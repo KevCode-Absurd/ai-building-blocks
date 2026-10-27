@@ -13,7 +13,7 @@ license_source: https://github.com/MohamedAbdallah-14/unslop/blob/main/LICENSE
 # Unslop Review
 ## When to Use
 
-Use this skill when you need rewrites code review comments so they read like a human teammate wrote them. Cuts corporate-AI throat-clearing ("I noticed...", "I was wondering if perhaps...", "It might be worth considering..."). Each comment is direct: location, the issue, a concrete fix. Use when user says...
+Use this skill when you need rewrites code review comments so they read like a human teammate wrote them. Cuts corporate-AI throat-clearing ("I noticed...", "I was wondering if perhaps...", "It might be worth considering..."). Each comment is direct: location, the issue, a concrete fix. Use when the user says "humanize this review", "de-slop this comment", "make this feedback sound human", or pastes a wordy review comment to tighten.
 
 
 ## Purpose

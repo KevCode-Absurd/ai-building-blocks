@@ -1,6 +1,6 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 87 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Share plain text or rough Markdown. Get clearer structure, title and summary fields, while keeping the body’s words apart from obvious typos.
 - [Article layout and typo editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Share rough text or notes. Get a title, summary, headings and lists while body wording stays intact apart from clear typos.
@@ -39,6 +39,7 @@
 - [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker): Share a finance deck. Find mismatched numbers, unclear wording and layout issues, using Indian fiscal years and units.
 - [Indian spreadsheet data cleaner](https://useaiblocks.com/skills/messy-spreadsheet-cleaner): Share an Excel file or range. Review fixes for spaces, dates, text numbers and duplicates, with original data protected.
 - [Interactive chart maker](https://useaiblocks.com/skills/interactive-chart-maker): Share your data. Get an interactive Plotly chart with hover, zoom and pan to embed in a page.
+- [Invoice maker](https://useaiblocks.com/skills/invoice-maker): Give it your details, your client and your work. Get an invoice with the totals added up and checked.
 - [jq JSON query writer](https://useaiblocks.com/skills/json-query-helper): Get a working jq command for your JSON. Describe your data and goal, and it filters, reshapes or totals the data and explains each part.
 - [JSON document file generator](https://useaiblocks.com/skills/document-file-generator): Build a new PowerPoint, Word, Excel or PDF file from a JSON layout. Get the generated file and basic file checks.
 - [Jupyter notebook builder](https://useaiblocks.com/skills/notebook-builder): Describe an experiment or lesson. Build a Jupyter notebook with clear cells, notes and checks for the target environment.

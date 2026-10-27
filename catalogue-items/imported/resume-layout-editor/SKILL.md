@@ -28,7 +28,7 @@ Use this skill when the user:
 ### The Dual Audience Challenge
 
 Your resume must work for:
-1. **ATS (Applicant Tracking Systems)** - Robots that parse text
+1. **ATS (Applicant Tracking Systems)** - Software that reads your file. Many systems parse plain text best, but they differ, so test by pasting your file into a plain-text view and check what survives
 2. **Human Readers** - Recruiters who scan quickly
 
 **The Solution:** Clean, simple formatting that satisfies both.
@@ -288,7 +288,7 @@ MBA, Finance & Strategy | Stanford Graduate School of Business | 2020
 ## File Format Guidelines
 
 ### For Online Applications
-- **.docx** - Best for ATS parsing
+- **.docx** - Usually safe for ATS parsing (follow the employer's own instructions if they give a format)
 - **.pdf** - Good if created from Word (not scanned)
 
 ### For Email/Direct Send

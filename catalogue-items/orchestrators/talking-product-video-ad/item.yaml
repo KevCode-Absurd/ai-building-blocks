@@ -7,13 +7,10 @@ role: orchestrate
 job: video
 level: advanced
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
   - {type: brand_brain, required: true}
   - {type: product_data, required: true}
   - {type: voc_reviews, required: false}
-  - {type: ad_copy, required: false}
-  - {type: static_ads, required: false}
-  - {type: landing_page, required: false}
 outputs:
   - {type: audit_report}
 uses: [ad-angle-planner, talking-object-ad-script, video-ad-script-line-checker, talking-object-video-prompts, meta-ads-compliance-checker]

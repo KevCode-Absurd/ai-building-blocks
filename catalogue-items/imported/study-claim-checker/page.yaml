@@ -16,9 +16,10 @@ when:
   - You teach students to question evidence.
   - Someone sends you a health claim with one study behind it.
 not_for:
-  - "You need to write a formal peer review of a paper: use the peer-review skill, or ask a subject expert."
+  - "You need to write a formal peer review of a paper: use the Manuscript peer review drafter, or ask a subject expert."
   - "You want a medical or policy decision: ask a doctor or a qualified expert, since this only grades the evidence."
   - "You have no study or claim to check, only a topic to explore: start with a plain web search or a librarian."
+  - "You want a fast read of a headline or news article claim: use the Study headline claim checker."
 you_give:
   - The study, abstract or claim
   - The question you want answered
@@ -31,9 +32,10 @@ you_get:
   - Questions to ask the authors
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste the study, abstract or claim. Add the question you want answered.
+  - Paste the full paper or abstract, and the exact claim. Add the outcome that matters to you and the question you want answered.
   - Say how much you know about statistics if you want simpler or more technical wording (optional).
   - Read the concerns first. Check that each one points to a real place in the paper.
+  - Next, take each concern back to the paper and check it. If you need a formal written review, use the Manuscript peer review drafter.
   - Skip the figure step unless you want a diagram. It needs code running and a paid OpenRouter key, and it sends your prompt to a third party.
 output_sample:
   input:
@@ -54,3 +56,4 @@ output_sample:
       contains: Practical fixes or questions to put to the authors.
     - name: Overall assessment
       contains: A plain verdict on evidence strength and what can and cannot be concluded.
+next: [manuscript-peer-review-drafter, study-headline-claim-checker]

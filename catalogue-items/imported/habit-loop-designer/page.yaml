@@ -16,8 +16,8 @@ when:
   - You want to know why users drop off after the first week.
   - You want to check that your engagement tactics are fair to users.
 not_for:
-  - "You want to cut sign-up steps and friction: use improve-retention, a separate skill, not this one."
-  - "You want users to share your product with others: use contagious, a separate skill, for viral sharing."
+  - "You want to cut sign-up steps and friction: use the Onboarding improver, not this one."
+  - "You want users to share your product with others: use the Growth loop designer for viral sharing."
   - "Your product does not help users and relies on regret or addiction: fix the product first, because this tool caps the score at 3."
 you_give:
   - What your product does and who uses it
@@ -35,7 +35,7 @@ how_to_use:
   - Add any notifications, streaks or progress bars you already run (optional).
   - Read the score and the weak rows first. Fix the lowest row before the others.
   - Read the ethics check before you change anything. If it flags a concern, deal with that first.
-  - Run improve-retention next if friction is the weak row. Run contagious if you want more sharing.
+  - Run the Retention problem fixer next if friction is the weak row. Run the Growth loop designer if you want more sharing.
 output_sample:
   input:
     - What your product does and who uses it
@@ -55,3 +55,4 @@ output_sample:
       contains: A verdict from the Manipulation Matrix, with the score capped at 3 if the product is a Dealer.
     - name: Next steps
       contains: Which weak row to fix first and which related skill to run after this one.
+next: [retention-problem-fixer, growth-loop-designer]

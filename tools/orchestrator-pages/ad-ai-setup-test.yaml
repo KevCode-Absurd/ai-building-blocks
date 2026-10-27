@@ -21,8 +21,9 @@ not_for:
 you_give:
   - Customer reviews, copied as written
   - Your product facts
-  - The old setup and its saved outputs
-  - The new setup run on the same briefs
+  - The buyer brief both setups work from
+  - The image ads your old setup made, saved before you change it
+  - The image ads your new setup makes from the same briefs
   - Your persona and landing page (optional)
 you_get:
   - A story ad test plan with the lead problem and four stories
@@ -41,7 +42,7 @@ output_sample:
     - The new setup run on the same briefs
     - Your landing page (optional)
   prerequisites:
-    - An AI that can read files, such as Claude with the handoff pack
+    - An AI that can read files, such as Claude Code or a Claude Project with the handoff pack. Check that your plan allows file upload and that the usage cost fits your budget.
     - Both chains run on the same briefs, with every image ad saved
   output:
     - name: Story ad test plan
@@ -127,3 +128,10 @@ improve:
   - Save the claim cards in your brand file so every future chain uses them.
   - Re-run the score after each change to your prompts.
   - Keep the before set of every version, so you can go back.
+terms:
+  - term: Story ad
+    meaning: An ad that pairs an everyday-looking picture with a short story that tells buyers their own experience back to them.
+  - term: Handoff card
+    meaning: A note for one AI step that says what it needs, what it may use, what it returns and what it must never lose.
+  - term: Blind score
+    meaning: A comparison where the judge cannot tell which ads are old and which are new.

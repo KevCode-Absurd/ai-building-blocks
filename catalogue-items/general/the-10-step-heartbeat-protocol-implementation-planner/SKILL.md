@@ -7,6 +7,33 @@ description: "Plan a safe AI agent run loop: one task per run, no overlapping ru
 
 Plan the run loop for an AI agent: one run wakes the agent, checks it may run, picks exactly one task, locks it, does it within limits, saves the result and always writes a run record. This skill reads a starter runner and its notes, lists where the starter would leave a task locked, let two runs overlap or lose a wakeup, and drafts the rules, code changes and tests. It does not call a model, run code or touch your database.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Oracle behavior baseline test writer](https://useaiblocks.com/skills/copilot-creating-oracle-to-postgres-migration-integration-tests). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** Reads your runner, your tables and your queue code together and proposes exact edits.
+- **Supabase:** The run record and the one-run-at-a-time rule are written for Postgres, which Supabase uses.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in BASIS and use a labelled placeholder. Never invent an agent, a limit or a table name.

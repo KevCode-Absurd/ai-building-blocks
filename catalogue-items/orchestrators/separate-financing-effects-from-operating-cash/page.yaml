@@ -24,7 +24,7 @@ not_for:
   - You want earnings per share, not cash. Use Reconcile alternative EPS and comprehensive income.
 you_give:
   - The cash flow statement, with reported cash from operations (from the annual report)
-  - "Factoring records: advances from the factor and customer receipts paid to it, for the same period and pool (from the notes or company records)"
+  - "Factoring records: advances from the factor and customer receipts paid to it, for the same period and the same set of invoices sold to the factor (from the notes or company records)"
   - Supplier-finance balances and payment terms (from the notes)
   - Opening and closing operating balances, plus acquisition, currency and other noncash movements (from the notes)
   - Debt and cash at the same date, with the currency, scale and period
@@ -92,7 +92,7 @@ tweaks:
 judge:
   - Reported accounts stay visible, each financing effect has source-backed classification and timing, cash and balance movements are not mixed and analytical reclassifications conserve total liabilities.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Reconcile opening balances, additions, deductions and closing balances.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

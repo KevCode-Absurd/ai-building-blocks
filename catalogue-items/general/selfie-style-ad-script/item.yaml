@@ -28,6 +28,7 @@ uses:
   - creator-filming-brief-writer
   - ad-script-read-aloud-editor
 example: ugc
+next: [meta-ads-compliance-checker, creator-filming-brief-writer, selfie-style-video-prompts]
 origin: own
 source_ids:
   - CES-124

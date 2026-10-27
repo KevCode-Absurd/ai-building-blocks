@@ -7,19 +7,20 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: competitor_set, required: false}
+  - {type: competitor_set, required: true}
   - {type: question, required: false}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
   - {type: product_data, required: false}
 outputs:
+  - {type: landing_page}
   - {type: audit_report}
 uses: [competitor-messaging-comparer, competitor-white-space-mapper, alternative-page-writer, landing-page-auditor]
 steps:
-  - {uses: competitor-messaging-comparer, note: "Starts from rival names and writes down how each one pitches. Hands steps 2 and 3 the rival set."}
+  - {uses: competitor-messaging-comparer, note: "Starts from rival names and writes down how each one pitches, from their public pages. Hands steps 2 and 3 the rival set."}
   - {uses: competitor-white-space-mapper, note: "Reads the rival set from the step before and shows which gap you can honestly own. Hands step 3 the gap you can honestly own."}
   - {uses: alternative-page-writer, note: "Builds the page on the rival set and leads with the gap the map found. Takes the rival set from step 1 and the gap map from step 2; hands step 4 the page."}
-  - {uses: landing-page-auditor, note: "Reads the alternative page and ranks what to fix first."}
+  - {uses: landing-page-auditor, note: "Reviews the alternative page from step 3 and ranks what to fix first."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-rival-alternative-page-that-wins-on-a-real-gap/skeleton.yaml

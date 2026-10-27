@@ -6,7 +6,7 @@ argument-hint: "<competitor or market segment>"
 
 # Competitive Brief
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> This skill works with web search alone. Paid tools (social listening, SEO tools, analyst reports, alert services) are optional extras, and your AI can only use them if you connect them or paste their results.
 
 Research competitors and generate a structured competitive analysis comparing positioning, messaging, content strategy, and market presence.
 

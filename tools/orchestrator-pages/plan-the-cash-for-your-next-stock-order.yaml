@@ -9,7 +9,7 @@ subhead: Give it your supplier invoices, lead times and current cash. It works o
 explain: |
   A store can show a profit and still run out of cash. Stock is paid for months before it sells, freight and duty arrive as lump invoices, and a growth plan can ask for more money than the bank holds. Many owners find out only when a supplier wants a deposit and the account is short.
 
-  The steps put numbers on it in order. First it spreads freight, duty and fees across the products to get the true cost of each unit. Then it times each order against lead time and shows the cash it needs and your lowest cash point, with a case where sales fall short. Next it shows which supplier terms would close the gap. Then it tests your growth plan against cash and tells you if cash or ads are the limit. If cash is still short, it ranks six ways to free it. Nothing pauses for you, so have your numbers ready.
+  The steps put numbers on it in order. First it spreads freight, duty and fees across the products to get the true cost of each unit. Then it times each order against lead time and shows the cash it needs and your lowest cash point, with a case where sales fall short. Next it shows which supplier terms would close the gap. Then it tests your growth plan against cash and tells you if cash or ads are the limit. If cash is still short, it ranks six ways to free it. There is no planned pause. It asks you a question only when a step needs a number that only you have, and it stops at step 1 if the supplier invoices are missing, so have your numbers ready.
 when:
   - You are about to place a large stock order and want to know if you can pay for it.
   - Your store shows a profit, but cash is always tight after a reorder.
@@ -23,6 +23,7 @@ you_give:
   - Your lead times from order to shelf, and how and when you pay the supplier
   - Your starting cash, stock on hand and sales per month by product
   - Your price and cost per product
+  - Your last three months of profit and loss
   - Your ad results (optional)
 you_get:
   - Landed cost per unit with each layer shown, and margin per unit

@@ -5,7 +5,7 @@ name: Stock age report builder
 summary: "Build a stock age report for your Shopify store. See units, cost value and carrying cost by how long stock has gone unsold."
 job: run-your-store
 headline: Stock age report builder
-subhead: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over. Bring your Shopify store link and read access. Use the result to plan your next step."
+subhead: "Get your stock sorted by how long it has sat unsold: 0 to 30, 31 to 60, 61 to 90, 91 to 180 and 181 or more days. Bring your Shopify store link and read access. Use the result to pick what to mark down."
 explain: |
   A clear picture of which products have sat on your shelves too long, and what holding them costs. Every item with stock is placed in an age bucket based on when it last sold, such as 0 to 30, 31 to 60, 61 to 90, 91 to 180 and 181 or more days.
 
@@ -34,8 +34,10 @@ how_to_use:
   - Sign in to your store with read access to orders, products and stock.
   - Paste in this skill and give your store link. Add your own buckets, carrying cost rate or supplier if you want them.
   - Let it run. It reads your stock, a year of orders and your unit costs. Nothing in your store is changed.
-  - Check the buckets summary first. Items never sold are aged from the date the product was created.
+  - Check the buckets summary first. Items with no sale in the last 365 days are aged from the date the product was created, and the report marks them "no sale in 365 days".
   - Open the CSV and sort by age to pick your markdown candidates.
+  - Next, check the oldest items with the dead stock finder, then plan a sale with the clearance discount planner.
+next: [dead-stock-finder, clearance-discount-planner]
 output_sample:
   input:
     - Your Shopify store link

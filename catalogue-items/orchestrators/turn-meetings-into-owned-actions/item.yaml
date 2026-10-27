@@ -1,7 +1,6 @@
 slug: turn-meetings-into-owned-actions
 name: Turn meetings into owned actions
-summary: Share meeting notes. Get a sourced action register and follow-up drafts
-  with owners and dates made clear.
+summary: Give it notes from one meeting or one set of threads. Get an action list with owners and dates, plus follow-up drafts you review before anything is sent.
 category: orchestrator
 boards:
   - business
@@ -11,32 +10,28 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
-    required: true
   - type: meeting_notes
-    required: false
+    required: true
   - type: plan
     required: false
 outputs:
-  - type: document
+  - type: plan
+  - type: copy_draft
 uses:
   - executive-action-register
   - executive-due-task-drafts
 steps:
   - uses: executive-action-register
-    note: 1. Read skills/executive-action-register/SKILL.md. Share meeting notes or
-      email threads. Get one action list with owners, deadlines, source links
-      and unresolved commitments. Save the result with source references. Carry
-      the user's goal and all earlier findings into this step. If required
-      evidence or tool access is missing, mark this step blocked; do not
-      fabricate a result.
+    note: 1. Read skills/executive-action-register/SKILL.md. Give it the meeting
+      notes or email threads (and your task list, if you have one). It saves one
+      action list with owners, deadlines, source links and unresolved commitments.
+      Any owner or date it cannot confirm is marked unconfirmed. If the notes are
+      missing, mark this step blocked; do not make up a result.
   - uses: executive-due-task-drafts
-    note: 2. Read skills/executive-due-task-drafts/SKILL.md. Share due tasks and
-      related threads. Get follow-up drafts linked to each task, with missing
-      facts and send status clear. Save the result with source references. Carry
-      the user's goal and all earlier findings into this step. If required
-      evidence or tool access is missing, mark this step blocked; do not
-      fabricate a result.
+    note: 2. Read skills/executive-due-task-drafts/SKILL.md. Give it the action
+      list from step 1 and the related threads. It saves one follow-up draft per
+      due task, with the missing facts and the send status. Nothing is sent. If
+      the action list is missing, mark this step blocked; do not make up a result.
 origin: rebuilt
 version: 1.0.0
 credits:

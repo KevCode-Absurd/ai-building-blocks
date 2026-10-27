@@ -147,3 +147,4 @@ terms:
     meaning: A session that lasted over 10 seconds, had a key event, or had 2 or more page views.
   - term: Funnel exploration
     meaning: A GA4 report that counts how many people move from one step to the next.
+next: [store-funnel-benchmark-checker, store-friction-checker]

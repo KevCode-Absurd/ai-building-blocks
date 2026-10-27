@@ -6,7 +6,7 @@ boards: []
 type: skill
 role: make
 job: ops
-level: beginner
+level: intermediate
 inputs:
   - type: meeting_notes
     required: true

@@ -5,11 +5,11 @@ name: Task list keeper
 summary: Keep one task list file current. Tell your AI what you add, finish or wait on, and it moves each item to the right section.
 job: organise-work
 headline: Task list keeper
-subhead: Tell it your tasks, and say when you finish one or are waiting on someone. It keeps one plain TASKS file with four sections (Active, Waiting On, Someday, Done) and moves items as you report. You get a current file, a review of stuck work and an optional task board.
+subhead: Tell it your tasks, and say when you finish one or are waiting on someone. It keeps one plain TASKS file with four sections (Active, Waiting On, Someday, Done) and moves items as you report. You get a current file, and a review of stuck work.
 explain: |
   One plain TASKS file that stays current as you add, finish and review your work; you know what is active, waiting and can wait.
 
-  The file has four sections: Active, Waiting On, Someday and Done. When you say you finished something, it moves to Done. When you add a task, it goes in the right place with context such as who you are waiting on. You and the AI can both edit the file, and it is kept in your working folder. A visual board can read the same file. You can ask for a review of open items any time.
+  The file has four sections: Active, Waiting On, Someday and Done. When you say you finished something, it moves to Done. When you add a task, it goes in the right place with context such as who you are waiting on. You and the AI can both edit the file, and it is kept in your working folder. You can ask for a review of open items any time.
 when:
   - Your to-do list lives in five apps and you trust none.
   - You keep forgetting what you are waiting on from other people.
@@ -28,7 +28,6 @@ you_get:
   - A TASKS file with four clear sections
   - Items moved and updated as you report
   - A review of open and stuck work
-  - An optional visual task board
 how_to_use:
   - Open your AI in a folder where it can read and write files. If it cannot, paste your TASKS file into the chat each time.
   - "Paste the skill into the chat. Then tell it your tasks, for example: Send invoice to Acme, waiting on Sam since 3 May."
@@ -36,6 +35,9 @@ how_to_use:
   - Say "done with the invoice" when you finish something. It moves the task to Done with the date.
   - Ask "what am I waiting on" or "what is on my plate" for a weekly check of stuck work.
   - After a meeting, paste your notes. It offers tasks it found and asks before adding any.
+  - This copy has no visual task board, so you work from the TASKS file and the chat.
+  - Once a week, ask "what is on my plate" and paste the Task summary into your planning or meeting notes, so the list drives action. For a bigger job, break it into steps first with the task breakdown planner.
+next: [weekly-review-guide, task-breakdown-planner]
 output_sample:
   input:
     - Your tasks, in your own words

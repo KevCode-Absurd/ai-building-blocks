@@ -13,8 +13,8 @@ outputs:
   - {type: plan}
 uses: [win-win-stance-planner, other-person-view-mapper, can-they-pay-deal-checker, negotiation-call-prep-planner]
 steps:
-  - {uses: win-win-stance-planner, note: "Sets your stance, what a win is for each side and your walk-away line. Hands on the question to settle."}
-  - {uses: other-person-view-mapper, note: "Takes the question from the step before and maps the other side: wants, pressures and a way to save face. Hands steps 3 and 4 that map."}
+  - {uses: win-win-stance-planner, note: "Sets your stance, what a win is for each side and your walk-away line. Passes step 2 the one question you need to settle with them."}
+  - {uses: other-person-view-mapper, note: "Takes the question from step 1 and maps the other side: wants, pressures and a way to save face. Passes that map to steps 3 and 4."}
   - {uses: can-they-pay-deal-checker, note: "Tests your ask against what they can pay and proposes one sum. Uses the question, your terms and step 2's map of their pressures. Hands step 4 the sum and its terms."}
   - {uses: negotiation-call-prep-planner, note: "Turns their side (step 2) and the proposed sum (step 3) into the lines you open with, the questions you ask and what to listen for."}
 origin: rebuilt

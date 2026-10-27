@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions.
   - "Pick one option: ask what to pay a role, upload your pay bands, or ask for an equity grant model."
   - Add your details. For a pay file, use an AI that can read uploads.
-  - Check every figure against a named source before you act. Ask your AI to name the source for each range.
+  - Check every figure against a named source before you act. Ask your AI to label each range as web-sourced, supplied by you, or "no source found". It should leave out any range it cannot source.
   - Take the result to your hiring manager or pay committee as a starting point, not a final answer.
 output_sample:
   input:
@@ -52,3 +52,4 @@ output_sample:
       contains: Each person's current base next to band minimum, middle and maximum, marked below, at or above band.
     - name: Recommendations
       contains: Specific pay advice, equity points to weigh and retention risks if your data shows them.
+next: [job-offer-planner, offer-letter-drafter]

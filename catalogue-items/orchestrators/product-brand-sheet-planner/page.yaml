@@ -11,6 +11,7 @@ explain: |-
 when:
   - You need a cohesive one-page product visual sheet.
   - You want a clear draft and checks from the material you already have.
+  - You need one sheet that shows the product, the mood and the ad and editorial looks together, with a prompt for each image.
 you_give:
   - brief
   - "Optional: product photos"

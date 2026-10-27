@@ -4,12 +4,14 @@ headline: Dividend reinvestment share schedule
 summary: Find how many shares a cash dividend buys at your actual reinvestment price, and compare the result with keeping the cash.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The shares added depend on the real reinvestment price, and mixing in adjusted prices would count the dividend twice."
 subhead: Give it your share count, dividend and reinvestment price. It works out the new shares and compares your ending value with keeping the cash. Fees and withholding are shown on their own lines.
 explain: |-
-  A dividend cash-to-shares schedule with a no-reinvestment comparator.
+  With a dividend reinvestment plan, the cash dividend buys more shares instead of being paid out to you. This schedule shows the new shares. It also compares your ending value with the case where you kept the cash.
 
-  Public equity and share counts. Illustrative figures. 100 shares × $1 yields $100, acquiring five shares at $20. At $22, 105 shares are worth $2,310 versus $2,300 if the dividend stayed cash. Reinvesting at $22 makes both values $2,300.
+  New shares = (dividend cash − fees − withholding) ÷ the price the plan actually paid. It uses the real reinvestment price from your plan statement, not the market price on another day. It tracks share count. It does not test whether the company can afford its dividend.
+
+  Illustrative figures. 100 shares × $1 yields $100, which buys five shares at $20. At an ending price of $22, 105 shares are worth $2,310, against $2,300 if the dividend stayed cash. If the shares were bought at $22, both values would be $2,300.
 when:
   - You got a cash dividend that was reinvested and want to see the new share count.
   - You want to know if reinvesting left you better off than taking the cash.
@@ -19,6 +21,7 @@ not_for:
   - "You want total return from a price series: use an adjusted-price return calculation in a spreadsheet, and do not add dividends twice."
   - "Your plan fees or withholding are unknown: get the plan statement from your broker first, then run this."
   - "You want a forecast of future dividends or prices: ask a licensed adviser, because this schedule only uses prices you supply."
+  - "You need EPS and share counts restated after a stock split: use the Stock-split EPS restatement instead."
 you_give:
   - Shares you held before the dividend.
   - Dividend per share.
@@ -74,10 +77,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Reinvestment date"
+    how: "Take the reinvestment date from your share holding, the dividend and the reinvestment price. Use one currency and scale on every line."
+  - what: "Reinvestment price"
+    how: "Change the reinvestment price and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: An adjusted total-return price series is not combined with explicit dividends.
 judge:
@@ -90,8 +93,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one dividend reinvestment you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define reinvestment price into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -106,3 +109,6 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+next:
+  - stock-split-eps-restatement
+  - weighted-average-share-schedule

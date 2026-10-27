@@ -19,6 +19,7 @@ not_for:
   - "You want to call MATLAB from Python: use the MATLAB Engine API for Python, which MathWorks provides."
   - "You want to build MEX files or Python C extensions: ask a developer who knows C or C++."
   - "You only write Python and never use MATLAB: use a plain Python guide or ask your AI for help with Python alone."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The Python library or function
   - Your MATLAB code to connect
@@ -30,12 +31,13 @@ you_get:
   - Error fixes
   - Notes on data type conversion
 how_to_use:
-  - Open your AI tool and paste in the skill text. Use one that can run MATLAB and a Bash tool.
+  - Open your AI tool and give it the skill folder. You need an AI with a MATLAB connection that can run code, and a Bash tool for the pip and virtual environment steps. It must read references/environment-setup.md before it installs anything, so include that file.
   - Tell it the Python library you want and paste your MATLAB code. Add your MATLAB release.
   - If a run failed, paste the full error message too.
   - Let it set up the Python environment first. It asks before it restarts a running Python session, so read that warning.
   - Run the new code on a small test input before you use real data.
-  - "Next step: ask for notes on data types for your next Python call."
+  - Once the test run passes on small input, move to your real data. For each new Python call, ask for notes on the data types that call expects.
+  - To go the other way and call MATLAB from Python, use the MATLAB Engine API for Python.
 output_sample:
   input:
     - The Python library or function you want to call
@@ -43,8 +45,9 @@ output_sample:
     - Your MATLAB release
     - The error message, if a run failed (optional)
   prerequisites:
-    - MATLAB and a Python install on your computer
+    - MATLAB (paid MathWorks software that needs a licence) and a Python install on your computer
     - An AI that can run MATLAB through a MATLAB connection and use a Bash tool for pip and virtual environments
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: MATLAB code
       contains: Code that calls the Python library with py. names, name=value arguments and integer types where Python needs whole numbers.

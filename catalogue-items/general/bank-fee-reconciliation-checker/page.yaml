@@ -4,7 +4,7 @@ headline: Bank fee reconciliation checker
 summary: Check one month of bank service charges against your agreement. See what you should have paid, the credit applied and the gap to the bill.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Prices, credits and the bill must tie line by line to the agreement, so each step needs checking against it."
 subhead: Give it your bank agreement, the month's service counts and the bank's invoice. It rebuilds the charge from per-item prices and the fixed fee, applies your balance credit and compares the result with what you were billed.
 explain: |-
   A bank bill puts item prices, a fixed account fee and a credit on your balances into one number. This bank fee checker rebuilds that number from your agreement line by line, so you can see which line is off.
@@ -53,10 +53,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Billing month"
+    how: "Take the billing month from the bank agreement and the month's service counts. Use one currency and scale on every line."
+  - what: "Service counts"
+    how: "Change the service counts and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Every material input has a source location, date, unit, sign and approval status.
 judge:
@@ -69,8 +69,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one bank service charge you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define included credit into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

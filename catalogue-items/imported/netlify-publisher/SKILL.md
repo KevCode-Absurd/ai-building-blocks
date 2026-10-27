@@ -20,7 +20,7 @@ This skill automates Netlify deployments by:
 - **Netlify CLI**: Installed via npx (no global install required)
 - **Authentication**: Netlify account with active login session
 - **Project**: Valid web project in current directory
-- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.
+- When sandboxing blocks the deployment network calls, ask the user, then rerun with `sandbox_permissions=require_escalated` (this setting exists only in some agent tools; if yours has none, ask the user to run the command in their own terminal).
 - The deployment might take a few minutes. Use appropriate timeout values.
 
 ## Authentication Pattern

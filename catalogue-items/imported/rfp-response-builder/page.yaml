@@ -35,7 +35,8 @@ how_to_use:
   - "Add your proof points: case studies, certificates and references. Say where each one can be checked."
   - Answer the seven check questions the skill asks one at a time, such as whether there is an incumbent. Set your bid threshold before you see the results.
   - Let it sort the requirements, build the fit matrix and draft win themes. Read the gap audit first.
-  - Read the win-chance estimate as a rough guide only. Its weights are editable assumptions, so change them to match your own deals.
+  - Read the win-chance estimate as a rough guide only. Its weights and percentages are editable assumptions, not research results, so change them to match your own deals.
+  - Next, make the bid call. If you bid, take the win themes and the fit matrix into the sales proposal writer. If not, log the reasons and the gap list for your next review.
   - This skill includes three Python scripts. They need an AI that can run code. In a plain chat, your AI can follow the same steps by hand.
 output_sample:
   input:
@@ -58,3 +59,4 @@ output_sample:
       contains: A percentage with a confidence range and the factors that moved it.
     - name: Bid call
       contains: Bid, partner-bid or no-bid, with the named factors behind the call.
+next: [sales-proposal-writer]

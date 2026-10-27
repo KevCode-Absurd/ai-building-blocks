@@ -27,6 +27,8 @@ A typical mid-stage company carries 80-200 SaaS subscriptions and dozens of oper
 
 ## When NOT to use
 
+The names below (`c-level-advisor/...`, `business-growth/...`, `procurement-optimizer`, `engineering/slo-architect`) belong to the original author's wider skill pack. They are not part of AI Blocks, so you cannot open them from here. Use the plain advice beside each name instead.
+
 - Negotiating new contract terms → `c-level-advisor/general-counsel-advisor`
 - Writing an outbound proposal or RFP response → `business-growth/contract-and-proposal-writer`
 - Categorizing software spend or finding duplicate SaaS → sibling `procurement-optimizer`
@@ -49,7 +51,7 @@ The user provides a JSON catalog (see `assets/vendor_catalog_template.md` for th
 
 ### Step 2 — Score each vendor 0-100
 
-Run `scripts/vendor_scorer.py --input catalog.json --profile <industry> --output scorecard.md`.
+Run `scripts/vendor_scorer.py --input catalog.json --profile <industry> --output scorecard.md`. **That script is not in this folder.** If you cannot find it, score each vendor by hand with the weights in the table below, show the arithmetic for each dimension, and say that the scores were worked out by hand.
 
 The scorer weights 5 dimensions per industry profile:
 
@@ -148,7 +150,7 @@ cd business-operations/skills/vendor-management && python3 scripts/vendor_scorer
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-bizops` or the BizOps orchestrator. Recommended answer + canon citation per question. Never bundled.
+Walked one at a time (the original author's `/cs:grill-bizops` command is not part of AI Blocks; just ask the user the questions one at a time). Recommended answer + canon citation per question. Never bundled.
 
 1. **"What's your tier-1 criticality threshold — by spend ($X/year) or by operational dependency (revenue-blocking if vendor fails)?"**
    Recommended: operational dependency.

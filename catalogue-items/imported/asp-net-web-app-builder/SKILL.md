@@ -32,7 +32,7 @@ Load the smallest set of references that fits the task. Do not load every refere
 ## Default Operating Assumptions
 
 - Prefer the latest stable ASP.NET Core and .NET unless the repository or user request pins an older target.
-- As of March 2026, prefer .NET 10 / ASP.NET Core 10 for new production work. Treat ASP.NET Core 11 as preview unless the user explicitly asks for preview features.
+- As of March 2026, prefer .NET 10 / ASP.NET Core 10 for new production work. Treat ASP.NET Core 11 as preview unless the user explicitly asks for preview features. This note is dated: check Microsoft Learn for the current stable version before you rely on it.
 - Prefer `WebApplicationBuilder` and `WebApplication`. Avoid older `Startup` and `WebHost` patterns unless the codebase already uses them or the task is migration.
 - Prefer built-in DI, options/configuration, logging, ProblemDetails, OpenAPI, health checks, rate limiting, output caching, and Identity before adding third-party infrastructure.
 - Keep feature slices cohesive so the page, component, endpoint, controller, validation, service, data access, and tests are easy to trace.

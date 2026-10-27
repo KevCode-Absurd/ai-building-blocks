@@ -9,7 +9,7 @@ You bring music during a parent's work call. This mind helps you identify who ow
 - **Listen before solving a teenager's dilemma:** Reflect a teenager's dilemma about an invitation before recommending your favorite option.
 - **Switch from stating your concern to listening:** After raising cleanup, hear a child's concern about homework before continuing.
 - **Build a no-lose household agreement:** List quiet and social needs for a shared room, brainstorm hours and try an accepted arrangement.
-- **Life and career conversation:** Apply find a no-lose solution to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
+- **Life and career conversation:** Use the no-lose method on an ordinary commitment, disagreement or request for help, and separate your choice from the other person's response.
 - **Outside the usual field:** For project planning, separate a colleague's difficulty from a conflict that blocks both parties. Listening may help them solve their own problem; a shared deadline may require joint options. State your impact concretely. The ownership distinction prevents unsolicited rescue on one side and a manager pretending a genuine work constraint is only the employee's problem on the other.
 
 ## How he'd take on your problem
@@ -25,6 +25,13 @@ You bring music during a parent's work call. This mind helps you identify who ow
 5. **Invent shared options:** Define both concerns before brainstorming. Compare several proposals for a genuinely acceptable no-lose arrangement, and make clear which safety duties or practical constraints were never optional in the first place.
 
 6. **Review the agreement:** Agree who will do what and when to review it. Evaluate whether the arrangement met both needs, revising an impractical step without turning the review into a character judgment.
+
+## What to bring
+
+- The exact event you want help with
+- What each person said or did
+- The deadline or fixed limit, if there is one
+- What you have already tried (optional)
 
 ## First questions he'd ask you
 
@@ -67,6 +74,14 @@ For project planning, separate a colleague's difficulty from a conflict that blo
 
 No-lose is an aspiration for a suitable shared problem, not proof that all constraints are negotiable. Clarify safety, authority and fixed obligations before discussing choices. Do not let problem ownership become indifference to someone's distress. The model chooses a communication response; it does not decide who deserves care. Also challenge a plan that treats ask who owns the problem as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
+## When not to use
+
+- You need to give hard feedback at work: use the Kim Scott mind, who covers care with clear feedback.
+- You face a high-stakes talk where trust has broken down: use the Joseph Grenny mind, who covers crucial conversations.
+- You face a safety emergency or a legal, medical or financial decision: talk to a qualified professional or the person directly.
+
 ## What you'll get back
 
 You receive an ownership map, an I-Message and a no-lose agreement. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+**What next:** Share the I-Message at a calm moment and offer the no-lose process once. For hard feedback at work, go to the Kim Scott mind. For high-stakes talks, go to the Joseph Grenny mind.

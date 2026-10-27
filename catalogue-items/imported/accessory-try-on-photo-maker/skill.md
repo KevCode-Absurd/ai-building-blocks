@@ -5,6 +5,14 @@ description: 鞋包配饰真人穿戴图。商品图 + 模特参考图 → 真�
 
 # wear-everything — 鞋包配饰一键真人穿戴
 
+> **AI Blocks note (English summary).** The instructions below are in Chinese. In short:
+> 1. Check the product photo: 20 KB to 15 MB, larger than 400 x 400 pixels, jpg, jpeg, png or webp. Reject photos that are cut off, blurry, or covered in charms.
+> 2. Pick a model reference photo where the body part is fully visible and no similar item is already worn.
+> 3. Write one image prompt that says where the item sits on the body, keeps the product's shape, colour, hardware and logo the same, and says to change nothing else.
+> 4. Run it in an image tool (this costs credits; do a dry run to see the cost), make 2 to 4 versions, and check placement, scale, reflections and the face.
+>
+> Only use a reference photo of a person who has agreed to it. Do not present the result as a real customer photo or an endorsement. Links to `../flat-lay` and the `docs/` example pictures point to files that are not in this library. Ignore them; the steps above work without them. The `references/` and `scripts/` folders are included.
+
 把一张**鞋 / 包 / 手表 / 眼镜 / 帽子 / 围巾 / 项链 / 耳饰**的商品图，变成**真人正确佩戴**的商拍图。
 
 和 [flat-lay](../flat-lay/skill.md) 的区别：flat-lay 处理「穿在身上的衣服」，本技能处理「戴在身上的东西」——商品只占画面的一小块区域，因此**选区（商品出现在参考图的哪个位置）**是成败关键。

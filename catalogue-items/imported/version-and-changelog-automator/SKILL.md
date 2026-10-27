@@ -148,6 +148,8 @@ This config does not publish to npm (npmPublish is false). Set it to true only i
 
 ### Advanced Configuration
 
+Use one config file only. This `release.config.js` is an alternative to `.releaserc.json` above, not an addition. semantic-release does not accept both, so delete the one you do not use.
+
 ```javascript
 // release.config.js
 module.exports = {
@@ -190,6 +192,11 @@ name: Release
 on:
   push:
     branches: [main]
+
+permissions:
+  contents: write        # push tags and the changelog commit
+  issues: write
+  pull-requests: write
 
 jobs:
   release:
@@ -246,6 +253,8 @@ npm install --save-dev standard-version
   "compareUrlFormat": "https://github.com/owner/repo/compare/{{previousTag}}...{{currentTag}}"
 }
 ```
+
+Replace `owner/repo` in the two links above, and in the git-cliff config below, with your own GitHub owner and repo name.
 
 ### Usage
 
@@ -399,7 +408,7 @@ import subprocess
 def get_current_version():
     with open('setup.py', 'r') as f:
         content = f.read()
-        match = re.search(r"version=['\"] ([^'\"]+)['\"]", content)
+        match = re.search(r"version=['\"]([^'\"]+)['\"]", content)
         return match.group(1) if match else None
 
 def bump_version(current, bump_type):

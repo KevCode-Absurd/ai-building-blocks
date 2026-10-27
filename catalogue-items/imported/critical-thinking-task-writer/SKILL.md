@@ -179,6 +179,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+Note: the two argument extracts below are illustrative stimulus text. Their figures (casualty estimates, the $2 billion cost, the intercepted cables) are not sourced here. Before you give any real stimulus to students, check each figure against a source you trust, or tell students the extracts are written for the exercise.
+
 **Scenario:** *Topic: "Whether the atomic bombing of Hiroshima was justified" / Student level: "Year 10, can express strong opinions on this topic but tend to argue from emotion rather than evidence — they say 'it was wrong because killing civilians is always wrong' or 'it was right because it ended the war' without evaluating the evidence for either position" / Critical thinking focus: "Evaluating the strength of competing arguments — weighing evidence for and against a historical judgement" / Subject area: "History"*
 
 ---

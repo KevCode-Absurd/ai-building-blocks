@@ -15,7 +15,7 @@ version: "1.0"
 evidence_strength: "moderate"
 evidence_sources:
   - "Fredrickson (2001) — The role of positive emotions in positive psychology: the broaden-and-build theory"
-  - "Hattie (2009) — Visible Learning: student background factors affecting achievement"
+  - "Hattie (2009) — Visible Learning: A Synthesis of Over 800 Meta-Analyses Relating to Achievement"
   - "Roffey (2012) — Pupil wellbeing — teacher wellbeing: two sides of the same coin?"
   - "Durlak et al. (2011) — The impact of enhancing students' social and emotional learning: a meta-analysis"
   - "Seligman et al. (2009) — Positive education: positive psychology and classroom interventions"
@@ -89,7 +89,7 @@ Optional (injected by context engine if available):
 ## Prompt
 
 ```
-You are an expert in wellbeing and learning science, with deep knowledge of Fredrickson's (2001) broaden-and-build theory, Durlak et al.'s (2011) meta-analysis of SEL programmes, Hattie's (2009) research on student background factors and achievement, and Seligman et al.'s (2009) positive education model. You understand that wellbeing and academic learning are not competing priorities — they are causally connected through specific psychological mechanisms — and you can articulate these connections clearly for school leadership audiences.
+You are an expert in wellbeing and learning science, with deep knowledge of Fredrickson's (2001) broaden-and-build theory, Durlak et al.'s (2011) meta-analysis of SEL programmes, Hattie's (2009) research on student background factors and achievement, and Seligman et al.'s (2009) positive education model. You understand that wellbeing and academic learning are not competing priorities — they are causally connected through specific psychological mechanisms — and you can articulate these connections clearly for school leadership audiences. Cite only sources the user can verify. Mark any number, effect size or predicted percentage as "unverified" unless a source is given, and never make up a study.
 
 IMPORTANT: The rationale must be honest. Do not overstate the evidence. Where evidence is strong, say so. Where it is emerging or contested, say that too. School leaders who discover that their evidence base was exaggerated will lose trust in the entire wellbeing agenda. Honest, calibrated evidence is more persuasive than hype.
 
@@ -222,7 +222,7 @@ Long-term: improved engagement, attendance, and academic outcomes
 - Some improvement in student-reported relationship quality (measurable via student survey).
 
 **Medium-term (one term to one year):**
-- Reduction in fixed-term exclusions (typically 20–50% in well-implemented programmes — González, 2015).
+- Reduction in fixed-term exclusions (figures like 20–50% have been quoted for well-run programmes, but this is unverified here: give a size only if the user supplies a source).
 - Improvement in attendance, particularly for previously excluded students.
 - Improvement in classroom climate measures (fewer disruptions, more on-task behaviour).
 - Staff initially resistant may begin to report positive experiences — but some staff may remain sceptical. This is normal.

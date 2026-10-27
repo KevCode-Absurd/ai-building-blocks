@@ -17,6 +17,7 @@ Identifies customers who started checkout but did not complete their purchase, g
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify auth login --store <domain>`
+- Use one `api_version` for all three operations: the one in the header above (2025-01). The query comment below says 2025-04. If your store rejects 2025-01 on the query, use 2025-04 for all of them.
 - API scopes: `read_checkouts`, `write_price_rules`, `write_discount_codes`, `write_customers`
 
 ## Parameters
@@ -40,14 +41,20 @@ Identifies customers who started checkout but did not complete their purchase, g
 
 1. **OPERATION:** `abandonedCheckouts` — query
    **Inputs:** `first: 250`, `query: "created_at:>='<NOW - days_back days>'"`, pagination cursor
-   **Expected output:** List of checkout objects with `email`, `totalPrice`, `createdAt`, `lineItems`; paginate until `hasNextPage: false`
+   **Expected output:** List of checkout objects with `customer.id`, `email`, `totalPrice`, `createdAt`, `lineItems`; paginate until `hasNextPage: false`
+
+1a. **FILTER (no API call):** Drop checkouts with no email, and any checkout whose total is below `min_cart_value`. The rest are the eligible customers. In `dry_run`, stop after this step and report the count.
+
+1b. **OPERATION:** `priceRuleCreate` — mutation (live; needs `write_price_rules`)
+   **Inputs:** One price rule for the whole run: percentage value `discount_pct`, 30-day expiry, one use per code. Keep the returned price rule `id`; step 2 needs it as `priceRuleId`.
+   **Expected output:** The new price rule `id`; collect `userErrors`. If it fails, stop. Do not run step 2.
 
 2. **OPERATION:** `discountCodeBulkCreate` — mutation
-   **Inputs:** For each eligible customer email: a unique code `{code_prefix}-{UUID[:8].toUpperCase()}`, percentage discount `discount_pct`, usage limit 1, expiry 30 days
+   **Inputs:** The `priceRuleId` from step 1b. For each eligible customer email: a unique code `{code_prefix}-{UUID[:8].toUpperCase()}`, percentage discount `discount_pct`, usage limit 1, expiry 30 days
    **Expected output:** Confirmation of code creation with `code` and `priceRule.id`; collect `userErrors`
 
 3. **OPERATION:** `tagsAdd` — mutation
-   **Inputs:** Customer `id` (from checkout `email` lookup), tag string from `tag` parameter
+   **Inputs:** Customer `id` (taken from `customer.id` in the step 1 query; if it is empty, look the customer up by email first), tag string from `tag` parameter
    **Expected output:** Updated customer tags; collect `userErrors`
 
 ## GraphQL Operations
@@ -60,6 +67,7 @@ query AbandonedCheckouts($first: Int!, $after: String, $query: String) {
       node {
         id
         customer {
+          id
           defaultEmailAddress {
             emailAddress
           }

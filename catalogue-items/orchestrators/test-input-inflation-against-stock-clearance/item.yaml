@@ -10,7 +10,7 @@ inputs:
   - type: document
     required: true
   - type: spreadsheet
-    required: false
+    required: true
 outputs:
   - type: spreadsheet
     required: true

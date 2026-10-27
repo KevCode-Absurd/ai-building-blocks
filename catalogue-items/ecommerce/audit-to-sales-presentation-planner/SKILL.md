@@ -7,6 +7,23 @@ description: Turn an audit of a prospect's ad account or store into a ten-slide 
 
 Plan a ten-slide pitch from an audit the user already did. The deck must help the prospect even if they do not buy. You plan the slide copy. You do not build the deck file and you do not send anything.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Reads your audit and plans the slides. No code or paid tool needed.
+- **Google Slides, PowerPoint or Keynote:** Where you build the deck from the slide copy.
+<!-- /needs -->
+
 ## What you need
 
 - **The audit** (required): findings with the evidence behind each one, and the score if there is one.
@@ -65,6 +82,15 @@ MISSING: <proof, facts or fee still needed>
 ```
 
 An agreed shorter deck keeps the same order and merges slides.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Nonprofit sponsor package planner](https://useaiblocks.com/skills/nonprofit-sponsor-package-planner). It takes the document.
+- The [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan). It takes the document.
+- The [Sales proposal narrative writer](https://useaiblocks.com/skills/agency-sales-proposal-strategist). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

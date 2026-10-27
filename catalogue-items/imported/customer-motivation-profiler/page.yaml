@@ -36,6 +36,8 @@ how_to_use:
   - Answer any questions the AI asks. It will ask if something key is missing.
   - Check that facts and guesses are kept apart. Mark any guess you know is wrong.
   - Test the profile against real buyer feedback before you use any of it in public claims.
+  - Use the profile as the input for your customer job map, positioning or copy.
+next: [customer-job-mapper, product-positioning-planner]
 output_sample:
   input:
     - A description of your target buyer

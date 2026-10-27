@@ -38,7 +38,7 @@ how_to_use:
   - Your AI first tells you the version your recent commits would produce. Check that it matches what you expected.
   - Read the config before you save it. The semantic-release example is set to not publish to npm. Turn that on only if you want packages published.
   - Run the dry run first, such as npx standard-version --dry-run. Nothing is released until you run it for real or push to your release branch.
-  - Node must be installed. The release workflow needs a GitHub token, and an NPM_TOKEN secret if you publish.
+  - Node must be installed. The release workflow needs a GitHub token with write access (the workflow sets this), and an NPM_TOKEN secret if you publish. Use only one config file, either .releaserc.json or release.config.js, and replace every owner/repo with your own.
 output_sample:
   input:
     - Your repo or package.json

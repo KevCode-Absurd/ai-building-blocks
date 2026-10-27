@@ -19,12 +19,14 @@ you_get:
   - Notes on section order and field conventions.
   - A list of missing or unconfirmed details.
 how_it_works:
-  - title: Step 1
-    text: Choose section order for a research, teaching or other academic role.
-  - title: Step 2
-    text: Format the supplied academic record into consistent sections.
-  - title: Step 3
-    text: Check dates, publication status and missing details.
+  - title: Choose the section order
+    text: Orders the sections for a research, teaching or other academic role.
+  - title: Ask for what is missing
+    text: Asks for missing details one at a time before drafting, such as dates, DOIs and your role on each grant.
+  - title: Format your record
+    text: Puts what you supplied into consistent sections in your field's style.
+  - title: Check the details
+    text: Checks dates and publication status, and lists what you still need to confirm.
 how_to_use:
   - "Gather your details first: degrees with dates and advisors, a publication list with DOIs, grants with amounts and your role, and the job advert."
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code, files or paid tools are needed.
@@ -32,6 +34,7 @@ how_to_use:
   - Answer any questions your AI asks about missing details.
   - Check the draft against the job advert. Confirm every item on the missing-details checklist.
   - Replace any sample names, grants and dates before you send the CV.
+  - Next, paste the confirmed draft into your application. Ask your AI for a cover letter or research statement as a separate task.
 output_sample:
   input:
     - Your degrees, with dates, advisors and thesis titles

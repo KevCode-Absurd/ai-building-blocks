@@ -30,11 +30,13 @@ you_get:
   - A localisation checklist
   - A list of legal rules to check
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
   - List the two or three countries you are weighing. Say what you sell and who buys it.
   - Add any demand you already see abroad, plus your budget and team size, if you have them.
   - Ask for a scored table, one pick with an entry route, a localisation checklist and a list of rules to check.
-  - Read the scores and check the rules with a local expert before you spend money.
+  - Read the scores. They are judgment calls, so change any you disagree with and ask for the totals again.
+  - Check the rules list with a local expert before you spend money.
+  - Run a small test first. Sell remotely to the top market before you hire or set up a company there.
 output_sample:
   input:
     - The countries you are weighing

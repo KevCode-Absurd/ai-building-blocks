@@ -33,7 +33,8 @@ how_to_use:
   - Connect your CRM, calendar and email if your AI allows it. If not, upload a sales spreadsheet, a calendar export and your emails.
   - Say "daily briefing" and name your sales scope, such as your own deals.
   - Check the meetings and deals first. Blanks mean the data was empty, not skipped.
-  - Pick an action from the top 3 and ask your AI to do it.
+  - Pick an action from the top 3 and ask your AI to do it. The follow-on skills it may link to (update-opportunity, log-activity) are separate items. Without them, your AI tells you what to do by hand.
+  - "The briefing page and slides work in Claude. In ChatGPT or Gemini, ask for one table with four rows: meetings, pipeline, inbox and top 3 actions."
 output_sample:
   input:
     - Your CRM, calendar and email, connected to your AI

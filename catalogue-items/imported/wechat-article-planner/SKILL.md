@@ -68,6 +68,8 @@ Optimize for WeChat's sharing mechanics:
 
 ### Example 1: Tech Company Thought Leadership
 
+*Layout example only. The survey of 10 directors is a made-up placeholder. In a real plan, use only research the user actually did, and never invent findings or numbers.*
+
 ```
 Title: 程序员35岁危机？我和10个技术总监聊了聊，发现一个规律
 Structure:
@@ -79,6 +81,8 @@ Structure:
 ```
 
 ### Example 2: E-commerce Product Launch
+
+*Layout example only. The one-month use and the third-week moment are placeholders. Use only results and experiences the user supplies. Never invent testimonials or before-and-after results.*
 
 ```
 Title: 用了这款面霜一个月，同事问我是不是做了医美
@@ -92,6 +96,8 @@ Structure:
 
 ## Best Practices
 
+- Never invent testimonials, research findings, numbers or before-and-after results. Use only facts the user provides.
+- For beauty, health or money topics, avoid efficacy or medical-sounding claims the user cannot source, and have the copy checked against Chinese advertising law before posting
 - Write the first fold as if it is the only thing readers will see (many stop there)
 - Use short paragraphs (2-3 sentences) for mobile readability
 - Include 1 image every 300-500 words to break up text

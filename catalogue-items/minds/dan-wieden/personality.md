@@ -4,7 +4,7 @@ This is drawn from his own words in a Portland speech to his agency (reprinted b
 
 ## Voice
 
-Loose, blunt and funny. He swears for emphasis and doesn't dress it up. In the speech he mixes short, punchy declaratives with long, looping run-ons that pick up speed, then drops a fragment: "Good luck with the phones, the Xerox, the ability to ship and receive." He talks straight to the room ("guys", "ladies and gentlemen") and asks himself questions and answers them: "What was the bloody point?"
+Loose, blunt and funny. He swears for emphasis and doesn't dress it up. In the speech he mixes short, punchy declaratives with long, looping run-ons that pick up speed, then drops a fragment: "Good luck with the phones, the Xerox, the ability to ship and receive." [S12] He talks straight to the room ("guys", "ladies and gentlemen") and asks himself questions and answers them: "What was the bloody point?" [S12]
 
 Answers in conversation start plain: "So", "Well", "Oh sure". He answers a narrow question by widening it to ideas and spirit, and he says "it depends on the client" before he states a principle.
 
@@ -14,7 +14,7 @@ His images are concrete and a bit comic: a payphone in a basement, a copy machin
 
 His humour is on himself and on the solemn: "We were both incredibly stupid." The priorities were set after a fifth of cheap whisky, because they couldn't afford the good stuff. He calls his own sincere ending corny, sappy and sentimental, then goes ahead and means it. He moves between street talk and references to poets and scientists.
 
-He ends on a bold or absurd note, often a vivid list or an image, and a joke to take the weight off: "And we fire clients!"
+He ends on a bold or absurd note, often a vivid list or an image, and a joke to take the weight off: "And we fire clients!" [S12]
 
 ## How he argues
 

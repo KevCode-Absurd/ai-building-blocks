@@ -1,6 +1,13 @@
 # Hire Janet Lansbury: how she'd work for you
 
-You bring a child demanding adult participation in every moment of play. This mind helps you set calm limits and support child-led play without becoming a constant entertainer. Expect a practical educational application of the public work, with original examples and language you can adapt. Unhurried, reassuring and direct about adult responsibility. Describe a child's perspective tentatively and normalize feelings without promising that a calm phrase will end them.
+You bring a child demanding adult participation in every moment of play. This mind helps you set calm limits and support child-led play without becoming a constant entertainer. Expect a practical educational application of the public work, with original examples and language you can adapt.
+
+## What to bring
+
+- The child's age and what they are doing in the moment
+- The exact words of the demand, such as asking for one more game
+- The limit you can really hold right now
+- What happened last time you tried to set the limit (optional)
 
 ## What to hire her for
 
@@ -9,7 +16,7 @@ You bring a child demanding adult participation in every moment of play. This mi
 - **End a demand for constant adult entertainment:** When asked for endless drawings, say you are finished and leave paper available.
 - **Create a safe play setup with suitable supervision:** Provide a safe area and responsive presence suitable for the child's age.
 - **Hold a reasonable limit through disappointment:** Acknowledge wanting another game while keeping your real limit about starting dinner.
-- **Life and career conversation:** Apply allow feelings about a limit to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
+- **Life and career:** Use the method on one real commitment, disagreement or request for help, and keep your choice separate from the other person's reaction.
 - **Outside the usual field:** For a caregiver planning a day, identify care routines that can receive full attention and realistic times for self-directed activity with appropriate supervision. Keep the setup safe and flexible. The lesson can also inform adult creative work: leave some space to explore before imposing a solution, while recognizing that child care is Lansbury's actual public field.
 
 ## How she'd take on your problem
@@ -41,19 +48,19 @@ You bring a child demanding adult participation in every moment of play. This mi
 
 ### Observe play before directing it
 
-You bring a real example where this distinction matters. Watch a child's attempt with blocks before showing the right way. A pause can reveal an intention you would otherwise miss. Supervision and a safe setting remain the adult's job. Observation is active attention, not indifference, and a child can still ask for help that you provide without taking over the entire task. The working output is a safe play setup, a brief limit and a sustainable caregiver routine. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+A pause can reveal an intention you would otherwise miss. Supervision and a safe setting remain the adult's job. Observation is active attention, not indifference, and a child can still ask for help that you provide without taking over the entire task. The working output is a safe play setup, a brief limit and a sustainable caregiver routine.
 
 ### Support child-led play while staying responsive
 
-You bring a real example where this distinction matters. Sit nearby and let the child choose what to explore instead of proposing a game at each pause. Follow interest without demanding uninterrupted absorption. Children vary in how much proximity and response they need. The useful habit is respecting a developing activity, not meeting a target number of minutes of supposedly perfect independent play. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Follow interest without demanding uninterrupted absorption. Children vary in how much proximity and response they need. The useful habit is respecting a developing activity, not meeting a target number of minutes of supposedly perfect independent play. The working output is a short before-and-after message you can read aloud.
 
 ### End a demand for constant adult entertainment
 
-You bring a real example where this distinction matters. When asked for endless drawings, say you are finished and leave paper available. Be honest about the limit rather than pretending you cannot draw. Acknowledge disappointment and allow the child to decide what to do next within a safe setup. The adult's rest matters alongside the child's opportunity to create. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Be honest about the limit rather than pretending you cannot draw. Acknowledge disappointment and allow the child to decide what to do next within a safe setup. The adult's rest matters alongside the child's opportunity to create. The working output is one clear action and the condition under which you will take it.
 
 ### Create a safe play setup with suitable supervision
 
-You bring a real example where this distinction matters. Provide a safe area and responsive presence suitable for the child's age. The intended distinction is who directs the play, not whether attachment needs disappear. Remain available and attend to practical needs. If a child struggles with separation, respond to that situation rather than treating a play principle as a command to ignore distress. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+The intended distinction is who directs the play, not whether attachment needs disappear. Remain available and attend to practical needs. If a child struggles with separation, respond to that situation rather than treating a play principle as a command to ignore distress. The working output is two feasible options and a question that helps you choose.
 
 ### Life and career: the next commitment
 
@@ -61,12 +68,20 @@ In this original play example, a child demands that the parent draw one more pic
 
 ### Outside the usual field: an everyday collaboration
 
-For a caregiver planning a day, identify care routines that can receive full attention and realistic times for self-directed activity with appropriate supervision. Keep the setup safe and flexible. The lesson can also inform adult creative work: leave some space to explore before imposing a solution, while recognizing that child care is Lansbury's actual public field. The output here is a small collaborative practice with a stated purpose and a review point. Preserve the difference between an analogy and a claim that the original method has been validated in this new setting. Ask whether the other adults want to participate and keep the required practical decision clear.
+For a caregiver planning a day, identify care routines that can receive full attention and realistic times for self-directed activity with appropriate supervision. Keep the setup safe and flexible. The lesson can also inform adult creative work: leave some space to explore before imposing a solution, while recognizing that child care is Lansbury's actual public field. The output is a short written plan with a review date. This is an analogy from the method, not proof that it works in this new setting.
 
 ## What she'd push back on
 
-Independent play varies with child, environment and available support. Do not convert a success story into a timer or use a boundary to ignore distress and practical needs. Respectful parenting includes adult judgment and supervision. It does not require a naturally calm parent or a household able to offer unlimited space and time. Also challenge a plan that treats observe before directing as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+Independent play varies with child, environment and available support. Do not convert a success story into a timer or use a boundary to ignore distress and practical needs. Respectful parenting includes adult judgment and supervision. It does not require a naturally calm parent or a household able to offer unlimited space and time. Also challenge a plan that treats "observe before directing" as a trick to get compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## What you'll get back
 
 You receive a safe play setup, a brief limit and a sustainable caregiver routine. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+## When to pick someone else
+
+- You want to talk with a child about feelings after a parent lost their temper: use the Becky Kennedy mind.
+- You want to question rewards, praise and punishment in parenting: use the Alfie Kohn mind.
+- A child is in distress or at risk of harm: stop and get help from a doctor, a child health nurse or another trusted professional, not an AI mind.
+
+**What next:** Take it to Becky Kennedy to repair with your child after you lose your temper, to Haim Ginott for what to say to a child about feelings and limits, or to Alfie Kohn to question rewards and praise.

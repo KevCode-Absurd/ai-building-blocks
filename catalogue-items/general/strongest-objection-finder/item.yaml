@@ -7,10 +7,11 @@ role: check
 job: strategy
 level: beginner
 inputs:
-  - {type: plan, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: audit_report}
 uses: []
+next: [case-against-writer, seven-question-startup-scorer]
 origin: own
 version: 1.0.0
 example_pending: true

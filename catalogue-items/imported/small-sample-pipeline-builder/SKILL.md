@@ -3,8 +3,8 @@ name: skeleton-first
 description: "Prove a data/AI/agent workflow end to end on a tiny sample, find cheap wins, then scale in cost-gated steps within budget."
 category: workflow
 risk: safe
-source: self
-source_type: self
+source: community
+source_type: community
 date_added: "2026-10-11"
 author: Dan He
 tags: [llm, cost, pipeline, etl, rag, dbt, snowflake, budget, data-engineering]

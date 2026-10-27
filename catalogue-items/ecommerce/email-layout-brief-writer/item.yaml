@@ -10,6 +10,7 @@ inputs:
   - { type: copy_draft, required: true }
   - { type: brand_brain, required: false }
   - { type: image, required: false }
+  - { type: audit_report, required: false }
 outputs:
   - { type: page_layout_spec }
 uses: []

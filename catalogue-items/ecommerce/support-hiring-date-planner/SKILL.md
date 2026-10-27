@@ -50,6 +50,13 @@ MISSING: <what you did not give>
 
 Add: "This does not set pay or hours. Rules differ by country, so check with a qualified person."
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Support capacity planner](https://useaiblocks.com/skills/support-capacity-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Checks
 - Every figure comes from your numbers, with the sum shown for one month.
 - The forecast is called only as good as your sales forecast.

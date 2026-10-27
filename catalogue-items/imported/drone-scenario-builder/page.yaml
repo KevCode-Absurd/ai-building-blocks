@@ -44,7 +44,7 @@ output_sample:
     - A terrain elevation file (optional)
     - The drone's waypoints and the sensors to attach
   prerequisites:
-    - MATLAB with UAV Toolbox and Navigation Toolbox
+    - MATLAB with UAV Toolbox and Navigation Toolbox (paid MathWorks software that needs a licence)
     - An AI that can run MATLAB code, or you run the code yourself
   output:
     - name: Scenario

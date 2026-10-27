@@ -36,7 +36,7 @@ how_to_use:
   - List your competitors, the platforms and your niche. Add a time window if you want one.
   - If you give only company names, check the profiles your AI picks. Names can match more than one brand.
   - Read the brief. Its notes on rivals are inferred from public posts, so treat them as signs, not facts.
-  - Pick one or two tests from Recommended Content Tests and run them.
+  - Pick one or two tests from Recommended Content Tests and run them. Pull the data again after four weeks to see what moved.
 output_sample:
   input:
     - Your competitors' handles, links or company names

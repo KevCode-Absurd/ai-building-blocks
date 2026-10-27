@@ -8,10 +8,10 @@ role: build
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: slide_deck
     required: true
+  - type: question
+    required: false
 outputs:
   - type: document
     required: true

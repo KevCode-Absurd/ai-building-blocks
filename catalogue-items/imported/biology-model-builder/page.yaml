@@ -5,7 +5,7 @@ name: Biology model builder
 summary: Build a SimBiology model in MATLAB code from your list of species and reactions, with an optional diagram. Edit existing models the same way.
 job: build-software
 headline: Biology model builder
-subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram. Bring the species and reactions to model. Use the result to plan your next step.
+subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram. Bring the species and reactions to model. Then simulate or fit the saved model.
 explain: |
   Describe the species and reactions in your biological system, and get a working SimBiology model written as MATLAB code, with a diagram if you want one. You no longer need to click through the Model Builder by hand or guess function names.
 
@@ -16,12 +16,13 @@ when:
   - You need a clean diagram of a model for a paper or a talk.
   - You are loading a saved project and must keep its diagram layout.
 not_for:
-  - "You want to run a simulation of a finished model: use the simbiology-simulate-model skill, which is not yet listed here, or run it in MATLAB yourself."
-  - "You want to fit parameters to data or run population or NCA work: use the simbiology-fit-model skill, not yet listed here."
+  - "You want to run a simulation of a finished model: use the Biology model simulator."
+  - "You want to fit parameters to data or run population or NCA work: use the Biology model fitter."
   - "You do not have MATLAB with SimBiology: ask a colleague who does, or draw the model on paper first."
 you_give:
   - The species and reactions to model
   - Rate laws and starting values
+  - Units for each species, the form of each rate law and the compartment each species sits in
   - An existing model or .sbproj file (optional)
   - Whether you want a diagram (optional)
 you_get:
@@ -29,12 +30,13 @@ you_get:
   - Parameters, rules, events and doses set up
   - A laid-out model diagram (optional)
   - A saved model file you can reopen
+  - The result is a MATLAB script, a saved .mat or .sbproj file and a layout check count for the diagram
 how_to_use:
   - Open an AI that can run MATLAB with SimBiology. Add the skill folder or paste its text into the chat.
   - Paste your species, reactions, rate laws, starting values and units. Add a .sbproj file if you have one.
   - Say if you want a diagram. Without that request, the model is built in code only.
   - Run the code your AI writes and check the model has the parts you listed.
-  - Save the model file. Then simulate or fit it with the simbiology-simulate-model or simbiology-fit-model skills.
+  - Save the model file. Then simulate it with the Biology model simulator or fit it with the Biology model fitter.
 output_sample:
   input:
     - Your species and reactions, with rate laws
@@ -44,6 +46,8 @@ output_sample:
   prerequisites:
     - MATLAB with SimBiology that your AI can run
     - The skill's helper scripts folder, added to the MATLAB path
+    - MATLAB and SimBiology are paid MathWorks products, so you need a licence for both
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Model build code
       contains: MATLAB code that adds compartments, species, reactions, parameters, rules, events, doses, observables and variants to a SimBiology model.

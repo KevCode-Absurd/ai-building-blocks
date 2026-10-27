@@ -33,7 +33,7 @@ works_best_with:
   inputs:
     - Emergency and long-term ED succession is a board responsibility.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
 output_sample:
   input:

@@ -79,7 +79,7 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 2. **Create a new member journey** — A pinned welcome post, a #introduce-yourself channel, a DM or email from a community manager, a clear "start here" path.
 3. **Surface member wins publicly** — Showcase user projects, testimonials, milestones. This reinforces identity and signals that participation has rewards.
 4. **Run recurring community rituals** — Weekly threads (e.g., "What are you working on?"), monthly AMAs, seasonal challenges. Rituals create habit.
-5. **Identify and invest in power users** — 1% of members generate 90% of value. Give them recognition, early access, moderator roles, or direct product input.
+5. **Identify and invest in power users** — a small share of members often generates most of the value (a rule of thumb, not a measured figure). Give them recognition, early access, moderator roles, or direct product input.
 
 ### Building a Brand Ambassador / Advocate Program
 
@@ -103,7 +103,7 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 Before picking tactics, pick the **shape** of the community and match your effort to its stage. See **`references/community-models.md`** for:
 
 - **The 5 community models** — Support-Driven (GreenPal), Product-Development (Ydata), Education/Enablement (LiveAgent), Founder-Led (Bento, Postaga) — each with a "best when…" fit test tied to a primary goal.
-- **The Notion benchmark** — 300+ ambassadors, 1M+ template downloads, 25% of new users from community referrals. The north star for community-led growth at scale.
+- **The Notion benchmark** — the author cites Notion's community as the model for community-led growth at scale. The figures the author gives for it are unchecked here, so do not repeat them as fact.
 - **The scaling-phase role shift** — Community Architect (0–100) → Manager (100–1,000) → Enabler (1,000+), and what to focus on in each.
 
 Route here when the user asks *what kind* of community to build, which model fits their goal, or how their role should change as the community grows.

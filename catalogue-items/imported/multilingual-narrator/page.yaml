@@ -31,8 +31,10 @@ you_get:
   - Setup steps for your ElevenLabs key
   - The character count used by each request
 how_to_use:
+  - This uses ElevenLabs, a paid service. Check your plan's price and character limit before you start. Your text is sent to ElevenLabs.
   - Make an ElevenLabs account and open a chat with an AI that can run code and use the internet.
   - Paste the skill into the chat, then paste the text you want read aloud.
+  - "A prompt you can paste: Use the text to speech skill to read this aloud in [language] and save it as output.mp3."
   - Tell your AI the language and any voice you like. If you have no key yet, let it walk you through sign-in.
   - Play the MP3 and check numbers, dates and names sound right. Ask for another voice or model if not.
   - Drop the file into your video editor or course platform. Each request uses character credits on your ElevenLabs plan.

@@ -25,7 +25,7 @@ you_get:
   - A review of the fix against your standards and the issue
   - A pull request showing the failing run before and the passing run after
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
   - Give it the steps that trigger the bug. When it states the cause, read it and say yes or no. It will not edit until you do.
   - After the missing-test step, add the tests it proposes and run them. Make sure one fails on the old code.
@@ -103,3 +103,5 @@ output_sample:
       contains: A summary with the failing run before and the passing run after, plus what could go wrong on merge.
     - name: Hand-back summary
       contains: Each step's file and one list of everything marked MISSING.
+next: [ci-failure-fixer]
+before: []

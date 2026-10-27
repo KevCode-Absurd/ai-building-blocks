@@ -35,6 +35,7 @@ how_to_use:
   - Tell your AI which convention and genome build each file uses. Say so if you do not know.
   - Add your reference FASTA if you want variants normalised. It must be uncompressed.
   - Ask your AI to convert the positions, check the contigs, or audit the file. Read any warnings before you use the result.
+  - Keep the warnings and the note of what was checked with the converted file. If your files use different genome builds, move them to one build first with a liftover tool such as CrossMap, then run this again.
 output_sample:
   input:
     - Positions, intervals or variants to convert, or a BED, GFF, GTF or VCF file

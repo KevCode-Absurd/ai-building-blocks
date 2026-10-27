@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It plans the set, then checks that the product stays the same.
 new_slug: product-photo-set-builder
 name: Product photo set builder
-summary: "Turn one product photo into a full set of product photos: new angles, scenes and close-ups. Your AI writes one prompt per shot."
+summary: "Turn one product photo into a full set of product photos: new angles, scenes and close-ups. Your AI writes one prompt per shot. Free in ChatGPT or Gemini; the dlazy tool in the skill is paid."
 job: product-photos
 headline: Product photo set builder
 subhead: A full set of product images from a single photo, with new angles, scenes and framing that still look like the same item. Marketplace listings often need five or more images, and detail pages need many more.
@@ -35,6 +35,7 @@ how_to_use:
   - Ask for the shot list and one prompt per shot. Check that the product description is identical in every prompt.
   - Draw the images. In ChatGPT or Gemini, upload your photo with each prompt. The example commands in this skill use the paid dlazy gpt-image-2 tool, which needs a dlazy account and a way to run commands.
   - Put all images side by side. Check that it is the same item in each one, then rerun only the shots that drift.
+next: [marketplace-photo-rule-checker, main-image-a-b-test-planner]
 output_sample:
   input:
     - One product photo with a clean background

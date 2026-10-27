@@ -5,28 +5,29 @@ description: Use when you want to write down how your team works, or when a pile
 
 # Team culture memo writer
 
-Culture is what a team rewards and punishes, whatever the wall says. This skill writes a short memo that states the results you need, the people you want, how much people decide alone and how feedback works. It lists behaviours people can do, not values they can nod at. For the first message to a new team, use "New leader first message writer".
+Culture is what a team rewards and punishes, whatever the wall says. This skill writes a short memo that states the results you need, the people you want, how much people decide alone and how feedback works. It lists behaviours people can do, not values they can nod at. For the first message to a new team, use "New leader first message writer". Not for acting on a warning, exit or pay decision: check that with your HR policy, local employment law or an HR adviser first. Not for a values poster or slogans.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Sorting plain rules into checkable form is text work any strong chat AI does well with this skill.
@@ -40,7 +41,7 @@ How to start:
 ## Steps
 1. **Name the few results.** Write the three or four results this team must deliver this year, each with a number or a date. If the user gave only activities, turn each into the result it should produce and ask them to confirm.
 2. **Write who you want in each seat.** For each role, write the problem the person solves and what great looks like. State what top-of-market pay means for you: the pay you would offer a person who is clearly the best you could hire. Mark MISSING where you have no figure.
-3. **Set who decides what.** List ten recurring decisions. For each, mark: decide alone, tell the team first, or ask first. For every ask-first item, write the context a person needs to decide alone: the goal, the limits and the date. If you can supply the context, move the item out of ask-first.
+3. **Set who decides what.** List ten recurring decisions. For each, mark: decide alone (do it, no one needs telling), tell the team first (do it, but say so beforehand), or ask first (wait for a yes). For example, buying a 20 dollar tool is decide alone, changing a customer's price is tell first, and hiring is ask first. For every ask-first item, write the context a person needs to decide alone: the goal, the limits and the date. If you can supply the context, move the item out of ask-first.
 4. **Write the keeper test.** Write one test for each person: if they said they were leaving, would you fight to keep them? Say what you do when the answer is no, such as a fair talk and a generous exit, and who has that talk.
 5. **Write the feedback rule.** State that people give blunt feedback to the person, not about them, with a reason and a suggested change. Say when feedback is given (soon after the event), who gives it to whom and what happens if someone talks behind a back.
 6. **List what you reward and punish.** List the behaviours that actually led to praise, pay or promotion in the last year, and the ones that led to a warning or exit. Compare them with the behaviours you hope for. Write any gap plainly.
@@ -54,9 +55,8 @@ The memo, then a table of decisions marked alone, tell or ask, then the behaviou
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Lead the team** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
-- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft and plan.
-- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- The [New leader first message writer](https://useaiblocks.com/skills/new-leader-first-message-writer).
+- The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

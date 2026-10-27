@@ -21,6 +21,7 @@ not_for:
   - "You are testing a change to a design people already use: use the Breaking change reviewer."
   - "You built a one-off internal tool that nobody else will build on: skip this and ask a teammate for a quick read."
   - "You want to know if a design is easy for users to follow: test it with a few real users, not this checker."
+  - "You want a product, page or screen reviewed: use the Design ten-principles reviewer."
 
 you_give:
   - The design, as a spec, API description, file format or tool overview

@@ -7,7 +7,7 @@
 // Used by tools/add-needs.mjs (the "Before you start" and "After this" sections in each SKILL.md) and by
 // site/scripts/build-index.mjs (the same chain on each block page and in workflow packs).
 
-import { GENERIC_PORTS, nextSteps, sameFamily, subjectSimilarity, workflowPredecessors } from "../../site/src/lib/next-steps.mjs";
+import { GENERIC_PORTS, familiesOf, nextSteps, sameFamily, subjectSimilarity, workflowPredecessors } from "../../site/src/lib/next-steps.mjs";
 
 export const SITE = "https://useaiblocks.com";
 export const BRAND_BRAIN = "website-brand-brain-builder";
@@ -50,6 +50,20 @@ export const INPUTS = {
   question: { label: "Your question", what: "the decision or problem, and what a good outcome looks like" },
   mind_view: { label: "Views from great minds", what: "each mind's answer from the steps before this one, or their skill files from the minds library" },
 };
+/** The same hand-offs in plain words, for jobs outside the maker's line of work (their usual words are about ads). */
+const PLAIN = {
+  brief: { label: "A brief", what: "what the work is for, who it's for and what a good result looks like" },
+  lessons_register: { label: "Your lessons", what: "what past attempts taught you: what worked, what failed and why" },
+  script: { label: "A script", what: "the script, part by part" },
+};
+/**
+ * The areas whose work reads the brand brain's products and buyers parts: marketing, pictures, selling, writing and
+ * strategy (positioning and prices sit under leadership), plus the store jobs that write product pages and set prices.
+ * Elsewhere (stock, supply, finance) product data is a product list.
+ */
+const BRAIN_AREAS = ["marketing", "design", "sales", "writing", "leadership"];
+const BRAIN_TASKS = new Set(["set-up-store", "run-your-store", "set-prices", "sell-on-amazon"]);
+const brainWork = (task) => BRAIN_TASKS.has(task) || BRAIN_AREAS.some((a) => familiesOf(task).has(a));
 
 /** Which brand brain files a task reads (from the brand file builder's "which file for which task" and its slices). */
 const BRAIN_FILES = {
@@ -79,7 +93,10 @@ const lower = (s) => s.charAt(0).toLowerCase() + s.slice(1);
 /** "A video ad script" or "Your offer" as it reads after "the": "video ad script", "offer". */
 const bare = (s) => lower(s).replace(/^(a|an|your) /, "");
 
-/** The inputs a block takes from outside: its own inputs, and for a workflow anything a step needs that no earlier step makes. */
+/**
+ * The inputs a block takes from outside: its own inputs, and for a workflow anything specific a step needs that no
+ * earlier step makes. A step's generic input (a brief, a plan, a report) is the hand-off between steps, not an extra.
+ */
 function outsideInputs(b, bySlug) {
   const own = b.inputs ?? [];
   if (!b.steps?.length) return own;
@@ -88,11 +105,24 @@ function outsideInputs(b, bySlug) {
   for (const s of b.steps) {
     const step = bySlug[s.uses];
     if (!step) continue;
-    for (const p of step.inputs ?? []) if (!made.has(p.type)) extra.push({ type: p.type, required: false });
+    for (const p of step.inputs ?? []) if (!made.has(p.type) && !GENERIC_PORTS.has(p.type)) extra.push({ type: p.type, required: false, step: true });
     for (const o of step.outputs ?? []) made.add(o.type);
   }
   const seen = new Set(own.map((p) => p.type));
   return [...own, ...extra.filter((p) => !seen.has(p.type) && (seen.add(p.type), true))];
+}
+
+/**
+ * An input as it reads for a block in job `task`. A hand-off named for one line of work is only that thing, made by
+ * our named maker, inside that line of work: a finance check's brief is not a buyer brief, a decision log's lessons
+ * are not ad lessons, and a stock sheet's product data is not the brand brain. Outside it: plain words, no maker.
+ * Asking for the brand brain by name counts anywhere.
+ */
+function inputInfo(type, task, bySlug, describe) {
+  const info = INPUTS[type] ?? describe(type);
+  const home = info.maker && bySlug[info.maker];
+  if (!home || type === "brand_brain" || (info.part ? brainWork(task) : sameFamily(task, home.task))) return info;
+  return PLAIN[type] ?? (info.part || GENERIC_PORTS.has(type) ? describe(type) : { label: info.label, what: info.what });
 }
 
 /**
@@ -105,12 +135,11 @@ export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
     // A transformation may take and return the same type (notes, drafts, tables).
     // outsideInputs already tracks what earlier workflow steps have made; a
     // later output must not erase material needed to start the job.
-    let info = INPUTS[p.type] ?? describe(p.type);
-    // A generic hand-off (a brief, a shortlist, a draft) is only made by our named maker inside that maker's line of
-    // work: a finance check's brief is not a buyer brief.
-    if (info.maker && GENERIC_PORTS.has(p.type) && bySlug[info.maker] && !sameFamily(b.task, bySlug[info.maker].task)) info = describe(p.type);
+    const info = inputInfo(p.type, b.task, bySlug, describe);
+    // One step reading the brand brain (a plain-English editor keeping the voice) is no reason to ask for it outside brand work.
+    if (p.step && info.maker === BRAND_BRAIN && !brainWork(b.task)) continue;
     if (info.maker === b.slug) continue; // a block never needs what it makes (the brand file builder needs no brand brain)
-    if (b.steps?.some((st) => st.uses === info.maker)) continue; // a workflow whose own step makes it
+    if (info.maker && b.steps?.some((st) => st.uses === info.maker)) continue; // a workflow whose own step makes it
     const maker = info.maker && bySlug[info.maker] ? bySlug[info.maker] : null;
     const key = maker ? maker.slug : p.type;
     const item = byKey.get(key) ?? { key, label: info.label, what: info.what, parts: [], required: false, maker: maker ? ref(maker) : undefined };
@@ -158,7 +187,7 @@ export function chainOf(b, bySlug, describe, { before, all } = {}) {
       const hands = (x.outputs ?? []).map((o) => o.type).filter((t) => reads.has(t));
       if (!hands.length || (hands.every((t) => GENERIC_PORTS.has(t)) && subjectSimilarity(b, x, all) < 0.05)) continue;
       seen.add(x.slug);
-      const own = needsOf(x, bySlug, describe), info = INPUTS[hands[0]] ?? describe(hands[0]);
+      const own = needsOf(x, bySlug, describe), info = inputInfo(hands[0], b.task, bySlug, describe);
       order.push({ ...ref(x), label: info.label, bring: [...own.needed, ...own.helps].filter((i) => !i.maker).map((i) => `${lower(i.label)}${i.required ? "" : " (optional)"}`), uses: [...own.needed, ...own.helps].filter((i) => i.maker).map((i) => i.label) });
     }
   }
@@ -215,7 +244,8 @@ export function nextOf(b, all, max = 5, override) {
   if (outs.has("brand_brain")) { outs.add("product_data"); outs.add("persona"); } // its products and buyers parts
   // Results no block takes by name still go somewhere: opening lines are ad copy, a theme is a page, and so on.
   for (const t of [...outs]) if (LIKE[t]) outs.add(LIKE[t]);
-  const link = (x) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set((x.inputs ?? []).filter((p) => outs.has(p.type)).map((p) => bare(INPUTS[p.type]?.label ?? p.type.replace(/_/g, " "))))] });
+  // What it takes is what this block made, so a brief is "the brief", not a buyer brief.
+  const link = (x) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set((x.inputs ?? []).filter((p) => outs.has(p.type)).map((p) => bare((PLAIN[p.type] ?? INPUTS[p.type])?.label ?? p.type.replace(/_/g, " "))))] });
   // A reviewed per-item list (page.yaml or item.yaml `next:`), then the chosen lists below, beat the worked-out paths.
   const chosen = Array.isArray(override) ? override : NEXT_CHOSEN[b.slug];
   if (chosen) return chosen.map((slug) => all.find((x) => x.slug === slug)).filter((x) => x && x.slug !== b.slug).slice(0, Math.max(max, chosen.length)).map(link);
@@ -229,7 +259,7 @@ export function nextOf(b, all, max = 5, override) {
 export function planOf(b, bySlug, all, describe, links = b.links ?? {}) {
   const { needed, helps } = needsOf(b, bySlug, describe);
   const usesBrain = [...needed, ...helps].some((i) => i.key === BRAND_BRAIN);
-  return { needed, helps, chain: chainOf(b, bySlug, describe, { before: links.before, all }), brain: usesBrain ? brainUse(b) : null, next: nextOf(b, all, 5, links.next) };
+  return { job: b.task, needed, helps, chain: chainOf(b, bySlug, describe, { before: links.before, all }), brain: usesBrain ? brainUse(b) : null, next: nextOf(b, all, 5, links.next) };
 }
 
 const itemLine = (i) => {
@@ -276,7 +306,14 @@ export function afterSection(plan, nl = "\n") {
     "## After this",
     "When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:",
     // A job with no "next" label falls back to the skill's own name; then just name the skill once.
-    ...plan.next.map((x) => (x.label === x.name ? `- The [${x.name}](${x.url}). It takes the ${takes(x)}.` : `- **${x.label}** with the [${x.name}](${x.url}). It takes the ${takes(x)}.`)),
+    // A reviewed next-step list can name a skill whose inputs match nothing this one makes; then leave out "It takes the ."
+    ...plan.next.map((x) => {
+      const t = takes(x);
+      const tail = t ? ` It takes the ${t}.` : "";
+      // The job's phrase only says something when the link moves to another job, and "Set up AI" holds unrelated set-ups.
+      const named = x.label === x.name || x.job === plan.job || x.job === "set-up-ai";
+      return named ? `- The [${x.name}](${x.url}).${tail}` : `- **${x.label}** with the [${x.name}](${x.url}).${tail}`;
+    }),
     "If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.",
   ].join(nl);
 }

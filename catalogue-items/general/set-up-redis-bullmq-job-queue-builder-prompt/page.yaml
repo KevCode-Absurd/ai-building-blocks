@@ -5,29 +5,31 @@ job: build-software
 headline: Redis + BullMQ Job Queue coding prompt
 subhead: Get a coding brief for a Redis and BullMQ job queue, with scoped jobs, retries and failed-job handling.
 explain: |-
-  Share your project and the required feature. Get a coding brief for redis + bullmq job queue, with setup and test steps.
+  Some work should not run while a visitor waits: sending emails, running reports, calling an AI. A job queue holds that work and runs it in the background, with retries when a job fails.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This prompt builds the smallest working queue with Redis and BullMQ. It writes a shared connection, a queue, a worker that logs each job, and a test script that sends three test jobs. It explains priority, retries and concurrency in plain words.
 when:
-  - You need a coding brief for redis + bullmq job queue.
-  - You need set up redis + bullmq job queue prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are building an app that needs background work, such as agent tasks or emails.
+  - You want a first queue that you can test in a few minutes.
+  - You are new to coding and want each part explained simply.
 not_for:
   - "You need a production queue with strict TLS checks: set up certificate checks first, or use a managed queue service."
   - "You only need one task to run later or on a timer: use a simple scheduled job from your host instead."
   - "You do not have a code project or a Redis server yet: set up the project and Redis first, then come back."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, open in Claude Code
+  - A running Redis server and its REDIS_URL, saved in .env.local
 you_get:
-  - A coding brief for redis + bullmq job queue
-  - Required files, setup gaps and test cases
+  - A connection file, a queue file, a worker file and a test script
+  - A plain explanation of priority, retries and concurrency
+  - A test run that shows three jobs completed
 how_to_use:
   - Open your code project in an AI that can edit files, such as Claude Code.
   - Make sure Redis is running and REDIS_URL is in your .env.local file.
   - Paste the prompt from the download and ask the AI to list anything missing before it writes code.
   - Run the test script with npx tsx scripts/test-queue.ts and check that all three jobs log as completed.
-  - Before real use, turn on certificate checks for your Redis link, and ask the AI to add the real job code in the worker.
+  - The prompt keeps certificate checks on for rediss:// links. If your Redis server uses a self-signed certificate, tell the AI, and it turns the checks off for testing only. Turn them back on before real use.
+  - Once the three test jobs complete, ask the AI to replace the logging in the worker with your real job code.
 output_sample:
   input:
     - Your code project, opened in a coding AI such as Claude Code
@@ -49,11 +51,13 @@ output_sample:
     - name: Plain explanation
       contains: Short notes on why to use a queue, what priority means, how retries work and what concurrency means.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Check what you have
+    text: Your coding AI looks for your project and REDIS_URL, and lists anything missing before it writes code.
+  - title: Install the packages
+    text: It asks before it installs bullmq and ioredis.
+  - title: Write the queue files
+    text: A shared connection, a queue called agent-jobs, a worker that handles 3 jobs at a time, and a test script.
+  - title: Test and explain
+    text: You run the test script and check that all three jobs log as completed. The AI explains the parts in plain words.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -30,7 +30,7 @@ Reorders products in a manual Shopify collection by inventory level without navi
 
 ## Safety
 
-> ⚠️ Step 2 executes `collectionReorderProducts` which changes the product display order immediately. The sort is reversible — run again with the opposite `sort_by` to restore previous order — but the original custom order cannot be recovered once overwritten. The `moves` array passed to the mutation must be complete; partial moves produce undefined ordering. Always run with `dry_run: true` first to review the computed sort order before committing.
+> ⚠️ Step 2 executes `collectionReorderProducts` which changes the product display order immediately. Running again with the opposite `sort_by` only reverses the stock order. The original custom order cannot be recovered once overwritten. The `moves` array passed to the mutation must be complete; partial moves produce undefined ordering. Always run with `dry_run: true` first to review the computed sort order before committing.
 
 `collectionReorderProducts` only works on manual (custom) collections. If the collection has `sortOrder` other than `MANUAL`, the skill must abort with a clear message: "Cannot reorder: collection sort order is not MANUAL. Switch the collection to manual sorting in the Shopify admin first."
 
@@ -167,4 +167,4 @@ No CSV output. The skill reports the new sort order in the session completion su
 2. `collectionReorderProducts` is asynchronous — `job.done` may be `false` immediately. The sort completes within a few seconds; refresh the storefront to verify.
 3. Use `sort_by: inventory_asc` to push out-of-stock products to the bottom of the collection page, reducing customer frustration.
 4. For large collections (250+ products), pagination is automatic but increases execution time. Consider running during off-peak hours.
-5. This skill only reads `totalInventory` from the products node — it does not aggregate per-location. If you need location-specific sorting, use the `low-inventory-restock` skill to identify which products to prioritize.
+5. This skill only reads `totalInventory` from the products node — it does not aggregate per-location. If you need location-specific sorting, use the Restock list builder skill to find which products to restock first.

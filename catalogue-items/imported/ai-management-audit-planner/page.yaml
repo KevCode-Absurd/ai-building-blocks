@@ -33,7 +33,7 @@ how_to_use:
   - Gather your AI system list, policies, roles, known risks and past audit findings. Write each set down in plain text first.
   - Open your AI tool. Paste the skill text, or upload the skill folder if your tool reads files.
   - "Say which job you want: the gap check, the risk register or the audit plan. Then paste your details."
-  - To run the scripts, use an AI that can run Python code. Otherwise ask it to follow the same steps in chat.
+  - To run the scripts, use an AI that can run Python code. Without Python, ask it to follow the same steps in chat. For the gap check, paste your AI system list, policies and roles. For the risk register, paste each risk and the system it touches. For the audit plan, paste the systems and teams in scope and who could audit them.
   - Check each gap, risk and audit date against your own records before you act on it.
   - Give each fix an owner and a due date, then take the plan to your management review.
 output_sample:
@@ -56,3 +56,4 @@ output_sample:
       contains: Audit scope, timing and auditor assignments, with checks that nobody audits their own work.
     - name: Bottom line and next steps
       contains: One sentence on gap severity, the decision type, the evidence, and three next steps with owners and dates.
+next: [iso-27001-audit-planner, privacy-management-audit-planner, ai-impact-assessment-writer]

@@ -40,8 +40,8 @@ Forensic evidence must be provided as static files (CSV exports, PDF statements)
 ## Technical Investigation Steps
 
 ### 1. Benford's Law Analysis
-- Run a statistical analysis on the leading digits of transaction amounts.
-- Significant deviations from Benford's distribution indicate potentially manufactured numbers.
+- Run a statistical analysis on the leading digits of transaction amounts. Use `scripts/calculate.py` (`benford_test`): it compares the observed first digits with the Benford curve using a chi-square test and flags a result above 15.507 (8 degrees of freedom, 5 percent level).
+- A flag means the digits look unusual, not that the numbers were invented. Benford's Law needs a few hundred amounts that span several orders of magnitude, and many honest data sets (such as fixed prices) fail it.
 
 ### 2. Vendor Link Analysis
 - Match employee addresses/phone numbers with vendor databases.
@@ -56,17 +56,25 @@ Forensic evidence must be provided as static files (CSV exports, PDF statements)
 
 ---
 
+## When not to use
+
+- You need proof of fraud or a named suspect: hire a qualified fraud examiner or a lawyer. This only points to where to look.
+- You want a routine check of your controls: use a formal audit or an internal control review by an accountant.
+- You have no records, only a hunch: gather bank statements or exports first.
+
+---
+
 ## Output Format
 
 ### Forensic Report Structure
 
 **Executive Summary**
-- Summary of the alleged scheme.
+- Summary of the suspected pattern (not a finding of fraud).
 - Quantified loss (Total amount of fraud detected).
 
 **Evidence Chain**
-- **The Scheme**: Step-by-step description of how the fraud occurred.
-- **Key Suspects**: List of entities/individuals involved.
+- **The Pattern**: Step-by-step description of what the records suggest may have happened, marked as unconfirmed.
+- **Entities to verify**: List of entities (and roles) that appear in the flagged transactions. These are leads, not accusations. Never name a person as a suspect without documentary evidence and review by a qualified examiner.
 - **Evidence Logs**: Table of specific transactions with reference IDs.
 
 **Control Recommendations**

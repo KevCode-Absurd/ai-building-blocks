@@ -5,9 +5,9 @@ name: Safe database query runner
 summary: Ask a question about your Postgres data in plain words. Get a read-only SQL query run for you, with the results back and write commands blocked.
 job: work-with-files
 headline: Safe database query runner
-subhead: Ask a question about your PostgreSQL data in plain words. Your AI picks the right database, writes a read-only query, runs it and shows the rows with a short answer. Commands that would change data are refused.
+subhead: Ask a question about your PostgreSQL data in plain words. Your AI picks the right database, writes a read-only query, runs it and shows the rows with a short answer. The session is set to read-only, and the checks refuse commands that write. Your database login should be read-only too.
 explain: |
-  Most people who want a number from their database wait for a developer. This skill lets your AI write and run the SQL for you. It is built so the AI cannot edit your data by accident.
+  Most people who want a number from their database wait for a developer. This skill lets your AI write and run the SQL for you. It is built to make accidental edits unlikely: the session and the checks are read-only. The login is the real control.
 
   You list each database in a small settings file on your computer, with a name, a note on what it holds and a login. A Python script then lists the databases and tables, shows the columns and runs queries. When you have several databases, the AI reads your notes to pick the right one.
 
@@ -38,6 +38,7 @@ how_to_use:
   - Read the SQL it shows before you trust the answer. Check the table and column it used.
   - Check the row count and whether it hit the 10,000 row limit. Ask for a narrower query if it did.
   - Results can hold personal data. Do not share them outside the people allowed to see them.
+  - Next, paste the rows into your spreadsheet, or use the DuckDB big file query helper for file-based data.
 output_sample:
   input:
     - Your question about the data, in plain words

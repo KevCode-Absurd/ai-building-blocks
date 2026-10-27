@@ -30,10 +30,11 @@ you_get:
   - Ways to keep members active
   - A path from member to advocate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add the skill, or paste the text of SKILL.md into a new chat.
+  - Tell it what your product does, which platform you use (Discord, Slack, Circle, Reddit or another), your stage and size, your main goal and your ideal member. Add your product marketing notes if you have them.
+  - Say which result you want first. The choices are a community strategy doc, a channel plan, a new member welcome, a ritual calendar, an ambassador program brief or a health audit.
+  - Read the assumptions it flags and correct any that are wrong.
+  - Next, run the launch steps in the plan. To test one idea with a cost cap, hand it to the Community growth experiment planner.
 not_for:
   - You want a small, time-boxed test with a cost cap and a stop rule. Use the Community growth experiment planner.
   - Your members are developers and you need channels, welcome text and rules. Use the Developer community builder.

@@ -186,7 +186,9 @@ Do not implement fixes as part of this skill. The output is a read-only diagnosi
 
 **User request:**
 
-> Investigate this failure with @bug-hunt-swarm, prove the root cause, implement the smallest safe fix, and verify it.
+> Investigate this failure with @bug-hunt-swarm and rank the likely causes with the fastest proof step for each. Do not edit any files.
+
+Once you know the cause, ask for the fix as a separate request. This skill only diagnoses.
 
 ## Limitations
 

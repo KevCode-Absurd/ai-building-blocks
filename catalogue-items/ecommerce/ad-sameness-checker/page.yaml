@@ -9,7 +9,7 @@ headline: "Ad sameness checker"
 subhead: Paste your live ads with the persona, angle, offer and format of each, plus frequency for cold ads. It groups ads that are really one idea and counts the distinct ideas. You get a sameness score out of 100, which ads to replace, and what to change in each.
 
 explain: |
-  Fifty ads can be five ideas. If your ads match on persona, angle, offer and format, they are one ad as far as Meta is concerned. One agency says Meta's system groups similar ads under one ID, and that tiny changes such as a new background colour or a different model pose are too small to count. That is the speaker's reading of Meta's system and not a published rule. Viewers who see the same ad more than twice buy less often, and a different ad in third or fourth place keeps that chance up.
+  Fifty ads can be five ideas. If your ads match on persona, angle, offer and format, they are one ad as far as Meta is concerned. One agency says Meta's system groups similar ads under one ID, and that tiny changes such as a new background colour or a different model pose are too small to count. That is the speaker's reading of Meta's system and not a published rule. The same speaker cites research that viewers who see the same ad more than twice buy less often, and says a different ad in third or fourth place keeps that chance up. We have not checked that research.
 
   This skill groups your ads by the four fields and counts the distinct clusters. The sameness score is the share of your ads that repeat an idea already in the account. Lower is better: 0 means every ad is a different idea. It also flags cold ads with a frequency above 2, and ads that call out the whole audience.
 

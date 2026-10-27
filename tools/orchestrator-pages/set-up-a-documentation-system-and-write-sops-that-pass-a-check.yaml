@@ -29,7 +29,7 @@ you_get:
   - A runbook for each thing that breaks
   - A check of every procedure and runbook with what a stranger could not follow
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 4 skill files in the order they run: Documentation system planner, Process and SOP writer, On-call runbook writer and SOP and runbook checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste how your team works and what goes wrong. It plans the system and writes the procedures.
   - Read the runbooks with the person who fixes things today. Correct what they know differently.

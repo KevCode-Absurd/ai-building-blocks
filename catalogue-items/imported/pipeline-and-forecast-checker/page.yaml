@@ -7,8 +7,8 @@ summary: Give it your deals and quota. Get pipeline cover, forecast accuracy and
 job: money-and-investing
 headline: Pipeline and forecast checker
 subhead: Give it your deals and quota. Get pipeline cover, forecast accuracy and
-  sales cost numbers. Bring deals with value, stage and age. Use the result to
-  plan your next step.
+  sales cost numbers. It uses your own deal data and flags deals that are old or
+  too large a share of the pipeline.
 explain: |
   Three numbers a sales leader needs: is there enough pipeline to hit quota, how accurate were past forecasts, and what does each sale cost to win. You get them from your own deal data.
 
@@ -19,18 +19,43 @@ when:
   - One big deal makes up most of the pipeline.
   - You want to know what it costs to win a customer.
 you_give:
-  - Deals with value, stage and age
-  - Quota target
-  - Past forecasts and results
-  - Sales and marketing spend (optional)
+  - "Your open deals, one per line, with stage, value, close date, owner and age in days"
+  - Your quota target
+  - Past forecasts next to what you actually sold, by period
+  - Sales and marketing spend and customer numbers (optional)
 you_get:
   - Pipeline coverage ratio
   - Stage conversion and velocity
   - Forecast accuracy by period
   - Risk flags for aged or concentrated deals
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Export your open deals from your CRM or a sheet. You need stage, value, close date, owner and age in days for each deal, plus your quota.
+  - Export past forecast periods with the forecast and the actual result for each.
+  - In an AI that can run Python, upload the skill folder and the files. Ask it to run the pipeline analyzer, the forecast tracker and the cost calculator.
+  - In a plain chat, paste the skill text and your tables. Ask it to work out the same numbers step by step and show its sums.
+  - Read the coverage ratio first, then the flagged deals. Check two or three flags against your CRM before you act on them.
+  - Take the forecast accuracy and the aged deals to your next pipeline review.
+not_for:
+  - Your sales process has no closed-won history yet. The forecast and conversion numbers need past results, so wait until you have a few periods.
+  - You sell something that is not a recurring-revenue product. The cost benchmarks assume that model, so check them against your own market.
+  - You only want your CRM's own pipeline report. Use that if it already shows coverage and aged deals.
+output_sample:
+  input:
+    - Your open deals with stage, value, close date, owner and age in days
+    - Your quota
+    - Past forecasts and actual results by period
+    - Sales and marketing spend (optional)
+  prerequisites:
+    - An AI that can run Python for the scripts, or paste tables into a chat for hand calculation
+  output:
+    - name: Pipeline coverage
+      contains: Total pipeline against quota as a ratio, with a rating against the usual 3 to 4 times target.
+    - name: Stage conversion and velocity
+      contains: How many deals move from each stage to the next, and how fast revenue moves through the pipeline.
+    - name: Risk flags
+      contains: Deals older than twice the usual time in their stage, and any single deal over 40 percent of the pipeline.
+    - name: Forecast accuracy
+      contains: The average miss in percent (MAPE), whether you over- or under-forecast, and a rating.
+    - name: Cost efficiency
+      contains: Customer acquisition cost and payback numbers with a rating, if you gave spend and customer data.
+next: [outbound-sales-team-planner]

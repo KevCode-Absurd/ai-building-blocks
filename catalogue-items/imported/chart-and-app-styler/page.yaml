@@ -9,14 +9,14 @@ subhead: MATLAB charts and apps that use one clean set of colours, with dark mod
 explain: |
   MATLAB charts and apps that use one clean set of colours, with dark mode that works. You give it your figures or app, and it sets palettes, colormaps and themes the way MATLAB expects, instead of scattering colour values through your code.
 
-  It keeps brand colours in one struct. It uses colororder for series that are categories and colormap for smooth gradients, and never mixes them up. For apps built with uifigure it uses the newer theme tools: dark mode through lightness flipping, a callback that reacts when the system theme changes, and uistyle for conditional colours in tables and trees. It can also bring in a palette from Material Design, Adobe Color or Tailwind. MATLAB is required.
+  It keeps brand colours in one struct. It uses colororder for series that are categories and colormap for smooth gradients, and never mixes them up. For apps built with uifigure it uses the newer theme tools: dark mode through lightness flipping, a callback that reacts when the system theme changes, and uistyle for conditional colours in tables and trees. It can also bring in a palette from Material Design, Adobe Color or Tailwind. MATLAB is required. This is MathWorks' skill, shared under a BSD 2-Clause licence that allows use only with MathWorks products.
 when:
   - Your MATLAB plots all look default blue and orange and you want your brand colours.
   - Your app needs a dark mode that follows the user's system setting.
   - You want a table to highlight rows that cross a threshold.
   - You have a colour scheme from a design tool and need it inside MATLAB.
 not_for:
-  - "You want to pick chart types or build a chart from scratch: ask your AI for a chart, or use matlab-build-chart if you have it."
+  - "You want to pick chart types or build a chart from scratch: ask your AI for a chart, or use the MATLAB chart maker."
   - "You need to colour one plot element once: set its Color property directly."
   - "You style web pages or CSS themes: use your web tool's own theme settings, since this only covers MATLAB."
 you_give:
@@ -35,7 +35,8 @@ how_to_use:
   - Add your brand colours, or a hex palette from a design tool, if you have one.
   - Say whether you want dark mode and whether your data is categories or smooth values.
   - Run the code in MATLAB. Dark mode in apps needs R2025a or newer. Check both light and dark views.
-  - "Test it: if a component ignores the theme, remove its explicit colour."
+  - "Test it: if a component ignores the theme, remove its explicit colour. List any component that still shows the default theme."
+  - Next, use the MATLAB app builder to change the layout, or the MATLAB chart maker to add new charts.
 output_sample:
   input:
     - Your MATLAB figure or app code

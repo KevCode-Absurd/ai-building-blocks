@@ -25,12 +25,14 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 
 ## Examples
 
+**Every number in the examples below is illustrative, not measured on a real site.** Never quote them as results. In a real run, report only the user's own measurements, and write [your LCP] or "unknown" where you have none. The front-matter label `risk: critical` is the original author's tag for skills that change live code. It means: ask before you change production, and test first.
+
 ### Example 1: Optimizing Core Web Vitals
 
 ```markdown
 ## Performance Audit Results
 
-### Current Metrics (Before Optimization)
+### Current Metrics (Before Optimization, illustrative)
 - **LCP (Largest Contentful Paint):** 4.2s ❌ (should be < 2.5s)
 - **INP (Interaction to Next Paint):** 350ms ❌ (should be ≤ 200ms)
 - **CLS (Cumulative Layout Shift):** 0.25 ❌ (should be < 0.1)
@@ -154,7 +156,7 @@ npm install date-fns
 }
 \`\`\`
 
-### Results After Optimization
+### Results After Optimization (illustrative, not measured)
 
 - **LCP:** 1.8s ✅ (improved by 57%)
 - **INP:** 150ms ✅ (improved by 57%)
@@ -167,7 +169,7 @@ npm install date-fns
 ```markdown
 ## Bundle Size Optimization
 
-### Current State
+### Current State (illustrative)
 - **Total Bundle:** 850KB (gzipped: 280KB)
 - **Main Bundle:** 650KB
 - **Vendor Bundle:** 200KB
@@ -195,11 +197,11 @@ npx webpack-bundle-analyzer dist/stats.json
 npm uninstall moment
 npm install date-fns
 
-# Before
+// Before (JavaScript code, not shell commands):
 import moment from 'moment';
 const formatted = moment(date).format('YYYY-MM-DD');
 
-# After
+// After (JavaScript code):
 import { format } from 'date-fns';
 const formatted = format(date, 'yyyy-MM-dd');
 \`\`\`
@@ -279,7 +281,7 @@ module.exports = {
 </script>
 \`\`\`
 
-### Results
+### Results (illustrative, not measured)
 
 - **Total Bundle:** 380KB ✅ (reduced by 55%)
 - **Main Bundle:** 180KB ✅
@@ -427,7 +429,7 @@ import Image from 'next/image';
 />
 \`\`\`
 
-### Results
+### Results (illustrative, not measured)
 
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|

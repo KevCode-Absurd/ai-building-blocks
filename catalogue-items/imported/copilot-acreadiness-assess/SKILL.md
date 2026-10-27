@@ -26,7 +26,7 @@ This skill is the *Measure* step in AgentRC's **Measure → Generate → Maintai
    ```
    The `CommandResult<T>` JSON envelope is your input for the next step.
 
-4. **Hand off to the `ai-readiness-reporter` custom agent** to interpret the JSON and produce `reports/index.html`. The agent renders via the bundled template `report-template.html` (shipped alongside this skill) so every report has an identical look & feel. The agent:
+4. **Hand off to the `ai-readiness-reporter` custom agent** to interpret the JSON and produce `reports/index.html`. If that agent is not installed, do this step yourself: read `report-template.html`, fill it in from the JSON, and write `reports/index.html`. The agent renders via the bundled template `report-template.html` (shipped alongside this skill) so every report has an identical look & feel. The agent:
    - Reads the bundled `report-template.html` and substitutes placeholders with real data.
    - Inlines all CSS, ships a single static file (works under `file://`).
    - Renders maturity level, overall score, grade, pass-rate vs threshold.

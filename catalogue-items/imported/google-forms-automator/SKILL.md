@@ -68,6 +68,8 @@ function getEmail(response) {
       return item.getResponse();
     }
   }
+  // No email question found: falls back to the script owner's own address.
+  // Add an email question to the form, or this thank-you goes to you, not the respondent.
   return Session.getActiveUser().getEmail();
 }
 ```
@@ -75,6 +77,8 @@ function getEmail(response) {
 ### Example 2: Log each response to a Google Sheet
 
 ```javascript
+const SHEET_ID = "PASTE_YOUR_SHEET_ID_HERE";  // the long ID in your sheet's web address
+
 function onFormSubmit(e) {
   const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName("Responses");
   const itemResponses = e.response.getItemResponses();
@@ -86,6 +90,16 @@ function onFormSubmit(e) {
 ### Example 3: Branch on a multiple-choice answer
 
 ```javascript
+const MANAGER_EMAIL = "PASTE_THE_EMAIL_TO_ALERT_HERE";
+
+// Lists every question and answer as plain text for the email body
+function itemResponsesText(e) {
+  return e.response.getItemResponses()
+    .map(r => r.getItem().getTitle() + ": " + r.getResponse())
+    .join("
+");
+}
+
 function onFormSubmit(e) {
   const items = e.response.getItemResponses();
   for (const item of items) {

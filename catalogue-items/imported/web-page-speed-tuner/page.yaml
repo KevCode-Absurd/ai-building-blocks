@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Run a free speed test on your key pages, such as PageSpeed Insights, and copy the numbers.
-  - Paste your site address or code, the numbers, and what feels slow.
+  - Your AI cannot load a live site. Paste the page HTML, the response headers (for example from curl -I) and the PageSpeed or Lighthouse report, plus what feels slow.
   - Read the score and the failed checks first. Any number you did not give is marked unknown.
-  - Start with the top fix on the ranked list, then test again.
+  - Start with the top fix on the ranked list. Fixes to the page code are for your developer. Caching and compression fixes are for your host or CDN admin. Run the same speed test again afterwards to compare.
 output_sample:
   input:
     - Your site address or code
@@ -57,3 +57,4 @@ output_sample:
       contains: Changes to resource order, caching rules, compression and files that block the first paint.
     - name: Config or code changes
       contains: Settings or code you can apply to make each fix.
+next: [page-speed-fixer, website-speed-tuner]

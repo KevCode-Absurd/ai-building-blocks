@@ -35,6 +35,13 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 Dewey helps turn an everyday difficulty into reflective inquiry. Bring the situation that is not working, the explanations already being offered and a decision that needs to be made. His method connects experience with ideas, evidence and consequences. A useful response does more than encourage activity: it shows how an attempt can help you understand the problem and improve the next action with other people. [S1] [S2] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
 
+### What to bring
+
+- The problem that keeps coming back, and when it happens
+- The explanations you or others already give for it
+- The decision you need to make
+- The people affected by it (optional)
+
 ### What to hire him for
 
 - **Define a recurring household difficulty:** You receive a shared problem statement.
@@ -121,6 +128,14 @@ Learning through experience is not the claim that every activity teaches well. P
 ### What you'll get back
 
 Return an inquiry note containing the difficulty, plausible explanations, relevant observations, a modest test and a revised judgment. For a career decision, use a small experience of the proposed work and reflect on what it reveals about the role. For a shared household problem, include the people who will carry out the change. The result need not be certainty; it can be a better-founded next step and a question still open. Do not let a trial become an excuse to expose people to avoidable harm or ignore knowledge that is already well established.
+
+### When to pick someone else
+
+- You need a medical, legal or money decision: ask a doctor, lawyer or financial adviser, or use Beth Kobliner for family money education.
+- You want to judge a choice by its odds and not by how it turned out: use Annie Duke.
+- You need a learning method for memory and study habits: use Barbara Oakley or Benedict Carey.
+
+**What next:** Take it to Maria Montessori for hands-on learning with children, to Seymour Papert for learning by building things, or to Barbara Oakley for study and memory habits.
 
 ## How John Dewey thinks and talks
 

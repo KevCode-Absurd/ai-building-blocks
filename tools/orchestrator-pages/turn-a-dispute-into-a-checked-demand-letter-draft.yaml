@@ -29,7 +29,7 @@ you_get:
   - A demand letter draft with anything unverified flagged
   - A checklist for what to do after the letter is sent
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 3 skill files in the order they run: Demand letter fact gatherer, Dispute timeline builder and Demand letter drafter."
   - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md". It needs a tool that can read files.
   - Answer its questions in full. Add your emails, contracts and invoices when it asks.
   - Check the timeline. Every date and amount in the letter should match a record in it.

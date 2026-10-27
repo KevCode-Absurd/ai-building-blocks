@@ -28,6 +28,7 @@ you_give:
   - Realized fees, meaning what clients actually paid (from invoices and receipts)
   - Loaded delivery cost per hour or in total (from payroll and benefits)
   - The shared service pool and its activity counts, for the same month (from the cost ledger and service logs)
+  - Normal capacity for the shared service, in the same unit as the counts (from your own definition). Without it, idle cost is not worked out.
 you_get:
   - A utilization and delivery margin view, with unbilled work kept
   - Delivery contribution, passed to the second step with the month and cost ledger
@@ -85,7 +86,6 @@ tweaks:
 judge:
   - Delivery labor and shared pool do not overlap; activity units and hours are bridged explicitly; unused capacity cost remains visible rather than being hidden in unit fees.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

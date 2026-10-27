@@ -5,7 +5,7 @@ name: Excel and MATLAB bridge writer
 summary: Write VBA macros that move Excel data into MATLAB, run your MATLAB commands and bring results or charts back into your sheet.
 job: work-with-files
 headline: Excel and MATLAB bridge writer
-subhead: Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results. Bring what data moves between Excel and MATLAB. Use the result to plan your next step.
+subhead: Tell it which data moves between Excel and MATLAB and which MATLAB command to run. You get VBA macros that send the data, run MATLAB and bring the results back into your sheet.
 explain: |
   Working Excel VBA macros that send your sheet data into MATLAB, run MATLAB commands and bring the results or charts back into cells, so Excel stays your front end and MATLAB does the heavy maths.
 
@@ -30,12 +30,13 @@ you_get:
   - Code to bring a MATLAB figure into your sheet as an image (if you ask for one)
   - A cell formula version of the same job (if you ask for one)
 how_to_use:
-  - Check you are on Windows with Excel and MATLAB installed, and open MATLAB first.
+  - Check you are on Windows with Excel and MATLAB installed, and open MATLAB first. MATLAB and the Spreadsheet Link add-in are paid MathWorks software, so you need a MathWorks licence. The skill's own licence (see LICENSE.md) allows use only with MathWorks products.
   - Open Claude, ChatGPT or Gemini and paste this skill.
   - Say what data moves, which MATLAB command to run and where results should land.
   - Copy the VBA code into a new module in your workbook. Your AI does not run it for you.
   - Test the macro on a copy of the workbook with a small range of data.
   - Check the results in the cells, then run it on your live data.
+  - Next, add a button or a keyboard shortcut for the macro, and keep a copy of the workbook before you extend it.
 output_sample:
   input:
     - What data moves between Excel and MATLAB

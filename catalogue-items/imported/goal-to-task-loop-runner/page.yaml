@@ -28,11 +28,13 @@ you_get:
   - Results verified task by task
   - "A clear stop: finished or stuck"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run Python and read and write files, such as Claude Code. A plain chat window cannot run the loop.
+  - Download the skill folder and open your AI inside it, so it can find the scripts and the 18 ready-made setups.
+  - Tell your AI your goal and name the finished result so it can be checked. A vague goal is refused with questions.
+  - Pick the setup that fits your work, or point it at your own folder of skills.
+  - Let it compile the plan. Read each task and its check before it starts.
+  - It runs one task at a time and checks each one before the next. Stop when it says finished or stuck.
+  - Only use plan and state files you made yourself. They run commands on your computer, so never run ones from someone else.
 not_for:
   - You want to design a repeatable loop on paper, with no code running. Use the Agent loop designer.
   - You only want to keep one to-do list up to date. Use the Task list keeper.
@@ -58,3 +60,4 @@ output_sample:
       contains: The result of each check, recorded by the controller and not by the AI.
     - name: Close or escalate
       contains: A finish only when every task is verified or waived, or a stop that tells you why it is stuck.
+next: [agent-loop-designer, long-goal-coordinator]

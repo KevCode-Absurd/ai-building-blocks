@@ -30,12 +30,12 @@ you_get:
   - Step-by-step instructions
   - Example of the fix in use
 how_to_use:
-  - Use Claude Code with auto-memory on. Copy this skill folder into your skills directory.
-  - Check that the skill-extractor agent is installed too. The skill calls it to write the files.
+  - Use Claude Code with auto-memory on (Claude Code keeps notes about your project in a memory folder under your .claude folder). Copy this skill folder into your skills directory.
+  - Check that the skill-extractor agent is installed too. The skill calls it to write the files. It is not in this folder. If it is missing, your AI writes the files itself.
   - Run /si:extract with a short description of your pattern. Add --name to pick the skill name.
   - Add --dry-run to preview first, or --output to choose where the folder goes.
   - Answer up to two questions if it asks what problem the fix solves.
-  - Read the new SKILL.md without your old context. If it makes sense, install it.
+  - Read the new SKILL.md without your old context. If it makes sense, install it. Sharing it with clawhub is optional, and you should check whether that service needs an account or costs money.
 output_sample:
   input:
     - A short description of the pattern or fix

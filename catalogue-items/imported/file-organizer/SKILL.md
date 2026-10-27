@@ -167,7 +167,7 @@ Proposed structure:
   README.md                   ← unchanged
 
 7 files moved, 3 directories created, 2 files unchanged.
-Import paths in Go files updated automatically.
+Note: moving Go files does not fix their import paths. After the move, run `go build ./...` and fix the imports by hand or with a tool such as goimports before you commit.
 
 Confirm? (yes / no / edit plan)
 ```

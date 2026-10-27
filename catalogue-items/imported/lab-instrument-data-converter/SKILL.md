@@ -173,8 +173,8 @@ For PDF-only files, extract tables using pdfplumber, then apply Tier 2 parsing.
 Before writing a custom parser, ALWAYS:
 
 1. **Check if allotropy supports it** - Use native parser if available
-2. **Find a reference ASM file** - Check `references/examples/` or ask user
-3. **Review instrument-specific guide** - Check `references/instrument_guides/`
+2. **Find a reference ASM file** - Ask the user for one (this folder has no example files)
+3. **Review the instrument notes** - Check `references/supported_instruments.md` and `references/field_classification_guide.md`
 4. **Validate against reference** - Run `validate_asm.py --reference <file>`
 
 ## Common Mistakes to Avoid
@@ -227,7 +227,7 @@ User: "Convert this cell counting data to Allotrope format"
 [uploads viCell_Results.xlsx]
 
 Claude:
-1. Detects Vi-CELL BLU (95% confidence)
+1. Detects Vi-CELL BLU (state how sure you are and why; never invent a confidence figure)
 2. Converts using allotropy native parser
 3. Outputs:
    - viCell_Results_asm.json (full ASM)

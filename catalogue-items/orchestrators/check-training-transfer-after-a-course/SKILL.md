@@ -9,6 +9,25 @@ See whether a course changed the work. Compare real post-course work with the sk
 
 This workflow chains two skills from the library. Run them in order. Save each result and pass the next step what it needs. It judges evidence of skills in use. It never judges a person.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file support:** They can read work samples and documents you paste. None of them can watch anyone work.
+<!-- /needs -->
+
 ## What you need
 
 - **The learning objectives** (required): what the course said people would be able to do, as written before it ran. If they are missing, ask once. If still missing, write `MISSING: learning objectives` and stop.
@@ -53,6 +72,14 @@ Skill | practice on real work | supervisor support | evidence to collect | check
 HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Manager training and practice session planner](https://useaiblocks.com/workflows/build-a-practical-manager-training-session).
+- The [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger, warren-buffett]
 credits:
-  - {title: "Poor Charlie's Almanack", by: "Charles T. Munger, ed. Peter D. Kaufman", used: "The order of the steps: mispriced bet tester, twenty-punch bet ranker, incentive checker, room for error plan checker, sit-still rule writer"}
+  - {title: "Poor Charlie's Almanack", by: "Charles T. Munger, ed. Peter D. Kaufman", used: "The ideas behind the steps: test the odds after the price, back only a few bets, check who profits from steering you, leave room for error, then sit still"}
 generated_from: intake/munger-invest-few-big-bets/skeleton.yaml

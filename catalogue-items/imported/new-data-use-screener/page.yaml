@@ -30,10 +30,12 @@ you_get:
   - Conditions to meet
   - A handoff into a full assessment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your saved privacy setup notes.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - "Describe the new data use: what data, whose data, why, and whether a vendor is involved."
+  - Add your privacy practice setup. In a chat that cannot read files, paste it in. Without it the skill stops, or runs on US defaults if you say "provisional".
   - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - Other commands it names (pia-generation, ai-governance-legal, product-legal) are not included. Skip those handoffs, or start the full assessment in a separate chat.
+  - It cites laws from the AI's knowledge or search. Have your privacy counsel check every citation before you rely on it.
 output_sample:
   input:
     - A short description of the new data use or feature

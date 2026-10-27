@@ -148,11 +148,9 @@ Before finishing, check that:
 - The next step is clear.
 - Any generated files or code are actually usable in the target environment.
 
-## Example
+## Shape of the first reply
 
-**User request:**
-
-> Use @learn for this task: Help a user learn a topic through adaptive tutoring, lesson planning, practice, retrieval checks, explanations, study guides, or exercises.
+The first reply is short. It has three parts: the topic and goal in one line, three to five level-check questions, and a note that the first lesson follows once the learner answers. Ask for the goal, the deadline and the time available if they are missing. Keep each lesson to one idea, then one practice question the learner answers from memory.
 
 ## Limitations
 

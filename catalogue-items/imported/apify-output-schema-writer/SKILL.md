@@ -10,8 +10,10 @@ date_added: '2026-09-21'
 risk: unknown
 ---
 ## When to Use
-- Use when this upstream workflow matches the user's stated goal.
-- Use when the task requires the procedures documented in this skill.
+- Use when an Apify Actor's results look like raw JSON in Console and you want a clear table.
+- Use when you are about to publish an Actor and want a tidy results view.
+- Use when several Actors in one repository need matching schemas.
+- Do not use before the Actor has code that saves results.
 
 # Generate Actor output schema
 
@@ -428,8 +430,8 @@ Report:
 ## Examples
 
 ```text
-User: Apply this skill to my current task.
-Assistant: Follow the workflow in this skill, cite limitations, and ask before risky steps.
+User: Write the output schema for the Actor in ./my-actor.
+Assistant: Reads the source, finds every place data is saved, writes the schema files, links them in actor.json, and lists what to check.
 ```
 
 ## Limitations

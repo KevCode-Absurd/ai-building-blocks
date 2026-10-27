@@ -26,11 +26,11 @@ you_get:
   - Leadership roles for the chair, the committee and staff
   - A phased timeline with a gate for the public launch
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, web access or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. No code, web access or paid tool is needed. A feasibility study (15 to 30 confidential interviews with top prospects and leaders) is usually run by an outside consultant. If you run it yourself, use a neutral interviewer and a draft case for support.
   - Paste the skill text, or upload the skill folder if your AI takes files.
   - Paste your project cost, goal, prospect list and interview notes. Say what is missing.
   - Ask for the feasibility findings, then the gift table, then the phases and roles.
-  - Check each tier. If the top tiers have no named prospect, the goal is not yet real.
+  - Check each tier. If the top tiers have no named prospect, the goal is not yet real. The lead gift share (about 10 to 20 percent of the goal) and the launch threshold (about 50 to 70 percent committed) are common rules of thumb. Test them against your own pipeline.
   - Take the table to your board before any donor is asked.
 output_sample:
   input:
@@ -42,13 +42,13 @@ output_sample:
     - name: Feasibility findings
       contains: A recommended goal, leaders who could serve, fixes to the case for support, and whether your team can run the campaign.
     - name: Gift range table
-      contains: Gift tiers worked back from the goal, with the prospects you have at each tier and the gaps.
+      contains: Gift tiers worked back from the goal. Each tier shows its goal amount, the named prospects and the gap, so you can see which tiers have no support.
     - name: Campaign phases and timeline
       contains: The planning, quiet, public and closing phases, with named milestones.
     - name: Leadership roles
       contains: What the chair, the steering committee and the staff campaign director each do.
     - name: Public launch gate
-      contains: The share of the goal that must be committed before you announce the campaign.
+      contains: The share of the goal that must be committed before you announce the campaign. Common practice is 50 to 70 percent, which you should check against your own pipeline.
     - name: Progress dashboard
       contains: Money committed against the goal, by phase and by tier, for board updates.
 how_it_works:

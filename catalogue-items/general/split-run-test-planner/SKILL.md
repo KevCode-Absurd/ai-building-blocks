@@ -7,7 +7,7 @@ description: Use when you have two versions of an ad, email, page or mailing and
 
 A split-run test shows version A to half of an audience and version B to the other half at the same moment, in the same place. That removes the usual excuses: the weather, the day, the position on the page, the order of the ads. Only the one thing you changed is left to explain a difference. This skill plans that test.
 
-**Not for:** a quick one-message plan for just two versions (use the Two-version ad test planner), versions that must run in different places such as two magazines or towns (use the Cross-over copy test planner), ranking headline ideas before a test (use the Keyed headline test planner), or reading results you already have (use the Split-run result reader). To choose what people reply to, use the Test reply offer planner.
+**Not for:** versions that must run in different places such as two magazines or towns (use the Cross-over copy test planner), ranking headline ideas before a test (use the Keyed headline test planner), or reading results you already have (use the Split-run result reader). To choose what people reply to, use the Test reply offer planner.
 
 <!-- needs: hand-written (needs_mode: manual in item.yaml). Keep this section in step with the page. -->
 ## Before you start

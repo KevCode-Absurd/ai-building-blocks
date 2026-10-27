@@ -5,22 +5,27 @@ description: Use when a store with subscriptions wants to know where and why sub
 
 # Subscription churn audit
 
-You read a store's subscription data and find where subscribers leave. You change nothing in the subscription app. You score four parts, 25 points each, show every threshold and say which thresholds are the sources' and which are ours.
+You read a store's subscription data and find where subscribers leave. You change nothing in the subscription app. Your export comes from the subscription app (Skio or Recharge, for example, which are paid accounts) and your email tool (Klaviyo, for example, also paid). You score four parts, 25 points each, show every threshold and say which thresholds are the sources' and which are ours.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Email flow** (yours): an email/SMS flow: trigger, timing, messages, segments.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Email flow** with the [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer). Bring email flow (optional), audit report (optional). It uses your brand brain.
+2. This one.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results, spreadsheet. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, spreadsheet, email flow. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Skio or Recharge:** Their exports give cancel dates, order numbers and reasons.
@@ -38,12 +43,12 @@ Needs at least a few hundred subscribers for the day-by-day chart to be readable
 
 ## Steps
 1. **Chart cancels by days since the first order.** Group them: day 0 to 1 (deal seekers who were never going to stay), days 2 to 6 (quiet, the product has not arrived), days 7 to 14 (first delivery window, product try-out), around day 28 (the billing reminder), the first rebill (the confirmation; in one audited store this was the biggest spike, about double the reminder day) and days 31 to 45. A second source names three peaks on a healthy subscription: day 1, day 28 and a window of 31 to 45. Label each spike with a likely cause, not a certainty.
-2. **Value gap.** Compare month-6 and month-12 value per customer for those whose first order was a subscription against everyone else. One brand saw $195 against $130 at month 6 (+50 percent), about 2 times by month 12 and 3 times by month 24. That is one store. The gap is the value of pushing take rate. Do not repeat cost-to-win or lifetime value work here; point to the Subscription unit economics skill.
+2. **Value gap.** Compare month-6 and month-12 value per customer for those whose first order was a subscription against everyone else. One brand saw $195 against $130 at month 6 (+50 percent), about 2 times by month 12 and 3 times by month 24. That is one store. The gap is the value of pushing take rate. Do not repeat cost-to-win or lifetime value work here; point to the Subscription payback checker.
 3. **Reminder and receipt.** Count cancels per 100 billing reminders sent. One example sat at 8.6 before a redesign. Check whether the first-rebill day is the biggest spike.
 4. **Campaign cancels.** Count cancels within a few days of each campaign sent to subscribers. Flag any send where cancels exceed starts.
 5. **Save rate.** 15 percent or more is good, 20 percent strong, and under 10 percent is a red flag.
 6. **Monthly churn.** Show it but do not score it. One practitioner called 24 percent a month terrible, and got one brand to 17 percent. Their goal of under 5 percent is a target, not a result. As a starting line to adjust, which is ours and not a source's, look hard at anything above about 15 percent a month.
-7. **Route each finding:** Onboarding writer for days 0 to 14; Billing reminder and confirmation writer for the reminder and receipt spikes; Subscriber retention calendar for campaign cancels; Subscription cancel flow builder for save rate.
+7. **Route each finding:** New customer onboarding sequence writer for days 0 to 14; Billing reminder and confirmation writer for the reminder and receipt spikes; Subscriber retention calendar for campaign cancels; Subscription cancel flow builder for save rate.
 
 ## Score it
 The score measures where subscribers leave, in four parts of 25 points. The thresholds below are ours unless marked as a source's. Adjust them to the store's own history.
@@ -83,11 +88,10 @@ MISSING: <what you did not give>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
+- The [Subscription cancel flow builder](https://useaiblocks.com/skills/subscription-cancel-flow-builder). It takes the audit report.
+- The [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer). It takes the audit report.
+- The [Subscriber retention calendar planner](https://useaiblocks.com/skills/subscriber-retention-calendar). It takes the audit report.
+- **Make an offer people want** with the [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

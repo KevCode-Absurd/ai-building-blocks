@@ -1,11 +1,13 @@
 ---
 name: two-version-result-reader
-description: Paste this above the audience size, replies and sales for two ad versions. It works out the gap, checks it against luck, and says keep, rerun or stop.
+description: Paste this prompt, then add the audience size, replies and sales for each of two ad versions. It works out the gap, checks it against luck, and says keep, rerun or stop.
 ---
 
 # Two-version result reader
 
 A plain read of a two-version test: how big the gap is, whether it is luck, and what to do next.
+
+Not for a test with only one version: there is no gap to read, so wait for a second version. Not for a handful of replies: the call will be rerun, so collect more first. For a full report with every check, use the Split-run result reader.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -55,16 +57,14 @@ CALL: <keep | rerun | stop>, because <reason>
 LESSON: <one line, for this audience>
 NEXT TEST: <what to change>
 MISSING: <what you did not give>
+CHECKS MISSED: <one line for each check that failed or could not run, or none>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Campaign performance reviewer](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- The [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader).
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

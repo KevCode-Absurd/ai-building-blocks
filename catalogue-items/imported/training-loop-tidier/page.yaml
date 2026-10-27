@@ -37,6 +37,7 @@ how_to_use:
   - Run the new script and your old one for a few epochs. Check the loss curves look the same.
   - Fix any gaps, then switch on multi-GPU by changing one Trainer setting.
   - Your AI needs to run Python to test the result. If it cannot, run the script yourself.
+  - Keep your old script as a reference until the new one matches it. Then merge, and add a small test that runs one epoch.
 output_sample:
   input:
     - Your current PyTorch training script
@@ -58,3 +59,4 @@ output_sample:
       contains: Best model saving, early stopping and learning rate logging, set to watch your validation loss.
     - name: Run command
       contains: The one command to start training on your laptop or your GPUs.
+next: [tiny-gpt-trainer]

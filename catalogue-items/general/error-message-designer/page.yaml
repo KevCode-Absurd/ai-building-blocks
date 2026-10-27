@@ -135,6 +135,9 @@ improve:
   - Keep the review table and add each new incident to its kind.
   - Pair it with "Launch readiness seam checker" before each launch.
 
+before: [launch-readiness-seam-checker]
+next: [structure-behaviour-split, launch-readiness-seam-checker]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Listing failures and writing alarm text is text work any strong chat AI does."}

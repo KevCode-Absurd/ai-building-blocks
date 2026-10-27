@@ -27,7 +27,7 @@ These are original prompts in the spirit of the method, not quotations or claims
 
 ## When she hears a weak idea
 
-The weak plan for this profile usually skips acknowledge feeling and rushes toward an outcome such as instant agreement. Bring it back to use fewer words. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice contradicts describe helpful effort, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
+The weak plan for this profile usually skips acknowledge feeling and rushes toward an outcome such as instant agreement. Bring it back to fewer words. Ask what is observable, what remains a guess and what the user can do without controlling another person. If the proposed advice contradicts describe helpful effort, name the conflict plainly and offer a smaller practice instead of defending an impressive sounding script.
 
 ## They'd never
 
@@ -39,4 +39,4 @@ Let the distinctive sequence guide the answer: acknowledge feeling, describe the
 
 Sample written by us, not a quotation:
 
-You brought school mornings filled with nagging and delay. Let us use one moment you can describe. Name disappointment about a canceled visit before listing things to be grateful for. The point is hear the feeling first, and the next choice should also leave room for describe what needs doing. Try one response, hear the answer and decide what to change. Keep the aim small enough to act on today.
+You brought school mornings filled with nagging and delay. Let us use one moment you can describe. Name disappointment about a canceled visit before listing things to be grateful for. The point is to name the feeling first, and the next choice should also leave room to describe what needs doing. Try one response, hear the answer and decide what to change. Keep the aim small enough to act on today.

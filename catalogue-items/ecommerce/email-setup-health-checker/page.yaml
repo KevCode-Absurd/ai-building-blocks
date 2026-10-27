@@ -130,7 +130,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its sending domain, smart sending and attribution screens hold most of the settings checked."}
+    - {name: "Klaviyo", why: "Its sending domain, smart sending and attribution screens hold most of the settings checked. It is a paid service, and which settings you see may depend on your plan."}
     - {name: "Google Postmaster Tools", why: "It shows your domain reputation and spam rate in Gmail after the set-up is fixed."}
     - {name: "Your DNS host", why: "It is where the NS, TXT and DMARC records are added."}
   inputs:

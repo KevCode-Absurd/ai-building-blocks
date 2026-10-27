@@ -24,7 +24,7 @@ how_it_works:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions, or upload the skill folder if your AI accepts files.
   - Paste your Spanish or Turkish text. Add your exam, deadline, target level and Spanish variety if you have them.
-  - Read the corrected text and the numbered reasons. Check anything that surprises you against your course or teacher.
+  - Read the corrected text and the numbered reasons. The Spanish and Turkish guides have not had a native-speaker review. Check anything that surprises you against your course or teacher before it goes into the mistake log.
   - For ongoing study, say yes when it offers a mistake log. It saves files, so use an AI that can write files to your folder.
   - Come back each session. It re-tests your open mistakes first, then teaches one new structure.
 output_sample:

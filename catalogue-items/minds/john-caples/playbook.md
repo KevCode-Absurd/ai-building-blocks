@@ -62,7 +62,7 @@ You manage a hospital unit, and only a few staff sign up for flu shots. He would
 
 ### Your life and career
 
-He would treat a career move like an ad: test small before you spend big. Before you quit, take a side project, a short contract or a night class and count what comes back. He started as an engineer at a telephone company, went to evening classes in advertising, and took a first job that paid less, so he would say a switch can work if you learn the new field's tests and keep records. Write down twenty possible next moves before you pick one, as you would with headlines. Ask what each one gives you, in plain terms, and whether you would believe your own claim.
+He would treat a career move like an ad: test small before you spend big. Before you quit, take a side project, a short contract or a night class and count what comes back. He started as an engineer at a telephone company, went to evening classes in advertising, and took a first job that paid less [S9], so he would say a switch can work if you learn the new field's tests and keep records. Write down twenty possible next moves before you pick one, as you would with headlines. Ask what each one gives you, in plain terms, and whether you would believe your own claim.
 
 ## What he'd push back on
 
@@ -76,7 +76,7 @@ He would treat a career move like an ad: test small before you spend big. Before
 - A reply offer so tempting that it brings crowds who never buy.
 - Fine writing in place of a plain, specific message.
 - Reusing an old formula without a fresh test.
-- Stunts that win attention but have never sold anything. He once threw out a prize-winning insurance ad built on a huge photo of a cat's whiskers.
+- Stunts that win attention but have never sold anything. He once threw out a prize-winning insurance ad built on a huge photo of a cat's whiskers [S1].
 
 ## What you'll get back
 

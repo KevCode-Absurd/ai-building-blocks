@@ -9,16 +9,16 @@ subhead: Raise the chance that every order leads to the next one. Share your shi
 explain: |
   Raise the chance that every order leads to the next one. Share your shipping, returns and loyalty setup and get a plan for what happens after checkout.
 
-  The plan follows tested rules. Send abandoned-cart reminders after 24 to 72 hours, never in the first hour. Put a handwritten thank-you note in the box with nothing attached. Offer paid free-shipping membership if people reorder often. Make returns free and refund when the carrier scans the parcel. Keep loyalty automatic, with one tier and a simple threshold reward. It reviews your current setup against these steps and tells you what to change.
+  The plan mixes measured findings and practitioner tips. Each rule in the skill is marked, so you can see which is which. Send abandoned-cart reminders after 24 to 72 hours, never in the first hour. Put a handwritten thank-you note in the box with nothing attached. Offer paid free-shipping membership if people reorder often. Make returns free and refund when the carrier scans the parcel. Keep loyalty automatic, with one tier and a simple threshold reward. It reviews your current setup against these steps and tells you what to change.
 when:
   - Customers buy once and never come back.
   - You are rewriting your returns policy.
   - You are launching a loyalty programme and want it simple.
   - Your cart reminder emails go out too soon.
 not_for:
-  - "You want to fix cart layout, checkout fields or payment errors: use a checkout review step or your store platform's checkout settings, not this plan."
-  - "You want more reviews or a way to handle complaints: ask a person on your team to run a review request, since no sibling item covers it yet."
-  - "You want a referral scheme or a full store trust audit: use a simpler step, like a one-page referral offer, before this plan."
+  - "You want to fix cart layout, checkout fields or payment errors: use the Checkout page auditor, not this plan."
+  - "You want more reviews or a way to handle complaints: use the Review request and reply planner."
+  - "You want a referral scheme: use the Referral program designer. For a full store trust audit, use a store audit step first."
 you_give:
   - Return and refund policy
   - Abandoned-cart email timing
@@ -34,7 +34,8 @@ how_to_use:
   - Paste your return policy, cart email timing, box contents, average order value and free-shipping threshold.
   - Add your loyalty setup if you have one (optional).
   - Read the plan table. Check each keep or change line against how your store really works.
-  - Note that some rules are practitioner tips, not measured findings. The skill marks these, so test them before you rely on them.
+  - Note that some rules are practitioner tips, not measured findings. The skill marks these with a dagger, so test them before you rely on them.
+  - If return abuse is a worry, or you sell high-value items, refund on the carrier scan only for items that need no inspection. Inspect the rest first.
   - Make the top three changes first. Check your cart recovery and repeat orders again after 30 days.
 output_sample:
   input:
@@ -56,3 +57,4 @@ output_sample:
       contains: One automatic tier with a simple reward after a set number of buys.
     - name: Sequence
       contains: The order to roll out changes, from confirmation to box, returns, loyalty and cart timing.
+next: [returns-policy-designer, loyalty-and-vip-program-designer, post-purchase-flow-builder]

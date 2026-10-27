@@ -5,9 +5,9 @@ job: write-ad-copy
 headline: Awareness-stage ad framework chooser
 subhead: Share product, buyer awareness stage, offer and proof. Get a stage-matched framework and ad copy.
 explain: |-
-  Choose a copy structure for what buyers already know. Write an ad and flag stage mismatches.
+  Copy that works on someone who already knows your brand confuses someone who has never heard of the problem. Copy that teaches the unaware bores the buyer who is ready to order. Most weak ads speak to the wrong stage.
 
-  Share product, buyer awareness stage, offer and proof. Get a stage-matched framework and ad copy.
+  This skill asks what your buyer already knows, using five stages from unaware to most aware. It picks the copy structure for that stage, writes a headline, subheadline, body and call to action from your facts, and warns which other stages the ad would fail. It uses only the proof you give it.
 when:
   - You are about to write an ad and are not sure what your buyer already knows.
   - An ad is not working and you think it speaks to the wrong stage.
@@ -28,7 +28,7 @@ you_get:
   - A warning on which other stages the copy would fail
   - A list of missing facts and assumptions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tools are needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
   - Paste your product facts, price and offer, and any real proof such as reviews. Say which stage your buyer is in, if you know.
   - If any item is missing, ask your AI to mark it as missing and not make it up.
   - Read the stage and framework first. Change the stage if it is wrong.
@@ -57,18 +57,16 @@ output_sample:
       contains: Which nearby stages the copy would suit, and which two-stage-away buyers it would fail.
 how_it_works:
   - title: Check the inputs
-    text: Confirm product, buyer awareness stage, offer and proof. Mark facts that are missing.
-  - title: Identify the Stage
-    text: Follow the identify the stage section in the full method and keep its required fields and decision rules.
-  - title: Pick the Framework Per Stage
-    text: Follow the pick the framework per stage section in the full method and keep its required fields and decision rules.
-  - title: Write Copy for the Stage
-    text: Follow the write copy for the stage section in the full method and keep its required fields and decision rules.
-  - title: Deliver + Cross-Stage Warning
-    text: Follow the deliver + cross-stage warning section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
+    text: It confirms your product, offer and proof, and marks any fact that is missing. It does not invent proof.
+  - title: Find the stage
+    text: It asks what your buyer already knows and picks one of five stages. If it cannot tell, it defaults to solution aware and says so.
+  - title: Pick the structure
+    text: Each stage has its own structure and tone, from teaching for the unaware to a direct offer with a deadline for the most aware.
+  - title: Write the ad
+    text: A headline of 4 to 6 words, a subheadline, a body sized for the stage and a call to action of 2 to 4 words.
+  - title: Warn on other stages
+    text: It shows which nearby stages the ad would suit and which it would fail.
   - title: Review the result
-    text: Return a stage-matched framework and ad copy. Check facts, math and the decisions before any action.
+    text: Check every claim against your facts before you publish.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

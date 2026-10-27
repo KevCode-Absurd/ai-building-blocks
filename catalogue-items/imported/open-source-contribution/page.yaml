@@ -16,8 +16,8 @@ when:
   - You want a ready draft but need to approve before anything is posted.
   - A maintainer has not replied to your pull request and you need a follow-up.
 not_for:
-  - "You maintain the repo and want a pull request reviewed: use a code review step or ask a teammate."
-  - "You want to update packages or lockfiles in your own project: use the dependency management skill, not this one."
+  - "You maintain the repo and want a pull request reviewed: use the Bug and security code reviewer or ask a teammate."
+  - "You want to update packages or lockfiles in your own project: use a dependency update skill, not this one."
   - "You want to add a new feature or refactor code in someone else's repo: this skill refuses that, so open a discussion with the maintainer first."
 you_give:
   - The repo and the issue link
@@ -30,12 +30,12 @@ you_get:
   - A tested patch
   - A pull request draft held for your approval
 how_to_use:
-  - Download the skill folder, or paste the skill text into a chat with an AI that can run code and read the repo.
-  - Before you start, set up a private queue repo for approvals, a read-only token and a browser tool. These are not in the download.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Use an AI that can run code and read the repo.
+  - "What you need that is not in the download: a private approval queue repo, the queue's poster (the tool that sends approved items), a read-only token and a browser tool. Without a queue and poster, the run stops at the drafted text and you post it yourself."
   - Tell your AI the repo, the issue link and where your queue lives. Add the project's disclosure wording if you have it.
   - Let it work through each check in order. It stops at the first one that fails and tells you why.
   - Read the queue item. Check the policy, the repro and the draft text.
-  - Post the text yourself once you approve. The AI never posts for you.
+  - Approve the item. With a queue, the queue's poster sends the approved text. Without one, you post it yourself. The AI never posts for you.
 output_sample:
   input:
     - The repo name and the issue link

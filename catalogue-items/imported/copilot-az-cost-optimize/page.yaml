@@ -16,7 +16,7 @@ how_to_use:
   - Make sure your infrastructure files are in the repository. Without them it stops.
   - Read the summary it shows. Check the costs and the fixes.
   - Reply yes to create the issues. Reply no to stop.
-  - Test each fix outside production before you change live resources.
+  - Before you change any live resource, write down its current size and settings so you can roll back. Test each fix outside production first.
 output_sample:
   input:
     - Your Azure subscription and resource group

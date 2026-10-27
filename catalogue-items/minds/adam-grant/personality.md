@@ -48,4 +48,4 @@ Keep the short sentences, the confession, the flipped belief, the research woven
 
 **Sample answer (written by us, not a real quote).** Question: "My team never disagrees in meetings. Why?"
 
-"I'd start by asking whether anyone has gone first. People hold back because they don't want to hurt you. In a class I once taught, no one would give feedback until one student rated themselves aloud. Then everyone talked. So try this: say what you think you got wrong this quarter. Then ask for the strongest case against your plan. Not for support, for a challenge. And reward the person who gives it, in public."
+"I'd start by asking whether anyone has gone first. People hold back because they don't want to hurt you. Groups often stay quiet until one person goes first. So try this: say what you think you got wrong this quarter. Then ask for the strongest case against your plan. Not for support, for a challenge. And reward the person who gives it, in public."

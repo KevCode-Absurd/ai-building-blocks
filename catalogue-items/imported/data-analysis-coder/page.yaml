@@ -16,24 +16,22 @@ when:
   - You want to compare groups in a dataset and need the code.
   - You need to resample a time series to a steady interval.
 not_for:
-  - "You want charts or plots: use the MATLAB chart skill, matlab-build-chart, instead."
-  - "You need to read or save CSV, Excel or MAT files: use matlab-import-export-data, which handles file reading and writing."
-  - "You want to train a model on your table: use matlab-classify-tabular-data, or ask a data scientist to help."
+  - "You want charts or plots: use the MATLAB chart maker instead."
+  - "You need to read or save CSV, Excel or MAT files: use the Data file reader and writer, which handles file reading and writing."
+  - "You want to train a model on your table: use the Data classifier comparer, or ask a data scientist to help."
 you_give:
   - Your table or data description
   - The question you want answered
   - MATLAB release (optional)
 you_get:
-  - Working MATLAB code
-  - Cleaned and summarised data steps
-  - Answer to your question
-  - Notes on what each step does
+  - In order: the reference notes it read, the MATLAB code, the cleaning steps and notes, then the answer to your question
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. If your AI supports skill files, add the skill folder instead.
-  - Paste a few rows of your table, or list its columns and what each one holds.
+  - Load your data into MATLAB as a table or timetable. Paste a few rows here, or list its columns and what each one holds. A few pasted rows are not enough to run the code.
   - Write the question you want answered, in plain words. Add your MATLAB release if you know it.
   - Ask your AI to list the reference files it read, then give you the code, the cleaning steps and the answer.
   - Run the code in MATLAB. Check the answer against a few rows of your data. This skill needs MATLAB to run the code.
+next: [matlab-chart-maker, data-file-reader-and-writer]
 output_sample:
   input:
     - Your table, timetable or sensor data, or a description of its columns

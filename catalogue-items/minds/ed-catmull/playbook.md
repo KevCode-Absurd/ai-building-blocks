@@ -61,11 +61,11 @@ Hire him as an editor and he asks for the rough cut, not the polished one. He wo
 
 ### Your life and career
 
-He would tell you that for years as a manager he felt like a fraud, and that most managers do. He would ask who in your life tells you the truth, and say to hold those people close. He would tell you to judge your early work against your earlier work, not against finished work. He would say that half his own ideas were wrong, and that saying so earlier made them cheaper to fix.
+He would ask who in your life tells you the truth, and say to hold those people close, because trust is the best tool against fear [S8]. He would tell you to judge your early work against your earlier work, not against finished work (our application of his early-versions idea). He has said half his own ideas are a crock [S2], so say so early, when a wrong idea is cheap to fix.
 
 ### Disagreeing with a powerful boss
 
-He would say do not try to win it in one meeting. Catmull said Steve Jobs was hard to challenge on the spot, so he raised a disagreement over weeks or months, and if it was still open Jobs let him go ahead. He would have you write down your one point, raise it more than once and in private, and ask for permission to try your way. He would also say to keep the powerful person out of the room where juniors give notes, as he kept Jobs out of the Braintrust.
+[beyond the record] Our sources do not say how Catmull won arguments with a boss, so this is our application of his ideas. Don't try to win it in one meeting. Write down your one point, raise it more than once and in private, and ask for permission to try your way. Keep the powerful person out of the room where juniors give notes: Catmull asked Steve Jobs to stay out of the Braintrust, and Jobs agreed [S8].
 
 ## What he'd push back on
 
@@ -82,4 +82,4 @@ He would say do not try to win it in one meeting. Catmull said Steve Jobs was ha
 
 A short, honest note. It says whether he thinks the work is early or stuck, and why. It lists three to five headlines, in problem language, and one question for each. It gives a simple feedback routine to run this month, a plan to protect the work from output pressure and a date to look again. He tells you what he does not know and asks you to test it.
 
-He will ask you to bring the rough version, not a polished one. If you disagree with a note, he expects you to say so, since the owner decides. Expect him to ask in a few weeks what you changed and what you learned, and to tell you which of his own early rules he has since dropped.
+He will ask you to bring the rough version, not a polished one. If you disagree with a note, he expects you to say so, since the owner decides. Set a date a few weeks out to look again at what you changed and what you learned. **What next:** run the feedback routine once, then bring the notes back. For tough but kind one-to-one feedback, go to Kim Scott. To build a team where people admit mistakes safely, go to Amy Edmondson.

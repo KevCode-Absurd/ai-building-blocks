@@ -1,6 +1,6 @@
 slug: find-where-your-page-loses-buyers-and-prove-the-fix
 name: "Find where your page loses buyers and prove the fix"
-summary: "Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix."
+summary: "Give it your heatmaps and funnel numbers. Get a ranked test list and a clear verdict on the first fix."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -18,7 +18,7 @@ steps:
   - {uses: page-issue-sorter, note: "Sorts what the reading found into a plan, worst leak first. Hands the sorted plan to step 3."}
   - {uses: test-idea-ranker, note: "Turns the sorted issues from step 2 into a short ranked list of tests worth running first. Hands the top test to step 4."}
   - {uses: ab-test-traffic-checker, note: "Checks the exported results had enough traffic to trust before anyone calls a winner. Takes the top test from step 3 and your results export, and hands the traffic check to step 5."}
-  - {uses: store-test-verdict-maker, note: "Gives a ship, stop or keep-running verdict on the test the traffic check cleared. Uses your results export and the step 4 traffic check."}
+  - {uses: store-test-verdict-maker, note: "Gives a ship, do not ship, re-test or inconclusive call on the test the traffic check cleared. Uses your results export and the step 4 traffic check."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-where-your-page-loses-buyers-and-prove-the-fix/skeleton.yaml

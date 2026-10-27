@@ -6,28 +6,17 @@ argument-hint: "[yesterday | today | blockers]"
 
 # /standup
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Placeholders like ~~source control, ~~project tracker and ~~chat mean the tool you use for that job, if it is connected. The original pointed to a CONNECTORS.md that is not included here.
 
 Generate a standup update by pulling together recent activity across your tools.
 
 ## How It Works
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        STANDUP                                    │
-├─────────────────────────────────────────────────────────────────┤
-│  STANDALONE (always works)                                       │
-│  ✓ Tell me what you worked on and I'll structure it             │
-│  ✓ Format for daily standup (yesterday / today / blockers)      │
-│  ✓ Keep it concise and action-oriented                          │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Source control: Recent commits and PRs                        │
-│  + Project tracker: Ticket status changes                        │
-│  + Chat: Relevant discussions and decisions                      │
-│  + CI/CD: Build and deploy status                                │
-└─────────────────────────────────────────────────────────────────┘
-```
+1. Always works: tell me what you worked on and I structure it.
+2. I format it as yesterday, today and blockers, short and action-focused.
+3. If you connect your tools, I also pull in recent commits and PRs (source control), ticket changes (project tracker), relevant discussions (chat), and build and deploy status (CI/CD).
+
+Connectors depend on your AI platform. To use them, connect source control, a project tracker and chat first. Without them, just type your notes.
 
 ## What I Need From You
 
@@ -73,3 +62,4 @@ If **~~chat** is connected:
 1. **Run it every morning** — Build a habit and never scramble for standup notes.
 2. **Add context** — After I generate, add any nuance about blockers or priorities.
 3. **Share format** — Ask me to format for Slack, email, or your team's standup tool.
+4. **Next step** — Paste the update into Slack, email or your standup tool. Add context to any blocker before you share it.

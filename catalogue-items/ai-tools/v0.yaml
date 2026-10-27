@@ -36,6 +36,19 @@ runs_in: [web, api]
 blocks: []
 alternatives: [lovable, bolt, replit, cursor]
 last_checked: 2026-10-21
+first_result:
+  - "Go to v0.app and sign up on the free plan. It allows 7 messages a day."
+  - "Type the screen or app you want in plain words. Name the page, what is on it and what a visitor does. Or upload a wireframe or mock-up."
+  - "Watch the live preview as v0 builds it. Click through it as a visitor would."
+  - "Ask for changes in words, one at a time, such as a new headline or a different layout. Each change uses a message."
+  - "When it works, deploy it to Vercel or open a pull request on GitHub. Hand the code to a developer if it needs server or data work."
+needs:
+  - "A v0 account. Free works to start, with 7 messages a day."
+  - "A plain-words description of the screen, or a wireframe or mock-up."
+  - "Your own copy, colours and brand rules, so v0 does not invent them (optional)."
+  - "A GitHub account for pull requests, and a Vercel account for one-click deploys (optional)."
+example:
+  reply: "A live preview link, the code behind it (React by default), and a pull request on GitHub if you connect it. Treat it as a prototype. A developer should review the code before customers use it."
 sources:
   - https://v0.app/pricing
   - https://v0.app

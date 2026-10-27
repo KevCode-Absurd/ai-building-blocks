@@ -35,6 +35,8 @@ how_to_use:
   - Add the rivals and workarounds you know of (optional). Include doing nothing.
   - Read the map. Check that each job is written in your buyer's words, not as a feature list.
   - If the AI says your input is too thin, add more detail about a real buyer and run it again.
+  - Use the map as the input for positioning, messaging or onboarding.
+next: [product-positioning-planner, brand-messaging-builder, customer-onboarding-planner]
 output_sample:
   input:
     - Your product or service

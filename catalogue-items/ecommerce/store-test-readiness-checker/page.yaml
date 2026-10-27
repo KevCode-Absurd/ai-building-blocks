@@ -142,3 +142,4 @@ terms:
     meaning: The chance a test finds a real gain of the size you planned for. The usual aim is 80 percent.
   - term: Guardrail
     meaning: A number that must not get worse, such as order value or margin, even if the main number improves.
+next: [big-swing-test-picker, shopify-test-setup-picker, store-test-verdict-maker]

@@ -11,6 +11,8 @@ Transform sourcing intelligence (personas, talent maps, JDs) into compelling, pe
 
 ## Outreach Principles
 
+The percentages and rates in this skill (here and in the tables below) are the author's, taken from LinkedIn and Gem data. They are not checked here. Use them as rough guides. Never repeat them to a candidate as fact.
+
 1. **Candidate-centric value prop** - Lead with what matters to THEM, not what the company needs
 2. **Specific > generic** - Reference something concrete about their background, never "I came across your profile"
 3. **Shorter wins** - InMail: under 400 characters (~50-70 words) gets 22% higher response. Email: 101-150 words is the sweet spot. Respect their time.
@@ -187,7 +189,7 @@ When generating outreach for a role, produce a complete sequence document:
 # Outreach Sequence: [Role Title]
 **Created:** [Date]
 **Based on persona:** [Persona name/file reference]
-**Tone:** [professional/casual/technical per talent-sourcing.local.md]
+**Tone:** [professional, casual or technical, as the user asked; friendly and professional if they did not say]
 
 ## Sequence Overview
 | Touch | Day | Channel | Purpose |

@@ -13,11 +13,12 @@ inputs:
   - {type: persona, required: false}
 outputs:
   - {type: brief}
+  - {type: angle_library}
 uses: [copy-research-file-builder, dominant-emotion-finder, sales-letter-outline-planner]
 steps:
-  - {uses: copy-research-file-builder, note: "Sorted research files and a short list of proof you can give away"}
-  - {uses: dominant-emotion-finder, note: "The strongest feeling to write to and where it comes from. Reads the angle library from the step before"}
-  - {uses: sales-letter-outline-planner, note: "A full outline, with headline ideas and the proof each claim needs. Reads the angle library from the step before"}
+  - {uses: copy-research-file-builder, note: "Sorted research files, an angle library (ranked reasons to buy, with customer words and proof) and a short list of proof you can give away"}
+  - {uses: dominant-emotion-finder, note: "The strongest feeling to write to and where it comes from. Takes the angle library from step 1"}
+  - {uses: sales-letter-outline-planner, note: "A full outline, with headline ideas and the proof each claim needs. Takes the angle library from step 1 and the chosen theme from step 2"}
 origin: rebuilt
 version: 1.0.0
 minds: [clayton-makepeace]

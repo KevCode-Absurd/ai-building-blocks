@@ -5,22 +5,31 @@ job: secure-code
 headline: Review an agent before launch
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share your agent code and design. Get risks in tool access, plugin trust and behavior ranked before launch. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Share your agent's job, its tool list and its code. Your AI checks what each tool may do, tests the code against the 10 OWASP agent risks, checks your packages, and reviews the proof behind each finding. You get the open risks ranked High, Medium or Low.
 explain: |-
-  Share your agent code and design. Get risks in tool access, plugin trust and behavior ranked before launch.
+  An agent that can call tools can send, change or delete things. This review finds where it could do harm before real users reach it.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Step 1 lists each tool and decides what the agent may do with it: allow, deny or ask a person first. Step 2 checks your code against the 10 OWASP agent risks and uses that tool plan. Step 3 works on your code and package files alone. It records a file hash for your tools and packages and checks how they are pinned. Step 4 checks the findings from steps 2 and 3 for proof. A claim with no evidence is marked, not trusted.
+
+  The last result ranks what is still open. High means the agent can change data, spend money or reach secrets with no block or approval. Medium means a control exists but can be bypassed, is not logged or is not tested. Low means a weakness with little reach. A person must still review it before launch.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You are about to launch an agent that can call tools, such as APIs, files or a database.
+  - You need to decide which tools the agent may use, which are blocked and which need a person to approve.
+  - You want the agent's code and packages checked before real users reach it.
+  - You were given a security audit of the agent and want to know which claims have proof.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - What the agent does, in one or two sentences
+  - Each tool the agent can call, and whether it reads or changes things
+  - The risk level (internal test, general production, sensitive such as money, health or legal, or compliance-critical) and the data it can touch
+  - Your agent code, tool list and package files
+  - A security audit or findings list you already have (optional)
 you_get:
-  - Agent control review
-  - OWASP and plugin findings
-  - Evidence review and unresolved risks
+  - A tool permission table that says allow, deny or ask a person, with the reason
+  - A policy file, the fields to log for each tool call and a test list
+  - A pass or fail line for each of the 10 OWASP agent risks, with evidence and a fix
+  - A file hash record of your tools and packages, with a verified or tampered result when you recheck
+  - A verdict on each finding's evidence
+  - The open risks ranked High, Medium or Low, in the order to fix them
 not_for:
   - "Your agent has no tools and only writes text: there is nothing to lock down, so skip this."
   - "You want to attack the agent and see if it breaks: use the AI agent attack tester."
@@ -42,35 +51,35 @@ output_sample:
     - name: "Step 3: Plugin integrity record"
       contains: A file hash manifest for your tools and packages, and a verified or tampered result when you recheck.
     - name: "Step 4: Evidence review"
-      contains: A verdict on any audit you supply, with each claim marked verified, unsupported or not checked.
+      contains: A verdict on each finding from steps 2 and 3, and any audit you supply, marked verified, unsupported or not checked.
     - name: Unresolved risks
-      contains: Open findings ranked by risk, every missing fact and one next action.
+      contains: Open findings ranked High, Medium or Low in fix-first order, every missing fact and one next action.
     - name: Hand-back summary
       contains: Source coverage and each step's status in one list.
 
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - "Download the pack. It holds HANDOFF.md and four skill files, in the order they run: AI agent control designer, Agent OWASP risk checker, Agent plugin integrity checker, then Security audit evidence reviewer."
+  - Share the agent's job, its tool list, and its code and package files.
+  - Ask your AI to follow HANDOFF.md and mark any missing fact.
+  - Review the ranked risks yourself before launch. Nothing is deployed or changed for you.
 how_it_works:
   - title: AI agent control designer
-    text: Share how your agent uses tools. Get controls for permissions, trust and risky actions.
+    text: Lists every tool the agent can call and what it can do with it. Sets allow, deny or ask a person for each tool, and writes the policy, log fields and tests. Hands the plan to step 2.
   - title: Agent OWASP risk checker
-    text: Share your agent code. Get findings against the OWASP agent risks, with evidence and fixes.
+    text: Checks your agent code against the 10 OWASP agent risks, using the plan from step 1. Gives a pass or fail line for each risk, with evidence and a fix.
   - title: Agent plugin integrity checker
-    text: Share your agent tools and packages. Get file checks and a record of supply chain risks.
+    text: Works on your code and package files, not on step 2. Records a file hash for your tools and packages, checks how packages are pinned and flags files that changed.
   - title: Security audit evidence reviewer
-    text: Share a security audit. Get claims without proof, missing facts and failed checks called out.
+    text: Checks the findings from steps 2 and 3, and any audit you supply, against the files they cite. Marks each claim verified, unsupported or not checked.
 output_shape: |-
-  Agent control review
-  OWASP and plugin findings
-  Evidence review and unresolved risks
+  Agent control review          <tool | reads or changes | allow, deny or ask a person | why; policy file; log fields; tests>
+  OWASP and plugin findings     <ASI-01 to ASI-10, pass or fail, evidence, fix; file hash record for tools and packages>
+  Evidence review and unresolved risks   <each claim: verified, unsupported or not checked; open risks ranked High, Medium, Low in fix-first order; missing facts; one next action>
 tweaks:
+  - what: Risk level
+    how: Say if the agent is an internal test or touches money, health or legal matters. A higher level calls for stricter controls.
   - what: Scope
-    how: Name the date window, project or business to keep the work focused.
-  - what: Success
-    how: Say what decision or finished artifact you need.
+    how: Name the tools, folders or packages to include when the agent is large.
 judge:
   - Facts trace back to sources.
   - Missing inputs are clear.
@@ -83,4 +92,8 @@ test:
 improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
-terms: []
+terms:
+  - term: OWASP agent risks
+    meaning: A public list of the 10 most common security risks for AI agents that use tools.
+  - term: File hash
+    meaning: A short code worked out from a file's contents. If the file changes, the code changes.

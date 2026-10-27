@@ -5,7 +5,7 @@ name: Brand style setup wizard
 summary: Set up your brand style once with ten questions. Your colours and fonts are saved and reused when you convert Markdown to HTML.
 job: brand-file
 headline: Brand style setup wizard
-subhead: Answer ten questions once. Get your colours, fonts and style saved for every page that follows. Bring answers to ten setup questions. Use the result to plan your next step.
+subhead: Answer ten questions once. Get your colours, fonts and style saved for every page that follows. Use it before you convert Markdown to HTML, so every page comes out in your brand.
 explain: |
   Set your colours, fonts and look once, and have every page you convert afterwards come out in your brand instead of plain defaults.
 
@@ -20,7 +20,7 @@ not_for:
   - "You want to design or edit anything that is not Markdown converted to HTML: use your design tool instead."
   - "You want a full accessibility audit of a page: use a dedicated accessibility checker. This only checks text contrast."
 you_give:
-  - Answers to ten setup questions
+  - Answers to ten setup questions: save folder, main colour, accent colour, heading font, body font, look, code theme, contents style, company name and logo
   - A main brand colour (optional)
   - Font choices (optional)
   - A folder for saved output (optional)
@@ -31,7 +31,7 @@ you_get:
   - Style applied to later conversions
   - Project-level overrides
 how_to_use:
-  - Make sure Python 3 is installed. You do not need to add anything else.
+  - You need Python 3 and a terminal (or an AI that can run code). Nothing else is needed. Have your main colour, fonts, company name and logo link ready for the ten questions.
   - Download the skill folder and the Markdown to HTML converters. The converters read your saved style.
   - Run onboard.py in a terminal, or ask an AI that can run code to run it. Answer the ten questions.
   - For a fast start with default choices, run onboard.py with the --defaults option.

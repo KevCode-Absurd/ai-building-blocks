@@ -1,6 +1,6 @@
 new_slug: guess-test-metrics
 name: "Test your riskiest guess and measure what counts"
-summary: "Test your product idea before you build more. Find the riskiest guess, run the smallest test, read the numbers honestly and trace a miss to its cause."
+summary: "Give it your product idea. Get the riskiest guess, the smallest test, honest metrics and the root cause behind a miss."
 job: test-an-idea
 thinking: high
 thinking_why: "It has to tell real progress from numbers that only look good. Give it your strongest model."
@@ -9,9 +9,9 @@ headline: "Test the guess your idea depends on, and read the results honestly"
 subhead: "Give it your product idea. It finds the guess the idea rests on most, designs the smallest test and sets the pass numbers before you run it. After the test, it replaces vanity numbers with ones that show cause, then traces any miss back to a cause you can fix."
 
 explain: |
-  Most people build the whole product first and find out later that the riskiest guess was wrong. When they do test, they watch numbers that only go up, such as total sign-ups or page views, which look like progress whether or not the idea works.
+  It is easy to build the whole product first and find out later that the riskiest guess was wrong. Even when you test, numbers that only go up, such as total sign-ups or page views, look like progress whether or not the idea works.
 
-  This workflow tests one guess at a time. It picks the guess that would sink the idea, plans the smallest test that can teach you about it, and sets what counts as a pass before you run it. You run the test and collect the numbers. Then it swaps vanity numbers for per-customer rates and splits results by group, and, if the result missed, asks why until it reaches a cause you can fix. The method comes from Eric Ries and The Lean Startup.
+  This workflow tests one guess at a time. It picks the guess that would sink the idea, plans the smallest test that can teach you about it, and sets what counts as a pass before you run it. You run the test and collect the numbers. Then it swaps vanity numbers for per-customer rates and splits results by group, and, if the result missed, asks why until it reaches a cause you can fix. The approach is inspired by Eric Ries's The Lean Startup.
 
 when:
   - You have a product idea and want evidence before you build more of it.
@@ -35,7 +35,7 @@ you_get:
   - A chain of whys checked against facts, the cause you can fix and a check that it won't happen again
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your idea. It runs step 1 and stops.
   - Run the test with real customers and collect the numbers it asked for.

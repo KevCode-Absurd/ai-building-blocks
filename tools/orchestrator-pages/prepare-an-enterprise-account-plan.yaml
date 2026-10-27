@@ -11,12 +11,13 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You sell a complex product to a large company and need to know who the buyers are and what could stall the deal.
+  - You want an onboarding plan ready, with owners and a check for first value, for when the deal signs.
+  - You have notes from calls and want them turned into next steps with owners.
 you_give:
-  - The source files, notes or product facts for this job
+  - The target account name, your product, the contacts you know and where the deal stands
   - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your signed-customer brief and success goals, if the deal has signed (for step 2)
 you_get:
   - Account map
   - Deal actions and risks

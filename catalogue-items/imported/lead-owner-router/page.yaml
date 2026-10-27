@@ -17,7 +17,7 @@ when:
   - You need a short handoff note that tells the rep what they are getting.
 not_for:
   - "The lead already has an owner in your CRM and you only want to change it: edit the owner in your CRM yourself."
-  - "You need to know if the lead is good before you assign it: score it first with lead-triage, then come back here."
+  - "You need to know if the lead is good before you assign it: score it first with the Lead prioritizer, then come back here."
   - "You have no written routing rules yet: agree on territories and who covers them with your sales lead first, then use this."
 you_give:
   - The lead or the unrouted queue
@@ -31,8 +31,9 @@ you_get:
   - An info request draft for thin records
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder.
-  - Paste your routing rules. Include territories, company size bands, industries and named accounts.
-  - Paste the new lead, or the list of unrouted leads. If your AI can read your CRM, let it pull the queue.
+  - Paste your routing rules in the order you want them applied. For example, named account first, then region, then company size, then industry, then a default queue.
+  - Include territories, company size bands, industries and named accounts.
+  - Paste the new lead, or the list of unrouted leads. If your AI can read your CRM, let it pull the queue. With no CRM access or export, paste one lead and your rules. You get one routing card and a checklist to apply by hand.
   - Read each routing card. Accept it, or override it and give a one-line reason.
   - Apply the accepted owners in your CRM, or work from the checklist it gives you. Send the handoff note when you are ready.
 output_sample:

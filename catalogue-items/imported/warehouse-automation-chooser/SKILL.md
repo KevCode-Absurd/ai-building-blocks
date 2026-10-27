@@ -145,6 +145,7 @@ def conveyor_sortation_sizing(orders_per_day, items_per_order=5,
     required_capacity = items_per_hour / target_utilization
 
     # Sorter specifications and costs
+    # PLACEHOLDER costs and rates: replace with vendor quotes
     sorter_specs = {
         'sliding_shoe': {
             'capacity_range': (5000, 15000),
@@ -178,7 +179,7 @@ def conveyor_sortation_sizing(orders_per_day, items_per_order=5,
 
     # Estimate conveyor length needed (assume 300 ft)
     conveyor_length_ft = 300
-    conveyor_cost = conveyor_length_ft * 500  # $500/ft for belt conveyor
+    conveyor_cost = conveyor_length_ft * 500  # PLACEHOLDER $500/ft: replace with a vendor quote
 
     total_cost = estimated_cost + conveyor_cost
 
@@ -251,6 +252,7 @@ def asrs_capacity_analysis(pallet_positions_needed, storage_height_ft,
     - System configuration and cost
     """
 
+    # PLACEHOLDER costs and rates: replace with vendor quotes
     system_specs = {
         'unit_load': {
             'positions_per_aisle': 1000,  # Typical
@@ -384,10 +386,8 @@ def gtp_system_comparison(pick_lines_per_day, operating_hours=16,
     Parameters:
     - pick_lines_per_day: Daily pick volume (lines)
     - operating_hours: Operating hours per day
-    - cost_per_robot: from a vendor quote (required for cost figures)
-    - manual_lines_per_hour, assisted_lines_per_hour: the user's own pick rates
-    - operating_cost_rate: yearly running cost as a share of fleet cost, from the vendor
-    - buffer: extra robots for charging and repairs (1.2 is a starting guess)
+    - Cost and pick-rate figures in the table below are PLACEHOLDERS. Replace them with vendor quotes and the user's own pick rates before using any result.
+    - (The robot fleet function further down is the one that takes cost_per_robot, manual and assisted pick rates, operating_cost_rate and buffer.)
     - warehouse_sqft: Available warehouse space
 
     Returns:
@@ -396,6 +396,7 @@ def gtp_system_comparison(pick_lines_per_day, operating_hours=16,
 
     pick_lines_per_hour = pick_lines_per_day / operating_hours
 
+    # PLACEHOLDER costs and rates: replace with vendor quotes
     systems = {
         'Vertical Lift Module (VLM)': {
             'pick_rate_per_hour': 150,
@@ -600,6 +601,7 @@ def picking_technology_comparison(pick_lines_per_day, accuracy_target=0.995):
     - Technology comparison
     """
 
+    # PLACEHOLDER costs and rates: replace with vendor quotes
     technologies = {
         'Manual (Paper)': {
             'pick_rate': 80,

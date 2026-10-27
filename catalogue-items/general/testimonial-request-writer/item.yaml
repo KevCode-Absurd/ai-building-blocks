@@ -1,0 +1,23 @@
+slug: testimonial-request-writer
+name: Testimonial request writer
+summary: Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.
+category: general
+boards: []
+type: skill
+role: make
+job: email
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: copy_draft
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - email-send-readiness-scorer
+  - one-ask-email-tightener
+  - follow-up-email-sequence-writer

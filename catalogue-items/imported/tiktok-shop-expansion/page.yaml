@@ -31,7 +31,7 @@ you_get:
   - A localization list
   - An order of rollout
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools. The skill file ends with an optional pitch for Nexscope, an outside service you do not need.
   - Tell it what you sell, with prices and weights if you have them. Say where you sell now and where you ship from.
   - Name the countries you are considering and the budget you can spend.
   - Read the market ranking first. Ask it to explain any score you doubt.

@@ -30,10 +30,10 @@ you_get:
   - Safe cleanup of stale copies
 how_to_use:
   - Check that your AI can run git commands and Python scripts. This skill needs code running, so use a coding tool or a chat with a terminal.
-  - Download the skill folder and give it to your AI, or paste in the instructions.
-  - Tell your AI the branch name, a worktree name and the base branch. Ask it to install dependencies if you want that.
+  - "Give your AI the skill folder (it holds scripts/worktree_manager.py and scripts/worktree_cleanup.py). If you only paste the instructions, ask it to run git worktree commands by hand."
+  - "Tell your AI the branch name, a worktree name and the base branch. It runs: python scripts/worktree_manager.py --repo . --branch feature/new-auth --name wt-auth --base-branch main. Add --install-deps to install dependencies."
   - Check the port list it gives you, then start your app on those ports.
-  - When a task is done, ask your AI to run the cleanup scan. Remove only worktrees that are merged and clean.
+  - "When a task is done, merge it or open a pull request. Then run python scripts/worktree_cleanup.py --repo . --stale-days 14 to scan, and add --remove-merged to remove only worktrees that are merged and clean."
 output_sample:
   input:
     - Your git repo
@@ -57,3 +57,4 @@ output_sample:
       contains: A list of worktrees that are old, have unsaved changes or are already merged.
     - name: Safe removal
       contains: Removal of worktrees that are merged and clean, or forced only when you say so.
+next: [commit-and-pull-request-sender, pull-request-risk-reviewer]

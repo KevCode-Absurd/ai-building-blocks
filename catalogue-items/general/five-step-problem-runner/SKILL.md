@@ -57,11 +57,9 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Decision counterargument writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Plan your strategy** with the [Repeat purchase habit planner](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Test the idea with real people** with the [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- The [Root cause finder](https://useaiblocks.com/skills/root-cause-finder). It takes the plan.
+- The [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner). It takes the plan.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

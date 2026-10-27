@@ -21,6 +21,7 @@ not_for:
   - Your store has under about 30 conversions a month or no conversion tracking. Start with the search terms view inside Google Ads, and treat any verdict here as an early read.
   - You want to fix brand terms leaking into cold campaigns. Use the Brand and non-brand splitter.
   - You want a weekly routine for your Shopping campaigns. Use the Shopping campaign tuner.
+  - "You want a quick first pass on one report with fewer checks: use the Search term junk sorter."
 
 you_give:
   - The search terms reports with impressions, clicks, conversions and cost, ideally by campaign

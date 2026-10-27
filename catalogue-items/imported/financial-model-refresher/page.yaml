@@ -20,8 +20,8 @@ not_for:
   - "You want to rebuild the model from scratch: start a new model instead of using this one."
   - "You plan to share the rating or price target with clients: get a compliance check first, as this is for your own analysis."
 you_give:
-  - The current model file
-  - New results, guidance or the event
+  - The current model file (Excel is best), with the prior estimate lines you want compared
+  - New results, guidance or the event, and where the numbers come from (results release, guidance text)
   - Your view on what changed (optional)
 you_get:
   - Updated actuals
@@ -36,6 +36,7 @@ how_to_use:
   - Add the new results or guidance. Add your own view if you have one (optional).
   - Check the actuals table first. Then read the flagged changes and the summary.
   - Treat the rating and price target as your own working view until a compliance check is done.
+  - Next, compare your new estimates with consensus. Then write the note with the earnings update report writer, and re-check the value with the valuation method comparer.
 output_sample:
   input:
     - Your current financial model file
@@ -58,3 +59,4 @@ output_sample:
       contains: One paragraph on what changed, why, and whether it matters or is noise.
     - name: Rating and price target
       contains: Whether to keep or change the rating, the new target and the upside or downside.
+next: [valuation-method-comparer]

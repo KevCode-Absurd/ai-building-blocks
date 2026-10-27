@@ -36,8 +36,9 @@ how_to_use:
   - Paste the skill text, or upload the skill file if your AI takes files.
   - Paste your offer, audience and platforms. Add current ads and voice notes if you have them.
   - "Ask for the full plan: hooks, formats, variations, test calendar and fatigue watch."
-  - Check that every hook is true for your offer. Treat the fatigue numbers as rules of thumb and compare them to your own account.
+  - "Check that every hook is true for your offer. Numbers and proof points in the hook examples are placeholders: use only results you can prove. Treat the fatigue numbers as rules of thumb and compare them to your own account."
   - Make the first batch of ads and follow the test calendar.
+  - Log each ad's hook, body, call to action and format in one sheet, so you can read results against the naming scheme. Bring the results to your ad platform's reports or an analyst.
 output_sample:
   input:
     - Your offer, in a few lines

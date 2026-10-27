@@ -33,6 +33,7 @@ how_to_use:
   - Remove what you do not need from the request first, such as ID scans and unrelated email threads. Do not put the person's name in file names.
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions from the download.
   - Paste your systems list, your reply deadline rules and how you check identity. If your AI cannot read your saved privacy setup notes, paste these into the chat.
+  - Say which privacy law applies to you, such as GDPR or a US state law. Deadlines and exemptions in the draft depend on it, so confirm them before you rely on them.
   - Paste the request text and ask your AI to follow the skill.
   - Read the request type and risk flags first. If a flag says to see a lawyer, stop and do that.
   - Check the letters and the system list with a person. Send nothing until they approve. The skill never sends anything.

@@ -30,12 +30,14 @@ you_get:
   - Simulated predictions from the prior
   - A sensitivity check on scale and tails
 how_to_use:
+  - This is for people who know Bayesian modelling and Python. If you do not, use your tool's default priors or ask a statistician. A prior is your starting assumption about a number before you see data. A quantile is a value with a stated share of probability below it. PreliZ is a Python tool that turns your ranges into a distribution.
   - Open a chat with an AI that can run Python code. Paste in this skill.
   - Tell it the quantity you are modelling and its units.
   - Give your likely ranges, such as a low and high value you would bet on. Add your PyMC model if you have one.
   - Check the fitted prior against your own numbers before you go on.
   - Read the simulated predictions. If they look silly, change your assumptions and run it again.
   - Look at the sensitivity check to see how much the prior changes your answers.
+  - Next, report the range of answers to the people deciding, or ask a statistician to review the priors.
 output_sample:
   input:
     - The quantity you are modelling, with its units

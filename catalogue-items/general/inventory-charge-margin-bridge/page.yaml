@@ -4,12 +4,12 @@ headline: Inventory charge margin bridge
 summary: Find how much inventory write-downs and reversals moved your gross margin. Get a reported-to-charge-excluded margin bridge you can trace to its sources.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "A charge must sit inside the cost line you adjust, and repeating charges stay a real cost, so each needs reading against the notes."
 subhead: A reported-to-charge-excluded gross-margin bridge with recurring-cost cautions. Share reported revenue/COGS, inventory write-downs and reversals included in that COGS, plus accounting basis and notes.
 explain: |-
   A reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
 
-  Issuer accounting and earnings. Illustrative figures. Reported margin(1,000-700)/1,000=30%. Charge30 less reversal10 is20, or2 percentage points; charge-excluded margin32%. A zero reversal gives a30 charge and33% charge-excluded margin.
+  Issuer accounting and earnings. Illustrative figures. Reported margin is (1,000 - 700) / 1,000 = 30%. A charge of 30 less a reversal of 10 is a net charge of 20, or 2 percentage points, so the charge-excluded margin is 32%. With a zero reversal, the charge is 30 and the charge-excluded margin is 33%.
 when:
   - You need a reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
   - You work on issuer accounting and earnings and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You need to value inventory or decide how big a reserve should be: ask your accountant or auditor, because this only shows what past charges did to margin."
   - "You want to treat all write-downs as one-off costs: do not use this to hide them, because repeat obsolescence is a real cost of doing business."
   - "You need to track an earlier write-down through later sales item by item: use an inventory ledger or a stock-level spreadsheet instead."
+  - "You need a LIFO to FIFO inventory and earnings bridge: use the LIFO reserve earnings bridge instead."
 you_give:
   - Reported revenue/COGS, inventory write-downs and reversals included in that COGS, plus accounting basis and notes.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The reporting period, plus the currency and scale used for the inventory charge margin bridge."
+  - "Your spreadsheet tool, if you want the inventory charge margin bridge as a workbook."
 you_get:
   - A reported-to-charge-excluded gross-margin bridge with recurring-cost cautions.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the inventory charge margin bridge, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of reported margin and the charge-excluded margin, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the income statement and the inventory write-down notes."
+  - "Tell it what you need: reported gross margin and the margin with inventory charges and reversals removed."
+  - "Ask it to stop and mark MISSING if a disclosed write-down or reversal is not in your sources."
+  - "Check that each disclosed charge or reversal is counted once and sits in the stated line, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Reported revenue and cost of goods sold (COGS) for the period
@@ -64,12 +65,13 @@ output_shape: |-
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING lines
+  CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Reporting period"
+    how: "Take the reporting period from the income statement and the inventory write-down notes. Use one currency and scale on every line."
+  - what: "Net inventory charge"
+    how: "Change the net inventory charge and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Each disclosed charge or reversal is included once and agrees to its income-statement location.
 judge:
@@ -82,8 +84,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one inventory charge margin bridge you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define write-down into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

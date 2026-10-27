@@ -34,9 +34,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a mode that can run Python code and accept files, if your plan has one.
   - Paste the skill text into the chat. Or upload the skill folder if your AI accepts files.
   - Add your monthly net cash flow for 12 to 24 months. Add your lumpy costs and your hiring and marketing plans.
-  - Ask your AI to run scripts/calculate.py with python3. It self-tests, and the code uses Prophet and pandas for the forecast.
+  - Ask your AI to run scripts/calculate.py with python3. It works out the runway and growth-adjusted burn. A seasonal model such as Prophet is a separate step, and only worth it with about 24 months of data.
   - If your AI can't run code, say so. It will give a rougher estimate by reasoning instead.
-  - Treat the odds as estimates, not facts about your business. Ask a finance adviser to check any fundraising date before you act.
+  - Treat the odds as estimates, not facts about your business. They come from how far the forecast missed on past months. Do not plan a fundraising decision on one date. Pair the result with budget-and-forecast-builder for the monthly plan. Ask a finance adviser to check any fundraising date before you act.
 output_sample:
   input:
     - Your monthly net cash flow for the last 12 to 24 months

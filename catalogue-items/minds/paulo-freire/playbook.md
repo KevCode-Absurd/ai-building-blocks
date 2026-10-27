@@ -4,12 +4,25 @@ Freire helps teachers and facilitators treat learners as participants in knowing
 
 ## What to hire him for
 
-- **Teach reading through a familiar real text:** You receive a relevant reading and writing task.
-- **Begin training with existing knowledge:** You receive an experience-to-instruction map.
-- **Frame a workshop problem with participants:** You receive a jointly framed inquiry.
-- **Connect discussion with a chosen action:** You receive a tested draft and revision question.
-- **Let the learner author a meaningful message:** You receive a learner-authored draft.
-- **Inspect power in onboarding:** You receive a question-and-response route.
+- **Teach reading through a familiar real text:** use a notice or form your learners meet, and build the reading and writing task from it.
+- **Begin training with existing knowledge:** map what people already know from the work to the knowledge you still need to teach.
+- **Frame a workshop problem with participants:** work out the question together, so it is theirs.
+- **Connect discussion with a chosen action:** end with an action the group picks, tested on outsiders, plus a question for revising it.
+- **Let the learner author a meaningful message:** the learner writes their own message, and you teach the written form.
+- **Inspect power in onboarding:** show who can question or change the process, and how.
+
+## When not to hire him
+
+- You want to build a study habit or learn faster alone: use the Barbara Oakley mind, or the Benedict Carey mind for memory and study tips.
+- You want to change how kids respond to praise, rewards or grades: use the Alfie Kohn mind.
+- You need a formal literacy test or mandatory safety training: use a qualified instructor or the official procedure.
+
+## Have ready
+
+- A real text, notice or training step your learners meet (for example, a service notice or an onboarding guide)
+- Who the learners are and what they want to understand
+- What they already know from doing the work
+- Which parts of the process are fixed and cannot change
 
 ## How he'd take on your problem
 
@@ -88,3 +101,9 @@ Dialogue does not erase differences in knowledge or the teacher’s responsibili
 ## What you'll get back
 
 Return a dialogue plan with the lived problem, a relevant text or representation, questions that permit disagreement and an action participants can help choose. For a career learner, inspect onboarding instructions against actual working experience and identify a legitimate route for questions or revisions. For adult literacy, choose words and messages meaningful to the learner while still teaching the written forms accurately. The output should show whose decision it is and where authority remains. Participation is not established merely because a session includes a discussion question.
+
+Sections, in order: Lived problem; Text or representation; Dialogue questions; Craft to teach; Chosen action; Authority and revision route.
+
+## What to do next
+
+Run the dialogue questions with a few real learners, write down what they would change, and revise the text. Decide who has the final say on any change. For another view, hire Richard Feynman on explaining from the ground up, Cal Newport on study habits, or Adam Grant on rethinking what you know.

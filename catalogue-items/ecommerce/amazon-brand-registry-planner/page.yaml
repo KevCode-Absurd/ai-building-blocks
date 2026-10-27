@@ -9,7 +9,7 @@ headline: "Amazon brand registry planner"
 subhead: Give it your brand name, logo, country, category and your listing's ASIN. It plans the order of steps from name check to trademark to registry application. You get a trademark choice, the application pack and a list of tools to turn on after approval.
 
 explain: |
-  Brand Registry gives a brand owner more control of its listings and opens tools that other sellers cannot use, such as A+ content, Vine, brand analytics and the brand referral bonus. To apply, Amazon wants a trademark, and the order you do things in matters. A name that is too close to another brand can force a rebrand: two sellers in the source had to change names, one at a cost of over 100,000 dollars in lost launches.
+  Brand Registry gives a brand owner more control of its listings and opens tools that other sellers cannot use, such as A+ content, Vine, brand analytics and the brand referral bonus. To apply, Amazon wants a trademark, and the order you do things in matters. A name that is too close to another brand can force a rebrand: two sellers in the source said they had to change names, and one put the cost at over 100,000 dollars in lost launches (their own figure, not a rule).
 
   This skill is a store version of a general brand protection planner. It covers the first-time order: check the name, apply for the trademark, create the listing, then apply to the registry with the trademark number, an ASIN and a product image showing the brand. It lists what to turn on after approval. A trademark is specific to a country, and rules and open tools change, so confirm on the registry site. This is not legal advice.
 
@@ -107,7 +107,7 @@ tweaks:
   - what: How generic the name is
     how: A generic-sounding name may be denied as a word mark, so the plan leans to a logo mark.
   - what: Whether the listing exists
-    how: Without an ASIN the plan starts with creating the listing. A mock-up pack image was accepted in the source example.
+    how: Without an ASIN the plan starts with creating the listing. The application needs a real photo of the product with the brand visible, so check Amazon's image rules first.
   - what: Where you make the product
     how: Say where the maker is. The plan adds a manufacturer agreement note.
 
@@ -126,7 +126,7 @@ test:
 
 improve:
   - Add your chosen countries and the trademark office for each to the skill file.
-  - Add your logo files and pack mock-up so the pack is ready.
+  - Add your logo files and a real product photo showing the brand so the pack is ready.
   - Add a note of which tools you have turned on and the date.
   - Pair it with the Amazon listing writer for the listing and the Amazon launch week planner for Vine.
 
@@ -137,7 +137,7 @@ works_best_with:
     - {name: "A trademark attorney", why: "A qualified person can check scope and wording. This skill is not legal advice."}
   inputs:
     - "A trademark search result for your name and close spellings"
-    - "Your logo files and a pack mock-up showing the brand"
+    - "Your logo files and a real photo of the product with the brand visible"
     - "Your listing ASIN"
     - "The countries you sell in or plan to"
 

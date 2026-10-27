@@ -6,12 +6,12 @@ thinking: high
 thinking_why: "It runs six skills and has to tell real interest from polite praise. Give it your strongest model."
 
 headline: "Find out if your idea is worth building, before you build it"
-subhead: Give it your idea. It picks who to talk to first, writes questions about their life instead of your idea, and writes the messages that get the talks. After you've had them, it sorts your notes, plans what to ask each person to commit to, and makes a keep going, change or stop call.
+subhead: Give it your idea. It picks who to talk to first, writes the messages that get the talks, and writes questions about their life instead of your idea. After you've had them, it sorts your notes, plans what to ask each person to commit to, and makes a keep going, change or stop call.
 
 explain: |
   Ask people about your idea and they'll be kind. They'll say it sounds great and that they'd buy it, and you'll build something nobody pays for. The problem isn't the people. It's the questions.
 
-  This workflow keeps every conversation on the customer's life: the last time the problem came up, what they tried, what it cost them, and what they already do about it. It runs in two halves. The first half picks a group you can reach this week, writes the questions (including the one you're afraid to ask) and writes the messages that get you the talks. Then you go and have five to ten conversations. The second half sorts your notes into what people did, gave up and committed to, flags the compliments and wish lists that only feel like proof, plans the next step to ask each person for, and ends with a clear call and the next three talks to have.
+  This workflow keeps every conversation on the customer's life: the last time the problem came up, what they tried, what it cost them, and what they already do about it. It runs in two halves. The first half picks a group you can reach this week, writes the messages that get you the talks and writes the questions (including the one you're afraid to ask). Then you go and have five to ten conversations. The second half sorts your notes into what people did, gave up and committed to, flags the compliments and wish lists that only feel like proof, plans the next step to ask each person for, and ends with a clear call and the next three talks to have.
 
 when:
   - You have an idea and want to know if it's worth building before you spend time or money on it.
@@ -28,8 +28,8 @@ you_give:
   - Your notes from the talks, for the second half
 you_get:
   - The group to talk to first, with where to find them this week
-  - A question guide about their life, your big three unknowns and the scary question, planned
   - Messages that get you the conversations
+  - A question guide about their life, your big three unknowns and the scary question, planned
   - Your notes sorted into what people did, gave up and committed to, with the weak signals flagged
   - A keep going, change or stop call with the reason, and the next three talks to have
 
@@ -50,10 +50,10 @@ output_sample:
   output:
     - name: First customer group
       contains: The group to talk to first, and where you could reach them this week.
-    - name: Question guide
-      contains: Questions about their life, the big three unknowns and a plan for the scary question.
     - name: Interview messages
       contains: A warm-intro message and a cold message that ask for help, not a sale.
+    - name: Question guide
+      contains: Questions about their life, the big three unknowns and a plan for the scary question.
     - name: Sorted notes
       contains: Each talk split into what they did, what it cost them and what they committed to, with weak signals flagged.
     - name: Ask plan
@@ -66,10 +66,10 @@ output_sample:
 how_it_works:
   - title: Picks who to talk to
     text: Slices the market until there's a who and a where you could reach this week, and picks the group to start with.
-  - title: Writes the questions
-    text: Questions about their life and their past, never about your idea, plus the three unknowns that could change the plan and the question you're afraid to ask.
   - title: Writes the messages
     text: Warm-intro and cold messages that ask for help, not a sale, and keep it casual.
+  - title: Writes the questions
+    text: Questions about their life and their past, never about your idea, plus the three unknowns that could change the plan and the question you're afraid to ask.
   - title: Sorts what you heard
     text: Splits your notes into what they did, what it cost them and what they committed to. Compliments, vague claims and feature ideas are flagged as weak.
   - title: Plans the commitment
@@ -80,10 +80,10 @@ how_it_works:
 output_shape: |
   FIRST HALF
   Start with: <who> at <where>, because <why this group first>
+  Messages: <warm intro> | <cold message>
   Big three: 1 <unknown, what it could change> 2 <...> 3 <...>
   Scary question: <how to ask it, and what each answer means>
   Questions: <about their life and the last time it happened>
-  Messages: <warm intro> | <cold message>
 
   (you have the talks)
 

@@ -36,6 +36,8 @@ Review this SaaS agreement from the customer's perspective. Flag any clauses tha
 
 ## Examples
 
+The examples below are illustrations for made-up contracts. They are not reviews of real agreements, and the scores and findings are not real results.
+
 ### Example 1: SaaS Agreement Review
 
 **Input:** A SaaS subscription agreement where the customer is subscribing to a project management tool. The customer is a 50-person company evaluating a 2-year enterprise commitment. Review from the customer's perspective.
@@ -44,7 +46,7 @@ Review this SaaS agreement from the customer's perspective. Flag any clauses tha
 
 **Executive Summary:** This agreement contains 2 Critical and 3 High severity issues that should be addressed before signing. The liability cap is absent for the vendor while the customer faces unlimited exposure, the IP assignment clause claims ownership of customer-created content, and termination requires 180-day notice with no cure period for the customer. Overall risk score: 7.2/10. We recommend negotiating all Critical items and at least the indemnification clause before execution.
 
-**Overall Risk Score:** 7.2 / 10 (High — do not sign without modifications)
+**Overall Risk Score:** 7.2 / 10 (High — flag these items and raise them before signing)
 
 | Clause | Section | Risk | Severity | Recommendation |
 |--------|---------|------|----------|----------------|

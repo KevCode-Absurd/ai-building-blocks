@@ -36,6 +36,7 @@ how_to_use:
   - Answer the questions your AI asks about your facility and how you restock today.
   - Review the par table before you change any shelf levels. Treat safety stock numbers as starting points.
   - Ask your pharmacy or clinical leads to confirm crash cart and implant levels before you use them.
+  - Next, try the new par levels on one ward for a few weeks and compare stockouts and expired stock. Then roll them out to other wards.
 output_sample:
   input:
     - Your supply usage by item and department, such as 90 days from your stock system

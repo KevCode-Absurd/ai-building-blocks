@@ -73,7 +73,7 @@ how_it_works:
   - title: Judges over a week
     text: A spend change is read from a week of profit and loss, not one day's ROAS.
   - title: Plans the pace
-    text: On email drop days it pulls back ad spend, and it sets a bull case, a bear case and a daily pace.
+    text: On email drop days it suggests pulling back ad spend as a test, not a rule, and it sets a bull case, a bear case and a daily pace.
   - title: Scores health
     text: Four parts of 25 points each, scored against your goals or last week. The weights are a starting point.
 
@@ -100,6 +100,8 @@ output_shape: |
   Email drop days: <pull back ad spend by ...>
 
   MISSING: <email data | discount data | goals>
+
+  CHECKS MISSED: <none | list>
 
 tweaks:
   - what: Your goals
@@ -132,9 +134,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Reports give sales, discounts and large orders by day or week."}
-    - {name: "Klaviyo", why: "Shows emails and texts sent, sign-ups captured and revenue from flows."}
-    - {name: "Triple Whale", why: "A store dashboard that shows blended ROAS and new-customer numbers in one place."}
+    - {name: "Shopify", why: "Reports give sales, discounts and large orders by day or week. You need a paid Shopify plan."}
+    - {name: "Klaviyo", why: "Shows emails and texts sent, sign-ups captured and revenue from flows. It is a paid service."}
+    - {name: "Triple Whale", why: "A store dashboard that shows blended ROAS and new-customer numbers in one place. It is a paid tool."}
   inputs:
     - "Your email and text schedule for the week"
     - "Your profit and loss for the last four weeks"

@@ -7,14 +7,19 @@ description: Use when you have tested a loan, bond, note or preferred share for 
 
 Picking safe debt is mostly the art of saying no. Turning down a good loan costs a delay. Accepting a bad one costs your money. So the rules here exclude, and none of them gives way because the rate is high, the date is near or something is pledged. This skill takes your test results and writes the call. It is a method of analysis, not personal financial advice. It never tells you to buy or sell a named security.
 
+A result with a MISSING test is provisional. For a large or personal loan, or money you cannot afford to lose, take the call to a licensed financial adviser before any money moves.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with . They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Applying fixed rules and writing a reasoned call is text work.
@@ -40,7 +45,7 @@ How to start:
 4. **Do not relax for a near due date.** Repayment needs either cash on hand or the power to borrow again. Borrowers often choose a short loan because their credit is too poor for a long one. The only exception is a borrower with so much cash and near-cash that repayment is certain, like a bank loan. 
 5. **Do not accept a high rate as pay for thin cover.** Safe debt pays little because that is the trade. If the rate is far above safe rates, ask what the market knows. A high rate on an issue priced well below its face is a bet on recovery.
 6. **Do not accept a pledge as the main comfort.** Security is a mitigation of a mistake, not a reason to make one. Unsecured debt of a strong borrower can be as good as secured debt of a weak one.
-7. **Check what a rise in rates does.** Long debt at a low fixed rate falls in price when rates rise, and a short debt must be refinanced at the higher rate. If you expect rates to rise, avoid long low-rate debt. If you are unsure, keep to about ten years or less and ask for extra cover.
+7. **Check what a rise in rates does.** Long debt at a low fixed rate falls in price when rates rise, and a short debt must be refinanced at the higher rate. If you expect rates to rise, avoid long low-rate debt. If you are unsure, keep to about ten years or less and ask for extra cover. Ten years is an example limit, so use your own.
 8. **Check the price against the repayment price.** If you would pay more than the amount you get back, or more than the call price, the premium is a bet that the debt will not be repaid early. Say how much of your price is that bet.
 9. **Write the call.** Choose one:
    - **MEETS THE BAR:** both tests pass, no exclusion applies, and the terms and price carry no extra bet.
@@ -50,7 +55,7 @@ How to start:
 11. **Set a date to test again.** Re-run the tests each year, and when new debt ranks ahead of you.
 12. **Check it.** Go through "Check before you hand it back" and fix what fails. Under CHECKS MISSED write one line per check missed, or "none".
 
-**Worked case (made-up numbers).** A 14-month note from a mid-size baker pays 9% when safe notes pay 5%. Earnings cover is 2.4 times against a bar of 3, and the cushion is 0.8 against a bar of 1.0. The baker says it will refinance. Call: REJECT as an investment. Both tests fall short, and the high rate and the near date are not safety. It could be a small speculation if the amount can be lost; call it that.
+**Worked case (made-up numbers).** A 14-month note from a mid-size baker pays 9% when safe notes pay 5%. Earnings cover is 2.4 times against a bar of 3, and the cushion is 0.8 against a bar of 1.0. The baker says it will refinance. The bars of 3 and 1.0 here are examples; use the bars your own tests set. Call: REJECT as an investment. Both tests fall short, and the high rate and the near date are not safety. It could be a small speculation if the amount can be lost; call it that.
 
 ## What you hand back
 
@@ -59,10 +64,9 @@ The results in three lines. The exclusion checks with a yes or no each. The matu
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Business track record checker](https://useaiblocks.com/skills/steady-track-record-checker). It takes the audit report.
+- The [Business value capture reviewer](https://useaiblocks.com/skills/who-keeps-the-gain-tester). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -29,7 +29,7 @@ you_get:
   - A screening memo with a clear pass, proceed or wait call
   - An investment committee memo with the case for, the case against, terms and what would change your mind
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 4 skill files in the order they run: Startup due diligence reviewer, Early-stage valuation estimator, Deal screening memo writer and Investment committee memo drafter. Keep them in that order."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the deck, the numbers and your call notes. It reviews the company and estimates a valuation range.
   - Ask the founders the open questions it lists. Paste their answers.

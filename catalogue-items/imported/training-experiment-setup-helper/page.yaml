@@ -29,8 +29,8 @@ you_get:
   - Live edits shown in the app
   - Answers about the strategy and settings
 how_to_use:
-  - Open an AI that can run MATLAB code, and start MATLAB with Experiment Manager open. This skill will not work in a plain chat with no MATLAB.
-  - Add the skill to your AI. Its scripts folder must be on your MATLAB path.
+  - Open an AI that can run MATLAB code, and start MATLAB with Experiment Manager open. MATLAB and Experiment Manager are paid MathWorks products that need a licence. This skill will not work in a plain chat with no MATLAB.
+  - Copy the skill folder to your computer and point your AI at it. In MATLAB, add its scripts folder to the path with addpath('<skill folder>/scripts'). The licence on this copy (BSD 2-Clause, see LICENSE.md) allows use only with MathWorks products.
   - Paste your training script, or describe it. Say which settings to sweep, such as learning rate.
   - Ask your AI to create the experiment. It reads the code, picks the settings and builds the experiment.
   - Check the new experiment in Experiment Manager. Ask for edits, a new name or a copy, and the app updates.

@@ -21,12 +21,12 @@ best_for:
   - Companies that need every deck to follow the brand.
   - People who want tidy slides without design skills.
 not_for:
-  - Free-form designs where you place every shape yourself.
+  - Free-form designs where you place every shape yourself. Use Canva for those.
   - Anyone who wants a permanent free plan, since it offers a 14-day trial.
 pricing:
   model: subscription
   from: US$14.50 per month
-  note: Pro is US$14.50 a month billed yearly, with a 14-day trial that needs a card. Team is US$40 per user billed yearly. A single presentation costs US$45 for one month.
+  note: Pro is US$14.50 a month billed yearly, with a 14-day trial that needs a card. Team is US$40 per user billed yearly. A single-presentation option is listed at US$45 for one month.
 works_with:
   - PowerPoint
   - Google Sheets
@@ -34,6 +34,22 @@ runs_in: [web]
 blocks: []
 alternatives: [gamma, canva, figma-ai]
 last_checked: 2026-10-21
+first_result:
+  - "Go to beautiful.ai and start the 14-day trial. It asks for a card, so note the day the trial ends."
+  - "Pick a way in: a topic, a pasted outline or a source document."
+  - "Read the outline it shows before it designs anything. Cut, reorder and reword the points."
+  - "Generate the deck. Check every number, name and claim on every slide against your source."
+  - "Export to PowerPoint or PDF, or share the protected link. You end with a draft deck, laid out for you, in one of those three forms."
+  - "Next: for a looser, faster draft try Gamma. For social posts or flyers use Canva."
+needs:
+  - "A topic, an outline or a source document."
+  - "A card for the 14-day trial."
+  - "Your logo, colours and fonts, if the deck must match your brand."
+  - "A spreadsheet, if you want charts that update (optional)."
+not_verified:
+  - "Where each export option sits in the app. We did not click through it."
+  - "What the US$45 single-presentation option includes."
+  - "How good the first draft is. We did not test it."
 sources:
   - https://www.beautiful.ai
   - https://www.beautiful.ai/pricing

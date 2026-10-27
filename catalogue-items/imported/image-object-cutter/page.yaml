@@ -28,6 +28,7 @@ you_get:
   - Masks for all objects in the image
   - Confidence scores for each mask
   - Code you can adapt for your own tool
+next: [ai-training-data-labeling-planner]
 how_to_use:
   - Open an AI that can run Python code, or use your own computer. Install the package with pip install git+https://github.com/facebookresearch/segment-anything.git.
   - Download one model file. The smallest, ViT-B, is 375 MB and the fastest. The largest, ViT-H, is 2.4 GB and the most accurate.
@@ -35,6 +36,7 @@ how_to_use:
   - Load your image. Add a click point, or a box around the object. Or skip both to cut out every object.
   - Check the scores and pick the best mask. If the edge is off, add a click on the object or off it and run it again.
   - Save the mask or the cutout with a clear background, and use it in your tool or training data.
+  - Next, pass the saved masks to a labelling tool or a training pipeline, or export the model to ONNX for a browser tool. The ONNX export script is not in this copy, so get it from the original repository first.
 output_sample:
   input:
     - Your image file

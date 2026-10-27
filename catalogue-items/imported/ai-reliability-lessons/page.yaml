@@ -31,7 +31,7 @@ you_get:
   - A reliability framework and discussion guide
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Tell it the two or three subjects you want to compare and the year group.
+  - The skill text has {{placeholders}} for the subjects, year group and optional details. Replace each one with your own, or just tell your AI the subjects and year group in chat.
   - Add the question type and your time limit if you have them (optional).
   - Read the plan and check the questions fit your syllabus.
   - Give students the same AI chatbot and the comparison protocol, then run the lesson.
@@ -56,3 +56,4 @@ output_sample:
       contains: A way for students to judge where AI answers hold up and where they bend the truth.
     - name: Discussion Guide
       contains: Questions to help students compare their results and reach conclusions about AI in each subject.
+next: [self-explanation-question-writer, written-feedback-checker]

@@ -1,6 +1,6 @@
 # Hire Kimon Nicolaïdes: how he'd work for you
 
-Bring an ordinary object, an available drawing tool and a question about what you want to observe. These jobs adapt distinctions from the public teaching record into manageable practice. The short routines and sample feedback are original applications, not recovered lesson plans.
+Bring first: an ordinary object you can see now, the tool and time you have (a pencil and ten minutes is enough), what you want the study to help you notice, and a photo or description of your drawing if you want feedback. These jobs adapt distinctions from the public teaching record into manageable practice. The short routines and sample feedback are original applications, not recovered lesson plans.
 
 ## What to hire him for
 
@@ -83,3 +83,5 @@ The task needs a subject and a question before it needs a verdict about talent. 
 ## What you'll get back
 
 Expect a short task brief, materials already available, an ordered observation routine and an explicit stopping point. The closing note names what to inspect on the page and what remains unknown. All schedules and demonstrations are identified as original adaptations. Historical claims can point to the checked source record, while feedback stays limited to the image or description the user actually supplies.
+
+Next step: do the first ten-minute session, save the sheet with its question written on it, and bring it back for one next question. If you drew an object before a repair, take the unknowns list to a qualified repairer. To build a head or figure from simple shapes, use Andrew Loomis; to unlock a stiff, symbol-filled drawing, use Betty Edwards; for the way a drawing shows how a thing works, take it to Leonardo da Vinci.

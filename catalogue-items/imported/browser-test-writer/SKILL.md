@@ -6,6 +6,14 @@ description: >-
   "test this page", or "test this feature".
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../pw/templates/auth/login.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Generate Playwright Tests
 
 Generate production-ready Playwright tests from a user story, URL, component name, or feature description.
@@ -55,6 +63,8 @@ Check `templates/` in this plugin for matching patterns:
 | Onboarding flow | `templates/onboarding/` |
 | API endpoints | `templates/api/` |
 | Accessibility | `templates/accessibility/` |
+
+If the template files are not available, write the test by hand from the project's own tests and auth setup. Do not say you loaded a template.
 
 Adapt the template to the specific app — replace `{{placeholders}}` with actual selectors, URLs, and data.
 

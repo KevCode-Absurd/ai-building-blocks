@@ -118,6 +118,8 @@ Use this skill when you need to:
    lg: height 48px, paddingX 20px, fontSize 18px
    ```
 
+   The `sm` size (32px high) is below the 44×44px touch target in the checklist. On touch screens, enlarge its tap area to 44×44px or leave `sm` out.
+
    Color variants:
    ```
    primary: background primary-500, text white
@@ -232,9 +234,9 @@ Use this skill when you need to:
    ```
 
 3. **Sync with Figma**
-   - Install Tokens Studio plugin
+   - Install the Tokens Studio plugin (it has a paid tier; check its current pricing)
    - Import design-tokens.json
-   - Tokens sync automatically with Figma styles
+   - Tokens may sync with Figma styles. This has not been checked here, so test it on one token first
 
 4. **Handoff checklist**
    - [ ] Token files added to project

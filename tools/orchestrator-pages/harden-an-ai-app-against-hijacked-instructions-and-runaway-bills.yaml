@@ -67,7 +67,7 @@ how_it_works:
   - title: Merge the caps and run the app
     text: This one is yours. Merge the caps and run the app once so the final test attacks the finished version.
   - title: Attack the finished app
-    text: Runs injection and jailbreak tests, tries to trick the tools, maps each finding to a known attack type and says which defences held.
+    text: Runs injection and jailbreak tests against a test model or test keys only, unless you confirm a live target. Tries to trick the tools, maps each finding to a known attack type and says which defences held.
 output_shape: |-
   STEP 1: DEFENCES
     Where outside text enters | layers added | test inputs

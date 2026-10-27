@@ -347,10 +347,10 @@ After running the appropriate sub-skill, present results clearly:
 
 ### Practical applications (mention when relevant)
 
-- **Sympathy plays**: Stocks likely to follow a peer's earnings/news move
-- **Pair trading**: High-correlation pairs where the spread has diverged from its mean
+- **Peer reactions**: Stocks that may move after a peer's earnings or news (a topic to research, not a signal)
+- **Pairs research**: High-correlation pairs, and how far their price gap sits from its usual range (research only, no trade signal)
 - **Portfolio diversification**: Finding low-correlation assets to reduce risk
-- **Hedging**: Identifying inversely correlated instruments
+- **Hedging research**: Spotting inversely correlated instruments (research only, not a hedge recommendation)
 - **Sector rotation**: Understanding which sectors move together
 - **Risk management**: Correlation spikes during stress — diversification may fail when needed most
 

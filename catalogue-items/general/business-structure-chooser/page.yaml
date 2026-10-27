@@ -1,0 +1,124 @@
+new_slug: business-structure-chooser
+name: Business structure chooser
+summary: Share your country, plans and owners. Get business structures compared on risk, tax and paperwork, plus questions for an accountant.
+job: plan-strategy
+thinking: medium
+thinking_why: It compares options across several points and has to separate what it knows from what to check locally.
+headline: Business structure chooser
+subhead: Tell it your country, what you plan to do and who is involved. It compares the usual ways to set up a business there, such as a sole trader, a partnership or a company, on personal risk, tax, paperwork and room to grow. You get a leaning and questions to settle with an accountant.
+explain: |
+  Choosing how to set up a business is easy to put off and hard to undo. A sole trader is simple but leaves you personally on the hook. A company adds protection and paperwork. The right answer depends on your country, your plans and your co-owners.
+
+  This skill sets out the choice. You give your country, your plans, the money and risk involved, and who else owns it. It names the usual structures people use there and compares them on the same points: personal risk, how profit is taxed and taken out, paperwork and cost, adding partners or investors, and how easy it is to change later. Rules and costs differ by place and change, so it marks every fact TO CONFIRM and gives you questions for an accountant or lawyer.
+when:
+  - You want to start an LLC, or work as a sole trader or a limited company, and need to choose.
+  - You started as a sole trader and wonder if it is time to change.
+  - You are starting with a partner, and need to compare ways to share ownership.
+not_for:
+  - "You want to register the business: do it through your government's business registry, with an accountant or lawyer."
+  - "You want your tax worked out: ask an accountant."
+  - "You want a shareholder or partnership agreement drafted: ask a lawyer."
+you_give:
+  - Your country or state
+  - What the business will do, and whether it carries risk of harm or debt
+  - "Who owns it: only you, or others, and how you will split it"
+  - Whether you expect to hire, borrow or take investment (optional)
+  - How much profit you expect to take out as income (optional)
+you_get:
+  - The usual structures where you are, named in plain words
+  - A comparison on risk, tax, paperwork, partners and change
+  - A leaning for now, with the reasons
+  - Questions for an accountant or lawyer
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your country, plans, owners and how you expect to grow.
+  - Read the comparison and mark each fact TO CONFIRM against your government's business site.
+  - Take the questions to an accountant or lawyer in your country.
+  - Make the choice, then register through the official route.
+output_sample:
+  input:
+    - Your country or state, and what the business will do
+    - Who owns it and how you will split it
+    - Whether you expect to hire, borrow or take investment (optional)
+  output:
+    - name: Your plans
+      contains: Your country, activity, owners, risk and growth plans, as you gave them.
+    - name: The options
+      contains: Each usual structure, compared on risk, tax, paperwork, partners and changing later, with facts to confirm.
+    - name: My leaning for now
+      contains: The structure that fits what you said, why, and what would change it.
+    - name: Questions
+      contains: What to ask an accountant or lawyer, one line each.
+    - name: Missing
+      contains: Anything you did not tell it that changes the comparison.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads your plans
+    text: Pulls out country, activity, owners, risk and growth plans.
+  - title: Names the structures
+    text: Lists the usual ways to set up a business in your country, in plain words.
+  - title: Compares them
+    text: "Puts each on the same points: personal risk, tax and income, paperwork, partners and change."
+  - title: Marks what to confirm
+    text: Flags every fact that depends on local law or changes.
+  - title: Leans for now
+    text: Picks the structure that fits what you said, with the reason, and when you might change.
+  - title: Writes the questions
+    text: Turns the open points into questions for an accountant or lawyer.
+output_shape: |
+  YOUR PLANS
+  <country, activity, owners, risk, growth>
+
+  THE OPTIONS
+  <structure> | Personal risk: <...> | Tax and taking income: <...> | Paperwork and cost: <...> | Partners and investors: <...> | Changing later: <...> | TO CONFIRM: <facts>
+
+  MY LEANING FOR NOW
+  <structure, reason, and what would change it>
+
+  QUESTIONS FOR AN ACCOUNTANT OR LAWYER
+  - <question>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Your country
+    how: Name it, and the state or region if it matters. The options and every rule depend on it.
+  - what: Risk
+    how: Say if the business could cause harm or take on debt. It weighs strongly toward structures with protection.
+  - what: Co-owners
+    how: Say who and how you split things. It rules some structures in or out.
+  - what: Plans to grow
+    how: Say if you may hire, borrow or take investment. A structure that is easy to start may be hard to grow in.
+judge:
+  - The options are real ones for your country, not a generic list.
+  - Every option is compared on the same points.
+  - Every fact about law, tax or cost is marked TO CONFIRM.
+  - The leaning follows from what you said and says what would change it.
+  - It says an accountant or lawyer decides, and that this is not tax or legal advice.
+test:
+  - Check two facts in the comparison against your government's business site. Note any that are wrong.
+  - Change one thing, such as adding a co-owner. The leaning should change or explain why not.
+  - Take the questions to an accountant. Ask which ones mattered.
+improve:
+  - Add your country's official names for each structure to the skill file.
+  - Add the points that matter most in your field, such as client contracts that need a company.
+  - Keep your accountant's answers with the skill file, so you can reuse them when you grow.
+works_best_with:
+  tools:
+    - name: Your government's business registry site
+      why: It holds the official options, forms and costs. Check each fact there.
+    - name: An accountant
+      why: They know the tax effect of each structure for your case.
+  inputs:
+    - Your expected income and costs for the first year
+    - Any contract that requires a certain structure
+    - A note of who contributes what money and work
+terms:
+  - term: Personal liability
+    meaning: Being personally responsible for the business's debts and claims, so your own savings or home are at risk.
+  - term: Sole trader
+    meaning: A business run by one person, with no legal difference between the person and the business. Other countries use other names.

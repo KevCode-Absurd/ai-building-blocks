@@ -16,3 +16,4 @@ version: 1.0.1
 minds: [ joanna-wiebe ]
 credits:
   - { title: "Where do I start when I want to optimize an email automation? (2025)", by: "Joanna Wiebe, Copyhackers", used: "Treating current emails as the control, mapping the flow, recording each email's numbers and sorting emails into green, yellow and red" }
+needs_mode: manual

@@ -14,8 +14,8 @@ outputs:
   - {type: plan}
 uses: [marketing-scorecard-builder, brand-and-sales-budget-splitter]
 steps:
-  - {uses: marketing-scorecard-builder, note: "A balanced scorecard with short-term and long-term measures and what each tells you"}
-  - {uses: brand-and-sales-budget-splitter, note: "A brand versus sales split, a share-of-voice check and what to shift. Reads the audit report from the step before"}
+  - {uses: marketing-scorecard-builder, note: "Reads the numbers you track. Returns a balanced scorecard with short-term and long-term measures and what each tells you"}
+  - {uses: brand-and-sales-budget-splitter, note: "Reads the scorecard from step 1 and your spend by channel. Returns a brand versus sales split, a share-of-voice check and the smallest shift to test"}
 origin: rebuilt
 version: 1.0.0
 minds: [les-binet]

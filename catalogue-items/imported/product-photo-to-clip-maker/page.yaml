@@ -37,6 +37,8 @@ how_to_use:
   - Run the dry run first. It shows what will be sent and costs nothing.
   - Make one 3 second clip and check the motion. If the product bends, ask for slower, smaller movement.
   - Only then make more clips. Check the video length, shape and file size against your store's rules by hand.
+  - Save the MP4 and upload it to your listing's video slot.
+next: [product-photo-retoucher, marketplace-photo-rule-checker]
 output_sample:
   input:
     - Your main product photo, tall 3:4 or square, as sharp as you can get

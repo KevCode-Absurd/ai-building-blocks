@@ -38,6 +38,7 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. The script of the ad, the on-screen text, your product facts and your product photos.
+  - Have a video editor ready for the final build. After Effects is paid software. Remotion builds video from code, so it needs someone who writes code. The workflow plans the build and does not render the video.
   - Approve the product card, the sheets and the storyboard when it stops. Nothing moves on without your yes.
   - Build the final video in your editor or video tool from the build plan.
 output_sample:
@@ -48,7 +49,7 @@ output_sample:
     - Your target countries, for the ad rules check (optional)
   prerequisites:
     - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
-    - A video editor or video tool to build the final ad (After Effects or Remotion work well)
+    - A video editor or video tool to build the final ad from the step 4 plan. After Effects is paid software. Remotion is code-based, so it needs someone who writes code. The workflow does not render the video.
   output:
     - name: Remake plan
       contains: The ad beat by beat, the beat that sells, a shot table, a cast note and a list of changes.
@@ -59,7 +60,7 @@ output_sample:
     - name: Build plan
       contains: Five stages from product card to render, with approval points before costly steps.
     - name: Ad rules check
-      contains: A verdict on the script and on-screen words, with each flagged line quoted.
+      contains: A verdict on the script and on-screen words, with each flagged line quoted. It is a screen against published ad rules, not a Meta approval. Confirm the final ad in Ads Manager.
     - name: Hand-back summary
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
@@ -91,6 +92,7 @@ output_shape: |
   Stage 4 storyboard (approve) / Stage 5 build and render
 
   AD RULES CHECK: <verdict, findings with the exact line>
+  (A screen against published rules, not a Meta approval. Confirm in Ads Manager.)
 
   HAND-BACK SUMMARY
   Files: <each step's file> | MISSING: <every line, in one list>

@@ -68,11 +68,10 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner). It takes the offer.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
-- **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the offer.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the offer.
-- **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the offer.
+- The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker). It takes the offer.
+- The [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker). It takes the offer.
+- The [SaaS pricing strategist](https://useaiblocks.com/skills/pricing-strategist).
+- **Make an offer people want** with the [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

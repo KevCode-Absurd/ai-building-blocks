@@ -91,7 +91,7 @@ test:
 improve:
   - Collect one new piece of performance proof each month.
   - Turn bare claims into test offers (a trial or a guarantee) where you can.
-  - Pair with "Claim and proof matcher" once the copy is written.
+  - Pair with "Claim evidence checker" once the copy is written.
 works_best_with:
   tools:
     - name: Any good chat AI

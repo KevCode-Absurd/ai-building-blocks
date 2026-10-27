@@ -36,6 +36,7 @@ how_to_use:
   - Say the reporting period and whether you use GAAP or IFRS. Add last period figures if you have them.
   - Check that the balance sheet balances and that net income matches across all three statements.
   - Send the results to your bookkeeper or accountant before they go to lenders, investors or regulators.
+  - Then read the ratios and trends with the financial statement analyst.
 output_sample:
   input:
     - Your trial balance, ledger export or sorted transactions
@@ -53,3 +54,4 @@ output_sample:
       contains: Margins, current ratio, quick ratio, debt to equity and other ratios, with flags on big shifts from the earlier period.
     - name: Executive summary
       contains: A one-page plain-language note that opens with the headline, then the main drivers, risks and items needing attention.
+next: [financial-statement-analyst, month-end-close-planner]

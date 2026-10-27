@@ -8,7 +8,7 @@ job: analysis
 level: intermediate
 inputs:
   - {type: plan, required: true}
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: product_data, required: true}
   - {type: competitor_set, required: false}
 outputs:
@@ -16,12 +16,12 @@ outputs:
 uses: [marketing-plan-law-checker, brand-name-stretch-checker, long-run-effects-checker, one-bold-move-picker]
 steps:
   - {uses: marketing-plan-law-checker, note: "Every law the plan breaks, with the line that breaks it, a score and a fix list."}
-  - {uses: brand-name-stretch-checker, note: "A call on the name for any new product in the plan. Reads the fix list from the step before."}
+  - {uses: brand-name-stretch-checker, note: "Takes the plan and step 1's fix list. Compares what your name means today with what a new product would mean, and makes the call on the name."}
   - {uses: long-run-effects-checker, note: "Which tactics pay now and cost later, and whether you are riding a fad or a trend."}
   - {uses: one-bold-move-picker, note: "One move to back, what to stop doing, the money it needs and how you will know it worked."}
 origin: rebuilt
 version: 1.0.0
 minds: [al-ries, jack-trout]
 credits:
-  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The order of the steps: check the plan against the laws, check the name stretch, check short-term gains against long-term costs, pick the one bold move"}
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "Ideas behind the thirteen tests. The test selection and the step order (laws, name stretch, short against long term, one bold move) are this workflow's own."}
 generated_from: intake/immutable-laws-check-a-plan/skeleton.yaml

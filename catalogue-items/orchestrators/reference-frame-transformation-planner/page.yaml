@@ -11,19 +11,22 @@ explain: |-
 when:
   - You need a controlled before/after image-to-video transformation.
   - You want a clear draft and checks from the material you already have.
+  - You have a before image and an idea for the after, and you want the two frames to match except for the one change.
 you_give:
   - brief
   - "Optional: approved image"
   - "Optional: reference set"
 you_get:
-  - plan
-  - image prompt
-  - video prompt
-  - Missing inputs and steps that still need to run
+  - "An endpoint lock table: what the before and after frames share and what must not change"
+  - "An after-frame edit prompt: one prompt that allows a single change"
+  - "A transition prompt: a timed video prompt with the mechanics of the change"
+  - "Checks, and a not-run list of anything that was not generated or inspected"
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+  - Make the after frame in an image tool, approve it against the lock table, then run the transition prompt in a video tool. If the endpoints do not match, fix the after frame first. More motion words will not repair it.
+  - Image and video tools may need a paid plan or credits. This workflow makes prompts and checks only.
 how_it_works:
   - title: Read the brief
     text: Choose illustration-to-3D or mechanical-object-to-toy. Both start with approved before and after frames, but their transformation mechanics are different.

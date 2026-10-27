@@ -317,6 +317,8 @@ Before reporting ANY issue:
 
 ## Output Format
 
+Only state table sizes, admin checks or traffic that the user gave you. You read code only, so never claim you checked a running site.
+
 ```markdown
 ## Django Performance Review: [File/Component Name]
 
@@ -332,8 +334,8 @@ Validated issues: X (Y Critical, Z High)
 
 **Validation:**
 - Traced: UserListView → users queryset → user_list.html → `{{ user.profile.bio }}` in loop
-- Searched codebase: no select_related('profile') found
-- User table: 50k+ rows (verified in admin)
+- Searched the code you were given: no select_related('profile') found (say so if you could not search the whole project)
+- User table size: only if the user told you (for example "50k rows, as you said"). If you were not given a size, write "size not given" and do not guess
 - Hot path: linked from homepage navigation
 
 **Evidence:**

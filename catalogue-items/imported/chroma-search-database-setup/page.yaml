@@ -36,6 +36,7 @@ how_to_use:
   - Run the script. The default model runs on your computer and needs no account. The OpenAI and HuggingFace options need an API key and may cost money.
   - Check that the test query returns passages that match your question, with the right labels.
   - Fix your text pieces or labels if the matches look wrong, then run the script again.
+  - Next, wire the store into a question-answering app. The LangChain and LlamaIndex notes in the skill's references/integration.md show how.
 output_sample:
   input:
     - Your text or documents

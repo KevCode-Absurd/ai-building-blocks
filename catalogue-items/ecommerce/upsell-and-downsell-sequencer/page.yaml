@@ -74,7 +74,7 @@ how_it_works:
   - title: Write the retreat
     text: Pairs each declined big offer with a real smaller one, framed as a step down.
   - title: Plan post-purchase
-    text: One click after payment, with rules by what is in the cart and a deeper discount on the same or next item.
+    text: One click after payment, with rules by what is in the cart and a deeper discount on the same or next item. The offer states the price, says the stored card will be charged and shows how to decline.
   - title: Set a margin floor
     text: Gives each offer a discount and a floor so the deep discount still leaves profit.
   - title: Check honesty
@@ -134,9 +134,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Its checkout and order data give you cart contents and the order history for the rules."}
-    - {name: "Aftersell", why: "A Shopify app that shows a one-click offer after payment and charges the stored card."}
-    - {name: "ReConvert", why: "A Shopify app for thank-you page and post-purchase offers."}
+    - {name: "Shopify", why: "Its checkout and order data give you cart contents and the order history for the rules. You need a paid Shopify plan."}
+    - {name: "Aftersell", why: "A Shopify app that shows a one-click offer after payment and charges the stored card. It is a Shopify app with paid plans."}
+    - {name: "ReConvert", why: "A Shopify app for thank-you page and post-purchase offers. It is a Shopify app with paid plans."}
   inputs:
     - "Top bundles from order history"
     - "A product margin list"

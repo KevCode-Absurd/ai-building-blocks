@@ -1,7 +1,7 @@
 new_slug: build-a-practice-plan-from-common-mistakes
 name: Build a practice plan from common mistakes
 headline: Build a practice plan from common mistakes
-summary: Turn a learner's wrong answers into an error map, practice with one planted mistake each, and a mixed practice plan with a recall check.
+summary: Turn a learner's wrong answers into an error map, practice on the top three mistakes, and a mixed practice plan with a recall check.
 job: study-and-practice
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
@@ -29,9 +29,11 @@ you_give:
   - How many practice sessions a week the learner has, and how long each lasts
   - The topics taught earlier, in the order they were taught (optional)
   - How many practice sets you want (optional)
+  - The date for the recall check and what counts as a pass (optional). It suggests both if you give none
 you_get:
   - "An error map: each mistake sorted as a slip, a missing basic or a misunderstood idea, with the answer it came from"
-  - Practice sets where each worked example has one planted mistake to find, explain and fix
+  - Practice sets for the top three mistakes that come from a missing basic or a misunderstood idea. Each worked example has one planted mistake to find, explain and fix
+  - A one-line checking habit for each slip
   - A teacher key, kept apart from the learner sheet
   - A practice plan that mixes the fixed topics with earlier ones, within your weekly time
   - A recall check with a date, its questions and what counts as a pass
@@ -55,6 +57,7 @@ output_shape: |-
   PRACTICE SETS
     Learner sheet: <worked example with one planted mistake> | find it, explain it, fix it
     Teacher key: <correct solution> | <the planted mistake>
+    Slips: <a one-line checking habit for each>
 
   PRACTICE PLAN
     Session | Topics mixed | Minutes | Practice task
@@ -112,8 +115,9 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
+  - Check that each planted mistake matches a mistake in the error map. Ask for a rewrite if one does not.
+  - Check that the recall check has a date and a pass rule, and say which are yours and which are suggestions.
   - Keep the error map and compare it with the next test. Mistakes that vanish tell you the practice worked.
-  - Add a mistake type you spotted yourself and ask for one more practice set on it.
   - Run the recall check, then bring the answers back to update the map.
 next:
   - study-plan-progress-review-assistant

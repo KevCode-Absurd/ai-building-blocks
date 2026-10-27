@@ -87,7 +87,7 @@ The three control baselines are defined in **NIST SP 800-53B** (October 2020):
 
 **Program Management (PM) controls** apply at the organizational level regardless of baseline — they are not allocated to individual systems.
 
-**Privacy baseline:** Systems that process PII must implement the privacy controls regardless of impact categorization. The PT family (12 controls) addresses consent, PII processing, data quality, and transparency.
+**Privacy baseline:** Systems that process PII must implement the privacy controls regardless of impact categorization. The PT family (8 controls, PT-1 to PT-8) addresses consent, PII processing, data quality, and transparency.
 
 ---
 
@@ -134,6 +134,8 @@ Tailoring adjusts the selected baseline to match the system's specific operation
 
 ### Organization-Defined Values (ODVs) — Common Examples
 
+The values below are illustrations only, not required settings. The user's own policy and their assessor set the real values.
+
 | Control | ODV Parameter | Example Value |
 |---------|--------------|---------------|
 | AC-2(3) | Disable inactive accounts after [x] days | 90 days |
@@ -146,7 +148,7 @@ Tailoring adjusts the selected baseline to match the system's specific operation
 
 ## Step 5 — Overlays
 
-Overlays tailor baselines for specific communities, technologies, or environments:
+Overlays tailor baselines for specific communities, technologies, or environments. The Privacy and Healthcare rows below are general examples, not official NIST overlays. Tell the user to check the source of any overlay before they use it:
 
 | Overlay | Use Case |
 |---------|---------|

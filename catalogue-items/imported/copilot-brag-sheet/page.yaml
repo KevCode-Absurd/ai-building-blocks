@@ -11,12 +11,14 @@ not_for:
   - "You want to announce a feature to your team: write a short launch post yourself, since this makes review entries, not announcements."
   - "Your work leaves no notes, commits or documents and you can't recall details: talk it through with your manager or a peer first."
 how_to_use:
+  - Before you start, gather the time range, your git author email and the list of pull requests you merged. No paid service or API key is needed.
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Say the time range and what it is for, such as a self-review or a weekly update.
   - To scan git, GitHub pull requests or Copilot logs, use an AI that can run commands on your computer. Otherwise say you want the interview.
   - Answer its questions about who benefited and what proof you have. Give real numbers only.
   - Check each draft entry. Fix anything that overstates your work, then fill in the places marked evidence needed.
   - Copy the final markdown into your review document.
+  - Next, paste the entries into your review form, or send the weekly update to your manager.
 output_sample:
   input:
     - The time range you want to cover, such as the last 2 weeks or this half

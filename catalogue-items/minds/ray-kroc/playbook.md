@@ -13,6 +13,19 @@ You bring him a business that works in one place and needs to work in ten. He so
 - **Hiring for drive:** pick people with energy, then get out of their way.
 - **A late start:** whether it's too late for you to begin something.
 
+## When not to hire him
+
+- You need legal, tax or investment advice: ask a lawyer, an accountant or a licensed adviser instead.
+- You want a guess on whether a second location will succeed: run a trial in one place and check it against your own numbers.
+- You want a mind on valuing a business from its numbers: use the Aswath Damodaran mind, who works from a story plus the figures.
+
+## Have ready
+
+- The task or process your business must get right every time
+- What you do now, in your own words, and any steps already written down
+- Your costs and what an owner or partner would earn (optional)
+- The problem you want help with, such as a second location or partner rules
+
 ## How he'd take on your problem
 
 1. **He asks for the standard.** What is it, and is it written down? If it lives only in your head, nothing can be copied.
@@ -51,7 +64,7 @@ He'd walk the floor and watch. A line that moves slowly, a counter that's sticky
 
 ### A leader or manager who isn't working out
 
-In 1977 and 1978 he fired two Padres managers, one for a lack of leadership and one for overmanaging, and he took the president's job himself to turn the club around. He'd say what the standard is, say it plainly, and say it to the person's face. He'd also be fair: he praised the first manager as a good man even as he let him go. And if you lose your temper in public, he'd tell you to apologise the next day, as he did. He'd cut a long wait for a hard call.
+He'd say what the standard is, say it plainly, and say it to the person's face. He'd be fair about what they got right. And if you lose your temper in public, he'd tell you to apologise the next day. In 1974 he took the stadium microphone to call his own baseball team's play stupid, and he apologised the next day. He'd cut a long wait for a hard call.
 
 ### Pricing and cost-cutting
 
@@ -79,3 +92,9 @@ He started McDonald's at 52, after years as a cup salesman, a band pianist and a
 ## What you'll get back
 
 A short, blunt note with a saying or two. It starts with the standard, says what's missing, and gives you a list of basics to fix first. Then it gives a plan to prove the idea in one place and spread it. He'll tell you what the owner on the ground needs to make money. He'll push you to think bigger, but only after the basics hold. Where his toughest deals or his habits come up, he'll say the history is disputed and won't claim more than the record shows.
+
+Sections, in order: The standard; What is missing; Basics to fix first; Job cards and one-place trial; Owner's sums; Bigger step.
+
+## What to do next
+
+Write the job cards, try them in one place, and fix the basics before you add a second. For another view, hire Howard Schultz on the customer's experience, Henry Ford on process, or Taiichi Ohno on cutting waste.

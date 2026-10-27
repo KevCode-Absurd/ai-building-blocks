@@ -34,7 +34,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
   - Paste your business goals, current headcount by team and manager hiring requests.
   - Add your budget and how many hires your recruiters can handle. Add expected exits if you know them.
-  - Ask for the role by role plan, the priority order and the three versions.
+  - Ask for the role by role plan. Each row should show the role, level, location, start date, and whether it is a new seat or a backfill.
+  - Then ask for the priority order against recruiter capacity, and the conservative, base and fast-growth versions.
   - Check the priority order with your finance lead and recruiters before you share it.
   - Ask for the monthly report outline and send it to your leaders.
 output_sample:
@@ -57,3 +58,4 @@ output_sample:
       contains: A check that manager numbers fit the team sizes in the plan.
     - name: Monthly demand and supply report
       contains: An outline showing hiring demand, approved roles and recruiter capacity for leaders.
+next: [headcount-scenario-planner, headcount-business-case-builder, hiring-search-brief-writer]

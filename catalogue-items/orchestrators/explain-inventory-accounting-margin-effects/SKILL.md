@@ -17,6 +17,8 @@ Use what is attached or pasted first. If something is missing, say what you can 
 - **Balances** (yours): opening and closing inventory from the balance sheet.
 - **Noncash notes** (yours): acquisitions, currency and other noncash movements, with dates, currency and scale.
 
+A reserve liquidation is when a LIFO company sells more stock than it buys, so older, cheaper cost layers flow into cost of goods sold and lift profit. That lift is not growth, so this flags it.
+
 **Makes it better (optional):** two or more years of the same company, and the full inventory and cash flow notes.
 
 **Tools that do this best:**
@@ -34,11 +36,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **LIFO reserve earnings bridge** (`lifo-reserve-earnings-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. For an actual LIFO issuer, reconcile the reserve to FIFO inventory and COGS; document FX, acquired reserves and liquidation effects before using the movement. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-lifo-reserve-earnings-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** reserve changes from acquisitions, currency and method changes are taken out of the operating movement, and any liquidation is flagged. If not, stop and say which line is off.
+1. **LIFO reserve earnings bridge** (`lifo-reserve-earnings-bridge`). Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. For an actual LIFO issuer, reconcile the reserve to FIFO inventory and COGS; document FX, acquired reserves and liquidation effects before using the movement. Preserve original sources and verify the meaning, units and period of each input before using prior work. It returns FIFO inventory, FIFO comparable cost of goods sold and the after-tax effect. Save `outputs/step-1-lifo-reserve-earnings-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** reserve changes from acquisitions, currency and method changes are taken out of the operating movement, and any liquidation is flagged. If not, stop and say which line is off.
 
-2. **Inventory charge margin bridge** (`inventory-charge-margin-bridge`). Attribute disclosed inventory charges to the same COGS period. Keep permitted reversals and LIFO effects distinct, identify overlap and prevent two adjustments to the same expense. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-inventory-charge-margin-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** each charge sits in the selected cost of goods sold line, reported margin stays primary, and no expense is adjusted twice.
+2. **Inventory charge margin bridge** (`inventory-charge-margin-bridge`). Attribute disclosed inventory charges to the same COGS period. Keep permitted reversals and LIFO effects distinct, identify overlap and prevent two adjustments to the same expense. Preserve original sources and verify the meaning, units and period of each input before using prior work. It returns margin as reported and without the charges, plus the noncash write-downs for step 3. Save `outputs/step-2-inventory-charge-margin-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** each charge sits in the selected cost of goods sold line, reported margin stays primary, and no expense is adjusted twice.
 
-3. **Noncash working capital bridge** (`noncash-working-capital-bridge`). Use original reported inventory balances and separately identified noncash write-downs/reserve changes to derive operating cash investment; analytical FIFO values must not silently replace statutory cash-flow inputs. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-noncash-working-capital-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** noncash movements are taken out, the sign is reversed for the cash flow effect, and no restated FIFO balance is used for the cash result.
+3. **Noncash working capital bridge** (`noncash-working-capital-bridge`). Use original reported inventory balances and separately identified noncash write-downs/reserve changes to derive operating cash investment; analytical FIFO values must not silently replace statutory cash-flow inputs. Preserve original sources and verify the meaning, units and period of each input before using prior work. It returns the operating cash invested in inventory. Save `outputs/step-3-noncash-working-capital-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** noncash movements are taken out, the sign is reversed for the cash flow effect, and no restated FIFO balance is used for the cash result.
 
 ## Workbook checks
 
@@ -48,7 +50,7 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 - Reported-to-comparable COGS reconciles with no double-counted charge; LIFO is not applied as an IFRS costing method; noncash inventory movements do not become cash investment.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+- Reconcile opening balances, additions, deductions and closing balances. Confirm the LIFO reserve and inventory note periods match the period of the income statement cost of goods sold.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
 - Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.

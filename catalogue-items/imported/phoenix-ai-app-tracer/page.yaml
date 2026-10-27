@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It reads traces and finds what went wrong.
 new_slug: phoenix-ai-app-tracer
 name: Phoenix AI app tracer
-summary: Trace every step of your AI app, then score its answers with test sets and judge runs. A free tool to debug an LLM app that you host yourself.
+summary: Trace every step of your AI app and score its answers with test sets. Phoenix itself is free and open source. Judge runs need a paid model key.
 job: build-software
 headline: Phoenix AI app tracer
 subhead: See every step your AI app takes, score its answers, and catch failures before users do. Phoenix is an open-source tool you run yourself, with no vendor lock-in.
@@ -35,6 +35,7 @@ how_to_use:
   - Add the tracing lines for your framework to your app, then run the app once. Check that a trace shows up in Phoenix.
   - Run one judge test on a single saved trace first. Judge runs call a paid model, so check the cost before you run a whole set.
   - Save a small test set, run an experiment on it, and compare your prompts or models in the results.
+  - Fix the prompt or model that scored worst, then rerun the same test set to confirm the change helped.
 output_sample:
   input:
     - Your AI app code (Python)
@@ -57,3 +58,4 @@ output_sample:
       contains: Scores for each prompt or model run on the same test set, so you can compare them.
     - name: Annotations
       contains: Feedback such as user ratings logged against a single step.
+next: [prompt-tester-and-tuner, ai-app-guardrails-builder]

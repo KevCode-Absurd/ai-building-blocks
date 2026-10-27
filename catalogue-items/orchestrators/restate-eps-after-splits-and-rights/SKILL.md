@@ -46,7 +46,6 @@ For a requested workbook, use the spreadsheet tool you have and any template sup
 
 - Total earnings are unchanged by the restatement. Every factor and dated interval reconciles to the company's EPS note. No cash issue is applied backwards without a bonus basis.
 - Each material input traces to its source, date, currency, scale, sign and period. Unresolved items stay as MISSING: lines.
-- Opening balances, additions, deductions and closing balances reconcile. Cash flows are matched to the right discount rate where one is used.
 - Real zeros, unavailable evidence and inapplicable ratios are told apart. No statement is forced to tie with an unexplained plug.
 - Original source locations, assumptions, formula conventions, failed checks and actual verification results are saved. End with CHECKS MISSED: none, or the exact outstanding checks.
 

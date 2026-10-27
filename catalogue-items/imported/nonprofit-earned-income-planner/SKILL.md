@@ -11,6 +11,8 @@ metadata:
 
 # Nonprofit Revenue Diversification
 
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-annual-appeals is the Nonprofit annual appeal planner. nonprofit-budgeting is the Nonprofit operating budget planner. nonprofit-grant-research is the Nonprofit grant funder researcher. nonprofit-cost-allocation, nonprofit-major-gifts, nonprofit-reserves-cash-flow and nonprofit-mergers-fiscal-sponsorship are not in this library yet. If one is missing, say so and carry on with the steps here.
+
 ## When to Use This Skill
 
 Use this skill when an organization is assessing its revenue concentration risk and evaluating
@@ -38,10 +40,10 @@ business case for a new earned-income stream," "how risky is our funding mix."
 
 1. **Diagnose concentration risk first.** Calculate the share of total revenue from (a) the single
    largest funder/contract, (b) the largest revenue *type* (grants vs. individual giving vs. earned
-   income vs. events), and (c) government funding overall. A widely used rule of thumb: no single
+   income vs. events), and (c) government funding overall. A rough rule of thumb (a prompt for judgment, not a sourced standard or benchmark): no single
    source above roughly 25-30% of total revenue is a healthier risk profile; above ~50% from one
    source or one revenue type is a red-flag concentration that funders, auditors, and rating
-   agencies (e.g., Charity Navigator's revenue diversification factors) will flag.
+   agencies (some rating sites look at revenue mix; check their current method) may flag.
 2. **Classify current mix** against a simple matrix: Contributed (grants, individual gifts,
    corporate/foundation) vs. Earned (fees, sales, contracts, rental, licensing, investment income).
    Nonprofits with resilient balance sheets typically blend both; pure earned-income shifts can

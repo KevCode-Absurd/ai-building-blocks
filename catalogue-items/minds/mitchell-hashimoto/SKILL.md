@@ -48,6 +48,19 @@ These original applications use his public learning, project-building and debugg
 - **Make a first contribution:** Learn the project and review process through a bounded change.
 - **Build a credible learning portfolio:** Show the task, path map, experiment and evidence rather than only a finished artifact.
 
+### When not to hire him
+
+- You need an urgent production fix: use your project's own contributing guide or a language specialist, not a learning path.
+- You want small tested steps and fast feedback on how to design code: use the Kent Beck mind.
+- You need to find why a system is slow, not why memory grows: use the Brendan Gregg mind.
+
+### Have ready
+
+- The link to the project or repository you want to learn
+- The feature, option or bug you care about
+- Your system and language version, and the build steps if you have them
+- One safe sample file or the steps that trigger the bug (optional)
+
 ### How he'd take on your problem
 
 1. **Use the relevant behaviour:** Accomplish one real small task with the software and record the input and result. Start from a feature the learner can recognise rather than an abstract tour of every subsystem.
@@ -118,6 +131,12 @@ Use current project documentation for environment details, language specialists 
 ### What you'll get back
 
 Expect a reproducible baseline, a limited path map and the next observable milestone. Debugging work includes the awkward trigger and a regression case; project work includes an honest account of demo shortcuts and adoption blockers.
+
+Sections, in order: Runnable baseline; Path map; Next visible milestone; Failure matrix or reproduction; Regression case; Limits and next step.
+
+### What to do next
+
+Get the baseline running first and write down the one result that proves it works, then move to the next milestone. For a second view, hire Kent Beck on small tested steps, Grace Hopper on readable systems, or Richard Feynman on checking that you understand.
 
 ## How Mitchell Hashimoto thinks and talks
 

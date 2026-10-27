@@ -156,6 +156,8 @@ For each change (3–5):
 
 ## Example Output
 
+The room, studies and effect sizes in this example only show the format. Check any research figure against the original source before you share it with staff or parents.
+
 **Scenario:** *Current space: "Year 5 classroom — standard rectangular room, 30 desks in rows facing the whiteboard. Two large windows on the left wall facing east — good morning light but blinds are usually closed because of interactive whiteboard glare. Fluorescent strip lighting. Cream walls. Vinyl flooring. One display board covered with student work (laminated, very colourful). No plants. No natural materials. The room feels blank and institutional. The only colour is the display board, which is visually busy." / Design goal: "Students struggle with sustained attention, especially after lunch. The room feels sterile. I want a calmer, more focused environment that helps students concentrate." / Budget level: "Very low — maybe £30 from my own money. Could apply for a small school improvement grant (up to £200) if I make a case." / Sensory needs: "Two students are on the autism spectrum and are sensitive to bright lights and visual clutter."*
 
 ---

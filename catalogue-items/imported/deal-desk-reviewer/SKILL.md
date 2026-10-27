@@ -70,7 +70,7 @@ All three: stdlib-only, `--help`, `--sample`, `--input <json>`, `--output {human
 
 - **Auto-approving deals.** This skill never says "approved". Every verdict (including `APPROVE`) names the human(s) who must sign. The output is a recommendation.
 - **Skipping the redline scan** because the score is high. A high composite with `UNCAPPED_INDEMNITY` is still a DECLINE — critical signals override composite.
-- **Using this for legal review of arbitrary contract text.** This skill takes a *structured* terms JSON. For prose redlining, use `c-level-advisor/skills/general-counsel-advisor/scripts/contract_risk_scanner.py`.
+- **Using this for legal review of arbitrary contract text.** This skill takes a *structured* terms JSON. For prose redlining of full contract text, use a general counsel or contract review skill if you have one, or send it to your lawyer. Neither is part of this folder.
 - **Treating the discount router as a discount calculator.** It routes a discount the AE/customer has already proposed; it does not calculate the right discount. Pricing logic lives in `commercial/skills/pricing-strategist`.
 - **Routing every deal to CFO.** The router stops at the lowest-authority hop that can sign the deal. Over-escalation slows the funnel and trains AEs to over-discount.
 - **Hand-editing the chain to skip a hop.** Modifiers (enterprise floor, SMB fast-lane) are explicit; hidden skips defeat the audit trail.
@@ -125,7 +125,7 @@ Walked one at a time by `/cs:grill-commercial` or the Commercial orchestrator. R
 
 5. **"What payment terms — NET-30, NET-45, or NET-60+?"**
    Recommended: prefer NET-30; NET-45+ is a cash flow drag worth quantifying.
-   Canon: KeyBanc SaaS Survey, Pacific Crest data — every 15 days of payment terms costs ~2% of effective deal value.
+   Why it matters: longer payment terms delay cash. Work out the cost for this deal from the user's own cost of cash; do not quote an outside percentage.
 
 6. **"Is the term multi-year with annual prepay, or annual auto-renew?"**
    Recommended: multi-year prepay > annual prepay > annual auto-renew. Auto-renew without 60-day notice is a redline.
@@ -133,6 +133,6 @@ Walked one at a time by `/cs:grill-commercial` or the Commercial orchestrator. R
 
 7. **"Who is the named human approver at each hop of the discount chain?"**
    Recommended: surface the name, not just the role. "VP Sales" is not an approver; "Maria Singh, VP Sales" is.
-   Canon: Bridge Group SaaS AE compensation research — named approval reduces precedent drift by 50%+.
+   Why it matters: a named person is accountable for each approval, which keeps discounts from drifting from deal to deal.
 
 Walk depth-first. Lock 1-4 before opening 5-7. After all 7 are answered, invoke `deal_scorer.py` → `discount_approval_router.py` → `terms_redliner.py` in sequence.

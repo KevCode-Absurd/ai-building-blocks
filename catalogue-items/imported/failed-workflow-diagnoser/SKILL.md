@@ -56,7 +56,7 @@ Error: Node.js 16 actions are deprecated. Please update to use Node.js 20.
 ```diff
        - name: Checkout Code
 -        uses: actions/checkout@v2
-+        uses: actions/checkout@v4
++        uses: actions/checkout@v4   # example only: check the current release notes and pin the reviewed commit SHA before you apply it
 ```
 
 ### Example 2: Diagnosing and Fixing a Missing Repository Secret

@@ -5,9 +5,9 @@ name: Pallet stacking planner
 summary: Plan a pallet stacking pattern that fits the most boxes. Give it your box and pallet sizes, and get layers, box counts and weight and height checks.
 job: plan-supply-chain
 headline: Pallet stacking planner
-subhead: A stacking pattern that fits the most boxes on a pallet without breaking weight, height or crush limits. You give box and pallet sizes, and it works out the layers.
+subhead: A stacking pattern that fits the most boxes on a pallet and stays within the weight, height and crush limits you give it. You give box and pallet sizes, and it works out the layers. The checks are estimates.
 explain: |
-  A stacking pattern that fits the most boxes on a pallet without breaking weight, height or crush limits. You give box and pallet sizes, and it works out the layers.
+  A stacking pattern that fits the most boxes on a pallet and stays within the weight, height and crush limits you give it. You give box and pallet sizes, and it works out the layers. The checks are estimates.
 
   It starts by confirming the pallet type, its weight capacity, allowed overhang and maximum height. Then it checks your boxes: sizes, weights, fragile items and how many can sit on each other. It tests layer patterns, including interlocked ones, picks the layout with the best fill, and checks total weight and height. It also covers wrapping, banding, forklift side and whether pallets will be stacked on a truck.
 when:
@@ -34,8 +34,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
   - Paste in your details. Add any fragile or no-stack rules (optional).
   - Ask your AI to plan the pallet. It works best when your AI can run code (Python), but a plain chat can try too.
-  - Check each layer against the weight and height results. These are estimates.
+  - Check each layer against the weight and height results. These are rough estimates from simple rules. Compare them with the box maker's stacking strength, the pallet's load rating and your carrier's rules before you use them.
   - Have a qualified person check the pallet before it ships.
+  - Once the layout is set, plan how the pallets go onto the truck. Compare carriers with the Freight mode and carrier picker.
 output_sample:
   input:
     - Your pallet type and size
@@ -53,3 +54,4 @@ output_sample:
       contains: Where the load's center of gravity sits, how far it is off center, and whether it is stable.
     - name: Shipping instructions
       contains: Wrapping advice, forklift entry sides, whether pallets can be double-stacked, and labeling.
+next: [freight-mode-and-carrier-picker]

@@ -19,6 +19,8 @@ Two modes. Pick one:
 
 1. **Read the practice profile.** Load `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it contains `[PLACEHOLDER]` markers or does not exist, stop and say: "This plugin needs setup before it can give you useful output. Run `/ip-legal:cold-start-interview` — the C&D skill depends on your enforcement posture, approval matrix, and practice-area mix, none of which are configured yet."
 
+   If the user is in a plain chat with no plugin, do not just stop. Ask them for the same facts in plain words: how firm they want to be, who must approve a letter, and where their rights are registered. Use those answers in place of the profile, say so at the top of the draft, and keep every other rule below.
+
 2. **Check matter workspaces.** Per `## Matter workspaces`: if `Enabled` is `✗`, skip — skills use practice-level context. If enabled and there is no active matter, ask: "Which matter is this for? Run `/ip-legal:matter-workspace switch <slug>` or say `practice-level`."
 
 3. **Dispatch on `$ARGUMENTS`:**

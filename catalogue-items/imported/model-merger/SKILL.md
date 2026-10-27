@@ -15,12 +15,12 @@ dependencies: [mergekit, transformers, torch]
 Use Model Merging when you need to:
 - **Combine capabilities** from multiple fine-tuned models without retraining
 - **Create specialized models** by blending domain-specific expertise (math + coding + chat)
-- **Improve performance** beyond single models (often +5-10% on benchmarks)
+- **Improve performance** beyond single models on some benchmarks (test your own merge; gains vary)
 - **Reduce training costs** - no GPUs needed, merges run on CPU
 - **Experiment rapidly** - create new model variants in minutes, not days
 - **Preserve multiple skills** - merge without catastrophic forgetting
 
-**Success Stories**: Marcoro14-7B-slerp (best on Open LLM Leaderboard 02/2024), many top HuggingFace models use merging
+**Success Stories**: many models on HuggingFace are made by merging. Check the model cards for their results.
 
 **Tools**: mergekit (Arcee AI), LazyMergekit, Model Soup
 
@@ -58,10 +58,10 @@ dtype: bfloat16
 
 ```bash
 # Run merge
-mergekit-yaml config.yml ./merged-model --cuda
+mergekit-yaml config.yml ./merged-model   # add --cuda if you have a GPU (optional; CPU works)
 
 # Use merged model
-python -m transformers.models.auto --model_name_or_path ./merged-model
+python -c "from transformers import AutoModelForCausalLM; m = AutoModelForCausalLM.from_pretrained('./merged-model'); print(m.config.model_type)"
 ```
 
 ### SLERP Merge (Best for 2 Models)

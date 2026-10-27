@@ -27,7 +27,7 @@ you_give:
   - Your budget and deadline
   - Reference images you like (optional)
 you_get:
-  - A creative brief built on a photo, illustration or general template
+  - A creative brief built on a photo, illustration or general template, covering story, look, execution, standards and logistics
   - A shot list or visual direction
   - A list of sizes and crops you need
   - Quality standards with what is approved and what is not
@@ -40,6 +40,8 @@ how_to_use:
   - Read the brief. Check that the idea is one clear sentence and that the avoid list is specific.
   - Fix any vague words like modern or clean. Ask your AI to name real references instead.
   - Send the brief to your vendor in writing. Walk them through it and take questions before work starts.
+  - When the first work comes back, judge it with the brief's quality checklist before you pay for more.
+next: [aesthetic-direction-brief-writer, product-shoot-brief-writer]
 output_sample:
   input:
     - The job to brief (photo shoot, illustration set, video or campaign)

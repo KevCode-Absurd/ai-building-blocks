@@ -29,7 +29,7 @@ you_get:
   - A card for each handoff with what the step needs, returns and must never lose
   - A list of ways the plan could fail, with a change for each
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the job and a normal week. Ask two or three of the people who do it which tasks they dislike.
   - Read the hidden-value step before you automate anything. Keep or replace whatever it flags.

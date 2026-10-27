@@ -25,8 +25,9 @@ not_for:
 you_give:
   - Your team, meaning who is on it, what they do and how experienced they are
   - What you want to get done in the period (a quarter or a month)
+  - Last period's results, if you have them (optional)
   - A current plan or list of priorities (optional)
-  - The decision that is stuck, if there is one
+  - The decision that is stuck, if there is one (step 3 skips without it)
 
 you_get:
   - A few goals, each with key results that have a number and a date
@@ -34,7 +35,7 @@ you_get:
   - A decision plan with one named owner, who to hear from, the strongest case against, a date and what everyone does after the call
 
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and three skill files, in the order they run: Objectives and key results writer, One-on-one meeting planner and Informed captain decision planner."
   - Open Claude Code, or a Claude Project with the files added, and say "Follow HANDOFF.md". With only a chat window, paste each skill in order and carry each result to the next.
   - Describe your team and the period. Add the stuck decision if you have one.
   - Check the key results first, since the other two steps use them.

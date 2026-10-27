@@ -151,3 +151,4 @@ terms:
     meaning: A separate page and ad set up to sell slow stock at a discount, kept off your main store.
   - term: Contribution per sale
     meaning: What is left from one sale after product cost, delivery cost and the ad cost of winning that customer.
+next: [next-dollar-budget-allocator, discount-impact-checker]

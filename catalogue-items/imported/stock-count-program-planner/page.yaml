@@ -33,11 +33,14 @@ you_get:
   - Accuracy targets and tracking
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tools are needed.
-  - Paste the skill text into the chat.
+  - Paste the skill text into the chat. It contains Python snippets for people who want to run them. Your AI can ignore them: nothing needs to run.
   - Paste your item list with value and sales rate. Add your warehouse size, staff time and how you count now.
   - Answer any questions your AI asks about your tools and audit needs.
   - Check the count schedule against your real staff time. Ask for changes if it is too heavy.
   - Run the first counts. Then paste the results back and ask your AI to update the schedule.
+  - The accuracy targets and cause shares in the plan are rules of thumb, not measured data. Set your own targets from your first counts.
+  - For stock levels use the warehouse stock level planner. For shelf layout use the warehouse layout planner.
+next: [warehouse-stock-level-planner, warehouse-layout-planner]
 output_sample:
   input:
     - Your item list with value and sales rate

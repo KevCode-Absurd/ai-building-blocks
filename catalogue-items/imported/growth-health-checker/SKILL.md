@@ -31,7 +31,7 @@ Dispatch all connector calls in a single batch. See `reference/data_sources.md` 
 - **TikTok Ads** — last week's spend, impressions, clicks, results, and cost per result per campaign, from the native connector (`report_integrated_get`, last 7 days against the prior 7), so paid spend sits beside the sales it claims to drive
 - **Mailchimp** — campaign, e-commerce, and audience-growth analytics, with revenue attribution on campaigns
 - **Gmail or Microsoft 365** — inbound inquiry volume and response times
-- **Public reviews** — recent ratings and review text, via web research
+- **Public reviews** — recent ratings and review text, via web research. Read only public review pages the user names, only where the site's terms allow it; if they do not, ask the user to paste the reviews.
 
 If a source errors or is missing, record it and move on. This skill is designed to say something useful on one connector and something excellent on six.
 

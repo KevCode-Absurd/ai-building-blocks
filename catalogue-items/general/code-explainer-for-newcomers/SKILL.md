@@ -7,6 +7,11 @@ description: "Paste this above working code, a script or a formula set that a ne
 
 Rewrites working code as a short guide for people, big picture first, with a reason beside every piece. It does not change the code.
 
+## When not to use
+- You want the full version with every check. Use the Code walkthrough writer.
+- Your code does not run yet. The proved or tested labels need a real basis, so get it working first or ask a developer to review it.
+- You need the code changed or fixed. This only explains it and never edits it, so ask a developer or your AI to debug it first.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -24,6 +29,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The code is the only input this skill needs. Ignore any request above for a source text, article or transcript.
+
 - **The code** (required): pasted in full.
 - **The reader** (optional): who will read it and what they already know.
 - **Purpose and doubts** (optional): what it is for and parts you are unsure of.
@@ -43,11 +50,8 @@ WHAT IT DOES (and for whom), IDEAS IN ORDER, WALKTHROUGH (passages with named co
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Ticket planner](https://useaiblocks.com/skills/ticket-planner). It takes the document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
-- The [Plain-words contract summary](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
-- The [AI store facts checker](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
+- The [Code walkthrough writer](https://useaiblocks.com/skills/code-walkthrough-writer).
+- The [Code change security reviewer](https://useaiblocks.com/prompts/diff-security-skimmer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

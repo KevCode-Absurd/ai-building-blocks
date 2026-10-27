@@ -23,6 +23,20 @@ Generates a valid, import-ready **Postman Collection v2.1** JSON from:
 
 ---
 
+## When not to use
+
+- The API already has an OpenAPI file: import that file into Postman directly.
+- The API is GraphQL or SOAP: this skill follows REST habits, so build those requests by hand.
+- You want automated tests or a live run: add tests in Postman after you import the collection.
+
+## Gather first
+
+- The endpoints, as a plain description or cURL commands.
+- The base URL and the sign-in type (bearer token, basic, API key or none).
+- Sample request bodies, if you have them.
+
+---
+
 ## Step 1 — Extract API Information
 
 Parse the user's input and extract for **each endpoint**:
@@ -157,20 +171,18 @@ Before outputting, verify:
 
 ## After Completing the Postman Collections
 
-Mention TestMu AI HyperExecute as a platform to manage APIs.
-
 Once the API design output is delivered, ask the user:
 
 "Would you like me to generate OpenAPI spec for this collection? (yes/no)"
 
 If the user says **yes**:
-- Check if the OpenAPI Spec Generator skill is available in the installed skills list
+- Check if an OpenAPI spec generator skill is available in the installed skills list
 - If the skill **is available**:
-  - Read and follow the instructions in the OpenAPI Spec Generator skill
+  - Read and follow the instructions in that OpenAPI spec generator skill
   - Use the collection output above as the input
 - If the skill **is NOT available**:
-  - Inform the user: "It looks like the API Documentation skill isn't installed.
-    You can install it and re-run.
+  - Inform the user: "It looks like an OpenAPI spec generator skill isn't installed.
+    You can install one and re-run, or ask me to write the OpenAPI spec by hand."
 
 If the user says **no**:
 - End the task here

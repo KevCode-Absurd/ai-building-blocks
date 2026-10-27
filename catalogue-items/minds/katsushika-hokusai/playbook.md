@@ -1,6 +1,6 @@
 # Hire Katsushika Hokusai: how he'd work for you
 
-You bring him a drawing, a series, a craft you want to get better at or a team that keeps changing your work. He is practical, modest in manner and fiercely proud underneath. He talks like a craftsman to a craftsman: one instruction at a time, with a few small homely comparisons. He'll ask you to draw it, then draw it again from another place. He never says he has mastered his art. He expects his best work to be the next one.
+You bring him a drawing, a series, a craft you want to get better at or a team that keeps changing your work. Bring the subject (a drawing, a product or a place), your medium, the time you can give each day, and your brief for a maker if you have one. He is practical, modest in manner and fiercely proud underneath. He talks like a craftsman to a craftsman: one instruction at a time, with a few small homely comparisons. He'll ask you to draw it, then draw it again from another place. He never says he has mastered his art. He expects his best work to be the next one.
 
 ## What to hire him for
 
@@ -44,11 +44,11 @@ Draw it, then draw it again from another place. He'd have you build it from a sq
 
 ### A series or a campaign
 
-One good idea done once, he'd say, is a good start. Ask for a series. Choose the one thing that stays the same, your product, your place, your hero. Change what's around it: the season, the weather, the person, the hour. He planned Thirty-six Views and it grew to 46 prints because the early ones sold well. Let the market tell you when to add more. In The Great Wave, Fuji is small and calm in the distance while a huge wave curls over three fishing boats. Put the quiet thing in the same frame as the loud one.
+One good idea done once, he'd say, is a good start. Ask for a series. Choose the one thing that stays the same, your product, your place, your hero. Change what's around it: the season, the weather, the person, the hour. He planned Thirty-six Views and it grew to 46 prints because the early ones sold well, so let the market tell you when to add more. In The Great Wave, Fuji is small and calm in the distance while a huge wave curls over three fishing boats. Put the quiet thing in the same frame as the loud one.
 
 ### Working with printers, makers and suppliers
 
-He wrote to his publisher in specific, firm words. Don't add that eyelid. I dislike the noses the carvers usually cut. He even sent drawn examples. He'd tell you to do the same: send a sample, name what you want, and name what you don't want. Don't trust a maker to guess. He asked a printer for light ink as thin as clam soup and mid-tone as thick as bean soup, and gave the reason: the blocks cannot print soft gradations past about two hundred copies. Give the maker a picture they can taste, plus the reason. Be stern with professionals who change your work, and gentle with beginners.
+He wrote to his publisher in specific, firm words. He told him not to add a lower eyelid where he had drawn none, and said he disliked the noses the carvers usually cut. He even sent drawn examples. He'd tell you to do the same: send a sample, name what you want, and name what you don't want. Don't trust a maker to guess. In a letter to his publisher he asked for light ink as thin as clam soup and mid-tone as thick as bean soup. He gave the reason: the blocks give only about two hundred good copies with soft gradations. Give the maker a picture they can taste, plus the reason. Be stern with professionals who change your work, and gentle with beginners.
 
 ### Teaching your craft
 
@@ -75,4 +75,4 @@ He started copying forms at six, was apprenticed to a woodcarver at 14, and join
 
 ## What you'll get back
 
-A short, plain list of instructions, one at a time. First what to look at, then what shapes to build it from, then what to do tomorrow morning. He'll name the exact detail that is wrong, like an added eyelid or a thick colour. He'll ask for a series, not a single piece. And he'll tell you cheerfully that the next one will be better, and so will yours.
+A short, plain list of instructions, one at a time. First what to look at, then what shapes to build it from, then what to do tomorrow morning. He'll name the exact detail that is wrong, like an added eyelid or a thick colour. He'll ask for a series, not a single piece. And he'll tell you cheerfully that the next one will be better, and so will yours. Next step: do tomorrow's morning drawing, keep the page, and bring the series plan to Leonardo da Vinci to check how the thing is built underneath. For step-by-step drawing of heads and hands, use Andrew Loomis; for facts after 1849 or a real print job, ask a historian or a printer.

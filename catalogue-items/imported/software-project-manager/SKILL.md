@@ -20,7 +20,7 @@ This skill enables an AI agent to serve as a project management co-pilot for sof
    Break each high-level goal into epics, then into user stories, and finally into sub-tasks small enough to complete in one to two days. Write each user story in the standard format: "As a [role], I want [capability] so that [benefit]." Attach acceptance criteria as a checklist on every story. Identify dependencies between tasks and flag any that form a critical path. Assign story-point estimates using the Fibonacci scale (1, 2, 3, 5, 8, 13) based on complexity, uncertainty, and effort.
 
 3. **Plan Sprints or Populate the Board**
-   For Scrum teams, create a sprint with a start date, end date, and sprint goal. Pull stories from the top of the prioritized backlog until the team's velocity (historical average story points per sprint) is reached. For Kanban teams, enforce work-in-progress (WIP) limits per column and ensure the board columns match the team's workflow (e.g., Backlog → In Progress → Review → Done). Push the plan to the connected project tracker via its API.
+   For Scrum teams, create a sprint with a start date, end date, and sprint goal. Pull stories from the top of the prioritized backlog until the team's velocity (the trailing three-sprint average of story points) is reached. For Kanban teams, enforce work-in-progress (WIP) limits per column and ensure the board columns match the team's workflow (e.g., Backlog → In Progress → Review → Done). Push the plan to the connected project tracker via its API.
 
 4. **Track Progress and Surface Blockers**
    Poll the project tracker on a configurable interval (default: daily). Calculate burndown and cumulative-flow metrics. Detect when a task has been "In Progress" longer than its estimate and flag it as at risk. Identify dependency chains where a blocked upstream task is stalling downstream work. Post a daily digest to the team's Slack or Teams channel summarizing completed items, in-progress items, and blockers.
@@ -29,7 +29,7 @@ This skill enables an AI agent to serve as a project management co-pilot for sof
    Maintain a risk register with each entry containing a description, likelihood (low/medium/high), impact (low/medium/high), an assigned owner, and a mitigation plan. When a new risk is identified — such as a team member going on leave or a third-party API deprecation — add it to the register and notify the project lead. Track cross-team dependencies by linking external issues and alerting when their status changes.
 
 6. **Generate Status Reports**
-   Produce sprint review or weekly status reports in Markdown (or export to PDF/Confluence). Each report includes: sprint goal and whether it was met, completed stories with their point total, stories carried over, burndown chart data, velocity trend over the last five sprints, top risks, and action items for the next period. Tailor the level of detail to the audience — executives get a one-page summary, the team gets the full breakdown.
+   Produce sprint review or weekly status reports in Markdown (or export to PDF/Confluence). Each report includes: sprint goal and whether it was met, completed stories with their point total, stories carried over, burndown chart data, velocity trend over the last five sprints (for the report only; plan capacity from the trailing three-sprint average), top risks, and action items for the next period. Tailor the level of detail to the audience — executives get a one-page summary, the team gets the full breakdown.
 
 ## Usage
 
@@ -52,6 +52,8 @@ Provide the agent with your project details and what you need. The agent adapts 
 ```
 
 ## Examples
+
+Both examples use invented data for illustration. The "pushed to Linear" and Slack lines happen only when the agent has access to a tracker or Slack. Without it, hand back the plan as text.
 
 ### Example 1 — Creating a Sprint Plan with User Stories
 

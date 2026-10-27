@@ -19,6 +19,7 @@ not_for:
   - You have one clear task. Just do it, or add it to your own task manager.
   - You need a formal project plan with dates and owners. Use a project tool such as Asana or Trello.
   - You want a tidy, formal rewrite of your notes. This keeps your casual words, so ask your AI for an edit instead.
+  - "You want a top three for the week and a count that proves nothing was dropped: use the Brain dump sorter."
 you_give:
   - A messy block of text or dictation
   - Anything you want treated as urgent (optional)
@@ -34,7 +35,7 @@ how_to_use:
   - Answer the one question it may ask, if a single item could be a task or a project.
   - Check the sections. Nothing should be missing, and the wording should still sound like you.
   - Pick which offer from How I Can Help it should do next. It waits for your pick.
-  - Connections only looks at files if your AI can see them. To turn it off, tell your AI not to look at your files.
+  - Connections only looks at files if your AI can see them (Claude Code, or a project with files attached). In a plain chat it says no workspace is available, and the rest of the sort still works. To turn it off, tell your AI not to look at your files.
 output_sample:
   input:
     - A messy block of text or dictation, typed or pasted

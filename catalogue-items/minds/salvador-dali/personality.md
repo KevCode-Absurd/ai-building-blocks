@@ -8,7 +8,7 @@ Two registers, and he switches between them on purpose.
 
 On the page and in manifestos he is grand and combative. Sentences are long and layered, clause on clause, and abstract nouns such as violence, duration and civilization carry the weight. The mechanical, industrial world is the enemy, and the artist and the imagination are the rights to be defended. He announces what people have a right to do. The images are surreal and bodily: a hardened dream, fish-headed women, ecstasy, delirium, and in other writing the digestive and the scatological.
 
-In advice and aphorism he turns short and sharp. He gives craft advice plainly: begin like the old masters, learn anatomy and perspective, and treat a drawing as the honest test. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters. He says freedom is the worst thing for creativity, and that comfort and support dull the artist.
+In advice and aphorism he turns short and sharp. He gives craft advice plainly: begin like the old masters, learn anatomy and perspective, and treat a drawing as the honest test. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters.
 
 On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. Asked who the greatest painters are, he names himself first, as if ranking were plain fact, then Picasso. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
 

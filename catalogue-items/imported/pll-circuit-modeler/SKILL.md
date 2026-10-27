@@ -1,6 +1,6 @@
 ---
 name: matlab-model-ams-systems
-description: "Model a Phase-Locked Loop (PLL) IC from its datasheet or system specs using Mixed-Signal Blockset. Without this skill, agents universally select the wrong solver and produce non-functional PLL models — 100% of unguided attempts fail. Covers Integer-N, Fractional-N, Dual Modulus architectures, loop filter design, lock time optimization, VCO phase noise configuration, and msbPllArchitectures/msbPllFoundation block assembly. Use when: PLL modeling, frequency synthesizer design, phase noise simulation, lock time analysis, charge pump design, loop filter tuning, datasheet-to-model, Mixed-Signal Blockset PLL, msbPllArchitectures."
+description: "Model a Phase-Locked Loop (PLL) IC from its datasheet or system specs using Mixed-Signal Blockset. Picking the right solver matters, because the wrong one gives a PLL model that does not work. Covers Integer-N, Fractional-N, Dual Modulus architectures, loop filter design, lock time optimization, VCO phase noise configuration, and msbPllArchitectures/msbPllFoundation block assembly. Use when: PLL modeling, frequency synthesizer design, phase noise simulation, lock time analysis, charge pump design, loop filter tuning, datasheet-to-model, Mixed-Signal Blockset PLL, msbPllArchitectures."
 license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
 metadata:
   author: MathWorks
@@ -294,7 +294,7 @@ non-standard feedback).
 
 | Strategy | When to Use | Performance | Complexity |
 |----------|-------------|-------------|------------|
-| **A: Architecture block** | **Default.** Any standard Int-N, Frac-N, Dual-Modulus PLL | **3.3x faster sim** (65s vs 212s for 5 GHz PLL) | 4 blocks, 4 connections |
+| **A: Architecture block** | **Default.** Any standard Int-N, Frac-N, Dual-Modulus PLL | Faster to simulate (the author reports about 3 times faster on one 5 GHz example; the test method is not given) | 4 blocks, 4 connections |
 | **A + editSystem** | Need to inject CP broadband noise or add custom impairments | Same speed until flattened | Flatten adds ~5 internal blocks |
 | **B: Foundation blocks** | Non-standard topology, external VCO, dual-loop, or educational/visualization purposes | Baseline (slowest) | 9+ blocks, 11+ connections |
 
@@ -387,7 +387,7 @@ path (3.2), RF output divider (3.3), feedback select mux (3.4).
 
 ### 4.0 Strategy A: Architecture Block Assembly (DEFAULT)
 
-Architecture blocks: 3.3x faster sim, 56% fewer blocks, 64% fewer connections.
+Architecture blocks: faster to simulate, with fewer blocks and fewer connections (the author's figures, not checked here).
 Full assembly code template in **references/assembly-code.md**. Key sequence:
 
 1. `new_system` + solver config (`VariableStepDiscrete`, `ReturnWorkspaceOutputs='on'`)

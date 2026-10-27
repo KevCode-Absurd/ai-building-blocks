@@ -17,30 +17,31 @@ You write the brief and image prompt for a candid photo carrying one line: the h
 - Leave the product out unless asked. If asked, it's the real one, small and off to one side, and the picture still works without it.
 - Any person is a made-up adult, no children, never shown as a customer. Anything borrowed (an app, a chat, a news look) is generic.
 - Nothing says what the reader has. No before-and-after.
+- The picture is an ad and must read as one. The platform's "Sponsored" or ad label must stay on it in the platform's own format. The prompt must not say or imply it is a real user's own photo or an organic post. Never fake a user's name, profile or comments.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Makes it better (optional):**
-- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ad copy, your brand brain, your page. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for ad copy, your brand brain, your page. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **GPT Image:** Spells a short line on a photo better than older models, and you can point at one wrong word to fix it.
@@ -71,7 +72,8 @@ If an image tool is connected, offer to make the picture with it, and ask before
 5. **Set the type.** One line, plain heavy sans-serif, sentence case, dark on light or light on dark, big enough to read at arm's length. Never script, never the brand's font. No masthead, outlet name, byline or date.
 6. **Write the line under the image:** a different caption line, about 27 characters, so the two lines don't repeat.
 7. **Run the scent check.** Compare the ad with the page's first screen on three things: the words, the scene and the promise. Mark each one as a match, or say what to change.
-8. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none". Scent items that don't match stay in the scent check, each with its fix.
+8. **Check the ad label and disclosure.** Tell the user to check the ad label and disclosure against the platform's current ad policy before the ad runs. Health, money and results claims need the same check.
+9. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none". Scent items that don't match stay in the scent check, each with its fix.
 
 ## What you hand back
 1. **Scene**: what someone scrolling would say they saw.
@@ -88,7 +90,10 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
+- The [Visual twist image ad maker](https://useaiblocks.com/skills/visual-twist-image-ad-maker).
+- The [Clay scene image ad maker](https://useaiblocks.com/skills/clay-scene-image-ad-maker).
+- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -102,7 +107,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## If something is missing
 Write `MISSING: <what>` instead of guessing.
 - No page yet: write the line from the story and flag "the page must open with this line and this scene".
-- No line works without a claim the brand can't make: use `problem-moment-image-ad-maker` with no words.
+- No line works without a claim the brand can't make: say so and use the Problem moment image ad maker (`problem-moment-image-ad-maker`) with no words on the picture. That sibling makes a handwritten-note picture. This skill carries the page's headline on a candid photo.
 
 ## Avoid
 - A second line, a subhead or a button on the image.

@@ -36,6 +36,11 @@ how_to_use:
   - Install the support packages it lists. GigE, USB3 Vision and CoaXPress cameras also need the vendor's .cti file.
   - Run the listing code in MATLAB first. Check your camera appears, then run the connect and capture code.
   - Your AI can only test the code if it can run MATLAB and reach your camera. Otherwise, run it yourself and report any errors back.
+  - "Expect four parts back: device listing code, connect code, capture code and clean-up code. Run them in that order."
+  - Next, save the frames to disk or pass them to your image processing code. To write up the results, use the MATLAB report builder.
+next:
+  - matlab-report-builder
+  - matlab-bug-tracer
 output_sample:
   input:
     - Your camera type and model

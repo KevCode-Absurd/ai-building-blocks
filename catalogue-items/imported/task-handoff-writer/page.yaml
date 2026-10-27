@@ -36,7 +36,7 @@ how_to_use:
   - List the files or areas the agent may touch, and say what is off limits.
   - Tell your AI you approve the handoff, and say how you will know the work is done.
   - Read the brief and the success check before you send anything to the agent.
-  - Sending the brief to a terminal agent needs that tool installed on your computer. Check its progress using the polling plan, then review the report yourself.
+  - Sending the brief to a terminal agent such as Claude Code or Codex CLI needs that tool installed on your computer, and a paid plan or API key for it. Check your account first. These tools can run commands on your computer, so read the brief and limits before you let one start. Check its progress using the polling plan, then review the report yourself.
 output_sample:
   input:
     - The work you want to pass on
@@ -45,7 +45,7 @@ output_sample:
     - How you will know the work is done
     - Your OK to hand the work off
   prerequisites:
-    - An AI agent or tool you are allowed to use, such as Claude Code or Codex CLI
+    - An AI agent or tool you are allowed to use, such as Claude Code or Codex CLI (these need a paid plan or API key)
     - Your clear approval to delegate the work
   output:
     - name: Handoff brief

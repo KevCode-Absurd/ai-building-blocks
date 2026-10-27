@@ -5,7 +5,7 @@ name: Outbound email sequence writer
 summary: Write a cold email sequence for your prospect. You get several short emails, subject lines, personal fields and a send schedule.
 job: write-emails
 headline: Outbound email sequence writer
-subhead: Describe your prospect. Get a multi-step email sequence with timing and personal touches. Bring target company type and person. Use the result to plan your next step.
+subhead: Describe your prospect. Get a multi-step email sequence with timing and personal touches. You fill in the proof and send it from your own email tool.
 explain: |
   A full cold email series that earns replies and ends with a booked meeting, each message short and different from the last.
 
@@ -16,7 +16,7 @@ when:
   - You target a new job title and need fresh messaging.
   - You want a follow-up plan, not one-off emails.
 not_for:
-  - "You need one reply or a single message: ask your AI to draft it directly, or use an email drafting skill."
+  - "You need one reply or a single message: use the Cold email writer."
   - "You only have a purchased list with no lawful basis to contact people: get consent or a lawful basis first."
   - "You need a script for a live sales call: write call notes by hand or ask your AI for a call prep plan."
 you_give:
@@ -35,7 +35,9 @@ how_to_use:
   - Add proof points and trigger events if you have them. Use only real, checked numbers.
   - Say how many emails you want. Then ask for subject lines, personal fields and a send schedule.
   - Read each email and fill in every field. Replace any figure or case study that is not true for you.
+  - Add an opt-out line and your real name and company to every email. Make sure you have a lawful basis to contact each person before you send.
   - Send from a real person's address. If a prospect replies, stop the sequence and answer by hand.
+  - Load the emails into your email or sales tool. Track replies for the first week and change the weakest subject line.
 output_sample:
   input:
     - The type of company and the person you are writing to
@@ -60,3 +62,4 @@ output_sample:
       contains: Fill-in fields such as name, company and trigger event.
     - name: Send schedule
       contains: The day, time and gap between each email.
+next: [cold-email-pre-send-checker, cold-email-claim-checker]

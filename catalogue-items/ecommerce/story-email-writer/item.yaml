@@ -7,7 +7,7 @@ role: make
 job: email
 level: beginner
 inputs:
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: brief, required: false}
 outputs:
   - {type: copy_draft}

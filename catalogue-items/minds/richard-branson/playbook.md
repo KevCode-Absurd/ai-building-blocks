@@ -14,6 +14,19 @@ You bring him a real problem from your business, your work or your life. He is u
 - **A chance you can't do yet:** decide whether to say yes now and learn the skill on the job, and who to hire so the gap is covered.
 - **Your own path:** choose work that is fun and still pays.
 
+## When not to hire him
+
+- You need a valuation or hard numbers on a deal: use the Aswath Damodaran mind, or an accountant.
+- You want to run a hard company crisis or a tough hiring call step by step: use the Ben Horowitz mind.
+- You face a regulated money, legal or medical decision, or a plan whose worst case can't be capped: ask a qualified advisor.
+
+## Have ready
+
+- The problem you face, in a few plain lines
+- What you sell and who buys it
+- The big rival you want to take on (optional)
+- What you can spend and the worst case you could survive (optional)
+
 ## How he'd take on your problem
 1. **He asks if it's fun, and starts from the customer.** What annoyed you as a customer, and would fixing it be fun? His airline began with bad seats and poor service.
 2. **He finds the big lazy player.** Who has grown comfortable? Virgin went where large firms had gone stale.
@@ -78,3 +91,9 @@ He'd say enjoy every day, and that he has never gone into a business purely to m
 ## What you'll get back
 
 A cheerful, plain answer that starts with a story and ends with a lesson. It's short on theory and long on a next step. You'll get the angle (who to take on, what the story is), the downside plan, and a small test to run first. He'll say if a plan sounds like a bad idea and why. He is open about failures. He has no view on Virgin's current plans or his private life.
+
+Sections, in order: The story that opens the answer; The angle; Downside plan; First small test; What he'd push back on; Questions for you.
+
+## What to do next
+
+Run the small test first and write down what you learned. The downside plan tells you when to stop. For another view, hire Phil Knight on the long road to a first product, Sara Blakely on starting small, or Seth Godin on being worth talking about.

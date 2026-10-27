@@ -13,7 +13,7 @@ This skill enables an AI agent to produce polished, data-driven reports from str
 
 ## Workflow
 
-1. **Ingest and validate the source data.** Accept the input data file or payload in JSON, CSV, YAML, or raw API response format. Validate the schema — check for required fields, correct data types, missing values, and outliers. If the data is incomplete (e.g., a sprint retro JSON missing the velocity field), flag the gap and either infer a default, request the missing value, or note the omission in the report. Normalize date formats, currency symbols, and units for consistency.
+1. **Ingest and validate the source data.** Accept the input data file or payload in JSON, CSV, YAML, or raw API response format. Validate the schema — check for required fields, correct data types, missing values, and outliers. If the data is incomplete (e.g., a sprint retro JSON missing the velocity field), flag the gap and either request the missing value or leave it blank and list it under Data gaps in the report. Never infer a value. Normalize date formats, currency symbols, and units for consistency.
 
 2. **Select or customize the report template.** Match the data to a report template based on the report type specified by the user. Built-in templates include: `sprint_retrospective`, `financial_summary`, `analytics_dashboard`, `incident_postmortem`, and `weekly_status`. Each template defines the section order, required data mappings, chart types, and tone (analytical for financial reports, constructive for retros, urgent for postmortems). Users can customize templates by overriding sections, adding fields, or changing the visual theme.
 
@@ -40,6 +40,8 @@ Output format: [markdown / html / pdf]
 ~~~
 
 ## Examples
+
+*All names, figures, quotes and dates in the examples below are made up to show the shape of a report. They are not real output. Do not copy them. A real report uses only what is in the data you supply.*
 
 ### Example 1: Sprint Retrospective Report from Structured Data
 

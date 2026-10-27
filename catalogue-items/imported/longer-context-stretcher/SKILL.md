@@ -201,8 +201,11 @@ where θ_j = base^(-2j/d) for j ∈ [0, d/2)
 - Efficient context extension (the YaRN paper reports needing far fewer tokens than earlier methods)
 
 **Parameters:**
+
+AI Blocks note: the keys below name the ideas in the YaRN paper. They are not the `rope_scaling` keys that `transformers` reads, so a config built from them would be silently ignored. For the real config, use the `rope_scaling` pattern in "HuggingFace Transformers Integration" below, and check its key names against your installed `transformers` version.
+
 ```python
-# YaRN configuration
+# YaRN configuration (paper terms, illustration only)
 yarn_config = {
     "scale": 16,                    # Extension factor
     "original_max_position": 2048,  # Base context
@@ -259,6 +262,8 @@ scaled_position[i] = i / extension_factor
 - The paper's analysis says interpolation is far more stable than extrapolation
 
 ## Method Comparison
+
+The Max Context column gives the original author's rough ranges. They are not tied to one baseline model, so treat them as a sense of scale, and follow the scaling advice in Best Practices for your own model.
 
 | Method | Max Context | Training Needed | Memory | Extrapolation | Best For |
 |--------|-------------|-----------------|--------|---------------|----------|

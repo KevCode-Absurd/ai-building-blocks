@@ -29,7 +29,7 @@ you_get:
   - A fair review of what is strong, what is weak and what to fix next
   - The paper fitted to the journal's current limits, sections and style, with the date checked
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give the topic, your results and your methods notes. Do not paste data you may not share.
   - After the review, fix the weak parts and rerun any analysis it asks for.

@@ -85,9 +85,10 @@ import {
 interface EmailLayoutProps {
   preview: string
   children: React.ReactNode
+  unsubscribeUrl?: string // pass a real, working link for each recipient. Leave out for pure account mail (verify, reset, invoice). Required for any marketing-style mail.
 }
 
-export function EmailLayout({ preview, children }: EmailLayoutProps) {
+export function EmailLayout({ preview, children, unsubscribeUrl }: EmailLayoutProps) {
   return (
     <Html lang="en">
       <Head>
@@ -126,11 +127,11 @@ export function EmailLayout({ preview, children }: EmailLayoutProps) {
           <Hr style={styles.divider} />
           <Section style={styles.footer}>
             <Text style={styles.footerText}>
-              MyApp Inc. · 123 Main St · San Francisco, CA 94105
+              [YOUR COMPANY NAME] · [YOUR POSTAL ADDRESS]
             </Text>
             <Text style={styles.footerText}>
-              <a href="{{unsubscribe_url}}" style={styles.link}>Unsubscribe</a>
-              {" · "}
+              {unsubscribeUrl && <a href={unsubscribeUrl} style={styles.link}>Unsubscribe</a>}
+              {unsubscribeUrl && " · "}
               <a href="https://yourapp.com/privacy" style={styles.link}>Privacy Policy</a>
             </Text>
           </Section>
@@ -162,7 +163,7 @@ import { Button, Heading, Text } from "@react-email/components"
 import { EmailLayout } from "../components/layout/email-layout"
 
 interface WelcomeEmailProps {
-  name: "string"
+  name: string
   confirmUrl: string
   trialDays?: number
 }
@@ -172,7 +173,7 @@ export function WelcomeEmail({ name, confirmUrl, trialDays = 14 }: WelcomeEmailP
     <EmailLayout preview={`Welcome to MyApp, ${name}! Confirm your email to get started.`}>
       <Heading style={styles.h1}>Welcome to MyApp, {name}!</Heading>
       <Text style={styles.text}>
-        We're excited to have you on board. You've got {trialDays} days to explore everything MyApp has to offer — no credit card required.
+        We're excited to have you on board. [REPLACE WITH YOUR REAL PLAN DETAILS, for example your trial length and whether a card is needed.] Trial length: {trialDays} days.
       </Text>
       <Text style={styles.text}>
         First, confirm your email address to activate your account:
@@ -190,7 +191,7 @@ export function WelcomeEmail({ name, confirmUrl, trialDays = 14 }: WelcomeEmailP
       </Text>
       <ul style={styles.list}>
         <li>Connect your first project in 2 minutes</li>
-        <li>Invite your team (free for up to 3 members)</li>
+        <li>[Invite your team. State your real free-seat limit, or remove this line.]</li>
         <li>Set up Slack notifications</li>
       </ul>
     </EmailLayout>
@@ -221,7 +222,7 @@ import { EmailLayout } from "../components/layout/email-layout"
 interface InvoiceItem { description: string; amount: number }
 
 interface InvoiceEmailProps {
-  name: "string"
+  name: string
   invoiceNumber: string
   invoiceDate: string
   dueDate: string
@@ -299,9 +300,12 @@ const styles = {
 
 ## Unified Send Function
 
+Placeholders in square brackets, and the sample company, trial and seat details in the templates, are examples. Fill in your own real details before you send anything. Never send the sample claims as if they were true.
+
 ```typescript
 // emails/lib/send.ts
 import { Resend } from "resend"
+import { createElement } from "react"
 import { render } from "@react-email/render"
 import { WelcomeEmail } from "../templates/welcome"
 import { InvoiceEmail } from "../templates/invoice"
@@ -320,7 +324,8 @@ export async function sendEmail(to: string, payload: EmailPayload) {
   }
 
   const template = templates[payload.type]
-  const html = render(template.component(payload.props as any))
+  // Render the component as a React element. Do not call it as a plain function.
+  const html = await render(createElement(template.component as any, payload.props))
   const trackedHtml = addTrackingParams(html, { campaign: payload.type })
 
   const result = await resend.emails.send({

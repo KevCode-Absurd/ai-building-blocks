@@ -11,7 +11,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Queries all URL redirects in the store and identifies redirect chains (where redirect target A is itself redirected to B), duplicate targets (multiple paths pointing to the same destination), and orphaned redirects (pointing to non-existent pages). Redirect chains add latency and hurt SEO. Read-only — no mutations.
+Queries all URL redirects in the store and identifies redirect chains (where redirect target A is itself redirected to B), duplicate targets (multiple paths pointing to the same destination). It does not check whether the target pages exist, so it does not find redirects that point to missing pages. Redirect chains add latency and hurt SEO. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_content`
@@ -124,5 +124,5 @@ CSV file `redirect_audit_<YYYY-MM-DD>.csv` with columns:
 
 ## Best Practices
 - Redirect chains (A→B→C) add an extra HTTP round-trip — consolidate them to a direct redirect (A→C).
-- After fixing chains or removing duplicates, use Shopify Admin → Navigation → URL Redirects to make the corrections. Bulk deletion is not available in the Admin API but individual redirects can be deleted via `urlRedirectDelete` mutation.
+- After fixing chains or removing duplicates, use Shopify Admin → Navigation → URL Redirects to make the corrections. This skill itself never deletes or changes a redirect. Make the corrections yourself in Admin.
 - Run after every major store migration or product/collection restructuring where URLs change in bulk.

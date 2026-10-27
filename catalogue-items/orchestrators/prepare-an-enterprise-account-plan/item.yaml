@@ -11,9 +11,11 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
-  - type: brief
+  - type: meeting_notes
+    required: false
+  - type: document
     required: false
 outputs:
   - type: document

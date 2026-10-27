@@ -5,7 +5,7 @@ name: Pricing strategist
 summary: Plan your SaaS pricing with a value metric, good-better-best tiers and a price test plan. Give it your product, buyers and competitors.
 job: set-prices
 headline: Pricing strategist
-subhead: Describe your product and buyers. Get tiers, a value metric and a test plan for your prices. Bring product and target market. Use the result to plan your next step.
+subhead: Describe your product and buyers. Get tiers, a value metric and a test plan for your prices. Bring your product, target market and competitor prices. Then run the price test on new customers.
 explain: |
   A pricing plan for your product: tiers, the unit you charge on and a way to test prices without guessing.
 
@@ -30,12 +30,12 @@ you_get:
   - Packaging and feature split
   - Price test plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text (SKILL.md) together with the four files in its references folder. The skill works without them, but you lose the detail on pricing models, tiers, research methods and the pricing page teardown. No code or paid tools are needed.
   - Describe your product, your buyers and how you sell. Add competitor prices.
   - Add your current price, conversion rate, churn and revenue per customer if you have them.
   - Answer any questions your AI asks. It asks once, so say so if you do not know a number.
   - Read the value metric first. Check that it grows as your customers get more value.
-  - Run the price test on new customers before you change prices for existing ones.
+  - Run the price test on new customers before you change prices for existing ones. The Price test planner can set up the test.
 output_sample:
   input:
     - Your product type and who it is for
@@ -54,3 +54,4 @@ output_sample:
       contains: What to measure, how long to run the test and how to roll out a change.
     - name: Price rise plan (if needed)
       contains: Steps to raise prices, including what to do for existing customers and how to tell them.
+next: [price-test-planner, paywall-designer]

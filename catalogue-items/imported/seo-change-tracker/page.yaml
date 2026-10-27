@@ -30,12 +30,12 @@ you_get:
   - Ranking and index losses
   - Changed titles, tags and schema
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web, and connect Search Console if you can.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web, and connect Search Console if you can. You need verified access to your site's property there. Without it, the tool only compares pages and cannot measure ranking changes.
   - Paste the skill text into the chat. Say if you want a baseline or a comparison.
   - Give your site address and the key URLs. Include your best landing pages, sales pages and any page a recent release touched.
   - For a comparison, paste your last snapshot and say which dates each one covers. Use the same URLs and date range both times.
   - Read the critical items first. Check each one on the live page before you act.
-  - Fix the problems, then ask for a new baseline.
+  - Hand the repairs to your developer or whoever runs your site's CMS. Then ask for a new baseline and compare it using the same URLs and date range, so the check stays fair.
 output_sample:
   input:
     - Your site address and the key page URLs

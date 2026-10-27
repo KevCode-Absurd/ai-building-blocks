@@ -9,7 +9,7 @@ headline: "Find out if a business is worth owning, before you look at its price"
 subhead: Give it a business and its accounts. It tests the edge, whether you understand it, how steady the record is, how managers use cash, the returns and margins, and the real cash an owner could take out. You get ten tests marked pass, fail or unknown, and a verdict. A method of analysis, not personal financial advice.
 
 explain: |
-  Most people start with the price. The better order is to ask first whether the business is worth owning at any sensible price. If you cannot explain how it makes money, if its record keeps changing, or if you cannot estimate its cash, no price will make it a good choice.
+  Start by asking whether the business is worth owning at any sensible price, before you look at the price. If you cannot explain how it makes money, if its record keeps changing, or if you cannot estimate its cash, no price will make it a good choice.
 
   This workflow runs the questions in the order they cut things down. First the lasting edge and whether the business sits inside what you understand. Then whether the record is steady, and whether the people in charge treat spare cash and the truth like owners would. Then the money tests: return on equity, margins, whether the profit kept added value, and the cash an owner could really take out. It ends on one page of ten tests, each marked pass, fail or unknown, and a verdict: too hard, not worth a price check, dig more, or worth a price check. The method is the one Robert Hagstrom drew from Warren Buffett's habits in The Warren Buffett Way. The ten tests are Hagstrom's grouping, not a list Buffett wrote. It gives no buy or sell calls, and no test catches outright fraud.
 
@@ -18,13 +18,14 @@ when:
   - You like a business and want to know if your liking holds up against ten tests.
   - You are comparing two businesses and want them on the same page.
 not_for:
-  - "You want a buy or sell call or a share price: use the Bad-year break-even tester or a licensed adviser, since this gives no buy or sell calls."
+  - "You want a buy or sell call or a share price: ask a licensed adviser, since this gives no buy or sell calls."
   - "You only want to know what the assets are worth: use the Business asset value estimator."
   - "The business has no public or shared accounts, such as a very young company: ask for its books first, or talk to an accountant."
 
 you_give:
   - The business, in a few lines, and what you know of its rivals (optional)
   - Four or five years of its accounts, with profit, equity, debt, sales, spending and working capital
+  - Its market value at the start and end of that period, for the one-dollar test (optional)
   - Notes on its managers, such as past letters to owners (optional)
 you_get:
   - A test of whether the edge is real and lasting

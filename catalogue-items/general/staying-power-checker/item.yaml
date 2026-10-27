@@ -7,10 +7,11 @@ role: check
 job: strategy
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report, required: true}
+next: [people-trust-checker]
 origin: rebuilt
 version: 1.0.0
 minds:

@@ -7,13 +7,15 @@ role: orchestrate
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
+  - {type: document, required: false}
   - {type: audio, required: true}
 outputs:
-  - {type: meeting_notes}
+  - {type: meeting_notes, required: true}
+  - {type: plan, required: true}
 uses: [meeting-agenda-and-cost-planner, meeting-pre-read-writer, meeting-notes-maker]
 steps:
-  - {uses: meeting-agenda-and-cost-planner, note: "Starts from your idea for a meeting. Makes a go or no-go call and a timed agenda. Hands step 2 the go or no-go call and the timed agenda."}
+  - {uses: meeting-agenda-and-cost-planner, note: "Starts from your idea for a meeting: the decision it must make, who attends and how long. Makes a go or no-go call and a timed agenda. Hands step 2 the go or no-go call and the timed agenda."}
   - {uses: meeting-pre-read-writer, note: "Builds on the agenda from the step before. Needs your Notion pages connected to pull in background. Hands you the pre-read to send, and step 3 the agenda it follows."}
   - {uses: meeting-notes-maker, note: "Starts from the recording. Check each decision and action against the agenda you wrote at the start. Takes the agenda from steps 1 and 2 as the meeting header. Hands you the notes with decisions and action items."}
 origin: rebuilt

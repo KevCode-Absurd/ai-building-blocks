@@ -1,6 +1,6 @@
 # Matthew Dixon: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 **An honest note on the sources.** Matthew Dixon is alive, and views can change. His own words come from a full podcast transcript of 2023 [S1], a 2022 written interview [S2], a 2025 podcast transcript on client loyalty and his professional services research [S10], and two Harvard Business Review articles [S3][S4]. Four more pages (S11 to S14) are host summaries or write-ups with a few of his lines, so they carry less weight. The Challenger Sale, The Effortless Experience and The JOLT Effect are under copyright and we did not read them, so book-level claims rest on interviews, articles and reference pages. Most of his work was written with co-authors, first at CEB, a research firm, and later with Ted McKenna. Treat each view as "as of" the year of its source. This data set summarises and does not quote the books. Our sources do not confirm his birth year.
 

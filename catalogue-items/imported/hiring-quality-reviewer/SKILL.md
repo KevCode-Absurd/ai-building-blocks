@@ -88,6 +88,8 @@ The targets are examples to adjust to your company. They are not proven industry
 
 ## Candidate Experience Survey
 
+Before any survey goes out, add a short privacy note at the top: why you are asking, who will read the answers, how long you will keep them, and that replying is optional. Follow your local data rules.
+
 **Stage-appropriate surveys — different questions by outcome:**
 
 | Candidate Status | Survey Focus | Timing |

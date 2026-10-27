@@ -17,11 +17,11 @@ when:
   - You want to check the paper against what reviewers look for before submitting.
   - You are a first-time author and want a clear section plan.
 not_for:
-  - "You are writing a NeurIPS, ICML or ICLR paper: use ml-paper-writing, which covers general machine learning papers."
-  - "You need to check your citations: use ml-paper-writing, which has the citation check. This skill does not bundle it."
+  - "You are writing a NeurIPS, ICML or ICLR paper: use the AI research paper writer, which covers general machine learning papers."
+  - "You need to check your citations: use the AI research paper writer, which has the citation check. This skill does not bundle it."
   - "You only need LaTeX formatting help: use the official template for your venue. This skill does not set up formatting."
 you_give:
-  - A description of your system and what is new
+  - A description of your system and what is new (a written description is enough, no code needed)
   - Your main results
   - The target venue
   - An existing draft (optional)
@@ -33,10 +33,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
   - Describe your system and say what is new about it.
-  - Add your main results and name the target venue, such as OSDI or NSDI.
+  - Add your main results and name the target venue, such as OSDI or NSDI. Submission limits are 12 pages for OSDI, NSDI, SOSP and EuroSys, and 11 for ASPLOS. Check your call for papers.
   - Paste your current draft if you have one (optional).
   - Ask for the page budget and outline first. Check that each claim has a result, then ask for the draft.
-  - Use the venue checklist to fix the weak spots before you submit. Running LaTeX needs an AI that can run code and read files.
+  - Use the venue checklist to fix the weak spots before you submit. This skill does not check citations or set up LaTeX. Look up every reference yourself, or use the AI research paper writer for that. Compiling LaTeX needs an AI that can run code and read files.
 output_sample:
   input:
     - A description of your system and what is new

@@ -11,6 +11,7 @@ inputs:
 outputs:
   - {type: council_brief}
 uses: []
+next: [advisory-council, week-priority-picker]
 origin: own
 version: 1.0.0
 example_pending: true

@@ -117,7 +117,6 @@ tweaks:
 judge:
   - Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

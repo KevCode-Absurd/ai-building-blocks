@@ -25,15 +25,19 @@ source:
   licence_file: LICENSE-CONTENT
   commit: 0c10eb8
   original_name: brendangregg-use-tsa
-  author: Brendan Gregg
+  author: thecsdoctor
   imported: 2026-10-20
 version: 1.0.0
 credits:
   - title: brendangregg-use-tsa skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brendangregg-use-tsa
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name.
   - title: Original author
+    by: thecsdoctor
+    url: https://github.com/thecsdoctor/brendangregg-use-tsa-skill
+    used: Wrote the skill; sickn33 shared it in their collection.
+  - title: USE and TSA methods
     by: Brendan Gregg
     url: https://www.brendangregg.com
-    used: Wrote the skill; sickn33 shared it in their collection.
+    used: Created the methods the skill is based on. He did not write this skill.

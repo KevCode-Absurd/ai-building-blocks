@@ -9,7 +9,7 @@ subhead: Give it a company's new filing with the inventory note and your last ac
 explain: |-
   Two companies can sell the same goods at the same price and report different margins. One may count its stock on LIFO (last in, first out) and the other on FIFO (first in, first out). One may have written down old stock in the year, and the other may not. A year-on-year margin change can come from those choices as much as from the business. The balance sheet can also mislead. Stock may rise because a company bought another one, or because of currency, and none of that is cash spent on stock.
 
-  This inventory comparison reviewer keeps a short record of the last accepted review. It holds the costing basis, the LIFO reserve history, the write-downs and reversals by line, the noncash changes in stock, the period dates and any overlaps between adjustments. When a new filing arrives, it compares the inventory note with that record. Then it runs the Inventory cost and margin reviewer. That workflow has three steps: a LIFO to FIFO bridge, a write-down margin bridge and a split of cash invested in stock. Each charge is counted once.
+  This inventory comparison reviewer keeps a short record of the last accepted review. It holds the costing basis, the LIFO reserve history, the write-downs and reversals by line, the noncash changes in stock, the period dates and any overlaps between adjustments. When a new filing arrives, it compares the inventory note with that record. Then it runs the Explain inventory accounting margin effects. That workflow has three steps: a LIFO to FIFO bridge, a write-down margin bridge and a split of cash invested in stock. Each charge is counted once.
 
   LIFO is a US accounting method. The agent will not apply it to a company that reports under IFRS. It does not value stock, judge whether a reserve is right or say whether to buy a share. It uses only the filings you give it, and a person who knows the filings checks the result.
 when:
@@ -18,10 +18,10 @@ when:
   - A filing shows a write-down or a reversal, and you need to know how much of the margin change it explains.
   - Stock on the balance sheet jumped, and you want to know how much was cash and how much was a purchase of a business or a currency move.
 not_for:
-  - You want the LIFO to FIFO adjustment for one year only. Use the LIFO to FIFO comparison calculator.
-  - You only want to pull a write-down out of one margin. Use the Inventory write-down margin checker.
-  - You only want to see how much cash went into working capital. Use the Working capital cash change checker.
-  - You want a bank borrowing limit for your own stock. Use the Inventory borrowing limit calculator.
+  - You want the LIFO to FIFO adjustment for one year only. Use the LIFO reserve earnings bridge.
+  - You only want to pull a write-down out of one margin. Use the Inventory charge margin bridge.
+  - You only want to see how much cash went into working capital. Use the Noncash working-capital bridge.
+  - You want a bank borrowing limit for your own stock. Use the Inventory borrowing base builder.
   - You want to value stock, set a reserve or decide what to buy. It explains reported numbers and gives no view on value.
 you_give:
   - The new dated filing, with the inventory note, the income statement and the cash flow statement (from the company's results page)
@@ -121,7 +121,7 @@ tweaks:
 judge:
   - Inventory effects reconcile to reported COGS once, LIFO/IFRS conventions are distinguished and analytical values do not contaminate reported cash-flow inputs.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - No write-down or reversal is counted twice. LIFO is used only for a company that reports it under US GAAP, and a reserve cut is flagged as a one-off.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
@@ -131,7 +131,7 @@ improve:
   - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
   - Keep one sheet with the company's reserve and write-down figures by year, with the filing page for each, and paste it in every time.
   - Write your materiality threshold into the agent's file once, so every run uses the same one.
-  - Pair it with the LIFO to FIFO comparison calculator when you only need one year's bridge.
+  - Pair it with the LIFO reserve earnings bridge when you only need one year's bridge.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

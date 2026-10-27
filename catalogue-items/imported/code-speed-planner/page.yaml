@@ -35,6 +35,7 @@ how_to_use:
   - Read the plan and the cost it states before you accept any code.
   - Review the slow patterns it lists, then use the faster replacement.
   - If your AI can read project files, point it at the folder so it can scan more code at once.
+  - Next, for code that has already shipped and is slow, use the slow code speeder. Time any speed claim with a profiler before you trust it.
 output_sample:
   input:
     - The task you want coded, or the code or pull request to review

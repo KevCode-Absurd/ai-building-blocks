@@ -16,6 +16,8 @@ outputs:
   - type: audio
 uses: []
 origin: imported
+warnings:
+  - paid:OpenAI
 source:
   by: OpenAI
   repo: openai/skills

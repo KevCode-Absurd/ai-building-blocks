@@ -30,7 +30,8 @@ you_get:
   - A compliance check
   - A results table to fill in
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. This skill makes images by running code, so use an AI that can run code and has files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. The skill file is mostly in Chinese and starts with an English summary, so your AI can follow it in English. This skill makes images by running code, so use an AI that can run code and has files.
+  - Add an image API key from OpenAI, Gemini, fal or Replicate. Each image may cost money.
   - Add your product photo and your selling points. Say which metric you care about, clicks or sales.
   - Pick one thing to test. If you want to change three, ask for three rounds.
   - Read and confirm the hypothesis for each version before any image is made.

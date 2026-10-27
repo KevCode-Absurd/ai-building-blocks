@@ -44,7 +44,7 @@ Estimates customer acquisition cost (CAC) for each traffic source by combining t
    - Else parse `landingPageUrl` UTM params (utm_source)
    - Else bucket as `direct`
 
-3. If `new_customers_only: true`, drop orders where `customer.numberOfOrders > 1` so each customer is counted once
+3. If `new_customers_only: true`, count each customer once: keep only the customer's earliest order inside the window, and only if `customer.createdAt` falls inside the window. Do not drop a new customer because they placed a second order in the window. (`numberOfOrders` is a lifetime count, so it cannot tell new from returning customers.)
 
 4. Aggregate per source: `orders_count`, `new_customers_count`, `revenue_attributed`
 
@@ -86,6 +86,7 @@ query OrdersWithAttribution($query: String!, $after: String) {
         }
         customer {
           id
+          createdAt
           numberOfOrders
         }
       }

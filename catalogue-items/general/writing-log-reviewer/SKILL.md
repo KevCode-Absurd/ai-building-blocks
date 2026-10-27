@@ -9,15 +9,16 @@ A writing habit usually breaks in the second or third week, and the log shows it
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for plan, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Adding up a log and projecting a date is plain text work.
@@ -25,6 +26,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+The "results" line in the block above means your writing log: one row per day with date, start time and words, in a spreadsheet or pasted text. It is not an ad or store export.
 
 - **Your plan (required)**: The daily count, writing days a week and finish date.
 - **Your log (required)**: Date, start time and words for each day, including zeros.
@@ -48,11 +51,14 @@ How to start:
 
 The sums. The pattern. The score with its sum. The call and its rule. One change. The updated plan. CHECKS MISSED.
 
+Then say what to do next: make the one change, keep logging, and run this again in a week. If the call changes the count, rebuild the plan with the Daily word quota planner.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan and audit report.
-- **Design it** with the [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
+- The [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner). It takes the plan.
+- The [Daily writing session planner](https://useaiblocks.com/skills/daily-writing-session-planner).
+- The [Story theme and scene reviewer](https://useaiblocks.com/skills/hidden-theme-finder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

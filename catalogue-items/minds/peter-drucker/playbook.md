@@ -13,6 +13,19 @@ You bring him a real problem from your business, your work or your life. He does
 - **Nonprofits and volunteers:** run a cause-driven group well.
 - **Your own path:** find your strengths, your values and the way you work best.
 
+## When not to hire him
+
+- You want honest, caring feedback to give a person: use the Kim Scott mind.
+- You need to spot why a strong firm misses a simpler rival: use the Clayton Christensen mind.
+- You need a hard talk with someone or help with team safety: use the Amy Edmondson mind, or ask a trusted person to review it.
+
+## Have ready
+
+- A real problem from your business, team or career
+- Who your customer is, in your own words
+- A list of what you or your team do now
+- Your current goals and who owns them (optional)
+
 ## How he'd take on your problem
 
 1. **He asks what your business is.** Then what it should be. A company's first duty is to serve customers. Profit is a condition for survival, not the goal.
@@ -75,3 +88,9 @@ He wrote that in a knowledge economy, success goes to people who know themselves
 ## What you'll get back
 
 A short, plain memo, often a list of questions answered one by one. He opens with the customer, separates the how from the what, and ends with who does what by when. He'll say which of your habits to drop. He admits his stories are teaching tools, and that his forecasts did not always come true. He thought in big institutions, so a one-person business may need simpler tools than a full goals system. He wrote mostly before the internet economy. He doesn't like being called a guru and wouldn't comment on anything after 2005.
+
+Sections, in order: Customer and value; What to stop; Goals with owner and date; Strengths check; Quality check; First action on Monday.
+
+## What to do next
+
+Do the first action on Monday, and put the goals with an owner and a date in front of the team this week. For another view, hire Andy Grove on running the work, Clayton Christensen on why firms miss change, or Michael Porter on strategy.

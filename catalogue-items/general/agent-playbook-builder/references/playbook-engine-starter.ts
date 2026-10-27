@@ -19,6 +19,8 @@
  *      f. Record activation with cooldown timestamp
  *
  * Reporting only. No actions without a proposal and human approval.
+ * It posts the diagnosis to a channel only once you wire postDiagnosis. The
+ * firing is recorded, and the cooldown starts, only after the post succeeds.
  */
 
 // ============================================================================
@@ -247,7 +249,8 @@ async function executePlaybook(
     clientId,
   })
 
-  // 3. Post (wrap in try so record still happens on Slack failure)
+  // 3. Post. If the post fails, stop here: do not record the firing, so the
+  //    cooldown does not start for an alert nobody saw. The next run retries.
   try {
     await postDiagnosis({
       playbook,
@@ -257,7 +260,8 @@ async function executePlaybook(
       findings: triggerFindings,
     })
   } catch (err: any) {
-    console.error(`[PlaybookEngine] post failed:`, err.message)
+    console.error(`[PlaybookEngine] post failed, not recording:`, err.message)
+    return
   }
 
   // 4. Record activation (enforces cooldown going forward)

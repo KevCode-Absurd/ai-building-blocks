@@ -20,8 +20,8 @@ uses: [sms-send-planner, email-campaign-calendar-planner, campaign-email-writer,
 steps:
   - {uses: sms-send-planner, note: "Plans how many texts the sale can bear and when each goes out. Hands the text plan to the email calendar and to the text checker."}
   - {uses: email-campaign-calendar-planner, note: "Places the emails around the text plan so the two channels do not repeat each other. Hands the calendar slot for the sale email to the email writer, and the calendar to the text checker."}
-  - {uses: campaign-email-writer, note: "Takes the sale email's slot from step 2's calendar (goal, audience, angle, date) and the brief you write at the pause, plus your brand brain and reviews. Writes the sale email and hands the draft to the text checker."}
-  - {uses: sms-send-checker, note: "Checks the text you plan to send against the plan from steps 1 and 2 and pairs its timing with the email from step 3. You write or bring the text itself. Hands back a readiness score and a fix list."}
+  - {uses: campaign-email-writer, note: "Takes the sale email's slot from step 2's calendar (goal, audience, angle, date) and the brief you write at the pause, plus your brand brain and reviews. Writes the sale email. It does not write the texts. Step 4 pairs the timing of your text with this email."}
+  - {uses: sms-send-checker, note: "Checks the text you plan to send against the plan from steps 1 and 2 and pairs its timing with the email from step 3. You write or bring the text itself, since step 3 does not write it. Hands back a readiness score and a fix list."}
   - {uses: email-and-sms-performance-reader, note: "Uses the sale results you export after sending, not step 4's pre-send check. Reads them by channel and ranks what to repeat; set them beside the plan from steps 1 and 2."}
 origin: rebuilt
 version: 1.0.0

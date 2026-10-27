@@ -32,11 +32,12 @@ you_get:
   - Clear, direct wording you can reuse in ads, decks and welcome emails
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the prompt from the skill into the chat. Swap $ARGUMENTS for your product name.
+  - Paste the prompt from the skill into the chat. Swap $ARGUMENTS for your product name. The skill's Canva example only shows the pattern, so tell your AI to write about your own product, and check that no Canva wording leaks into the result.
   - Add your value proposition, your customer groups, your key features and where the copy will run.
   - Add your brand tone if you have one, such as plain, warm or formal.
   - Read each statement. Check that the benefit is true and the feature really delivers it.
   - Ask for a shorter or longer version if a place needs a different length.
+  - Put each version where it belongs: ads and pages, the sales deck, the welcome email. Then test the statement that matches each group's main concern against your current line.
 output_sample:
   input:
     - Your value proposition, or the key benefits of your product
@@ -46,7 +47,7 @@ output_sample:
     - Your brand tone or voice notes (optional)
   output:
     - name: Segment statements
-      contains: One statement per customer group that names the person, the main benefit and result, and the feature that delivers it.
+      contains: One statement per customer group that names the person, the main benefit and result, and the feature that delivers it. Each is two to three sentences, plus a one-line tagline for ads.
     - name: Marketing version
       contains: Statements for ads, web pages and social posts, in clear and direct language.
     - name: Sales version

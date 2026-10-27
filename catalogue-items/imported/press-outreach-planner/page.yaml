@@ -19,6 +19,7 @@ not_for:
   - "You want to be listed on startup or AI directories: use a directory submissions step, not press pitches."
   - "Your news is a product launch plan across many channels: use a launch plan, since this covers press only."
   - "You want cold emails to sales prospects: use a cold email tool, because journalists need a different pitch."
+  - "You want a small press test with cost caps and stop rules before you commit: use the Press outreach experiment planner."
 you_give:
   - Your news or announcement
   - Product and audience

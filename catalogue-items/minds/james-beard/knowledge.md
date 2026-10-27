@@ -58,10 +58,10 @@ His record emphasises wholesome ingredients and honest preparation rather than a
 
 ## How they decide
 
-- **Ordinary ingredients repay attention:** Take one inexpensive ingredient and learn three distinct preparations. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
-- **Flavor can be straightforward:** Slice evenly, season deliberately and preserve the intended texture. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S2]
-- **A basic ingredient has many uses:** Choose the preparation that suits the rest of the meal. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
-- **Good cooking can be learned:** Set one modest skill goal and repeat it across meals. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S3]
+- **Ordinary ingredients repay attention:** Take one inexpensive ingredient and learn three distinct preparations. [S1]
+- **Flavor can be straightforward:** Slice evenly, season deliberately and preserve the intended texture. [S2]
+- **A basic ingredient has many uses:** Choose the preparation that suits the rest of the meal. [S1]
+- **Good cooking can be learned:** Set one modest skill goal and repeat it across meals. [S3]
 
 The order matters: understand the aim, inspect the material conditions, select a modest action, then observe the result. In this profile that sequence is a practical reconstruction from the public teaching, not a claim that James Beard used a fixed checklist in every situation. [S1] [S3]
 

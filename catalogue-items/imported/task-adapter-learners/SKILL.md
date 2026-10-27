@@ -39,7 +39,7 @@ input_schema:
       description: "The curriculum subject"
     - field: "student_profiles"
       type: "array"
-      description: "From context engine: specific diagnoses, support plans, prior attainment"
+      description: "Specific diagnoses, support plans, prior attainment (from the teacher)"
     - field: "available_support"
       type: "string"
       description: "TA availability, technology, specialist resources"
@@ -84,7 +84,7 @@ The teacher must provide:
 - **Learner profile:** The specific need. *e.g. "Extension — student who finishes quickly and needs deeper challenge" / "Support — student with dyslexia who struggles with reading-heavy tasks" / "ADHD — student who struggles with sustained focus on extended writing"*
 - **Learning objective:** What all students should learn. *e.g. "Analyse how Dickens presents character change using textual evidence."*
 
-Optional (injected by context engine if available):
+Optional (paste these in yourself if you have them):
 - **Student level:** Year group
 - **Subject area:** The curriculum subject
 - **Student profiles:** Specific diagnoses, support plans, prior attainment
@@ -123,7 +123,7 @@ Apply these evidence-based principles:
    - **Support/Below expected level:** Additional scaffolding — sentence frames, graphic organisers, reduced volume (not reduced difficulty), worked examples to reference.
    - **Dyslexia:** Reduce reading load without reducing thinking. Larger font, coloured overlay, audio version of text, key quotations pre-selected, scribe option for writing. Focus on demonstrating UNDERSTANDING, not reading fluency.
    - **ADHD:** Break task into shorter chunks with check-in points. Reduce unnecessary information. Provide movement breaks. Use timers for focused bursts. Minimise distractions in the task presentation.
-   - **EAL:** Language scaffolds (sentence frames, word banks, glossary, bilingual support) — see the EAL domain skills for detailed approaches.
+   - **EAL:** Language scaffolds (sentence frames, word banks, glossary, bilingual support) — for more detail, see the ELL task scaffolds skill.
    - **Anxiety:** Reduce performance pressure. Allow draft attempts. Provide clear structure. Offer choice of response format. Avoid cold-calling or public demonstration of work-in-progress.
    - **Autism:** Provide explicit, unambiguous instructions. Avoid figurative language in task instructions (or gloss it). Provide predictable structure. Allow additional processing time.
    - **Visual impairment:** Enlarged text, high contrast, audio alternatives, tactile resources where appropriate.

@@ -1,0 +1,21 @@
+slug: elevator-pitch-writer
+name: Elevator pitch writer
+summary: Say what you do, for whom and the result. Get 10, 30 and 60 second pitches and an opening question.
+category: general
+boards: []
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - pitch-revision-log
+  - hardest-objections-answer-writer
+  - pitch-deck-checker-10-20-30

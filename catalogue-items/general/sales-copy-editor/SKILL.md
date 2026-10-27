@@ -32,6 +32,11 @@ How to start:
 
 <!-- /needs -->
 
+## When not to use it
+- You have no draft yet and need new ad copy from scratch: use "Fact-based ad copy writer" first, then bring the draft here.
+- You want a full rewrite in a new voice: this edit only fixes lines where a reader would stop, and keeps the rest.
+- You have no facts to give it: it can only mark `MISSING:` and cannot add details it was not given.
+
 ## What you need
 - **The draft** (required): each part named (headline, body, button; for an ad, image words, main text, headline or script lines).
 - **Facts** (required): product details, approved claims, proof, price and offer terms, the guarantee as written, and claims the brand must never make. No edit may go beyond them.

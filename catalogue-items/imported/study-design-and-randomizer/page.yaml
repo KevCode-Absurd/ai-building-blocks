@@ -16,8 +16,8 @@ when:
   - You worry the order of runs will bias your results.
   - A reviewer asked how you randomised.
 not_for:
-  - "You need to know how many people or samples to test: use statistical-power."
-  - "You already have data and want to analyse it: use statistical-analysis."
+  - "You need to know how many people or samples to test: use the sample size planner."
+  - "You already have data and want to analyse it: use the statistical test picker or the statistics helper."
   - "You want a quick A/B test of two email subject lines: split your list at random in your email tool, no Python needed."
 you_give:
   - The question you want to test
@@ -31,11 +31,14 @@ you_get:
   - A table of treatment combinations
   - A list of design pitfalls to avoid
 how_to_use:
-  - Open a chat with an AI that can run Python code, like Claude or ChatGPT with code tools turned on.
+  - Open a chat with an AI that can run Python code, like Claude or ChatGPT with code tools turned on. It needs Python 3.12 or newer with numpy, pandas and pydoe 1.5.0.
   - Paste in the skill instructions, or upload the skill folder if your AI accepts files.
   - Describe your question, your units, your factors and their ranges. Add a grouping variable if you have one.
+  - Pick your own seed for a real study and write it down somewhere safe. The seed 42 in the examples is for demos only. Keep future assignments hidden from the people who enrol participants.
   - Check the design it suggests and the reason it gives before you accept it.
-  - Save the schedule and run order files, and run your study in that order.
+  - Save the schedule and run order files, and run your study in that order. Match each unit to its ID using the unit_id column.
+  - Next, check your sample size with the sample size planner. After you collect data, use the statistical test picker.
+next: [sample-size-planner, statistical-test-picker]
 output_sample:
   input:
     - The question you want to test
@@ -44,7 +47,8 @@ output_sample:
     - A grouping variable to balance, like age (optional)
   prerequisites:
     - An AI that can run Python code
-    - Python with numpy, pandas and pydoe installed
+    - Python 3.12 or newer with numpy, pandas and pydoe 1.5.0 installed
+    - Your question, the number of units and the factor ranges, ready to paste
   output:
     - name: Recommended design
       contains: The design that fits your question, with a short reason for the choice.

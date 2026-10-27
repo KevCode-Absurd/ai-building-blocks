@@ -7,17 +7,26 @@ description: Use when you want to know what a company or small business would fe
 
 Earnings say what a business can make. Assets say what it could be sold for if it stopped. When the second figure is higher than the price, something is odd: either the price is too low, or the business should be wound up and the owners paid. This skill builds that floor from the balance sheet, with deliberate markdowns, and checks the company can pay its bills. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
 
+This skill needs a balance sheet, a price and an earnings range. It does not need an article or a transcript. Ignore any generic request for a source text.
+
+Before this, build the earnings range with the [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder). After this, take the result to the [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Audit report** with the [Earnings-based share value calculator](https://useaiblocks.com/skills/earnings-value-range-builder). Bring audit report, source text (optional).
+2. This one.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with source text. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Reading a balance sheet and applying markdowns is text work.
@@ -44,8 +53,8 @@ How to start:
    - Inventory: 60% to 75%, about two thirds. Less if it is hard to resell.
    - Fixed assets and other items: 1% to 50%, about 15%. More for general-purpose assets that others can use.
    Show two columns: a typical case and a harsh case using the low end of each range. Subtract all liabilities from each and divide by shares. These are the LIQUIDATING VALUES.
-5. **Compare with the price.** State whether the price is under the cash assets, under the net current assets, under the liquidating values, or above all of them. If the price sits under the liquidating value, record the rule: either the price is too low or the business should be wound up. Then ask who could act: a buyer, the owners, a change of policy.
-6. **Check the burn.** Shares priced under liquidating value nearly always have poor earnings. Work out how many years of the current losses the net current assets could absorb. A cushion that is being used up fast is not a floor.
+5. **Compare with the price.** State whether the price is under the cash assets, under the net current assets, under the liquidating values, or above all of them. If the price sits under the liquidating value, note the old rule of thumb: either the price is too low, or the business would be worth more wound up, if the markdowns are right and the owners could and would act. Then ask who could act: a buyer, the owners, a change of policy.
+6. **Check the burn.** Shares priced under liquidating value often have poor earnings, so the low price may be fair. Check, do not assume. Work out how many years of the current losses the net current assets could absorb. A cushion that is being used up fast is not a floor.
 7. **Run the cash tests.**
    - Current assets divided by current liabilities. A ratio of 2 to 1 or better is the old comfortable mark for an industrial company.
    - The acid test: current assets without inventory against current liabilities, at 1 to 1 or better.
@@ -65,10 +74,9 @@ The balance sheet figures used. Book value, net current assets and cash assets p
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker). It takes the audit report.
+- The [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -36,6 +36,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 These original cases apply the public debugging, operations and career methods without claiming vendor endorsement or universal service rules.
 
+**Bring:** the failure (what someone tried to do and what happened), a few real failed and successful requests with private details removed, what logs, traces and metrics you can see today, and who is on call.
+
 ### What to hire her for
 
 - **Investigate a failure hidden by healthy averages:** Start from the affected request and compare it with successful examples.
@@ -117,6 +119,8 @@ Use service-specific engineering expertise for implementation, appropriate secur
 ### What you'll get back
 
 Expect a request-focused question trail, a defined instrumentation gap and a responsible next action. Operational work includes the responder's conditions; career work includes actual duties and support rather than only a title.
+
+Next: send the handover note to the next on-call responder and confirm the repair owner at a follow-up date. She does not fix a live outage. Follow your own on-call process for that.
 
 ## How Charity Majors thinks and talks
 

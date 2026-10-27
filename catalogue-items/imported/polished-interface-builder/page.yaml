@@ -5,7 +5,7 @@ name: Polished interface builder
 summary: Build a polished interface from a short description, or review one you have. Get working React and Tailwind code with a clear look, not a stock template.
 job: build-websites
 headline: Polished interface builder
-subhead: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look. Bring description of the page or app. Use the result to plan your next step.
+subhead: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look. You get code to run, then check on a phone and a desktop.
 explain: |
   Ask for a page or app screen and get working front-end code with a deliberate look, not the stock template feel of centred heroes, purple gradients and rows of identical cards.
 
@@ -35,6 +35,8 @@ how_to_use:
   - To review a screen, paste its code or describe it. Ask for the biggest problems first, with a fix.
   - Read the result. Check the code runs in your project and works on phone and desktop.
   - Code running and file access help a lot. Without them, copy the code into your project yourself.
+  - The names, numbers and prices in the code are placeholders to make the page look real. Replace every one with your real data before the page goes live.
+  - Before launch, have a developer run the build, and check the page on a phone and a desktop. Run the Accessibility checker on it too.
 output_sample:
   input:
     - Your description of the page or app
@@ -55,3 +57,4 @@ output_sample:
       contains: Short notes on the type, colour, spacing and motion picked, and why.
     - name: Ranked design fixes
       contains: "For a review: the biggest design problems in order, with an improvement you can build."
+next: [accessibility-checker, react-landing-page-builder]

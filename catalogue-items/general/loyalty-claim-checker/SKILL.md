@@ -9,9 +9,9 @@ Loyalty plans look cheap on a slide. This skill checks the arithmetic: where the
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
@@ -19,9 +19,9 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with plan, your question, your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for plan, your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Sorting and weighing written facts is text work any strong chat AI does well with this skill.
@@ -37,9 +37,9 @@ How to start:
 1. **Write the claim and the gain.** State the claim in one sentence and the gain promised as a number: extra sales, retention points or profit. If no number is given, write MISSING and ask for it.
 2. **Trace where the gain comes from.** Break the gain into parts: more purchases from current buyers, or more buyers. For each, show the sum and which input drives it. Flag any part that rests on an assumption with no figure.
 3. **Add the costs.** List what raising loyalty or share of wallet costs: rewards, discounts given to people who would have bought anyway, systems, staff and time. Use the user's figures only; mark MISSING otherwise. Subtract them from the gain.
-4. **Check room to buy more.** Look at how much your heaviest buyers already buy. If they buy most of their category from you, say there is little room left. Compare with light buyers who buy rarely.
+4. **Check room to buy more.** Look at how much your heaviest buyers already buy. If they buy most of their category from you, say there is little room left. Compare with light buyers who buy rarely. To size it from a sales export, rank buyers by spend, take the top tenth, and set their spend against what they could buy in the category. If you have no figure for what they could buy, write MISSING and do not guess a share.
 5. **Check the evidence.** Ask where the claim has worked: other categories, other years, an independent source. Mark each piece of evidence as independent, from the seller or from a different type of business, and say what it does and does not show.
-6. **Compare with reaching more buyers.** Spend the same money in your own figures on reaching new or light buyers and work out the extra sales at your cost of reaching them. Show the two results side by side, with the same time frame and the same assumptions.
+6. **Compare with reaching more buyers.** Spend the same money in your own figures on reaching new or light buyers and work out the extra sales at your cost of reaching them. Show the two results side by side, with the same time frame and the same assumptions. The cost of reaching a new buyer is needed here. If you do not have it, write MISSING: cost per new buyer and show the reach side as a formula; never use an industry average.
 7. **Give a verdict and the data to ask for.** State a plain verdict: go, test small, or do not do it, in one sentence with the main reason. List the data you still need, each with who could supply it.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
@@ -49,10 +49,8 @@ The claim, a table of gain sources, costs, the room-to-buy check, the evidence t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer). It takes the audit report.
+- The [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

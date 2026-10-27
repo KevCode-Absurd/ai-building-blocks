@@ -9,6 +9,26 @@ Write down how a dataset analysis was done so someone else can repeat it. Get a 
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass it to the next step. It documents an analysis that is already done. It does not run new analysis. Your original data is never changed.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Slide deck** (yours): a finished slide deck.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for spreadsheet, document, slide deck. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A spreadsheet engine or a code runner the AI can use:** To recalculate a workbook or rerun a script, the AI needs the real tool. Without it, it reads and describes, and marks reruns as not done.
+<!-- /needs -->
+
 ## What you need
 
 - **The dataset** (required): the file or files the analysis used, in the version it used.
@@ -34,7 +54,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## If something is missing
 
-Write `MISSING: <what>` next to the affected result and keep going on work that does not depend on it. Stop a step when a required file is absent, and hand back the partial files with the exact input needed to resume. If the commands and the outputs disagree, show both and ask which is right.
+Write `MISSING: <what>` next to the affected result. Which steps halt depends on the file: with no dataset, stop all three steps. With no commands, script or workbook, run step 1 and stop at step 2, which needs them; step 3 then checks only the draft against the inventory. With no methods draft, steps 1 and 2 still run and step 3 checks the procedure's own claims. Hand back the partial files with the exact input needed to resume. If the commands and the outputs disagree, show both and ask which is right.
 
 ## What you hand back
 
@@ -54,6 +74,14 @@ What could not be seen or run
 HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer). It takes the audit report and document.
+- The [Spreadsheet results reviewer](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

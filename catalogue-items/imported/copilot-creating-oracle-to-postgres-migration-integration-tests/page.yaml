@@ -16,7 +16,7 @@ when:
   - "You are about to move a .NET project from Oracle to PostgreSQL and have no safety net."
   - "Your data access code has no integration tests."
   - "You want proof of what Oracle returns before you change the database."
-  - "You are preparing the baseline step of a larger migration plan."
+  - "You are preparing the baseline step (Phase 3) of a larger migration plan. Phase 3 is the work on Oracle before any PostgreSQL work. Phase 6 is when the tests are moved to PostgreSQL."
 not_for:
   - "You have already moved to PostgreSQL or started Phase 6: run the migrated test project instead, as this skill only targets Oracle."
   - "You have no test project yet: ask a developer to set one up first, because this skill needs one that already compiles."
@@ -37,7 +37,9 @@ how_to_use:
   - Tell your AI which project to cover. Point it to your data access files, base test class and seed manager.
   - Ask it to follow this skill. It reads your test conventions, then writes seed data and tests.
   - Read the tests and check each assertion uses a specific value from the seed data.
-  - Run the suite against Oracle yourself and fix any failures. Do this before Phase 6 starts to lock in the baseline.
+  - Run the seed and the suite only against a non-production copy of Oracle, never a live business database.
+  - Fix any failures. Do this before Phase 6 (porting the tests to PostgreSQL) starts, to lock in the baseline.
+  - Next, keep the results. After the move, port the same test project to PostgreSQL and compare the results with this baseline.
 output_sample:
   input:
     - Your data access code, such as repositories, DAOs and stored procedure callers

@@ -7,6 +7,8 @@ description: "Paste this above a role and your team details, or an old job post,
 
 Writes a job post that opens with the work, splits must-haves from nice-to-haves and drops biased wording.
 
+**Not for:** a post built around one problem the new hire must solve (use "Problem-first job description writer"), the full set of inclusive-language checks (use "Inclusive job post writer"), or picking from resumes you already have (use "Applicant shortlist builder").
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -46,10 +48,7 @@ THE POST, with these headings: About the role, What you will do, First 90 days, 
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
-- The [Plain-words contract summary](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
-- The [AI store facts checker](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
+- The [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

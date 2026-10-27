@@ -9,7 +9,7 @@ subhead: A messy file becomes analysis ready, with a log of every change made. Y
 explain: |
   A messy file becomes analysis ready, with a log of every change made. You see exactly what was fixed and can undo or adjust it.
 
-  First it profiles the data: nulls per column, duplicate rows and mixed types. Then it fills gaps by column, using medians for light numeric gaps and an Unknown label for categories. It removes exact duplicates and checks near duplicates, such as rows that differ only by spacing or capital letters. It converts dates and numbers to proper types and standardises formats. Outliers are found with the 1.5 times IQR rule or z-scores, and you choose between capping, blanking or keeping them. A final validation reports anything still wrong. It uses Python.
+  First it profiles the data: nulls per column, duplicate rows and mixed types. Then it fills gaps by column, using medians for light numeric gaps and the most common value or an Unknown label for categories. Blank emails and phone numbers stay blank and are flagged. It removes exact duplicates and checks near duplicates, such as rows that differ only by spacing or capital letters. It converts dates and numbers to proper types and standardises formats. Outliers are found with the 1.5 times IQR rule or z-scores, and you choose between capping, blanking or keeping them. A final validation reports anything still wrong. It uses Python.
 when:
   - A CSV from a supplier has blank cells, duplicates and dates in three formats.
   - You need clean data before building a report.
@@ -33,7 +33,8 @@ how_to_use:
   - Paste the skill into the chat, then upload your raw data file.
   - Say how to treat outliers, and add expected column types if you know them (optional).
   - Read the cleaning log first. Check that the changes make sense for your data.
-  - Answer any question about columns with many blanks. The skill asks before it drops them.
+  - Answer any question about columns with many blanks. The skill asks before it drops columns with many blanks. Columns that are entirely empty are dropped and logged.
+  - Check the near-duplicate pairs and the match threshold before it merges any customer records.
   - Load the cleaned file into your report or formula tool.
 output_sample:
   input:

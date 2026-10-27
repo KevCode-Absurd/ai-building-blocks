@@ -29,6 +29,16 @@ Full rule set (74 rules) and components: https://github.com/bitjaru/styleseed
 - The user asks to make UI "look professional / polished / designed, not AI-generated."
 - After generating UI, to verify it before shipping.
 
+## When not to use
+
+- Backend code. Ask a developer or a code review tool.
+- A logo or brand identity. Work with a designer.
+- A colour contrast check only. Use a free contrast checker.
+
+## What you need first
+
+The AI must be able to read the project files, or be given the UI code pasted in. Ask which screen to focus on.
+
 ## How to review
 
 Read the file(s). Score these **seven categories** (total 100); start each at full marks

@@ -7,17 +7,20 @@ job: study-and-practice
 headline: Study notebook review
 subhead: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
 not_for:
-  - "You have a brand-new topic and no lesson notes yet: build the lessons first with the agent-tutor skill, then come back here."
+  - "You have a brand-new topic and no lesson notes yet: build the lessons first with the personal study notebook, then come back here."
   - "You want a quick one-off quiz on a topic: ask your AI for a short quiz and skip the notebook."
   - "Your notes have no review dates and no dashboard: set those up first, or this skill has no queue to read."
 explain: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
 you_give:
-  - Lesson notes with review intervals, due dates and key takeaways.
-  - Your study notebook dashboard and recall answers.
+  - Lesson notes with a review block (interval, due date and key takeaways).
+  - Your study notebook dashboard with its Up for review list.
+  - Your recall answers, typed or spoken, for each topic.
+  - An AI that can read and write files in your notes folder or Obsidian vault.
 you_get:
   - Recall feedback for each reviewed topic.
   - Updated note review dates.
   - A mixed quiz and an updated session log.
+next: [personal-study-notebook, study-review-scheduler]
 how_it_works:
   - title: Step 1
     text: Read the due-note queue and ask for recall before revealing takeaways.
@@ -32,6 +35,7 @@ how_to_use:
   - Explain each topic from memory before it shows anything. Answer honestly.
   - Take the mixed quiz at the end.
   - Check that the new due dates and the session log look right.
+  - Next, open the dashboard to see the updated review list. For topics marked gone, rebuild the lesson with the personal study notebook. To plan review dates for plain study cards, use the study review scheduler.
 output_sample:
   input:
     - Your lesson notes, each with a review block (interval, ease, due date)

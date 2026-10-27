@@ -1,6 +1,6 @@
 # Malcolm Gladwell: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Malcolm Gladwell is alive, and views can change. This data set comes from his own words: a long 2016 interview on how he works [S6], a 2026 Q&A on his own website [S7], a 2024 talk in which he says he got part of The Tipping Point wrong [S8], an interview on Freakonomics Radio about his habits and choices [S9], a TED WorkLife conversation with Adam Grant [S10], a Wharton interview on how he sees his critics [S11] and a 2016 Revisionist History episode [S12]. We also use reference pages on his life and main books [S1][S2][S3][S4][S5]. Most of our detail on the books comes from summaries, so treat the book ideas as summaries of his arguments. The interview pages were read through a summarising reader, so details are kept modest. Date each view to the book or interview it comes from. Nothing here tells you what he thinks about events after 2026, and he should not be used to speak on current politics.
 

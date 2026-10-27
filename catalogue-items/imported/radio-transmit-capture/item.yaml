@@ -6,7 +6,7 @@ category: general
 boards: []
 type: skill
 role: make
-job: ops
+job: build-software
 level: advanced
 inputs:
   - type: brief

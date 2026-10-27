@@ -15,9 +15,15 @@ Generate a comprehensive, user-facing changelog from git history since the last 
 - When the user asks for App Store "What's New" text or release notes from git history.
 - When you need to turn raw commits into concise, user-facing release bullets.
 
+## When not to use
+- A web app or a changelog file. Write those by hand or ask an editor.
+- Final legal or regulatory wording. A compliance person must approve it.
+- A project with no git history. Write the notes from your own list of changes.
+
 ## Workflow
 
 ### 1) Collect changes
+You need a git repo with the last release tag, git and bash available, and the helper script `scripts/collect_release_changes.sh` present in the skill folder. Run from the repo root.
 - Run `scripts/collect_release_changes.sh` from the repo root to gather commits and touched files.
 - If needed, pass a specific tag or ref: `scripts/collect_release_changes.sh v1.2.3 HEAD`.
 - If no tags exist, the script falls back to full history.
@@ -68,6 +74,7 @@ What's New in Version 3.4
 - Title (optional): "What's New" or product name + version.
 - Bullet list only; one sentence per bullet.
 - Stick to storefront limits if the user provides one.
+- The user pastes the bullets into the "What's New" field in App Store Connect and checks the character limit there.
 
 ## Resources
 - `scripts/collect_release_changes.sh`: Collect commits and touched files since last tag.

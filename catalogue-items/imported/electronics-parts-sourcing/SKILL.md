@@ -22,6 +22,8 @@ If a column is blank, write MISSING for that part. Do not assume a lead time, an
 
 **The scores are a way to sort, not a verdict.** The risk weights, cut-offs, default values and the sample parts in the code and tables are placeholders that show the method. Tell the user they can change them. Show how each part got its score so the user can disagree. Do not state lead times or shortages for real parts from memory. Check them with the part's maker or a distributor.
 
+**The chat steps above are the main route.** The code blocks further down are optional. If you run them, note the code reads `allocated_qty` (quantity already allocated to you) and, in the assembly code, `quantity_per_board`, and a blank `lead_time_weeks` must be handled as MISSING before any comparison.
+
 **If you cannot run code,** work from the table: shortfall equals need minus stock minus allocated quantity, then sort by shortfall and lead time.
 
 **Output format.** Give the answer in this order:

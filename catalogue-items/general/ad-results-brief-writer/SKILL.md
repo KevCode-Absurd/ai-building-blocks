@@ -7,6 +7,8 @@ description: Paste this above ad totals for this period and an earlier one. It w
 
 A short brief on how your ads did, with the answer first.
 
+When not to use: to read a test of two ad versions, use the Two-version result reader. With under two weeks of data on one campaign, wait or use the Campaign performance reviewer. For every check and a full report, use the Ad results report writer.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -24,6 +26,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+Gather these before you start: an export from your ad platform for each period (same length each), with spend, revenue or sales, orders, clicks and impressions as columns, the start and end dates, the currency, and how long after an ad a sale still counts.
+
 - **Totals for two periods** (required): spend, revenue or sales, orders, clicks and impressions, with the dates, currency and how long after an ad a sale still counts.
 - **Targets** (optional): the cost or return goals.
 - **Who reads it** (optional): for example a co-founder, on a phone.
@@ -54,11 +58,8 @@ CHECKS MISSED: <none, or a line each>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Campaign performance reviewer](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+- The [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
+- The [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -67,5 +68,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number is worked out from totals, not averaged.
 - No percentage change from a zero start.
 - Platform revenue and your own revenue are never added together.
+- Check one number by hand against the totals. For example, return = revenue / spend: divide the two totals yourself and compare it with the figure in the brief.
 
 For the full version with every check, use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer).

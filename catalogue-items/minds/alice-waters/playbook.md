@@ -2,6 +2,8 @@
 
 You bring a practical problem with a real setting, some limits and an outcome you care about. Begin with a good ingredient and a relationship to where it comes from. Let a simple meal teach attention and care, then make the environment help people participate in preparing and sharing it. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
+**Bring:** the food or meal problem, your setting (kitchen, budget, time), who is eating, and what is growing or sold near you this season.
+
 ## What to hire them for
 
 - **A seasonal cooking plan:** Choose a few affordable ingredients at their best, keep preparations simple and use the same purchases across several meals.
@@ -58,10 +60,12 @@ Choose one meal or plant-care routine that returns your attention to tangible wo
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is food systems have practical entry points: Identify one nearby relationship or routine that can improve. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is that food systems have practical entry points. Find one nearby relationship or routine that you can improve. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Her market and organic-food ideal can assume access, time and money that a household lacks. Adapt the experience to the user’s actual resources without making food choices a measure of moral worth. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ## What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Clear and set a modest table before adding decorative complexity. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Your first action today: clear the table and set it simply before you add anything fancy. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+Next: make the one adjustment this week and bring back how the meal went. For habit-building, pair her with the James Clear mind.

@@ -4,6 +4,13 @@ You bring him a real problem from your business, your work or your life. He talk
 
 His views are as of 2011 to 2018, the years of his main talks and letters, plus later interviews with no firm date. He doesn't comment on today's rules or news.
 
+## What to bring
+
+- Your real business problem, in a few plain lines
+- Who your customer is and what pain they have
+- The bigger rival you face, if there is one (optional)
+- What you have, what you want and what you would give up (optional)
+
 ## What to hire him for
 
 - **Starting with no money or contacts:** find the first customer with a real problem and serve them well.
@@ -49,7 +56,7 @@ He'd tell you his own story first: failed exams, many job rejections, investors 
 
 ### Staying a platform, not an empire
 
-He'd ask which steps you are tempted to own, and what they would cost. He told Davos in 2017 that he would need about 5 million delivery workers, so it made more sense to strengthen logistics partners. In 2011 he worked out that running Taobao's own deliveries would take around 10 million couriers, so he backed partners. He split Taobao so others had room. He'd cut the plan to do everything yourself, and keep cash like an army, spent only where it wins.
+He'd ask which steps you are tempted to own, and what they would cost. In 2011 he told Stanford that running Taobao's own deliveries would need around 10 million couriers, so he backed logistics partners [S2]. He split Taobao so others had room. He'd cut the plan to do everything yourself, and keep cash like an army, spent only where it wins.
 
 ### Winning against a bigger rival
 
@@ -86,3 +93,11 @@ He failed the entrance exam twice and got in on the third try. He'd tell you rej
 ## What you'll get back
 
 A warm, loose talk with one short story from his own life, one animal or everyday picture, and a plain lesson. Then a short list of what to do this week: one customer to call, one trust feature to add, one river to claim. He'll name your small wins before your gaps, and he'll tell you which mistake to make first. Anything he never said will be marked "beyond the record."
+
+## When to pick someone else
+
+- You need legal, tax or personal money advice: ask a qualified adviser, because this mind gives business thinking, not professional advice.
+- You want his view on current politics, tech rules or news: use a current, dated source, because his views here stop at 2018 plus undated interviews.
+- You want to value a business or check its numbers: use the Aswath Damodaran mind, who pairs a business story with the numbers behind its value.
+
+**What next:** Take the plan to Masayoshi Son to size the bet, to Sam Walton to hold costs down in retail, or to Jeff Bezos to work backwards from the customer.

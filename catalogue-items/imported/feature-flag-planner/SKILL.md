@@ -114,6 +114,8 @@ Use as a pre-merge gate before any new flag ships.
 
 ## Provider chooser (5 + DIY)
 
+Pricing models and licences below are a general guide and may be out of date. Tell the user to check each on the vendor's own site.
+
 | Provider | Best for | Pricing model | Lock-in risk | OSS option |
 |---|---|---|---|---|
 | **LaunchDarkly** | Enterprise, complex targeting, audit/compliance | Per-MAU, expensive | High | No |
@@ -212,7 +214,7 @@ Decision rules:
 
 ## Verifiable success
 
-A team using this skill should achieve:
+Suggested goals for a team using this skill. They are targets to aim for, not measured results:
 - 100% of new flags pass `kill_switch_audit.py` at merge time
 - `flag_debt_scanner.py --max-age-days 90` returns ≤5 stale flags repo-wide
 - Every flag has a documented owner, type, and kill switch

@@ -2,12 +2,12 @@ thinking: medium
 thinking_why: The steps are fixed, but you must check quality after.
 new_slug: model-size-reducer
 name: Model size reducer
-summary: Shrink a large language model to 4-bit with AWQ. Get a smaller copy that runs about 3 times faster on a smaller GPU. See the steps and checks.
+summary: Shrink a large language model to 4-bit with AWQ. Get a smaller copy that fits a smaller GPU and may run faster. Includes speed and quality checks.
 job: build-software
 headline: Model size reducer
-subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU. Bring the model you want to shrink. Use the result to plan your next step.
+subhead: Give it a large model. Get a 4-bit copy that fits on a smaller GPU. The skill's author reports about 3 times faster answers on recent Nvidia cards, so measure it on yours.
 explain: |
-  A large language model shrunk to 4-bit, running about three times faster and fitting on a smaller GPU, with only a small loss in answer quality.
+  A large language model shrunk to 4-bit so it fits on a smaller GPU. The skill's author reports about three times faster answers and a small loss in quality. Those figures come from the upstream skill, not our tests, so check them on your own model.
 
   The skill uses AWQ, which looks at how the model behaves on sample text and protects the weights that matter most before shrinking the rest. You can load a ready-made small copy or make your own with a short Python script and a few hundred calibration samples. It compares AWQ with GPTQ and bitsandbytes so you pick the right one, and it covers serving with vLLM. Fast kernels need a recent Nvidia GPU.
 when:
@@ -32,10 +32,10 @@ you_get:
   - A method comparison
 how_to_use:
   - Check you have an Nvidia GPU and an AI that can run Python code. Without code running, you only get the script and steps.
-  - Install autoawq and transformers, and note the versions you use.
+  - Install autoawq and transformers, and note the versions you use. AutoAWQ is no longer maintained, so use it for an existing AWQ model. For a new project, use vLLM llm-compressor.
   - Test first on a small 7B model, or load a ready-made 4-bit model, to confirm your setup works.
   - Ask your AI to make the 4-bit copy of your model with the script. Add your own sample text if your model has a special job.
-  - Compare speed and quality of the old and new model. Check the answers read well before you use it.
+  - Compare memory, tokens per second and perplexity (a score where lower is better) of the old and new model on the same test text. Check the answers read well before you use it.
   - Serve the result with vLLM if you want to use it in a chat product.
 output_sample:
   input:

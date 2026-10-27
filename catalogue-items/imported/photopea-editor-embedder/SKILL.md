@@ -54,6 +54,10 @@ app.echoToOE("done");
 app.preferences.rulerUnits = Units.PIXELS;
 var doc = app.activeDocument;
 
+// Remember which layers were visible, so we can put them back
+var wasVisible = [];
+for (var k = 0; k < doc.layers.length; k++) wasVisible[k] = doc.layers[k].visible;
+
 for (var i = 0; i < doc.layers.length; i++) {
   // Hide all layers
   for (var j = 0; j < doc.layers.length; j++) doc.layers[j].visible = false;
@@ -64,14 +68,16 @@ for (var i = 0; i < doc.layers.length; i++) {
   opts.format  = SaveDocumentType.PNG;
   opts.PNG8    = false;
   opts.quality = 100;
+  // Replace characters that are not safe in a file name (slashes, colons and so on)
+  var safeName = doc.layers[i].name.replace(/[\\/:*?"<>|]/g, "_");
   doc.exportDocument(
-    new File("/" + doc.layers[i].name + ".png"),
+    new File("/" + safeName + ".png"),
     ExportType.SAVEFORWEB, opts
   );
 }
 
-// Restore visibility
-for (var i = 0; i < doc.layers.length; i++) doc.layers[i].visible = true;
+// Restore the original visibility
+for (var i = 0; i < doc.layers.length; i++) doc.layers[i].visible = wasVisible[i];
 ```
 
 ### 3. Find and replace text across all text layers

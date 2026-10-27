@@ -16,13 +16,15 @@ inputs:
     required: false
 outputs:
   - type: document
+    required: true
   - type: audit_report
+    required: true
 uses:
   - equity-research-valuation-report-builder
   - unsupported-claim-spotter
 steps:
   - uses: equity-research-valuation-report-builder
-    note: Use the real valuation engine and matching strict validator to check scenario inputs and arithmetic. Retain the source ledger and inspect the actual rendered report. Treat sensitivities as scenarios, never price predictions. Hands step 2 the report, its scenarios and the source ledger.
+    note: Use the real valuation engine and matching strict validator to check scenario inputs and arithmetic. Takes the filings, the dated share price and any scenario assumptions you gave. Retain the source ledger and inspect the actual rendered report. Treat sensitivities as scenarios, never price predictions. Hands step 2 the report, its scenarios and the source ledger.
   - uses: unsupported-claim-spotter
     note: Check thesis and valuation commentary against the filings, dated prices and actual scenario results. Flag implied certainty and missing counter-evidence; give no personalized investment recommendation. Uses step 1's report as the draft to check.
 origin: rebuilt

@@ -277,7 +277,7 @@ See techniques.md sections 4 and 19 when you need the full Late-Night DJ Voice m
 |----------|-------|--------|
 | Have I prepared an accusation audit? | Objections will blindside you | List every negative they might think; address early |
 | Do I have 3-5 calibrated questions ready? | You'll default to arguing | Draft "How" and "What" questions targeting their needs |
-| Have I identified my BATNA? | You'll accept a bad deal under pressure | Define your walk-away point before negotiating |
+| Have I identified my BATNA (my best option if no deal happens)? | You'll accept a bad deal under pressure | Define your walk-away point before negotiating |
 | Am I aiming for "That's right"? | You'll chase counterfeit "yes" | Summarize their position until they affirm genuinely |
 | Have I considered their negotiation style? | One-size-fits-all will misfire | Assess if they're Analyst, Accommodator, or Assertive |
 | Am I hunting for Black Swans? | You'll miss game-changing information | Stay curious; watch for anomalies; ask about the unexpected |

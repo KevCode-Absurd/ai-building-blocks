@@ -7,10 +7,11 @@ role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: plan, required: false}
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: plan, required: true}
+next: [negotiation-call-prep-planner, supplier-quote-table-builder]
 origin: rebuilt
 version: 1.0.0
 minds: [ray-kroc]

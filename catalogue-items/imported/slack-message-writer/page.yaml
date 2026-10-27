@@ -22,6 +22,7 @@ not_for:
 you_give:
   - The point you want to make
   - Who it is for and which channel
+  - Whether it is an announcement or a reply, and any deadline or action date (optional)
   - Links or people to mention (optional)
   - Slack connected (optional)
 you_get:
@@ -33,8 +34,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
   - Type your point in a line or two. Add the channel and who it is for.
   - Add any links or people to mention. Slack needs the user ID for a mention, so write the name and fix it before you send.
-  - If your AI is connected to Slack, ask it to save the result as a draft. If not, ask for text you can paste.
-  - Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it.
+  - Saving a draft or making a canvas only works if your AI has a Slack connector. Without one, just ask for text you can paste into Slack.
+  - Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it. Check the thread later for replies. If the update needs more detail, ask for a canvas or a short follow-up post.
 output_sample:
   input:
     - The point you want to make, in a line or two

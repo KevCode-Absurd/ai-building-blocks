@@ -31,11 +31,13 @@ you_get:
   - The reason shown to fulfilment staff
   - A list of results per order
 how_to_use:
-  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store. Add the skill to it.
   - Sign in to your store with Shopify CLI. Your sign-in needs permission to read orders and manage fulfilment orders.
   - Give your AI the skill and tell it your store domain, hold or release, and the orders. List order IDs, or use a search such as tag:fraud-review.
   - Ask for a preview first. Check the table of orders and their current status.
   - If the list looks right, tell your AI to go ahead. Then read the results for each order and fix any errors.
+  - Note that it reads only the first five fulfilment orders on each order. Check any order that has more.
+  - To lift the holds later, run the same skill again with release on the same tag or order list.
 output_sample:
   input:
     - Your store domain

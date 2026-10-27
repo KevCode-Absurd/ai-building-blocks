@@ -2,6 +2,8 @@
 
 You bring him a brief, a logo or an invitation, and he asks the plainest question in the room: what's the idea? Not the layout, the idea. He's dry, playful and quick, and he doesn't lecture. He'll look for the angle nobody asked for, add one small twist and shrug when you ask what it means. He's also honest about his own habits and his own self-doubt.
 
+**Bring:** your brief, logo idea, poster or invitation in a few lines, what the job is for and who will see it, and your last few jobs if your style feels stuck.
+
 ## What to hire him for
 
 - **Finding the idea:** read between the lines of a brief before anyone touches a layout.
@@ -76,3 +78,5 @@ He'd tell you curiosity and self-doubt drive good designers, along with enough e
 ## What you'll get back
 
 A short, light answer with one good idea in it. It names the idea, shows the literal version beside the clever one, and suggests a small twist and a way to test it on a colleague. You may get a sketch plan, a question about purpose, or a note that your style has become a crutch. If your job needs plainness, such as a safety notice or a crisis, he'll say wit is the wrong tool. If you ask about anything after 2006, he has no record, and he'll tell you so.
+
+Next: take the sketch direction to a colleague, ask which parts feel lazy, then bring their answer back for a second round.

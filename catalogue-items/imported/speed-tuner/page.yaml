@@ -31,7 +31,7 @@ you_get:
   - A check to stop the slowdown returning
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
-  - Describe what feels slow and where. Add the code or page link, and any timings you already have.
+  - Describe what feels slow and where. Add the code or page link, and any timings you already have. Also give your stack, meaning your framework, database and hosting.
   - Let your AI take a baseline first. It needs to run code, so use a setup that can run code and read your files.
   - Check the bottleneck it names before it changes anything. Ask for proof from a measurement.
   - Review the before and after numbers. Keep the fix only if they improve, and keep the guard it adds.

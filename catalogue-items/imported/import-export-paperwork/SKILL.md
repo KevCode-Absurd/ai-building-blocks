@@ -31,7 +31,7 @@ The Harmonized System is a 6-digit international nomenclature maintained by the 
 
 Classification follows the General Rules of Interpretation (GRI) in strict order — you never invoke GRI 3 unless GRI 1 fails, never GRI 4 unless 1-3 fail:
 
-- **GRI 1:** Classification is determined by the terms of the headings and Section/Chapter notes. This resolves ~90% of classifications. Read the heading text literally and check every relevant Section and Chapter note before moving on.
+- **GRI 1:** Classification is determined by the terms of the headings and Section/Chapter notes. In practice it settles most classifications (a rough rule of thumb, not a measured figure). Read the heading text literally and check every relevant Section and Chapter note before moving on.
 - **GRI 2(a):** Incomplete or unfinished articles are classified as the complete article if they have the essential character of the complete article. A car body without the engine is still classified as a motor vehicle.
 - **GRI 2(b):** Mixtures and combinations of materials. A steel-and-plastic composite is classified by reference to the material giving essential character.
 - **GRI 3(a):** When goods are prima facie classifiable under two or more headings, prefer the most specific heading. "Surgical gloves of rubber" is more specific than "articles of rubber."
@@ -89,7 +89,7 @@ Incoterms define the transfer of costs, risk, and responsibility between buyer a
 
 **Red flags triggering enhanced due diligence:** Customer reluctant to provide end-use information. Unusual routing (high-value goods through free ports). Customer willing to pay cash for expensive items. Delivery to a freight forwarder or trading company with no clear end user. Product capabilities exceed the stated application. Customer has no business background in the product type. Order patterns inconsistent with customer's business.
 
-**False positive management:** ~95% of screening hits are false positives. Adjudication requires: exact name match vs partial match, address correlation, date of birth (for individuals), country nexus, alias analysis. Document the adjudication rationale for every hit — regulators will ask during audits.
+**False positive management:** Most screening hits turn out to be false positives (a rough rule of thumb, not a measured rate). Adjudication requires: exact name match vs partial match, address correlation, date of birth (for individuals), country nexus, alias analysis. Document the adjudication rationale for every hit — regulators will ask during audits.
 
 ### Regional Specialties
 

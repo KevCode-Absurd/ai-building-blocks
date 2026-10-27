@@ -3,6 +3,14 @@ name: "skill-tester"
 description: "Validate, test, and score the quality of skills within the claude-skills ecosystem. Comprehensive meta-skill: structure validation, Python script testing (syntax + imports + runtime + output format), multi-dimensional quality scoring with letter grades and tier classification (BASIC/STANDARD/POWERFUL). Use when authoring a new skill, auditing existing skills for tier promotion, setting up pre-commit hooks for skill quality, or integrating skill QA into CI."
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `scripts/audit_skills.py`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Skill Tester
 
 **Tier**: POWERFUL · **Category**: Engineering Quality Assurance · **Dependencies**: None (Python stdlib only)
@@ -31,7 +39,7 @@ python3 engineering/skills/skill-tester/scripts/quality_scorer.py engineering/sk
 
 Consume the JSON: validator emits `overall_score`, `compliance_level`, per-check `checks{}`; scorer emits `overall_score`, `letter_grade`, `tier_recommendation`, `dimensions`, and an `improvement_roadmap` — work the roadmap top-down, then re-run until the target score is met.
 
-For repo-wide auditing prefer `scripts/audit_skills.py` at the repo root (wraps the write-a-skill checklist runner across all skills).
+This catalogue copy does not include `scripts/audit_skills.py`. To check many skills, loop over the skill folders and run the three commands above on each one.
 
 ## What Each Tool Checks
 
@@ -64,6 +72,8 @@ Four dimensions, 25% each: **Documentation** (depth, examples, references), **Co
 # GitHub Actions: gate changed skills
 - name: "validate-changed-skills"
   run: |
+    # Set changed_skills first, for example:
+    # changed_skills=$(git diff --name-only origin/main... | grep '/SKILL.md$' | xargs -n1 dirname | sort -u)
     for skill in $changed_skills; do
       python3 engineering/skills/skill-tester/scripts/skill_validator.py "$skill" --json
       python3 engineering/skills/skill-tester/scripts/script_tester.py "$skill"

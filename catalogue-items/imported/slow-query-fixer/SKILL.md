@@ -38,6 +38,8 @@ Provide the slow SQL query (or describe the ORM operation) along with the databa
 
 ## Examples
 
+The timings and counts in these examples are illustrations, not measured results. Your results depend on your own data and database.
+
 ### Example 1: Optimizing a Slow JOIN Query
 
 **Problem:** A report query joining orders with users and products takes 4.2 seconds on a table with 500K orders.

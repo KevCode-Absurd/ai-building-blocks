@@ -22,12 +22,7 @@ The leading framework for connecting LLMs with your data.
 - Building chatbots with enterprise data
 - Need structured data extraction from documents
 
-**Metrics**:
-- **45,100+ GitHub stars**
-- **23,000+ repositories** use LlamaIndex
-- **300+ data connectors** (LlamaHub)
-- **1,715+ contributors**
-- **v0.14.7** (stable)
+**Note**: the author lists 300+ data connectors (LlamaHub). Star, repository and contributor counts were removed because they were undated and unsourced. Check the project's own page for current figures and versions.
 
 **Use alternatives instead**:
 - **LangChain**: More general-purpose, better for agents
@@ -341,15 +336,16 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 index = VectorStoreIndex.from_documents(documents, storage_context=storage_context)
 ```
 
-### Pinecone (cloud)
+### Pinecone (cloud, paid account and API key needed)
 
 ```python
 from llama_index.vector_stores.pinecone import PineconeVectorStore
-import pinecone
+from pinecone import Pinecone
 
-# Initialize Pinecone
-pinecone.init(api_key="your-key", environment="us-west1-gcp")
-pinecone_index = pinecone.Index("my-index")
+# Initialize Pinecone (current client; read the key from an environment variable)
+import os
+pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
+pinecone_index = pc.Index("my-index")
 
 # Create vector store
 vector_store = PineconeVectorStore(pinecone_index=pinecone_index)
@@ -519,6 +515,8 @@ while True:
 ```
 
 ## Performance benchmarks
+
+These are rough guesses from the skill's author, not measured results, and no date or source is given. Your times depend on your files, your model and your network. Time it yourself before you plan around any figure.
 
 | Operation | Latency | Notes |
 |-----------|---------|-------|

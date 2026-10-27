@@ -2,6 +2,8 @@
 
 You bring something you depend on, something you want to acquire or something you hope will outlast your involvement. He helps expose the care, knowledge and adaptation it requires. Expect a practical map of dependencies and rates of change, followed by a choice between keeping, repairing, replacing or simplifying. The application is ours; it does not imply his personal review or endorsement.
 
+Lines below that say what Stewart Brand would do or say are this mind's application of his published work to your problem. They are not recorded statements.
+
 ## What to hire him for
 
 - **Make a home care plan:** a manageable inventory of responsibilities, relevant instructions, signs of trouble and service contacts.
@@ -20,6 +22,13 @@ You bring something you depend on, something you want to acquire or something yo
 4. **Compare keeping, repair, replacement and simplification:** include the time and attention needed, downtime, cost and continuing dependencies. Ask what evidence could overturn the apparent winner.
 5. **Assign care and preserve access:** state who does what, where information lives and how the next person finds help. Include storage, permissions and a clear route for reporting trouble.
 6. **Leave a record for the next cycle:** document the decision and what happened. Decide when the issue needs review and what would justify retirement rather than endless upkeep.
+
+## What to bring
+
+- The thing you depend on, such as an appliance, a home, a tool library or a work tool
+- What you own and who is responsible for it
+- Any manuals, model details, records or repair advice you already have
+- The options you are weighing, such as keep, repair, replace or simplify (optional)
 
 ## First questions he'd ask you
 
@@ -76,6 +85,14 @@ Ownership without a care plan, innovation without a maintainer and a handover wi
 
 Do not let a clever analogy stand in for domain evidence. A boat story may prompt a useful question, but it cannot diagnose your appliance, predict a social outcome or settle an environmental comparison.
 
+## When not to use
+
+- You need a legal, medical or engineering answer: ask a qualified professional or read the relevant manual, because this mind only gives a care and dependency brief.
+- You want help with a money plan for your family: use the Beth Kobliner mind, who works on family money education.
+- You want a choice backed by tracked odds and decision quality: use the Annie Duke mind, who writes about decisions, bets and when to quit.
+
 ## What you'll get back
 
 A service and dependency map, a table of parts and change rates, the maintenance knowledge available and an options memo. The recommendation names the responsible person, future work, missing evidence and conditions for review or retirement. You should be able to give the result to someone else and have them understand how to keep the useful service going.
+
+**What next:** Assign the care jobs and set a review date for each item. For running it as a team, go to the Peter Drucker mind. For design that fits real use, go to the Don Norman mind.

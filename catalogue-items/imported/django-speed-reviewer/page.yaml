@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your Django views, models and queries
   - The slow page or endpoint (optional)
-  - Rough data sizes (optional)
+  - Rough data sizes (optional, the review will not guess them)
 you_get:
   - Confirmed performance issues ranked by impact
   - The code location of each
@@ -30,7 +30,7 @@ you_get:
   - A clear statement if nothing serious was found
 how_to_use:
   - Open your AI tool. Paste in the skill text, or upload the skill folder if your tool takes files.
-  - Add your Django views, models, serializers and templates for the slow area. Share the whole project if your AI can read files.
+  - Add your Django views, models, serializers and templates for the slow area. Share the whole project if your AI can read files. It reads code only and assumes the Django ORM, and Django REST framework if you use it.
   - Say which page or endpoint is slow, and roughly how many rows your biggest tables have. Both are optional but help.
   - Ask your AI to review the code for Django speed problems using this skill.
   - Read each finding and check the evidence matches your code. Fix the top one first, then run the review again.

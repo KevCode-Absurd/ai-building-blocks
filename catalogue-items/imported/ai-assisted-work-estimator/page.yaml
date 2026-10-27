@@ -36,7 +36,7 @@ how_to_use:
   - Answer any questions your AI asks. It will ask if team size or agent use is missing.
   - Read the 75 and 90 percent figures. Use one of them when you promise a date, not the likely figure.
   - Start with one task to check the result feels right. Then paste a bigger list.
-  - After the work is done, paste the real times back in so the next estimate fits your team better.
+  - After the first few tasks are done, paste the real times back in and replace the default speed multipliers with your own. The defaults are rough starting assumptions, not measured figures.
 output_sample:
   input:
     - The tasks or tickets to estimate

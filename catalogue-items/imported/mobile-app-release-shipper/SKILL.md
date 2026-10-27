@@ -11,6 +11,9 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 ---
 
 # Deployment
+
+Costs: EAS builds use your Expo plan, and its free build allowance is limited. Apple and Google charge for developer accounts. This skill does not check current prices, so tell the user to look them up before building.
+
 ## When to Use
 
 Use this skill when you need deploy Expo apps to production with EAS — build and submit to the iOS App Store, Google Play Store, and TestFlight, configure eas.json build and submit profiles, manage app versions and build numbers, publish App Store metadata and ASO, and deploy web bundles and API routes via EAS...

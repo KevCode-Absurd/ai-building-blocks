@@ -39,7 +39,7 @@ how_to_use:
   - Paste the skill text. Then paste the facts of the search. Say which of the four parts you want, or ask for all.
   - If you lack a fact, such as scores, leave it out. The AI will mark it missing and not guess.
   - Read the look back first. Check each finding against what you remember of the search.
-  - Send the surveys and the checklist only after you have edited them to fit your company.
+  - Send the surveys and the checklist only after you have edited them to fit your company. Add a short privacy note to each candidate survey: why you ask, who reads it, how long you keep it, and that replying is optional.
   - Get a candidate's permission before you keep them on a near-miss list.
 output_sample:
   input:
@@ -78,3 +78,4 @@ terms:
     meaning: A strong candidate who did not get the offer but may suit a later role.
   - term: Pre-boarding
     meaning: The steps between a person accepting an offer and starting work.
+next: [30-60-90-day-onboarding-planner, hiring-search-brief-writer]

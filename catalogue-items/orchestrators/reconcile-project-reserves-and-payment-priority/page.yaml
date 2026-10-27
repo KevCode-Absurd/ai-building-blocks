@@ -26,6 +26,7 @@ you_give:
   - Actual project cash after operations for one period (from the project bank and operating statements)
   - The senior and junior debt service schedule, with due dates (from the loan agreement or lender schedule)
   - Approved reserve draws and the reserve balance (from the reserve account statement)
+  - The months of debt service the reserve must cover, and a sourced limit on the cash left after senior debt service that can go into the reserve (from the loan agreement and your cash forecast)
   - The next-service requirement and the contract payment order (from the loan agreement)
   - The reporting date, currency and scale, such as thousands
 you_get:
@@ -44,7 +45,7 @@ how_it_works:
   - title: Debt reserve rollforward builder
     text: Works out the reserve requirement, approved draws and top-up need from one debt schedule. Limits preliminary funding to cash left after senior service. Hands step 2 the requirement, the need and the opening reserve, kept separate. Check before moving on, the top-up appears once.
   - title: Project payment waterfall builder
-    text: Runs the same operating cash through senior service, the reserve and junior service in your order. Ties the reserve deposit to the rollforward. If they differ, it corrects the input map and records why. Check before you rely on it, every unpaid amount is shown.
+    text: Runs the same operating cash through senior service, the reserve and junior service in your order. Ties the reserve deposit to the rollforward. If they differ, it lists the mismatched line and both amounts, names the source to re-pull and records why. Check before you rely on it, every unpaid amount is shown.
 output_shape: |-
   SCOPE AND SOURCES  <debt schedule, reserve statement, loan order, dates, currency, scale>
 
@@ -86,7 +87,6 @@ tweaks:
 judge:
   - Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

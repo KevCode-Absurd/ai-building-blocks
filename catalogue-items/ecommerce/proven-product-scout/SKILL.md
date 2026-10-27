@@ -9,18 +9,18 @@ You help the person find products that someone else is already making money on, 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, store capture. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, store capture. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Ad Library:** Free. It shows active ads, start dates and image or video formats for any advertiser.
@@ -32,7 +32,7 @@ How to start:
 This skill runs on its own. All it needs to start is the market or buyer. Everything else makes the short list better. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
 - **Your market or buyer** (required): for example adults over 50, or parents.
-- **Which tool you have** (required): the free Facebook Ad Library, or a paid ad spy tool.
+- **Which tool you have** (advised): the free Facebook Ad Library, or a paid ad spy tool. If not given, assume the free Ad Library and say so.
 - **Your price and margin rules** (advised): if you have none, use the winning product scorer's margin rules ($30 gross profit and 3 times cost) and say so.
 - **Links to viral product clips and the seller's profile or store** (optional).
 - **Your market country** (advised).
@@ -65,7 +65,7 @@ Pick the route that matches the tool.
 For a validated product, open the longest-running ad. Note the avatar (who it speaks to) and the angle. Reuse the idea of the avatar and the angle but change the wording, the proof and the footage so you are not a clone. Do not copy their ad.
 
 ## 5. Native scouting (optional)
-Refresh the paid-content widget on big news or weather sites. Mostly older readers visit them, so the offers show what works for buyers aged 60 and over. Note repeat offers (neuropathy, hip and knee pain, bladder control, tinnitus, hearing). Keep refreshing.
+Refresh the paid-content widget on big news or weather sites. Mostly older readers visit them, so the offers show what works for buyers aged 60 and over. Refresh the widget about once a week for four weeks. Note an offer as a repeat when the same offer shows on at least two different visits. Examples of what shows up are neuropathy, hip and knee pain, bladder control, tinnitus and hearing. These are health-adjacent, so do not make health claims or give medical advice about them. Check local ad and health-claim rules first.
 
 ## 6. Viral video route (optional, with a caveat)
 A free idea source: use a fresh account of your own, search a product hashtag, like 5 to 10 physical product videos, then scroll the Reels or For You feed to fill it with product ads. One source calls burner-account scrolling outdated and slow for beginners, saying it takes 3 to 6 months to train your eye, and calls a Facebook feed better for older buyers. Treat this route as an idea source, not proof. Platforms can limit extra accounts, so follow their rules.
@@ -104,7 +104,7 @@ SUPPLIER CHECK
 <product> | supplier link <url the person gave or found> | cost <c> | margin at your price <p - c> | rivals and their estimated sales <list | not checked>
 
 POLICY NOTE
-<health, pain or body claims: rules differ and ad review is strict; check ad policy and check with a qualified person | none needed>
+<health, pain or body claims (for example incontinence, tinnitus, hearing, pain): rules differ and ad review is strict; check local ad and health-claim rules and check with a qualified person before any product is listed | none needed>
 
 NEXT  saturation checker, revenue estimator, winning product scorer
 
@@ -115,11 +115,9 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Crowded category white space finder](https://useaiblocks.com/skills/crowded-category-white-space-finder). It takes the competitors.
-- **Study competitor ads** with the [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the competitors and shortlist.
-- **Fill the gaps in your brand brain** with the [Store name tester](https://useaiblocks.com/skills/store-name-tester). It takes the shortlist and competitors.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the competitors.
-- The [Amazon listing writer](https://useaiblocks.com/skills/amazon-listing-writer). It takes the shortlist and competitors.
+- The [Crowded market opportunity finder](https://useaiblocks.com/skills/crowded-category-white-space-finder). It takes the competitors.
+- The [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the shortlist.
+- The [Product opportunity reviewer](https://useaiblocks.com/skills/rating-gap-product-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -138,6 +136,7 @@ Write `MISSING: <market | tool | price and margin rules | ad results | store lin
 ## Avoid
 - Copying a rival's ad, footage or page. Study the angle and make your own.
 - Calling a product proven on one signal.
+- Listing a health-adjacent product (incontinence, tinnitus, hearing, pain) before the ad and health-claim rules for the country are checked.
 - Copying health or pain claims from an ad. Check ad policy first. Meta reviews health and body claims strictly, and a qualified person should check what you can say.
 - Treating an ad spy tool's estimate as fact.
 - Buying a supplier's product that copies a brand's logo or trademark.

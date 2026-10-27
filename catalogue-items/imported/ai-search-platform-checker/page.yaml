@@ -5,9 +5,9 @@ name: AI search platform checker
 summary: Check how your site shows up in AI search. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity, Gemini and Bing Copilot.
 job: get-found-in-search
 headline: AI search platform checker
-subhead: Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. Only about one domain in nine is cited by both ChatGPT and Google AI Overviews for the same question.
+subhead: Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. This check shows where your site stands on each.
 explain: |
-  Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. Only about one domain in nine is cited by both ChatGPT and Google AI Overviews for the same question. This check scores your site on each platform separately.
+  Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. This check scores your site on each platform separately.
 
   For every platform, it runs a checklist and gives a score from 0 to 100. Google AI Overviews checks include question headings, direct answers under them, tables, lists, a FAQ, cited statistics, dates and author bylines. The output is one file with a score, the gaps and action items for each platform. Fix the platform that matters most to your buyers first.
 when:
@@ -33,7 +33,9 @@ how_to_use:
   - Paste the skill text into the chat, or upload the skill file.
   - Type your website address and your main topic or industry. Add the questions you want to win if you have them.
   - Ask your AI to check your site against each platform and write the report.
+  - Some checks need facts your AI cannot open on the public web, such as Reddit activity, backlinks or Bing coverage. Give it those facts, or ask it to mark the score "unverified".
   - Read the scores first. Start with the platform your buyers use most, then do the quick wins.
+  - If you act on the Wikipedia or Reddit advice, say who you are, follow each site's rules on writing about your own business, and never post as if you were independent.
 output_sample:
   input:
     - Your website address
@@ -53,3 +55,4 @@ output_sample:
       contains: Fixes sorted into quick wins for this week, medium-term for this month, and strategic for this quarter.
     - name: GEO-PLATFORM-OPTIMIZATION.md
       contains: The saved report file that holds all of the sections above.
+next: [ai-search-audit, ai-search-visibility-optimiser, llms-txt-writer]

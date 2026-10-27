@@ -42,7 +42,7 @@ output_sample:
 seats:
   - {seat: Creative experiments and discovery, asks: What happened in this attempt that is worth carrying forward?}
   - {seat: Sound and conversational explanation, asks: How can a listener experience the question with us?}
-pairs_with: [richard-feynman, hayao-miyazaki]
+pairs_with: [ira-glass, roman-mars, christopher-nolan]
 last_checked: 2026-10-23
 sources:
   - {n: 1, title: The Terrors and Occasional Virtues of Not Knowing What You Are Doing, by: Jad Abumrad edited by Sydney Lewis, url: "https://transom.org/2012/jad-abumrad-gut-wrench/", kind: own-words}

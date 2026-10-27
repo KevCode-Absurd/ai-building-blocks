@@ -20,7 +20,7 @@ not_for:
   - "You need to fix a live support problem for one customer: use your support runbook or ask a teammate who owns that account."
   - "You want in-product tours or tooltips built: use a product designer or your product's own tour tool, since this plan covers steps and emails, not screens."
 you_give:
-  - Your product and customer type
+  - Your product and customer segment
   - Your onboarding length and goals
   - Success milestones you already track (optional)
   - Team roles (optional)
@@ -35,7 +35,8 @@ how_to_use:
   - Add the milestones you already track and your team roles, if you have them.
   - Read the milestones first. Change any that your product cannot measure.
   - Check the emails. Replace any stats or claims with figures from your own product data.
-  - Share the plan with your team. Load the milestones into your product analytics, and review the plan every quarter.
+  - Share the plan with your team. Load the milestones into your product analytics, and review the plan every quarter. Check your first cohort of customers against the milestones before you change the plan.
+next: [retention-cohort-analyst]
 output_sample:
   input:
     - Your product and the type of customer you onboard

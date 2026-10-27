@@ -33,11 +33,11 @@ you_get:
   - A short verdict on whether to use the task
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text, then paste your task, mark scheme, learning goals and year group.
+  - The skill text has {{placeholders}} for the task, mark scheme, learning goals and year group. Replace each one with your own details before you paste it, or paste the skill text and then give your details in chat.
   - Add the purpose and stakes if you know them.
   - Read the verdict first. Then read the problems and the ranked fixes.
   - Fix the top problems in your task, then run the check again on the new version.
-  - If marking is the weak spot, write a clearer rubric next, then check it here.
+  - If marking is the weak spot, write a clearer rubric next with the marking rubric writer, then check it here.
 output_sample:
   input:
     - Your assessment task, as students will see it
@@ -58,3 +58,4 @@ output_sample:
       contains: Changes to the task or marking that fix each problem, in order of importance.
     - name: Overall Verdict
       contains: A short judgement on whether the task is ready to use as it stands.
+next: [marking-rubric-writer, single-point-rubric-builder, written-feedback-checker]

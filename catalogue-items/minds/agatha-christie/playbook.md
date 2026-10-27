@@ -82,3 +82,5 @@ She'd say to write from what you know. Her work in hospital dispensaries gave he
 ## What you'll get back
 
 A tidy, friendly list. It starts with the facts as she sees them, then the one detail that doesn't fit, then the gap in the timeline. She'll say which clue to move, which character to cut and where to put the reveal. If your problem is far from plots and puzzles, she'll tell you that her way of thinking only suggests an answer. Beyond the record, she won't claim to know.
+
+Next: fix the clue map, then give the draft to two or three readers and ask where they guessed the answer. Bring those guesses back for a second pass.

@@ -1,6 +1,6 @@
 new_slug: monthly-email-flow-keeper
 name: Monthly email flow keeper
-summary: Check your monthly email flow results against last month. It finds your weakest flow, rebuilds it and reviews the new emails. Nothing goes live.
+summary: Check your monthly email flow results against last month. It finds your weakest flow, rebuilds it and reviews the new emails. Nothing goes live without your yes.
 job: write-emails
 thinking: high
 thinking_why: It runs up to eight skills, compares two months, picks one fix from the numbers and loops on copy checks. Give it your strongest model.
@@ -9,7 +9,7 @@ subhead: Give it last month's email numbers and your live flows. It compares the
 explain: |
   Email flows earn quietly, so a broken one can go unseen for months. Most owners look at open rates, rebuild what they feel like rebuilding, and never check whether it worked. Open rates are also unreliable now, so they can point you the wrong way.
 
-  This agent does the same monthly check every time. It reads the month against last month, then asks one question: is the weakest part sending, or a flow? If mail is landing badly, it fixes that first, because a better flow will not be seen. If sending is fine, it rebuilds one flow, reviews the new emails and fixes them, then sets the next tests. It saves a short summary so next month it can say whether the fix helped. It never sends or turns anything on. You get the rebuilt flow and a list of changes to approve.
+  This agent does the same monthly check every time. It reads the month against last month, then asks one question: is the weakest part sending, or a flow? If mail is landing badly, it fixes that first, because a better flow will not be seen. If sending is fine, it rebuilds one flow, reviews the new emails and fixes them, then sets the next tests. It saves a short summary so next month it can say whether the fix helped. It sends nothing and turns nothing on by itself. A change goes live only after your clear yes. You get the rebuilt flow and a list of changes to approve.
 when:
   - You have email flows running and want one monthly check done the same way each time.
   - Email revenue slipped and you want to know whether to fix sending or a flow first.

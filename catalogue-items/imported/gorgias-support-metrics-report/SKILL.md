@@ -23,7 +23,7 @@ Run `composio execute <SLUG> --get-schema` in Bash (in parallel) for:
 - `GOOGLEDRIVE_FIND_FILE`
 
 ### Step 3: Fetch ticket data
-Run `composio execute GORGIAS_LIST_TICKETS -d '{...date filter...}'` in Bash to pull tickets. Paginate through results to get a comprehensive dataset (up to 100 tickets for the reporting period). If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
+Run `composio execute GORGIAS_LIST_TICKETS -d '<JSON>'` in Bash to pull tickets for the dates the user gave, using the argument names from the schema in Step 1. Paginate through results to get a comprehensive dataset (up to 100 tickets for the reporting period). If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
 
 ### Step 4: Enrich with details
 For a sample of tickets (up to 20), run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash as parallel calls to get message-level data for response time calculations.
@@ -43,9 +43,10 @@ Calculate and present:
 - New (last 7d): X
 
 ### Response Performance
-- Avg First Response Time: Xh Xm
-- Median First Response Time: Xh Xm
-- Avg Resolution Time: Xh Xm
+- Sample note: volume counts cover up to 100 tickets in the period; the times below come from a sample of up to 20 tickets, so treat them as a rough guide, not a full-queue figure. State the real counts.
+- Avg First Response Time: Xh Xm (sample)
+- Median First Response Time: Xh Xm (sample)
+- Avg Resolution Time: Xh Xm (sample)
 
 ### Breakdown by Category
 | Category | Count | % | Avg Resolution |

@@ -1,6 +1,6 @@
 # Mark Zuckerberg: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Mark Zuckerberg is alive, and views can change. This data set comes from his own public writing and speeches: his 2012 letter to investors when Facebook went public [S1], his 2021 letter on renaming the company Meta [S2], his 2024 letter on open source AI [S3], his 2025 letter on "personal superintelligence" [S4], his 2017 Harvard commencement speech [S7], his 2019 Georgetown speech on free expression [S8] and the 2019 note on a privacy-focused vision, which we read only through Meta's summary page [S9]. It adds public reference pages [S5][S6]. Treat each view as "as of" the year it was said. Nothing here tells you what he thinks about events after that, and this mind does not speak for him on court cases, politics or new products.
 

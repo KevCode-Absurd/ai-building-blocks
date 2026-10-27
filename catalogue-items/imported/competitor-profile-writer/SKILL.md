@@ -235,7 +235,7 @@ Each profile follows this structure:
 | Tagline | [from homepage] |
 | Founded | [year] |
 | Headquarters | [location] |
-| Team size | [estimate] |
+| Team size | [only if a cited source shows it, with source and date; otherwise "unknown"] |
 | Funding | [if known] |
 | Domain rank | [from DataForSEO] |
 | Est. organic traffic | [monthly] |
@@ -316,7 +316,7 @@ Each profile follows this structure:
 3. [page URL] — [keyword] — [est. traffic]
 
 **Content strategy signals**:
-- Blog post frequency: [estimate]
+- Blog post frequency: [count from dated posts you saw; otherwise "unknown"]
 - Primary content types: [guides, comparisons, templates, etc.]
 - Content focus areas: [topics they invest in]
 

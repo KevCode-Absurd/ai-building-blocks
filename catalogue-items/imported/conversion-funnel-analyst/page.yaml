@@ -32,7 +32,7 @@ you_get:
   - Segment comparison
   - Ranked fixes
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with a mode that can run code and accept file uploads.
+  - Open Claude, ChatGPT or Gemini with a mode that can run code and accept file uploads. This may need a paid plan. Or run the Python script yourself on your own computer.
   - Paste the skill text into the chat, then upload your event log file.
   - Tell your AI your funnel steps in order and the time window to finish. Add segment columns and the value of a conversion if you have them.
   - Ask it to run the funnel analysis and write the report.

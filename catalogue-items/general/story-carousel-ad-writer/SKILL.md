@@ -15,16 +15,20 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
+**Makes it better (optional):**
+- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. This one.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, a buyer brief, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -95,11 +99,11 @@ CHECKS MISSED  <one line per check still missed, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Plan what to test** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). It takes the ad copy.
+- The [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the ad copy.
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
+- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the ad copy.
+- **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -68,11 +68,9 @@ CHECKS MISSED: <one line per check not done, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand brain** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain.
-- **Fill the gaps in your brand brain** with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
-- **Write the landing page** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the brand brain.
-- **Tell it as a story** with the [Brand origin story writer](https://useaiblocks.com/skills/brand-origin-story-writer). It takes the brand brain.
-- **Make image ads** with the [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the brand brain.
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain and brand guide.
+- The [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer). It takes the brand brain.
+- The [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

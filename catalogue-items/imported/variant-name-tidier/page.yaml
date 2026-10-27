@@ -34,7 +34,7 @@ how_to_use:
   - Sign in to your store with a login that can read and write products.
   - Tell your AI the store domain, the option to fix (such as Size) and your map of messy values to the standard one.
   - Run the preview first. Check the list. Add any messy values you did not know about to your map.
-  - Approve the update. Then save the CSV file, because it holds the old values.
+  - Approve the update. Your AI must wait for your yes before it changes anything. Then save the CSV file, because it holds the old values.
   - Check that any collections built on option values still match the right products.
 output_sample:
   input:
@@ -54,3 +54,4 @@ output_sample:
       contains: Counts of products scanned, variants needing a fix, variants updated and errors.
     - name: option_normalizer CSV file
       contains: One row per variant with product, SKU, option name, old value and new value.
+next: [variant-sales-ranker]

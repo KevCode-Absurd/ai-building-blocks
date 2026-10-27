@@ -61,6 +61,8 @@ improve:
   - Add two lines about your team culture, in your own words.
   - Ask for a second version for a job board with a 150-word limit.
   - Use the full skill for a job family with many roles.
+before: []
+next: [applicant-shortlist-builder, interview-question-set-maker]
 works_best_with:
   tools:
     - name: Any good chat AI

@@ -28,10 +28,11 @@ you_get:
   - A diagram you can paste into a Mermaid viewer (optional).
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code running or paid tool is needed.
-  - Paste your process notes, user groups, systems and access rules in one message.
+  - Gather your process notes, user groups, systems and access rules first. Paste them in one message.
   - Answer any follow-up questions the AI asks about missing facts.
   - Read the component list and flow. Check each assumption and licensing note.
-  - Ask for the diagram if you want one, then paste it into a Mermaid viewer.
+  - Ask for the diagram if you want one. Your AI shows the diagram code in the chat. Copy it into a Mermaid viewer.
+  - Take the plan and the licensing checks to a Power Platform developer or your IT team before you build.
 output_sample:
   input:
     - Your process notes, meeting transcript or use case description
@@ -58,3 +59,4 @@ how_it_works:
     text: Describe the end-to-end flow, approval points and open licensing or integration checks.
 thinking: medium
 thinking_why: It weighs your evidence and follows a specific method.
+next: [design-a-power-bi-report-layout, review-a-power-bi-data-model]

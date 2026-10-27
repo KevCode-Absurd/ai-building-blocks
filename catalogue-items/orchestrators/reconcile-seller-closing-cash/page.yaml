@@ -38,7 +38,7 @@ you_get:
 
 how_to_use:
   - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can create spreadsheets.
-  - Attach the signed closing statement, the working-capital calculations and the escrow ledger. Paste the agreement's definitions of cash, debt, working capital and who pays a settlement. State the closing date once at the top.
+  - Paste the figures or attach the files (the signed closing statement, the working-capital calculations and the escrow ledger). A spreadsheet is welcome but not required. Paste the agreement's definitions of cash, debt, working capital and who pays a settlement. State the closing date once at the top.
   - After step 1, check that equity proceeds match the closing statement. A gap usually means a debt-like item was counted twice or missed.
   - After step 2, check that the estimate, peg and final use the same definition. Read the sign and the payer line aloud against the agreement.
   - After step 3, check that every escrow claim appears once and that release plus held equals the remaining balance.
@@ -46,7 +46,7 @@ how_to_use:
 
 how_it_works:
   - title: Closing equity proceeds checker
-    text: Starts at enterprise value, adds cash, and takes off debt, debt-like items and seller expenses once each. Leaves working capital and escrow out. Hands step 2 the equity figure and the cutoff date. Check before moving on, the total ties to the draft closing statement.
+    text: Starts at enterprise value, adds cash, and takes off debt, debt-like items and seller expenses once each. Leaves working capital and escrow out. Hands step 2 the equity figure and the cutoff date. Check before moving on, the total ties to the closing statement.
   - title: Working capital true-up checker
     text: Puts the peg, the estimate and the final on one definition. Works out the closing adjustment (estimate less peg) and the final adjustment (final less peg), then settles only the difference, final less estimate. Hands step 3 the settlement amount, its sign and who pays. Check before moving on, the same accounts and cutoff are used in all three.
   - title: Escrow release checker
@@ -85,7 +85,6 @@ tweaks:
 judge:
   - Working-capital amounts already paid and actual escrow disbursements appear once; final settlement signs and payer are explicit.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
@@ -125,7 +124,7 @@ terms:
     meaning: Practice numbers that show how the calculation works, with no claim about a real deal.
 
 not_for:
-  - The price bridge is not signed yet. Use the closing equity proceeds checker on a draft and treat it as a draft.
+  - The price bridge is not signed yet. Wait for the signed statement. A draft can be run only as a labelled draft.
   - You only need the equity bridge, or only the escrow balance. Use the closing equity proceeds checker or the escrow release checker on its own.
   - The deal used a locked-box price with no working-capital peg. Use the locked-box closing price workflow.
   - There is a dispute, a tax question, an earnout or a collar. This covers a plain dollar-for-dollar adjustment only.

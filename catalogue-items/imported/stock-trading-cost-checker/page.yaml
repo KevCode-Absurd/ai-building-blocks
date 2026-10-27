@@ -32,11 +32,11 @@ you_get:
   - An estimated price impact for your order size
   - A side-by-side table when you give several tickers
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with a tool that can run Python. Add this skill, or paste the text of SKILL.md into a new chat.
-  - Give the ticker, and the order size if you have one. For a non-US stock, add the Yahoo suffix, for example RELIANCE.NS.
+  - Know the data limits. Yahoo Finance data comes from the unofficial yfinance library, which is not tied to Yahoo. It scrapes Yahoo's site, so it can be blocked, delayed or changed, and Yahoo's terms may limit use. Open Claude, ChatGPT or Gemini with a tool that can run Python. Add this skill, or paste the text of SKILL.md into a new chat.
+  - Have ready the planned order size in shares or in money, your broker's quoted spread, and the Yahoo suffix for non-US tickers. Give the ticker, and the order size if you have one. For a non-US stock, add the Yahoo suffix, for example RELIANCE.NS.
   - Say yes if it asks to install the yfinance, pandas and numpy packages.
   - Read the grade table, then the impact figure for your order size. Note any field marked n/a.
-  - If the impact looks high, ask for the same order split over several days. Check the stock on your broker's own screen before you trade.
+  - If the impact looks high, ask for the same order split over several days. Check the stock on your broker's own screen before you trade. The grade cut-offs and the 25 and 50 basis point impact lines are unvalidated rules of thumb, so compare them with your broker's spread and depth data. For a live trade, use your broker's tools.
 how_it_works:
   - title: Check the setup
     text: It tests that yfinance, pandas and numpy are installed and asks you before it installs anything.

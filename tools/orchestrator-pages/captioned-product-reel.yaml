@@ -27,6 +27,7 @@ you_give:
   - Real product photos, from the front and in use
   - Your brand file and your font file
   - Your offer (optional)
+  - A coding AI that can build video, such as Claude Code with Remotion
 you_get:
   - A brief with the buyer and the argument
   - A script that opens on one satisfying movement, then shows the demo
@@ -38,7 +39,7 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your product facts, how it is used, real photos, your font and the sizes you need.
+  - Have your inputs ready. Your product facts, how it is used, real photos, your font and the sizes you need. Step 3 builds the reel as code, so use an AI that can run code, such as Claude Code.
   - Check the script before the reel is built, then review the reel for at least three rounds.
   - Watch the finished reel on a phone with the sound off before it runs.
 output_sample:
@@ -148,7 +149,7 @@ tweaks:
   - what: Length
     how: Ask for 10, 15 or 20 seconds. The beat grid changes with it.
   - what: Voice
-    how: Say "no voice" or "add a voice-over". With a voice, the caption step times captions to it.
+    how: Say "no voice", or give a voice the brand may use. With speech, the caption step times each caption to it. With none, it skips the subtitle file.
   - what: Sizes
     how: Name every size you need. Each is laid out for its own shape and its own safe zones.
   - what: Offer
@@ -169,14 +170,14 @@ test:
 
 improve:
   - Add a step before the script that finds the reasons people buy, so the demo shows the main one.
-  - Add a step after the reel that checks it against Meta's ad rules.
+  - Add a step that writes the headline and text to run with the reel.
   - Tune the script skill with the movements your product does best.
   - Make a second reel with a different opening and compare the two.
 
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps the script, words and captions consistent across six steps."}
-    - {name: "CapCut", why: "Takes the shot list and captions straight into an edit."}
+    - {name: "Claude Code with Remotion", why: "Builds the reel as code from your real photos and renders every size."}
     - {name: "Meta Ads Manager", why: "Its preview shows which parts the feed buttons cover."}
   inputs:
     - "Full-size photos of your product, front, back and torn open"

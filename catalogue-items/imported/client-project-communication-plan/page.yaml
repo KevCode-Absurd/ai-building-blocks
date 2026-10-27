@@ -21,7 +21,7 @@ not_for:
   - "You only need one status email this week: use the Weekly status update writer."
   - "You work with a large client team and a full account team (1,000+ staff): this plan is sized for small teams."
   - "You need to set a price or scope for new work: use the Client fee and cap setter or the Client scope decision review assistant."
-  - "You want to chase a late invoice: use the Late invoice reminder writer."
+  - "You want to chase a late invoice: use the Payment reminder letter writer."
 you_give:
   - The client projects you run, with the 1 to 5 client-side people on each
   - How you talk to each client today (email, chat, calls, a shared board)

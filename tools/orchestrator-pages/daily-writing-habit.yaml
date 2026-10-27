@@ -9,9 +9,9 @@ headline: A daily writing habit with a word count you can keep
 subhead: Tell it what you write and the hours you have. It sets a small start and a restart rule, works out a daily word count and finish date, and plans your reading. After two weeks, paste your log and it tells you what to change.
 
 explain: |
-  Most writing habits fail in the second or third week. The goal was too big for a bad day, the finish line was vague, and one missed day turned into a month. Writers also say they have no time to read, even though reading is half of the job.
+  A writing habit breaks when the goal is too big for a bad day, the finish line is vague, and one missed day turns into a month. Reading often gets squeezed out too, even though it feeds the writing.
 
-  This workflow builds the habit in small, firm parts. It begins with a first step you can do on your worst day and a plan for restarting after a miss. It then sizes a daily word count to your real minutes and works out the date you will finish. It fits reading into the gaps in your week. After two weeks of writing, you give it your log, and it counts the days you hit, projects your finish date and names one change. The method comes from Stephen King's book On Writing.
+  This workflow builds the habit in small, firm parts. It begins with a first step you can do on your worst day and a plan for restarting after a miss. It then sizes a daily word count to your real minutes and works out the date you will finish. It fits reading into the gaps in your week. After two weeks of writing, you give it your log, and it counts the days you hit, projects your finish date and names one change. The idea of writing to a daily count and reading as part of the job is inspired by Stephen King's book On Writing.
 
 when:
   - You want to write every day and have failed before.
@@ -26,12 +26,12 @@ you_give:
 
 you_get:
   - A small first step, a fixed cue and a restart rule
-  - A daily word count, a finish date and a closed-door routine
+  - A daily word count, a finish date and a closed-door routine (one room, one shut door, one start time, no phone and a stop rule)
   - A weekly reading schedule with the sums
-  - A review of your log with a score out of 100, the pattern in missed days and one change
+  - A review of your log with a score out of 100 (days you hit the count divided by planned writing days), the pattern in missed days and one change
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your project, your hours and your week. It works step by step and saves each result.
   - Write at the same time every day for two weeks. Log the date, the start time and the words, including the zero days.
@@ -126,3 +126,5 @@ output_sample:
       contains: Pages and minutes a day, a weekly schedule, the mix of books and what to cut.
     - name: Log review
       contains: Days hit, pace, finish date, the pattern in missed days, a score out of 100 and one change.
+next: [book-writing-project-coach, daily-writing-session-planner]
+before: []

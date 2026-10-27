@@ -107,10 +107,11 @@ CHECKS MISSED: <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
-- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
-- **Write the ad copy** with the [Video scripts for buyer groups](https://useaiblocks.com/skills/persona-script-multiplier). It takes the video ad script.
+- The [Wordless video ad opening writer](https://useaiblocks.com/skills/wordless-video-ad-opening-writer).
+- The [Paper craft video ad script writer](https://useaiblocks.com/skills/paper-craft-ad-script).
+- The [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan). It takes the script.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

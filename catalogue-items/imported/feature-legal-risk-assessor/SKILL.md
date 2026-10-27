@@ -10,6 +10,8 @@ description: >
 
 # Feature Risk Assessment
 
+> **Plain-chat note (added by AI Blocks).** The `~/.claude/plugins/...` config files and the `/product-legal`, `/ai-governance-legal` and `/privacy-legal` commands below belong to other plugins you may not have. If you do not have them: use any company risk notes the user pastes; otherwise ask for their risk appetite and past legal issues. Return the 2-4 page assessment in the chat. Where the text says to run another command, say it as a next step instead. This is a first check, not legal advice.
+
 ## Matter context
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/product-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/product-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.

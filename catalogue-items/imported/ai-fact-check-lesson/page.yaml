@@ -31,11 +31,12 @@ you_get:
   - A teacher script with a real and a fake citation
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the full text of SKILL.md into the chat.
+  - Paste the full text of SKILL.md into the chat. It returns the error types for your topic, the four-step AI check, the verification moves, the Hallucination Hunt and the teacher script.
   - "Send your details: the AI text students will check, such as an AI summary with named studies, plus your subject, year level and the tools students can use to check. Add the AI tool they use if you know it."
   - Read the error types first. Remove any that do not fit your class.
   - Run the Hallucination Hunt with a real AI answer from your subject, then use the teacher script to show one check aloud.
-  - Check every real citation in the script yourself before class.
+  - Check every real citation in the script yourself before class. The Twenge example in the skill file is a made-up illustration, not a real finding.
+  - Next, turn what the Hallucination Hunt finds into a class discussion.
 output_sample:
   input:
     - Your subject and year level

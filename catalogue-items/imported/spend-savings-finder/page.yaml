@@ -36,7 +36,7 @@ you_get:
   - Savings ranked by size, effort and how sure the estimate is
 how_to_use:
   - Export your payments from QuickBooks, Xero, your bank, card or purchasing system as a CSV or spreadsheet. Keep supplier, amount and date columns. Remove personal or payroll rows.
-  - Use an AI that can run Python, such as Claude Code or ChatGPT with data analysis. For a short list, a plain chat can work on a pasted sample.
+  - Use an AI that can run Python with pandas and scikit-learn installed, such as Claude Code or ChatGPT with data analysis. The automated classifier is optional and needs your own labelled rows. For a short list, a plain chat can work on a pasted sample.
   - Paste the skill and attach the file. Say the period it covers and your goal.
   - Check the cleaning summary first. Look at rows dropped, duplicates removed and any supplier names merged. Fix anything wrong before you accept the ranking.
   - Read the Pareto view and the ranked savings. Ask your AI to show the assumption behind each saving.

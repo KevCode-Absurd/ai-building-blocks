@@ -31,7 +31,8 @@ you_get:
   - A tested answer with uncertainty marked
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
-  - Type your question. Add what you already know or tried, and what a wrong answer would cost.
+  - Before you type, write down the question, what you already know or tried, and what a wrong answer would cost. The skill depends on these details.
+  - Type your question and add those details.
   - Paste any logs or data if you have them (optional).
   - Read the mode your AI picks. If it is a simple or urgent question, expect a short answer, not five stages.
   - Check the strongest attack and the list of what remains uncertain before you act on the answer.

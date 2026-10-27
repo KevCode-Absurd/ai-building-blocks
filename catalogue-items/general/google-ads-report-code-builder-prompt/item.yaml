@@ -7,8 +7,12 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: codebase
+  - type: question
     required: true
+  - type: codebase
+    required: false
+  - type: spreadsheet
+    required: false
 outputs:
   - type: code_change
     required: true

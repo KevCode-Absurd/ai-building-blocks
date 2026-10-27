@@ -66,6 +66,8 @@ npx skills add nexscope-ai/eCommerce-Skills --skill brand-protection-shopify -g
 python3 scripts/detector.py
 ```
 
+The script does not fetch the web, ad libraries or social sites, and it needs no key. It checks listing details (seller, price, images, reviews) against your brand info. Run as it is, it only shows built-in demo data, so its findings are not about your store. Give it real listings you collected by hand, and check each finding yourself.
+
 ### Generate Takedown Templates
 
 ```bash
@@ -81,19 +83,21 @@ python3 scripts/templates.py platform-report
 
 ## Output Example
 
+This is an illustration from the built-in demo data. The names, counts and dates below are placeholders, not real findings.
+
 ```
 🛡️ Shopify/DTC Brand Protection Report
 
-Brand: YourBrand
-Official Domain: yourbrand.com
-Analysis Date: 2024-01-15
+Brand: [example brand]
+Official Domain: [example domain]
+Analysis Date: [example date]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔴 HIGH RISK ALERTS
 
 Fake Store Detected:
-├── Domain: your-brand-sale.com
+├── Domain: [example: look-alike domain]
 ├── Copying: Product images, descriptions
 └── Action: File DMCA + domain complaint
 
@@ -101,8 +105,8 @@ Fake Store Detected:
 
 ⚠️ SOCIAL MEDIA INFRINGEMENT
 
-Instagram: 2 unauthorized ads detected
-Facebook: 1 fake page found
+Instagram: [example: unauthorized ads found]
+Facebook: [example: fake page found]
 Recommendation: Report to platforms
 ```
 

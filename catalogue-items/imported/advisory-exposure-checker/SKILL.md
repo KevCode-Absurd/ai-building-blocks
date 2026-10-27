@@ -39,6 +39,8 @@ disable-model-invocation: true
 
 ## Check menu (pick what's relevant)
 
+The commands below are written for macOS (Homebrew paths, LaunchAgents, `lsof`). On Linux, swap in the matching paths and tools. On Windows there are no ready checks here, so mark each one "not checked (no ready check for this system)" in the table.
+
 ```bash
 # --- Node / npm ecosystem (supply-chain advisories) ---
 which npm pnpm yarn; npm root -g; pnpm root -g 2>/dev/null
@@ -53,8 +55,8 @@ find ~/Documents ~/Desktop ~/Downloads -maxdepth 8 -type f \
 # --- Python ecosystem ---
 which python3 pip pipx uv
 pip list 2>/dev/null | grep -i "<pkg>"
-find ~/Documents -maxdepth 6 -name "requirements*.txt" -o -name "pyproject.toml" \
-  -o -name "poetry.lock" -o -name "uv.lock" 2>/dev/null | xargs grep -l "<pkg>" 2>/dev/null
+find ~/Documents -maxdepth 6 \( -name "requirements*.txt" -o -name "pyproject.toml" \
+  -o -name "poetry.lock" -o -name "uv.lock" \) 2>/dev/null | xargs grep -l "<pkg>" 2>/dev/null
 
 # --- Homebrew / system binaries ---
 brew list --versions <formula> 2>/dev/null
@@ -85,7 +87,7 @@ File: `~/Documents/security-audits/YYYY-MM-DD-<short-kebab-slug>.md`
 # <Subject> — Audit
 
 **Date:** YYYY-MM-DD
-**Host:** the user's Mac
+**Host:** <the user's computer and operating system>
 
 ## <CVEs | Advisory> in scope
 

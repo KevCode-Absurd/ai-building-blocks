@@ -29,8 +29,8 @@ you_get:
   - A one-command way to run it
   - A note of what you learned
 how_to_use:
-  - Open your AI tool in your project. Use one that can run code and write files, such as Claude Code.
-  - Paste the skill text into the chat, then state your design question in one sentence.
+  - Open your AI tool in your project. Use one that can run code and write files, such as Claude Code. You need a local copy of the project and some comfort running a command. A person who does not code can then click through the finished demo.
+  - Add this skill to your AI, or paste its text into the chat. Then state your design question in one sentence.
   - Say whether it is about how something behaves or how a screen looks. If you skip this, your AI picks from your code and tells you its guess.
   - Run the prototype with the command your AI gives you. Logic demos are one HTML file you open in your browser.
   - Click through the cases and watch the state after each step.
@@ -56,3 +56,8 @@ output_sample:
       contains: One command, or one double-click, that starts the prototype with no setup thinking.
     - name: Capture note
       contains: The verdict and the question it settled, with the prototype kept on a throwaway branch, out of main.
+terms:
+  - term: State
+    meaning: What your demo knows at one moment, such as an order being "paid" or "shipped".
+  - term: Throwaway branch
+    meaning: A separate copy of your code kept on the side, so the prototype never reaches your real product.

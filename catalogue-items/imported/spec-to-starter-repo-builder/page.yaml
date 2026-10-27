@@ -28,7 +28,7 @@ you_give:
 you_get:
   - A summary of how your AI read your spec, for you to confirm
   - A file tree you can check before any code is written
-  - A project folder with config, source code and tests
+  - A project folder with config, source code and tests. It is a starting point. It may need dependency fixes and a developer review before real use or deployment.
   - A README with setup and run steps
   - A checklist result that shows problems it found
 how_to_use:
@@ -36,7 +36,8 @@ how_to_use:
   - Paste the skill into Claude, ChatGPT or Gemini, then paste your spec.
   - Check the summary it shows you. It asks at most 3 questions. Fix anything wrong, or say "just build it".
   - Check the file tree, then let it write the files.
-  - Use an AI that can run code and save files. It can then install, test and start the project, and report any failure.
+  - Use an AI that can run code and save files. It can then install, test and start the project, and report any failure. Without that, the install, test and run steps are unverified, so run them yourself before you rely on the project.
+  - The optional check script scripts/validate_project.py needs Python 3 and a local copy of the generated folder.
   - Follow the README to run the project. Ask for auth, polish or deploy setup next.
 output_sample:
   input:

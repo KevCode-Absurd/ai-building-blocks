@@ -7,26 +7,30 @@ description: Use when you need an honest review of why a landing page, offer pag
 
 Eyetracking research shows people spend most of their viewing time on the first screen, skim the rest by headings and pictures, and read every word only when they're close to buying. So this review reads the page the same three ways, in that order, and weighs each problem by how badly it stops a buyer and how high on the page it sits.
 
+Not for a page that is not live or has no visitors (use a short landing page checklist first), or a full redesign brief (hire a designer, or fix the ranked problems here first). It sizes no fixes in money without your analytics.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Bring customer words (optional), objection map (optional), a draft (optional). It uses your brand brain and your offer and ad copy.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your page, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your page, your brand brain, objection map. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI that reads screenshots can run the three reads. Give it phone screenshots, top to bottom.
@@ -71,11 +75,9 @@ This skill runs on its own. If something marked required is missing, ask once, i
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
-- **Write the ad copy** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report.
+- The [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker).
+- The [Page issue sorter](https://useaiblocks.com/skills/page-issue-sorter). It takes the audit report.
+- The [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -95,9 +97,9 @@ Write `MISSING: <what>` (no ad to compare, no terms visible, no proof on file). 
 - Recommending fake scarcity, fake reviews or hidden fees.
 
 
-## Store economics and use-cycle reference
+## Optional add-on: store economics and use-cycle reference
 
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-cro-brain.md.
+This is not part of the page review above. Use it only when asked and when you have store records. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-cro-brain.md.
 
 With commercial records, add a shipping, bundle and use-cycle decision record instead of copying generic thresholds. For free shipping inspect the actual order-value distribution, including mode, mean and median, plus margin and shipping cost. A threshold just above a common basket is a hypothesis; costs and customer experience decide viability.
 
@@ -106,12 +108,12 @@ Compare bundles using real included items and individually charged prices. Show 
 Separate transaction/support messages from optional marketing. Review timing depends on delivery and real use. Fast texts and pressure upsells are not universal best practice; account for consent, capacity and experience. End with what evidence would confirm or reject each recommendation.
 
 
-## Optional fifteen-setting merchant evidence sheet
+## Optional add-on: fifteen-setting merchant evidence sheet
 
-The source title says thirty settings but contains fifteen. Check the real list without inflating it: guest checkout; Shop Pay where applicable; applicable Apple Pay/Google Pay wallets; express placement; tipping applicability; gift-card fulfilment; visible shipping rates; truthful free-shipping terms; clear returns; unused app review; image optimization; actual performance measures; post-purchase offer suitability; survey; and referral placement.
+This is not part of the page review above. Use it only when asked and when the merchant can show their store settings. It has fifteen settings. Check the real list without inflating it: guest checkout; Shop Pay where applicable; applicable Apple Pay/Google Pay wallets; express placement; tipping applicability; gift-card fulfilment; visible shipping rates; truthful free-shipping terms; clear returns; unused app review; image optimization; actual performance measures; post-purchase offer suitability; survey; and referral placement.
 
 Some items combine multiple wallet or image checks, so count the actual declared subchecks rather than promise a universal total. Classify storefront-visible, admin-only and conditional. A public page cannot prove enabled payment methods, automatic gift-card fulfilment or an app being unused. Request merchant evidence for those checks. Do not alter settings merely to complete the sheet.
 
-Old speed-score-above-fifty is a historical heuristic, not a current universal pass. Use actual loading, responsiveness and layout evidence from the available tools. Tipping, upsells and referral prompts depend on business and buyer experience, not automatic enable/disable rules. Remove agency sales calls-to-action and keep unresolved evidence visible.
+Old speed-score-above-fifty is a historical heuristic, not a current universal pass. Use actual loading, responsiveness and layout evidence from the available tools. Tipping, upsells and referral prompts depend on business and buyer experience, not automatic enable/disable rules. Keep unresolved evidence visible.
 
 Procedure reference: references/cmo-lesson-landing-page-auditor.md.

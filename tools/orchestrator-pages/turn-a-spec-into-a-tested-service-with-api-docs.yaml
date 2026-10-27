@@ -25,7 +25,7 @@ you_get:
   - Tests for every route, with sample data
   - A complete API spec file you can share
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 4 skill files in the order they run: Spec to starter repo builder, Backend builder, API test suite builder and API spec writer."
   - Open an empty folder in Claude Code, give it the pack and say "Follow HANDOFF.md".
   - Paste your spec. Check the plain-words summary it gives back and fix anything it got wrong.
   - After the build, run the service and the tests yourself.

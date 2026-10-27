@@ -41,7 +41,7 @@ source_repo: Ranjeet2063/agentic-awesome-skills
    uncertainty. Keep mandatory safety/schema failures visible even if aggregate
    similarity improves. Use the predeclared rule, not a threshold selected after results.
 7. Store a redacted report and exact artifacts at an authorized destination.
-   Decide retain/revise/reject for the stated dataset; deployment is separate.
+   Decide retain/revise/reject for the stated dataset; deployment is separate. On the page these read as ship (retain), hold (revise) and keep the old prompt (reject).
 
 ## Regression register
 

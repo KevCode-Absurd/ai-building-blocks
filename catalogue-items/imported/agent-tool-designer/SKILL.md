@@ -10,7 +10,7 @@ date_added: "2026-02-27"
 
 Build tools that agents can use effectively, including architectural reduction patterns
 
-Use this skill when working with build tools that agents can use effectively, including architectural reduction patterns.
+Use this skill when you are writing, reviewing or cutting down the tools an AI agent can call, so that the agent picks the right tool and uses it correctly. You get fewer, clearer tool definitions with better error messages.
 # Tool Design for Agents
 
 Tools are the primary mechanism through which agents interact with the world. They define the contract between deterministic systems and non-deterministic agents. Unlike traditional software APIs designed for developers, tool APIs must be designed for language models that reason about intent, infer parameter values, and generate calls from natural language requests. Poor tool design creates failure modes that no amount of prompt engineering can fix. Effective tool design follows specific principles that account for how agents perceive and use tools.
@@ -159,7 +159,7 @@ Without the server prefix, agents may fail to locate tools, especially when mult
 
 ### Using Agents to Optimize Tools
 
-Claude can optimize its own tools. When given a tool and observed failure modes, it diagnoses issues and suggests improvements. Production testing shows this approach achieves 40% reduction in task completion time by helping future agents avoid mistakes.
+Claude can optimize its own tools. When given a tool and observed failure modes, it diagnoses issues and suggests improvements. The original author claims large time savings from this approach, but gives no study or source for the number, so AI Blocks has removed the figure. Test it on your own agent.
 
 **The Tool-Testing Agent Pattern**:
 

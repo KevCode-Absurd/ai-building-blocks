@@ -2,14 +2,14 @@ thinking: low
 thinking_why: Proofreading follows clear rules.
 new_slug: proofreader
 name: Proofreader
-summary: Proofread your text for grammar, spelling and punctuation. You get clean copy, a list of every change and a readability score.
+summary: Proofread your text for grammar, spelling and punctuation against a style guide. Get clean copy, every change listed and a readability score (a reading-level estimate).
 job: write-and-tell-stories
 headline: Proofreader
 subhead: Paste your text and pick a style guide. Your AI checks it in separate passes for grammar, spelling, punctuation and style. You get clean text and a list of what changed, so you can accept or reject each fix.
 explain: |
   Clean text with every fix explained, so you can send it with confidence and see what changed. It follows your chosen style guide instead of guessing.
 
-  The skill makes several separate passes over the text: grammar (agreement, tense, fragments, run-ons), spelling and confused words, punctuation, then style and consistency. It applies AP, Chicago, APA or your own house rules, including details such as the Oxford comma. Terms are checked against any glossary you supply. You get the corrected text, a list of each change with the original wording, a readability score and a note on tone.
+  The skill makes several separate passes over the text: grammar (agreement, tense, fragments, run-ons), spelling and confused words, punctuation, then style and consistency. It applies AP, Chicago, APA or your own house rules, including details such as the Oxford comma. Terms are checked against any glossary you supply. You get the corrected text, a list of each change with the original wording, a reading-level estimate and a note on tone. Unlike a spell checker, it checks style and consistency against a named guide, so it suits reports and client-facing copy.
 when:
   - You are about to send a report, article or email and want it free of errors.
   - Your company has a style guide and drafts keep breaking it.
@@ -27,14 +27,15 @@ you_give:
 you_get:
   - Corrected text
   - Annotated list of every change
-  - Readability score
+  - Reading-level estimate
   - Tone notes
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill text into the chat, then paste your text below it.
   - Say which style guide to use, such as AP, Chicago or APA. Add your audience and tone if you have them.
-  - Read the Changes Made table. Accept or reject each fix. Treat the readability score as an estimate.
+  - Read the Changes Made table. Accept or reject each fix. The reading grade is the AI's estimate, not a measured score.
   - If you edit the text, paste it back in and run the proofread again.
+  - Paste the final text back into your document. Keep a short house style list (spellings, terms, Oxford comma) and paste it in next time so drafts match.
 output_sample:
   input:
     - The text you want checked
@@ -47,8 +48,9 @@ output_sample:
     - name: Changes Made
       contains: A table of each change with the original wording, the fix and the reason for it.
     - name: Readability
-      contains: A reading grade score for the text, with a note on whether it suits your audience.
+      contains: An estimated reading grade for the text (an estimate by the AI, not a calculated score), with a note on whether it suits your audience.
     - name: Tone notes
       contains: A short read on the tone and any spots where it shifts.
     - name: Suggestions
       contains: Optional ideas such as splitting long sentences, kept apart from the fixes so you can choose.
+next: [plain-english-editor, brand-voice-guide-builder]

@@ -25,22 +25,22 @@ you_get:
   - A list of missing or out-of-date help topics.
 how_it_works:
   - title: Search the question
-    text: Try the exact topic and related words in your Notion knowledge base.
+    text: Run composio search to find the Notion tools, then run NOTION_SEARCH_NOTION_PAGE with the exact title and then with related keywords.
   - title: Read the best matches
-    text: Read the full content of the best matching pages and note their dates.
+    text: Run NOTION_GET_PAGE_MARKDOWN on the top 3 to 5 pages and note their dates.
   - title: Draft a sourced answer
-    text: Return article links, useful excerpts, a customer reply, and missing or outdated help topics.
+    text: Return article links, useful excerpts, a customer reply built only from those pages, and missing or outdated help topics.
 works_best_with:
   tools:
     - name: Notion
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
   - Use an AI that can run commands and read files. A chat window alone will not work for live Notion search.
-  - Install the Composio CLI and link your Notion account. Your AI will ask you to run composio link notion if it is not linked. Check Composio's site for any plan or cost.
+  - Composio is a separate service with its own plan and limits, so check its site before you start. Install the Composio CLI and link your Notion account. Your AI will ask you to run composio link notion if it is not linked.
   - Add the skill folder to your AI and ask for the Notion help article finder.
   - Type the customer's question or topic.
   - Read the excerpts and the reply draft. Check each against the linked article before you send anything.
-  - Use the Gaps list to decide which help articles to write or update.
+  - Use the Gaps list to decide which help articles to write or update. Give each gap to one owner, and ask your AI for a short draft of the first missing article.
 output_sample:
   input:
     - The customer's question or topic

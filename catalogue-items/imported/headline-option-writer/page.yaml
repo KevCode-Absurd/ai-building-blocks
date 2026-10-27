@@ -7,7 +7,7 @@ job: write-ad-copy
 headline: Headline option writer
 subhead: Tell it who the headline is for, what they should do next, the channel and your provable facts. It writes several headlines for that reader, each from a different angle. You get the headlines, why each should work, a pick, and a check that no claim goes past your facts.
 explain: |
-  A set of headline options aimed at one reader, each using a different angle, so you can pick or test the best. Good headlines get noticed because they feel relevant and leave a small gap the reader wants to close. Bad ones promise too much.
+  A set of headline options aimed at one reader, each using a different angle, so you can pick or test the best. Headlines tend to get noticed when they feel relevant and leave a small gap the reader wants to close. Bad ones promise too much. Treat the reasons it gives as ideas to test, not proven rules.
 
   The skill first asks who the reader is, how aware they are of the problem, what you want them to do, where the headline will run, and any length limit. It then picks the mental state needed and writes headlines using different mechanisms, such as contrast, a specific number, a question or a surprising fact. Every line is checked against what you can prove, so there is no clickbait.
 when:
@@ -53,3 +53,4 @@ output_sample:
       contains: For each headline, a note on which of your proven facts backs it, so no claim goes too far.
     - name: Best pick
       contains: The headline that fits your reader, goal and channel best, with a short reason.
+next: [meta-ad-copywriter, honest-conversion-copywriter]

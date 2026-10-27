@@ -5,7 +5,7 @@ name: Thinking-about-thinking prompt set
 summary: Get a set of thinking-about-thinking prompts for one task. Students use them to plan, check and review their own work without you.
 job: teach-and-train
 headline: Thinking-about-thinking prompt set
-subhead: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone. Bring the task students are doing. Use the result to plan your next step.
+subhead: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone. Bring the task students are doing.
 explain: |
   A set of questions that students can ask themselves before, during and after a task, so they notice when they are lost and fix it without waiting for you. You describe the task and the class, and the prompts are tuned to both.
 
@@ -20,6 +20,7 @@ not_for:
   - "Students have not yet tried the task: let them attempt it first, then use these prompts to check their thinking."
   - "You need help with one subject only, such as maths method: ask your AI for a subject-specific scaffold instead."
 you_give:
+  - One real task sheet and the spot where your class most often gets stuck
   - The task students are doing
   - Year group and how well students notice their own thinking
   - "The skill to target: planning, monitoring, evaluating or debugging"
@@ -36,6 +37,10 @@ how_to_use:
   - Run it and read the prompts. Cut any that do not fit your class.
   - Print or share the student card.
   - Model one prompt aloud with the teacher script before students try it alone.
+  - Next, in your following lesson, read a few of the students' self-check answers. Use what you find to choose the next prompt set.
+next:
+  - student-mistake-analyser
+  - study-strategy-picker
 output_sample:
   input:
     - The task students are doing

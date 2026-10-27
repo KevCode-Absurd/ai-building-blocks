@@ -32,7 +32,7 @@ Run the architecture designer to get pattern recommendations:
 python scripts/architecture_designer.py --input requirements.json
 ```
 
-**Example output:**
+**Example output (made-up sample values, not a result from a real app):**
 
 ```json
 {
@@ -63,7 +63,7 @@ Create infrastructure-as-code for the selected pattern:
 python scripts/serverless_stack.py --app-name my-app --region us-east-1
 ```
 
-**Example CloudFormation YAML output (core serverless resources):**
+**Example CloudFormation YAML output (a partial example of the core serverless resources; the full template comes from running `serverless_stack.py`):**
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -141,7 +141,7 @@ Analyze estimated costs and optimization opportunities:
 python scripts/cost_optimizer.py --resources current_setup.json --monthly-spend 2000
 ```
 
-**Example output:**
+**Example output (made-up sample values, not a result from a real account):**
 
 ```json
 {
@@ -238,7 +238,7 @@ Creates serverless CloudFormation templates.
 python scripts/serverless_stack.py --app-name my-app --region us-east-1
 ```
 
-**Output:** Production-ready CloudFormation YAML with:
+**Output:** A starting CloudFormation YAML template for review (have someone who knows AWS check it before you deploy) with:
 - API Gateway + Lambda
 - DynamoDB table
 - Cognito user pool
@@ -361,7 +361,7 @@ Provide these details for architecture design:
 
 ### IaC Templates
 
-- **CloudFormation YAML**: Production-ready SAM/CFN templates
+- **CloudFormation YAML**: SAM/CFN starter templates, to be reviewed before deploy
 - **CDK TypeScript**: Type-safe infrastructure code
 - **Terraform HCL**: Multi-cloud compatible configs
 

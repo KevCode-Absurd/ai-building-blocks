@@ -7,7 +7,7 @@ job: research-topics
 headline: Persuasive claim truth checker
 subhead: Share the message and the decision it is trying to influence. It separates factual claims from hints, value judgments, and predictions, then checks authoritative sources. You get a claim-by-claim report showing what is supported, contradicted, misleading, unclear, or still unknown.
 not_for:
-  - "You want broad research on a whole topic, not one message: use research-methodology, or ask your AI to run a wider search first."
+  - "You want broad research on a whole topic, not one message: use the Literature reviewer, or ask your AI to run a wider search first."
   - "You need a medical, legal or technical claim settled: ask a doctor, lawyer or domain expert."
   - "You want to know if a person is lying from their video, voice or body language: this tool does not do that."
 you_give:
@@ -28,11 +28,12 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Open a chat AI that can search the web or read links. Paste in this skill.
+  - Open a chat AI that can search the web or read links. Paste in this skill. If it cannot browse, it will mark sources it could not open as unknown. The skill also names two helper files, references/claim-audit.md and assets/claim-audit.md. The check works without them in a chat.
   - Paste the full article, pitch or post. Add its link if it has one.
   - Say what decision it is trying to move, such as a purchase, a share or a vote.
   - Read the Bottom line first. Then open the sources in the Authoritative-source check.
   - Do the Decision-safe next step before you act on a high-stakes claim.
+  - To check the claims in your own copy before you publish, use the Claim evidence checker.
 output_sample:
   input:
     - The article, pitch or post you want checked
@@ -57,3 +58,4 @@ output_sample:
       contains: Each claim with its source, source type, limits and confidence.
     - name: Decision-safe next step
       contains: The smallest action that would cut the remaining doubt.
+next: [claim-and-proof-matcher, claim-fact-checker]

@@ -363,6 +363,8 @@ def tracking_signal(actual, forecast):
 
 ### Target Accuracy by Product Category
 
+These ranges are generic starting points, not benchmarks and not from a named study. Compare them with your own past error before you set targets.
+
 | Category | Target MAPE | Notes |
 |----------|-------------|-------|
 | A items (high volume) | 15-25% | Tightest control |
@@ -467,7 +469,10 @@ Start
 ```python
 # Generate forecast with confidence intervals
 forecast = model.forecast(steps=12)
-conf_int = model.forecast_interval(steps=12, alpha=0.05)  # 95% CI
+# ARIMA / SARIMAX results: get_forecast gives intervals
+pred = model.get_forecast(steps=12)
+conf_int = pred.conf_int(alpha=0.05)  # 95% CI
+# Holt-Winters has no built-in interval: use model.simulate(...) and take percentiles
 ```
 
 ### 4. Forecast Enrichment
@@ -580,6 +585,8 @@ def forecast_value_added(actual, baseline_fcst, adjusted_fcst):
 
 ### Python Libraries
 
+Install what you need first (for example `pip install statsmodels pmdarima prophet scikit-learn xgboost`). Prophet and the deep-learning libraries are large. Start with `statsmodels`. All of these are free.
+
 **Statistical Forecasting:**
 - `statsmodels`: ARIMA, exponential smoothing, seasonal decomposition
 - `pmdarima`: Auto ARIMA
@@ -596,7 +603,7 @@ def forecast_value_added(actual, baseline_fcst, adjusted_fcst):
 - `numpy`: Numerical computations
 - `matplotlib`, `seaborn`, `plotly`: Visualization
 
-### Commercial Software
+### Commercial Software (paid; none is needed for this skill)
 
 - **SAP IBP**: Integrated business planning
 - **Oracle Demantra**: Demand management
@@ -672,6 +679,8 @@ def forecast_value_added(actual, baseline_fcst, adjusted_fcst):
 ## Output Format
 
 ### Forecast Report Structure
+
+The table below shows the layout only. Its names and numbers are illustrations. Use the user's own figures, and never fill a cell with a number you were not given or did not calculate.
 
 **Executive Summary:**
 - Overall forecast accuracy (current period)

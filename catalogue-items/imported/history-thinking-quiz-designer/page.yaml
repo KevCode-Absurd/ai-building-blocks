@@ -34,8 +34,8 @@ how_to_use:
   - "Tell your AI which skills to check: sourcing, close reading, contextualisation, corroboration, or all four."
   - Add your students' age group and level, and what you want to learn from the check.
   - Add your topic, format and time limit if you have them (optional).
-  - Read each task and its answer guide. Check that the artefact suits your class before you use it.
-  - Use the weak, partial and strong answer notes to plan what to teach next.
+  - Read each task and its answer guide. The AI writes the source text itself, so it can invent an author, date or archive. Check each one against a real collection, or swap in a real source, before students see it.
+  - Use the weak, partial and strong answer notes to plan what to teach next. To check whether the tasks are fair, run them through the Assessment fit and fairness checker. To mark answers, use the Marking rubric writer.
 output_sample:
   input:
     - The history skills you want to check, such as sourcing or contextualisation

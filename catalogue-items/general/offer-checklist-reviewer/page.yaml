@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no offer yet and want to build one around buyer doubts: use the Offer builder that answers buyer doubts."
   - "You want a bonus package for an offer you already have: use the Bonus stack builder."
-  - "You want to check the page that carries the offer: use the Claim and proof matcher."
+  - "You want to check the page that carries the offer: use the Claim evidence checker."
 
 you_give:
   - Your offer, price and guarantee
@@ -135,7 +135,7 @@ improve:
   - Add your costs and margins, so the changes stay profitable.
   - Add past offer tests with results.
   - Save the winning offer terms to your brand file.
-  - Pair it with "Claim and proof matcher" to check the page that carries the offer.
+  - Pair it with "Claim evidence checker" to check the page that carries the offer.
 
 works_best_with:
   tools:

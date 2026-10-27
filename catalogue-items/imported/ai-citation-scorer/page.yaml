@@ -5,9 +5,9 @@ name: AI citation scorer
 summary: Check how easily AI tools can quote your page. Get each passage scored with rewrites to try. Scores are a guide, not proof.
 job: get-found-in-search
 headline: AI citation scorer
-subhead: Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Research found that AI picks passages that stand alone, answer a question up front and carry real facts.
+subhead: Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Published research suggests AI picks passages that stand alone, answer a question up front and carry real facts. We have not checked its figures.
 explain: |
-  Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Research found that AI picks passages that stand alone, answer a question up front and carry real facts.
+  Every passage on your page scored for how easily an AI tool can lift it into an answer, with rewrites to try. Published research suggests AI picks passages that stand alone, answer a question up front and carry real facts. We have not checked its figures.
 
   The scorer splits your page into blocks and rates each one. It looks for a length near 134 to 167 words, a direct answer in the first one or two sentences, and specific facts such as numbers, dates and named things. Self-containment is a large share of the score. A block that says "it" or "this" without naming the subject scores low, because it makes no sense when lifted out. Each weak block gets a clear rewrite you can copy.
 when:
@@ -30,11 +30,11 @@ you_get:
   - Rewrite suggestions you can paste in
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini.
-  - Paste the full SKILL.md text into the chat.
+  - Paste the full SKILL.md text into the chat. A plain chat cannot save files, so you get the report as text in the chat. Copy it into your own file.
   - Paste your page text below it, or give the page address if your AI can open web pages.
   - Add the question the page should answer (optional).
   - Read the weakest blocks first. Paste in the rewrites you like.
-  - Score the page again after you edit it. Treat all lift figures as estimates.
+  - Score the page again after you edit it. Treat every score and effect as a guide, not a measurement.
 output_sample:
   input:
     - Your page address or the page text

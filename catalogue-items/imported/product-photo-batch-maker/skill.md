@@ -9,6 +9,8 @@ description: 多商品批量生图流水线。商品清单 CSV → 整批统一�
 
 批量的难点不是「跑很多次」，而是**跑出来的图要像一套**。本技能的核心是**规范段与变量段分离**：视觉规范逐字不变，只有商品描述随 SKU 变化。
 
+> **For English readers (added by AI Blocks).** This file is written in Chinese. Keep one fixed style block word for word the same for every product, and change only the product details. Cost figures in this file (about 5 credits per image, "about 7 折" meaning roughly 30% off at batch scale, about 500 credits for 100 products, and about 6 times the cost for the second model) are the author's own figures for the dLazy service. Check them against dLazy's current price list. The script shows a price check with `--dry-run` but does not stop on its own when spending hits a cap, so watch the total yourself. The last step names a separate skill (detect-task) that is not included here.
+
 ---
 
 ## 生成效果示例

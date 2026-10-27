@@ -3,9 +3,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "../site/node_modules/yaml/dist/index.js";
+import { TASKS } from "../site/src/lib/catalogue-taxonomy.mjs";
 
 const REQUIRED = ["new_slug", "name", "summary", "job", "headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve"];
-const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds", "test-an-idea", "plan-strategy", "build-product", "build-software", "sell-and-negotiate", "lead-people", "speak-and-persuade", "write-and-tell-stories", "design-work", "think-and-decide", "money-and-investing", "work-with-files", "build-websites", "test-and-fix-code", "ship-and-host", "secure-code", "connect-tools", "make-skills", "make-images", "organise-work", "work-with-audio", "run-your-store", "get-found-in-search", "write-emails", "set-prices", "help-customers", "hire-people", "check-contracts", "track-numbers", "document-work", "research-topics", "teach-and-train", "plan-supply-chain", "find-products", "set-up-store", "speed-up-store", "test-store-changes", "run-google-ads", "launch-and-scale-ads", "keep-customers", "sell-on-amazon", "protect-your-store"];
+// The jobs come from the site's own list, so a new job is never reported as unknown.
+const JOBS = TASKS.map((t) => t.id);
 const BANNED = ["delve", "foster", "leverage", "utilize", "facilitate", "empower", "streamline", "robust", "cutting-edge", "game changer", "game-changer", "unlock", "supercharge", "harness", "elevate", "seamless", "effortless", "transformative", "revolutionize", "paradigm", "synergy", "holistic", "journey", "ecosystem", "best-in-class", "world-class", "next-level", "morrow", "ledgerly", "hale studio"];
 const words = (s) => String(s ?? "").trim().split(/\s+/).filter(Boolean).length;
 

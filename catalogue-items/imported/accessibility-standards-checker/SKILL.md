@@ -37,6 +37,8 @@ WCAG is the technical foundation for accessibility laws worldwide: the EU Web Ac
 
 Always cite the **criterion number and name** (e.g., SC 2.4.7 Focus Visible) — never just the principle.
 
+**Legal note (AI Blocks):** this gives general guidance, not legal advice or a formal audit. Treat the law table below as a starting point. The dates and rules in it were written by the original author and may be out of date, so say that when you use them.
+
 ---
 
 ## WCAG Versions
@@ -185,6 +187,8 @@ ARIA (Accessible Rich Internet Applications) adds semantics when HTML alone is i
 ---
 
 ## Global Legal Framework Mapping
+
+These rows are not checked against current law. Before anyone relies on a deadline or a jurisdiction, ask them to confirm it with an accredited accessibility assessor or a lawyer.
 
 | Law / Standard | Jurisdiction | WCAG Requirement |
 |----------------|-------------|-----------------|

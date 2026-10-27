@@ -8,6 +8,17 @@ tags: [Model Architecture, LitGPT, Lightning AI, LLM Implementation, LoRA, QLoRA
 dependencies: [litgpt, torch, transformers]
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `scripts/prepare_dataset.py`
+- `scripts/convert_lit_checkpoint.py`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+By hand: for the dataset step, tell the user to prepare the tokenised data with LitGPT's own data options, or to supply the original script. For the GGUF step, say it could not be run here and point to the LitGPT and llama.cpp docs. Say plainly which steps you skipped.
+Who runs the commands: the commands in this skill run on a computer with Python and a GPU. A chat AI cannot run them unless it has a code-running tool, so the user runs each command and pastes back any error.
+
 # LitGPT - Clean LLM Implementations
 
 ## Quick start
@@ -318,13 +329,13 @@ results = [llm.generate(p) for p in prompts]
 Reduce model size with minimal quality loss:
 
 ```bash
-# 8-bit quantization (50% size reduction)
+# 4-bit quantization (roughly 75% smaller than 16-bit)
 litgpt convert_lit_checkpoint \
   out/phi2-lora/final \
   --dtype bfloat16 \
   --quantize bnb.nf4
 
-# 4-bit quantization (75% size reduction)
+# 4-bit with double quantization (a little smaller again)
 litgpt convert_lit_checkpoint \
   out/phi2-lora/final \
   --quantize bnb.nf4-dq  # Double quantization
@@ -385,7 +396,7 @@ Use LoRA instead of full fine-tuning:
 litgpt finetune_lora  # Only needs 12-16GB
 ```
 
-Or enable gradient checkpointing:
+Or use gradient accumulation, which keeps each step small and adds up the gradients over several steps:
 ```bash
 litgpt finetune_lora \
   ... \

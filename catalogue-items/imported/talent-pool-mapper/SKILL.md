@@ -140,6 +140,9 @@ A talent map deliverable should include:
 - **Consider emerging companies** - Startups may have high-quality talent with less competition
 - **Map alumni networks** - Where do people go after leaving target companies?
 - **Update regularly** - Talent maps become stale; refresh quarterly for active roles
+- **Label every number.** Mark each pool size, fit score and pay range as an estimate. State the method and the source URL. If no public source exists, leave the field blank instead of guessing.
+- **Respect the sources.** Use public pages that need no login: company sites, public job posts, conference pages. LinkedIn and PitchBook data should be read by hand from an account you hold. Do not scrape them.
+- **Next step.** Take the top 5 companies into a first outreach list and set a refresh date.
 
 ## Additional Resources
 

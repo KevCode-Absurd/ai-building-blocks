@@ -5,7 +5,7 @@ job: build-software
 headline: Google Ads report coding prompt
 subhead: Give your AI your code folder and your Google Ads details. You get a coding brief for a monthly Google Ads report. It covers the report parts, the math, the tests and what is still missing.
 explain: |-
-  Share your project and the required feature. Get a coding brief for google ads report code builder, with setup and test steps.
+  A monthly Google Ads report goes wrong quietly: costs off by a million, two currencies added together, a manager account summed as one customer. This prompt gives you a coding brief that fixes the rules first: dates, currency, metric math and tests. The brief starts with the data checks, then the report.
 
   The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
 when:
@@ -37,6 +37,7 @@ how_to_use:
   - Ask for the coding brief and check that the dates, currency and conversion actions match your account.
   - Fix any gap it lists, then hand the brief to your developer or your coding AI.
   - Run the tests it proposes in your own project. The prompt does not run code or call Google Ads.
+  - No code yet? Paste the Google Ads export and a short description of the report, and ask for a brief that starts with the data checks.
 output_sample:
   input:
     - Your Google Ads customer ID

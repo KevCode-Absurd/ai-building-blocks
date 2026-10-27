@@ -1,0 +1,128 @@
+new_slug: self-assessment-tax-return-checklist
+name: Self-assessment tax return checklist
+summary: Say how you earned money. Get records to gather, totals to work out, an order of work and questions for your accountant.
+job: manage-tax
+thinking: low
+thinking_why: It follows a fixed order and sorts what you tell it, with few judgement calls.
+headline: Self-assessment tax return checklist
+subhead: "Tell it where your money came from this year and what records you already have. It builds a checklist for filing your own tax return: what to gather, what to total, what order to work in, and what to ask your tax office or accountant."
+explain: |
+  Filing your own tax return goes wrong in the same ways. Records are scattered, income from a second source gets forgotten, and the deadline arrives before the sums are done. Most people start by opening the form, which is the slowest way in.
+
+  This skill starts from your year instead. You say how you earned money and what you kept. It lists the records to gather for each kind of income, the totals to work out, and the order to do things in. It ends with questions for your tax office or accountant. "Self assessment" is the UK name for filing your own return. If you file in another country, use the same checklist and swap in your tax office's names and dates.
+when:
+  - You file your own tax return each year and want to know what to gather before you start.
+  - You earned money from more than one place this year, such as a job, freelance work and rent.
+  - You are filing for the first time and don't know where to begin.
+not_for:
+  - "You want your tax worked out: the checklist gets you ready, but the figures come from your accountant or your tax office's own calculator."
+  - "You want to know what you may claim as a cost: ask your tax office or accountant, then use the Expense sorter to total it."
+  - "You need to plan what to put aside through the year: use the Tax set-aside planner."
+you_give:
+  - "How you earned money this year: a job, self-employment, rent, dividends, or something else"
+  - Your country, and the tax year you are filing for
+  - The records you already have, such as bank statements, invoices and receipts (optional)
+  - Last year's return or the deadline your tax office gave you (optional)
+you_get:
+  - A list of records to gather for each kind of income
+  - A list of totals to work out before you open the form
+  - The work in order, with the deadline you give it
+  - Questions for your accountant or tax office
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List every way you earned money this year, even small ones, and name your country and tax year.
+  - Say which records you already have. Don't paste bank logins or ID numbers.
+  - Look up this year's deadline on your tax office's site and give it to the skill.
+  - Work down the checklist. Take the questions list to your accountant or tax office.
+output_sample:
+  input:
+    - How you earned money this year, and your country and tax year
+    - The records you already have (optional)
+    - Last year's return or this year's deadline (optional)
+  output:
+    - name: Your year
+      contains: Your country, the tax year and each kind of income you named.
+    - name: Records to gather
+      contains: For each kind of income, the records to collect and whether you already have them.
+    - name: Totals to work out
+      contains: The figures to add up before you open the form, and which records feed each one.
+    - name: Order of work
+      contains: The steps from gathering to filing, with the deadline you gave.
+    - name: Questions
+      contains: What to ask your accountant or tax office, one line each.
+    - name: Missing
+      contains: Anything you did not tell it that changes the list.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Sorts your income
+    text: Splits what you told it into kinds of income, each with its own records.
+  - title: Lists the records
+    text: Names the papers and files to gather for each kind, and marks the ones you already have.
+  - title: Lists the totals
+    text: Names the figures to add up before you start the form, such as money in and costs out.
+  - title: Puts it in order
+    text: Orders the work from gathering to filing, with the deadline you gave.
+  - title: Writes the questions
+    text: Turns every gap into a question for your tax office or accountant.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  YOUR YEAR
+  <country, tax year, kinds of income>
+
+  RECORDS TO GATHER
+  <kind of income>: <records> | Have: <yes / no>
+
+  TOTALS TO WORK OUT
+  <figure> | From: <records>
+
+  ORDER OF WORK
+  1. <step> | By: <date you gave, or MISSING>
+
+  QUESTIONS FOR YOUR ACCOUNTANT OR TAX OFFICE
+  - <question>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Every kind of income
+    how: Name the small ones too, such as one-off jobs, interest or selling things. A forgotten income is the usual mistake.
+  - what: Your country and year
+    how: Rules and dates change by place and year. Name both, and check the dates on your tax office's own site.
+  - what: Records you have
+    how: Say what you already hold. The list then shows only what is left to collect.
+  - what: Last year's return
+    how: If you have it, say what it included. The skill carries those lines forward as things to check.
+judge:
+  - Every kind of income you named has its own list of records.
+  - No tax rate, allowance or deadline appears unless you gave it.
+  - Each gap you left turns up as a question, not a guess.
+  - The order of work ends with filing and a copy for your records.
+  - It says plainly that it is a checklist and not tax advice.
+test:
+  - Run it with last year's real income list. The checklist should match what you actually needed.
+  - Leave out one kind of income, then run it again. The checklist should change, and the missing list should say so.
+  - Show the questions list to your accountant. Ask which were useful and which were not.
+improve:
+  - Save your list of income sources in your about-me note, so each year starts from the same base.
+  - Add your tax office's name for each form and total, so the checklist uses the words on your screen.
+  - Keep a record of the questions your accountant answered, and add those answers to the skill file for next year.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Sorting a year's income into records and a plan is text work any strong chat AI does well.
+    - name: Your tax office's website
+      why: It has this year's deadline, forms and rules. Check every date and rate there.
+  inputs:
+    - Last year's tax return, with personal numbers hidden
+    - A bank statement export for the year
+    - A list of invoices sent and invoices paid
+terms:
+  - term: Self assessment
+    meaning: The UK name for filing your own tax return. Other countries call it by other names.
+  - term: Tax year
+    meaning: The twelve months your tax office counts as one year. It may not match the calendar year.

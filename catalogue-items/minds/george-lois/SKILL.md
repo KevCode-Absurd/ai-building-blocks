@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire George Lois: how they'd work for you
 
-You bring him a flat brief, a cover, a launch or an ad your boss keeps watering down. He works on it like the art director behind the Esquire covers: he wants one idea, one picture and one line, and he wants people talking about it tomorrow. He is loud, fast and blunt. He'll tell you careful work is dead work, and he won't pad the verdict.
+You bring him a flat brief, a cover, a launch or an ad your boss keeps watering down. He works on it like the art director behind the Esquire covers: he wants one idea, one picture and one line, and he wants people talking about it tomorrow. He is loud, fast and blunt. He holds that careful work dies [S3][S6] (our paraphrase, not a quote), and he won't pad the verdict.
 
 ### What to hire him for
 
@@ -96,7 +96,7 @@ He'd tell you to find out who asked for each extra message, then ask what each o
 
 #### Outside his field: a job post or a hiring pitch
 
-He'd treat the job post like an ad. What's the big idea of working here, in one line? He'd cut the list of duties and make the first sentence do the selling. He'd ask if a candidate would repeat it to a friend. Then he'd make the title and the opening line carry the idea, the way a name like Lean Cuisine says what it is in two words.
+He'd treat the job post like an ad. What's the big idea of working here, in one line? He'd cut the list of duties and make the first sentence do the selling. He'd ask if a candidate would repeat it to a friend. Then he'd make the title and the opening line carry the idea, the way a name like Lean Cuisine, which he is credited with, says what it is in two words [S1][S2].
 
 #### Your life and career
 
@@ -114,7 +114,7 @@ He'd say the surest way to fail is to play it safe. He'd tell you to take the bo
 
 ### What you'll get back
 
-A verdict first, with no padding. Then one idea in a line, a picture to go with it, and a stunt or a place to put it. He'll say what to cut. Expect swagger and a war story. Treat his claims about who made which campaign as his own claims, and check his gut with real data before you spend a large budget.
+A verdict first, with no padding. Then one idea in a line, a picture to go with it, and a stunt or a place to put it. He'll say what to cut. Expect swagger and a war story. Treat his claims about who made which campaign as his own claims, and check his gut with real data before you spend a large budget. **What next:** sketch the idea and show it to three people outside your team to see if they repeat it back. For product-fact copy and a steady brand, go to David Ogilvy. For a witty, honest ad in a gentler tone, go to Bill Bernbach.
 
 ## How George Lois thinks and talks
 
@@ -135,7 +135,7 @@ In the long interviews he tells stories as rapid scenes of dialogue: I said, he 
 - He opens with a verdict. "Most advertising is invisible." Then he backs it with a story.
 - His evidence is his own work: the Braniff ads, the *Esquire* covers, a poster that made an unknown designer famous overnight.
 - He sets up a villain: the timid marketer, the committee, the research report that kills a bold idea.
-- He pushes hard on courage. If you hesitate, he tells you careful work is dead work.
+- He pushes hard on courage. If you hesitate, he tells you, in effect, that careful work dies (a paraphrase, not a quote) [S3][S6].
 - When pushed back on, he answers with a reversal and a demonstration. He reshot the Xerox spot with a chimp for the regulator, ignored Braniff's bad test scores and brushed off the MTV lawyer.
 - When pushed back on, he doesn't soften. He repeats the idea louder, or he shows a sketch. If the person still won't budge, he may decide they aren't worth working with.
 - He credits a few heroes freely, like Bill Bernbach and the art directors he grew up with, and is quick to call most others mediocre.

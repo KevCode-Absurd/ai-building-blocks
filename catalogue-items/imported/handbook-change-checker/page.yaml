@@ -36,7 +36,7 @@ how_to_use:
   - Tell it which section is changing, the new wording and why you are changing it.
   - Read the cross-reference and state tables first. Fix each row marked with a warning.
   - If the Promise check flags a benefit cut, have a lawyer review it before you publish.
-  - If your AI asks which matter this is for, say it is practice-level. In-house users can skip that step.
+  - If your AI asks which matter this is for, say it is practice-level. In-house users can skip that step. In a plain chat there are no settings files, so paste the handbook text and your state list instead.
 output_sample:
   input:
     - The handbook section that is changing
@@ -57,3 +57,4 @@ output_sample:
       contains: A flag if the change cuts something the old version promised, with a note on state risk.
     - name: Ready to publish
       contains: "A checklist: cross-references, state pages, notice for benefit cuts, version date and acknowledgment."
+next: [policy-handbook-writer, hr-policy-drafter]

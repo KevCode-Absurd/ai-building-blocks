@@ -46,7 +46,7 @@ Just run `/release-skills` - auto-detects your project configuration.
 ### Step 1: Detect Project Configuration
 
 1. Check for `.releaserc.yml` (optional config override)
-   - If present, inspect whether it defines release hooks
+   - If present, inspect whether it defines release hooks. Hook commands run on the user's computer, so show them to the user and get a yes before running any hook from a repo the user did not write
 2. Auto-detect version file by scanning (priority order):
    - `package.json` (Node.js)
    - `pyproject.toml` (Python)
@@ -392,7 +392,7 @@ After user confirmation:
    ```
    If `.releaserc.yml` sets `tag.sign: true`, use `git tag -s` with the same notes file.
 
-4. **Push if user confirmed** (Step 8):
+4. **Push if user confirmed** (Step 8). This assumes a remote named `origin` and the branch `main`. Check your real remote and branch name first and use them if they differ:
    ```bash
    git push origin main
    git push origin v{VERSION}

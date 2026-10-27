@@ -9,7 +9,7 @@ subhead: Tell it the sale or price change you plan. It tests your real margin, c
 explain: |
   A discount that looks like 30 percent off can take half your profit. Many sales are planned from the number that looks big, and the margin is checked after the emails are out. A price rise rolled out to every product at once can't be undone. Old strikethrough prices stay on pages long after the sale, and they can mislead your customers.
 
-  This agent checks the plan first. It works out your margin at the sale price, cuts the discount five points at a time until your margin floor holds, and tells you the deepest cut that is safe. For a clearance it plans the cuts in stages. For a price rise it builds the price from the bottom up and sets a test you can undo. Once a month it lists strikethrough prices that no longer show a real discount. It never changes a live price. You approve a previewed list.
+  This agent checks the plan first. It works out your margin at the sale price, cuts the discount five points at a time until your margin floor holds, and tells you the deepest cut that is safe. For a clearance it plans the cuts in stages. For a price rise it builds the price from the bottom up and sets a test you can undo. Once a month it lists strikethrough prices that no longer show a real discount. It changes a live price only for the exact list you approve in clear words, after a preview. Without your yes, it changes nothing.
 when:
   - You plan a sale, a discount code or a clearance and want to know it still pays.
   - You want to raise prices and need a test you can undo.
@@ -29,10 +29,10 @@ you_get:
   - Stock to have ready, or clearance stages with dates
   - Sale wording, and a previewed price list to approve
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your plan.
+  - Start a chat with the agent. In Claude Code (a paid tool, needed only to save the pricing folder and run the monthly clean-up on a schedule), add it as a skill or save it in .claude/agents, then give it your plan. A plain chat works without it.
   - The first time, give it your product costs and your margin floor. It saves them.
   - Read the margin table and the depth that holds. Change the plan if you want a deeper cut and accept the lower margin yourself.
-  - Approve the price list in clear words if you want it to make the change. Otherwise, change prices yourself.
+  - Approve the price list in clear words if you want it to make the change. This needs a store connection with write access, which your store admin sets up and your plan or the connector may limit or charge for. Otherwise, change prices yourself from the preview.
   - After the sale, tell it the result so the log can use it next time.
 output_sample:
   input:

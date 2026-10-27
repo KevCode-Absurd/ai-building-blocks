@@ -34,7 +34,7 @@ how_to_use:
   - Fill in your spend list using the intake template in the folder. Add one line per charge with vendor and amount.
   - Tell your AI to follow the skill, and upload the folder and your spend list.
   - Check the categories first. Fix any line that landed in the wrong group.
-  - Read the consolidation plan. Decide which cuts you accept before you talk to any supplier.
+  - Read the consolidation plan. Decide which cuts you accept before you talk to any supplier. Then take the keep, merge or drop list to the contract owner or your lawyer to check the terms of the tool you keep.
   - If you cannot run code, paste the skill text and your list into a chat. Expect a rougher sort.
 output_sample:
   input:

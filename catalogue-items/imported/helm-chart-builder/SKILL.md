@@ -9,6 +9,14 @@ metadata:
   updated: 2026-03-15
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `./scripts/convert.sh`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Helm Chart Builder
 
 > Production-grade Helm charts. Sensible defaults. Secure by design. No cargo-culting.
@@ -433,6 +441,8 @@ cp -r claude-skills/engineering/helm-chart-builder ~/.claude/skills/
 ```bash
 ./scripts/convert.sh --skill helm-chart-builder --tool codex|gemini|cursor|windsurf|openclaw
 ```
+
+(The convert script is not in this catalog copy, so skip this install line. Paste this skill into your AI tool instead.)
 
 ### OpenClaw
 ```bash

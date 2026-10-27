@@ -24,11 +24,11 @@ Turn specs, bug reports, and loose requests into work items someone can pull and
 
 ## When NOT to use
 
-- Writing the PRD or spec itself (use `pm-spec-writing`)
-- Deciding what ships this quarter (use `roadmap-planning`)
-- Running sprint ceremonies or measuring the team (use `sprint-operations`)
-- Writing up what went wrong after the fact (use `after-action-report`)
-- Handing a whole plan to a coding agent to execute unattended (use `dispatch-authoring`)
+- Writing the PRD or spec itself (use `feature-spec-writer` from this library)
+- Deciding what ships this quarter (use `quarterly-roadmap-builder` from this library)
+- Running sprint ceremonies or measuring the team (use `sprint-coach` from this library)
+- Writing up what went wrong after the fact (not in this library; ask your AI to write a plain incident summary)
+- Handing a whole plan to a coding agent to execute unattended (not in this library; write a plain task brief for that agent)
 
 ---
 
@@ -86,7 +86,7 @@ Done test: every item in the definition of done is checked, and nothing outside 
 A story delivers one user-visible outcome.
 
 - User story statement: "As a [user], I want [action], so that [outcome]."
-- Link to the PRD or spec. If none exists, write one first with `pm-spec-writing`.
+- Link to the PRD or spec. If none exists, write one first with `feature-spec-writer`.
 - Acceptance criteria in checkable form (Given, When, Then, or a checkbox list with observable outcomes)
 - Explicit non-goals
 - Wireframe or mockup screenshots, if any
@@ -118,7 +118,7 @@ An epic groups work toward one outcome and carries the business case.
 - Success metric, with baseline and target
 - Kill criteria: the signal that ends the epic early
 - Owner, one name
-- Roadmap fitment: which quarter, which objective (see `roadmap-planning` and `okr-design`)
+- Roadmap fitment: which quarter, which objective (see `quarterly-roadmap-builder`)
 - Notes
 - Capitalization stage, if the work is capitalizable
 

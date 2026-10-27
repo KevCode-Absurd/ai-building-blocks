@@ -37,7 +37,7 @@ Or describe your metrics in natural language:
 **What it measures:** Can we fund operations and invest in growth?
 
 Key metrics:
-- **Runway** — months at current burn (Green: >12, Yellow: 6-12, Red: <6)
+- **Runway** — months at current burn. Thresholds depend on stage: Seed green >18, red <12; Series A and B green >12, red <6; Series C green >18, red <9; yellow is in between (see `references/health-benchmarks.md`)
 - **Burn multiple** — net burn / net new ARR (Green: <1.5x, Yellow: 1.5-2.5x, Red: >2.5x)
 - **Gross margin** — SaaS target: >65% (Green: >70%, Yellow: 55-70%, Red: <55%)
 - **MoM growth rate** — contextual by stage (see benchmarks)
@@ -141,6 +141,8 @@ Weighted average by company stage (see `references/health-benchmarks.md` for wei
 ---
 
 ## Dashboard Output Format
+
+The numbers in this dashboard are sample figures to show the layout. They are not a real company's result.
 
 ```
 ORG HEALTH DIAGNOSTIC — [Company] — [Date]

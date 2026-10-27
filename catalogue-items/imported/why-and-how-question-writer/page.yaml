@@ -36,6 +36,7 @@ how_to_use:
   - Paste the reading text and what students already know, if you have them.
   - Read the prompts. Check each one fits your students and cut any that are too easy or too hard.
   - Use the timing and grouping advice to run the session, in pairs or alone.
+  - Next, a few days later, test what they remember with retrieval-quiz-writer, or move on to self-explanation-question-writer.
 output_sample:
   input:
     - Your topic or content area
@@ -50,3 +51,4 @@ output_sample:
       contains: Questions that link the new facts to things your students already know.
     - name: Implementation Guide
       contains: Advice on timing, grouping, and whether students should answer out loud or in writing.
+next: [retrieval-quiz-writer, self-explanation-question-writer]

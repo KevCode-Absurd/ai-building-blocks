@@ -31,8 +31,11 @@ you_get:
   - Assumptions and risks flagged
   - A comparison table for several options
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or files are needed.
+  - Gather the upfront cost, the useful life, the expected savings or extra revenue, the ongoing costs, and any alternatives or your cost of capital.
+  - Paste those details and ask whether the purchase is worth it. If a number is missing, it should ask you, not guess.
+  - Read the payback, ROI, NPV and IRR, then the upside and downside cases. The downside case assumes projections miss by 40%.
+  - Check each assumption it flags in red. Then take the recommendation to a finance professional before you commit money.
 output_sample:
   input:
     - What you plan to buy, such as equipment, a hire, software, space or a vendor contract

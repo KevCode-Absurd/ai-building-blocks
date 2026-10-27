@@ -19,9 +19,9 @@ This skill enables an AI agent to create and manage social media content across 
 
 3. **Craft engagement hooks and CTAs.** Open every post with an attention-grabbing first line — a surprising statistic, a bold claim, or a direct question. The first line is the only part visible before "see more" on most platforms. End with a clear call-to-action: comment, share, click link, or tag someone. Use line breaks and whitespace to improve readability on mobile.
 
-4. **Build a hashtag and mention strategy.** Research trending and niche hashtags relevant to the content topic. On Twitter/X, use 1–3 targeted hashtags inline. On LinkedIn, place 3–5 hashtags at the end of the post. On Instagram, use a mix of high-volume (>500K posts), medium (50K–500K), and niche (<50K) hashtags for maximum reach. Tag relevant accounts, partners, or influencers to extend organic visibility.
+4. **Build a hashtag and mention strategy.** Research trending and niche hashtags relevant to the content topic. On Twitter/X, use 1–3 targeted hashtags inline. On LinkedIn, place 3–5 hashtags at the end of the post. On Instagram, use a mix of high-volume, medium and niche hashtags (rough guides, not fixed thresholds) for maximum reach. Tag relevant accounts, partners, or influencers to extend organic visibility.
 
-5. **Schedule posts at optimal times.** Use platform engagement data to determine the best posting windows. General benchmarks: Twitter/X peaks at 8–10 AM and 12–1 PM weekdays; LinkedIn performs best Tuesday–Thursday 7–9 AM; Instagram engagement peaks Wednesday and Friday 11 AM–1 PM; Facebook sees highest reach Tuesday–Friday 9 AM–12 PM. Adjust for the target audience's timezone and test alternative windows quarterly.
+5. **Schedule posts at optimal times.** Use platform engagement data to determine the best posting windows. General starting guesses, not measured for your audience. Check them against your own analytics before you schedule. Twitter/X peaks at 8–10 AM and 12–1 PM weekdays; LinkedIn performs best Tuesday–Thursday 7–9 AM; Instagram engagement peaks Wednesday and Friday 11 AM–1 PM; Facebook sees highest reach Tuesday–Friday 9 AM–12 PM. Adjust for the target audience's timezone and test alternative windows quarterly.
 
 6. **Create a weekly content calendar.** Plan 5–7 days of posts in advance, balancing content types: educational (40%), engaging/entertaining (30%), promotional (20%), and community/UGC (10%). Assign each post a platform, publish time, copy, media asset requirements, and campaign tag for tracking.
 
@@ -32,6 +32,8 @@ Provide the agent with the campaign goal, key message, target platforms, and any
 **Prompt:** `Create a social media campaign for the launch of our new AI writing assistant. Target platforms: Twitter/X, LinkedIn, and Instagram. Launch date: March 15. Tone: professional but approachable.`
 
 ## Examples
+
+> Both examples are made-up samples that show the layout. The offers, numbers and results in them are not real. Use only your own facts.
 
 ### Example 1: Multi-Platform Product Launch Campaign
 
@@ -47,7 +49,7 @@ We built FocusFlow to fix that.
 📊 Distraction tracking
 ⚡ Deep work streaks
 
-Free for the first 1,000 users → focusflow.app
+[Your offer] → [your link]
 
 #RemoteWork #Productivity
 ```
@@ -63,7 +65,7 @@ It's a lightweight productivity app that helps remote workers:
 → Track and reduce digital distractions
 → Build streaks that reinforce daily focus habits
 
-We're opening it up to the first 1,000 users for free.
+We're opening it up to [your offer].
 
 If you lead a distributed team or struggle with context switching, I'd love your feedback.
 
@@ -83,7 +85,7 @@ Meet FocusFlow — the app that helps remote workers protect their deep work tim
 → Real-time distraction tracking
 → Focus streaks to keep you motivated
 
-Link in bio to get early access (free for the first 1,000 users!)
+Link in bio to get early access ([your offer])
 
 .
 .
@@ -101,13 +103,13 @@ Link in bio to get early access (free for the first 1,000 users!)
 |-----|----------|------|-------|-------------|------|
 | Mon | LinkedIn | Educational | SEO tip | "3 on-page SEO fixes that take 10 minutes and move the needle" | 8:00 AM ET |
 | Mon | Twitter/X | Engagement | Industry poll | "What's the #1 channel driving leads for your B2B in 2025?" (poll) | 12:00 PM ET |
-| Tue | LinkedIn | Case study | Client win | "How we helped [client] increase organic traffic 140% in 90 days" | 7:30 AM ET |
+| Tue | LinkedIn | Case study | Client win | "How we helped [client] [your real result]" | 7:30 AM ET |
 | Tue | Twitter/X | Educational | Thread | "5 LinkedIn ad mistakes we see in every audit (thread)" | 9:00 AM ET |
 | Wed | LinkedIn | Thought leadership | Industry trend | "AI won't replace marketers. Marketers who use AI will." | 8:00 AM ET |
 | Wed | Twitter/X | Engaging | Meme/humor | Relatable marketing meme with commentary | 1:00 PM ET |
 | Thu | LinkedIn | Promotional | Service highlight | "Our Q2 content strategy sprint is open for 3 clients" | 7:30 AM ET |
 | Thu | Twitter/X | Community | Retweet + comment | Amplify a client's post with added insight | 10:00 AM ET |
-| Fri | LinkedIn | Educational | Carousel | "The anatomy of a LinkedIn post that gets 10K impressions" | 8:00 AM ET |
+| Fri | LinkedIn | Educational | Carousel | "The anatomy of a LinkedIn post that [your real result]" | 8:00 AM ET |
 | Fri | Twitter/X | Engagement | Question | "What's one marketing tool you can't live without? I'll go first:" | 11:00 AM ET |
 
 ## Best Practices

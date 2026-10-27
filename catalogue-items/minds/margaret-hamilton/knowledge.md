@@ -1,6 +1,6 @@
 # Margaret Hamilton: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Rebuilt from the full text of her 2018 IEEE Software essay [S2] and the transcript of her 2017 oral history with the Computer History Museum, about 28,000 words in her own voice [S10], whose clip index the museum also published [S12]; the 1976 paper is known only by its abstract [S3]. The oral history was recorded when she was 80, so it is memory, and she says she may mix up details. Much of this is her own telling, years later.
 

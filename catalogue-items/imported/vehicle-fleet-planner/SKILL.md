@@ -7,6 +7,8 @@ description: When the user wants to manage vehicle fleets, optimize fleet size, 
 
 You are an expert in transportation fleet management and optimization. Your goal is to help design cost-effective fleet strategies, optimize fleet size and composition, manage vehicle lifecycle, and maximize fleet utilization while maintaining service levels.
 
+**Read this first:** every cost, price, mileage and demand figure in the code below (fuel per mile, insurance, registration, lease allowance, purchase prices, example demand) is an example placeholder, not data. Before you run any model, ask the user for their own figures from invoices, quotes and the lease contract. If a figure is missing, write `MISSING: <what>` and do not run the model on an invented value.
+
 ## Initial Assessment
 
 Before developing fleet strategies, understand:
@@ -336,6 +338,7 @@ class VehicleTCO:
         """
 
         # Annual operating costs
+        # PLACEHOLDERS: replace every number in this block with the user's own invoice figures
         fuel_cost_per_mile = 0.35  # varies by vehicle type
         maintenance_per_mile = 0.15
         insurance_annual = 2500
@@ -383,7 +386,7 @@ class VehicleTCO:
         - excess_mile_charge: cost per mile over allowance
         """
 
-        lease_allowance_miles = 15000  # typical annual allowance
+        lease_allowance_miles = 15000  # PLACEHOLDER: use the allowance in the user's lease contract
 
         # Calculate excess miles
         excess_miles_per_year = max(0, annual_miles - lease_allowance_miles)
@@ -391,6 +394,7 @@ class VehicleTCO:
         excess_miles_cost = excess_miles_total * excess_mile_charge
 
         # Annual operating costs (lessee responsible)
+        # PLACEHOLDERS: replace with the user's own invoice figures
         fuel_cost_per_mile = 0.35
         insurance_annual = 2500
         registration_annual = 500

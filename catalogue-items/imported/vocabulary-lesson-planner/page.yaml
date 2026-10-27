@@ -18,11 +18,11 @@ when:
 not_for:
   - "You teach a whole class by talk or slides with no objects to handle: write a normal lesson plan or use a simple slide outline instead."
   - "The concept has nothing physical to show, like an abstract idea: pick a different planner or a short worked example instead."
-  - "You want practice after the lesson to help students remember: use the Retrieval practice designer once the lesson is done."
+  - "You want practice after the lesson to help students remember: use recall-quiz-writer once the lesson is done."
 you_give:
   - The word or concept to teach
   - Objects or materials you have on hand
-  - Student age or level
+  - Student age or level (if you give none, the plan assumes ages 3 to 9)
   - What students already know (optional)
   - Group size (optional)
 you_get:
@@ -36,7 +36,7 @@ how_to_use:
   - List the objects you have on hand. Add student age and group size if you know them.
   - Ask your AI to write the three-step lesson.
   - Read the lesson and check the teacher words fit your students. Change any object that you do not have.
-  - After the lesson, use the Retrieval practice designer to help students remember the word, or the Prepared environment designer to set up your room.
+  - After the lesson, use recall-quiz-writer to help students remember the word, or classroom-layout-redesigner to set up your room.
 output_sample:
   input:
     - The word or idea you want to teach
@@ -59,3 +59,4 @@ output_sample:
       contains: Ideas for what to do next once students know the word well.
     - name: Adaptation Notes
       contains: Ways to change the lesson for age, group size, prior knowledge and language learners.
+next: [recall-quiz-writer, classroom-layout-redesigner]

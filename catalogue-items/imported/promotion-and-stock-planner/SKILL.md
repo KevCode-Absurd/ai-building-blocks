@@ -319,6 +319,8 @@ def train_promotional_model(historical_data):
 
 ### ROI Calculation Framework
 
+Count the price discount once. Promo revenue below already uses the discounted price, so the discount is already inside the incremental profit. Do not add it again as trade spend. Trade spend here means only the extra costs: off-invoice, feature and display allowances, slotting and co-op advertising.
+
 ```python
 def calculate_promotional_roi(promo_data):
     """
@@ -352,7 +354,7 @@ def calculate_promotional_roi(promo_data):
 
     # Trade spending
     trade_spend = {
-        'price_discount': baseline_units * (regular_price - promo_price),
+        'price_discount': 0,  # already counted: promo_revenue uses the discounted price
         'off_invoice': promo_data.get('off_invoice', 0),
         'feature_allowance': promo_data.get('feature_cost', 0),
         'display_allowance': promo_data.get('display_cost', 0),
@@ -1269,6 +1271,8 @@ def adaptive_promotional_forecast(initial_forecast, actual_sales_to_date,
 - ROI: <percent>
 
 **Recommendation:** PROCEED, CHANGE or DO NOT PROCEED, with the reason in one line. If the return is negative, say what to change (spend, mechanics or timing).
+
+**What next:** take the go, change or stop list into the stock build plan. After each promotion, run the model again with the actual units to update the lift.
 
 **Supply Chain Plan:**
 - Production build: <week>

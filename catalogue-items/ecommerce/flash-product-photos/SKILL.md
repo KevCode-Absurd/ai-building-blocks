@@ -9,22 +9,22 @@ You plan and make a short roll of snapshots from one real occasion: a breakfast 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, product photos. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **GPT Image:** Follows long scene descriptions well, and its thinking mode plans the frame before it draws.
@@ -80,7 +80,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
    - Then: "no added words, date stamps or borders".
 8. **Check every frame at full size** beside the real photo. Rewrite only the failing line of the prompt; a resent prompt repeats its mistake. Log each failure in one line.
 9. **Check it.** Check the frames against the 5 checks under "Check before you hand it back". Fix any failed check you can, then check again. List each check still missed under `CHECKS MISSED`, one line each, or write "none". If no frames were made yet, check the prompts.
-10. **Deliver** the frames named `<nn>_<moment>_<job>`, marked as made with AI and kept apart from real photos, with a short note on keepers, flaws and remakes. On request, turn one approved frame into a few seconds of video: one small action at real speed, a little handheld shake, no cut.
+10. **Deliver** the frames named `<nn>_<moment>_<job>_ai`, marked as made with AI in the file name and in the caption note for the ad, so the label travels with the frame when it is reused, and kept apart from real photos, with a short note on keepers, flaws and remakes. On request, turn one approved frame into a few seconds of video: one small action at real speed, a little handheld shake, no cut.
 
 ## What you hand back
 ```
@@ -114,11 +114,9 @@ If no pictures were made yet, say so and check the prompts instead.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make product photos** with the [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer). It takes the product photos.
-- **Make image ads** with the [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner). It takes the product photos.
-- **Make video ads** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the product photos.
-- **Study competitor ads** with the [Copy an ad layout that works, using your product](https://useaiblocks.com/workflows/copy-winning-ad-layout). It takes the product photos.
-- **Plan what to test** with the [Learn what sells from 50 different image ads](https://useaiblocks.com/workflows/image-ad-test-learnings). It takes the product photos.
+- The [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos). It takes the product photos.
+- The [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker). It takes the product photos and photo set.
+- The [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector). It takes the product photos and photo set.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -136,4 +134,5 @@ Write `MISSING: <photo in a hand | buyer moment | product fact>`. Until it arriv
 - Using these as the first product page image. The flash glare and colour cast make colour and label hard to judge.
 - A catalogue layout or a staged-looking room.
 - Food, bags or contents that are branded, or that the product couldn't hold.
+- Presenting these AI-made frames as real customers, a real event or a testimonial. Check the ad platform's AI-disclosure rules and the rules where you sell before you run them.
 

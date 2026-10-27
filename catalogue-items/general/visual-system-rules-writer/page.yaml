@@ -27,6 +27,7 @@ you_give:
   - "Every place it will show up"
   - "Your brand file (optional)"
   - "Looks or histories you want to avoid (optional)"
+  - "Colours already in use nearby, yours or rivals' (optional)"
 you_get:
   - "The feeling in a few lines"
   - "What it must not look like"

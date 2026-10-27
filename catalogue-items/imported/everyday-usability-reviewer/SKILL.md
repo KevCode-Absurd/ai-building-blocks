@@ -257,7 +257,7 @@ See: [references/seven-stages.md](references/seven-stages.md) for stage-by-stage
 Observation → Idea Generation → Prototyping → Testing → (iterate)
 ```
 
-Two specifics that change how you run this loop: in **Observation**, don't ask users what they want (they don't know) — watch for workarounds and frustrations in real contexts. In **Testing**, use real users not designers — 5 reveal ~85% of problems, so observe behavior over opinions and iterate.
+Two specifics that change how you run this loop: in **Observation**, don't ask users what they want (they don't know) — watch for workarounds and frustrations in real contexts. In **Testing**, use real users not designers — five users often reveal many of the main problems (a commonly quoted figure is about 85%, but we have no source for it, so do not quote it as fact). Observe behavior over opinions and iterate.
 
 ## Common Mistakes
 
@@ -283,6 +283,8 @@ Audit any design:
 | Are impossible/irrelevant options hidden? | Missing constraints | Disable, hide, or remove invalid options |
 
 ## Further Reading
+
+Note: the book links below carry an affiliate tag from the original author. We do not earn from them.
 
 For the complete framework:
 

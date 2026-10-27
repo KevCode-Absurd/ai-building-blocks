@@ -31,7 +31,7 @@ you_get:
   - A failed payment recovery plan
   - Early warning signals to watch
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. The skill also refers to two files, cancel-flow-patterns.md and dunning-playbook.md. Paste them too or attach the folder, or it works from the main text with less detail.
   - Tell your AI about your product, your billing tool, your plan types and your average revenue per customer.
   - Add your churn rate and any cancel reasons you already know. Say if you track feature use.
   - Read the cancel flow and save offers first. Check that each offer fits the reason it is paired with.

@@ -136,7 +136,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Reads and counts the self-descriptions in the reviews you paste."}
     - {name: "Google Forms", why: "A free way to send the three-question survey and collect open answers."}
-    - {name: "Shopify post-purchase survey apps", why: "Ask the questions right after an order so answers keep coming."}
+    - {name: "Shopify post-purchase survey apps", why: "Ask the questions right after an order so answers keep coming. Many of these apps charge a monthly fee, so check the price. A Google Form is the free way."}
   inputs:
     - "Reviews from your own store, a rival and similar products from larger brands"
     - "Order dates and order values, to compare groups by what they buy"

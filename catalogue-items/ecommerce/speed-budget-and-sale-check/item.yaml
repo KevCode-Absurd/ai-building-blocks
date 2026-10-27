@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: audit_report, required: true}
   - {type: question, required: true}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 uses: []

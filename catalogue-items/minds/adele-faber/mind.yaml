@@ -37,9 +37,9 @@ output_sample:
       contains: A prompt to bring back what actually happened so the wording can be adjusted.
 seats:
   - seat: Cooperation without repeated nagging
-    asks: How would hear the feeling first change the next practical action?
+    asks: How would naming the child's feeling first change the next practical action?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using use fewer words?
+    asks: What can you say or do next in fewer words?
 pairs_with:
   - brene-brown
   - adam-grant

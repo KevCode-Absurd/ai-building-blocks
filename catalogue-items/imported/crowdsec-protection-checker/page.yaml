@@ -6,7 +6,10 @@ headline: Check CrowdSec protection
 subhead: Bring host details and log samples. Trace each stage, then get a fix and proof plan.
 explain: Bring host details and log samples. Trace each stage, then get a fix and proof plan.
 when:
-  - You want to check CrowdSec protection.
+  - Alerts fire but blocked requests still reach your app.
+  - A bouncer shows a stale last-pull time, or no decisions arrive.
+  - Logs are coming in but nothing gets parsed or matched to a scenario.
+  - You are handing over a CrowdSec setup and need proof that it blocks.
 not_for:
   - "You need general firewall design: use a firewall guide or your platform's own docs, then come back for the CrowdSec part."
   - "You need Kubernetes or reverse-proxy design: ask a person or tool that knows that platform, and use this only for the CrowdSec link."
@@ -20,7 +23,9 @@ you_get:
 how_to_use:
   - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
   - Provide the inputs listed here and ask your AI to follow the skill.
+  - A chat AI cannot run commands on your host. You run each cscli or log command it asks for, then paste the output back.
   - Review the result and any missing facts before using it.
+  - Use the operations checklist and the bouncer guide in the skill's references folder (Traefik or Nginx) to hand the setup over.
 output_sample:
   input:
     - Your host or container name, and the CrowdSec version

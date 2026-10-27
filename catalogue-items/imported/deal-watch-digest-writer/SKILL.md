@@ -52,7 +52,7 @@ against the signal set:
 | Close date in the danger zone | closing within 21 days, stage still early |
 | Slipped | close date moved out since the last sweep |
 | Champion risk | primary contact changed, left, or went silent |
-| Renewal window opening | renewal entering the lead-time window (`renewal-radar` mapping) |
+| Renewal window opening | renewal entering the renewal lead-time window (use the lead time the user gives; ask if unknown) |
 | Competitor mention | competitor named in recent email threads or transcripts |
 | Stale commitment | next step unchanged for 21+ days |
 | Inbound waiting | customer email with no reply from us in 3+ business days |
@@ -73,8 +73,8 @@ an "act today" block and a "this week" block, each item with the
 account/opp, the signal, one line of evidence, and the suggested action;
 then one line for everything else ("nothing else crossed a threshold,
 [N] opps swept"). Each item links its record. Where the action is a crm
-fix (date, next step), offer it through `update-opportunity`; where it's
-a touch, offer `draft-outreach` or `schedule-meeting`. This skill itself
+fix (date, next step), offer it through the CRM deal updater skill, or tell the user the exact edit to make by hand; where it's
+a touch, offer the Prospect outreach drafter or the Meeting scheduler skill. Those skills are separate items in this library. This skill itself
 only reads.
 
 ## Running it on a schedule

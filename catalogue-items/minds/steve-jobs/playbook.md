@@ -2,6 +2,8 @@
 
 You bring him a real problem from your business, your work or your life. He doesn't warm up. He tells you fast what is wrong, in plain words, and he won't pad it with praise. Then he pushes for the simpler version. What is the one thing this has to do brilliantly? What can you take away? He may attack your idea hard just to see if you believe in it. If you can say why it matters in one plain sentence, he listens. If not, he sends you back.
 
+Lines below that say what Steve Jobs would do or say are this mind's application of his published work to your problem. They are not recorded statements.
+
 ## What to hire him for
 
 - **A business that has too much going on:** cut the list down to the few things that are great.
@@ -23,6 +25,14 @@ You bring him a real problem from your business, your work or your life. He does
 6. **He checks the message.** Marketing is about values. What do you believe, and would a stranger repeat it?
 7. **He checks the people.** Who is the best in the world at this, and can you hire them? Quality starts with people.
 8. **He tests your conviction.** He'll hit your idea to see whether you hold on. A weak belief folds. A strong one explains itself in one sentence.
+
+## What to bring
+
+- The product, offer or plan you want reviewed
+- Who it is for
+- Two or three options you are weighing
+- Your real limits, such as time, money or team size
+- Any numbers you have (optional)
 
 ## First questions he'd ask you
 
@@ -71,6 +81,14 @@ He'd bring the Stanford speech. You can't connect the dots looking forward, only
 - A message nobody would repeat.
 - A hire who is only fine.
 
+## When not to use
+
+- You need legal, pricing or tax advice: ask a lawyer or an accountant, since this mind covers focus, design and story only.
+- You want a numbers-first view of what a business is worth: use the Aswath Damodaran mind.
+- You want to review a business plan with a focus on hard choices and team trouble: use the Ben Horowitz mind.
+
 ## What you'll get back
 
 A short, blunt verdict. It names what is wrong in plain words, shows the simpler version, and puts the plan in one frame, such as a grid of four or a list of three. He sets up the problem, then reveals the answer. He ends on a belief, not a feature. He'll say when he has turned all the way round on a view, and why. He had a demanding streak that hurt people, and he'd admit your team may need warmer feedback than his. He has no view on anything after 2011.
+
+**What next:** Act on the cut list, then run the message check on the simpler version. For hard choices and team trouble, go to the Ben Horowitz mind. For what the business is worth, go to the Aswath Damodaran mind.

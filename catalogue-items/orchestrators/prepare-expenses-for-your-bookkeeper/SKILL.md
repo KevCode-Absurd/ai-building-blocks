@@ -14,6 +14,25 @@ This workflow chains 2 skills from the library. Run them in order. Save each res
 - No approved category list: ask the bookkeeper for one. Do not invent categories.
 - Tax deductions or tax treatment: leave these to the bookkeeper or accountant.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A spreadsheet tool such as Excel or Google Sheets:** Lets you open the categorized file and re-check a total. The AI cannot recalculate a workbook without one.
+<!-- /needs -->
+
 ## What you need
 
 - **Receipts** as photos, PDFs or a list with date and amount (required).
@@ -37,9 +56,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 1. **Spreadsheet checker.** Use the skill `spreadsheet-checker`. Give it the export, the receipts and the category mapping. Make a working copy. Normalise dates and currency. Give each row a transaction ID and, where a receipt exists, a receipt ID. Apply only the approved mapping. Fill the file: Receipt ID | Transaction ID | Date | Amount | Currency | Merchant | Category | Status. Status is one of matched, no receipt, unknown category or possible personal. Hand to step 2: the categorized working copy and the list of rows with no receipt or no category.
 
-2. **Account reconciler.** Use the skill `account-reconciler`. Give it the categorized file and the original export. Match the entries to the export on date, amount and merchant. List every unmatched amount with the likely reason, such as no receipt, a duplicate or a date outside the period. Give the export total, the matched total and the difference. Hand to the final summary: the reconciliation summary, the receipt gaps and the question list, for the final summary.
+2. **Account reconciler.** Use the skill `account-reconciler`. Give it the categorized file and the original export. Match the entries to the export on date, amount and merchant. List every unmatched amount with the likely reason, such as no receipt, a duplicate or a date outside the period. Give the export total, the matched total and the difference. Hand to the final summary: the reconciliation summary, the receipt gaps and the question list.
 
-3. **Check and hand back.** Check the combined result against the list at the end. End with a section headed `HAND-BACK SUMMARY`: each file saved, any step not run and why, source coverage, every `MISSING:` line in one list, and CHECKS MISSED (the checks that failed or could not run, or "none").
+3. **Check and hand back.** Run these checks on the combined result: the row count in the categorized file equals the export's row count plus any receipts with no bank line; the matched total plus the unmatched total equals the export total (or the difference is shown); and only approved categories appear in the Category column. Then check it against the list at the end. End with a section headed `HAND-BACK SUMMARY`: each file saved, any step not run and why, source coverage, every `MISSING:` line in one list, and CHECKS MISSED (the checks that failed or could not run, or "none").
 
 ## If something is missing
 
@@ -63,6 +82,16 @@ unknown categories, possible personal costs, unmatched amounts
 HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Bank and ledger matcher](https://useaiblocks.com/skills/bank-and-ledger-matcher). It takes the spreadsheet.
+- The [Product cost sorter](https://useaiblocks.com/skills/cogs-line-sorter). It takes the spreadsheet.
+- The [Expense sorter](https://useaiblocks.com/skills/expense-sorter). It takes the spreadsheet.
+- **Check the money** with the [Unusual transaction finder](https://useaiblocks.com/skills/unusual-transaction-finder). It takes the spreadsheet.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

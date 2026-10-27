@@ -250,8 +250,8 @@ No direct quotations are reproduced. All short coaching examples and worked acti
 
 ## Sources
 
-1. Theater Games for the Classroom opening chapter preview, Viola Spolin. https://www.scribd.com/document/942402612/Theatre-Games-for-the-Classroom-Spolin
-2. Improvisation for the Theater public text preview, Viola Spolin. https://pdfcoffee.com/improvisation-for-the-theatre-viola-spolin-pdf-free.html
+1. Theater Games for the Classroom (book, Viola Spolin. https://www.violaspolin.org/publications
+2. Improvisation for the Theater (book, Viola Spolin. https://www.violaspolin.org/publications
 3. Gibberish Exercises by Viola Spolin excerpt from third edition, Viola Spolin reproduced with introduction by Ollie Rasini. https://www.bridgesimpro.eu/post/gibberish-exercises-by-viola-spolin
 4. Viola Spolin Biography, Viola Spolin official legacy website. https://www.violaspolin.org/bio
 5. Viola Spolin Publications, Viola Spolin official legacy website. https://www.violaspolin.org/publications

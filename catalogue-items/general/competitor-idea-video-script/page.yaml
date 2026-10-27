@@ -23,6 +23,7 @@ not_for:
   - 'You only have notes about a brand, like "science-first", and no ad you have seen: collect one real ad from the Meta Ad Library first, or give your own words about an ad you saw.'
   - "You want to keep the ad's order and pace: use the competitor-video-ad-script skill instead."
   - "You have no customer reviews or product facts: gather a few real quotes and facts first, or the proof lines will be marked missing."
+  - "You want to keep the ad's rows, order and pace: use the Competitor ad video script writer."
 
 you_give:
   - A real ad, as a screenshot, a video, its words with where you saw them, or a breakdown card (attach the screenshot; your AI can see pictures)

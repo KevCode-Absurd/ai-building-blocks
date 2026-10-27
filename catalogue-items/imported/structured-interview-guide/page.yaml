@@ -18,12 +18,13 @@ when:
 not_for:
   - "You need legal, background or right-to-work checks: use your lawyer, a licensed screening provider or your local rules, not this guide."
   - "You want to write the job ad or job description: write that first with a person who knows the role, then bring it here."
+  - "You want a full interview loop with several rounds and a debrief: use the hiring interview designer. For a scorecard per stage, use the interview scorecard builder."
   - "You want the AI to pick the hire: it will not. Your team makes the call from the scores and notes."
 you_give:
-  - The role and seniority
-  - Key skills or traits the job needs
-  - The interview stages or panel size (optional)
+  - The exact role title and level
+  - Three to five skills the job needs
   - The job description (optional)
+  - The number of interview stages and panel members (optional)
 you_get:
   - Core interview questions
   - Follow-up probes
@@ -37,6 +38,8 @@ how_to_use:
   - Ask your AI to build the structured interview guide with a scorecard.
   - Read the questions and cut any that do not fit the job. Check that none ask about age, family, religion or other personal topics.
   - Give each interviewer the same guide. Ask them to score on their own before the team talks.
+  - After the interviews, pull each person's scores into one scorecard, compare them in a short meeting, and write down the hiring decision with its evidence.
+next: [interview-scorecard-builder, hiring-interview-designer]
 output_sample:
   input:
     - The role and level

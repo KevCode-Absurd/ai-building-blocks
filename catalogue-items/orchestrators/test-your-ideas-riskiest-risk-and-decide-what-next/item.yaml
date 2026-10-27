@@ -8,6 +8,8 @@ job: research
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: document, required: false}
 outputs:
   - {type: audit_report}
 uses: [product-idea-risk-checker, smallest-test-picker, pivot-or-persevere-decider]

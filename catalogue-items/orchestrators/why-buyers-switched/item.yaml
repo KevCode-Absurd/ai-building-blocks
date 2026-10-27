@@ -8,15 +8,15 @@ job: research
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: voc_reviews, required: true}
+  - {type: voc_reviews, required: false}
   - {type: product_data, required: false}
 outputs:
   - {type: plan}
 uses: [buying-story-interview-guide, switch-story-mapper, switch-friction-remover]
 steps:
-  - {uses: buying-story-interview-guide, note: "A guide to a timeline interview, not a list of questions about features."}
-  - {uses: switch-story-mapper, note: "Turns notes into stories, forces and patterns."}
-  - {uses: switch-friction-remover, note: "Turns the held-back forces into changes you can test."}
+  - {uses: buying-story-interview-guide, note: "Takes what you sell and who bought lately, and writes a guide to a timeline interview, not a list of questions about features. The run then pauses for your interviews."}
+  - {uses: switch-story-mapper, note: "Runs after the interviews. Takes your interview notes (exact words, with an ID and a date for each person) and the guide from step 1, and turns them into stories, forces and patterns."}
+  - {uses: switch-friction-remover, note: "Takes the forces table, clusters and what was fired from step 2, and turns the held-back forces into changes you can test."}
 origin: rebuilt
 version: 1.0.0
 minds: [clayton-christensen]

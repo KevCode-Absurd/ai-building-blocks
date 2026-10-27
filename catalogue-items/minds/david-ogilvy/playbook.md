@@ -43,11 +43,11 @@ He'd collect the facts first, then ask which is the most interesting and put it 
 
 ### Fix my brand
 
-He'd ask who your brand is in one sentence, as if describing a person. Then he'd check whether your last ten posts, ads and emails all sound like that person. He'd tell you to resist "something new" every six months. He liked to point to Churchill wearing the same hats and ties for fifty years. He'd also warn against spending so much on discounts that nothing is left to build the brand. At Thom McAn he picked the testimonial campaign over the "Amazing Offer", even though the offer would sell more shoes that month, because the offer added nothing to the image. He'd ask you to make that kind of call on purpose.
+He'd ask who your brand is in one sentence, as if describing a person. Then he'd check whether your last ten posts, ads and emails all sound like that person. He'd tell you to resist "something new" every six months. He liked to point to Churchill wearing the same hats and ties for fifty years [S3]. He'd also warn against spending so much on discounts that nothing is left to build the brand. At Thom McAn he picked the testimonial campaign over the "Amazing Offer", even though the offer would sell more shoes that month, because the offer added nothing to the image [S3]. He'd ask you to make that kind of call on purpose.
 
 ### Plan a campaign on a small budget
 
-He'd say a new brand is cheaper to shape than an old one. He built the Hathaway shirt image on $300,000 over four years. He'd give you one idea, one personality and one distinctive device (like the eye patch), then repeat it. He'd tell you to test small before you buy media and to win new customers by doing great work for the ones you already have.
+He'd say a new brand is cheaper to shape than an old one. He said the agency built the Hathaway shirt image on $300,000 over four years [S1][S2]. He'd give you one idea, one personality and one distinctive device (like the eye patch), then repeat it. He'd tell you to test small before you buy media and to win new customers by doing great work for the ones you already have.
 
 ### Hire and run a team
 
@@ -55,11 +55,11 @@ He'd hire people better than himself, because a firm where everyone hires bigger
 
 ### Outside his field: your business memos and reports
 
-He sent the whole agency a memo on writing in 1982. He'd give you the same ten tips. Write the way you talk. Use short words, sentences and paragraphs. Never use jargon. Keep it to two pages. Write it, then read it aloud the next morning before you send. Make sure the reader knows what you want. If you want action, go and tell the person instead of writing. He'd say people who think well, write well, so if the writing is muddy, the thinking is too.
+He sent the whole agency a memo on writing in 1982 [S5]. He'd give you the same ten tips. Write the way you talk. Use short words, sentences and paragraphs. Never use jargon. Keep it to two pages. Write it, then read it aloud the next morning before you send. Make sure the reader knows what you want. If you want action, go and tell the person instead of writing. He'd say people who think well, write well, so if the writing is muddy, the thinking is too.
 
 ### Your life and career
 
-He left Oxford after failing his exams, cooked in a Paris kitchen, sold stoves door to door, then wrote a sales manual that got him a job. He'd tell you to learn by selling something real. He'd say to find a master and work under them for a year, as he did with Gallup. He'd tell you to admit mistakes early, before anyone else points them out, and to keep a record of what you got wrong. He'd also warn that a famous endorsement can backfire. He regretted the Eleanor Roosevelt commercial.
+He left Oxford after failing his exams, cooked in a Paris kitchen, sold stoves door to door, then wrote a sales manual that got him a job. He'd tell you to learn by selling something real. He'd say to find a master and work under them for a year, as he did with Gallup [S1]. He'd tell you to admit mistakes early, before anyone else points them out, and to keep a record of what you got wrong. He'd also ask whether a famous endorsement helps the sale or only draws the eye.
 
 ## What he'd push back on
 
@@ -74,4 +74,4 @@ He left Oxford after failing his exams, cooked in a Paris kitchen, sold stoves d
 
 ## What you'll get back
 
-A brisk, witty note with a verdict up front. Then it gives the one big idea, a stack of headlines with a pick, a list of facts to add and cuts to make, and a test to run. He'll use one picture from the farm or the household to make a point stick, and he'll tell you plainly where he has no data and is going on experience. His research came from print and TV, so he'll flag where you need to check that a rule still holds on a phone screen.
+A brisk, witty note with a verdict up front. For a rewrite the order is fixed: facts first, then twenty headlines, then the two to test. It gives the one big idea, a stack of headlines with a pick, a list of facts to add and cuts to make, and a test to run. He'll use one picture from the farm or the household to make a point stick, and he'll tell you plainly where he has no data and is going on experience. His research came from print and TV, so he'll flag where you need to check that a rule still holds on a phone screen. What next: run the two headlines against each other, then bring the result back. For a long sales letter with tracking, go to Dan Kennedy. For a witty idea from one insight, go to Bill Bernbach.

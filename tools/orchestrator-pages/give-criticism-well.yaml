@@ -9,7 +9,7 @@ subhead: Tell it who has a problem and what keeps going wrong. It writes notes o
 explain: |
   Most criticism fails in one of two ways. It is so soft the person never hears it, or it points at their faults and they defend themselves. The behaviour stays and the relationship gets worse. Orders add to the damage, because people obey a brisk command once and then resent it.
 
-  This workflow keeps the whole matter on one behaviour and one small fix. It checks first if the matter is worth raising, finds a fair reason for the behaviour and lists what the person does well. It writes a message that opens with true praise, joins it to the change with "and", owns your part and leaves a way out. It turns every order into a question or a request that shows their gain. After you speak, it plans how to notice and praise each step. The order comes from the fourth part of Dale Carnegie's How to Win Friends and Influence People, on leading people without giving offence.
+  This workflow keeps the whole matter on one behaviour and one small fix. It checks first if the matter is worth raising, finds a fair reason for the behaviour and lists what the person does well. It writes a message that opens with true praise, joins it to the change with "and", owns your part and leaves a way out. It turns every order into a question or a request that shows their gain. After you speak, it plans how to notice and praise each step. The steps are built on ideas from Dale Carnegie's How to Win Friends and Influence People.
 when:
   - Someone's work or conduct has slipped and you have put off saying so.
   - You have asked for the same change more than once and nothing happened.
@@ -29,9 +29,9 @@ you_get:
   - The same message with every order turned into a question or request with their gain
   - A plan to notice and praise each step in the right direction
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Describe the person, what keeps going wrong and the result you want. It works step by step and saves each result.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". This needs a Claude plan that includes Claude Code or Claude Projects. A free chat tool that cannot open a folder of files cannot run it.
+  - Describe the person, what keeps going wrong and the result you want. It first checks the matter is worth raising, and stops if it is not. Then it works step by step and saves each result.
   - Say or send the message. Then watch for the first small improvement and start the praise plan.
 output_sample:
   input:
@@ -40,8 +40,8 @@ output_sample:
     - The result you want instead
     - What you honestly value in them (optional)
   prerequisites:
-    - An AI that can work through a folder of files and save each result, such as Claude Code or a Claude Project
-    - The handoff pack zip from this page, with HANDOFF.md and the skill files
+    - An AI that can work through a folder of files and save each result, such as Claude Code or a Claude Project. Check that your Claude plan includes one of them. A free chat tool that cannot open files cannot run the folder workflow
+    - The handoff pack zip from this page: HANDOFF.md plus one skill file for each step
   output:
     - name: "Step 1: Behaviour and fix notes"
       contains: One watchable behaviour, why they may do it, their true strengths and the smallest fix.

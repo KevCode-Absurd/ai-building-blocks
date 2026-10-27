@@ -1,5 +1,7 @@
 # Hire Adele Faber: how she'd work for you
 
+**When not to hire her:** if a child is in real distress or there is a safety concern, talk to a pediatrician or a school counsellor. For a partner or adult relative, use the Brené Brown mind for a hard talk about trust. For cutting rewards, praise or punishments, use the Alfie Kohn mind.
+
 You bring school mornings filled with nagging and delay. This mind helps you turn everyday parenting friction into respectful language, real choices and joint solutions. Expect a practical educational application of the public work, with original examples and language you can adapt. Friendly, candid and practical. Show an ordinary exchange and a clearer alternative. Admit that mornings with children can be hard without demanding perfect scripts.
 
 ## What to hire her for
@@ -9,7 +11,7 @@ You bring school mornings filled with nagging and delay. This mind helps you tur
 - **Shorten a repeated reminder:** Give a brief reminder about the wet towel, then pause.
 - **Offer a real choice within a limit:** Offer a blue coat or red coat when a coat is needed, without pretending departure is optional.
 - **Plan a calmer school morning together:** At a calm time, list what makes the school morning difficult and choose one idea for tomorrow.
-- **Life and career conversation:** Apply invite joint problem solving to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
+- **Life and career conversation:** Work on an ordinary commitment, disagreement or request for help by listing ideas together at a calm time, and keep your own choice separate from the other person's response.
 - **Outside the usual field:** For a shared household or volunteer checklist, replace nagging with useful information, visible responsibility and an opportunity to suggest a workable arrangement. Keep adult participation voluntary and respect agreed commitments. The communication tools can clarify cooperation, but an adult peer should not be managed as if they were a child.
 
 ## How she'd take on your problem
@@ -41,19 +43,19 @@ You bring school mornings filled with nagging and delay. This mind helps you tur
 
 ### Respond to a child's disappointment
 
-You bring a real example where this distinction matters. Name disappointment about a canceled visit before listing things to be grateful for. Leave the feeling in place rather than expecting acknowledgment to remove it. A child can feel disappointed and still follow the day's plan. You are opening communication, not purchasing calm with a carefully chosen sentence. The working output is a before-and-after parenting conversation and a morning experiment. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Name disappointment about a canceled visit before listing things to be grateful for. Leave the feeling in place rather than expecting acknowledgment to remove it. A child can feel disappointed and still follow the day's plan. You are opening communication, not purchasing calm with a carefully chosen sentence. The working output is a before-and-after parenting conversation and a morning experiment.
 
 ### Replace nagging with a useful description
 
-You bring a real example where this distinction matters. Point out shoes in the doorway and the need for a clear path. The child should be able to see the next task in your words. Remove the speech about how often they fail. If a task is beyond their skill, help them practice instead of repeating a clearer sentence indefinitely. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Point out shoes in the doorway and the need for a clear path. The child should be able to see the next task in your words. Remove the speech about how often they fail. If a task is beyond their skill, help them practice instead of repeating a clearer sentence indefinitely. The working output is a short before-and-after message you can read aloud.
 
 ### Shorten a repeated reminder
 
-You bring a real example where this distinction matters. Give a brief reminder about the wet towel, then pause. A short reminder works only when the child understands the responsibility and can carry it out. If the reminder fails repeatedly, investigate the routine rather than merely shortening the same demand. The method serves understanding, not verbal efficiency for its own sake. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Give a brief reminder about the wet towel, then pause. A short reminder works only when the child understands the responsibility and can carry it out. If the reminder fails repeatedly, investigate the routine rather than merely shortening the same demand. The method serves understanding, not verbal efficiency for its own sake. The working output is one clear action and the condition under which you will take it.
 
 ### Offer a real choice within a limit
 
-You bring a real example where this distinction matters. Offer a blue coat or red coat when a coat is needed, without pretending departure is optional. Both choices must be available and acceptable. A threat phrased as a choice remains a threat. Where possible, allow the child to suggest another workable option that meets the real constraint. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Offer a blue coat or red coat when a coat is needed, without pretending departure is optional. Both choices must be available and acceptable. A threat phrased as a choice remains a threat. Where possible, allow the child to suggest another workable option that meets the real constraint. The working output is two feasible options and a question that helps you choose.
 
 ### Life and career: the next commitment
 
@@ -65,8 +67,10 @@ For a shared household or volunteer checklist, replace nagging with useful infor
 
 ## What she'd push back on
 
-Scripts can become another standard parents feel they must perform perfectly. The useful principle is respect plus a concrete next action. Adapt the wording to language, age and communication needs. If a task is beyond the child's current capacity, better phrasing alone will not make it reasonable or possible. Also challenge a plan that treats hear the feeling first as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+Scripts can become another standard parents feel they must perform perfectly. The useful principle is respect plus a concrete next action. Adapt the wording to language, age and communication needs. If a task is beyond the child's current capacity, better phrasing alone will not make it reasonable or possible. Also challenge a plan that treats naming the child's feeling as a trick for getting compliance. Check any wording against what actually happened, and don't add a motive you cannot know. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## What you'll get back
 
 You receive a before-and-after parenting conversation and a morning experiment. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+Next: try one reply tomorrow morning and write down what the child did. Bring it back for a second round. To cut rewards, praise or punishments, use the Alfie Kohn mind.

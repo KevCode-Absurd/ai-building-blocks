@@ -49,6 +49,7 @@ first_result:
   - "Create a Zap. Choose the trigger app and the event, then connect your account for that app when Zapier asks."
   - "Add the action app and map the fields, such as a contact's name into a message. Run the test Zapier offers and check the result in the target app."
   - "Turn the Zap on. Check the next few real runs in your Zap history before you leave it alone."
+  - "Next, add a second action or a filter on a paid plan. If your runs climb past your task limit, compare Make or n8n."
 needs:
   - "A Zapier account. The free plan covers two-step Zaps with 100 tasks a month."
   - "Logins for both apps you want to connect, with permission to connect them."
@@ -58,7 +59,7 @@ needs:
 example:
   task: "When a new contact is added in HubSpot, send a message to a Slack channel."
   cost: "This is a two-step Zap, so it fits the free plan, which allows two-step Zaps and 100 tasks a month (checked 26 Oct 2026). How many tasks one run uses is not stated on the pricing page, so check your Zap history after a few runs."
-  reply: "A running Zap with a HubSpot trigger and a Slack action. Each new contact posts a message to your channel. Our example shows the shape only, not a measured result. Test it with a dummy contact first."
+  reply: "A running Zap, which is one trigger and one or more actions. It appears in your Zap history with a log of each run. Here it is a HubSpot trigger and a Slack action. Each new contact posts a message to your channel. Our example shows the shape only, not a measured result. Test it with a dummy contact first."
 not_verified:
   - "How Zapier counts tasks for each step. The pricing page gives task limits but not the counting rule."
   - "Which plan includes API access. The page lists web and API use but gives no plan table for it."

@@ -9,7 +9,7 @@ what_it_does:
   - Makes short video clips from a written description.
   - Turns a still image into a moving clip.
   - Takes reference images and clips to guide the look of a scene.
-  - "Use it in Dreamina, or connect your app through ByteDance’s API."
+  - "Use it in Dreamina, or connect your app through ByteDance’s API. The API needs your own key, so check ByteDance’s prices and access rules first."
 benefits:
   - Test a video ad idea before you pay for a shoot.
   - Guide the look of a clip with your own reference pictures.
@@ -19,7 +19,7 @@ best_for:
   - People who already use CapCut, since Dreamina is made by the same company.
   - Prompt writers who want to try many styles of one script.
 not_for:
-  - Long videos with one continuous take.
+  - Long videos with one continuous take. Check Kling or Veo for longer clips.
   - Users in regions where the model is not offered.
 pricing:
   model: freemium
@@ -42,6 +42,17 @@ blocks:
   - 3d-explainer-video-prompts
   - offer-reel-real-product
 alternatives: [kling, veo, runway, pika]
+first_result:
+  - "Sign in to Dreamina with an account. The free plan gives daily credits."
+  - "Pick text to video, or image to video if you have a still image."
+  - "Paste a one-line prompt that names the subject, the setting and the camera move. Add reference images if you want a set look."
+  - "Choose the clip length and aspect ratio, then generate. Limits change, so check the current ones in Dreamina."
+  - "Watch the clip, change one thing in the prompt and run it again. Download the one you like."
+  - "What you get: a short video clip. The page does not give a standard length or resolution, so check them in the app."
+needs:
+  - "A Dreamina account. The free plan has daily credits."
+  - "A written prompt, and optionally reference images or a still image."
+  - "For the API: your own ByteDance key and confirmed access in your region. This is a paid, metered service, so check the prices first."
 last_checked: 2026-10-21
 sources:
   - https://dreamina.capcut.com/

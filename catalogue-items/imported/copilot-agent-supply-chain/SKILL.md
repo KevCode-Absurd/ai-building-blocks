@@ -23,7 +23,7 @@ Plugin Directory → Hash All Files (SHA-256) → Generate INTEGRITY.json
                                                     ↓
 Later: Plugin Directory → Re-Hash Files → Compare Against INTEGRITY.json
                                                     ↓
-                                          Match? VERIFIED : TAMPERED
+                                          Match? VERIFIED : FAILED
 ```
 
 ## When to Use
@@ -179,7 +179,9 @@ FAILED: 3 issue(s)
 Check that agent dependencies use pinned versions.
 
 ```python
+import json
 import re
+from pathlib import Path
 
 def audit_versions(config_path: str) -> list[dict]:
     """Audit dependency version pinning in a config file."""
@@ -287,7 +289,7 @@ Add to your GitHub Actions workflow:
 ```yaml
 - name: Verify plugin integrity
   run: |
-    PLUGIN_DIR="${{ matrix.plugin || '.' }}"
+    PLUGIN_DIR="."  # for a matrix job, use "${{ matrix.plugin }}" instead
     cd "$PLUGIN_DIR"
     python -c "
     from pathlib import Path

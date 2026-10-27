@@ -49,7 +49,9 @@ RECHECK: lab at once; real-user data after about 28 days
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Self-hosted store speed fixer](https://useaiblocks.com/skills/self-hosted-store-speed-fixer). It takes the audit report.
+- The [Store website speed reviewer](https://useaiblocks.com/skills/speed-budget-and-sale-check). It takes the audit report.
+- The [Store speed report analyst](https://useaiblocks.com/skills/store-speed-report-reader).
+- The [Layout shift fixer](https://useaiblocks.com/skills/layout-shift-fixer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

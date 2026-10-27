@@ -11,12 +11,23 @@ Narration often explains what the viewer is already looking at, which steals the
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+
+**Makes it better (optional):**
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+3. This one.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** If no script came, say so in one line, ask them to paste it with the narration marked, and stop.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a video ad script, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Sorting lines and rewriting scenes is text work.
@@ -56,9 +67,11 @@ Use these exact headings, in this order, even when the input is thin. Put the ve
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
-- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
+- The [Video ad script point-of-view editor](https://useaiblocks.com/skills/video-script-pov-editor). It takes the script.
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the script.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the script.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -29,12 +29,13 @@ you_get:
   - A check that each idea is explained before it is used
   - Leftover material you did not need
 how_to_use:
-  - Put your raw notes in one file. Messy is fine. A transcript works too.
+  - Put your raw notes in one markdown or text file. Messy is fine. A transcript works too. An AI that can open files makes this easiest. Otherwise you paste the notes in.
   - Open your AI and paste in the skill text. If your AI cannot read files, paste your notes into the chat.
   - Tell it who will read the article and where to save it.
   - Say what your reader already knows. Then pick one of the openings it offers, or mix them.
   - Approve each paragraph in turn. Push back when a paragraph does not earn its place.
   - Say when the article is done. Your notes file stays unchanged.
+  - Then edit the draft with a plain proofread, and format it for where it will be published.
 output_sample:
   input:
     - A file of raw notes, quotes or fragments
@@ -53,3 +54,4 @@ output_sample:
       contains: A running list of ideas the reader has met, so no paragraph leans on an idea not yet explained.
     - name: Gap notes
       contains: Places where your notes lack an example or fact, so you can add one or cut the section.
+next: [article-formatter, article-beat-planner]

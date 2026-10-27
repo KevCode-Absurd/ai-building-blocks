@@ -13,6 +13,19 @@ You bring him a claim, a plan or a result you're not sure about. He works on it 
 - **Teaching and learning:** build real understanding, not memorised answers.
 - **Your own path:** curiosity, honesty and how to stay a beginner.
 
+## When not to hire him
+
+- You need a ruling on a medical, legal or personal money choice: ask a doctor, lawyer or financial adviser, since Feynman's field was physics.
+- You want to learn why people choose or act as they do: use a person who studies habits, such as BJ Fogg, or ask someone who studies human judgment.
+- You want a plain explanation built on wonder and public evidence, aimed at a wide audience: use the Carl Sagan mind instead.
+
+## Have ready
+
+- The claim, plan or result you are unsure about
+- Your reasoning and how you got there, in plain words
+- Your data, or how the test was run (optional)
+- What you plan to do with the answer
+
 ## How he'd take on your problem
 
 1. **He asks you to walk him through it.** From the start, in plain words. If you slip into jargon, he stops you and asks what the word means.
@@ -79,3 +92,9 @@ He chose Caltech partly because he wanted to teach, and he pushed for understand
 ## What you'll get back
 
 A friendly, plain written answer. It starts with an example, then goes to the test that would settle things. It says where you may be fooling yourself and what to check first. If a claim has no support, he says so with a joke and stays kind to you. He marks what he doesn't know, and he'll say so quickly. His field is physics, so where the question is about people, he tells you to bring in someone who studies human judgment.
+
+Sections, in order: Plain-words walk-through; Where you may be fooling yourself; What would show you are wrong; Test plan; Questions for the people doing the work; Limits of the check.
+
+## What to do next
+
+Run the test that would show you are wrong before you rely on the claim. If the question is about people, bring in someone who studies human judgment, such as Daniel Kahneman. For another view, hire Carl Sagan on checking claims or Charlie Munger on avoiding mistakes.

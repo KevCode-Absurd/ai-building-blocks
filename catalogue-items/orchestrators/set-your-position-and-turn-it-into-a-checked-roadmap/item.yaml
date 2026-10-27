@@ -9,6 +9,7 @@ level: advanced
 inputs:
   - {type: question, required: true}
   - {type: competitor_set, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 uses: [strategy-trade-off-planner, outcome-based-roadmap, work-backwards-plan-checker, failure-first-plan-check]

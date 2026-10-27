@@ -10,7 +10,7 @@ date_added: "2026-07-07"
 author: davidondrej
 tags: [skills, authoring, quality]
 tools: [claude, codex]
-license: "MIT"
+license: "CC-BY-4.0"
 license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 ---
 
@@ -23,7 +23,7 @@ license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 
 ## How to run this guide
 
-Source and credit: the guide is by David Ondrej (davidondrej/skills, MIT), shared in the sickn33/agentic-awesome-skills collection (content under CC BY 4.0). Keep the credit with any copy you share.
+Source and credit: the guide is by David Ondrej (davidondrej/skills, originally MIT). This copy comes from the sickn33/agentic-awesome-skills collection, where written content is under CC BY 4.0, and that is the licence that covers this copy. Keep the credit with any copy you share.
 
 **Two modes.** Pick the one that matches the request:
 
@@ -96,7 +96,7 @@ Only `name` + `description` from frontmatter are injected into the system prompt
 When the user's request matches a skill's description, the agent reads the full `SKILL.md` body into context.
 
 **Level 3 — Execution (unbounded, on demand):**
-The agent reads referenced files (`references/foo.md`) or runs scripts (`scripts/validate.py`) only as needed. Scripts can execute without their source being loaded into context at all.
+The agent reads referenced files (for example `references/foo.md`, an illustration only) or runs scripts (for example `scripts/validate.py`, also an illustration) only as needed. Scripts can execute without their source being loaded into context at all.
 
 This is why bundled content has no practical limit. Files don't consume tokens until accessed.
 
@@ -205,7 +205,7 @@ If not, walk the user through setup: [steps]
 Tell the agent exactly when to read each referenced file:
 ```
 For standard cases, follow the steps below.
-For [specific edge case], read references/edge-cases.md first.
+For [specific edge case], read references/edge-cases.md first. (Illustration only: this path is not a file in this skill.)
 ```
 
 ### Keep references one level deep

@@ -9,7 +9,7 @@ subhead: A long research report with cited sources, written while you do somethi
 explain: |
   A long research report with cited sources, written while you do something else. You give a question and Google Gemini's research mode plans the search, reads the pages and writes the report. The skill starts the job, checks on it, and collects the finished text.
 
-  Before anything runs, it shows you the exact question, the cost range and where the file will be saved. It only starts after you agree, because the question goes to Google. It suits market scans, literature reviews and competitor checks where a quick web search falls short. It needs Python and a paid Gemini API key.
+  Before anything runs, it shows you the exact question, the cost range (about $2 to $5 per run, an estimate and not a spending limit) and where the file will be saved. It only starts after you agree, because the question goes to Google. It suits market scans, literature reviews and competitor checks where a quick web search falls short. It needs Python and a paid Gemini API key.
 when:
   - You need a market or competitor scan with sources you can check.
   - A quick web search will not cover a topic you must understand.
@@ -33,7 +33,7 @@ how_to_use:
   - Get a Gemini API key from Google AI Studio. Set it on your computer as GEMINI_API_KEY. Never paste it into a chat.
   - Open an AI that can run code, such as Claude Code, and give it the skill folder. In the folder, ask it to run pip install -r requirements.txt.
   - Tell your AI your research question and any layout you want. Remove private details first.
-  - Check the question, the cost range and the save location it shows you. Say yes only if all three are right.
+  - Check the question, the cost range and the save location it shows you. If you gave no place to save, ask your AI where it will save the file. Say yes only if all three are right.
   - Wait 2 to 10 minutes. Your AI can stream progress, or check status or wait using the job ID it gives you.
   - Read the report and check key claims against the original sources. Ask for a follow-up on any point that needs more.
 output_sample:

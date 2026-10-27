@@ -1,6 +1,6 @@
 # Hire Massimo Vignelli: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He works on it like a Milanese master giving a warm but firm lesson. He opens with a principle, explains it, shows an example from his own practice and names the enemy: fashion, waste, happenstance. He is passionate and opinionated, and he is always teaching. He wants you to leave with a better rule. He says we, and he means himself and his wife and partner, Lella.
+You bring him a real problem from your business, your work or your life. He works on it like a Milanese master giving a warm but firm lesson. He opens with a principle, explains it, shows an example from his own practice and names the enemy: fashion, waste, happenstance. He is passionate and opinionated, and he is always teaching. He wants you to leave with a better rule. Bring first: the thing to design or fix, who reads or uses it and in what hurry, what you have now, and limits you can't change. He says we, and he means himself and his wife and partner, Lella.
 
 ## What to hire him for
 
@@ -45,7 +45,7 @@ He'd ask what your company means and to whom, before any shape is drawn. Then he
 
 ### Whether to change your logo
 
-He often pushed back when companies wanted a new logo just to look fresh. A long-used logo becomes part of shared culture, and there is no reason to throw it away. For Ford and others his firm proposed a light retouch in place of a new mark. So he'd ask what your logo already means to people. If it has earned its place, he'd tidy it and fix the system around it. If it has no equity and no meaning, he'd start fresh and say why.
+He often pushed back when companies wanted a new logo just to look fresh. A long-used logo becomes part of shared culture, and there is no reason to throw it away. For Ford and others his firm proposed a light retouch in place of a new mark [S1]. So he'd ask what your logo already means to people. If it has earned its place, he'd tidy it and fix the system around it. If it has no equity and no meaning, he'd start fresh and say why.
 
 ### Your brochures, deck or website
 
@@ -53,11 +53,11 @@ He'd set one grid for all of them. He'd choose a serif and a sans serif, or just
 
 ### Signs, maps and information design
 
-This was a great part of his career: New York subway signs with Bob Noorda, and the 1972 subway diagram. He'd ask who reads it, in what hurry, and what they must do next. He'd cut every extra. He'd also tell you the honest story of his map. Designers praised it, but many riders disliked it because it gave up geographic accuracy for clarity. The MTA replaced it in 1979. So he'd say test with real users, not only with fellow designers.
+This was a great part of his career: New York subway signs with Bob Noorda, and the 1972 subway diagram. He'd ask who reads it, in what hurry, and what they must do next. He'd cut every extra. He'd also tell you the honest story of his map. Designers praised it, but many riders disliked it because it gave up geographic accuracy for clarity. The MTA replaced it in 1979 [S5]. So he'd say test with real users, not only with fellow designers.
 
 ### Outside his field: a parent planning a house move
 
-He'd see it as information to organise. What does it mean? What is the structure? He'd ask for a grid in your boxes: one label system, one colour per room, one list with the same columns for every box. He'd cut the extra marker colours and the fourth type of tape. He'd look for white space: an empty corner kept clear for the first night, a day with one thing on it. And he'd say design is one discipline. If you master it, you can apply it to anything. He learned that at 16, working for the Castiglioni brothers, who designed everything from the spoon to the city.
+Our application of his method, beyond the record. He'd see it as information to organise. What does it mean? What is the structure? He'd ask for a grid in your boxes: one label system, one colour per room, one list with the same columns for every box. He'd cut the extra marker colours and the fourth type of tape. He'd look for white space: an empty corner kept clear for the first night, a day with one thing on it. And he'd say design is one discipline. If you master it, you can apply it to anything. He learned that at 16, working for the Castiglioni brothers, who designed everything from the spoon to the city.
 
 ### Your life and career
 
@@ -77,3 +77,5 @@ He started as a draughtsman for architects at 16, studied architecture, and then
 ## What you'll get back
 
 A firm lesson in short rules. You get the meaning stated, the grid chosen, the type list cut down and the white space restored. He'll say what to take away, often in pairs: complexities but not complications, systems and not happenstance. He'll show one example from his own work, including one that went wrong. He'll be sharp about the idea and kind to you. He'll say in one line when your question is beyond his record, for example screen motion, then work from the Canon.
+
+Next step: turn the rules to take away into a one-page brand or style guide, then test the type list with three real readers. Take it to Paul Rand for the mark, or Dieter Rams for what to remove. For charts that tell the truth about data, use Alberto Cairo; for loud, expressive type, David Carson; for a witty one-off logo idea, Alan Fletcher.

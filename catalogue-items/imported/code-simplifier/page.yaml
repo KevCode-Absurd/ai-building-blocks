@@ -29,12 +29,13 @@ you_get:
   - Confirmation behavior is unchanged
   - Places left alone on purpose
 how_to_use:
-  - Open a chat with an AI that can read your project files and run your tests. Claude Code works well for this.
+  - Open a chat with an AI that can read your project files and run your tests. Claude Code works well for this, but it needs a paid Claude plan or an API account. Other tools that read files and run tests, such as Gemini CLI, also work. Check each tool's current pricing.
   - Paste this skill into the chat, or load it as a skill.
   - Add the code you want simplified. Add your style guide or CLAUDE.md file if you have one.
   - Ask your AI to explain what the code does before it changes anything.
   - Check the list of changes and the test results. Reject any change that needed a test edit.
   - Submit the result as its own pull request, apart from any new feature work. Run your tests and linter before you merge.
+  - Before you merge, run a code review on the change, for example with the Bug and security code reviewer.
 output_sample:
   input:
     - The code you want simplified

@@ -2,6 +2,7 @@
 /** The jobs people hire a block for. Every block is filed under one. */
 export const TASKS = [
   { id: "study-and-practice", name: "Study and check your understanding" },
+  { id: "health-and-fitness", name: "Look after your health and fitness" },
   { id: "find-a-job", name: "Prepare job applications" },
   { id: "write-ad-copy", name: "Write ad copy" },
   { id: "make-image-ads", name: "Make image ads" },
@@ -80,6 +81,7 @@ export const taskOf = (b) => TASK_BY_ID.get(b.task) ?? TASKS[0];
  *  Each one groups a few jobs; a job can sit under more than one. */
 export const FUNCTIONS = [
   { id: "learner", name: "Study and practise", line: "Learning paths, papers and checks on what you understand", tasks: ["study-and-practice"] },
+  { id: "health", name: "Health and fitness", line: "Exercise plans and everyday habits, with a doctor for anything medical", tasks: ["health-and-fitness"] },
   { id: "job-seeker", name: "Prepare a job application", line: "Your real experience, matched to a role", tasks: ["find-a-job"] },
   { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer", "write-emails"] },
   { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "launch-and-scale-ads", "check-ads", "read-ad-results", "study-competitors"] },
@@ -150,6 +152,7 @@ export const AREAS = [
   { id: "it", name: "IT and infrastructure", fns: ["it", "connector"] },
   { id: "security", name: "Security and privacy", fns: ["security"] },
   { id: "engineering", name: "Engineering", fns: ["engineer"] },
+  { id: "health", name: "Health and fitness", fns: ["health"] },
 ];
 export const QUICK_JOB_IDS = ["coding", "marketing", "design", "writing", "business", "finance", "sales", "operations"];
 // Worked out once per job, not once per block per keystroke: the library asks these for every block, many times a second.

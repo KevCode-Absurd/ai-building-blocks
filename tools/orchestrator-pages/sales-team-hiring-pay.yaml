@@ -31,7 +31,7 @@ you_get:
   - What your pay plan rewards and ignores, reps ranked by churn next to their earnings, and one change to test with the number that would prove it
   - One early sign of customer success written as a percent, an action and a time limit, with a way to measure it by cohort
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 3 skill files in the order they run: Sales hiring scorecard builder, Sales pay plan checker and Customer success leading-sign definer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your sale and your past hires. It builds the scorecard first.
   - Share your pay plan and each rep's results. Give any pay change at least two quarters before you judge it.
@@ -60,7 +60,7 @@ how_it_works:
   - title: Check the pay plan
     text: Takes the scorecard and your pay plan, ranks reps by how many customers stayed, and finds what the plan rewards that you did not mean to.
   - title: Define the early sign
-    text: Takes the findings from the step before and writes one sign of success as a percent, an action and a time limit that you can check in 30 to 60 days.
+    text: Takes the pay plan findings from the step before and your customer data, and writes one sign of success as a percent, an action and a time limit that you can check in 30 to 60 days.
 output_shape: |-
   STEP 1: HIRING SCORECARD
     Sale profile | traits with a 1, 5 and 10 anchor | test for each trait | one-page score sheet | date to re-check

@@ -30,12 +30,14 @@ you_get:
   - Speaker notes with timing and a line to lead into each next slide
   - A talk script you can read aloud (optional)
 how_to_use:
+  - Before you start, install LaTeX (for the PDF) and the python-pptx tool (for the PowerPoint file), or ask your AI to do it.
   - Open Claude, ChatGPT or Gemini with a mode that can run code and read files. Paste in this skill.
   - Upload your compiled paper. Say the talk type and the time slot, such as a 15 minute oral.
   - Add your key figures or conference style rules if you have them.
   - Check the slide plan first. Ask for changes before it writes all the slides.
   - Without LaTeX, expect only the PowerPoint file. The PDF needs LaTeX on your computer.
   - Read the speaker notes aloud once to check the timing. Cut slides if you run over.
+  - Next, make any missing results charts with Chart maker, and rehearse with a friend before the day.
 output_sample:
   input:
     - Your compiled research paper (PDF or LaTeX source)

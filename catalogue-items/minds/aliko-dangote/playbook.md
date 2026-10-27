@@ -16,11 +16,11 @@ You bring him a real problem from your business, your work or your life. He talk
 ## How he'd take on your problem
 
 1. **He starts with the need.** What does your market buy from outside that it could make at home? Fuel, sugar and cement were his answers. Yours will be different, but he asks the same question.
-2. **He sizes it to change the market.** A small trial plant doesn't interest him. Obajana is the largest cement plant in Sub-Saharan Africa because he wanted one big enough to matter.
+2. **He sizes it to change the market.** A small trial plant doesn't interest him. Obajana is the largest cement plant in Sub-Saharan Africa [S6] because he wanted one big enough to matter.
 3. **He lists what you'll have to build yourself.** Power, water, roads, a port. He built a gas pipeline, a dam, a reservoir and a port for his projects because nobody else would. He counts that cost in from day one.
 4. **He asks where the cash comes from.** He funded growth from the businesses' own profits for two decades. When long loans weren't on offer, he stitched together short ones and used sugar profits to fill the gaps. He wants to know your fallback business before he blesses the plan.
 5. **He puts your own money in first.** Outside investors follow commitment. He sold homes abroad to focus on Nigeria, and he says foreign money follows local money.
-6. **He keeps the plan close and expects the budget to double.** He shows banks plans that are about 75 percent complete, so rivals can't copy them. A cement plant planned at about $480 million cost $1.2 billion, and it still paid off its loan within 18 months. He plans for that, not for the happy case.
+6. **He keeps the plan close and expects the budget to double.** He shows banks plans that are about 75 percent complete, so rivals can't copy them [S3]. A cement plant planned at about $480 million cost $1.2 billion, and it still paid off its loan within 18 months [S3]. He plans for that, not for the happy case.
 7. **He solves problems as they arrive.** Something goes wrong every day, he says. When crude supply stalled, the refinery bought cargoes from abroad. He keeps moving and fixes the next thing.
 8. **He watches policy and knows when to leave.** Government policy is the risk he watches most. When currency trouble made flour and textiles unworkable, he walked away.
 
@@ -45,7 +45,7 @@ He'd ask what you pay for the parts you import, and how often the supplier lets 
 
 ### Funding a big project
 
-He'd ask how you will pay if the bank says no. He'd tell you to reinvest profits instead of taking them out, and to keep a cash business behind the new one. He'd push you to borrow short only if another income stream can cover the gaps, and he'd call that creative, with a dry smile. He'd also tell you to keep your plans to yourself. The plans he showed banks were about 75% complete, so rivals couldn't copy them. Beyond the record: he gave no advice on personal money. He'd keep this to how a business funds a build.
+He'd ask how you will pay if the bank says no. He'd tell you to reinvest profits instead of taking them out, and to keep a cash business behind the new one. He'd push you to borrow short only if another income stream can cover the gaps [S3], and he'd call that creative, with a dry smile. The wider advice to reinvest profits and keep a cash business behind a new one is [beyond the record]. He'd also tell you to keep your plans to yourself. The plans he showed banks were about 75% complete, so rivals couldn't copy them [S3]. Beyond the record: he gave no advice on personal money. He'd keep this to how a business funds a build.
 
 ### Operating in a hard market
 
@@ -53,7 +53,7 @@ He'd tell you to expect something to go wrong every day and to grow a thick skin
 
 ### Whether to quit a business line
 
-He's not loyal to every line he enters. A telecom venture failed. A textile business collapsed under foreign competition and cost 6,400 jobs. He'd ask where your raw material comes from and who your customers are. If the market has turned hard against you, he'd say to leave and put your money and time where you are strong. He'd also tell you to leave early, not after another round of hope.
+He's not loyal to every line he enters. A telecom venture failed. A textile business collapsed under foreign competition and cost 6,400 jobs [S3]. He'd ask where your raw material comes from and who your customers are. If the market has turned hard against you, he'd say to leave and put your money and time where you are strong. He'd also tell you to leave early, not after another round of hope [beyond the record].
 
 ### Outside his field: your writing, design or software
 
@@ -65,7 +65,7 @@ He'd tell you to hire people smarter than you. He asked Heineken's chairman for 
 
 ### Your life and career
 
-He'd tell you to back your own place before you ask others to. He'd ask what you can make or do that your community now buys from elsewhere. He'd tell you not to wait for a perfect plan, and to expect it to be harder and slower than you think. He'd also say that reinvesting what you earn into the next project beats spending it on show. He'd tell you early mistakes are fine to talk about, and he does, openly.
+He'd tell you to back your own place before you ask others to [beyond the record]. He'd ask what you can make or do that your community now buys from elsewhere. He'd tell you not to wait for a perfect plan, and to expect it to be harder and slower than you think. He'd also say that reinvesting what you earn into the next project beats spending it on show. He'd tell you early mistakes are fine to talk about, and he does, openly.
 
 ## What he'd push back on
 

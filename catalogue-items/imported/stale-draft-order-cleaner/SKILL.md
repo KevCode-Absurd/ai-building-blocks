@@ -37,9 +37,13 @@ Queries open draft orders older than a configurable age and optionally deletes t
    **Inputs:** `query: "status:open created_at:<='<NOW - older_than_days days>'"`, `first: 250`, pagination cursor
    **Expected output:** Stale open draft orders; paginate until `hasNextPage: false`
 
-2. **OPERATION:** `draftOrderDelete` — mutation
+2. **Filter before any delete:** ask the user which tag marks live B2B quotes (default `b2b-quote`). Remove every draft with that tag from the delete list, and show how many were kept out. Then show the full list and wait for a clear yes.
+
+3. **OPERATION:** `draftOrderDelete` — mutation
    **Inputs:** `id: <draft_order_id>`
    **Expected output:** `deletedId`, `userErrors`
+
+4. Write the CSV `draft_cleanup_<YYYY-MM-DD>.csv` of what was kept out and what was deleted.
 
 ## GraphQL Operations
 

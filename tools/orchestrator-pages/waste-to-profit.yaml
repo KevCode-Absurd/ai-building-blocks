@@ -6,10 +6,12 @@ thinking: high
 thinking_why: It builds a cost model from your steps and then prices the waste from it. Give it your strongest model.
 headline: Know what every step costs, and turn your waste into money
 subhead: Describe how you make or deliver your product, step by step. It puts a measure on each step and builds a cost sheet and a weekly count. Then it finds everything you throw away or leave idle, and prices each item as a product, a reuse or a saving.
-explain: |
+explain: |-
   Most owners know their total costs but not what each step costs. A product that looks like a winner can lose money once you count the steps, and the scrap, offcuts, idle time and returns that you throw away each month are rarely counted at all.
 
-  This workflow counts first. It puts a measure on each step, builds a monthly cost per product and ranks products by what they really earn. It then walks the whole process for waste, values each item by the labour in it as well as the material, and asks who would buy it or what it could feed. The method comes from Andrew Carnegie's autobiography, which describes how he tracked cost at every step and treated waste as a source of profit.
+  This workflow counts first. It puts a measure on each step, builds a monthly cost per product and ranks products by what they really earn. It then walks the whole process for waste, values each item by the labour in it as well as the material, and asks who would buy it or what it could feed.
+
+  The method is this library's own design. The idea of counting the cost of every step is inspired by Andrew Carnegie's autobiography. The idea of finding a use for waste is inspired by John D. Rockefeller's memoir and Henry Ford's writing.
 when:
   - You do not know which products earn money after all the steps are counted.
   - You throw away scrap, leftovers, returns or idle time and suspect some of it is worth something.
@@ -31,10 +33,10 @@ you_get:
   - A list of waste with a monthly amount, priced in labour as well as material
   - A buyer or reuse for each item (or "no use"), the first three actions with owners and dates, and a re-count date
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Describe your process and add any figures you have. It works step by step and saves each result.
-  - Hold the count on the dates it sets, and bring the new numbers back for a re-count.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus two skill files, in the order they run: Step cost tracker, Waste and by-product finder."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Describe your process and add any figures you have. It works step by step and saves each result."
+  - "Hold the count on the dates it sets, and bring the new numbers back for a re-count."
 output_sample:
   input:
     - How each product is made or delivered, step by step

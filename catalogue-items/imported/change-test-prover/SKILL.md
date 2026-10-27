@@ -38,8 +38,8 @@ uncommitted work, a branch such as `main` checks a whole branch. Other options g
 
 The goal is that the user can trust the change from evidence, without reading every line. A
 change is verified when the tests fail if any part of it is wrong. Passing tests alone do not
-show that: our study found 71% of the calls that could be deleted unnoticed sat in functions
-that looked well tested.
+show that: the original authors report that 71% of the calls that could be deleted unnoticed sat in
+functions that looked well tested. We have not checked that figure, so do not repeat it as a fact.
 
 ### Runner
 
@@ -144,7 +144,7 @@ $AV replay --run .test-suite-audit/<run-dir> --mutant <id> --all
 
 ## Security & Safety Notes
 
-- The runner is fetched with `uvx` from GitHub at tag `v0.3.0` (commit `07608b3b9e4e359bc0b93b3eca94bb78d67e369e`). Review it before first use.
+- The runner is fetched with `uvx` from GitHub at tag `v0.3.0` (commit `07608b3b9e4e359bc0b93b3eca94bb78d67e369e`). Review it before first use: read its code for network calls, shell commands and any writes outside `.test-suite-audit/`.
 - It copies the project to a temporary directory and writes only to `.test-suite-audit/` in the project. It does not stash, revert or edit production files.
 - The agent adds test files; it must not weaken, skip or delete existing tests.
 

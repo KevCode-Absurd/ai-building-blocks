@@ -28,7 +28,7 @@ you_get:
   - The practical, emotional and social jobs they hire you for, and what else they could hire
   - A map of each step they take, with feelings, friction and fixes in order
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your idea and who you could reach for talks. Step 1 stops with your questions and plan.
   - Hold five to ten conversations. Write notes straight after each one, in the words people used.

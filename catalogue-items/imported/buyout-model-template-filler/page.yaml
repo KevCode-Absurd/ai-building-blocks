@@ -34,7 +34,7 @@ you_get:
   - Sensitivity tables with the base case highlighted
   - A list of checks that passed or failed
 how_to_use:
-  - Use an AI that can run commands and save files, such as Claude Code. The skill builds the file with a command line tool called officecli. A plain chat cannot do this.
+  - Use an AI that can run commands and save files, such as Claude Code, which needs a paid plan. Install the command line tool officecli first, because the skill builds the file with it. A plain chat cannot do this and will give you a cell-by-cell table instead.
   - Open the skill and attach your blank template. Add the deal facts, and say which currency and units the model uses.
   - Answer any question it asks about your template. It will not guess where a number goes.
   - Check each section when it pauses, starting with sources and uses. Debt plus equity must equal the total price.

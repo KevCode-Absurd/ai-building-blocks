@@ -138,7 +138,7 @@ When allocating a fixed budget across multiple options:
 Surface these without being asked:
 
 - **Payback > useful life** → investment never pays back; recommend against
-- **"Optimistic" revenue projections** → run downside case at 50% of projected revenue
+- **"Optimistic" revenue projections** → run the downside case with projections missing by 40% (revenue at 60% of plan)
 - **Single customer/contract as assumed revenue** → flag concentration risk
 - **Debt-financed investment** → factor full interest cost into NPV
 - **Dissimilar time horizons being compared** → normalize to same period
@@ -205,7 +205,7 @@ For every investment analysis:
 | Anti-Pattern | Why It Fails | Better Approach |
 |---|---|---|
 | Using ROI alone without time value of money | ROI ignores when cash flows occur — a 50% ROI over 10 years is worse than 30% over 2 years | Always calculate NPV and IRR alongside ROI for investments over $25K or 12 months |
-| Relying on optimistic revenue projections | Founders and sales teams systematically overestimate revenue from new investments | Run the downside case at 50% of projected revenue as the primary decision input |
+| Relying on optimistic revenue projections | Founders and sales teams systematically overestimate revenue from new investments | Run the downside case with projections missing by 40% as the primary decision input |
 | Ignoring opportunity cost | Approving an investment in isolation misses what else that capital could do | Always compare the proposed IRR against the best alternative use of the same capital |
 | Sunk cost reasoning in go/no-go decisions | Past spend is irrelevant to whether continuing will generate positive returns | Evaluate only the incremental investment required vs. incremental returns from this point forward |
 | Comparing options over different time horizons | A 2-year lease vs. a 7-year purchase cannot be compared without normalization | Normalize all options to the same analysis period using annualized metrics |

@@ -65,7 +65,7 @@ output_sample:
 
 how_it_works:
   - title: Sorts the ads
-    text: Uses the study board skill to file each ad under one of nine types and keep three per type from at least two brands, long-running ones first.
+    text: Uses the study board skill to file each ad under one of nine types and keep three per type from at least two brands, long-running ones first. The run is only as good as the ads you collect by hand. No step fills a gap from your notes.
   - title: Maps the category
     text: Uses the competitor gaps skill to count which types the category crowds, list repeated claims word for word, and check them against what buyers say.
   - title: Writes your own script

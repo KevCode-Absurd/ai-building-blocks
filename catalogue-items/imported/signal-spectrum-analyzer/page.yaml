@@ -16,6 +16,7 @@ when:
   - You need the power or bandwidth in one band.
   - You want to compare two signals with coherence or a cross-spectrum.
 not_for:
+  - You want to use this code outside MATLAB or other MathWorks products. The licence (BSD 2-Clause plus MathWorks terms) does not allow it.
   - "You want to design or apply a filter: use the matlab-design-digital-filter skill."
   - "You want a spectrogram or time-frequency view of a signal that changes over time: use a time-frequency tool, since this skill does not cover it yet."
   - "You want audio features such as pitch, or Bode and Nyquist plots: use Audio Toolbox or Control System Toolbox."
@@ -36,6 +37,7 @@ how_to_use:
   - "Tell your AI the sample rate in Hz and the measurement you want: peaks, band power or bandwidth."
   - Read the data check first. Then check the plot axes and the peak table.
   - If your data arrives live, frame by frame, say so. The skill uses a different method for that.
+  - Next, check the peak table against a tone you know is in the signal. If you need a filter, use the Digital filter designer. For a view over time, use the Time-frequency analyzer.
 output_sample:
   input:
     - Your signal, as a variable in MATLAB or a CSV file

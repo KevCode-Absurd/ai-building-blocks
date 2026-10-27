@@ -1,6 +1,6 @@
 ---
 name: email-drafting
-description: Draft a professional, audience-aware email or reply with calibrated tone and a clear call to action. Use when the user needs one message, response, follow-up, support note, or meeting request; use sales-email-sequences for a coordinated multi-touch outbound campaign.
+description: Draft a professional, audience-aware email or reply with calibrated tone and a clear call to action. Use when the user needs one message, response, follow-up, support note, or meeting request; use the Email sequence writer for a coordinated multi-touch outbound campaign.
 license: MIT
 metadata:
   author: awesome-ai-agent-skills
@@ -17,13 +17,15 @@ This skill enables an AI agent to compose professional, context-appropriate emai
 
 2. **Profile the recipient and calibrate tone.** Gather details about the recipient: name, title, company, relationship history, and any previous interactions. Use this context to select the appropriate tone — formal for executive outreach, conversational for peer updates, empathetic for complaint responses, or urgent when time-sensitive action is required. Apply personalization tokens such as `{{first_name}}`, `{{company}}`, and `{{pain_point}}` when drafting templates.
 
-3. **Compose the subject line.** Write a subject line that is specific, concise (under 60 characters), and action-oriented. Avoid generic phrases like "Quick question" or "Touching base." Instead, reference a concrete benefit or context point, e.g., "Cut your onboarding time by 40% — here's how" or "Follow-up: action items from Thursday's standup."
+3. **Compose the subject line.** Write a subject line that is specific, concise (under 60 characters), and action-oriented. Avoid generic phrases like "Quick question" or "Touching base." Instead, reference a concrete benefit or context point the user gave you, e.g., "Cut your onboarding time by [X%] — here's how" (only with a figure the user supplied) or "Follow-up: action items from Thursday's standup."
 
 4. **Draft the email body with clear structure.** Follow a proven structure: opening hook (1-2 sentences establishing relevance), body (2-3 short paragraphs delivering the core message with supporting evidence or context), and closing with a single, unambiguous call to action. Keep paragraphs under 3 sentences. Use bullet points for lists of items or benefits. Avoid walls of text.
 
 5. **Add signature and formatting polish.** Include an appropriate sign-off ("Best regards," for formal, "Thanks," for casual, "Cheers," for friendly) followed by the sender's name, title, and contact info. Review the draft for grammar, spelling, and readability. Ensure the email can be scanned in under 30 seconds.
 
 6. **Review against checklist and deliver.** Verify the email meets these criteria: subject line is compelling, tone matches the audience, the CTA is clear and singular, the email is under 200 words for outreach or under 300 words for detailed responses, and no placeholder tokens remain unresolved. Output the final email in a ready-to-send format.
+
+**Facts rule.** Use only the facts, numbers, offers and results the user gave you. Do not add any figure, discount, promise or customer result of your own. Put a bracketed placeholder such as [X%] or [discount if approved] where a fact is missing, and tell the user to fill it in from their own records before sending. The numbers and offers in the examples below are made-up placeholders, not claims to reuse.
 
 ## Usage
 
@@ -47,7 +49,7 @@ Tone: [formal / casual / empathetic / urgent]
 ~~~
 Draft a cold outreach email to Sarah Chen, VP of Engineering at Cloudstream Inc.
 Purpose: Introduce our API monitoring platform and book a 15-minute demo.
-Key points: Their engineering blog mentions scaling challenges; our tool reduces incident response time by 60%.
+Key points: Their engineering blog mentions scaling challenges; our tool reduces incident response time by [X%, from our own customer data].
 Tone: Professional but conversational.
 ~~~
 
@@ -60,7 +62,7 @@ Hi Sarah,
 
 I read your recent post on scaling Cloudstream's microservices architecture — the challenges you described around observability gaps resonated with several of our customers who faced similar growing pains.
 
-We built Watchdog specifically for engineering teams navigating that transition. Our API monitoring platform provides real-time anomaly detection and automated root-cause analysis. Teams using Watchdog have cut their mean incident response time by 60%, which typically saves 10+ engineering hours per week.
+We built Watchdog specifically for engineering teams navigating that transition. Our API monitoring platform provides real-time anomaly detection and automated root-cause analysis. Teams using Watchdog have cut their mean incident response time by [X%, from our customer data], saving [N] engineering hours per week.
 
 Would you be open to a 15-minute walkthrough? I can show you how Watchdog would map onto Cloudstream's stack. Here's a link to grab a time that works: [calendar link]
 
@@ -92,7 +94,7 @@ I'm truly sorry about the duplicate charge on your account — I completely unde
 
 We've processed a full refund of $49.99 to your original payment method. You should see the credit reflected within 3-5 business days. The duplicate charge was caused by a one-time issue during our billing system migration, and our engineering team has deployed a fix to ensure this doesn't happen again.
 
-Your subscription remains fully active and unaffected. As a thank-you for your patience, I've also applied a 15% discount to your next renewal.
+Your subscription remains fully active and unaffected. [Only if you are authorised to offer it: As a thank-you for your patience, I've also applied a [discount] to your next renewal.]
 
 If you have any other questions or concerns, please don't hesitate to reply to this email — I'm happy to help.
 

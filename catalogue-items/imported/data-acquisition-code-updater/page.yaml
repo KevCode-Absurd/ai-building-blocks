@@ -5,7 +5,7 @@ name: Data acquisition code updater
 summary: Update old MATLAB data acquisition code to the current DataAcquisition interface. Paste your script and get a ported version with a list of changes.
 job: build-software
 headline: Data acquisition code updater
-subhead: Give it old session-based data acquisition code. Get it ported to the current interface. Bring your old MATLAB script. Use the result to plan your next step.
+subhead: Give it old session-based data acquisition code. You get it ported to the current interface, with a table of every changed call.
 explain: |
   Old MATLAB scripts that talk to measurement hardware get ported to the current DataAcquisition interface, so they stop breaking on new releases. Error messages about missing wait or Data fields usually point to this exact problem.
 
@@ -26,15 +26,17 @@ you_give:
   - The error message (optional)
 you_get:
   - Ported script on the modern interface
-  - List of changed calls
+  - A table of changed calls, with the old call, the new call and the line
   - Fixes for callback and output queue code
   - Checks to confirm it still works
 how_to_use:
-  - Open your AI tool and paste in the skill instructions from this page.
+  - Open your AI tool and paste in the skill instructions from this page. To run the checks you need MATLAB with Data Acquisition Toolbox and an NI device. With only the old script, you still get the ported code and the change table.
   - Paste your old MATLAB script. Add your MATLAB release, hardware and error message if you have them.
   - Read the table of changed calls first. Check each one makes sense for your hardware.
   - If your AI can run MATLAB with Data Acquisition Toolbox, ask it to run the checks. If not, run them yourself.
   - Run a short live test on your hardware before you start a full-length run.
+  - Compare its output with a run of the old script before you trust a full-length acquisition.
+next: [matlab-test-runner, matlab-code-reviewer]
 output_sample:
   input:
     - Your old MATLAB data acquisition script

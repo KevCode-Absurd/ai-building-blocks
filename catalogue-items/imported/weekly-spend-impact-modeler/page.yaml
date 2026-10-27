@@ -34,7 +34,7 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run Python and read files. Claude or ChatGPT with code running turned on both work.
   - Upload the skill folder, or paste in SKILL.md.
-  - Add your weekly spend and sales by channel as a spreadsheet or CSV. Also give your time zone, currency and week range.
+  - Add your weekly spend and sales by channel as a spreadsheet or CSV. Use one row per week per channel, with the week start date, channel, spend, and the outcome count or revenue. Also give your time zone, currency and week range.
   - Add your CRM numbers and any spend scenarios you want to test (optional).
   - Ask your AI to follow the skill. Check the status lines before you read any channel result.
   - Take the modeled share versus CRM share into a lift-test plan or a human budget review. Do not treat it as a budget decision.
@@ -63,3 +63,10 @@ output_sample:
       contains: CRM cost per conversion divided by the share factor, only when the outcome is a conversion count.
     - name: Assumptions and limits
       contains: Scope, dates, units, status flags and a plain note on what is not proven.
+output_shape: |
+  STATUS <ok / limited / no usable result> | Scope: <weeks, time zone, currency>
+  CHANNEL <name> | modeled contribution: <number or unknown> | modeled share vs CRM share: <ratio>
+  SCENARIOS <spend change by channel> | assumed response: <low to high>
+  ASSUMPTIONS <list>
+  NOT PROVEN: <what these numbers cannot show>
+next: [ad-spend-analyst]

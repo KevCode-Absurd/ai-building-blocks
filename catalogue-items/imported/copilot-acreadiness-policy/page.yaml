@@ -9,13 +9,14 @@ subhead: Tell your AI about your repo and how strict you want to be. It writes a
 not_for:
   - "Your repo does not use AgentRC yet: set up AgentRC first, then come back to write a policy."
   - "You want to add new checks: JSON policies cannot add criteria, so use AgentRC's TypeScript plugin system."
-  - "You only want a readiness report: run the AgentRC readiness command, or the assess skill, which is not in this folder."
+  - "You only want a readiness report: run the AgentRC readiness command, or Agent readiness dashboard builder."
 how_to_use:
   - Open your AI in a place where it can run terminal commands and read your repo. This skill needs code running and Node installed.
   - Paste the skill, then say "new my-policy" and name your stack and pass-rate goal.
   - Answer its questions on what to turn off and what to raise. It will ask you to confirm before it disables any check.
   - Check the policy file it writes and the line added to agentrc.config.json.
-  - Say "apply" with the policy path to run AgentRC and see your new score. The report step hands off to the assess skill, which is not in this folder.
+  - Say "apply" with the policy path. Your AI runs npx -y github:microsoft/agentrc readiness --json --policy <path> and shows your new overall score, grade and the criteria that still fail. For a full web page report, use Agent readiness dashboard builder.
+  - Policies are checked against the AgentRC version you run. A newer version may treat an override differently, so re-run after you update AgentRC.
   - Add the CI line if you want builds to fail below a set level.
 output_sample:
   input:

@@ -9,28 +9,30 @@ A buyer taps an ad because of one promise. If the page they land on doesn't pick
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, your offer, ad copy. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, your offer, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** This is a writing job from facts you supply, and the main chat AIs all handle it well.
@@ -60,7 +62,7 @@ How to start:
 6. **Fit how it's bought.**
    - Used up: "will it suit me" means taste or feel, what's in it, how to use it, how long a pack lasts. The risk line is the guarantee plus how to pause or cancel. A price per day is fine if the facts give it.
    - Kept: it means size, fit, materials, what it works with, care, how long it lasts. The risk line is returns and warranty. No price per day and no "supply".
-7. **Offer.** Show only offers in the facts, at their names and prices. A crossed-out price must be one the item really sold at. State the saving the way that reads largest while staying true: under about 100 in your currency a percentage tends to read bigger, above that a money amount does. A deadline appears only if the facts give a date.
+7. **Offer.** Show only offers in the facts, under the exact name the facts give (if they say only "Subscribe", write "Subscribe"; never add words like "& Save"), at their prices. A saving shown as a percent or an amount must match the facts exactly. Never round it up or make it larger than the stated price difference. A crossed-out price must be one the item really sold at. State the saving the way that reads largest while staying true: under about 100 in your currency a percentage tends to read bigger, above that a money amount does. A deadline appears only if the facts give a date.
 8. **Proof.** Quote customers word for word, choosing quotes that answer the doubt in that section. Never write a review, name, rating, count, award or press mention.
 9. **Questions.** After the body, answer the doubts still open, in the buyer's words, as many as the evidence supports. Delivery and returns belong here only when asked as worries ("What if it doesn't fit?").
 10. **Close.** Come back to the ad's promise in one line, then the button and the risk line.
@@ -81,11 +83,11 @@ How to start:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the page.
-- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
-- **Check the landing page** with the [Landing page 30-point checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
-- **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the page.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the page.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
+- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
+- The [Competitor landing page layout planner](https://useaiblocks.com/skills/competitor-landing-layout).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

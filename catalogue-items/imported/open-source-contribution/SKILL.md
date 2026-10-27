@@ -8,6 +8,10 @@ display_order: 5
 
 # OSS Contribution Research
 
+> In short (added by AI Blocks): check the repo's rules about AI-made pull requests, check for duplicates, reproduce the bug, make the smallest fix, run the repo's own tests, have a second pass rerun it, then write the exact text with a disclosure line and stop. A person approves it. The AI never posts. Each gate either passes with evidence or stops the run, and a stop is a valid result.
+>
+> What you need that is not in the download: a private approval queue repo, the queue's poster (the tool that sends approved items), a queue-item template in that repo and a read-only token. If you do not have a queue and poster, run the gates and stop at the drafted text. Read it, then post it yourself. The AI still never posts for you.
+
 Prepare one outside contribution to an open-source repo, gate by gate, and stop at a queue item a human approves. The agent running this skill never posts.
 
 ---

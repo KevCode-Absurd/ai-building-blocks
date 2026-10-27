@@ -32,7 +32,7 @@ Compare a site to its competitors and find the gaps worth closing. Stack-agnosti
 
 - The user's site
 - 3 to 5 named competitors (or the topic area, if competitors are not yet identified)
-- Access to a keyword tool, a backlink tool, and any crawler
+- Access to a keyword tool, a backlink tool, and any crawler. Ahrefs, Semrush and Similarweb are paid services that need their own account or key. Without them, do manual search checks and mark what you could not verify.
 
 If competitors are unknown, start by listing the top 10 ranking domains for the user's top 10 priority keywords. Pick the 3 to 5 that appear most often.
 
@@ -95,9 +95,9 @@ How well-known are they outside organic search?
 
 ## Workflow
 
-1. **Confirm the competitors.** Either named, or derive from SERP overlap on top 10 priority keywords.
+1. **Confirm the competitors.** Either named, or derive from SERP overlap on top 10 priority keywords. To find them: search each of the user's top 10 keywords, note the top 10 domains for each, then count how often each domain appears. Pick the 3 to 5 that appear most. Skip big directories and marketplaces unless they sell what the user sells.
 2. **Pick the angles.** Run all 5 for a full audit, or 2 to 3 for a focused dive.
-3. **Pull the data.** Keyword tool exports, backlink tool exports, manual SERP inspection, technical crawl.
+3. **Pull the data.** Keyword tool exports, backlink tool exports, manual SERP inspection, technical crawl. For each keyword record: the keyword, the user's rank, each rival's rank, the page type that wins, and any SERP feature. Use public pages only.
 4. **Score each angle.** Where does the user lead? Where do they trail?
 5. **Identify gaps.** Specific content gaps, specific backlink gaps, specific technical gaps.
 6. **Prioritize.** Which gaps are highest leverage to close? (Big traffic potential, achievable effort, strategic fit.)
@@ -128,6 +128,8 @@ Structure:
 6. Technical comparison
 7. Brand and entity comparison
 8. Prioritized gap-closing roadmap
+
+Next steps: for missing topics, run `seo-keyword`; for a single page that trails, run `seo-onpage`; for old content, run `seo-content-audit`. Hand each tool the matching rows of the roadmap. (In this library, use the On-page SEO tuner, the Store SEO gap finder or the SEO auditor.)
 
 ---
 

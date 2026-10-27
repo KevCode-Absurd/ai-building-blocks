@@ -30,11 +30,12 @@ you_get:
   - AGENTS.md linked to it
   - List of hard limits and locked decisions
 how_to_use:
-  - Open your AI in a tool that can read and write your project files, such as Claude Code.
+  - Open your AI in a tool that can read and write your project files, such as Claude Code. The skill runs shell commands (it makes a link with ln -s and can commit with git) and writes files, so confirm the folder first and approve each command.
   - Paste this skill into the chat, or add it to your skills folder.
   - Tell your AI which folder to write a guide for. Add any rules you want kept.
-  - Read the bullet list it shows first. Fix anything wrong or missing, then say go.
-  - Check the finished CLAUDE.md for rules that clash. Add any rule your AI keeps breaking.
+  - The skill asks for the folder path, reads every file, and shows you a bullet outline. Fix anything wrong or missing in the outline, then say go. Only then does it write CLAUDE.md and the AGENTS.md link.
+  - Check the finished CLAUDE.md for rules that clash. Add any rule your AI keeps breaking. A good guide is short, about 60 lines or fewer.
+  - Nothing is committed unless you ask. When your AI breaks a rule later, add that rule to the file.
 output_sample:
   input:
     - The path to one project folder
@@ -55,3 +56,4 @@ output_sample:
       contains: Choices already made and dated, so the AI does not reopen them.
     - name: AGENTS.md
       contains: A link to CLAUDE.md, so other AI tools read the same guide.
+next: [project-memory-keeper, project-memory-builder]

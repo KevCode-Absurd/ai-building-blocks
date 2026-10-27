@@ -24,7 +24,7 @@ steps:
   - uses: workforce-crisis-playbook-writer
     note: Use confirmed disruption facts for workforce priorities, decision owners, communication routes and staff support. Pass approved essential-service priorities and safety constraints to scheduling.
   - uses: shift-schedule-planner
-    note: Use priorities, skills, confirmed availability and working limits for coverage options. Mark gaps, rest constraints and unconfirmed availability rather than impossible assignments. Hand exceptions and proposed choices to the action register.
+    note: First list the hours and roles each service window needs. Then subtract confirmed availability, within approved working limits and rest rules. Then record each remaining gap, and any unconfirmed availability, before drafting any option. Draft the coverage options from what is left. Mark gaps, rest constraints and unconfirmed availability rather than impossible assignments. Hand exceptions and proposed choices to the action register.
   - uses: executive-action-register
     note: Capture gaps, decisions, owner, deadline, escalation trigger and message approval. Link draft schedules to their facts and approvals; return pending actions for incident lead review. Treat proposed assignments as proposals, not accepted commitments; never guess an owner or due date.
 execution: coordinator

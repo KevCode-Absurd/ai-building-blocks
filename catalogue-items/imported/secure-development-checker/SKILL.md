@@ -1,6 +1,6 @@
 ---
 name: "senior-secops"
-description: Senior SecOps engineer skill for application security, vulnerability management, compliance verification, and secure development practices. Runs SAST/DAST scans, generates CVE remediation plans, checks dependency vulnerabilities, creates security policies, enforces secure coding patterns, and automates compliance checks against SOC2, PCI-DSS, HIPAA, and GDPR. Use when conducting a security review or audit, responding to a CVE or security incident, hardening infrastructure, implementing authentication or secrets management, running penetration test prep, checking OWASP Top 10 exposure, or enforcing security controls in CI/CD pipelines.
+description: Senior SecOps engineer skill for application security, vulnerability management, compliance verification, and secure development practices. Runs static code scans (SAST; it does not run live DAST tests), generates CVE remediation plans, checks dependency vulnerabilities, creates security policies, enforces secure coding patterns, and automates compliance checks against SOC2, PCI-DSS, HIPAA, and GDPR. Use when conducting a security review or audit, responding to a CVE or security incident, hardening infrastructure, implementing authentication or secrets management, running penetration test prep, checking OWASP Top 10 exposure, or enforcing security controls in CI/CD pipelines.
 ---
 
 # Senior SecOps Engineer
@@ -269,7 +269,7 @@ PHASE 5: POST-INCIDENT (24-72 hours)
 | `--json` | Output results as JSON |
 | `--output, -o` | Write results to file |
 
-**Exit Codes:** `0` = compliant (90%+ score) · `1` = non-compliant (50-69% score) · `2` = critical gaps (<50% score)
+**Exit Codes:** `0` = compliant (90%+ score) · `1` = non-compliant (50-69% score) · `2` = critical gaps (<50% score). These codes show how many checks the tool found in your files. They are a pre-check, not a pass or fail certification.
 
 ---
 

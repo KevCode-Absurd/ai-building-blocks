@@ -14,11 +14,17 @@ when:
   - You have time to study companies and want to look for stocks priced under their worth.
   - You want a repeatable first cut instead of following tips.
   - You want to know if the research you do beats a plain fund.
+not_for:
+  - "You want a quick tip or have no time to study companies: a low-cost index fund is the plain path."
+  - "The company is a bank, an insurer or a utility: the five tests suit industrial companies, so these are set aside."
+  - "You want to be told what to buy: this is a method of analysis, not personal financial advice, and it names no company."
 you_give:
   - A table of listed companies with price, recent earnings and the balance sheet figures
   - Five years of profit and the dividend for each company
   - The money you would put in the group
   - Your trading costs and tax rate, if you know them
+  - The latest balance sheet for each survivor
+  - A value range per share from earnings, if you have one (optional)
 you_get:
   - A short list that passes five tests, with the failed test beside every cut
   - An asset floor for each survivor, set beside the price
@@ -74,7 +80,7 @@ test:
 improve:
   - Rerun the screen each year on the whole table and note which names stay.
   - Score the group on the dates you fixed, not earlier.
-  - If the method fails the scorecard, go back to the plain path in "Screen stocks with a defensive investor's seven tests".
+  - If the method fails the scorecard, go back to the plain path in the "Screen stocks with a defensive investor's seven tests" workflow.
 terms:
   - term: Margin of safety
     meaning: The gap between what you think something is worth and what you pay. It protects you if your estimate is wrong.

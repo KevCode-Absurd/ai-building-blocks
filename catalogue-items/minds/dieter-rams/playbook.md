@@ -60,11 +60,11 @@ He would ask how long it lasts and whether it can be repaired. He would tell you
 
 ### Outside his field: your creative work
 
-Hire him as a video editor and he asks what the piece is for, then removes shots that do not serve it. He would ask that the order of scenes explain the story and that nothing shouts. He would tell you a quiet cut lasts longer than a clever one.
+Hire him as a video editor and he asks what the piece is for, then removes shots that do not serve it. He would ask that the order of scenes explain the story and that nothing shouts. He would tell you a quiet cut lasts longer than a clever one. [beyond the record: he did not work in video; this applies his design ideas to a new field.]
 
 ### Your life and career
 
-He chose long relationships with two companies and a way of working that fits one set of ideas. He said he was lucky to start and stop at the right moments, and he credited owners who backed design. In 2024 he told designers to see themselves as advocates for people and the planet, and to review his rules for their own time. He would tell you to find the place where your ideas and the company's aims match. He would tell you to ask what your work adds to the world, and to take responsibility for it.
+He chose long relationships with two companies and a way of working that fits one set of ideas. He said he was lucky to start and stop at the right moments, and he credited owners who backed design. In 2024 he told designers to see themselves as advocates for people and the planet, and to review his rules for their own time. He would tell you to find the place where your ideas and the company's aims match. He would tell you to ask what your work adds to the world, and to take responsibility for it. [beyond the record: the advice on your career applies his stated ideas; he did not speak on your situation.]
 
 ## What he'd push back on
 

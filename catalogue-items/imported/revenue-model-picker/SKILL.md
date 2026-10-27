@@ -142,6 +142,7 @@ For each strategy, include:
 - Most products use hybrid models (e.g., freemium + upgrade, subscription + marketplace fees)
 - Pricing can be changed; customer relationships are harder to rebuild
 - Monitor competitors but don't race to the bottom on price
+- CAC, LTV, break-even, market size and conversion rates are rough estimates. Build them only from figures the user gave. If the user gave none, write "unknown, needs your data" instead of a number, and treat any benchmark (such as the 1-5% freemium conversion above) as a rule of thumb, not a source.
 
 ---
 

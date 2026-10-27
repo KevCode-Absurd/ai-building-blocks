@@ -32,11 +32,13 @@ you_get:
   - Approval points before anything is published, sent or paid for, unless you give clear permission and set limits
   - Stop rules, a self-check and a way to switch it off
 how_to_use:
+  - Paste or attach loop-catalog.md and loop-guardrails.md from the skill's references folder too. Without them the plan has no catalogue and no spend or send limits.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed to plan the routine.
   - Say which outcome you want to protect, and how often the data changes.
   - Say what the routine may do alone, and what it must leave for your approval. Add any spend or send limits.
   - Read the plan. Check the schedule, the approval points and the stop rule before you use it.
   - To run it without you, set it up in a tool that can run on a schedule. Otherwise run it by hand each week.
+  - Do not let a routine publish, send or spend on its own until you have set limits in the guardrails. Each week, review what it did, and switch it off if a stop rule fires.
 output_sample:
   input:
     - The outcome you want to protect or grow, such as rankings, ad cost or sign-ups

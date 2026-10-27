@@ -21,8 +21,8 @@ best_for:
   - Teachers and trainers turning notes into slides.
   - Anyone who wants a first draft of a deck to edit.
 not_for:
-  - Exact layouts where every element must sit in a set place.
-  - Heavy data decks with many complex charts.
+  - Exact layouts where every element must sit in a set place. Use Beautiful.ai for those.
+  - Heavy data decks with many complex charts. Beautiful.ai can link a spreadsheet.
 pricing:
   model: freemium
   from: Check the maker's site
@@ -35,6 +35,22 @@ runs_in: [web, api]
 blocks: []
 alternatives: [beautiful-ai, canva, chatgpt]
 last_checked: 2026-10-21
+first_result:
+  - "Go to gamma.app and sign up. The free plan gives a one-time set of credits."
+  - "Choose to make a deck. Paste an outline, type a prompt or upload a file."
+  - "Read the outline Gamma proposes. Cut or reorder cards before you accept it."
+  - "Let it build the deck. Check every fact and number on every card against your notes."
+  - "Edit with the AI, change the theme, then share a link or export."
+  - "You end with a draft deck. Try the same notes as a document or a web page."
+  - "Next: finish the visuals in Canva, or use Beautiful.ai when the layout must be exact."
+needs:
+  - "A Gamma account. The free plan is enough to try it."
+  - "A topic, an outline or a file."
+  - "Facts and numbers you have already checked."
+not_verified:
+  - "Current plan prices. The pricing page did not load when read."
+  - "Menu names and export file types."
+  - "How many credits one deck uses."
 sources:
   - https://gamma.app
   - https://www.eesel.ai/en/blog/gamma-pricing

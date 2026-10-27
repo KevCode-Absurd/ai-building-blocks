@@ -22,5 +22,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [sean-ellis]
 credits:
-  - {title: "Key to Sustaining Rapid Growth", by: "Sean Ellis", used: "The order of the steps: must-have survey planner, growth idea ranker"}
+  - {title: "Key to Sustaining Rapid Growth", by: "Sean Ellis", used: "Ideas behind the must-have survey and the 40 percent test. The step order and the idea scoring are this workflow's own."}
 generated_from: intake/sean-ellis-growth-survey/skeleton.yaml

@@ -34,9 +34,12 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Tell your AI the topic, the session type and how long you have. Add notes from earlier sessions if you have them.
   - Start with the opening step. Agree a goal you can finish in the time you have.
-  - Halfway through, come back and ask for the mid-session check. Say how it is going and switch method if the coach suggests it.
+  - About 15 minutes in, or at a natural break, come back and ask for the mid-session check. It takes about a minute, and you can skip it if you are in deep focus. Say how it is going and switch method if the coach suggests it.
   - At the end, ask for the closing step. Write down what changed and what you will do next time.
   - Keep the goal and next step. Paste them in at the start of your next session.
+  - The closing note is a short list: your goal, how confident you felt, how well you met the goal, and the next goal.
+  - To pick a better study method, use the study strategy picker. To plan revision before an exam, use the study revision coach.
+next: [study-strategy-picker, study-revision-coach]
 output_sample:
   input:
     - The subject or topic you are studying

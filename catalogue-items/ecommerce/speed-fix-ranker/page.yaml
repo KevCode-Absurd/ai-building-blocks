@@ -21,6 +21,7 @@ not_for:
   - "Your store already passes Google's mobile speed checks: work on your offer, page copy or ads instead, as speed is unlikely to be the problem."
   - "Your store gets under about 1,000 visits a month: your own data is too thin to measure small gains, so fix the cheap no-code items and skip the sums."
   - "You have no list of speed problems yet: run a speed audit in Google PageSpeed Insights first, then bring the results here."
+  - "You want a quick first pass with fewer checks: use the Speed fix week planner."
 
 you_give:
   - "The speed problems you found (from an audit or the store speed report reader)"
@@ -148,3 +149,4 @@ terms:
     meaning: Conversion rate, the share of visits that end in an order.
   - term: AOV
     meaning: Average order value, the average amount in one order.
+next: [speed-fix-week-planner, speed-budget-and-sale-check]

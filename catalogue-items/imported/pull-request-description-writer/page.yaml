@@ -30,12 +30,12 @@ you_get:
   - Reviewer notes
   - The opened pull request
 how_to_use:
-  - Commit all your changes on your branch. If you have loose changes, commit them first.
+  - Commit all your changes on your branch. If you have loose changes, commit them first, with a commit skill such as the commit message writer, or by hand.
   - Check that GitHub CLI is installed and signed in. Your AI needs to run git and gh commands, so use a tool that can run code.
   - Paste this skill into your AI and ask it to write the pull request for your branch.
   - Add your issue or ticket link and any notes for reviewers (optional).
-  - Read the title and description it writes. Check that the reason for the change is right.
-  - Let it open the draft pull request, then mark it ready when you are happy.
+  - Read the title and description it writes. Any reason it worked out from the code alone is marked "inferred". Confirm or fix each one before it opens anything.
+  - Let it open the draft pull request. This runs git and gh as you and creates the pull request in your GitHub account, so check the repo and title first. Review it on GitHub, then mark it ready.
 output_sample:
   input:
     - A branch with all changes committed
@@ -59,3 +59,4 @@ output_sample:
       contains: Links to related issues or tickets, written so they close or only link when merged.
     - name: Draft pull request
       contains: The pull request opened on GitHub as a draft, using the title and body above.
+next: [commit-message-writer, ai-written-code-reviewer]

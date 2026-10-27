@@ -11,7 +11,7 @@ subhead: Tell it your idea and the days you can write. It turns the idea into a 
 explain: |
   Most first drafts never get finished. The writer plans too long, rewrites page one all week, or shows the pages to a friend and loses their nerve. A first draft needs speed, a closed door and a clear daily count.
 
-  This workflow sets that up. It starts with a situation, which is a person or two stuck in a pressure they cannot leave, not a plot. It works out how many words to write each day and the date you will finish, then picks a few real details for each place so the scenes stay short. Last, it writes the day's pages by asking at each turn what these people would really do next. It keeps a facts sheet so day two matches day one. The method comes from Stephen King's book On Writing.
+  This workflow sets that up. It starts with a situation, which is a person or two stuck in a pressure they cannot leave, not a plot. It works out how many words to write each day and the date you will finish, then picks a few real details for each place so the scenes stay short. Last, it writes the day's pages by asking at each turn what these people would really do next. It keeps a facts sheet so day two matches day one. It is inspired by Stephen King's book On Writing.
 
 when:
   - You have an idea for a story or book and keep putting off the first page.
@@ -35,7 +35,7 @@ you_get:
   - Each day's pages, a facts sheet and tomorrow's first question
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your idea, your length and your writing days. It works step by step and saves each result.
   - Run the last step again each day with the facts sheet and the last paragraph until the draft is done.

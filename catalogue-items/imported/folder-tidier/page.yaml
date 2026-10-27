@@ -5,7 +5,7 @@ name: Folder tidier
 summary: Tidy a messy folder with a clear plan. Your AI finds duplicate files and lists every move first. Nothing changes until you say yes.
 job: organise-work
 headline: Folder tidier
-subhead: Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes. Bring folder to tidy. Use the result to plan your next step.
+subhead: Point it at a messy folder. Get a clean folder plan and the duplicates it found. Files move only when you say yes. Back the folder up first.
 explain: |
   A messy folder becomes a clear plan for how it should be organised, with duplicates listed. Nothing moves until you approve it.
 
@@ -33,9 +33,11 @@ you_get:
 how_to_use:
   - Open an AI that can read and move files on your computer. Or paste the skill into a chat to get the plan only.
   - Say which folder to tidy, what annoys you most, and what to leave alone.
+  - Back up the folder first, or work on a copy. Moves are not undone for you.
   - Tell it to show the plan first and not delete anything.
   - Read the duplicate list and the planned moves. Ask for changes until you are happy.
   - Say yes to start the moves. Deleting needs its own separate yes.
+  - The skill writes each move to a log file in the folder, as old path and new path. If something lands in the wrong place, use the log to move it back by hand.
   - Check the summary at the end, then keep up the habits it suggests.
 output_sample:
   input:

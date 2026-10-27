@@ -12,14 +12,15 @@ inputs:
   - {type: product_data, required: true}
   - {type: persona, required: false}
 outputs:
+  - {type: script}
   - {type: shot_list}
   - {type: image_prompt}
   - {type: video_prompt}
   - {type: edit_plan}
 uses: [long-form-video-ad-script-writer, voice-over-stripping-test, ad-script-read-aloud-editor, video-ad-shot-list-maker]
 steps:
-  - {uses: long-form-video-ad-script-writer, note: "Starts the chain: a narrated script with a picture for each line. Hands step 2 the script."}
-  - {uses: voice-over-stripping-test, note: "Tests the narration from the step before and cuts lines the pictures already say. Hands step 3 the trimmed script."}
+  - {uses: long-form-video-ad-script-writer, note: "Starts the chain: takes your brief, brand file and product facts and writes a narrated script with a picture for each line. Hands step 2 the script."}
+  - {uses: voice-over-stripping-test, note: "Strips the voice-over from the video script in step 1, line by line, and cuts the lines the pictures already say. Hands step 3 the shorter script."}
   - {uses: ad-script-read-aloud-editor, note: "Takes the trimmed script and makes each remaining line easy to say. Hands step 4 the final script."}
   - {uses: video-ad-shot-list-maker, note: "Turns the final script into timed shots and clip prompts."}
 origin: rebuilt

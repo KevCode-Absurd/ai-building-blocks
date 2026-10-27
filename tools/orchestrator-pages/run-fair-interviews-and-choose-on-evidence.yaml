@@ -19,17 +19,19 @@ not_for:
   - "You only need the job post and the offer letter: use the Hire fairly, from job post to a checked offer letter workflow."
   - "You need to check a candidate's background or references: ask the candidate for referees and call them yourself."
 you_give:
-  - The role, its level and what the person must be able to do
+  - The role, its level, what the person must be able to do and the main tasks of their first 90 days
   - Who will interview and how much time you have
   - After the interviews, every interviewer's scorecard notes
   - Interview transcripts or recordings (optional)
+  - Your hiring decision, once you have read the comparison
+  - For each reply, the candidate's first name, where they are in the process, the next step and who signs it
 you_get:
   - An interview plan with stages, owners and what each stage checks
   - A scorecard per stage and a work test with a scoring guide
   - The candidates compared on evidence, with bias flags, for you to decide
   - A reply drafted for every candidate, ready for you to send
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and five skill files, in the order they run: Interview process planner, Interview scorecard builder, Work sample test designer, Fair candidate comparer, then Candidate message drafter."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the role and what it needs. It plans the stages, the scorecards and the work test.
   - Run the interviews. Each interviewer fills in their scorecard before anyone discusses a candidate.
@@ -75,7 +77,7 @@ output_shape: |-
     Stage <n>: <what it checks> | Runs it: <who> | Length: <minutes>
 
   STEP 2: SCORECARDS
-    Stage <n>: <question> | Strong answer: <...> | Weak answer: <...> | Rating 1 to 4
+    Stage <n>: <question> | Strong answer: <...> | Weak answer: <...> | Rating 1 to 5
 
   STEP 3: WORK TEST
     Task: <from the real job> | Time: <...> | Scoring: <...> | Fairness checks: <...>
@@ -112,7 +114,7 @@ tweaks:
   - what: Transcripts
     how: Bring recordings or transcripts to step 4. It can then check a scorecard note against what was actually said.
   - what: Your rating scale
-    how: If your company uses a 1 to 5 scale, say so in step 2 and every scorecard will use it.
+    how: If your hiring tool uses other rating labels, say so in step 2 and the scorecards will use them.
 judge:
   - Every stage checks something different, and nothing on the list of must-haves is checked twice or not at all.
   - Each scorecard question has a strong and a weak answer written next to it.

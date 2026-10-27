@@ -25,7 +25,7 @@ Draft a complete offer letter for a new hire.
 - **Start date**: When should they start?
 - **Hiring manager**: Who will they report to?
 
-If you don't have all details, I'll help you think through them.
+If you don't have all details, I'll help you think through the options. I will not invent pay, equity or start details. Anything not supplied is marked [TBC]. Also tell me the country or state, because employment law and required terms depend on it. I do not check them, so HR or a lawyer must.
 
 ## Output
 
@@ -79,4 +79,8 @@ If **~~ATS** is connected:
 
 1. **Include total comp** — Candidates compare total compensation, not just base.
 2. **Be specific about equity** — Share count, current valuation method, vesting schedule.
-3. **Personalize** — Reference something from the interview process to make it warm.
+3. **Personalize** — Reference something from the interview process to make it warm, but only a detail the person gave you. Never invent an interview detail or a personal claim.
+
+## Next steps
+
+After HR or a lawyer approves the letter: send it, run the background check and onboarding steps, and log the approved offer in your ATS or HRIS.

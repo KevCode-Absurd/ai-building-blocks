@@ -67,7 +67,7 @@ Modern succession planning teams are increasingly expected to support:
 - talent data that connects individual readiness to business continuity risk
 - a clear link between succession health and long-term organizational performance
 
-AI-assisted pipeline analytics and skills-based succession models are becoming major industry trends in 2026.
+AI-assisted pipeline analytics and skills-based succession models are becoming major industry trends in 2026 (the author's opinion, with no source: do not present it as fact).
 
 ## Succession planning ecosystem (2026)
 

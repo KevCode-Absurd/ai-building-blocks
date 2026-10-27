@@ -21,8 +21,9 @@ not_for:
   - "You have one metric question, like last week's sales: check your dashboard or spreadsheet instead."
   - "You have no findings yet and only raw data: run your analysis first, then bring the results here."
 you_give:
-  - Your analysis findings, charts or outputs
+  - Your findings file, charts or outputs
   - Current goals and priorities
+  - How confident you are in each finding
   - Who will read the brief (optional)
 you_get:
   - Top insights ranked by impact and confidence
@@ -51,7 +52,7 @@ output_sample:
     - name: So What, Why, Now What
       contains: "For each finding: why it matters, the most likely cause, and the specific action that should follow."
     - name: Business impact estimate
-      contains: A size for each insight, using rough estimates when exact data is missing.
+      contains: A size for each insight. Rough figures are labelled as estimates with their source, or marked not sized.
     - name: Priority scores
       contains: Each insight scored from 1 to 3 on impact, confidence and ease of action.
     - name: Conflicts and open questions

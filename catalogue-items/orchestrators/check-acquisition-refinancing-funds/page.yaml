@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
   - Attach the financing terms, the payoff letter and the draft funds flow. Say the closing date, currency and scale.
-  - Ask your AI to follow the pack and save each step's file.
+  - Ask your AI to follow the pack and save each step's file. If the three step skills (debt issue proceeds, refinancing closing cost, deal funding gap) are not attached, it follows the arithmetic written in the pack and lists that under checks missed.
   - After step 1, check the cash received against the lender's funding notice. After step 2, check the payoff against the payoff letter.
   - After step 3, check that sources equal uses with no unexplained plug. Finish every MISSING line before closing.
 how_it_works:
@@ -45,7 +45,7 @@ how_it_works:
   - title: Refinancing closing cost checker
     text: Takes the net cash from step 1 and the payoff letter. Adds refinancing fees not already deducted. Shows old principal, premium and fees separately. Hands step 3 each use.
   - title: Deal funding gap checker
-    text: Lists the payoff, fees, purchase price and closing cash as uses. Lists net debt cash, rollover and sponsor money as sources. Shows the gap and does not plug it. Check before you wire, sources and uses match line by line.
+    text: Lists the payoff, fees, purchase price and closing cash as uses. Lists net debt cash, rollover and sponsor money as sources. Shows the gap and does not plug it.
 output_shape: |-
   SCOPE AND SOURCES       <financing terms, payoff letter, funds flow and dates>
   DEBT CASH               <face value | discount | fees at issue | cash received>
@@ -54,24 +54,26 @@ output_shape: |-
   MISSING                 <each gap and what it stops>
   CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Financing and payoff fees are deducted once; face debt never substitutes for usable funding cash.
+  - what: Issue price
+    how: Change the issue price of the new debt. The discount, the cash received and the funding gap move with it.
+  - what: Prepayment premium
+    how: Change the premium rate, or what it applies to. The premium and the closing cash need change.
+  - what: Rollover
+    how: Change the rollover amount. It stays as a source only, so the sponsor's share of the gap changes.
+  - what: Workbook
+    how: Say you want a spreadsheet. Inputs, formulas and checks sit on separate sheets.
 judge:
   - Financing and payoff fees are deducted once; face debt never substitutes for usable funding cash.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the debt terms, the payoff letter figures and the fee list on one page, and paste it in each run.
+  - Compare the cash received in step 1 with the lender's funding notice before closing day.
+  - Run the Reconcile seller closing cash workflow next, to check what the seller receives.
 works_best_with:
   tools:
     - name: A spreadsheet tool and an AI that reads files

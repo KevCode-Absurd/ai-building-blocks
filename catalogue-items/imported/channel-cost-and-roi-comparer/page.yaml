@@ -32,7 +32,7 @@ you_get:
   - A tested channel mix with a cost-shift table
 how_to_use:
   - Open a chat with an AI that can run Python code and read files, then add the skill folder.
-  - Fill in the channel data template for each channel. Use real numbers from the last 12 months.
+  - Fill in the channel data template for each channel. Use real numbers from the last 12 months. The scripts read three JSON files made from the template (channel.json, roi.json and mix.json) and print a markdown report each.
   - Ask your AI to follow the skill and run the cost to serve script for each channel first.
   - Run the ROI script, then the mix script. Add your mix limits if you have them.
   - Check the verdicts and the cost-shift table, then take them to your channel review.

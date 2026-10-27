@@ -22,13 +22,13 @@ not_for:
 you_give:
   - An image file or folder
   - Output format and quality (optional)
-  - Bun or Node installed on your computer
+  - Bun, or Node with npx, installed on your computer
 you_get:
   - Compressed WebP or PNG files
   - Original files kept if you choose
   - Size savings per image
 how_to_use:
-  - Open an AI that can run code and save files, such as Claude with code tools. You need Bun or npx installed on your computer.
+  - Open an AI that can run code and save files, such as Claude with code tools. The script runs on your own computer and needs Bun, or Node with npx. Check the script before you run it on a whole folder.
   - Paste in this skill and tell your AI the path to your image or folder.
   - Say which format and quality you want. The default is WebP at quality 80. Add the keep option to keep your originals.
   - "Warning: by default the original file is replaced. Back up your images first, or ask your AI to keep the originals."

@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Initiates a formal Shopify Return on a delivered order — specifying which line items to return, quantities, and reason. This creates the return record in Shopify's native returns system (distinct from simply issuing a refund). Used by support agents when a customer contacts them to return delivered items. The return record enables tracking, warehouse inspection, and exchange/refund resolution downstream. Note: `returnCreate` requires the order to be in `FULFILLED` status. For orders that haven't shipped yet, use `cancel-and-restock` instead. For already-returned items needing a refund, use `refund-and-reorder`.
+Initiates a formal Shopify Return on a delivered order — specifying which line items to return, quantities, and reason. This creates the return record in Shopify's native returns system (distinct from simply issuing a refund). Used by support agents when a customer contacts them to return delivered items. The return record enables tracking, warehouse inspection, and exchange/refund resolution downstream. Note: `returnCreate` requires the order to be in `FULFILLED` status. For orders that haven't shipped yet, cancel the order in Shopify admin instead (Orders, open the order, More actions, Cancel order, and tick restock). To pay the customer back once the item has arrived, use Refund on the order in Shopify admin. Those steps are not part of this item.
 
 ## Prerequisites
 - `shopify auth login --store <domain>`
@@ -176,14 +176,14 @@ No CSV output. The session summary reports the return ID and status. Line items 
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
-| `displayFulfillmentStatus` not `FULFILLED` | Order hasn't shipped yet | Use `cancel-and-restock` for unfulfilled orders |
+| `displayFulfillmentStatus` not `FULFILLED` | Order hasn't shipped yet | Cancel the order and restock in Shopify admin (Orders, open the order, More actions, Cancel order) |
 | `fulfillmentLineItemId` not found | Line item ID doesn't belong to this order's fulfillments | Re-query the order to get correct fulfillment line item IDs |
 | `userErrors` from returnCreate | Invalid quantity or reason | Check `quantity` doesn't exceed `fulfillmentLineItem.quantity` |
 | Return already exists | A return was already created for these items | Check order returns in Shopify admin |
 
 ## Best Practices
 1. Always run `dry_run: true` first — confirm the fulfillment line item IDs and quantities before creating the return record.
-2. The `return-initiation` skill creates the return record only — it does not issue a refund. After inspecting the returned item, use `refund-and-reorder` to process the monetary refund.
+2. The `return-initiation` skill creates the return record only — it does not issue a refund. After inspecting the returned item, open the order in Shopify admin and use Refund to pay the customer back.
 3. Set `reason` per line item when items have different return reasons — this improves your returns analytics in Shopify.
-4. For exchanges (not refunds), create the return record here and then use `refund-and-reorder` with `create_replacement: true` to generate a replacement draft order.
+4. For exchanges (not refunds), create the return record here. Then make the replacement order yourself in Shopify admin (Orders, Create order). This item does not make replacement orders.
 5. The return `status` will be `OPEN` after creation — it moves to `IN_PROGRESS` when a return label is generated and `CLOSED` when the refund is processed.

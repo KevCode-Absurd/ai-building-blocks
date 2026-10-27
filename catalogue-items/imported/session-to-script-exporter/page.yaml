@@ -19,6 +19,7 @@ not_for:
   - "You want new MATLAB code written from scratch: ask your AI to write the code directly."
   - "You need a Live Script (.mlx): this makes plain .m files only, so convert the result in MATLAB."
   - "Your session used Python or shell scripts: copy that code out by hand, because this only exports MATLAB."
+  - You want to use the script outside MATLAB or other MathWorks products. The licence does not allow it.
 you_give:
   - A MATLAB session with code that ran
   - A script name (optional)
@@ -29,6 +30,7 @@ you_get:
   - Parameters gathered at the top
   - A saved file in the Results folder
 how_to_use:
+  - Before you start, you need a licensed MATLAB installation (paid) and an AI tool that can run MATLAB code, for example through MCP or matlab -batch.
   - Finish your MATLAB work in a chat with an AI that can run MATLAB code.
   - Paste the skill text into the chat, or add the skill in your AI tool.
   - "Say: export this session as a script. Add a script name if you want one."

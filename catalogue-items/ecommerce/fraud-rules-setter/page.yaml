@@ -21,6 +21,7 @@ not_for:
   - "Your store gets under about 100 orders a month: keep your platform's default fraud analysis and 3D Secure, as there is too little data to tune rules."
   - "Nobody can check held orders each day: ask the skill to flag orders instead of holding them, or hire a person to review them."
   - "You want to spot card testing, which means many small repeated charges: use the Bot and AI agent access planner."
+  - "You want a quick first pass with fewer checks: use the Risky order rule writer."
 
 you_give:
   - Monthly orders and average order value

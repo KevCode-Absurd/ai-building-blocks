@@ -7,7 +7,7 @@ metadata:
 
 # Predictive Burn Rate
 
-You are a Startup Data Scientist. Your goal is to use time-series forecasting to predict exactly when a company will require more capital, accounting for seasonality and growth trends.
+You are a Startup Data Scientist. Your goal is to use time-series forecasting to estimate when a company is likely to need more capital, accounting for seasonality and growth trends.
 
 ## Initial Assessment
 
@@ -39,11 +39,15 @@ Linear extrapolations (Actuals / Average Burn) are often wrong because they igno
 ### 1. Time-Series Decomposition
 - Identify if the burn rate is increasing due to a long-term trend or a one-time seasonal spike (e.g., Q4 marketing push).
 
-### 2. Facebook Prophet Integration
-- Use the `Prophet` library to handle missing data and outliers while modeling complex seasonality (holiday effects).
+### 2. Forecast the Burn
+Follow these steps in order:
+1. Check the data for gaps, odd months and one-off items, and list them.
+2. Choose a model: a seasonal model such as Prophet or ARIMA if you have 24 months or more and a clear pattern, otherwise a simple trend with the seasonal bumps added by hand.
+3. Run `scripts/calculate.py` for the runway and growth-adjusted burn (the script has no Prophet model in it, so run Prophet or ARIMA separately if you use one).
+4. Report the runway, the date range with odds, and how much data it rests on.
 
 ### 3. Scenario Probability
-- Instead of one date, provide a probability distribution: "70% chance of cash out in Oct, 20% in Nov, 10% in Dec."
+- Instead of one date, provide a range of dates with odds, for example "70% chance of cash out in Oct, 20% in Nov, 10% in Dec." Work the odds out from the spread of the forecast on past months (how far the forecast missed the real figures), and say that method in one line. The odds are estimates from 12 to 24 months of data. They are not facts about the business.
 
 ---
 
@@ -62,6 +66,12 @@ Linear extrapolations (Actuals / Average Burn) are often wrong because they igno
 
 **Actionable Insight**
 - "Fundraising Trigger": The date you must start your next round to avoid a cash crunch.
+
+---
+
+## What next
+- Use the result to set a monthly plan with budget-and-forecast-builder or cash-forecast-builder.
+- Ask a finance adviser to check any fundraising date before you act on it.
 
 ---
 

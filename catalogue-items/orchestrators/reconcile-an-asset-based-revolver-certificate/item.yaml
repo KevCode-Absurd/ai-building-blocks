@@ -11,7 +11,8 @@ inputs:
     required: true
   - type: document
     required: true
-outputs: []
+outputs:
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - receivables-borrowing-base-builder
@@ -19,7 +20,7 @@ uses:
   - revolver-availability-checker
 steps:
   - uses: receivables-borrowing-base-builder
-    note: Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger to the facility bridge.
+    note: Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger on to step 2 and step 3. Step 3 combines them.
   - uses: inventory-borrowing-base-builder
     note: Calculate inventory advance on the same certificate date using matching cost and liquidation-value populations. Pass net advance and already-applied reserves, identifying appraisal coverage gaps.
   - uses: revolver-availability-checker

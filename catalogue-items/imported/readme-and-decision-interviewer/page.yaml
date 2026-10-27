@@ -34,6 +34,8 @@ how_to_use:
   - Answer the questions you find most useful. You can skip the rest.
   - Check each update. Tell your AI to fix anything that is wrong or too long.
   - Say "we're done" when you have covered enough. Save the README and the docs folder in your project.
+  - Commit the README and the docs/adr folder, then link new decision records from the README so teammates and AI agents find them.
+  - To pick up an existing project in a new session, open it in the same folder. Your AI reads README.md and docs/adr first, then asks only about what is missing.
 output_sample:
   input:
     - Your project folder
@@ -51,3 +53,4 @@ output_sample:
       contains: Two or three varied questions per round, on different angles, until you say you are done.
     - name: Updated docs after each round
       contains: Your confirmed answers filed in the README or a new record, with open questions and tentative ideas kept apart.
+next: [decision-record-writer]

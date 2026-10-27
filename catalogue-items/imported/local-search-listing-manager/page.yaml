@@ -36,7 +36,8 @@ how_to_use:
   - Type your business name, address, phone, services and the areas you serve.
   - "Say which job you want: a profile audit, a page for one area, a listing check, markup code or review replies."
   - Paste your current profile text or reviews if you have them.
-  - Check every local detail in the result, such as landmarks, streets and zip codes, before you publish.
+  - Check every local detail in the result, such as landmarks, streets and zip codes, before you publish. Anything you did not give your AI should be marked [VERIFY].
+  - Next, publish the fixes to your Google Business Profile and the main directories first. Then come back with new reviews for reply drafts, and run the name, address and phone check again.
   - Running the listing check and page scripts needs an AI that can run code. Without it, the AI works from what you paste.
 output_sample:
   input:

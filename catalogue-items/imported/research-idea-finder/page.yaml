@@ -27,7 +27,7 @@ you_give:
 you_get:
   - Candidate ideas from ten different angles
   - The payoff and risk of each idea
-  - A ranked shortlist of the strongest ideas
+  - "A ranked shortlist of the strongest ideas, as a table: each idea with its payoff, risk and fit with your skills"
   - A sharper pitch for your top pick
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
@@ -35,6 +35,8 @@ how_to_use:
   - Add your field or stuck project, where you are stuck, and any skills or past ideas.
   - Read the ranked list. Check that the top ideas matter to people in your field.
   - Ask your AI to sharpen the one you like best, or to run the angles again with new details.
+  - Next, turn your top pick into the two-sentence pitch, then run the two-week pilot the skill describes to see if it holds up.
+next: [research-problem-picker, research-hypothesis-builder, literature-review-finder]
 output_sample:
   input:
     - Your field or the project you are stuck on

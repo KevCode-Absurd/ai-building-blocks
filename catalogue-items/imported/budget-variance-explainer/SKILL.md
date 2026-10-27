@@ -28,6 +28,8 @@ Verification:  Volume Effect + Price Effect = Total Variance
                (when mix is embedded in the price/volume terms)
 ```
 
+**Which method to use:** if the data has a mix column, use the three-way decomposition below, where mix is its own term. If it has none, use the two-way formula above and treat mix as the residual.
+
 **Three-way decomposition (separating mix):**
 ```
 Volume Effect = (Actual Volume - Budget Volume) x Budget Price x Budget Mix

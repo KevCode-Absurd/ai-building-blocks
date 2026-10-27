@@ -39,7 +39,7 @@ works_best_with:
 how_to_use:
   - Add the downloaded folder to an AI that can read skill files and run commands.
   - Link your accounts first. Run composio link gorgias and composio link hubspot if asked.
-  - Ask for the refund processor and give the ticket number or customer email.
+  - Ask for the refund processor and give the ticket number or customer email. Paste your refund policy and the amount above which a manager must approve. Without them, the policy rows are left as not checked.
   - Read the eligibility table and the recommendation. Check them against your own policy.
   - Edit the draft reply, then send it yourself. The skill never issues the refund.
 output_sample:
@@ -61,3 +61,4 @@ output_sample:
       contains: Full refund, partial refund, credit, or deny with an alternative, plus the reasoning and the risk of losing the customer.
     - name: Draft Response to Customer
       contains: A ready reply for either approval or denial, for a person to check before sending.
+next: [gorgias-and-hubspot-customer-brief, refund-rate-analyzer]

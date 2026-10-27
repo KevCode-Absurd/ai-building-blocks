@@ -9,7 +9,7 @@ subhead: Code review from people who want to find fault, not approve. Point it a
 explain: |
   Code review from people who want to find fault, not approve. Point it at staged changes, recent commits or one file, and get a ranked list of real problems with a clear merge verdict.
 
-  An AI that read the code shares its blind spots and tends to say it looks fine. This skill breaks that habit with three hostile reviewers. The Saboteur looks for what will break in production. The New Hire asks what will confuse the next person. The Security Auditor hunts for common attack holes. Each must find something. A problem spotted by two reviewers moves up a severity level. The report ends in BLOCK, CONCERNS or CLEAN.
+  An AI that read the code shares its blind spots and tends to say it looks fine. This skill breaks that habit with three hostile reviewers. The Saboteur looks for what will break in production. The New Hire asks what will confuse the next person. The Security Auditor hunts for common attack holes. Each must look hard, and says so plainly if it finds nothing real. A problem spotted by two reviewers moves up a severity level. The report ends in BLOCK, CONCERNS or CLEAN.
 when:
   - You wrote a change yourself and need a review that will not just agree with you.
   - You are about to merge a pull request and want a final tough pass.
@@ -35,6 +35,7 @@ how_to_use:
   - Add what the change should do and what worries you (optional).
   - Read the verdict first, then the Critical Findings. Fix those before you merge.
   - Check each finding against your code. Treat any point your AI marks as unverified as a question to check, not a fact.
+  - Fix the critical findings, then run it again on the new change. For a deeper security pass, use the Insecure code catcher.
 output_sample:
   input:
     - Your code changes, a commit range, or one file

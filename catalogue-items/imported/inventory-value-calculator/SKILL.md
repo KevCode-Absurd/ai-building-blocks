@@ -74,7 +74,4 @@ Item-by-item (or similar-item groups); raw materials written down only if the fi
 ---
 
 ## Related Skills
-- **variance-analysis**: Standard cost variances feeding inventory valuation.
-- **product-profitability**: Unit costs flow into margin analysis.
-- **journal-entry**: For adjustment entries.
-- **forensic-accounting**: Shrinkage and count-fraud patterns.
+These skills are not part of this folder. In the AI Blocks library, use the Journal entry drafter for adjustment entries, the Month-end variance commentary writer for cost variances, and the Ledger-to-subledger reconciler to tie the schedule back to your books.

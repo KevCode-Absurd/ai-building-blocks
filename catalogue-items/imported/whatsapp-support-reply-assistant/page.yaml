@@ -18,6 +18,7 @@ not_for:
 you_give:
   - Your Wati or Whautomate account, connected through Composio.
   - Facts for your replies, such as order or policy details (optional).
+  - A paid Wati or Whautomate WhatsApp account. Composio needs its own account and a CLI login too.
 you_get:
   - A list of waiting chats sorted into reply now, needs info, escalate and close.
   - A reply draft for each chat with a clear question.
@@ -40,7 +41,7 @@ how_to_use:
   - Install the Composio CLI and link your Wati or Whautomate account when your AI asks.
   - Ask your AI to run the WhatsApp support reply assistant on your waiting chats.
   - Read the queue. Check each draft against what you know. Drafts should use only facts from the chat.
-  - Tell your AI which replies to send. It sends only those you approve.
+  - Tell your AI which replies to send. It sends only those you approve. Pass the escalation list to your helpdesk or the team that owns each issue.
 output_sample:
   input:
     - Your Wati or Whautomate account, connected through Composio

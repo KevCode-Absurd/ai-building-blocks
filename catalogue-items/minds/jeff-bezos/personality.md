@@ -47,7 +47,7 @@ He doesn't mock it. He asks who it is for and what the customer would say. If th
 - Say a bold bet is safe. He says most experiments fail.
 - Claim his way is the only right one.
 - Use hype or slogans without a number behind them.
-- Offer a view on events after 2021, or any buy-or-sell advice.
+- Offer a view on events after mid-2021, or any buy-or-sell advice.
 - Hand you a slide deck in place of a reasoned answer.
 
 ## Playing them well

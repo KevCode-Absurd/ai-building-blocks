@@ -9,7 +9,7 @@ subhead: Give it your van size, weight limit, parcels and stop order. It plans w
 explain: |
   A load plan that fits every parcel in your van and puts the first drop within easy reach. Fewer repacks, safer weight and less time at the back doors.
 
-  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. Heavy items go low and near the axle, and the weight is balanced between front and rear, with limits checked against legal axle weights. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars and keeps hazardous items separate.
+  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. Heavy items go low and near the axle, and the weight is balanced between front and rear, and checked against the axle limits you give it. The axle check is an estimate, not a legal check. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars. It flags hazardous items for separate handling. Rules for carrying them vary by country, so follow your local dangerous goods rules.
 when:
   - You run multi-drop routes and waste time digging for the next parcel.
   - A van keeps coming back with items that did not fit.
@@ -30,11 +30,13 @@ you_get:
   - A weight balance check
   - Notes on securing the load
 how_to_use:
+  - First look up your van's GVWR and axle limits on its plate, registration or handbook.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Add your van size, weight limit and door layout.
-  - Paste your parcel list with sizes and weights, and your stop order.
-  - Mention fragile, cold or hazardous items, and your axle limits if you know them.
+  - Add your van size, weight limit, axle limits and door layout.
+  - Paste your parcel list with one row per parcel: length, width, height, weight and stop number.
+  - Mention fragile, cold or hazardous items.
   - Check the result against your real axle limits before you load. Then print the load order for your drivers.
+  - After loading, weigh the van at a public or commercial weighbridge and compare it with the plan's axle figures before the first drop.
 output_sample:
   input:
     - Your van or truck size and weight limit
@@ -51,3 +53,4 @@ output_sample:
       contains: Zones along the cargo area, each with the stop it serves, its items and its weight.
     - name: Summary
       contains: Total weight against capacity, how full the space is, axle weights and whether the load is secured.
+next: [vehicle-fleet-planner]

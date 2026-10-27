@@ -17,7 +17,7 @@ when:
   - You want a record of every try, not just the final version.
 not_for:
   - You have no score you can run from a command. Judge the file by hand, or ask your AI for a plain review.
-  - Your project has unsaved work. Save it to git first, or the agent may wipe it when it undoes a failed try.
+  - Your project has unsaved work. Commit or stash it first. The loop undoes failed tries with git reset --hard, which wipes uncommitted changes.
   - You only need one speed test or one test run. Run the benchmark or test once yourself, with no loop.
 you_give:
   - The file to improve
@@ -36,7 +36,8 @@ how_to_use:
   - Ask your AI to set up the experiment. Give it your file, your score command, and whether higher or lower is better.
   - Run the score command once to check it works. Then set a top limit on the number of tries.
   - Start one round, then check results.tsv. If it looks right, start the loop.
-  - Check your plan's usage limits before a long run, since AI scoring uses your plan.
+  - Check your plan's usage limits before a long run. Each score counts against your plan, so set a top limit on the number of tries.
+  - When it ends, review the kept changes with git diff on the experiment branch. Merge them only if the file reads well. If your score is a test pass rate, the test run is your score command.
 output_sample:
   input:
     - The one file you want to improve

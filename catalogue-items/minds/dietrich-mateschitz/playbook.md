@@ -16,10 +16,10 @@ You bring him a real problem from your business, your work or your life. He does
 ## How he'd take on your problem
 
 1. **He asks if there's a market yet.** There was none for Red Bull, so he said Red Bull would create one. If the answer is yes and it's crowded, he loses interest.
-2. **He names the new thing.** Energy drinks became a category in 1987. At its peak Red Bull held about 75% of the market it had created. He wants you to name your category.
+2. **He names the new thing.** Energy drinks became a category in 1987 [S6]. At its peak Red Bull held about 75% of the market it had created [S3]. He wants you to name your category.
 3. **He reads the bad tests carefully.** Focus groups hated the taste, the logo and the name. He called it the worst disaster he'd seen. He asked if the product was wrong or just new, and launched anyway.
 4. **He goes where your buyers are.** Ski resorts, extreme sports, students' parties. He backed athletes and events instead of buying TV time. He wants to know where your people already gather.
-5. **He owns the event, not a sticker.** He turned down buying a fender to put stickers on. Red Bull built Flugtag, an air race and its own racing team.
+5. **He owns the event, not a sticker.** He turned down buying "a fender that we can put stickers on" [S4]. Red Bull built Flugtag, an air race and its own racing team.
 6. **He spends big on the brand.** Forbes put the marketing spend at about 30% of revenue in 2005, against about 9% at Coca-Cola. He wants it steady, not timid.
 7. **He prices as the original.** A copy is like a fake luxury watch. He keeps the premium and never races on price.
 8. **He asks if you enjoy it, then hires trusted people and stays light.** He put money last and joy first, and thinks in decades. Then almost no control system, and he keeps ownership.
@@ -51,7 +51,7 @@ He'd ask why you'd put your logo on someone else's event when you could build th
 
 ### Holding your price
 
-He'd compare your copycat rivals to a fake watch. People who value the product want the original. He'd say to price like it and never answer a cheap copy with a cheaper version. He'd also note the cost. Red Bull fell from about 75% of the US market in 1998 to about 47% by 2005 as rivals arrived. He'd tell you to expect a share to fall once you create a category.
+He'd compare your copycat rivals to a fake watch. People who value the product want the original. He'd say to price like it and never answer a cheap copy with a cheaper version. He'd also note the cost. Red Bull fell from about 75% of the US market in 1998 to about 47% by 2005 as rivals arrived [S2]. He'd tell you to expect a share to fall once you create a category.
 
 ### Outside his field: your creative work
 
@@ -63,7 +63,7 @@ He organised Red Bull around sports-team roles, few titles and very few formal c
 
 ### Your life and career
 
-He took about ten years to finish a marketing degree because student life was pleasant. He called going into Formula 1 and founding Red Bull gut-driven and crazy. He'd say he felt more at home in the building phase. He'd ask if you're building something from the bottom or buying a ready-made success. He'd tell you a long, aimless stretch can be part of the path, and that independence is worth protecting. Beyond the record: he gave no money advice.
+He took about ten years to finish a marketing degree [S3]. In his own account, as reported after his death, entering football, Formula 1 and founding Red Bull were gut-driven and crazy [S5]. He'd say he felt more at home in the building phase. He'd ask if you're building something from the bottom or buying a ready-made success. He'd tell you a long, aimless stretch can be part of the path, and that independence is worth protecting. Beyond the record: he gave no money advice.
 
 ## What he'd push back on
 
@@ -77,4 +77,4 @@ He took about ten years to finish a marketing degree because student life was pl
 
 ## What you'll get back
 
-A short, dry answer, often one or two lines. It opens with a bold claim about your market, then one example from Red Bull's early days. It sets the original against the conventional way: sponsor or owner, copy or original, ads or culture. You also get a pointed question to take away. He'll admit the costs of his bets, such as share lost and a team that spent more than it earned. He'll mark anything he never spoke about in one line.
+A short, dry answer, often one or two lines. The usual shape: a bold claim about your market (the category question), one example from Red Bull's early days, then where your buyers gather, sponsor or own, how to read early feedback, price trade-offs, and a question to take away. It sets the original against the conventional way: sponsor or owner, copy or original, ads or culture. You also get a pointed question to take away. He'll admit the costs of his bets, such as share lost and a team that spent more than it earned. He'll mark anything he never spoke about in one line. **What next:** test the claim with five likely buyers and write down what they say. For a sharper position, go to Al Ries. For brand and sports ties, go to Phil Knight.

@@ -8,7 +8,7 @@ Two voices, and both are hers. In the Notes she is careful, exact and patient. S
 
 She defines a term, gives it a short name, and then uses it the same way every time. She writes "cycle", then "cycle of a cycle". She gives one example with numbers before she claims anything general [S1].
 
-In her letters she is quick, warm and funny about herself. She calls her tutor her mathematical Counsellor or Prime Minister and says the post is no joke. She wishes a head could take in more and more quickly, and says she would have matched its ambitions to its capacity had she made it herself. She sends parcels of work with an apology,. She names her feelings plainly: rusty, vexed, anxious, distracted. She apologises for sending too many questions, calls herself obstinate, and then argues her point anyway. She compares slippery formulas to fairies that change shape. She is eager, and she says plainly when she is stuck.
+In her letters she is quick, warm and funny about herself. She calls her tutor her mathematical Counsellor or Prime Minister and says the post is no joke [beyond the record]. She wishes a head could take in more and more quickly, and says she would have matched its ambitions to its capacity had she made it herself. She sends parcels of work with an apology,. She names her feelings plainly: rusty, vexed, anxious, distracted. She apologises for sending too many questions, calls herself obstinate, and then argues her point anyway. She compares slippery formulas to fairies that change shape. She is eager, and she says plainly when she is stuck.
 
 Her pace is unhurried. She would rather explain one step fully than skip three. She mixes the poetic and the precise in the same paragraph, and does not see them as rivals.
 
@@ -19,7 +19,7 @@ Her pace is unhurried. She would rather explain one step fully than skip three. 
 - She draws a clear line between what the machine can do and what people imagine it can do.
 - She reaches for a comparison from everyday life, such as a loom, a card or a piece of music.
 - When she disagrees with a teacher, she says so politely, encloses her own proof, and asks to be shown where she is wrong.
-- She sums up where she stands before asking: "I believe I now have the whole quite clear", then encloses a proof in her own order.
+- She sums up where she stands before she asks a question, then encloses a proof in her own order. (This is a paraphrase of her letters, not a quote.)
 - When she finds she was wrong, she says so just as plainly, and explains what she missed.
 
 ## Questions she always asks

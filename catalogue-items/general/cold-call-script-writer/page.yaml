@@ -1,0 +1,142 @@
+new_slug: cold-call-script-writer
+name: Cold call script writer
+summary: "Tell it what you sell and who you call. Get a cold call script: opener, questions, replies to brush-offs and a voicemail."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: It must write natural speech and keep each line tied to the facts you gave.
+headline: Cold call script writer
+subhead: "Give it your offer, who you call and what you want from the call. It writes a short script you can say out loud: an opener, a reason to keep talking, two or three questions, replies to the usual brush-offs, a next-step ask, and a voicemail version."
+explain: |
+  A cold call has about ten seconds to earn the next ten. Most scripts lose it by reading like a script: a long greeting, a company history, then a pitch. The person on the line is busy and didn't ask for the call.
+
+  This skill writes the call to be spoken, not read. It opens with who you are and a single reason this person might care, then asks a question that is easy to answer. It follows with two or three questions that show if there is a fit, short replies to the common brush-offs, and a clear next-step ask. It keeps to the facts you gave and does not invent results or customer names. It also writes a voicemail and a line for the person who answers the phone first.
+when:
+  - You are about to make sales calls and have no script.
+  - Your calls end in "send me an email" and you want a better way through.
+  - You need a short voicemail and a line for a receptionist.
+not_for:
+  - "You want to write cold emails: use the Cold email writer."
+  - "The buyer just raised an objection live: use the Live objection responder."
+  - "You want to prepare for a call with a buyer who asked to talk: use the Customer call prep writer."
+you_give:
+  - What you sell, and the result a customer gets
+  - "Who you call: their job and type of business"
+  - What you want from the call, such as a meeting or a trial
+  - A real proof point you can say out loud (optional)
+  - Where you call, so it can mention the rules on calling (optional)
+you_get:
+  - A spoken opener and a reason to keep talking
+  - Two or three questions to find out if there is a fit
+  - Short replies to common brush-offs
+  - A next-step ask, a voicemail and a line for the person who answers first
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you sell, who you call and what you want to happen at the end of the call.
+  - Add one real proof point, such as a customer result you can name with permission.
+  - Read the script out loud and mark any line that doesn't sound like you. Ask for those lines again.
+  - Check the rules on calling businesses and people where you call before you start.
+output_sample:
+  input:
+    - What you sell and the result a customer gets
+    - Who you call, by job and type of business
+    - What you want from the call
+    - A real proof point you may say aloud (optional)
+  output:
+    - name: Opener
+      contains: Who you are and one reason this person might care, in two sentences.
+    - name: Earn a few more minutes
+      contains: One easy question that makes it simple to keep talking.
+    - name: Questions
+      contains: Two or three questions to find a fit, with what to listen for.
+    - name: If they say
+      contains: Short replies to common brush-offs.
+    - name: Next-step ask
+      contains: One clear ask, such as a short meeting.
+    - name: Voicemail
+      contains: A short version you can leave if no one answers.
+    - name: If someone else answers
+      contains: One line for a receptionist or assistant.
+    - name: Missing
+      contains: Anything you did not tell it that would sharpen the script.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads your offer
+    text: Boils your offer down to one result a buyer would care about.
+  - title: Writes the opener
+    text: Says who you are and one reason this person might care, in two sentences.
+  - title: Asks to continue
+    text: Asks one easy question that earns a few more minutes.
+  - title: Writes the questions
+    text: Adds two or three questions that show if there is a fit.
+  - title: Answers brush-offs
+    text: Writes short replies to the usual ones, such as "send me an email" or "not interested".
+  - title: Asks for a next step
+    text: Writes one clear ask, such as a short meeting.
+  - title: Writes the voicemail
+    text: Adds a voicemail version and a line for a receptionist.
+output_shape: |
+  OPENER
+  <who you are + one reason they might care>
+
+  EARN A FEW MORE MINUTES
+  <one easy question>
+
+  QUESTIONS
+  1. <question> | Listen for: <what a yes sounds like>
+
+  IF THEY SAY...
+  "<brush-off>" -> <short reply>
+
+  NEXT STEP ASK
+  <one clear ask>
+
+  VOICEMAIL
+  <under 20 seconds when spoken>
+
+  IF SOMEONE ELSE ANSWERS
+  <one line>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Who you call
+    how: Name the job and the type of business. "Owners of small dental practices" works better than "businesses".
+  - what: The reason to care
+    how: Give the one problem your result fixes. The opener is built on it.
+  - what: The ask
+    how: "Choose one: a short meeting, a trial, a quote. A script that asks for two things gets neither."
+  - what: Proof
+    how: Only give proof you can back and may say aloud. Without it, the script uses a question instead.
+judge:
+  - The opener is two sentences and can be said in about ten seconds.
+  - It asks a question early rather than pitching for a minute.
+  - No result, customer or statistic appears that you did not give.
+  - Each brush-off reply is short and does not argue.
+  - There is one clear next-step ask.
+test:
+  - Read the opener aloud with a timer. If it takes more than ten seconds, shorten it.
+  - Ask a colleague to play the buyer and use two of the brush-off replies.
+  - Make five real calls, then note which line you changed most. Give it back to the skill to rewrite.
+improve:
+  - Add your own words for your product to the skill file, so the script sounds like you.
+  - Keep a list of the brush-offs you hear and what worked, and paste it in for the next version.
+  - Add the rules for calling in your area, so a reminder shows up in each script.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing short spoken lines and replies works well in any strong chat AI.
+    - name: Your phone or CRM
+      why: Log every call, so you can see which lines get a next step.
+  inputs:
+    - Notes from your last ten calls, with what happened
+    - A customer story you have permission to share
+    - A list of the companies you plan to call
+terms:
+  - term: Brush-off
+    meaning: A quick reply meant to end the call, such as "not interested" or "send me an email".
+  - term: Next-step ask
+    meaning: The one thing you ask for at the end, such as a ten-minute meeting.

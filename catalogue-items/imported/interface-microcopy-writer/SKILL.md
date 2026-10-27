@@ -23,18 +23,19 @@ Use this skill when you need generate UX microcopy (button labels, error message
 - For brand voice/tone definition itself — this skill consumes a voice spec, doesn't create it
 - For translations to non-English languages — single-language only
 
-Context: **$0**
-Description: $ARGUMENTS
+Context: the screen or flow the user names (ask for it if missing)
+Description: what the screen does, in the user's words (ask for it if missing)
 
-> **Read `engine/UX-WRITING.md` first** — it's the rule set this skill applies: buttons
+> **Note (added by AI Blocks).** `engine/UX-WRITING.md` and `DESIGN-LANGUAGE.md` are not in this copy. Use the rules written here and in the Tone Rules below. If the user pastes their own voice notes or design language, follow those. The Korean section (§W8) is only for Korean projects.
+>
+> The rule set the skill applies: buttons
 > name the action (not "Submit"), errors help instead of blame, empty states invite,
 > money copy stays calm, one term per concept. Korean/CJK projects: see §W8 for the
 > clear-calm-human "Toss feel" (존댓말 일관성, 사용자 관점 "내 계좌", 군더더기 빼기).
 
 ## Instructions
 
-1. Read the design language reference:
-   - `DESIGN-LANGUAGE.md` sections on Microcopy Tone Guide and UX Writing
+1. Read the user's voice notes or design language if they pasted them. If not, use the Tone Rules below.
 
 2. Apply the voice principles:
 

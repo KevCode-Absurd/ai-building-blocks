@@ -18,6 +18,14 @@ Systematic competitor tracking. Not obsession — intelligence that drives real 
 ## Keywords
 competitive intelligence, competitor analysis, battlecard, win/loss analysis, competitive positioning, competitive tracking, market intelligence, competitor research, SWOT, competitive map, feature gap analysis, competitive strategy
 
+## First run
+
+1. Gather the facts: your product, your ideal customer, your rival names, recent deal wins and losses, and any pricing pages or reviews you already hold.
+2. Choose the deliverable: landscape map, battlecard, win/loss review or rival update.
+3. Sort the rivals with the threat matrix (Layer 1).
+4. Set the tracking plan (Layer 2).
+5. Write the battlecard or map from the facts you were given. Mark anything you could not confirm as unknown.
+
 ## Quick Start
 
 Ask in natural language for the deliverable you need:
@@ -47,7 +55,7 @@ Update this quarterly. Who's moved quadrants?
 
 ### Layer 2: Tracking Dimensions
 
-Track these 8 dimensions per competitor:
+Track these 8 dimensions per competitor. Your AI cannot browse these sources unless web search is on, so the user supplies the facts or checks them by hand. Crunchbase and some review sites have paid tiers, and LinkedIn and Indeed restrict automated collection in their terms:
 
 | Dimension | Sources | Cadence |
 |-----------|---------|---------|

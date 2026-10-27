@@ -30,7 +30,7 @@ you_get:
   - A rollback runbook per phase
   - Validation checkpoints with go and stop rules
 how_to_use:
-  - Write a short description of what you are moving, where to, and your time window.
+  - Write a short description of what you are moving, where to, and your time window. Put it in a migration spec file (migration_spec.json) with these fields (type, pattern, source, target, description, constraints, tables_to_migrate, schema_changes, performance_requirements and business_continuity). Copy the layout from assets/sample_database_migration.json.
   - Gather the schema or API before and after the change, if you have them.
   - Open an AI that can run code and read files. Upload the skill folder and your spec.
   - Ask it to make the plan, run the compatibility check, then write the rollback runbook.

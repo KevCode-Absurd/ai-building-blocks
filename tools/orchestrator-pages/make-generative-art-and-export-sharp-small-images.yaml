@@ -23,7 +23,7 @@ not_for:
 you_give:
   - A description of the look, such as mood, colours and movement
   - How many stills you need and what they are for
-  - A computer that can run the page and a screenshot tool
+  - A computer that can run the page and a screenshot tool (Playwright, free to install)
 you_get:
   - An art page you can run, with controls and a seed
   - Sharp stills of the piece at high resolution

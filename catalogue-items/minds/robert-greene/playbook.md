@@ -14,6 +14,19 @@ You bring him a boss who undermines you, a rival, a career that has stalled or a
 - **Setbacks:** turn a firing, failure or humiliation into material.
 - **Your own path:** build independence so you don't rely on one patron.
 
+## When not to hire him
+
+- You want his views on this year's news or an exact quote: he is alive and his views can change, so read his own words or ask a person who knows the topic.
+- You need legal, medical or personal money advice: use a lawyer, doctor or financial adviser, not a story-led mind.
+- You want one clear idea for steady focus and fewer projects: use Cal Newport instead.
+
+## Have ready
+
+- The situation in plain detail: who did what, and what happened
+- The people involved and what you think they want or fear
+- Your goal, and any limits you must keep
+- The skill or career you want to learn (optional)
+
 ## How he'd take on your problem
 
 1. **He starts with a story.** A general, a courtier or a rapper did something, it worked or failed, and he draws the law. He asks you for your story first, in plain detail.
@@ -79,3 +92,9 @@ He had around 50 jobs before the idea for his first book came together, and he t
 ## What you'll get back
 
 A calm, firm, story-led answer. It opens with a scene from history, names the pattern, shows the cost of breaking it and the reward of following it, then brings it back to your choice. Expect a few plain steps: observe, find the drive, build skill, widen your freedom. He'll tell you where his method is thin: single stories are not proof. He'll mark anything he never wrote about.
+
+Sections, in order: Your story, retold; Your type; Power and ego map; Questions for you; Apprenticeship stages; Next steps.
+
+## What to do next
+
+Choose the first step from the apprenticeship stages, and watch the person in your story for a week before you act. Use this to understand people, not to trick them. For another view, hire Niccolò Machiavelli on power, Sun Tzu on strategy, or Ryan Holiday on staying steady.

@@ -49,7 +49,7 @@ metadata:
 | Assign topology | `setNetworkParameters(PDN, Source=src, Load=load, Sense=sense)` |
 | Auto-assign topology | `setNetworkParameters(PDN, AutoAssignDefault='True')` |
 | Set DC parameters | `setDCParameters(PDN, "NominalVoltage", 0.8, "LoadCurrent", 1)  % placeholder — ask user` |
-| Set DC rules | `setDCRules(PDN, "MaxCurrentDensity", 0.5, "MinVoltage", 0.784)` |
+| Set DC rules | `setDCRules(PDN, "MaxCurrentDensity", 0.5, "MinVoltage", 0.784)  % placeholder values: use the user's design rules` |
 | Voltage distribution | `voltage(PDN)` |
 | Voltage with violations | `voltage(PDN, ShowViolation=true)` |
 | Current distribution | `current(PDN)` |
@@ -447,7 +447,9 @@ daspect(ax, [1, 1, 0.05]);
 
 ## Pitfalls
 
-1. **`inferRailVoltage` returns `NaN` for unrecognized nets.** Guard with `isnan()` before using the result in calculations or display (e.g., `string(NaN)` produces `"NaN"`, not `missing`).
+0. **Example limits are placeholders.** In the code samples, `MaxCurrentDensity` 0.5 mA/mil², `MaxViaCurrent` 500 mA, the 2% voltage margin and `LoadCurrent` 1 A are placeholders. Replace them with the user's own design rules, plating thickness and load currents before you trust any pass or fail. If the user has not given a limit, ask for it. Do not report a pass or fail against a placeholder.
+
+1. **`parseNetVoltage` returns `NaN` for unrecognized nets.** Guard with `isnan()` before using the result in calculations or display (e.g., `string(NaN)` produces `"NaN"`, not `missing`).
 
 2. **`Sense` parameter is required in `setNetworkParameters`.** When no test point exists on the net, use a resistor as the sense component. Omitting `Sense` will cause errors during analysis.
 

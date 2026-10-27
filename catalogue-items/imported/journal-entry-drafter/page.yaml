@@ -33,8 +33,9 @@ how_to_use:
   - Gather the period end date, the invoice or contract, and who must approve entries of this size.
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Describe the transaction in plain words. Add the amounts, and your chart of accounts if you have one.
-  - Check that debits equal credits, the period is right, and every account is one you really use.
+  - Check that debits equal credits, the period is right, and every account is one you really use. The balance check script needs an AI that can run code. No paid service or API key is needed.
   - Attach the source documents, get approval, then post the entry in your accounting system.
+  - Next, add the entry to your month-end checklist. Use the Month-end close planner to see where it fits in the close.
 output_sample:
   input:
     - A short description of what happened

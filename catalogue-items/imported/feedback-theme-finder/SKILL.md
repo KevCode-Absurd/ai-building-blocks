@@ -17,7 +17,7 @@ Transform raw customer feedback from NPS surveys, CSAT responses, support intera
 
 2. **Clean and normalize** — Deduplicate responses from the same customer across channels. Standardize rating scales (convert 1-5 CSAT to 1-10 for cross-comparison). Strip PII from open-text responses. Handle multilingual responses by detecting language and translating to English while preserving the original. Remove bot/spam responses using pattern detection (identical text, suspicious timing, single-word noise).
 
-3. **Extract themes from open-text responses** — Apply topic modeling to cluster open-text feedback into coherent themes. Common theme categories include: product reliability, ease of use, specific feature feedback, pricing/value perception, support quality, onboarding experience, and competitive comparison. Assign each response to one or more themes with a confidence score. Pull representative verbatim quotes for each theme. Copy each quote character for character from the source and mark any omitted words with an ellipsis. Never fix, shorten or reword a quote. If no response fits a theme well, write "no clear quote" instead of writing one.
+3. **Extract themes from open-text responses** — Group the open-text feedback into themes in four steps. List the comments. Tag each one with a short theme name. Count the tags per theme. Check each quote you plan to use against the source file, word for word. Common theme categories include: product reliability, ease of use, specific feature feedback, pricing/value perception, support quality, onboarding experience, and competitive comparison. Assign each response to one or more themes with a confidence score. Pull representative verbatim quotes for each theme. Copy each quote character for character from the source and mark any omitted words with an ellipsis. Never fix, shorten or reword a quote. If no response fits a theme well, write "no clear quote" instead of writing one.
 
 4. **Calculate quantitative scores** — Compute aggregate metrics: NPS (% Promoters minus % Detractors), CSAT average, and theme frequency distribution. Break scores down by segment (plan tier, industry, account size, tenure) to identify which cohorts are most and least satisfied. Show the number of responses behind every segment figure. Only calculate statistical significance if you can run the calculation; otherwise say that differences between small segments may be noise.
 
@@ -52,67 +52,54 @@ Both examples use invented figures to show the layout. They are not real results
 
 ### Example 1: NPS survey analysis
 
-**Input:** 850 NPS survey responses from Q4, segmented by plan tier.
+**Input:** [number] NPS survey responses from [period], segmented by [plan tier].
 
 **Output:**
 
 **Executive Summary:**
-- Overall NPS: +32 (up from +28 in Q3, statistically significant at p<0.05)
-- Enterprise NPS: +52 | Pro NPS: +31 | Starter NPS: +14
-- Top detractor theme: "Reporting is too slow" (38% of detractor comments, up from 22% in Q3)
-- New emerging theme: "Need better mobile experience" (appeared in 12% of Q4 responses, absent in Q3)
-- Promoter loyalty driver: "Customer support is exceptional" (45% of promoter comments)
+- Overall NPS: [score] (earlier period: [score], if you gave one). Report a change as significant only if you can run the test.
+- NPS by segment: [segment A] [score] | [segment B] [score] | [segment C] [score]
+- Top detractor theme: "[theme name]" ([N]% of detractor comments, earlier period [N]%)
+- New theme: "[theme name]" (in [N]% of responses this period, absent earlier)
+- Promoter loyalty driver: "[theme name]" ([N]% of promoter comments)
 
 **Score Distribution:**
 
 | Segment | Promoters (9-10) | Passives (7-8) | Detractors (0-6) | NPS | Responses |
 |---------|-----------------|----------------|-------------------|-----|-----------|
-| Enterprise | 68% | 16% | 16% | +52 | 180 |
-| Pro | 52% | 27% | 21% | +31 | 420 |
-| Starter | 38% | 38% | 24% | +14 | 250 |
-| **Overall** | **51%** | **28%** | **21%** | **+32** | **850** |
+| [segment A] | [N]% | [N]% | [N]% | [score] | [n] |
+| [segment B] | [N]% | [N]% | [N]% | [score] | [n] |
+| **Overall** | **[N]%** | **[N]%** | **[N]%** | **[score]** | **[n]** |
 
-**Theme Breakdown (Detractor Comments, n=179):**
+**Theme Breakdown (Detractor Comments, n=[count]):**
 
-| Theme | Frequency | Change vs Q3 | Representative Quotes |
+| Theme | Frequency | Change vs earlier period | Quote |
 |-------|-----------|-------------|----------------------|
-| Slow reporting | 38% | +16pp | "Dashboards take 20+ seconds to load with large datasets. This is killing our team's productivity." |
-| Pricing concerns | 24% | -3pp | "The price jump from Pro to Enterprise is too steep. We need the features but can't justify 3x the cost." |
-| Missing integrations | 18% | -5pp | "Still no native Salesforce integration. We've been asking for over a year." |
-| Mobile experience | 12% | NEW | "I can't review dashboards on my phone during commute. Competitors have solid mobile apps." |
-| Complex setup | 8% | -8pp | "Initial configuration took our team 3 weeks. Onboarding docs are outdated." |
+| [theme] | [N]% | [+/-N pp] | "[quote copied word for word from the user's file]" |
+| [theme] | [N]% | [+/-N pp] | "[quote copied word for word from the user's file]" |
+| [theme] | [N]% | NEW | "[quote copied word for word from the user's file]" |
 
 **Recommended Actions:**
-1. **P0 — Reporting performance:** Invest in query optimization and caching. 38% of detractors cite this, and it's growing fast. Say how much of the detractor comment volume it covers. Do not predict a score change.
-2. **P1 — Mobile experience:** Commission a competitive analysis of mobile offerings. 12% is a new theme trending upward — get ahead of it before Q1 NPS.
-3. **P2 — Pricing tier gap:** Introduce a "Pro Plus" tier between Pro and Enterprise to capture accounts that need select enterprise features without the full price tag.
+1. **[Priority] — [theme]:** [action]. [N]% of detractor comments mention it. Say how much of the comment volume it covers. Do not predict a score change.
+2. **[Priority] — [theme]:** [action], tied to the theme and its count.
 
 ### Example 2: App store review sentiment analysis
 
-**Input:** 1,200 app store reviews from the past 6 months (iOS and Android combined).
+**Input:** [number] app store reviews from [period] (iOS and Android).
 
 **Output:**
 
-**Overall Sentiment:** 3.8★ average (iOS: 4.1★, Android: 3.4★)
+**Overall Sentiment:** [average] stars (iOS: [average], Android: [average])
 
-**Sentiment by Star Rating:**
-- 5★ (34%): "Love the design," "Fast and reliable," "Best in category"
-- 4★ (22%): "Great but needs offline mode," "Almost perfect"
-- 3★ (18%): "Decent but buggy on Android," "OK for basic use"
-- 2★ (14%): "Crashes frequently," "Too expensive for what it offers"
-- 1★ (12%): "Lost my data," "Customer support unresponsive," "App doesn't open"
+**Sentiment by Star Rating:** for each star level, give the share of reviews and two or three short phrases copied word for word from the reviews.
 
-**Feature Request Extraction (from 3★ and above reviews):**
+**Feature Request Extraction:**
 
 | Feature Request | Mentions | Platform | Sample Quote |
 |----------------|----------|----------|-------------|
-| Offline mode | 87 | Both | "I travel a lot and need to access my data without WiFi." |
-| Dark mode | 64 | Both | "Using this at night is blinding. Please add dark mode." |
-| Widget support | 43 | iOS | "Would love a home screen widget to see my daily stats." |
-| Export to PDF | 38 | Both | "I need to share reports with people who don't have accounts." |
-| Android stability | 112 | Android | "Crashes every time I try to edit a dashboard. Pixel 8, Android 14." |
+| [request] | [count] | [platform] | "[quote copied word for word from the reviews]" |
 
-**Critical Finding:** Android rating (3.4★) drags overall score down. 72% of 1-2★ reviews are from Android users. Top complaint is crash on dashboard edit (Samsung and Pixel devices, Android 14+). Say that fixing it targets the biggest group of low ratings. Do not predict a new rating.
+**Critical Finding:** name the platform or theme that drags the rating down and the share of low-star reviews it covers, with counts from the data. Do not predict a new rating.
 
 ## Best Practices
 

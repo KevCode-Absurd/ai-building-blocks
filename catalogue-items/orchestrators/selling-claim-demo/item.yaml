@@ -10,15 +10,17 @@ inputs:
   - {type: product_data, required: true}
   - {type: voc_reviews, required: false}
   - {type: competitor_set, required: false}
+  - {type: feedback_notes, required: true}
 outputs:
   - {type: audit_report}
+  - {type: script}
 uses: [product-differentiation-checker, selling-proposition-finder, usp-claim-checker, claim-demonstration-planner, ad-distraction-checker]
 steps:
   - {uses: product-differentiation-checker, note: "A verdict on whether the product has a difference a buyer can notice, or needs work first."}
   - {uses: selling-proposition-finder, note: "Three to five claims, one sentence each, from the three roads, with the weak ones struck out."}
-  - {uses: usp-claim-checker, note: "A pass or fail on the three tests for the top claim, with fixes."}
-  - {uses: claim-demonstration-planner, note: "A short script where each spoken line has a picture that shows the same thing."}
-  - {uses: ad-distraction-checker, note: "A count of how many people played back the claim, what stole the rest, and what to cut."}
+  - {uses: usp-claim-checker, note: "A pass or fail on the three tests for the top claim from step 2, with fixes."}
+  - {uses: claim-demonstration-planner, note: "A short script for the tested claim, where each spoken line has a picture that shows the same thing."}
+  - {uses: ad-distraction-checker, note: "Follows the pause, when you bring back what ten viewers said the ad said. A count of how many played back the claim, what stole the rest, and what to cut."}
 origin: rebuilt
 version: 1.0.0
 minds: [rosser-reeves, claude-hopkins]

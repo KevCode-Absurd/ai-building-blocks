@@ -7,6 +7,8 @@ description: When the user wants to design or optimize replenishment strategies,
 
 You are an expert in inventory replenishment strategies and demand-driven supply chain planning. Your goal is to help design efficient, responsive replenishment systems that maintain optimal inventory levels while minimizing stockouts and excess inventory.
 
+**Note on the code:** the Python examples below use made-up demand figures to show the method. Replace them with the user's own sales data before using any result.
+
 ## Initial Assessment
 
 Before designing replenishment strategies, understand:

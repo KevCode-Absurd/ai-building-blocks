@@ -140,7 +140,7 @@ Goal: Help implement. Remove friction to purchase.
 - **Email + company/role** — better lead qualification, more friction
 - **Multi-field** — only for high-value offers (webinars, demos)
 
-Rule of thumb: Ask for the minimum needed. Every extra field reduces conversion by 5-10%.
+Rule of thumb: Ask for the minimum needed. Every extra field reduces conversion, by roughly 5-10% by one common rule of thumb. That figure is unsourced and varies, so don't present it as the person's own result.
 
 ### How to Frame the Exchange
 
@@ -192,7 +192,7 @@ Don't waste the thank you page. After they've converted:
 
 - Add relevant CTAs within blog posts (inline, end-of-post)
 - Create post-specific content upgrades (bonus checklist for a how-to post)
-- Content upgrades convert 2-5x better than generic sidebar CTAs
+- Content upgrades often convert better than generic sidebar CTAs (a common claim of 2-5x; unsourced, so treat it as a rough guide and test it yourself)
 
 ### Exit-Intent & Popups
 
@@ -259,7 +259,7 @@ Good lead magnet attracted quality leads if:
 
 ## Output Format
 
-When creating a lead magnet strategy, provide:
+When creating a lead magnet strategy, work in this order and provide:
 
 ### 1. Lead Magnet Recommendation
 - Format and topic

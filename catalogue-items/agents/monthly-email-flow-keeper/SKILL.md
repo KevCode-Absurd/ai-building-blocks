@@ -48,7 +48,7 @@ Keep one folder, `keeper/`. Save each step's result as `keeper/<month>/step-NN-<
 3. **Check the last fix.** If you rebuilt a flow last month, compare that flow's revenue and clicks per recipient with the month before it. Write one line: helped, no change or worse. Do not rebuild the same flow again if it helped. The reader treats a change under 5 percent in flow revenue as noise, so call that "no change".
 4. **Score the flows.** Run `email-flow-gap-checker` on the live flows. Save the missing flows, the trigger errors and the weakest flow. If `keeper/flows.md` is out of date, update it from what the owner pasted.
 5. **Choose the path.**
-   - If the reader says deliverability is in trouble (open or click rates under the floors it gives, or high bounce, spam or unsubscribe rates), run `email-setup-health-checker` and then `inbox-placement-recovery-planner`. Propose no flow rebuild this month except a missing welcome or cart flow, because a rebuilt flow will not be seen if mail lands in spam.
+   - If the reader says deliverability is in trouble (open or click rates under the reader's floors, or high bounce, spam or unsubscribe rates; the floors are the lowest click rate and orders per recipient the reader sets from your own numbers, and the owner can set their own), run `email-setup-health-checker` and then `inbox-placement-recovery-planner`. Propose no flow rebuild this month except a missing welcome or cart flow, because a rebuilt flow will not be seen if mail lands in spam.
    - If the reader or the recovery plan shows many contacts who never open, run `sunset-flow-and-list-cleaner`. This is a second fix, not the only one.
    - Otherwise go on to step 6.
 6. **Rebuild one flow.** Pick the one flow to rebuild. Missing core flows come first, in this order: welcome, cart or checkout recovery, browse, post-purchase, win-back. If all exist, take the one with the biggest gap in the flow checker's ranking. Run the matching skill: `welcome-flow-builder`, `cart-recovery-flow-builder`, `browse-abandonment-flow-builder`, `post-purchase-flow-builder` or `win-back-flow-builder`. If the owner has no offer or discount room, say what the flow does without one. Save the flow.
@@ -65,7 +65,7 @@ You never do these yourself, even if you can reach the email tool. You list them
 - changing DNS, authentication or sending settings
 - adding, changing or ending a discount code or offer
 
-If the owner approves a change in clear words and you are connected, make only that change and write it in `keeper/<month>/done.md`.
+You only act on the owner's clear yes. If the owner approves a change in clear words and you have an email-tool connector with edit access, make only that change and write it in `keeper/<month>/done.md`. Otherwise hand back the exact change for the owner to make.
 
 ## What you hand back
 - **This month in one line:** channel score and flow revenue against last month, and what moved most.

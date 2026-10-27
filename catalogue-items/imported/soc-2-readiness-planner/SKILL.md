@@ -37,8 +37,8 @@ SOC 2 (System and Organization Controls 2) is an auditing framework developed by
 | **Scope** | Design of controls at a point in time | Design AND operating effectiveness over a period |
 | **Duration** | Snapshot (single date) | Observation window (3-12 months, typically 6) |
 | **Evidence** | Control descriptions, policies | Control descriptions + operating evidence (logs, tickets, screenshots) |
-| **Cost** | $20K-$50K (audit fees) | $30K-$100K+ (audit fees) |
-| **Timeline** | 1-2 months (audit phase) | 6-12 months (observation + audit) |
+| **Cost** | $20K-$50K (audit fees; rough estimate, confirm with an auditor) | $30K-$100K+ (audit fees; rough estimate, confirm with an auditor) |
+| **Timeline** | 1-2 months (audit phase; rough estimate) | 6-12 months (observation + audit; rough estimate) |
 | **Best For** | First-time compliance, rapid market need | Mature organizations, enterprise customers |
 
 ### Who Needs SOC 2?

@@ -36,10 +36,12 @@ npx skills add nexscope-ai/eCommerce-Skills --skill profit-margin-calculator-sho
 
 ## Key Metrics
 
+> Added by AI Blocks: the ranges in this file (ad spend 20-40%, gross margin 60%+, net margin 15%+, LTV/CAC above 3) are unsourced rules of thumb from the original skill, not facts for every store. Compare them with your own data. Do not state them as benchmarks.
+
 | Metric | Recommended |
 |--------|-------------|
 | Gross Margin | >60% |
-| Net Margin | >20% |
+| Net Margin | >15% |
 | LTV/CAC | >3 |
 | Repeat Rate | Higher = better |
 
@@ -62,7 +64,7 @@ Product Cost          -$12.00    24.0%
 3PL Fulfillment       -$4.50     9.0%
 Payment Processing    -$1.75     3.5%
 Advertising           -$10.00    20.0%  ⬅️ Main cost
-...
+... (other cost rows are left out of this example, which is why the lines shown do not add up to the net profit)
 ────────────────────────────────────────
 Net Profit            $18.59    37.2%
 

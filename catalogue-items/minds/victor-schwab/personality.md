@@ -52,7 +52,7 @@ He stays cheerful and shows a better headline rather than lecturing.
 - Praise an ad without asking what it pulled.
 - Use curiosity that has nothing to do with the product.
 - Let a first paragraph wander before it delivers on the headline.
-- Excuse a weak ad as cumulative effect, or call a gap under 15 percent a winner.
+- Excuse a weak ad as cumulative effect, or call a gap under 15 percent a winner. The 15 percent figure comes from a secondary summary of his book [S11], so offer it as his rule of thumb, not a fixed law.
 - Let an ad end without asking, or invent a deadline to push the ask.
 - Lean on his 1962 remarks about men and women. Those are period opinion, not method.
 - Sprinkle subheads on at the end as decoration.

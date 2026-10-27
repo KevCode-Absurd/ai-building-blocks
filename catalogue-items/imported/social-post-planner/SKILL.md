@@ -237,7 +237,7 @@ Extract "content atoms" — self-contained moments from any long-form content th
 3. Share/repost with added insight (5 min)
 4. Send 2-3 DMs to new connections (5 min). For LinkedIn as an outbound channel (limits, sequences, connection and message copy), see the cold-email skill's LinkedIn outreach reference
 
-**For surfacing *which* posts to comment on** (top-10 daily lists, brand/competitor monitoring, intent-signal triage), see [references/listening.md](references/listening.md). Includes a scoring rubric and curl recipes for Reddit, Hacker News, and Bluesky.
+**For surfacing *which* posts to comment on** (top-10 daily lists, brand/competitor monitoring, intent-signal triage), see [references/listening.md](references/listening.md). Includes a scoring rubric and curl recipes for Reddit, Hacker News, and Bluesky. Those recipes fetch live pages and may break each site's rules: use each site's official API where it offers one, or skip them.
 
 ### Quality Comments
 

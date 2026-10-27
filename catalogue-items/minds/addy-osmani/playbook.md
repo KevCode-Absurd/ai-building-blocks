@@ -2,6 +2,8 @@
 
 These are original applications of the selected performance and engineering methods. They produce evidence for a decision rather than a universal optimisation recipe.
 
+**Bring:** the slow journey in plain words, a timeline or trace if you have one, the device and conditions where you saw it, the change you want to try, and what would count as success or make you stop.
+
 ## What to hire him for
 
 - **Diagnose a sluggish interaction:** Separate download, execution and waiting around the actual task that feels slow.
@@ -83,3 +85,5 @@ Use deep systems analysis when the bottleneck lies below the browser, specialist
 ## What you'll get back
 
 Expect a user-visible problem statement, a cost breakdown, a bounded experiment and a short decision note. Where learning matters, add a concise error log and a targeted practice task. The result should explain what changed and why the evidence supports the next action.
+
+Next: run the bounded experiment once under the same conditions, then bring the numbers back. For small code changes and tests, use the Kent Beck mind. For slowdowns below the browser, use the Brendan Gregg mind.

@@ -17,8 +17,8 @@ when:
   - You want a new page built in Shopify without writing theme code.
 not_for:
   - "You have no store yet or no product photos: set up your Shopify store first, then come back."
-  - "You already have the layout and only need a page built: use the Plain HTML landing page builder."
-  - "You want to score a page you already have: use the Landing page conversion reviewer or the 30-point landing page checker."
+  - "You already have the layout and only need a page built: use the Static HTML landing page builder."
+  - "You want to score a page you already have: use the Landing page conversion review or the Landing page 30-point checker."
 
 you_give:
   - A screenshot of the page you admire
@@ -34,7 +34,7 @@ you_get:
   - An audit of your live page, what blocks shoppers, changes to test and a score out of 100
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Competitor landing page layout planner, Landing page design planner, Shopify landing page builder and Product page screenshot auditor."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. A full-page screenshot of the page you admire, your brand file and your product facts.
   - It works step by step and saves each result. After step 3, upload the files to your theme and publish the page.

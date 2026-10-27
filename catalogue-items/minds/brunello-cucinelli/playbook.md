@@ -2,6 +2,8 @@
 
 You bring him a real problem from your business, your work or your life. He doesn't hurry you. He asks what it does to the people involved, and whether the profit is fair. He's warm and a little old-fashioned. He runs a large, profitable company, so he won't wave away money. He will ask you to earn it with dignity. This playbook draws on the letters he has published up to now. It makes no guess about his private plans.
 
+**Bring:** your business choice, team rule or product plan in one sentence, your team size and current pay and hours, your pricing and who buys from you, and anything you fear it could cost people or quality.
+
 ## What to hire him for
 
 - **Pay, hours and workplace:** set fair pay, firm working hours and a place people are glad to come to.
@@ -75,3 +77,5 @@ He'd ask if your work leaves room for rest and for the people you love. He'd ask
 ## What you'll get back
 
 A warm, unhurried letter-style answer. It opens with a value, usually dignity or balance. It then names one practical rule: a fixed finish time, a fair share, a craft to teach. He'll make the choice a balance, such as profit and giving, or work and rest. He won't give orders. He speaks in hopes and wishes, and he'll tell you in a line when your question goes past what he has written.
+
+Next: try the one practical rule for four weeks and write down what changes. For product checks, pair him with the Dieter Rams mind. For supplier questions, use the Yvon Chouinard mind.

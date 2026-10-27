@@ -103,7 +103,7 @@ Optimize content for maximum impact:
 
 **1. Hook Strategies (First 3 seconds):**
 - **Problem/Solution:** "If you struggle with [pain point], try this..."
-- **Shocking Statement:** "This $X product does what $XXX brands can't..."
+- **Shocking Statement:** "This $X product does what $XXX brands can't..." (use only if you can prove the comparison; see the claims rule below)
 - **Before/After:** "POV: You've been using [product] for X days..."
 - **Trending Audio:** Popular sounds adapted with product integration
 - **Question Hook:** "Is this why your [problem] never goes away?"
@@ -159,13 +159,14 @@ Try it: [shop link in bio]"
 
 **Template 2: Curiosity Gap**
 ```
-"This $[price] product does something 
-$[higher price] brands can't...
+"This $[price] product does something
+[a specific, true thing you can show or prove]...
 [Build suspense]
 [Reveal product and benefit]
-[Social proof/results]
+[Real social proof/results]
 Get yours: [CTA]"
 ```
+Only name a rival, a higher price or a result if you have proof for it. Product claims must follow TikTok Shop and platform advertising rules.
 
 **Template 3: Trend Adaptation**
 ```
@@ -196,6 +197,8 @@ Also me: [Product as solution]
 ### Performance Tracking & KPIs
 
 **Content Performance Metrics:**
+
+The targets below are generic starting points, not benchmarks from any source. Replace them with your own account's numbers after two to four weeks of posting.
 
 | Metric | Target | Measurement | Optimization Focus |
 |--------|--------|-------------|-------------------|
@@ -287,6 +290,8 @@ Also me: [Product as solution]
 ```
 
 ## Integration with Nexscope
+
+Nexscope is an optional paid service. The plan above works without it. Mention it only if the person asks about automation.
 
 *To supercharge your TikTok Shop content strategy with advanced intelligence, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
 

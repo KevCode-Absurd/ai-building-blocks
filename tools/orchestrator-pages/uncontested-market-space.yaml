@@ -15,12 +15,12 @@ when:
   - Your positioning line could fit three of your rivals and you want one only you can use.
   - You have a good idea and need leaders or a team to back it.
 you_give:
-  - Your rivals, including those buyers might compare you with
-  - What buyers in your category value, in their words if you have them
-  - Your brand file, and what you love to do (optional)
-  - Customer reviews or quotes (optional)
-  - The people who can say yes or no to the idea, and what you know about each
-  - What you want them to do next
+  - "Your rivals, including those buyers might compare you with"
+  - "What buyers in your category value, in their words if you have them"
+  - "The people who can say yes or no to the idea, and what you know about each"
+  - "What you want them to do next"
+  - "Your brand file and what you love to do (optional, but step 2 marks the six prompts missing without it)"
+  - "Customer reviews or quotes (optional)"
 you_get:
   - A grid of rivals against the features that decide the choice
   - The gaps nobody serves well, with evidence, and where to stop fighting
@@ -28,10 +28,10 @@ you_get:
   - Two or three versions of an only-ness sentence, with a rival swap test for each
   - A plan through the four stages of buy-in, a story that fits in under two minutes, a vision picture and a pitch line for each person
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your rivals and what buyers value, plus your brand file if you have one. It works step by step and saves each result.
-  - Check the rival ratings against what you know before you build on the gaps.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus three skill files, in the order they run: Competitor white space mapper, Onliness statement writer, Idea buy-in pitch planner."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Paste your rivals and what buyers value, plus your brand file if you have one. It works step by step and saves each result."
+  - "Check the rival ratings against what you know before you build on the gaps. A rating with no source comes back as missing."
 how_it_works:
   - title: Maps the white space
     text: Lists rivals as buyers see them, grids them against the features that drive the choice and marks the gaps nobody serves.

@@ -354,7 +354,7 @@ obj.Height = 0.8e-3;    % Must match a cumulative layer boundary
 
 15. **`stubRadialShunt` has no `design()` method.** Set dimensions manually or use `optimize()`.
 
-14. **Polygonal SplitSide defaults may be invalid.** Hexagons require `SplitSide` from {2, 3, 5, 6}. Always set explicitly for polygonal types with multiple rings.
+16. **Polygonal SplitSide defaults may be invalid.** Hexagons require `SplitSide` from {2, 3, 5, 6}. Always set explicitly for polygonal types with multiple rings.
 
 ## Related Skills
 

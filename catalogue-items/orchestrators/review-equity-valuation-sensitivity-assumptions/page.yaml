@@ -25,7 +25,7 @@ not_for:
 you_give:
   - The company name, stock exchange and reporting currency
   - Your research date and time horizon
-  - Company filings and data you are allowed to use
+  - Company filings and data you are allowed to use, as files your AI can open or as pasted text
   - A share price with its date
   - Your existing valuation model or scenario assumptions (optional)
   - A draft thesis or commentary to check (optional)
@@ -36,7 +36,7 @@ you_get:
   - A ranked list of unsupported claims and the source each one needs
   - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the workflow pack and add it to an AI that can read files and run Python 3.9 or later.
+  - "Download the pack. It holds HANDOFF.md and two skill files, in the order they run: Equity research and valuation report builder, then Unsupported claim spotter. Add it to an AI that can read files and run Python 3.9 or later."
   - Give the company, exchange, currency, research date and horizon. Attach the filings and the dated share price.
   - Ask your AI to follow the pack, save a file for each step and stop a step when a check fails.
   - Read the validator result. A pass checks structure only. It does not prove your sources or conclusion.
@@ -72,10 +72,10 @@ output_sample:
     - name: HAND-BACK SUMMARY
       contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Scenarios
+    how: Give your own growth and discount rate cases, or let step 1 propose labelled ones.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Provide the filings and a dated share price, not figures from memory. If you only have summaries, say so. Figures from them are marked second-hand.
   - what: Acceptance
     how: Scenarios use dated evidence and explicit inputs; model validity is separate from investment merit.
 judge:

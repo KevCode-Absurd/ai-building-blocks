@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
 How to start:
@@ -54,11 +54,10 @@ HEADLINES (5), PICK with reason, SUBHEAD, TWO PROOF ITEMS with source, BUTTON, U
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- **Write the landing page** with the [Marketing copy editor](https://useaiblocks.com/skills/marketing-copy-sweeper). It takes the draft.
-- **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
-- **Read your ad results** with the [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
+- The [Store hero section writer](https://useaiblocks.com/skills/store-hero-section-writer).
+- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
+- The [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter).
+- The [Landing page and email copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

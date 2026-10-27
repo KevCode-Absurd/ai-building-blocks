@@ -39,7 +39,7 @@ Analyzes return resolutions to calculate the split between exchanges (revenue re
 
 2. Categorize each return resolution:
    - **Exchange**: return has `exchangeLineItems` with quantity > 0
-   - **Store credit**: return has `refunds` with gift card or store credit payment
+   - **Store credit**: a refund transaction whose `gateway` is a gift card or store credit (read it from the `transactions` field below). If the gateway does not say clearly, count the return as a refund and tell the user how many were unclear.
    - **Refund**: return has cash/card refund with no exchange
 
 3. **OPERATION:** `orders` — query (if `compare_days_back > 0`)
@@ -77,6 +77,14 @@ query ReturnResolutions($query: String!, $after: String) {
         }
         refunds(first: 5) {
           id
+          transactions(first: 5) {
+            edges {
+              node {
+                kind
+                gateway
+              }
+            }
+          }
           totalRefundedSet {
             shopMoney {
               amount
@@ -160,7 +168,7 @@ EXCHANGE vs REFUND RATIO  (<days_back> days)
     Refund (revenue lost):      <n>  (<pct>%)
 
   Revenue recovery rate: <pct>%
-  (exchanges + store credit as % of all returns)
+  (exchanges + store credit as % of all returns; counts returns, not money)
 
   Output: exchange_refund_ratio_<date>.csv
 ══════════════════════════════════════════════
@@ -193,7 +201,7 @@ CSV file `exchange_refund_ratio_<YYYY-MM-DD>.csv` with columns:
 | Exchange line items empty but status indicates exchange | In-progress exchange | Count as pending, exclude from ratio |
 
 ## Best Practices
-- A revenue recovery rate above 30% (exchanges + store credit) is generally a strong signal for fashion/apparel; set your own benchmark based on category.
+- There is no trusted benchmark for the recovery rate. Use your own earlier period as the baseline (`compare_days_back`), and do not tell the user a rate is "good" or "bad" against a made-up target.
 - Use `compare_days_back` to track whether returns policy changes (e.g., "exchange only" periods) improved the recovery rate.
-- Pair with `return-reason-analysis` — high "wrong size" return reasons paired with low exchange rates may indicate size guidance issues in product listings.
+- Pair with `return-reason-finder` — high "wrong size" return reasons paired with low exchange rates may indicate size guidance issues in product listings.
 - Run before and after launching an exchange incentive (e.g., bonus store credit for exchanging instead of refunding) to measure impact.

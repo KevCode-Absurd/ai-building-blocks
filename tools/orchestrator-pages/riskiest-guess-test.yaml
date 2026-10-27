@@ -9,7 +9,7 @@ subhead: Paste your plan for a product, service or project. It turns it into a s
 explain: |
   Most plans are mostly routine, with a few bets hidden inside lines like "it worked for them, so it will work for us". Teams spend months on the routine part and meet the bet last, when it is costly to be wrong.
 
-  This workflow follows the method Eric Ries teaches in The Lean Startup. It pulls the bets out and writes each as a plain sentence with a number. It ranks them by damage if wrong and how little you know. It then picks the smallest form of test for the top bet, from a sign-up page to doing the work by hand for one customer, and sets pass, fail and in-between numbers before the test runs.
+  This workflow follows the method Eric Ries teaches in The Lean Startup. It pulls the bets out and writes each as a plain sentence with a number. It ranks them by damage if wrong and how little you know. It then picks the smallest form of test for the top bet, from a sign-up page to doing the work by hand for one customer, and sets pass, fail and in-between numbers before the test runs. The Smallest test picker on its own needs a ranked list of guesses to start from. This workflow makes that list from your plan first, then sets the pass lines.
 when:
   - You have a plan and sense that part of it is a bet, but cannot say which part.
   - You are about to spend months building and want proof of the shakiest part first.
@@ -28,10 +28,10 @@ you_get:
   - Pass, fail and in-between numbers set before the run
   - A run plan and a rule for what to do on a pass, a fail or a middle result
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and three skill files, in the order they run: Leap-of-faith assumption finder, Smallest test picker, then MVP experiment planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your plan as it stands, comparisons and all. Say what worries you most.
-  - Agree the pass numbers before you run the test, then bring back the results.
+  - Agree the pass numbers before you run the test, then bring back the results. This workflow plans the test. It does not run it.
 output_sample:
   input:
     - "Your plan: what you make, for whom, how they find it and what you expect back"

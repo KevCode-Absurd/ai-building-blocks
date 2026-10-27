@@ -106,3 +106,4 @@ improve:
   - Keep a log of each test, its call and the lift you saw.
   - Test the next fix from the review, one at a time.
   - Re-run the review after three wins.
+next: [one-change-experiment-planner, landing-page-30-point-checker]

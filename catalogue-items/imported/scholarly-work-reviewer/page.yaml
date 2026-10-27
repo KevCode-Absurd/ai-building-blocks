@@ -30,8 +30,9 @@ you_get:
   - Optional rubric notes with limits stated
   - A check of an assessment process (optional)
 how_to_use:
-  - Download the skill folder, or paste the contents of SKILL.md into a chat with your AI.
-  - Tell your AI to follow SKILL.md and start at step 1. It will ask for your purpose, the type of work and who reads it.
+  - "Plain chat review, in short: paste the contents of SKILL.md into a chat with your AI. Paste your work. Ask for a criterion-by-criterion review with evidence, then the next steps. You do not need scripts or web access for this."
+  - Tell your AI to start at step 1. It will ask for your purpose, the type of work and who reads it.
+  - The committee, data-class and process-audit steps are for organisations that assess other people's work. If you are reviewing your own draft, skip them.
   - Paste your paper, draft or idea. Add your field, your readers, your rubric and your worries if you have them.
   - Read the findings one criterion at a time. Check each evidence reference against your own text.
   - Pick the next steps you agree with and revise your work.

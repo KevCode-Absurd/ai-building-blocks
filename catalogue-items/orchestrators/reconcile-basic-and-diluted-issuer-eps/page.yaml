@@ -92,7 +92,6 @@ tweaks:
 judge:
   - Reported basic and diluted EPS, numerator and shares reconcile within disclosed rounding; every excluded instrument and missing term is listed; changed-input recalculation is inspected.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

@@ -25,7 +25,7 @@ Stock is cash the owner already spent. Two things go wrong: running out of the i
 
 ## Step 1 — Get sales and stock
 
-**Preferred:** Shopify for sales and inventory levels. Square and NetSuite work the same way.
+**Preferred:** Shopify for sales and inventory levels. Square and NetSuite work the same way. These connectors may need a paid plan or API access. The CSV path below needs neither.
 
 **Fallback, fully supported:** a CSV of sales history plus a stock-on-hand count. Two files, or one with both. This path works with zero connectors and gives the same output. Many businesses count on a clipboard, and that is a legitimate input.
 
@@ -101,7 +101,7 @@ With Google Calendar connected, offer a recurring block for the restock decision
 
 ## Closing offer
 
-Close with one line on what was decided — the total buy and the items about to run out. Then offer the most relevant next step with its exact trigger phrase: "reorder" (`/restock`) when the owner wants the POs drafted and sent end to end. Up to two more from the router's table, such as "cash forecast" (`cash-flow-snapshot`) or "pay the bills" (`/pay-the-bills`). Three offers at most, and never repeat one the owner already declined this session.
+Close with one line on what was decided — the total buy and the items about to run out. Then offer the most relevant next step in plain words: say "reorder" to have the purchase orders drafted and sent end to end. If the owner's setup has other skills, offer up to two more, such as a cash forecast or paying the bills. Skip any the tool does not have. Three offers at most, and never repeat one the owner already declined this session.
 
 ## What not to do
 

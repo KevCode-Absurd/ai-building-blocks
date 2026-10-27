@@ -34,19 +34,25 @@ Collect, or state your assumption:
 
 ## Procedure
 
+> Added by AI Blocks: effect sizes below come from specific studies and tests, listed in reference.md. A dagger means no primary source is on file, so it is a practitioner tip. Your store may see a different result. Show which figures are measured and which are tips, and do not present any as a promise.
+
 1. **Channels by product type.** Hedonic → social media and your own product pages; the journey is impulsive and starts on social. Utilitarian → search ads, comparison sites, third-party reviews, deal sites; the buyer compares for value.
-2. **Recommendation labels.** Utilitarian → algorithm-based label ("Recommended based on your browsing"). Hedonic → human label ("Our expert's pick"). Keep the module; change the label.
+2. **Recommendation labels.** Utilitarian → algorithm-based label ("Recommended based on your browsing"). Hedonic → human label such as "Our team's pick". Use "Our expert's pick" only if a real expert reviewed the picks. Keep the module; change the label.
 3. **Layout direction.** Horizontal (carousel) makes people weigh quality and the primary feature — 26% more chose the pricier, higher-quality laptop. Vertical (scroll) makes them price-sensitive. Horizontal where quality should win, vertical where you compete on price.
 4. **Visual style.** Structured (straight lines, symmetry, geometry) reads reliable; unstructured (rounded, incomplete, unpredictable) reads fun. Match the brand: matched perfume ads got 39% more clicks. †
 5. **Cost transparency.** If margin ≤ ~55%, show a per-product cost breakdown (materials, labor, shipping, packaging, development); group beyond ~8 categories. Sales were 22% higher for a $115 wallet with one.
 6. **Company size.** Small, low-tech → say so prominently; buyers infer motivated staff and better quality. Small, high-tech → show R&D effort. Large, low-tech → show employee passion.
-7. **Warranty.** Offer one far longer than the category norm (10-year hoodie): 34.8% more bought. Best for buyers who know the category but not your brand. For consumables, the equivalent is an unusually strong effectiveness or satisfaction guarantee (untested, same mechanism).
+7. **Warranty.** Offer one far longer than the category norm (10-year hoodie): 34.8% more bought. Best for buyers who know the category but not your brand. For consumables, the equivalent would be an unusually strong effectiveness or satisfaction guarantee, but that is untested. Only offer a warranty or guarantee you can honour. Check it against real product results first.
 8. **Sustainability.** If real, state it on product and packaging: 6.4% higher revenue across 10 million grocery sales, and people enjoy the product more when they know. Small businesses gain most. †
 9. **Marketplaces.** If unknown, list on a major marketplace: 1 in 71 marketplace sales creates a direct customer; acquisition cost averages 24% of revenue vs 30–100% direct. Give a reason to switch, within marketplace rules.
 
 ## Output
 
 Table: priority, area, recommendation, rule + number. Then what to leave alone, and why.
+
+## Next steps
+
+Start with the top row of the priority table and change one thing at a time. For a weak area, run a focused review: product-page (Product page auditor), checkout-ux (Checkout page auditor), post-purchase (Post-purchase experience) or pricing (Pricing strategist). If one is not in your library, ask for a review of that part on its own.
 
 ## Common mistakes
 

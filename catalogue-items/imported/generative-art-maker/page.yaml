@@ -30,12 +30,13 @@ you_get:
   - A p5.js sketch file
   - Seeds to repeat any result
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text. Better still, upload the skill folder if your AI accepts files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. Better still, upload the skill folder if your AI accepts files. The skill reads a viewer template from that folder, so if you only paste the text, tell your AI to build the viewer page itself.
   - Describe the mood or look you want. Add colours, a seed or a size if you care about them.
   - Your AI first writes a short art philosophy, then the viewer and the sketch code.
   - Open the HTML file in your browser. If your AI shows previews, you can view it there. Use the sliders and try new seeds.
   - Note the seed you like. The same seed gives the same piece again.
   - Save the image from the viewer to use in a site header or a print.
+  - The art is code, so check the file size and the colours before you print it. Ask your AI for a larger size if needed.
 output_sample:
   input:
     - A description of the mood or look you want
@@ -54,3 +55,4 @@ output_sample:
       contains: The code that draws the piece using noise, particles, flows and forces, with seeded randomness.
     - name: Seed and parameters
       contains: The seed and a few sliders, so the same seed gives the same piece and you can step through variations.
+next: [article-cover-maker, web-animation-builder]

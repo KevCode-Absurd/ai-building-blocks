@@ -5,10 +5,10 @@ name: Video dubbing editor
 summary: Dub your video or podcast into other languages and keep each speaker's voice. Fix the transcript and translation before you make the final dub.
 job: work-with-audio
 headline: Video dubbing editor
-subhead: Your video or podcast in new languages, still in each speaker's own voice, with a chance to fix the words before the final version. The skill uses the ElevenLabs dubbing service.
+subhead: Your video or podcast in new languages, still in each speaker's own voice, with a chance to fix the words before the final version (fixing needs an ElevenLabs enterprise workspace). The skill uses the ElevenLabs dubbing service.
 explain: |
   Your video or podcast in new languages, still in each speaker's own voice, with a chance to fix the words before the final version. 
-  The skill uses the ElevenLabs dubbing service. You upload a file or give a link, and it transcribes the source into editable segments with speaker names and timing. Then you add as many target languages as you like. Each language gets its own translation, and you can refine any segment, then regenerate the dubbed audio. It tells you to use the current projects interface, not the old dubbing calls. You need an ElevenLabs account and an API key, which the setup command can create for the project.
+  The skill uses the ElevenLabs dubbing service. You upload a file or give a link, and it transcribes the source into editable segments with speaker names and timing. Then you add as many target languages as you like. Each language gets its own translation, and you can refine any segment, then regenerate the dubbed audio. Editing and regenerating work on enterprise workspaces only. On other plans you can still make the dubs and download them. It tells you to use the current projects interface, not the old dubbing calls. You need an ElevenLabs account and an API key, which the setup command can create for the project. Only clone the voice of someone who has agreed to it, and check your local rules on voice cloning before you publish a dub.
 when:
   - You have a course video and want Spanish and German versions.
   - A podcast episode needs a translated audio track.
@@ -18,6 +18,7 @@ not_for:
   - "You need transcript editing or regenerating on a standard plan: these work on enterprise workspaces only, so create the project and add languages without edits, or ask ElevenLabs about enterprise."
   - "You want a translated text file or subtitles only: use a plain translation tool or your AI chat, since this skill makes dubbed audio."
   - "You cannot get an ElevenLabs account or key: ask a translator or voice actor to record the new language instead."
+  - "A speaker has not agreed to have their voice cloned: do not use this. Ask a voice actor to record the new language instead."
 you_give:
   - A video, audio file or link
   - Target languages
@@ -29,12 +30,12 @@ you_get:
   - Segment-level translation edits
   - Regenerated audio after each change
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with an option to run code, and paste in this skill.
+  - Open Claude, ChatGPT or Gemini with an option to run code, and paste in this skill. Editing a transcript or translation needs an enterprise workspace. On other plans, skip the fix steps below.
   - Add your video, audio file or public link, and name the languages you want.
-  - Give your ElevenLabs API key, or let the setup command create one for the project.
+  - Set your ElevenLabs API key as an environment variable, or let the setup command create one for the project. Don't paste the key into a shared chat or a file you will share.
   - Ask your AI to make the project and show you the source transcript. Fix any wrong words or names first.
   - Ask it to add each language, then download the dubbed audio files when they finish.
-  - To fix a translation, edit that segment and regenerate the language. This needs an enterprise workspace and is charged.
+  - To fix a translation, edit that segment and regenerate the language. This needs an enterprise workspace and is charged. Before you publish, have a native speaker listen to each dub, then put the new audio track onto your video in your video editor.
 output_sample:
   input:
     - Your video, audio file or a public link to it

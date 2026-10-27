@@ -9,7 +9,9 @@ subhead: Give it your supplier, freight and duty invoices and your sales export.
 explain: |
   A profit report can look fine while cash runs short. The usual cause is cost that never reaches the product: freight and duty booked as one lump, shipping and fees mixed with product cost, and ad spend that hides how first orders really pay back. So the margin you think you have is higher than the one you earn.
 
-  The steps fix this in order. First each lump invoice is spread across the products on a stated basis, giving true landed cost per unit. Then every cost line is sorted into cost of goods or expense by one rule, and the sort is scored out of 100. Next it builds the monthly P&L, then splits it into first-time and returning buyers, and scores acquisition health out of 100. Last it sets up a daily margin sheet. It does not pause. Bring the invoices and exports up front.
+  The steps fix this in order. Step 1 spreads each lump invoice across the products on a stated basis, giving true landed cost per unit. Step 2 sorts every cost line into cost of goods or expense by one rule. Its score out of 100 is the share of your lines that were already in the right place. Step 3 builds the monthly P&L from those unit costs and that rule. Step 4 splits the P&L into first-time and returning buyers and scores acquisition health out of 100. Step 5 sets up a daily margin sheet from the same P&L rules and your own daily numbers.
+
+  Bring the invoices and exports up front. If a step needs an answer only you know, it waits when you are there. If you are not, it writes MISSING and carries on.
 when:
   - Your profit report looks fine but cash is tight, and you do not trust the margin it shows.
   - You import stock in shipments and cannot say what freight and duty add to each product.
@@ -18,18 +20,22 @@ not_for:
   - "You sell one product and have no import costs: a simple P&L in a spreadsheet, or your bookkeeper, will do."
   - "You only want to know what freight and duty add to each product: use the Landed cost allocator."
   - "You only want to see what first-time buyers cost against returning ones: use the New and returning P&L splitter."
+  - "You have only a few orders a month: the new versus returning split is not worth reading below a few hundred. Use the Store P&L builder."
 you_give:
   - Supplier, freight, duty and other import invoices, with the purchase order lines
+  - Your selling price for each product, if you know it
   - Your sales export with discounts, refunds and shipping charged
   - Your cost lines, with where they sit now in your books
+  - How you sell (own stock, dropship, 3PL or Amazon FBA) and whether shipping is charged or built into the price
   - Marketing spend by channel and your running costs
-  - Orders marked first-time or returning, and your return rate
+  - Orders marked first-time or returning
+  - Daily sales, costs and ad spend, and your return rate from the last 90 days
   - A profit target (optional)
 you_get:
   - Landed cost per unit with every layer shown, margin per unit and a late-cost checklist
-  - Every cost line sorted into cost of goods or expense, with gross margin and a score out of 100
+  - Every cost line sorted into cost of goods or expense, with gross margin before and after and a score out of 100 (lines already in the right place)
   - A monthly P&L in dollars, percent of sales and per order, with the line to fix first
-  - A first-time and a returning P&L, and an acquisition health score out of 100
+  - A first-time and a returning P&L, who pays for whom, and an acquisition health score out of 100
   - A daily margin sheet with returns set aside each day and checked against the month
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
@@ -64,25 +70,25 @@ how_it_works:
   - title: Work out true unit cost
     text: Ties each invoice to its purchase and spreads each lump on a stated basis, never evenly. Divides by units received and shows margin per unit.
   - title: Sort the cost lines
-    text: Applies one rule for what counts as cost of goods. Splits packaging, shipping, fees, discounts and returns, and scores the sort out of 100.
+    text: Applies one rule for what counts as cost of goods, using the landed costs from step 1. Splits packaging, shipping, fees, discounts and returns. Scores the sort out of 100 as the lines already in the right bucket over the lines with a known bucket.
   - title: Build the monthly P&L
-    text: Bridges gross to net sales, sorts costs into delivery, marketing and running buckets, and shows each line in dollars, percent and per order.
+    text: Uses the unit costs from step 1 and the rule from step 2. Bridges gross to net sales, sorts costs into delivery, marketing and running buckets, and shows each line in dollars, percent and per order. It has no score.
   - title: Split new and returning
-    text: Puts ad spend on first-time buyers, splits shared costs by a rule you approve, and scores acquisition health out of 100.
+    text: "Puts ad spend on first-time buyers and splits shared costs by a rule you approve. Scores acquisition health out of 100: first-time result up to 50, trend up to 30, funding up to 20."
   - title: Set up the daily margin
-    text: Builds a daily sheet with returns set aside on each day's sales, checked against the month, and ranks the numbers worth showing.
+    text: Uses the P&L rules from step 3 and your own daily numbers, not the step 4 split. Builds a daily sheet with returns set aside on each day's sales, checked against the month, and ranks the numbers worth showing.
 output_shape: |-
   STEP 1: UNIT COSTS
     Each product: purchase price | freight | duty | other | landed cost | margin per unit | late-cost checklist
 
   STEP 2: COST SORT
-    Each line: cost of goods or expense | why | split lines | gross margin before and after | score out of 100
+    Each line: cost of goods or expense | why | split lines | gross margin before and after | score out of 100 = lines already in the right bucket / lines with a known bucket x 100, count shown
 
   STEP 3: MONTHLY P&L
     Gross to net sales | cost of goods | delivery | marketing | running costs | per order view | margin needed for target | line to fix first
 
   STEP 4: NEW AND RETURNING
-    Two P&Ls | rule for shared costs | who subsidises whom | trend | score out of 100
+    Two P&Ls | rule for shared costs | who subsidises whom | trend | acquisition health score out of 100 = first-time result (50) + trend (30) + funding (20), sum shown
 
   STEP 5: DAILY MARGIN
     Daily formula | returns set aside | month check | goal | metrics to show

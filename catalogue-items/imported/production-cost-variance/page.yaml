@@ -32,6 +32,7 @@ you_get:
   - Suggested root causes to check
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Gather these from your spreadsheet first, in this order. Material: standard price and quantity per unit, then actual price and quantity used. Labour: standard and actual rate, then standard and actual hours. Overhead: budgeted and actual fixed overhead, standard hours allowed and the overhead rate."
   - Paste your standard price and quantity per unit, then your actual price and quantity used.
   - Add your standard and actual labour rate and hours. Add overhead budget and actual spend if you have them.
   - Ask your AI to run the variance report. If it can run code, it can use the included script for the sums.

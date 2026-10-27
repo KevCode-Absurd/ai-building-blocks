@@ -35,6 +35,7 @@ how_to_use:
   - "Say where the route starts and ends. Say what to minimise: distance, time or cost."
   - Add this skill's text to the chat, then ask for the stop order, the total and the gap from the best possible.
   - Check the order on a map. Make sure no stop is missing and the loop ends at your start point.
+  - Give the stop order to your driver or planner, and run it again when stops change. If you have time windows or load limits, use delivery-time-slot-route-planner or delivery-route-planner instead.
 output_sample:
   input:
     - Your list of stops, with coordinates or a table of distances between them

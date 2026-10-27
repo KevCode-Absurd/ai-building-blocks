@@ -39,7 +39,8 @@ how_to_use:
   - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Paste your figures and say what hurts most.
   - Answer the one round of questions it asks. If you do not know a figure, say so. It will mark it MISSING and will not guess.
   - Read the ranked fixes. Check that each saving shows the inputs it used. Ask for a recalculation if one looks wrong.
-  - Pick one fix to try this week and one for this month. Then run the pair skills named in the next steps.
+  - "The review follows the order of an order: receive stock, store it, pick, pack, ship, then returns."
+  - Pick one fix to try this week and one for this month. Then run the Pick, pack and ship improver for the warehouse step, or the Online store bottleneck finder for a Shopify store.
 output_sample:
   input:
     - Orders per day, average and busiest
@@ -80,3 +81,4 @@ terms:
     meaning: How long an order takes from placed to shipped.
   - term: Order accuracy
     meaning: The share of orders sent with the right items and no damage.
+next: [pick-pack-and-ship-improver, online-store-bottleneck-finder]

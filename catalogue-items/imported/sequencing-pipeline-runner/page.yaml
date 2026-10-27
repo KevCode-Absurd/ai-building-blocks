@@ -35,8 +35,9 @@ how_to_use:
   - Check your computer has enough disk space, memory and time for a full run. Full runs can be heavy.
   - Paste the skill into your AI. Tell it your files or your GEO or SRA accession.
   - "Approve each choice it asks about: the samples, the pipeline, the genome and the pipeline options."
-  - Read the Nextflow install command before you run it. It downloads a script from the web.
+  - Install Nextflow from the official install page (nextflow.io). If you use a command that downloads a script, read the script before you run it.
   - Have an expert review the results before you use them. Cite the pipeline when you publish.
+  - Next, hand the gene counts or peak calls to a bioinformatician for differential expression or deeper analysis. This skill is a prototype and is not production-ready.
 output_sample:
   input:
     - Your FASTQ files, or a GEO or SRA accession
@@ -62,3 +63,5 @@ output_sample:
       contains: A MultiQC report, plus gene counts for RNA-seq, variant files for sarek, or peak calls for ATAC-seq.
     - name: Output check
       contains: A check that the run finished and that the key result files exist.
+    - name: Final report
+      contains: The list of files you receive, such as the MultiQC report, the gene count file or the peak calls, and a pass or fail summary of the output check.

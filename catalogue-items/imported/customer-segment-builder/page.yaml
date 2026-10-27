@@ -31,7 +31,7 @@ you_get:
   - Optional tags added to customer records
 how_to_use:
   - Use an AI that can run code and connect to your Shopify store, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot pull your orders.
-  - Sign in to your store with read access to orders and customers.
+  - Install the Shopify CLI, then sign in to your store with read access to orders and customers (shopify store auth, scopes read_orders and read_customers).
   - Give your AI this skill and your store address. Add a look-back window or a minimum order count if you want them.
   - Check the report. Look at the group sizes and the At Risk list first.
   - Open the CSV file to pick who gets a VIP email or a win-back email.

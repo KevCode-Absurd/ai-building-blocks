@@ -22,16 +22,18 @@ you_give:
   - Your brand file
   - The founder's real story, in notes or from a call (optional)
   - Who the videos are for (optional)
-  - Your footage once you have filmed the first episode
+  - Your footage once you have filmed the first episode (required for the edit step)
 you_get:
   - Ten episodes in order, each with something to show
   - A filming setup you can use every time
   - A script for episode one, with two or three openings
   - An edit plan with cuts, captions, cover and export checks
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. It works step by step and saves each result.
+  - Give it your brand file. It plans the series, scripts episode 1 and tidies the script, then pauses.
+  - Film the episode with the script and the filming setup. Come back with the footage.
+  - The edit step cannot run without footage. Without it, you stop after the read-aloud fixes.
 output_sample:
   input:
     - Your brand file

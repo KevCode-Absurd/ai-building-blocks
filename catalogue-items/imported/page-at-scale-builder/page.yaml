@@ -31,9 +31,9 @@ you_get:
   - Quality checks before publishing
   - Small first-batch launch plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. The skill's playbooks and platform guides are in the references folder, so upload the whole skill folder to get them. Pasting SKILL.md alone leaves them out.
   - Give your keyword pattern, such as [service] in [city], and say what you sell and who buys it.
-  - Paste your data as a table. One row per page, with columns such as city, service, number of providers and one unique fact per row.
+  - Paste your data as a table. One row per page, with columns such as city, service, number of providers and one unique fact per row. If the data was scraped or licensed from another site, check that site's terms and get permission before it goes on your pages.
   - Add the pages that rank today for this pattern (optional).
   - Read the template and data check first. Fix any gaps in your data before you build.
   - Publish a small first batch. Check how many pages get indexed before you add more.

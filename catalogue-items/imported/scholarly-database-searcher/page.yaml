@@ -9,7 +9,7 @@ subhead: A literature search you can repeat and defend. Ask a research question 
 explain: |
   A literature search you can repeat and defend. Ask a research question and get papers, preprints, citations and open full text from eighteen free sources, with the exact queries shown so anyone can rerun them.
 
-  It first turns your question into a search plan. It picks the most trusted database for the job, prefers identifiers like DOIs over loose keywords, and keeps each query small. Python scripts using only the standard library call the sources. Some of these APIs report success even when they fail, so it checks the contents, not just the status. The report says what was searched, what came back and what could not be reached. No login is needed.
+  It first turns your question into a search plan. It picks the most trusted database for the job, prefers identifiers like DOIs over loose keywords, and keeps each query small. Python scripts using only the standard library call the sources. Some of these APIs report success even when they fail, so it checks the contents, not just the status. The report says what was searched, what came back and what could not be reached. Most sources need no login. CORE full text needs a free CORE key.
 when:
   - You start a literature review and need a clear record of how you searched.
   - You have a DOI and want the open access full text if it exists.
@@ -30,7 +30,7 @@ you_get:
   - Citation data
   - The queries used, so you can repeat them
 how_to_use:
-  - Open Claude, ChatGPT or Gemini in a chat that can run Python code and reach the web. Paste in the skill text.
+  - Open an AI chat that can run Python and Bash commands (including curl) and reach the web, such as Claude Code or Codex. A consumer chat without code execution will not run this skill. Paste in the skill text.
   - Type your research question. Add a DOI, a date range or a field limit if you have one.
   - Add free API keys if you have them. Most sources need no login, but CORE full text needs a free CORE key.
   - Read the Retrieval Summary first. It tells you which sources were searched and which came back empty.

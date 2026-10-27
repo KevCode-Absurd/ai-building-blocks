@@ -4,12 +4,12 @@ headline: Trailing-period financial bridge
 summary: Find a trailing 12-month figure for revenue or another flow. Give it last year and matching year-to-date numbers. You get a checked bridge.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The sum only works for flows and when both periods match, so the period lengths and the cut-offs need checking."
 subhead: A trailing-period additive-flow reconciliation with period-boundary checks. Share last full-year flow, current YTD flow, comparable prior YTD flow and fiscal-period definitions.
 explain: |-
   A trailing-period additive-flow reconciliation with period-boundary checks.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures. Annual100 + current YTD40 - matching prior YTD30 = trailing110. Current YTD50 gives120. This identity must not be applied to EPS or balance-sheet stocks.
+  Issuer revenue and cash-flow reconciliation. Illustrative figures. Last full year 100 + current YTD 40 - matching prior-year YTD 30 = trailing 110. With a current YTD of 50, the result is 120. This identity must not be applied to EPS or balance-sheet stocks.
 when:
   - You need a trailing-period additive-flow reconciliation with period-boundary checks.
   - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You need trailing EPS, margins or average-balance ratios: these need a different method, so work them out with your finance lead or accountant."
   - "You need a balance-sheet figure such as cash or debt: use the closing balance from the latest statement, not a trailing sum."
   - "You want to trade, file or move money from the result: this only checks the numbers, so ask a qualified person to act on it."
+  - "You need one extra fiscal week taken out of this year's revenue: use the Extra-week revenue comparability schedule instead."
 you_give:
   - Last full-year flow, current YTD flow, comparable prior YTD flow and fiscal-period definitions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The year-to-date cut-off, plus the currency and scale used for the trailing twelve months."
+  - "Your spreadsheet tool, if you want the trailing twelve months as a workbook."
 you_get:
   - A trailing-period additive-flow reconciliation with period-boundary checks.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the trailing twelve months, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of the trailing figure and four quarters where available, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the last annual report and both year-to-date statements."
+  - "Tell it what you need: the trailing figure built from last year, this year to date and the same period last year."
+  - "Ask it to stop and mark MISSING if the prior year-to-date figure is not in your sources."
+  - "Check that the prior year-to-date period has the same length and cut-off as the current one, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Your last full-year figure for one flow, such as revenue
@@ -69,10 +70,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Year-to-date cut-off"
+    how: "Take the year-to-date cut-off from the last annual report and both year-to-date statements. Use one currency and scale on every line."
+  - what: "The figure being rolled"
+    how: "Change the the figure being rolled and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Prior YTD has the same duration and calendar cut-off as current YTD.
 judge:
@@ -85,8 +86,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one trailing twelve months you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define year to date into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

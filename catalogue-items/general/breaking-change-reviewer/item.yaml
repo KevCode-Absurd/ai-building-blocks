@@ -14,4 +14,4 @@ origin: rebuilt
 version: 1.0.0
 minds: [linus-torvalds]
 credits:
-  - {title: "Re: OOM changes in Linux 3.7 (LKML email, 12 November 2012)", by: "Linus Torvalds", used: "Treating a change that breaks existing users as the change's fault, refusing expiry dates as a reason to break people, and not leaving empty stubs behind"}
+  - {title: "Re: OOM changes in Linux 3.7 (LKML email, 12 November 2012)", by: "Linus Torvalds", used: "One email about a kernel change that broke existing users. This skill adapts its ideas: a change that breaks existing users is the change's fault, an expiry date is not a reason to break people, and empty stubs should not be left behind. It does not speak for him."}

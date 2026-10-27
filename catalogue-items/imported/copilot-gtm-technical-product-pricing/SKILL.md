@@ -57,6 +57,8 @@ Leadership debate: "If we raise prices, we'll lose customers."
 
 Raised enterprise tier from $15K to $45K/year. Added dedicated support, SSO, audit logs to justify the jump.
 
+(One author's anecdote, not a benchmark. Your result will differ.)
+
 Lost: 0 enterprise customers. Zero.
 
 Gained: 3x revenue per enterprise account. Plus the customers who stayed started taking the product more seriously — higher adoption, more internal champions, more expansion.
@@ -204,7 +206,7 @@ Enterprise pricing isn't a page on your website. It's a conversation. The "Conta
 
 **1. Deployment model** (self-serve cloud, dedicated cloud, on-prem, hybrid)
 - Each has different cost to serve → different price floor
-- On-prem commands 2-5x premium over cloud (support complexity)
+- On-prem commands 2-5x premium over cloud (support complexity). These multiples are the author's rules of thumb, not benchmarks
 
 **2. Usage scale** (seats, API volume, data volume)
 - Volume discounts should never go below cost to serve + 40% margin

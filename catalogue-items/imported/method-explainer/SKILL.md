@@ -9,6 +9,8 @@ Any time you deliver findings that require the audience to trust the method — 
 
 # Process
 
+If you cannot open the reference files, use these short versions. Executive: why and what, in three sentences. Analyst: what and how, at a high level. Technical: full detail. Replace each statistical term with a plain word, and keep the term in brackets the first time.
+
 1. **Identify the audience tier** — use `references/audience_depth_guide.md` to determine the appropriate level: executive (why/what), business analyst (what/how at high level), or technical peer (full detail).
 2. **Select the explanation pattern** — use `references/methodology_explanation_patterns.md` to pick the structure: narrative, layered (short summary + appendix), or Q&A format.
 3. **Draft the core explanation** — cover: what question was asked, what data was used, what method was applied, what assumptions were made, and what the key limitation is.
@@ -18,8 +20,10 @@ Any time you deliver findings that require the audience to trust the method — 
 
 # Inputs the skill needs
 
+Gather these first: your raw method notes, the data source and date range, and the decision the reader must make.
+
 - Description of the analytical method used (technique, data, steps)
-- Audience type (executive / business / technical)
+- Audience type (executive / business / technical). If none is given, use business analyst and say so at the top.
 - Any assumptions or known limitations
 
 # Output

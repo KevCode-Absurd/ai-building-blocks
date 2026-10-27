@@ -336,7 +336,7 @@ python3 scripts/ai_threat_scanner.py \
 RISK=$(jq -r '.overall_risk' ai_security_report.json)
 if [ "${RISK}" = "critical" ]; then
   echo "Critical AI security findings — blocking deployment"
-  exit 1
+  exit 2   # same code the scanner uses for critical findings
 fi
 ```
 

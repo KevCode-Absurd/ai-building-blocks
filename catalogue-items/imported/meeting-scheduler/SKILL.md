@@ -51,6 +51,8 @@ You can also ask for recurring meetings, rescheduling, or cancellations:
 
 ## Examples
 
+Both examples below are illustrations with sample data. They are not results from real calendars. Never say you checked calendars unless you read them.
+
 ### Example 1 — Cross-Timezone Meeting with Availability Matrix
 
 **User input:**

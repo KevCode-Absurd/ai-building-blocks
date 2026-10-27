@@ -35,7 +35,8 @@ how_to_use:
   - "Describe your company: sector, services, staff, turnover, balance sheet and the EU countries you work in."
   - Add your current security measures if you have them. Say if an incident has happened and when you found out.
   - Ask for your classification first. Check that the sector and size facts are right before you go on.
-  - Ask for the gap table, reporting timeline and fine estimate. Then check your national law and register before you act.
+  - Ask for the gap table, reporting timeline and fine estimate. Then check your national law and register before you act. The skill's notes on which countries have passed their national law may be out of date, so confirm with your national authority.
+  - Hand the gap table to your board or IT lead, and bring the open items to a lawyer.
 output_sample:
   input:
     - Your sector and the services you offer

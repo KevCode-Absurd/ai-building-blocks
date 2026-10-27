@@ -30,6 +30,7 @@ you_get:
   - Earnings per share before and after the deal
   - Savings cases and a break-even view
 how_to_use:
+  - The India conventions files the skill names are not in this folder. If your AI cannot load them, ask it to state the conventions it assumed and list what it could not check.
   - Open a chat with an AI that can make Excel files. Paste in this skill.
   - Add the buyer and target details, the offer price and the cash and stock mix.
   - Add your expected savings, fees and close date. If you skip something, your AI should ask or mark it missing.

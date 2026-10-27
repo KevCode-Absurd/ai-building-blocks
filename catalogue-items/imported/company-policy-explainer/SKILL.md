@@ -6,7 +6,7 @@ argument-hint: "<policy topic — PTO, benefits, travel, expenses, etc.>"
 
 # /policy-lookup
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> In this skill, "~~knowledge base" means your handbook or policy documents (pasted, attached or connected), and "~~HRIS" means your HR system. If neither is connected, use the handbook text the user pastes.
 
 Look up and explain company policies in plain language. Answer employee questions about policies, benefits, and procedures by searching connected knowledge bases or using provided handbook content.
 
@@ -47,7 +47,7 @@ Search for policies matching: $ARGUMENTS
 
 ## How to Answer
 
-1. Search ~~knowledge base for the relevant policy document
+1. Search the handbook or policy documents for the relevant policy
 2. Provide a clear, plain-language answer
 3. Quote the specific policy language
 4. Note any exceptions or special cases

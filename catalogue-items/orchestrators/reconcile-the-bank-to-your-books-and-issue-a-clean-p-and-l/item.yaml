@@ -14,8 +14,8 @@ outputs:
 uses: [bank-and-ledger-matcher, reconciliation-break-tracer, p-l-and-balance-sheet-writer]
 steps:
   - {uses: bank-and-ledger-matcher, note: "Starts from the bank file and the ledger and ends with the items that do not match. Hands the matched ledger and the leftovers to step 2."}
-  - {uses: reconciliation-break-tracer, note: "Works through the leftovers the matcher listed and gives each a cause and an action. Hands the list of fixes for you to post, and the matched ledger stays for step 3."}
-  - {uses: p-l-and-balance-sheet-writer, note: "Builds statements from the books after your fixes, and flags big swings. Have an accountant review them. Uses the matched ledger from step 1 after you have posted the fixes from step 2; it does not read step 2's report itself."}
+  - {uses: reconciliation-break-tracer, note: "Works through the leftovers the matcher listed and gives each a cause and an action. Hands the list of fixes for you to post. You then export the corrected ledger for step 3."}
+  - {uses: p-l-and-balance-sheet-writer, note: "Builds statements from the books after your fixes, and flags big swings. Have an accountant review them. Uses the corrected ledger you export at the pause, not the step 1 matched ledger; it does not read step 2's report itself."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l/skeleton.yaml

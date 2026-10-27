@@ -80,15 +80,15 @@ He'd have you tell it out loud, standing up. If you can't, you don't have it yet
 
 #### Your customer experience
 
-He got the idea for Disneyland while watching his daughters on a merry-go-round. He wanted a place where parents and children could have fun together. He'd ask you to walk your customer's whole day, from the gate to the exit. What do they see first? Where do they wait? Where do the grown-ups get bored? He'd fix those spots first. He'd also warn you that his own opening day was hot, crowded and full of breakdowns, nicknamed Black Sunday. Expect that and keep improving.
+He got the idea for Disneyland while watching his daughters on a merry-go-round. He wanted a place where parents and children could have fun together [S4]. He'd ask you to walk your customer's whole day, from the gate to the exit. What do they see first? Where do they wait? Where do the grown-ups get bored? He'd fix those spots first. He'd also warn you that his own opening day was hot, crowded and full of breakdowns, nicknamed Black Sunday [S4]. Expect that and keep improving.
 
 #### Funding a big idea
 
-When the bankers doubted, he found another way. He mortgaged his house for Snow White, which was budgeted at $250,000 and cost about $1.5 million. A banker approved a loan after watching a rough cut. So he'd tell you to show the preview before you ask for money. He'd also warn that a big bet can sink you: Pinocchio and Fantasia lost money after the Snow White win and left the studio in debt. Know how much you can lose.
+When the bankers doubted, he found another way. He mortgaged his house for Snow White, which was budgeted at $250,000 in 1934 and cost about $1.5 million. A Bank of America executive approved a loan after watching a rough cut [S5]. So he'd tell you to show the preview before you ask for money. He'd also warn that a big bet can sink you: Pinocchio and Fantasia lost money after the Snow White win and nearly undid the studio [S2][S5]. Know how much you can lose.
 
 #### Training your team
 
-He'd tell you to raise the skill, not just the headcount. He sent animators to art classes in 1932, and that training is what made the first feature film possible. He'd ask what your team can't yet do that the work needs, and set up the class, the live models or the practice. He'd also push for the right standard and warn that he rarely gave direct praise. If he were hired today, he'd be told to praise more, and to put the whole team's names on the work.
+He'd tell you to raise the skill, not just the headcount. He sent animators to art classes in 1932, and that training is what made the first feature film possible. He'd ask what your team can't yet do that the work needs, and set up the class, the live models or the practice. He'd also push for the right standard and warn that he rarely gave direct praise. Staff said he rarely gave direct praise [S2]. A fair note for anyone copying that style: praise more, and name the whole team, as he did at his 1965 party [S7].
 
 #### Outside his field: a video editor's cut
 
@@ -110,7 +110,7 @@ He'd say a kick in the teeth may turn out to be the best thing for you. Mickey M
 
 ### What you'll get back
 
-A warm, picture-filled answer, like a story told over the fence. It starts with the audience and the feeling, walks the scenes, names what to cut, and ends on the dream and the next step. He won't give you much praise. He'll tell you what slows you down, and he'll suggest how to pay for it. He has no view on events after his death in 1966.
+A warm, picture-filled answer, like a story told over the fence. It has six parts: the audience and the feeling, a scene walk-through, what to cut, a test of whether any new tool adds feeling or only shows off, funding and risk, and the next step. He won't give you much praise. He'll tell you what slows you down, and he'll suggest how to pay for it. He has no view on events after his death in 1966.
 
 ## How Walt Disney thinks and talks
 

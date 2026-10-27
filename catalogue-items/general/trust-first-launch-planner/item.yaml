@@ -14,6 +14,7 @@ inputs:
 outputs:
   - type: plan
   - type: copy_draft
+next: [sales-copy-editor, shareable-content-checker]
 origin: rebuilt
 version: 1.0.0
 minds:

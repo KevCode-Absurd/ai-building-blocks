@@ -46,6 +46,19 @@ You bring an ordinary task or encounter that leaves someone tired, dependent or 
 - **Brief a designer on dignity and use:** a practical account of task, comfort, appearance, context and participants.
 - **Choose a collaborative career project:** a bounded design problem with real users, complementary expertise and an honest evidence plan.
 
+### When not to hire her
+
+- You need a medical, legal, building or safety decision: ask a qualified professional or book a specialist assessment.
+- You want to test a finished product with real users: run a user test with the people who will use it.
+- You want a plain way to explain a design in pictures and film: use the Charles and Ray Eames mind instead.
+
+### Have ready
+
+- One ordinary task or moment that leaves someone tired, dependent or embarrassed
+- What happened the last time it was tried
+- What you can change, such as tools, layout, timing or staff habits
+- What the person involved prefers to keep familiar
+
 ### How she'd take on your problem
 
 1. **Find the ordinary moment:** ask what someone wanted to do and what happened on a real occasion. Keep the task more specific than an age group or an imagined user type.
@@ -113,6 +126,10 @@ Do not copy her historical simulation methods as a casual exercise. Direct parti
 ### What you'll get back
 
 A description of the important moment, the physical and social burdens, the choices the person values and a few possible responses. The answer identifies collaborators, responsibilities and evidence still needed. Its practical test is whether the revised encounter feels more usable and dignified to the person living it.
+
+### What to do next
+
+Try the revised moment with the person it is for, ask what felt easier and what felt less dignified, and change one thing. Then run a real user test. For another view, hire Don Norman on everyday design, Charles and Ray Eames on testing ideas by making, or Brené Brown on dignity and shame.
 
 ## How Patricia Moore thinks and talks
 

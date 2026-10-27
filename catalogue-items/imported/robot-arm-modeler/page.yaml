@@ -31,12 +31,14 @@ you_get:
   - A table for each target pose with the solver exit flag, position error and largest joint jump
   - A note on any gaps in the model
 how_to_use:
-  - Open an AI that can run MATLAB. You need MATLAB with Robotics System Toolbox.
+  - Open an AI that can run MATLAB. You need paid MATLAB with Robotics System Toolbox. The skill's licence lets you use it only with MathWorks products.
   - Paste the skill text into the chat.
   - Give the arm name, or attach your URDF file or DH parameters.
   - Add target poses and gripper details if you have them (optional).
   - Say what you plan to do next, such as animate or pick and place.
   - Read the checks table and gap notes before you use the model.
+  - Next, pass the model to a motion planner or a trajectory tool, such as the Robot arm motion planner.
+next: [robot-arm-motion-planner]
 output_sample:
   input:
     - The arm name, such as a UR5e, KUKA iiwa or Panda, or your URDF file or DH parameters

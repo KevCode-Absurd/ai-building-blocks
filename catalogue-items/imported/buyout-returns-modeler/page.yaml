@@ -36,6 +36,7 @@ how_to_use:
   - For exact numbers, use an AI that can run Python code, so it can use the calculation script.
   - Check the sources and uses first. Debt plus equity must equal the total price.
   - Read the returns matrix to see how IRR changes when the exit multiple or growth changes.
+  - Pass the returns and the debt schedule to a finance professional before you use them for a decision.
 output_sample:
   input:
     - Company financials and expected EBITDA growth

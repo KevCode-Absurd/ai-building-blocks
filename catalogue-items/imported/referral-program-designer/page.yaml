@@ -30,12 +30,14 @@ you_get:
   - Share message copy
   - Launch plan and measures
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code or paid tool is needed. The referral tools it names, such as Rewardful, Tolt, Mention Me, PartnerStack and Introw, are optional and usually paid.
+  - If you paste only the skill text, its reference files are left out. Your AI should ask you to paste a section, or work from the main steps.
   - Tell your AI what you sell and who buys it.
   - Add your average customer value and what it costs now to win a customer.
   - Say if you want a customer referral program, an affiliate program or both.
   - Check that the reward costs less than your other ways of winning a customer.
   - Ask for the launch plan and follow the checklist before you go live.
+next: [growth-loop-designer]
 output_sample:
   input:
     - Your product and who buys it

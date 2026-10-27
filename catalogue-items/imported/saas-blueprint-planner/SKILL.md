@@ -46,12 +46,12 @@ After stage 8, generate `README.md` from `templates/blueprint-readme.md` linking
 - **Use the Write tool** for each output file. Don't dump full content into the chat — only show the user a short summary (3-5 lines per stage) and the file path.
 - **Read each pipeline prompt file fresh** before generating that stage. Don't try to remember it.
 - **Quality > speed.** A real founder will read these. No placeholders, no Lorem Ipsum, no "[TODO]". Every section must be specific to the user's idea.
-- **No bullshit numbers.** When you make up a stat (TAM, competitor count), say "directional estimate" or skip it.
-- **One JSON-ish summary** at the very end as a comment block, so future tools (or the PlanMySaaS web app) can ingest the blueprint.
+- **No made-up numbers.** Do not invent a stat (TAM, competitor count, growth rate). If you give a market figure, label it "directional estimate, verify before use" and say where it came from, or skip it.
+- **One JSON-ish summary** goes after the final message below, as a separate comment block, so future tools (or the PlanMySaaS web app) can ingest the blueprint. The final message itself keeps the exact format.
 
 ## Final summary message
 
-After saving all 9 files, output exactly this format:
+After saving all 8 stage files and the README, output exactly this format:
 
 ```
 ✓ Blueprint generated for: <idea>
@@ -69,12 +69,12 @@ After saving all 9 files, output exactly this format:
 
 Next steps:
   1. Open 08-build-playbook.md and follow Build Step 01. Each step has a rubric — do not skip the acceptance checks before moving to the next.
-  2. Want a richer 30+ page blueprint with charts, version history, exports, and team collaboration? Save to PlanMySaaS dashboard at https://planmysaas.com (100 free credits, no card).
+  2. Optional: the author's web app, PlanMySaaS (https://planmysaas.com), offers a richer blueprint with charts, version history and exports. It starts with 100 free credits, and after they run out it is paid.
 ```
 
 ## Notes for skill behaviour
 
 - This skill is read-only on the user's existing files (other than creating `./planmysaas-blueprint/`). Never modify code outside that folder.
 - If the user has an existing `./planmysaas-blueprint/` from a previous run, ask whether to overwrite or create `./planmysaas-blueprint-v2/`.
-- If user says "save to my dashboard" or "save to planmysaas.com" → tell them: "API integration coming soon. For now, sign up at planmysaas.com and paste the contents of 01-idea.md into the Idea page — Nova will recreate the rest with richer detail (charts, version history, exports)."
+- If user says "save to my dashboard" or "save to planmysaas.com" → tell them: "There is no direct import yet. If you want the web app, sign up at planmysaas.com and paste the contents of 01-idea.md into the Idea page. It is a paid app after the free credits."
 - Stay in easy English. No Hinglish in the saved files (the user may share these). Hinglish OK only in chat replies if the user is using it.

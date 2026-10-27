@@ -37,7 +37,7 @@ how_to_use:
   - Tell your AI what the bot is for, who will use it, which tasks it handles and which channel it runs on.
   - Add your current flows if you have them (optional).
   - Check the result for dead ends. Every path should end in an answer or a handoff to a person.
-  - Run the test script with a few real users. Tools like Voiceflow or Dialogflow CX can help you prototype, but they are optional and some plans are paid.
+  - Test with about five real users, one at a time. Log whether they finish, how many turns it takes, how often the bot falls back and how often it hands off. Fix the weakest flow first, then test again. Tools like Voiceflow or Dialogflow CX can help you prototype, but they are optional and some plans are paid.
 output_sample:
   input:
     - What the bot is for

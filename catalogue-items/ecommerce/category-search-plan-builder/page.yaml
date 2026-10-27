@@ -109,7 +109,7 @@ tweaks:
   - what: Competitors
     how: Name 5 to 10 rivals so the bottom-of-funnel topics include versus pages that fit your market.
   - what: Budget for earned placements
-    how: State a number. Sponsored posts and free product cost money, so the plan only promises what you can pay for.
+    how: State a number. Sponsored posts and free product cost money, so the plan only promises what you can pay for. Label any paid or gifted post as paid or gifted, as the platform and advertising rules require.
 
 judge:
   - It picked exactly one category and says what happens to the others.
@@ -122,7 +122,7 @@ test:
   - Run it for a category where you already know your best-selling search term. That term should show up in the core queries or the topic map.
   - Run it twice. The category choice and the publishing order should match, even if the topic wording changes.
   - Check three topics by hand in Google. If a topic has no real searches or already belongs to a strong page of yours, mark it as a miss and tell the skill why.
-  - After day 30, run the five core queries again and compare with the first record.
+  - After day 30, run the five core queries again and compare with the first record. AI answers change from one session to the next, so treat the first record as a starting point, not a fixed ranking.
 
 improve:
   - Add your brand voice and claims file to "What you need" so every topic follows what you can say.

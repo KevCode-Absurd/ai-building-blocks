@@ -9,7 +9,7 @@ subhead: Give it your offer and what you know about your leads. It picks a premi
 explain: |
   If too few people respond, a better ad may not be the fix. People who would never respond to a full-price offer may respond to a free first step or a deep discount on one small piece. The risk is a pile of leads who never buy, or a discount that teaches buyers to wait for deals.
 
-  The steps manage that risk. First it compares premium, free and discount on your facts and picks one. Then it counts qualified leads per dollar, including what each lead costs you to handle, and adds friction one lever at a time. If the pick is a discount, it designs a two-step sale with a card taken and a second meeting booked. Last it plans what buyers buy next and a small test with the win rule written first. The order follows the draft chapter on free and discount promotions by Alex Hormozi.
+  The steps manage that risk. First it compares premium, free and discount on your facts and picks one. Then it counts qualified leads per dollar, including what each lead costs you to handle, and adds friction one lever at a time. If the pick is a discount, it designs a two-step sale with a card taken and a second meeting booked. Last it plans what buyers buy next and a small test with the win rule written first. The approach is inspired by Alex Hormozi's chapter on free and discount promotions.
 when:
   - Too few people respond to your offer.
   - Your cost to win a customer is higher than you can afford.
@@ -28,14 +28,14 @@ you_give:
 you_get:
   - A pick of premium, free or discount first step, with the reason and what must be true
   - Cost per qualified lead, with handling cost, and the friction to add one step at a time
-  - A cheap first piece, a booked second meeting and a no-show fee, if you choose discount
+  - A cheap first piece, a booked second meeting and a no-show fee, if you choose discount (check local rules on card taking and no-show fees first)
   - A ladder of what buyers buy next
   - A small test with a win rule written before you start
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Share your offer and whatever lead numbers you have. Missing numbers are marked, not invented.
-  - If it picks free, skip the paid first step. If it picks discount, run it.
+  - If it picks free, skip the paid first step. If it picks discount, run it. Check your local consumer rules on taking a card and charging no-show fees first.
   - Run the test for the time it sets and compare to the win rule before you scale.
 output_sample:
   input:
@@ -87,7 +87,7 @@ output_shape: |-
     Budget and time | win numbers | roll out or stop rule
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <the checks that failed, or none>
 tweaks:
   - what: Your cash and how long you can wait to break even
     how: Less cash pushes the pick toward free or discount. State both.

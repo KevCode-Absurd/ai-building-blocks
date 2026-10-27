@@ -8,19 +8,19 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: plan, required: false}
+  - {type: plan, required: true}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
 outputs:
   - {type: plan}
-uses: [launch-scope-cutter, feature-request-screener, launch-teaser-to-preview-planner]
+uses: [launch-scope-cutter, launch-teaser-to-preview-planner, feature-request-screener]
 steps:
   - {uses: launch-scope-cutter, note: "The same date with half the scope, the core first and the rest parked"}
-  - {uses: feature-request-screener, note: "A yes, later or no on each, with the full cost of every yes. Reads the smaller launch plan from step 1. Hands you the request list to act on; it is not needed by step 3"}
-  - {uses: launch-teaser-to-preview-planner, note: "A teaser, preview and launch plan with a sign-up page and free sample. Uses the smaller launch plan from step 1, not step 2's list, so no stage shows a cut feature"}
+  - {uses: launch-teaser-to-preview-planner, note: "A teaser, preview and launch plan with a sign-up page and free sample. Built from the smaller launch plan in step 1, so no stage shows a cut feature. Hands step 3 the launch plan"}
+  - {uses: feature-request-screener, note: "A yes, later or no on each customer request, with the full cost of every yes. Screens the requests against the smaller launch plan from step 1 and the teaser plan from step 2. Hands you the request list to act on"}
 origin: rebuilt
 version: 1.0.0
 minds: [jason-fried]
 credits:
-  - {title: "Getting Real", by: "Jason Fried and 37signals", used: "The order of the steps: launch scope cutter, feature request screener, launch teaser to preview planner"}
+  - {title: "Getting Real", by: "Jason Fried and 37signals", used: "The steps: launch scope cutter, launch teaser to preview planner, feature request screener"}
 generated_from: intake/getting-real/skeleton.yaml

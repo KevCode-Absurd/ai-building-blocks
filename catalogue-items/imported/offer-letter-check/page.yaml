@@ -30,10 +30,11 @@ you_get:
   - Pay and background check issues
   - A list of items to escalate to counsel
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can search the web for current local rules.
-  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
+  - It works best when your AI can search the web for current local rules. Web results come tagged "verify". Check each one against the law itself or with a lawyer before you rely on it.
+  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own. If the skill asks for a plugin config file you do not have, answer its questions in chat instead.
+  - A "Clear to send" result is not legal clearance. Have a lawyer review the offer before you send it, especially the non-compete.
 output_sample:
   input:
     - Your offer letter, or a short description of the hire
@@ -43,6 +44,7 @@ output_sample:
   prerequisites:
     - An AI that can search the web, so it can look up current local rules
     - A lawyer to check anything flagged before you send the offer
+    - "Optional: a legal research tool such as Westlaw (paid) or CourtListener (free)"
   output:
     - name: Overall
       contains: "One call on the offer: clear to send, changes needed, or escalate to a lawyer."

@@ -406,7 +406,7 @@ class ValueLevers:
         }
 
 
-# Example: IT Hardware category
+# Example: IT Hardware category (all prices, volumes and confidence values here are placeholders; use your own)
 it_hardware = ValueLevers(category='IT Hardware', baseline_spend=2000000)
 
 it_hardware.add_price_reduction(
@@ -536,12 +536,14 @@ class ShouldCostModel:
         manufacturing_cost = material_cost + labor_cost + overhead_cost
 
         # SG&A (typically 10-15% of manufacturing)
+        # 0.12 is a placeholder, not a benchmark: replace it with your supplier's real figure
         sga_cost = manufacturing_cost * 0.12
 
         # Total cost before profit
         total_cost = manufacturing_cost + sga_cost
 
         # Add profit margin
+        # 0.15 is a placeholder default, not a benchmark: set the margin you know
         margin_rate = getattr(self, 'margin_rate', 0.15)
         profit = total_cost * margin_rate
 

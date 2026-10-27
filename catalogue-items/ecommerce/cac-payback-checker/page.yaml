@@ -21,6 +21,7 @@ not_for:
   - "You have under 3 months of data or no cohort profit: wait, or work out CAC and first order profit by hand in a spreadsheet first."
   - "You want a deeper read of cohorts and the CAC spiral: use the lifetime gross profit to CAC checker."
   - "You want to judge one ad or one campaign: use the results screen in your ad platform, or ask your media buyer."
+  - "You sell subscriptions and want the most you can pay per subscriber and the cash needed until payback: use the Subscription payback checker."
 
 you_give:
   - CAC, average order value after refunds, product cost and fulfilment per order

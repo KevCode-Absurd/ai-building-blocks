@@ -7,6 +7,8 @@ description: Paste this above 20 or more customer reviews, support emails or sur
 
 Turns a pile of customer words into a short ranked list of why people buy, and what nearly stopped them.
 
+**Not for:** fewer than 20 entries (read them yourself, since a count on so few is thin), or finished ad copy (take the ranked reasons to a copy writer skill). For the full version with every check, use "Customer buying reasons finder".
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -49,16 +51,17 @@ THIN REASONS (fewer than 5 people)
 
 NOTES
 <entries used, entries dropped, anything the pile cannot tell you>
+CHECKS MISSED
+<one line per check missed, or none>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
+- The [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder).
+- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder).
+- The [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
 - **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- **Write the ad copy** with the [Ad headline ideas](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

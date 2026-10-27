@@ -74,7 +74,7 @@ how_it_works:
   - title: Build the statements
     text: Checks the trial balance adds up, maps accounts to lines and builds the income statement, balance sheet and cash flow.
   - title: Explain the moves
-    text: Compares each line with last month and budget, and writes one sentence of why for each line past your limit.
+    text: Compares each line with last month (and the budget, if you gave one) and writes one sentence of why for each line past your limit. Where the reason is not clear from the data, it says so.
 output_shape: |-
   STEP 1: CLOSE PLAN
     Tasks with owners | order | longest chain | blockers | calendar
@@ -103,7 +103,7 @@ tweaks:
   - what: Reporting basis
     how: Say which rules you follow and the currency. Statements then use your labels and format.
   - what: Your limit
-    how: A tight limit gives more lines to explain. Pick one that your reader will accept.
+    how: A tight limit gives more lines to explain. Without one, step 5 uses 5 percent of the line or a fixed floor, whichever is greater.
   - what: Budget
     how: Add the budget for the month to get a second comparison on every line.
 judge:
@@ -119,4 +119,6 @@ test:
 improve:
   - Keep the calendar and reuse it next month, with the slow tasks moved earlier.
   - Add every accrual you had to correct to your list.
-  - Not a substitute for an accountant. If you have a team and software that closes for you, use this to check the order, not to replace it.
+  - Keep a note of every draft your accountant changes. Add each fix to your accrual list or your limit.
+next: [build-a-weekly-kpi-report-with-a-forecast-and-dashboard]
+before: []

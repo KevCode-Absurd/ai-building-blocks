@@ -32,9 +32,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code, files or paid tools are needed.
   - Add any brand notes you already have, such as your strategy, story or voice. This step is optional.
-  - "Answer the questions: your core belief, what you fight against, who it is for, the change you want, the tone and whether it is for your team or customers."
+  - "Have six answers ready: your core belief, what you fight against, who it is for, the change you want, the tone and whether it is for your team or customers."
   - "Pick a tone: war cry, love letter, quiet conviction or provocation."
   - Read both versions. Cut any line a competitor could have written, then ask your AI to rewrite it.
+  - Next, pair it with the Brand messaging builder for strategy, the Brand origin story writer for your story, and the Brand voice guide builder for tone.
 output_sample:
   input:
     - What your brand believes at its core

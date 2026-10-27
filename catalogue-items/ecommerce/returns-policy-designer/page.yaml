@@ -9,7 +9,7 @@ headline: "Returns policy designer"
 subhead: Give it your return rate, what a return costs you and your product list. It sets when refunds move, when to push exchange or store credit, which items to refund without a return, and how much support can spend to put a problem right.
 
 explain: |
-  A return is a test of trust. Shoppers read your policy before they buy, and one source puts that at 67 percent. After a poor return, about 71 percent say they are less likely to buy from you again. Yet most stores treat returns as a cost to cut, not a moment to keep the customer.
+  A return is a test of trust. Many shoppers read your policy before they buy. After a poor return, many say they are less likely to buy from you again. Yet most stores treat returns as a cost to cut, not a moment to keep the customer.
 
   This skill starts with three numbers: days from return request to refund start, the share refunded as store credit, and repurchase within 60 days of a return. It then writes the rules: when money moves, how to steer toward exchange or credit, which items are keep-it (refund, no return), and a per-incident budget so support can fix problems on the spot. Many figures come from vendors or secondary sources, so it treats them as direction and asks you to run your own 60-day check.
 
@@ -75,7 +75,7 @@ how_it_works:
   - title: Marks keep-it items
     text: An item is keep-it when the refund is smaller than the return cost, or it is damaged, perishable or hard to resell. Many stores draw the line near $20.
   - title: Adds guards
-    text: Offer keep-it case by case, cap it by value and watch repeat abusers, since about 9 percent of returns are reported as fraud.
+    text: Offer keep-it case by case, cap it by value and watch repeat abusers, since some returns are fraud.
   - title: Considers longer cover
     text: Lifetime or repair-for-life cover for durable items, and a results-based guarantee to test, only when margins allow.
   - title: Sets the recovery budget
@@ -132,7 +132,7 @@ improve:
   - Add your carrier and portal limits, such as when you can refund before the parcel is back.
   - Add the consumer law notes your adviser gives you for each market you sell in.
   - Save your three returns numbers to your brand file each quarter.
-  - Pair it with the return cost calculator, the refund speed checker and the guarantee designer, which do the sums this skill links to.
+  - Pair it with the guarantee designer for the terms of longer cover, and the first use gap checker to find why buyers return products.
 
 works_best_with:
   tools:

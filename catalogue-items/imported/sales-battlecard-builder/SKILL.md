@@ -13,11 +13,11 @@ Build structured sales battlecards that arm reps with everything they need to wi
 
 ## Workflow
 
-1. **Research the Competitor** — Gather current intelligence on the competitor: product capabilities, pricing model, recent product launches, G2/Gartner reviews, customer complaints, leadership changes, and public roadmap signals. Pull from their website, changelog, job postings (which reveal investment areas), and customer review sites.
+1. **Research the Competitor** — Gather current intelligence on the competitor: product capabilities, pricing model, recent product launches, G2/Gartner reviews, customer complaints, leadership changes, and public roadmap signals. Pull from their website, changelog, job postings (which reveal investment areas), and customer review sites. Use public pages only. Skip anything behind a login or paywall, and never scrape a site against its terms.
 
 2. **Identify Strengths and Weaknesses** — Map the competitor's genuine strengths (don't ignore them — reps need to acknowledge what the competitor does well) and exploitable weaknesses. Categorize weaknesses as product gaps, architectural limitations, pricing disadvantages, support deficiencies, or market positioning misalignment.
 
-3. **Map Feature Comparison** — Build a side-by-side feature comparison across the dimensions that matter most to your buyers. Use objective, verifiable claims. Mark each feature as strong advantage, slight advantage, parity, or disadvantage. This table becomes the centerpiece of the battlecard.
+3. **Map Feature Comparison** — Build a side-by-side feature comparison across the dimensions that matter most to your buyers. Use objective, verifiable claims. Add a source and date column to the table, and mark any row you cannot source as unverified. Mark each feature as strong advantage, slight advantage, parity, or disadvantage. This table becomes the centerpiece of the battlecard.
 
 4. **Draft Objection Handlers** — Write talk tracks for the 5–8 most common objections reps hear when competing against this vendor. Each handler follows a structure: acknowledge the objection, reframe the conversation, deliver your counter-point with proof, and bridge to your differentiator.
 
@@ -30,7 +30,13 @@ Provide the competitor name, your product's key differentiators, the target buye
 **Example prompt:**
 > Create a battlecard for competing against DataVault Analytics. We sell CloudMetrics, a real-time analytics platform. Our advantages are real-time processing, simpler pricing, and better onboarding. Their advantages are brand recognition and deeper enterprise compliance features. Target buyer is VP of Data at mid-market SaaS companies.
 
+## When not to use
+
+Skip the battlecard for a rival the team has never met in a deal. Keep a simple competitor list until they show up.
+
 ## Examples
+
+**These examples are fictional.** The companies, customers, quotes, results and prices in them are invented to show the layout only. Never copy a name, quote, number or result into a real deal. In a real battlecard, use only sourced facts, and write unknowns as placeholders such as [customer, result, source, date].
 
 ### Example 1: Full Competitive Battlecard
 

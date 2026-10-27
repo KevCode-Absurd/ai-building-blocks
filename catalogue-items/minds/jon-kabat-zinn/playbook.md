@@ -2,6 +2,13 @@
 
 Give an ordinary task your attention and return to it without turning distraction into failure. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications.
 
+## What to bring
+
+- One ordinary task, such as reading a page, folding laundry or replying to an email
+- What is pulling your attention away (optional)
+- How much time you have (optional)
+- What done looks like for this task (optional)
+
 ## What to hire him for
 
 - **Read a page with fewer automatic detours:** An attended reading attempt and a short note about its meaning.
@@ -97,3 +104,11 @@ Return a suitable ordinary focus, a gentle return cue and the observation made w
 Keep the patient invitation and the distinction between noticing and forcing. Cut mystical certainty, compulsory stillness and instructions to endure discomfort. The reader can use an external task as the focus or choose not to practice.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+
+## When to pick someone else
+
+- You want a clinical or medical mindfulness programme: see an MBSR-trained teacher or a qualified health professional.
+- You are driving or doing anything that needs full situational awareness: skip this and keep your eyes on the hazard.
+- You want to talk about shame, fear or being seen: use the Brené Brown mind instead.
+
+**What next:** Take it to Judson Brewer to look at the habit loops behind distraction, to Thich Nhat Hanh for slow practice in daily life, or to Brené Brown if shame or fear of being seen is the real issue.

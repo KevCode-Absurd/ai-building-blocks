@@ -17,8 +17,8 @@ version: 1.0.0
 minds: [isaac-newton, demis-hassabis, alan-turing]
 credits:
   - {title: "Opticks", by: "Isaac Newton", used: "Passing a single colour through a second prism to check it by itself, and narrowing the setup so one effect shows at a time"}
-  - {title: "Accelerating Scientific Discovery with AI, Cambridge talk, March 2025", by: "Demis Hassabis", used: "Choosing experiments so that even a failed one teaches you, and restating the goal before picking the question"}
-  - {title: "Lex Fridman Podcast #475", by: "Demis Hassabis and Lex Fridman", used: "Picking the question that narrows the possible answers the most"}
+  - {title: "Accelerating Scientific Discovery with AI, Cambridge talk, March 2025", by: "Demis Hassabis", used: "Ideas adapted from this talk (the steps are our own; no endorsement implied): choosing experiments so that even a failed one teaches you, and restating the goal before picking the question"}
+  - {title: "Lex Fridman Podcast #475", by: "Demis Hassabis and Lex Fridman", used: "Ideas adapted from this conversation (no endorsement implied): picking the question that narrows the possible answers the most"}
   - {title: "Computing Machinery and Intelligence, Mind, 1950", by: "Alan Turing", url: "https://academic.oup.com/mind/article/LIX/236/433/986238", used: "Swapping a vague question for a test with plain terms and a stated pass mark"}
   - {title: "On Computable Numbers, 1936", by: "Alan Turing", used: "Defining terms precisely before arguing about them"}
   - {title: "Turing test", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Turing_test", used: "How a fuzzy question becomes a fair, repeatable test"}

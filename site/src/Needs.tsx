@@ -50,9 +50,9 @@ export function Next({ plan }: { plan: Plan }) {
       {plan.next.map((x) => (
         <li key={x.slug}>
           <Link to={local(x.url)} className="next-one">
-            <span className="next-job">{x.label}</span>
+            {x.label.toLowerCase() !== x.name.toLowerCase() && <span className="next-job">{x.label}</span>}
             <b>{x.name}</b>
-            <span className="small">Takes the {x.takes.join(" and ")}</span>
+            {x.takes.length > 0 && <span className="small">Takes the {x.takes.join(" and ")}</span>}
           </Link>
         </li>
       ))}

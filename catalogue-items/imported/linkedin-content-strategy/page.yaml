@@ -37,7 +37,8 @@ how_to_use:
   - Say how many minutes a week you can spare in a bad week, and your stage, such as starting out.
   - If your AI can run Python 3 code and files, it can run the three checks. If not, ask it to follow the same steps in chat.
   - Read the minimum viable week first. Check it is a week you could really keep.
-  - Ask about the newsletter only after the brief and the weekly plan are done.
+  - Ask about the newsletter only after the brief and the weekly plan are done. The newsletter check uses LinkedIn's published follower minimum, which can change, so confirm the current rule on LinkedIn.
+  - Next, write the individual posts with the LinkedIn hook post writer. After about 90 days, paste your post data into the LinkedIn results reader and decide what to change.
 output_sample:
   input:
     - Your one main goal, such as a career change, consulting, thought leadership, hiring, fundraising or community

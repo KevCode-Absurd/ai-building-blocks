@@ -1,6 +1,6 @@
 # Check contracts and rules: AI Blocks
 
-> 97 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 98 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Check your site against WCAG accessibility rules. Give it your page code or screenshots. You get gaps by level, fixes ranked first, and statement notes.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
@@ -8,6 +8,7 @@
 - [AI law gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker): Share the AI rule and company practices. Check scope, compare requirements and plan gaps for legal review with owners and due dates.
 - [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker): Share AI vendor terms and your company’s rules. Get clause-by-clause risks, proposed edits and points to take to a lawyer.
 - [Board written consent drafter](https://useaiblocks.com/skills/board-written-consent-drafter): Share a proposed board action and a past consent. Get a house-style draft, signature checklist and legal questions for lawyer review.
+- [Business insurance needs checker](https://useaiblocks.com/skills/business-insurance-needs-checker): Describe your business. Get its risks, the usual cover for each, what may be required where you are, and broker questions.
 - [Car supplier security checker](https://useaiblocks.com/skills/car-supplier-security-checker): Describe your work for car makers and assessment date. Get likely TISAX scope, labels and gaps to verify with an assessor.
 - [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker): Check your card payment setup against PCI DSS. Get your merchant level, the right self-assessment form (SAQ), and a list of gaps to fix.
 - [Cease-and-desist letter drafter](https://useaiblocks.com/skills/cease-and-desist-letter-helper): Draft a cease-and-desist letter to stop someone copying your work, or get an options memo for a letter you received. A lawyer should review it.

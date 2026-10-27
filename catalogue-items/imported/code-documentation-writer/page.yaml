@@ -17,7 +17,7 @@ when:
   - You need an API reference for other developers.
 not_for:
   - "Your code is private and you cannot share it with an AI tool: write the docs by hand or use a tool that runs on your own machine."
-  - "You need docs checked on every build: use a doc generator such as TypeDoc or Sphinx in your build steps."
+  - "You need a published doc site or docs checked on every build: use a doc generator such as TypeDoc (JavaScript and TypeScript) or Sphinx (Python). Use this to write the docstrings it reads."
   - "You only have a few lines to explain: write a short comment yourself, it is faster."
 you_give:
   - Your code or project folder
@@ -34,6 +34,8 @@ how_to_use:
   - Check the list of missing and stale docs it returns first.
   - Read the new docstrings and README. Fix anything that does not match how your code really works.
   - Look at the issues it flagged, such as names that do not match, and fix them in your code or docs.
+  - You get docstrings written into your source files, a README.md, and a standalone API reference in a docs folder if you ask for one.
+  - Run the examples it wrote before you merge, so none of them is broken.
 output_sample:
   input:
     - Your code or project folder

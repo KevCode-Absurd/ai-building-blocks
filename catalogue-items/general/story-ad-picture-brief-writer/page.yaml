@@ -5,7 +5,7 @@ job: make-image-ads
 thinking: medium
 thinking_why: It has to find the right moment in the story and pick a picture that does not give the answer away.
 headline: Story ad picture brief writer
-subhead: Paste a story ad. You get the moment the old way failed, the kind of picture that shows its trace, a runner-up to test, a ready image prompt, and a short line to run under the picture.
+subhead: Paste a story ad. You get the moment the old way failed, the kind of picture that shows its trace, a runner-up to test, a ready image prompt, and a short line to run under the picture. ChatGPT or Gemini draws the picture from the prompt.
 explain: |
   A story ad needs a picture that makes people curious, not one that explains the ad. Most AI picture ideas show the product or a smiling person, and people scroll past them like any other ad.
 

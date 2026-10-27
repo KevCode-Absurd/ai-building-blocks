@@ -30,7 +30,7 @@ you_get:
   - Steps for turning notes into findings
   - A list of product decisions the findings should inform
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
@@ -48,6 +48,7 @@ output_sample:
   prerequisites:
     - A way to reach real people for 5 to 15 interviews
     - A way to record sessions, with each person's consent
+    - "Optional: recruiting platforms such as UserInterviews and Respondent, which charge fees"
   output:
     - name: Research plan (research-plan-[topic].md)
       contains: Sharper questions, the chosen method, who to recruit and how many, and the timeline.

@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Collect your page and service addresses, your current alerts if you have any, and who is on call.
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
-  - Paste your details and say what you want planned. No code or paid tool is needed.
+  - Paste your details and say what you want planned. No code or paid tool is needed. Alert tools it names, such as PagerDuty, are optional and usually paid.
   - Check the alert tiers. Only problems that need action now should wake someone.
-  - Set up the checks and alerts in your own monitoring tools, then review them every three months.
+  - Set up the checks and alerts in your own monitoring tools. Write a runbook for each alert that wakes someone, then run the alert audit every three months.
 output_sample:
   input:
     - Your site address and the services it relies on

@@ -57,7 +57,7 @@ The companion files this skill once pointed to (`india-market-conventions`, `ind
 
 Next steps to state at the end:
 
-- Foot check passes: the schedule can go in the close package. Say which lines still need a source before sign-off.
+- Foot check passes: the schedule can go in the close package. A pass does not clear the schedule: every `unverified` line still needs a source before sign-off. Say which lines those are.
 - Foot check fails: do not sign off. Re-check the period cut-off, the journal-source filter and missing postings on the unexplained delta, then rebuild.
 
 No-tools note: this works in a plain chat. Paste the ledger rows and do the sums in a table. It needs no code.

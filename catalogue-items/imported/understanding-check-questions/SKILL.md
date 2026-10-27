@@ -193,40 +193,6 @@ For each option:
 
 Five students scored the following marks in a test:
 
-**6, 4, 8, 3, 9**
-
-What is the mean score?
-
-A) 5
-B) 6
-C) 8
-D) 30
-
-**Correct answer:** B) 6
-
-### Diagnostic Key
-
-- **A) 5** — This is the **median** (the middle value when ordered: 3, 4, 6, 8, 9). A student choosing this has confused mean with median — they may have ordered the numbers and picked the middle one, or they may have a general confusion between the two averages. This is one of the most common errors when mean and median are taught in close proximity.
-
-- **B) 6** — **Correct.** The student has added all values (6 + 4 + 8 + 3 + 9 = 30) and divided by the number of values (30 ÷ 5 = 6). This confirms they understand both steps: the sum AND the division by the count.
-
-- **C) 8** — This is the **range** (9 – 3 = 6... wait, no — this is a deliberately chosen distractor). Actually, 8 is the answer a student gets if they **divide by 4 instead of 5** — that is, they miscounted the number of values or forgot to count one of them (30 ÷ 4 = 7.5... let me recalculate).
-
-Let me redesign. The data set is **6, 4, 8, 3, 9**.
-- Sum = 30. Mean = 30 ÷ 5 = 6. ✓
-- Median = 6 (middle of 3, 4, 6, 8, 9). This would overlap with the correct answer.
-
-I need to adjust the data set so the mean and median are different.
-
-**Revised data set: 2, 3, 5, 8, 12**
-- Sum = 30. Mean = 30 ÷ 5 = 6.
-- Median = 5 (middle of 2, 3, 5, 8, 12).
-- Range = 10 (12 – 2).
-
-### The Question (Revised)
-
-Five students scored the following marks in a test:
-
 **2, 3, 5, 8, 12**
 
 What is the mean score?

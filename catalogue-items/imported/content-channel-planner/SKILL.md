@@ -10,7 +10,7 @@ display_order: 12
 
 A senior editorial leader's playbook for content distribution as a discipline. Owned, earned, and paid channels matched to audience and content type, with the channel-fit decisions that distinguish strategic distribution from spam-everywhere or hope-and-pray.
 
-Content distribution is half the work and gets a fraction of the attention. Most programs spend 90% of capacity on production and 10% on distribution; the resulting ratio of effort-to-reach is consistently poor. The teams producing content that reaches audiences are the ones who treat distribution as a real discipline: channels chosen for fit, cadence calibrated to audience attention, owned-earned-paid balance set by program strategy, and effectiveness measured per channel.
+Content distribution is half the work and gets a fraction of the attention. Many programs spend far more effort on production than on distribution (a rough rule of thumb, not a measured figure); the ratio of effort to reach is often poor. The teams producing content that reaches audiences are the ones who treat distribution as a real discipline: channels chosen for fit, cadence calibrated to audience attention, owned-earned-paid balance set by program strategy, and effectiveness measured per channel.
 
 This skill is the channel discipline. Different from `content-repurposing` (which turns one piece into many formats), this skill is about getting content TO audiences via the right channels. The two skills compose: repurpose first, then distribute the right format on the right channel.
 
@@ -132,6 +132,8 @@ Detail in [`references/content-channel-matching.md`](references/content-channel-
 
 How often, what mix, sustaining vs campaign rhythm.
 
+The cadence ranges below are rough guidance, not benchmarks. Adjust them to your audience and your results.
+
 **Cadence axes.**
 
 - **Frequency per channel.** How often the program posts to each channel.
@@ -213,7 +215,7 @@ When boosting organic content earns its keep.
 - Boosting pieces that drive volume but not value. Pieces that produce clicks but not engagement may be drawing the wrong audience; paid amplification compounds the wrong-audience problem.
 - Treating paid content amplification as a substitute for organic distribution. Paid amplifies what organic validated; paid alone produces transactional reach without the audience relationship organic builds.
 
-**The mix.** Most strong programs allocate 0-20% of distribution capacity to paid content amplification. Programs heavily dependent on paid promotion are usually programs that have not yet built owned and earned distribution.
+**The mix.** As a rough guide, not a benchmark, strong programs often put 0-20% of distribution capacity into paid content amplification. Programs heavily dependent on paid promotion are usually programs that have not yet built owned and earned distribution.
 
 Detail in [`references/paid-promotion-patterns.md`](references/paid-promotion-patterns.md).
 
@@ -306,7 +308,7 @@ This skill's output depends on data, measurements, or tool results it cannot gen
 
 ## Closing: distribution is half the work
 
-Most content programs are production-heavy and distribution-light. The teams producing flagship pieces typically spend 90% of capacity producing and 10% distributing; the resulting reach matches the inverse ratio. Pieces that took 60 hours to produce reach a fraction of their potential audience because the 6 hours allocated to distribution were not enough to do the channel work.
+Most content programs are production-heavy and distribution-light. Teams producing flagship pieces often spend most of their capacity producing and little distributing, and reach suffers. A piece that took many hours to make can reach a fraction of its audience because too little time was left for the channel work. Treat the ratios here as illustrations.
 
 The discipline is not "distribute more"; it is "distribute deliberately." Channel-fit decisions concentrate distribution work where it produces value. Owned-channel investment builds durable foundations. Earned-channel relationships accumulate over years. Paid promotion amplifies what organic validated. Measurement informs what to keep and what to cut.
 

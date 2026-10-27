@@ -33,11 +33,13 @@ you_get:
   - Warning signs of a weak giveaway
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Have these ready: your current signup numbers, the price of what you sell next, and the three questions your audience asks most.
   - Describe your audience and what you sell next in a few lines.
   - Add the topics your audience asks about. Add your old giveaways and results if you have them.
   - Answer any questions it asks about your audience and how people buy.
   - Read the format choice and the one-problem promise first. Ask for a change if either feels too broad.
   - Use the outline to make the giveaway. Then set up the form questions and follow-up emails.
+  - Test the giveaway with five people who are not subscribers before you launch. Then write the first follow-up email with the follow-up email sequence writer.
 output_sample:
   input:
     - Who your audience is
@@ -59,3 +61,4 @@ output_sample:
       contains: How the first emails lead from the giveaway to your next offer.
     - name: Weak-bait checks
       contains: Warning signs that the idea is thin, too broad or likely to attract people who never buy.
+next: [follow-up-email-sequence-writer, signup-popup-builder]

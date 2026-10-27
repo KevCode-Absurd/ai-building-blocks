@@ -5,6 +5,15 @@ description: Build or refresh a strategic account plan - current state, goals, s
 
 # Account Plan
 
+**First run (AI Blocks summary):**
+1. Ask for the account name, whether it is a new plan or a refresh, and the horizon (quarter, half or year).
+2. Check which tools are connected. If none are, read the uploaded file or pasted notes.
+3. Read the account, deals, activities and any notes, and cite each claim.
+4. Draft the seven sections in Step 3.
+5. Propose CRM changes with before and after, and apply only the ones the user accepts. Without write access, give a checklist.
+
+The rules block below applies to every step. `stakeholder-map` and `expansion-whitespace` are optional companions, listed in this library as the Stakeholder map builder and the Expansion whitespace finder. Without them, do the stakeholder pull inside this skill.
+
 **Rules (apply to every step of this skill):**
 - Work silently between tool calls and batch independent reads. When the user asks for an action (update a record, send an email, post to chat, book a meeting), take it through the connector. When the skill suggests a change the user did not ask for, show the change and its evidence and let the user decide. Permissions live in each connector's own settings (allow, ask or block per tool): never add a restriction the connector does not impose, and never refuse an action the user asked for on the plugin's own authority.
 - Ground field, stage and picklist names on the live CRM's own schema. Never assume one vendor's shapes on another.

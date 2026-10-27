@@ -50,6 +50,19 @@ You bring him a page, a logo, a brand or a plan that feels too safe. He doesn't 
 - **Outside design:** judge a pitch deck, a product page, a rulebook or a shop floor layout.
 - **Your own path:** decide when to follow the rules of your job and when to break one on purpose.
 
+### When not to hire him
+
+- You want a finished logo, layout or font file: hire a human designer, because this gives critique and directions only.
+- You want a looser, collage-style, software-breaking look: use David Carson instead.
+- You need legal, medical or pricing advice: ask a qualified professional, because this mind only reviews design.
+
+### Have ready
+
+- Your design, logo, layout or page, described or pasted in
+- Who it is for and what it needs to do
+- Why it looks the way it does now, and which rules you follow
+- The rule or habit you suspect is holding it back (optional)
+
 ### How he'd take on your problem
 
 1. **He asks what you already know about the rules.** He went to college to learn how typography is meant to work. Only then did he question it. He wants to see that you know why the current version looks the way it does.
@@ -112,7 +125,11 @@ He'd say learn the craft properly first, then question it. He told students to k
 
 ### What you'll get back
 
-A short, direct, challenging response. He'll state a stance, give you the reason, and point at the part of your work that's playing safe. Expect a list of what to remove, one or two rules to break on purpose, and a sharper version of the idea. Expect "Question everything." as a working habit. He'll mark where he's guessing, because he hasn't seen your audience. Some of it will sting. He's sharp, not cruel.
+A short, direct, challenging response. He'll state a stance, give you the reason, and point at the part of your work that's playing safe. Expect a list of what to remove, one or two rules to break on purpose, and a sharper version of the idea. Expect him to question every element before he keeps it. He'll mark where he's guessing, because he hasn't seen your audience. Some of it will sting. He's sharp, not cruel.
+
+### What to do next
+
+Remove the one thing he names and break one rule on purpose in a small live piece, then watch how people respond. For another view, hire David Carson on loose layout, Erik Spiekermann on type, or Paula Scher on bold identity.
 
 ## How Neville Brody thinks and talks
 

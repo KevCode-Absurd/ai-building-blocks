@@ -21,8 +21,8 @@ not_for:
   - "You want to buy the other company, not partner with it: talk to a lawyer or M&A adviser about an acquisition."
 you_give:
   - Who the partner is and what they ask for
+  - Their proof of demand, such as named customers they sold to in the last 12 months and the size of their sales team
   - Your product, price and margin
-  - What they bring, such as customers or reach
   - Your current partner terms (optional)
 you_get:
   - Sign or pass call
@@ -35,6 +35,7 @@ how_to_use:
   - Answer its questions one at a time. It first checks whether the partner has their own customers.
   - Read the tier call, the 90-day plan and the revenue share range. Check them against your own numbers.
   - Put the stop criteria into the contract before you sign. You make the final call.
+  - Take the tier call and revenue share band to whoever approves partner deals. Ask your sales operations or deal desk to handle pricing questions after the deal is signed.
 output_sample:
   input:
     - Who the partner is and what they ask for
@@ -54,3 +55,4 @@ output_sample:
       contains: Margin per deal direct and through the partner, a suggested share range and the break-even point.
     - name: Kill criteria
       contains: The signs that mean you should restructure or end the deal, to write into the contract.
+next: [partner-profit-tester, partner-deal-terms-writer]

@@ -47,6 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can read your files and past posts
     - Canva, Shopify, HubSpot or Mailchimp connected (optional, for graphics, product data and staging)
+    - "Optional: the Mailchimp connector may need a paid plan or an API key"
   output:
     - name: Voice profile
       contains: A short description of how you write, built from your past posts, and checked with you before any caption.

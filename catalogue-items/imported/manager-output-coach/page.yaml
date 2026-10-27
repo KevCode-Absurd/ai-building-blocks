@@ -17,8 +17,8 @@ when:
   - You are a new manager and want a proven routine.
 not_for:
   - "You have no direct reports: a manager routine will not fit, so start with a plain weekly plan of your own tasks."
-  - "You want a system for the whole company: use traction-eos, a separate skill for company-wide planning, not this one."
-  - "You want to boost your team's drive and motivation: use drive-motivation, a separate skill, rather than a meeting and task review."
+  - "You want a system for the whole company: use a company-wide planning method, such as EOS (the Entrepreneurial Operating System), not this one."
+  - "You want to boost your team's drive and motivation: talk to each person about what they want, rather than review meetings and tasks."
 you_give:
   - Your role and team size
   - Your current calendar and meetings
@@ -30,8 +30,11 @@ you_get:
   - A meeting and one-on-one rhythm
   - A ranked list of high-impact tasks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
+  - Paste your calendar as text. Say your team size, your role, and how work is measured today.
+  - Ask your AI to follow this skill. You get the score first, the list of gaps second, and the ranked tasks last.
+  - Two terms are worth knowing. Task-relevant maturity means how much experience a person has with a given task, which sets how closely you check their work. Managerial leverage means the output created per hour of your time.
+  - Pick the two biggest gaps for the next 30 days. Run the skill again after a month to see if the score moved.
 output_sample:
   input:
     - Your role and team size

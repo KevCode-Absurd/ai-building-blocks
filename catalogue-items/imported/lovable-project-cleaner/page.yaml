@@ -33,7 +33,8 @@ how_to_use:
   - 'Add this skill, then say: "Clean up my Lovable project."'
   - Tell your AI which package manager you use and give your own title and icons if you have them.
   - Read the Cleaned list, then answer anything under Needs your input.
-  - Run your build to check the project still works before you ship it.
+  - Run your build to check the project still works before you ship it. Then run the leftovers scan once more and deploy.
+  - The Vercel cache step needs a Vercel account. The favicon it writes is a blank placeholder, so replace it with your real icon before launch.
 output_sample:
   input:
     - Your exported Lovable project folder

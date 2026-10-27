@@ -19,6 +19,7 @@ not_for:
   - "You want to reply to comments or write DMs: use the LinkedIn engagement skill, or write them yourself."
   - "You want to plan what your posts should be about: use the LinkedIn strategy skill first."
   - "You only want a tone edit on general copy: use a copywriting skill or a plain edit pass."
+  - "You want one idea turned into both an X post and a LinkedIn post: use the X and LinkedIn post pair writer."
 you_give:
   - Your story, idea or source text
   - Your goal for the post

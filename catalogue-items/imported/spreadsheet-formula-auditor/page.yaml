@@ -30,7 +30,7 @@ you_get:
   - Unit and fiscal period warnings
 how_to_use:
   - Open your AI tool and paste the skill, or upload the skill folder. It needs an AI that can read spreadsheet files.
-  - Upload your workbook.
+  - Upload your workbook. For Indian models (crore units, April to March year), also add the india-modeling-rules-checker skill. For other models you do not need it.
   - "Say the scope: selection, sheet or whole model. Add your currency and fiscal year if you have them."
   - Read the findings table. Start with the critical rows, and check the balance sheet first.
   - Tell your AI which fixes to make. It will not change anything until you ask.

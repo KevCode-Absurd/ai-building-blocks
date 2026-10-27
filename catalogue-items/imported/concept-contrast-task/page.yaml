@@ -35,7 +35,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text, then add the idea, the mistake and the year group. Add your old worksheet if you have one.
   - Read the key feature your AI picks. Check it matches the real mix-up in your class.
   - Check every example by hand. For maths, count each area and perimeter on the grid before class.
-  - Run the task, then use the Assessment Check to see if the mix-up has gone.
+  - Run the task, then use the Assessment Check to see if the mix-up has gone. If it has not, ask your AI to run the contrast step again with new examples.
+  - Next, check the idea has stuck with Recall quiz writer, or plan the next lesson with Concrete to abstract maths lesson planner.
 output_sample:
   input:
     - The idea students need to learn

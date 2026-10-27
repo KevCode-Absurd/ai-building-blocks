@@ -12,7 +12,9 @@ argument-hint: "[optional — scope hint, e.g. 'firm-wide', 'legal team only', '
 
 # /policy-starter
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. If the practice profile is unpopulated, stop and direct to `/ai-governance-legal:cold-start-interview`.
+**Using this on AI Blocks:** the plugin files and `/ai-governance-legal:` commands named below are not part of this item. If the practice profile file does not exist, do not stop. Ask the user to paste a short company profile instead: the AI role (builds AI, uses AI, or both), the countries and sector, who approves policy, any existing AI policy, and who will use this. Or run the interview in the `setup-interview` folder. Where a step below names another command, tell the user the matching job in plain words (see Handoffs) and offer to do it by hand.
+
+1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` if it exists. If the practice profile is unpopulated, use the pasted profile or run the setup interview.
 2. Use the framework below.
 3. Run the scope interview — which sections does the policy need to cover, who's the audience, what's the deployment context. Do not skip to drafting.
 4. Web search for the current published model policies and guidance relevant to the deployment context (ABA, state bars, ILTA, CLOC, NIST, peer-firm / peer-company policies, current state AI laws, EU AI Act, sector regulators as applicable).
@@ -251,9 +253,9 @@ profile. The most common next steps:
    them with the attorney; the skill re-runs with the decisions baked in.
 2. **Stakeholder summary** — produce a one-page version for the board or
    executive committee explaining what the policy does and doesn't do.
-3. **Training materials** — once the policy is adopted, `/ai-governance-legal:aia-generation` can be used to produce per-use-case training notes.
-4. **Vendor sweep** — once the policy is adopted, `/ai-governance-legal:vendor-ai-review` should be run against the vendors the policy references to check conformance.
-5. **Gap check against new regulation** — pair with `/ai-governance-legal:reg-gap-analysis` to test the draft against a specific regulation or guidance before adoption.
+3. **Training materials** — once the policy is adopted, ask for per-use-case training notes. The AI impact assessment writer on AI Blocks can help.
+4. **Vendor sweep** — once the policy is adopted, check each vendor the policy names against it, by hand or with your AI.
+5. **Gap check against new regulation** — ask your AI to test the draft against a specific regulation or guidance before adoption.
 
 ## Output scope reminder
 

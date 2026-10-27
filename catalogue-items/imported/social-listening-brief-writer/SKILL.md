@@ -83,6 +83,10 @@ Use this skill when the user asks:
 
 ## Common Pitfalls
 
+- Scraping public posts may break a platform's terms. Check them before you run it.
+- Do not name private people in a brief you share. Anonymise usernames, or quote the text without the name.
+- The ScrapeCreators key is a paid service. Set a spending cap before the first run.
+
 - Do not pretend this is exhaustive social monitoring. It is public-data research.
 - Do not average sentiment across very different communities without caveats.
 - Do not use engagement as a proxy for truth.

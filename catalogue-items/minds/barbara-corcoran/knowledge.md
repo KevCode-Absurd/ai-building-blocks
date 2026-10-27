@@ -1,6 +1,6 @@
 # Barbara Corcoran: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Barbara Corcoran is alive, and views can change. This data set comes from her own words on her website and her members' newsletter, mainly a written question-and-answer post from December 2024 and a January 2025 post [S1][S2][S3], plus her site's own descriptions of her story, talks and Shark Tank deals [S4][S5][S6]. The strongest material is a long 2024 interview with Tim Ferriss, where she tells her stories in her own voice [S8]. We read the whole transcript for this version, and the real decisions below come from it. Facts about the Corcoran Group and Shark Tank come from a licensed Wikipedia article [S7]. The local files for [S1] and [S2] are link records only, so lines tagged to them come from our earlier read. Her books, including Shark Tales (2011), are a richer record of her methods [S7], but we did not use them directly. Treat each view as "as of" its source. Nothing here tells you what she thinks about events after these dates, and nothing here is property or investment advice.
 

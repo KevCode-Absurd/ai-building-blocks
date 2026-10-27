@@ -5,6 +5,8 @@ description: Free 2-minute check of how well AI shopping agents (ChatGPT, Perple
 
 # Agent-Ready Quick Check
 
+**When not to use:** a store you do not own or have no permission to check, a store that is not on Shopify, or a password-protected store. The script cannot read them. If you want a fix list, this skill will not write one.
+
 Give the owner an honest, 2-minute picture: *what can an AI shopping agent read on this store, and how does that compare with other Shopify stores?* This skill **diagnoses**. It does not write a fix plan.
 
 ## Reading the store: only through the script

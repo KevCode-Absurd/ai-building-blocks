@@ -235,7 +235,7 @@ works_best_with:
     - name: Claude
       why: Keeps the speaker rules and the one-detail limit in view across a long brief.
     - name: Veo
-      why: Turns a start frame of your AI presenter into short talking clips with the lips matched to the line.
+      why: Turns a start frame of your AI presenter into short talking clips with the lips matched to the line. Veo is a paid Google service that needs an account; this script does not need it.
   inputs:
     - Support emails or return reasons, so the doubt comes from more than reviews
     - A phone clip of someone opening and using the product, so the Show beat follows the real steps

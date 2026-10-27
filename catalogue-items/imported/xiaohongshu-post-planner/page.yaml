@@ -35,7 +35,9 @@ how_to_use:
   - "Type your topic, product or message. Add your audience and your goal: saves, follows or sales."
   - Add competitor accounts if you have them (optional).
   - Read the format choice first. Then check the cover brief, titles and body against your real product and facts.
+  - Seed comments in the result are likely reader questions with drafted replies. Do not post them from your own or paid accounts as fake users.
   - Remove any claim you cannot prove. Label posts that are paid, gifted or linked to a product as ads, as Xiaohongshu rules and Chinese ad law require.
+  - Next, test two or three titles, then track save rate and click rate for each post before you plan a content calendar with content-calendar-builder.
 output_sample:
   input:
     - Your topic, product or message
@@ -55,3 +57,4 @@ output_sample:
       contains: Three to five tags that mix popular and niche ones.
     - name: Comment engagement plan
       contains: Seed comments to post and likely reader questions with answers.
+next: [content-calendar-builder, wechat-article-planner]

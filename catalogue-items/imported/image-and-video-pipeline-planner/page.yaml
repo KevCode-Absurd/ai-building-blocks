@@ -33,7 +33,7 @@ you_get:
   - A list of changes to make, in order
 how_to_use:
   - "Gather your facts first: how many images and videos you have, where they live now, and your monthly budget."
-  - Run Lighthouse on two or three key pages and note the image weight. Lighthouse is free in Chrome. Skip this if you can't.
+  - Run Lighthouse on two or three key pages (open Chrome DevTools, choose Lighthouse, then run it) and write each page's image weight in your fact list. About 500KB of images per page is a rule of thumb, not a standard. Lighthouse is free in Chrome. Skip this if you can't.
   - Open Claude, ChatGPT or Gemini and paste the skill text. No code running is needed.
   - "Paste your facts and say: Plan my image and video pipeline using this skill. Mark anything you can't verify as a gap."
   - Check the plan against your budget. Then hand it to whoever builds your site, and ask them to make the first change on the roadmap.
@@ -48,6 +48,7 @@ output_sample:
   prerequisites:
     - Any AI chat tool. It does not need to run code.
     - Access to your site's files helps, but is not required.
+    - "Optional: image delivery services such as Cloudinary or imgix, which may cost money"
   output:
     - name: Inventory
       contains: Your current asset count, formats and storage, with any missing data clearly marked as a gap.

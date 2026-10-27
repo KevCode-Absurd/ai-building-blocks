@@ -1,0 +1,130 @@
+new_slug: podcast-show-notes-writer
+name: Podcast show notes writer
+summary: "Paste your transcript or notes. Get show notes: title, summary, key points, links mentioned and a call to action."
+job: write-and-tell-stories
+thinking: low
+thinking_why: It condenses a transcript into a fixed layout with little judgement needed.
+headline: Podcast show notes writer
+subhead: "Paste a transcript or your notes from an episode. It writes show notes people will read: a clear title, a two-sentence summary, the key points with timestamps if you have them, the links and names mentioned, and one call to action. It uses only what was said."
+explain: |
+  Show notes are the part of a podcast that people search for and share. Most are written in a rush: a vague title, a long paragraph, and a list of links nobody can match to a moment.
+
+  This skill turns your transcript or notes into show notes in a fixed layout. It writes a title that says what the episode is about, a summary of two sentences, the key points in the order they came up with timestamps if your transcript has them, and every name, link and book mentioned. It ends with a single call to action. It uses only what was said in the episode. It does not add claims, links or quotes that are not in the transcript, and it marks anything it could not check.
+when:
+  - You've recorded an episode and need show notes to publish with it.
+  - Your show notes are a rushed paragraph and you want a clear layout.
+  - You want a summary and key points to reuse in a post or a newsletter.
+not_for:
+  - "You need the audio turned into text first: use the Whisper speech transcriber."
+  - "You want to plan a podcast: use the Podcast pilot brief builder."
+  - "You want to turn the episode into several posts: use the Content repurposing planner."
+you_give:
+  - The transcript or your notes from the episode
+  - The show name, episode number and guest, if any
+  - The call to action you want, such as subscribe or visit a page
+  - Links and names you mentioned, if they are not in the transcript (optional)
+you_get:
+  - A title and a two-sentence summary
+  - Key points in order, with timestamps if the transcript has them
+  - Every name, link and book mentioned, in a list
+  - One call to action, and a list of what it could not check
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the transcript. Add the show name, episode number, guest and the call to action.
+  - Check every link and name against the episode. Fix any marked as unchecked.
+  - Read the summary aloud. It should sound like your show.
+  - Paste the notes into your podcast host and publish.
+output_sample:
+  input:
+    - The transcript or your notes from the episode
+    - The show name, episode number and guest, if any
+    - The call to action you want
+  output:
+    - name: Title
+      contains: A title that says what the episode is about.
+    - name: Summary
+      contains: Two sentences on what a listener will get.
+    - name: Key points
+      contains: The main points in order, with timestamps if the transcript has them.
+    - name: Mentioned
+      contains: Names, books and links mentioned, with a note where a link is still needed.
+    - name: Call to action
+      contains: One line, from the call to action you gave.
+    - name: Could not check
+      contains: What the transcript did not make clear.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads the episode
+    text: Goes through the transcript and finds the main subject and the order of topics.
+  - title: Writes the title
+    text: A title that says what the episode is about.
+  - title: Writes the summary
+    text: Two sentences on what the listener will get.
+  - title: Lists the key points
+    text: The main points in order, with timestamps if the transcript has them.
+  - title: Collects mentions
+    text: Lists every name, link and book mentioned, and marks any that need a link.
+  - title: Adds the call to action
+    text: One call to action, from the one you gave.
+  - title: Checks against the text
+    text: Removes anything that was not said in the episode.
+output_shape: |
+  TITLE
+  <title>
+
+  SUMMARY
+  <two sentences>
+
+  KEY POINTS
+  <timestamp> <point>
+
+  MENTIONED
+  - <name, book or link> | Link: <given / needed>
+
+  CALL TO ACTION
+  <one line>
+
+  COULD NOT CHECK
+  <what the transcript did not make clear>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Timestamps
+    how: Use a transcript that has them. Without them, the key points have no timestamps and say so.
+  - what: The call to action
+    how: Pick one. A list of asks gets none done.
+  - what: Your style
+    how: Paste the show notes of an earlier episode you like, so the new ones match.
+  - what: Guest details
+    how: Give the name and role as the guest wants them written.
+judge:
+  - The title says what the episode is about.
+  - Every point in the notes was said in the episode.
+  - Timestamps match the transcript, or are left out.
+  - Every name, book and link comes from the episode or is marked as needed.
+  - There is one call to action.
+test:
+  - Pick three key points. Find each in the transcript. The timestamps should match.
+  - Remove the call to action. It should ask for one, not invent it.
+  - Run it on two episodes. The layout should be the same.
+improve:
+  - Save your standard intro and outro lines in the skill file, if you want them on every episode.
+  - Add an earlier set of show notes you like as a style guide.
+  - Pair it with a transcriber so the transcript always comes first.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Condensing a transcript into a fixed layout works well in any strong chat AI.
+    - name: A transcription tool
+      why: It gives the transcript and timestamps this skill works from.
+  inputs:
+    - A transcript with timestamps
+    - Your last two sets of show notes
+    - A list of links and sponsors for the episode
+terms:
+  - term: Show notes
+    meaning: "The written page that goes with a podcast episode: a summary, key points and links."
+  - term: Timestamp
+    meaning: The time in the episode when a point starts, such as 12:30.

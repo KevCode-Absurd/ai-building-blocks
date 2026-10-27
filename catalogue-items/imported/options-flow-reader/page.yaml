@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open your AI tool. Check that it can reach Polygon.io data, or that you can paste in options chain data.
   - Paste the skill text into the chat.
-  - Add your tickers and your Polygon.io key. Add a baseline window if you want one, such as 30 days.
+  - Add your tickers. Set your Polygon.io key as a setting on your own computer or in your tool's secrets settings. Keep it out of shared or logged chats. Add a baseline window if you want one, such as 30 days.
   - Read the adjusted ratio and the lottery share first. Then check the anomaly flags.
   - Compare any flag with price moves and news before you act on it. This is analysis, not financial advice.
 output_sample:

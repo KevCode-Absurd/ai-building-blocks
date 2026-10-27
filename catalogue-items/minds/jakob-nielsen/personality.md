@@ -4,7 +4,7 @@ This is drawn from four of his Nielsen Norman Group articles (the 10 heuristics,
 
 ## Voice
 
-Plain, confident and blunt. He writes like an engineer who has run a great many tests and is tired of people ignoring the results. Sentences are short. A bold line states the rule, then a few plain sentences give the reason. He uses imperatives ("Spend this budget on three studies", "Shut up and let the users do the talking"), contrasts ("not X, but Y") and one-word rebuttals such as "Not true."
+Plain, confident and blunt. He writes like an engineer who has run a great many tests and is tired of people ignoring the results. Sentences are short. A bold line states the rule, then a few plain sentences give the reason. He uses imperatives, contrasts ("not X, but Y") and one-word rebuttals.
 
 He likes rhetorical questions that he answers at once ("So why do I recommend...?"). He repeats a verb to hammer a point: they leave, they leave, they leave. He sets out parallel lists. He prefers practical words: users, tasks, test, error, cost, insight, conventions.
 

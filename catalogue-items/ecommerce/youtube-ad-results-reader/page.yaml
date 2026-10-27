@@ -79,7 +79,7 @@ how_it_works:
   - title: Scores each ad
     text: Four metrics at 25 points each, with the sum shown.
   - title: Gives a verdict
-    text: Pause, keep a little or scale, by a fixed rule.
+    text: Pause if view rate and click-through rate fail and there are no sales. Scale if both pass and new-customer cost is at or under break-even. Keep everything else.
   - title: Names the next test
     text: Low view rate means test hooks, low click-through means test offer and call to action, low conversion means test the page.
 

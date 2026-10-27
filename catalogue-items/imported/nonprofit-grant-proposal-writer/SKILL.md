@@ -11,6 +11,8 @@ metadata:
 
 # Grant Writing: LOIs, Proposals & Reports
 
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-grant-research is the Nonprofit grant funder researcher. nonprofit-program-design is the Nonprofit program outcome planner. nonprofit-outcomes-measurement is the Nonprofit program measurement planner. nonprofit-storytelling is the Nonprofit ethical impact story writer. nonprofit-cost-allocation is not in this library yet. If a skill is missing, say so and ask finance for the rate and base.
+
 ## When to Use This Skill
 
 Use this skill once a funder has been identified and you are producing the written application or
@@ -59,6 +61,8 @@ problem statement (2-3 sentences), proposed project and amount requested, alignm
 funder's stated priorities (cite their specific language), and one differentiator. Cut everything
 that would appear in the full proposal — an LOI's job is to earn the invitation, not tell the whole
 story.
+
+> Verify with finance before use: the federal cost rules below were written at a set date and they change. Finance must confirm the rules that apply to your own award before any rate or base goes in a budget. Treat everything here as a starting point for that check, not as current advice.
 
 ## Budget Narrative
 

@@ -21,8 +21,8 @@ not_for:
   - "You want to change or end a discount: this only reads orders, so make the change in your Shopify discounts page."
 you_give:
   - Your Shopify store domain
-  - "Bucket size: week, month or quarter"
-  - How many periods to look back
+  - "Bucket size: week, month or quarter (optional, month by default)"
+  - How many periods to look back (optional, 12 by default)
   - How many top codes to list separately (optional)
   - Whether to include shipping discounts (optional)
 you_get:
@@ -31,12 +31,12 @@ you_get:
   - The top codes named individually
   - A trend you can compare across periods
 how_to_use:
-  - Sign in to Shopify CLI for your store with permission to read orders. This skill needs an AI that can run code.
+  - Sign in to Shopify CLI for your store with permission to read orders, using its auth command, before the first run. This skill needs an AI that can run code.
   - Paste the skill into your AI, or open the skill folder in your AI tool.
-  - Give your store domain, bucket size and how many periods to look back.
+  - Give your store domain. Add the bucket size and how many periods to look back if you want to change the defaults.
   - Add the number of top codes and whether to count shipping discounts, if you want to change the defaults.
   - Check the summary and the CSV file. Look at the latest period against the one before it.
-  - Use the discount-roi-calculator on any code that looks costly.
+  - Use the Discount payoff calculator on any code that looks costly.
 output_sample:
   input:
     - Your Shopify store domain

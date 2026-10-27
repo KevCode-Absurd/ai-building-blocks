@@ -30,11 +30,12 @@ you_get:
   - Terms and conditions text
   - Talking points for the offer call
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
-  - Add the role, level, location, pay, start date and hiring manager. Say so if you don't have a detail, and your AI will help you work it out.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
+  - Add the role, level, country or state, pay, start date and hiring manager. If you do not have a detail, say so. It is marked [TBC] and your AI will not invent pay, equity or start details.
   - Read the pay table first. Check that the first-year total adds up.
-  - Read the letter and the notes for the hiring manager. Add something personal from the interview.
+  - Read the letter and the notes for the hiring manager. Add something personal from the interview yourself.
   - Send the letter to HR or a lawyer to check before it goes to the candidate.
+  - Once it is approved, send it, start the background check and onboarding steps, and log the offer in your hiring system.
 output_sample:
   input:
     - The role and title

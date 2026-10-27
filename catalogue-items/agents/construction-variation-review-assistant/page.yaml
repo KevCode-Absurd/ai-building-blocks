@@ -10,7 +10,7 @@ subhead: Give it the variation request, the signed contract, the priced scope an
 explain: |
   A variation is a change to the work after the contract is signed. Extra scope, a different material, a delay. Each one arrives with a price and a time claim. The trouble starts when the request is treated as an approval. Work begins, and later nobody can show who agreed to what and for how much.
 
-  This construction variation review starts from your last review. It compares the new request with the signed contract and the priced scope. It uses the Construction change decision brief writer to find the contract's change, notice, approval and pricing clauses, recompute the quantities and rates, and draft a decision brief. Proposed work is kept apart from signed work. Each cost and time claim is traced to evidence or marked unproven.
+  This construction variation review starts from your last review. It compares the new request with the signed contract and the priced scope. It uses the Prepare a construction variation decision to find the contract's change, notice, approval and pricing clauses, recompute the quantities and rates, and draft a decision brief. Proposed work is kept apart from signed work. Each cost and time claim is traced to evidence or marked unproven.
 
   When an approval arrives, it records the accepted scope, who approved it, the amount and the date, taken from that approval. A submitted variation is never treated as an approved one. It reviews and drafts. It gives no legal or quantity surveying advice and approves nothing.
 
@@ -23,8 +23,8 @@ when:
 not_for:
   - There is no signed contract or priced scope yet. Take it to the commercial team first, because this review has nothing to compare against.
   - The work is a client service engagement and not construction. Use the Client scope change and decision tracker.
-  - You are checking a delay or time claim only. Use the Project delay test reviewer.
-  - You want a risk review of the contract wording for a lawyer. Use the Contract clause risk reviewer.
+  - You are checking a delay or time claim only. Use the Weekly project delay evidence assistant.
+  - You want a risk review of the contract wording for a lawyer. Use the Contract intake reviewer.
   - You want the AI to approve, price or instruct the work. It drafts, and a person with authority decides.
 
 you_give:
@@ -45,7 +45,7 @@ you_get:
   - A MISSING list, CHECKS MISSED and a short record for the next review
 
 how_to_use:
-  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add the decision brief writer, the contract summary, the invoice totals checker and the update writer from the pack.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Prepare a construction variation decision, Plain-words contract summary, Invoice totals checker, Stakeholder update writer and Executive action register keeper. If one is missing, stop and ask for it.
   - Say if this is a first run. If not, paste your last review and its record.
   - Attach the variation request, the signed contract and the priced scope. Write your approval rules in two or three lines.
   - Read "Changed since last version" first. Check each change against the new request.
@@ -62,7 +62,7 @@ how_it_works:
   - title: Draft the decision brief
     text: Shows the signed scope beside the proposed change, with cost and time evidence, approval status and open questions.
   - title: Record an approval, only if one arrived
-    text: Reads the approval and records the accepted scope, who approved, the amount and the date, using the Action item tracker. A submission or a reply that is not an approval stays open.
+    text: Reads the approval and records the accepted scope, who approved, the amount and the date, using the Executive action register keeper. A submission or a reply that is not an approval stays open.
 
 output_shape: |
   REVIEW DATE <date>   CONTRACT <ref>   VARIATION <id, version>   LAST REVIEW <date or first run>
@@ -87,7 +87,7 @@ output_sample:
     - Your last review and any approval received (optional)
   prerequisites:
     - An AI that can read files, such as Claude, ChatGPT or Gemini
-    - The Construction change decision brief writer and the Action item tracker in the agent pack
+    - The Prepare a construction variation decision and the Executive action register keeper in the agent pack
   output:
     - name: Changed since last version
       contains: Each change to scope, quantity, rate or time, with its source and date.

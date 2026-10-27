@@ -127,3 +127,4 @@ terms:
   - {term: "Friction", meaning: "Anything that makes a shopper stop, think hard or leave before buying."}
   - {term: "Above the fold", meaning: "What shows on screen before the shopper scrolls."}
   - {term: "Cart drawer", meaning: "A cart that slides in from the side so the shopper stays on the page."}
+next: [store-test-readiness-checker, big-swing-test-picker]

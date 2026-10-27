@@ -15,13 +15,14 @@ when:
   - The same five questions make up half your inbox.
   - You are about to hand support to someone new and want answers written down.
 not_for:
-  - "You get only a few tickets a week: answer them by hand, or paste one into the Customer reply promise checker."
+  - "You get only a few tickets a week: answer them by hand, or paste one reply into the Complaint reply promise checker."
   - "You want to answer public reviews: use the workflow Reply to reviews safely and plan how to get more."
-  - "You only need one angry reply checked: use the Customer reply promise checker."
+  - "You only need one angry reply checked: use the Complaint reply promise checker."
 you_give:
   - The open tickets, pasted as they came in, with dates
   - How you want to sound, or two replies you were happy with
   - What you can and cannot offer (refunds, replacements, discounts)
+  - Who handles orders, and medical or legal questions (optional)
   - Reviews or complaints that give the full customer story (optional)
 you_get:
   - Every ticket classified, ranked and routed, with a first line

@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 105 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 106 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Antagonist behavior planner](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper): Build a villain mood scale from calm to dangerous. Paste your setting plan and the person in power. Get warning signs, triggers and costs.
 - [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer): Share your app’s code history. Get plain “What’s New” notes users can read, based on real changes.
@@ -66,6 +66,7 @@
 - [Plain English editor](https://useaiblocks.com/skills/plain-english-editor): Paste a draft and get it back in plain English, with every cut explained and a read-aloud check. Edit stiff emails, reports and pages.
 - [Plain-language reply writer](https://useaiblocks.com/skills/human-sounding-reply-writer): Get a human-sounding reply from your AI: short, direct and warm, with no stock phrases or bullet lists. Good for hard personal messages.
 - [Podcast pilot brief builder](https://useaiblocks.com/skills/podcast-pilot-brief-builder): Build a podcast pilot episode brief: give your show idea and listener, get a hook, timed run sheet, guest questions and a recording plan.
+- [Podcast show notes writer](https://useaiblocks.com/skills/podcast-show-notes-writer): Paste your transcript or notes. Get show notes: title, summary, key points, links mentioned and a call to action.
 - [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker): Share a draft, brief and source material. Get checks on claims, voice, structure and search details, with fixes and unresolved gaps.
 - [Product positioning brief writer](https://useaiblocks.com/skills/positioning-memo): Share product facts and customer comments. Get a team memo about the outcome you offer, an example user and one clear line.
 - [Reader feedback question writer](https://useaiblocks.com/skills/first-reader-question-writer): Share your draft. Identify the right test reader and get questions that uncover where they struggle.
@@ -96,7 +97,7 @@
 - [Suspense scene writer and editor](https://useaiblocks.com/workflows/page-turner-scene): Describe the scene, characters and known story facts. Get an open-question plan, a fair resolution check, a scene draft and pacing edits.
 - [Teaching story writer](https://useaiblocks.com/skills/teaching-story-writer): Turn one lesson into a short, funny teaching story people remember. Give it your lesson and who will hear it. You get a one-minute story.
 - [Technical writer](https://useaiblocks.com/skills/technical-writer): Turn code, specs, and reader needs into structured technical docs with examples and flagged gaps.
-- [Text proofreader](https://useaiblocks.com/skills/proofreader): Proofread your text for grammar, spelling and punctuation. You get clean copy, a list of every change and a readability score.
+- [Text proofreader](https://useaiblocks.com/skills/proofreader): Proofread your text for grammar, spelling and punctuation against a style guide. Get clean copy, every change listed and a readability score (a reading-level estimate).
 - [Text translator](https://useaiblocks.com/skills/translator): Translate text into another language so it reads like a local wrote it. Keeps your terms, tone and formatting the same throughout.
 - [Trapped-character suspense planner](https://useaiblocks.com/workflows/trapped-character-suspense): Share your story setup, characters and limits. Get a closed setting, rising threats, a ticking clock and an escape-logic check.
 - [True story outline writer](https://useaiblocks.com/skills/hero-story-mapper): Share the facts of a founder, project or life change. Get a clear story outline and short draft using only events you supplied.

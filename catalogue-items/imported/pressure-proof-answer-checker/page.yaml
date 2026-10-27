@@ -37,6 +37,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text as your first message.
   - Paste the request that is pushing you, word for word. Then paste your evidence. If you have none, say so.
   - Do not paste private names, credentials or client details. Describe them in general terms instead.
+  - If the skill offers the optional Ejentum tool and it is not set up or asks for a key, skip it. The steps work without it.
   - Read the counter-evidence first. Then read what is unproven. Those two parts are the ones to act on.
   - Use the sign-off section as your reply. Send the next step with it, so the person pushing gets a way forward.
 how_it_works:

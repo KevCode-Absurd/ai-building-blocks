@@ -5,7 +5,7 @@ name: Deferred tax calculator
 summary: Work out deferred tax from your balance sheet and tax bases. You get the asset or liability, a check on whether it can be used, and a rate bridge.
 job: money-and-investing
 headline: Deferred tax calculator
-subhead: Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation. Bring balance sheet with carrying amounts. Use the result to plan your next step.
+subhead: Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation.
 explain: |
   Your deferred tax position worked out line by line, with a view on whether the asset will ever be used. Give it carrying amounts and tax bases and you get the temporary differences, the deferred tax asset or liability, and a rate reconciliation.
 
@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Paste your balance sheet with carrying amounts and the tax base for each item.
   - Add the enacted tax rates, your country, and any unused losses with expiry dates (optional).
-  - Ask your AI to build the schedule. For exact sums, use an AI that can run code.
+  - Ask your AI to build the schedule. For exact sums, use an AI that can run code, and paste the skill's calculate.py script and references/td-catalogue.md file too. If your AI cannot run code, it works the sums in the text, so check them yourself.
   - Check the rate bridge. Treat any unexplained gap as an error to track down, and have a qualified reviewer sign off before you book entries.
 output_sample:
   input:

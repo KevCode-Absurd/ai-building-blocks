@@ -18,6 +18,7 @@ not_for:
   - "You want the full check with every test: use the Leap-of-faith assumption finder."
   - "You have no buyers or customers in mind yet: first write down who you think they are, then come back."
   - "You want to know if the plan will work: this prompt ranks risks and cannot predict success. Test the top guess with real people."
+  - "You want each part of the plan rewritten as a guess with a test and a pass line: use the Business model guess tester."
 you_give:
   - Your plan in a paragraph
   - What worries you most (optional)
@@ -92,6 +93,8 @@ improve:
   - Add your own numbers to each guess before you run it.
   - Add what you have already tested.
   - Run it again after each test.
+before: []
+next: [mvp-experiment-planner, one-change-experiment-planner]
 works_best_with:
   tools:
     - name: Any good chat AI

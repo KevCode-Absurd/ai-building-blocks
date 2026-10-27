@@ -7,8 +7,10 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
+  - {type: spreadsheet, required: true}
 outputs:
+  - {type: plan}
   - {type: web_page}
 uses: [event-tracking-planner, retention-heatmap-maker, dashboard-builder]
 steps:

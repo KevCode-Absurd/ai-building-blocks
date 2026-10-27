@@ -49,6 +49,8 @@ output_sample:
     - Your budget
     - Current pay by person or role (optional)
     - Market data for your roles (optional)
+  prerequisites:
+    - "Optional: pay survey data from Radford, Mercer or Pave, which are usually paid"
   output:
     - name: Levels
       contains: Each level with a one-line meaning and the roles in it.

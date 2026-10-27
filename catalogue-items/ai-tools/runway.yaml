@@ -38,5 +38,21 @@ blocks:
   - marketing-video-producer
 alternatives: [kling, veo, pika, luma]
 last_checked: 2026-10-21
+first_result:
+  - "Go to runway.com and sign up. The free plan gives a one-time grant of 125 credits."
+  - "Pick one job: a clip from text, a still image into motion, or an edit of footage."
+  - "Make a short clip first. One pool of credits pays for every kind of output, so keep early tests short."
+  - "Watch the clip for warped details."
+  - "To try an edit, use a short clip you own."
+  - "You end with a short clip or an edited version of your footage."
+  - "Next: write the prompt with the Watercolor video clip prompt writer or the Paper craft video clip prompt writer, or plan the whole ad with the Marketing video producer."
+needs:
+  - "A Runway account and credits."
+  - "A still image, or footage you own if you want to edit."
+  - "A one-sentence description of the shot."
+not_verified:
+  - "How many credits one second of video uses."
+  - "The longest clip it can make."
+  - "Export file types."
 sources:
   - https://runway.com/pricing

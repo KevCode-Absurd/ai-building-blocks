@@ -7,7 +7,7 @@ thinking_why: Each step is a focused design or build task. A mid-size model does
 headline: Build a page that looks designed and clicks through without breaking
 subhead: Describe your site. It picks fonts and sizes, sets a grid and page layout around them, builds the page to follow those choices, then opens it in a real browser and clicks through to find what breaks.
 explain: |
-  Pages built straight from a prompt tend to look like every other template. The fonts are the default, the spacing is random and nothing sits on a grid. Then nobody clicks through it, so a broken menu or form ships with the page.
+  A page built straight from a prompt can end up with default fonts, uneven spacing and nothing on a grid. If nobody clicks through it, a broken menu or form ships with the page.
 
   The steps fix the look first, then build. It picks fonts that suit what the site says and who reads it, and sets sizes and line spacing. Next it builds a grid and layout around those fonts. You add the type, grid and layout to your page brief. Then the art director builds the page to follow it and checks it at phone and desktop width. Last it opens the page in a real browser, clicks through links, forms and menus and reports what failed.
 when:
@@ -32,6 +32,8 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your real words and images ready. The grid is only as good as the content it holds.
   - Your step is to copy the type list, grid and layout into the page brief before the build.
+  - For the test, install Python and Playwright, a free browser-testing tool, and have the way to start your page ready.
+  - If the built page breaks at phone or desktop width, fix that before the browser test runs.
 output_sample:
   input:
     - "A plain description of your site: what it says, who reads it and what they should do"

@@ -47,7 +47,6 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 - Operating cash investment and cash taxes reconcile to their independent source notes; FX conventions are explicit; tax/financing balances are excluded from working capital and every residual is retained.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
 - Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.

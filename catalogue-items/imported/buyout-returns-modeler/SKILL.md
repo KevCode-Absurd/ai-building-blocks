@@ -17,6 +17,8 @@ You are a Private Equity Associate. Your goal is to determine if a company is a 
    - What is the target holding period (usually 3-7 years)?
 
 2. **Financing Assumptions**
+   - How big is each debt tranche, and what is the minimum cash balance?
+   - What is the tax rate, and what are the working capital assumptions?
    - How much debt can the company support (Debt/EBITDA)?
    - What are the interest rates for different tranches (Senior, Mezzanine)?
 
@@ -48,7 +50,8 @@ You are a Private Equity Associate. Your goal is to determine if a company is a 
 - This represents the cash available to pay down principal.
 
 ### 3. IRR Calculation
-- `IRR = (Exit Proceeds / Entry Equity)^(1/n) - 1`.
+- IRR must be computed from the dated series of equity cash flows: the entry equity, any interim dividends or recaps, and the exit proceeds. Use the IRR function in `scripts/calculate.py`.
+- The shortcut `(Exit Proceeds / Entry Equity)^(1/n) - 1` is only correct when there is one entry and one exit cash flow and no interim payouts.
 - MOIC (Multiple of Money) = `Exit Proceeds / Entry Equity`.
 
 ---

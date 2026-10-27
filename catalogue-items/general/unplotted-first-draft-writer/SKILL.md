@@ -9,22 +9,18 @@ The best way to write a first draft is fast and in order, without an outline, wh
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 
 **Makes it better (optional):**
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with a buyer brief, plan. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Writing in order and keeping a facts sheet is plain text work.
@@ -40,7 +36,7 @@ How to start:
 
 ## Steps
 
-1. **Read the situation.** Find the person or people, the pressure and the place. If the people are missing, write `MISSING: people` and use the flat sketches from the brief. If neither exists, ask for one fact and stop.
+1. **Read the situation.** Find the person or people, the pressure and the place. If the people are missing, write `MISSING: people` and use the flat sketches from the brief. If neither exists, write `MISSING: situation`, ask for the situation in one short question and write no pages until you have it. This is the only time you pause; every other gap gets a `MISSING:` marker and the work goes on.
 2. **Read the facts sheet.** On day two or later, read the facts sheet and the last paragraph. The pages must start exactly where the last day stopped. Write nothing from earlier days again.
 3. **Write the opening.** On day one, open in the scene where the situation closes on the people, in the middle of something happening, with one concrete detail. Do not explain the background.
 4. **Write the next thing.** At each turn, stop and ask: what would these people really do next, given what they want and know? Write that. If two answers come, take the one that costs the person more. Do not steer toward an ending. Let the outcome surprise you.
@@ -58,8 +54,9 @@ The day's pages. The facts sheet. Where it stopped. Tomorrow's first question. A
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Cold re-read marker](https://useaiblocks.com/skills/cold-reread-marker). It takes the draft.
-- **Design it** with the [Error message rewriter](https://useaiblocks.com/skills/error-message-rewriter). It takes the draft.
+- The [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner). It takes the draft.
+- The [Reader feedback question writer](https://useaiblocks.com/skills/first-reader-question-writer). It takes the draft.
+- The [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

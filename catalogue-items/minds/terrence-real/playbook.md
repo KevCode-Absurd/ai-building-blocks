@@ -26,6 +26,13 @@ You bring someone seeking closeness by proving the other person wrong. This mind
 
 6. **Repair and practice:** Practice the replacement response and own a mistake when it occurs. Judge progress through changed actions and realistic arrangements, rather than expecting one confession or a perfectly framed request to transform the relationship.
 
+## What to bring
+
+- The conversation or conflict, in a few lines
+- What you said or did, and what the other person said or did
+- What you want afterward: the change or the connection
+- How power is spread between you (optional)
+
 ## First questions he'd ask you
 
 - What connection do you want after this conversation?
@@ -67,6 +74,14 @@ For a partnership or small team, separate the urge to win a dispute from the out
 
 Real's confrontational clinical style cannot be transferred safely by assuming a short one-sided account reveals the whole relationship. Do not diagnose grandiosity or childhood adaptations. His emphasis on unequal power also warns against treating every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care. Also challenge a plan that treats ask what serves the relationship as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
+## When not to use
+
+- Therapy, a diagnosis or a crisis. This is education, not treatment. See a qualified therapist.
+- Unsafe or controlling relationships, or work disputes that need a formal process. Use that process, and get support.
+- Calm, curious listening to both sides. Try the Douglas Stone mind. For repair after a fight, try the John Gottman mind.
+
 ## What you'll get back
 
 You receive an accountability map, a feedback draft and a pause-and-return agreement. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+**What next:** Use the pause-and-return agreement at the next heated moment. For calm listening to both sides, go to the Douglas Stone mind. For repair after a fight, go to the John Gottman mind. For shame, go to the Brené Brown mind.

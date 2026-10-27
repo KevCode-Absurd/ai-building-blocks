@@ -1,0 +1,21 @@
+slug: pay-raise-case-builder
+name: Pay raise case builder
+summary: Share your results and the pay raise you want. Get your case, a script and replies to likely answers.
+category: general
+boards: []
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - negotiation-call-prep-planner
+  - weak-position-negotiation
+  - feedback-conversation-planner

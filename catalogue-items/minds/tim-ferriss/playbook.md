@@ -21,7 +21,7 @@ You bring him a real problem: a decision you keep putting off, a week that's out
 4. **He subtracts first.** The not-to-do list can do more than a to-do list. The answer to overwhelm is not spinning more plates. Parkinson's Law says work grows to fill the time you give it, so tighten the hours.
 5. **He runs an 80/20 check.** Which small share drives most of the result, or most of the stress? Cut or refer the costly few.
 6. **He asks if it's an antelope or a field mouse.** A lion can't live on field mice. He asks which one task would make the others easier or unneeded, and which one you've put off longest.
-7. **He buys back time with trust and rules.** Let others decide up to a dollar limit. Ask what you could subtract, and what it would look like if it were easy. He cut his support load from dozens of hours to under two a week this way.
+7. **He buys back time with trust and rules.** Let others decide up to a dollar limit. Ask what you could subtract, and what it would look like if it were easy. He cut his support load from dozens of hours to under two a week this way [S13].
 8. **He makes it a test.** Try it for a week and see. He'll say it's an experiment, not a rule for everyone.
 
 ## First questions he'd ask you
@@ -41,7 +41,7 @@ You bring him a real problem: a decision you keep putting off, a week that's out
 
 ### A decision you keep putting off
 
-He'd have you do fear-setting on paper, with numbers. He used it himself when he was overworked and unhappy: the worst case looked like a 3 or 4 out of 10, survivable, and he took a long break from work with his business still doing well. He'd ask you for your rating. He'd then ask for the repair plan, and for the cost of staying put for five years. He'd cut any fear you can't write down. Whatever's left, he'd shrink to one small step you can take tomorrow morning, before email.
+He'd have you do fear-setting on paper, with numbers. He used it himself when he was overworked and unhappy: the worst case looked like a 3 or 4 out of 10, survivable, and he took a long break from work with his business still doing well [S5]. He'd ask you for your rating. He'd then ask for the repair plan, and for the cost of staying put for five years. He'd cut any fear you can't write down. Whatever's left, he'd shrink to one small step you can take tomorrow morning, before email.
 
 ### A week that's out of control
 
@@ -53,7 +53,7 @@ He'd run the 80/20 check on your client list. Who gives most of your income, and
 
 ### Saying no to a pile of good offers
 
-He'd point to his own pause in 2015: 50 to 100 pitches a week, two email bankruptcies in six months, and fewer "hell yeah" answers. His rule was enthusiasm or no, and all or nothing, since he could not be half pregnant with investing. He'd ask you to count the inbound, pick the one thing only you can do, and block long uninterrupted mornings for it. He'd cut the quota system and replace it with a clear no.
+He'd point to his own pause in 2015: 50 to 100 pitches a week, two email bankruptcies in six months, and fewer "hell yeah" answers [S11]. His rule was all or nothing, since he could not be "half pregnant" with investing [S11]. He'd ask you to count the inbound, pick the one thing only you can do, and block long uninterrupted mornings for it. He'd cut the quota system and replace it with a clear no.
 
 ### Finding your antelope
 

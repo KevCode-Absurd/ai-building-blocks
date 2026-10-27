@@ -31,11 +31,12 @@ you_get:
   - Node browsing and lookup code
 how_to_use:
   - Open MATLAB with the Industrial Communication Toolbox. This is a paid add-on. Make sure you can reach the server and its discovery service.
-  - Open your AI chat and paste the skill text. Add your server name or address and how you log in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Add your server name or address and how you log in.
   - Ask your AI to find the server, connect and browse its nodes.
-  - Copy the code into MATLAB and run it. If your AI can run MATLAB, it can do this step for you.
+  - Copy the code into MATLAB and run it. If your AI can run MATLAB, it can do this step for you. A good run prints "Connected to" and the server address, then lists the names of the nodes under the one you browse.
   - If the connection fails with a trust or host name error, paste the error back into the chat and ask for the fix.
   - Before you call any method, check with the plant owner. A method can change how equipment runs.
+  - Next, read the variables you need, or log them. Then pass the values to a MATLAB analysis or a dashboard.
 output_sample:
   input:
     - Your OPC UA server name or address
@@ -63,3 +64,14 @@ output_sample:
       contains: Code that finds a method node and calls it, with a note to confirm with the plant owner first.
     - name: Troubleshooting
       contains: A short list of common connection errors and what to try for each.
+terms:
+  - term: OPC UA
+    meaning: A standard way for machines and software in a factory to share data.
+  - term: endpoint
+    meaning: The address of the server, like opc.tcp://machine:4840.
+  - term: node
+    meaning: One item on the server, such as a sensor value or a folder of values. Each has a NodeId, its unique ID.
+  - term: LDS
+    meaning: The Local Discovery Service. It keeps a list of the OPC UA servers on a network so you can find them.
+  - term: security mode
+    meaning: How the connection is protected. None, Sign or Sign and encrypt.

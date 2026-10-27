@@ -22,12 +22,12 @@ outputs:
   - type: document
 uses:
   - screen-states-designer
-  - plain-error-message-writer
+  - error-message-rewriter
   - small-interface-details-designer
 steps:
   - uses: screen-states-designer
     note: List the states and user actions for each supplied screen, including retry and interrupted work. Hands step 2 every failure and empty state with its cause and recovery options.
-  - uses: plain-error-message-writer
+  - uses: error-message-rewriter
     note: Write a plain message for every failure state using only recovery actions the product supports. Reads step 1's failure states and hands step 3 the final text of each message.
   - uses: small-interface-details-designer
     note: Specify focus, buttons and transitions so each message can be implemented and checked. Reads step 2's message text and your brief, and hands back the build notes.
@@ -41,9 +41,9 @@ credits:
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-states
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
-  - title: Plain error message writer
+  - title: Error message rewriter
     by: AI Blocks
-    url: https://useaiblocks.com/skills/plain-error-message-writer
+    url: https://useaiblocks.com/skills/error-message-rewriter
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
   - title: Small interface details designer
     by: Wondel.ai

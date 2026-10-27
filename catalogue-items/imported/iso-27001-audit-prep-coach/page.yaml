@@ -35,6 +35,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Type your scope and the audit type.
+  - Before you paste access records, remove names, employee IDs and credentials, and check your AI tool's data policy.
   - Answer each of the six questions. Paste real records, like an access review export, not a summary.
   - Say so when you have no evidence for a question. Your AI marks it as a gap.
   - Read the verdict and the top 3 actions, then give each action to an owner.

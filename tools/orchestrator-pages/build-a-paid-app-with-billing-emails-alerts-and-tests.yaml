@@ -7,9 +7,9 @@ thinking_why: It writes a lot of connected code in five passes. Give it your str
 headline: Start a subscription app with sign-in, billing, emails and tests already working
 subhead: Describe your app. It scaffolds the project, adds subscriptions and safe payment webhooks, builds the emails your app sends, adds logs and alerts, and writes tests for the whole thing.
 explain: |
-  Starting a paid app from a blank folder takes weeks before you reach what makes it yours. Sign-in, billing, emails and monitoring all have to work together, and the parts that go wrong, such as failed payments, repeated webhooks and emails that land in spam, are the ones people forget.
+  A paid app needs sign-in, billing, emails and monitoring to work together. The parts that go wrong are the ones people forget: failed payments, the same payment message arriving twice, and emails that land in spam.
 
-  The steps build in the order the app needs. The first lays out the project with sign-in, a database and a dashboard. The second adds plans, trials, checkout and webhooks that check signatures and ignore repeats. The third builds the emails the app sends. The fourth adds logs and alerts to the paths that now matter: payments and emails. The last writes and runs tests on the finished app and says what is still untested.
+  Each step builds on the project the step before left. Step 1 lays out the project with sign-in, a database and a dashboard. Step 2 adds plans, trials, checkout and webhooks (the messages your payment provider sends your app) that check a signature and ignore repeats. Step 3 builds the emails your app sends. Step 4 adds logs and alerts to the payment and email paths. Step 5 writes tests for the finished app and lists what is still untested.
 when:
   - You are starting a subscription web app and want the base done properly.
   - Your first version needs real payments, not a mock checkout.
@@ -109,6 +109,6 @@ test:
   - Break a payment on purpose and check that the log and alert show it.
   - Run the test suite from a clean checkout.
 improve:
-  - Keep the finished project as your own starter for the next app.
-  - Add the missing tests it lists before you launch.
-  - Not worth running if you only need a landing page or a one-time payment link.
+  - Add the missing tests the last step lists before you launch.
+  - Have a developer who knows payments read the billing code before you take real money.
+  - Keep the finished project as the starter for your next app.

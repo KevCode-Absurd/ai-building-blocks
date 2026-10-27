@@ -9,7 +9,7 @@ subhead: Tax collected, grouped the way you file it. Pick a period and get your 
 explain: |
   Tax collected, grouped the way you file it. Pick a period and get your sales tax split by state, province or rate, ready for whoever prepares your return. This is prep for a professional, not tax advice.
 
-  It is built for Shopify. It reads paid orders in your lookback window, ninety days by default to fit a quarter, and collects the tax lines on each. You choose to group by jurisdiction or by rate. By default it removes tax from fully refunded orders. It sums each group and shows totals as text or JSON. It only reads data. You sign in with the Shopify command line and allow order read access.
+  It is built for Shopify. It reads paid orders in your lookback window, ninety days by default to fit a quarter, and collects the tax lines on each. You choose to group by jurisdiction or by rate. By default it removes tax from fully refunded orders. Partly refunded orders stay in the totals and are listed on their own, so you can adjust them by hand. It sums each group and shows totals as text or JSON. It only reads data. You sign in with the Shopify command line and allow order read access.
 when:
   - A quarterly filing is due and you need totals by state.
   - Your accountant asks for tax collected by rate.
@@ -26,7 +26,7 @@ you_give:
   - Shopify read access to orders
 you_get:
   - Tax collected per jurisdiction or rate
-  - Refunded orders taken out
+  - Fully refunded orders taken out, and partly refunded orders listed for you to adjust
   - A summary for filing prep
   - A reminder to check with a tax professional
 how_to_use:
@@ -35,7 +35,7 @@ how_to_use:
   - Paste the skill and give your store domain. Set the number of days to match your filing period, such as 30 for monthly or 90 for quarterly.
   - Choose to group by state or province, or by tax rate.
   - Check the totals on screen, then open the CSV file it saves.
-  - Send the CSV to your accountant or tax preparer.
+  - Next, compare the CSV totals with your Shopify tax report for the same dates. Check the partly refunded orders by hand. Then send the CSV to your accountant or tax preparer.
 output_sample:
   input:
     - Your Shopify store domain

@@ -33,8 +33,8 @@ how_to_use:
   - "Paste the skill text first. Then start your request with the line: Apply the Beautiful Prose skill."
   - "On the next lines, add your settings if you want them, such as REGISTER: cold_steel or LENGTH: short."
   - Add your topic, or paste your draft. Say who it is for and how long it should be.
-  - Read the result. Check facts and names yourself, because the skill does not verify claims.
-  - Run a separate edit pass if the piece must match your brand voice.
+  - Read the result. Check facts and names yourself, because the skill does not verify claims. Anglo-Saxon words are short, plain ones like "burn" or "hard". Latinate words are longer, like "combustion" or "difficult". The skill prefers the short ones.
+  - Run a separate edit pass if the piece must match your brand voice, with the brand voice rewriter. Run the claim fact-checker over anything that states facts.
 output_sample:
   input:
     - Your topic, or a draft to rewrite
@@ -47,3 +47,4 @@ output_sample:
       contains: Plain text writing in the register you chose, with no headings or bullets unless you asked for them.
     - name: No commentary
       contains: The skill adds no notes, no thanks and no talk about the piece, so you get the writing only.
+next: [brand-voice-rewriter, claim-fact-checker]

@@ -55,6 +55,8 @@ Recommended modern SaaS stack (2026):
 | Deployment | Vercel (frontend) + Railway (backend) | Zero-config, fast CI/CD |
 | Monitoring | Sentry + PostHog | Error tracking + analytics |
 
+Costs: Stripe takes a fee on each payment. Clerk, Vercel, Railway, Supabase, Resend, Sentry and PostHog have free tiers but charge as you grow, so check each price page. The code samples below were written for specific library versions. Check them against the current Clerk, Stripe and Prisma docs before you use them.
+
 ### 3. Project Structure
 
 ```
@@ -105,7 +107,7 @@ model Subscription {
   stripeCustomerId   String   @unique
   stripePriceId      String
   stripeSubId        String   @unique
-  status             String   # active, canceled, past_due
+  status             String   // active, canceled, past_due
   currentPeriodEnd   DateTime
 }
 
@@ -193,7 +195,7 @@ export async function createCheckoutSession(userId: string, priceId: string) {
 
 ## Best Practices
 
-- ✅ **Do:** Ship a working MVP in 4-6 weeks maximum, then iterate based on feedback
+- ✅ **Do:** Ship a working MVP quickly (the author's rule of thumb is 4-6 weeks, not a fact), then iterate based on feedback
 - ✅ **Do:** Charge from day 1 — free users don't validate product-market fit
 - ✅ **Do:** Build the "happy path" first, handle edge cases later
 - ✅ **Do:** Use feature flags for gradual rollouts (e.g., Vercel Edge Config)
@@ -209,13 +211,19 @@ export async function createCheckoutSession(userId: string, priceId: string) {
 **Solution:** Reduce steps to first value. Track with PostHog where users drop off in onboarding.
 
 **Problem:** High churn after trial
-**Solution:** Add an exit survey. Most churn is due to lack of perceived value, not price.
+**Solution:** Add an exit survey. Churn often comes from lack of perceived value rather than price (a rule of thumb, not a measured fact).
 
 **Problem:** Stripe webhook events not received locally
 **Solution:** Use Stripe CLI: `stripe listen --forward-to localhost:3000/api/webhooks/stripe`
 
 **Problem:** Database migrations failing in production
 **Solution:** Always run `prisma migrate deploy` (not `prisma migrate dev`) in production environments.
+
+## What to do next
+
+- Hand the build order and the checklists to a developer or an AI coding tool, one step at a time.
+- If fewer than 3 people will pre-pay, go back to validation before you build.
+- Before launch, work through the pre-launch checklist and test the live Stripe webhook.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

@@ -5,9 +5,9 @@ name: Own-voice outreach writer
 summary: Write outreach emails in your own voice. Give it your prospects and get personal emails and follow-ups, each tied to a real detail.
 job: write-emails
 headline: Own-voice outreach writer
-subhead: Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. Nobody has to wonder if a bot did it.
+subhead: Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. You read and approve every draft before it goes out.
 explain: |
-  Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. Nobody has to wonder if a bot did it.
+  Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. You read and approve every draft before it goes out.
 
   The skill first learns your voice. It reads 15 to 30 of your sent emails from Gmail or Microsoft 365, or three examples you pasted, and notes sentence length, greetings, sign-offs, contractions, exclamation marks, how direct your ask is and things you never say. It saves the profile for next time. Then it finds a true detail for each prospect, from a recent post, role change or company news. It writes the message around that detail and drafts follow-ups in the same voice. With no samples, it asks for three first.
 when:
@@ -34,7 +34,8 @@ how_to_use:
   - Add 15 to 30 of your sent emails. If you can't, paste three emails you were happy with.
   - Read the voice profile it makes. Fix anything that does not sound like you.
   - Read message one closely, then skim the follow-ups. Ask for changes until it sounds right.
-  - Approve each batch before anything is sent. If no mail account is connected, copy the drafts and send them yourself.
+  - Approve each batch before anything is sent. If no mail account is connected, copy the drafts and send them yourself. The drafts are AI-written, so check every claim, and do not say you wrote one by hand if someone asks.
+  - "Hooks come from public posts, role changes and company news. Use public sources or details the person shared with you, and check a site's terms before you collect from it."
   - Check your local opt-out rules before sending cold email, such as CAN-SPAM or PECR.
 output_sample:
   input:
@@ -59,3 +60,4 @@ output_sample:
       contains: A summary of what would be sent, to whom and when, before anything goes out.
     - name: Send log
       contains: A record of each touch, in your CRM if connected or in a file.
+next: [cold-email-pre-send-checker, follow-up-email-sequence-writer]

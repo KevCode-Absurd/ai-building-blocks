@@ -129,3 +129,4 @@ works_best_with:
   inputs:
     - "Exit notes or reasons from hires who left"
     - "The pay plan document"
+next: [candidate-comparison-table-builder, interview-scorecard-builder]

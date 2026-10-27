@@ -146,7 +146,7 @@ Return your output in this exact format:
 For each strategy:
 - **Strategy name** — [Dunlosky rating]
 - **What to do:** [Specific, step-by-step implementation]
-- **Why it works:** [1–2 sentence evidence-based explanation]
+- **Why it works:** [1–2 sentence evidence-based explanation. Name only well-known findings. Do not give a precise percentage unless you are sure of it, and say so when you are not sure]
 - **Pitfall to avoid:** [The common implementation error]
 - **Time needed:** [How long per session]
 
@@ -210,7 +210,7 @@ Highlighting marks text but doesn't process it. You're deciding what's important
    - Session 3: 2–3 days before
 3. In each session, use retrieval practice (Strategy 1 above), not re-reading.
 
-**Why it works:** Ebbinghaus's forgetting curve shows that without review, you lose ~70% of new learning within 24 hours. Spacing reviews at expanding intervals catches the forgetting before it becomes permanent. Cepeda et al. (2006): optimal spacing depends on retention interval.
+**Why it works:** Ebbinghaus's forgetting curve shows that without review, you lose a large share of new learning within a day or two (the exact amount varies). Spacing reviews at expanding intervals catches the forgetting before it becomes permanent. Cepeda et al. (2006): optimal spacing depends on retention interval.
 
 **Pitfall to avoid:** Don't space sessions too far apart. If you've forgotten everything by the next session, the gap was too large — shorten it. Some forgetting is productive (it makes retrieval harder, which strengthens the memory), but complete forgetting means starting over.
 
@@ -236,7 +236,7 @@ Highlighting marks text but doesn't process it. You're deciding what's important
 
 **What to do:** When practising exam questions, mix topics. Don't do 10 cell structure questions, then 10 transport questions. Instead, shuffle them: cell structure, transport, division, structure, transport, division. This forces you to identify which topic each question is about before you can answer it.
 
-**Why it works:** In the exam, questions come from all topics mixed together. If you only practise in blocks, you never develop the skill of recognising which topic is being tested. Rohrer et al. (2015) found interleaved practice improved maths scores by 25%.
+**Why it works:** In the exam, questions come from all topics mixed together. If you only practise in blocks, you never develop the skill of recognising which topic is being tested. Rohrer et al. (2015) found interleaved practice improved maths scores in their study.
 
 **Pitfall to avoid:** Don't interleave before you've studied each topic individually. You need to understand the basics first, then mix for practice.
 

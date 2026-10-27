@@ -7,8 +7,8 @@ role: make
 job: copy
 level: intermediate
 inputs:
-  - {type: plan, required: true}
-  - {type: question, required: false}
+  - type: question
+    required: true
 outputs:
   - {type: copy_draft, required: true}
 origin: rebuilt

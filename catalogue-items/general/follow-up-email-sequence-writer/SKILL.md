@@ -63,11 +63,9 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Email permission and message review](https://useaiblocks.com/skills/permission-email-audit). It takes the email flow.
-- The [Customer email journey planner](https://useaiblocks.com/skills/customer-stage-flow-mapper). It takes the email flow.
-- **Check the landing page** with the [Email sequence results auditor](https://useaiblocks.com/skills/email-sequence-auditor). It takes the email flow.
-- The [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer). It takes the email flow.
-- **Make an offer people want** with the [Store drop and urgency planner](https://useaiblocks.com/skills/store-urgency-and-drop-planner). It takes the email flow.
+- The [Cold email writer](https://useaiblocks.com/skills/cold-email-writer).
+- The [Outbound email sequence writer](https://useaiblocks.com/skills/outbound-email-sequence-writer). It takes the email flow.
+- The [Email automation gaps and trigger reviewer](https://useaiblocks.com/skills/email-flow-gap-checker). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

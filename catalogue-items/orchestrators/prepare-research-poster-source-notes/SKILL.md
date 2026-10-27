@@ -32,9 +32,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 1. **Source note summariser.** Use the skill `source-note-summariser`. Read the study for the poster question only. List each fact the poster needs with its quote, its location (section, table or page) and its limit, such as sample or period. Save `outputs/step-01-source-note-summariser.md`. Pass to step 2: the fact list. This is the only source for poster text.
 
-2. **Presentation builder.** Use the skill `presentation-builder`. Plan one poster: a short reading order, a heading and a few lines for each section, and a brief for each figure (which table or file, what it shows, the caption). Stay inside the poster rules and word limit. Return an outline, never a claim of a rendered poster. Save `outputs/step-02-presentation-builder.md`. Pass to step 3: every heading, caption and figure brief.
+2. **Presentation builder.** Use the skill `presentation-builder`. Plan one poster: a short reading order, a heading and a few lines for each section, and a brief for each figure (which table or file, what it shows, the caption). Stay inside the poster rules and word limit. If the rules require a section the study does not cover, keep the heading, write `MISSING: <section>` under it and do not fill it. Return an outline, never a claim of a rendered poster. Save `outputs/step-02-presentation-builder.md`. Pass to step 3: every heading, caption and figure brief.
 
 3. **Unsupported claim spotter.** Use the skill `unsupported-claim-spotter`. Check each heading and caption against the study. Pass test: each one traces to a source line from step 1 or is flagged. Flag outcomes that were not measured and novelty claims without support. Give safer wording for each flag. Save `outputs/step-03-unsupported-claim-spotter.md`.
+
+The three component skills are separate, attributed dependencies with their own licences and sources. The sequencing, handoff rules and checks in this file are the workflow's own.
 
 4. **Check and hand back.** Apply the safer wording the user accepts, never silently. Build the layout below. End with a section headed `HAND-BACK SUMMARY`.
 

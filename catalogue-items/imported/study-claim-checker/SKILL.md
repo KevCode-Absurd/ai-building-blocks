@@ -10,6 +10,14 @@ metadata:
   skill-author: K-Dense Inc.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `skills/scientific-schematics/scripts/generate_schematic.py`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Scientific Critical Thinking
 
 ## Overview
@@ -65,6 +73,8 @@ Only add figures when the **user explicitly requests** a diagram (for example, a
 **How to create figures:**
 - **Preferred:** Use the **scientific-schematics** skill for AI-generated diagrams from a natural-language description
 - **Alternative:** Build figures in your usual tools (draw.io, PowerPoint, matplotlib, etc.)
+
+This script is not in this catalogue copy, and it needs a paid OpenRouter key and sends your prompt to a third party. Skip it by default. If the user wants a figure, draw it by hand or with their own tools. Only run the command if the user has the original skill and a key.
 
 Run from the repository root, with `OPENROUTER_API_KEY` set:
 

@@ -12,7 +12,7 @@ when:
   - You want to test a growth idea before committing more time or money.
 not_for:
   - "You have no product yet and need to know if anyone wants it: talk to ten likely buyers first, then come back."
-  - "You run a shop, a service firm or another non-software business: the questions assume software buyers, so use a simple list of local ways to reach customers."
+  - "You run a shop, a service firm or another non-software business: the questions assume software buyers, so use Find your business growth channel instead."
   - "You already know your channel and need to run it: this picks tests, it does not send, spend or publish anything."
 you_give:
   - A public product link or pasted product and pricing text

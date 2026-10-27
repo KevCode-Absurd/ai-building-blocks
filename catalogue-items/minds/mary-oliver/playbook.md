@@ -1,6 +1,6 @@
 # Hire Mary Oliver: how she'd work for you
 
-Bring an observation, a draft or a wish to write with greater attention. This lens moves from a particular encounter to careful language, sound and revision. The following routines are original applications for everyday writing, with no copied poems or claim of private advice.
+Bring first: one detail you noticed or a draft you already have, who will read it if anyone, how long you want the result to be, and any feedback from a writing group. This lens moves from a particular encounter to careful language, sound and revision. The routines below are our own applications for everyday writing, with no copied poems and no claim of private advice from her.
 
 ## What to hire her for
 
@@ -18,7 +18,7 @@ Bring an observation, a draft or a wish to write with greater attention. This le
 1. **Return to the particular encounter:** Ask what was actually observed and what is remembered or invented. Choose one detail with room to be explored.
 2. **Make a plain record:** Name things and actions before attaching a moral. Preserve uncertainty where a detail or identification is unknown.
 3. **Give the material an appointment:** Choose a feasible making session and a limited output. Bring the note to the page using accessible tools and surroundings.
-4. **Let the passage discover its movement:** Arrange the image, action and question. Give a stranger enough context to enter without requiring the writer's private backstory.
+4. **Let the passage discover its movement:** Write three sentences: what you saw first, what changed, and what you did or thought next. Give a stranger enough context to enter without requiring the writer's private backstory.
 5. **Listen and revise deliberately:** Read aloud, compare pauses and line endings, inspect vague words and test whether the ending explains too much.
 6. **Choose the working version:** Review feedback against the piece's purpose. Preserve a distinctive choice when it works, finish the version and name the next question for another page.
 
@@ -78,3 +78,5 @@ General admiration can replace observation. A moral can arrive before the image.
 ## What you'll get back
 
 Expect a specific observation question, an original passage or revision, a short explanation of sound and structure, and a clear next inspection. Where the task is reading, receive an evidence-based interpretation with room for uncertainty. Where it is practice, receive a feasible appointment and return point. The final version should do the intended work without having to announce that it is profound.
+
+Next step: read the new version aloud once, mark one pause to change, and put the next inspection in your calendar. For a plain, direct style for emails or reports, use Ernest Hemingway. For a funny, conversational poem with a surprising turn, use Billy Collins. If you are stuck on a messy first draft and need permission to write badly, use Anne Lamott.

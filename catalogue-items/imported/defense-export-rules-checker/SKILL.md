@@ -81,7 +81,7 @@ Who must register (22 CFR § 122.1):
 **Registration process:**
 1. Create account at the DDTC Registration Portal (registration.pmddtc.state.gov)
 2. Submit DS-2032 (Statement of Registration) electronically
-3. Pay annual fee (tiered by revenue: $2,750 for small businesses / $2,750–$27,500 for larger)
+3. Pay the annual registration fee. The fee schedule changes, so tell the user to read the current amount on the DDTC portal. Do not quote a fee from memory
 4. Renewal: annual, 60 days before expiration
 5. Notify DDTC within 5 days of changes to registration details (22 CFR § 122.4)
 
@@ -164,14 +164,14 @@ A **broker** is any person who facilitates the manufacture, export, import, tran
 4. Cooperation and remediation are significant mitigating factors
 5. May result in no penalty, warning letter, or reduced civil penalty
 
-**Civil penalties**: Up to $1,369,000 per violation (adjusted annually per FCPIA)
+**Civil penalties**: set by statute and adjusted annually (FCPIA), so give the current maximum only after checking it; this skill's earlier figure may be out of date
 **Criminal penalties**: Up to $1,000,000 fine and 20 years imprisonment per violation (22 USC § 2778)
 **Debarment**: DDTC may debar a company from ITAR privileges for serious/repeated violations
 
 **Aggravating factors**: wilfulness, harm to national security, senior management involvement, prior violations
 **Mitigating factors**: VSD, cooperation, effective compliance programme, no prior history
 
-**Enforcement benchmark (August 2026):** DDTC's **$36M consent agreement with BAE Systems, Inc.** — 104 AECA/ITAR violations (May 2019–Mar 2025, voluntarily disclosed): 38 unauthorized technical-data exports to China (§126.1), unauthorized exports/defense services across six other countries. Terms: $18M suspended for remedial compliance spend, 3-year agreement, Special Compliance Officer, external audit — no debarment (VSD + cooperation credit). Cite it for what drives penalties: weak written procedures, inexperienced staff, poor agreement management, and no authorization-tracking system.
+**Enforcement benchmark (dated note from the skill's author, not verified by this library; confirm the DDTC consent agreement and its date before you repeat any figure) (August 2026):** DDTC's **$36M consent agreement with BAE Systems, Inc.** — 104 AECA/ITAR violations (May 2019–Mar 2025, voluntarily disclosed): 38 unauthorized technical-data exports to China (§126.1), unauthorized exports/defense services across six other countries. Terms: $18M suspended for remedial compliance spend, 3-year agreement, Special Compliance Officer, external audit — no debarment (VSD + cooperation credit). Cite it for what drives penalties: weak written procedures, inexperienced staff, poor agreement management, and no authorization-tracking system.
 
 Reference full penalty framework → `references/compliance-program.md`
 
@@ -200,6 +200,8 @@ Always check the current 22 CFR § 126.1 list and OFAC sanctions before any tran
 ---
 
 ## Regulatory Status — September 2026 (state where relevant)
+
+These items are dated notes from the skill's author. They change often and this library has not verified them. Before you state one as current, confirm it in the Federal Register or on the DDTC website and give the citation and the date you checked. If you cannot check, say the status is not confirmed.
 
 - **Survivability-enhanced civil aircraft (IFR, 91 FR 55457, effective October 13, 2026):** USML **Category VIII(a)(8)** is revised to exclude civil FAA transport/commuter aircraft modified with "secured ASE" (DIRCM systems, or IR/UV missile-warning systems needed for DIRCM, with anti-tamper — definitions in §121.0). **The ASE equipment itself stays in Category XI**, and ASE technical data/defense services remain ITAR-controlled under XI(d). New §120.54(a)(8)–(9) exclude temporary imports of secured ASE and country-to-country movement of previously licensed installed ASE from authorization requirements. Comments were due September 28, 2026.
 - **Category XI(b):** the temporary modification (retaining "analyze and produce information from" and "software") is extended **through August 30, 2028** (91 FR 55461).

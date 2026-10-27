@@ -41,13 +41,13 @@ Analyzes fulfilled orders to calculate average transit time (fulfillment created
 2. Calculate transit times per carrier: `deliveredAt - createdAt` (skip orders where `deliveredAt` is null)
 
 3. **OPERATION:** `fulfillmentOrders` — query (optional, for location breakdown)
-   **Inputs:** `assignedLocationId: <location_id>`, `status: CLOSED`, `first: 250`
+   **Inputs:** `query: "assigned_location_id:<location_id> status:closed"`, `includeClosed: true`, `first: 250`. If Shopify rejects this filter, skip the location breakdown, say it was skipped, and report the carrier averages for all locations
    **Expected output:** Fulfilled orders per location for location-level segmentation
 
 ## GraphQL Operations
 
 ```graphql
-# orders:query — validated against api_version 2025-01
+# orders:query — written for api_version 2025-01 (not re-run by AI Blocks; check it against your API version)
 query FulfilledOrders($query: String!, $after: String) {
   orders(first: 250, after: $after, query: $query) {
     edges {
@@ -77,13 +77,13 @@ query FulfilledOrders($query: String!, $after: String) {
 ```
 
 ```graphql
-# fulfillmentOrders:query — validated against api_version 2025-01
-query FulfillmentOrdersByLocation($locationId: ID!, $after: String) {
+# fulfillmentOrders:query — written for api_version 2025-01 (not re-run by AI Blocks; check it against your API version)
+query FulfillmentOrdersByLocation($query: String!, $after: String) {
   fulfillmentOrders(
-    assignedLocationId: $locationId
     first: 250
     after: $after
-    query: "status:closed"
+    query: $query
+    includeClosed: true
   ) {
     edges {
       node {
@@ -175,4 +175,4 @@ CSV file `delivery_analysis_<YYYY-MM-DD>.csv` with columns:
 - Set `min_orders: 10` for statistically meaningful averages — carriers with fewer orders will skew results.
 - `deliveredAt` is populated only when the carrier confirms delivery via tracking events; some carriers do not report this, so null values are expected.
 - Run monthly to track carrier performance over time and inform carrier contract negotiations.
-- Cross-reference with the `wismo-bulk-status-report` skill to correlate slow delivery carriers with WISMO ticket volume.
+- Cross-reference with the WISMO bulk status report skill to correlate slow delivery carriers with WISMO ticket volume.

@@ -7,6 +7,8 @@ description: 'Provides exact Enzyme → React Testing Library migration patterns
 
 Enzyme has no React 18 adapter and no React 18 support path. All Enzyme tests must be rewritten using React Testing Library.
 
+Before you start, ask the user for: the Enzyme test files, their React version, the installed React Testing Library version, and any provider setup (such as a customRender helper). Not for test suites outside React, or tests already on React Testing Library.
+
 ## The Philosophy Shift (Read This First)
 
 Enzyme tests implementation. RTL tests behavior.

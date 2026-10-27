@@ -68,6 +68,8 @@ Based on the file extension or language context, refer to the appropriate guide:
 
 ## Quick Start
 
+**The `ct_analyzer` script is not included in this folder.** If it is not in your project, skip the commands below. Review the code by hand instead, using the Quick Reference table, the language guides in `references/`, and the triage questions below, and say plainly that no tool was run. Only run the commands if the analyzer is installed and you can run code.
+
 ```bash
 # Analyze any supported file type
 uv run {baseDir}/ct_analyzer/analyzer.py <source_file>

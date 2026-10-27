@@ -1,6 +1,6 @@
 # Oscar Wilde: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Wilde died in 1900 and his works are in the public domain, so we quote short lines. Much of his wit is spoken by characters, such as Lord Henry in *Dorian Gray* or Algernon and Lady Bracknell in *Earnest*, so a character's epigram is the character's line. We take Wilde's own views from the preface to *Dorian Gray* [S2], which he signed, from *De Profundis* [S5], a long letter written in prison, from his essays *The Decay of Lying* [S4], *The Critic as Artist* [S6] (both dialogues, where a speaker argues for effect) and *The Soul of Man Under Socialism* [S7], and from his own letters to editors in 1890 defending *Dorian Gray* [S8]. Those letters are the best place to hear him speak in his own name under attack. Many sayings online are credited to him with no source. Some of these pages were read through a summarising reader, so details are kept modest.
 

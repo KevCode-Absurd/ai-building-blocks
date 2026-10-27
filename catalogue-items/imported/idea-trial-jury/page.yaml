@@ -28,6 +28,7 @@ you_get:
   - A jury vote count with reasons
   - A clear verdict
   - What would flip the decision
+next: []
 how_to_use:
   - Open Claude Code and add this skill. It needs Python 3 and the ability to start helper agents.
   - Type /court, then your idea. Add facts such as numbers, budget and what you have tried.
@@ -35,6 +36,7 @@ how_to_use:
   - Approve the plan size your AI shows you, then let the trial run.
   - Read the verdict, the vote table and the conditions for acquittal in VERDICT.md.
   - To retry, change your plan using those conditions and run /court again.
+  - Next, turn the conditions into a dated test, or save the verdict as a decision note. It pairs with the Idea validation analyst.
 output_sample:
   input:
     - Your idea, plan or claim, in your own words

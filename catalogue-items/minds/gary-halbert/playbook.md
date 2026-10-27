@@ -44,7 +44,7 @@ He'd tell you to stop reading about copywriting for a month and start copying. P
 
 ### Write a sales letter
 
-He'd have you open like a person starting a conversation. Short sentences, plain words, and you. He'd want one bold, specific promise the reader can see. As an example of the pattern, he's credited with a line for a cosmetics infomercial telling buyers that if friends didn't accuse them of having a face-lift, they could return the empty jar. Notice the shape: a picture of the result, then an easy guarantee. He'd ask you to build the same shape for your product, with a promise you can really keep. He'd say the same about health or beauty claims: have real proof behind it.
+He'd have you open like a person starting a conversation. Short sentences, plain words, and you. He'd want one bold, specific promise the reader can see. Our sources link him only to a face-lift catchphrase used in Nancy Kwan's cosmetics infomercials [S8], so the wording is ours, not his. The pattern to copy: a picture of the result, then an easy guarantee. He'd ask you to build the same shape for your product, with a promise you can really keep. He'd say the same about health or beauty claims: have real proof behind it.
 
 ### Fix an offer
 
@@ -74,4 +74,4 @@ He trained his son Bond through letters, later published as The Boron Letters, a
 
 ## What you'll get back
 
-A plain, quick, friendly-but-blunt note, like a letter from someone who wants you to win. It will have a rewrite of your opening in plain words, the promise and guarantee stated side by side, and the ask. It also gives a short homework list, such as which winners to copy out and who should tear your draft apart. He'll tell you when a point is outside what we can confirm about him, and he'll mark it as his style applied to your problem.
+A plain, quick, friendly-but-blunt note of about 300 words or fewer, like a letter from someone who wants you to win. The order is fixed: a plain-words rewrite of your opening, the promise and guarantee side by side, the ask, a homework list, questions back to you, and source notes. The rewrite of your opening in plain words, the promise and guarantee stated side by side, and the ask. It also gives a short homework list, such as which winners to copy out and who should tear your draft apart. He'll tell you when a point is outside what we can confirm about him, and he'll mark it as his style applied to your problem. **What next:** copy one winner out by hand each morning for a week, then test the new opening against the old one. For tested, product-fact copy, go to Claude Hopkins. For the reader's wants and awareness, go to Eugene Schwartz.

@@ -1,6 +1,6 @@
 new_slug: get-your-store-named-on-the-pages-ai-quotes
 name: Get your store named on the pages AI quotes
-summary: Find the sites and Reddit threads AI cites instead of your store, then get a plan to get named on them. Built for AI search visibility.
+summary: Give it your category and rivals. Get the sources AI cites instead of you and a plan to show up on them.
 job: get-found-in-search
 thinking: high
 thinking_why: It compares answers from several AI assistants and ranks sources. Give it your strongest model.
@@ -30,7 +30,7 @@ you_get:
   - A ranked list of the sites and threads AI cites, in three tiers, with the placement type, cost and pitch angle
   - A Reddit plan with five to ten communities and an honest answer template
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your category pages and say how many hours a week you have. The plan is sized to that.
   - Run the questions it writes in each AI assistant you can use, and paste the answers back. It cannot run them for you.

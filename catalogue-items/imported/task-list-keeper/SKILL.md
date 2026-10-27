@@ -15,15 +15,11 @@ Tasks are tracked in a simple `TASKS.md` file that both you and the user can edi
 - If it exists, read/write to it
 - If it doesn't exist, create it with the template below
 
-## Dashboard Setup (First Run)
+## Dashboard (optional, not included here)
 
-A visual dashboard is available for managing tasks and memory. **On first interaction with tasks:**
+The original skill could add a visual task board (`dashboard.html`) from its plugin. That file is not part of this copy, so skip it: do not look for it, do not copy it, and do not tell the user to run `/productivity:start`. Work from `TASKS.md` only.
 
-1. Check if `dashboard.html` exists in the current working directory
-2. If not, copy it from `${CLAUDE_PLUGIN_ROOT}/skills/dashboard.html` to the current working directory
-3. Inform the user: "I've added the dashboard. Run `/productivity:start` to set up the full system."
-
-The task board:
+If a task board is available in your setup, it:
 - Reads and writes to the same `TASKS.md` file
 - Auto-saves changes
 - Watches for external changes (syncs when you edit via CLI)

@@ -17,6 +17,7 @@ when:
   - You need to stress-test a restructure before announcing it.
 not_for:
   - "You are budgeting for one hire: use a simple headcount budget in a spreadsheet."
+  - "You still need the base hiring plan itself: use the Headcount plan builder first, then bring its plan here."
   - "You have no revenue forecast or hiring plan yet: write a basic forecast with your finance lead first."
   - "You need a legal or consultation plan for layoffs: ask an HR lawyer or your HR lead."
 you_give:
@@ -57,3 +58,4 @@ output_sample:
       contains: Steps to take under each scenario, such as pausing hiring, redeploying people or speeding up.
     - name: Decision brief
       contains: A one-page note on which scenario you are tracking and what it means for hiring.
+next: [workforce-crisis-playbook-writer]

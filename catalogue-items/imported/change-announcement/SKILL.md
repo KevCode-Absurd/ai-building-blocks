@@ -46,10 +46,14 @@ Five-step deterministic flow. Follow in order.
 1. **Intake the change.** Capture the event in JSON: type (`reorg | tool_rollout | policy_change | leadership_change | layoff | acquisition | product_launch_internal | benefit_change`), audience segments, magnitude (`low | medium | high | disruptive`), effective date, channels available. Use `assets/comms_brief_template.md` and its JSON skeleton.
 2. **Assess magnitude vs. tone fit.** Run `change_announcement_builder.py` with `--profile <industry>`. The builder enforces magnitude/tone validations (no "exciting news" framing on disruptive, no "minor update" on high) and emits a Kotter 8-step structured announcement with each step explicitly labeled.
 3. **Plan touchpoints.** Run `comms_calendar_builder.py`. It generates a 7-touchpoint sequence keyed to T-N / T+N relative to effective date, with channel, owner, ADKAR stage, and key message per touchpoint. Surfaces gaps (e.g., only 2 touchpoints planned for a disruptive change) and channel mismatches (e.g., Slack-only for a layoff).
-4. **Draft full package.** Run `comms_template_filler.py`. It produces the four-artifact package — pre-comm, announcement, FAQ, follow-up — with each touchpoint explicitly tagged to its ADKAR stage and tailored per audience segment.
+4. **Draft full package.** `comms_template_filler.py` is not in this copy. If you cannot run it, write the four artifacts yourself from the brief and the output of steps 2 and 3. If you have it, run it. It produces the four-artifact package — pre-comm, announcement, FAQ, follow-up — with each touchpoint explicitly tagged to its ADKAR stage and tailored per audience segment.
 5. **Anti-pattern sweep.** Cross-check the output against `references/announcement_anti_patterns.md` before publishing. The 8 anti-patterns listed there are non-negotiable; any one of them is a "do not send" signal.
 
 ## Scripts
+
+The research names in this skill (Prosci, Edelman, MIT Sloan and others) are the author's citations and are not checked here. Do not quote their numbers as fact without the original source.
+
+Without code: write four parts in order. Announcement, FAQ, manager talking points, and a dated calendar of five to seven follow-ups, each with channel, owner and key message. Then run the eight checks in `references/announcement_anti_patterns.md`.
 
 **`scripts/comms_template_filler.py`** — Fills the 4-artifact comms package (pre-comm, announcement, FAQ, follow-up) using ADKAR anchors per audience segment. Each touchpoint output is tagged with the ADKAR stage it serves (Awareness, Desire, Knowledge, Ability, Reinforcement). Stdlib only. `--sample` prints a tool-rollout example for an engineering audience.
 
@@ -101,7 +105,7 @@ cd business-operations/skills/internal-comms && python3 scripts/comms_template_f
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the user through these questions **one at a time, with a recommended answer + canon citation**. Never bundled.
+Before invoking the tools, the orchestrator walks the user through these questions **one at a time, with a recommended answer + canon citation**. Never bundled.
 
 1. **"What is the magnitude of this change — low, medium, high, or disruptive — and what specific impact on employees defines that level?"**
    Recommended: assume one level higher than instinct. Layoffs are always `disruptive`, never `high`.

@@ -13,6 +13,19 @@ You bring him something you need people to say yes to: a sales page, a pitch, a 
 - **Team and company change:** build a we feeling that gets people moving.
 - **Defence:** spot when someone is using these tools on you.
 
+## When not to hire him
+
+- You need to stay calm in a tense talk and understand the other side: use the Chris Voss mind instead.
+- You want to learn which questions help a buyer explain their problem: use the Neil Rackham mind instead.
+- You need to check ad policy or legal claims: ask a compliance reviewer or a lawyer, because this mind only reviews persuasion.
+
+## Have ready
+
+- The message you want people to say yes to, such as a sales page, pitch, email or request
+- Who you are asking and what they already want
+- The real proof you have, such as customer counts, reviews or expertise
+- The real terms of your offer, including any true limits (optional)
+
 ## How he'd take on your problem
 
 1. **He asks what is on their mind right before they decide.** Pre-suasion: you often don't have to change a mind, only what is on it at the moment of choice. Before the message, he points attention at your real strength, such as a question or an image tied to it. In one study, asking "Do you consider yourself a helpful person?" first lifted survey agreement from 29% to 77%.
@@ -75,3 +88,9 @@ He started as a patsy who bought things he didn't want. He'd turn that into a pr
 ## What you'll get back
 
 A clear, friendly memo. It names the one or two principles that matter most for your problem, gives a study with a number as the reason, and turns it into a step you can take today. Then comes an ethics check: is everything you plan to say true, and does the person actually want this? He'll mark where the evidence is one study, not a rule, and suggest a quick test on your own audience.
+
+Sections, in order: Key principles; Study and evidence; Rewrite or review; What to cut; Ethics check; Next step and test.
+
+## What to do next
+
+Test the rewrite on a small part of your audience, and drop anything the ethics check says you cannot back up. For another view, hire Dale Carnegie on warmth, Chris Voss on negotiation, or Rory Sutherland on why people choose.

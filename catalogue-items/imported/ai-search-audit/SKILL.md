@@ -95,7 +95,7 @@ For each page in the crawl set, record:
 
 ### Phase 2: Parallel Subagent Delegation
 
-Delegate analysis to 5 specialized subagents. Each subagent operates on the collected page data and produces a category score (0-100) plus findings.
+Delegate analysis to 5 specialized subagents. Each subagent operates on the collected page data and produces a category score (0-100) plus findings. If a named helper skill is not installed, or you cannot run subagents, do that check yourself from the page data and follow the bullet list under it.
 
 **Subagent 1: AI Visibility Analysis** (invoke skill `geo-citability`)
 - Analyze content blocks for quotability by AI systems (citability scoring)
@@ -364,5 +364,7 @@ Generate a file called `GEO-AUDIT-REPORT.md` with the following structure:
 curl -s https://example.com/robots.txt
 curl -s https://example.com/llms.txt
 ```
+
+If you have no shell, fetch the same two files with WebFetch instead.
 
 > Adapted from [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: upstream runtime helpers not bundled.

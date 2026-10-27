@@ -23,5 +23,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [clayton-christensen]
 credits:
-  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan", used: "The order of the steps: find where the unmet jobs are, write the job as a situation, name the rivals and what they must beat, find where nobody does the job well"}
+  - {title: "Competing Against Luck", by: "Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan", used: "Inspiration for the job as the progress a person wants in one moment, and for naming rivals as anything hired for that job. The four-step order is this workflow's own design."}
 generated_from: intake/jobs-to-be-done-job-spec/skeleton.yaml

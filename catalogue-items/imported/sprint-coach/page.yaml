@@ -31,11 +31,11 @@ you_get:
   - Coaching steps for the habits that slow the team down
 how_to_use:
   - Export your sprint history from Jira or a similar tool. Match the fields to the layout in assets/sample_sprint_data.json and save it as sprint_data.json.
-  - Open an AI that can run Python code and upload the skill folder with your file. You need at least 3 sprints, and 6 or more gives a better forecast.
+  - Open an AI that can run Python code and upload the skill folder with your file. The minimum depends on the tool: the velocity tool needs 3 sprints (6 or more gives a better forecast), the health scorer needs 2, and the retrospective analyzer needs 3 retrospectives with action items.
   - Run python velocity_analyzer.py sprint_data.json --format text. You get the trend and the forecast ranges.
   - Run python sprint_health_scorer.py sprint_data.json --format text. You get the health grade and a score for each area.
   - Run python retrospective_analyzer.py sprint_data.json --format text. You get action item completion, recurring themes and the team's stage.
-  - Read the three reports before your retro. Plan with the 70 percent forecast, and take fewer new action items if your team finishes under 60 percent of them.
+  - Read the three reports before your retro. Plan with the 70 percent forecast, and take fewer new action items if your team finishes under 60 percent of them. Bring the top findings to the retro, and add each new action item to sprint_data.json so the next run can track it.
 output_sample:
   input:
     - Your sprint history exported from Jira or a similar tool, as a JSON file

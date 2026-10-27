@@ -13,7 +13,7 @@ explain: |
 
   You get a bar plot of overall importance, a beeswarm plot, a waterfall plot for single rows and CSV files of the numbers.
 
-  SHAP describes how the model behaves. It does not show cause, and it is not a fairness test. The skill refuses to open model files from sources you do not trust. It comes from K-Dense's scientific agent skills, shared under MIT, and needs Python 3.12 or newer.
+  SHAP describes how the model behaves. It does not show cause, and it is not a fairness test. The skill tells your AI not to open model files from sources you do not trust, so only share a model you made or trust. It comes from K-Dense's scientific agent skills, shared under MIT, and needs Python 3.12 or newer.
 when:
   - A manager asks why the model rejected one customer.
   - You want to know which inputs matter most across all predictions.
@@ -38,6 +38,7 @@ you_get:
   - A note on what the explanation cannot show
 how_to_use:
   - Download the skill folder from this page and add it to an AI that can run Python, such as Claude Code. Keep the references and scripts folders with SKILL.md.
+  - Check that the AI has uv and Python 3.12 or newer installed. The bundled script runs a built-in demo dataset, not your data, so use it to learn the plots first.
   - Share the model code or file, the rows to explain and a training sample. Only share a model file you made or trust, because model files can run code when opened.
   - Say which output to explain. For a classifier, name the class and whether you want a probability or a raw score.
   - Check the add-up result first. If it fails, stop and fix the inputs before you read any plot.
@@ -97,7 +98,7 @@ output_sample:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can set up Python 3.12, run SHAP and save the plots and CSV files.
+      why: It can set up Python 3.12, run SHAP and save the plots and CSV files. It is a paid tool that needs a subscription. Any other AI that can run Python and save files also works.
     - name: Any chat AI that runs Python
       why: It can run the bundled script on a small table to learn the plots first.
   inputs:

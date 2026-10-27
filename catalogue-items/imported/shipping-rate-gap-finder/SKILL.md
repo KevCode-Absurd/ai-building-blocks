@@ -39,7 +39,7 @@ Audits the shipping configuration for every delivery profile on the store. Surfa
 
 2. For each profile, walk every `profileLocationGroups[].locationGroupZones`. For each zone, capture: zone name, country codes, method definitions (rates).
 
-3. Flag zones with: zero `methodDefinitions`, OR only manual `priceConditions`-based rates (no carrier-calculated method when `flag_manual_only: true`), OR a method whose `price.amount > flag_high_price` if the threshold is set.
+3. Flag zones with: zero `methodDefinitions`, OR only manual rates (no carrier-calculated method when `flag_manual_only: true`). Class each method by its `rateProvider.__typename` in the query: `DeliveryRateDefinition` is a manual rate, and `DeliveryParticipant` is a carrier-calculated rate, OR a method whose `price.amount > flag_high_price` if the threshold is set.
 
 4. Aggregate findings per profile, then build a global summary of misconfigured zones across the store.
 
@@ -203,5 +203,5 @@ CSV file `shipping_rate_audit_<YYYY-MM-DD>.csv` with columns:
 - Run after any major shipping change (new region launch, carrier switch) to confirm zone coverage matches the rollout plan.
 - Zero-rate zones cause silent checkout failures — customers from that geography see "no shipping available" and abandon. Treat these as P0.
 - Manual-only zones are not always wrong — flat-rate domestic shipping is a deliberate choice. Use `flag_manual_only: false` if your store is intentionally flat-rate.
-- Cross-reference flagged country codes with `customers:query` filtered by country to estimate revenue at risk.
+- Optional: cross-reference flagged country codes with `customers:query` filtered by country to estimate revenue at risk. This needs the extra `read_customers` scope, which this read-only setup does not ask for, so skip it unless the user grants that scope.
 - Run quarterly to catch zones added by app integrations or staff that drift from the documented configuration.

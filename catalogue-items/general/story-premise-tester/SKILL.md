@@ -9,26 +9,21 @@ An idea can sound good for a paragraph and then run dry, leaving a sagging middl
 
 **Not for:** a finished draft that needs checking line by line (use the Story rules checker), a scene list you want tested scene by scene (use the Scene turn checker), or a story you can only describe as a feeling (start with the Ending-first story planner).
 
-<!-- needs: hand-written (needs_mode: manual in item.yaml). Keep this section in step with the page. -->
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs in any chat AI. It needs no files, web access or paid tools.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need:**
-- **Your story idea** (yours): a paragraph or less. Rough is fine.
-
-**Makes it better (optional):**
-- **The kind of story and its length** (yours): short story, script, novel or pitch.
-- **The ending you have in mind** (yours): the test checks the idea can reach it.
-- **Other ideas** (yours): to compare and pick which to write first.
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
-1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too.
-2. **If the idea is missing, stop and ask.** Reply with only this request: "What is your story idea? A paragraph is enough, rough is fine. Tell me the kind of story and its length if you know them." Do not output empty sections, even if they say to go ahead. Once the idea arrives, do the whole job.
-3. **Do the job.** Mark each gap with `MISSING:` and never invent plot. Say each point once. In CHECKS MISSED, name only the checks that failed, or write "none".
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Any good chat AI:** testing an idea against a fixed method is text work.
-- **Index cards:** one turn per card makes the outline easy to move around.
+- **Any good chat AI:** Testing an idea against a fixed method is text work.
+- **Index cards:** One turn per card makes the outline easy to move around.
 <!-- /needs -->
 
 ## What you need
@@ -68,6 +63,16 @@ CHECKS MISSED   (one line per check missed, or none)
 ```
 
 <!-- next: hand-written (needs_mode: manual in item.yaml). -->
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker). It takes the plan.
+- The [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan and audit report.
+- The [Plain English editor](https://useaiblocks.com/skills/plain-english-editor). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Turn the outline into scenes** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the plan and audit report.

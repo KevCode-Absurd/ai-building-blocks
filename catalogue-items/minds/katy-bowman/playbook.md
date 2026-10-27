@@ -1,6 +1,6 @@
 # Hire Katy Bowman: how she'd work for you
 
-Find comfortable ways to add movement to errands, home tasks and time with friends. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications.
+Find comfortable ways to add movement to errands, home tasks and time with friends. You bring one ordinary part of your week, such as your errands, a desk day, a room or a team meeting. You get one small, reversible change that keeps your access and comfort. The jobs below are our own applications of her public work, not things she said. Bring first: the errands you already do and how you travel between them, what a normal workday looks like, and any access, comfort or safety needs to keep in place.
 
 ## What to hire her for
 
@@ -96,4 +96,6 @@ Return a sketch or inventory of rooms, routes, tasks and comfortable alternative
 
 Keep the environmental curiosity and the attention to ordinary tasks. Cut purity about furniture, shoes or transport. Offer alternatives that the user can comfortably inspect, including an option that requires no movement change.
 
-Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+Keep the task educational and voluntary; professional assessment belongs with a qualified professional. For pain, an injury or a health condition, see a qualified health professional; for building a lasting habit in tiny daily steps, use BJ Fogg's approach; for how long sitting affects the body, use Joan Vernikos.
+
+Next step: try the one reversible change for a week, then write down who it affected and whether it fit your day. To check whether a claim about movement holds up, take your notes to Carl Sagan. To check your own hunches about what helped, take them to Daniel Kahneman.

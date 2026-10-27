@@ -7,6 +7,41 @@ description: Share your own ads and real product photos. Get a new set in your b
 
 Use only the brand's own or explicitly authorized ads to extract its visual system. Competitor references may teach a layout separately, but they are not the brand's winners. If performance data is absent, call the source set existing ads rather than proven winners.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad image planner](https://useaiblocks.com/skills/ad-image-generation-and-edit-planner). It takes the brief.
+- The [Product photo ad prompt set writer](https://useaiblocks.com/skills/six-image-ad-prompt-set).
+- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the brief.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image ads.
+- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image ads.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
+- **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for reference ads, product photos, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## 1. Lock the product and source set
 Use the named product, exact variant, source location, output count and sizes already supplied. Ask only for missing choices. Inspect clean real product photos; a designed source ad alone may distort proportions and is not an ideal product anchor.
 
@@ -34,7 +69,11 @@ Use references/remix-manifest.md to choose a render path per archetype. Exact la
 Review the DNA/concept plan where decisions remain unresolved. Reuse existing approval rather than imposing repeat gates. If product facts, restrictions or selected claims cannot support an archetype, change it or leave the slot empty.
 
 ## 4. Pilot and produce
-Make one representative output when feasible, compare its product and style to the real anchors, then carry accepted notes across the set. Generate in bounded batches inside the authorized cost scope. Never change claims to bypass a generation service's safety decision; revise the legitimate concept or choose a permitted non-generative rendering method.
+Follow these steps in order:
+1. Make one pilot ad when feasible.
+2. Compare its product and style with the real product photos, and note what to fix.
+3. Carry the accepted notes across the set.
+4. Make the rest in small batches, inside the cost the person has approved. Image generation may be paid, so say the cost scope before you start. Never change claims to bypass a generation service's safety decision; revise the legitimate concept or choose a permitted non-generative rendering method.
 
 Build requested sizes deliberately. Product identity and supported words stay fixed while crops, zones and type scale adapt. Save the exact prompt, real-anchor names, render mode and output version per ad. A generated frame can support style continuity but cannot replace real product evidence.
 

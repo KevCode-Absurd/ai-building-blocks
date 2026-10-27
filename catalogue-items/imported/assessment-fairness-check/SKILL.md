@@ -86,7 +86,7 @@ The teacher must provide:
 - **Intended learning:** What the assessment claims to measure. *e.g. "Understanding of the causes of WW1 and ability to construct a historical argument" / "Knowledge and understanding of photosynthesis" / "Understanding of nutrition and healthy eating"*
 - **Student level:** Year group. *e.g. "Year 10"*
 
-Optional (injected by context engine if available):
+Optional (add them if you have them):
 - **Subject area:** The curriculum subject
 - **Assessment purpose:** Formative, summative, diagnostic, or evaluative
 - **Marking approach:** How it will be marked

@@ -29,4 +29,4 @@ credits:
   - title: matlab-engineer-tabular-features skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-engineer-tabular-features
-    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.
+    used: Copied as it is, under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence. We gave it a plain name.

@@ -256,7 +256,7 @@ trainer.fit(model, train_loader)
 - **Automatic**: DDP, FSDP, DeepSpeed with 1 line
 - **Callbacks**: Modular training extensions
 - **Reproducible**: Less boilerplate = fewer bugs
-- **Tested**: 1M+ downloads/month, battle-tested
+- **Widely used**: a popular, well-known library (check current download numbers on PyPI before you quote any)
 
 **Use alternatives instead**:
 - **Accelerate**: Minimal changes to existing code, more flexibility
@@ -285,7 +285,7 @@ Reduce batch size or use gradient accumulation:
 ```python
 trainer = L.Trainer(
     accumulate_grad_batches=4,  # Effective batch = batch_size × 4
-    precision='bf16'  # Or 'fp16', reduces memory 50%
+    precision='bf16'  # Or 'fp16'; can reduce memory use
 )
 ```
 
@@ -341,6 +341,6 @@ trainer = L.Trainer(accelerator='gpu', devices=1)
 - Version: 2.5.5+
 - Examples: https://github.com/Lightning-AI/pytorch-lightning/tree/master/examples
 - Discord: https://discord.gg/lightning-ai
-- Used by: Kaggle winners, research labs, production teams
+- Used by research labs and production teams
 
 

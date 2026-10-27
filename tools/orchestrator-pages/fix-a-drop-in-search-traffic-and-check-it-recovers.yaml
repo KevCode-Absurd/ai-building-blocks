@@ -30,7 +30,7 @@ you_get:
   - The exact theme edits, redirects and settings for duplicate pages, a re-test checklist and a score for the leaks closed
   - A recovery report on non-branded clicks, branded trend and organic funnel against the period before, a score out of 100 and the one thing to look at next
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Export Search Console for the drop and the equal period before it. Give it the theme files if you use Shopify.
   - Duplicate your theme and test each change there before it goes live. Do not noindex pages that bring organic sales.

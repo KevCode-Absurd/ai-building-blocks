@@ -37,7 +37,9 @@ how_to_use:
   - Paste your backlog, team, time off and sprint length. If your AI has a tracker or calendar connected, it can pull these itself.
   - Check the capacity table first. The skill suggests planning to 70 to 80 percent of capacity to leave room for interruptions.
   - Read the sprint goal. If it takes more than one sentence, ask your AI to tighten the scope.
+  - Pick one unit, points or hours, and convert your estimates and capacity to it before the capacity table is filled in.
   - Share the plan with your team and check it again at the mid-sprint date.
+  - "The /sprint-planning command only works where skills are installed. Otherwise, paste the whole skill text and write the sprint details after it. Once the plan is agreed, paste the sprint backlog into your tracker, or ask your AI to draft the standup or sprint review notes."
 output_sample:
   input:
     - Your team and who is away this sprint

@@ -36,6 +36,13 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 Bring a rough recording, an awkward draft or a project whose familiar form has stopped producing useful discoveries. Expect an experiment and a careful review of what it reveals. These are our working adaptations for small creative tasks with ordinary tools.
 
+### What to bring
+
+- A rough recording, draft or outline you are stuck on (optional)
+- The question that first made you curious about the topic
+- Who will listen or read, and what they need to know first
+- How much time and which tools you have
+
 ### What to hire him for
 
 - **Get an unfinished creative piece moving:** Turn a global worry into one craft question and a version you can inspect.
@@ -113,6 +120,14 @@ Creative discomfort is not proof of quality. A sound effect is not a fact check.
 ### What you'll get back
 
 Expect the question worth exploring, one concrete experiment, a review of what to keep and a clear next edit or reporting task. Where useful, receive a short script or sequence map. Identify which parts are factual, which are illustrative and which remain uncertain. Finish with something the user can make or compare using their available time and materials.
+
+### When to pick someone else
+
+- You need a fact check or a source check: use a subject expert or a source-checking tool, because a sound effect is not proof.
+- You need legal, medical or personal money advice: ask a qualified professional, not a creative advisor.
+- You want a film director's view on story order, time and suspense: use the Christopher Nolan mind or the Alfred Hitchcock mind.
+
+**What next:** Take the rough cut to Ira Glass for the story and the voice, to Roman Mars for how sound and design carry an idea, or to Christopher Nolan for the order of the telling.
 
 ## How Jad Abumrad thinks and talks
 

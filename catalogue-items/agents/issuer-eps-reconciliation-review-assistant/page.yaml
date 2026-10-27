@@ -9,7 +9,7 @@ subhead: Give it a new filing, your last accepted EPS model and your materiality
 explain: |
   Earnings per share (EPS) moves when profit moves. It also moves when the share count or an option or convertible term changes, and a new filing can change those without touching profit. If you rebuild the whole model every quarter, you lose sight of what really changed. If you patch one number, a split or a missing conversion price can leave the model wrong with no sign.
 
-  This EPS reconciliation agent keeps a short record of the last accepted review. It holds the filings you accepted, the profit figure used as the control number and the dated share intervals. It also holds each option or convertible you included or left out, and why, plus any open checks. When a new filing arrives, it compares dates and periods with that record. It checks for a confirmed split first, because a split changes every earlier share count and every earlier EPS figure. Then it reruns the Basic and diluted earnings per share checker on the restated base.
+  This EPS reconciliation agent keeps a short record of the last accepted review. It holds the filings you accepted, the profit figure used as the control number and the dated share intervals. It also holds each option or convertible you included or left out, and why, plus any open checks. When a new filing arrives, it compares dates and periods with that record. It checks for a confirmed split first, because a split changes every earlier share count and every earlier EPS figure. Then it reruns the Reconcile basic and diluted issuer EPS on the restated base.
 
   When a conversion or exercise term is missing, it pauses that one instrument and says so. It never guesses a price. It uses only the filings you give it, with no live market data. It trades nothing, files nothing and starts no schedule. A person who knows the filings checks the result.
 when:
@@ -18,9 +18,9 @@ when:
   - A revised note adds or changes options, convertible bonds or other instruments that could dilute EPS.
   - Your reviewer asks which instruments went into diluted EPS, and why the others were left out.
 not_for:
-  - You are building a first EPS model from scratch. Use the Basic and diluted earnings per share checker.
-  - You only need old EPS restated for one split or one rights issue. Use the Stock split earnings adjustment calculator or the Rights issue earnings adjustment calculator.
-  - You want to judge a share buyback. Use the Cash buyback EPS checker.
+  - You are building a first EPS model from scratch. Use the Reconcile basic and diluted issuer EPS.
+  - You only need old EPS restated for one split or one rights issue. Use the Stock-split EPS restatement or the Rights-issue EPS adjustment.
+  - You want to judge a share buyback. Use the Cash-funded buyback EPS bridge.
   - You want a buy or sell view, or a price target. It gives neither and uses no live market data.
   - The company has not filed anything dated, such as a rumour or a draft. It works only from dated filings you supply.
 you_give:
@@ -112,7 +112,7 @@ tweaks:
 judge:
   - Basic/diluted numerators and shares reconcile, every changed instrument is explained and all missing terms remain explicit; no account, filing or trade is changed.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - A split factor reads new shares per old share, and total earnings do not change. Each instrument is marked included or left out, with the reason.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
@@ -122,7 +122,7 @@ improve:
   - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
   - Write your materiality threshold into the agent's file once, so every run uses the same one.
   - Keep one sheet with the issuer's option and convertible terms, with the filing page for each, and paste it in every time.
-  - Pair it with the Stock split earnings adjustment calculator when you only need one restatement, and the Cash buyback EPS checker when a buyback is the question.
+  - Pair it with the Stock-split EPS restatement when you only need one restatement, and the Cash-funded buyback EPS bridge when a buyback is the question.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

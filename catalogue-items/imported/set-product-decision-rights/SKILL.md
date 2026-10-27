@@ -104,7 +104,7 @@ Six recurring reviews form the product governance rhythm. Each review has a defi
 | **Launch review** | Confirm readiness to ship; accept residual risk | Product lead, engineering lead, QA, security, support, marketing | Readiness evidence packet, risk register, rollback plan | Go/no-go/defer decision, accepted risks | Product lead (go/no-go); risk acceptance may require exec |
 | **Lifecycle / Health review** | Assess product health; decide continue/invest/harvest/retire | Product lead, engineering lead, support, finance (high-assurance) | Usage data, outcome metrics, cost data, competitive intel | Lifecycle decision, updated investment level, migration plan if retiring | Product council or accountable exec |
 
-Use [templates/review-cadence.md](templates/review-cadence.md) to configure cadences for a specific operating model. Routes to [product-roadmapping-and-portfolio](../product-roadmapping-and-portfolio/SKILL.md) for roadmap review mechanics, [product-experimentation](../product-experimentation/SKILL.md) for experiment review methods, and product-lifecycle-learning (prose — same-wave skill, directory not yet created) for lifecycle/health review evidence.
+Use [templates/review-cadence.md](templates/review-cadence.md) to configure cadences for a specific operating model. Routes to [product-roadmapping-and-portfolio](../product-roadmapping-and-portfolio/SKILL.md) for roadmap review mechanics, [product-experimentation](../product-experimentation/SKILL.md) for experiment review methods, and, for lifecycle or health review evidence, no skill covers it yet: run that review by hand and bring the evidence to the review meeting.
 
 ## Evidence Standards
 
@@ -183,7 +183,7 @@ Every exception and escalation gets a dated record with accountable owner and re
 | Outcome roadmaps, strategic bets, portfolio sequencing | [product-roadmapping-and-portfolio](../product-roadmapping-and-portfolio/SKILL.md) |
 | Multi-project technical coordination, shared capacity, program benefits, transformation delivery | [technical-program-management](../technical-program-management/SKILL.md) |
 | Experiment design, method selection, guardrails, readouts | [product-experimentation](../product-experimentation/SKILL.md) |
-| Post-launch learning, lifecycle decisions, assumption updates | product-lifecycle-learning (prose — same-wave skill) |
+| Post-launch learning, lifecycle decisions, assumption updates | No skill covers this yet: handle it in the review meeting by hand |
 | Executive decision memos, CoS methods, board materials | [chief-of-staff-methodology](../chief-of-staff-methodology/SKILL.md) |
 | Strategic planning, capital allocation, OKR frameworks | [strategy-frameworks](../strategy-frameworks/SKILL.md) |
 | Release mechanics, deployment pipelines, rollback plans | [release-engineering](../release-engineering/SKILL.md) |

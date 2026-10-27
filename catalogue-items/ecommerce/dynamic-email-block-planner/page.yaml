@@ -127,9 +127,9 @@ improve:
 works_best_with:
   tools:
     - name: Klaviyo
-      why: Show-hide blocks, product feeds, app events and predictive fields are built in, and the preview tool checks blocks with real profiles.
+      why: Show-hide blocks, product feeds, app events and predictive fields are built in, and the preview tool checks blocks with real profiles. It is a paid service, and some of these features may need a paid plan, so check before you build.
     - name: Shopify
-      why: Cart, checkout and product-view events come from your store connection.
+      why: Cart, checkout and product-view events come from your store connection. You need a paid Shopify plan.
     - name: Any good chat AI
       why: Any current chat AI can draft the rules from your property list.
   inputs:

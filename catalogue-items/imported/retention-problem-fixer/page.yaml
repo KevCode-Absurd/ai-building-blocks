@@ -17,8 +17,8 @@ when:
   - You want to cut the time it takes a new user to see value.
 not_for:
   - Your product has no repeat use, like a one-off purchase. Fix the sales page or follow-up emails instead.
-  - You want habit loops or variable rewards. Use hooked-ux, a separate skill, which this site does not list yet.
-  - You want to build lasting inner drive in your users. Use drive-motivation, a separate skill, for that.
+  - You want habit loops or variable rewards. Use the Habit loop designer.
+  - You want to build lasting inner drive in your users. Use the Motivation designer for that.
 you_give:
   - A description of your product and first-use flow
   - Where people drop off
@@ -31,11 +31,11 @@ you_get:
   - Small first steps to try
   - A list of changes in priority order
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed. The skill text works on its own. The longer reference files in the skill folder are optional extras you can paste if you want more depth.
   - Describe your product and what a new user does in their first session.
-  - Say where people drop off. Add your activation or retention numbers if you have them.
+  - Say where people drop off. Add your activation or retention numbers if you have them, such as the share of sign-ups who finish setup each week. A table pasted from your analytics tool, with one row per week or step, works well.
   - Ask your AI to run the retention diagnostic and give the score, failing rows and fixes.
-  - Pick the top fix and test it with a small group of new users before you change everything.
+  - Pick the top fix and test it with a small group of new users before you change everything. After the test, run the diagnostic again to see if the score and the drop-off step moved.
 output_sample:
   input:
     - A description of your product and what a new user does first
@@ -55,3 +55,4 @@ output_sample:
       contains: Changes to when and how you nudge users and guide them at the start.
     - name: Priority list
       contains: The changes ranked so you know what to try first.
+next: [first-use-onboarding-designer]

@@ -180,13 +180,15 @@ Identifies which features customers value most:
 
 ### Signs It's Time
 
+The numbers in this section and in the pricing page section (conversion above 40%, churn below 3%, annual discount 17-20%) are rough rules of thumb with no source. Check them against your own numbers.
+
 **Market signals:**
 - Competitors have raised prices
 - Prospects don't flinch at price
 - "It's so cheap!" feedback
 
 **Business signals:**
-- Very high conversion rates (>40%)
+- Very high conversion rates (>40%, a rough rule of thumb)
 - Very low churn (<3% monthly)
 - Strong unit economics
 

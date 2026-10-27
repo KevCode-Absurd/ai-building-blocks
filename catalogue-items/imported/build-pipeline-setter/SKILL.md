@@ -264,7 +264,8 @@ jobs:
     steps:
       - name: Rollback deployment
         run: |
-          # Deploy the specified previous version
+          # PLACEHOLDER: replace with your host's own rollback command and check it before use.
+          # Example for Vercel (confirm the syntax in Vercel's docs first):
           npx vercel rollback ${{ inputs.version }}
 ```
 

@@ -47,6 +47,7 @@ output_sample:
     - An AI that can read files and save a memo
     - The ip-legal plugin setup finished, with your practice profile filled in
     - For a design patent, the patent drawings and photos of the other product
+    - "Optional: connectors such as CourtListener and Solve Intelligence, which may need a paid plan or an API key"
   output:
     - name: Posture and scope
       contains: Which right is at issue, which side you are on, the place, the timing and the exhibits reviewed.

@@ -36,6 +36,7 @@ how_to_use:
   - Ask your AI to pick one beachhead segment and score you with the quick diagnostic.
   - Check the result against what you know about your customers. Fill in any messaging templates with real customer words before you use them.
   - Work through the fixes for the weak rows, then run it again.
+  - Take the top fix into a real conversation with a customer in your beachhead segment. Then re-run the diagnostic with what you learn.
 output_sample:
   input:
     - What your product is and does

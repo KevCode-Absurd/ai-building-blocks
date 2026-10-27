@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Scans all store pages and blog articles for missing or thin content (short body, missing SEO title/description, empty body). Thin content pages are penalized by search engines and create a poor customer experience. Read-only — no mutations. Complements `seo-metadata-audit` (which covers products and collections).
+Scans all store pages and blog articles for missing or thin content (short body, missing SEO title/description, empty body). Thin pages can rank poorly and give customers little to read. Read-only — no mutations. Complements `seo-metadata-audit` (which covers products and collections; on AI Blocks this is the Store SEO gap finder).
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_content`
@@ -26,6 +26,9 @@ Scans all store pages and blog articles for missing or thin content (short body,
 | min_body_length | integer | no | 100 | Flag pages with body content shorter than this (characters) |
 | include_unpublished | bool | no | false | Also audit unpublished pages and articles |
 | format | string | no | human | Output format: `human` or `json` |
+
+## SEO fields
+The SEO title and description are read from the `global.title_tag` and `global.description_tag` metafields, where Shopify keeps them by default. If your store or an SEO app keeps them somewhere else, "missing" flags can be wrong. Spot-check a few flagged pages in Shopify before you act on the list.
 
 ## Safety
 
@@ -46,7 +49,7 @@ Scans all store pages and blog articles for missing or thin content (short body,
 ## GraphQL Operations
 
 ```graphql
-# pages:query — validated against api_version 2025-04
+# pages:query — uses the api_version set in the front matter
 query PageContentAudit($after: String) {
   pages(first: 250, after: $after) {
     edges {
@@ -70,7 +73,7 @@ query PageContentAudit($after: String) {
 ```
 
 ```graphql
-# articles:query — validated against api_version 2025-04
+# articles:query — uses the api_version set in the front matter
 query ArticleContentAudit($after: String) {
   articles(first: 250, after: $after) {
     edges {
@@ -156,7 +159,7 @@ CSV file `content_audit_<YYYY-MM-DD>.csv` with columns:
 | No pages or articles | Minimal store | Exit with 0 results |
 
 ## Best Practices
-- A page with fewer than 300 words is generally considered "thin content" by search engines — use `min_body_length: 1500` (characters ≈ ~250 words) as a starting threshold.
+- The default `min_body_length` is 100 characters, which catches near-empty pages. Many SEO guides call a page under about 300 words thin; that is about 1,500 characters. This is a rule of thumb, not a search-engine rule. Set `min_body_length: 1500` for a stricter check.
 - The About, FAQ, and Contact pages are high-trust pages that should never be empty — prioritize these.
 - Run after any CMS migration or theme change that may have wiped page content.
 - Pair with `seo-metadata-audit` for a complete SEO audit covering products, collections, pages, and blog articles in one workflow.

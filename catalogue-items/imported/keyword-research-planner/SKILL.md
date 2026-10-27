@@ -57,10 +57,12 @@ Prioritize problem-related queries that the product can genuinely solve. Search 
 
 ## Difficulty & Volume Rubric
 
-**Important:** This skill estimates difficulty and volume based on
-semantic analysis and competitive signals. It does not connect to
-live data APIs. All figures are directional estimates, not
-verified data. Always validate with a live tool
+**Important:** One rule for every number. If browser or keyword-API
+data is available (see "Live search-intent research"), use it and
+name the source next to each figure. Otherwise estimate from
+semantic analysis and competitive signals and mark every volume,
+difficulty and CPC figure as an unverified estimate. Never show an
+estimate as measured data. Always validate with a live tool
 (Ahrefs, SEMrush, Google Keyword Planner) before committing
 to a full content strategy.
 

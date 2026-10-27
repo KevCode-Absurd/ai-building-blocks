@@ -15,11 +15,11 @@ This skill enables an AI agent to build production-grade webhook receivers and c
 
 1. **Design the webhook endpoint:** Create an HTTP POST endpoint at a stable, non-guessable URL path (e.g., `/webhooks/stripe`, `/webhooks/github`). The endpoint must return a `200 OK` response quickly (within 5 seconds for most providers) to acknowledge receipt—long processing should be done asynchronously via a job queue. Use HTTPS exclusively; most providers reject plain HTTP endpoints.
 
-2. **Implement signature verification:** Every webhook provider signs payloads using HMAC-SHA256, RSA, or a similar scheme. Before processing any event, verify the signature using the provider's signing secret. Compare signatures using a constant-time comparison function to prevent timing attacks. Reject requests with missing or invalid signatures immediately with a `401 Unauthorized` response. Read the raw request body for verification—parsed JSON may differ from the signed bytes.
+2. **Implement signature verification:** Every webhook provider signs payloads using HMAC-SHA256, RSA, or a similar scheme. Before processing any event, verify the signature using the provider's signing secret. Compare signatures using a constant-time comparison function to prevent timing attacks. Reject requests with missing or invalid signatures immediately with a `401 Unauthorized` response. Read the raw request body for verification—parsed JSON may differ from the signed bytes. For Shopify, compute an HMAC-SHA256 of the raw body with your app secret, base64-encode it, and compare it in constant time with the `X-Shopify-Hmac-Sha256` header.
 
 3. **Parse and route events by type:** Parse the verified payload and extract the event type (e.g., `payment_intent.succeeded`, `push`). Route each event type to a dedicated handler function using a registry or switch statement. Log unrecognized event types at warning level and return `200 OK` to prevent the provider from retrying unhandled events indefinitely.
 
-4. **Process events idempotently:** Providers retry webhook delivery when they don't receive a timely `200` response, which means your handler may receive the same event multiple times. Store processed event IDs in a database table and check for duplicates before processing. Use database transactions to atomically mark an event as processed and perform its side effects.
+4. **Process events idempotently:** Providers retry webhook delivery when they don't receive a timely `200` response, which means your handler may receive the same event multiple times. Store event IDs in a database table and mark an event as processed only after its handler succeeds, so a failed event is retried and not skipped. Check for duplicates before processing. Use database transactions to atomically mark an event as processed and perform its side effects.
 
 5. **Add async processing and dead letter queues:** For events that require heavy processing (sending emails, updating multiple records), acknowledge the webhook immediately and enqueue the event for background processing. Failed events that exhaust retries should be moved to a dead letter queue (DLQ) for manual inspection. Set up monitoring and alerts on DLQ depth.
 
@@ -125,7 +125,7 @@ const db = new Pool();
 
 async function checkIdempotency(eventId) {
   const result = await db.query(
-    "SELECT 1 FROM processed_webhook_events WHERE event_id = $1",
+    "SELECT 1 FROM processed_webhook_events WHERE event_id = $1 AND processed_at IS NOT NULL", // only skip events whose handler finished, so failed ones are retried
     [eventId]
   );
   return result.rows.length > 0;
@@ -133,7 +133,7 @@ async function checkIdempotency(eventId) {
 
 async function markEventReceived(eventId) {
   await db.query(
-    "INSERT INTO processed_webhook_events (event_id, received_at) VALUES ($1, NOW()) ON CONFLICT (event_id) DO NOTHING",
+    "INSERT INTO processed_webhook_events (event_id, received_at) VALUES ($1, NOW()) ON CONFLICT (event_id) DO NOTHING" // processed_at stays empty until the worker finishes,
     [eventId]
   );
 }

@@ -22,6 +22,7 @@ not_for:
 you_give:
   - The cancer type, scan type or collection you need
   - Any filters such as body part or number of cases
+  - Whether your use is commercial, because some collections only allow non-commercial use
   - Disk space and a computer with internet access
   - Python to run the search (optional)
 you_get:
@@ -32,9 +33,10 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run Python code and reach the internet, such as Claude or ChatGPT with code tools on.
   - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
-  - Describe what you need, such as the cancer type, scan type, body part and how many cases.
+  - Describe what you need, such as the cancer type, scan type, body part and how many cases, and say if your use is commercial. The first run may install a search index, which takes some disk space.
   - Read the list of collections and the licence notes. Drop any collection whose licence does not fit your use.
   - Run the download commands on a computer with enough disk space. Add the citations to your paper or report.
+  - Next, open the downloaded files with a tool such as pydicom or SimpleITK. Check each series' licence name again before any commercial use.
 output_sample:
   input:
     - The cancer type, scan type or collection you need
@@ -44,6 +46,7 @@ output_sample:
     - An AI that can run Python code and reach the internet
     - Enough disk space for the files you download
     - A Google Cloud sign-in, only for the optional BigQuery route
+    - "About 77 MB of free space, which the first run uses to install the packaged search index"
   output:
     - name: Matching collections and series
       contains: The public collections and image series that fit your request, with scan type, body part and case counts.

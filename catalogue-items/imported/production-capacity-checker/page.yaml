@@ -37,6 +37,7 @@ how_to_use:
   - Add your known bottlenecks and service level if you have them. Your AI asks for anything missing.
   - Check the utilization table and the named bottleneck against what you see on the floor.
   - Compare the options by cost and timing, then pick one to plan in detail.
+  - Next, take the named bottleneck and your chosen option into your planning or budget review. Run the check again when demand changes.
 output_sample:
   input:
     - Your demand forecast by month or quarter, with busy and quiet periods
@@ -45,7 +46,7 @@ output_sample:
     - Known bottlenecks and current output rates (optional)
     - The service level you must hit (optional)
   prerequisites:
-    - An AI chat tool such as Claude, ChatGPT or Gemini. No code needs to run.
+    - An AI chat tool such as Claude, ChatGPT or Gemini. The skill text includes Python examples, which a chat tool can follow without running them. To run them yourself, you need Python with pandas, numpy, pulp and matplotlib.
   output:
     - name: Executive summary
       contains: Current capacity and use, the demand gaps, the advised plan, and the cost and timing.

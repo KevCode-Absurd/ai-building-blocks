@@ -43,10 +43,10 @@ output_sample:
     - A keyword export or Search Console data
     - Three to five competitors (optional)
   prerequisites:
-    - A keyword export from a tool like Ahrefs, Semrush or Google Keyword Planner, or Search Console data. Without either, volume figures will be rough.
+    - A keyword export from a tool like Ahrefs, Semrush or Moz (paid), Google Keyword Planner (free with an ads account), or Search Console data (free for your own site). Without any of these, Volume and Difficulty are left blank and marked no data. Nothing is guessed.
   output:
     - name: Keyword sheet
-      contains: One row per keyword with volume, difficulty, intent, SERP features, cluster, cluster role, scores, priority and notes.
+      contains: One row per keyword with volume, difficulty, intent, SERP features, cluster, cluster role, scores, priority and notes. Volume and difficulty come from your tool and stay blank if you gave none.
     - name: Intent labels
       contains: Each keyword marked informational, navigational, commercial or transactional, checked against what ranks in search results.
     - name: Cluster list

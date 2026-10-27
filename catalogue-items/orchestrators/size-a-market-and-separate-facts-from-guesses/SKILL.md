@@ -11,25 +11,25 @@ This workflow chains 4 skills into one job. You run them one after another, and 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Use what they have attached or pasted first. This job needs a market and a buyer group. Everything else makes the estimate better.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**You need:**
-- **The market and who you would sell to** (yours): one or two sentences naming the buyers, such as "parents of children aged 2 to 13 who already buy a children's vitamin".
-- **Your price, or an idea of it** (yours).
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your own data** (yours): sales, conversion or survey numbers, in a spreadsheet or pasted.
-- **Reports you already have**, with their methods, and **the country or area** you care about.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
-1. **Look first.** Use what they have already attached, pasted or put in their about-me note.
-2. **If the buyer group or the price is missing, ask once** in one short message. If the buyer group cannot be named, say so and suggest the Pick a market worth selling to and its price workflow first.
-3. **Do the job.** Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Step 2 needs web or database access. If you have none, list where to look and mark each input `MISSING: public fact`.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, spreadsheet, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **A chat AI that can browse the web:** step 2 looks up public data.
-- **Official statistics sites:** census, trade and health statistics are the facts behind the inputs.
-- **A spreadsheet:** holds the estimate so you can change an input and see the range move.
+- **A chat AI that can browse the web:** Step 2 looks up public data. Without browsing it lists where to look and marks each gap.
+- **Official statistics sites:** Census, trade and health statistics are the facts behind the inputs.
+- **A spreadsheet:** Holds the estimate so you can change an input and see the range move.
 <!-- /needs -->
 
 ## What you need
@@ -76,11 +76,11 @@ The estimate is not a forecast, and the report is not investment advice. Say so 
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you have handed it back, suggest one next step as a short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
-- **Test the top guess.** Plan a survey or sales test with the [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner).
-- **Choose where to sell.** Use the [Pick a market worth selling to and its price](https://useaiblocks.com/workflows/market-and-price-picker) workflow with the size you just built.
-- **Check the idea can win it.** Use the [Test if your idea can own its market](https://useaiblocks.com/workflows/idea-market-test) workflow.
-If they pick one and it is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Scholarly work reviewer](https://useaiblocks.com/skills/scholarly-work-reviewer). It takes the document.
+- The [Cited research report writer](https://useaiblocks.com/skills/cited-research-report-writer). It takes the plan.
+- The [Item-by-item researcher](https://useaiblocks.com/skills/item-by-item-researcher). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back

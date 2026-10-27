@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Step cost tracker** with the [Step cost tracker](https://useaiblocks.com/skills/step-cost-tracker). Bring your question, your results (optional).
+1. **Step cost tracker** with the [Step cost tracker](https://useaiblocks.com/skills/step-cost-tracker). Bring your question, spreadsheet (optional).
 2. This one.
 
 How to start:
@@ -98,8 +98,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Yes, no or too-hard call writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report and plan.
-- **Plan your strategy** with the [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). It takes the plan.
+- **Decide what to do** with the [Investment decision brief writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report and plan.
+- The [Process waste finder](https://useaiblocks.com/skills/process-waste-finder). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

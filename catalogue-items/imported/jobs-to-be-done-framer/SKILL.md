@@ -22,6 +22,14 @@ When to use this skill: applying JTBD to a discovery cycle, replacing persona-dr
 
 ---
 
+## How to run it
+
+1. Ask for the inputs: the product or customer problem, recent customer moments (interview notes, switch decisions), and the product decision being debated. If there are no customer moments, say so and mark every job as a hypothesis.
+2. Clarify the problem, then draft the job statements.
+3. Derive the struggling moments and the hire and fire reasons.
+4. Test each job against the decision.
+5. Hand back: the job statements, the struggling moments, hire and fire reasons, the decision test, and the next step (about one to two pages).
+
 ## What this skill is for
 
 This skill spans JTBD as a framing technique within product work. The PM-skill distinction:

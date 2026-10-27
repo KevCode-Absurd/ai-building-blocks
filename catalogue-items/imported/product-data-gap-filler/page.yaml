@@ -5,19 +5,19 @@ name: Product data gap filler
 summary: Find Shopify products missing a barcode, SKU, vendor or product type, then fill the blanks from your own data. Preview every change before it goes live.
 job: build-websites
 headline: Product data gap filler
-subhead: Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent cannot confirm the product is the one asked for and picks a rival with full data.
+subhead: Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent may not be able to confirm the product is the one asked for, and may pick a rival with full data.
 explain: |
-  Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent cannot confirm the product is the one asked for and picks a rival with full data.
+  Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent may not be able to confirm the product is the one asked for, and may pick a rival with full data. This is the author's view, not a measured result.
 
   Claude scans your Shopify products and variants for blank fields. Vendor and product type are set at product level. Barcode and SKU are set per variant. You see the gaps and proposed values before anything is written. It changes live data, so you need an authenticated Shopify CLI session with product write access, and you should supply real barcodes rather than guesses.
 when:
   - Your product pages show no GTIN or SKU.
-  - AI shopping tools skip your items in favour of competitors.
+  - AI shopping tools may skip your items in favour of competitors.
   - Vendor or product type is blank on many products.
   - You are cleaning up a catalog after a bulk import.
 not_for:
-  - "You only want a read-only check of how ready your store is: run an audit first and do not use this tool to write changes."
-  - "You need to fix values that are already filled in but wrong: make a targeted edit in your Shopify admin or a bulk edit instead."
+  - "You only want a read-only check of how ready your store is: use the AI shopping readiness checker first and do not use this tool to write changes."
+  - "You need to fix values that are already filled in but wrong: use the Product field bulk editor, or edit them in your Shopify admin."
   - "You do not have real barcodes from your supplier: ask your supplier first, because a wrong barcode is worse than a blank one."
 you_give:
   - Your store domain
@@ -60,3 +60,4 @@ output_sample:
       contains: Counts of products and variants updated for each field, plus any errors.
     - name: Still-missing list
       contains: Variants with no match in your file, left blank so you can find the data.
+next: [ai-shopping-readiness-checker, product-field-bulk-editor]

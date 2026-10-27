@@ -27,10 +27,11 @@ you_get:
   - Templates to log exceptions and disputes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or web access is needed.
-  - Paste your product scope, decision types, team roles and current meetings. Add any rules you must meet.
+  - Before you write the brief, list each team member's role, what they decide today, and the decision types to cover. Paste that with your product scope, current meetings and any rules you must meet.
   - Ask your AI to set the decision rights. If it asks which setup fits, pick light or high-assurance.
   - Check that every decision has one owner and a clear path for disputes.
   - Fix anything marked missing, then share the map with your team.
+  - Next, log each waiver and dispute in the exception and escalation records the skill gives you, and review the map at your next review-cadence meeting.
 output_sample:
   input:
     - Your product scope and what is in or out

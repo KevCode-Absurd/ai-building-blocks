@@ -207,7 +207,7 @@ for doc, score, is_safe in results:
 - Need multilingual support (8 languages)
 - Budget constraints (CPU-deployable)
 
-**Model performance**:
+**Model performance** (figures as reported in the skill's source, not tested here; measure on your own text):
 - **TPR**: 99.7% (in-distribution), 97.5% (OOD)
 - **FPR**: 0.6% (in-distribution), 3.9% (OOD)
 - **Languages**: English, French, German, Spanish, Portuguese, Italian, Hindi, Thai
@@ -252,7 +252,9 @@ score = get_jailbreak_score(query)  # 0.72 (false positive)
 ```python
 def filter_with_context(text, user_is_trusted):
     score = get_jailbreak_score(text)
-    # Higher threshold for trusted users
+    # Higher threshold for trusted users.
+    # Risk: a stolen or spoofed trusted account then gets past the filter more easily.
+    # Keep a second check, such as logging, rate limits or review, for every user.
     threshold = 0.7 if user_is_trusted else 0.5
     return score < threshold
 ```
@@ -284,6 +286,8 @@ def score_long_text(text, chunk_size=512, overlap=256):
 ```
 
 ## Threshold recommendations
+
+The rates in this table and the per-pattern scores above are example values from the skill's source. Do not treat them as guarantees. Test on your own samples and pick your own cutoff.
 
 | Application Type | Threshold | TPR | FPR | Use Case |
 |------------------|-----------|-----|-----|----------|

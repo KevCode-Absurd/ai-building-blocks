@@ -11,22 +11,22 @@ This is the store version of the Buying story interview guide. What it adds is t
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `customers.md`, `offers.md`, `proof-and-claims.md`, `market.md`. Take the buyers, the main promise and approved claims only. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, spreadsheet. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI can fill the sheets from your order list and write the pattern note.
@@ -87,11 +87,9 @@ CHECKS MISSED: <list or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Brand facts accuracy fixer](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
-- The [Email setup health checker](https://useaiblocks.com/skills/email-setup-health-checker). It takes the document.
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
-- The [Analysis checker](https://useaiblocks.com/skills/analysis-checker). It takes the document.
-- The [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker). It takes the document.
+- The [Customer purchase interview script writer](https://useaiblocks.com/skills/buying-story-interview-guide).
+- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger).
+- The [Customer interview synthesizer](https://useaiblocks.com/skills/customer-interview-synthesizer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

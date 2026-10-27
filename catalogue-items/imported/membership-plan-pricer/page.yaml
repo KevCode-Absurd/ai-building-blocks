@@ -37,6 +37,10 @@ how_to_use:
   - Add your perks or rewards if you have them. Say so if you do not.
   - Read the table of prices and the reason for each line. Check that the upgrade path matches your goal.
   - Note that the pay-per-use advice comes from research on business buyers of usage-based services. It may not hold for consumer memberships, so test it with your own members.
+  - Next, test one tier change with a small group of members. Track Basic to Pro upgrades for a full billing cycle before you change prices for everyone.
+next:
+  - three-tier-price-ladder-drafter
+  - pricing-strategist
 output_sample:
   input:
     - Your plan tiers, prices and billing period

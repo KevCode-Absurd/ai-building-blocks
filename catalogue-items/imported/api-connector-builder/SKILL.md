@@ -72,7 +72,9 @@ class StripeClient:
             total=4,
             backoff_factor=1,
             status_forcelist=[429, 500, 502, 503, 504],
-            allowed_methods=["GET", "POST", "DELETE"],
+            # POST is left out on purpose: a retried payment call can charge twice.
+            # Retry POST only if you send an Idempotency-Key header with it.
+            allowed_methods=["GET", "DELETE"],
             respect_retry_after_header=True,
         )
         adapter = HTTPAdapter(max_retries=retry_strategy)
@@ -140,6 +142,7 @@ print(f"Payment intent {payment['id']} for ${payment['amount']/100:.2f}")
 ### Example 2: GraphQL API Integration with requests
 
 ```python
+import os
 import requests
 from typing import Any, Optional
 

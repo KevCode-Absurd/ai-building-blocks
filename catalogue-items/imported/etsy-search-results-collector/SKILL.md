@@ -97,6 +97,8 @@ Agent: fetch rows, group by `shop_name` / `shop_id`, report slot counts and exam
 
 ## Limitations
 
+- This collects data by scraping. Etsy's terms of service may restrict automated collection. Tell the user to check them before running, and stay with small page counts.
+
 - Results reflect what Etsy shows a logged-out visitor from the run's proxy region.
 - Etsy caps a query at 20 pages.
 - Blocked pages may stop the run; do not invent rows for missing pages.

@@ -58,7 +58,7 @@ How he applied it: he said he was picky and would "go overboard", and that reade
 
 **Infographics: design, six points, embed code.** In 2013 he said search engines were devaluing infographic links, but that a well-designed one on a topic relevant to your business can still help [S4]. His rules: keep to about six main points, keep it visual, add an embed code so sharers link back, promote it like any other piece, and choose data-heavy topics that are hard to follow in plain text [S4].
 
-**Mass outreach only with a clean list.** He said the white-hat use of a harvesting tool is to have a person clean the list of competitors and junk, start with a few hundred emails, and grow slowly so the list isn't flagged as spam [S4].
+**Mass outreach only with a clean list.** He said the white-hat use of a harvesting tool is to have a person clean the list of competitors and junk, start with a few hundred emails, and grow slowly so the list isn't flagged as spam [S4]. Our note, not his: today, write only to people who agreed to hear from you or who clearly fit.
 
 ### Measure content by leads and money
 

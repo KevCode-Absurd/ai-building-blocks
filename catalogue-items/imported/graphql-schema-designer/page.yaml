@@ -9,7 +9,7 @@ subhead: Describe your data and get a GraphQL API plan you can build from. You r
 explain: |
   Describe your data and get a GraphQL API plan you can build from. You receive a full schema, plus resolver code that avoids the slow trap of one database call per item.
 
-  It starts by modelling real entities as types, inputs, enums and interfaces. Queries are named for things, mutations for actions. Long lists use cursor paging with edges, nodes and page info. Resolvers use DataLoader so fifty posts and their authors cost two lookups, not fifty-one. It adds subscriptions for live data, limits on query depth and cost, field-level access rules, and options for Apollo Federation and persisted queries.
+  It starts by modelling real entities as types, inputs, enums and interfaces. Queries are named for things, mutations for actions. Long lists use cursor paging with edges, nodes and page info. Resolvers use DataLoader so fifty posts and their authors cost two lookups, not fifty-one. Other list fields, such as tags, need their own loader too. It adds subscriptions for live data, limits on query depth and cost, field-level access rules, and options for Apollo Federation and persisted queries.
 when:
   - You are starting a new API and need a schema design.
   - Your API is slow because each list item triggers its own query.
@@ -36,6 +36,7 @@ how_to_use:
   - Add your auth rules, such as who may edit or delete (optional).
   - Read the schema first. Check which fields can be empty and that the names fit your data.
   - Copy the code into your project to run it. Your AI chat can't run it for you. Test it in Apollo Studio.
+  - Before you go live, add a sign-in and owner check to every edit and delete action, and only pass fixed table names into the paging SQL.
 output_sample:
   input:
     - Your entities and how they relate
@@ -58,3 +59,4 @@ output_sample:
       contains: Query depth and cost limits, field-level access checks and notes on persisted queries.
     - name: Federation notes
       contains: Advice on splitting the schema across services, only if your API spans more than one.
+next: [api-security-checker, api-test-suite-builder]

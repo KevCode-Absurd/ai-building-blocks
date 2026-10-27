@@ -37,7 +37,8 @@ how_to_use:
   - Add this skill, or paste its instructions into the chat.
   - Tell it the repository path and the branch or commit to check. For an update, also name the earlier threat-model folder.
   - Ask it to run a threat model analysis. For an update, say 'update the threat model using this folder as the baseline'.
-  - Read 0-assessment.md first. Then check 3-findings.md and fix the highest-ranked items.
+  - Read 0-assessment.md first. Then check 3-findings.md and fix the highest-ranked items. Findings are ranked with the CVSS 4.0 severity scale, and each has its CWE and OWASP mapping.
+  - Next, send the top findings to your engineers and fix them. Then run the analysis again in update mode with the same folder, to confirm each one is closed.
   - "Example request: 'Run a threat model analysis on ./my-app'. You get a new threat-model folder with the files listed above."
 output_sample:
   input:
@@ -62,3 +63,10 @@ output_sample:
       contains: A saved list of threats and findings, used as the baseline for later updates.
     - name: Comparison report (update runs only)
       contains: Which threats are new, fixed or still open, with a STRIDE heatmap and findings diff.
+terms:
+  - term: STRIDE
+    meaning: Six kinds of threat to look for. They are spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege. This skill adds abuse, which is why it says STRIDE-A.
+  - term: data flow diagram (DFD)
+    meaning: A drawing of the parts of a system and the paths data takes between them.
+  - term: trust boundary
+    meaning: A line in the diagram where data moves between parts that trust each other differently, such as from the internet into your server.

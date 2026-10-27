@@ -31,11 +31,12 @@ you_get:
   - Sources for every claim
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a chat that can browse the web, and paste in the skill.
+  - Before you run it, check each site's terms and robots.txt. The skill reads public pages and may be blocked on some.
   - Paste your competitor links, one per line, and one line on what your product does.
   - "Say how deep to go: quick scan for key facts, or deep profile for full research."
   - Say if you have a Firecrawl key or an SEO tool connected. DataForSEO, Ahrefs and Semrush are paid, and Firecrawl needs its own key. Without them it reads pages directly.
-  - The skill reads public pages. Check each site's terms and robots.txt before you run it.
   - Read each profile. Check pricing and any claim marked as inferred against the source page before you use it.
+  - Next, turn the finished profiles into a sales battle card with Competitor battle card builder, or into comparison pages for your own site with a page-writing skill.
 output_sample:
   input:
     - Links to the competitor websites

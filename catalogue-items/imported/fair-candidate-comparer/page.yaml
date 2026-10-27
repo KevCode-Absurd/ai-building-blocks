@@ -30,9 +30,10 @@ you_get:
   - A written screen evaluation grouped by skill
   - A side-by-side comparison of candidates with a confidence level
   - A list of evidence gaps, interviewer gaps and bias flags
+next: [candidate-comparison-table-builder]
 how_to_use:
   - Write your role scorecard first. List each question, the follow-ups, and the green and red flags.
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. Metaview and Teamtailor, which it names, are paid tools you only need if you use their transcripts or kits.
   - Paste the transcript or notes, then the scorecard. Add candidate notes if you have them.
   - Ask for the scorecard and the screen evaluation. For several candidates, ask for the comparison matrix.
   - Check each rating against its quotes. Fix any that rest on feeling, then make the hiring call yourself.

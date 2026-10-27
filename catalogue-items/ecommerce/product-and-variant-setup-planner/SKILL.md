@@ -9,15 +9,24 @@ You plan how each product is entered, so nothing is missing when it is added. Yo
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
 - **Product photos** (yours): clear photos of the real product, from more than one angle. Attach them.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with product photos. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, product photos. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Shopify:** Variants, compare-at price and a continue-selling stock setting are built in.
@@ -41,13 +50,13 @@ Limits: the click paths are WooCommerce. The variant-table thinking applies to S
 2. **Pick the type.** Simple: one option, ships (a couch). Variable: more than one option such as size and colour. Virtual simple: a service. Virtual plus downloadable: an ebook or file. External or affiliate: a button that sends the buyer to another site.
 3. **Build shared options first.** For variable products, create global attributes (such as Size and Colour) first, then add them to each product and tick "used for variations". Global attributes are reusable. Attributes made inside one product are not. On WooCommerce separate the values with the pipe symbol, save, then generate variations.
 4. **Generate the variations.** Four sizes by three colours gives 12 rows. A variation needs a price or it cannot be bought, so mark any row without one.
-5. **Fill each row.** Its own SKU (for example the product name plus a number), price, stock, weight and the photo for that option. Use bulk actions to set one price or stock for all rows, then override the exceptions (in one demo, XL and a navy variant cost more, and one size in black had stock of 3).
+5. **Fill each row.** Its own SKU (for example the product name plus a number), price, stock, weight and the photo for that option. Use bulk actions to set one price or stock for all rows, then override the exceptions.
 6. **Set defaults.** Choose default form values so a variation is preselected. Without it nothing is selected on the product page. Match the default to the main image.
-7. **Add a photo per colour.** One photo per colour variation so the picture changes when the buyer picks a colour. It is slow but a one-time job. Use at least three to five images with different angles and zoom, plus video or a 3D model if there is one. Use one image size for all product photos so the grid lines up. Replace generic file names with descriptive alt text. Product photos should be at least 1,000 by 1,000 pixels, one source says.
+7. **Add a photo per colour.** One photo per colour variation so the picture changes when the buyer picks a colour. It is slow but a one-time job. Use at least three to five images with different angles and zoom, plus video or a 3D model if there is one. Use one image size for all product photos so the grid lines up. Replace generic file names with descriptive alt text. A common guide is at least 1,000 by 1,000 pixels for product photos. Check your platform's image guidance for the exact size.
 8. **Price rules.** Put the old price in "compare at" to show a strikethrough on Shopify. On WooCommerce use regular price plus sale price and schedule the sale end date so the regular price returns on its own. Keep the compare-at price realistic.
-9. **Stock rules.** Manage stock on. For held stock, leave "continue selling when out of stock" off so it shows sold out at zero. For dropshipping, it can be on, after checking supplier stock rules. Backorders off unless you can ship fast. On WooCommerce set a low-stock alert such as 3 or 10 (one demo used 2).
+9. **Stock rules.** Manage stock on. For held stock, leave "continue selling when out of stock" off so it shows sold out at zero. For dropshipping, it can be on, after checking supplier stock rules. Backorders off unless you can ship fast. On WooCommerce set a low-stock alert such as 3 or 10.
 10. **Shipping fields.** Weight and package, so calculated rates are right. Leave blank only if you charge a flat rate.
-11. **Services and downloads.** For a service or ebook, tick "sold individually" so the cart cannot take two. Put delivery instructions (a booking link) in the purchase note. Attach the download file by URL and set the download limit and expiry (unlimited and none in both demos).
+11. **Services and downloads.** For a service or ebook, tick "sold individually" so the cart cannot take two. Put delivery instructions (a booking link) in the purchase note. Attach the download file by URL and set the download limit and expiry.
 12. **Organise.** Categories (parent and child, such as Furniture then Sofas) and tags. A short description shows beside the price, a long one below. On WooCommerce the "uncategorized" category cannot be deleted, so rename and use it.
 13. **Link products.** Upsells show on the product page and cross-sells show in the cart. Link both and check each in the storefront.
 14. **List what is missing.** Anything you could not fill from the facts given goes under STILL MISSING with who has it.
@@ -82,11 +91,9 @@ CHECKS MISSED: <none, or the checks you could not run>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI store build planner](https://useaiblocks.com/skills/ai-store-build-planner). It takes the brand brain.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the brand brain.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brand brain.
-- **Make image ads** with the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brand brain.
-- **Make an offer people want** with the [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder). It takes the brand brain.
+- The [Collections and menu planner](https://useaiblocks.com/skills/collections-and-menu-planner). It takes the brand brain.
+- The [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner). It takes the brand brain.
+- The [Store go-live checker](https://useaiblocks.com/skills/store-go-live-checker). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

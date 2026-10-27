@@ -131,7 +131,7 @@ works_best_with:
     - name: Any good chat AI
       why: Any current chat AI can draft the blocks once it has your brand context, then you edit by hand.
     - name: Klaviyo
-      why: It builds the email from blocks and runs the manual 50/50 split for the variants.
+      why: It builds the email from blocks and runs the manual 50/50 split for the variants. It is a paid service.
   inputs:
     - Your brand voice notes and two emails you like
     - Reviews that answer a known doubt

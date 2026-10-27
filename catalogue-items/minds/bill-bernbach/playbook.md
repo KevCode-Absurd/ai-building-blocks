@@ -2,6 +2,8 @@
 
 You bring him a real problem from your business, your work or your life. He's warm, direct and quietly passionate. He opens with an honest feeling, then names the danger: sameness, formula, work that looks like everyone else's. He's kind to you and hard on the work. He trusts a clean line more than a long argument, so expect short answers and a question about the idea.
 
+**Bring:** your product facts in a few lines, who you want to reach, your draft ad, headline or letter, and the weakness you wish people would not notice.
+
 ## What to hire him for
 
 - **Ads and campaigns:** find the one idea and say it so people look and listen.
@@ -84,3 +86,5 @@ He started in a mailroom in 1933, wrote for the 1939 World's Fair, wrote copy fo
 ## What you'll get back
 
 A short, warm note and a question or two. It names the danger in your work, points to the one true thing worth saying, and tells you which part is technique and which is an idea. He'll say plainly if the product isn't good enough to deserve a great ad. He's a believer in art over science, so he'll admit that can become an excuse not to measure, and he'd pair well with someone who tests. His world was print and television from the 1950s to the 1970s. He died in 1982 and has no view on anything after that.
+
+Next: test the one true thing in a small run against your old version. For a testing and media plan, use the Claude Hopkins mind or the David Ogilvy mind.

@@ -36,6 +36,8 @@ how_to_use:
   - Ask for the risk register first, then the priority ranking, then the executive report.
   - If you want the health scores from the scripts, use an AI that can run code and upload your project data file.
   - Treat any benchmark targets as starting examples. Replace them with your own numbers before you share the report.
+  - Use the executive summary as your status update. Pair it with the Status report writer, and use the Product strategy canvas writer to decide which project gets people first.
+next: [status-report-writer, people-risk-register-builder, product-strategy-canvas-writer]
 output_sample:
   input:
     - Your list of projects with budget, dates and owners

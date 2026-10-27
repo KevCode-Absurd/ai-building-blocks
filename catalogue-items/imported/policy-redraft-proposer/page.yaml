@@ -5,7 +5,7 @@ name: Policy redraft proposer
 summary: Turn a policy gap into a marked-up policy redraft with the smallest edits, plus notes on why. A proposal for your policy owner, not legal advice.
 job: check-contracts
 headline: Policy redraft proposer
-subhead: Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice. Bring description of the gap. Use the result to plan your next step.
+subhead: Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice. Your policy owner approves the change before it goes live.
 explain: |
   When a review finds your policy no longer meets a rule, this writes the fix as a marked-up draft with the smallest edits that close the gap. Nothing in your original policy is touched.
 
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - "Collect the three things the skill needs: the gap, your current approved policy text, and the rule text."
   - Open Claude, ChatGPT or Gemini and paste in the skill. A chat works if you paste your policy and rule text.
-  - Tell your AI which gap to fix and paste your inputs. If you have a gap tracker, a gap review or policy comparison result, and setup notes, add them too. Saving the draft as a new file needs an AI that can write files.
+  - "Tell your AI which gap to fix and paste your three inputs: the gap, the current approved policy and the rule text. The skill mentions /regulatory-legal commands and a gap tracker from its original plugin. They are not included, so skip them. A chat shows the draft in the reply. Saving a dated file needs an AI that can write files."
   - Answer its question about whether your policy text is the latest approved version.
   - Read the marked-up draft and the change summary. Check every item tagged [verify] against the primary source.
   - Send the draft to your policy owner. Update your gap tracker only after the change is applied and approved.
@@ -62,3 +62,4 @@ output_sample:
       contains: Choices for what to do next, such as sign-off, more research, escalation, or waiting.
     - name: Saved draft file
       contains: A new file named with the policy, the words proposed-redraft, and the date. Your source policy is never changed.
+next: [company-policy-explainer, gdpr-privacy-checker]

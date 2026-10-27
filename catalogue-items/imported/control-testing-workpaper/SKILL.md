@@ -38,6 +38,8 @@ Generate sample selections, create testing workpapers, document control assessme
 
 ### 1. Identify Controls to Test
 
+Have these ready before you start: the control area and period, the SOX 404 controls matrix for that area, and the full population file (one row per item, with at least date, reference, amount and owner). Use only the population the user gives you. If items or fields are missing, flag them. Never fill them in.
+
 Based on the control area, identify the key controls. Present the control matrix:
 
 | Control # | Control Description | Type | Frequency | Key/Non-Key | Risk | Assertion |
@@ -80,7 +82,7 @@ Adjust for:
 Select samples from the population using the appropriate method:
 
 **Random selection** (default for transaction-level controls):
-- Generate random numbers to select specific items from the population
+- Generate random numbers to select specific items from the population. A chat AI cannot prove its picks are random, so if it cannot run code, use a fixed interval with a stated start point instead, and record the method, the start point and the population size
 - Ensure coverage across the full period
 
 **Systematic selection** (for periodic controls):
@@ -216,3 +218,5 @@ Provide:
 4. Results documentation template
 5. Deficiency evaluation framework (if exceptions are identified)
 6. Suggested remediation actions for any noted deficiencies
+
+Next steps: the preparer and a reviewer sign the workpaper. File it with the internal audit team or the external auditor, and log any deficiency in your remediation tracker. A rating of significant deficiency or material weakness is a judgement for a qualified person to confirm, not a finding to rely on as written.

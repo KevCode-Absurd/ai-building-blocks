@@ -9,7 +9,7 @@ subhead: Your leads in a ranked list, with hot ones at the top so your team call
 explain: |
   Your leads in a ranked list, with hot ones at the top so your team calls them first. Give your ideal customer profile, the activity signals you track and a list of leads. The skill scores how well each company fits, using size, industry, funding stage and region, up to 50 points.
 
-  It adds up to 50 points more for behaviour, such as email clicks, page visits and product use. The total sorts every lead into Hot at 75 and above, Warm from 40 to 74 and Cold below that. You also get the rubric, so you can see why each lead scored as it did and tune the weights as you learn.
+  It adds up to 50 points more for behaviour, such as email clicks, page visits and product use. Behaviour points are cut off at 50, even when the signals add up to more. The total sorts every lead into Hot at 75 and above, Warm from 40 to 74 and Cold below that. You also get the rubric, so you can see why each lead scored as it did and tune the weights as you learn.
 when:
   - Your sales team does not know which of 400 leads to call first.
   - You want a simple scoring model without buying software.
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
   - Paste in the skill text, then describe your ideal customer and the activity you track.
-  - Paste your leads as a table. Use columns for company, employees, industry, funding stage, region, tech stack and activity counts.
+  - Paste your leads as a table. Export it from your CRM with columns for company, employees, industry, funding stage, region, tech stack and activity counts for the last 30 days. Older activity counts for less.
   - Ask your AI to build the rubric first. Check the points and change any weights you disagree with.
   - Ask it to score and rank the leads. Check that each total matches the rubric before you share the list.
   - Send Hot leads to a rep and Warm leads to nurture emails. Review your tier cut-offs every quarter.

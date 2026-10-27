@@ -106,7 +106,7 @@ The following optional context may or may not be provided. Use whatever is avail
 **Subject area:** {{subject_area}} — if not provided, infer the most likely discipline from the argument topic and generate a discipline-appropriate scaffold.
 **Student profiles:** {{student_profiles}} — if not provided, design for a mixed-ability class where some students can structure paragraphs but struggle with whole-text argument organisation.
 **Text type:** {{text_type}} — if not provided, assume an academic essay format.
-**Example evidence:** {{example_evidence}} — if not provided, generate 2–3 plausible pieces of evidence students might use, to demonstrate how the scaffold works.
+**Example evidence:** {{example_evidence}} — if not provided, do not invent facts, dates, names or quotes. Use clearly labelled placeholders such as [EVIDENCE: replace with a real source] to show how the scaffold works.
 
 Apply these evidence-based principles:
 

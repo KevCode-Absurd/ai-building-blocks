@@ -7,6 +7,28 @@ description: "Plan a Meta Ads agent that triages account numbers with plain code
 
 A Meta Ads agent reads an ad account and reports what it finds. This skill plans one that works in two passes. Pass one is plain code over the account's numbers. Pass two is a stronger AI model that sees only the findings that stay unclear. The skill reviews the project you give it, finds what is missing, and writes a plan with draft code and tests. It does not call Meta, call an AI model or change an account.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Meta developer app setup planner** with the [Meta developer app setup planner](https://useaiblocks.com/skills/meta-developer-app-setup-planner). Bring codebase.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code or Codex:** Reads your fetchers, job handlers and model calls together, so the plan names real files.
+- **A Meta developer app with read access:** Gives the agent data to read. Set it up first with the Meta developer app setup planner.
+- **An AI model API from your provider:** The built agent calls it, and it costs money per call. The plan sets caps before you spend.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything on this list that is missing. If it is still missing, write `MISSING:` next to it in the output and carry on with placeholders. Never invent an account ID, a metric, a price or a limit.

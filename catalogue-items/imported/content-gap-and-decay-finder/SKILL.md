@@ -100,7 +100,7 @@ Pulled from:
 6. **Score each opportunity.** See [`references/content-decision-matrix.md`](references/content-decision-matrix.md).
 7. **Cluster.** Group related missing topics into pillar concepts.
 8. **Decide actions.** Create / update / merge / redirect / prune for each opportunity.
-9. **Sequence the roadmap.** Quarter by quarter, with effort estimates and traffic forecasts.
+9. **Sequence the roadmap.** Quarter by quarter, with effort estimates, and traffic forecasts only where Ahrefs data supports them (otherwise state the data gap).
 10. **Hand off.** Output feeds `content-strategy`, `content-and-copy`, and `seo-onpage`.
 
 ---
@@ -128,7 +128,7 @@ For each piece of existing content or proposed new content, decide one action.
 - **Treating publish date as currency.** A 5-year-old page can outrank a 1-month-old page if it is better. Stop deleting old content reflexively.
 - **Cannibalization blind spots.** Two pages on overlapping topics dilute each other. Audit for it explicitly.
 - **No effort estimates.** A roadmap without effort sizes cannot be sequenced realistically.
-- **No traffic forecast.** A roadmap without forecasted impact loses funding fights. Forecast even with wide confidence bands.
+- **No traffic forecast.** A roadmap without forecasted impact loses funding fights. Forecast only where the Ahrefs data supports one, and show the range. Where it does not, state the data gap. Never invent a number.
 - **Refreshing without re-promotion.** A refreshed page needs a re-crawl signal: update sitemap, internal links, distribution.
 - **Ignoring intent shift.** Some keywords have shifted from informational to transactional or to AI-answer-dominated. Recognize when the SERP is no longer addressable by the existing format.
 - **Confusing decay with seasonality.** A 30% click drop in summer for a back-to-school topic is not decay. Compare year-over-year, not month-over-month.
@@ -147,7 +147,7 @@ A content gap audit document with:
 5. **Outdated content.** Pages to refresh, with refresh scope.
 6. **Decaying content.** Pages to diagnose and act on, with hypothesis for each.
 7. **Cannibalization findings.** Page pairs to merge.
-8. **Action roadmap.** Quarter by quarter, with effort and forecast.
+8. **Action roadmap.** Quarter by quarter, with effort, and a forecast only where the data supports one.
 9. **Methodology.** Data sources, classification criteria, caveats.
 
 Length: 8-15 pages plus an attached inventory spreadsheet.

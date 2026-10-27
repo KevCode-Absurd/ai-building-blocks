@@ -36,7 +36,8 @@ how_to_use:
   - Check the pass or fail test and the ladder your AI writes before it builds anything.
   - Let it build the one-record version first. It needs to run code and read your files for this.
   - At each step, read the cost and the next projection. Say go only if it fits your budget.
-  - Before you trust any cost figure, make sure you can see real cost data, such as billing or token counts. Without it the numbers are guesses.
+  - Before you trust any cost figure, make sure you can see real cost data, such as billing or token counts. For Snowflake, use query history and the billing view. For AI services, use the token counts your provider reports. Without real data the numbers are guesses.
+  - After the final run, reconcile the totals and give the cost per unit and RUNLOG.md to whoever owns the budget. Then check the output with data-quality-auditor, and look for savings with ai-cost-cutter.
 output_sample:
   input:
     - A description of your workflow and its stages

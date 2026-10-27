@@ -205,9 +205,9 @@ Audit any tech go-to-market, and re-run it as the completion gate before declari
 
 For the complete methodology:
 
-- [*"Crossing the Chasm"*](https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986?tag=wondelai00-20) by Geoffrey A. Moore (3rd Edition)
-- [*"Inside the Tornado"*](https://www.amazon.com/Inside-Tornado-Strategies-Developing-Hypergrowth/dp/0060745819?tag=wondelai00-20) by Geoffrey A. Moore (sequel: managing hypergrowth)
+- [*"Crossing the Chasm"*](https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986) by Geoffrey A. Moore (3rd Edition)
+- [*"Inside the Tornado"*](https://www.amazon.com/Inside-Tornado-Strategies-Developing-Hypergrowth/dp/0060745819) by Geoffrey A. Moore (sequel: managing hypergrowth)
 
 ## About the Author
 
-**Geoffrey A. Moore** is a consultant, venture partner, and author whose work at The Chasm Group and Chasm Institute has shaped go-to-market strategy for enterprise technology companies for over 30 years. *Crossing the Chasm* has sold over a million copies and is required reading at business schools and tech companies worldwide.
+**Geoffrey A. Moore** is a consultant, venture partner, and author whose work at The Chasm Group and Chasm Institute has shaped go-to-market strategy for enterprise technology companies for over 30 years. *Crossing the Chasm* is widely read in technology go-to-market teams.

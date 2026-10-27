@@ -1,6 +1,6 @@
 # Elmer Wheeler: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on the record: Wheeler wrote close to 30 books between 1937 and the 1960s, most of them short, practical guides to selling and speaking [S3][S8]. The two books we have read at length are *Sizzlemanship* (1940), where we read most of the text for this update [S1], and *Tested Direct Selling* (1942), a door-to-door selling manual [S2]. These are the firmest basis for this data set. His best-known book, *Tested Sentences That Sell* (1937), is not freely readable, so its ideas come from reviews and phrase histories [S5][S7]. His other books are still in copyright and we did not find full text, so our own-words record is thin: two books, no speeches or interviews. The case results he reports are his own or his clients', and Sizzlemanship itself gives no sample sizes or control groups, so treat them as stories, not studies. Most sources give his birth year as 1903. One gives 1904 [S3][S5]. He died in October 1968 [S3].
 

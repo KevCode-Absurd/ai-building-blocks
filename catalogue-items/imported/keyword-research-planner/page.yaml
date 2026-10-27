@@ -35,8 +35,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - "Tell your AI your topic, what your site does, who it is for, and your goal: rank, convert or educate."
   - Add a city, competitor links or keywords you already care about (optional).
+  - A browser or keyword tool is optional. Without one, every number in the report is an estimate.
   - If your AI can browse the web or use a keyword data service, say so. If not, it will mark volume and difficulty as estimates.
   - Check the Quick Wins Summary first, then the Keyword → Content Map.
+  - Treat volume, difficulty and cost per click as estimates unless you gave your AI a named data source. The Note line in the report keeps that warning, so don't delete it.
   - Check the numbers in a live keyword tool before you spend money on content.
 output_sample:
   input:

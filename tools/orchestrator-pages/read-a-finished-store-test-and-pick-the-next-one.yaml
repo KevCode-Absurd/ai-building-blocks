@@ -81,7 +81,7 @@ tweaks:
   - what: What else changed
     how: List sales, emails, price changes and site fixes during the test. They can skew the result.
   - what: Your traffic
-    how: Give monthly visits and orders. Under about 300 orders a month, only bold changes on your busiest page are worth testing.
+    how: Give monthly visits and orders. As a rough guide from the Test idea ranker skill, under about 300 orders a month only bold changes on your busiest page are worth testing. It is not a fixed rule.
   - what: Your research
     how: Add heatmap notes, recordings and survey answers. Ideas backed by more kinds of evidence rank higher.
 judge:

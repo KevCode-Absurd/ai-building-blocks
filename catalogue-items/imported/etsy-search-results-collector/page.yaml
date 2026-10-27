@@ -32,8 +32,9 @@ you_get:
 how_to_use:
   - Open an AI that can connect to outside tools through MCP, such as Claude, and paste in this skill.
   - Add the Apify connection in your AI's settings with your own token. Never paste the token into the chat.
+  - This is scraping. Etsy's terms of service may limit automated collection, so read them before you run it.
   - Give your keyword. Start with one page.
-  - Say yes when your AI asks before spending credits. Each run is billed by Apify.
+  - Say yes when your AI asks before spending credits. Each run is billed by Apify, and more pages cost more. Check the current price on the scraper's Apify page first, then run one page before you ask for many.
   - Check the table. Ask for price bands, ad counts or shops with the most page-one slots.
 output_sample:
   input:

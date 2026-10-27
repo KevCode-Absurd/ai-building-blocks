@@ -5,30 +5,34 @@ job: make-images
 headline: Image and video prompt director
 subhead: Share an image or video idea, rough prompt or bad result. Get a usable prompt, clear gaps and one focused next change. Bring the brief and any files you want it to use.
 explain: |-
-  Use this when you need a model-neutral image/video prompt with gap detection and focused repair. Pick idea, detailed brief, existing-prompt repair or bad-result diagnosis. Do not restart intake if the user already provided an actionable idea.
+  A prompt fails when a layer is missing or two layers disagree: no light, no camera, a style that fights the subject. You can't see which layer it was, so you change everything at once and learn nothing.
 
-  Extract confirmed subject, action, environment, light, camera, composition, palette, texture/style and, for video, motion/audio/timing. Mark meaningful choices made by the assistant as assumptions.
+  This skill reads what you gave it and sorts it into facts from you and choices it made. It writes a prompt you can paste today, lists the layers still missing with one or two ways to fill each, and gives you one change to try next. It writes the prompt only. Your image or video tool makes the picture.
 when:
-  - You need a model-neutral image/video prompt with gap detection and focused repair.
-  - You want a clear draft and checks from the material you already have.
+  - You have an idea for an image or video and need a prompt you can paste today.
+  - You have a rough prompt that gives poor results and want it repaired.
+  - A result came out wrong and you want to know which one thing to change.
 not_for:
   - "You want the final image or video made: use an image or video generation tool, since this only writes the prompt."
   - "You need a logo or full brand look: work with a designer, because this writes one-off prompts, not brand identity."
   - "You already have a prompt that works and only want small word tweaks: edit it by hand."
 you_give:
-  - brief
-  - "Optional: reference set"
-  - "Optional: copy draft"
+  - Your idea, rough prompt, or a bad result with the prompt that made it
+  - Reference images or clips you want it to follow (optional)
+  - Any words that must appear in the picture (optional)
+  - The image or video tool you plan to use (optional)
 you_get:
-  - image prompt
-  - video prompt
-  - Missing inputs and steps that still need to run
+  - A list of confirmed details, kept apart from the AI's own choices
+  - A copy-ready image or video prompt, with assumptions marked
+  - The missing layers, each with one or two ways to fill it
+  - One change to try next, and anything that was not checked
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from the download.
   - Paste your idea, rough prompt or bad result. Add reference images if your AI can view them.
   - Say which image or video model you will use, if you know. If not, the prompt stays model-neutral.
   - Read the confirmed details first. Fix anything the AI got wrong.
   - Copy the prompt into your generation tool. Change only the one thing in the next step, then try again.
+  - If the result is still wrong, run it again with the new result. Keep the confirmed details and change one thing only. If the same fault shows after two rounds, stop and try a different tool or a different reference.
 output_sample:
   input:
     - Your image or video idea, or a rough prompt
@@ -49,11 +53,17 @@ output_sample:
     - name: NOT RUN
       contains: Anything that was not checked or made, such as image generation or a reference it could not see.
 how_it_works:
-  - title: Read the brief
-    text: Pick idea, detailed brief, existing-prompt repair or bad-result diagnosis. Do not restart intake if the user already provided an actionable idea.
-  - title: Build the result
-    text: Read visible references first and state which traits came from each. Never guarantee exact identity/style replication or claim to see an unavailable reference.
-  - title: Check and hand off
-    text: Keep a confirmed-details list and preserve it across iterations. This skill writes prompts; generation is a separate explicitly requested, tool-supported action.
+  - title: Reads what you gave it
+    text: An idea becomes a prompt. A detailed brief is tidied into one. A rough prompt is repaired. A bad result is diagnosed, then fixed with one change.
+  - title: Separates facts from choices
+    text: Lists subject, action, setting, light, camera, composition, colour and style (and motion, sound and timing for video). Marks its own choices as assumptions.
+  - title: Reads your references
+    text: Says which traits came from which reference. It never promises an exact copy of a face or a style.
+  - title: Writes the prompt
+    text: Writes a prompt you can use now. If you named a tool, it adds that tool's syntax only when it is known. Gaps stay in a separate list.
+  - title: Diagnoses a bad result
+    text: Finds whether the fault is a missing layer, two layers that disagree, a weak reference, a tool limit, or too many changes at once.
+  - title: Hands off
+    text: Gives you the confirmed details to keep, one change to try next, and what was not checked.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

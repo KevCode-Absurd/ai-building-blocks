@@ -31,7 +31,7 @@ you_get:
   - A saved report
   - Follow-up steps for you
 how_to_use:
-  - Open an AI that can run read-only commands and save one file, such as Claude Code or Codex.
+  - Open an AI that can run read-only commands and save one file, such as Claude Code or Codex. The ready-made checks are written for a Mac. Linux needs small changes. On Windows the skill marks each check it cannot run.
   - Paste the skill, then name the advisory, CVE or package you want checked.
   - Say which folders to search. This keeps the check to those places and not your whole home folder.
   - Let it run the checks. It reads your files and settings but changes nothing.

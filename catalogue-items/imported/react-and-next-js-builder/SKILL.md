@@ -121,19 +121,19 @@ Generate React components with TypeScript, tests, and Storybook stories.
 ```tsx
 'use client';
 
-import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface ButtonProps {
   className?: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }
 
-export function Button({ className, children }: ButtonProps) {
+export function Button({ className, children, onClick }: ButtonProps) {
   return (
-    <div className={cn('', className)}>
+    <button type="button" className={cn('', className)} onClick={onClick}>
       {children}
-    </div>
+    </button>
   );
 }
 ```
@@ -164,6 +164,8 @@ Analyze package.json and project structure for bundle optimization opportunities
    ```
 
 3. Apply the recommended fixes by replacing heavy dependencies.
+
+The package sizes in this skill (for example moment 290KB, lodash 71KB) are approximate and may be out of date. Check current sizes on bundlephobia or npm before you act on them.
 
 4. Re-run with verbose mode to check import patterns:
    ```bash
@@ -534,6 +536,10 @@ This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It
 | Apple HIG (iOS / macOS / visionOS) | `product-team/skills/apple-hig-expert/` |
 | Pre-commit Karpathy review | `engineering/karpathy-coder/` |
 | Pre-flight architecture grill | `engineering/grill-me/` |
+
+The LCP targets and bundle budgets in the profiles are the author's starting points, not measured facts. Set your own from your users and pages.
+
+Note: the `cs-frontend-engineer` agent, the `/cs:frontend-review` command and the forked skills named above belong to the author's full skill pack and are not in this item. Without them, ask the user the four assumptions above as plain questions (device and network, LCP target, SEO or sign-in only, accessibility target and owner) and carry on with the scripts here.
 
 The `cs-frontend-engineer` agent orchestrates these forks via `context: fork`. Invoke it from another agent with `Agent({subagent_type: "cs-frontend-engineer", prompt: "..."})` or via `/cs:frontend-review <your problem>`.
 

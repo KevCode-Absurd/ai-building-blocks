@@ -29,10 +29,10 @@ you_get:
   - A raise, hold or cut call on budget, with the gate that decided it
   - The numbers to watch next week
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's check.
+  - Start a chat with the agent. In Claude Code (a paid tool, needed only to keep files and run on a schedule), add it as a skill or save it in .claude/agents, then ask it to run this week's check. A plain chat works from your exports.
   - Put this week's exports in one folder, or attach them in the chat.
   - The first time, give it your average order value and margin. It saves the break-even numbers and reuses them.
-  - Read the change list. Make the changes you agree with in Google Ads, or say yes to each one and let it make only those if it is connected.
+  - Read the change list. Make the changes you agree with in Google Ads yourself. The agent works from exports and needs no connection. Letting it make a change needs a connector with Google Ads API access, which may cost money.
   - Run it again next Monday. It compares against last week's files.
 output_sample:
   input:

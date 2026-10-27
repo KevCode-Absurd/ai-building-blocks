@@ -7,8 +7,8 @@ summary: Give it your numbers. Get ratio analysis, a valuation, budget variances
 job: money-and-investing
 headline: Financial statement analyst
 subhead: Give it your numbers. Get ratio analysis, a valuation, budget variances
-  and a rolling forecast. Bring income statement, balance sheet and cash flow.
-  Use the result to plan your next step.
+  and a rolling forecast. Have your income statement, balance sheet and cash flow
+  ready, with the period and currency.
 explain: |
   Your numbers read back to you: ratios that show how healthy the business is, a value estimate, how actuals compare with budget and a forecast that rolls forward.
 
@@ -19,7 +19,7 @@ when:
   - You need a rolling forecast for the next four quarters.
   - You are valuing a business and want a sanity-checked DCF.
 you_give:
-  - Income statement, balance sheet and cash flow
+  - Income statement, balance sheet and cash flow, with the period and currency. Ratios need revenue, cost of goods sold, debt, cash and shares. The valuation needs growth and discount-rate assumptions. Variances need budget lines by department
   - Budget figures (optional)
   - Industry or peer benchmarks (optional)
   - Forecast assumptions (optional)
@@ -29,10 +29,12 @@ you_get:
   - A budget variance report
   - A rolling forecast with scenarios
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Use an AI that can run Python 3 and read files, such as Claude Code. Put the whole skill folder in your project, with its scripts and assets folders. The scripts use only the Python standard library.
+  - Run each script on the sample file first, to see the format. For example, python scripts/ratio_calculator.py assets/sample_financial_data.json.
+  - Make a JSON file with your own numbers in the same shape as the sample, either one flat file per tool or one nested file for all four.
+  - Ask your AI to run the ratio calculator, the DCF, the budget variance analyzer and the forecast builder on your file. Check the data warnings first.
+  - Read the results. Check the DCF against peer multiples, and run the forecast again after each month's actuals.
+  - A valuation depends on its assumptions. Have a qualified adviser review it before any investment decision.
 not_for:
   - You run an online store and want a 36-month model from ad spend and costs. Use the Store financial model builder.
   - You want a monthly budget against actuals by team. Use the Monthly budget versus actual keeper.
@@ -56,3 +58,4 @@ output_sample:
       contains: A driver-based forecast with a 13-week cash view and base, bull and bear cases.
     - name: Executive summary
       contains: The findings that matter most, in plain words.
+next: [valuation-method-comparer, store-financial-model-builder]

@@ -19,7 +19,7 @@ when:
   - You have a rough draft and want the weakest breaks found fast.
 not_for:
   - "You only have one headline to test: pick between versions by hand, or ask a friend which one they would click."
-  - "You want to check that claims have proof: use the Claim and proof matcher."
+  - "You want to check that claims have proof: use the Claim evidence checker."
   - "Your copy is not written yet: write a first draft first, then bring it here to find the weak breaks."
 
 you_give:
@@ -139,7 +139,7 @@ improve:
   - Add your analytics scroll data so stop points are checked against real drop-off.
   - Add your true stories, so rewrites use them instead of invented ones.
   - Add your voice notes, so rewrites sound like you.
-  - Pair it with "Claim and proof matcher" after the rewrite.
+  - Pair it with "Claim evidence checker" after the rewrite.
 
 works_best_with:
   tools:

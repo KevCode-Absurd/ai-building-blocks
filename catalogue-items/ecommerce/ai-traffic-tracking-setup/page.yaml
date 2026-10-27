@@ -89,7 +89,7 @@ output_shape: |
 
   GA4 CHANNEL
   Name: AI traffic
-  Source rule: <regex of sources>
+  Source rule: source matches <the expression, edited to the sources in your data>
   Steps: <numbered steps for your set-up>
   Reads as: undercount, a trend
 
@@ -117,7 +117,7 @@ tweaks:
   - what: Your order page
     how: "Say where you can add a question: checkout, order confirmation or a thank-you page. The skill then places it there."
   - what: Your survey options
-    how: Give your real channels. Keep the AI option first or clearly marked so buyers see it.
+    how: Give your real channels. Mark the AI option clearly, but do not always list it first, so the order does not steer answers. Shuffle the order if your tool can.
   - what: Store events
     how: If add to cart and purchase events do not show in GA4, say so and the skill gives the Tag Manager steps.
 

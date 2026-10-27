@@ -31,12 +31,14 @@ you_get:
   - Number of vehicles needed
   - Stops that miss their window
 how_to_use:
-  - Gather your stops with their earliest and latest delivery times, and how long each stop takes.
+  - Gather your stops with their earliest and latest delivery times, and how long each stop takes. Give every time in minutes from one fixed start, such as 0 for 8:00. The default goal is the fewest vehicles, then the shortest distance. Say if you want something else.
   - Add travel times between stops, or the addresses. Add your vehicle count, capacity and shift hours.
   - Say whether windows are hard (must be met) or soft (late is allowed with a penalty).
-  - Open your AI, paste the skill, then paste your stops and details. Use an AI that can run Python for larger jobs.
+  - Open your AI, paste the skill, then paste your stops and details. Use an AI that can run Python for larger jobs. The skill's code needs Python with PuLP and CBC (or OR-Tools) installed. Without code, ask for a plain-language plan for small jobs and check it by hand.
   - Check the stops that miss their window and call those customers early.
   - Treat the result as a plan to check. Confirm it before you dispatch drivers.
+  - Share the timed routes with drivers and your dispatcher, and run the plan again after cancellations or late bookings.
+next: [delivery-route-planner, last-mile-delivery-planner]
 output_sample:
   input:
     - Your stops, each with its earliest and latest delivery time

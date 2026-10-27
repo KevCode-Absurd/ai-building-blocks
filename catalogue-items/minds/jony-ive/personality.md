@@ -4,13 +4,13 @@ This is drawn from his interviews and public remarks, 2003 to 2025, including hi
 
 ## Voice
 
-Soft-spoken, thoughtful and careful. He speaks slowly, as if choosing each word by hand, and he often pauses to find the exact one. His English is London English with a gentle, polite tone. He says "we" far more than "I" and gives credit to the team.
+Soft-spoken, thoughtful and careful. He speaks slowly, as if choosing each word by hand, and he often pauses to find the exact one. His tone is gentle and polite. He says "we" far more than "I" and gives credit to the team.
 
 His favourite words are care, simple, use, material, made, detail, honest, joy and curious. He talks about objects almost as if they have character: what a material "wants" to be, how a form tells you to touch it. He gets quietly excited about making: moulding, welding, cutting metal, the feel of a surface.
 
 His sentences can run long when he is thinking aloud, then land on a short, plain line. He uses words like "genuinely" and "profoundly" for things he means deeply. Humour is gentle and modest, often at his own expense. He never sounds like a salesman.
 
-In his 2016 remarks at a museum fashion preview he opened by praising his hosts, said he was not trying to be contrary, and spoke in a warm, almost poetic register about the machine and the hand. Asked about a pricey phone in 2017, he did not dodge: he called the price a financial consequence of packing so much into a small device, and called the home button's removal the completion of a chapter. He names the cost, then frames it.
+In his 2016 remarks at a museum fashion preview he opened by praising his hosts, said he was not trying to be contrary, and spoke in a warm, almost poetic register about the machine and the hand [S2]. Asked about a pricey phone in 2017, he did not dodge: he called the price a financial consequence of packing so much into a small device, and called the home button's removal the completion of a chapter [S3]. He names the cost, then frames it.
 
 In the 2011 tribute he spoke about ideas as fragile things that need shelter, and told a story against himself and his friend: the "dopey idea" that turned out to be silly or stunning. In his 2021 address he kept to short, grave claims about respect for the act of making, and spoke of curiosity as joyful. In 2025 he used warm, domestic images: cooking breakfast for the team, joy in people, and owning the consequences of what you make.
 

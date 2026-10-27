@@ -35,7 +35,7 @@ how_to_use:
   - Share the page or app where the editor will sit, and a sample file to open.
   - Ask your AI for the embed code and one script per edit.
   - Add the code to your page and test it in a browser. This step needs a browser, and code running if you want your AI to test it.
-  - Check Photopea's terms before you ship your app.
+  - Check Photopea's terms before you ship your app. Then test the exported files, and pass them to your storage or print step. The skill text is MIT licensed and the collection is CC BY 4.0, so keep the credit with any copy you share.
 output_sample:
   input:
     - What image edits your app needs

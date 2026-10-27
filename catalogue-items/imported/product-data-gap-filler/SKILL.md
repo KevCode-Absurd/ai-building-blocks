@@ -176,7 +176,7 @@ For `format: json`, emit:
 | SKU not in CSV | No mapping supplied for that variant | Leave barcode blank, report it as still-missing |
 
 ## Best Practices
-- Run `shopify-admin-agentic-readiness-audit` first to size the gap, then `dry_run: true` here to review the exact change set.
+- Run the AI shopping readiness checker (`ai-shopping-readiness-checker`) first to size the gap, then `dry_run: true` here to review the exact change set.
 - Barcodes are GTIN/UPC/EAN — get them from your supplier, never invent them. A wrong GTIN is worse than a blank one.
-- This skill only fills blanks; to correct existing-but-wrong values use `shopify-admin-bulk-price-adjustment`-style targeted edits instead.
-- Pair with `shopify-admin-agentic-metafields-setup` — barcodes power JSON-LD identity, metafields power agent filtering; you usually want both.
+- This skill only fills blanks; to correct existing-but-wrong values use the Product field bulk editor (`product-field-bulk-editor`) or a targeted edit instead.
+- Barcodes power JSON-LD identity, and metafields power agent filtering. For metafields, use the Product field bulk editor (`product-field-bulk-editor`). You usually want both.

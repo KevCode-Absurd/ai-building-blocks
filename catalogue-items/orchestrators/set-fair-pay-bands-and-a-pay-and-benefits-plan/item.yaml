@@ -8,15 +8,15 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
-  - {type: document}
+  - {type: spreadsheet}
   - {type: plan}
 uses: [pay-benchmark-and-equity-modeler, pay-band-builder, pay-and-benefits-plan-builder]
 steps:
   - {uses: pay-benchmark-and-equity-modeler, note: "Starts with what the market pays for each role and where your pay sits."}
-  - {uses: pay-band-builder, note: "Reads the market ranges from the step before and turns them into bands with a method you can explain."}
-  - {uses: pay-and-benefits-plan-builder, note: "Builds the bonus and benefits plan on top of the pay bands from the step before."}
+  - {uses: pay-band-builder, note: "Reads the market ranges from step 1 and turns them into bands with a method you can explain."}
+  - {uses: pay-and-benefits-plan-builder, note: "Builds the bonus and benefits plan on top of the pay bands from step 2, costed against your budget."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/set-fair-pay-bands-and-a-pay-and-benefits-plan/skeleton.yaml

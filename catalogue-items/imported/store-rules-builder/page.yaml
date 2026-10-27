@@ -16,7 +16,7 @@ when:
   - You want to hide a payment method, such as cash on delivery, for large orders.
   - You need to stop checkout with a clear message when a cart breaks a rule.
 not_for:
-  - "You want to change how checkout looks: use the checkout-customization skill, since this one only changes rules."
+  - "You want to change how checkout looks: use the Shopify checkout customizer, since this one only changes rules."
   - "Shopify's built-in discount options already do what you want: set it up in your Shopify admin, no code needed."
   - "You have no developer help and no comfort with code: ask a Shopify developer to build and check the rule."
 you_give:
@@ -31,12 +31,15 @@ you_get:
   - Steps to test it and deploy it
   - Admin screen code to set values like a percentage (optional)
 how_to_use:
+  - Before you start, have these ready: the Shopify CLI installed (get the current version from Shopify's developer site), a free Shopify Partner account, and an existing Shopify app to add the Function to.
   - Open an AI that can run code and use the Shopify CLI. Paste in this skill.
   - Describe your rule in plain words and say which part of checkout it changes.
   - Ask your AI to create the Function with the Shopify CLI in your app, in Rust or JavaScript.
   - Run the sample cart through it with the local test command. Check the result matches your rule.
   - Try a large cart and a cart that should not match, then read the code once.
   - Deploy with the Shopify CLI only when the tests pass. Turn it on in your Shopify admin.
+  - For the admin screen, deploy first, then copy the Function ID from your app in the Partner dashboard (or from the deploy output) into the admin code. Some helpers, such as the weight check in the delivery example, are placeholders you or your AI must write.
+next: [shopify-checkout-customizer, shopify-app-builder]
 output_sample:
   input:
     - Your rule in plain words

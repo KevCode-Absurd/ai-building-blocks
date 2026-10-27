@@ -45,6 +45,7 @@ output_sample:
     - Your timeline and any limits, such as a parent brand or rules
   prerequisites:
     - Free web access helps your AI check competitor sites. Without it, paste in what you find by hand.
+    - "Optional: Similarweb and Ahrefs, which it names for competitor traffic, are paid tools"
   output:
     - name: Executive summary
       contains: Five to ten bullets with the main findings and what to do next.

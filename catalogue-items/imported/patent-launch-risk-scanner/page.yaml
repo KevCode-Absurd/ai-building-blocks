@@ -31,8 +31,8 @@ you_get:
   - A clear note that this is not a legal opinion
 how_to_use:
   - Open your AI chat and paste in the skill text. It works in Claude, ChatGPT or Gemini.
-  - Paste your product description, your countries and your launch timing.
-  - Add any patent numbers or text you already have. If your AI has no patent search tool, this step matters most.
+  - Paste your product description, your countries and your launch timing. The plugin setup file and /ip-legal commands in the skill do not apply in a normal chat. Answer its questions in the chat instead.
+  - Add any patent numbers or text you already have. If your AI has no patent search tool, this step matters most. A patent search tool may be a paid service or need an API key. Without one, the result covers only the patents you paste in. "No patents found" never means clear to launch.
   - Read the shortlist and the claim comparison. Check that each patent really matches your product.
   - Take the open questions to a registered patent attorney before you launch.
 output_sample:

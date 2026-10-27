@@ -11,6 +11,13 @@ Build an enjoyable movement break into a desk day and turn an everyday worry int
 - **Make a realistic plan to reconnect with a friend:** A specific invitation and a flexible alternative for staying in touch.
 - **Evaluate a brain-health headline:** A careful headline rewrite with a list of missing evidence.
 
+## What to bring first
+
+- Tomorrow's calendar, or the task or worry you want to work on.
+- The kind of movement you find comfortable, and what your day and setting allow.
+- Anything you cannot change, such as pain, energy, fixed meetings or access.
+- For a headline, the text and where it came from.
+
 ## How she'd take on your problem
 
 1. **Name the everyday task:** Identify what you want to do more comfortably: return to reading, prepare a presentation or reconnect with someone. Separate that task from a broad brain-health promise.
@@ -42,6 +49,8 @@ Look at tomorrow's work and identify a natural transition, such as finishing a c
 
 The deliverable: A desk-day transition plan with a comfortable activity and an alternative.
 
+Next: try it for three days and note how ready you felt for the next task.
+
 The pushback: A comfortable break is the goal of this adaptation. Do not import a research protocol, a fitness target or an exercise dose from a public interview.
 
 ### Keep a useful attention diary
@@ -49,6 +58,8 @@ The pushback: A comfortable break is the goal of this adaptation. Do not import 
 You think a walk helps you return to reading. Record the reading task, your starting state and what the break involved. On another day, note the same details even if you do not walk. Look for other differences such as interruptions and task difficulty. Use the diary to improve your schedule, without claiming it isolates the cause of a change.
 
 The deliverable: A short observation log with a separate column for alternative explanations.
+
+Next: review the log after a week and change one thing in your schedule.
 
 The pushback: An informal diary cannot establish that an activity changed cognition. It is still useful for noticing comfort, scheduling friction and preferences without dressing them up as research.
 
@@ -58,6 +69,8 @@ Write the worries before a presentation: losing the thread, an unclear chart or 
 
 The deliverable: A worry-to-action table and a short presentation preparation list.
 
+Next: do the one preparation task today and leave the rest.
+
 The pushback: Not every worry contains a solvable task. Avoid producing an endless safety checklist or promising that enough preparation will prevent discomfort or criticism.
 
 ### Prepare for a first-day introduction
@@ -65,6 +78,8 @@ The pushback: Not every worry contains a solvable task. Avoid producing an endle
 You are uneasy about joining a new group. Identify the concern beneath the story: wanting to be included, understanding the process or knowing someone's name. Prepare a simple introduction and one question about the activity. Choose a manageable way to participate. Afterwards review whether you made contact, rather than scoring yourself on whether you appeared perfectly confident.
 
 The deliverable: An introduction, a genuine question and a manageable participation choice.
+
+Next: after the first day, review whether you made contact.
 
 The pushback: Do not call every feeling a superpower. A difficult social setting may need accessibility changes, protection or support rather than a more positive interpretation.
 
@@ -74,6 +89,8 @@ You keep liking a friend's updates but miss talking. Send a specific invitation 
 
 The deliverable: A specific invitation and a flexible alternative for staying in touch.
 
+Next: send the invitation this week and note whether you talked.
+
 The pushback: Do not claim that a brief exchange guarantees health or happiness. Connection depends on mutual interest, trust and access; digital conversation can be meaningful too.
 
 ### Evaluate a brain-health headline
@@ -81,6 +98,8 @@ The pushback: Do not claim that a brief exchange guarantees health or happiness.
 Bring the headline that promises a habit will transform your brain. Identify the actual activity, population and outcome described. Separate a study result from the author's personal story and from the headline's promise. Write a plain-language version that says what remains unknown. If only a promotional claim is available, keep it labeled as a claim.
 
 The deliverable: A careful headline rewrite with a list of missing evidence.
+
+Next: ask the source for the study itself. If the claim is about reasoning or numbers, bring it to the Daniel Kahneman mind; for how science works in general, the Carl Sagan mind.
 
 The pushback: A famous neuroscientist's name does not establish every statement attached to an article. Avoid translating group findings into a prediction about a particular reader.
 

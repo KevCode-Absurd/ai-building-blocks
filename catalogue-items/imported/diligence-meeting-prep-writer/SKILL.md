@@ -16,6 +16,8 @@ Ask the user for:
 - **What you already know**: Prior meetings, CIM, data room findings
 - **Key concerns**: Specific issues to probe
 
+For expert and customer calls: do not ask for confidential or material non-public information, and follow the firm's and the expert network's rules.
+
 ### Step 2: Generate Question List
 
 Organize questions by priority and topic. Structure depends on meeting type:
@@ -69,9 +71,9 @@ Organize questions by priority and topic. Structure depends on meeting type:
 
 ### Step 3: Benchmarks & Context
 
-For each key topic, provide relevant benchmarks:
+For each key topic, provide relevant benchmarks. Every benchmark must carry a named source, or be labelled "unverified". Never state an industry figure as fact without one:
 - Industry growth rates and margin profiles
-- Comparable company metrics (if comps analysis exists in session)
+- Comparable company metrics (only from a comps analysis the user supplied)
 - Data points from the CIM or data room that warrant follow-up
 - Discrepancies between different data sources to clarify
 
@@ -93,6 +95,8 @@ One-page meeting prep doc:
 4. **Benchmarks**: Key numbers to reference
 5. **Red flags**: Specific items to probe
 6. **Follow-up items**: What to request after the meeting
+
+After the meeting, write up your notes and send the follow-up request to the company.
 
 ## Important Notes
 

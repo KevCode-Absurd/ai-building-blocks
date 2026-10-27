@@ -32,11 +32,13 @@ you_get:
   - List of spend to avoid
 how_to_use:
   - Gather your goal, monthly budget, target cost per customer, and what you sell and to whom.
+  - "Expect the plan in this order: test table, channel picks, budget split, audiences, bid style, what not to buy, attribution check."
   - Add your current results from each ad platform if you have them (optional).
   - Paste the skill into Claude, ChatGPT or Gemini, then paste your details. No code or paid tool is needed.
   - Read the test table first. Check that each test has a stop number and a scale number you can measure.
   - Compare any benchmarks in the plan with your own data. Treat them as rules of thumb.
   - Start with one or two tests. Review them against the stop and scale numbers before you move more budget.
+  - After the first tests run, check results in your own sales numbers, not only the ad platform. Bring them back for the next round.
 output_sample:
   input:
     - Your goal and monthly budget
@@ -47,7 +49,7 @@ output_sample:
     - Working sales or lead tracking in your analytics tool, so you can check results against your own numbers
   output:
     - name: Test hypotheses
-      contains: Each bet lists the audience, offer, channel, metric measured and size of change, with the numbers that mean stop or scale.
+      contains: One table row per bet, with columns for audience, offer, channel, metric, size of change, stop number and scale number.
     - name: Channel selection
       contains: Search, shopping, Meta, TikTok, LinkedIn and others compared by fit with your buyer, with reasons for each pick.
     - name: Budget allocation
@@ -60,3 +62,4 @@ output_sample:
       contains: Spend to cut or avoid, with the reason for each.
     - name: Attribution check
       contains: Why platform reports overstate results and which number to trust when you decide.
+next: [paid-campaign-builder, meta-ads-daily-checker]

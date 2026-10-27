@@ -9,7 +9,7 @@ subhead: Paste your offer and the doubts buyers have under this prompt. It match
 explain: |
   Buyers who like your offer often still wait. A discount cuts your margin and teaches them to wait for sales. A bonus that answers the exact doubt keeps the price and gives them a reason to act now.
 
-        This prompt starts from the doubts, not from what you could add. Each bonus is matched to one doubt, named by its benefit, and valued with a reason. It prefers quick tools such as checklists and scripts, because they get used.
+  This prompt starts from the doubts, not from what you could add. Each bonus is matched to one doubt, named by its benefit, and valued with a reason. It prefers quick tools such as checklists and scripts, because they get used.
 when:
   - People say they will think about it.
   - You want to add value without cutting your price.
@@ -60,12 +60,12 @@ how_it_works:
   - title: Add true limits
     text: Only caps and dates that are real.
 output_shape: |
-  BONUS | DOUBT IT ANSWERS | WHAT IT IS | VALUE AND WHY | LIMIT
-        1. <name> | <doubt> | <one line> | <value, reason> | <limit>
+  BONUS | ANSWERS THIS DOUBT | WHAT IT IS | VALUE AND WHY | LIMIT (if real)
+  1. <name> | <doubt> | <one line> | <value, reason> | <limit>
 
-        TOTAL VALUE: <sum or MISSING>
-        ORDER TO SHOW THEM: <...>
-        MISSING: <...>
+  TOTAL VALUE: <sum or MISSING>
+  ORDER TO SHOW THEM: <...>
+  MISSING: <...>
 tweaks:
   - what: Real doubts
     how: Doubts in buyers' own words give sharper bonuses than guesses.

@@ -15,10 +15,15 @@ Extract product data, prices, reviews, and seller information from any e-commerc
 - The task involves price monitoring, competitor product comparison, MAP enforcement, or review analysis.
 - You need a guided workflow for extracting marketplace data and summarizing findings.
 
+## Before you scrape
+
+Check each site's terms and robots rules first. Avoid high-volume runs against sites that forbid scraping. Keep `maxProductResults` low.
+
 ## Prerequisites
 
 - `.env` file with `APIFY_TOKEN` (at `~/.claude/.env`)
 - Node.js 20.6+ (for native `--env-file` support)
+- Apify is a paid service. It bills each run, so check your plan before a large run.
 
 ## Workflow Selection
 

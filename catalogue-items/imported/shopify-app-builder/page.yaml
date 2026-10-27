@@ -34,8 +34,8 @@ how_to_use:
   - Open an AI that can run code and use the Shopify CLI. Check that Node.js 18 or newer is installed.
   - Paste the skill into the chat, or upload the skill folder.
   - Describe what your app should do, and say if it is public, custom or a sales channel.
-  - "Let your AI run the first commands: shopify app init, then shopify app dev. Sign in to your Partner account when asked."
-  - Check the admin pages and webhook handler on a development store before you go further.
+  - "Let your AI run the first commands: shopify app init, then shopify app dev. Sign in to your Partner account yourself when asked. Never give your password or API secret to the AI, and use a development store, not your live store."
+  - Check the admin pages and webhook handler on a development store before you go further. The skill is written for Shopify API version 2025-01, so check the current CLI and API version before you start.
   - When it works, run shopify app deploy. For a public app, then send it for App Store review.
 output_sample:
   input:

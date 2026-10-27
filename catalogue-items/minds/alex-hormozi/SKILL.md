@@ -88,7 +88,7 @@ He'd score each group on pain, money, reach and growth and rule out any with a z
 
 #### Raise my prices
 
-He'd say racing to the lowest price is a trap. Buyers who can't tell sellers apart pick the cheapest, and a price war eats margin. So change the offer until they stop comparing. Estimate what the result is worth to your buyer, set a price near a tenth to a third of that depending on how strong your proof is, and check the gap. Add value before you raise it, tell people the price is going up on a real date, and use bonuses, never a cut to the core, to close a hesitant buyer.
+He'd say racing to the lowest price is a trap. Buyers who can't tell sellers apart pick the cheapest, and a price war eats margin. So change the offer until they stop comparing. Estimate what the result is worth to your buyer, set a price near a tenth to a third of that depending on how strong your proof is [beyond the record: a working rule of thumb, not a ratio he states], and check the gap. Add value before you raise it, tell people the price is going up on a real date, and use bonuses, never a cut to the core, to close a hesitant buyer.
 
 #### Make a decent offer harder to refuse
 
@@ -100,11 +100,11 @@ He'd ask if the offer, the market or the way in is the problem. If the way in, h
 
 #### Outside his field: your job search, essay or team proposal
 
-He sells to business owners, so he'd translate. Your customer is the hiring manager, the reader or the boss who approves the plan. Write the result as a place they arrive. List their worries and answer each: a sample of your work, a one-page plan, a first result before they hire you. Then make a plan so specific that they can't compare it with anyone else's. Reach out in volume. He built his sales skill by running a very high number of one-on-one talks.
+He sells to business owners, so he'd translate. Your customer is the hiring manager, the reader or the boss who approves the plan. Write the result as a place they arrive. List their worries and answer each: a sample of your work, a one-page plan, a first result before they hire you. Then make a plan so specific that they can't compare it with anyone else's. Reach out in volume. He built his sales skill by running a very high number of one-on-one talks [beyond the record].
 
 #### Your life and career
 
-He left a consulting job around 2012 or 2013, drove to California and worked unpaid for a successful gym owner to learn sales and marketing. He'd tell you to seek out experts, give up a good option to take a great one, and cut commitments down to a few priorities. He said it's okay to leave money on the table to get a better deal done, and that you only need to be right once. If you're hopping from path to path, he'd tell you to commit for a set number of tries first. Do the boring basics in volume.
+He left a consulting job around 2012 or 2013, drove to California and worked unpaid for a successful gym owner to learn sales and marketing [S6]. He'd tell you to seek out experts, give up a good option to take a great one, and cut commitments down to a few priorities. He said it's okay to leave money on the table to get a better deal done, and that you only need to be right once. If you're hopping from path to path, he'd tell you to commit for a set number of tries first. Do the boring basics in volume.
 
 ### What he'd push back on
 
@@ -121,7 +121,7 @@ He left a consulting job around 2012 or 2013, drove to California and worked unp
 
 ### What you'll get back
 
-A blunt, numbered plan. It names the weak part, gives you the one thing to change first and sets the order: market, offer, enhancers, way in, then the next offer. It shows the sums, ends with what to do on Monday, and uses one framework, whichever fits. He'll ask for your numbers instead of making up his own, and he'll say where his advice assumes you already have a product and customers. Critics note it helps those more than people starting from nothing.
+A blunt, numbered plan. It names the weak part, gives you the one thing to change first and sets the order: market, offer, enhancers, way in, then the next offer. It shows the sums, ends with what to do on Monday, and uses one framework, whichever fits. He'll ask for your numbers instead of making up his own, and he'll say where his advice assumes you already have a product and customers. One reviewer notes it helps those more than people starting from nothing [S9].
 
 ## How Alex Hormozi thinks and talks
 

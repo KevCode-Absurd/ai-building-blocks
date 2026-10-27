@@ -9,7 +9,7 @@ const candidateWorkflows = [
   ]),
   flow('Write helpful error and empty states', 'design-work', 'Screens or text for empty, loading, permission-denied and failed actions; actual recovery options.', 'A state inventory, revised messages and a handoff for implementation.', 'Every error explains what happened and one available action; messages never promise a recovery the product lacks.', [
     ['screen-states-designer', 'List the states and user actions for each supplied screen, including retry and interrupted work.'],
-    ['plain-error-message-writer', 'Write a plain message for every failure state using only recovery actions the product supports.'],
+    ['error-message-rewriter', 'Write a plain message for every failure state using only recovery actions the product supports.'],
     ['small-interface-details-designer', 'Specify focus, buttons and transitions so each message can be implemented and checked.'],
   ]),
   flow('Turn a design review into fixes', 'design-work', 'A screen or prototype, its intended users, task and implementation limits.', 'An evidence-based issue list, a revised design brief and a usability test.', 'Each fix names an observed problem, the user task it affects and a check for improvement.', [

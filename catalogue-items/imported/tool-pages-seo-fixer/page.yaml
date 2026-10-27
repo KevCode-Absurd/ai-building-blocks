@@ -12,6 +12,8 @@ explain: |
   It compares the page text you give it and reports what is shared. Then it builds a content register: one record per page with its own title, meta description, intro, steps and questions. It plans slugs and internal links, and adds a byline and date so pages do not look authorless.
 
   The method came from one author's audit of their own site. We have not checked their numbers, so treat them as an example. The skill works from your pages and measures only what you give it.
+
+  This skill is by whoisabhishekadhikari, shared in sickn33's collection. We changed its name and added the note that the author's figures are unchecked.
 when:
   - Dozens of your tool or feature pages look alike and none of them rank.
   - Search Console warns about duplicate pages or "crawled, not indexed" for your tool pages.
@@ -99,3 +101,4 @@ terms:
     meaning: The last part of a page link, such as meta-tag-generator.
   - term: Internal link
     meaning: A link from one page on your site to another.
+next: [technical-seo-auditor]

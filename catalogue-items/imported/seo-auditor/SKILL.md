@@ -163,7 +163,7 @@ If a check fails due network, DNS, permissions, or API rate limits:
 - Do not enter repeated fallback loops. Retry a failed source at most once, then finalize the audit.
 - Do not pivot into repeated web-search scraping loops for the same URL.
 
-**Visual analysis** (requires Playwright — use `conda activate pentest` if available):
+**Visual analysis** (requires Playwright: run `pip install playwright && playwright install chromium` first; every other part of the audit runs without it):
 ```bash
 # Capture screenshots (desktop, laptop, tablet, mobile)
 python3 <SKILL_DIR>/scripts/capture_screenshot.py <url> --all
@@ -361,7 +361,7 @@ Structure reports as:
   ```bash
   pip install playwright && playwright install chromium
   ```
-  Or if using conda: `conda activate pentest` (if Playwright is pre-installed)
+  The rest of the audit runs without Playwright.
 
 ### Install Script Dependencies
 ```bash

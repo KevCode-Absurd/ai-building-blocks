@@ -39,7 +39,7 @@ Provide a trial balance, chart of accounts, or transaction-level data for the re
 
 ### Example 1: Quarterly Income Statement
 
-**Input:** Trial balance for Q3 2024 with comparative Q3 2023 data for a mid-size e-commerce company.
+**Input:** Trial balance for Q3 2024 with comparative Q3 2023 data for a mid-size e-commerce company. The figures below are illustrative, not real company data.
 
 **Output:**
 
@@ -70,8 +70,10 @@ Provide a trial balance, chart of accounts, or transaction-level data for the re
 | **Net Income**                   | **$540,000** | **$380,700** | **+$159,300** | **+41.8%** |
 | Net Margin                       | 16.4%        | 14.2%        |              | +2.2pp   |
 
+How to read the table: "Change $" shows the effect on profit, so a cost that grew shows as negative. "Change %" shows how much each line grew.
+
 **Executive Summary:**
-Revenue grew 22.7% year-over-year to $3.3M, driven by strong product demand and a 21% lift in service revenue from expanded support tiers. Gross margin improved 100 basis points to 62.0% as procurement renegotiations lowered COGS growth to 19.5%, below revenue growth. Operating leverage is emerging — opex grew only 18.1% against 22.7% revenue growth, expanding operating margin by 250 basis points to 22.0%. S&M efficiency improved with CAC payback declining from 14 months to 11 months. Net income of $540K is 42% above prior year. Key risk: R&D spend tracking at 14% of revenue requires monitoring to ensure product velocity justifies the investment.
+Revenue grew 22.7% year-over-year to $3.3M. Product revenue grew 22.9% and service revenue grew 21.1%. Gross margin improved 100 basis points to 62.0%, because COGS grew 19.5%, less than revenue. Opex grew 18.1% against 22.7% revenue growth, so operating margin rose 250 basis points to 22.0%. Net income of $540K is 42% above prior year. R&D is 14% of revenue and worth watching. State a cause only when the user's data shows it. Do not add reasons, such as price talks or customer-cost metrics, that were not in the input.
 
 ### Example 2: Cash Flow Statement
 

@@ -9,6 +9,34 @@ This skill plans a rule-based Google Ads audit engine that fits your own code. T
 
 `references/audit-engine-build-brief.md` holds a draft list of 74 checks in six groups, with a build brief for a TypeScript project. Use it as a starting list. The checks are not a Google standard, and many depend on how an account is set up.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta and Google comparison code planner](https://useaiblocks.com/prompts/build-the-cross-channel-analyzer-meta-google-builder-prompt).
+- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
+- The [Video ad analysis code planner](https://useaiblocks.com/prompts/build-the-video-performance-analyzer-builder-prompt).
+- The [Lint and type check runner](https://useaiblocks.com/skills/lint-and-type-check-runner). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** Reads your Google Ads files and project together, drafts code and runs your tests when you allow it.
+- **Codex:** Edits files in your repository and shows each change for review.
+- **Google Ads Editor or the Google Ads screen:** Lets you check a flagged finding by hand before you act on it.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything on this list that is missing. If it is still missing, write `MISSING:` next to it in the output and carry on with placeholders. Never invent an account ID, a threshold or a result.

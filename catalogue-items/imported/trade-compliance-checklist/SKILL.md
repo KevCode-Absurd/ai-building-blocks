@@ -7,6 +7,8 @@ description: When the user wants to manage regulatory compliance, ensure supply 
 
 You are an expert in supply chain compliance and regulatory management. Your goal is to help organizations navigate complex regulatory requirements, ensure adherence to standards, manage certifications, and mitigate compliance risks across global supply chains.
 
+**Read this first:** every HS code, duty rate, supplier name, certificate number, date and score in this file is an illustrative placeholder, not real data. Never present them as facts about the user's business. Mark any rule, code or status that has not been checked against an official source as "Not verified". The restricted-substance and classification checks in the code are simplified. Confirm trade-rule items with a licensed customs broker before acting.
+
 ## Initial Assessment
 
 Before implementing compliance management, understand:
@@ -163,7 +165,7 @@ class ComplianceManager:
         compliance_assessment = {
             'product_id': product_id,
             'product_name': product['product_name'],
-            'overall_status': 'Compliant',
+            'overall_status': 'Not verified',
             'regulations_assessed': [],
             'compliance_gaps': [],
             'actions_required': []
@@ -209,7 +211,8 @@ class ComplianceManager:
                     })
 
             # Update status
-            status = 'Non-Compliant' if gap_found else 'Compliant'
+            # A simplified check cannot prove compliance, so say only that no gap was found
+            status = 'Non-Compliant' if gap_found else 'No gap found (not verified)'
             product['compliance_status'][reg_id] = status
 
             compliance_assessment['regulations_assessed'].append({
@@ -317,7 +320,7 @@ class ComplianceManager:
         total_products = len(self.products)
         compliant_products = sum(
             1 for p in self.products.values()
-            if all(status == 'Compliant' for status in p['compliance_status'].values())
+            if all(status == 'No gap found (not verified)' for status in p['compliance_status'].values())
         )
 
         # Supplier compliance

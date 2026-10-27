@@ -32,10 +32,12 @@ you_get:
   - A plain reading of the result
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code, so it can work out the sample size.
-  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
+  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files. The sample size script only runs if your AI can open the skill folder. If you paste the text only, ask your AI to apply the formula in references/statistics-reference.md instead.
+  - Have ready your weekly traffic or daily users, so the test length can be worked out.
   - Tell it the change you want to test, your current rate and the smallest gain that would matter.
   - Add results from a finished test or a list of ideas to rank, if you have them.
   - Check the hypothesis and the one main metric before you launch. Write down the stopping rule and stick to it.
+  - When the test ends, compare the result range with the smallest gain that matters. Ship, drop or re-test on that basis. Then take the next idea from the ICE list.
 output_sample:
   input:
     - The change you want to test

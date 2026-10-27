@@ -23,6 +23,19 @@ Use this skill when:
 - Deploying themes to a Shopify store
 - Optimizing theme performance
 
+## When not to use this skill
+
+- Shopify apps or checkout changes. Those need a Shopify developer. This skill only covers theme files.
+- Changing text, colours or images in a theme you already have. Use the theme editor in the Shopify admin.
+- Setting up products and payments. Use Shopify's own setup guide.
+
+## What to have ready
+
+- Your brand style: colours, fonts and the look you want.
+- The pages to build or change.
+- Your existing theme files, if you have any.
+- Node.js 18 or newer, the Shopify CLI and a Shopify Partner account.
+
 ## Theme Architecture Overview
 
 ### Directory Structure

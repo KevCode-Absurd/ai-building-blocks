@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run code and read files if you want the script tested.
   - Paste this skill into the chat.
-  - Describe the task, what starts it and where it will run. Add folder paths or the apps involved.
+  - Describe the task, what starts it and where it will run. Gather first: the folder paths, a sample CSV header row if files are involved, how often it should run, and the apps or web addresses it talks to.
   - Read the plan and the script. Check any file paths and names before you run it.
   - Run the tests it gives you, then set up the schedule or trigger.
   - Keep the notes it writes so you know how to pause or turn off the job.

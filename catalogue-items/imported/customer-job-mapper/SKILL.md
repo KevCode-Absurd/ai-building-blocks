@@ -25,6 +25,9 @@ If the input does not describe a real user context, ask for more detail.
 ## PSYCHOLOGICAL FRAMEWORK: PROGRESS JOB DECOMPOSITION
 
 ### Mechanism
+
+The author-year citations in this skill are background reading, not checked claims. Read the original paper before you repeat any of them as evidence.
+
 People switch products when a current solution blocks progress, increases emotional friction, or fails the social story they need to tell themselves. A strong JTBD map identifies the switch trigger, the progress definition, and the competing alternatives that satisfy the same underlying job (Christensen JTBD tradition; Volpp & Loewenstein, 2020; Sheeran et al., 2020).
 
 ### Execution Steps
@@ -118,6 +121,8 @@ Before finalizing output, the agent asks:
 **User request:**
 
 > Interview me to identify the progress this customer is trying to make, the forces around the decision, and the resulting job statement.
+
+**What the output looks like:** seven sections in this order: Progress state, Functional job, Emotional job, Social job, Hiring trigger, Competing alternatives (including doing nothing), and Success criteria in the buyer's words. Each is written from the buyer's side, not as a feature list.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

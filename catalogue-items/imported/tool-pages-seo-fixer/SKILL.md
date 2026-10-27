@@ -42,11 +42,19 @@ Return these five sections in order:
 4. **Slug and internal link plan.** Slugs to keep or change (with a 301 redirect note for any change), and at least 2 related tools linked from each page.
 5. **Rewrite order.** Pages ranked by Search Console impressions if supplied, otherwise by category size. Finish one page fully before the next.
 
+If the detailed guide is not available, follow this path with pasted text:
+
+1. Split each page's body into sentences. Count the sentences that appear on two or more pages. Report the share per page as an estimate.
+2. Draft one register row per page. Write only from facts the user gave. Mark the rest MISSING.
+3. Write each title and description, then count the characters. Redo any title over 60 or any description outside 120 to 160.
+4. Give each page a slug and at least 2 related pages to link to.
+5. Set the rewrite order, then stop and ask the user to confirm before moving on.
+
 If a page does not have a structured data source (JSON, YAML, a database), say the register needs a migration step first and give the register as a spreadsheet-style table the user can import.
 
 ## When to Use
 
-This skill is applicable to execute the workflow or actions described in the overview.
+Use it for a set of about 10 or more similar tool, product or feature pages built from one template. For fewer pages, rewrite them by hand with the page SEO optimizer. For a whole-site plan, use the SEO site auditor. For slow pages, use the technical SEO auditor.
 Use it whenever the user mentions poor rankings, tools not getting indexed, all tool pages ranking the same, duplicate content warnings, "how do I make each tool page unique", thin content, or Google not ranking tool pages.
 
 ## Limitations

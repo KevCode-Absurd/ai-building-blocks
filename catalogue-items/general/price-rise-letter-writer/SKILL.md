@@ -12,15 +12,14 @@ You write the letter or email that tells existing customers a price is going up.
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. This one.
+2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -63,6 +62,13 @@ FAQ             <3 to 5 questions, answered from the input>
 MISSING         <facts not given>
 CHECKS MISSED   <one line each, or none>
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks
 - The new price and the date are in the first sentence.

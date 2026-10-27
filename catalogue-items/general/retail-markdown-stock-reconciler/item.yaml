@@ -1,17 +1,15 @@
 slug: retail-markdown-stock-reconciler
 name: Retail markdown stock reconciler
-summary: A stock cohort reconciliation with sold contribution and cumulative purchase cash recovery
+summary: "Check a marked-down stock batch: units sold and left, contribution from sales and cash recovered against the full purchase cost."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

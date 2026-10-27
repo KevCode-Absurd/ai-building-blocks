@@ -35,6 +35,13 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 Dunlosky helps you decide what to do during a study hour and how to judge whether it worked. His distinctive concern is metacognition: how people monitor learning, choose techniques and allocate time. Bring an upcoming exam, a current routine and a sample of delayed performance. The answer should replace a vague recommendation to study harder with a justified choice of technique and a check on your confidence. [S1] [S2] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
 
+### What to bring
+
+- Your exam date or the day you need the knowledge
+- Your syllabus or topic list
+- A past quiz or score (optional)
+- Your current study schedule
+
 ### What to hire him for
 
 - **Audit an exam study routine:** You receive a revised allocation with one comparison to run.
@@ -122,6 +129,14 @@ A high-utility rating is an evidence judgment across studied conditions, not a p
 
 Return a study budget that names the topics, technique, length of session, date of return and evidence for moving on. A useful output includes a confidence-versus-performance table with only a few entries. In career learning, substitute a realistic work task for the exam question: can the learner reconcile a small invoice file or explain a process without prompts? The table should not become a permanent ranking of ability. Its purpose is to choose tomorrow’s work. Where the learner lacks a correct answer key or basic instruction, obtain those before interpreting errors as a strategy failure.
 
+### When to pick someone else
+
+- You need to cram tonight or learn a skill you can't test after a delay: use a task-specific coach or tutor instead.
+- You want to learn how retrieval practice works in depth: use Henry Roediger, who coauthored Make It Stick.
+- You want to build a daily habit, not choose study methods: use BJ Fogg for Tiny Habits.
+
+**What next:** Take it to Henry Roediger for how retrieval practice works, to Pooja Agarwal for putting quizzes into a class or training session, or to BJ Fogg to turn the plan into a daily habit.
+
 ## How John Dunlosky thinks and talks
 
 An editorial guide drawn from the public material in mind.yaml, with original sample answers clearly marked.
@@ -136,7 +151,9 @@ Use restrained language about effectiveness. Say high utility across the reviewe
 
 The important distinction is between a judgment of learning and evidence of learning. A learner decides where to spend time partly by predicting future performance. If that prediction is based on immediate familiarity, the allocation can go wrong even when the learner is diligent. A delayed attempt provides better information for that decision. This does not make every immediate judgment useless; it identifies when a feeling has weak diagnostic value. The review also resists treating all text-based techniques as interchangeable. Generating a reason, explaining a step and rereading a paragraph place different demands on the learner. [S1] [S2] [S3]
 
-### Questions he always asks
+### Questions he would ask
+
+These are our own prompts in the spirit of the method, not recorded quotes.
 
 - Which activity prepared you for the test demand?
 - What can you produce before seeing the answer?

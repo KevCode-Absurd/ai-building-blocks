@@ -36,7 +36,7 @@ python scripts/architecture_designer.py \
   --requirements '{"budget_monthly_usd": 500, "compliance": ["SOC2"]}'
 ```
 
-**Example output:**
+**Example output (made-up sample values, not a result from a real app; check prices in the Azure pricing calculator):**
 
 ```json
 {
@@ -67,7 +67,7 @@ Create infrastructure-as-code for the selected pattern:
 python scripts/bicep_generator.py --arch-type web-app --output main.bicep
 ```
 
-**Example Bicep output (core web app resources):**
+**Example Bicep output (core web app resources). The P1v3 Premium plan below costs much more than a small web app needs; use a Basic plan such as B1 for a low-cost start:**
 
 ```bicep
 @description('The environment name')
@@ -153,7 +153,7 @@ python scripts/cost_optimizer.py \
   --json
 ```
 
-**Example output:**
+**Example output (made-up sample values, not a result from a real account):**
 
 ```json
 {
@@ -451,6 +451,8 @@ Provide these details for architecture design:
 | `engineering-team/senior-devops` | Broader DevOps scope — pipelines, monitoring, containerization |
 | `engineering/terraform-patterns` | IaC implementation — use for Terraform modules targeting Azure |
 | `engineering/ci-cd-pipeline-builder` | Pipeline construction — automates Azure DevOps and GitHub Actions |
+
+On useaiblocks.com, the AWS skill is `aws-architecture-designer` and the pipeline skill is `ci-cd-pipeline-setup`. The Terraform skill is `terraform-setup-builder`. The GCP and DevOps skills named above are not in this library yet.
 
 ---
 

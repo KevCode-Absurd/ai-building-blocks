@@ -31,6 +31,8 @@ you_get:
 how_to_use:
   - Use an AI that can open web pages, such as Claude, ChatGPT or Gemini with browsing turned on.
   - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
+  - Before you start, check that your AI can open live web pages. It reads up to 50 pages from your site, one second apart.
+  - If your AI does not have the five checking skills, it runs those checks itself.
   - Add your website address. Add your topic and a rival's site if you have them (optional).
   - Ask your AI to run the audit and save the result as GEO-AUDIT-REPORT.md.
   - Read the critical and high issues first, then do the quick wins this week.
@@ -59,3 +61,4 @@ output_sample:
       contains: A week-by-week checklist of tasks to improve your score.
     - name: "Appendix: Pages Analyzed"
       contains: Each page checked, with its title and how many issues it has.
+next: [ai-search-visibility-optimiser, llms-txt-writer, ai-search-platform-checker]

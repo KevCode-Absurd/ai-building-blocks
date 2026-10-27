@@ -34,8 +34,9 @@ how_to_use:
   - Paste your brand description, who it is for, and the perception you want.
   - Add samples of your copy, visuals and packaging. Add customer quotes or research if you have them.
   - Answer any question it asks about your intended position.
-  - Read the mismatches and check any claim from psychology before you use it in public.
-  - Fix the top change first, then check that it holds across every place customers see you.
+  - It works in five steps: the impression people have now, the impression you want, the biggest clash, the smallest fix, then a check across every place customers see you.
+  - Read the clashes and check any claim from psychology before you use it in public.
+  - Fix the top change first. Then test it with real customers, and use the Honest persuasion advisor to fix the words.
 output_sample:
   input:
     - Your brand description and the audience you serve
@@ -55,3 +56,8 @@ output_sample:
       contains: Whether the new position holds everywhere your audience meets your brand.
     - name: Quality check
       contains: A short check that the change feels more credible, not just prettier.
+terms:
+  - term: brand schema
+    meaning: The picture of your brand that sits in a customer's mind, built from what they have seen and heard.
+  - term: halo effect
+    meaning: When one strong good or bad signal colours how people read everything else about you.

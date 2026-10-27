@@ -5,7 +5,7 @@ name: Industry-look site composer
 summary: Make your site look like your industry. Give it your type of site and get composition notes for a store, restaurant or maker site.
 job: build-websites
 headline: Industry-look site composer
-subhead: Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site. Bring your industry or type of site. Use the result to plan your next step.
+subhead: Name your kind of site, such as a store, a restaurant or a parts maker. Get notes on page layout, how much to show on each page and how the menu should work, so the site looks like it belongs to your field.
 explain: |
   Page layouts that look like they belong to your type of business, so a shop looks like a shop and a restaurant looks like a restaurant, not a generic software landing page. A site can be clean and still feel off for its field.
 
@@ -17,9 +17,9 @@ when:
   - You are building a demo that must look like a real store or firm.
   - Visitors expect certain sections and yours lacks them.
 not_for:
-  - "You want to tweak colours, fonts or spacing: use design-standards, which sets day-to-day visual choices."
-  - "You need to build one button, card or form: use frontend-component-build, which writes single parts."
-  - "You want to judge your competitors first: run competitor-experience-audit, then bring its result here."
+  - "You want to tweak colours, fonts or spacing: use the Page design standards checker, which handles day-to-day visual choices."
+  - "You need to build one button, card or form: ask your AI to build that single part. This skill plans whole pages."
+  - "You want to judge your competitors first: look at a few competitor sites and write down what they share, then bring your notes here."
 you_give:
   - Your industry or type of site
   - A competitor audit (optional)
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
   - Say what kind of site you are building, for example a small restaurant, a store or a parts maker.
-  - Add your competitor audit if you have one, plus the size of your catalogue or menu. Say so if you have neither.
+  - Add your competitor audit if you have one, plus the size of your catalogue or menu. No audit? Name your type of site and say you have no audit. It then works from its notes for each type of site. Other skills named in the skill file, such as the competitor audit and design standards skills, are not in this library.
   - Read the notes it writes. Check the checklist for conventions marked absent, and add them to your plan.
   - Pass the hand-off list to your designer, or to the design and component skills, to build the pages.
 output_sample:

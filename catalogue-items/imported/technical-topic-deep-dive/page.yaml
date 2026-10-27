@@ -28,9 +28,11 @@ how_it_works:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Tell your AI the topic, what you already know and why you need it.
-  - Answer the first check question. Your AI skips any steps you can already do.
+  - Answer the first check question. Your AI skips any steps you can already do. Expect about one page per step, with one worked trace and one checkpoint question.
   - Answer each checkpoint in your own words before moving on. Explain the worked trace back, give your own tradeoff view and name edge cases yourself.
   - Finish by writing one paragraph that explains the idea to a beginner.
+  - Next, keep the paragraph as a study note, or ask your AI for a practice question on the same topic. To test yourself in a mock interview, use the technical interview practice.
+next: [technical-interview-practice, retrieval-quiz-writer]
 output_sample:
   input:
     - The technical topic you want to go deeper on

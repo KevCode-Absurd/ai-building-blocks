@@ -16,7 +16,7 @@ when:
   - Your last launch got no attention and you want to know why.
   - You need rollback triggers agreed before go-live.
 not_for:
-  - "You have not written the feature spec yet: write the spec first, then come back to plan the launch."
+  - "You have not written the feature spec yet: use the feature spec writer first, then come back to plan the launch."
   - "You need to decide what to build next: use your roadmap or a simple ranked list of ideas instead."
   - "You want to test whether an idea works before building it: run a small test with a few customers first."
 you_give:
@@ -32,12 +32,13 @@ you_get:
   - Metrics to track
   - Rollback triggers
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed. The skill names companion skills (spec writing, roadmap planning, analytics setup, flagging). You do not need them. If you have a spec, paste it. If not, give the feature, the users and the date.
   - Tell your AI the feature name, who it is for and your target date.
   - Paste your spec or notes, and list the teams involved, if you have them.
   - Ask for a launch plan. Check that the tier fits the size of your feature.
   - Read the rollback triggers with your team and agree on them before go-live.
   - Share the task list with each owner, then ask your AI to help you review the launch after it goes live.
+  - Before you start, write the feature spec with the feature spec writer. Plan the rollout switch with the feature flag planner.
 output_sample:
   input:
     - Your feature name and what it does
@@ -64,3 +65,4 @@ output_sample:
       contains: What to watch on launch day and after, tied back to your spec goals.
     - name: Rollback triggers
       contains: The exact points that mean pause or roll back, agreed before go-live.
+next: [feature-spec-writer, feature-flag-planner]

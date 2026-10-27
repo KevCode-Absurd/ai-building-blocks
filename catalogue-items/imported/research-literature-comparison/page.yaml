@@ -19,8 +19,9 @@ how_to_use:
   - Gather your papers as PDFs or text. Write your research question and today's date.
   - Open Claude, ChatGPT or Gemini. Use one that can read file uploads.
   - Paste the skill text, then add your papers, question and date.
-  - If you give only a topic, turn on web search. Your AI will pick papers and tell you why.
+  - If you give only a topic, turn on web search. Your AI will pick papers and tell you why. Confirm that each paper it suggests shows up in a search result. Treat any that do not as unverified, and do not cite them.
   - Check the claims table against the papers. Look up any reading marked unverified before you trust it.
+  - Next, take the paper the map hinges on to a single-paper critique, then read the first paper in the reading order.
 output_sample:
   input:
     - Your papers, as PDFs or pasted text (4 to 10 is best)
@@ -59,3 +60,4 @@ you_get:
   - Points of agreement and disagreement, with sources
   - Open questions no paper answers
   - A suggested reading order
+next: [research-paper-evidence-review, research-paper-reading-guide, study-understanding-check]

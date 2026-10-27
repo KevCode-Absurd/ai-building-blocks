@@ -74,6 +74,7 @@ output_shape: |
   WHY: <two or three lines>
   ONE CHANGE: <change> (expected effect: <a lot | a little>)
   MISSING: <numbers not given>
+  CHECKS MISSED: <one line per check missed, or none>
 
 tweaks:
   - what: "Impressions"
@@ -99,6 +100,8 @@ improve:
   - "Add what you posted on the same day, such as a link or a reply, since it checks those."
   - "Pair it with the Flop post diagnoser when you want every check."
 
+before: []
+next: []
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}

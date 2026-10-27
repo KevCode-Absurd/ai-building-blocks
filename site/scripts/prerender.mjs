@@ -6,7 +6,7 @@
 // Checklists: the technical-seo-auditor, seo-site-auditor, ai-search-visibility-optimiser, structured-data-writer and
 // tool-pages-seo-fixer skills in our own library (catalogue-items/imported/).
 import fs from "node:fs";
-import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
+import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { INFO_PAGES, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
 import path from "node:path";
@@ -91,6 +91,10 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
 // The same links on every plain page, so no page is more than a few clicks from the rest.
 const NAV = [["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "API &amp; MCP"], ["/api-and-mcp#api", "Documentation"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/space">My space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
+// The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
+const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
+const logo = `<svg viewBox="0 0 24 24" aria-hidden="true" class="logo">${GLOBE.flatMap((row, y) => [...row].map((c, x) => (c === "." ? "" : `<rect x="${(x * 3.4 + 0.3).toFixed(1)}" y="${(y * 3.4 + 0.3).toFixed(1)}" width="2.9" height="2.9" fill="currentColor"${c === "+" ? ' opacity="0.32"' : ""}/>`))).join("")}</svg>`;
+const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><a href="/" class="brand" aria-label="AI Blocks, home">${logo}AI Blocks</a><nav class="hub-nav" aria-label="Main navigation"><a href="/#library">Find a task</a><a href="/compose">Build a workflow</a><a href="/tools">Tools</a><a href="/space">My space</a></nav></div></header>`;
 const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a></p>${SOCIAL_PROFILES.length ? `<p>${SOCIAL_PROFILES.map((p) => `<a href="${esc(p.url)}" rel="me noopener">${esc(p.label)}</a>`).join(" · ")}</p>` : ""}</footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
@@ -418,9 +422,13 @@ function render(url, p, { plain = false, noindex = false } = {}) {
     { "@type": "BreadcrumbList", "@id": `${full}#crumbs`, itemListElement: ldCrumbs.map(([n, u], i) => ({ "@type": "ListItem", position: i + 1, name: n, item: `${SITE}${u}` })) },
   ];
   // The home page shell already has its own h1, so its crawlable copy uses an h2 to keep one h1 per page.
+  // The trail above the heading, left out when it would only repeat "AI Blocks" under the header.
+  const trail = crumbs.length > 2 ? `<p class="small hub-trail">${crumbs.slice(0, -1).map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(" › ")}</p>` : "";
   const body = p.content
     ? `<main class="wrap api-mcp-docs" data-prerendered>${header}${p.content}${footer}</main>`
-    : `<main class="wrap bp-hero" data-prerendered>${header}<p class="small">${crumbs.slice(0, -1).map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(" › ")}</p>${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
+    : p.hub
+    ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
+    : `<main class="wrap bp-hero" data-prerendered>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
   const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
@@ -480,9 +488,20 @@ const PER = 150;
 // A job hub's opening: counts of what is in it, how many are tested, a few results you get, the best items (tested
 // first, then the most used in workflows) and the jobs it connects to. All of it comes from the hub's own items.
 const KIND_LABEL = { skills: ["skill", "skills"], workflows: ["workflow", "workflows"], prompts: ["prompt", "prompts"], agents: ["agent", "agents"] };
+const hubRank = (x) => (x.tested ? 1e6 : 0) + (Array.isArray(x.usedIn) ? x.usedIn.length : x.usedIn ?? 0);
+const bestOf = (bs, n) => [...bs].sort((a, b) => hubRank(b) - hubRank(a) || a.name.localeCompare(b.name)).slice(0, n);
+const arrow = `<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const testedBadge = (x) => (x.tested ? `<span class="from trust tested">Tested</span>` : "");
+// The library's card, drawn without the app: name, its one line, what kind it is and whether it is Tested.
+const hubCard = (x) => {
+  const kind = KIND_LABEL[kindPath(x)]?.[0] ?? "skill";
+  return `<a class="card hub-card" href="${hrefOf(x)}"><span class="nm">${esc(x.name)}</span><span class="peek">${esc(x.summary)}</span><span class="card-footer"><span class="meta secondary-meta"><span class="kind">${kind[0].toUpperCase()}${kind.slice(1)}</span>${testedBadge(x)}</span><span class="view">View the ${kind}${arrow}</span></span></a>`;
+};
+// Search from a plain page: the home page opens the library with ?q= (and ?job= keeps it to one job).
+const hubSearch = (n, label = `Search ${n.toLocaleString("en-US")} skills, workflows and prompts`, job = "") =>
+  `<form class="search big hub-search" action="/" method="get" role="search">${job ? `<input type="hidden" name="job" value="${esc(job)}" />` : ""}<input type="search" name="q" placeholder="${esc(label)}" aria-label="${esc(label)}" autocomplete="off" /><button class="btn btn-primary" type="submit">Search</button></form>`;
 function hubIntro(t, name, bs) {
-  const rank = (x) => (x.tested ? 1e6 : 0) + (x.usedIn ?? 0);
-  const best = [...bs].sort((a, b) => rank(b) - rank(a) || a.name.localeCompare(b.name)).slice(0, 8);
+  const best = bestOf(bs, 8);
   const counts = Object.entries(bs.reduce((m, x) => ((m[kindPath(x)] = (m[kindPath(x)] ?? 0) + 1), m), {})).sort((a, b) => b[1] - a[1])
     .map(([k, n]) => `${n.toLocaleString("en-US")} ${KIND_LABEL[k]?.[n === 1 ? 0 : 1] ?? k}`);
   const tested = bs.filter((x) => x.tested).length;
@@ -491,15 +510,22 @@ function hubIntro(t, name, bs) {
   for (const x of bs) for (const s of [...(x.uses ?? []), ...(x.steps ?? []).map((y) => (Array.isArray(y) ? y[0] : y)), ...(usedBy[x.slug] ?? [])]) { const o = bySlug[s]?.task; if (o && o !== t && TASK_NAMES[o]) near[o] = (near[o] ?? 0) + 1; }
   const related = Object.entries(near).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 4).map(([o]) => `<a href="${jobHref(o)}">${esc(TASK_NAMES[o])}</a>`);
   return [
-    `<p class="bp-sub">${esc(name)}: ${bs.length} free AI items you can run in Claude, ChatGPT or Gemini (${counts.join(", ")}).${tested ? ` ${tested} of them ${tested === 1 ? "has" : "have"} been tested on real business files and come first below.` : ""}</p>`,
-    gets.length ? `<p>Examples of what you get: ${gets.map((g) => esc(lowerFirst(g))).join("; ")}.</p>` : "",
-    `<h2>Start with these</h2>${list(best.map((x) => `${link(x)}${x.tested ? " (tested)" : ""}: ${esc(x.summary)}`))}`,
-    related.length ? `<p>Often used with: ${related.join(" · ")}. <a href="/jobs">All jobs</a> · <a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>` : `<p><a href="/jobs">All jobs</a> · <a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>`,
+    `<p class="bp-sub">${esc(name)}: ${bs.length} free AI items you can run in Claude, ChatGPT or Gemini (${counts.join(", ")}).${tested ? ` ${tested} of them ${tested === 1 ? "is" : "are"} marked Tested and come first below.` : ""}</p>`,
+    gets.length ? `<p class="hub-gets">Examples of what you get: ${gets.map((g) => esc(lowerFirst(g))).join("; ")}.</p>` : "",
+    hubSearch(bs.length, `Search the ${bs.length.toLocaleString("en-US")} items for this job`, t),
+    `<h2 class="hub-h2">Start with these</h2><div class="grid hub-grid">${best.map(hubCard).join("")}</div>`,
+    `<p class="hub-links">${related.length ? `<span>Often used with</span>${related.join("")}` : ""}<a href="/jobs">All jobs</a><a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>`,
   ].join("");
 }
 const hubTitle = (name, n, pg) => fitTitle(titleLadder(pg ? `${name}, page ${pg + 1}` : name, [`${n} free AI skills and workflows`, `${n} free AI skills`, "free AI skills"]));
 // Names the first few skills until the 155-character limit, so each hub says something only it can say.
 function hubDescription(name, n, items, pg, pages) {
+  // A job with one item names it and says what it does, so the description is still long enough to be useful.
+  if (n === 1 && items[0]) {
+    const { name: item, summary = "" } = items[0];
+    const tries = [`The ${item}, a free AI skill. ${summary}`, `Free: the ${item}. ${summary}`, `The ${item}. ${summary}`];
+    return trimDescription(tries.find((t) => t.trim().length <= 155)?.trim() ?? `The ${item}, a free AI skill to ${lowerFirst(name)}.`);
+  }
   const lead = pg ? `Page ${pg + 1} of ${pages}: free AI skills and workflows to ${lowerFirst(name)}, including` : `${n} free AI skills and workflows to ${lowerFirst(name)}, including`;
   const names = items.slice(0, 5).map((x) => x.name);
   for (let k = names.length; k >= 1; k--) {
@@ -509,9 +535,27 @@ function hubDescription(name, n, items, pg, pages) {
   return trimDescription(`${lead} ${names[0] ?? "more"}.`);
 }
 const hubUrls = ["/jobs"];
+// /jobs groups the jobs under the library's broad areas, each job once, in the area it is listed under first.
+const jobCount = new Map(tasks.map(([t, bs]) => [t, bs]));
+const placed = new Set();
+const jobGroups = JOB_AREAS.map((a) => {
+  const ts = [...new Set(a.fns.flatMap((id) => FUNCTIONS.find((fn) => fn.id === id)?.tasks ?? []))].filter((t) => jobCount.has(t) && !placed.has(t));
+  ts.forEach((t) => placed.add(t));
+  return [a.name, ts.sort((x, y) => jobCount.get(y).length - jobCount.get(x).length)];
+}).filter(([, ts]) => ts.length);
+const unplaced = tasks.map(([t]) => t).filter((t) => !placed.has(t));
+if (unplaced.length) jobGroups.push(["More jobs", unplaced]);
+const jobCard = (t) => {
+  const bs = jobCount.get(t), name = TASK_NAMES[t] ?? t;
+  return `<div class="card hub-job"><a class="hub-job-name" href="${jobHref(t)}">${esc(name)}</a><span class="count">${bs.length.toLocaleString("en-US")} skills and workflows</span><ul>${bestOf(bs, 3).map((x) => `<li><a href="${hrefOf(x)}">${esc(x.name)}</a></li>`).join("")}</ul><span class="view">See all ${bs.length.toLocaleString("en-US")}${arrow}</span></div>`;
+};
+const allCount = cat.blocks.filter((b) => hasPage(b) && b.type !== "mind").length;
 write("/jobs", render("/jobs", {
   title: "All AI skills and workflows by job", documentTitle: `Browse ${cat.blocks.filter((b) => hasPage(b) && b.type !== "mind").length.toLocaleString("en-US")} free AI skills and workflows by job | ${BRAND}`, desc: `${cat.blocks.filter((b) => hasPage(b) && b.type !== "mind").length.toLocaleString("en-US")} free AI skills, workflows and prompts sorted into ${tasks.length} jobs, from ${lowerFirst(TASK_NAMES[tasks[0][0]] ?? tasks[0][0])} to ${lowerFirst(TASK_NAMES[tasks[3][0]] ?? tasks[3][0])}. Pick the job you need done.`, h1: "All skills by job", collection: true,
-  body: list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a>: ${bs.length} skills and workflows`)),
+  hub: true,
+  body: `<p class="bp-sub">${allCount.toLocaleString("en-US")} free AI skills, workflows and prompts, sorted into ${tasks.length} jobs. Pick the job you need done, or search the whole library.</p>${hubSearch(allCount)}`
+    + `<nav class="hub-areas" aria-label="Areas">${jobGroups.map(([n]) => `<a href="#${n.toLowerCase().replace(/[^a-z0-9]+/g, "-")}">${esc(n)}</a>`).join("")}</nav>`
+    + jobGroups.map(([n, ts]) => `<section class="hub-area" id="${n.toLowerCase().replace(/[^a-z0-9]+/g, "-")}"><h2 class="hub-h2">${esc(n)}</h2><div class="hub-jobs">${ts.map(jobCard).join("")}</div></section>`).join(""),
   main: { "@type": "ItemList", numberOfItems: tasks.length, itemListElement: tasks.map(([t], i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}${jobHref(t)}`, name: TASK_NAMES[t] ?? t })) },
 }, { plain: true }));
 for (const [t, bs] of tasks) {
@@ -520,11 +564,11 @@ for (const [t, bs] of tasks) {
     const url = jobHref(t) + (pg ? `/${pg + 1}` : "");
     const items = bs.slice(pg * PER, (pg + 1) * PER);
     const pages = Math.ceil(bs.length / PER);
-    const nav = pages > 1 ? `<p>${Array.from({ length: pages }, (_, i) => (i === pg ? `<b>Page ${i + 1}</b>` : `<a href="${jobHref(t)}${i ? `/${i + 1}` : ""}">Page ${i + 1}</a>`)).join(" · ")}</p>` : "";
+    const nav = pages > 1 ? `<nav class="hub-pages" aria-label="Pages">${Array.from({ length: pages }, (_, i) => (i === pg ? `<b aria-current="page">Page ${i + 1}</b>` : `<a href="${jobHref(t)}${i ? `/${i + 1}` : ""}">Page ${i + 1}</a>`)).join("")}</nav>` : "";
     write(url, render(url, {
       title: `${name}: ${bs.length} free AI skills${pg ? `, page ${pg + 1}` : ""}`, documentTitle: hubTitle(name, bs.length, pg), desc: hubDescription(name, bs.length, items, pg, pages), h1: name + (pg ? `, page ${pg + 1}` : ""),
-      crumbs: [["All skills by job", "/jobs"]], collection: true,
-      body: `${pg ? `<p class="bp-sub">Page ${pg + 1} of ${pages}: more free AI skills and workflows to ${esc(lowerFirst(name))}. <a href="${jobHref(t)}">Start with the best ${esc(lowerFirst(name))} skills on page 1</a>.</p>` : hubIntro(t, name, bs)}${nav}<h2>${pg ? `More to ${esc(lowerFirst(name))}` : `Every ${esc(lowerFirst(name))} skill and workflow`}</h2>${list(items.map((x) => `${link(x)}: ${esc(x.summary)}`))}${nav}`,
+      crumbs: [["All skills by job", "/jobs"]], collection: true, hub: true,
+      body: `${pg ? `<p class="bp-sub">Page ${pg + 1} of ${pages}: more free AI skills and workflows to ${esc(lowerFirst(name))}. <a href="${jobHref(t)}">Start with the best ${esc(lowerFirst(name))} skills on page 1</a>.</p>` : hubIntro(t, name, bs)}<h2 class="hub-h2">${pg ? `More to ${esc(lowerFirst(name))}` : `Every ${esc(lowerFirst(name))} skill and workflow`}</h2>${nav}<ul class="hub-list">${items.map((x) => `<li><a href="${hrefOf(x)}">${esc(x.name)}</a>${testedBadge(x)}<span>${esc(x.summary)}</span></li>`).join("")}</ul>${nav}`,
       main: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: pg * PER + i + 1, url: `${SITE}${hrefOf(x)}`, name: x.name })) },
     }, { plain: true }));
     hubUrls.push(url);

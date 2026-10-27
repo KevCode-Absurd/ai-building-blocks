@@ -43,6 +43,7 @@ you_give:
   - Your product plan, goal and who it is for
   - Your team size and any fixed date
   - The list of requests, with who asked and when
+  - What the product is for, and who it is not for, in one line
   - Customer comments about the product (optional)
 you_get:
   - A one-page brief with goal, audience, limits and what could go wrong
@@ -50,7 +51,7 @@ you_get:
   - A yes, later or no on each request, with the full cost of every yes
   - A short reply to send for each request
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 3 skill files in the order they run: Project kickoff brief writer, Lean product shaping coach and Feature request screener."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your plan, then your request list with who asked.
   - Answer the few questions step 1 asks, then let it run.
@@ -59,7 +60,7 @@ how_it_works:
   - title: Put the plan on one page
     text: Pulls the facts you gave, asks a few questions about goal, audience and limits, and writes a one-page brief tested for weak spots.
   - title: Cut it to a six-week bet
-    text: Scores the plan against build-less rules. Cuts it to a bet a small team can finish in six weeks. Lists the features to say no to.
+    text: Scores the plan against the build-less rules of the 37signals books. They say build less, shape the work, fix the time and keep teams small. Cuts it to a bet a small team can finish in six weeks. Lists the features to say no to.
   - title: Screen every request
     text: Starts each request at not now and counts different people asking. Adds up what a yes would cost and checks it against the bet.
   - title: Write the replies

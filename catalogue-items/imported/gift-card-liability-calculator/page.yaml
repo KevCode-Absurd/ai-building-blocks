@@ -28,13 +28,14 @@ you_get:
   - Total outstanding gift card balance
   - Liability by issue month
   - Breakdown by balance band
-  - A list of stale cards
+  - A list of stale cards and cards that expire within 30 days
 how_to_use:
   - Use an AI that can run Shopify admin commands. A plain chat with no store access cannot read your cards.
   - Sign in to your store with permission to read gift cards.
   - Paste the skill into your AI and give your store domain. Add band edges or stale days if you want your own.
   - Check the totals, the month and band tables, and the stale list.
-  - Send the figure to your accountant before you book anything. Note that stale cards are judged by last update date, which is only a hint of last use.
+  - Send the figure to your accountant before you book anything. Stale cards are judged by last update date, and cards that expire within 30 days are flagged too. Both are only hints, not proof the money is earned.
+  - The saved file lists customer email addresses. Keep it private and share only the totals unless your accountant needs the rows.
 output_sample:
   input:
     - Your store domain
@@ -54,3 +55,4 @@ output_sample:
       contains: Card count and balance owed for each balance size band, with one band for cards above the largest edge.
     - name: gift_card_liability_<date>.csv
       contains: One row per card with balance, redeemed amount, issue month, band, dates, stale flag and customer email.
+next: [revenue-recognition-checker, gift-card-issuer]

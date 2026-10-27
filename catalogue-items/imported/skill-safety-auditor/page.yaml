@@ -5,9 +5,9 @@ name: Skill safety auditor
 summary: Check a skill before you install it. Get a PASS, WARN or FAIL verdict and the risky code and hidden commands flagged in your skill safety scan.
 job: secure-code
 headline: Skill safety auditor
-subhead: A PASS, WARN or FAIL verdict on a skill before you install it, with the risky code and hidden commands flagged. You avoid giving a stranger's script access to your machine.
+subhead: A PASS, WARN or FAIL verdict on a skill before you install it, with the risky code and hidden commands flagged. It helps you spot risky code before you give a stranger's script access to your machine.
 explain: |
-  A PASS, WARN or FAIL verdict on a skill before you install it, with the risky code and hidden commands flagged. You avoid giving a stranger's script access to your machine.
+  A PASS, WARN or FAIL verdict on a skill before you install it, with the risky code and hidden commands flagged. It helps you spot risky code before you give a stranger's script access to your machine.
 
   Point it at a local folder or a git repo. A Python script scans code files for command injection, code execution, hidden or encoded payloads, network sends and attempts to read keys or credentials. Each finding has a severity and a note on how to fix it. A strict mode turns every warning into a fail, and you can ask for a JSON report. It reads the files and does not run them.
 when:
@@ -31,6 +31,7 @@ you_get:
 how_to_use:
   - Put the skill in a folder on your computer, or copy its git repo link.
   - "Open a terminal and run: python3 scripts/skill_security_auditor.py /path/to/skill-name/ . For a repo, give the link and add --skill with the skill name."
+  - Repo mode needs git and an internet connection to fetch the repo. The scan still does not run the code.
   - Add --strict to turn every warning into a fail. Add --json to save a report you can attach to an approval.
   - Read the verdict first, then the findings from critical down to info.
   - PASS means no known risky patterns were found. It is not proof of safety, so review anything flagged before you install.

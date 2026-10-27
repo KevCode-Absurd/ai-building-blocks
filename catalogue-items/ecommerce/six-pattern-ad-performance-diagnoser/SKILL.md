@@ -5,6 +5,31 @@ description: Check six possible causes of an ad result change. Use local baselin
 
 # Six-pattern ad performance diagnoser
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Fading ad refresh planner](https://useaiblocks.com/skills/fatigued-ad-reviver).
+- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -40,6 +65,7 @@ Ask for the problematic campaign(s):
 | Impressions / Reach | 7-day, 14-day |
 
 Also ask:
+- **Gross margin** (as a percent, so you can work out break-even ROAS)
 - **What changed?** (budget, creative, audience, landing page, seasonality)
 - **When did the issue start?** (specific date)
 - **Business type** (ecommerce, lead gen, SaaS, local)
@@ -67,15 +93,17 @@ Baseline confidence by data availability (placeholder curve, tune once you see w
 
 ### Level 3: Absolute Thresholds (placeholder starting values)
 
-These numbers exist so the system has something to say when there is no baseline. They are starting guesses, not tuned values. Replace them with whatever thresholds your team already uses as rules of thumb, then tune after a month of observation.
+These numbers exist so the system has something to say when there is no baseline. They are starting guesses, not tuned values. Ask the user for the thresholds their team already uses. If they have none, use the starting values below, say they are placeholders, and tune after a month of observation.
 
-| Metric | Critical (placeholder) | Warning (placeholder) |
+Break-even ROAS = 1 / gross margin (for example, a 40 percent margin gives 2.5). If margin was not given, write `MISSING: margin` and do not run the profitability gate.
+
+| Metric | Critical (starting value) | Warning (starting value) |
 |--------|------------------------|------------------------|
-| ROAS | below a floor you consider unprofitable | below your break-even ROAS |
-| Frequency (prospecting) | well above your saturation point | approaching saturation |
-| Frequency (retargeting) | double your prospecting ceiling or higher | meaningfully above prospecting ceiling |
-| CTR | a small fraction of your account average | noticeably below your account average |
-| Learning phase | stuck in Limited for over a week | stuck in Limited for a few days |
+| ROAS | below break-even ROAS | within 20 percent above break-even ROAS |
+| Frequency (prospecting) | above the user's saturation point, or 4 if they have none | 3 to 4 |
+| Frequency (retargeting) | double the prospecting ceiling or higher | above the prospecting ceiling |
+| CTR | below half your account average | below 80 percent of your account average |
+| Learning phase | stuck in Limited for over 7 days | stuck in Limited for 3 to 7 days |
 
 ### Level 4: Industry Defaults (last-resort anchors)
 
@@ -86,7 +114,7 @@ If you have no baseline and no absolute thresholds, fall back to public industry
 **Critical rule:** If campaign is profitable, suppress input-metric violations.
 
 ```
-IF CPA <= baseline AND ROAS >= 1.0:
+IF CPA <= baseline AND ROAS >= break-even ROAS (1 / gross margin):
   - Suppress CPC warnings
   - Suppress CPM warnings
   - Only flag frequency and creative fatigue
@@ -114,7 +142,7 @@ Fix: Expand audience (broader, new lookalikes, new geos).
 ### Pattern 4: Budget Constraint
 Signals: Good ROAS + Low spend + Learning Limited
 Confidence boost: +0.10
-Fix: Increase budget to 10x target CPA/day, consolidate ad sets.
+Fix: Consolidate ad sets. If you raise budget, raise it in small steps. A common rule of thumb is a daily budget of about 10x target CPA per ad set, but it is only a rule of thumb, so check it against your own account and what you can afford to lose.
 
 ### Pattern 5: Platform Algorithm Shift
 Signals: CPM spike + All campaigns affected + No changes made
@@ -176,6 +204,9 @@ MONITORING:
 - Check [metric] in [X] days
 - If [condition], escalate to [action]
 ```
+
+NEXT STEP:
+- Name the one follow-up test or check to run first. For a worn-out creative, use the Five-tactic ad hook writer to make new openings. To read the test afterwards, use the Creative test reader.
 
 No em dashes. Be specific. Numbers, not adjectives.
 

@@ -7,6 +7,8 @@ description: 生成带中文排版的详情页模块。商品图 + 卖点 → �
 
 一张商品图 + 卖点文案 → **带中文排版的详情页视觉**。
 
+> **For English readers (added by AI Blocks).** This file is written in Chinese. To get readable text on the picture, the method sets four conditions: (1) write each line of text into the prompt word for word, inside quote marks; (2) name the font style and weight; (3) say where each text block sits; (4) tell the model the text must be clear and not garbled. Keep lines short, and make one image per block, not the whole page at once. Each block comes out as a jpg at 3:4, 1:1 or 9:16, at about 2K. The sample selling points below, such as 机洗不缩 (machine washable, no shrinking), 不易变形 and 蓬松保暖, are illustration only. Never copy a claim into a real listing until it is checked against verified product specs. Scripts need the skill folder, Node and a dLazy account, or the dLazy command line tool.
+
 和其他技能的区别：本技能的产出**带文字**。所以模型选型的第一标准是**中文字形渲染能力**——大多数图像模型会把中文画成乱码。
 
 ---

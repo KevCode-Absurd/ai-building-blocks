@@ -34,6 +34,7 @@ how_to_use:
   - Say what feels slow and on which device, for example a menu that drops frames on phones.
   - Read each quoted line and its reason, then paste in the fix that suits you.
   - Test again on the same device to check the motion is smooth. This skill reads code only and does not run your page.
+  - "If jank remains, open the browser's Performance tab, record the animation again and paste the new trace back in. If your AI cannot read your code, paste only the animation CSS or script block."
 output_sample:
   input:
     - The file or component that holds the animation

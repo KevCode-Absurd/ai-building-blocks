@@ -138,3 +138,4 @@ terms:
     meaning: A small device or built-in phone feature that proves it is you. It will not work on a fake site.
   - term: Lookalike address
     meaning: A web address that reads like a real one but is spelled a little differently or uses similar-looking letters.
+next: [store-sign-in-security-checker, store-security-checkup]

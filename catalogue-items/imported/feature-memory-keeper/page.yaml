@@ -29,6 +29,7 @@ you_get:
   - One short file per feature
   - Recorded decisions and risks
   - Status and next steps
+next: [decision-record-writer, readme-and-decision-interviewer]
 how_to_use:
   - Open your AI tool in your project folder. It needs to read and write files, so use a tool like Claude Code, Cursor or Codex.
   - Paste the skill into the chat, or add it to your tool's skills folder.

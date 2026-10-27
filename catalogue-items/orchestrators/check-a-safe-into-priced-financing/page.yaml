@@ -46,7 +46,7 @@ how_it_works:
   - title: Option pool top-up checker
     text: Uses the share count before the top-up and the pool target. Shows the extra reserve on its own. If the approved round dilution already includes it, the pool is not applied again. Hands step 3 the reserve treatment.
   - title: Pro rata allocation checker
-    text: Uses the stake your side letter makes eligible, after the pool treatment, and cash allocated outside the round. Ties it to the full round. Check before you rely on it, the side letter's share count can be shown from a document.
+    text: Uses the stake your side letter makes eligible, after the pool treatment, and cash allocated outside the round. Ties it to the full round. Stops if the side letter's share count cannot be shown from a document.
 output_shape: |-
   SCOPE AND SOURCES       <SAFE, side letter, cap table, round terms and dates>
   SAFE STAKE              <cap | cash funded | stake before the round>
@@ -55,24 +55,26 @@ output_shape: |-
   MISSING                 <each gap and what it stops>
   CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts.
+  - what: Round dilution
+    how: Change the share of the company the new round gives away. The stake after the round changes, and the stake before it does not.
+  - what: Pool target
+    how: Change the option pool target. The extra reserve is recalculated on its own line.
+  - what: Outside cash
+    how: Change the cash other investors put in. Your pro rata cash and the round total move, and the tie to your stake is checked again.
+  - what: Workbook
+    how: Say you want a spreadsheet. Inputs, formulas and checks sit on separate sheets.
 judge:
   - Use actual contract denominators; keep pool expansion and financing dilution separate and never treat illustrative defaults as deal facts.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the SAFE terms on one line (cap, funded cash, date, dilution, side-letter stake) and paste it in each run.
+  - Save the three step files next to the lawyer's cap table, so you can show what was checked.
+  - Run the Check staged follow-on commitments workflow next if you hold rights in more than one company.
 works_best_with:
   tools:
     - name: A spreadsheet tool and an AI that reads files

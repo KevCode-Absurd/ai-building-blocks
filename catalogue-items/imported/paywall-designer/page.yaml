@@ -5,7 +5,7 @@ name: Paywall designer
 summary: Find the right moments to ask free users to upgrade. Get paywall screens, trigger points and copy for your in-app paywall design.
 job: build-product
 headline: Paywall designer
-subhead: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users. Bring your plans and what is free or paid. Use the result to plan your next step.
+subhead: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users. Pick one screen and one test to run first.
 explain: |
   Upgrade screens, timing triggers and copy that move free users to paid. It places the ask after people have felt real value, not before.
 
@@ -30,12 +30,11 @@ you_get:
   - Upgrade copy
   - Test ideas
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
-  - Paste the skill text into the chat.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat. No code or paid tool is needed. The skill mentions an experiments file and some context files. Skip those lines in a plain chat.
   - Describe your plans, what is free, and where users hit limits or trials end.
   - Add your current upgrade rate and how users move through your product, if you know them.
-  - Read the trigger moments first. Check each one comes after the user has felt real value.
-  - Pick one screen and one test to try first.
+  - Read the trigger moments first. Check each one comes after the user has felt real value. For social proof on a screen, use only real quotes and numbers you can verify, or leave it out.
+  - Pick one screen and one test to try first. Track views, clicks, completions and revenue per user for a set period before you change a second thing. If users never reach their first win, fix onboarding first.
 output_sample:
   input:
     - Your plans and what is free or paid
@@ -55,3 +54,4 @@ output_sample:
       contains: When not to show the ask, and how long to wait after someone dismisses it.
     - name: Test ideas
       contains: Changes to try, such as timing, wording, price display and trial length, with numbers to track.
+next: [first-use-onboarding-designer, customer-onboarding-planner]

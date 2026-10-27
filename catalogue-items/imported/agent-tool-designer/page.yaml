@@ -5,9 +5,9 @@ name: Agent tool designer
 summary: Design agent tool definitions that your AI picks and uses correctly. Give it your tools or tasks. Get fewer, clearer tools with better errors.
 job: connect-tools
 headline: Agent tool designer
-subhead: Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Most agent failures come from tools that overlap or describe themselves badly.
+subhead: Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Tools that overlap or describe themselves badly are a common cause of agent mistakes.
 explain: |
-  Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Most agent failures come from tools that overlap or describe themselves badly.
+  Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Tools that overlap or describe themselves badly are a common cause of agent mistakes.
 
   The key test: if a person could not say which tool fits a task, the agent cannot either. So the skill merges tools that do nearly the same thing. Each description answers three questions: what it does, when to use it, and what it returns. Replies are sized to be complete without wasting tokens. Error messages say what went wrong and how to fix the call. It also sets matching names and settings across all tools, so the agent learns one pattern and not ten.
 when:
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill's instructions. No code running or paid tools are needed.
   - List your agent's main task and its current tools. Add any failed tool calls you have (optional).
-  - Ask your AI to review the tool set and cut or merge tools that overlap.
+  - Ask your AI to review the tool set and cut or merge tools that overlap. Ask for the result as a short table of tools (keep, merge or cut), then a description block for each tool, then a list of error messages.
   - Read each new description. Check that a person could tell which tool fits which task.
   - Test the new tools with real requests to your agent. Fix any call that still goes wrong.
 output_sample:

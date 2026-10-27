@@ -9,15 +9,15 @@ The return a person can fairly aim for depends on the intelligent effort they wi
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Weighing a few honest answers and writing a short verdict is text work any strong chat AI does well with this skill.
@@ -37,7 +37,7 @@ How to start:
 4. **Test nerve.** Ask what they did when prices last fell by a fifth or more. Then ask what they would do if their holdings halved next month. Mark steady if they held and would hold, shaky if they sold, froze or bought more with borrowed money.
 5. **Sort.** Defensive if effort is passive or partial, or skill is two or less, or nerve is shaky. Enterprising only if effort is active and skill is three or four and nerve is steady, and the person has a real reason to expect an edge. If none fits, write NEITHER YET and say what would change it, such as eight steady hours a month for a year while learning. Write the three reasons that decided it, ranked.
 6. **Say what the path asks.** Defensive: a plain mix of high-grade bonds and a spread of large, sound stocks bought at sensible prices, a few decisions a year, and a written policy. Enterprising: the same base first, then only departures that are sound on their numbers and not popular, because a method everyone follows has no edge left. An enterprising approach is worth the extra work only if the person can hope to add something real, such as a few percentage points a year, to the stock part. If not, the plain path is better.
-7. **Name the paths to skip.** Trading in and out on market moves, buying on short-term tips, and buying a company only because it is growing fast are not investment by the test of safe money and a fair return after study. Add borrowing to buy shares unless the case is unusual and the person can lose the lot. If the person wants to take risky bets anyway, tell them to do it with open eyes, expect to lose, cap the amount, and keep it in a separate account away from the plan. Zweig's commentary suggests about a tenth of the total as a cap; offer that as an example, not a rule.
+7. **Name the paths to skip.** Trading in and out on market moves, buying on short-term tips, and buying a company only because it is growing fast are not investment by the test of safe money and a fair return after study. Add borrowing to buy shares unless the case is unusual and the person can lose the lot. If the person wants to take risky bets anyway, tell them to do it with open eyes, expect to lose, cap the amount, and keep it in a separate account away from the plan. A common rule of thumb is to cap it at about a tenth of the total; offer that as an example, not a rule.
 8. **Set fair expectations.** Say that more effort or more risk is not a promise of more return, that results from a short run prove little, and that the plain path often beats active people after costs. Give no return figure.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any that fail. Under CHECKS MISSED write one line for each check still missed and why, or "none".
 
@@ -50,10 +50,9 @@ Effort, skill and nerve results in the person's words, the type with three ranke
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Stock and bond split planner](https://useaiblocks.com/skills/stock-and-bond-split-planner). It takes the audit report.
+- The [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the audit report.
+- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

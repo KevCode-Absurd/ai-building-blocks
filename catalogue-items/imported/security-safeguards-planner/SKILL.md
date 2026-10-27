@@ -13,7 +13,9 @@ description: >
 
 # CIS Controls v8 Skill
 
-> **Last verified:** 2026-10-03
+> **Last verified:** 2026-10-03 (the original author's date)
+
+> **Mappings:** The tables that map CIS Controls to NIST CSF, ISO 27001 and CMMC are general guides. They have not been checked against the current text of those standards, and some CMMC entries use `x` as a placeholder. An assessor must check them before anyone relies on them for an audit.
 
 You are an expert cybersecurity advisor with deep knowledge of the **CIS Controls v8** (formerly CIS Top 20, now CIS Top 18), published by the Center for Internet Security. You help security teams, IT professionals, and compliance officers implement and assess CIS Controls across organizations of all sizes — from small businesses to enterprises.
 
@@ -72,7 +74,7 @@ The single most important scoping decision. Every organization starts with IG1.
 
 **CIS Control 1: Inventory and Control of Enterprise Assets**
 - Know what hardware (endpoints, servers, network devices, IoT) is authorized on the network
-- Key Safeguards: 1.1 Establish/maintain detailed enterprise asset inventory; 1.2 Address unauthorized assets; 1.3 Utilize DHCP logging; 1.4 Use dynamic host configuration protocol (DHCP) logging; 1.5 Use a passive asset discovery tool (IG2+)
+- Key Safeguards: 1.1 Establish/maintain detailed enterprise asset inventory; 1.2 Address unauthorized assets; 1.3 Utilize an active discovery tool (IG2+); 1.4 Use DHCP logging to update the asset inventory (IG2+); 1.5 Use a passive asset discovery tool (IG2+)
 
 **CIS Control 2: Inventory and Control of Software Assets**
 - Know what software is authorized to run on enterprise assets

@@ -4,9 +4,15 @@ summary: Plan service capacity and cost from your traffic, tested limits and spe
 job: build-software
 headline: Plan service capacity and cost
 subhead: Bring traffic and cost records. Model demand, headroom and spend, then set checks for the next scale step.
-explain: Bring traffic and cost records. Model demand, headroom and spend, then set checks for the next scale step.
+explain: |
+  Know how much your service can carry, what each unit of traffic costs, and when you need to scale. You give it your traffic, current resources, measured limits and cost records. It maps demand to capacity, works out headroom, and names the point where you must add more.
+
+  It also works out cost per unit of demand, sets budget and quota rules, and lists the load tests still needed before you trust any capacity claim. The skill is long, so tell your AI which job you need first. It then uses the matching template.
 when:
-  - You want to plan service capacity and cost.
+  - Traffic is growing and you need to know when your service runs out of room.
+  - A big sale or launch is coming and you must size for the peak.
+  - Your cloud bill is rising and you want the cost per customer or per request.
+  - You must choose between a higher uptime target and a lower bill.
 not_for:
   - "You need a profit and loss statement, funding scenarios or SaaS metrics: use a finance tool or your accountant."
   - "You need servers or cloud resources set up: ask your platform or DevOps engineer."
@@ -18,11 +24,26 @@ you_get:
   - A demand-to-capacity projection with triggers and unit-cost calculations.
   - A load/soak evidence plan and an owned budget-versus-reliability decision.
 how_to_use:
+  - Start here. Paste only the job you need, such as a growth projection, a peak-event plan, a unit cost, a budget cap or a load test plan. Reply with your inputs when your AI asks. You do not need to paste the whole skill at once.
   - Gather your traffic history, current resource counts, and a cost export for the same period.
   - Add your reliability targets, budget cap and the names of who owns each decision.
   - Open Claude, ChatGPT or Gemini and paste in the skill. No code or paid tool is needed.
-  - Paste your inputs and ask for a capacity and cost plan.
+  - Paste your inputs and ask for a capacity and cost plan. Give your AI the matching template from the skill folder: capacity-model.md for a growth projection, load-soak-test-plan.md for tests, unit-economics-record.md for unit cost, or budget-quota-decision.md for spend rules.
   - Check the flagged gaps. Any claim marked as untested needs a real load test before you rely on it.
+  - Next, find waste in the bill with the cloud bill waste finder, and set your uptime target with the reliability target setter.
+
+terms:
+  - term: headroom
+    meaning: How much extra traffic your service can take before it hits its limit.
+  - term: load test and soak test
+    meaning: A load test sends heavy traffic to find the limit. A soak test keeps steady traffic on for hours or days to find slow leaks.
+  - term: error budget
+    meaning: The amount of failure your uptime target allows before you must stop and fix things.
+  - term: hot tenant skew
+    meaning: One customer using far more than the rest, so the average hides the real load.
+  - term: pooled or siloed
+    meaning: Pooled means customers share the same resources. Siloed means each gets their own.
+next: [cloud-bill-waste-finder, reliability-target-setter]
 output_sample:
   input:
     - Your traffic history, growth estimate and peak events

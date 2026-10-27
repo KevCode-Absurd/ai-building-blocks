@@ -36,7 +36,7 @@ input_schema:
       description: "Whether this is for an individual student, a small group, or a whole class"
     - field: "student_profiles"
       type: "array"
-      description: "From context engine: prior behaviour patterns, goals, self-regulation capacity"
+      description: "Prior behaviour patterns, goals, self-regulation capacity (optional, pasted by the user)"
     - field: "subject_area"
       type: "string"
       description: "The curriculum subject, if the implementation intention is academic"
@@ -75,7 +75,7 @@ Designs specific "if-then" plans (implementation intentions) that help students 
 
 ## Evidence Foundation
 
-Gollwitzer (1999) demonstrated that implementation intentions — specific if-then plans that link a situational cue to a target behaviour — dramatically increase the probability of follow-through. His meta-analysis (Gollwitzer & Sheeran, 2006) found a medium-to-large effect size (d = 0.65) across 94 studies: people who formed implementation intentions were significantly more likely to achieve their goals than people with equivalent motivation but no specific plan. The mechanism is cognitive: the if-then format creates a mental link between the situation (the "if") and the behaviour (the "then"), so that encountering the situation automatically activates the intended behaviour — bypassing the need for conscious deliberation or willpower. Oettingen & Gollwitzer (2010) combined implementation intentions with mental contrasting (WOOP), showing that the combination is more effective than either alone: mental contrasting creates commitment (by making the person realise the obstacle is real and their plan is needed), and the implementation intention provides the specific action plan. Duckworth et al. (2013) applied this to education, showing that implementation intentions help students with study habits, homework completion, and exam preparation. Bettinger et al. (2012) demonstrated that simple implementation-intention-style assistance (specific plans for when and how to complete college applications) increased college enrollment among low-income students by 8 percentage points — a remarkable effect for a minimal intervention.
+Gollwitzer (1999) demonstrated that implementation intentions — specific if-then plans that link a situational cue to a target behaviour — dramatically increase the probability of follow-through. His meta-analysis (Gollwitzer & Sheeran, 2006) found a medium-to-large effect size (d = 0.65) across 94 studies: people who formed implementation intentions were significantly more likely to achieve their goals than people with equivalent motivation but no specific plan. The mechanism is cognitive: the if-then format creates a mental link between the situation (the "if") and the behaviour (the "then"), so that encountering the situation automatically activates the intended behaviour — bypassing the need for conscious deliberation or willpower. Oettingen & Gollwitzer (2010) combined implementation intentions with mental contrasting (WOOP), showing that the combination is more effective than either alone: mental contrasting creates commitment (by making the person realise the obstacle is real and their plan is needed), and the implementation intention provides the specific action plan. Duckworth et al. (2013) argued, as a conceptual paper on self-regulation, that implementation intentions could suit school settings; treat this as an argument for trying it with students, not as proof of an effect. Bettinger et al. (2012) demonstrated that simple implementation-intention-style assistance (specific plans for when and how to complete college applications) increased college enrollment among low-income students by 8 percentage points — a remarkable effect for a minimal intervention.
 
 ## Input Schema
 
@@ -83,7 +83,7 @@ The teacher must provide:
 - **Target behaviour:** What the student needs to do. *e.g. "Start homework on the day it's set instead of the night before it's due" / "Use retrieval practice when revising instead of re-reading notes" / "Put their hand up to contribute in class discussion instead of staying silent" / "Take a 4-7-8 breath when they feel anxious before a test instead of panicking"*
 - **Student level:** Year group. *e.g. "Year 10"*
 
-Optional (injected by context engine if available):
+Optional (paste these yourself if you have them; if you leave a field out, the skill uses the default stated for it below):
 - **Current barrier:** What prevents the behaviour
 - **Context:** Individual, group, or whole class
 - **Student profiles:** Prior behaviour patterns, goals
@@ -242,7 +242,7 @@ This feeling means it's working. Re-reading is a comfort blanket. Retrieval prac
 
 ## Known Limitations
 
-1. **Implementation intentions work best when motivation already exists.** If the student genuinely does not care about revising, an if-then plan won't create motivation — it provides a bridge from intention to action, not from apathy to intention. For students who lack motivation, pair this with the Motivation Diagnostic & Task Redesign skill before designing implementation intentions.
+1. **Implementation intentions work best when motivation already exists.** If the student genuinely does not care about revising, an if-then plan won't create motivation — it provides a bridge from intention to action, not from apathy to intention. For students who lack motivation, talk with the student first about why the habit matters to them, then design the implementation intention.
 
 2. **Implementation intentions are most effective for simple, discrete behaviours.** "Start revision with retrieval practice" is a clear, discrete action. "Become a better student" is too complex for a single implementation intention. Complex behaviour change requires multiple implementation intentions targeting different specific actions.
 

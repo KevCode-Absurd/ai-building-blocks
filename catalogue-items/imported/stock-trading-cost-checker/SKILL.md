@@ -330,7 +330,7 @@ Show:
 
 **Goal**: Estimate how much a given order size would move the price, using the square-root market impact model.
 
-The standard model in practice is: **Impact (%) = σ × √(Q / V)** where σ is daily volatility, Q is order size in shares, and V is average daily volume. This is a simplified version of the Almgren-Chriss framework used by institutional traders.
+The standard model in practice is: **Impact (%) = σ × √(Q / V)** where σ is daily volatility, Q is order size in shares, and V is average daily volume. This is a simplified version of the Almgren-Chriss framework used by institutional traders. The code uses a constant of 1 (no fitted scale), so treat the figures as unverified rough estimates.
 
 ### E1: Compute market impact estimate
 

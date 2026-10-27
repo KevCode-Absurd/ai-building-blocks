@@ -5,27 +5,11 @@ description: Use when a function behaves differently at different times, is hard
 
 # Function purity refactor planner
 
-A function that reads or changes things outside itself is hard to trust, because its answer depends on what the rest of the program did before. This skill finds those hidden dependencies, plans a version that uses only its inputs, and writes tests for it. To explain the result to others, use "Code walkthrough writer".
+A function that reads or changes things outside itself is hard to trust, because its answer depends on what the rest of the program did before. This skill finds those hidden dependencies, plans a version that uses only its inputs, and writes tests for it. To explain the result to others, use the [Code walkthrough writer](https://useaiblocks.com/skills/code-walkthrough-writer).
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+## When to use it
 
-**Works best with** (or they can paste their own instead):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
-
-**Makes it better (optional):**
-- **A draft** (yours): the ad, page, email or script you want checked or improved.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, a draft. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
-
-**Tools that do this best:**
-- **Any good chat AI:** Tracing reads and writes and drafting tests is text work any strong chat AI does.
-- **Your test runner:** Run the tests it writes so you can see the old and new versions agree.
-<!-- /needs -->
+Use it on one function at a time. Do not use it to explain finished code (use the Code walkthrough writer), to rework a whole program at once (start with a design review by a senior developer, then come back with one function), or to only move code around without changing what it does (use the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split)).
 
 ## What you need
 
@@ -48,12 +32,9 @@ How to start:
 
 The chosen function and why. The hidden state list. The comment to add. The pure version's inputs and result, and the thin layer. The tests. The copying cost. Flags for redesign. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+## What next
+
+When you've handed it back, suggest in one short question that they split the change into small, reviewable steps with the [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan. If they have not yet run the tests on the old function, tell them to do that first.
 
 ## Check before you hand it back
 

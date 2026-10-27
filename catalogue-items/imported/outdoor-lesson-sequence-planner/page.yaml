@@ -37,6 +37,7 @@ how_to_use:
   - Read the safety plan and check it against your school's rules and your own site risk check.
   - Do not let students taste any wild plant. Remove any tasting from the plan unless an expert has identified the plant and allergies are checked.
   - Ask your AI to change anything that does not fit your class, then teach the prep lesson first.
+  - After the follow-up lesson, plan the next unit with the Local place lesson planner or the Local nature inquiry unit planner.
 output_sample:
   input:
     - "Your learning objective: what students must learn"
@@ -57,3 +58,4 @@ output_sample:
       contains: How ideas move between the classroom and the outdoor session so learning carries on.
     - name: Equipment and Resources
       contains: The kit and materials you need to gather before the session.
+next: [local-place-lesson-planner, nature-inquiry-unit]

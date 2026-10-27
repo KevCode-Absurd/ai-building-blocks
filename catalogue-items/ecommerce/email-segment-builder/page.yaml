@@ -89,11 +89,11 @@ output_shape: |-
   MISSING <unresolved data or rules>
 tweaks:
   - what: Your send rhythm
-    how: Tell it how often you send. A store sending three to four times a week uses a shorter engaged window than a store sending once a week.
+    how: Tell it how often you send. A store sending three to four times a week uses a shorter engaged window than a store sending once a week. It picks one default window and says when another fits.
   - what: Your open rate
     how: Give the current rates. It may propose testing a shorter engaged window, then widening only after reviewing results; it does not send emails itself.
   - what: Your size
-    how: Under about 20 million a year with one or two people on email, the skill keeps groups big and uses dynamic blocks for differences, instead of many small groups.
+    how: With one or two people on email, the skill keeps groups big and uses dynamic blocks for differences, instead of many small groups.
   - what: What counts as a VIP
     how: Give your rule, such as 4 or more orders, or spend near four times your average order value. The skill adapts it.
 judge:
@@ -115,7 +115,7 @@ improve:
 works_best_with:
   tools:
     - name: Klaviyo
-      why: The conditions in this skill follow its segment filters, so they can be copied across.
+      why: The conditions in this skill follow its segment filters, so they can be copied across. It is a paid service.
     - name: Shopify
       why: Order and customer data feed the buyer and VIP groups.
     - name: Any good chat AI

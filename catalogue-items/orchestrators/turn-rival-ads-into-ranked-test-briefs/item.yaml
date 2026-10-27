@@ -8,17 +8,17 @@ job: research
 level: advanced
 inputs:
   - {type: reference_set, required: true}
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: spreadsheet, required: false}
   - {type: performance_sheet, required: false}
 outputs:
   - {type: plan}
 uses: [ad-library-teardown-counter, competitor-ad-gap-finder, ad-test-brief-writer, meta-test-campaign-planner]
 steps:
-  - {uses: ad-library-teardown-counter, note: "Starts the chain: turns the Ad Library export into counts, a shortlist and content gaps."}
-  - {uses: competitor-ad-gap-finder, note: "Reads the counts and the shortlist from the step before and finds what the rivals leave empty."}
-  - {uses: ad-test-brief-writer, note: "Takes the gap brief and the rival counts and turns them into designer-ready test briefs."}
-  - {uses: meta-test-campaign-planner, note: "Reads the test briefs and sets how many ads go in each pack and when to scale."}
+  - {uses: ad-library-teardown-counter, note: "Starts the chain: turns the rival's Ad Library export (inactive ads included) into counts, a shortlist and content gaps."}
+  - {uses: competitor-ad-gap-finder, note: "Reads the counts and the shortlist from step 1, plus your brand file if you have one, and finds what the rivals leave empty."}
+  - {uses: ad-test-brief-writer, note: "Takes the gap brief from step 2 and the rival counts from step 1 and turns them into designer-ready test briefs."}
+  - {uses: meta-test-campaign-planner, note: "Reads the test briefs from step 3 and your daily test budget, and sets how many ads go in each pack and when to scale."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/turn-rival-ads-into-ranked-test-briefs/skeleton.yaml

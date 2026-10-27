@@ -30,7 +30,7 @@ you_get:
   - Runbook outlines
   - A log privacy list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
@@ -39,6 +39,7 @@ not_for:
   - "You want a ready Grafana dashboard and alert config from scripts. Use the Monitoring planner."
   - "You are watching an AI agent or an AI app. Use the AI agent monitoring planner."
   - "You cannot get at any metrics, logs or traces yet. Set up the data first, then plan."
+next: [monitoring-planner, reliability-target-setter]
 output_sample:
   input:
     - The services and user tasks that matter most
@@ -48,6 +49,7 @@ output_sample:
   prerequisites:
     - Access to your metrics, logs or traces, or a person who has it
     - A safe test environment where you may trigger one alert
+    - "Optional: monitoring tools it names, such as Datadog, New Relic, PagerDuty and Splunk, which are usually paid"
   output:
     - name: Key user tasks and targets
       contains: The tasks to protect and how reliable each must be.

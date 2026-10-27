@@ -36,6 +36,9 @@ how_to_use:
   - Tell your AI your goal, such as a customer request, a target or a baseline.
   - Check which numbers are real and which are estimates, and check each factor's source and unit.
   - Use the ranked ideas to pick your first cuts. Do not use the result for audited filings.
+  - The emission factors built into the code are example values with no year or version. Replace any factor you cannot cite with one from a published source, and note its year and unit.
+  - Next, turn the top cuts into a data request to your biggest suppliers, or into a reduction target and plan.
+next: [supply-chain-dashboard-designer]
 output_sample:
   input:
     - Your shipping and freight data
@@ -48,9 +51,9 @@ output_sample:
     - Emission factors from a source you trust
   output:
     - name: Executive summary
-      contains: Total footprint, change on last year, progress to targets, main sources and the biggest initiatives.
+      contains: Total footprint, main sources, the gap to your reduction target if you give one, and the biggest initiatives.
     - name: Emissions inventory by scope
-      contains: A table of emissions by scope and category, with share of total and change on the prior year.
+      contains: A table of emissions by scope and category, with share of total.
     - name: Emissions by business unit
       contains: Emissions and intensity for each unit, set against its target, with a status.
     - name: Supplier emissions

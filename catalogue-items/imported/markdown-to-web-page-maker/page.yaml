@@ -21,7 +21,7 @@ not_for:
   - "Your file is under 100 lines: keep it as plain markdown, it reads fine as it is."
 you_give:
   - A markdown file of 100 lines or more
-  - Your design setup with brand colors and fonts, done once with /cs:design-system
+  - Your design setup (brand colors and fonts) from the author's /cs:design-system command. That command is in the author's full pack, not in this folder
   - Python 3 installed on your computer
 you_get:
   - One HTML page you can share as a single file
@@ -31,7 +31,7 @@ you_get:
   - Your brand colors and fonts on the page
 how_to_use:
   - Check your file has 100 lines or more. Shorter files are refused.
-  - Set up your design look first by running /cs:design-system. The page will not build without it.
+  - Install the author's full pack (alirezarezvani/claude-skills) and run /cs:design-system once. This folder holds only the three scripts, so the page will not build without that setup.
   - Use an AI that can run code, such as Claude Code or Codex. Give it your markdown file and the skill.
   - "Ask it to run the three steps in order: parse the markdown, build the page, then add search and copy buttons."
   - Open document.html in your browser. Check the contents bar, search and a code copy button.

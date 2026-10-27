@@ -1,0 +1,22 @@
+slug: business-insurance-needs-checker
+name: Business insurance needs checker
+summary: Describe your business. Get its risks, the usual cover for each, what may be required where you are, and broker questions.
+category: general
+boards: []
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: question
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - business-structure-chooser
+  - room-for-error-plan-checker

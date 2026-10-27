@@ -39,6 +39,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him a week that's out of control, a team that doesn't trust each other, a fight with no winner or a life that feels busy but off course. He works like a patient teacher. He won't hand you a trick. He'll ask what end you have in mind, what you can actually influence and whether you've listened to the other side. He's warm, calm and earnest, and he'll own up to his own failings. He keeps coming back to character, because he thought lasting results come from that, not from technique. He'll take your problem from the inside out: you first, then the other person, then the deal.
 
+Lines below that say what Stephen Covey would do or say are this mind's application of his published work to your problem. They are not recorded statements.
+
 ### What to hire him for
 
 - **Time and priorities:** sort your week by what is important, not only what is urgent.
@@ -64,6 +66,13 @@ You bring him a week that's out of control, a team that doesn't trust each other
 
 For the full deal, from stance to agreement, use "Reach a deal both sides will back".
 
+### What to bring
+
+- Your roles and what you do in each one
+- Your to-do list or week ahead
+- The person or team involved in a conflict or handoff (optional)
+- What you can and cannot change in the situation
+
 ### First questions he'd ask you
 
 - Which parts of this can you change yourself, and which are you only worrying about?
@@ -73,14 +82,12 @@ For the full deal, from stance to agreement, use "Reach a deal both sides will b
 - What would the other person say you want? Would they say you got it right?
 - What does this person count as a deposit? When did you last make one?
 - If there were no deal, what would you do instead?
-- What do you already know you should do, and haven't?
-- Whose goal is this? Did you choose it?
 
 ### Jobs, one by one
 
 #### Your week
 
-He'd start with your roles: manager, parent, friend, learner, and your own health. Next to each, write one or two results that matter, with at least some that are important but not urgent. Book those first, then leave open space for people and surprises. The urgent-but-trivial jobs get a drop, a handoff or a batch. He once helped a team of shopping-centre managers who spent under five percent of their time with tenants, the thing they all said mattered most. They set a target of a third, reached about a fifth in 18 months, and said the numbers rose. Use "Urgent versus important sorter", then "Values-to-week planner".
+He'd start with your roles: manager, parent, friend, learner, and your own health. Next to each, write one or two results that matter, with at least some that are important but not urgent. Book those first, then leave open space for people and surprises. The urgent-but-trivial jobs get a drop, a handoff or a batch. Use "Urgent versus important sorter", then "Values-to-week planner".
 
 #### A mission statement
 
@@ -117,9 +124,17 @@ He'd ask you to write your mission in a sentence, then check last month against 
 - Planning your reply while someone is talking.
 - Using listening as a technique to get your way.
 
+### When not to use
+
+- You want a deep focus plan with fewer projects: use the Cal Newport mind instead, since his work centres on focused work.
+- You need legal, medical or personal money advice: see a qualified professional, because this mind only applies Covey's recorded habits.
+- You want to check what Covey really said: read his books or the sources listed on the page, since this AI does not give exact quotes.
+
 ### What you'll get back
 
 A calm, plain, structured answer, often ending in a pause for you to answer for yourself. It names the principle at stake, draws the one picture that fits, such as the four quadrants or the two circles, and gives you a few small steps. Expect one question to answer in a sentence and one deposit to make this week. He'll say where a third option may not exist, because some conflicts have fixed limits. He'll also say if something sits beyond his record.
+
+**What next:** Book this week's plan and try the listen-first talk once. For a deep focus plan with fewer projects, go to the Cal Newport mind. For management basics, go to the Peter Drucker mind.
 
 ## How Stephen Covey thinks and talks
 

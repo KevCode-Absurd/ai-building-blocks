@@ -9,7 +9,7 @@ headline: "Numbers drop explainer"
 subhead: "Paste the metric that fell, by day or week, the numbers that feed it and everything that changed in the window. The prompt sizes the drop, finds which part moved, lines changes up against the timeline, ranks causes by evidence, names the one check to run and writes the explanation for your audience."
 
 explain: |
-  Sales fell twenty percent and everyone has a theory by lunchtime. The marketing lead blames the platform, the founder blames the price change, and the number that would settle it sits in a dashboard nobody opened. Eric Ries has argued in public that the honest version is to show cause and effect with evidence, and to say what you do not know.
+  Sales fell twenty percent and everyone has a theory by lunchtime. The marketing lead blames the platform, the founder blames the price change, and the number that would settle it sits in a dashboard nobody opened. The honest version shows cause and effect with evidence, and says what you do not know.
 
   This prompt sizes the drop against the usual swing, breaks the metric into its parts to find which one moved, and puts every change in the window on the same timeline, because a change that came after the drop cannot have caused it. It ranks the causes with evidence for and against, always including normal variation and broken measurement, flags the vanity numbers that do not answer the question, names the one check that would settle the top cause, and writes six to ten lines for your audience with no blame in them.
 

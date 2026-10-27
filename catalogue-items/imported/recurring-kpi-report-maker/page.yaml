@@ -33,7 +33,8 @@ how_to_use:
   - "Describe your report in one sentence. For example: sales by location vs last year plus AR aging, every Monday."
   - Answer the one batch of questions it asks, such as which period each run covers. Then confirm the spec once.
   - If you have no connected tools, export a CSV or Excel file from your system and upload it. This works with no account.
-  - Connected tools like QuickBooks, Xero, Shopify or Stripe need your own account and may need API access. Check each tool's plan.
+  - Connected tools like QuickBooks, Xero, Shopify, Stripe or Ramp each need your own paid account, and connecting them may need an API key or a plan that allows API access. Check each tool's plan. A CSV or Excel export needs none of this.
+  - The skill cannot run itself on a timer. To get the report each week or month, say "same report as last time" or set a calendar reminder.
   - Check the summary and the workbook totals. Next week, say same report as last time to rerun it.
 output_sample:
   input:
@@ -56,3 +57,4 @@ output_sample:
       contains: The same report as a page with stat tiles and tables, or in the format you prefer.
     - name: Saved report definition
       contains: Your report spec with its date and cadence, so you can rerun it with one phrase.
+next: [business-snapshot-writer, cash-forecast-builder]

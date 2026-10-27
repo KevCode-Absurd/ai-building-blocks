@@ -34,9 +34,9 @@ how_to_use:
   - Open a chat with an AI that can run Python code, such as Claude or ChatGPT.
   - Paste the skill text, or upload the skill file.
   - Add your supplier quotes, price breaks, limits and demand. Say if you have holding and ordering costs.
-  - Answer any questions your AI asks. It will not invent missing numbers.
-  - Check that each supplier stays within its limit and the total meets your demand.
-  - If you run the code yourself, install numpy, pandas, pulp and scipy first. Then use supplier selection and spend review steps to act on the result.
+  - Answer any questions your AI asks. If a quote, limit or demand figure is missing, it should ask you for it before it calculates. Do not let it guess.
+  - Check every total against your original quotes, and that each supplier stays within its limit and the total meets your demand. The code is copied as it is and has not been tested on your numbers.
+  - If you run the code yourself, install numpy, pandas, pulp, scipy and matplotlib first. Then run the Supplier scorer or the Spend savings finder to act on the result.
 output_sample:
   input:
     - Supplier quotes and price breaks
@@ -46,7 +46,7 @@ output_sample:
     - Quality, lead time or risk scores for each supplier (optional)
   prerequisites:
     - An AI that can run Python code
-    - Python packages numpy, pandas, pulp and scipy
+    - Python packages numpy, pandas, pulp, scipy and matplotlib
   output:
     - name: Executive Summary
       contains: The order plan you should follow, the total cost, the saving and what changes from today.
@@ -62,3 +62,4 @@ output_sample:
       contains: Next actions, such as the split to move to and contract points to raise.
     - name: Implementation Plan
       contains: A month by month plan to sign contracts, place first orders and check results.
+next: [supplier-scorer, spend-savings-finder]

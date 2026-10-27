@@ -5,10 +5,34 @@ description: Plan a Meta app setup with the least access needed, private secrets
 
 # Meta developer app setup planner
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Google Ads developer access checker](https://useaiblocks.com/skills/google-ads-developer-access-setup-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Inputs
 
-- The selected codebase, schemas and service setup
-- The exact change you want and actions you authorize
+- What you need to do: read-only reporting, Ad Library research or changes to ads
+- The Meta app and business account you own, and the ad account to use (hide the IDs in anything you share)
+- Who has access to that ad account today, a person or a system user
+- Your code project, or a short description of the app that will connect
+- What you allow the AI to do: plan only, or also run a read-only test
+- Whether the AI has web access (to check Meta's current permission pages) and a tool that can run files
 
 ## Working rules
 
@@ -24,7 +48,7 @@ Historical examples, thresholds and platform labels are starting assumptions, no
 
 3. Confirm the user or system identity actually has access to the intended ad account and app. Distinguish app permissions from business asset assignment. A token with a scope but no account access must fail clearly rather than widening authority blindly.
 
-4. Create and store authorized credentials in secure settings with an owner, expiry and rotation plan. Do not print tokens, app secrets or personal identifiers in the output. Never install a browser extension just because a source lesson used one.
+4. Plan where the credentials will live: say how the user creates the token in Meta and stores it in their own secure settings, with an owner, expiry and renewal plan. You cannot create or store credentials, and must not claim to. Never ask for or print tokens, app secrets or personal identifiers. Never install a browser extension just because a source lesson used one.
 
 5. Plan or run a minimal authorized read-only identity/account probe using tools present in the selected environment. Confirm any named local script exists before use. Report current permission errors by category and keep requests for additional access specific to the task.
 
@@ -36,7 +60,8 @@ Follow the actual current account/project structure rather than source screensho
 
 ## Output
 
-- A concrete setup or code-change plan with required files
+- A setup plan with six parts: the mode (read-only or changes) and why; the permissions to ask for; the Meta reviews still missing; a redacted map of app, business and ad account; the token plan (owner, expiry, renewal); and a small read-only test with its result or the reason it did not run
 - Missing inputs and a bounded verification plan
+- Next steps: take any missing reviews to the Meta app admin. If calls fail, use "Meta API access troubleshooter". To review the ad account itself, use "Meta Ads 30-check account auditor".
 
 Finish with the evidence used, assumptions, open questions, actions proposed or actually completed, and checks that did not run. Retain the previous approved settings or files so a requested revision can be compared and rolled back.

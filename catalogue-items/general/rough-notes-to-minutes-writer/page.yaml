@@ -15,6 +15,7 @@ not_for:
   - "You need formal board minutes: use the Board minutes drafter."
   - "You want a full set of minutes with every check, or a running list of open actions: use the Meeting minutes, open actions and next agenda."
   - "You need a word-for-word record of the meeting: keep the transcript itself, because minutes leave out most remarks."
+  - "You have a transcript and want the point of the meeting first, then the detail: use the Meeting minutes writer."
 you_give:
   - Rough notes or a transcript
   - Date and who attended (optional)
@@ -61,6 +62,9 @@ output_shape: |-
 
   OPEN QUESTIONS
   - <issue>. Next step: <who, what>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
 tweaks:
   - what: Length
     how: Ask for one paragraph for a quick team post.

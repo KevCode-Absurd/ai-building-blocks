@@ -8,10 +8,11 @@ role: plan
 job: ops
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: []
+next: [week-priority-picker]
 origin: own
 version: 1.0.0
 example_pending: true

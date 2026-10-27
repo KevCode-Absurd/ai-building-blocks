@@ -29,9 +29,11 @@ you_get:
   - Fix applied to the test
   - Repeat-run results showing it is stable
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run commands and read your project, such as Claude Code. Put the whole skill folder in your project, so it can read flaky-taxonomy.md. A chat window cannot run Playwright.
+  - Tell your AI the test file path, the test name, or what goes wrong. Say "Follow the flaky test fixer skill." Add CI logs or traces if you have them.
+  - Let it rerun the test, repeat it, and record a trace. Ask it to name the cause before it edits anything.
+  - Check the diff. A retry is a last resort, added only after the cause is found and only for infrastructure problems. A fix that only adds retries is not a fix.
+  - When the test passes 10 of 10 runs, commit the fix with the trace as evidence and run the full suite in CI. If the flake comes back, send the new trace and run the skill again.
 output_sample:
   input:
     - Your test file path, test name or a short description of the failure
@@ -49,3 +51,4 @@ output_sample:
       contains: The result of repeat runs of the test, to show whether it is now stable.
     - name: Prevention recommendation
       contains: Suggested config and habits to stop the same flake coming back, such as tracing on first retry.
+next: [fix-loop-breaker, bug-root-cause-finder]

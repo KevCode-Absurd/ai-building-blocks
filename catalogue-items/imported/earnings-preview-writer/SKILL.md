@@ -42,7 +42,7 @@ If already installed, skip to the next step.
 
 ## Step 2: Identify the Ticker and Gather All Data
 
-Extract the ticker symbol from the user's request. If they mention a company name without a ticker, look it up. Then fetch all relevant data in one script to minimize API calls.
+Extract the ticker symbol from the user's request. If they mention a company name without a ticker, look it up and confirm the exact ticker with them before you fetch data (several companies share similar names). Then fetch all relevant data in one script to minimize API calls.
 
 ```python
 import yfinance as yf
@@ -100,7 +100,7 @@ The briefing should let the user see the setup at a glance. Cover these five are
 
 ## Step 4: Respond to the User
 
-Open with the headline — the report date and a one-line read of the setup — then the five areas above, using tables where they help. Close with a short read of the overall setup drawn from the estimates, track record, and sentiment, framed as what the street expects rather than a recommendation.
+Keep the brief to about one page (around 600 words). Open with the headline — the report date and a one-line read of the setup — then the five areas above, using tables where they help. Close with a short read of the overall setup drawn from the estimates, track record, and sentiment, framed as what the street expects rather than a recommendation.
 
 Include the caveats that apply: estimates can change until the report date, past beats don't guarantee future ones, Yahoo Finance consensus can lag real-time providers by a few hours, and this is not financial advice.
 

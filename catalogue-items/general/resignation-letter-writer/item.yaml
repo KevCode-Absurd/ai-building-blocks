@@ -1,0 +1,20 @@
+slug: resignation-letter-writer
+name: Resignation letter writer
+summary: Share your role, last day and tone. Get a short resignation letter, what to say first and a handover list.
+category: general
+boards: []
+type: skill
+role: make
+job: email
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - email-draft-reviewer
+  - email-send-readiness-scorer

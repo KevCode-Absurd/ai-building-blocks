@@ -31,11 +31,11 @@ you_get:
   - The most you can pay to win one customer
   - A check of your numbers against typical ranges, which are rules of thumb and not hard rules
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini and paste in this skill.
-  - Say which tool you use, and note that the script needs an AI that can run Python code. If yours cannot, ask it to do the math by hand.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The calculator script needs an AI that can run Python. If yours cannot, it does the math by hand with the same steps.
+  - Say what tool you use, so it can pick the script or the hand math.
   - Paste your price, product cost, shipping, fulfillment and ad spend.
   - Replace the example card fee of 2.9% plus $0.30 with your own plan's rate.
-  - Read the net margin and the max affordable CAC. Treat the benchmark ranges as typical, and compare them with your own data.
+  - Read the net margin and the max affordable CAC. Treat the benchmark ranges as rough rules of thumb with no source, and compare them with your own data.
   - Run it again with a new price or ad spend to find your break-even. Use the max CAC to set your ad budget.
 output_sample:
   input:

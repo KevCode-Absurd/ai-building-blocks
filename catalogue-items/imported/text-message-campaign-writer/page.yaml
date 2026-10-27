@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or file access is needed.
   - Tell your AI your business type, list size, phone number type and how people opt in.
   - "Say your goal: revenue, signups or order updates. Add your country if you sell outside the US."
-  - Read the compliance check first and fix any blockers before you build a flow.
+  - Read the compliance check first and fix any blockers before you build a flow. It is a guide, not legal advice, so confirm the rules with a lawyer or your SMS provider before you send.
   - Load the message copy and timing into your SMS tool.
   - "Know the costs first: you need a paid SMS or WhatsApp account, and US senders must register for 10DLC. Check your provider for current prices."
 output_sample:
@@ -58,4 +58,5 @@ output_sample:
     - name: Measurement plan
       contains: The numbers to track, plus a short list of tests to run.
     - name: Compliance footer
-      contains: The required disclosures and ready-to-use STOP and HELP reply texts.
+      contains: The required disclosures, ready-to-use STOP and HELP reply texts, and a reminder to confirm the rules with a lawyer or your SMS provider.
+next: [email-sequence-writer, email-flow-gap-checker]

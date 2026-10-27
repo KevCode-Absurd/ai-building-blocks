@@ -31,10 +31,10 @@ you_get:
   - Creative brief
   - Measurement plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. This one plans a whole partnership program. To only build a shortlist, use the influencer shortlist builder. To only check one creator's audience, use the creator audience checker. Tools like SparkToro for audience checks are usually paid.
   - Tell your AI what you sell, your price, your audience and your budget.
   - Say which platforms you want, or leave this out and let it suggest some.
-  - Read the plan. Check the creator vetting steps and the disclosure rules first.
+  - Read the plan. Check the creator vetting steps and the disclosure rules first. Treat the pay ranges as rough starting points to negotiate from, not market data.
   - Send the brief and outreach messages to your shortlist, then follow the checklist through to the review.
 output_sample:
   input:
@@ -44,7 +44,7 @@ output_sample:
     - The platforms you care about (optional)
     - Your product marketing notes, if you have them (optional)
   prerequisites:
-    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed. The audience tools it names, such as SparkToro, are optional and usually paid.
   output:
     - name: Finding and vetting partners
       contains: Where to look for creators and the checks to run before you reach out.

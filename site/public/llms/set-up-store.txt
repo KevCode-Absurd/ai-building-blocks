@@ -4,12 +4,12 @@
 
 - [Collections and menu planner](https://useaiblocks.com/skills/collections-and-menu-planner): Plan your store collections and menu: give it your product list and get tags, collections, filters, a short menu and search settings.
 - [Drupal Commerce developer](https://useaiblocks.com/agents/agency-engineering-drupal-shopping-cart): Plan or review a Drupal Commerce store, from products and checkout to payments, tax and orders, with a test list to clear before go-live.
+- [Etsy shop opening planner](https://useaiblocks.com/skills/etsy-shop-opening-planner): Say what you make and who buys it. Get a plan for your Etsy shop: listings, photos, price check and launch steps.
 - [Payments and checkout settings checker](https://useaiblocks.com/skills/payments-and-checkout-settings-checker): Share your store’s payment and checkout settings. Get a custom checklist score, ranked concerns and proposed changes.
 - [Product and variant setup planner](https://useaiblocks.com/skills/product-and-variant-setup-planner): Plan your product variants before you enter them. List what you sell and get a product type, a variant table and a fill-in sheet for each.
 - [Product page answer planner](https://useaiblocks.com/prompts/product-page-doubt-mapper): Share product facts and customer concerns. Get page sections that answer each concern using evidence you have.
 - [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner): Plan your product page sections from buyer doubts. Give it your product and price. You get ordered sections, Shopify settings and proof to collect.
 - [Shipping rate planner](https://useaiblocks.com/skills/shipping-rate-planner): Plan your shipping rates before you enter them. Give it parcels, costs and countries. Get zones, rates and a free-shipping line to set up.
-- [Shipping zone and rate drafter](https://useaiblocks.com/prompts/shipping-zone-and-rate-drafter): Share destinations, parcel details and carrier costs. Get proposed shipping zones, rates, margin checks and checkout test cases.
 - [Shopify Markets setup planner](https://useaiblocks.com/skills/shopify-markets-setup-planner): Plan your Shopify Markets setup: give your countries and payment gateway, get market groups, currency, rounding, catalogs, languages and tax notes.
 - [Shopify product, menu and build planner](https://useaiblocks.com/workflows/plan-your-store-pages-and-get-a-safe-ai-build-plan): Share product facts and buyer questions. Get variant tables, collections, menus, page sections and an AI coding brief.
 - [Shopify store setup planner](https://useaiblocks.com/skills/shopify-store-setup-planner): Plan your Shopify store setup: which plan to start on, payments for your country, domain checks and the order to build in.

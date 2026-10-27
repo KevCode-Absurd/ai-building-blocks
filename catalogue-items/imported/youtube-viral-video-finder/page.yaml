@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Pick five or more channels in your niche. Open each channel's public video list.
   - "Collect at least four videos per channel: the title, views, link and length. Use yt-dlp, copy them by hand, or ask your AI to help."
-  - Paste the skill into a chat with an AI that can run Python code, then add your list. Add a minimum multiple such as 2x if you want one.
+  - Paste the skill into a chat with an AI that can run Python code (Python 3), then add your list. Keep swipe.py in the same folder as collected.json. The command is python3 swipe.py collected.json --min 2.0, and the 2.0 is your minimum multiple.
   - Check the top five and their multiples. Remember the title formula is a guess about the title, not proof of why it worked.
   - "Pick the video you could make this week. Then answer the last question: ship it, or change it?"
   - Read only public pages, never log in. Check YouTube's terms of service and keep your requests few and slow.

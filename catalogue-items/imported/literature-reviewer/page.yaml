@@ -36,6 +36,7 @@ how_to_use:
   - Say whether your AI can search the web. If it can't, paste in the papers or abstracts you have.
   - Check the research question and the include and exclude rules before it screens anything.
   - Open each reference and check it is real before you use the review. Treat any example numbers as placeholders, not findings.
+  - Next, check the references with the Citation and BibTeX fixer and the claims with the Claim fact-checker before you share the review. Note any gaps the review found, and plan what to read next.
 output_sample:
   input:
     - Your research topic or question

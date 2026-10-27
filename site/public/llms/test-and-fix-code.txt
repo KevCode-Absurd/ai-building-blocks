@@ -1,6 +1,6 @@
 # Test and fix code: AI Blocks
 
-> 149 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 148 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility auditor](https://useaiblocks.com/agents/agency-testing-accessibility-auditor): Audit a web page or app for accessibility barriers. Get findings tied to WCAG 2.2, a test plan for keyboard and screen readers, and a fix list.
 - [Agent run evidence auditor](https://useaiblocks.com/skills/agent-run-evidence-auditor): Share logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
@@ -91,7 +91,6 @@
 - [Playwright test writer](https://useaiblocks.com/skills/browser-test-writer): Turn a user story or feature and project code into Playwright tests with error cases.
 - [Postman test pipeline writer](https://useaiblocks.com/skills/api-test-pipeline-writer): Share a Postman collection and build platform. Get a pipeline file to run Newman tests, report results and flag failures.
 - [Production error summarizer](https://useaiblocks.com/skills/production-error-summarizer): Summarize recent production errors from Sentry. Ask what broke and get the top open issues with level, priority and key details in plain words.
-- [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester): Compare a new prompt with your old one on the same test cases. You get a case-by-case report of what got better or worse, and a ship or hold call.
 - [Prototype production readiness planner](https://useaiblocks.com/skills/prototype-to-production-guide): Share a working prototype. Get tests, code cleanup and a staged readiness plan for real users.
 - [Pull request comment repairer](https://useaiblocks.com/skills/review-comment-fixer): Turn the review comments on your open GitHub pull request into a numbered list. Pick which to fix and your AI changes only those.
 - [Pull request repair and approval reviewer](https://useaiblocks.com/workflows/review-a-pull-request-fix-the-comments-and-sign-off): Share the pull request, review comments and code access. Get ranked risks, scoped fixes and a signoff record after a named reviewer approves.

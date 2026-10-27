@@ -17,7 +17,7 @@ when:
   - You need a clear picture of how you differ from rivals.
 not_for:
   - "You only want to tweak the price of one product: work it out with a simple cost and margin sheet instead."
-  - "You already have a finished strategy and want to test it: use the Good strategy bad strategy skill, not this one."
+  - "You already have a finished strategy and want to test it: use the Real strategy checker, not this one."
   - "You need a plan to get a tech product past early buyers: use a go-to-market plan or ask a marketing advisor."
 you_give:
   - Your market and main rivals
@@ -31,11 +31,12 @@ you_get:
   - A score with moves to improve it
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste the full skill text as your first message.
-  - Describe your market, your main rivals and what buyers compare you on.
+  - Describe your market, your main rivals and what buyers compare you on. Check every rival level and cost figure against real prices or product pages. Mark any you are unsure of as estimates, and fix them before you use the canvas.
   - Add your costs and who does not buy in your category, if you know them.
   - Ask for the strategy canvas, the four actions lists and the score.
   - Check that the factors match how buyers really choose. Fix any that are wrong, then ask your AI to redo the lists.
-  - No code, files or web access are needed. The reference files are optional.
+  - No code, files or web access are needed. The skill works from the text you paste. Its reference files add depth for the four actions workshop and the score checks.
+  - Take the top move to reach 10 into a pricing or product brief, and run the score again after each change.
 output_sample:
   input:
     - Your market and your main rivals
@@ -53,3 +54,4 @@ output_sample:
       contains: A score from the five diagnostic questions, with the questions your strategy fails.
     - name: Moves to reach 10
       contains: The specific changes needed to lift your score.
+next: [real-strategy-checker]

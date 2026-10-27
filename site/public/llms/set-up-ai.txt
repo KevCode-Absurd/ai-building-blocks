@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Compare old and new ad prompts with a blind test. Paste both sets of ads. Get a keep-or-switch decision and a score out of 100.
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Check an AI agent action before it runs. Get a review of its scope, approval, risks and missing evidence, with a clear result and reason.
@@ -33,6 +33,7 @@
 - [AI task handover writer](https://useaiblocks.com/skills/task-handoff-writer): Write a task handoff brief for another AI agent: goal, files it owns, limits and a done check. Plus a plan to track its progress.
 - [AI task loop coordinator](https://useaiblocks.com/skills/goal-to-task-loop-runner): Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
 - [AI task opportunity reviewer](https://useaiblocks.com/skills/role-task-breakdown-for-ai-help): Break a job into tasks and find which ones drain or endanger people. See where AI can take the load in a role breakdown, with a person in charge.
+- [AI tool picker](https://useaiblocks.com/skills/ai-tool-picker): Describe the job you want done. Get the kind of AI tool that fits, tools to try first and a backup.
 - [AI workflow quality investigator](https://useaiblocks.com/skills/copilot-diagnose): Check an AI workflow for weak spots before it goes live. Get five scores, the worst problems ranked, and clear fixes for each.
 - [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner): Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
 - [Automation governance planner](https://useaiblocks.com/agents/agency-automation-governance-architect): Decide if a business process should be automated. Get a verdict, the risks, a safe design with fallback and the tests to pass before go-live.
@@ -73,6 +74,7 @@
 - [Project memory organizer](https://useaiblocks.com/skills/project-memory-organizer): Share your project. Get small context files per folder so your AI reads less and costs less.
 - [Prompt and skill improvement tester](https://useaiblocks.com/agents/prompt-and-skill-tuner): Test a prompt or skill against agreed cases. Try one change at a time and keep fixes that avoid regressions.
 - [Prompt change manager](https://useaiblocks.com/skills/prompt-change-manager): Set up prompt versioning, tests and rollback for AI features already live. Get a prompt registry, eval plan and safe deploy steps for your team.
+- [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester): Compare a new prompt with your old one on the same test cases. You get a case-by-case report of what got better or worse, and a ship or hold call.
 - [Prompt editor](https://useaiblocks.com/skills/prompt-improver): Turn a rough request into a clear prompt for any AI. Give it your idea and get a prompt improver result you can paste and use right away.
 - [Prompt fixer](https://useaiblocks.com/skills/prompt-fixer): Fix a prompt that gives vague or uneven answers. Paste it in with one bad reply and get a tighter version that works more reliably.
 - [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review): Check an AI prompt for safety, bias and security risks before you use it. Get a risk report, test ideas and a safer rewritten prompt.

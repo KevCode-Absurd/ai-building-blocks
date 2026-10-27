@@ -35,6 +35,7 @@ how_to_use:
   - Add your weekly visitors and any customer feedback you have. These are optional.
   - Read the ranked problems first. Check that each one matches what you know about your customers.
   - Pick the top test and write down the change, the expected result and the reason before you run it.
+  - Next, run the test, then rewrite the weak sections with Conversion page writer.
 output_sample:
   input:
     - Your page link or screenshots

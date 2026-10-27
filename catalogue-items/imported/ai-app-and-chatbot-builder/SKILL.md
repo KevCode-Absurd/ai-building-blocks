@@ -22,11 +22,11 @@ The most popular framework for building LLM-powered applications.
 - Rapid prototyping of LLM applications
 - Production deployments with LangSmith observability
 
-**Metrics**:
-- **119,000+ GitHub stars**
-- **272,000+ repositories** use LangChain
-- **500+ integrations** (models, vector stores, tools)
-- **3,800+ contributors**
+**Metrics** (the author's rough figures, with no source or date; do not repeat them as fact):
+- 119,000+ GitHub stars
+- 272,000+ repositories use LangChain
+- 500+ integrations (models, vector stores, tools)
+- 3,800+ contributors
 
 **Use alternatives instead**:
 - **LlamaIndex**: RAG-focused, better for document Q&A
@@ -35,6 +35,8 @@ The most popular framework for building LLM-powered applications.
 - **Semantic Kernel**: Microsoft ecosystem
 
 ## Quick start
+
+**Version check:** this code was written for LangChain 0.3. Parts of it (LLMChain, ConversationBufferMemory, RetrievalQA, langchain_core.pydantic_v1, and passing a plain string as the agent prompt) are old or removed in newer releases. Test each example against the current LangChain docs before you rely on it, and replace any call that fails.
 
 ### Installation
 
@@ -139,11 +141,28 @@ result = chain.run(topic="machine learning")
 from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain.tools import Tool
 
-# Define custom tool
+# Define custom tool. Never call eval() on text a model gives you: it can run any code.
+# This parser only allows plain arithmetic.
+import ast, operator
+
+_OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
+        ast.Div: operator.truediv, ast.Pow: operator.pow, ast.USub: operator.neg}
+
+def safe_calc(expression: str) -> float:
+    def walk(node):
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+            return node.value
+        if isinstance(node, ast.BinOp) and type(node.op) in _OPS:
+            return _OPS[type(node.op)](walk(node.left), walk(node.right))
+        if isinstance(node, ast.UnaryOp) and type(node.op) in _OPS:
+            return _OPS[type(node.op)](walk(node.operand))
+        raise ValueError("Only plain arithmetic is allowed")
+    return walk(ast.parse(expression, mode="eval").body)
+
 calculator = Tool(
     name="Calculator",
-    func=lambda x: eval(x),
-    description="Useful for math calculations. Input: valid Python expression."
+    func=lambda x: str(safe_calc(x)),
+    description="Useful for math calculations. Input: an arithmetic expression such as 25 * 17 + 142."
 )
 
 # Create agent with tools
@@ -436,6 +455,8 @@ splitter = SemanticChunker(OpenAIEmbeddings())
 8. **Monitor costs** - Track token usage with LangSmith
 
 ## Performance benchmarks
+
+These times are rough guesses with no source. Measure your own setup.
 
 | Operation | Latency | Notes |
 |-----------|---------|-------|

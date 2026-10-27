@@ -9,14 +9,14 @@ subhead: A promotion that gets sales without teaching customers to wait for a ma
 explain: |
   A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
 
-  The skill first classifies your product as bought for pleasure or for a job, since that changes what works. For pre-orders it picks gift or discount based on how far away the launch is: a gift for three weeks or more, a discount if it is close. It then advises on bundles, free bonus wording, unit caps and urgency, and warns about promo mechanics that backfire. It sticks to promotions, not plain price cuts or everyday pricing.
+  The skill first classifies your product as bought for pleasure or for a job, since that changes what works. For pre-orders it picks gift or discount based on how far away the launch is: a gift for three weeks or more, and a gift or a discount if it is within a week. For the middle range, you split-test the two. It then advises on bundles, free bonus wording, unit caps and urgency, and warns about promo mechanics that backfire. It sticks to promotions, not plain price cuts or everyday pricing.
 when:
   - You are launching a product and want pre-orders.
   - You want a Black Friday hook that is not just 20 percent off.
   - You are deciding whether to offer a free gift or a discount.
   - You need to word a free bonus so it feels like a real prize.
 not_for:
-  - "You only want to size or word a plain price cut: use a discounts guide or work it out yourself, since this tool avoids price cuts."
+  - "You only want to size or word a plain price cut: use the Discount wording planner, since this tool avoids price cuts."
   - "You need to set your everyday price: use a pricing guide or a simple cost-plus check, not a promotion."
   - "You want ad copy for the offer: write the offer here first, then ask a copywriter or your AI for the ad text."
 you_give:

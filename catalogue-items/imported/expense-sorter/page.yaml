@@ -5,7 +5,7 @@ name: Expense sorter
 summary: Sort your card or bank transactions by category, department and tax status. Paste a CSV and get a clean expense list with unsure items flagged.
 job: money-and-investing
 headline: Expense sorter
-subhead: Give it transactions. Get each sorted by category, department and tax treatment. Bring transactions with date, amount and merchant. Use the result to plan your next step.
+subhead: Give it transactions. Get each sorted by category, department and tax treatment. Add your department list. Check the unsure items, then hand the totals to your bookkeeper or accountant.
 explain: |
   A clean list of your transactions, each sorted by category, department and tax treatment, with a flag on anything the skill is unsure about.
 
@@ -54,3 +54,4 @@ output_sample:
       contains: Spend totals by category, department and tax status.
     - name: Items to review
       contains: Transactions the skill is less than 80 percent sure about, listed for you to confirm.
+next: [expense-report-builder, prepare-expenses-for-your-bookkeeper, tax-set-aside-planner]

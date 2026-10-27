@@ -25,10 +25,10 @@ Design how images, video, and downloadable files get stored, processed, organize
 
 ## When NOT to use
 
-- Performance optimization beyond media (use `performance-optimization`)
-- Brand identity or photography direction (use `brand-identity`, `art-direction`)
-- Content production strategy (use `content-strategy`)
-- Single-image optimization (covered in `performance-optimization`)
+- Performance optimization beyond media (use the Web page speed tuner or Page speed fixer in this library)
+- Brand identity or photography direction (a designer or photographer; those skills are outside this library)
+- Content production strategy (outside this library)
+- Single-image optimization (resize it and save it as WebP in a free image tool, or use the Web page speed tuner)
 
 ---
 
@@ -145,7 +145,7 @@ For typical web use:
 
 | Format | Use for | Avoid for |
 |---|---|---|
-| AVIF | Photographs, complex images. Best compression. | Browser support edge cases (rare in 2026, ubiquitous now) |
+| AVIF | Photographs, complex images. Best compression. | Very old browsers (check current browser support before you rely on it) |
 | WebP | Photographs, illustrations. Good compression. Wide support. | Print, archival |
 | JPEG | Photographs (fallback). Universal support. | Sharp-edged graphics, transparent backgrounds |
 | PNG | Sharp-edged graphics, transparent backgrounds, screenshots. Lossless. | Photographs (file size) |
@@ -173,7 +173,7 @@ What assets exist? Where? In what state?
 ### Step 2: Audit performance
 
 For a sample of pages:
-- Image weight per page (target: under 500KB total for marketing pages)
+- Image weight per page (a rule of thumb, not a standard: aim for under about 500KB total for marketing pages, and record the number you measure)
 - Number of image requests
 - Are responsive images used?
 - Are modern formats served?

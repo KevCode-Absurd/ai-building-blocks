@@ -64,7 +64,7 @@ output_sample:
 
 how_it_works:
   - title: Counts your real effort
-    text: Adds up the hours, the skill and the interest you will bring, using what you did over the last year.
+    text: Adds up the hours, the skill and the interest you will bring, using what you did over the last three months.
   - title: Tests your nerve
     text: Asks what you did when prices last fell hard, and what you would do if your holdings halved.
   - title: Sorts you

@@ -5,13 +5,13 @@ job: build-software
 headline: Google bid and budget coding prompt
 subhead: Get a coding brief for Google Ads bid and budget checks, with matched data, business targets and proposed changes.
 explain: |-
-  Share your project and the required feature. Get a coding brief for the bid strategy diagnostic + budget reallocator, with setup and test steps.
+  Changing Google Ads bids and budgets without a clear rule loses money quietly. This prompt gives you a coding brief for two read-only checks: one reviews how each campaign's bid strategy is doing, the other proposes budget moves that keep your total spend the same. Every move is a proposal for a person to review.
 
   The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
 when:
-  - You need a coding brief for the bid strategy diagnostic + budget reallocator.
-  - You need build the bid strategy diagnostic + budget reallocator prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You want your own tool to check Google Ads bid strategies and suggest budget moves.
+  - You want the rules for a budget move written down before anyone codes them.
+  - You want tests that prove the total budget stays the same and no budget goes below zero.
 not_for:
   - Your account has no conversion tracking. Do a manual bid review in Google Ads instead.
   - You want your AI to change bids or budgets in the account. This brief only proposes changes for you to review.
@@ -23,9 +23,10 @@ you_get:
   - A coding brief for the bid strategy diagnostic + budget reallocator
   - Required files, setup gaps and test cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Paste the text of SKILL.md into Claude, ChatGPT or Gemini. Use Claude Code or Codex if you want it to read your project files.
+  - Attach or open your repository, then answer the inputs it asks for: customer ID, date range, currency, ROAS or CPA targets and your spending limit.
+  - Check the brief against your own facts before you use it.
+  - Next: give the brief to a developer or your coding AI. Review every proposed move with the budget owner before anything is changed in Google Ads.
 output_sample:
   input:
     - Your code project, or its schema and file layout

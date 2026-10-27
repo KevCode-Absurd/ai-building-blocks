@@ -26,12 +26,12 @@ you_give:
   - Your price, contents, guarantee and proof
   - The goal for the piece, such as break-even or profit on each send (optional)
 you_get:
-  - Research files of the best passages, each with its source, plus the top past hits and a short list of proof you can give away
+  - Research files of the best passages, each with its source, an angle library of ranked reasons to buy, the top past hits and a short list of proof you can give away
   - The strongest feeling to write to, the events and words behind it, a main theme and the runner-up
   - A section-by-section outline, a pile of headline ideas, a table of claims with their proof, and three options for the headline, deck and lead-in
   - A brief another writer or AI can write the page from
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 3 skill files in the order they run: Copy research file builder, Dominant emotion finder and Sales letter outline planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Share all the product material you have, newest first. It builds the research files.
   - Read the dominant feeling it picks. Leave it a day or two and talk it over with someone before you accept it as the theme.
@@ -48,7 +48,7 @@ output_sample:
     - A brand brain from the Website brand brain builder (optional, makes the result better)
   output:
     - name: "Step 1: Copy research file builder"
-      contains: Best passages sorted by purpose with their sources, proof you can give away, and your top past hits.
+      contains: Best passages sorted by purpose with their sources, the angle library, proof you can give away, and your top past hits.
     - name: "Step 2: Dominant emotion finder"
       contains: The one feeling to write to, the events and words behind it, a main theme and a runner-up.
     - name: "Step 3: Sales letter outline planner"
@@ -61,9 +61,9 @@ how_it_works:
   - title: Build the research files
     text: Reads your material, copies the best passages into files by purpose, and lists proof you can give away and the top past hits.
   - title: Find the dominant feeling
-    text: Takes the research from the step before, lists what the buyer has lived through lately, and names the one fear or desire that is already there.
+    text: Takes the angle library from the step before, lists what the buyer has lived through lately, and names the one fear or desire that is already there.
   - title: Outline the letter
-    text: Takes the research and the chosen theme, plans the whole piece before any copy, and matches each claim to the proof it needs.
+    text: Takes the angle library and the chosen theme, plans the whole piece before any copy, and matches each claim to the proof it needs.
 output_shape: |-
   STEP 1: RESEARCH FILES
     Passages sorted by purpose, each with its source | value note and mini-ad for each bonus | proof you can give away | top past hits and why they worked

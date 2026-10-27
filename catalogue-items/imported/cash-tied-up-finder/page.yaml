@@ -31,7 +31,7 @@ you_get:
   - Where cash is stuck and why
   - Actions to free it
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files, such as a paid plan with data analysis on.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files. Some free plans can and some need a paid plan, so check for data analysis or code execution in your AI's settings.
   - Paste the full text of the skill into a new chat.
   - "Send your spreadsheet first: monthly receivables, stock, payables, revenue and cost of goods for about 24 months."
   - Add your agings and your payment terms list (optional), and say if your sales are seasonal.

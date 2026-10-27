@@ -275,8 +275,8 @@ Use one `<script>` block per schema type.
 
 The `references/` folder contains pre-validated 
 JSON-LD templates for all supported schema types. 
-The script uses these as base structures and 
-populates them with page data.
+You use these as base structures and 
+populate them with page data.
 ````
 references/
 ├── faq-schema.json
@@ -293,8 +293,7 @@ references/
 
 Each template contains all required and recommended 
 fields with placeholder values in this format: 
-`"{{field_name}}"`. The `schema_builder.py` script 
-replaces all placeholders with the values from `page_data`.
+`"{{field_name}}"`. There is no script. You replace all placeholders by hand with the values from `page_data` (see Step 11).
 
 ---
 

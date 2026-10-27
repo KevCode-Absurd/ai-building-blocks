@@ -30,9 +30,11 @@ you_get:
   - Token lifetime and storage rules
   - A list of security gaps to fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
+  - Gather first your framework and version, your sign-in provider (or "none yet"), your list of user types, and where your current login code lives.
+  - Ask your AI to follow this skill. It works through four stages. List the users and sign-in flows. Choose the session or token approach and how long tokens last. Map each role to the routes and data it may reach. Plan where secrets are stored and what gets logged.
   - It works best when your AI can read your project files.
+  - Hand the security gaps list to a developer as tickets. Then test a failed login, a logout, and an old session cookie to confirm each is refused.
 output_sample:
   input:
     - A description of your app and its users

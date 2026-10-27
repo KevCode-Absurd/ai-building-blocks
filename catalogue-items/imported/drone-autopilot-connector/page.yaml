@@ -28,7 +28,7 @@ you_get:
   - Connection code in the right order
   - A running heartbeat timer
   - Confirmation that the client is found
-  - A link ready for reading flight data
+  - A link ready for reading flight data (the skill shows how to subscribe to messages such as GLOBAL_POSITION_INT or ATTITUDE)
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Tell your AI which autopilot you use, PX4 or ArduPilot, and give the IP address and UDP port.
@@ -36,6 +36,7 @@ how_to_use:
   - Run the code in MATLAB. Your AI cannot run it unless it has MATLAB access, so paste any errors back to it.
   - Check that the client list shows more than one row. The extra row is your drone.
   - Test arm commands only in a simulator, or with propellers removed and people clear of the vehicle.
+  - Next, read flight data with the skill's "Subscribing to Specific Messages" pattern. MATLAB is paid software, and the skill's licence allows use only with MathWorks products (see its LICENSE.md).
 output_sample:
   input:
     - Which autopilot you use, PX4 or ArduPilot

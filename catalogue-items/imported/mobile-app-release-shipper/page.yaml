@@ -31,12 +31,12 @@ you_get:
   - A rule for version and build numbers
   - An automated release setup
 how_to_use:
-  - Check costs first. Apple and Google charge for developer accounts, and EAS builds have limits on your plan. Look at the current prices on their sites.
+  - Check costs first. Apple and Google charge for developer accounts, and EAS builds use your Expo plan and have limits. This skill does not check current prices, so look them up on their sites.
   - Open your AI in a tool that can run commands in your Expo project folder. Paste this skill in.
   - Tell your AI your app name, bundle identifier and which stores you want. Sign in to Expo when it asks.
   - Let it set up eas.json and run the production build. Check the build status and the version numbers it used.
   - Before any step that submits to a store, read the command and say yes. Submitting cannot always be undone.
-  - Start with TestFlight or the Google Play internal track. Test the app, then move to public release.
+  - Start with TestFlight or the Google Play internal track. Test the app, then move to public release. At the end you should have a build ID and a submission status for each store.
 output_sample:
   input:
     - Your Expo app folder

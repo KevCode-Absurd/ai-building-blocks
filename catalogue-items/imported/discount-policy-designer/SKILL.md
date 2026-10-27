@@ -95,14 +95,14 @@ All three: stdlib-only, `--help`, `--sample`, `--input <json>`, `--output {markd
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-commercial` or the Commercial orchestrator before the skill runs. Recommended answer + canon citation per question. Never bundled.
+Ask these one at a time in the chat before the skill runs. (No separate orchestrator is needed.) Recommended answer + canon citation per question. Never bundled.
 
 1. **"What's your observed discount distribution across the last 4 quarters — and is the median inside or outside your current matrix?"**
    Recommended: pull the corpus before designing any band. If the observed median is outside the matrix, the matrix is rhetoric.
    Canon: OpenView SaaS Benchmarks; RevOps Co-op playbooks. Anti-pattern AP-2.
 
 2. **"What's the win-rate AND the 12-month NRR for deals at your current 'max discount' band?"**
-   Recommended: both, not one. A band with high win-rate but low NRR is buying logos with leaky-bucket retention. Tunguz benchmarks: top-NRR-quartile companies discount 6 pts less than bottom quartile.
+   Recommended: both, not one. A band with high win-rate but low NRR is buying logos with leaky-bucket retention. A published view (Tomasz Tunguz) is that top-NRR-quartile companies discount less than the bottom quartile. We have not checked the figure, so do not quote a number without a source.
    Canon: Tomasz Tunguz; Bessemer State of the Cloud.
 
 3. **"Who at the company owns the margin floor, AND who owns the discount-band cap — are those the same person?"**

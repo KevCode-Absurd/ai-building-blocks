@@ -39,20 +39,22 @@ Calculates true net profit and margin at both order-level and product-level gran
 
 1. **OPERATION:** `orders` — query
    **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `id`, `name`, `createdAt`, `totalPriceSet`, `subtotalPriceSet`, `totalShippingPriceSet`, `totalTaxSet`, `totalDiscountsSet`, `currentTotalPriceSet`, `displayFinancialStatus`, `refunds { totalRefundedSet }`, `lineItems { variant { id, inventoryItem { id, unitCost { amount, currencyCode } } }, quantity, originalTotalSet, discountedTotalSet }`, pagination cursor
-   **Expected output:** All orders in window with full cost breakdown
+   **Expected output:** All orders in window with full cost breakdown. Keep requesting pages with the `endCursor` until `hasNextPage` is false, so no orders are missed.
 
 2. **OPERATION:** `inventoryItems` — query
    **Inputs:** Batch of `inventoryItemIds` from line item variants for any missing unitCost data
    **Expected output:** Unit cost for each inventory item
 
 3. For each order, calculate:
-   - **Revenue** = `currentTotalPriceSet.shopMoney.amount`
+   - **Revenue** = `totalPriceSet.shopMoney.amount` (the total before refunds, because refunds are taken off once below. Do not use `currentTotalPriceSet`, which already has refunds removed)
    - **COGS** = Σ(lineItem.quantity × variant.inventoryItem.unitCost)
    - **Shipping Cost** = `totalShippingPriceSet.shopMoney.amount` (merchant-paid portion estimate)
    - **Discounts** = `totalDiscountsSet.shopMoney.amount`
    - **Transaction Fee** = estimated at 2.9% + $0.30 of total (configurable)
    - **Refunds** = Σ(refunds.totalRefundedSet.shopMoney.amount)
-   - **Net Profit** = Revenue - COGS - Shipping - Transaction Fee - Refunds
+   - **Tax** = `totalTaxSet.shopMoney.amount` (collected for the tax office, so it is not profit)
+   - **Net Profit** = Revenue - Tax - COGS - Shipping - Transaction Fee - Refunds
+   - If a line item has no unitCost, leave its cost out of COGS, show its profit as "unknown", and list it under unknown costs. Never count a missing cost as zero.
    - **Margin %** = (Net Profit / Revenue) × 100
 
 4. If `group_by: product` or `variant`, aggregate profits by product/variant across all orders
@@ -209,12 +211,13 @@ For product grouping: `product_id`, `product_title`, `vendor`, `units_sold`, `re
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Missing unitCost | Product COGS not set | Flag as "unknown COGS" — include in report but exclude from margin calc |
+| Missing unitCost | Product COGS not set | Flag as "unknown COGS" — list in the report, exclude from margin calc, and do not count as $0 cost |
 | Refunded orders | Fully refunded | Include with $0 net revenue if `include_refunded: true` |
 
 ## Best Practices
 - Populate `inventoryItem.unitCost` on all products for accurate COGS. Without it, margins cannot be calculated.
 - Adjust transaction fee estimate based on your payment processor (default 2.9% + $0.30 matches Shopify Payments US).
 - Use `group_by: product` to identify which products are margin-positive vs. margin-negative.
-- Cross-reference with `stock-velocity-report` to find fast-selling but low-margin items that may need repricing.
-- Use results with `bulk-price-adjustment` to increase prices on margin-negative products.
+- Look for fast-selling but low-margin items that may need repricing.
+- Use results with `bulk-price-changer` to increase prices on margin-negative products.
+- The fee is an estimate, so call the headline figure "estimated net profit", not "true profit".

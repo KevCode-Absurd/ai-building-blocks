@@ -42,6 +42,8 @@ If a ticket reference is provided, look up the full context:
 
 ### 2. Draft the Article
 
+Use only menu paths, button names and on-screen messages that appear in the source material. If the source does not give one, write [check in the product] instead of guessing.
+
 Using the article structure, formatting standards, and searchability best practices below:
 
 - Follow the template for the chosen article type (how-to, troubleshooting, FAQ, known issue, or reference)

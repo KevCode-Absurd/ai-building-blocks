@@ -21,7 +21,7 @@ Use MLflow when you need to:
 - **Collaborate** on ML projects with team workflows
 - **Integrate** with any ML framework (framework-agnostic)
 
-**Users**: 20,000+ organizations | **GitHub Stars**: 23k+ | **License**: Apache 2.0
+**MLflow library licence**: Apache 2.0 (this skill file is MIT, as in the front matter)
 
 ## Installation
 
@@ -655,6 +655,8 @@ curl http://127.0.0.1:5001/invocations -H 'Content-Type: application/json' -d '{
 
 ### Deploy to Cloud
 
+SageMaker and Azure ML need your own paid AWS or Azure account and may cost money. Check prices before you run these commands.
+
 ```bash
 # Deploy to AWS SageMaker
 mlflow sagemaker deploy -m "models:/my-classifier/Production" --region-name us-west-2
@@ -691,7 +693,7 @@ mlflow.set_tracking_uri("http://localhost:5000")
 ## Resources
 
 - **Documentation**: https://mlflow.org/docs/latest
-- **GitHub**: https://github.com/mlflow/mlflow (23k+ stars)
+- **GitHub**: https://github.com/mlflow/mlflow
 - **Examples**: https://github.com/mlflow/mlflow/tree/master/examples
 - **Community**: https://mlflow.org/community
 

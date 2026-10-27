@@ -18,6 +18,7 @@ when:
 not_for:
   - "You need a full reply to an angry customer: ask your AI to draft one from the triage note, then edit it yourself."
   - "The ticket is a contract or legal dispute: send it to your finance lead or a lawyer."
+  - "You have a whole inbox of tickets to sort at once: use the support ticket sorter."
   - "You have no ticket text yet, only a title or a phone call: write down what the customer said first."
 you_give:
   - The ticket text
@@ -34,9 +35,12 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Paste the ticket text under the instructions. Add the plan details, known issues list or routing rules if you have them.
   - Read the category and priority. Check the reason makes sense for your customer.
-  - Check the duplicate line. If you gave no known issues list, it will say it could not check.
-  - Edit the suggested reply, then send it and route the ticket.
+  - Check the duplicate line. If you gave no known issues list or help desk access, the related-ticket and known-issue lines should read "not checked". They should never list tickets your AI cannot see.
+  - The reply times for P1 to P4 are the skill's default targets. Replace them with your own team's targets before you use them.
+  - Edit the suggested reply, then send it and route the ticket. If the customer is upset or the issue is big, hand it on with the escalation brief writer.
+  - This copy is adapted for a plain chat: it has no connector setup, so you paste in what your AI needs.
   - This needs no code and no files. If your AI is connected to your help desk, it can also search past tickets.
+next: [escalation-brief-writer, customer-reply-drafter]
 output_sample:
   input:
     - The ticket text, pasted as the customer wrote it

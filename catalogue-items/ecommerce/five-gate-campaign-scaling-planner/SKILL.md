@@ -5,6 +5,32 @@ description: Check five gates before scaling Meta campaigns. Compare pacing, met
 
 # Five-gate campaign scaling planner
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta campaign growth planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner).
+- The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
+- The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -21,6 +47,8 @@ These working rules control the procedure below. If an example assumes a client,
 # Campaign Scaling Plan
 
 You are a senior media buyer evaluating which campaigns are ready to scale and building a phased scaling plan. You will assess scale-readiness using a 5-point checklist, analyze budget pacing, recommend scaling methods, and identify saturation signals.
+
+The Meta thresholds below (50+ conversions a week, the frequency limits, 14-day windows) are starting assumptions. Check them against the user's own account and the platform's current guidance before acting on them.
 
 ## How This Works
 
@@ -136,7 +164,7 @@ Risk: LOW/MEDIUM/HIGH
 ### Platform Thresholds:
 | Platform | Signal | Threshold | Action |
 |----------|--------|-----------|--------|
-| Meta | Frequency (prospecting) | >4.0 | Stop scale, expand audience |
+| Meta | Frequency (prospecting) | >3.0 (same limit as gate 5) | Stop scaling. Above 4.0, expand the audience |
 | Meta | Frequency (retargeting) | >8.0 | Refresh creative |
 | Google | Impression Share | >80% | Diminishing returns |
 | Google | Search IS Lost (Budget) | <5% | Near-max capture |
@@ -160,6 +188,7 @@ Risk: LOW/MEDIUM/HIGH
 4. Budget Reallocation (source → destination)
 5. Saturation Watchlist
 6. 30-Day Projection (spend + revenue)
+7. Next step: re-run this review with fresh data after the 7-day cycle wait. If no campaign passes, say so and point to a creative test (for example the Meta concept diversity test planner) before any scaling.
 
 ## Rules
 

@@ -13,7 +13,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Scans all active products, collections, and pages and flags records with missing or short SEO titles (`seo.title`) and meta descriptions (`seo.description`). Produces a prioritized list of SEO gaps sorted by traffic potential (products → collections → pages). Read-only — no mutations.
+Scans all active products, collections, and pages and flags records with missing or short SEO titles (`seo.title`) and meta descriptions (`seo.description`). Produces a list of SEO gaps grouped by type (products, then collections, then pages). It does not read sales or traffic data, so it cannot rank by traffic; the user can sort the CSV by product sales themselves. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,read_content`
@@ -44,8 +44,8 @@ Scans all active products, collections, and pages and flags records with missing
    **Expected output:** All collections with SEO fields
 
 3. **OPERATION:** `pages` — query (if `scope` includes pages)
-   **Inputs:** `first: 250`, select `seo { title, description }`, pagination cursor
-   **Expected output:** All pages with SEO fields
+   **Inputs:** `first: 250`, select the metafields `global.title_tag` and `global.description_tag` (pages read their search text from metafields, not the `seo` field, and use API version 2025-04), pagination cursor
+   **Expected output:** All pages with SEO fields. A blank value means no custom search text is set; Shopify may then use the page title, so report it as "check" rather than a sure gap
 
 4. Flag records: missing title, missing description, title < `min_title_length`, description < `min_description_length`
 

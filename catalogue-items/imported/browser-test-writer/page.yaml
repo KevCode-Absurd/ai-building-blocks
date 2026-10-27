@@ -29,11 +29,12 @@ you_get:
   - Page objects or fixtures where they help
   - Cases for the main path and for errors
 how_to_use:
-  - Open your AI tool in a way that lets it read your project files and run code.
+  - Open your AI tool in a way that lets it read your project files and run code. Have your app or dev server running, because the new test is run to check it.
   - Paste the skill instructions into the chat.
   - "Say what to test, for example: user can log in with email and password. You can also give a page, a component file or a feature name."
   - Let it read your Playwright config and existing tests so the new test matches them.
   - Check the test file it writes and the run result. If the test fails, it fixes the test. If the app is at fault, it tells you.
+  - Next, add the test file to your suite, fix any real app bug it found, and read the coverage note before you merge. To review tests you already have, use browser-test-reviewer.
 output_sample:
   input:
     - A user story, page, component file or feature name

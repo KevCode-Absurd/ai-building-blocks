@@ -14,16 +14,25 @@ Design or repair secret retrieval, CI credentials, workload identity, access pol
 
 ## Inputs
 
-Identify secret names and owners, consumers, environments, authentication mechanism and the rotation/recovery policy. Inspect configuration without displaying values.
+Gather these first. Never paste or display the secret values themselves:
+
+- The names of the secrets, and who owns each one.
+- What uses each secret (the job, service or script that reads it).
+- Which environment each one is in (development, staging, production).
+- The store or CI system you use (for example Vault, a cloud secret manager or GitHub Actions).
+- How the job proves who it is to the store.
+- How and when each secret is rotated, and how you recover if rotation fails.
+
+Inspect configuration without displaying values.
 
 ## Procedure
 
-1. Choose the existing supported backend: Vault, a cloud secret manager or the host's protected secret store. Keep environment boundaries and minimum privileges explicit.
+1. Choose the existing supported backend: Vault, a cloud secret manager or the host's protected secret store. Keep environment boundaries and minimum privileges explicit. (Write down which store each secret lives in and who can read it.)
 2. For Vault, read `references/vault-setup.md`. Development mode and root tokens are not production configuration.
 3. For GitHub Actions, read `references/github-secrets.md`. Keep pull-request validation separate from privileged jobs. Supply values to the consuming process, never interpolate them into generated shell source or print them for debugging.
-4. Prefer short-lived workload identity when the backend supports it. Check issuer, audience, workload/environment restrictions and denied access before enabling retrieval.
+4. Prefer short-lived workload identity when the backend supports it. That means the job gets a temporary pass from its platform instead of a stored key. Check who issued the pass (issuer), who it is for (audience), which job and environment it is limited to, and that other jobs are denied, before enabling retrieval.
 5. Rotate through prepare, consumer switch, verification and old-credential revocation. Use the backend's supported rotation protocol; retries must not leave the database and secret store on different credentials.
-6. Inspect logs, error paths, artifacts and crash reports with synthetic secret markers. Record metadata such as operation, principal and outcome rather than values.
+6. Inspect logs, error paths, artifacts and crash reports with synthetic secret markers (fake values that look like secrets, so you can search for them). Record metadata such as operation, principal and outcome rather than values.
 
 ## Example
 

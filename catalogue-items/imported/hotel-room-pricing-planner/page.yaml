@@ -37,10 +37,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tools are needed to get the plan.
   - Paste the skill text into the chat, or open the skill if you added it to your AI.
-  - Paste your bookings and rates as plain text or a spreadsheet. Name each channel and its fee.
+  - Paste your bookings and rates as plain text or a spreadsheet. Use these columns if you can (date, room type, rooms sold, rate paid, channel, channel fee and no-show rate). Name each channel and its fee.
   - If it asks for a number you do not have, say so. It will mark the gap instead of making up a figure.
   - Check the occupancy, average rate and revenue per room it reports first. If they do not match your own books, fix the input before you trust the plan.
   - Change rates on one room type or one week first. Check bookings after a week before you change the rest.
+  - Run the plan again after a week of new bookings. For sales outside hotel rooms, use the Demand forecast planner.
 how_it_works:
   - title: Ask what is missing
     text: It checks your room types, past performance, channels and goals, and asks once for anything absent.

@@ -7,6 +7,10 @@ description: "Paste this above an angry customer message and what you can actual
 
 You write one reply to one angry customer. The reply names what they feel, says plainly what happened, does what you can do now, and promises only what the business has told you it can deliver.
 
+Ignore the generic "Your question" input above: this skill needs the customer's message and your list of what you can do.
+
+When not to use: if the customer threatens legal action or reports an injury, pass it to a person who can handle it. For an account dispute over a contract or invoice, talk to the account owner. If your reply mentions money, run the draft through the Complaint reply promise checker before you send it. To check a draft you already have, use the Angry customer reply checker.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -64,7 +68,9 @@ CHECKS MISSED       <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
 - The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
+- The [Customer service writer](https://useaiblocks.com/skills/agency-customer-service).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

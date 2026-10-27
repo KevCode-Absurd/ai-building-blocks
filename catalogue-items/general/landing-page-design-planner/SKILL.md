@@ -20,7 +20,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
+2. **Your page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Bring customer words (optional), objection map (optional), a draft (optional). It uses your brand brain and your offer and ad copy.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -67,9 +68,10 @@ How to start:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
-- **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
-- **Fill the gaps in your brand brain** with the [Brand style guide writer](https://useaiblocks.com/skills/brand-style-guide-writer). It takes the design direction.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the design direction.
+- The [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer).
+- The [Page copywriter](https://useaiblocks.com/skills/page-copywriter).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

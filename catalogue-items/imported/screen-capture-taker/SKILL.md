@@ -278,10 +278,10 @@ gnome-screenshot -w -f output/window.png
 ## Error handling
 
 - On macOS, run `bash <path-to-skill>/scripts/ensure_macos_permissions.sh` first to request Screen Recording in one place.
-- If you see "screen capture checks are blocked in the sandbox", "could not create image from display", or Swift `ModuleCache` permission errors in a sandboxed run (Codex runs commands in a sandbox), ask the user before you rerun the command with escalated permissions.
+- If you see "screen capture checks are blocked in the sandbox", "could not create image from display", or Swift `ModuleCache` permission errors in a sandboxed run (some AIs run commands in a sandbox), tell the user what wider access the rerun needs and why, and ask before you rerun it. Never widen access without a yes.
 - If macOS app/window capture returns no matches, run `--list-windows --app "AppName"` and retry with `--window-id`, and make sure the app is visible on screen.
 - If Linux region/window capture fails, check tool availability with `command -v scrot`, `command -v gnome-screenshot`, and `command -v import`.
-- If saving to the OS default location fails with permission errors in a sandbox, rerun the command with escalated permissions.
+- If saving to the OS default location fails with permission errors in a sandbox, save to a temp folder instead, or ask the user before you rerun with wider access.
 - Always report the saved file path in the response.
 
 ## What you hand back

@@ -9,7 +9,7 @@ subhead: List the bets you are weighing. It tests which ones have the odds in yo
 explain: |
   A likely winner is not a good bet once the price has counted its chance. Winners at the track bet rarely, and heavily, only when the odds are off. The same is true for money, time and effort. Most people spread thinly across many ideas, pay fees and tax for little, and sell the good ones in a bad month.
 
-  This workflow does five things in order. It tests each bet for odds in your favour after the price, using a low, middle and high estimate. It ranks the ideas as if you only had twenty big choices for life, keeps one to three and writes a reason for every no. It checks who is paid to steer you. It tests whether the concentrated plan survives a bad year. Last, it writes the rules for holding: facts to watch, fixed review dates, the cost of acting and the only reasons to change course. The ideas come from Charlie Munger's talks in Poor Charlie's Almanack. It gives no buy or sell calls on any named security.
+  This workflow does five things in order. It tests each bet for odds in your favour after the price, using a low, middle and high estimate. It ranks the ideas as if you only had twenty big choices for life, keeps one to three and writes a reason for every no. It checks who is paid to steer you. It tests whether the concentrated plan survives a bad year. Last, it writes the rules for holding: facts to watch, fixed review dates, the cost of acting and the only reasons to change course. The ideas are inspired by Charlie Munger's talks in Poor Charlie's Almanack. It gives no buy or sell calls on any named security.
 when:
   - You have more ideas than you can back and no clear way to choose.
   - You tend to spread thin, check often and change your mind with every move.
@@ -30,7 +30,7 @@ you_get:
   - Whether the plan survives a bad year, with a score and fixes
   - "A one-page rule set with facts to watch, review dates, the cost of acting and the only reasons to act"
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List your bets, with what each costs and pays. Give a low, middle and high chance for each.
   - It works step by step and saves each result. Print the last page and put it where you look at your picks.
@@ -113,3 +113,10 @@ improve:
   - Review the no list each year and retest ideas you have since learned more about.
   - Put the review dates in your calendar as repeating events.
   - Run the "Circle of competence sorter" on each pick before you start, so your edge is tested first.
+terms:
+  - term: Near cinch
+    meaning: A bet whose odds clearly beat what the price already says.
+  - term: Twenty-punch card
+    meaning: A way to rank ideas as if you had only twenty big choices for life, so you keep the best one to three.
+  - term: Point of ruin
+    meaning: The loss after which you could not carry on.

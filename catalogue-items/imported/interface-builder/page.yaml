@@ -37,6 +37,7 @@ how_to_use:
   - Read the tokens first, then the components. Ask for changes before you copy the code.
   - Test with the Tab key only, then run an accessibility checker and a contrast check. Fix any failures before release.
   - Running the code and viewing it in a browser needs your own project or a tool that can run code.
+  - You get code files for each component and a tokens file. The example code is React with Tailwind, and other frameworks follow the same tokens. Paste the code into your project, run the Tab-key and contrast checks, then pair it with a backend or coding tool to connect your data.
 output_sample:
   input:
     - A description of the screens or components you need

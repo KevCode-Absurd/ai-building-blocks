@@ -20,7 +20,7 @@ not_for:
   - "You have only one sample per group, or cells and lanes from one donor: get more donors first, since this needs true biological replicates."
   - "You only have TPM, FPKM or log values: go back to the raw integer counts, because this skill cannot use them."
 you_give:
-  - A raw counts table, samples by genes
+  - A raw counts table. The skill's script expects genes in rows and samples in columns by default. If yours has samples in rows, tell your AI to use --no-transpose
   - A sample sheet with group labels
   - The comparison to test
   - Covariates such as batch (optional)
@@ -31,9 +31,12 @@ you_get:
   - Volcano and related plots
   - Input checks and a note on what was excluded
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run code. Download the skill folder and add it to your AI tool. A plain chat cannot run the script.
+  - Install Python 3.11 or newer, then PyDESeq2 version 0.5.4, in a fresh environment.
+  - Put your counts file and your sample sheet in one folder. Each file needs sample or gene names in its first column.
+  - Ask your AI to run the script with your counts, your sample sheet, your design (for example batch plus condition), the comparison to test (for example treated against control) and an output folder.
+  - Read the input checks first. Then open the corrected p-values and the plots.
+  - Next, report the excluded samples and genes from the manifest with your results. To find which pathways your changed genes share, pass the signed Wald statistic from deseq2_results_unshrunken.csv to a ranked enrichment tool.
 output_sample:
   input:
     - Your raw counts table, one count per gene and sample
@@ -58,3 +61,4 @@ output_sample:
       contains: The comparison, cutoff, shrinkage coefficient and software versions used in the run.
     - name: Volcano and MA plots
       contains: Two PNG plots of the results, made only when you ask for plots.
+next: [gene-list-pathway-finder]

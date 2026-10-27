@@ -25,10 +25,8 @@ you_give:
   - Who took part
   - What went wrong or slowed you down (optional)
 you_get:
-  - A completed review document
-  - Root causes for each problem
-  - Action items with owners and dates
-  - Entries for a learnings log
+  - A review file with what went well, what went wrong, the root cause of each problem, and action items with owners and dates
+  - A learnings log file with short entries, each marked as a template, checklist, reference page or team habit
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
   - Paste your project name, scope, timeline and original plan.
@@ -36,6 +34,7 @@ how_to_use:
   - Ask your AI to run the review. Set 30 minutes for one person or 60 for a team.
   - Check each root cause. It should explain the problem, not just repeat it.
   - Give every action an owner and a date. Save the lessons you will reuse in your log.
+  - Next, send the actions to their owners and put the review in your team's shared folder. Check progress at your next team review.
 output_sample:
   input:
     - Your project name, scope and timeline
@@ -49,3 +48,4 @@ output_sample:
       contains: What went well, what went wrong, the root cause of each problem, and action items with owners and due dates.
     - name: learnings_log_template.md
       contains: Short entries for lessons worth reusing, each marked for a template, checklist, reference page or team norm.
+next: [sprint-retro-facilitator, lessons-learned-note-writer]

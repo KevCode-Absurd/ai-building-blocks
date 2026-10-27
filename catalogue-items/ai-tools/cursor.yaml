@@ -27,7 +27,7 @@ not_for:
 pricing:
   model: freemium
   from: US$8 per month
-  note: Free plan, then Plus (US$8), Premium (US$30), Super (US$100) and Ultra (US$200) per month. Plus covers Grok models only, so check which models each plan includes. Teams start at US$30 per user.
+  note: Free plan, then Plus (US$8), Premium (US$30), Super (US$100) and Ultra (US$200) per month. The vendor's page lists only Grok models under Plus, so the OpenAI, Anthropic and Google models above may need a higher plan. Check which models each plan includes before you pay. Teams start at US$30 per user.
 works_with:
   - claude
   - chatgpt
@@ -45,6 +45,23 @@ blocks:
   - slow-code-speeder
 alternatives: [claude-code, github-copilot, windsurf, codex]
 last_checked: 2026-10-21
+first_result:
+  - "Download Cursor from cursor.com and open a project folder that is saved with git. We did not check the install steps."
+  - "Sign in. The free plan lets you try it. Check which AI models your plan includes before you pick one."
+  - "Open the agent chat and describe one small change. Ask it to show its plan first."
+  - "Read the plan, then let it edit. Read each changed file before you accept it."
+  - "Run your tests. If something breaks, ask the agent to fix it, or undo the change in git."
+  - "You end with edited files in your project. Save your project rules in a file so the agent follows them next time."
+  - "Next: write that rules file with the AI coding agent rules writer, and set up context with the Agent context setter."
+needs:
+  - "A computer where you can install an editor."
+  - "A code project, saved with git."
+  - "One small task, written as what should change."
+  - "A plan that includes the AI models you want to use."
+not_verified:
+  - "Install steps and where the agent chat sits in the editor."
+  - "Which models each plan includes. The Plus note names Grok models only."
+  - "How much use each plan allows before limits."
 sources:
   - https://cursor.com/pricing
   - https://cursor.com

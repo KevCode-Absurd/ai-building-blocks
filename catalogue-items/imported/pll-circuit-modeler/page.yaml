@@ -35,6 +35,7 @@ how_to_use:
   - Answer its questions. It asks one at a time.
   - Let it build and run the model. This needs an AI that can run MATLAB with Simulink and the Mixed-Signal Blockset.
   - Check the stability result first, then the lock time and phase noise. Ask it to tune the model if a target is missed.
+  - Take the phase noise and lock time numbers to a hardware engineer and compare them with bench measurements before you rely on the model.
 output_sample:
   input:
     - Your PLL datasheet (optional if you have system targets)
@@ -61,3 +62,4 @@ output_sample:
       contains: Lock time and final frequency read from the PLL Testbench after the simulation.
     - name: Phase noise check
       contains: Phase noise levels compared with your target or the datasheet, covered in the companion guide.
+next: [rf-system-modeler]

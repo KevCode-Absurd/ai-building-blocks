@@ -32,8 +32,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. It needs no code, files or paid tools.
   - Describe your screen or product in a few lines, or attach a screenshot.
   - Say the task users are trying to do. Add complaints or support questions if you have them.
-  - Ask your AI to review it with this skill.
-  - Read the score and the failing checks first. Then pick the fixes that match your top complaints.
+  - Ask your AI to list the task, walk each step through the seven stages of action, and mark each of the five checks pass or fail.
+  - Read the score and the failing checks first. Then pick the fixes that match your top complaints. This is an MIT-licensed skill imported from Wondel.ai, adapted from wondelai/skills.
 output_sample:
   input:
     - A description or screenshot of your product or screen

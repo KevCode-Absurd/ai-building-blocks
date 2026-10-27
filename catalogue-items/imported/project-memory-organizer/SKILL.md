@@ -97,6 +97,8 @@ Run "HAM savings" to see your token and cost savings.
 
 ### Example 2: Checking savings
 
+The numbers below are an illustration of the layout, not measured results. Real savings depend on your project and your AI provider's prices. Show estimates as estimates.
+
 ```
 User: ham savings
 

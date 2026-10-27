@@ -19,6 +19,7 @@ not_for:
   - "You want a standard transmission line, filter or coupler: use the matching catalog design skill in PCB Toolbox, not a custom build."
   - "You have a Gerber, ODB++ or Allegro file to open: import it with the PCB Toolbox file reader instead."
   - "You only need to define substrate or metal materials, or run EM analysis on a finished board: do that step directly in MATLAB."
+  - "You do not have MATLAB: the skill's licence lets you use it only with MathWorks products (see its LICENSE.md), and MATLAB with the Antenna or PCB Toolbox is paid software."
 you_give:
   - A description or sketch of the shape
   - Substrate and conductor details
@@ -42,7 +43,7 @@ output_sample:
     - Feed type and where each feed sits
     - Dimensions and layer order (optional if the sketch shows them)
   prerequisites:
-    - MATLAB with the Antenna Toolbox or PCB Toolbox
+    - MATLAB with the Antenna Toolbox or PCB Toolbox (paid MathWorks licence)
     - Your substrate and conductor set up first
   output:
     - name: Layers and board shape

@@ -36,6 +36,9 @@ how_to_use:
   - Write your goal in one line, such as leads or sales, plus the target number if you have one.
   - Open Claude, ChatGPT or Gemini. Paste the skill, then paste or upload your exports, period and goal. No code is needed.
   - Check the report first. Any metric you did not supply should read 'not provided', not a guess. Then pick the top recommendation to act on.
+next:
+  - marketing-performance-report
+  - marketing-plan-writer
 output_sample:
   input:
     - Exports from your analytics and ad tools, such as Google Analytics, search console and ad accounts

@@ -47,6 +47,7 @@ first_result:
   - "Write the job in one or two sentences, such as: when a new HubSpot lead arrives, research the company and post a summary in Slack."
   - "Connect only the apps the job needs, such as HubSpot and Slack. Sign in to each when asked."
   - "Run the agent once on one test record. Open the result in Slack, check it against the lead, and fix the task wording before you switch on a trigger."
+  - "You end with a short message in Slack for each record, and an agent you can share with your team. Next: if your steps never change, compare Zapier or Make. For a similar assistant, see Lindy."
 needs:
   - "A Gumloop account on a plan that includes agents. We could not confirm which plan."
   - "Access to each app you want it to use, such as Slack or Gmail. A company may need IT to approve it."

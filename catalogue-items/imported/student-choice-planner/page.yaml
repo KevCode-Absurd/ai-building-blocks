@@ -32,12 +32,15 @@ you_get:
   - Your changing role at each stage
   - Common pitfalls to avoid
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page's download.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or copy the skill text from this page and paste it in.
   - Type the task students do now, their year level, and how much say they have today.
   - Add the subject and learning goal if you have them. Add notes on certain students if it helps (optional).
   - Send it. No code, files or paid tools are needed.
   - Read the choices and safety nets. Cut any step that does not fit your class.
   - Start with the first step only. Check how students cope before you release more.
+  - The four release levels are the skill author's own model, built on research on student agency. They are not a finding from those papers, so adjust them to your class.
+  - Next, use the low motivation task redesigner for students who stay stuck, and the motivation designer for the wider plan.
+next: [low-motivation-task-redesigner, motivation-designer]
 output_sample:
   input:
     - The task students do now

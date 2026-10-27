@@ -266,8 +266,15 @@ pipe = StableDiffusionControlNetPipeline.from_pretrained(
     torch_dtype=torch.float16
 ).to("cuda")
 
-# Use Canny edge image as control
-control_image = get_canny_image(input_image)
+# Use Canny edge image as control.
+# get_canny_image is not a library function: you supply the edge-map step. A simple version:
+import cv2, numpy as np
+from PIL import Image
+def get_canny_image(img):
+    edges = cv2.Canny(np.array(img.convert("RGB")), 100, 200)
+    return Image.fromarray(np.stack([edges] * 3, axis=-1))
+
+control_image = get_canny_image(input_image)  # input_image is your PIL photo
 
 image = pipe(
     prompt="A beautiful house in the style of Van Gogh",

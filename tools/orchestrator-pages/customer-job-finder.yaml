@@ -9,7 +9,7 @@ subhead: Describe what you sell and when people buy it. It plans a day of watchi
 explain: |
   Asking buyers what they want and profiling who they are often leaves you with nothing to act on. A profile says who bought. It doesn't say what they were trying to get done, or what else they could have chosen.
 
-  This workflow plans how to find the job behind the purchase. It sets up a day at the place of purchase, quick questions for buyers on their way out and interviews with people who switched to you in the last year. You hold the interviews and keep each person's words. Then it marks up those words, tags each phrase by how strong the reason is, counts separate people and ranks the reasons. The first half follows the milkshake study described by Clayton Christensen and his co-authors in "Know Your Customers' Jobs to Be Done".
+  This workflow plans how to find the job behind the purchase. It sets up a day at the place of purchase, quick questions for buyers on their way out and interviews with people who switched to you in the last year. You hold the interviews and keep each person's words. Then it marks up those words, tags each phrase by how strong the reason is, counts separate people and ranks the reasons. The order of the two steps follows "Know Your Customers' Jobs to Be Done" by Clayton Christensen and others.
 when:
   - You know who buys, but not what they are trying to get done when they buy.
   - Sales are flat and you suspect you are marketing to the wrong reason.
@@ -24,7 +24,7 @@ you_give:
   - Product facts (optional)
   - Reviews or notes, word for word (optional)
   - Time to watch buyers for a day and interview several people who switched to you
-  - The interview answers, with each customer's own words
+  - The interview answers, one block per person with an ID, a date and their exact words
   - Your brand file (optional)
 you_get:
   - A plan for a day of watching buyers, with a log sheet
@@ -69,11 +69,11 @@ how_it_works:
   - title: Writes the questions
     text: Writes exit questions for buyers on their way out and an interview plan for people who switched to you in the last 6 to 12 months.
   - title: Waits for the interviews
-    text: You watch, ask and keep each customer's own words. Nothing more runs until you bring them back.
+    text: You watch, ask and keep each customer's own words, with an ID and a date for each person. Nothing more runs until you bring them back.
   - title: Marks up the words
     text: Marks up the phrases in the answers instead of summarising them, and tags each by how strong the reason is.
   - title: Counts and ranks
-    text: Counts separate people, ranks the reasons and pairs each with its best exact quote.
+    text: Counts separate people, ranks the reasons and pairs each with its best exact quote. A reason said by fewer than 5 people, or from one kind of source, is marked thin, not called a pattern.
 output_shape: |-
   STEP 1: CUSTOMER JOB INTERVIEW PLAN
     Frame: <what you want to learn> | why profiles will not answer it

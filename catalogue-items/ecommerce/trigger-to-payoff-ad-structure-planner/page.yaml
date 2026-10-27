@@ -5,9 +5,9 @@ job: plan-ad-tests
 headline: Trigger-to-payoff ad structure planner
 subhead: Give it your product, your buyer and where the ad sits in the funnel. It works out the trigger, emotion, evidence and payoff. You get an ad brief with a video timeline or a static layout.
 explain: |-
-  Build an ad around trigger, emotion, evidence and payoff. Place each part in a video timeline or image layout.
+  A strong ad does four jobs. It opens on the moment the buyer notices a problem (trigger), makes them feel it (emotion), shows proof (evidence) and states the result they get (payoff).
 
-  Share buyer trigger, product facts, approved proof, format and length. Get a four-part ad structure with timing or layout notes.
+  This skill picks each of the four from your product facts and buyer, then places them in a video timeline, a static layout or a carousel. It lists the proof you have and the proof you still need. It never makes proof up.
 when:
   - You are planning a new video, static or carousel ad and need a clear structure.
   - You have a product and buyer but do not know what the ad should open with.
@@ -17,6 +17,7 @@ not_for:
   - "You want brand awareness with no proof to show: the planner flags weak evidence as a brand problem, so fix the proof first or talk to your client."
   - "You need a finished script or final copy: ask your AI to write it from the brief once you have approved it."
   - "You need a media buying or budget plan: use a person or tool that handles ad spend, because this brief has no budget or targeting."
+  - "You need a shot-by-shot video list: use the Video ad shot list maker once the brief is approved."
 you_give:
   - Your product and a one-sentence description
   - Your audience
@@ -54,20 +55,18 @@ output_sample:
       contains: What you need to make the ad. Cost lines need your own quotes.
 how_it_works:
   - title: Check the inputs
-    text: Confirm buyer trigger, product facts, approved proof, format and length. Mark facts that are missing.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Work Through Each Element
-    text: Follow the work through each element section in the full method and keep its required fields and decision rules.
-  - title: Ad Structure By TEEP Element
-    text: Follow the ad structure by teep element section in the full method and keep its required fields and decision rules.
-  - title: Deliver the Brief
-    text: Follow the deliver the brief section in the full method and keep its required fields and decision rules.
-  - title: "TEEP Ad Brief: [concept]"
-    text: "Follow the teep ad brief: [concept] section in the full method and keep its required fields and decision rules."
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a four-part ad structure with timing or layout notes. Check facts, math and the decisions before any action.
+    text: Confirm your product, buyer, funnel position and any existing ad. Mark facts that are missing.
+  - title: Pick the trigger
+    text: Choose one to three moments that make your buyer notice the problem, from your own facts.
+  - title: Pick the emotion
+    text: Choose the one or two feelings your buyer shows at that moment.
+  - title: List the proof
+    text: Note what proof you have and what is missing. Weak proof is flagged as a brand problem.
+  - title: Name the payoff
+    text: One main outcome and one or two smaller ones.
+  - title: Place the four parts
+    text: Put each part in a video timeline from hook to call to action, a static layout or a carousel.
+  - title: Write production notes
+    text: List what is needed to make the ad. Cost lines need your own quotes.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

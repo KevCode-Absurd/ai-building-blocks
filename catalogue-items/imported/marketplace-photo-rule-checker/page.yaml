@@ -30,11 +30,13 @@ you_get:
   - A batch summary
 how_to_use:
   - Open an AI that can run Python code on your computer. Install the Pillow image library first.
+  - The skill file is written in Chinese. Your AI can read it, and you can ask it to reply in English.
   - Copy the skill into your AI, or upload the skill folder with its scripts.
   - Give it your photo or folder and name the platform you sell on.
   - Read the pass or reject list first. Fix content problems such as text or watermarks yourself.
   - Ask for the fix option to get new copies in a separate folder. Your originals stay as they are.
   - Check the store's current seller image guide before you upload, since platform rules change.
+  - The size and fill limits in the rule table have no check date. Confirm each one in the store's own seller image guide. Other skills named in the file, such as watermark removal, are not included.
 output_sample:
   input:
     - One product photo or a folder of photos

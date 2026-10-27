@@ -5,11 +5,11 @@ name: Company health scorer
 summary: Score your company health across eight areas with a clear colour for each. See which problem to fix first and which numbers are missing.
 job: lead-people
 headline: Company health scorer
-subhead: Use the same stated thresholds for every company stage; flag unknown inputs instead of guessing.
+subhead: Give it your stage and key numbers from each team. It scores eight areas green, yellow or red against stated thresholds for your stage. Unknown inputs are flagged, not guessed. You get the numbers behind each colour and a list of what to fix first.
 explain: |
   A traffic-light score for your company across eight areas, so you see which problem to fix first instead of guessing. Each area is judged against stated thresholds, not a feeling.
 
-  The areas cover money, revenue, product, engineering, people, operations, security and market. For each one, Claude uses a few key measures and a green, yellow or red band. Runway under six months is red. Net revenue retention under 100 percent is red. Burn compared to new revenue and customer concentration get the same treatment. You can paste numbers, answer questions, or run the bundled Python script for a guided score. You can also ask for one area only and go deeper there.
+  The areas cover money, revenue, product, engineering, people, operations, security and market. For each one, Claude uses a few key measures and a green, yellow or red band. Runway thresholds depend on your stage. For example, runway is red under 12 months at Seed and under 6 months at Series A and B. Net revenue retention under 100 percent is red. Burn compared to new revenue and customer concentration get the same treatment. You can paste numbers, answer questions, or run the bundled Python script for a guided score. You can also ask for one area only and go deeper there.
 when:
   - You want one view of how the whole company is doing, not just revenue.
   - A board or investor meeting is coming and you need to know your weak spots.
@@ -34,7 +34,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill. Then paste your stage and numbers. Missing numbers are fine, they are marked as data needed.
   - Or run the Python scorer if your AI can run code. It asks for each metric and prints the scored dashboard.
   - Read the dashboard. Check each colour against the number and threshold shown beside it.
-  - Start with the top priorities. Save the result and run it again next quarter to compare.
+  - Start with the top priorities. Give each one an owner and a date.
+  - Save the result and run it again next quarter to compare.
 output_sample:
   input:
     - Your company stage, such as Seed or Series A

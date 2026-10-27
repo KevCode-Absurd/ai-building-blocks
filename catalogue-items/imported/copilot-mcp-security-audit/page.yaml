@@ -12,11 +12,13 @@ not_for:
   - "You want proof a package is safe: ask your security person to review the code, because this only flags loose version rules."
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Paste your .mcp.json file, or upload it if your AI takes files. Remove real keys first if you can.
+  - Before you paste, replace every real key, token and password in the file with a placeholder such as ${API_KEY}. Never paste live secrets into a chat.
+  - Paste your .mcp.json file, or upload it if your AI takes files.
   - Ask your AI to audit the file and list findings from critical to low.
   - Fix the critical and high items first. Move secrets into environment variables.
   - Pin each package to a version your team has reviewed, then paste the file again to confirm it is clean.
-  - Your AI only reads the file. It does not need to run code, and it should never run the commands inside.
+  - Your AI only reads the file. It does not need to run code, and it should never run the commands inside. The Python blocks in the skill are reference logic for your AI to read and reason from. They are not code for you to run.
+  - This check reads static text only. It does not confirm that a package is safe.
 output_sample:
   input:
     - Your .mcp.json file, pasted in or uploaded

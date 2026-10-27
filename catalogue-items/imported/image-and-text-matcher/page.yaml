@@ -35,6 +35,7 @@ how_to_use:
   - Check the scores. Use clear, descriptive labels, because vague ones give weak results.
   - For moderation, treat the scores as a way to pick pictures for a person to review. Do not use them to block pictures on their own.
   - For a large photo set, save the picture data in a vector database so you can search it again fast.
+  - Send flagged pictures to a person for review, or save the match scores in a spreadsheet. Check a sample of low and high scores before you act on them.
 output_sample:
   input:
     - Your pictures, or a folder of pictures

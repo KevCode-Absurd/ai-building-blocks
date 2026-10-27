@@ -21,6 +21,7 @@ not_for:
   - "You have a one-off bug to fix or a single loud customer: use a simple bug list or talk to that customer directly."
   - "You need to fit the yes items into a launch date: use the Launch scope cutter after this."
   - "You have no product vision written down yet: write one or two sentences first, because the vision test depends on it."
+  - "You want a quick first pass with fewer checks: use the Yes-later-no request sorter."
 
 you_give:
   - The request list, with who asked and when
@@ -145,3 +146,4 @@ terms:
     meaning: A cost of a feature beyond building it, such as help text, a tour, copy, terms or a promise to keep.
   - term: Repeat request
     meaning: A request that comes from different people at different times, not the same person asking again.
+next: [launch-scope-cutter]

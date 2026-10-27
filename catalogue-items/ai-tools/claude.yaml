@@ -21,7 +21,7 @@ best_for:
   - Owners who want to add reusable skills to their assistant.
   - Writing and fixing code in the same account.
 not_for:
-  - Drawing pictures, since it does not make images on its own.
+  - Drawing pictures, since it does not make images on its own. Use ChatGPT or Gemini for that.
   - Heavy daily use on the free plan, which has usage limits.
 pricing:
   model: freemium
@@ -43,5 +43,20 @@ blocks:
   - session-credit-reviewer
 alternatives: [chatgpt, gemini, perplexity, microsoft-copilot]
 last_checked: 2026-10-21
+first_result:
+  - "Go to claude.ai and sign up for the free plan. Heavy daily use needs a paid plan."
+  - "Upload one document you know well, such as a policy or a report. Ask for a summary in five bullets."
+  - "Check the bullets against the document. Ask it to fix what is wrong or missing."
+  - "Then give it a task of your own, such as a first draft. Paste a sample of your writing so it can match your voice."
+  - "You end with text you can copy, or a document, slide deck or small app you can open and edit."
+  - "Next: get more from it with the Claude power-user coach, or build a small tool with the Claude app builder."
+needs:
+  - "A Claude account. Free works to start."
+  - "One task, and the file or notes it should work from."
+  - "A sample of your own writing, if you want it to match your voice (optional)."
+not_verified:
+  - "How much the free plan allows each day."
+  - "Where each setting sits in the app. Menus change often."
+  - "Which skills work in which place you use Claude."
 sources:
   - https://claude.com/pricing

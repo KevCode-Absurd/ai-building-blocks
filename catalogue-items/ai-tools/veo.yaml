@@ -43,6 +43,19 @@ blocks:
   - wordless-video-ad-opening-writer
 alternatives: [kling, runway, seedance]
 last_checked: 2026-10-21
+first_result:
+  - "Pick where to run it: Gemini, Google Flow or the Gemini API. Gemini and Flow need a Google AI plan. The API is paid per second of video."
+  - "Write the clip in one paragraph. Say who or what is in it, what happens, the camera view and the sound you want. Or upload a still image, such as a product photo, to start from."
+  - "Generate one clip and watch it with sound on. Check the product, the hands and any words on screen. On-screen text often comes out wrong."
+  - "Change one thing at a time in the prompt and generate again."
+  - "Save the best clip. Add text, a logo and a voice-over in a video editor, then check the result on a phone. For a longer ad, join several clips there."
+needs:
+  - "A Google AI plan (Plus, Pro or Ultra) for Gemini and Flow, or a Gemini API key for developers. Plans have usage limits."
+  - "A clip idea in a few lines, or a still image."
+  - "A product photo, if the clip features your product (optional)."
+  - "Your real claims and wording, added in editing. Do not ask Veo to write them on screen."
+example:
+  reply: "One short video clip with sound, as a file you download. The clip is only a visual draft. Add your real claims, text and logo in an editor, and check it against ad rules before it runs."
 sources:
   - https://gemini.google/subscriptions/
   - https://one.google.com/about/google-ai-plans/

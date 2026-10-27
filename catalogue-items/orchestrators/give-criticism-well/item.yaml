@@ -15,10 +15,10 @@ steps:
   - {uses: behaviour-and-fix-notes-writer, note: "One watchable behaviour, the result you want, what is good in their work and the smallest fix."}
   - {uses: hard-feedback-message-writer, note: "A short message with true praise, one change asked for, and a way out that keeps their pride."}
   - {uses: order-to-request-rewriter, note: "Every order in the draft becomes a question or a request with a gain for them."}
-  - {uses: small-win-praise-planner, note: "A plan to notice and praise each step in the right direction, in specific words. Uses the notes from step 1 and what you saw after the talk, not the message draft."}
+  - {uses: small-win-praise-planner, note: "A plan to notice and praise each step in the right direction, in specific words. Uses the notes from step 1 and what you saw after the talk, not step 3's rewritten message."}
 origin: rebuilt
 version: 1.0.0
 minds: [dale-carnegie, abraham-lincoln]
 credits:
-  - {title: "How to Win Friends and Influence People (1981 revised edition)", by: "Dale Carnegie", used: "The order of the steps: get the behaviour and the fix clear, write the message, turn orders into requests, praise the progress"}
+  - {title: "How to Win Friends and Influence People (1981 revised edition)", by: "Dale Carnegie", used: "The ideas behind the steps: raise one fault at a time, begin with true praise, ask instead of ordering, and praise every step of progress"}
 generated_from: intake/win-friends-change-behaviour/skeleton.yaml

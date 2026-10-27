@@ -36,13 +36,22 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, how the contrast ratios were measured (script or by hand), then every `MISSING:` line from all steps in one list.
 
+## Not for
+
+- Testing colours you already have: use `colour-contrast-checker` on its own.
+- Moving an existing design system: use the Prepare a design system migration workflow.
+- One poster or one page: use the Make a readable event poster workflow.
+
 ## If something is missing
 
 - No feeling or no places: ask once, then stop at step 1.
 - A fixed colour fails contrast: keep it, show the failure, offer the closest passing colour and let the person choose.
 - A step cannot run its code and the numbers cannot be worked by hand: mark the step blocked and hand back what you have.
+- Working contrast by hand: ratio = (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter colour and L2 of the darker. Show each sum, so the person can repeat it.
 
 ## What you hand back
+
+A step is not done until its line below is fully covered. If a part has nothing to show, write `MISSING:` and the reason.
 
 ```
 STEP 1: DESIGN RULES

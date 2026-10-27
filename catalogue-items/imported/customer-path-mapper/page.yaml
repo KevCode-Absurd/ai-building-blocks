@@ -28,10 +28,11 @@ you_get:
   - Pain points
   - Improvement ideas for each stage
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste the skill instructions into a new chat in Claude, ChatGPT or Gemini.
+  - Name your product and your customer. Attach any interview, survey or support
+    ticket files you have.
+  - Ask for the seven-stage table. Read the pain points first, then the fixes.
+  - Pick the one or two fixes that matter most and plan them with your team.
 not_for:
   - You also need the staff actions and systems behind each step. Use the Customer path blueprint maker.
   - You want separate cart and email flows for new, returning and loyal buyers. Use the Customer stage flow mapper.

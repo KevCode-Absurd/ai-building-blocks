@@ -43,6 +43,8 @@ A portfolio should sustain 30 years of withdrawals if the initial withdrawal rat
 
 Example: $60,000/year needed → nest egg of $1,500,000.
 
+Note: the 4% rate comes from US research. It is a rule of thumb, not a promise. If you live outside the US, or your accounts and taxes work differently, adjust the rate and the assumptions for your own country and account types.
+
 ---
 
 ## Technical Steps

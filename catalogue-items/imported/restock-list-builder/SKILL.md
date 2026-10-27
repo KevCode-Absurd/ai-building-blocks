@@ -25,7 +25,6 @@ Queries all tracked product variants at or below a configurable stock threshold 
 | format | string | no | human | Output format: `human` or `json` |
 | dry_run | bool | no | false | Preview operations without executing mutations |
 | threshold | integer | no | 10 | Variants at or below this quantity are included |
-| location_id | string | no | — | GID of a specific location to filter by (optional; if omitted, uses `inventoryQuantity` across all locations) |
 | include_zero_stock | bool | no | true | Include variants with 0 quantity |
 
 ## Workflow Steps
@@ -33,6 +32,8 @@ Queries all tracked product variants at or below a configurable stock threshold 
 1. **OPERATION:** `productVariants` — query
    **Inputs:** `first: 250`, `query: "inventory_quantity:<= <threshold>"`, pagination cursor
    **Expected output:** List of variant objects with inventoryQuantity, product title, vendor, SKU; paginate until `hasNextPage: false`
+
+2. Keep only variants where `inventoryItem.tracked` is true. Drop untracked variants, because their count is not meaningful. Then sort by vendor, then product title, and write the CSV.
 
 ## GraphQL Operations
 
@@ -108,7 +109,7 @@ For `format: json`, emit:
   "completed_at": "<ISO8601>",
   "dry_run": false,
   "steps": [
-    { "step": 1, "operation": "LowInventoryVariants", "type": "query", "params_summary": "threshold <= 10, all locations", "result_summary": "<n> variants", "skipped": false }
+    { "step": 1, "operation": "LowInventoryVariants", "type": "query", "params_summary": "threshold <= 10, store-wide", "result_summary": "<n> variants", "skipped": false }
   ],
   "outcome": {
     "variants_below_threshold": 0,
@@ -127,11 +128,10 @@ CSV file `restock_list_<YYYY-MM-DD>.csv` grouped by vendor, sorted by vendor nam
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | No variants returned | All variants are above threshold or inventory not tracked | Lower threshold or verify `inventoryItem.tracked: true` |
-| `location_id` not found | Invalid location GID | Retrieve valid location IDs via Shopify admin |
 | Rate limit (429) | Too many paginated requests | Reduce `first` to 100 and retry |
 
 ## Best Practices
-1. Run without `location_id` first to get store-wide low stock; then filter by location if you operate multiple warehouses.
+1. Counts are store-wide totals. This skill cannot filter by location, so use your inventory app for per-warehouse counts.
 2. Only variants with `inventoryItem.tracked: true` have meaningful stock counts — untracked variants always appear as 0.
 3. The restock CSV is sorted by vendor — share the vendor-grouped output directly with your procurement team without reformatting.
 4. Set `include_zero_stock: false` to skip variants already on back-order to focus on nearly-depleted items.

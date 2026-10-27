@@ -83,15 +83,16 @@ output_sample:
 
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+    how: Use the same reporting period, currency and scale for the buyback records, the share counts and the cash figures.
+  - what: After-tax return on the cash
+    how: Give the rate the cash would have earned. Without it, step 1 shows the share effect only and marks the income effect MISSING.
+  - what: Announced buybacks
+    how: Give executed buybacks only. An announced programme goes in as a labelled scenario.
   - what: Acceptance
     how: Cash distributions, share retirement and closing common equity reconcile across schedules; foregone income and execution timing are explicit; EPS accretion is not treated as proof of value creation.
 judge:
   - Cash distributions, share retirement and closing common equity reconcile across schedules; foregone income and execution timing are explicit; EPS accretion is not treated as proof of value creation.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

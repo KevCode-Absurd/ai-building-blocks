@@ -31,11 +31,12 @@ you_get:
   - A ranked list of influential parameters
 how_to_use:
   - Check first that MATLAB and the SimBiology toolbox are installed and licensed. Both are paid products.
-  - Download the skill folder and copy its scripts folder into your MATLAB project.
+  - Download the skill folder. Copy it into your MATLAB project at .claude/skills/simbiology-simulate-model/. Your AI then runs the addpath line at the top of the skill, with your project folder in place of WORKSPACE_ROOT.
   - Open your AI in a tool that can run MATLAB code. Paste in the skill instructions.
   - Tell your AI where your model file is, which cases to test and which species to watch.
   - Ask for a plain run first. Check the plots look sensible before you ask for sweeps or sensitivity.
   - Read the ranked list of influential settings. Spend your effort on the top ones.
+  - Next, fit or measure the top-ranked settings with the Biology model fitter. Use the Biology model builder if the model's structure needs to change.
 output_sample:
   input:
     - Your SimBiology model (a .sbproj file or a model already open in MATLAB)

@@ -36,7 +36,8 @@ how_to_use:
   - Add your current topic list if you have one (optional), and the time you have per unit.
   - Ask for the sections in order, from the prerequisite map to the design flags.
   - Read the prerequisite violations first, then answer the teacher-decision questions.
-  - Ask your AI to redo the order with your answers, then check it with your colleagues.
+  - Ask your AI to redo the order with your answers, then check it with your colleagues. Treat any research the plan cites as background to verify, not proof.
+next: [backwards-unit-planner, skill-progression-map-builder]
 output_sample:
   input:
     - Your subject or programme name and a short description

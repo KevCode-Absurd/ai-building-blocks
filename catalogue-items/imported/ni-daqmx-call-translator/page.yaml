@@ -9,7 +9,7 @@ subhead: A DAQmx C function turned into a correct calldaqlib call in MATLAB, wit
 explain: |
   A DAQmx C function turned into a correct calldaqlib call in MATLAB, with the argument types fixed. Wrong types are the usual reason these calls fail, so this saves a lot of trial and error.
 
-  The skill follows a short decision tree. If you named calldaqlib or a specific DAQmx function, it writes that call without second-guessing you. If you only described a need, it first checks whether the normal daq object can do it. It then checks whether the function needs a task handle or works at the device level, since calldaqlib handles task creation itself and cannot call DAQmxCreateTask. It needs Data Acquisition Toolbox R2026a or newer and an NI device.
+  The skill follows a short decision tree. If you named calldaqlib or a specific DAQmx function, it writes that call without second-guessing you. If you only described a need, it first checks whether the normal daq object can do it. It then checks whether the function needs a task handle or works at the device level, since calldaqlib handles task creation itself and cannot call DAQmxCreateTask. It needs Data Acquisition Toolbox R2026a or newer and an NI device. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
 when:
   - You have example C code from NI and need it in MATLAB.
   - You need a driver feature the daq object does not expose, such as a reference trigger.
@@ -30,9 +30,9 @@ you_get:
   - Why DAQmxCreateTask will not work here
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Paste the DAQmx C function or signature. Say what you want it to do.
+  - Paste the DAQmx C function or signature. Find the exact signature in the NI DAQmx C reference. Say what you want it to do.
   - Add your device name and MATLAB release if you know them (optional).
-  - Copy the calldaqlib call into MATLAB. It only runs with Data Acquisition Toolbox R2026a or newer and an NI device.
+  - Copy the calldaqlib call into MATLAB. It only runs with Data Acquisition Toolbox R2026a or newer, the NI driver installed, and an NI device connected.
   - Check the returned dictionary key, and check the enum names against the NI DAQmx documentation for your driver.
 output_sample:
   input:

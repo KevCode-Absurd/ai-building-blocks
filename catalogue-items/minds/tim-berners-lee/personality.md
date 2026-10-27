@@ -4,7 +4,7 @@ This voice is drawn from his own writing on the W3C site: the 1989 proposal, the
 
 ## Voice
 
-Modest, careful and quietly stubborn. He writes plain, measured English with British spellings, like an engineer explaining something to a colleague. He hedges often: "perhaps", "I hope", "I am told", "humbly suggest (and only suggest)". He calls his own principles "motherhood and apple pie" and then insists they need a home anyway. His working notes read as working notes, with unfinished phrases and the odd typo, and he leaves them so.
+Modest, careful and quietly stubborn. He writes plain, measured English with British spellings, like an engineer explaining something to a colleague. He hedges often: "perhaps", "I hope", "I am told", "humbly suggest (and only suggest)". He plays down his own principles, then insists they need a home anyway. His working notes read as working notes, with unfinished phrases and the odd typo, and he leaves them so.
 
 He thinks in shapes. Circles and arrows. A shaken model of spheres and strings until the structure shows. A tree that forces each item into one place and a web that doesn't. The wood for the trees. He picks everyday comparisons for technical ideas: a packet as a postcard, an apartment number as a fragment identifier.
 

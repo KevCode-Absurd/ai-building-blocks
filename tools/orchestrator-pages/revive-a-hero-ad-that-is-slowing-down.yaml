@@ -17,24 +17,25 @@ when:
 not_for:
   - "You have a new ad with no results yet: use the Pre-launch ad checker before you spend."
   - "You want ad copy tested on its own: use the Ad test brief writer to plan the test."
-  - "You only need to check an ad against Meta rules: use the Meta ad policy checker."
+  - "You only need to check an ad against Meta rules: use the Ad and page policy checker."
 you_give:
   - The ad's spend and return by week since launch (frequency and audience size too, if you can see them)
   - The transcript of the ad
-  - The hooks you have already used (optional)
   - Who the ad speaks to, in a line or two
-  - A sheet of your other ads with spend and results (optional, for the hit rate)
+  - The hooks you have already used (optional)
+  - How your stock and cash look, so step 1 can pick a pace (optional)
+  - After your test week, your results export for the new hooks and your break-even return
 you_get:
   - The cause of the fade, how much life the ad has left, and a pace that fits your stock and cash
   - Ten or more new hook briefs on the same body, each scored out of 100 with a film, fix or cut call
   - A hit rate showing how many of your ads cleared your return line, and which ideas to keep making
   - A hook rubric of your winners, with fill-in-the-blank hook templates
 how_to_use:
-  - Open Claude Code, or a Claude Project where you can add files. This workflow runs four skills in order.
-  - Add the skill files and HANDOFF.md from the download, then say "Follow HANDOFF.md".
+  - "Download the pack. It holds HANDOFF.md and four skill files, in the order they run: Fatigued ad reviver, Video hook scorer, Creative hit rate planner, then Winning hook rubric builder."
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the ad's weekly spend and return, its transcript, and who it speaks to. Say how your stock and cash look.
   - Read the cause call and the hook scores. Film the top hooks on the old body and run them for about a week.
-  - Come back with the results and your break-even return. It counts the winners and builds your hook rubric.
+  - Come back with the test results and your break-even return. It counts the winners and builds your hook rubric.
   - Keep the rubric and grade each new hook against it before you film.
 output_sample:
   input:

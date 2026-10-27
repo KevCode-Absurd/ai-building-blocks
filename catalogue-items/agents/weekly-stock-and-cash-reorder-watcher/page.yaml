@@ -112,10 +112,11 @@ improve:
   - Save the orders you place each week, so the next run knows what is on the way.
   - If you only buy one or two products, remove the clearance step from the run.
   - Add a note of the sales you plan, so the forecast can include them.
+  - When cash is the limit, take the terms it suggests to your supplier before you place the order.
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the watch folder, read last week's files and run every Monday.
+      why: It can keep the watch folder and read last week's files. It needs a paid Claude plan or an API key. For no extra cost, paste the same files into any chat AI each Monday.
     - name: Your stock or store system
       why: Export units on hand and units sold by product, for the same dates.
   inputs:

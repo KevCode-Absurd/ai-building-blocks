@@ -31,7 +31,7 @@ you_get:
   - List of open questions until done
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
-  - Tell it the workflows you want to build. Or say you have none and ask it to help you find them.
+  - Tell it the workflows you want to build. Or say you have none and ask it to help you find them. If your AI cannot save files, the specs and NOTES.md come back as chat text for you to copy, and the workflows folder is optional.
   - Answer each round of questions. It gives a suggested answer with each one, so you can accept or change it.
   - If it asks about your tools and terms, answer fully. It keeps these in NOTES.md.
   - Keep going until no open questions are left. Then save each spec, or ask your AI to print them.
@@ -51,3 +51,4 @@ output_sample:
       contains: "Raw notes on your world: your tools, the channels you process, and your own terms made clear."
     - name: Open questions
       contains: Anything still unclear in a spec. A spec is done only when this list is empty.
+next: [process-and-sop-writer]

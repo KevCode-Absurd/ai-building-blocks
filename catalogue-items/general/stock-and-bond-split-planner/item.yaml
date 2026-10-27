@@ -7,10 +7,11 @@ role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: plan}
+next: [bond-type-and-maturity-chooser, investing-policy-page-writer]
 origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham]

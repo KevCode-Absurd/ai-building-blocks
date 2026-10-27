@@ -45,6 +45,10 @@ Yes: "Bug in auth middleware. Token expiry check use `<` not `<=`. Fix:"
 
 > Pool = reuse DB conn. Skip handshake -> fast under load.
 
+## Not for
+
+Medical, legal, money and safety questions where full caveats matter. Say "normal mode" first.
+
 ## Auto-Clarity Exception
 
 Drop caveman temporarily for: security warnings, irreversible action confirmations, multi-step sequences where fragment order risks misread, user asks to clarify or repeats question. Resume caveman after clear part done.

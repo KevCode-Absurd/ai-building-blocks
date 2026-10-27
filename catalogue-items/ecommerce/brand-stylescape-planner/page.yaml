@@ -42,7 +42,7 @@ you_get:
   - "A short shoot brief for your photographer or designer"
 
 how_to_use:
-  - "Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. Use an AI that can read images if you want to attach any. It needs no code and no paid tool."
+  - "Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. Use an AI that can read images if you want to attach any. The plan works in a free chat AI alone. Figma is optional, and you may need a paid plan for it, if you want to build the boards yourself."
   - "Paste your values, what you sell and who buys. Add your brand brain if you have one. With no values, the AI will ask for three to five before it does anything else."
   - "Attach screenshots of three to five rivals and any images you like. Say what you like in each, and say if your logo is already known."
   - "Read the three directions and the fit grid. Tell the AI which you prefer and what to borrow from the others."
@@ -153,7 +153,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI that reads images can describe and grade the directions. Attach your references."}
-    - {name: "Figma", why: "A designer can build the wide boards and mock the pack and home page in one file."}
+    - {name: "Figma", why: "Optional, and you may need a paid plan. A designer can build the wide boards and mock the pack and home page in one file. The plan works without it."}
     - {name: "Pinterest", why: "A quick place to collect reference images for each theme before you build the boards."}
   inputs:
     - "Your brand brain file, with mission, values and voice"

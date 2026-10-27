@@ -12,8 +12,8 @@ when:
   - You have an earned income idea and need to know if the numbers work.
   - You need a clear business case before the board votes on a small pilot.
 not_for:
-  - "You want grant, major gift or annual appeal tactics: ask a fundraising specialist, as this plans earned income and your overall funding mix."
-  - "You already run the income stream and need a yearly budget or cash plan: use your finance lead or a simple budget sheet."
+  - "You want grant, major gift or annual appeal tactics: use the Nonprofit annual appeal planner or the Nonprofit grant funder researcher, as this plans earned income and your overall funding mix."
+  - "You already run the income stream and need a yearly budget or cash plan: use the Nonprofit operating budget planner."
   - "You are weighing a merger or fiscal sponsorship: talk to an adviser who handles those, as this does not cover them."
 you_give:
   - Your income by source, such as grants, gifts, contracts and fees
@@ -41,12 +41,13 @@ works_best_with:
   inputs:
     - Earned-income and social-enterprise models raise unrelated business income tax questions.
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, web access or paid tool is needed.
-  - Paste in this skill's text, then add your income by source, your ideas and your costs.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code, web access or paid tool is needed.
+  - Add your income by source (a short table is fine), your ideas and your full costs.
   - Say which idea you favor, and what your mission will not allow.
   - Read the funding risk check first. Ask your AI to explain any figure you do not follow.
   - Check the break-even model for full costs, including overhead.
   - Send the tax questions to your accountant or lawyer before the board sees the plan.
+  - Treat the 25-30% and 50% concentration figures as rough rules, not standards. The tax questions follow US rules.
 output_sample:
   input:
     - Your income by source, such as grants, gifts, contracts and fees
@@ -70,3 +71,4 @@ output_sample:
       contains: Compares running the venture inside your nonprofit with a separate company, and says which fits.
     - name: Board business case and pilot plan
       contains: Sets the funding ask, pilot length, decision dates, and money and mission checks for a go or no-go.
+next: [nonprofit-operating-budget-planner, nonprofit-grant-funder-researcher]

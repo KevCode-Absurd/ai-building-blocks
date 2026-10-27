@@ -58,7 +58,7 @@ For most brands, a portfolio of **micro + nano** partners out-converts one macro
 **Vetting checklist:**
 - **Engagement rate**, not follower count (a rough floor: ~1–3% is healthy on IG/TikTok at scale; higher for nano). Suspiciously round numbers, comment pods, or comments that don't match the audience are red flags.
 - **Telegram channels** show no likes-based engagement; the signal is the view counter under each post. Divide the median views of week-old posts by subscribers and compare with channels of the same size (median about 8% at 10K–20K subscribers, about 4% above 1M). For the full Telegram checklist (topic and language baselines, ad networks, channel age) and per-view pricing, see [references/telegram-channels.md](references/telegram-channels.md).
-- **Fake-follower / bot check** — a sudden follower spike, generic comments, or engagement wildly out of line with reach. Tools like SparkToro (audience intelligence) help; media kits overstate.
+- **Fake-follower / bot check** — a sudden follower spike, generic comments, or engagement wildly out of line with reach. Tools like SparkToro (audience intelligence, usually a paid service) help; media kits overstate.
 - **Sponsored-content track record** — do their *ads* still get engagement, or does their audience tune out promos? Ask for past campaign results.
 - **Brand safety** — scroll their last ~3 months. Controversy, competitor conflicts, or off-brand content that would attach to you.
 - **Authenticity of fit** — have they mentioned your category unprompted? A genuine user is worth several cold partners.
@@ -79,7 +79,7 @@ Move beyond "pay for a post."
 
 **Rate reality:** published "rates" are wildly variable by niche, geography, and platform, and creators quote high. Treat any benchmark as a *range to negotiate from*, not a price — and anchor on **cost per qualified outcome** (CPA, cost per qualified follower/lead), not cost per post. A cheap post to the wrong audience is the expensive one.
 
-**Starting ranges for a single post** (negotiation anchors, *not* fixed prices — aligned to the tiers above):
+**Starting ranges for a single post** (rough negotiation anchors from the skill's contributors, with no source or date, *not* fixed prices — check them against current quotes before you use them):
 
 | Tier | Single post (rough range) | Notes |
 |---|---|---|

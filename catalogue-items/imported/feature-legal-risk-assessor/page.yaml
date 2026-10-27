@@ -25,6 +25,7 @@ you_give:
   - Who the users are and where they live
   - Any earlier review notes (optional)
 you_get:
+  - A 2 to 4 page assessment you can hand on
   - A list of specific risk scenarios
   - Likelihood and severity for each, with reasons
   - Suggested fixes
@@ -34,7 +35,7 @@ how_to_use:
   - Paste your feature description, the data it uses, and who the users are. Add earlier review notes if you have them.
   - If you have product legal setup notes, paste them too. They help the skill judge risk for your company and add the right header. Without them, tell your AI your company's risk appetite and any past legal trouble.
   - Read the risks and check each likelihood and severity reason makes sense for your business.
-  - Check every case, law or fine it names. This needs a legal research tool such as Westlaw or CourtListener. Without one, check the regulator's own website.
+  - Check every case, law or fine it names. This needs a legal research tool such as Westlaw (paid) or CourtListener (free). Without one, check the regulator's own website.
   - Give the result to your lawyer or decision maker with the open questions.
 output_sample:
   input:

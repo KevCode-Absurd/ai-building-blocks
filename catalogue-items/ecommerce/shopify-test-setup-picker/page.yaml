@@ -68,7 +68,7 @@ output_sample:
 
 how_it_works:
   - title: Places each idea
-    text: Before checkout or in checkout. About 80 percent of high-impact store tests happen before checkout.
+    text: Before checkout or in checkout. Most of the tests worth running happen before checkout.
   - title: Applies the checkout rule
     text: Apps cannot split-test checkout on standard plans. Plus has checkout blocks, extensions and native theme tests.
   - title: Picks the route
@@ -142,3 +142,4 @@ terms:
     meaning: A test where the server picks the version before the page is sent, so nothing flashes.
   - term: Checkout blocks
     meaning: Parts you can add to Shopify Plus checkout without custom code.
+next: [store-test-readiness-checker, store-test-verdict-maker]

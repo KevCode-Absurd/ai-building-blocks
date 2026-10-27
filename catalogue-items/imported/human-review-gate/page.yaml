@@ -16,8 +16,8 @@ when:
   - Reviewers give feedback in chat and items get lost.
   - You work over a server connection and need review without a web app.
 not_for:
-  - "You want AI text to sound more human: use content-humanizer or behuman."
-  - "You want a code diff reviewed: use md-review or code-reviewer."
+  - "You want AI text to sound more human: use the Pre-publish content checker."
+  - "You want a code diff reviewed: use the Hostile code reviewer or the AI-written code reviewer."
   - "You need no proof of review and the work is easy to undo: ask a colleague to read it in chat."
 you_give:
   - The plan or document to review (Markdown or HTML)
@@ -30,12 +30,13 @@ you_get:
   - A pass or fail gate status
   - A record that the review took place
 how_to_use:
-  - Open your AI tool with code running and file access. Add the skill folder and your plan or document.
+  - Open your AI tool with code running and file access, and Python 3 installed. Add the skill folder and your plan or document.
   - Tell your AI the reviewer's name and whether the work can be undone.
   - "Ask it to run: python3 engineering/human-gate/skills/human-gate/scripts/human_gate.py open plan.md --launch. Use your own file name. It builds the page and your AI stops."
   - Open the page and add comments. Save the feedback file next to your document.
   - Ask your AI to run the collect step, apply every item, then run close. If close fails, fix what it names.
-  - Check the result. Only call the work done when the gate passes.
+  - Check the result. Status 0 means clear, 2 means blocked, 3 means feedback is waiting to be collected and 4 means nobody has reviewed yet. Only call the work done when close passes.
+  - Then hand the signed-off file to the next step, such as shipping or sharing it. Run your machine checks first or after, as they test different things.
 output_sample:
   input:
     - The plan or document to review (Markdown or HTML)

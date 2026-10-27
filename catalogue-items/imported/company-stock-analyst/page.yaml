@@ -30,7 +30,7 @@ you_get:
   - A list of strengths and risks
   - Gaps clearly marked
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Turn on web search if your AI has it.
+  - Open Claude, ChatGPT or Gemini. Turn on web search, or have the company's annual report ready to paste. Without one of them, most figures will come back as not available.
   - Paste the skill text into the chat.
   - Type the company name or ticker. Add its annual report or peers if you have them (optional).
   - "Pick a depth if the AI asks: a quick view or a full review."

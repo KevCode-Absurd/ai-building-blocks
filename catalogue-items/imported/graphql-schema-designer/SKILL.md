@@ -235,6 +235,7 @@ const resolvers = {
   },
   Post: {
     author: (post, _, { loaders }) => loaders.userLoader.load(post.authorId),
+    // Runs one query per post. To batch it like the authors, add a tagsLoader to createLoaders.
     tags: (post, _, { db }) => db.tags.findByPostId(post.id),
   },
   Comment: {
@@ -249,6 +250,8 @@ const resolvers = {
       const post = await db.posts.create({ ...input, authorId: currentUser.id });
       return { post, errors: [] };
     },
+    // updatePost and deletePost are not shown. Each one must check that the caller is signed in
+    // and owns the post (or is an admin) before it changes anything.
   },
 };
 
@@ -260,6 +263,9 @@ function decodeCursor(cursor) { return Buffer.from(cursor, "base64").toString().
 
 ```javascript
 // pagination.js — Reusable cursor-based pagination for any entity
+// SAFETY: `table` and the keys of `where` are written into the SQL text. Only pass names
+// you set in your own code (check them against a fixed list), never text from a request.
+// Values always go in `params`.
 
 /**
  * Generic paginated query builder for SQL databases.

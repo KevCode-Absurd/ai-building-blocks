@@ -33,8 +33,10 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your process and the problem. It works step by step and saves each result.
+  - Paste your process with who does each step and the times. The result depends on these most. Add the problem with its place and date.
+  - It works step by step and saves each result.
   - Go and look at the real place or record for any why it can't check, then bring back what you find.
+  - Make the one change to the worst waste first. After it, run the waste map again to find the next worst waste.
 output_sample:
   input:
     - Your process, step by step, with who does each step

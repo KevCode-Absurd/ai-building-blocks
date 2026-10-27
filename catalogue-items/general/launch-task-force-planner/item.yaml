@@ -15,7 +15,7 @@ origin: rebuilt
 version: 1.0.0
 minds: [raymond-loewy]
 credits:
-  - {title: "Speech at Essen, typed draft, Paris, 21 September 1955", by: "Raymond Loewy", used: "Bringing design, engineering, sales and advertising in at the start, one kickoff, short data, a second free team for options and a product that is easy to advertise and sell"}
+  - {title: "Speech at Essen, typed draft, Paris, 21 September 1955", by: "Raymond Loewy", used: "Adapted from the ideas in this speech: bringing design, engineering, sales and advertising in at the start, one kickoff, short data, a second free team for options and a product that is easy to advertise and sell"}
 next: [go-or-no-go-launch-checker, launch-teaser-to-preview-planner, publicity-first-launch-planner]
 before: []
 needs_mode: manual

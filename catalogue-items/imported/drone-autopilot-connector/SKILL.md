@@ -281,6 +281,8 @@ end
 
 ### Sending Commands After Discovery
 
+**Safety warning.** The example below sends an ARM command. Arming starts the motors. Test it only in a simulator (SITL), or with the propellers removed and everyone clear of the vehicle. Run it only if the user asked for it, and say so before you run it.
+
 Once a client is discovered via `listClients`, you can use `sendmsg` with the client:
 
 ```matlab

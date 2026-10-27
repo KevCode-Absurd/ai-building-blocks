@@ -197,8 +197,16 @@ epoch, then apply `lookangles` to filter low-elevation satellites.
 validRows = all(isfinite(combinedMeas.SatellitePosition), 2);
 combinedMeas = combinedMeas(validRows, :);
 
+% Set your elevation mask in degrees (10 is a common starting value)
+elevationMask = 10;
+
+% Corrections used for every fix
+opts = gnssoptions( ...
+    Ionosphere=gnssIonosphere("klobuchar"), ...
+    Troposphere=gnssTroposphere("saastamoinen"));
+
 % Get initial position from first epoch (unfiltered)
-[initPos] = receiverposition(combinedMeas);
+[initPos] = receiverposition(combinedMeas, opts);
 recLLA = initPos(1,:);  % [lat lon alt]
 
 % Get unique epochs
@@ -318,6 +326,7 @@ Store results across runs to compare processing configurations.
 
 ```matlab
 % Initialize or append to run history
+configLabel = "GPS + Galileo, 10 deg mask";   % name this run so you can compare later
 if ~exist('runHistory', 'var')
     runHistory = table('Size', [0 6], ...
         'VariableTypes', ["string","double","double","double","double","double"], ...

@@ -21,6 +21,7 @@ not_for:
   - "You sell heavy or bulky goods that need weight-based rates: use your carrier's own rate calculator."
   - "You only want to know if a product is profitable: work out your margin per product first, or ask your accountant."
   - "You already have rates set and only need the checkout settings clicked through: follow your platform's own help pages."
+  - "You sell digital goods with nothing to ship: skip shipping rates and set up delivery by email in your store settings."
 
 you_give:
   - The countries or states you will ship to, and where each ships from

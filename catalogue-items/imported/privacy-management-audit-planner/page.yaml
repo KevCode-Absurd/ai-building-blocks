@@ -35,7 +35,8 @@ how_to_use:
   - Describe your three main flows of personal data, such as what you collect, where it is kept and who sees it.
   - Add your ISO 27001 status and the laws you must meet, if you know them (optional).
   - Ask for the gap list first. Then ask for the control checklist, the Statement of Applicability draft and the audit plan.
-  - Check the results with a qualified assessor or privacy counsel before you act on them.
+  - Check the results with a qualified assessor or privacy counsel before you act on them. Confirm the transition dates with your certification body, because they can change.
+  - Next, take the top gaps into a remediation plan, and run the gap list again after the fixes.
 output_sample:
   input:
     - A short description of how you collect, use and store personal data
@@ -58,3 +59,4 @@ output_sample:
       contains: How the standard lines up with GDPR, CCPA, LGPD and PIPEDA.
     - name: Audit and transition plan
       contains: The steps to prepare for an audit, or to move from the 2019 edition to the 2025 edition.
+next: [privacy-impact-assessment-writer]

@@ -19,10 +19,10 @@ steps:
   - {uses: owned-word-mapper, note: "Which words are taken, which are claimed by everyone and which are open."}
   - {uses: ownable-word-picker, note: "One word with two backups, each tested on four lines."}
   - {uses: candid-line-writer, note: "Takes the word from step 2. Hands back three admit-then-turn lines that set up the word."}
-  - {uses: give-up-list-planner, note: "Uses the word from step 2, not the lines from step 3. Hands back what to cut, which target to aim at and a rule that protects the word."}
+  - {uses: give-up-list-planner, note: "Uses the word from step 2, not step 3's lines. Hands back what to cut, which target to aim at and a rule that protects the word."}
 origin: rebuilt
 version: 1.0.0
 minds: [al-ries, jack-trout]
 credits:
-  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "The order of the steps: map the words rivals already own, pick the word to own, write the honest line that sets it up, decide what to give up"}
+  - {title: "The 22 Immutable Laws of Marketing", by: "Al Ries and Jack Trout", used: "Ideas behind owning one word and admitting a flaw before you boast. The step order is this workflow's own."}
 generated_from: intake/immutable-laws-own-a-word/skeleton.yaml

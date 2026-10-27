@@ -19,6 +19,7 @@ not_for:
   - "You need a fixed filter that does not learn: use a plain digital filter design in MATLAB, or ask your AI for a standard FIR or IIR filter."
   - "You want to track a moving state, like position or speed: use a Kalman filter from the Control System Toolbox."
   - "You want to clean noise with a trained neural network: use the Deep Learning Toolbox instead."
+  - You do not work in MATLAB. Ask a general AI for a standard filter instead. The licence allows use only with MathWorks products.
 you_give:
   - Your signal and a reference signal
   - A description of the noise or echo
@@ -46,6 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB code
     - MATLAB R2024b or newer with the DSP System Toolbox (needs a MATLAB licence)
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Problem analysis
       contains: The type of task, such as noise cancellation or system identification, and the limits on filter length and delay.

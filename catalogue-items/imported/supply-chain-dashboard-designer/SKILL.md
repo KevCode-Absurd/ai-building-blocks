@@ -119,6 +119,8 @@ Before designing a control tower, understand:
 
 ### Data Architecture
 
+These Python sketches show the data flow. They need pandas and numpy, and they do not connect to live systems until you change them. Test with a few sample rows first, for example one early and one late shipment.
+
 ```python
 import pandas as pd
 import numpy as np
@@ -224,7 +226,8 @@ class ControlTowerPlatform:
                     shipment_enriched['actual_delivery_date']
                 )
 
-                if shipment_enriched['delivery_performance_days'] < 0:
+                # actual minus planned: above 0 means it arrived late, below 0 means early
+                if shipment_enriched['delivery_performance_days'] > 0:
                     self._create_exception(
                         'SHIPMENT_DELAYED',
                         f"Shipment {shipment['shipment_id']} delivered late",
@@ -521,6 +524,8 @@ if not alerts.empty:
 - `flask`: Web framework
 
 ### Commercial Software
+
+These are paid products that need a contract. You do not need any of them to use this skill.
 
 **Control Tower Platforms:**
 - **Blue Yonder (JDA)**: Luminate Control Tower

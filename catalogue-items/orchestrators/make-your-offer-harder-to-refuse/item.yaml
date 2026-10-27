@@ -12,6 +12,8 @@ inputs:
   - {type: objection_map, required: false}
   - {type: persona, required: false}
 outputs:
+  - {type: plan}
+  - {type: offer}
   - {type: shortlist}
 uses: [honest-urgency-planner, bonus-stack-builder, guarantee-designer, offer-name-writer]
 steps:
@@ -23,5 +25,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [alex-hormozi]
 credits:
-  - {title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://shop.acquisition.com/products/100m-offers-hardcover", used: "The order of the steps: add honest limits and deadlines, build the bonus stack, design the guarantee, name the offer"}
+  - {title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No", by: "Alex Hormozi", url: "https://shop.acquisition.com/products/100m-offers-hardcover", used: "The order of the steps is inspired by this book: add honest limits and deadlines, build the bonus stack, design the guarantee, name the offer"}
 generated_from: intake/hormozi-offers-harder-to-refuse/skeleton.yaml

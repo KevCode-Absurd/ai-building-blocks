@@ -16,9 +16,9 @@ when:
   - You have a product people pay for but no steady way to find buyers.
   - You need a growth forecast you can defend.
 not_for:
-  - "You have no paying customers yet: use create-business to find and test your first buyers."
-  - "Your offer, customer retention or daily operations are broken: run improve-business first, then come back."
-  - "Your product itself must drive the growth, such as invites or sharing inside an app: use grow-app."
+  - "You have no paying customers yet: use the Idea to business guide to find and test your first buyers."
+  - "Your offer, customer retention or daily operations are broken: run the Business turnaround guide first, then come back."
+  - "Your product itself must drive the growth, such as invites or sharing inside an app: use the App stickiness guide."
 you_give:
   - Description of your business and customers
   - Current revenue and sales figures
@@ -31,8 +31,12 @@ you_get:
   - Metrics plan with one key number
   - Growth forecast
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Use an AI that can read and write files in a project folder, so it can save each document and resume later. Add the skill file to the folder.
+  - The guide names nine linked skills, one for each phase. Install them before the first run, or let your AI pull each one when its phase starts. If one is missing, the AI runs that phase from a short built-in brief and says so.
+  - Tell your AI your revenue, customer count, main sales channel and current offer and price. It asks a few more questions once, then saves a tracker file.
+  - Answer each phase's questions and approve each document before it is saved.
+  - The forecast uses only the figures you gave and the baselines and targets set in the metrics phase, and it shows the numbers it used. Treat it as a projection, not a promise.
+  - When GROW-BUSINESS-PLAN.md is signed off, read the Next Actions in the tracker. Start the phase that unlocks your biggest constraint.
 output_sample:
   input:
     - A short description of your business and your customers
@@ -53,3 +57,4 @@ output_sample:
       contains: The full growth plan, with your forecast, built from the answers and documents of every phase.
     - name: Phase notes
       contains: Notes on your outbound, word-of-mouth, mainstream buyer, network and pricing decisions, saved as you go.
+next: [idea-to-business-guide, business-turnaround-guide, app-stickiness-guide]

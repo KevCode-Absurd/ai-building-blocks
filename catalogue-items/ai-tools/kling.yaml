@@ -44,6 +44,22 @@ blocks:
   - avatar-storyboard-planner
 alternatives: [veo, runway, seedance, pika]
 last_checked: 2026-10-21
+first_result:
+  - "Go to klingai.com and sign up. Free daily credits are offered, then paid plans."
+  - "Start from a still image if you have one, such as your product photo. Add one line on the motion you want."
+  - "Make a 5 second clip first. Watch it for warped product details, hands and any text."
+  - "Make two or three versions. Keep the best, and extend it only if it works."
+  - "Add voice or music in another tool, such as ElevenLabs or CapCut."
+  - "You end with a short video clip, 5 to 10 seconds long."
+  - "Next: plan all your shots with the Video ad shot list maker before you spend more credits."
+needs:
+  - "A Kling account and credits."
+  - "A still image (optional), or a one-sentence description of the shot."
+  - "A shot list, so you do not waste credits."
+not_verified:
+  - "Plan prices. They change with offers and region."
+  - "How many credits one clip uses."
+  - "The licence for commercial use."
 sources:
   - https://klingai.com/membership/membership-plan
   - https://eesel.ai/blog/kling-ai-pricing

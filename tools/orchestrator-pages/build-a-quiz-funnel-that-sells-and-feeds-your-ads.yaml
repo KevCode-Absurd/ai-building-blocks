@@ -7,7 +7,7 @@ thinking_why: It runs four skills in a row and reads buyer answers for patterns.
 headline: A quiz that sells, and ad angles from its answers
 subhead: Give it your product, offer and customer words. It writes the buyer research, builds the quiz with its result pages and email step, then reads the answers you export and ranks the ad angles worth testing. Last, it turns the top angles into a brief for your next ads.
 explain: |
-  When you pay for cold traffic in a niche where buyers need help choosing, a plain product page loses people who are not sure what suits them. A quiz guides them to the right product. It also tells you what they struggle with, in their own words, which most stores never use.
+  When you pay for cold traffic in a niche where buyers need help choosing, a plain product page loses people who are not sure what suits them. A quiz guides them to the right product. It also shows what they struggle with, in their own words.
 
   The steps build both halves. First it writes the buyer research and offer brief. Then it builds the quiz: questions that each have a job, result pages, a buy box and an email step. You send paid traffic through it for a week or two and export the answers and drop-off. It reads them for common problems, past fixes and words, ranks the ad angles, and writes a brief for the next round of ads. It needs about 100 answers to be worth reading.
 when:
@@ -34,8 +34,8 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give it your product page, your offer and any customer words. Attach screenshots of a quiz you like for the structure only.
-  - When it pauses, send paid traffic through the quiz for a week or two, then export every answer and the drop-off by question.
+  - Give it your product page, your offer, your product list and any customer words. Attach screenshots of a quiz you like for the structure only.
+  - Build the quiz in your quiz tool. When it pauses, send paid traffic through it for a week or two, then export every answer and the drop-off by question.
   - Bring the export back. Check the finish rate against the 30% target before you change the quiz.
 output_sample:
   input:
@@ -105,4 +105,4 @@ test:
 improve:
   - Add your real expert, certificate or proof to your brand file so the angles can use them.
   - Re-run steps 3 and 4 each month with new answers, and drop the questions with the worst drop-off.
-  - Pair the angles with your ad copy and video skills.
+  - Write test ads for the top two angles, using the buyers' own words from the answers.

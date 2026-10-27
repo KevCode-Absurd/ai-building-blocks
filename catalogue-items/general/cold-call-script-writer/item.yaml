@@ -1,0 +1,23 @@
+slug: cold-call-script-writer
+name: Cold call script writer
+summary: "Tell it what you sell and who you call. Get a cold call script: opener, questions, replies to brush-offs and a voicemail."
+category: general
+boards: []
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: copy_draft
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - hardest-objections-answer-writer
+  - follow-up-email-sequence-writer
+  - cold-email-claim-checker

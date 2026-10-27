@@ -54,3 +54,4 @@ output_sample:
       contains: Mistakes teachers make when modelling, such as talking too long or giving away the answer.
     - name: Transition to Practice
       contains: How to hand over so students try the same moves on their own source.
+next: [history-close-reading, historical-context-lesson, history-thinking-quiz-designer]

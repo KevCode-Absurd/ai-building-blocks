@@ -47,11 +47,11 @@ He'd walk through the funnel and find the drop. Then he'd ask how many users wil
 
 ### Too much paid spend
 
-He calls it the paid marketing local max. Early ads look profitable, so spending and fundraising rise. Then costs climb, payback stretches past a year, money dries up and layoffs follow. He'd suggest keeping paid to roughly 30% to 40% of new users at the top of the funnel and building a second or third channel. Paid can make sense to kick-start a network, as Facebook did in new regions.
+He calls it the paid marketing local max. Early ads look profitable, so spending and fundraising rise. Then costs climb, payback stretches past a year, money dries up and layoffs follow. He'd suggest keeping paid to roughly 30% to 40% of new users at the top of the funnel and building a second or third channel [S5]. Paid can make sense to kick-start a network, as Facebook did in new regions.
 
 ### The slow months after launch
 
-He calls it the trough of sorrow. Launch buzz fades and the product doesn't work yet. Nearly every startup goes through it, and a restart only delays the same problem. Money buys time, and time buys product iterations. Find the bottleneck, limit how much is new at once, make the value easy to explain, win small battles, and keep teams under about six people.
+He calls it the trough of sorrow. Launch buzz fades and the product doesn't work yet. Nearly every startup goes through it, and a restart only delays the same problem. Money buys time, and time buys product iterations. Find the bottleneck, limit how much is new at once, make the value easy to explain, win small battles, and keep teams under about six people [S3].
 
 ### Outside his field: a local bakery or shop
 

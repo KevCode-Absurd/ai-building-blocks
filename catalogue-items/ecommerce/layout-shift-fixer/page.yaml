@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your CLS is already 0.1 or less: leave the page as it is and check it again in Search Console later."
   - "The page only moves after a shopper taps, such as a menu opening: that is not layout shift, so no fix is needed."
-  - "You want to find why the whole store loads slowly: read the PageSpeed report first, then come back for any shifting elements."
+  - "You want to find why the whole store loads slowly: use the store speed report reader first, then come back for any shifting elements."
 
 you_give:
   - "The PageSpeed CLS element list and loading filmstrip, mobile and desktop"
@@ -68,7 +68,7 @@ how_it_works:
   - title: Finds the element
     text: Gets the shifting element from the lab report, or by slowing the page to slow 3G with the cache off and comparing frames.
   - title: Checks both devices
-    text: Mobile and desktop can differ. One store had no shift on mobile and a large one on desktop.
+    text: Mobile and desktop can differ, so it looks at both.
   - title: Works through the causes
     text: Late app bars and widgets first, then images without size, font swap, then clashing style rules.
   - title: Reserves space

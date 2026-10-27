@@ -30,12 +30,12 @@ you_get:
   - A findable name
   - A parent workflow that is shorter and simpler
 how_to_use:
-  - Connect the n8n MCP tools to your AI first. This skill works best when your AI can read and create workflows in n8n.
+  - Connect the n8n MCP tools to your AI first. This needs an n8n instance you can reach (n8n Cloud is paid, or you can host it yourself) with API access turned on. This skill works best when your AI can read and create workflows in n8n.
   - Paste the skill instructions into your AI, or upload the skill folder if your tool takes files.
   - Paste the long workflow or the steps to split out. Add what the piece should accept and return, and whether the caller should wait.
   - Let your AI list your existing workflows. Check that it reuses one if a good match exists.
   - Read the plan before it builds. Approve anything that sends, writes, deletes or costs money.
-  - Open the parent in n8n and run it once with test data to check the call settings.
+  - Open the parent in n8n and run it once with test data to check the call settings. To let an AI agent call the new piece as a tool, use the n8n AI agent builder next. To tidy the parent flow, use the n8n workflow designer.
 output_sample:
   input:
     - The long n8n workflow, or the steps you want to split out

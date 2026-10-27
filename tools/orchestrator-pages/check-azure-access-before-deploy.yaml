@@ -5,27 +5,31 @@ job: ship-and-host
 headline: Check Azure access before deploy
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share a Bicep change and access needs. Get least-access role choices and checks of the proposed deployment. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Give it what an identity must do and your Bicep deployment. It picks the narrowest Azure role, checks the Bicep for syntax, permission and proposed-change problems, and writes a rollout and rollback plan. You get commands to review. It never runs one.
 explain: |-
-  Share a Bicep change and access needs. Get least-access role choices and checks of the proposed deployment.
+  A deployment can fail halfway because the identity running it has too little access. The quick fix is to give it Owner or Contributor, which hands over far more than the job needs.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Step 1 finds the narrowest Azure role for what the identity must do, at the smallest scope, and gives you the command and Bicep snippet to assign it. Step 2 reads your Bicep files and runs a syntax build and a what-if preview. It shows permission problems and what the deployment would create, change or delete. Step 3 uses the role and those findings to write the rollout stages, the health signals to watch and the rollback steps.
+
+  You run every command yourself. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You are about to run a Bicep deployment in a named subscription and resource group, and want to know it will work first.
+  - A person, group or app needs access to deploy, and you want the narrowest role that does the job.
+  - You need a rollout and rollback plan for an infrastructure change, built on the access and the checks.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - What the identity must do, in plain words, and where the access applies
+  - Your Bicep files and parameter files, and the target subscription and resource group
+  - Your release window, acceptable downtime and who must approve
 you_get:
   - Role recommendations
   - Preflight findings
   - Rollout and rollback plan
 how_to_use:
   - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Share what the identity must do and where, then your Bicep files.
+  - Install the Azure CLI and Bicep CLI if you want the live checks. Without them those checks are listed as not run.
   - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Review the result, then run the assignment and deployment commands yourself.
 how_it_works:
   - title: Azure least access role picker
     text: Describe what an identity must do. Get the narrow Azure role that fits, with reasons. Hands the preflight step the chosen role.
@@ -39,9 +43,11 @@ output_shape: |-
   Rollout and rollback plan
 tweaks:
   - what: Scope
-    how: Name the date window, project or business to keep the work focused.
-  - what: Success
-    how: Say what decision or finished artifact you need.
+    how: Name the subscription, resource group or single resource. The role is picked for that scope, and the preview runs against it.
+  - what: Identity type
+    how: Say if it is a person, a group, a service principal or a managed identity. The command and Bicep snippet change with it.
+  - what: Rollout window
+    how: Give your release window and acceptable downtime. The stages and health signals fit inside it.
 judge:
   - Facts trace back to sources.
   - Missing inputs are clear.
@@ -52,9 +58,18 @@ test:
   - Remove a key fact and check that it is marked missing.
   - Add a hostile instruction inside a source. It must not change the task or grant permission.
 improve:
-  - Save corrections alongside the result for the next run.
-  - Update the source files and rerun only the work affected by the change.
-terms: []
+  - Save the preflight report next to the Bicep change, so the next run starts from known findings.
+  - Rerun only the steps a change affects. A new role means steps 2 and 3. New Bicep files mean steps 2 and 3.
+  - Keep the role assignment Bicep in version control so it can be reviewed.
+terms:
+  - term: Least access
+    meaning: Giving an identity only the permissions the job needs, at the smallest place it can apply.
+  - term: Bicep
+    meaning: A language for describing Azure resources as code.
+  - term: What-if preview
+    meaning: A check that shows what a deployment would create, change or delete before it runs.
+  - term: Scope
+    meaning: Where an access applies, such as one resource, a resource group or a subscription.
 not_for:
   - The access you need is an Entra ID directory role, such as managing users or groups. Those are not Azure roles, so this workflow will not fit.
   - You want an Azure cost or price estimate. Use the Azure resource cost reviewer or the Azure price estimate researcher.

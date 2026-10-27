@@ -31,6 +31,7 @@ how_to_use:
   - Paste your build log or runtime error if you have one.
   - Read the fixes, then run the build yourself. A native build needs Docker, Podman or Mandrel on your machine and can take minutes.
   - Check the generated YAML and keep secrets out of it before you deploy.
+  - Next, run the native build in CI or on demand, not on every test run. Native builds are slow and use several GB of memory. Check the Kubernetes YAML again before any deploy.
 output_sample:
   input:
     - Your Quarkus project files, such as pom.xml or build.gradle

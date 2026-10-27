@@ -1,6 +1,6 @@
 # Brené Brown: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Brené Brown is alive and still working, so her views can change. What follows comes from two long radio interviews with published transcripts (2012 and 2018) [S2][S3], a long 2020 podcast interview with Tim Ferriss [S7], her 2020 commencement address at the University of Texas [S8] and the introduction to her own 2020 podcast [S9], plus reference pages on her career and books and her publisher's page for *Dare to Lead* (2018). The Ferriss, commencement and podcast pages are transcripts and summaries that we read only in part, and we left out her private-life detail. Read each view as "as of" those dates. Her books and talks are in copyright, so this is our own summary with a few short quotes.
 

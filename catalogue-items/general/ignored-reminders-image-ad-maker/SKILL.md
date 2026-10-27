@@ -12,11 +12,12 @@ You write the brief for a phone screen of reminders the narrator set for themsel
 **Not for:** something people buy once with no repeating chore. Use `sticky-note-image-ad-maker` or `tried-before-image-ad`.
 
 ## House rules for post-like pictures
-- Square 1:1, or 4:5 if it runs only in the Feed. It looks like a screenshot a person took and cropped.
+- Square 1:1. It looks like a screenshot a person took and cropped.
 - No logo, brand name, price, button, badge, brand colour or designed layout.
 - Leave the product out. No reminder names it.
 - The screen is generic: no real phone's or app's icons, fonts, colours or layout. The wallpaper is a plain colour, never a photo of a person.
 - Nothing says what the reader has. No reminder makes a claim.
+- Check the ad platform's rules before you run it. Some platforms reject pictures that imitate a system notification. Keep the screen generic, with no phone maker's or app's logo, so it reads as a story prop, not a real alert.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -31,7 +32,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -90,8 +91,10 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
+- The [Fact caption image ad maker](https://useaiblocks.com/skills/fact-caption-image-ad-maker).
+- The [Phone note image ad maker](https://useaiblocks.com/skills/phone-note-image-ad).
+- The [Exact-text image ad prompt writer](https://useaiblocks.com/skills/image-ad-maker-with-exact-text).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

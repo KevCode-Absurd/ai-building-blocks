@@ -19,7 +19,7 @@ steps:
   - {uses: competitor-landing-layout, note: "Keeps the layout idea and fills every slot with your own facts and words. Hands the landing page copy to step 2."}
   - {uses: landing-page-design-planner, note: "Turns the page copy into three on-brand designs and a build brief. Hands the design direction to step 3."}
   - {uses: shopify-landing-page-builder, note: "Loads the page copy and chosen design into theme files, with install steps. You upload them and take screenshots, which step 4 uses."}
-  - {uses: product-page-screenshot-auditor, note: "Uses your screenshots of the page you published from step 3's files, not the theme files themselves, to look at it as a shopper would and list what blocks buying."}
+  - {uses: product-page-screenshot-auditor, note: "Uses your screenshots of the page you published from step 3's files, and traces each fault back to the theme file, to look at it as a shopper would and list what blocks buying."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-rebuild-a-page-you-admire-as-your-own-shopify-page/skeleton.yaml

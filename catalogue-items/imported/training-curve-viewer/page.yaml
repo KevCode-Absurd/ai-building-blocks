@@ -35,7 +35,7 @@ how_to_use:
   - Copy the updated script back to your computer. Give each run its own name, such as a learning rate, so you can compare them.
   - Run your script. Your AI cannot do this step unless it can run Python code.
   - In a terminal, run tensorboard --logdir=runs. For Keras, use the log folder from your script instead.
-  - Open http://localhost:6006 in your browser. Check that the loss and accuracy charts appear, then compare your runs.
+  - Open http://localhost:6006 in your browser. Check that the loss and accuracy charts appear, then compare your runs. Next, pick the best settings and train again, or use the profiler section if training is slow.
 output_sample:
   input:
     - Your training script

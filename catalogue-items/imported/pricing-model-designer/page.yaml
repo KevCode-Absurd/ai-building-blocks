@@ -34,8 +34,9 @@ how_to_use:
   - Upload the skill folder, or paste the SKILL.md text into the chat.
   - "Fill in the pricing brief first: your industry, deal size, customer count, value drivers and competitor models."
   - Ask your AI to pick the pricing model from your brief. Read the trade-offs before you move on.
-  - If you have survey answers, add them next. You need at least 30 people, and 100 is better. Ask for the acceptable price range.
+  - If you have survey answers, add them next. You need at least 30 people, and 100 is better. Each person answers four questions: at what price is it too cheap, a bargain, getting expensive, and too expensive. If you have not run the survey yet, use the Willingness-to-pay survey designer to write the questions. Ask for the acceptable price range.
   - Add your feature list and ask for good, better, best tiers. Fix any packaging flags, then choose your own price.
+  - Next, test the price range in the market with a small price test on new customers. Then pass the chosen tiers to your discount rules, for example your deal approval step.
 output_sample:
   input:
     - Your product and customer description
@@ -55,3 +56,4 @@ output_sample:
       contains: Your features sorted into three tiers.
     - name: Packaging flags
       contains: Problems found, such as a decoy tier, a feature dump or no reason to upgrade.
+next: [willingness-to-pay-survey, price-test-planner]

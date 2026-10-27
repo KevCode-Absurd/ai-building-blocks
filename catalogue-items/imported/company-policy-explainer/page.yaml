@@ -7,7 +7,7 @@ job: hire-people
 headline: Company policy explainer
 subhead: Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words.
 explain: |
-  Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words. Staff stop waiting days for HR to reply to simple questions.
+  Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words.
 
   You paste your handbook or connect your policy documents, then ask in everyday language. Claude finds the matching section, explains the rule without jargon, and points to where it came from. It covers time off, benefits, pay, remote work, travel, expenses and conduct. With your HR system connected it can also pull a leave balance. For a dispute or a big decision, it tells you to check with HR.
 when:
@@ -33,7 +33,7 @@ how_to_use:
   - Paste your handbook text, or attach the file if your AI can read files.
   - "Type your question the way you would say it, such as: can I work from Europe for a month?"
   - Add your country or region if rules differ by place (optional).
-  - Check the Source line against your handbook before you act.
+  - Check the Source line against your handbook before you act. For anything that affects pay or leave, confirm it with HR first.
   - For a dispute, a legal issue or a big decision, ask HR.
 output_sample:
   input:

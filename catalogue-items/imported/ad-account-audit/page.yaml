@@ -34,6 +34,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder if your AI accepts files.
   - Upload your ad exports. Add your goal, monthly budget and the platforms you run. Add your tracking setup and landing page links if you have them.
+  - In a plain chat, the AI audits from your exports in one pass. It skips the helper workers, run folders and slash commands, which need the full toolkit. The landing page and competitor steps look at live pages, so approve each source first, or paste the page text.
   - Live account reading is optional. It needs your own read-only tokens and an AI that can run code. Skip it if you only have exports.
   - Ask your AI to audit your ad account. Answer any question it asks about your goal or data.
   - Check the findings and their sources first. Then work through the ranked fixes.

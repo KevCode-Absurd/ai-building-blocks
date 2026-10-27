@@ -53,11 +53,10 @@ MISSING: anything you could not find in what I gave you.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Plan what to test** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). It takes the ad copy.
+- The [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer).
+- The [Founder video series planner](https://useaiblocks.com/skills/founder-video-series-planner).
+- **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- The [TikTok Shop content planner](https://useaiblocks.com/skills/tiktok-shop-content-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

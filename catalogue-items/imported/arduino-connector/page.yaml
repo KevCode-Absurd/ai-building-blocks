@@ -35,6 +35,7 @@ how_to_use:
   - Check the board and port lists it shows you. Tell it which port to use.
   - Confirm the libraries it suggests, or ask for more.
   - Read the connection message. Then move on to your task, such as blinking an LED or reading a sensor.
+  - To reconnect later, clear the arduino object first. For a sensor MATLAB does not support, pair this with the Arduino sensor library builder.
 output_sample:
   input:
     - An Arduino board plugged in by USB
@@ -44,6 +45,8 @@ output_sample:
     - An AI that can run MATLAB commands
     - MATLAB with the Arduino support package installed
     - A USB cable that carries data, not just power
+    - MATLAB is a paid MathWorks product, so you need a licence for it
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Board and port lists
       contains: The results of arduinolist and serialportlist, shown to you side by side.

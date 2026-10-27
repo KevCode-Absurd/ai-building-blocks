@@ -209,7 +209,7 @@ After recommending, continue building flows with setup instructions for the reco
 **Email 3 — Social Proof + Best Sellers**
 - Goal: Build trust, showcase popular products
 - Timing: 2 days after Email 2
-- Content: Customer reviews, UGC, best-selling products, "loved by X customers"
+- Content: Customer reviews, UGC, best-selling products, "loved by [your real customer count] customers" (use only a real number)
 - Design: Product grid with reviews, star ratings
 
 **Email 4 — Discount Reminder / Urgency** (only if they haven't purchased)
@@ -220,7 +220,7 @@ After recommending, continue building flows with setup instructions for the reco
 
 ### Flow 2: Cart Abandonment
 **Priority:** 🔴 Critical — highest revenue per recipient
-**Expected impact:** $5.81 revenue per recipient average *(Klaviyo 2026)*
+**Expected impact:** A third-party benchmark of about $5.81 revenue per recipient has been quoted (Klaviyo 2026). Verify it before you use it. Your own results will differ.
 **Emails:** 3 emails over 3 days
 
 **Trigger:** Added to cart + started checkout, but did NOT complete purchase
@@ -338,7 +338,7 @@ After recommending, continue building flows with setup instructions for the reco
 
 **Email 2 — Reminder** (only if no review submitted after 5 days)
 - Content: Shorter, more direct. "Quick reminder — your review helps other [pet owners / etc.]"
-- Social proof: "Join 500+ customers who shared their experience"
+- Social proof: "Join [your real review count] customers who shared their experience" (the count must come from your own data. Never invent it.)
 
 ### Flow 6: Cross-Sell / Upsell
 **Priority:** 🟡 Important — increases AOV and LTV

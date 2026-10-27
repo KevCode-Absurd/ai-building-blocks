@@ -33,7 +33,8 @@ how_to_use:
   - Share your project code. Views, models, serializers and permission files matter most. Your AI needs to read files, so use a tool that can open your project.
   - Say which areas worry you most, such as billing or user records. Skip this if you are not sure.
   - Read each finding and the code path behind it. Check the ones marked for manual verification yourself.
-  - Apply the fixes. Then test with bad requests on a staging copy, never on real users' data, and run the review again.
+  - Apply the fixes one at a time. Then test with bad requests on a staging copy, never on real users' data, and run the review again.
+  - A code review does not replace testing a live system. Before a launch that matters, hire a penetration tester.
 output_sample:
   input:
     - Your Django or Django REST Framework project code

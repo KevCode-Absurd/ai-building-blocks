@@ -7,7 +7,7 @@ thinking_why: Three skills run in a row and the break-even sums are simple. A mi
 headline: Give each product a Shopping target that fits its margin
 subhead: Give it your products with margins and past return. It sorts them into tiers with a target for each, reads your first two weeks to say what to cut, feed or fund, then rewrites the weak titles from searches that sold.
 explain: |
-  Most Shopping accounts treat every product the same. A product with a 60 percent margin and one with a 25 percent margin get the same target, so you either leave profit on the table or starve the products that could carry the account. Weak titles add to it, because Google matches your product to searches by its title.
+  When every product in a Shopping account gets the same target, a product with a 60 percent margin and one with a 25 percent margin are judged alike. You either leave profit on the table or starve the products that could carry the account. Weak titles add to it, because Google matches your product to searches by its title.
 
   The steps fix the targets first, then the products, then the words. The first sets tiers and a target for each from break-even, and checks you have enough sales to split. It pauses while you build and run it for two weeks and export the weekly report. The second finds products to cut, feed, bid up or fund, and the search terms to block. It pauses again while you pull the converting search terms for the products it said to feed. The last rewrites those titles in one order, using the words buyers really typed.
 when:
@@ -101,4 +101,4 @@ improve:
   - Watch click rate and returns after each title batch before the next one.
   - Re-run step 2 every week for the first month, then every two weeks.
   - Move products between tiers when their sales change.
-  - Not worth it with very few products or sales. Fix titles and wait.
+  - With very few products or sales, fix titles first and wait for more data before you split into tiers.

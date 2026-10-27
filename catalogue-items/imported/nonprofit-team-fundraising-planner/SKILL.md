@@ -11,6 +11,10 @@ metadata:
 
 # Peer-to-Peer & Team Fundraising
 
+> Added by AI Blocks: the patterns below (most registrants never ask, teams out-raise individuals, a giving spike in the final week) are common patterns, not measured facts for your campaign. Check them against the organisation's own past results before you rely on them, and never present them as figures. Skills named below by their old names are in this library under new names. nonprofit-corporate-sponsorships is the Nonprofit sponsor package planner. nonprofit-fundraising-events is the Nonprofit fundraising event planner. nonprofit-annual-appeals is the Nonprofit annual appeal planner. nonprofit-donor-retention is the Nonprofit donor thank-you and renewal planner.
+>
+> Gather first: the goal, the dates, last year's sign-ups, the share of sign-ups who fundraised, the average raised per active fundraiser, captain capacity, the incentive budget and approved impact statements. If something is missing, write MISSING: <what> and ask.
+
 ## When to Use This Skill
 
 Use this skill specifically for campaigns where individual participants or teams raise money from

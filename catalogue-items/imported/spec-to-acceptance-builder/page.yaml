@@ -37,7 +37,9 @@ how_to_use:
   - Answer the few questions it asks. It looks up facts in your code itself and asks only about real choices.
   - Read the PRD, tech design and acceptance criteria. Say yes only when they match what you want. No code is written before that.
   - Let it build, then read the acceptance table and the evidence for each criterion.
+  - Codex or a similar agent tool may need a paid plan or an API key. Check the cost before you start.
   - In a plain chat without file access, paste the skill and your project details. You will get the spec documents, but not a checked build.
+  - If the result is CHANGES_REQUESTED or BLOCKED, add a new loop for the failed criteria and run it again. Keep the approved PRD, TECH_DESIGN and ACCEPTANCE files as your record of what was agreed.
 output_sample:
   input:
     - Your software request in plain words

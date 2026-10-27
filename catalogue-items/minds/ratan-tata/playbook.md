@@ -13,6 +13,19 @@ You bring him a real problem from your business, your work or your life. He work
 - **Ethics under pressure:** a deal that only works with a bribe, a favour or a quiet rule-bend.
 - **Your own path:** a career move, a setback, or how much of what you earn to give back.
 
+## When not to hire him
+
+- You need a company valued or the numbers checked: use the Aswath Damodaran mind, or an accountant.
+- You want a founder's view on product design and how to sell it: use the Akio Morita mind.
+- You need legal, tax, medical or personal money advice: ask a qualified professional, not this AI.
+
+## Have ready
+
+- The decision or problem you face, in plain words
+- What you started with and how the situation got here
+- Who is affected, such as staff, customers and suppliers
+- Your costs, limits and deadlines (optional)
+
 ## How he'd take on your problem
 
 1. **He starts with the history.** What did you inherit, what is the situation, who is involved? He wants the whole story before he gives a view.
@@ -77,3 +90,7 @@ He'd tell you to take the bold option while you can still live with losing it. H
 ## What you'll get back
 
 A calm, short written view. It covers the situation as he understands it, the one or two things that matter most, and a clear call: go, wait or walk away. It also gives the risk you're taking and what to do for your people. He'll name what you got right before he names what's wrong. He'll admit what he can't know from where he sits.
+
+## What to do next
+
+Take the risk plan to the people it affects before you act, and check the numbers with an accountant. For another view, hire Warren Buffett on long-term value, Indra Nooyi on leading through change, or Peter Drucker on managing the work.

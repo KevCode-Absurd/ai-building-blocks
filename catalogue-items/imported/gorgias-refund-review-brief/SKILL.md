@@ -69,4 +69,8 @@ Parse the JSON output from Step 2. From HubSpot, pull:
 [Pre-written response for either approval or denial scenario]
 ```
 
-This skill does NOT process the actual refund - it prepares the case for a human to approve. Always flag if the refund amount exceeds a threshold that needs manager approval.
+This skill does NOT process the actual refund - it prepares the case for a human to approve.
+
+Policy rule: use only the refund policy the user pasted. If none was given, write "Not checked: no policy given" in the refund window and valid reason rows, and say what you need to complete them. Never assume a window or rule.
+
+Manager threshold: flag the refund for manager approval when it is above the amount the user named. If the user named none, say "No approval threshold given" and ask for one.

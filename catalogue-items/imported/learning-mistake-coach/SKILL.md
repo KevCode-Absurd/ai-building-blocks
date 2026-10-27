@@ -17,6 +17,7 @@ Identify the exact type and root cause of a misconception, then design a correct
 - Learner makes the same conceptual error repeatedly. `check-understanding` or `challenge-generator` flagged a pattern. Learner's explanation reveals a plausible but incorrect mental model. Learner believes they understand but consistently applies it wrong.
 - **Skip if**: one-time execution mistake with no conceptual root. Concept hasn't been taught yet → `teach-concept`. Issue is environmental → `debug-teacher`.
 - **Routing**: run before `check-understanding` recheck when persistent error detected. Pair with `socratic-mode` for deep misconceptions. Log to `weak-area-tracker`.
+- **AI Blocks note**: this skill works on its own. If the other skills named here are not installed, do the action yourself. `socratic-mode` means ask three or four guided questions that expose the clash in the learner's thinking, one at a time. `weak-area-tracker` means write the mistake and its fix in a short notes list for the learner. `challenge-generator` means write one new practice question on the corrected model. `check-understanding` means ask the learner to explain the idea again in their own words. `teach-concept` means teach the idea from the start. `debug-teacher` means help the learner find the setup problem first.
 
 # Inputs
 

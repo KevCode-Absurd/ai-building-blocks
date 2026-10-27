@@ -37,6 +37,7 @@ how_to_use:
   - Add any landing page links you already found (optional).
   - Read Coverage first to see what was found. Then check that each claim has a link to an ad or page.
   - Treat anything marked as a guess as an idea to test, not a fact.
+  - Next, turn the top gaps into a test plan. Check any counter ad against the ad platform's rules before it runs.
 output_sample:
   input:
     - Your rivals' names and websites

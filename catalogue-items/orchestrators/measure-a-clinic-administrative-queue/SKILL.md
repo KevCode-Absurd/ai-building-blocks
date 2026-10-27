@@ -7,6 +7,26 @@ description: "Use when a clinic's admin queue, such as referrals or records requ
 
 Find where a clinic's admin queue waits and whether staff hours cover the load. Admin stages only. Two steps run in order: measure the stages, then set the load against staff.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A chat AI that can run Python code:** The Process bottleneck finder uses small scripts for the stage math. Without code, the AI does the sums by hand and says so under CHECKS MISSED.
+- **Your practice management or task system:** Export the task log from it, then remove identifiers before you share it.
+<!-- /needs -->
+
 ## What you need
 
 - Deidentified task records: one row per task and stage, with a task ID, the stage name, the owner role, and working and waiting time in minutes or days.
@@ -64,6 +84,14 @@ CHECKS MISSED      <one line each, or none>
 ```
 
 Then add a short HAND-BACK SUMMARY: the scope, each saved file, each step run or skipped and why, the sources used, every MISSING line and CHECKS MISSED. A draft is not a completed action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recurring work delay reviewer](https://useaiblocks.com/workflows/trace-why-work-keeps-missing-deadlines). It takes the document.
+- The [Clinic referral administration handover planner](https://useaiblocks.com/workflows/prepare-a-referral-administration-handover).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

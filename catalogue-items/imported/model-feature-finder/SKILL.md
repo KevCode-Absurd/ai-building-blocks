@@ -37,7 +37,7 @@ Individual neurons in neural networks are **polysemantic** - they activate in mu
 ## Installation
 
 ```bash
-pip install sae-lens
+pip install sae-lens transformer-lens torch
 ```
 
 Requirements: Python 3.10+, transformer-lens>=2.0.0

@@ -1,6 +1,6 @@
 # Alan Fletcher: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on the record: our best source for his own views is the long interview Rick Poynor did with him for *Eye* magazine, dated winter 1990 and first printed in 1991, which we re-read in full for this version [S2]. We also use excerpts from his book *The Art of Looking Sideways* [S7], a review that quotes him [S6], a short blurb page [S9], a tribute by his publisher [S3], a design-magazine piece on the V&A mark [S4] and reference pages [S1][S5][S8]. The book is largely an anthology of other people's sayings, so we do not credit its quoted lines to him; we use it to show what he chose to collect [S6][S7]. Reports of its length differ, about 500 pages in one review and over 1,000 in another note [S6][S9]. He died in 2006 [S1]. Public English-language record of his own voice is thin: one long interview and a book of other people's lines.
 

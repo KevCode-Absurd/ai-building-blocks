@@ -7,9 +7,9 @@ thinking_why: It runs three skills in a row. The steps are fixed, and the care i
 headline: Decide what you will do in a falling market while you are calm, and write it down
 subhead: Paste your holdings, what you think each is worth and how prices have moved. It sorts each move into the business changing or the crowd changing its mood, checks each holding on business facts with the price hidden, and writes the do and do-not rules for a fall. A method of analysis, not personal financial advice.
 explain: |
-  Nobody chooses well in the middle of a fall. The screen is red, the news is loud, and every reason to act sounds sensible.
+  It is hard to choose well in the middle of a fall. The screen is red, the news is loud, and every reason to act sounds sensible.
 
-  This workflow uses the Mr. Market picture from The Intelligent Investor by Benjamin Graham. Imagine a business partner who names a price for your share every day, some days far too high and some days far too low. You may deal with him or ignore him. First it reads the offer: today's price against your own written value, and whether the business changed or only the mood. Then it checks each holding on business facts alone, and asks if you would buy the same business today with the price hidden. Last it writes the rules for three sizes of fall and for a jump, with fixed dates for looking. It is a plan, not a trade. It names no security to buy or sell.
+  This workflow is inspired by the Mr. Market picture in The Intelligent Investor by Benjamin Graham. Imagine a business partner who names a price for your share every day, some days far too high and some days far too low. You may deal with him or ignore him. First it reads the offer: today's price against your own written value, and whether the business changed or only the mood. Then it checks each holding on business facts alone, and asks if you would buy the same business today with the price hidden. Last it writes the rules for three sizes of fall and for a jump, with fixed dates for looking. It is a plan, not a trade. It names no security to buy or sell.
 when:
   - Prices are swinging and you feel pulled to act.
   - You sold in a panic once and do not want to do it again.
@@ -29,9 +29,9 @@ you_get:
   - A keep, watch or weak mark for each holding, from facts alone
   - A one-page rule card for falls and jumps, with look dates
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Write your value for each holding before you paste, even a rough range. Without it the gap cannot be read.
+  - Gather your holdings with cost and date, your written value for each, and the sizes of fall that would hurt you. Even a rough range works. Without your value the gap cannot be read.
   - Print the rule card and keep it where you look at prices.
 output_sample:
   input:

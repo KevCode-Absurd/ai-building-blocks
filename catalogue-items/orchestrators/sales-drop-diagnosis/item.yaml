@@ -9,7 +9,6 @@ level: advanced
 inputs:
   - {type: performance_sheet, required: true}
   - {type: brand_brain, required: true}
-  - {type: product_data, required: true}
   - {type: reference_set, required: false}
   - {type: voc_reviews, required: false}
   - {type: persona, required: false}
@@ -20,7 +19,7 @@ uses: [ad-sales-drop-analyst, untried-ad-idea-finder, ad-test-brief-writer, ad-h
 steps:
   - {uses: ad-sales-drop-analyst, note: "Works out which link in the chain moved and ranks the likely reasons."}
   - {uses: untried-ad-idea-finder, note: "Uses the drop report to aim new ideas at places your ads have not been."}
-  - {uses: ad-test-brief-writer, note: "Turns the ideas into a brief that fits what your results prove."}
+  - {uses: ad-test-brief-writer, note: "Uses the drop report and the gap map to write a brief that fits what your results prove."}
   - {uses: ad-headline-writer, note: "Writes headlines for the brief's ideas and marks the one to test first."}
 origin: rebuilt
 version: 1.0.0

@@ -31,10 +31,11 @@ you_get:
   - Sign-off only when hard issues are closed
 how_to_use:
   - Open an AI that can run code and open a browser, such as Claude Code or Cursor. A plain chat window cannot run the browser check.
-  - Paste the skill, then tell your AI what the page is for and who visits. Add your page code or a short brief.
+  - Paste the skill, then tell your AI what the page is for and who visits. Add your page code or a short brief. The check opens whatever address or file you give it, so point it only at your own page or a local server.
   - Add your brand fonts or colours if you have them (optional). They override the skill's design rules.
   - Let your AI write the direction line, build the page, then run the browser check. The first run installs Playwright and Chromium.
   - Ask it to fix every failed finding and run the check again. Then open the two screenshots yourself and judge the look.
+  - Hand the checked page to your developer to ship, or run a check with real visitors before launch.
 output_sample:
   input:
     - What the page is for and who visits

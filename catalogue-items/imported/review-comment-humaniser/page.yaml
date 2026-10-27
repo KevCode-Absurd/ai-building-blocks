@@ -5,7 +5,7 @@ name: Review comment humaniser
 summary: Turn a wordy code review comment into a short, direct one with the line, a severity label and a fix. A code review comment rewriter for teammates.
 job: write-and-tell-stories
 headline: Review comment humaniser
-subhead: Give it a code review comment. Get a direct version that reads like a teammate wrote it. Bring one or more code review comments. Use the result to plan your next step.
+subhead: Paste a wordy code review comment. You get a short version that names the line, how serious it is and the fix, so your teammate acts on it.
 explain: |
   Code review comments rewritten to sound like a teammate: short, direct and with a fix. They get read and acted on, not skimmed past.
 
@@ -34,6 +34,8 @@ how_to_use:
   - "Read the reply. Each comment should look like: L42: bug: problem. Fix."
   - Check that the label is honest. A real bug must not be called a nit.
   - Paste the result into your pull request. Keep security and design comments in full sentences.
+  - To find the bugs first, run a plain code review (such as the Code change reviewer), then paste its comments here.
+next: [code-change-reviewer, bug-and-security-code-reviewer]
 output_sample:
   input:
     - One or more code review comments

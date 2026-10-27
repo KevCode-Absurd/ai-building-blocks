@@ -5,25 +5,35 @@ job: build-software
 headline: Agent database migration planner
 subhead: Plan a database change that preserves existing agent data. Get a schema map, staging checks, release order and recovery steps.
 explain: |-
-  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+  Changing a database that already holds your agent data is where data gets lost. A quick reset fixes the schema and wipes the rows.
 
-  Use forward migrations and rehearsed recovery. Existing data and access policies must survive the planned change unless a separate explicit decision authorizes otherwise.
+  This skill plans the change so the data stays. It maps your current tables to the ones your agents need, orders the steps so old and new code both keep working, and plans a rehearsal on a test copy. It also says plainly what a rollback cannot bring back. It plans only. A developer runs it on your servers.
 when:
-  - You need a concrete setup or code-change plan with required files.
+  - Your agents already store data, and you need to change the tables without losing it.
+  - Your agent tables do not match your project's tables, and you need a map from one to the other.
+  - You want a rehearsal and a recovery plan before anyone touches live data.
 not_for:
   - "You only add one column to a table with no data you need to keep: use your normal migration tool."
   - "You want to wipe and rebuild a live database: this plan refuses a reset, so use a script made for a throwaway test copy."
   - "You need the migration run for you: this makes a plan and files, so ask a developer to run them on your servers."
 you_give:
-  - The selected codebase, schemas and service setup
-  - The exact change you want and actions you authorize
+  - Your code, as a repo path or a zipped copy
+  - Your schema file or a database dump, with the names of the agent tables in use
+  - The exact change you want, and what you allow (plan only, or also write files)
+  - Backup and restore details, if you have them (optional)
 you_get:
-  - A concrete setup or code-change plan with required files
-  - Missing inputs and a bounded verification plan
+  - A current-state summary of your tables, constraints, data size and backups
+  - A source-to-target mapping of agent records to your tables
+  - Ordered migration steps, with backfill and access rules
+  - Staging checks and a rehearsal plan on a test copy
+  - Release order and rollback limits
+  - A list of what is missing and what was not run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI, or copy it and paste it into a new chat.
+  - Give it your code, your schema or dump, the table names, and the exact change you want.
+  - Read the mapping and the ordered steps. Check them against your own tables.
+  - Next, a developer runs the staging rehearsal on a test copy and brings the results back to your AI, which confirms the rollback plan.
+  - Release to live data only after the rehearsal and the restore both pass.
 output_sample:
   input:
     - Your code and database schemas for the project
@@ -46,17 +56,17 @@ output_sample:
     - name: Run evidence and open questions
       contains: What was run and what was not, plus assumptions and missing inputs.
 how_it_works:
-  - title: Step 1
-    text: Inspect schema history, live table definitions, constraints, data volume, ownership and every job/runtime component that reads them. Capture the current state and backup/restore evidence before designing a change. A mismatch with a classroom schema is not a reason to delete data.
-  - title: Step 2
-    text: Map required agent registry, jobs, activity, issues, findings, costs and proposal records to the selected project. Separate missing columns, renamed fields and semantic differences. Define compatibility for old readers and in-flight jobs.
-  - title: Step 3
-    text: Write an ordered forward migration that adds or transforms the necessary data without an unqualified table reset. Plan backfill, constraints and access policies deliberately. Make destructive changes a separate reviewed proposal with explicit data-loss scope, never a default repair step.
-  - title: Step 4
-    text: Rehearse the migration and restoration path in isolated staging with synthetic data and a representative schema. Check row counts, transformed values, indexes, ownership and old/new client compatibility. Use transactions or resumable phases where supported and appropriate.
-  - title: Step 5
-    text: Document release ordering, locking or maintenance needs, monitoring and the precise rollback limits. A rollback script that cannot restore deleted data is not a complete recovery plan. Pause the rollout if the rehearsed recovery or isolation check fails.
-  - title: Step 6
-    text: Return the migration plan, change files when requested, source-to-target mapping, verification queries and actual run/not-run evidence. A full reset is allowed only for an explicitly disposable environment and separate user authorization, with the exact target checked first.
+  - title: Inspect the current state
+    text: Reads schema history, live tables, constraints, data size, ownership and every job that reads them. It checks backup and restore evidence first.
+  - title: Map source to target
+    text: Matches agent records to your project. Missing columns, renamed fields and changed meanings are listed apart.
+  - title: Order the migration
+    text: Writes forward steps that add or change data in sequence, with backfill and access rules. Any destructive change is a separate reviewed proposal.
+  - title: Rehearse on a test copy
+    text: Tests the change and the restore on isolated data. It checks row counts, values, indexes, ownership and old clients.
+  - title: Plan the release and rollback
+    text: Gives the release order, any locking or downtime, what to watch, and what a rollback cannot restore.
+  - title: Report the evidence
+    text: Lists what was run, what was not run, assumptions and open questions.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

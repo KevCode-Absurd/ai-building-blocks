@@ -303,6 +303,7 @@ def solve_vrpb_ortools(coordinates, linehaul_demands, backhaul_demands,
         solution dictionary
     """
     import math
+    import numpy as np
 
     n = len(coordinates)
 
@@ -371,10 +372,11 @@ def solve_vrpb_ortools(coordinates, linehaul_demands, backhaul_demands,
         'Pickup_Capacity')
 
     # Add precedence constraints: linehauls before backhauls
-    # Use a counter dimension to enforce sequence
+    # Use a counter dimension to enforce sequence.
+    # The counter at a stop is the sum of the values of the stops visited
+    # BEFORE it. Backhaul stops add 1000, all other stops add 0.
     def counter_callback(from_index):
         from_node = manager.IndexToNode(from_index)
-        # Linehaul customers get value 0, backhauls get value 1000
         if from_node in backhaul_only:
             return 1000
         return 0
@@ -384,16 +386,17 @@ def solve_vrpb_ortools(coordinates, linehaul_demands, backhaul_demands,
     routing.AddDimension(
         counter_callback_index,
         0,  # no slack
-        10000,  # large upper bound
+        1000 * (len(backhaul_only) + 1),  # upper bound
         True,  # start cumul to zero
         'Counter')
 
     counter_dimension = routing.GetDimensionOrDie('Counter')
 
-    # Enforce that linehauls (counter ~0) come before backhauls (counter ~1000)
-    for backhaul_customer in backhaul_only:
-        index = manager.NodeToIndex(backhaul_customer)
-        counter_dimension.CumulVar(index).SetMin(500)
+    # A delivery stop (and a mixed stop) may not follow any backhaul stop,
+    # so its counter must still be 0 when the van reaches it.
+    for customer in linehaul_only + mixed:
+        index = manager.NodeToIndex(customer)
+        counter_dimension.CumulVar(index).SetMax(0)
 
     # Search parameters
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
@@ -525,7 +528,7 @@ if __name__ == "__main__":
     n_total = n_linehauls + n_backhauls + 1  # +1 for depot
 
     coordinates = [(50, 50)]  # Depot
-    coordinates.extend(np.random.rand(n_linehauls + n_backhauls, 2).tolist() * 100)
+    coordinates.extend((np.random.rand(n_linehauls + n_backhauls, 2) * 100).tolist())
 
     # Demands
     linehaul_demands = [0]  # Depot

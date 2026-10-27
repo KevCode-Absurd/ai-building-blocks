@@ -40,6 +40,10 @@ Out of scope (the boundary):
 - "Scrape TikTok Shop products" or "TikTok ads" — use a TikTok Shop or ads Actor from the Apify Store.
 - "Show me @user's stories" or a private account — not visible without a login, so the Actor cannot read them.
 
+## Before you run
+
+Check TikTok's terms of service and your local privacy rules before you collect comments or follower lists. Do not publish personal details taken from them. This skill is marked `risk: critical` because it collects data from people at scale through a paid scraper. Keep runs small, and tell the user what is collected and what it costs before you start.
+
 ## Prerequisites
 
 - Apify account ([sign up](https://apify.com)). AI add-ons need a paid Apify plan; on the free plan they are ignored.
@@ -190,6 +194,10 @@ See <https://github.com/apify/mcpc>.
 - **No `aiAnalysis` on rows** → the account is on the Apify free plan. AI options need a paid plan.
 - **Unexpected profile charges** → each entry in `profiles`, and each account from `"/user"` search, adds one `profile` row at $0.004.
 - More detail: [references/gotchas.md](references/gotchas.md).
+
+## Next steps
+
+Turn the top-video table into a content plan, or export the comments to a sheet to sort and code them.
 
 ## Limitations
 

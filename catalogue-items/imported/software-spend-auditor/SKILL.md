@@ -160,7 +160,7 @@ Walked one at a time by `/cs:grill-bizops` or the BizOps orchestrator. Recommend
    Canon: NotPetya / M.E.Doc supply chain attack lessons, NIST SP 800-161, A.T. Kearney on supply concentration risk.
 
 5. **"What % of your spend goes through a PO vs. expense reimbursement vs. shadow IT? Where's the maverick spend?"**
-   Recommended: measure it. A.T. Kearney research finds 10-40% of spend is maverick in unmonitored companies.
+   Recommended: measure it. Commonly quoted figures put maverick spend high in unmonitored companies; treat any percentage as an unverified rule of thumb and measure your own.
    Canon: A.T. Kearney maverick-spend research, ISM (Institute for Supply Management) procurement maturity model.
 
 6. **"How many of your top-20 contracts renew in the same calendar month? Do you have a renewal calendar?"**
@@ -168,7 +168,7 @@ Walked one at a time by `/cs:grill-bizops` or the BizOps orchestrator. Recommend
    Canon: IACCM/WorldCC contract-management research, Spend Matters on negotiation leverage timing.
 
 7. **"What's your approval threshold for net-new SaaS purchases under $5k? Who owns the death-by-a-thousand-SaaS problem?"**
-   Recommended: a tightened threshold + a single owner. Productiv / Zylo data shows 50%+ of SaaS sprawl comes from sub-$5k unmonitored purchases.
+   Recommended: a tightened threshold + a single owner. SaaS sprawl reports suggest much of it comes from small unmonitored purchases; treat any percentage as an unverified rule of thumb and measure your own.
    Canon: Productiv / Zylo / Vendr industry reports on SaaS sprawl.
 
 Walk depth-first. Lock 1-4 before opening 5-7. After all are answered, invoke `spend_categorizer.py` → `purchasing_cycle_analyzer.py` → `supplier_consolidation.py` in sequence.

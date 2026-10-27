@@ -35,7 +35,8 @@ how_to_use:
   - Add your counts file. Say which samples and conditions you have, if you know them.
   - Ask your AI to run the whole pipeline in one go, or one step at a time so you can check each.
   - Open the marker gene tables. Choose cell type names and ask your AI to add them to the data.
-  - If your data is a Seurat or SingleCellExperiment file, ask your AI to convert it to h5ad first.
+  - If your data is a Seurat or SingleCellExperiment file, ask your AI to convert it to h5ad first. The conversion script is in references/r_interop.md and needs R.
+  - Next, run pseudobulk.py to compare conditions. Treat the marker tables as an exploratory first look only, and have a specialist check cell type names.
 output_sample:
   input:
     - Your single-cell raw counts as an h5ad file, a 10X folder or a CSV

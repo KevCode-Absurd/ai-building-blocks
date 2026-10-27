@@ -11,6 +11,7 @@ explain: |
 
   The fix is a story bible, which is the facts of your story as a list, plus a mechanical check of the prose against it. For each hit, the skill asks one question: is the manuscript wrong, or is the bible out of date? It does not write, outline or polish. It checks and reports. It works on long manuscripts and comes with a small script.
 when:
+  - Your manuscript passes about 10 chapters or 30,000 characters and a re-read no longer catches slips.
   - Your character is 18 in chapter one and 23 in chapter twelve with no time passing.
   - A name changed spelling somewhere in the middle of the book.
   - You wrote a historical story and fear modern objects crept in.
@@ -32,7 +33,7 @@ you_get:
   - "A verdict on each: fix the text or the notes"
 how_to_use:
   - Put each chapter in one folder as its own .md or .txt file, with the chapter number in the file name.
-  - Open an AI that can run code and read files. Upload the skill and your folder.
+  - Open an AI that can run code and read files. Upload the skill and your folder. The checker is the Python block in references/sbc-checker.md. It uses only the standard library, and your AI saves it as sbc.py beside your story bible.
   - Ask it to build a story bible from your existing chapters, or upload yours. Check the names, birth years and clues it lists.
   - Ask it to run the check and group each hit as a prose fix, a bible update or a retcon.
   - Fix the prose, update the bible where you changed a fact on purpose, then ask it to run the check again.

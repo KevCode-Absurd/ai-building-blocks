@@ -24,13 +24,14 @@ you_give:
   - Your language and framework preference (optional)
   - Existing CRD or controller code (optional)
   - Cluster and RBAC constraints
+  - The Kubernetes version you will test against (optional)
 you_get:
   - A custom resource design
   - Controller code with a safe reconcile loop
   - CRD and reconcile lint results
   - A capability level score with gaps to close
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill. Use an AI that can run Python and read your files.
+  - Use an AI that can run Python scripts from the skill folder, such as Claude Code with this skill installed. In a plain chat window you still get the design and code, but you must check them by hand.
   - Describe the resource you want the operator to manage. Add your language, and any CRD or controller code you already have.
   - Read the CRD design first. Fix every warning before you write controller code.
   - Run the reconcile linter on your controller. It uses pattern checks, so still read the code yourself.
@@ -56,3 +57,6 @@ output_sample:
       contains: Pattern-based flags on the controller, such as sleeps, spec updates and missing requeues. It can miss issues.
     - name: Capability level
       contains: Your operator's OperatorHub level from 1 to 5, with next steps to reach the level above.
+terms:
+  - term: OperatorHub capability levels
+    meaning: "Five steps of operator maturity. 1 installs it, 2 upgrades it, 3 backs up and recovers it, 4 shows metrics and alerts, 5 runs and tunes itself."

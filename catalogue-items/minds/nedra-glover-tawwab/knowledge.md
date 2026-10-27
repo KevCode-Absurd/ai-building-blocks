@@ -54,12 +54,12 @@ Original everyday application: Limit money lending while considering other forms
 
 The following order is our runnable interpretation of the public work. It gives a useful default for a small daily problem, and can be adjusted when the situation or the person's own account requires it.
 
-- **Notice the cost:** In the application to a person accepting every family request and resenting it later, this stage provides a check before the next action. Identify where a recurring yes leaves you depleted or resentful. Separate an actual obligation from an optional request and check your capacity before deciding what you can honestly offer. [S4]
-- **Choose a limit:** In the application to a person accepting every family request and resenting it later, this stage provides a check before the next action. Choose a specific limit about time, access, help or another resource. Include the practical context, because housing, work and caregiving may affect what actions are realistically available. [S1]
-- **Say it directly:** In the application to a person accepting every family request and resenting it later, this stage provides a check before the next action. Communicate the limit directly in ordinary words. Provide helpful context if wanted, but avoid turning the message into an application for permission or inventing excuses that require ongoing defense. [S1]
-- **Decide your action:** In the application to a person accepting every family request and resenting it later, this stage provides a check before the next action. Decide the follow-through you control before ordinary pushback arrives. A boundary cannot guarantee another person's respect; it can make your own availability and next action clearer and more consistent. [S4]
-- **Expect discomfort:** In the application to a person accepting every family request and resenting it later, this stage provides a check before the next action. Expect some guilt or discomfort and recheck the reasons without treating the feeling as the sole judge. Seek practical support where material risk is present instead of assuming more courage solves every constraint. [S2]
-- **Review the relationship:** In the application to a person accepting every family request and resenting it later, this stage provides a check before the next action. Review whether the limit permits the connection you want and whether your action matches your words. Respect others' boundaries too, and avoid treating all disappointment as toxicity or every limit as a reason to end contact. [S2]
+- **Notice the cost:** Identify where a recurring yes leaves you depleted or resentful. Separate an actual obligation from an optional request and check your capacity before deciding what you can honestly offer. [S4]
+- **Choose a limit:** Choose a specific limit about time, access, help or another resource. Include the practical context, because housing, work and caregiving may affect what actions are realistically available. [S1]
+- **Say it directly:** Communicate the limit directly in ordinary words. Provide helpful context if wanted, but avoid turning the message into an application for permission or inventing excuses that require ongoing defense. [S1]
+- **Decide your action:** Decide the follow-through you control before ordinary pushback arrives. A boundary cannot guarantee another person's respect; it can make your own availability and next action clearer and more consistent. [S4]
+- **Expect discomfort:** Expect some guilt or discomfort and recheck the reasons without treating the feeling as the sole judge. Seek practical support where material risk is present instead of assuming more courage solves every constraint. [S2]
+- **Review the relationship:** Review whether the limit permits the connection you want and whether your action matches your words. Respect others' boundaries too, and avoid treating all disappointment as toxicity or every limit as a reason to end contact. [S2]
 
 ## An everyday worked application
 
@@ -69,9 +69,9 @@ Before trying the example, define what a useful result would look like for the p
 
 ## Where she stood
 
-The recurring question in this profile is how to approach a person accepting every family request and resenting it later without losing the useful distinction in define a concrete limit. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
+The recurring question in this profile is how to approach the habit of accepting every family request and resenting it later without losing the useful distinction between an obligation and an optional request. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
 
-In the original application, ask whether the proposed response preserves say what you mean and whether it leaves room for balance independence and connection. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
+In the original application, ask whether the proposed response says what you mean, and whether it leaves room for both your independence and the connection. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
 
 ## Their work and record
 

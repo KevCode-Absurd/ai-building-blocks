@@ -23,7 +23,7 @@ you_give:
   - The fields you need extracted
   - Sample text to pull them from
   - Your AI provider and language
-  - An API key
+  - An API key. Each provider bills the calls to your account, so you need a paid key before you run the code
 you_get:
   - A schema for your fields
   - Working extraction code
@@ -36,6 +36,7 @@ how_to_use:
   - Say your AI provider and your language, Python or JavaScript.
   - Run the code you get with your own API key. This needs a place to run code, so use a project on your computer or an AI that can run code.
   - Test it on real inputs and fix the schema if a field comes back wrong.
+  - Next, pass the checked object to your database or screen. Log the input, the raw reply and any check errors, so you can tell a schema problem from a prompt or model problem.
 output_sample:
   input:
     - The fields you want pulled out, with type, required or optional, and allowed values

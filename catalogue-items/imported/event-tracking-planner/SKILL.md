@@ -6,6 +6,16 @@ catalog_summary: "Instrument product analytics correctly: event taxonomy, proper
 display_order: 8
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `references/retention-measurement-patterns.md`
+
+The `analytics-strategy` and `experimentation-analytics` skills named below are not in this library. If the person has not decided what to measure, ask them for their goal and the three questions they want answered, then carry on.
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Product Analytics Setup
 
 A senior PM and analyst's playbook for instrumenting product analytics correctly the first time.
@@ -182,7 +192,7 @@ Retention curve interpretation.
 - Gradual decay across weeks with no plateau. No one is sticking. Usually a value-prop or onboarding problem; the product is not delivering recurring value.
 - Flat line at low percentage. A power-user product with a small but engaged base. Not a problem; just a different shape.
 
-Detail in [`references/retention-measurement-patterns.md`](references/retention-measurement-patterns.md).
+The three retention types above are the full guidance in this copy. The longer retention reference file is not included.
 
 ---
 

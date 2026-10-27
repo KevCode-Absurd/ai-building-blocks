@@ -23,6 +23,8 @@ Design and execute offboarding programs that protect the organization, support d
 - Building involuntary termination protocols compliant with local labor law
 - Creating offboarding dashboards to track completion and trends
 
+> Added by AI Blocks: this is not legal advice. Anything on involuntary exits, redundancy, separation agreements or country-specific rules is an outline only. An employment lawyer or HR adviser must check it before use. Do not state what the law requires in a country unless the person gave you the rule. Say "check with a lawyer" instead.
+
 ## Key prompts
 
 ### Offboarding process design

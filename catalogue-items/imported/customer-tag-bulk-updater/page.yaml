@@ -32,11 +32,13 @@ you_get:
   - A CSV file with one row per customer and its status
 how_to_use:
   - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
-  - "Sign in to your store first with this command: shopify store auth --store <your-store>.myshopify.com --scopes read_customers,write_customers"
+  - "Install the Shopify CLI if you do not have it. Then sign in to your store first with this command: shopify store auth --store <your-store>.myshopify.com --scopes read_customers,write_customers"
   - Paste the skill into your AI. Give it your store address, your search or ID list, and the tags to add or remove.
   - Let it run the preview. It is on by default and changes nothing. Check the match count and a few before and after tag sets.
   - Check the spelling and case of each tag. Shopify tags are case sensitive, so VIP and vip are different.
   - Keep the default merge mode, which keeps existing tags. Replace mode wipes a customer's current tags, so use it only if you have a backup. Then ask your AI to run it for real.
+  - Open the CSV to check each status. To undo a run, run it again with the tags to remove.
+next: [customer-segment-builder, customer-note-bulk-adder]
 output_sample:
   input:
     - Your store address

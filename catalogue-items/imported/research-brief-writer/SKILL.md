@@ -55,7 +55,7 @@ Goal: turn a vague research need into ONE self-contained paragraph that a resear
 
 ## Executing the prompt
 
-To run the finished prompt with an AI researcher, execute it via DeepAPI `POST /v1/research/deep` — follow the `deep-research` skill.
+This step is optional. To run the finished prompt with an AI researcher, the author's route is DeepAPI `POST /v1/research/deep` (follow the `deep-research` skill). That route needs an API key and a paid service. The free route: copy the brief and paste it into a deep research tool yourself. Only use DeepAPI if the user asks for it and has a key.
 
 ## Example
 

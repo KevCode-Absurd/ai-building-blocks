@@ -25,6 +25,7 @@ you_get:
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
+  - The image round needs an image tool, such as ChatGPT or Gemini. Free plans have tight limits, and an image API key bills each picture. Without one, you get a labelled wireframe and the rest still runs.
   - Check the result against the supplied facts before using it.
 output_sample:
   input:
@@ -59,5 +60,8 @@ how_it_works:
     text: Plan two distinct executions and two or three hero concepts grounded in real product photos.
   - title: Build and inspect
     text: Compose editable HTML, preview both sizes and prepare an email-safe fallback before handoff.
+improve:
+  - Check the finished email with the Email design checker before you send it.
+  - Bring later copy changes to the Campaign email writer, then rebuild with this workflow.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.

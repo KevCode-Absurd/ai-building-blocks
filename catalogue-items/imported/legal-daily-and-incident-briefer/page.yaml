@@ -33,7 +33,9 @@ how_to_use:
   - Open your AI tool and paste in this skill, or add the skill folder if your tool takes files.
   - Connect your email, calendar, chat or contract tools so your AI can read them. Without them, the brief will be thin.
   - "Say which mode you want: daily, topic or incident. For topic or incident, add the question or situation."
+  - For the daily mode, the brief checks each connected source in turn (email, calendar, chat, contract tool, CRM). It sorts what it finds into Urgent, then the rest, and lists any source it could not read.
   - Read the Urgent section first, then the list of sources that were not available.
+  - Pass each Urgent item to whoever acts on it, such as the contract owner for a review request. Log incident actions in the matter file.
   - Have a qualified lawyer check anything before you act on it.
 output_sample:
   input:

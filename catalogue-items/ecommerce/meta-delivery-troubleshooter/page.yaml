@@ -9,7 +9,7 @@ headline: "Meta delivery troubleshooter"
 subhead: "Describe what Meta is doing with your ads, plus frequency, click rate, CPM, cost per sale and spend by ad. It matches the symptoms to the delivery steps, says which step is failing, what to change first and what to leave alone, and plans a 7-day broad against interest test."
 
 explain: |
-  When Meta ads stall, people blame the wrong thing. They tweak budgets daily, add exclusions, or chase a "learning" label, when the real problem sits earlier. Meta picks which ads a person sees in steps. It reads your creative to narrow tens of millions of ads to a few thousand, ranks them, then runs an auction. Each step takes about 200 milliseconds.
+  When Meta ads stall, people blame the wrong thing. They tweak budgets daily, add exclusions, or chase a "learning" label, when the real problem sits earlier. Meta picks which ads a person sees in steps. It reads your creative to narrow tens of millions of ads to a few thousand, ranks them, then runs an auction. One operator puts each step at about 200 milliseconds.
 
   This skill walks your symptoms through those steps. It treats the creative as the targeting, since who is on screen and what is said shapes who sees the ad. It checks the click rate, page conversion and unit economics, and it tests common claims before you act on them. Much of this is one buyer's practice or one agency's reading of Meta's engineering posts, not Meta's own documents, so the skill hedges and tells you what to test.
 

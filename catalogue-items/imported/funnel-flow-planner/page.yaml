@@ -36,8 +36,10 @@ how_to_use:
   - Paste the skill text from this page into the chat.
   - Add your audience groups, your offer and price, your tools and pages, and your traffic sources.
   - Add your current conversion numbers if you have them.
+  - For a quick first pass, name only your two or three biggest audiences. Ask your AI to map those first and add the rest later.
   - "Check each path: does each audience get its own entry point and its own emails? Ask your AI to fix any that share one path."
   - Pick the first test from the list and run it before you change anything else.
+  - Next, ask for the lead magnet, the emails or the quiz each path needs, one at a time.
 output_sample:
   input:
     - Your audience groups and how ready each is to buy
@@ -58,3 +60,4 @@ output_sample:
       contains: Where the offer appears on each path and what it says.
     - name: Measurement and tests
       contains: What to track across the whole funnel and which tests to run first.
+next: [lead-magnet-planner, email-sequence-arc-planner, leaky-funnel-fixer]

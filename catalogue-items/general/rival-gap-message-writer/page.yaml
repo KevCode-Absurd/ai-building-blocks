@@ -74,6 +74,7 @@ output_shape: |
 
         CLAIM ONLY (not used): <...>
         MISSING: <...>
+        CHECKS MISSED: <one line per check missed, or none>
 tweaks:
   - what: Proof quality
     how: Numbers, policies and test results beat adjectives. Add them and more pairs survive.
@@ -94,6 +95,7 @@ improve:
   - Add your approved claims and the words you never use.
   - Add your own weak spots so the reply test is harder.
   - Save the winning message in your brand file.
+next: []
 works_best_with:
   tools:
     - name: Any good chat AI

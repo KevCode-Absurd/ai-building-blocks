@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: tool_connection
     required: false
+  - type: document
+    required: false
 outputs:
   - type: audit_report
 uses: []

@@ -35,6 +35,7 @@ how_to_use:
   - Add your existing code or schema if you have it (optional). Paste it in, or upload files if your AI allows.
   - Ask your AI to write the contract first, with typed inputs, outputs and error shapes.
   - Check the result against the Verification list, then ask for a short plan for changing it later.
+  - Save the agreed contract as a file in your repo next to the code. Give it to the developer who builds from it, and to anyone who will call the interface.
 output_sample:
   input:
     - What your code must offer, such as the actions or data it exposes
@@ -56,3 +57,4 @@ output_sample:
       contains: Types that separate input from output, model variants clearly and keep IDs from being mixed up.
     - name: Red flags and verification
       contains: A checklist to test the design and spot common mistakes before you build.
+next: [api-spec-writer, api-design-reviewer, api-test-suite-builder]

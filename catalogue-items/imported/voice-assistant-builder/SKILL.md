@@ -166,6 +166,8 @@ function App({ signedUrl }: { signedUrl: string }) {
 
 ## Configuration
 
+Model names change often. Run the model list command first (`GET /v1/convai/llm/list`, see below) and choose from what it returns. Treat this table as examples, not a promise that each name exists.
+
 | Provider | Models |
 |----------|--------|
 | OpenAI | `gpt-6.1-sol`, `gpt-6-sol`, `gpt-6-luna`, `gpt-6-astra`, `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`, `gpt-5.5`, `gpt-5.5-2026-04-23`, `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.4-nano`, `gpt-5.4-2026-03-05`, `gpt-5.4-mini-2026-03-17`, `gpt-5.4-nano-2026-03-17`, `gpt-5`, `gpt-5-mini`, `gpt-5-nano`, `gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`, `gpt-4o`, `gpt-4o-mini`, `gpt-4-turbo` |

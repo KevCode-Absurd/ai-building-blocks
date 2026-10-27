@@ -35,7 +35,8 @@ how_to_use:
   - Add your country, company size and work setup. Paste any current policy (optional).
   - Answer up to three questions the AI asks before it starts.
   - Read the package. Fill in the placeholders in curly brackets, like the company name and start date.
-  - Show any policy, firing, leave or pay item to a lawyer before you use it.
+  - Show any policy, firing, leave or pay item to a lawyer before you use it. Send a job post to your recruiter or hiring manager.
+  - Work through the rollout checklist in order, and give each task to the owner named in it.
 output_sample:
   input:
     - The HR task in plain words

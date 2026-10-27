@@ -5,7 +5,7 @@ name: Org structure and role map builder
 summary: Plan your org structure from your goals and team. Get a spans check, a recommended design and a RACI chart of who decides what.
 job: hire-people
 headline: Org structure and role map builder
-subhead: Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what. Bring company goals and strategy. Use the result to plan your next step.
+subhead: Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what. Take the plan to HR and legal before you act on it.
 explain: |
   A clear plan for how your company or team should be organised, with a check on how many people each manager leads and a chart of who decides what.
 
@@ -32,12 +32,13 @@ you_get:
   - Decision rights and governance notes
   - A change plan outline
 how_to_use:
-  - Gather your company goals, your team list with who reports to whom, and your headcount.
+  - Gather your company goals and headcount. List your team, one person per line, as name, role, manager, number of direct reports.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
   - Paste your goals, reporting lines, headcount and pain points, such as slow decisions.
   - "Ask for named sections: structure options, spans and layers check, RACI chart, decision rights and a change plan."
   - Check the result against real workload, not just headcount. Keep people placement separate from structure.
   - Review any people decisions with HR and legal before you act.
+  - Put a date in your calendar to check the new structure 6 to 12 months after the change. Use the Change rollout planner to plan the move itself.
 output_sample:
   input:
     - Your company goals and strategy
@@ -56,3 +57,4 @@ output_sample:
       contains: Who makes which calls, and how a central or local model would work.
     - name: Change plan outline
       contains: Steps and messages for moving from the current structure to the new one.
+next: [change-rollout-planner, org-change-announcement-writer]

@@ -41,6 +41,7 @@ first_result:
   - "Pick an image model, make a first set, and keep the one that is closest."
   - "Make the next round from that one, or edit one area in Canvas. Upscale only the final pick."
   - "Check hands, logos and any words in the image before you use it."
+  - "You end with a set of image files and an upscaled final pick. Next: write the description with the Marketing image prompt writer. If the image needs exact words, compare Ideogram."
 needs:
   - "An account. We could not confirm which sign-in methods it accepts."
   - "A written description of the picture: subject, setting, style."

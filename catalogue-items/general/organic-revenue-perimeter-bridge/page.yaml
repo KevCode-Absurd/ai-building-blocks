@@ -4,12 +4,12 @@ headline: Organic revenue perimeter bridge
 summary: Work out organic revenue growth by taking acquisitions, disposals and currency effects out of reported revenue, with a bridge you can check.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The three adjustments can overlap, so each must have a stated order and source before growth is called organic."
 subhead: Give it your reported revenue, the acquired and disposed revenue, and the currency effect. It removes them to find organic growth. You get a bridge you can trace back to each input.
 explain: |-
   A reported-to-organic revenue bridge with clearly defined comparable bases.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures. Prior comparable revenue100-10=90; current comparable130-20-5=105. Growth105/90-1=16.666667%. Acquired revenue15 gives110/90-1=22.222222%.
+  Illustrative figures only. Prior comparable revenue: 100 - 10 = 90. Current comparable revenue: 130 - 20 - 5 = 105. Organic growth: 105 / 90 - 1 = 16.67%. If you also take out 15 of acquired revenue, it is 110 / 90 - 1 = 22.22%.
 when:
   - You report growth to a board or lender and need to show it without deals and currency swings.
   - You bought or sold a business and need comparable revenue for both periods.
@@ -19,6 +19,7 @@ not_for:
   - "You only need reported revenue growth from the accounts: compare the two reported figures in a plain spreadsheet."
   - "You cannot document which businesses sit in both periods: ask your finance lead to define the comparable group first."
   - "You need an audit opinion or a legal view on the accounting: use a qualified accountant."
+  - "You only need to split growth into real growth and the currency effect: use the Constant-currency revenue bridge instead."
 you_give:
   - Reported revenue for the current and prior period.
   - Revenue from acquired businesses in the current period, with dates.
@@ -74,10 +75,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Period end"
+    how: "Take the period end from the revenue for both periods and the notes on acquisitions, disposals and currency. Use one currency and scale on every line."
+  - what: "The order of the adjustments"
+    how: "Change the the order of the adjustments and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Acquisition, disposal and FX effects are mutually exclusive and use a documented ordering.
 judge:
@@ -90,8 +91,10 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one organic revenue growth you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define organic growth into SKILL.md, so every run uses your wording."
+before: []
+next: [constant-currency-revenue-bridge, extra-week-revenue-comparability]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

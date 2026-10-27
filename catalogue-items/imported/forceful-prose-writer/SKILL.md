@@ -124,6 +124,7 @@ Actively do the following:
 ### Authority
 - Write as if truth does not need permission.
 - Avoid hedging unless uncertainty is essential and explicit.
+- Keep any uncertainty the user's source states. Do not turn a maybe into a fact. Never invent a name, figure or date, and tell the user to check each one before use.
 - Do not posture. Do not moralize.
 
 ## Registers (optional)

@@ -47,6 +47,7 @@ output_sample:
     - An AI that can read your files, including your saved legal setup notes
     - Your litigation setup notes (CLAUDE.md) and your matter log (_log.yaml)
     - Web access to look up the rule for where the subpoena was issued
+    - "Optional: a legal research tool such as Westlaw (paid), Trellis, Descrybe or CourtListener (free)"
   output:
     - name: Key fields
       contains: Who issued it, who it was served on, what it asks for, where to comply and the dates.

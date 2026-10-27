@@ -29,7 +29,7 @@ you_get:
   - A clean-up list of what to remove, which keys and seats to revoke and which widgets to move off checkout
   - Notes for a developer on pinned versions and a content security policy
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md and the two skill files this workflow uses. Unzip it and keep them together in one folder.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Export your reviews and email flows before you cut a review or email app. Removing one can break both.
   - After step 1, remove the cuts, then collect the script list for the pause.

@@ -32,7 +32,9 @@ vercel deploy [path] -y
 
 ## Fallback (No Auth)
 
-If CLI fails with auth error, use the deploy script:
+If CLI fails with auth error, use the deploy script.
+
+**Warn the user first and wait for a yes.** The script uploads the whole project folder to Vercel's no-login deploy service (`codex-deploy-skills.vercel.sh`), and the preview link is public until the user claims it. Remove `.env` files, keys and other secrets from the folder before you run it.
 
 ```bash
 skill_dir="<path-to-skill>"
@@ -60,7 +62,7 @@ vercel deploy [path] --prod -y
 
 ## Output
 
-Show the user the deployment URL. For fallback deployments, also show the claim URL.
+Show the user the deployment URL. For fallback deployments, also show the claim URL. Tell the user to open the link and check the site themselves, and to claim or delete a no-login deployment if it should not stay live.
 
 **Do not** curl or fetch the deployed URL to verify it works. Just return the link.
 

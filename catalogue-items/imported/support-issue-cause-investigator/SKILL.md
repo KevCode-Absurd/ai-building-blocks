@@ -24,7 +24,7 @@ The user's input is: $ARGUMENTS
 3. Analyze the pattern
 
 ### If raw descriptions are pasted:
-Use them directly.
+Use them directly. This needs no Composio or Gorgias access, so a user without those tools can start straight away.
 
 ## Analysis Framework
 
@@ -80,13 +80,13 @@ Starting from the symptom, ask "why" five times to drill down:
 ### Impact
 - Customers affected: X
 - Ticket volume from this issue: X
-- Estimated revenue impact: $X
+- Estimated revenue impact: [Unknown unless the user's data gives a figure. Never estimate one]
 - Trend: [Growing / Stable / Declining]
 
 ### Recommendations
 | Priority | Action | Owner | Impact |
 |----------|--------|-------|--------|
-| P0 | [Fix the root cause] | Engineering | Eliminates X tickets/week |
+| P0 | [Fix the root cause] | Engineering | [Expected effect on ticket volume, or Unknown] |
 | P1 | [Add monitoring] | DevOps | Early detection |
 | P2 | [Update KB article] | Support | Reduce handle time |
 

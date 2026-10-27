@@ -36,6 +36,8 @@ how_to_use:
   - Open your AI tool with the skill loaded. Use one that can run commands and save files, such as Claude Code, Cursor, Codex or Gemini CLI.
   - Give it your store domain. Say if you want JSON instead of the readable text.
   - Open the CSV it saves. Look for accounts with no recent orders or with a missing catalog.
+  - Next, sort out accounts with no orders in 90 days for outreach, and check each catalog before a price change.
+  - If the run fails with an access error, check which scope Shopify needs for company data in its current docs, then log in again with it.
 output_sample:
   input:
     - Your store domain, like yourstore.myshopify.com
@@ -53,3 +55,4 @@ output_sample:
       contains: Totals for companies, locations, accounts with net terms and accounts with catalogs, plus each company's locations, last order date and payment terms.
     - name: b2b_companies_<date>.csv
       contains: One row per company with ID, name, location and contact counts, last order date and value, currency, payment terms and catalog flag.
+next: [order-hold-manager]

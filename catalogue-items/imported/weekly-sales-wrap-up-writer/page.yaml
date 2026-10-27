@@ -39,6 +39,7 @@ how_to_use:
   - Say if you want a team chat post drafted.
   - Check the Closed and Moved sections against your CRM before you share them.
   - If a source was missing, the wrap says so at the top. Read that note first.
+  - Next, use the Monday list to set next week's agenda. For a monthly or quarterly review, use pipeline-and-forecast-checker.
 output_sample:
   input:
     - Your CRM access, or this week's and last week's deal exports
@@ -61,3 +62,4 @@ output_sample:
       contains: Next week's meetings, deals due to close, and next steps with dates.
     - name: Team chat post
       contains: A draft of the wrap formatted for your team channel, posted only if you ask.
+next: [team-pipeline-roll-up-writer]

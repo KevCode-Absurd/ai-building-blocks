@@ -40,7 +40,7 @@ how_to_use:
   - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
   - Write the question first. Then list each layer with its file type and what it holds. A few sample rows are enough. Leave out private data.
   - Say 'Plan this map task. Do not assume my coordinate system.' Your AI asks once for what is missing.
-  - Run the data checks in your GIS tool before anything else. Tell the AI what you find.
+  - Run the data checks in your GIS tool before anything else. Tell the AI what you find, and treat the steps as final only after it has seen those results.
   - Follow the numbered steps. Spot check the result against a few features you know.
   - Ask for fixes where a step fails, and keep the sources note with the finished map.
 how_it_works:
@@ -119,7 +119,7 @@ tweaks:
   - what: Data size
     how: Give a row count or file size, since it changes which steps are practical.
 improve:
-  - Keep useful corrections with your task notes and apply them on the next run.
+  - Keep useful corrections in your own notes. The agent keeps no memory, so paste them into the next chat.
 terms:
   - term: Coordinate system (CRS)
     meaning: The rule that places map data on the Earth. Layers in different systems will not line up.

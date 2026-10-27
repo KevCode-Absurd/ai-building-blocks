@@ -35,7 +35,7 @@ Scans all active products and their variants for missing or insufficient images.
 
 1. **OPERATION:** `products` — query
    **Inputs:** `query: "status:<status_filter>"`, `first: 250`, select `images`, `variants { image }`, pagination cursor
-   **Expected output:** Products with image counts and variant image assignments; paginate until `hasNextPage: false`
+   **Expected output:** Products with image counts and variant image assignments. Repeat the query with `endCursor` until `hasNextPage` is false. Only the first 10 images and first 50 variants of each product are counted.
 
 2. Flag products: `images.count < min_images` OR `images.count == 0`
 
@@ -148,7 +148,7 @@ CSV file `image_audit_<YYYY-MM-DD>.csv` with columns:
 | No products match filter | Empty catalog or wrong status filter | Exit with 0 results |
 
 ## Best Practices
-- Products with zero images cannot be sold on most sales channels (Google Shopping, Meta, etc.) — prioritize these as urgent.
+- Some sales channels, such as Google Shopping, may reject products with no images. Check each channel's rules, and fix the zero-image products first.
 - For apparel or products with color/size variants, set `min_images: 3` to ensure at least one front, back, and lifestyle shot per product.
 - Run after bulk product imports to catch images that failed to upload in the import batch.
 - Pair with `product-data-completeness-score` for a single comprehensive catalog quality report.

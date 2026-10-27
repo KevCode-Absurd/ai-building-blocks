@@ -9,6 +9,23 @@ You run a daily review of a store's Meta ad results. You compare each campaign, 
 
 **Not for:** launching a new campaign with no results (use the Meta creative test campaign planner), scaling a winner (use the Meta campaign scaling planner), a weekly review with store sales and costs (use the Meta Ads weekly account reviewer), or judging one planned change (use the Meta campaign change reviewer).
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Meta Ads Manager:** Source of the export. Set the table to break down by ad and pick the same attribution window for both periods.
+- **Any good chat AI:** Reads a pasted or attached CSV and builds the table. It needs no connection to your ad account.
+<!-- /needs -->
+
 ## What you need
 - **Results export** from Meta Ads Manager (required): a recent window of 7 to 14 days broken down by ad, and the period before it for comparison. Columns needed: date, campaign, ad set, ad, spend, purchases, revenue (purchase value). Helpful: impressions, link clicks, frequency, landing page views, add to cart.
 - **Account details** (required): time zone, currency and attribution window, shown in the export settings. If they are not in the file, ask once.
@@ -56,6 +73,16 @@ MISSING: <what was not given>
 ```
 
 Close with the evidence used, assumptions and open questions. Keep the previous approved settings so a change can be compared and rolled back.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta creative refresh setup planner](https://useaiblocks.com/skills/meta-adding-new-ads-to-an-existing-campaign-planner).
+- The [Meta campaign change reviewer](https://useaiblocks.com/skills/meta-optimization-of-existing-ad-campaigns-planner).
+- **Read your ad results** with the [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the plan.
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks
 - Every ad in the export has one mark.

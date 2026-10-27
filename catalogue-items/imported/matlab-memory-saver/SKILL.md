@@ -88,7 +88,7 @@ Based on profiling, identify which patterns apply. See `references/memory-patter
 
 ### Step 4: Implement Optimizations
 
-Apply the identified patterns. Focus only on the hotspots identified in Step 2 — do not apply patterns everywhere.
+For each hot spot from Step 2, pick the pattern in the Step 3 table that matches it and apply it to that line or loop only. Change one hot spot at a time, and re-run the code on small data after each change. Do not apply patterns everywhere. Stop when the saving meets the user's goal, or when the remaining hot spots each use little memory next to the biggest one you started with.
 
 ### Step 5: Measure Optimized Memory
 

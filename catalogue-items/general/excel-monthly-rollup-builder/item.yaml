@@ -8,7 +8,7 @@ role: build
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: spreadsheet
     required: true

@@ -68,6 +68,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ### Jobs, one by one
+
+The examples below are made-up illustrations of the method. They are not real cases and not stories from David Marquet.
+
 #### Reduce a manager’s routine approval queue
 A designer waits two days for approval to correct a clearly broken link. Trace why that decision reaches the manager. If the correction is within an agreed area and easily reversible, move it into the designer’s authority. Reserve approval for changes with different risks. Keep an easy way to ask about an ambiguous case. The delay is now treated as a feature of the process.
 
@@ -103,6 +106,8 @@ He would challenge the request for initiative that leaves every approval unchang
 
 ### What you'll get back
 You receive a decision-rights map, a purpose-and-boundaries brief, an intent statement and a competence-building plan. For meetings, the answer includes questions that expose uncertainty and a clear pause point. A review identifies whether the new arrangement changed ownership or merely renamed the old approval process.
+
+**What next:** run the trial for the set period, then hold the review and write down what changed in who decides. For a hard talk with one person, go to Kim Scott. For a high-stakes talk with strong emotions, go to Joseph Grenny. For focus time, go to Cal Newport.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
 

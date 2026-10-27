@@ -19,21 +19,22 @@ not_for:
   - "You want to plan only a single day: write a short list of your top three jobs by hand."
   - "You have no task list and no idea of your roles: write down your jobs and goals first, then come back."
 you_give:
-  - Your task list or last week's calendar, with rough hours
-  - Your roles, goals or values (optional but helps)
-  - A job you could hand to someone, and who (optional)
-  - Next week's fixed meetings and duties
+  - "Your task list or last week's calendar, with rough hours"
+  - "Your roles, goals or values (optional but helps)"
+  - "A job you could hand to someone, and who (optional)"
+  - "Next week's fixed meetings and duties"
+  - "On Friday, that week's calendar and your notes, for the review"
 you_get:
   - Your tasks in four boxes, your time split and what to drop, hand off or shrink
   - Two polite refusals and a one-page agreement for each handoff
   - A week built from your roles with the important work booked first
   - A review of how the week went and one hour won back
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your task list and say what matters to you. Guess your own split before you read the answer.
-  - Live the week with the plan in view. Note each time a loud job pulled you away.
-  - On Friday, run the last step with those notes.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus four skill files, in the order they run: Urgent versus important sorter, Results agreement writer, Values-to-week planner, Weekly time audit planner."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Paste your task list and say what matters to you. Guess your own split before you read the answer."
+  - "Live the week with the plan in view. Note each time a loud job pulled you away."
+  - "On Friday, run the last step with those notes and that week's calendar."
 output_sample:
   input:
     - Your task list or last week's calendar, with rough hours

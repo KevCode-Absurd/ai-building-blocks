@@ -44,14 +44,14 @@ The upstream skill by ibelick lists MIT. This copy came through the sickn33 coll
 
 ## When to Use
 
-Use this skill when you need audit and fix HTML metadata including page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter cards, favicons, JSON-LD structured data, and robots directives. Use when adding SEO metadata, fixing social share previews, reviewing Open Graph tags, setting up canonical...
+Use this skill when you need audit and fix HTML metadata including page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter cards, favicons, JSON-LD structured data, and robots directives. Use when adding SEO metadata, fixing social share previews, reviewing Open Graph tags, setting up canonical URLs, or checking robots directives.
 
 ## Workflow
 
 1. Identify pages with missing or incorrect metadata (titles, descriptions, canonical, OG tags)
 2. Audit against the priority rules below — fix critical issues (duplicates, indexing) first
 3. Ensure title, description, canonical, and og:url all agree with each other
-4. Verify social cards render correctly on a real URL, not localhost
+4. Verify social cards render correctly on a real URL, not localhost. This needs the page to be online. If the site is not published yet, say "not checked" and ask the user to run this step after launch.
 5. Keep diffs minimal and scoped to metadata only — do not refactor unrelated code
 ## when to apply
 

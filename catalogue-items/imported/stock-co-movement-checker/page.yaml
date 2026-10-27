@@ -9,7 +9,7 @@ subhead: Find which stocks rise and fall together with the one you care about, a
 explain: |
   Find which stocks rise and fall together with the one you care about, and how strong that link is. Give it a single ticker and it lists its closest peers; give it a pair or a group and it measures how tightly they move.
 
-  Price history comes from Yahoo Finance through a Python library, so it needs code to run and an internet connection. It works from daily returns over one year by default and keeps links with a correlation of 0.60 or higher. Four modes cover finding peers, measuring a pair including beta, clustering a group into a correlation grid, and rolling correlation to see how the link shifts over time. It is research only, not advice.
+  Price history comes from Yahoo Finance through an unofficial Python library (yfinance) that scrapes Yahoo's site. There is no official feed, so it can break, lag or be rate-limited. It needs code to run and an internet connection. It works from daily returns over one year by default and keeps links with a correlation of 0.60 or higher. Four modes cover finding peers, measuring a pair including beta, clustering a group into a correlation grid, and rolling correlation to see how the link shifts over time. It is research only, not advice.
 when:
   - You hold one stock and want to know what else drops when it drops.
   - You want to see whether two companies really move as a pair.
@@ -34,6 +34,7 @@ how_to_use:
   - Type your request, such as the ticker, a pair, or a list of tickers. Add a time period or a minimum correlation if you want.
   - Check the period, the number of trading days and any dropped tickers at the top of the result.
   - Remember Yahoo Finance data can be late or have gaps. Treat the result as research, not advice.
+  - Next, take the closest peers into a company reports or fundamentals check before you draw conclusions. Talk to a licensed adviser before any money decision.
 output_sample:
   input:
     - One ticker, a pair of tickers, or a list of tickers

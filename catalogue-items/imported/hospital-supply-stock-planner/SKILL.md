@@ -129,8 +129,8 @@ def calculate_par_level(avg_daily_usage, replenishment_cycle_days,
         std_during_cycle = usage_variability * np.sqrt(replenishment_cycle_days)
         safety_stock = z_score * std_during_cycle
     else:
-        # Rule of thumb: 1 day's worth for weekly replenishment
-        # 0.5 days for more frequent (2-3x/week)
+        # Rule of thumb: 2 days of usage for weekly or slower restocking,
+        # 1 day for restocking every 3-6 days, 0.5 day for more frequent
         if replenishment_cycle_days >= 7:
             safety_stock = avg_daily_usage * 2
         elif replenishment_cycle_days >= 3:
@@ -208,6 +208,7 @@ def optimize_par_levels_multi_location(usage_data_df):
             'par_change': par_calc['par_level'] - row.get('current_par', 0),
             'avg_inventory': round(avg_inventory, 0),
             'inventory_value': round(inventory_value, 2),
+            'current_inventory_value': round(row.get('current_par', 0) / 2 * row['unit_cost'], 2),
             'annual_turns': round(turns, 1)
         })
 
@@ -215,9 +216,10 @@ def optimize_par_levels_multi_location(usage_data_df):
 
     # Summary statistics
     summary = {
-        'total_current_value': results_df['inventory_value'].sum() if 'current_par' in usage_data_df.columns else 0,
+        'total_current_value': results_df['current_inventory_value'].sum() if 'current_par' in usage_data_df.columns else 0,
         'total_recommended_value': results_df['inventory_value'].sum(),
-        'potential_savings': 0,  # Calculate based on current vs recommended
+        # Positive = the recommended levels hold less stock than today
+        'potential_savings': (results_df['current_inventory_value'].sum() - results_df['inventory_value'].sum()) if 'current_par' in usage_data_df.columns else 0,
         'avg_turns': results_df['annual_turns'].mean()
     }
 

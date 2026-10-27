@@ -32,6 +32,8 @@ how_to_use:
   - Read how it describes your belief. Say yes or fix it before it goes on.
   - Answer the check question in your own words. Your AI will tell you if the mistake is still there.
   - If the mistake stays after two tries, ask for guided questions that expose the clash in your thinking.
+  - The skill works alone in any chat AI. Ignore the other skill names in its text, because it explains what each one means.
+  - Next, ask yourself the same check question again after a day or two. Write down whether the mistake came back.
 output_sample:
   input:
     - Your wrong answer or explanation, in your own words

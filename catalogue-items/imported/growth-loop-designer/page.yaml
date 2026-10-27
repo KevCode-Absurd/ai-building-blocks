@@ -56,3 +56,4 @@ output_sample:
       contains: What to do in the first 30, 60 and 90 days.
     - name: Loop coefficient and growth projection
       contains: An estimate of how many new users each user brings, and how fast that could grow.
+next: [referral-program-designer]

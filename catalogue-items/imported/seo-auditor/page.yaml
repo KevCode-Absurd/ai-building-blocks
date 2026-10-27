@@ -30,6 +30,7 @@ you_get:
   - An HTML copy of the report (optional)
   - Notes on any checks that could not run
 how_to_use:
+  - "Before you start: a full run takes a while. The PageSpeed check works without a key. Only scan a site you own or have permission to scan."
   - Install Python on your computer, and open an AI that can run code and reach the web.
   - Download the skill folder. If you have API keys, copy .env.example to .env and add them.
   - "Tell your AI: perform seo analysis on, then your page link."

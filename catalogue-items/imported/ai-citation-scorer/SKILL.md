@@ -25,7 +25,7 @@ allowed-tools:
 
 ## Core Insight
 
-AI language models cite passages that meet specific structural criteria. Research from Princeton, Georgia Tech, and IIT Delhi (2024) found that GEO-optimized content achieves 30-115% higher visibility in AI-generated responses. The key finding: AI systems preferentially extract and cite passages that are **134-167 words long**, **self-contained** (understandable without surrounding context), **fact-rich** (containing specific statistics, dates, or named entities), and **directly answer a question** in the first 1-2 sentences.
+AI language models cite passages that meet specific structural criteria. Research from Princeton, Georgia Tech, and IIT Delhi (2024) reported that GEO-optimized content achieves higher visibility in AI-generated responses (we have not checked the figures). The key finding: AI systems preferentially extract and cite passages that are **134-167 words long**, **self-contained** (understandable without surrounding context), **fact-rich** (containing specific statistics, dates, or named entities), and **directly answer a question** in the first 1-2 sentences.
 
 This is fundamentally different from traditional SEO copywriting, which optimizes for keyword density and user engagement metrics. GEO citability optimizes for **extractability** -- the ease with which an AI system can pull a passage from your content and present it as a direct answer.
 
@@ -291,11 +291,11 @@ Generate a file called `GEO-CITABILITY-SCORE.md`:
 
 ## Quick Win Reformatting Recommendations
 
-1. **[Specific recommendation]** -- Expected citability lift: +[X] points
-2. **[Specific recommendation]** -- Expected citability lift: +[X] points
-3. **[Specific recommendation]** -- Expected citability lift: +[X] points
-4. **[Specific recommendation]** -- Expected citability lift: +[X] points
-5. **[Specific recommendation]** -- Expected citability lift: +[X] points
+1. **[Specific recommendation]** -- Likely effect: [low / medium / high] (a guess, not measured)
+2. **[Specific recommendation]** -- Likely effect: [low / medium / high] (a guess, not measured)
+3. **[Specific recommendation]** -- Likely effect: [low / medium / high] (a guess, not measured)
+4. **[Specific recommendation]** -- Likely effect: [low / medium / high] (a guess, not measured)
+5. **[Specific recommendation]** -- Likely effect: [low / medium / high] (a guess, not measured)
 
 ---
 
@@ -311,6 +311,8 @@ Generate a file called `GEO-CITABILITY-SCORE.md`:
 ## Reference Data
 
 ### Optimal Passage Characteristics (from GEO Research)
+
+These figures are the cited studies' own claims. We have not checked them and they may be out of date. Do not state them as fact in your report. Call them "reported by" the study, or leave them out.
 
 - **Optimal length for AI citation:** 134-167 words (Bortolato 2025 analysis of AI Overview passages)
 - **Definition patterns increase citation rate by:** 2.1x (Georgia Tech 2024)

@@ -17,7 +17,7 @@ when:
   - You are cleaning up before an email campaign.
 not_for:
   - "You do not yet know which records are duplicates: check them by hand in Shopify Admin first, because a wrong merge cannot be undone."
-  - "The duplicate is a B2B account, a gift card holder or has an active subscription: use the manual merge in Shopify Admin (Customers, then Merge)."
+  - "The duplicate is a B2B account, a gift card holder or has an active subscription: do not run the native merge. Let the skill copy tags and notes and leave the pointer note, then finish by hand in Shopify Admin (Customers, then Merge) once the subscription or gift card is sorted out."
   - "You need to merge many pairs at once: run this one pair at a time, or ask a developer to script it."
 you_give:
   - Your Shopify store domain
@@ -31,11 +31,13 @@ you_get:
   - A pointer note on the old record if the fallback runs
   - A summary of which path ran and any errors
 how_to_use:
+  - Run the Duplicate customer finder first, so you know the two records are the same person. This skill expects its result.
   - Use an AI that can connect to your Shopify store and change it. A plain chat cannot do this.
   - In Shopify Admin, open each customer. The number at the end of the page link is the ID. The record with more orders or the older date is usually the one to keep.
   - Paste the skill into your AI. Give your store domain, the ID to keep and the ID to merge in.
   - Run the preview first. It is the default. Check that both records are the same person, and look at the order counts.
-  - Check the plan for B2B accounts, gift cards and active subscriptions. Use the manual merge in Shopify Admin for those.
+  - Check the plan for B2B accounts, gift cards and active subscriptions. Use the fallback and finish by hand in Shopify Admin for those.
+  - Before you say yes, type back both IDs and confirm the preview showed the right two records. The merge cannot be undone.
   - Say yes to run it. Then check the kept record. Shopify finishes native merges in the background, so wait for it to be done.
 output_sample:
   input:

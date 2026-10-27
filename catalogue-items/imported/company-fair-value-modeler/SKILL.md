@@ -123,6 +123,8 @@ sector      = info.get("sector")
 industry    = info.get("industry")
 ```
 
+The code above is a sketch. Row names differ between companies and yfinance versions. Print the real row names first, and if a needed row is missing, stop and tell the user which one instead of guessing.
+
 Key financial statement rows (yfinance labels):
 
 | Need | Row |
@@ -175,7 +177,7 @@ wacc = e_v*ke + d_v*kd*(1 - tax_rate)
 
 # 4e. Terminal value — compute both, use midpoint
 tv_gordon = fcff[-1] * (1 + g_terminal) / (wacc - g_terminal)
-tv_exit   = (rev_t[-1] * ebit_margin + rev_t[-1] * da_pct) * 15  # peer median EV/EBITDA
+tv_exit   = (rev_t[-1] * ebit_margin + rev_t[-1] * da_pct) * 15  # 15 is a placeholder; replace it with the peer median EV/EBITDA from Step 5
 tv_base   = 0.5 * (tv_gordon + tv_exit)
 
 # 4f. Bridge to equity
@@ -289,8 +291,10 @@ Present the valuation in this order:
 ### Caveats to include
 - TTM data lags real-time; peer multiples reflect market sentiment (can overshoot)
 - DCF is garbage-in/garbage-out; sensitivity matters more than a point estimate
-- yfinance data is unofficial; cross-check any decision with primary filings
-- Not financial advice
+- yfinance is an unofficial way to read Yahoo Finance. It may break, may be wrong, and may go against the site's terms, so check them before you rely on it
+- List every default you used (risk-free rate, equity risk premium, tax rate, exit multiple, terminal growth) as an assumption in the output
+- Cross-check any decision with primary filings
+- The result is research, not a signal to buy or sell. Not financial advice
 
 ---
 

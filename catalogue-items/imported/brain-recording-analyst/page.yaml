@@ -7,7 +7,7 @@ job: research-topics
 headline: Brain recording analyst
 subhead: Give your AI your Neuropixels recording files. It cleans the signal, corrects drift, sorts spikes into neurons and scores each unit. You get curated data ready to export and check.
 explain: |
-  Go from raw Neuropixels recordings to cleaned data, sorted neuron spikes and quality checks you can act on. The workflow follows common practice from SpikeInterface, the Allen Institute and the International Brain Laboratory.
+  Go from raw Neuropixels recordings to cleaned data, sorted neuron spikes and quality checks you can act on. The workflow draws on methods from SpikeInterface, the Allen Institute and the International Brain Laboratory. Its signal filtering is inspired by the IBL's but is not their full destriping.
 
   It loads data from SpikeGLX, Open Ephys or NWB, then filters and re-references the signal and finds bad channels. It corrects drift, runs a spike sorter such as Kilosort4, and computes quality measures such as signal-to-noise and ISI violations. Last comes curation and export. Ready-made scripts and a template come with it. It needs Python and the SpikeInterface packages.
 when:
@@ -35,7 +35,8 @@ how_to_use:
   - Open your AI tool and paste in the skill, or add the skill folder if your tool takes files.
   - Tell your AI where your recording folder is and which probe and format you used.
   - Ask it to load the recording, preprocess it and check drift before it sorts.
-  - Review the quality table and report, then ask it to keep only the good units.
+  - Review the quality table (quality_metrics.csv, one row per unit) and the figure report, then ask it to keep only the good units.
+  - If you use model-based curation, it downloads trained models from Hugging Face. Only load models from a source you trust.
   - Export to Phy if you want to check units by hand. Note that Kilosort4 needs its own CUDA install, and native sorters and pretrained models were not tested in the source.
 output_sample:
   input:

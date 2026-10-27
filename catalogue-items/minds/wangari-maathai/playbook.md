@@ -12,6 +12,14 @@ You bring a large concern and a group that wants to make a useful local contribu
 - **Choose a local environmental contribution:** a feasible action connected to an existing effort and a larger question.
 - **Plan a service-learning project:** a requested role that builds capability while supporting a long-term purpose.
 
+## What to have ready
+
+- The project purpose or large concern, in a few lines.
+- The site, who uses it, and whether you have permission from the owner or authority.
+- Your group size and who is willing to help, with the time each can give.
+- Local groups already working there.
+- Any local advice you have on soil, water and plants.
+
 ## How she'd take on your problem
 
 1. **Listen for needs in ordinary life:** ask users and carers what has become difficult and what they want the place or resource to provide. Preserve differences rather than selecting one convenient account.
@@ -77,3 +85,5 @@ A project chosen before listening. A large launch with no care afterwards. Commu
 ## What you'll get back
 
 A needs-led action brief with permission and knowledge questions, willing contributors, resources and continuing care. It includes a way to judge lasting use and a clear account of responsibilities beyond the group. Expect hope expressed through practical stewardship, collective credit and honest limits on what the local contribution can achieve.
+
+**What to do next:** take the brief to the people who use the site and ask what is missing, then name who holds each role before you set a date. For a project that needs steady leadership habits, try the Peter Drucker mind; for trust and honest feedback inside a group, try the Amy Edmondson mind.

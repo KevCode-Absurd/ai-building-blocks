@@ -19,7 +19,7 @@ not_for:
   - "You are planning an average month or one product launch: use a simple sheet or ask your 3PL for a normal quote."
   - "You want to fix a warehouse bill and have no agreement or rate card: ask your 3PL for those first."
 you_give:
-  - Daily ad spend and new-customer revenue for 12 to 36 months, and your revenue target
+  - Daily ad spend and new-customer revenue for 12 to 36 months, your monthly customer groups with repeat rates, your returning order value and your revenue target
   - Tickets per month, support costs and how long it takes to hire and train an agent
   - Product sizes and weights, ship-to countries and your purchase orders
   - Bids from warehouses (optional)
@@ -29,9 +29,9 @@ you_get:
   - Forecast tickets, cost per ticket and the dates new support staff must start
   - A request for pricing, a bid comparison and the 3PL agreement terms to demand
   - A shared tracker for every stock order, and a shipping notice for the warehouse
-  - A line-by-line bill audit with overcharges, a dispute note and a score out of 100
+  - A line-by-line bill audit with overcharges, a dispute note and a match score out of 100 (matched lines out of lines checked)
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your sales history, monthly tickets and your revenue target. Say how long a support hire takes to train.
   - Send the request for pricing to several 3PLs, and tell it what the stock orders on the way are.
@@ -45,7 +45,7 @@ output_sample:
     - "After peak: the warehouse invoice, rate card and your orders for the month"
   prerequisites:
     - An AI that can read files and work with spreadsheets
-    - The handoff pack with every skill file this workflow uses
+    - The handoff pack: HANDOFF.md plus one skill file for each step
   output:
     - name: Peak forecast
       contains: Daily orders and revenue, new and returning customers, your sales calendar, the gap to target and actions to close it.
@@ -56,7 +56,7 @@ output_sample:
     - name: Inbound tracker
       contains: A shared sheet for every stock order, update rules, a forwarder quote comparison and an advance shipping notice.
     - name: Bill audit
-      contains: A line-by-line match of the invoice, overcharges, on-time and pick-time checks, a dispute note and a score out of 100.
+      contains: A line-by-line match of the invoice, overcharges, on-time and pick-time checks, a dispute note and a match score out of 100.
     - name: HAND-BACK SUMMARY
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:

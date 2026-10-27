@@ -54,7 +54,7 @@ Ask once for anything missing.
 
 **Normalization:**
 - Convert all amounts to consistent currency
-- Scale consistently ($mm or $bn throughout, not mixed)
+- Scale consistently, never mixed: $mm or $bn for dollar companies, ₹ crore for Indian companies (see Currency and scale above), and the filing currency in millions or billions for any other company
 
 **Before Building:**
 - Print outline to chat with 4-5 bullet points per item (actual numbers, no placeholders)
@@ -406,7 +406,7 @@ For projections, use Bear/Base/Bull case scenarios in structured tables.
 - [ ] Consistent fonts and colors throughout
 - [ ] Charts render correctly
 - [ ] No placeholder text - all actual data
-- [ ] Consistent scaling ($mm or $bn, not mixed)
+- [ ] Consistent scaling (one currency and one scale, as set in Currency and scale)
 - [ ] Sources cited
 - [ ] Investment banking quality (GS/MS/JPM standard)
 

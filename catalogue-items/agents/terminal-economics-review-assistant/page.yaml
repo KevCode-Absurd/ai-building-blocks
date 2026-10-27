@@ -24,8 +24,8 @@ not_for:
   - You want a price target, a buy or sell view or advice on a trade. It reviews assumptions and nothing else.
   - The company is a bank or an insurer. Its growth is paid for with equity and regulatory capital, so this cash-flow method does not fit.
   - You have no dated sources for growth, return or discount rate. It will mark each gap MISSING and stop those lines, but it cannot judge numbers that have no source.
-  - You only want to check one number, such as the implied return. Use the Business terminal value assumption checker.
-  - You want to build the whole growth and reinvestment spreadsheet from scratch. Use the Growth and reinvestment spreadsheet modeller.
+  - You only want to check one number, such as the implied return. Use the Terminal growth reinvestment check.
+  - You want to build the whole growth and reinvestment spreadsheet from scratch. Use the Link operating growth to terminal reinvestment workflow.
 
 you_give:
   - The model you accepted last time, as a spreadsheet, and last time's review record (optional on a first run)
@@ -44,7 +44,7 @@ you_get:
   - A challenge list, MISSING lines, CHECKS MISSED and a short record for the next review
 
 how_to_use:
-  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. In a chat-only tool it still works, but cannot save files, so you keep the record it hands back.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. In a chat-only tool it still works, but cannot save files. At the end of each run, copy the RECORD FOR NEXT REVIEW lines (forecast version, NOPAT, growth, return on new capital, WACC, reinvestment rate, terminal value and your materiality rule) into a note, and paste them in next time. If the Link operating growth to terminal reinvestment workflow is missing from the pack, it uses the formulas in its own steps and says so.
   - Say if this is the first run. If not, paste last time's record. Then attach the accepted model, the new forecast or filing, and your growth, return, WACC and materiality figures with their sources.
   - Read "changed since last review" first. Check each moved number against its source before you read the rest.
   - Look at the funding check. The investment needed should equal growth divided by return on new capital. Try it by hand on one line.
@@ -94,7 +94,7 @@ tweaks:
 judge:
   - Growth/reinvestment identities reconcile, rates match operating cash flows, terminal timing is consistent and infeasible implied returns are explicitly rejected for interpretation.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
@@ -104,7 +104,7 @@ improve:
   - Keep each review's record in one folder named by date, so the next run starts from the true prior state.
   - Write down where your return on new capital comes from and its date. Without a source, it cannot tell a real change from a guess.
   - Use the same materiality rule every time. A rule that moves between runs makes the change log hard to compare.
-  - Pair it with the Economic profit value calculator when a source says the edge ends in a few years, and the Terminal growth reinvestment checker when you only need one terminal year checked.
+  - Pair it with the Economic profit fade schedule when a source says the edge ends in a few years, and the Terminal growth reinvestment check when you only need one terminal year checked.
 
 works_best_with:
   tools:
@@ -144,8 +144,8 @@ output_sample:
     - A dated source on how long the company's edge lasts (optional)
   prerequisites:
     - An AI that can read files, such as Claude, ChatGPT or Gemini
-    - The Growth and reinvestment spreadsheet modeller in the agent pack
-    - The Economic profit value calculator in the pack, only if a source says the edge fades early
+    - The Link operating growth to terminal reinvestment workflow in the agent pack
+    - The Economic profit fade schedule in the pack, only if a source says the edge fades early
   output:
     - name: Changed since last review
       contains: Every assumption that moved since last time, old to new, with its source and date.

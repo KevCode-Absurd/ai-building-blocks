@@ -30,9 +30,9 @@ you_get:
   - Constant-time rewrites
   - Functions marked safe
 how_to_use:
-  - Open your AI tool and paste in the skill, or upload the skill folder. Check that the folder holds ct_analyzer/analyzer.py.
+  - Open your AI tool and paste in the skill, or upload the skill folder. The analyzer script (ct_analyzer/analyzer.py) is not in this folder. Without it, your AI does a careful manual review and says that no tool was run.
   - Add your crypto source file. Say the language and which values are secret.
-  - Let your AI run the analyzer on your file. This needs code running and the right compiler installed.
+  - Only if you have the analyzer from the upstream Trail of Bits project and an AI that can run code, let it run the analyzer on your file. This needs the right compiler installed.
   - "Ask your AI to check each flag: does it touch a secret, or only a length or constant? Drop the false alarms."
   - Apply the fixes, then run the analyzer again. Ask a crypto expert to review before you ship.
 output_sample:
@@ -44,7 +44,7 @@ output_sample:
   prerequisites:
     - An AI that can run code and read your project files
     - The compiler or runtime for your language installed, such as gcc, go, rustc, a JDK or Node.js
-    - The analyzer script ct_analyzer/analyzer.py in the skill folder, which the page cannot confirm ships yet
+    - Optional: the analyzer script ct_analyzer/analyzer.py from the upstream Trail of Bits project. It is not included here. Without it you get a manual review only
   output:
     - name: Result
       contains: PASSED if no slow, value-dependent operations were found, or FAILED with each risky instruction listed.
@@ -56,3 +56,4 @@ output_sample:
       contains: A safer rewrite for each real leak, such as bit masking, Barrett reduction or a constant-time compare.
     - name: Safe functions
       contains: The functions where no risky operation was found.
+next: [untrusted-input-checker]

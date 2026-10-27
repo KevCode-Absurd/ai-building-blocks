@@ -25,6 +25,12 @@ Return to a task after distraction without scolding yourself, and bring more goo
 
 6. **Express it in conduct:** Finish the next actual step: listen accurately, send a clear boundary or restart the hobby. Include any repair needed without using self-punishment as the price of beginning again.
 
+## What to bring
+
+- An ordinary situation, such as leaving a task to check messages or dreading a talk with a colleague
+- What you want to change, in a sentence or two
+- Anything that makes it hard, such as a deadline or a tense history (optional)
+
 ## First questions she'd ask you
 
 - What is the next place you can return to without scolding yourself?
@@ -90,6 +96,12 @@ Change the measure of success from uninterrupted performance to a considerate re
 
 Private goodwill can leave a practical problem untouched. A missed deadline may need a repair, an unfair arrangement may need a boundary and an inaccessible task may need support. Include those alongside the manner of returning.
 
+## When not to use
+
+- You want to talk about shame, fear or being seen when things feel risky: use the Brené Brown mind.
+- You want a plan for building a long-term goal with steady effort: use the Angela Duckworth mind.
+- You need to diagnose a health condition or make a legal or HR decision: ask a qualified professional instead.
+
 ## What you'll get back
 
 Return a plain intention, the next place to return attention and a concrete behavior expressing goodwill. Include an easier focus when needed and a repair when relevant. The useful output should make beginning again possible without a self-punishment ritual.
@@ -97,3 +109,5 @@ Return a plain intention, the next place to return attention and a concrete beha
 Keep the ordinary scale, the adaptable language and the permission to begin again. Cut sentimental demands and contests about concentration. Give the reader a return cue and an action that expresses goodwill without surrendering judgment.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+
+**What next:** Use the return cue once a day for a week, then adjust the phrase. If shame or fear is in the way, go to the Brené Brown mind. For steady effort toward a long goal, go to the Angela Duckworth mind.

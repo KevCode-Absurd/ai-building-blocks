@@ -37,5 +37,20 @@ blocks:
   - chat-export-need-finder
 alternatives: [intercom-fin, gorgias, hubspot-breeze]
 last_checked: 2026-10-21
+first_result:
+  - "Start with a Zendesk Support plan. Open your Zendesk admin settings and find the AI agent and Copilot options."
+  - "List the 10 questions customers ask most. Write the correct answer to each from your own policies, or find it in your help centre articles."
+  - "Point the AI agent at those help articles, so it answers from your words and not its own guess."
+  - "Test it with real past questions. Read every reply it gives. Fix the articles that lead to a wrong answer."
+  - "Turn it on for one channel and one type of question first. Watch the resolutions, and read some tickets it closed."
+  - "Add Copilot for your team once the AI agent works. It drafts replies for your staff to edit and send."
+needs:
+  - "A Zendesk Support plan."
+  - "Help centre articles or written answers for your common questions."
+  - "A list of topics a person must always handle, such as refunds, legal threats and health issues."
+  - "A budget for resolutions, since each one the AI agent closes costs extra."
+  - "Copilot (optional): an extra charge per agent each month."
+example:
+  reply: "AI replies to common tickets in chat and email, a drafted reply for staff to edit, and tickets routed to the right team. Staff still handle anything the AI should not answer."
 sources:
   - https://www.zendesk.com/pricing/

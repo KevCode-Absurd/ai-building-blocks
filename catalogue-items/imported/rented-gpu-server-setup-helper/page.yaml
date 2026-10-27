@@ -7,9 +7,9 @@ job: build-software
 headline: Rented GPU server setup helper
 subhead: Tell your AI what you want to train or run. It picks a Lambda Labs GPU, shows the steps to launch it, connect, and load your files. It does not shut the server down for you, so you run the terminate step when you finish.
 explain: |
-  A rented GPU machine picked for your job, set up, loaded with your files and shut down when you finish. You stop paying for idle hardware.
+  A rented GPU machine picked for your job, set up and loaded with your files, with the stop step written out. You stop paying for idle hardware when you run it.
 
-  You say what you need to train or run. The skill matches it to a Lambda Labs instance type, such as an A100 or H100, and shows the price per minute. It uses the Lambda API to launch the machine, adds your SSH key, attaches a persistent file store so your data survives restarts, and copies your files over. The machine comes with PyTorch, CUDA and related tools already installed. When you are done it terminates the server. You need a Lambda account and an API key.
+  You say what you need to train or run. The skill matches it to a Lambda Labs instance type, such as an A100 or H100, and shows the price per GPU per hour. It uses the Lambda API to launch the machine, adds your SSH key, attaches a persistent file store so your data survives restarts, and copies your files over. The machine comes with PyTorch, CUDA and related tools already installed. It gives you a terminate command, which you run yourself when you finish, because Lambda does not stop the server for you. You need a Lambda account and an API key.
 when:
   - Your laptop is too slow to train a model.
   - A training run will last many hours and you need storage that stays after the server stops.
@@ -21,7 +21,7 @@ not_for:
   - "You run many clouds at once and want to cut cost across them: use SkyPilot."
 you_give:
   - What you need to train or run
-  - Your Lambda API key
+  - Your Lambda API key, kept in an environment variable named LAMBDA_API_KEY (do not paste the key itself into the chat)
   - The name of your SSH key on Lambda
   - Files or code to upload
   - Your budget or run length (optional)
@@ -33,6 +33,7 @@ you_get:
   - The terminate command to stop billing, to run yourself
 how_to_use:
   - Make a Lambda Labs account, add a payment method, create an API key and add your SSH key. This is a paid service.
+  - Do not paste your Lambda API key into a chat AI. Store it on your own machine as the environment variable LAMBDA_API_KEY, and tell your AI to refer to that name.
   - Paste this skill into Claude, ChatGPT or Gemini. Say what you want to train and how long it may run.
   - Check the GPU, region and hourly price your AI suggests before you launch.
   - Run the launch steps, either in the Lambda console or with the commands. Commands need a terminal or an AI that can run code.

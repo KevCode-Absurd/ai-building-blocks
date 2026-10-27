@@ -39,14 +39,16 @@ pip install dspy[all]           # All providers
 
 ## Quick Start
 
+> Version note: the code here uses the `dspy.LM("provider/model")` style from DSPy 2.5 and later. We have not run it against a specific release. Check the DSPy docs for the version you install, because class and optimiser names change between versions.
+
 ### Basic Example: Question Answering
 
 ```python
 import dspy
 
 # Configure your language model
-lm = dspy.Claude(model="claude-sonnet-4-5-20250929")
-dspy.settings.configure(lm=lm)
+lm = dspy.LM("anthropic/claude-sonnet-4-5-20250929")
+dspy.configure(lm=lm)
 
 # Define a signature (input → output)
 class QA(dspy.Signature):
@@ -67,8 +69,8 @@ print(response.answer)  # "Paris"
 ```python
 import dspy
 
-lm = dspy.Claude(model="claude-sonnet-4-5-20250929")
-dspy.settings.configure(lm=lm)
+lm = dspy.LM("anthropic/claude-sonnet-4-5-20250929")
+dspy.configure(lm=lm)
 
 # Use ChainOfThought for better reasoning
 class MathProblem(dspy.Signature):
@@ -287,48 +289,48 @@ optimized_rag = optimizer.compile(rag, trainset=trainset)
 ```python
 import dspy
 
-lm = dspy.Claude(
-    model="claude-sonnet-4-5-20250929",
+lm = dspy.LM(
+    "anthropic/claude-sonnet-4-5-20250929",
     api_key="your-api-key",  # Or set ANTHROPIC_API_KEY env var
     max_tokens=1000,
     temperature=0.7
 )
-dspy.settings.configure(lm=lm)
+dspy.configure(lm=lm)
 ```
 
 ### OpenAI
 
 ```python
-lm = dspy.OpenAI(
-    model="gpt-4",
-    api_key="your-api-key",
+lm = dspy.LM(
+    "openai/gpt-4o-mini",
+    api_key="your-api-key",  # Or set OPENAI_API_KEY env var
     max_tokens=1000
 )
-dspy.settings.configure(lm=lm)
+dspy.configure(lm=lm)
 ```
 
 ### Local Models (Ollama)
 
 ```python
-lm = dspy.OllamaLocal(
-    model="llama3.1",
-    base_url="http://localhost:11434"
+lm = dspy.LM(
+    "ollama_chat/llama3.1",
+    api_base="http://localhost:11434"
 )
-dspy.settings.configure(lm=lm)
+dspy.configure(lm=lm)
 ```
 
 ### Multiple Models
 
 ```python
 # Different models for different tasks
-cheap_lm = dspy.OpenAI(model="gpt-3.5-turbo")
-strong_lm = dspy.Claude(model="claude-sonnet-4-5-20250929")
+cheap_lm = dspy.LM("openai/gpt-4o-mini")
+strong_lm = dspy.LM("anthropic/claude-sonnet-4-5-20250929")
 
 # Use cheap model for retrieval, strong model for reasoning
-with dspy.settings.context(lm=cheap_lm):
+with dspy.context(lm=cheap_lm):
     context = retriever(question)
 
-with dspy.settings.context(lm=strong_lm):
+with dspy.context(lm=strong_lm):
     answer = generator(context=context, question=question)
 ```
 
@@ -349,13 +351,15 @@ class ExtractPerson(dspy.Signature):
     text = dspy.InputField()
     person: PersonInfo = dspy.OutputField()
 
-extractor = dspy.TypedPredictor(ExtractPerson)
+extractor = dspy.Predict(ExtractPerson)  # typed outputs work with Predict
 result = extractor(text="John Doe is a 35-year-old software engineer.")
 print(result.person.name)  # "John Doe"
 print(result.person.age)   # 35
 ```
 
 ### Pattern 2: Assertion-Driven Optimization
+
+> Version note: `dspy.Assert` and `dspy.Suggest` exist only in some DSPy 2.x releases and are not in newer ones. If the import below fails, check the DSPy docs for the current way to retry or refine an answer (for example `dspy.Refine`).
 
 ```python
 import dspy

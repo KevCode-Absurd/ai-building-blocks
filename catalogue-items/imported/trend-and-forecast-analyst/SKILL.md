@@ -20,6 +20,12 @@ description: Temporal pattern detection and forecasting. Use when analyzing tren
 5. **Fit a forecast model** — fit an ARIMA model (or simpler moving average if data is short). Validate on a held-out 20% test set and report MAPE. Generate point estimates and 95% confidence intervals for the forecast horizon.
 6. **Produce the analysis report** — summarise trend direction and strength, seasonal patterns and their business implications, anomaly findings, and the forecast with uncertainty. Use `assets/ts_report_template.md`.
 
+# Plain words
+- **ADF test**: a check for whether the numbers keep a steady average over time.
+- **Stationarity**: the numbers keep the same average and spread over time. A trend or a season breaks this.
+- **ARIMA**: a common forecasting method that predicts the next values from the recent past.
+- **MAPE**: the average size of the forecast's miss, as a percent of the real value. Lower is better.
+
 # Inputs the skill needs
 - Time series data: date column + one numeric metric column, minimum 2 full seasonal cycles
 - Granularity of the data (daily, weekly, monthly)

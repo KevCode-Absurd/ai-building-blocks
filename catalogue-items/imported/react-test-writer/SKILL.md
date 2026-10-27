@@ -266,6 +266,8 @@ await waitFor(() => {
 
 ### Mocking with MSW
 
+Note: this example uses the older MSW v1 style (`rest` and `ctx`). Current MSW versions use `http` and `HttpResponse`, so check the docs for the version you install.
+
 ```typescript
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';

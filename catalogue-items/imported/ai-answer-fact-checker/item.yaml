@@ -30,7 +30,7 @@ credits:
   - title: fact-check-x-complete skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/fact-check-x-complete
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says Apache-2.0. We gave it a plain name.
   - title: Original author
     by: ASI2030
     url: https://github.com/ASI2030/Fact-Check-X

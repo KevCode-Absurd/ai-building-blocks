@@ -20,6 +20,7 @@ not_for:
   - You only need one area, such as Performance Max or Display placements. Use the Performance Max checks coding prompt or the Display placement review coding prompt.
   - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
   - You want the engine to fix the account. It reads and reports. You make changes in Google Ads.
+  - "You only want the Meta and Google comparison module: use the Meta and Google comparison coding prompt."
 you_give:
   - Your code project, or its main folders, language and database
   - Your Google Ads access details by name, such as the manager account, the customer ID and where credentials are kept (never the secrets)

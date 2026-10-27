@@ -12,6 +12,10 @@ description: Translate SQL queries into plain language business logic. Use when 
 - Onboarding new analysts to existing SQL patterns
 - Translating legacy undocumented queries before refactoring
 
+**Not for:** speeding up a slow query (ask a database admin), writing a new query from a business question (use the Plain-words SQL writer), or fixing wrong data in the source tables.
+
+**Chat route:** the script and the template are optional extras in the source folder. In a chat, work from the steps below alone and use the section headings listed under Output as the document shape.
+
 # Process
 1. **Receive the query and context** — obtain the SQL and the business question it answers. Also collect any schema notes (what the key tables and columns represent in business terms).
 2. **Translate the FROM/JOIN structure** — describe in plain language which data sources are combined and what type of join is used (inner keeps only matches; left keeps all rows from the left side). Note if the join type seems inconsistent with the stated purpose.
@@ -28,6 +32,8 @@ description: Translate SQL queries into plain language business logic. Use when 
 - The intended output: who reads the result and for what decision
 
 # Output
+Document sections, in this order: Business purpose, Plain-language explanation (what is calculated, data source and joins, filters, grouping), Output columns, Business rules, Validation questions.
+
 - `scripts/sql_explainer.py` — parses a SQL query and generates a structured plain-language explanation
 - `assets/query_documentation_template.md` — completed translation covering purpose, step-by-step logic, output columns, business rules, and validation questions
 - Optionally: a flowchart representation of the query logic

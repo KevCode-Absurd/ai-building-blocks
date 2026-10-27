@@ -35,7 +35,7 @@ you_get:
   - A CSV you can sort or share
 how_to_use:
   - Gather your carrier costs. A rate card, or the total on each carrier invoice for the window, is enough. Skip this if you only want charges and discounts.
-  - Connect your AI to your Shopify store with read-only access to orders. No connection? Export your orders with the shipping method, charged and discount, and paste them in.
+  - Connect your AI to your Shopify store with read-only access to orders. With the Shopify CLI, sign in to your store with read access to orders, or use your AI tool's Shopify connector. Only paid orders are counted, so refunded or partly refunded orders are left out and your totals may differ from the Shopify dashboard. No connection? Export your orders with the shipping method, charged and discount, and paste them in.
   - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Give it your store address, the days to look back and your carrier costs.
   - Read the top of the report first. It says whether costs were supplied. If not, no method can be called a loss.
   - Check that each method matched to the right cost. Then look at the methods that lose money, and decide on rates or your free shipping level.

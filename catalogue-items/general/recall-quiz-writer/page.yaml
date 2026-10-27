@@ -105,6 +105,8 @@ improve:
   - "Add the words learners must use."
   - "Keep each quiz to repeat on the plan."
 
+before: []
+next: [check-a-lesson-before-teaching-it, class-quiz-reteach-keeper]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "One message is enough."}

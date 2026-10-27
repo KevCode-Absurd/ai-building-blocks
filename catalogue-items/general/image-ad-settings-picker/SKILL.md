@@ -16,13 +16,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
+**Makes it better (optional):**
+- **Your image ads** (yours): the image ads, attached as pictures.
+
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+2. **Your image ads** with the [Buyer research image ad maker](https://useaiblocks.com/workflows/scroll-stopping-image-ads). Bring customer words, product photos (optional). It uses your brand brain.
+3. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a buyer brief, your image ads. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -35,6 +39,7 @@ How to start:
 - **Brief** (required): the piece being made.
 - **Choices** (required): one per setting you want to control. A setting you skip adds nothing.
 - **Material the choices name** (optional): brand images and past ads, a style card, product photos, the brand's own lines, a reference ad. Read an attached reference image directly and ask for the picture, not a description. Take a description only if it can't be attached, and then say what you couldn't check.
+- **Ad concepts** (optional): planned or finished static ads. Use them as the brief when there is no other brief.
 
 ## Steps
 1. Pick one choice for each setting you care about.
@@ -142,11 +147,9 @@ CHECKS MISSED  <each check missed, and why, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make image ads** with the [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Make video ads** with the [Video ad format planner](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
-- **Write the landing page** with the [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the buyer brief.
+- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner). It takes the brief.
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
+- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

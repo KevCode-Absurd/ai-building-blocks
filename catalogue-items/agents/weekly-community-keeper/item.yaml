@@ -30,9 +30,9 @@ steps:
   - uses: recognition-plan-designer
     note: "Once, then every quarter: the levels anyone can reach and the public moment for each, built on step 1's plan, so recognition is fair, not favourites. Hands on: the levels each week's recognitions are picked from."
   - uses: feedback-theme-finder
-    note: "Every week: the themes in the week's posts and replies, with quotes, and which threads went unanswered. Uses the week's posts you paste in, not the plan. Hands on: the themes and unanswered threads, for the weekly note."
+    note: "Every week: the themes in the week's posts and replies, with quotes, and which threads went unanswered. Uses the week's posts you paste in, not step 1's plan or step 2's levels. Hands on: the themes and unanswered threads, for the weekly note."
   - uses: key-moment-designer
-    note: "Only when a first, a launch or a milestone is coming in the next month: the one peak to build and the rest kept simple. Uses the event you name, not the themes. Hands on: the moment's plan, for the weekly note."
+    note: "Only when a first, a launch or a milestone is coming in the next month: the one peak to build and the rest kept simple. Uses the event you name as its question, not step 3's themes. Hands on: the moment's plan, for the weekly note."
   - uses: internal-update-writer
     note: "Every week, last: the weekly community note drafted from step 3's themes and answers owed, the recognitions picked from step 2's levels, and any moment from step 4."
 schedule: Every Friday, after the week's posts are exported

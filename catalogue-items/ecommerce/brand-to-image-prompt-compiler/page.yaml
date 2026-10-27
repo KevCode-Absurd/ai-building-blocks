@@ -5,9 +5,9 @@ job: make-image-ads
 headline: Brand-to-image prompt compiler
 subhead: Give it your brand details, layout, visual settings and approved copy. It builds one short prompt for an AI image tool. You also get a list of things to avoid and a model suggestion.
 explain: |-
-  Combine brand, scene, product, text and avoid rules into one image prompt. Keep the chosen facts and controls clear.
+  Image tools drift off-brand when the prompt is a loose paragraph. Colours come out wrong, the product changes shape and the headline turns to gibberish.
 
-  Share brand profile, layout, eight visual settings, approved copy and product facts. Get a compact image prompt, negative prompt and tool assumptions.
+  This skill builds one short prompt in a fixed order: brand colours and product first, then the scene, then how the product is shown, then your exact words in quotes, then what to avoid. It trims the prompt to the parts that matter, suggests a type of image tool and ends with the aspect ratio. Claude writes the prompt. Your image tool draws it.
 when:
   - You have a brand, a layout and copy, and need one prompt for an image tool.
   - Your image prompts keep coming out off-brand or with garbled text.
@@ -30,7 +30,7 @@ you_get:
   - A token and cost estimate
   - A note on anything missing or assumed
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
   - Paste your brand profile, layout, aspect ratio and eight visual settings.
   - Add your approved headline, sub line and button text, word for word.
   - "If something is missing, answer when your AI asks: use a default or fill it in."
@@ -49,8 +49,8 @@ output_sample:
       contains: The image model that suits the prompt, with a short reason.
     - name: Token estimate
       contains: A rough size of the prompt so you can keep it short.
-    - name: Cost estimate
-      contains: A rough cost per image, to check against current pricing.
+    - name: Cost
+      contains: A reminder to check your image tool's current price. It does not guess one.
     - name: Prompt
       contains: One compressed prompt with brand colors, scene, product, exact quoted text and aspect ratio.
     - name: Negatives
@@ -58,21 +58,15 @@ output_sample:
     - name: Expected output
       contains: A plain description of what the finished image should look like.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm brand profile, layout, eight visual settings, approved copy and product facts. Mark facts that are missing.
-  - title: Collect Upstream Inputs
-    text: Follow the collect upstream inputs section in the full method and keep its required fields and decision rules.
-  - title: Build the Prompt in Sections
-    text: Follow the build the prompt in sections section in the full method and keep its required fields and decision rules.
-  - title: Compression
-    text: Follow the compression section in the full method and keep its required fields and decision rules.
-  - title: Model Routing
-    text: Follow the model routing section in the full method and keep its required fields and decision rules.
-  - title: Deliver the Compiled Prompt
-    text: Follow the deliver the compiled prompt section in the full method and keep its required fields and decision rules.
-  - title: Compiled Generation Prompt
-    text: Follow the compiled generation prompt section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a compact image prompt, negative prompt and tool assumptions. Check facts, math and the decisions before any action.
+  - title: Collect the inputs
+    text: It checks your brand profile, layout, eight visual settings, copy and aspect ratio. It asks about anything missing and never invents hex codes or words.
+  - title: Build the prompt
+    text: "Five parts in order: brand and product, scene, product rendering, quoted text, things to avoid."
+  - title: Trim it
+    text: It cuts adjectives and background history. Hex codes, product, mood, layout and exact text stay.
+  - title: Pick a tool
+    text: It suggests the type of image tool that fits the content, and tells you to check its current price.
+  - title: Hand it back
+    text: The prompt, the avoid list, a rough size and a plain description of the image you should get.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

@@ -48,6 +48,7 @@ Classify each ticket:
 ...
 
 ### SLA Overview
+Take each ticket's deadline from its Freshdesk due-by field. "Breached" means the due-by time has passed. "Due soon" means the deadline falls inside a window the user gives you, such as the next few hours. Ask for the window if you were not given one. If a ticket has no due-by date, count it as "no deadline" and say so.
 - Breached: X tickets
 - Due soon: X tickets
 - On track: X tickets

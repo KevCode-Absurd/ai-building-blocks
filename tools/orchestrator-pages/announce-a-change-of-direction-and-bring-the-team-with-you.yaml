@@ -20,6 +20,7 @@ not_for:
   - "You only want one decision recorded with its dissent: use the Team decision and dissent note writer."
 you_give:
   - "The change: what starts, what stops and why"
+  - Your teams and what each works on now
   - Who it touches most and who will push back
   - The timeline you have
   - Your notes or a draft, if you have one (optional)
@@ -67,14 +68,14 @@ output_shape: |-
     The shift: <from, to> | Why now: <...> | What stops: <...> | Each team now: <...>
 
   STEP 2: ROLLOUT
-    First: <who, setting, date> | Then: <...> | All-hands: <date> | Week after: <what each group can do>
+    First: <who, setting, date> | Then: <...> | Gaps between groups: <...> | Week after: <what each group can do>
 
   STEP 3: ANNOUNCEMENT
     Leader message: <...> | Manager points: <...> | Town hall script: <...>
     Hard questions: <question> / <honest answer>
 
   STEP 4: LISTENING TALKS
-    <person>: Likely objection <...> | Open with <...> | Listen for <...> | Before: <date>
+    <person>: Setting <...> | How you give the floor <...> | What to listen for <...> | Your side, once <...> | Next step: <action, date>
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>

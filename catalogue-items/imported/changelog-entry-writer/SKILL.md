@@ -31,8 +31,8 @@ Generate a CHANGELOG.md entry following the [Keep a Changelog](https://keepachan
 ## Do Not Use This Skill When
 
 - The task is unrelated to changelogs or release notes.
-- The user only wants a PR description (use `@git-pr-review` instead).
-- The user only wants a commit message (use `@commit` instead).
+- The user only wants a PR description (write the PR description by hand or ask your AI for a plain PR summary).
+- The user only wants a commit message (ask your AI to write one line from the diff).
 
 ## Untrusted Input Rules
 
@@ -116,9 +116,11 @@ Rules:
 
 ### 5. Output
 
-Print a reviewable entry. Merge into an existing Unreleased section rather than creating duplicate headings; a requested version does not prove it was released or that the tag/release date exists.
+Print a reviewable entry. Tell the user to paste it into CHANGELOG.md and, if they publish a release, reuse it as the release notes. Merge into an existing Unreleased section rather than creating duplicate headings; a requested version does not prove it was released or that the tag/release date exists.
 
 ## Example Output
+
+The entry below is a made-up example. The version, date and PR numbers are placeholders, not a real release. Take every line from the real diff.
 
 ```markdown
 ## [1.4.0] - 2026-09-29

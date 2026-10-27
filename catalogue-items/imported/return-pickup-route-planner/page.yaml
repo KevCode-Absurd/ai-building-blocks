@@ -36,7 +36,8 @@ how_to_use:
   - Say how many vans you have, how much each van can carry, and where the depot is.
   - Ask for one route per van, with the load after each stop.
   - Check each route against van capacity, and check that every delivery comes before any pickup.
-  - For the route map and bigger jobs, use an AI that can run Python code (numpy, ortools and matplotlib).
+  - For the route map and bigger jobs, use an AI that can run Python code (numpy, ortools and matplotlib). The sample code is a starting point. Have it run on your own stops and then check the order rule by hand, as in the step above.
+  - Next, send each driver their route sheet with the load at every stop. Run it again whenever stops change.
 output_sample:
   input:
     - Your delivery stops with the quantity for each

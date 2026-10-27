@@ -16,7 +16,7 @@ when:
   - You have a candidate metric and want to test it.
   - Revenue is your headline and you suspect it is the wrong guide.
 not_for:
-  - "You want to set goals or targets: use an OKR, which sets a goal on a metric. Pick the metric here first."
+  - "You want to set goals or targets: use the OKR writer, which sets a goal on a metric. Pick the metric here first."
   - "You need a full list of every number to track: ask a finance or data person for a reporting plan."
   - "You want to judge ad or campaign results: use the numbers inside your ad platform, not a company-wide metric."
 you_give:
@@ -30,12 +30,13 @@ you_get:
   - Three to five input metrics
   - A test of the metric against the criteria
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text into the chat.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code, files or paid tools are needed.
   - Describe your product, your customers and the value they get. Add your current metrics and any North Star idea if you have them.
   - Read the game type first. Check that it fits how your business makes money.
   - Check the seven-criteria test. If the metric fails one, ask your AI to try another.
-  - Review the input metrics and pick who owns each one.
+  - If the AI picks a metric you cannot measure yet, write down the data source or tool you would need before you adopt it.
+  - Review the input metrics and name one owner for each.
+  - Then turn the North Star into the goal of an OKR with the OKR writer.
 output_sample:
   input:
     - A description of your product and customers
@@ -51,3 +52,4 @@ output_sample:
       contains: How the metric scores on clarity, customer focus, lasting value, vision, numbers, action and leading signs.
     - name: Input metrics
       contains: Three to five smaller numbers that are easier to move and feed the North Star.
+next: [okr-writer]

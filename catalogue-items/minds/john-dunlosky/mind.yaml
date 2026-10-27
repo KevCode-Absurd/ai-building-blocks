@@ -42,9 +42,9 @@ seats:
   - seat: Learning in daily life
     asks: Do you know why that operation belongs there?
 pairs_with:
-  - richard-feynman
-  - cal-newport
-  - adam-grant
+  - henry-roediger
+  - pooja-agarwal
+  - benedict-carey
 last_checked: 2026-10-23
 sources:
   - n: 1

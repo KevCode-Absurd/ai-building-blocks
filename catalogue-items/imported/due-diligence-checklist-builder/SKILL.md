@@ -7,9 +7,9 @@ description: Generate and track comprehensive due diligence checklists tailored 
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. The convention and data files it was
+built with are not in this folder, so use the two rules below, which cause
+most Indian errors. Name any source you cannot check instead of guessing:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,8 +19,8 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+Where an item has no Indian equivalent, name the gap — never substitute a proxy
+and present it as the real thing.
 
 ## Workflow
 
@@ -82,7 +82,7 @@ Generate a checklist across all major workstreams, tailored to the sector:
 - Technology stack and architecture
 - Technical debt assessment
 - Cybersecurity posture
-- Data privacy compliance (GDPR, CCPA, SOC2)
+- Data privacy compliance (India's DPDP Act, plus GDPR or CCPA only if the target handles EU or California personal data; SOC2 where customers ask for it)
 - Product roadmap and R&D spend
 - Scalability assessment
 

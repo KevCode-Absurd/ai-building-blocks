@@ -44,7 +44,9 @@ RATING (green, yellow or red) and one-line reason. ODD CLAUSES (section, quoted 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report.
+- The [NDA quick checker](https://useaiblocks.com/skills/nda-quick-checker).
+- The [Data processing agreement reviewer](https://useaiblocks.com/skills/dpa-review).
+- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

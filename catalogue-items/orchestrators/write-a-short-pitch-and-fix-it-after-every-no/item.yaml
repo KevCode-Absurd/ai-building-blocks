@@ -11,18 +11,16 @@ inputs:
   - {type: brand_brain, required: false}
   - {type: persona, required: false}
   - {type: voc_reviews, required: false}
-  - {type: objection_map, required: false}
-  - {type: plan, required: false}
   - {type: feedback_notes, required: false}
 outputs:
   - {type: copy_draft}
-  - {type: lessons_register}
+  - {type: feedback_notes}
 uses: [why-first-message-writer, honest-persuasion-editor, hardest-objections-answer-writer, pitch-revision-log]
 steps:
   - {uses: why-first-message-writer, note: "Writes the first short pitch, starting from what you believe."}
-  - {uses: honest-persuasion-editor, note: "Reads the pitch from the step before and strips out anything you cannot back up."}
-  - {uses: hardest-objections-answer-writer, note: "Takes the honest pitch and builds the hardest objections and answers into it."}
-  - {uses: pitch-revision-log, note: "Takes the pitch from before and the nos you collected, and rewrites it around the doubts heard most."}
+  - {uses: honest-persuasion-editor, note: "Reads the pitch from the step before and strips out anything you cannot back up, using the facts you gave."}
+  - {uses: hardest-objections-answer-writer, note: "Takes the honest pitch from step 2 and builds the hardest objections and answers into it. Hands you the pitch to take to five people who can say no."}
+  - {uses: pitch-revision-log, note: "Follows the pause. Takes the pitch from step 3 and the nos you collected, and rewrites it around the doubts heard most."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-short-pitch-and-fix-it-after-every-no/skeleton.yaml

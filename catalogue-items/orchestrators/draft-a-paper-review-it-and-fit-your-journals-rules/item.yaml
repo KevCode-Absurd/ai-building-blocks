@@ -16,7 +16,7 @@ steps:
   - {uses: manuscript-evidence-gatherer, note: "Starts from your topic. Makes the packet of sources the draft cites."}
   - {uses: scientific-manuscript-drafter, note: "Writes from the source packet and your results. It will not invent a citation or a number."}
   - {uses: scholarly-work-reviewer, note: "Reads the draft as a fair reviewer would and lists the fixes."}
-  - {uses: journal-submission-formatter, note: "Uses your revised paper (step 2's draft after you fix what step 3's review found), not the review itself. Checks it against the journal's current rules and hands back the fitted paper."}
+  - {uses: journal-submission-formatter, note: "Uses your revised paper: step 2's draft after you make the fixes step 3's review found, not step 3's review itself. Checks it against the journal's current rules and hands back the fitted paper."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/draft-a-paper-review-it-and-fit-your-journals-rules/skeleton.yaml

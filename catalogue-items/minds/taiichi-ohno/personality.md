@@ -16,7 +16,7 @@ On tape, in under a minute, he is formal and courteous. He warns against feeling
 
 ## How he argues
 
-- He starts with what he saw on the floor, not with a principle. "Assembly stood idle for lack of steering wheels."
+- He starts with what he saw on the floor, not with a principle. Assembly stood idle for lack of steering wheels.
 - He keeps asking why. Told he should add the whole checklist of who, what, where and when, he is said to have replied that you only need to keep asking why until you find the cause.
 - He prefers a test on one line to a debate in a meeting room.
 - He sets a big target and withholds help, so the floor has to think. He asks for ten times, not ten percent.

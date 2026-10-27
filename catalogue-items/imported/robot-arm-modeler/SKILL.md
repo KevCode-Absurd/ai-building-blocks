@@ -234,13 +234,14 @@ end
 **After `generalizedInverseKinematics`:**
 
 ```matlab
-if solInfo.ExitFlag <= 0
+% solnInfo is the second output of your gik(...) call, as in Step 5
+if solnInfo.ExitFlag <= 0
     warning("GIK did not converge. ExitFlag: %d, Status: %s", ...
-        solInfo.ExitFlag, solInfo.Status);
+        solnInfo.ExitFlag, solnInfo.Status);
 end
 
-for i = 1:numel(solInfo.ConstraintViolations)
-    cv = solInfo.ConstraintViolations(i);
+for i = 1:numel(solnInfo.ConstraintViolations)
+    cv = solnInfo.ConstraintViolations(i);
     if cv.Violation > 1e-3
         warning("Constraint %d (%s) violated: %.4f", i, cv.Type, cv.Violation);
     end

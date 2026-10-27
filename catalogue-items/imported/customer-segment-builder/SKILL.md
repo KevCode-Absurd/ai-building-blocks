@@ -27,6 +27,7 @@ Performs full RFM (Recency, Frequency, Monetary) analysis across the entire cust
 | segments | integer | no | 5 | Number of quintile buckets per dimension (3 or 5) |
 | min_orders | integer | no | 1 | Minimum orders for a customer to be scored |
 | tag_customers | boolean | no | false | If true, add RFM segment tag to customer (requires write_customers scope) |
+| dry_run | boolean | no | true | Only used with `tag_customers: true`. When true, list the tags that would be added and change nothing. Set to false only after the user has checked the list. |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
@@ -154,7 +155,7 @@ RFM SEGMENTATION REPORT  (<days_back> days)
   Top Champions:
     <name> (<email>)  R:<n> F:<n> M:<n>  Spend: $<n>
   Top At-Risk (win-back candidates):
-    <name> (<email>)  Last order: <date>  Lifetime: $<n>
+    <name> (<email>)  Last order: <date>  Spend in window: $<n>
   Output: rfm_segments_<date>.csv
 ══════════════════════════════════════════════
 ```

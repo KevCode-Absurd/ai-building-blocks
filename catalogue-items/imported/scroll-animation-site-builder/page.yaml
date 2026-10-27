@@ -32,6 +32,7 @@ you_get:
 how_to_use:
   - "Open a chat with your AI and paste the skill text. Say which mode you want: build a new page, add effects to a page you have, or fix slow animation."
   - Paste your brief and add your images. Add your brand colours and copy if you have them.
+  - If your AI cannot run scripts, it checks your images and the page by eye instead, and tells you it did.
   - Read the asset audit and depth plan first. Ask for changes before the code is written.
   - Copy the HTML file your AI gives you, save it as a file ending in .html and open it in your browser.
   - Scroll the page and check it runs smoothly. Turn on reduced motion in your device settings to check the page still works.

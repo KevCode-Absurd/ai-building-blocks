@@ -3,7 +3,7 @@ thinking_why: It follows a set method but must read mixed results with care.
 new_slug: prompt-change-tester
 name: Prompt change tester
 summary: Compare a new prompt with your old one on the same test cases. You get a case-by-case report of what got better or worse, and a ship or hold call.
-job: test-and-fix-code
+job: set-up-ai
 headline: Prompt change tester
 subhead: A fair test of whether your new prompt is better than the old one. You get case-by-case evidence, so a change ships on proof, not a hunch.
 explain: |
@@ -32,10 +32,11 @@ you_get:
   - A ship or hold recommendation
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste your old prompt, your new prompt and your test cases. Give each case an ID.
+  - Paste your old prompt, your new prompt and your test cases. Give each case an ID. Use made-up or redacted cases. Do not paste private customer data into a consumer chat tool.
   - Say what counts as a pass for each case, before you see any results. Add the model and settings you used.
   - Ask your AI to compare both prompts case by case. Add the answers you got from each prompt if you already ran them.
   - Check the report for incomplete cases. A missing answer or timeout is not a pass.
+  - "Act on the call: if the call is ship, keep the new prompt. If it is hold, send the regression rows back to whoever wrote the prompt so they can revise it. If the new prompt loses overall, keep the old one live."
   - Save the report in your team change log. Run the test again after any change to the model or settings.
 output_sample:
   input:

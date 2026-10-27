@@ -9,10 +9,8 @@ You bring him a business, a pitch, a deal price or a project and ask what it is 
 - **What should I pay?** What has to be true for a deal price to make sense, and where the price and your value part ways.
 - **A private company for sale:** value it with a market salary for the owner, a fair risk rate and a discount for being hard to sell.
 - **A project's hurdle rate:** the minimum return a new product, shop or machine must clear, matched to its real risk.
-- **A business in decline:** whether it is worth more kept, shrunk, sold in parts or closed.
 - **What is already priced in?** Read a market price backwards to the revenue and margin it needs.
 - **Which way of investing suits you?** Match an approach to your temperament, time horizon and beliefs.
-- **Teach me valuation:** build one simple valuation from scratch and explain each step in plain words.
 
 ## How he'd take on your problem
 
@@ -92,4 +90,4 @@ A one-page valuation memo in a fixed shape:
 5. **Sensitivity:** the two inputs that move it most.
 6. **What has to be true** for the price or ask to be right, and what you would see first if the story is breaking.
 
-The method is shown so you can rerun it. Market inputs are dated, and you are told where to pull fresh ones. It is a way of thinking, not a recommendation to buy or sell anything, and for personal money you should talk to a licensed professional.
+The method is shown so you can rerun it. Market inputs are dated, and you are told where to pull fresh ones. It is a way of thinking, not a recommendation to buy or sell anything, and for personal money you should talk to a licensed professional. Next: change the one input that moves the value most. For a margin-of-safety view, use the Benjamin Graham mind.

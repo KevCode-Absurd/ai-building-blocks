@@ -35,7 +35,8 @@ how_to_use:
   - Add your products and prices, your margins, and your daily or monthly budget.
   - Paste your current ad results if you have them (optional).
   - Ask for a TikTok Shop ad plan.
-  - Check the budget and return figures. They are starting points, so compare them with your own numbers before you spend.
+  - Check the budget and return figures. They are starting points, so compare them with your own numbers before you spend. Replace every [X.X] and $[Amount] placeholder with your own figure, and note which numbers are assumptions.
+  - Use only real customer reviews and true urgency (such as a real sale end date) in your ads, and check TikTok's ad rules before launch.
   - Set up the campaigns in TikTok Shop Ads Manager and follow the weekly review list.
 output_sample:
   input:
@@ -65,3 +66,4 @@ output_sample:
       contains: 30 day targets and scaling milestones for the months after.
     - name: Next Actions
       contains: A short checklist to set up your account, build ads and start reviews.
+next: [tiktok-shop-results-reader, tiktok-ads-account-auditor]

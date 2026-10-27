@@ -14,7 +14,7 @@ outputs:
 uses: [key-hire-gap-finder, results-agreement-writer, one-on-one-meeting-planner]
 steps:
   - {uses: key-hire-gap-finder, note: "Starts by finding the single hire that removes the growth limit and the result they must deliver."}
-  - {uses: results-agreement-writer, note: "Turns the 90-day result and pay from the hire brief into a one-page agreement to hand over the ads."}
+  - {uses: results-agreement-writer, note: "Turns the 90-day result and pay from the hire brief into a one-page agreement to hand over the work."}
   - {uses: one-on-one-meeting-planner, note: "Builds a meeting rhythm around the agreement so the handover does not slide back to you."}
 origin: rebuilt
 version: 1.0.0

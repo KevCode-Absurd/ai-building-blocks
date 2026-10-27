@@ -141,6 +141,7 @@ To guarantee a premium, non-generic output, you MUST strictly avoid these common
 * **NO 3-Column Card Layouts:** The generic "3 equal cards horizontally" feature row is BANNED. Use a 2-column Zig-Zag, asymmetric grid, or horizontal scrolling approach instead.
 
 ### Content & Data (The "Jane Doe" Effect)
+* **Placeholder safety:** Every name, number, price, review, phone number and logo you invent for a mock-up is placeholder content. Mark it in the code with a comment such as `// PLACEHOLDER: replace before launch`, and tell the user to replace all of it with real data before the page goes live. Never present invented figures, testimonials or customer names as real.
 * **NO Generic Names:** "John Doe", "Sarah Chan", or "Jack Su" are banned. Use highly creative, realistic-sounding names.
 * **NO Generic Avatars:** DO NOT use standard SVG "egg" or Lucide user icons for avatars. Use creative, believable photo placeholders or specific styling.
 * **NO Fake Numbers:** Avoid predictable outputs like `99.99%`, `50%`, or basic phone numbers (`1234567`). Use organic, messy data (`47.2%`, `+1 (312) 847-1928`).

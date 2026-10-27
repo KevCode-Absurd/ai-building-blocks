@@ -11,7 +11,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and AWS resources to g
 - AWS CLI configured and authenticated (`aws sts get-caller-identity` succeeds)
 - GitHub MCP server configured and authenticated
 - Target GitHub repository identified
-- AWS resources deployed (IaC files optional but helpful)
+- AWS resources deployed, and IaC files for them (Step 2 stops if there are none)
 
 ## Workflow Steps
 
@@ -52,6 +52,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and AWS resources to g
 **Action**: Gather utilization data and verify actual resource costs
 **Tools**: AWS CLI (CloudWatch, Cost Explorer)
 **Process**:
+The `date -d` commands below need GNU date (Linux). On macOS, use `date -u -v-7d` instead, or read the same figures in the AWS console.
 1. **CloudWatch Metrics** (last 7 days):
    ```bash
    # EC2 CPU utilization
@@ -104,7 +105,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and AWS resources to g
    - Consolidate NAT Gateways for non-production environments
    - Use VPC endpoints for S3/DynamoDB to avoid NAT Gateway charges
 
-2. **Calculate Priority Score**:
+2. **Calculate Priority Score**. Score Value and Risk from 1 to 10 (Value: 10 = large, certain saving; Risk: 10 = likely to break something). Implementation Days is your estimate in days:
    ```
    Priority Score = (Value Score × Monthly Savings) / (Risk Score × Implementation Days)
    High: Score > 20 | Medium: Score 5-20 | Low: Score < 5
@@ -181,13 +182,13 @@ Wait for user confirmation before proceeding.
 
 ## Error Handling
 - **AWS Authentication Failure**: Guide through `aws configure`
-- **No Resources Found**: Create informational issue about AWS resource deployment
+- **No Resources Found**: Stop and tell the user there is nothing to review
 - **Insufficient Permissions**: List required IAM read-only permissions
 - **GitHub Creation Failure**: Output formatted recommendations to console
 - **Cost Explorer Not Enabled**: Guide user to enable in AWS Console
 
 ## Success Criteria
-- ✅ All cost estimates verified against actual configurations and AWS pricing
+- ✅ Cost estimates checked against actual configurations. Savings are estimates unless billing data confirms them, and the summary says so
 - ✅ Individual GitHub issues created for each optimization
 - ✅ EPIC issue provides comprehensive coordination and tracking
 - ✅ All recommendations include specific AWS CLI or IaC commands

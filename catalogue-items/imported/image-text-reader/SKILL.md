@@ -249,6 +249,8 @@ You MUST compute OCR metrics using `evaluateOCR`. The ground truth is either:
 1. **Text you (Claude) read visually from the image** — use this by default
 2. **Text the user provided** — use this if the user supplies expected text or corrects your read
 
+**Honesty note:** when the ground truth is your own reading of the image, CER and WER only show that MATLAB agrees with you. They are a consistency check, not true accuracy. Say so in the report, and ask the user to confirm or correct the text when it matters.
+
 Run this via MCP after recognition:
 
 ```matlab

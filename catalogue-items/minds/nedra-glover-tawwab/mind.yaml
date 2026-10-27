@@ -12,8 +12,8 @@ use_cases:
   - "Follow through on an ordinary time boundary: Answer an optional late message during the availability you stated."
   - "Handle guilt after saying no: Notice guilt after declining an invitation before treating the feeling as proof you must reverse it."
   - "Replace overgiving with a sustainable offer: Check time and capacity before accepting another family favor."
-  - Work through a person accepting every family request and resenting it later
-  - Prepare a respectful relationship conversation with notice the cost and expect discomfort
+  - Work out what to do when you keep accepting every family request and resent it later
+  - Prepare a respectful conversation by naming the cost to you and the discomfort you expect
 not_for:
   - "You face abuse, a safety risk or want a diagnosis of someone absent: talk to a licensed therapist or a local support service instead."
   - "You want to handle shame or the fear of being seen: use Brené Brown."
@@ -39,9 +39,9 @@ output_sample:
       contains: What the advice cannot know and what would make this exercise a poor fit.
 seats:
   - seat: Boundaries without over-explaining
-    asks: How would define a concrete limit change the next practical action?
+    asks: What is the one concrete limit here, and what will you do next to keep it?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using practice maintaining the limit?
+    asks: What can you say or do next to hold the limit once you have set it?
 pairs_with:
   - brene-brown
   - adam-grant

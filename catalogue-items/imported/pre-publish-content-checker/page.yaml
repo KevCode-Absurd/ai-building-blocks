@@ -16,7 +16,8 @@ when:
   - Your team keeps publishing errors and needs one standard review.
   - You want a page checked for search before it ships.
 not_for:
-  - "You need to define your brand voice from scratch: write your voice guide first, then bring the draft back here."
+  - "You need to define your brand voice from scratch: use the Brand voice guide builder first, then bring the draft back here."
+  - "You have no content brief yet: use the Content brief writer first. The brief check needs one."
   - "You want to check a huge set of programmatic pages one by one: check a small sample instead, not every page."
   - "You want a full rewrite of a weak draft: ask a writer or your AI to redraft it, then run this check."
 you_give:
@@ -30,11 +31,11 @@ you_get:
   - A list of facts and sources you need to verify.
   - A publish or hold verdict.
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. For the full detail, also paste the files in its references folder. Without them you still get the six checks, but with less depth. It needs no code or paid tools.
   - Paste your content brief, then your draft.
   - Add your voice notes and target keyword if you have them.
   - Ask your AI to run the full check and give a verdict.
-  - Fix the flagged issues, starting with facts to verify.
+  - Fix the flagged issues, starting with facts to verify. The check flags claims, numbers and quotes that need a source. It cannot confirm a fact, so check each one against your own sources.
   - Run the check again on the new draft if the verdict was hold.
 output_sample:
   input:
@@ -57,3 +58,4 @@ output_sample:
       contains: Gaps in keyword use, answer-style content, internal links and schema, with fixes.
     - name: Verdict
       contains: A publish or hold call, and the issues to fix first.
+next: [content-brief-writer, draft-brand-voice-checker]

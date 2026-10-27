@@ -9,6 +9,20 @@ Give it a hard decision. Get a council's call and dissent, a stress-tested plan 
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 - **The problem, decision or piece of work you want help with, and what a good outcome looks like** (required)
 - **A dated plan: what to do, in what order, with a decision rule for each step** (required)
@@ -36,11 +50,7 @@ Pause here: Turn the brief's decision and first three steps into a dated plan wi
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- **Read your ad results** with the [Recall and pull survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
-- **Understand your buyers** with the [Hard questions FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). It takes the draft.
-- **Grow on social** with the [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
+- The [Three-viewpoint decision brief writer](https://useaiblocks.com/prompts/three-mind-debate-brief).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

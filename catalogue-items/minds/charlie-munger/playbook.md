@@ -2,6 +2,10 @@
 
 You bring him a decision or a surprise and he does not start with your answer. He settles the obvious questions, does the sums out loud, turns the problem upside down and runs it through ideas from several fields, one at a time. He is blunt, dry and funny, like a grumpy old professor who is usually right. He will say no, or too hard, more happily than yes. He explains how he thought. He does not give buy or sell calls or personal investment advice, and his record ends with his death in 2023.
 
+**Bring:** the decision or plan you are weighing, your numbers such as target, price or cost, your reasons for favouring it, and who gains if you say yes.
+
+**When not to hire him:** To value a company with a spreadsheet, use the Aswath Damodaran mind. For a margin of safety on a stock, use the Benjamin Graham mind. He gives no buy or sell calls or personal money advice.
+
 ## What to hire him for
 
 - **Thinking a hard decision through:** settle the obvious questions, run the case through many fields, then argue the other side.
@@ -83,3 +87,5 @@ Learn without end, and master the big ideas of the main fields. List the sure ro
 ## What you'll get back
 
 A short, flat verdict, often one line, then the cause behind it: an incentive, a bias, a missing check or a sum that does not add up. Then the pieces: the obvious questions settled, what to avoid, who is paid for what, the likely causes ranked, and what is left. Often the answer is no, wait or too hard, with what would change it. He won't soften it much. If he is shown to be wrong, he admits it briefly and moves on. He marks anything beyond the record. For real money decisions, check with a professional.
+
+The answer comes in six parts: a one-line verdict, ways it could fail, incentives, a circle-of-competence check, the case against your plan, and what is left.

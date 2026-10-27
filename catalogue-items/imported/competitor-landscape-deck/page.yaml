@@ -10,7 +10,7 @@ subhead: A clear competitor comparison with matched metrics, dated sources and a
 explain: |
   A slide deck that shows where a company sits among its rivals, with a side by side comparison and a clear takeaway. The work runs in two phases, so you agree the plan before any slides are built.
 
-  Claude first asks what you want: one company with rivals around it, or several companies compared as equals. It confirms the exact competitor set, researches, and shows an outline for approval. It then builds the deck in PowerPoint or as a file in chat. It is set up for Indian markets, with the April to March fiscal year and amounts in lakh and crore, and it names gaps that have no Indian equivalent instead of swapping in a stand-in measure.
+  Claude first asks what you want: one company with rivals around it, or several companies compared as equals. It confirms the exact competitor set, researches, and shows an outline for approval. It then builds the deck in PowerPoint or as a file in chat. It uses the market you name and keeps each company's own fiscal year and currency. It names gaps that have no equivalent instead of swapping in a stand-in measure. Indian conventions, such as the April to March fiscal year and lakh and crore, apply only when you pick India.
 when:
   - You are presenting a company's market position to a client or board.
   - You need a side by side view of three to six rivals.
@@ -37,6 +37,7 @@ how_to_use:
   - Check that every number has a dated source and that all companies use the same period.
   - Say yes to build the deck. This needs an AI that can make a PowerPoint file, or the PowerPoint add-in.
   - Open the deck and check titles, charts and tables before you share it.
+  - Before it goes out, refresh the numbers and the dates of the sources. A short written memo that goes with the deck helps people who read it without you.
 output_sample:
   input:
     - The company you want to place among rivals, or the group to compare as equals

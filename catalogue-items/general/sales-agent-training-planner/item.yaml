@@ -16,4 +16,3 @@ version: 1.0.0
 minds: [madam-cj-walker]
 credits:
   - {title: "Madam C. J. Walker", by: "Wikipedia contributors (licensed text)", url: "https://en.wikipedia.org/wiki/Madam_C._J._Walker", used: "Testing a product on people you know, training agents in a method, commission, prizes and local clubs and gatherings"}
-  - {title: "Madam C.J. Walker study notes", by: "Study notes from public sources", used: "The agent course and records approach"}

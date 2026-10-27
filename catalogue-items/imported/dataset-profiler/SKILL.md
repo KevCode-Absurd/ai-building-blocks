@@ -6,7 +6,7 @@ argument-hint: "<table or file>"
 
 # /explore-data - Profile and Explore a Dataset
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> In a plain chat, paste this skill, then attach a file or paste sample rows. The warehouse steps apply only if your AI has a data tool connected. Say which you are using.
 
 Generate a comprehensive data profile for a table or uploaded file. Understand its shape, quality, and patterns before diving into analysis.
 
@@ -15,6 +15,8 @@ Generate a comprehensive data profile for a table or uploaded file. Understand i
 ```
 /explore-data <table_name or file>
 ```
+
+If your AI has no slash commands, paste this skill and say: "Profile this file" (attach it) or "Profile this table: <name>".
 
 ## Workflow
 

@@ -35,7 +35,7 @@ you_get:
   - New batch margin with the input rise, split into recovered and unrecovered cost
   - Missing facts and the checks that could not run
 how_to_use:
-  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook.
+  - "Download the workflow pack. It has HANDOFF.md and two skill files, in the order they run: Retail markdown stock reconciler and Commodity pass through cost bridge. Give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook."
   - Attach the supplier invoices for the old batch, your sales report and the clearance costs. Paste the new input price and the price you approved. Say the currency and dates.
   - After step 1, check that units sold are no more than the batch, and that the cost of unsold stock is not counted as cash.
   - After step 2, check the old-stock bridge and the new-batch margin are shown apart, and that only the pass-through you approved was used.
@@ -89,7 +89,6 @@ tweaks:
 judge:
   - Historical stock keeps its original purchase basis; prospective input inflation is not applied retroactively to existing inventory cost. Sold-unit contribution and cumulative cash after the full original cohort purchase remain distinct; stock cannot be oversold.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

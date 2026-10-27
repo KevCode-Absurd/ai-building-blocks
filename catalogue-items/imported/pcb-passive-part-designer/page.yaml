@@ -5,7 +5,7 @@ name: PCB passive part designer
 summary: Design a spiral inductor, interdigital capacitor, balun or resonator for your board. Get its dimensions, L or C values and a mesh check in MATLAB.
 job: build-software
 headline: PCB passive part designer
-subhead: Say which part you need, such as an inductor or balun. Get it designed and checked. Bring the part type. Use the result to plan your next step.
+subhead: Say which part you need, such as an inductor or balun. Get it designed and checked. You get one report you can check before a full solve.
 explain: |
   Tell it the part, such as a spiral inductor, interdigital capacitor, ring resonator or balun, and get a design you can measure instead of guess at. It pulls out the numbers that matter: inductance, capacitance and self-resonant frequency.
 
@@ -16,13 +16,13 @@ when:
   - You are building a balun to join a balanced and an unbalanced line.
   - You want a ring resonator for a filter or test structure.
 not_for:
-  - "You need a filter: use a filter design skill such as matlab-design-pcb-filter, since this skill only builds single parts."
-  - "You need a coupler or splitter: use matlab-design-pcb-coupler, which sizes those parts directly."
+  - "You need a filter: use the PCB RF filter designer, since this skill only builds single parts."
+  - "You need a coupler or splitter: use the PCB coupler designer, which sizes those parts directly."
   - "You have no MATLAB with the RF PCB Toolbox: ask an RF engineer, or use a free circuit simulator for a rough value."
 you_give:
   - The part type, such as spiral inductor, interdigital capacitor, balun, ring resonator, phase shifter or radial stub
   - Your target frequency
-  - Your substrate and metal, set up first with matlab-manage-pcb-material
+  - Your substrate and metal, set up first with the PCB material setup helper
   - Size limits (optional)
 you_get:
   - A designed part object
@@ -31,7 +31,8 @@ you_get:
   - A memory and mesh estimate before the full solve
 how_to_use:
   - Check you have MATLAB with the RF PCB Toolbox. Both are paid products and need a license.
-  - Set up your substrate and metal first with matlab-manage-pcb-material.
+  - Set up your substrate and metal first with the PCB material setup helper.
+  - "Expect one report: a table of part dimensions, the L or C value at your target frequency, the self-resonant frequency, then a pass or fail on the mesh and memory check."
   - Give your AI the skill text, the part type and your target frequency.
   - Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency.
   - Check the mesh and memory estimate before you approve a full-wave solve.
@@ -44,7 +45,7 @@ output_sample:
     - Size limits (optional)
   prerequisites:
     - MATLAB with the RF PCB Toolbox, both paid and licensed
-    - A substrate and conductor set up first with matlab-manage-pcb-material
+    - A substrate and conductor set up first with the PCB material setup helper
     - An AI that can run MATLAB code
   output:
     - name: Part object
@@ -59,3 +60,4 @@ output_sample:
       contains: A check of mesh density and memory need before you start a full-wave solve.
     - name: Next steps
       contains: Pointers to full-wave checks, tuning of dimensions and adding the part to a circuit.
+next: [pcb-circuit-combiner]

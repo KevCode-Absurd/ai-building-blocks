@@ -3,6 +3,18 @@ name: "gdpr-audit-prep"
 description: "/cs:gdpr-audit-prep <scope> — GDPR audit 6-question Article-cited forcing interrogation. Use before annual internal GDPR review, post-breach internal audit, DPA investigation readiness, or acquisition due diligence."
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `ra-qm-team/skills/gdpr-dsgvo-expert/scripts/gdpr_compliance_checker.py`
+- `ra-qm-team/skills/gdpr-dsgvo-expert/scripts/dpia_generator.py`
+- `ra-qm-team/skills/gdpr-dsgvo-expert/scripts/data_subject_rights_tracker.py`
+- `../../skills/compliance-os/scripts/cross_framework_mapper.py`
+- `../../../ra-qm-team/skills/gdpr-dsgvo-expert/references/gdpr_audit_playbook.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # /cs:gdpr-audit-prep — GDPR DPO Forcing Questions
 
 **Command:** `/cs:gdpr-audit-prep <scope>`
@@ -70,6 +82,8 @@ The GDPR DPO auditor pressure-tests any privacy compliance work. Six Article-cit
 
 ## Workflow
 
+**In this copy the four scripts below are not included, so do not run them.** Do the same four checks by hand in the chat. Ask the user to paste or describe: (1) their record of processing and lawful basis notes, (2) any impact assessments for risky processing, (3) their data subject request log, (4) their transfer impact assessments and breach log. Then check each against the six questions. Say clearly that you checked the pasted notes and did not run a checker.
+
 ```bash
 # 1. Compliance posture
 python ra-qm-team/skills/gdpr-dsgvo-expert/scripts/gdpr_compliance_checker.py compliance_state.json
@@ -89,7 +103,7 @@ python ../../skills/compliance-os/scripts/cross_framework_mapper.py program.json
 ```markdown
 # GDPR Audit Prep: <scope>
 **Date:** YYYY-MM-DD
-**Article Citations:** Every finding cites Article + paragraph; no paraphrase.
+**Article Citations:** Every finding cites Article + paragraph. Quote the article's meaning carefully and tell the user to check each citation against the regulation text.
 
 ## The Decision Being Made
 [RoPA-refresh | DPIA-required | DSAR-workflow | transfer-risk | breach-followup | DPA-readiness]

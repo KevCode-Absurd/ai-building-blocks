@@ -9,7 +9,7 @@ subhead: A launch plan that starts from the buyer, not the feature list. Give it
 explain: |
   A launch plan that starts from the buyer, not the feature list. Give it your product and your rivals and you get a clear position, a go-to-market plan and launch steps in order.
 
-  It begins by defining the ideal customer from your best customers, those with the highest lifetime value. Then it builds positioning, sizes up competitors, and plans the launch. It also covers what your sales team needs and notes on entering new countries. Scripts handle some of the scoring. The result is a plan you can hand to a team, written around why the right buyer picks you over the options.
+  It begins by defining the ideal customer from your best customers, those with the highest lifetime value. Then it builds positioning, sizes up competitors, and plans the launch. It also covers what your sales team needs and notes on entering new countries. The result is a plan you can hand to a team, written around why the right buyer picks you over the options.
 when:
   - You are launching a product and cannot explain why you beat the alternatives.
   - Your messaging sounds like every competitor's.
@@ -35,7 +35,7 @@ how_to_use:
   - Add your launch date and budget if you have them (optional).
   - "Ask for the part you need: the ideal customer, positioning, battlecards, a launch plan or a new market plan."
   - Check the result. Every dollar figure, timeline and target in the skill is an example. Replace each one with your own data.
-  - Test the positioning with customers before you launch.
+  - Test the positioning with customers before you launch. Check each competitor fact (founding year, funding, size) against their own site before it goes on a battlecard.
 output_sample:
   input:
     - Your product description
@@ -59,3 +59,4 @@ output_sample:
       contains: Outline for a sales deck, one-pagers, a demo script and email templates.
     - name: International entry plan
       contains: Steps to enter a new country, including a checklist for translating and adapting your site and pricing.
+next: [sales-battlecard-builder, product-launch-planner, launch-checklist-runner]

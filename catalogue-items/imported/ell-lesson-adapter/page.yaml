@@ -33,9 +33,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tools are needed.
   - Paste your lesson plan. Add the subject and year group.
-  - Add how many students are learning English and their levels, and the lesson length, if you know them.
+  - Add how many students are learning English and their levels, and the lesson length, if you know them. You can also add first languages and the resources you have, such as bilingual books or teaching assistant help. Leave them out if you do not know.
   - Read the SIOP checklist to see which parts of the method are covered.
-  - Read the Teacher Adaptations and What Changed and Why. Fix anything that does not suit your class before you teach it.
+  - Read the Teacher Adaptations and What Changed and Why. Fix anything that does not suit your class before you teach it. Then pair it with Task language demand checker or Vocabulary tier sorter, teach the lesson, and review it with the SIOP checklist.
 output_sample:
   input:
     - Your lesson plan, with topic, activities, resources and the learning goal

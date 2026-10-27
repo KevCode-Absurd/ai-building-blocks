@@ -19,6 +19,7 @@ not_for:
   - "You are speeding up a Simulink model: use the Simulink Profiler built into MATLAB."
   - "Your code is slow because of file, network or database waits: fix the reads or the connection, since code changes will not help."
   - "You want to write performance tests: use the writing-matlab-perf-tests skill."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Your slow MATLAB code
   - A way to run it with typical data
@@ -45,7 +46,8 @@ output_sample:
     - Your MATLAB release (optional)
     - Your target speed (optional)
   prerequisites:
-    - An AI that can run MATLAB, or a MATLAB session where you paste the results back
+    - An AI that can run MATLAB, or a MATLAB session where you paste the results back. MATLAB is paid software
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Baseline
       contains: The starting run time of your code, measured with the same method used again after the fix.

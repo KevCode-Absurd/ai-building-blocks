@@ -117,6 +117,8 @@ improve:
   - Add real objects from your own life, so the details have weight.
   - Keep a file of stop lines from your favourite books, and compare.
 
+before: [next-page-hook-planner, fair-escape-checker]
+next: [page-pull-scene-checker]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Drafting from a plan is text work any strong chat AI does well with this skill."}

@@ -31,10 +31,11 @@ you_get:
 how_to_use:
   - Use an AI agent that can run tools and reach the OpenAI developer docs server, such as Codex. A plain chat window cannot run the lookup tools.
   - Connect the OpenAI docs server in your agent's settings. Check your tool's own guide for the exact steps.
-  - Add this skill to your agent, or paste its text into the chat.
+  - Add this skill to your agent, or paste its text into the chat. The skill file is written for your AI. You only need to read the answer and its links. Your agent will ask before it installs the docs server.
   - Ask your question. Say what you are building and which model you use now, if any.
   - Check the links in the answer. Open the main page to confirm it matches what you asked.
   - If you cannot connect the docs server, ask your AI to search only official OpenAI sites. Treat the answer with more care.
+  - Take any upgrade steps or API fixes to your developer. Test them in a non-production setup first.
 output_sample:
   input:
     - Your question about OpenAI products or the API

@@ -36,6 +36,7 @@ how_to_use:
   - Read the page tree plan your AI shows you. Ask for changes, then say yes before it creates any page.
   - Set the permissions in your space settings in Confluence. Your AI cannot do this step.
   - Open the space and check the homepage loads. Create a test page from each template.
+  - Next, ask for a content health audit of the space. It lists the pages to archive or update, so fix the oldest and most visited first.
 output_sample:
   input:
     - What your team writes down, such as meeting notes or project pages

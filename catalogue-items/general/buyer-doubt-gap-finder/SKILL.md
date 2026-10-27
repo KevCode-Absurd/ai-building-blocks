@@ -44,11 +44,11 @@ A table: Doubt | Quote and source | Where the page answers it now | Visible, hid
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- **Make an offer people want** with the [Offer delivery options planner](https://useaiblocks.com/skills/delivery-option-generator). It takes the objection map.
 - **Understand your buyers** with the [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
+- **Sell it** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). It takes the buying reasons and objection map.
+- **Understand your buyers** with the [Ideal customer profile writer](https://useaiblocks.com/skills/ideal-customer-profile-writer). It takes the buying reasons.
+- The [Product page section planner](https://useaiblocks.com/skills/product-page-section-planner). It takes the objection map.
+- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

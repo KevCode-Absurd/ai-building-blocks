@@ -9,6 +9,23 @@ You plan a Meta creative test before anyone builds it. You turn new ads, a budge
 
 **Not for:** adding new ads to a campaign that already works (use the Meta creative refresh setup planner), bid-cap campaigns (use the Meta bid cap launch planner), or writing the ad words (use the Fact-based ad copy writer first).
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Meta Ads Manager:** Where you build the drafts. Use Meta's A/B test tool when you need a fair comparison between ads.
+- **Any good chat AI:** Plans the test and writes the checklists from the facts you paste.
+<!-- /needs -->
+
 ## What you need
 - **The test question** (required): what the store wants to learn, such as which opening hook gets more purchases.
 - **The new ads** (required): media, approved words, product facts, the offer and the link each ad goes to.
@@ -56,6 +73,16 @@ MISSING: <what was not given>
 ```
 
 Add the evidence used and the assumptions. Keep the previous approved settings or files so a change can be compared and rolled back.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
+- The [Meta campaign change reviewer](https://useaiblocks.com/skills/meta-optimization-of-existing-ad-campaigns-planner).
+- The [Meta bid cap adjustment planner](https://useaiblocks.com/skills/meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner).
+- **Read your ad results** with the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks
 - The test has a question and a deciding proof.

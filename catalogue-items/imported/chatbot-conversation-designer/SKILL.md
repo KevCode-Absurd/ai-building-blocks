@@ -25,6 +25,14 @@ This skill provides a comprehensive framework for designing chatbot conversation
 
 6. **Prototype, test, and iterate.** Build a low-fidelity prototype using conversation scripts or tools like Botmock, Voiceflow, or Dialogflow CX. Test with real users to identify where conversations break down. Track metrics: task completion rate, average turns to resolution, fallback trigger rate, and escalation rate. Iterate on the weakest flows first.
 
+## Output
+
+Hand back these parts in order: persona and scope, intent list (each with its slots and example phrases), slot-filling sequences, the three fallback tiers, a memory plan (what carries over and what resets), and a test script.
+
+## Testing with real users
+
+Test with about five people from your real audience, one at a time, using the test script. For each task log whether they finished, how many turns it took, how often the bot fell back and how often it handed off to a person. Fix the weakest flow first, then test again.
+
 ## Usage
 
 This skill is for developers, UX writers, and product managers designing conversational interfaces. Provide the agent with the bot's purpose, target user base, and the list of tasks it should handle.
@@ -42,6 +50,8 @@ Platform: [web widget / Slack / WhatsApp / voice assistant]
 ~~~
 
 ## Examples
+
+The order numbers, tracking numbers and emails in these examples are made up for illustration.
 
 ### Example 1: Customer Support Bot — Complete Conversation Flow
 

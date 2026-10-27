@@ -16,6 +16,7 @@ when:
   - You want to fine-tune a pretrained image network on your own pictures.
   - Your training code is slow and you want it faster.
 not_for:
+  - "You do not write or run MATLAB: this skill gives you MATLAB code, so it only helps if you already use MATLAB. Ask a data scientist or use a no-code tool instead."
   - "You need to bring in a PyTorch or ONNX model: use MATLAB's own import functions, not this skill."
   - "You need to load, clean or augment your images first: do that step in MATLAB before you start."
   - "You are not sure whether a CNN, LSTM or transformer fits: ask a data scientist or read up on network types, then come back to train."
@@ -25,8 +26,8 @@ you_give:
   - Existing MATLAB code to update (optional)
   - Whether you need a Simulink export (optional)
 you_get:
-  - A trained network
-  - Test results on unseen data
+  - MATLAB code that trains the network
+  - A table of test results on data the network has not seen
   - Updated code using current functions
   - An exported model (optional)
 how_to_use:

@@ -90,8 +90,8 @@ Each major achievement should follow: "Accomplished X, measured by Y, by doing Z
 
 **Guidance:**
 - Weak: "Improved product roadmap"
-- Strong: "Increased roadmap visibility and prioritization accuracy (X) by 40% completion rate (Y) by implementing quarterly planning cycles and stakeholder reviews (Z), leading to 6-month product launch acceleration for enterprise customers (S)"
-- Apply this formula to 70% of achievement bullets
+- Strong pattern: "[Achievement] (X), measured by [metric and number] (Y), by [what you did] (Z), in [specific context or scale] (S)". For example: "Improved roadmap prioritization (X), measured by [X%] more planned work completed (Y), by introducing quarterly planning cycles and stakeholder reviews (Z), for [the enterprise customer group] (S)". The bracketed parts must come from the user.
+- Apply this formula to most achievement bullets (about 70% is a rough guide, not a rule)
 
 ---
 
@@ -195,6 +195,7 @@ Use clear, standard job titles and language. Avoid made-up or overly creative jo
 
 ## Important Guidelines
 
+- **No invented numbers**: Use only figures that appear in the user's resume or the job posting. Where a metric is missing, write a bracketed placeholder such as [X%] and ask the user for the real figure. Every number in the examples in this file (35%, $2M to $15M, 40%, 25+, 500+, 18%) is made up, to show the shape. Never copy one into a rewrite.
 - **Tone**: Keep feedback casual yet professional. Be encouraging and positive.
 - **Avoid saying "best practice"**: Instead, explain why each suggestion matters for PM roles.
 - **Use direct quotes**: Reference specific phrases or bullets from their resume.

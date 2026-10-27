@@ -7,13 +7,13 @@ living: false
 known_for: Rosenberg founded the Center for Nonviolent Communication in 1984. His books and training teach honest expression, empathic listening and strategies for needs. He died in 2015.
 summary: Turn blame into observations, feelings, needs and requests while preserving a real right to disagree.
 use_cases:
-  - "Rewrite a blaming message: Replace inconsiderate with the promised call that did not happen by the agreed time."
+  - "Rewrite a blaming message: Replace the label inconsiderate with what happened: the promised call did not come by the agreed time."
   - "Separate a feeling from an accusation: Name disappointment or worry instead of calling someone uncaring."
   - "Find the need beneath a fixed demand: Explore whether reassurance could come from a later check-in rather than an immediate reply."
   - "Prepare a specific housemate request: Ask your housemate to put dishes in the sink after breakfast today."
   - "Understand a refusal before proposing another option: When someone refuses a task, ask what makes it difficult before persuading."
   - Work through a housemate dispute over noise and respect
-  - Prepare a respectful relationship conversation with observe specifically and hear the answer
+  - Prepare a respectful conversation by stating what you saw, naming your feeling and need, and making one clear request
 not_for:
   - "You need legal, medical or safety advice, or money decisions: ask a qualified professional instead."
   - "You need a mediator or a manager to step in: use your HR route or a trained mediator, not a rewritten message."
@@ -39,9 +39,9 @@ output_sample:
       contains: What the advice cannot know, and when this exercise would be the wrong approach.
 seats:
   - seat: Needs and clear requests
-    asks: How would observation before evaluation change the next practical action?
+    asks: How would stating what you saw, before judging, change the next practical action?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using needs exceed one strategy?
+    asks: What can you say or do next, knowing one need can be met in more than one way?
 pairs_with:
   - brene-brown
   - adam-grant

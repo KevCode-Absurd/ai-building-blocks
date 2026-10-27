@@ -36,7 +36,10 @@ how_to_use:
   - Add your subject, year group and number of lessons.
   - Say which topics must stay in order, and any order your school sets.
   - Read the plan. Check that each topic is taught on its own first, and that the order rules are kept.
-  - Next, plan review with the spaced-practice-scheduler and the retrieval-practice-generator.
+  - Next, plan quick review quizzes for each topic with the retrieval quiz writer.
+  - The research gains behind mixing are reported in the cited studies. Check those papers before you quote any figure to pupils or parents.
+next:
+  - retrieval-quiz-writer
 output_sample:
   input:
     - Your topics, in the order you teach them now

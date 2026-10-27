@@ -17,8 +17,8 @@ when:
   - You want milestones so students do not leave the work until the last week.
 not_for:
   - "You only need one lesson or a recall quiz: use a worksheet or a short quiz instead."
-  - "You need a full marking rubric for finished work: use the criterion-referenced-rubric-generator after the brief."
-  - "You want to plan the whole unit from the end goal back: use the backwards-design-unit-planner first."
+  - "You need a full marking rubric for finished work: use the Task rubric drafter after the brief."
+  - "You want to plan the whole unit from the end goal back: do that first, then bring the goal here."
 you_give:
   - Topic the project covers
   - Learning goals
@@ -33,11 +33,11 @@ you_get:
   - Teacher guide and support notes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
-  - Add your topic, learning goals, year group and project length.
+  - "Add your topic, learning goals, year group and project length. Then ask your AI to follow the skill's prompt step by step: driving question, scenario, what students make, milestones, marking criteria, teacher guide."
   - Add your subject, a real-world link, class details or resources if you have them (optional).
   - Read the driving question and scenario first. Change them if they do not fit your class.
   - Check the Known Design Choices section and edit any choice you disagree with.
-  - Next, run the criterion-referenced-rubric-generator, then the differentiation-adapter to adapt the brief for your learners.
+  - Next, use the Task rubric drafter for the full marking rubric. Then ask your AI to adapt the brief for your learners.
 output_sample:
   input:
     - Your project topic
@@ -62,3 +62,4 @@ output_sample:
       contains: Ways to support different learners in the same project.
     - name: Known Design Choices
       contains: The choices the skill made, so you can see them and change them.
+next: [task-rubric-drafter]

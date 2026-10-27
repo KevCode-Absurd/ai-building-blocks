@@ -17,6 +17,9 @@ Discover and track emerging trends using Apify Actors to extract data from multi
 - **Cost.** Apify runs can use paid credits. Before step 4, tell the user which Actor you will run and ask for a small result count for the first run. Never raise the count without asking.
 - **Platform rules.** Scraping Instagram, Facebook, TikTok and YouTube may go against those sites' terms of service. This skill reads public pages only. Remind the user once to check the terms before they use the data. Never ask for a login or a private account.
 - **Never ask the user to paste the Apify token into the chat.** It lives in the `.env` file.
+- **Skip the Facebook groups and Marketplace scrapers** unless the user confirms the data is public and allowed by the platform's terms. Group content can be private to its members.
+- **Ask for a spend limit.** Before the first run, ask how much Apify credit the user will allow, and stop when it is reached.
+- **Script path.** In the commands below, `${CLAUDE_PLUGIN_ROOT}` is the folder that holds this skill. The script is `reference/scripts/run_actor.js` inside it. If the variable is empty, use that relative path.
 - **Do not invent trends.** A trend needs a change over time. Report only what the returned data shows. If a run returns one snapshot with no earlier period to compare, say "this shows what is popular now, not what is rising" and suggest a second run next month. Quote counts exactly as returned. If a run fails or returns nothing, say so and stop.
 - **Why the front matter says `risk: critical`.** The skill uses an API token, can spend money on Apify, and reads other sites' data. Take care with each of those.
 

@@ -11,6 +11,8 @@ Good visuals are not decoration — they encode structure that text can't. Use t
 
 **Vault root:** `OBSIDIAN_VAULT` env var, else `learning/` in the current workspace. Subject assets go to `<vault>/Learning/<Subject>/assets/`.
 
+**If you work in a plain chat:** there is no vault and no `mermaid_lint` or `svg_save` tool. Give the diagram as a code block, check it against the rules below, and tell the user where to paste it. Sections 4 and 5 are for a full learning vault only. Skip them when the user asks for one diagram.
+
 ## 1. Choose the right form
 
 | The concept is... | Use | Mermaid type |
@@ -59,6 +61,8 @@ Use SVG when Mermaid can't express it: spatial layouts, annotated figures, simpl
 4. Keep it under ~100 elements. Simple shapes + text beat elaborate art every time.
 
 ## 4. Dashboard charts
+
+Only use this section when the user asks for a progress dashboard in a learning vault. The three chart files named below (`progress.svg`, `completion.svg`, `forecast.svg`) are not in this folder. You draw them yourself from the recipes, or skip them.
 
 The Dashboard is not a report. Text tables carry the data (links, dates); charts carry the state at a glance. **All dashboard charts are SVG images** — full color control, they render in Obsidian, on GitHub, and in any browser, and the agent writes them with plain file tools. Mermaid stays for lesson diagrams (section 2); the Dashboard grid is SVG only, because Mermaid code blocks cannot sit inside a table cell.
 
@@ -118,6 +122,8 @@ Bars, one per day for the next 7 days, `viewBox="0 0 340 200"`:
 - Bars accent `#22d3ee`, baseline and stubs `#3f3f46`, day labels (font-size 14) and title `#8b8b8b`.
 
 ## 5. Delegating to subagents
+
+Optional. Skip this section if your AI has no subagents.
 
 If the agent supports delegation/subagents (e.g. pi's `subagent` tool with `mermaid-maker` / `svg-maker` agents, or Claude Code subagents), hand off complex or high-effort visuals so the main conversation stays focused:
 

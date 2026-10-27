@@ -34,7 +34,7 @@ how_to_use:
   - Ask your AI to diagnose and fix the parfor. It runs the MATLAB code checker first.
   - Read the cause and the fixed loop. Check that the fix keeps the same results as your original loop.
   - Make sure the checker was run again on the fix and shows no parfor errors.
-  - Then time the new loop against the old one. Ask a separate question if you need more speed.
+  - Then time the new loop against the old one. If the checker is clean but workers still fail, set up the workers with the Parallel worker setup helper. For speed, use the MATLAB speed tuner.
 output_sample:
   input:
     - Your parfor loop or whole .m file
@@ -53,3 +53,4 @@ output_sample:
       contains: Notes on whether each variable is sliced, reduction, broadcast or temporary, and why it changed.
     - name: Verification result
       contains: The code checker run again on the fixed loop, confirming no parfor errors remain.
+next: [parallel-worker-setup-helper, matlab-speed-tuner]

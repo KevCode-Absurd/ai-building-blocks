@@ -17,8 +17,9 @@ when:
   - You need to explain your growth plan to investors.
 not_for:
   - Your product works fine for one person alone. Use a standard growth plan instead, since there is no network to start.
-  - You want people to share your product by word of mouth. Use the contagious skill instead.
-  - You want to build habits that bring users back each day. Use the hooked-ux skill instead.
+  - You want people to share your product by word of mouth. Use the Word of mouth planner instead.
+  - You want to build habits that bring users back each day. Use the Habit loop designer instead.
+  - "You want to pick a network that already holds your first users and set a tipping-point number: use the Network launch distribution planner."
 you_give:
   - A description of your product and who uses it
   - The two sides, if it has them
@@ -32,10 +33,11 @@ you_get:
   - A score for your plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
-  - Paste the SKILL.md text into the chat. If the skill folder has a references folder, attach those files too, for the deeper playbooks.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The deeper playbooks are in its references folder, which this page does not show. Attach atomic-networks.md to pick your first network, hard-side.md to win the hard side, tipping-playbooks.md to plan your second network, and scale-ceiling-moat.md when growth stalls.
   - Describe your product, who uses it and the two sides, if it has them. Add your user numbers and current plan if you have them.
   - Ask your AI to score your launch plan and give you the plan.
   - Check that the first small network is small enough to win. Then pick one step to start this week.
+  - Once you have users, use the Word of mouth planner to get them sharing and the Habit loop designer to bring them back.
 output_sample:
   input:
     - A description of your product and who uses it
@@ -55,3 +57,4 @@ output_sample:
       contains: The repeatable steps to move from one small network to the next.
     - name: Ceiling and moat
       contains: What may slow your growth later, and how to protect your lead.
+next: [word-of-mouth-planner]

@@ -130,3 +130,8 @@ Use the relevant profile/feed/detail/transcript/comment endpoints from `scrapecr
 - Do not mix platforms without platform context. A good LinkedIn post and good TikTok are different artifacts.
 - Do not assume a profile match from a company name if multiple brands share the name.
 - Do not present competitor strategy as fact when it is inferred from public content. Say "appears to" or "suggests".
+- The ScrapeCreators API key is a paid service. Each platform's own terms apply to the data you pull, so check them before you collect at scale.
+
+## What to do next
+
+Draft the first two posts from Recommended Content Tests, then pull the data again after four weeks and compare.

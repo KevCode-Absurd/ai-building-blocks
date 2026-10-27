@@ -15,11 +15,11 @@ The user will provide an interview transcript — either as an attached file (te
 
 ### Instructions
 
-1. **Read the full transcript** carefully before summarizing.
+1. **Read the full transcript** carefully before summarizing. List each job the customer describes, then rate importance and satisfaction only from what they said.
 
-2. **Fill in the summary template** below. Use "-" if information is unavailable. Replace numeric values with qualitative descriptions if needed (e.g., "not satisfied").
+2. **Fill in the summary template** below. Use "-" if information is unavailable. For each job, write importance and satisfaction as "not stated" unless the customer said it or clearly implied it, and add the supporting quote. Replace numeric values with qualitative descriptions if needed (e.g., "not satisfied").
 
-3. **Use clear, simple language** — a primary school graduate should be able to understand the summary.
+3. **Check every quote against the transcript, then write the action items.** Use clear, simple language — a primary school graduate should be able to understand the summary.
 
 ### Output Template
 
@@ -40,7 +40,7 @@ The user will provide an interview transcript — either as an attached file (te
 - [Unexpected findings or notable quotes]
 
 **Action Items**:
-- [Date, Owner, Action — e.g., "2025-01-15, Paweł Huryn, Follow up with customer about pricing"]
+- [Date, Owner, Action — e.g., "[Date], [Owner name], Follow up with customer about pricing"]
 ```
 
 Save the summary as a markdown document in the user's workspace.

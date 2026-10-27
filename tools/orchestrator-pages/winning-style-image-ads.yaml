@@ -23,10 +23,11 @@ not_for:
   - "You want to copy one winning layout exactly: use the Reference layout image ad maker."
 
 you_give:
-  - Your image ads, as pictures, with their results (spend, sales or clicks)
-  - Your product facts and photos
-  - Your brand file (optional)
-  - How many new ads you want, and the sizes
+  - "Six or more of your image ads, as pictures, with their results (spend, sales or clicks)"
+  - "Your product facts and photos"
+  - "Your brand file (optional)"
+  - "How many new ads you want, and the sizes"
+  - "After step 4, the images you picked, for the upscale"
 you_get:
   - The traits your winners share, and the ones to drop
   - New ad plans that each change one thing
@@ -36,11 +37,11 @@ you_get:
   - After you pick your images, an upscale plan for each
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. Your ads as pictures with their results, your product facts and photos, and a line on how many new ads you want.
-  - Check the style list and the new ad plans when it stops. Fix anything that is wrong before it writes the prompts.
-  - Make the images in your image tool, pick the ones to keep, then bring them back for the upscale step.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus five skill files, in the order they run: Winning image ad style finder, Image ad settings picker, Single image ad planner, Accurate product image ad maker, Image upscale checker."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Have your inputs ready. Your ads as pictures with their results, your product facts and photos, and a line on how many new ads you want."
+  - "Check the style list and the new ad plans when it stops. Fix anything that is wrong before it writes the prompts."
+  - "Make the images in your image tool, pick the ones to keep, then bring them back for the upscale step."
 output_sample:
   input:
     - Your image ads as pictures, with their results (spend, sales or clicks)

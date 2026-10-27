@@ -19,7 +19,7 @@ A systematic approach to web performance grounded in how browsers, protocols, an
 
 ## Scoring
 
-**Goal: 10/10.** Score by how many of the eight Quick Diagnostic rows pass, weighted toward the field metrics: **9-10** = all eight pass (the four field-metric rows in the green plus content-hashing, HTTP/2+, minimized render-blocking, and compression); **5-6** = the four field-metric rows pass but one or more transport/caching/compression rows fail; **<=3** = any field-metric row is in the red. Always report the score, which diagnostic rows failed, and the specific fix for each.
+**Goal: 10/10.** Score by how many of the eight Quick Diagnostic rows pass, weighted toward the field metrics: **9-10** = all eight pass (the four field-metric rows in the green plus content-hashing, HTTP/2+, minimized render-blocking, and compression); **5-6** = the four field-metric rows pass but one or more transport/caching/compression rows fail; **<=3** = any field-metric row is in the red. Always report the score, which diagnostic rows failed, and the specific fix for each. If you cannot check a row (no field data, no headers, no report), mark it "unknown" and do not guess a pass or a fail. Say what the user must paste to check it.
 
 ## The High Performance Browser Networking Framework
 

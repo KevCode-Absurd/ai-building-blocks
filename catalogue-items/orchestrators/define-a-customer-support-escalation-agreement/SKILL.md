@@ -7,6 +7,30 @@ description: "Use when you need a written customer support escalation procedure:
 
 Write a customer support escalation procedure from the user's real tiers and promises. Two steps run in order: the procedure, then update drafts for the team and customers.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief, source text, tool connection. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI that reads files, such as Claude, ChatGPT or Gemini:** It needs your tiers, promises and cases in one run.
+<!-- /needs -->
+
 ## Before you start
 
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
@@ -51,6 +75,15 @@ CHECKS MISSED, NEXT STEP
 ```
 
 Keep the user's original files as they are. Give each new file its own name.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker). It takes the draft.
+- The [Customer reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker). It takes the draft.
+- The [Pilot customer promise reviewer](https://useaiblocks.com/skills/pilot-customer-promise-review-assistant). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

@@ -19,7 +19,7 @@ steps:
   - {uses: feature-launch-planner, note: "Who gets it first and in what order, what could go wrong, the rollback, and the dates, from the feature and your users. Hands the launch plan to steps 2 and 3."}
   - {uses: beta-program-planner, note: "The beta users (who feel the problem most), how many, how to invite them, what to ask them each week and how to close the beta. Takes step 1's launch plan, so the beta cohort matches who gets it first, and hands you the beta to run."}
   - {uses: product-metrics-planner, note: "Before anything ships: what success looks like in numbers, the guardrail metrics that must not fall, and the number that would make you pull the feature. Takes step 1's launch plan for the dates, and hands the metrics plan to step 5."}
-  - {uses: release-notes-writer, note: "Release notes in plain words: what changed for the user, why, and what to do if something looks different. You approve before they are published. Uses your code changes and feature description, not the metrics plan, plus what the beta made you fix. Hands you notes to publish before the rollout."}
+  - {uses: release-notes-writer, note: "Release notes in plain words: what changed for the user, why, and what to do if something looks different. You approve before they are published. Uses your own code changes and feature description, not step 3's metrics plan, plus what the beta made you fix. Hands you notes to publish before the rollout."}
   - {uses: product-metrics-review-writer, note: "The numbers against the metrics you set: success, guardrails, the pull number, with what they mean and what they cannot yet say. Uses your own post-launch numbers and step 3's metrics plan, not the release notes."}
 origin: own
 version: 1.0.0

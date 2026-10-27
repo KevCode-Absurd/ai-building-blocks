@@ -7,6 +7,8 @@ description: "Paste it above one idea you want to post on both X and LinkedIn, s
 
 One idea written twice, once for X and once for LinkedIn, with no pasted-twice feel.
 
+**Not for:** a check across many platforms (use the Cross-platform post writer), a long article or numbered thread (write it yourself or ask your AI for a long-form draft), or one LinkedIn post, carousel or poll checked for weak hooks (use the LinkedIn post writer).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -28,6 +30,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The idea is the only required input. You do not need a buyer brief; the block above does not apply to this prompt.
 - **The idea** (required): what you want to say, in rough words.
 - **The facts behind it** (advised): the story, number or example. Nothing is invented.
 - **Your voice** (optional): one past post that sounds like you.
@@ -48,14 +51,14 @@ LINKEDIN POST: the text.
 WHAT DIFFERS: one line.
 MISSING: any fact you needed and did not have.
 
+Then say what to do next: read both aloud, post them, and note which place got the better response. To check the pair across more platforms, run the Cross-platform post writer.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- **Grow on social** with the [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
-- **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
-- **Read your ad results** with the [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
+- The [Cross-platform post writer](https://useaiblocks.com/skills/cross-platform-post-writer).
+- The [Social post performance reviewer](https://useaiblocks.com/prompts/post-flop-reason-finder). It takes the draft.
+- The [Low-performing post reviewer](https://useaiblocks.com/skills/flop-post-diagnoser). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

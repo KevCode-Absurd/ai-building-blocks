@@ -48,6 +48,8 @@ Present core metrics in a summary table:
 | Metric | This Period | Prior Period | Change | Target | Status |
 |--------|------------|--------------|--------|--------|--------|
 
+Targets come from the user. If none are given, write "no target given" in the Target and Status cells. Never make up a target.
+
 Status indicators:
 - On track (meeting or exceeding target)
 - At risk (below target but within acceptable range)

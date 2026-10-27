@@ -20,7 +20,7 @@ not_for:
   - "You want ad ideas or copy, not numbers: this workflow does not write creative, so ask your AI to draft it directly."
 you_give:
   - A plain description of the report, with the numbers, the groups, the comparison and the period
-  - A spreadsheet or export with at least two full seasons of weekly history (optional but best)
+  - A spreadsheet or export with weekly history, at least twelve weeks (optional but best)
   - How far ahead to forecast
   - Known events such as promos or outages, so spikes can be explained (optional)
 you_get:
@@ -93,4 +93,6 @@ test:
 improve:
   - Add a target line to the dashboard once you agree one.
   - Log each rerun date so you can see how the forecast drifted.
-  - Not worth running on under about twelve weeks of data. Build the report only and let the history grow.
+  - Rerun the saved definition each week on the new export, then ask for the forecast and page again.
+next: [define-your-metrics-once-and-write-a-weekly-update-anyone-gets]
+before: []

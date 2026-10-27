@@ -36,6 +36,7 @@ how_to_use:
   - Upload your files and describe your question, area and dates. Say which coordinate system each file uses, if you know.
   - Ask your AI to check each input's source, coordinate system and units before it runs anything.
   - Review the results table and the limits note. Check the maps against what you know of the area.
+  - Keep the saved code, the input record and the limits note with your results. When you are ready to share, ask your AI to write up the findings, with the limits stated.
   - Free open data works for most tasks. Earth Engine, CDS and paid imagery need an account. Route and place lookups use public services that limit how many requests you can send.
 output_sample:
   input:
@@ -60,3 +61,4 @@ output_sample:
       contains: Output rasters or map layers that keep the coordinate system, transform and mask.
     - name: Limits and checks
       contains: What the result cannot show, and what to check, such as accuracy on held-out areas.
+next: [research-results-report-builder, chart-maker]

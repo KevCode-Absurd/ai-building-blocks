@@ -17,7 +17,7 @@ when:
   - Your system is too messy to derive equations, so you need a data-driven model.
   - You need natural frequencies and damping pulled from response data.
 not_for:
-  - "Your system is strongly nonlinear: this skill fits linear models only, so ask a controls engineer about a nonlinear model instead."
+  - "Your system is strongly nonlinear: this skill fits linear models only, so ask a controls engineer about a nonlinear model type, such as NLARX or Hammerstein-Wiener in the same MATLAB toolbox. This skill uses nonlinear methods only to check whether a linear model is a fair choice."
   - "You want to design a controller: this skill only builds the model, so use MATLAB Control System Toolbox or a controls engineer for that step."
   - "You want to tune a Simulink model with test data: use Simulink Design Optimization Toolbox instead."
 you_give:
@@ -34,10 +34,11 @@ you_get:
 how_to_use:
   - Check you have MATLAB with the System Identification Toolbox and a licence. This skill needs an AI that can run MATLAB code. Without MATLAB, it cannot fit the model.
   - Open your AI and paste in the skill instructions, or add the skill folder.
-  - Share your data file or variable names, the sample time, and what the model is for.
+  - Share your data file or variable names, the sample time, and what the model is for. The file needs one column per input and one per output, a clear time step or sample time (in seconds), and units noted for each column.
   - Tell your AI what test signal you used, and the input range if you know it.
   - Read the results summary first. Check the validation fit and the residual plot before you trust the model.
   - Next, use the fitted model in a PID tuner or a Control System Toolbox step. This skill does not design the controller.
+next: [matlab-chart-maker, matlab-report-builder]
 output_sample:
   input:
     - Your input and output measurements, as a data file or MATLAB variables

@@ -1,6 +1,6 @@
 ---
 name: phase-gated-debugging
-description: "Use when debugging any bug. Enforces a 5-phase protocol where code edits are blocked until root cause is confirmed. Prevents premature fix attempts."
+description: "Use when debugging any bug. Asks the agent to follow a 5-phase protocol and to make no code edits until you confirm the root cause. Prevents premature fix attempts."
 risk: safe
 source: community
 date_added: "2026-03-28"
@@ -10,7 +10,7 @@ date_added: "2026-03-28"
 
 ## Overview
 
-AI coding agents see an error and immediately edit code. They guess at fixes, get it wrong, and spiral. This skill enforces a strict 5-phase protocol where you CANNOT edit source code until the root cause is identified and confirmed.
+AI coding agents see an error and immediately edit code. They guess at fixes, get it wrong, and spiral. This skill sets a strict 5-phase protocol: do not edit source code until the root cause is identified and the user confirms it. This copy is a prompt the agent is asked to follow. Nothing technically blocks edits, so watch the agent and stop it if it edits early.
 
 Based on [claude-debug](https://github.com/krabat-l/claude-debug) (full plugin with PreToolUse hook enforcement).
 
@@ -50,6 +50,7 @@ Remove all `// DEBUG` lines. Apply minimal change addressing confirmed root caus
 ### Phase 5: VERIFY
 Run original failing test — must pass. Run related tests. For intermittent bugs, run 5+ times.
 If verification fails: root cause was wrong, go back to Phase 2.
+After a pass, record the root cause in one line (in the commit message or the ticket) and add a regression test for it, so the same bug is caught if it returns.
 
 ## Bug-Type Strategies
 

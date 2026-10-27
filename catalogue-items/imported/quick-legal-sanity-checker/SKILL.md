@@ -10,7 +10,8 @@ argument-hint: "[the question]"
 
 # /is-this-a-problem
 
-1. Load `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Risk calibration.
+0. **In a plain chat (no plugin files):** there is no config file to load. Ask the user to paste their risk table (what is usually fine, what usually needs work, what usually blocks, with a timeline for each). If they have none, answer "Needs a human look" and send the question to their lawyer or privacy lead. Do not guess a call without a table. The `/product-legal` and `/ai-governance-legal` commands named below are not available in a plain chat. Where this skill says to route to one of them, say "send this to your lawyer or privacy lead" instead.
+1. Load `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Risk calibration (or the pasted risk table).
 2. Apply the triage workflow below.
 3. Pattern-match. Check for common traps.
 4. Answer in one minute: ✅ Fine / ⚠️ Needs a look / 🛑 Hold. One sentence why.
@@ -40,7 +41,7 @@ The goal is speed. The PM asked at 4:47pm. They want an answer, not a memo.
 
 ## Load calibration
 
-Read `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → `## Risk calibration`. The whole point of this skill is pattern-matching against that table.
+Read `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → `## Risk calibration`. If that file is not there, use the risk table the user pasted; if there is none, ask for one (see step 0). The whole point of this skill is pattern-matching against that table.
 
 ## The triage
 
@@ -49,7 +50,7 @@ Read `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → `##
 Does the question match a pattern in the calibration table?
 
 **Matches "usually FYI":**
-→ Say so. One line. "You're fine — [pattern]. Ship it."
+→ Say so. One line. "Looks fine on a first read — [pattern]. Confirm with your lawyer if it goes public or to a customer."
 
 **Matches "usually requires work":**
 → Name the work. "Needs a [PIA / vendor review / claims check]. Takes [timeline from table]. Want me to start it?"
@@ -62,7 +63,7 @@ Does the question match a pattern in the calibration table?
 
 ### The trap check
 
-Some questions are fine on the surface but have a twist. Recognize the fact pattern, ask the catch question, then research the applicable doctrine for the specific fact pattern before concluding whether it's a problem or not.
+Some questions are fine on the surface but have a twist. Recognize the fact pattern, ask the catch question, then, where you have research tools, research the applicable doctrine for the specific fact pattern before concluding whether it's a problem or not. In a plain chat with no research tools, do not conclude: flag it as needing a human look and send it to a lawyer.
 
 | Question sounds like | Why it might not be simple | Catch it by asking |
 |---|---|---|
@@ -105,7 +106,7 @@ For an in-the-flow Slack DM reply to the PM, the short form is:
 **Examples:**
 
 ```
-✅ Fine — adding an analytics event is an FYI here as long as it's covered by
+✅ Fine on a first read — adding an analytics event is an FYI here as long as it's covered by
 the existing privacy policy categories. This one is.
 ```
 

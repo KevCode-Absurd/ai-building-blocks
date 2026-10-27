@@ -20,10 +20,10 @@ not_for:
   - "You want an agent to run forever with no limits: this tool will not design that, so set your own stop rule first."
   - "You want the loop switched on or run for you: this skill only writes the loop, so set up the schedule yourself or ask your AI to do it."
 you_give:
-  - The job you want repeated
+  - The job you want repeated (required)
   - How often it should run
   - What counts as done (optional)
-  - Tools the agent can use (optional)
+  - Tools the agent can use, and any limits you already have (optional, but name them so the first session starts with the right facts)
 you_get:
   - Up to three matching loops to choose from
   - A loop written so you can paste it in

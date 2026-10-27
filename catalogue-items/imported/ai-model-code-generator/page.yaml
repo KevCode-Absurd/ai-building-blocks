@@ -36,7 +36,8 @@ how_to_use:
   - Share the model file, a sample input and your target. This needs an AI that can run MATLAB code, or you run each step yourself.
   - Ask it to inspect the model, write the entry function and build the MEX file first.
   - Check the number comparison against the source framework before you ask for the final C, C++ or CUDA code.
-  - If the other MathWorks skills are not installed, skip the embedded hardware step or do it by hand.
+  - The embedded hardware step uses three other MathWorks skills: matlab-generate-code, matlab-deploy-embedded-ai and matlab-deploy-embedded-code. If they are not installed, stop after the MEX check and the generated code, and load the model onto your hardware by hand.
+  - Each step has one result to check: the model's input and output shapes, an entry function that runs, a MEX build that runs, results that match the source framework, then the final code.
 output_sample:
   input:
     - Your model file (.pt2 from PyTorch or .tflite from LiteRT)
@@ -61,3 +62,4 @@ output_sample:
       contains: Production C, C++ or CUDA code as a static library, dynamic library or executable.
     - name: Simulink model (optional)
       contains: The model placed in a Simulink block so you can simulate it and build code from it.
+next: [matlab-to-c-converter, matlab-speed-tuner]

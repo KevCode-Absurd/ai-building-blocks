@@ -31,12 +31,14 @@ you_get:
   - What to hide inside
   - A testing approach through the interface
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page. You get five parts in order. They are the depth rating, the proposed interface, the seam, what to hide and a test approach.
   - Paste the code you want to improve. If your AI can read files, point it at the right folder instead.
   - Say what callers need from it and what hurts, such as hard to test or hard to change.
   - Read the depth rating first. Check that the proposed interface is smaller than the one you have.
   - Ask your AI to show the seam and the test approach for the new design.
   - No code running or paid tool is needed.
+  - The Going deeper option compares several interfaces using parallel sub-agents. If your AI cannot do that, skip it. You still get the core review.
+  - Next, turn the proposed interface into a task list or a test list, and build the smallest part first.
 output_sample:
   input:
     - The code or area you want to improve

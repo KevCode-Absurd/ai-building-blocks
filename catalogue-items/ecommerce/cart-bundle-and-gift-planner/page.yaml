@@ -125,8 +125,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Its discounts, automatic gifts and cart settings run the bundle, gift and shipping line."}
-    - {name: "A cart or upsell app", why: "Shows the slide-out upgrade and the one-click offer after payment. Check what your plan supports."}
+    - {name: "Shopify", why: "Its discounts, automatic gifts and cart settings run the bundle, gift and shipping line. You need a paid Shopify plan."}
+    - {name: "A cart or upsell app", why: "Shows the slide-out upgrade and the one-click offer after payment. Check what your plan supports. Most are paid apps."}
   inputs:
     - "Shipping costs per parcel by weight"
     - "Gross margin by product"

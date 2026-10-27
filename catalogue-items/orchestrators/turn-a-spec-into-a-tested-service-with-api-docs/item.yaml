@@ -7,8 +7,10 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: document, required: true}
 outputs:
+  - {type: codebase}
+  - {type: test_report}
   - {type: document}
 uses: [spec-to-starter-repo-builder, backend-builder, api-test-suite-builder, api-spec-writer]
 steps:

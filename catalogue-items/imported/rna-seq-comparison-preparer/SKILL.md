@@ -195,7 +195,7 @@ These cause most wrong or irreproducible bulk RNA-seq results:
 - **Upstream execution:** `nextflow` (runs `nf-core/rnaseq`, Path A; HPC/cloud/containers).
 - **Reference data / gene IDs:** `gget` (`gget ref` for genome+GTF, `gget info`/`gget search` for ID mapping), `database-lookup` (Ensembl/NCBI), `biopython`/`pysam` (FASTA/BAM handling).
 - **Differential expression:** `pydeseq2` (the DE engine this skill hands counts to).
-- **Enrichment:** `pathway-enrichment` (ORA + GSEA; its `scripts/run_enrichment.py` reads a DESeq2 results CSV directly).
+- **Enrichment:** `pathway-enrichment` (ORA + GSEA; that separate skill, which is not in this library, has its own `run_enrichment.py` script that reads a DESeq2 results CSV directly).
 - **Figures & reporting:** `scientific-visualization`, `matplotlib`, `seaborn`; `scientific-writing` for the methods/results narrative.
 - **Related but distinct:** `scanpy` (single-cell), `statistical-analysis` (multiple-testing depth).
 

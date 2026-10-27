@@ -5,7 +5,7 @@ name: Text embedding maker
 summary: Turn your sentences or documents into text embeddings your computer can compare. Use them for search by meaning, grouping and finding similar text.
 job: build-software
 headline: Text embedding maker
-subhead: Give it sentences or documents. Get number versions of them for search, grouping and finding similar text. Bring your sentences or documents. Use the result to plan your next step.
+subhead: Give it sentences or documents. Get number versions of them for search, grouping and finding similar text.
 explain: |
   Turn sentences or documents into lists of numbers that capture their meaning, so a computer can find text that says similar things even when the words differ. That powers meaning-based search, grouping of similar items and question answering over your own files.
 
@@ -30,11 +30,11 @@ you_get:
   - Similarity scores between texts
   - A working search or clustering example
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. The code needs Python, so use an AI that can run it, or run the code yourself on your own computer.
   - Paste your sentences or documents. Say which languages they use.
   - "Say what you want: search, group or compare similar text."
   - Run the code it writes. This needs an AI that can run Python, or Python on your own computer.
-  - Check the top matches make sense. If not, ask your AI to try a different model.
+  - Check the top matches make sense. If not, ask your AI to try a different model. Then store the vectors in a vector database such as Chroma, or pass them to a reranker, and test with 20 real queries.
 output_sample:
   input:
     - Your sentences or documents

@@ -31,7 +31,7 @@ you_get:
   - An answer sheet for every doubt, with a yes-question, an honest agreement and proof, and a list of doubts with no proof yet
   - Closing questions that offer two ways to say yes, the order to ask them in and the buying signals to listen for
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and four skill files, in the order they run: Buyer-matched argument planner, Ten-second opener writer, Objection answer sheet writer, then Ask-which closing planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your product, your offer and the buyers you meet. It plans the lead arguments and the opener.
   - Give it your real doubts, in the buyers' words if you can. It writes the answer sheet and the close.
@@ -85,7 +85,7 @@ tweaks:
   - what: How well you describe each buyer type
     how: A named kind of buyer, such as the person who pays and the person who uses it, gets a different lead argument for each. A vague "customer" gets one.
   - what: Real doubts in the buyers' words
-    how: Reviews, call notes and lost-deal notes give the real list. Without them it lists the likely doubts and says it guessed.
+    how: Reviews, call notes and lost-deal notes give the real list. Without them, step 3 asks for the last five reasons a buyer said no.
   - what: The choices you can offer
     how: List the real options, such as plan, start date and payment. The close can only offer choices that exist.
 judge:

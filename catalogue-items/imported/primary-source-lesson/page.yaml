@@ -40,6 +40,8 @@ how_to_use:
   - Ask your AI to design the lesson.
   - Check that each prompt matches your documents. Fix any claim about a source that is wrong.
   - Print or copy the plan into your lesson notes.
+  - Next, trim long documents with the History source simplifier, or add a writing frame with the Argument writing scaffold maker.
+next: [history-source-set-picker, history-source-simplifier, class-discussion-format-picker, argument-writing-scaffold-maker]
 output_sample:
   input:
     - Your central question, the one learners will investigate

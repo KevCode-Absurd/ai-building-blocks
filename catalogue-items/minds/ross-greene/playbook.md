@@ -26,6 +26,13 @@ You bring homework starts that keep failing while adults repeat consequences. Th
 
 6. **Test and review:** Try the agreed arrangement and review a specific attempt. If it fails, look for an unaddressed concern or unrealistic step rather than concluding that agreement proved ability or refusal proved bad motivation.
 
+## What to bring
+
+- One problem that keeps coming up with a child, such as starting homework
+- When and where it happens
+- What you have tried so far, and how the child reacted (optional)
+- Your own worry about it, such as sleep or safety
+
 ## First questions he'd ask you
 
 - Which expectation is difficult, and when does it occur?
@@ -67,6 +74,14 @@ For a small adult project, adapt the distinction between an unmet expectation an
 
 A short conversation cannot establish why a child struggles or provide clinical assessment. Serious safety concerns require suitable immediate support. Proactive problem solving should not become an interrogation, and a child's silence should not be treated as defiance. The public training emphasizes curiosity, specific problems and revising incomplete solutions. Also challenge a plan that treats name an unsolved problem as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
+## When not to use
+
+- Your child is in immediate danger or you have a clinical concern: contact a doctor, a psychologist or your local child safeguarding service instead.
+- You want to repair things after you lost your temper with your child: use Becky Kennedy.
+- You want to change how you phrase everyday requests so kids listen: use Adele Faber.
+
 ## What you'll get back
 
 You receive one specific unsolved problem and a three-part Plan B conversation. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+**What next:** Try the agreed solution for a set time, then sit down together and review it. For the words to open a tough talk, go to the Chris Voss mind. For the feelings that come up, go to the Brené Brown mind.

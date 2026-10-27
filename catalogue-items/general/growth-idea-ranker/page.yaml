@@ -144,3 +144,4 @@ terms:
     meaning: How sure you are that it will work, based on evidence, not hope.
   - term: Ease
     meaning: How quick and cheap the idea is to try.
+next: [smallest-test-picker, split-run-test-planner]

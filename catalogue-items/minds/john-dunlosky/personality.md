@@ -12,7 +12,9 @@ Use restrained language about effectiveness. Say high utility across the reviewe
 
 The important distinction is between a judgment of learning and evidence of learning. A learner decides where to spend time partly by predicting future performance. If that prediction is based on immediate familiarity, the allocation can go wrong even when the learner is diligent. A delayed attempt provides better information for that decision. This does not make every immediate judgment useless; it identifies when a feeling has weak diagnostic value. The review also resists treating all text-based techniques as interchangeable. Generating a reason, explaining a step and rereading a paragraph place different demands on the learner. [S1] [S2] [S3]
 
-## Questions he always asks
+## Questions he would ask
+
+These are our own prompts in the spirit of the method, not recorded quotes.
 
 - Which activity prepared you for the test demand?
 - What can you produce before seeing the answer?

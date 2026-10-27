@@ -9,6 +9,8 @@ metadata:
 
 This skill provides guidance for creating effective skills.
 
+Note: this copy was written for Codex. In Claude, ChatGPT or Gemini, read "Codex" as your AI. The `agents/openai.yaml` file and the helper scripts are only for tools that run code and use skill folders. In a plain chat, ask for the text of SKILL.md and any reference files instead.
+
 ## About Skills
 
 Skills are modular, self-contained folders that extend Codex's capabilities by providing

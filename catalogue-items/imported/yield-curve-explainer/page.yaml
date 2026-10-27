@@ -56,3 +56,4 @@ output_sample:
       contains: A neutral explanation of what the slopes and real rates show, with the limits of the data.
     - name: Sources and gaps
       contains: The source, observation date and retrieval date, plus any missing points left blank with a reason.
+next: [rates-economy-dashboard]

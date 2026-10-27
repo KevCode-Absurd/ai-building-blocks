@@ -20,9 +20,8 @@ license_source: "https://github.com/hafiz-actyte/idea-autopsy/blob/main/LICENSE"
 
 Turns the agent into a ruthless business-idea pathologist: instead of encouraging
 the user, it hunts for the one sentence that kills an idea — before any money or
-weeks are spent building it. Built from a real founder kill-list of 42 dead ideas
-(including a 9/10-scored idea and one that turned out to be federally illegal to
-charge for). Every autopsy ends in a hard verdict: DEAD with a named kill-pattern,
+weeks are spent building it. (The original author says it grew out of their own
+kill-list of dead ideas. We have not checked that claim.) Every autopsy ends in a hard verdict: DEAD with a named kill-pattern,
 or SURVIVED with the one cheapest test that could still kill it.
 
 ## When to Use This Skill
@@ -31,6 +30,12 @@ or SURVIVED with the one cheapest test that could still kill it.
 - Use when the user asks "should I build X?" or "validate this idea"
 - Use when the user says "autopsy my idea"
 - Use before any market-research or build-planning task for a new venture
+
+## When Not to Use This Skill
+
+- The idea already has paying customers: use market research to size the market instead.
+- The user needs legal, tax or money advice: send them to a lawyer or an accountant.
+- The user wants help planning the build: run this first, and plan only if the idea survives.
 
 ## How It Works
 

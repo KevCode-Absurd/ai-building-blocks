@@ -15,13 +15,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Makes it better (optional):**
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
@@ -87,11 +88,9 @@ After the fixes: <lines on voice> / <lines checked> x 100 = <score>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign performance reviewer](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+- **Fill the gaps in your brand brain** with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder).
+- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the audit report.
+- **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

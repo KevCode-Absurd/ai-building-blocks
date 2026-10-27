@@ -261,6 +261,8 @@ firDec = dsphdl.FIRDecimator( ...
 numSamples = 1000 * totalDecim;
 t = (0:numSamples-1)' / Fs;
 Fsig = 1e6;
+inputWL = 16;        % input word length (set from the requirements gathered above)
+inputFL = 14;        % input fraction length
 inputSignal = cos(2*pi*Fsig*t) .* exp(1j*2*pi*Fc*t);
 dataIn = fi(inputSignal, 1, inputWL, inputFL);
 

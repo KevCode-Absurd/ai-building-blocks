@@ -34,7 +34,8 @@ how_to_use:
   - Tell your AI your database type and size, how much data you can lose, how long you can be down, and where to store backups.
   - Read the scripts and the restore steps before you run anything. Never put passwords in the chat or in the scripts.
   - Run the scripts on a test setup first. This needs code running and access to your database, so a person with server access may need to do it.
-  - Do a test restore into staging before you rely on the backups.
+  - Do a test restore into staging before you rely on the backups. If the restore passes, keep the schedule and add a failure alert. If it fails, fix the script before you trust any backup.
+next: [uptime-and-alert-setup-planner, logging-and-alerts-setter]
 output_sample:
   input:
     - Your database type (PostgreSQL, MySQL or MongoDB) and its size

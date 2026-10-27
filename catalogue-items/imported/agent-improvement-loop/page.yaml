@@ -21,7 +21,7 @@ not_for:
   - "You want to improve a document search setup: use LlamaIndex or Chroma."
 you_give:
   - Your AI agent, or its prompt and tool files
-  - A set of test tasks with a way to score them
+  - A set of test tasks with a way to score them, as pass or fail or a score from 0 to 1. Keep some tasks back as a separate set to check that the new agent has not just memorised the tests
   - Model access and a Python setup
   - How many rounds to run (optional)
 you_get:
@@ -31,8 +31,9 @@ you_get:
 how_to_use:
   - Install the package with pip install a-evolve. Add the Claude extra with pip install a-evolve[anthropic].
   - Set your ANTHROPIC_API_KEY, or set up AWS credentials for Bedrock. Both are paid model services.
-  - Point the loop at your agent folder and your test tasks. Choose how many rounds to run.
-  - Run the loop with your AI or in a terminal. It needs Python and web access to the model.
+  - Point the loop at your agent folder and your test tasks. Choose how many rounds to run. For your own test set, write a small Python class with get_tasks and evaluate methods (a BenchmarkAdapter).
+  - Start the loop from a short Python script, as in the skill's Quick Start (ae.Evolver(...).run(cycles=N)). Or open the agent's folder in Claude Code and ask it to run that script. It needs Python and web access to the model.
+  - Each round makes many paid model calls. Run 1 or 2 rounds first to see what it costs, then raise the number of rounds.
   - Read the score table, then check the git log to see which files changed in each round.
   - Roll back to an earlier tag, such as evo-2, if a later round made things worse.
 output_sample:

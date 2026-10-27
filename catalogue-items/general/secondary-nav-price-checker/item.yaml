@@ -7,9 +7,7 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -21,6 +19,9 @@ outputs:
   - type: document
     required: true
 uses: []
+needs_mode: manual
+before: []
+next: [unfunded-commitment-checker, fund-recycling-capacity-checker]
 origin: own
 version: 1.0.0
 added: 2026-10-22

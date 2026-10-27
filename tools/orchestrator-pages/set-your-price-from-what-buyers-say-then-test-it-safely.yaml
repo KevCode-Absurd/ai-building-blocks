@@ -30,7 +30,7 @@ you_get:
   - A price to try, three outcome cases and a floor below which you lose money
   - A controlled test with a rule to roll back
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and three skill files, in the order they run: Price survey planner, Pricing model designer and Price test planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - At the first pause, send the survey and collect at least 30 answers per price. Fewer will mislead you.
   - At the second pause, export 90 days of sales and your cost for each product.

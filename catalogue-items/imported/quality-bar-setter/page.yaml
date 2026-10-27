@@ -34,7 +34,7 @@ how_to_use:
   - Let it read your project first. It finds your language, tests, linters and CI, so it only asks what it cannot see.
   - Answer the four questions one at a time. If you do not know, say so and take the default.
   - Read CONSTRAINTS.md before you accept it. Change any number you do not agree with.
-  - Ask your AI to install the checks and wire them in. Some tools it suggests may need a paid account, so check first.
+  - Ask your AI to install the checks and wire them in. They are free to run and need a local install: tsc, mypy, ESLint, ruff, pytest-cov, Semgrep, gitleaks, osv-scanner, Lighthouse, size-limit, axe, dependency-cruiser and Stryker. Check each tool's licence and Semgrep's rule terms before you share them outside your company.
 output_sample:
   input:
     - Your project files, so your AI can read them

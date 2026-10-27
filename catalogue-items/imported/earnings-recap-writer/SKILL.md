@@ -12,7 +12,11 @@ description: >
 
 # Earnings Recap Skill
 
-If your host has not already executed the shell probes below (for example, in Codex), run the commands inside the `!` wrappers with its shell tool before choosing a setup path. Use the actual output; if shell access is unavailable, report that limitation.
+If your host has not already executed the shell probes below (for example, in Codex), run the commands inside the `!` wrappers with its shell tool before choosing a setup path. Use the actual output.
+
+If you cannot run Python with internet access (a plain chat with no code tools), stop and tell the person so. Do not estimate or recall the figures from memory.
+
+Keep the recap to about one page, under 400 words, with a small table for the quarterly trends.
 
 Generates a post-earnings analysis using Yahoo Finance data via [yfinance](https://github.com/ranaroussi/yfinance). Covers the actual vs estimated numbers, surprise magnitude, stock price reaction, and financial context — a complete picture of what happened.
 

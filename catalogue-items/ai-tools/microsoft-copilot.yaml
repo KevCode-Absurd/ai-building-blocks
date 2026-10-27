@@ -48,11 +48,13 @@ first_result:
     - "Paste a short email thread, or a report you know well, and ask for a summary in three lines."
     - "Read the summary against the original. Fix anything it left out or got wrong."
     - "Ask it to draft a reply or an outline from the same text, then edit it yourself."
+    - "You end with a short summary and a draft you have edited. Next: to see how AI search describes your brand, use the AI search platform checker."
   in-app:
     - "Check that you have Microsoft 365 Personal, Family or Premium. The AI features need one of them (checked 26 Oct 2026)."
     - "Open a document in Word or a message in Outlook and look for the Copilot option. We did not check where it sits in each app or version."
     - "For Excel, save the file to OneDrive and turn AutoSave on first (checked 26 Oct 2026)."
     - "Ask for one small job, such as a summary or a rewrite, and review it before you keep it."
+    - "You end with a changed draft or summary inside your own file. Compare it with the original before you send it."
 needs:
   - "A Microsoft account to sign in."
   - "For the in-app features: a Microsoft 365 Personal, Family or Premium plan, or a business Copilot plan."

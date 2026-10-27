@@ -30,12 +30,15 @@ you_get:
   - Ambiguity function plots
   - Sidelobe and resolution figures
 how_to_use:
-  - Check you have MATLAB with the Phased Array System Toolbox. Some functions need R2023a or later, and radarWaveformGenerator needs R2026a.
+  - Gather first: your range, range resolution, target speed, radar or sonar, and your MATLAB release. You need paid MATLAB with the Phased Array System Toolbox. Some functions need R2023a or later, and radarWaveformGenerator needs R2026a. The skill's licence lets you use it only with MathWorks products.
   - Open your AI and paste the skill, or upload the skill folder.
   - Tell it your range, resolution and speed needs, and whether it is radar or sonar.
   - Answer any questions it asks about your use. It may ask about range scale, target speed and limits.
   - Run the MATLAB code it writes. Your AI needs to run MATLAB for this, or you run it yourself.
   - Check the sidelobe figure and the ambiguity plots against your needs. Ask it to try another waveform if they miss.
+  - Next, give the chosen settings and plots to a radar engineer for system design, or test the waveform in a detection simulation.
+  - No way to run MATLAB code? Ask your AI for the settings and plots code, run it yourself in MATLAB, and paste back the results.
+next: [radar-detection-simulator, signal-spectrum-analyzer]
 output_sample:
   input:
     - Your range, range resolution and target speed needs

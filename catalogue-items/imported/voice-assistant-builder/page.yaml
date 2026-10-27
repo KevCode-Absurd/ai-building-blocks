@@ -34,8 +34,8 @@ how_to_use:
   - Create an ElevenLabs account and get your API key. Usage is billed by ElevenLabs, so check the plan and cost first.
   - Tell your AI what the assistant should do, its first line, the language and the voice. Add any tools it should call.
   - Let your AI create the agent and push it live. Then speak to it and check the answers.
-  - Fix the instructions where it gets things wrong, and test again.
-  - Copy the embed snippet onto your site. Check the rules on calls and consent in your country first.
+  - Fix the instructions where it gets things wrong, and test again with real questions your customers ask.
+  - Copy the embed snippet onto your site. Check the rules on calls and consent in your country first. Then add a knowledge base or helpdesk tool for questions it cannot answer.
 output_sample:
   input:
     - What the assistant should do and say

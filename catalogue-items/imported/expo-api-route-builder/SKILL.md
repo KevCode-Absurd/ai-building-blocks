@@ -235,8 +235,8 @@ This builds and deploys your API routes to EAS Hosting (Cloudflare Workers).
 ### Environment Variables for Production
 
 ```bash
-# Create a secret
-eas env:create --name OPENAI_API_KEY --value sk-xxx --environment production
+# Create a secret. Leave out --value so EAS asks for it, which keeps the key out of your shell history.
+eas env:create --name OPENAI_API_KEY --environment production
 
 # Or use the Expo dashboard
 ```
@@ -333,8 +333,12 @@ export async function requireAuth(request: Request) {
     });
   }
 
-  // Verify token...
-  return { userId: "123" };
+  // PLACEHOLDER: you MUST replace this before shipping. As written, any token is accepted.
+  // Verify the token with your auth provider (check signature and expiry), then return the real user ID.
+  throw new Response(JSON.stringify({ error: "Token check not implemented" }), {
+    status: 501,
+    headers: { "Content-Type": "application/json" },
+  });
 }
 
 // app/api/protected+api.ts
@@ -353,9 +357,16 @@ export async function GET(request: Request) {
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const city = url.searchParams.get("city");
+  // Validate the input before you use it
+  if (!city || city.length > 80) {
+    return Response.json({ error: "Invalid city" }, { status: 400 });
+  }
 
+  // Encode the value, and send the key in a header if the provider allows it
+  // (header name shown is an example; use the one your provider documents)
   const response = await fetch(
-    `https://api.weather.com/v1/current?city=${city}&key=${process.env.WEATHER_API_KEY}`
+    `https://api.weather.com/v1/current?city=${encodeURIComponent(city)}`,
+    { headers: { "X-Api-Key": process.env.WEATHER_API_KEY! } }
   );
 
   return Response.json(await response.json());
@@ -371,6 +382,8 @@ export async function GET(request: Request) {
 - Keep API routes focused — one responsibility per endpoint
 - Use TypeScript for type safety
 - Log errors server-side for debugging
+- Put keys in request headers, not in the URL query string, where the provider allows it, so they stay out of logs
+- Limit how often each caller can use a route that calls a paid service. This skill gives no rate-limit code. Use your host's rate-limit feature or a per-user counter in your database, and test it before launch
 
 ## Limitations
 

@@ -1,6 +1,6 @@
 # Melanie Perkins: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Melanie Perkins is alive, and views can change. Everything below comes from her own voice in five places: a first-person article she wrote in 2017 [S3], an interview feature from 2022 [S4], a 2018 article that quotes her own blog post [S5], a 2019 podcast interview (the transcript is machine made, so meaning is safer than exact wording; we read about two thirds of it) [S6] and two Fortune interviews, from 2022 and 2025 [S7][S8]. Wikipedia pages on her and on Canva give the dates and numbers [S1][S2]. Treat each view as "as of" the piece it comes from. Nothing here tells you what she thinks about events since, or about Canva's future plans, and nothing here covers her private life.
 

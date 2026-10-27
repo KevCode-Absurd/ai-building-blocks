@@ -18,10 +18,12 @@ when:
 not_for:
   - "You only have a privacy question: run a privacy impact assessment with your privacy lead instead."
   - "The system runs in places you did not list: redo the places check first, or ask a lawyer who knows those rules."
-  - "You need legal advice or a sign-off: ask your own lawyer to review the result."
+  - "You need legal advice or a sign-off: ask your own lawyer to review the result. Do not rely on a risk tier or a cited rule until you have checked it against the source."
+  - "You only want to review a vendor contract: use ai-vendor-terms-checker instead."
 you_give:
-  - The AI use you are assessing
-  - The places and people affected
+  - The AI use you are assessing, and the vendor behind it
+  - The decision it makes or helps make, and who is affected
+  - The countries where it will run
   - Your AI policy and house style (optional)
   - A past assessment to copy the format from (optional)
 you_get:
@@ -68,3 +70,4 @@ output_sample:
       contains: Go or no-go, plus the conditions to meet before launch.
     - name: Handoff flags
       contains: Notes on whether a privacy review or vendor review is needed.
+next: [privacy-impact-assessment-writer, ai-vendor-terms-checker, team-ai-use-policy-drafter]

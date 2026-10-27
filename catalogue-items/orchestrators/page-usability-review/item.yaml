@@ -17,7 +17,7 @@ outputs:
   - {type: plan}
 uses: [usability-heuristic-reviewer, click-choice-clarity-checker, small-usability-test-planner]
 steps:
-  - {uses: usability-heuristic-reviewer, note: "It checked against ten usability rules, with fixes ordered by cost to the user"}
+  - {uses: usability-heuristic-reviewer, note: "Checks the page against ten usability rules, with fixes ordered by cost to the user."}
   - {uses: click-choice-clarity-checker, note: "Each choice rated for how hard it is, with a plain rewrite. Reads the audit report from the step before"}
   - {uses: small-usability-test-planner, note: "A one-morning test plan: three people, tasks, a read-aloud script and a fix list. Reads the audit report from the step before"}
 origin: rebuilt

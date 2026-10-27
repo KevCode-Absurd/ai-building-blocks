@@ -35,6 +35,8 @@ how_to_use:
   - Ask it to run the attribution, funnel and ROI scripts on your data.
   - Ask it to compare at least three attribution models, not just one.
   - Ask it to explain the results and suggest changes. The scripts give numbers. Your AI writes the suggestions.
+  - The report only describes your data. It runs no significance tests, so do not treat the numbers as proven. The ROI script's benchmarks are generic industry ranges. Replace them with your own past figures before you call a campaign weak.
+  - Next, take the top channel and the worst funnel stage into a budget decision, and test the change with the Test plan writer.
 output_sample:
   input:
     - Customer paths to purchase, with channel and time for each touch, as a JSON file

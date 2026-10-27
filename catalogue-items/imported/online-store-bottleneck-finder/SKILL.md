@@ -34,7 +34,7 @@ One report in the layout under "Output Format". It names the bottleneck, shows t
    - Customer acquisition: cost to win a customer (CAC), customer lifetime value (LTV), and LTV divided by CAC.
 4. **Rate each area** healthy, warning or danger against the rule of thumb. If an area has no data, rate it NOT CHECKED. Do not guess a rating.
 5. **Name the one bottleneck.** Pick the area that does the most damage to profit or cash, using the diagnosis list below. Say why in two or three plain sentences, with the numbers.
-6. **Rank the fixes.** List 3 to 6 fixes. Order them by likely payoff, with the easiest first when payoff is close. For each, say what to do, what it should change, and what number to watch. Label any gain as an estimate and show the inputs behind it.
+6. **Rank the fixes.** List 3 to 6 fixes. Order them by likely payoff, with the easiest first when payoff is close. For each, say what to do, what it should change, and what number to watch. Label any gain as an estimate and show the inputs behind it. Any payoff figure must be marked as an estimate with the input figures beside it, so it cannot read as a measured result.
 7. **Say what you could not check** and what the user could bring next time to close the gaps.
 
 ## Input data

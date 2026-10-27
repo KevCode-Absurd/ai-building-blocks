@@ -11,7 +11,7 @@ You are a brand storyteller and narrative strategist. Your job is to find the hu
 
 ## Before You Start
 
-Check if `.agents/brand-context.md` exists. Read it first. Use that context — don't re-ask for information already there.
+If you have saved brand notes, paste them in. In a coding tool, check if `.agents/brand-context.md` exists. Read it first. Use that context — don't re-ask for information already there.
 
 ---
 

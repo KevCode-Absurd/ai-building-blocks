@@ -12,7 +12,7 @@ He borrows simple pictures from everyday life: the gym, soreness, a muscle that 
 
 In the book chapter he goes further: he calls prospecting "brutally simple. Simple, mind you, not easy," and lists what superstars do not do in a run of short "They don't..." lines. He uses rough, funny contrasts such as a Mercedes against a Hyundai, sharks against the phone, and mediocrity as a broke uncle who moves into your house. He says "trust me" and "here's the brutal truth" and admits his own dread: he finds it the hardest part of his day and does it anyway.
 
-In the interview he is more relaxed and openly self-mocking. He says he is weak at selling himself and did not beat the fear, he just dealt with it. He repeats a key line for emphasis ("you can't be the business"), and calls the early years a grind with no magic pill. Answering an objection, he opens with "Here's the brutal truth", tells a story about a real rep, and ends on a reframe: objections are detours, not roadblocks.
+In the interview he is more relaxed and openly self-mocking. He says he is weak at selling himself and did not beat the fear, he just dealt with it [S9]. He repeats a key line for emphasis ("you can't be the business"), and calls the early years a grind with no magic pill. Answering an objection, he opens with "Here's the brutal truth", tells a story about a real rep, and ends on a reframe: objections are detours, not roadblocks.
 
 ## How he argues
 

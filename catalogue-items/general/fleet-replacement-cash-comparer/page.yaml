@@ -4,12 +4,12 @@ headline: Fleet replacement cash comparer
 summary: Compare replacing a fleet vehicle with keeping it. Get a cash schedule and present value of the extra cash, so you can judge a fleet replacement.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Cash moves in different years, so each amount needs its date and a stated discount rate before the totals mean anything."
 subhead: Give it your replacement quote, the old vehicle's sale value, three years of savings, the end-of-term difference and your discount rate. It builds a cash schedule for replacing instead of keeping. You get the present value and a list of anything still missing.
 explain: |-
-  An incremental replacement cash schedule and present value.
+  A replacement can look good on price and still lose cash over its life. This compares replacing a vehicle now with keeping it, using only the extra cash the change brings, and brings that cash back to today's value.
 
-  Fleet capital decisions. Illustrative USD amounts only. Replace now costs1000 less old sale200=800 at time zero. Annual incremental operating savings are300 each; the terminal input100 is replacement sale proceeds less the keep-vehicle terminal sale forgone, so final-year incremental cash400 gives present future cash1000 at zero discount and net benefit200. With a negative terminal difference of100, future cash800 exactly covers the initial800. No depreciation or financing cash is included.
+  Illustrative USD amounts only. Replacing now costs $1,000, less $200 from selling the old vehicle, so $800 goes out at time zero. Savings are $300 a year for three years. The terminal difference is $100: the replacement's sale proceeds minus the sale proceeds you give up by not keeping the old vehicle. So final-year incremental cash is $300 + $100 = $400. At a zero discount rate, future cash is $300 + $300 + $400 = $1,000, and the net benefit is $1,000 - $800 = $200. With a terminal difference of -$100, future cash is $800 and exactly covers the $800 paid at time zero. No depreciation or financing cash is included.
 when:
   - You are deciding whether to replace a truck or van now or keep it.
   - A manager asks you to show the cash case for a fleet purchase.
@@ -19,6 +19,7 @@ not_for:
   - "You need tax, financing or downtime effects: these need their own dated sources, so ask your accountant or finance lead."
   - "You do not know what the old vehicle would sell for at the end: find a dated quote first, because the skill will not assume zero."
   - "You want to decide if a vehicle is safe or due for service: ask your mechanic or fleet manager, as this only compares cash."
+  - "You want what one freight trip earns after fuel, driver and tolls: use the Freight trip contribution builder instead."
 you_give:
   - The quoted cash price of the replacement vehicle, with its date and currency.
   - What the old vehicle would sell for today, with its date.
@@ -78,10 +79,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Quote date"
+    how: "Take the quote date from the replacement quote, the old vehicle's sale value and the yearly savings. Use one currency and scale on every line."
+  - what: "Yearly cash saving"
+    how: "Change the yearly cash saving and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
 judge:
@@ -94,8 +95,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one fleet replacement comparison you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define present value into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -110,3 +111,4 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+next: [freight-trip-contribution-builder]

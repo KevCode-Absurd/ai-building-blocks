@@ -11,7 +11,7 @@ explain: |
 
   You give it a ticker. It checks for your Fintel key, then makes read-only calls for short interest, borrow rates, daily short volume, fails to deliver, fund holdings from 13F filings and insider trades. It never uses the calls that create lists or alerts. Each answer shows where the data came from and its date.
 
-  It reports facts and does not call a squeeze or give a buy or sell view. Fintel is a paid service, and short interest must be switched on for your account. If you have no key, the skill says so and points to free public sources such as SEC EDGAR for 13F holders and insider filings.
+  It reports facts and does not call a squeeze or give a buy or sell view. This is data, not investment advice. The skill is copied from himself65/finance-skills (MIT licence) with a plainer name. Fintel is a paid service, and short interest must be switched on for your account. If you have no key, the skill says so and points to free public sources such as SEC EDGAR for 13F holders and insider filings.
 when:
   - A stock is moving and you want to know whether short sellers are involved.
   - You want to see which funds bought or sold last quarter.
@@ -38,7 +38,7 @@ how_to_use:
   - Open the skill and give it a ticker and your question, for example "short interest and top holders for AAPL".
   - Read the "Not available" line first. A 403 usually means a dataset is not switched on for your account.
   - Check the dates on each table. Short data comes out on a delay.
-  - Open the original filings before you act. Pair this with an earnings or dividend calendar if timing matters.
+  - Open the original filings before you act. Compare the result with SEC EDGAR filings and the exchange or FINRA short reports, and check the dates. Pair this with an earnings or dividend calendar if timing matters.
 output_sample:
   input:
     - A stock ticker, such as AAPL

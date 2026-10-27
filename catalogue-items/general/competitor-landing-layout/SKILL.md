@@ -7,28 +7,33 @@ description: Use when you have a screenshot (or saved image) of a landing page w
 
 You produce a layout plan read from the reference screenshot (section order, grid, proportions, block types), a slot-by-slot map saying which of your facts fills each slot or whether to remove it, and optionally a plain HTML skeleton with your brand values and empty slots.
 
+## When not to use
+- You want to write the page copy first. Use the Ad-matched landing page writer, then place the copy in your layout.
+- You want to score a page you already built. Use the Landing page 30-point checker.
+- You want to copy another business's words, photos or reviews. This is the wrong tool, so write your own or hire a designer.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 
 **Makes it better (optional):**
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, reference ads, your offer. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, reference ads, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI that reads images:** It reads the reference screenshot section by section, which the layout map depends on.
@@ -73,11 +78,11 @@ How to start:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the page.
-- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
-- **Check the landing page** with the [Landing page 30-point checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
-- **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the page.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the page.
+- The [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). It takes the page.
+- The [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
+- **Check the landing page** with the [30-point landing page checker](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
+- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the page.
+- The [Conversion page writer](https://useaiblocks.com/skills/conversion-page-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -100,10 +105,10 @@ Write `MISSING: <what>`. Colour jobs not defined: reuse one value for several ro
 
 ## Optional capture-build-compare cycle
 
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-clone-from-screenshot.md.
+Use this only when you are asked to build and check a real page, and you can open pages in a browser. In Claude Code that means a browser tool or Playwright. In a plain chat you cannot, so skip this section, work from the screenshot, and write "no browser check run" under CHECKS MISSED.
 
-For an explicitly requested build, add a capture, inventory, build and compare cycle. Reconstruct neutral geometry before new brand content; do not reproduce another business's whole copy, identity or proof first.
-
-Capture permitted pages at named widths. Inventory sections, hierarchy, spacing, image roles, sticky behaviour and visible tokens, marking estimated measurements. Build with original words and cleared assets. Use CSS custom properties for sampled values and stable image replacement IDs so reference assets cannot be shipped by accident.
-
-Render at matching widths and compare rhythm, reading order, bounds, overflow and mobile behaviour. A visual diff helps find geometry drift; it does not demand commercial copying. Check unresolved slots, reference brand names, text, URLs, broken assets and unsupported facts. Report which states are drafted, rendered, inspected and exercised. Do not call missing source helper scripts or claim browser checks that did not run.
+1. **Capture.** Open the reference at a desktop width and a phone width. Only capture pages you own or may study.
+2. **Inventory.** List the sections, their order, spacing, image roles and any sticky bar. Mark each measurement you only estimated.
+3. **Build.** Use your own words and cleared images. Put sampled colours and sizes in CSS variables, and give each image a slot ID so no reference image can ship by mistake.
+4. **Compare.** Render your page at the same two widths. Compare section rhythm, reading order, overflow and the phone view. A visual diff finds layout drift. It is not a goal to match the reference.
+5. **Check.** Look for empty slots, the reference's brand name, its text or links, broken images and any fact you did not supply. Say which parts were drafted, rendered and inspected.

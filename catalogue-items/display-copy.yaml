@@ -913,10 +913,6 @@ first-reader-question-writer:
     keep the original scope.
   summary: Share your draft. Identify the right test reader and get questions that
     uncover where they struggle.
-five-colour-feeling-palette-picker:
-  name: Colour palette planner
-  reason: Replace a stacked label or specialist shorthand with the familiar job;
-    keep the original scope.
 five-step-problem-runner:
   name: Recurring problem action planner
   reason: Goal/problem/cause/design/doing is too abstract as a card line. The
@@ -1425,16 +1421,6 @@ onliness-statement-writer:
   name: Brand differentiation statement writer
   reason: Replace a stacked label or specialist shorthand with the familiar job;
     keep the original scope.
-open-word-finder:
-  name: Brand positioning word finder
-  reason: Word ownership and open-market opportunities need evidence; the copy now
-    describes the supplied-message map and labels candidate words.
-  summary: Share rival messages and buyer comments. Get a map of repeated brand
-    words and possible gaps, with evidence and uncertainty shown.
-  subhead: Share five to eight rivals' messages and any buyer comments. It finds
-    repeated themes, notes overlap and checks which words buyers value. You get
-    a map of the supplied messages and candidate words to explore. Missing
-    evidence stays marked; the map does not prove market ownership.
 opponent-favour-request-writer:
   name: Relationship repair request writer
   reason: Tighten existing introduction wording while retaining its stated inputs,
@@ -2413,16 +2399,6 @@ next-dollar-budget-allocator:
     mix and plans controlled tests. You get a channel ranking, stop rules, loss
     cap and review plan. With only platform reports, the ranking stays a
     hypothesis; past average returns do not prove what extra spend will earn.
-open-buyer-group-finder:
-  name: New customer group test planner
-  reason: A sample of rival ads cannot prove nobody targets a group. The revised
-    copy limits gaps to the supplied sample and proposes tests.
-  summary: Share product facts and rival ads. Get buyer groups missing from that
-    sample, ideas to test and spending stop rules.
-  subhead: Share product facts and notes on rival ads. It counts who appears in
-    your sample, suggests other groups and checks the evidence for each. You get
-    a ranked test plan with opening lines, picture ideas and stop rules. Sample
-    gaps do not prove a group is untargeted across the market.
 order-record-buyer-interview-guide:
   name: Purchase history interview planner
   reason: Uses a concise role for the stated work.
@@ -2476,17 +2452,6 @@ process-fact-finder:
   name: Product process fact researcher
   reason: Replace a stacked label or specialist shorthand with the familiar job;
     keep the original scope.
-product-niche-problem-picker:
-  name: Product niche problem finder
-  reason: The brainstorm is judgment, not measured demand. The copy now labels
-    problems and rankings as ideas to check.
-  summary: Name a market and your limits. Get 20 possible buyer problems, five
-    picks, product ideas and searches to check demand.
-  subhead: Share the market, budget, country and your experience. It suggests
-    specific buyer problems, ranks five using stated reasons and lists product
-    types and searches for each. You get ideas to research before spending.
-    Rankings are judgments; no competitor search or demand measurement is
-    implied.
 product-page-doubt-mapper:
   name: Product page answer planner
   reason: "Retained: the name and card specify matching customer concerns to
@@ -12112,16 +12077,6 @@ ad-claim-sorter:
     fine, needs proof or cut, safer wording and any claims that need extra care.
   reason: The name and categories are clear; the intro now states the
     evidence-matching process.
-ad-test-budget-setter:
-  name: Ad test budget setter
-  summary: Share your target cost per sale. Get starting test budgets, spend
-    limits and a review window with the maths shown.
-  subhead: Share your target cost per sale, the sales you want to see and the days
-    you can test. It calculates a starting daily budget and per-ad spend limits.
-    You get the sums, a review window and suggested next steps. Its rules of
-    thumb need checking against your own results.
-  reason: The result is a plan based on starting rules, so the card avoids
-    presenting the rules as proven ad outcomes.
 ai-tool-list-drafter:
   name: AI tool set designer
   summary: Describe jobs, apps and limits. Get tool definitions with clear names,
@@ -12346,15 +12301,6 @@ knock-on-effects-tracer:
     financial scope.
   aliases:
     - Knock-on effects tracer
-late-invoice-reminder-writer:
-  name: Late invoice reminder writer
-  summary: Share unpaid invoice details and customer history. Get a polite payment
-    reminder and a firmer follow-up with one clear action each.
-  subhead: Paste the unpaid invoice facts and your history with the customer. The
-    prompt writes a warm reminder with one clear way to pay and a firmer
-    follow-up for a later date.
-  reason: The reminder can be drafted but payment cannot be guaranteed; the card
-    no longer promises that it gets paid.
 marketing-image-prompt-writer:
   name: Marketing image prompt writer
   summary: Describe the image you need and where it will appear. Get an image
@@ -12375,16 +12321,6 @@ meeting-to-written-update-converter:
     and a two-week trial plan. Proposed savings still need testing.
   reason: Only report items are replaced; the revised name and copy preserve
     decisions, problem-solving and social time when needed.
-negotiation-call-opening-planner:
-  name: Negotiation call opening planner
-  summary: Describe the deal and the other side. Get opening lines, questions and
-    facts to learn before making concessions.
-  subhead: Share the deal, deadline, your limits and what you know about the other
-    side. It separates known concerns from guesses and plans opening lines and
-    questions. You get ways to handle a quick yes or a no, plus facts to learn
-    before offering concessions.
-  reason: The name is clear; the copy replaces unexplained labels with opening
-    lines, questions and facts to learn.
 outside-view-timeline-estimator:
   name: Past-project timeline estimator
   summary: Share a project estimate and similar past results. Get a history-based
@@ -12447,16 +12383,6 @@ price-rise-readiness-checker:
     does not prove buyers will accept a higher price.
   reason: The source's score is a judgment rubric, not demonstrated willingness to
     pay. The copy now distinguishes those.
-process-waste-walk-planner:
-  name: Process delay and rework checker
-  summary: Share a step-by-step process and times. Get waiting, repeat work and
-    extra steps flagged, with one change to test first.
-  subhead: Share the steps, owners, work time, wait time and the customer's goal.
-    It totals the times, checks which steps add value and traces where mistakes
-    are caught. You get evidence for possible waste, guesses about causes and
-    one change to try. Required checks stay distinguished from removable steps.
-  reason: Waste walk is specialist phrasing and every kind is an exhaustive claim.
-    The revised name and copy explain the review directly.
 refund-request-reply-writer:
   name: Refund request reply writer
   summary: Share a refund request, policy and order facts. Get a policy-based
@@ -12566,16 +12492,6 @@ share-of-search-tracker-planner:
   reason: Uses a specific job role for the described output.
   aliases:
     - Brand search share tracker planner
-shipping-zone-and-rate-drafter:
-  name: Shipping zone and rate drafter
-  summary: Share destinations, parcel details and carrier costs. Get proposed
-    shipping zones, rates, margin checks and checkout test cases.
-  subhead: Share where you ship, parcel sizes, real carrier costs, order value and
-    margin. It drafts a small set of zones and rates, checks typical costs and
-    considers a free-shipping threshold. You get wording, uncovered cases and
-    carts to test. Missing margin data may prevent a firm threshold.
-  reason: A threshold must be checked against actual margins. The revised copy
-    says proposed rates and carts to run, avoiding cost-coverage certainty.
 shopping-title-rewriter:
   name: Google Shopping title rewriter
   summary: Share product facts and converting search terms. Get factual Google
@@ -12702,16 +12618,6 @@ tense-email-softener:
     and a firmer follow-up.
   reason: A rewrite cannot guarantee the reader wants to help. The card now
     promises a calm draft and follow-up.
-test-idea-shortlist-maker:
-  name: Store test idea priority planner
-  summary: Share store test ideas, evidence and order volume. Get repairs
-    separated from experiments, a scored shortlist and ideas to park.
-  subhead: Share each idea, its evidence, page traffic, effort and monthly orders.
-    It separates repairs, checks distinct evidence types and scores supported
-    ideas. You get hypotheses and a first test where the stage supports one. Low
-    volume or weak evidence may mean fixing or learning first.
-  reason: The source is specifically store testing and has evidence and
-    order-volume gates; the revised copy makes that scope visible.
 test-result-trust-checker:
   name: Store experiment result reviewer
   summary: Share test results, the plan and guardrails. Get validity checks, a
@@ -12774,17 +12680,6 @@ training-handout-writer:
     cuts what only worked in the room, and fits it on one page.
   reason: The name is clear; the card now describes a reference handout instead of
     promising future use a month later.
-two-version-ad-test-planner:
-  name: Two-version marketing test planner
-  summary: Share two ads, emails or pages. Get one difference to test, a matched
-    split, tracking labels and a result rule to set first.
-  subhead: Share both versions, the offer and your usual response rate. It lists
-    differences, isolates one change and plans matched groups and tracking
-    labels. You get an audience estimate and a rule for reading results. Its
-    reply-count target is a starting heuristic, not a statistical power
-    calculation.
-  reason: The source covers ads, email and pages; the revised name retains that
-    scope and distinguishes sample heuristics from statistical power.
 two-version-result-reader:
   name: Two-version response results reviewer
   summary: Share audience and response counts for two versions. Get rates, the
@@ -38241,3 +38136,7 @@ your-agent-s-first-ai-call-implementation-planner:
     - Agent AI call cost tracker builder
   reason: Use a simple job role instead of a goal, output list or vague helper label;
     preserve the actual scope.
+ai-tool-picker:
+  aliases:
+    - Which AI tool should I use
+    - Best AI tool for my task

@@ -36,6 +36,13 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 These original exercises apply the documented CSS and performance distinctions to ordinary front-end work.
 
+### What to bring
+
+- Your CSS rule and the HTML it should style
+- A page or component where the style goes wrong
+- Your performance numbers and current budget (optional)
+- Who owns performance work on your team (optional)
+
 ### What to hire him for
 
 - **Fix a selector that reaches too far:** Compare its intended role with the unrelated content it actually styles.
@@ -110,9 +117,13 @@ Trace a hypothetical live regression through that map. It should become a reprod
 
 Return the responsibility map and a handover example. For a developer's career portfolio, document one such repair with intention, evidence and limits. For a volunteer site, keep the same rationale beside the code so the next maintainer can continue without inheriting unexplained conventions.
 
-### What to use another mind for
+### When to pick someone else
 
-Use specialist accessibility review for broader interface assessment and current browser evidence for compatibility. Bring in a deeper systems investigator when the bottleneck lies beyond the front end. This playbook prepares clear scope and ownership for that work.
+- You need a broad accessibility audit: ask a specialist accessibility reviewer, because this mind only covers heading meaning and CSS.
+- The slowdown sits in servers or the network: use Brendan Gregg, who covers methods for investigating computer performance.
+- You want to design how a CSS language or tool should work: use Lea Verou, who focuses on CSS language design.
+
+**What next:** Take the budget note to Addy Osmani for loading and page-speed fixes, to Brendan Gregg when the slow part is not in the front end, or to Lea Verou for deeper CSS design questions.
 
 ### What you'll get back
 

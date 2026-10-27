@@ -56,10 +56,13 @@ export const metadata = {
 
 ### Next.js App Router (generateMetadata)
 ```js
+// Next.js 15 and later: params is a Promise, so await it.
+// Next.js 14 and earlier: read params.slug directly, with no await.
 export async function generateMetadata({ params }) {
+  const { slug } = await params;
   return {
     alternates: {
-      canonical: `https://www.yourdomain.com/blog/${params.slug}`,
+      canonical: `https://www.yourdomain.com/blog/${slug}`,
     },
   };
 }
@@ -84,11 +87,14 @@ canonical: 'https://www.yourdomain.com/blog/my-post'
 Find pages that are accidentally noindexed:
 
 ```bash
-# Search for noindex in metadata
+# Search for noindex in metadata (rg needs ripgrep installed; if you do not have it, use the grep line below)
 rg -n --glob '*.{js,ts,jsx,tsx}' 'noindex|robots.*noindex' app pages
 
 # Check layout.js — a noindex here affects ALL pages
 grep -n "robots" app/layout.js
+
+# Same search with plain grep, no install needed
+grep -rnE "noindex" app pages --include=*.js --include=*.jsx --include=*.ts --include=*.tsx
 ```
 
 In Next.js App Router, `robots` in the root layout applies globally. Only set it there if you want the whole site affected.
@@ -255,6 +261,10 @@ export default function robots() {
 - [ ] robots.txt allows important content
 - [ ] Every important page has ≥1 internal inbound link
 - [ ] `generateStaticParams` added for dynamic routes with known slugs
+
+## Next steps
+
+After you deploy the fixes, run URL Inspection in Google Search Console on the affected URLs and ask for a new crawl. Then check the Pages report again in a few days. If pages are still not indexed, the cause may be thin or copied content, so run a general SEO audit.
 
 ## Limitations
 

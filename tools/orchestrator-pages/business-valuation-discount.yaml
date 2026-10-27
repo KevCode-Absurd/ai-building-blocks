@@ -7,7 +7,7 @@ thinking_why: "It chains sums that feed each other, and one wrong figure early c
 headline: "Work out what a business is worth, and how big a discount makes the price safe"
 subhead: Give it a business, its accounts and the price on offer. It checks you are valuing a business, works out owner earnings, and builds a floor value and three growth cases. It tests a bad year, then sets the price against the range. A method of analysis, not personal financial advice.
 explain: |
-  What is a business worth, and how big a discount makes the price safe? A price tells you what someone will pay today. It does not tell you what the business is worth. The gap between the two is where you either have room for error or you do not.
+  A price tells you what someone will pay today. It does not tell you what the business is worth. The gap between the two is where you either have room for error or you do not.
 
   This workflow builds the value first and the price check second. It starts by asking whether you are valuing a business or betting on a price move. It then turns the accounts into owner earnings, the cash an owner could really take out. From those it builds a floor value that assumes no growth, plus low, middle and high growth cases, each saying what has to be true. A bad-year test follows: how big a loss can one year bring before the business stops earning, and does it survive? Last, the price goes against the range and the result is a verdict on whether the discount is big enough, too small, or the business is too hard to value. The method follows Robert Hagstrom's account of how Warren Buffett values a business, and Benjamin Graham's margin of safety. The sums are estimates. It gives no buy or sell calls.
 when:
@@ -84,7 +84,7 @@ output_sample:
     - {name: "Hand-back summary", contains: "Each step's file and every MISSING line in one list."}
 tweaks:
   - what: The rate
-    how: Give today's long-term bond yield. Low rates are rounded up to 10% for the working figure.
+    how: Give today's long-term bond yield. A yield under about 7% is rounded up to 10% so low rates do not flatter the business.
   - what: How long fast growth lasts
     how: Five to ten years. A shorter stage is more cautious.
   - what: The worst event

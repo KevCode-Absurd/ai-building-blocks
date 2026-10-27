@@ -8,11 +8,9 @@ role: build
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: slide_deck
     required: true
-  - type: source_text
+  - type: document
     required: false
   - type: spreadsheet
     required: false

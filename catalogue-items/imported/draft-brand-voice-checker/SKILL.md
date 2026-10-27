@@ -6,7 +6,7 @@ argument-hint: "<content to review>"
 
 # Brand Review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Plain-chat use: pasted text always works. A file or link works only if your chat tool can open it. "Knowledge base" below means a doc you paste or attach, such as a Notion page. If no brand guide is saved, ask the person to paste or describe one.
 
 Review marketing content against brand voice, style guidelines, and messaging standards. Flag deviations and provide specific improvement suggestions.
 
@@ -18,7 +18,7 @@ User runs `/brand-review` or asks to review, check, or audit content against bra
 
 1. **Content to review** — accept content in any of these forms:
    - Pasted directly into the conversation
-   - A file path or ~~knowledge base reference (e.g. Notion page, shared doc)
+   - A file path or knowledge base reference (e.g. Notion page, shared doc), if your tool can open it
    - A URL to a published page
    - Multiple pieces for batch review
 

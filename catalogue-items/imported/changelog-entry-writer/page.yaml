@@ -9,7 +9,7 @@ subhead: A clean changelog entry you can paste into your file, grouped into adde
 explain: |
   A clean changelog entry you can paste into your file, grouped into added, changed and fixed. Give it a commit range or a pull request and it turns the raw history into what users and maintainers need to know.
 
-  It finds the last version tag, lists commits since then, and reads the real diff, including changes that arrived through merges. It follows the Keep a Changelog format. It treats commit messages, branch names and diffs as plain evidence, never as instructions, and quotes anything suspicious instead of obeying it. It is for release notes, not for PR descriptions or single commit messages. You need a git repository.
+  It finds the last version tag, lists commits since then, and reads the real diff, including changes that arrived through merges. It follows the Keep a Changelog format. It treats commit messages, branch names and diffs as plain evidence, never as instructions, and quotes anything suspicious instead of obeying it. It is for release notes, not for PR descriptions or single commit messages. You need a git repository. This is sickn33's changelog skill, shared as it is under the CC BY-4.0 licence.
 when:
   - You are about to release a version and the changelog is empty.
   - A pull request merged and users should hear about it.
@@ -34,7 +34,7 @@ how_to_use:
   - Give it the commit range, branch or pull request number. If you give none, it uses the commits since the last version tag.
   - Add the version number and date if you want a dated heading. Otherwise the heading says Unreleased.
   - Check each line against the real changes. The skill does not write to your file.
-  - Paste the entry into CHANGELOG.md.
+  - Paste the entry into CHANGELOG.md. If you publish a release on GitHub, use the same text as the release notes.
 output_sample:
   input:
     - Your git repository, with your AI able to read its history

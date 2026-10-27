@@ -21,6 +21,12 @@ If no `.devcontainer/` exists yet, load [`references/codespaces.md`](./reference
 - [`references/codespaces.md`](./references/codespaces.md) — devcontainer, machine-sizing, prebuild, idle-timeout guidance, and reporting.
 - [`references/review-rubric.md`](./references/review-rubric.md) — load only for review passes.
 
+## When Not to Use This Skill
+
+- Billing reports or spend history: use the billing page in GitHub settings.
+- Org-wide Codespaces rules: ask the org owner.
+- Repos with no Codespaces or dev container, where a basic dev container should come first.
+
 ## Core Workflow
 
 ### 1. Measure first
@@ -31,6 +37,8 @@ gh codespace list
 repo=$(gh repo view --json nameWithOwner --jq .nameWithOwner)
 gh api "/repos/$repo/codespaces/machines"
 ```
+
+These commands need a GitHub account with Codespaces billing and repo admin scope. Test Codespaces you start in step 4 are billed to that account.
 
 If `gh` auth fails or the user lacks repo admin scope, proceed with static analysis of `.devcontainer/` files; mark machine-type and prebuild recommendations as unverified.
 
@@ -75,6 +83,8 @@ From the six candidates below, keep only those supported by audit evidence from 
 - Startup time: [expected] / [measured if available]
 - Monthly spend: [expected] / [measured if available]
 - Resource utilization: [expected] / [measured if available]
+
+**Next:** apply one fix at a time, build a test Codespace after each, and run this review again to see what changed.
 
 ## References
 

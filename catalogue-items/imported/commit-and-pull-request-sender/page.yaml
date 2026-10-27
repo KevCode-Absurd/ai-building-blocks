@@ -9,7 +9,7 @@ subhead: Say the word. Get your changes committed, pushed and opened as a GitHub
 explain: |
   Your changes get committed, pushed and opened as a GitHub pull request in one go. You say the word and review the result.
 
-  It first checks that the GitHub CLI is installed and signed in, and stops with clear instructions if not. It makes a branch name when you are on the main branch, writes a terse commit message and a pull request title that covers the whole diff. It then looks for your repository's pull request template and uses it. If it finds more than one, it stops and asks which one. With no template, it falls back to a simple body. It needs the gh tool.
+  It first checks that the GitHub CLI is installed and signed in, and stops with clear instructions if not. It makes a branch name when you are on the main branch, writes a terse commit message and a pull request title that covers the whole diff. It then looks for your repository's pull request template and uses it. If it finds more than one, it stops and asks which one. With no template, it falls back to a simple body. It needs the gh tool. This is OpenAI's commit-and-pull-request skill under the Apache 2.0 licence, copied as it is apart from the name.
 when:
   - You finished a change and want it up for review fast.
   - Your repo has a pull request template you keep forgetting to fill.
@@ -36,6 +36,8 @@ how_to_use:
   - Look at the list of changed files when your AI shows it. Stop it if you see secrets or files that do not belong.
   - Let it commit, push and open the pull request. It starts a new pull request as a draft.
   - Open the link, read the title and body, then mark the pull request ready when you are happy.
+  - If the push or the pull request fails, run gh auth status to check you are signed in, then ask your AI to run it again.
+  - Next, have the change reviewed, for example with the Bug and security code reviewer.
 output_sample:
   input:
     - Your changes in a git repo

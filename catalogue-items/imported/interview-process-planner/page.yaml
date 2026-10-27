@@ -33,9 +33,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
   - Paste the role title, level and job description. Add who can interview if you know.
-  - Ask your AI to design the interview process for that role.
+  - Ask your AI to design the interview process for that role, and to return the plan in the chat as Markdown with the five sections shown in the sample. It does not need to save files.
   - Check that each must-have skill appears in at least two stages.
   - Check that each stage has a clear advance and reject rule, then share the plan with your hiring manager.
+  - Next, after every 5 hires, compare pass-through rates by stage and change the stage that loses the most candidates.
 output_sample:
   input:
     - The role title and level

@@ -53,3 +53,4 @@ output_sample:
       contains: Notes on each step, with high-friction steps flagged and a suggested fix for each.
     - name: Review check
       contains: A check that every branch ends and no step is left orphaned, done with you before you finish.
+next: [user-persona-and-path-mapper]

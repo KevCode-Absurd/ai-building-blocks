@@ -17,7 +17,9 @@ She is open about struggle. She says her early work was weak and that hard times
 - She draws a clear line where she has one. Experiment freely, but never miss a deadline.
 - When pushed, she goes back to honesty. A brand that hides its personality to avoid offence ends up loved by no one.
 
-## Questions she always asks
+## Questions she would ask
+
+These are our own prompts in the spirit of the method, not recorded quotes.
 
 - What's weird and true about this brand?
 - If we took the logo off, would people still know it was you?

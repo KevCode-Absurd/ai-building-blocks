@@ -9,7 +9,7 @@ subhead: A broad standard turned into criteria a student can check themselves ag
 explain: |
   A broad standard turned into criteria a student can check themselves against. Instead of 'analyses language', you get the small skills inside it and what each looks like in work.
 
-  Paste the standard or competency descriptor, plus the level and subject. The skill breaks it into observable indicators, the things you can actually see a student do. It lists the knowledge and skills needed first, notes the usual misconceptions, and writes success criteria in student-friendly words. It finishes with what the breakdown means for how you teach. The worked example covers analysing a writer's language and structure.
+  Paste the standard or competency descriptor, plus the level and subject. The skill breaks it into observable indicators, the things you can actually see a student do. It lists the knowledge and skills needed first, notes the usual misconceptions, and writes success criteria in student-friendly words. It finishes with what the breakdown means for how you teach. The worked example covers analysing a writer's language and structure. This skill is shared under the CC BY-SA 4.0 licence, so if you adapt and share it, share your version under the same licence.
 when:
   - The curriculum gives you a vague standard and you must write lesson goals.
   - Students do not know what good work looks like.
@@ -36,6 +36,8 @@ how_to_use:
   - Add the curriculum framework or what the criteria are for, if you know them.
   - Read the observable indicators first. Check each one is something you could really see in student work.
   - Edit the success criteria so the wording suits your class. Share them with students before they start the task.
+  - Next, plan the unit around them with the backwards unit planner, or turn the four levels into a marking grid with the marking rubric writer.
+next: [backwards-unit-planner, marking-rubric-writer]
 output_sample:
   input:
     - The standard or competency descriptor, pasted as written
@@ -53,6 +55,6 @@ output_sample:
     - name: Common Misconceptions
       contains: Typical misunderstandings that stop students showing the skill.
     - name: Success Criteria
-      contains: "Student-friendly statements at four levels: beginning, developing, secure and extending."
+      contains: "Student-friendly statements at four levels: emerging, developing, competent and extending."
     - name: Implications for Teaching
       contains: What the breakdown means for how you plan and teach.

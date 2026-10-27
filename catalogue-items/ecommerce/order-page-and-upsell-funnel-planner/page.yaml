@@ -117,9 +117,9 @@ improve:
   - Pair it with the bundle tier layout planner for the order page tiers and the store friction checker for the cart.
 works_best_with:
   tools:
-    - {name: "Shopify", why: "The standard checkout limits what you can add, so check what your plan allows."}
+    - {name: "Shopify", why: "The standard checkout limits what you can add, so check what your plan allows. You need a paid Shopify plan."}
     - {name: "Any good chat AI", why: "Runs the profit sums and drafts the offer page copy."}
-    - {name: "Klaviyo", why: "Email and SMS flows to win back buyers who drop off at each step."}
+    - {name: "Klaviyo", why: "Email and SMS flows to win back buyers who drop off at each step. It is a paid service."}
   inputs:
     - Your AOV, conversion rate and refund rate by month
     - The shipping cost of each add-on product

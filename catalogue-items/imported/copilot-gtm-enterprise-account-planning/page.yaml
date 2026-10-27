@@ -7,7 +7,7 @@ job: plan-strategy
 headline: Enterprise account deal planner
 subhead: "Describe one enterprise deal: the account, what you sell, the deal size and who is involved. It checks whether the deal is moving, maps what each buyer gains, and tells you whether it is the right time to send a proposal."
 explain: |
-  Big deals die quietly. This enterprise account deal planner uses one test: if the mutual action plan has not been updated in about three weeks, treat the deal as in trouble. It looks at how recent the plan is and who is doing the work.
+  Big deals die quietly. This enterprise account deal planner uses one seller's rule of thumb: if the mutual action plan has not been updated in about three weeks, treat the deal as in trouble. It looks at how recent the plan is and who is doing the work.
 
   It first decides whether this deal needs a full account plan or a lighter one. Then it builds the plan from the facts you give, adds a personal win map of what each buyer gains and checks the deal against MEDDICC.
 
@@ -34,9 +34,12 @@ you_get:
   - "A personal win map of what each buyer gains"
   - "A yes or no on sending the proposal now, with reasons"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read the files you provide and use the named tools when the job requires them.
+  - Gather the account facts: the account name, what you sell, the deal size, how long the cycle has run, and the people involved with their titles.
+  - Find your mutual action plan and the date it was last updated. If you have none, say so.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. Paste your facts, the plan and its last update date.
+  - Read the deal health first. Check it against what you know about the deal. The three week rule is one seller's rule of thumb. The result is a judgement from the facts you gave.
+  - Then read the win map and the answer on sending the proposal.
+  - Next, update the plan with the customer, set a weekly check-in on it, and book a meeting with the person who holds the budget if you have not yet.
 output_sample:
   input:
     - Your account name and what you sell them

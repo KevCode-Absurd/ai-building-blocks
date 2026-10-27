@@ -22,7 +22,7 @@ not_for:
 you_give:
   - A SimBiology model
   - Measured data with a group and time column
-  - Which parameters to estimate, with bounds
+  - Which parameters to estimate, with bounds (bounds are ignored for population fits, so give good starting values there)
   - Dosing details (optional)
 you_get:
   - Fitted parameter estimates
@@ -36,6 +36,7 @@ how_to_use:
   - Ask it to fit the model. Check the fit plots before you trust the estimates.
   - Ask for virtual patients or AUC, Cmax and half-life if you need them.
   - Keep the code your AI wrote so you can rerun the fit later.
+  - Pass the fitted parameters or virtual patients on to a simulation with the Biology model simulator, or share the fit plots and code with a pharmacometrics colleague.
 output_sample:
   input:
     - Your SimBiology model
@@ -45,6 +46,7 @@ output_sample:
   prerequisites:
     - MATLAB with the SimBiology toolbox, both paid licensed products
     - An AI that can write and run MATLAB code
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Fitted parameter estimates
       contains: The estimated value of each parameter you chose, from a single fit or a population mixed-effects fit.

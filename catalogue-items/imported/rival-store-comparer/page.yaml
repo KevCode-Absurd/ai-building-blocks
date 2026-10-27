@@ -34,7 +34,7 @@ how_to_use:
   - Paste the skill text into the chat.
   - Add your rivals, your products, your market and the channels you care about.
   - Add your own prices and message if you have them (optional).
-  - Read the gaps first. Check any figure marked as an estimate before you act on it.
+  - Read the gaps first. A number should come with a public source you can open. "Not found" means no public data, so do not fill it in yourself.
 output_sample:
   input:
     - Your top rivals (names or links)

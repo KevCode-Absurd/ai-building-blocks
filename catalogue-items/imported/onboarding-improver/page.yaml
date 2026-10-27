@@ -5,9 +5,9 @@ name: Onboarding improver
 summary: Improve your product onboarding so new users reach first value faster. Give it your product details. You get a checklist, empty-state copy and email ideas.
 job: build-product
 headline: Onboarding improver
-subhead: A faster route from signup to the moment a new user thinks, this works. You describe your product and get a plan to shorten that route and keep people coming back.
+subhead: Find the fastest route from signup to a new user's first real win. You describe your product and get a plan to shorten that route and keep people coming back.
 explain: |
-  A faster route from signup to the moment a new user thinks, this works. You describe your product and get a plan to shorten that route and keep people coming back.
+  Find the fastest route from signup to a new user's first real win. You describe your product and get a plan to shorten that route and keep people coming back.
 
   The skill starts by asking what the aha moment is and where users drop off. Then it designs the minimum path to value, the fewest steps needed to feel the benefit. It limits the first session to one goal and saves advanced features for later. You get a checklist for the first visit, empty states that guide instead of showing blank screens, and a short email series that nudges people along. It suggests which events to measure so you can see what is working.
 when:
@@ -30,12 +30,13 @@ you_get:
   - Empty-state copy
   - Onboarding email ideas and metrics to track
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
-  - Describe your product and who uses it. Say what counts as a user getting value.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs no code or paid tools.
+  - Answer the questions it asks first about your product, your users and what counts as a user getting value. Then pick the activation model that fits.
   - Say where users drop off today. Paste your current onboarding steps if you have them.
   - Read the activation goal and flow first. Check that the goal matches real value for your users.
-  - Ask your AI to adjust anything that does not fit, then build the checklist, empty states and emails.
+  - Ask your AI to adjust anything that does not fit, then build the checklist, empty states and emails. The psychology and toolkit sections can be skipped for a quick run.
   - Treat any percentage or benchmark in the result as a rough guide. Check it against your own data.
+  - Pick one fix to test first, and compare it with your own sign-up numbers.
 output_sample:
   input:
     - What your product does and who uses it

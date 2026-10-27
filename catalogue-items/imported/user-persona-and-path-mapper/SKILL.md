@@ -268,7 +268,7 @@ Generates data-driven personas from user research data.
 |----------|--------|---------|-------------|
 | format | (none), json | (none) | Output format |
 
-**Sample Output:**
+**Sample Output** (illustrative only: the name, quote, counts and figures below are made up to show the layout. Every persona figure must trace back to the user's own data):
 
 ```
 ============================================================
@@ -344,8 +344,9 @@ Quote: "I need tools that can keep up with my workflow"
 
 | Sample Size | Confidence | Use Case |
 |-------------|------------|----------|
+| Under 5 users | Not usable | Do not build a persona; collect more data |
 | 5-10 users | Low | Exploratory |
-| 11-30 users | Medium | Directional |
+| 11-30 users | Medium | Directional (20+ is the minimum for a firm persona) |
 | 31+ users | High | Production |
 
 ### Usability Issue Severity
@@ -385,7 +386,7 @@ Detailed reference guides in `references/`:
 ## Validation Checklist
 
 ### Persona Quality
-- [ ] Based on 20+ users (minimum)
+- [ ] Based on 20+ users for a firm persona (5-19 only as exploratory, labelled; under 5 is not usable)
 - [ ] At least 2 data sources (quant + qual)
 - [ ] Specific, actionable goals
 - [ ] Frustrations include frequency counts

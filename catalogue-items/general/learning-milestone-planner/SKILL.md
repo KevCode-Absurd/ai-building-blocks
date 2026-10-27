@@ -9,15 +9,18 @@ Ordinary milestones ask whether you shipped what you promised. For something new
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for plan, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Writing the rate chain and the milestone plan is text work.
@@ -32,7 +35,7 @@ How to start:
 ## Steps
 
 1. **Write the business you hope for as a chain of rates.** Follow a customer from first contact to the result you want. For example: sees the offer, signs up, uses it once, comes back, pays, brings someone. Write each step as a share of the step before. Take the hoped-for figure from the plan. If the plan has none, write `MISSING: target` and offer a placeholder marked as a guess. Add the rate your growth engine depends on.
-2. **Plan the test that gives the starting figure.** The first real test (a small version, a smoke test, a hand-delivered service) will give true starting rates, and they will probably be poor. That is fine. Without them nothing later can be judged. Say which test gives which rate, who it runs on, and how many people must reach each step to read it. If a step gets only a handful of people, widen the top of the funnel, for example with a small daily ad spend, so every step gets enough people to count.
+2. **Plan the test that gives the starting figure.** The first real test (a small version, a smoke test, a hand-delivered service) will give true starting rates, and they will probably be poor. That is fine. Without them nothing later can be judged. Say which test gives which rate, who it runs on, and how many people must reach each step to read it. If a step gets only a handful of people, widen the top of the funnel, for example with a small daily ad spend (this costs money and needs an ad account), so every step gets enough people to count.
 3. **Tie each change to one rate.** List the changes you plan (new design, message, price, feature). For each, write the one rate it should move and by how much: "New first screen: raise first use from 20 to 35 percent". A change with no target rate goes on a "not now" list. A good design is one that changes what customers do.
 4. **Set three dated milestones.**
    - **Baseline:** by <date>, each rate has a true starting figure from real customers.
@@ -50,11 +53,10 @@ The chain of hoped-for rates. The test that gives each starting figure, with who
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- The [90-day action plan builder](https://useaiblocks.com/skills/90-day-plan-builder). It takes the plan.
+- The [Cohort funnel analyst](https://useaiblocks.com/skills/cohort-funnel-reader). It takes the plan.
+- The [Customer success metric planner](https://useaiblocks.com/skills/customer-progress-measure-picker). It takes the plan.
+- **Decide what to do** with the [Business metric quality reviewer](https://useaiblocks.com/skills/vanity-metric-fixer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

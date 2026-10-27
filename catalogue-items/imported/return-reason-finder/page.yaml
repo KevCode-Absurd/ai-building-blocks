@@ -30,7 +30,7 @@ you_get:
   - Clues pointing to quality or listing problems
 how_to_use:
   - Open an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat can't read your store.
-  - Add the skill file, then sign in to your store with read access to orders and returns.
+  - Install the Shopify CLI first. Add the skill file, then sign in to your store with read access to orders and returns. A store with many orders can take a few minutes to count.
   - Tell your AI your store address and how many days back to look. The default is 30.
   - Read the top reasons and top products first. Then open the listings of the worst products.
   - Check the photos, size chart and description. Rewrite the listing if buyers say not as described.

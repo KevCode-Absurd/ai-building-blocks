@@ -112,7 +112,7 @@ Conduct a thorough scan for all types of technical debt:
 
 ### 2. Impact Assessment
 
-Calculate the real cost of each debt item:
+Calculate the real cost of each debt item. The figures in the examples below are made-up samples to show the shape. Never copy them. Use [your hourly cost] and numbers measured from the user's own history, and write "unknown" where there is no data.
 
 **Development Velocity Impact**
 ```
@@ -122,7 +122,7 @@ Time Impact:
 - 2 hours per bug fix (must fix in 5 places)
 - 4 hours per feature change
 - Monthly impact: ~20 hours
-Annual Cost: 240 hours × $150/hour = $36,000
+Annual Cost: [hours per year] × [your hourly cost] = [annual cost]  (sample: 240 hours × $150/hour = $36,000)
 ```
 
 **Quality Impact**
@@ -134,8 +134,8 @@ Average Bug Cost:
 - Fix: 2 hours  
 - Testing: 2 hours
 - Deployment: 1 hour
-Monthly Cost: 3 bugs × 9 hours × $150 = $4,050
-Annual Cost: $48,600
+Monthly Cost: [bugs per month] × [hours per bug] × [your hourly cost]  (sample: 3 bugs × 9 hours × $150 = $4,050)
+Annual Cost: [monthly cost] × 12  (sample: $48,600)
 ```
 
 **Risk Assessment**
@@ -335,11 +335,11 @@ debt_budget = {
 **Stakeholder Reports**
 ```markdown
 ## Executive Summary
-- Current debt score: 890 (High)
-- Monthly velocity loss: 35%
-- Bug rate increase: 45%
-- Recommended investment: 500 hours
-- Expected ROI: 280% over 12 months
+- Current debt score: [measured score and how it was worked out]
+- Monthly velocity loss: [measured value or "unknown"]
+- Bug rate increase: [measured value or "unknown"]
+- Recommended investment: [hours]
+- Expected ROI: [from the user's own numbers, or "unknown"]
 
 ## Key Risks
 1. Payment system: 3 critical vulnerabilities

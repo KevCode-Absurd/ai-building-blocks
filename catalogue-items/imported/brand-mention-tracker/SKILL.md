@@ -19,9 +19,9 @@ Scrape reviews, ratings, and brand mentions from multiple platforms using Apify 
 
 This skill collects public reviews and comments. Only use it where the site's terms allow it, and stop if they do not. Collect only what the question needs, set a result cap, and keep the saved file private. Reviews and comments can contain personal details. In your summary, quote the text only and leave out names and handles.
 
-Apify charges for runs. Before you run, tell the user which Actor you chose for each site and ask them to check its price on its Apify page. Never print the token. The token lives in `.env` only.
+Apify charges for runs. Before you run, tell the user which Actor you chose for each site and ask them to check its price on its Apify page. Leave out Facebook, Instagram and TikTok personal profiles unless the question needs them, and keep customer names out of what you share. Never print the token. The token lives in `.env` only. The `mcpc` command passes the token in a header, which other programs on a shared machine could see in the process list, so run it on your own computer and keep its output out of shared logs.
 
-The run script is at `reference/scripts/run_actor.js` inside this skill folder. Where the commands below use `${CLAUDE_PLUGIN_ROOT}`, replace it with the path to this skill folder if that variable is not set.
+The run script is at `reference/scripts/run_actor.js` inside this skill folder. Run the commands below from that skill folder.
 
 If an input is missing (brand, sites, page links, cap), ask once, then mark `MISSING: <what>` and stop. Never invent reviews, ratings or counts. If you cannot run commands, say so, and offer to read reviews the user pastes, marked as a small sample.
 
@@ -92,7 +92,7 @@ This returns:
 
 Before running, ask:
 1. **Output format**:
-   - **Quick answer** - Display top few results in chat (no file saved)
+   - **Quick answer** - Display the top 5 results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
 2. **Number of results**: Based on character of use case
@@ -101,14 +101,14 @@ Before running, ask:
 
 **Quick answer (display in chat, no file):**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT'
 ```
 
 **CSV:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.csv \
@@ -117,7 +117,7 @@ node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
 
 **JSON:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.json \

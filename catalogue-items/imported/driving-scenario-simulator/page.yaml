@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Check you have MATLAB with RoadRunner and RoadRunner Scenario. Add Simulink if you want co-simulation. All are paid tools.
   - Open or save your RoadRunner scenario, and note your MATLAB release.
-  - Open a chat with an AI that can run MATLAB code. Paste the SKILL.md text from the skill folder into the chat.
+  - Open a chat with an AI that can run MATLAB code. Paste the SKILL.md text from the skill folder into the chat. Also paste or attach the two files in its references folder, simulation-api-reference.md and simulink-cosim-details.md. The skill points to them for call signatures and block setup.
   - Tell your AI what to run, control or measure. Add any sensors or scenario variables you want.
   - Run the code it writes in MATLAB. Check the simLog and sensor readings.
-  - To export vehicle paths to CSV, use exportActorTrajectoryToCSV in MATLAB.
+  - Next, plot the poses in simLog in MATLAB to check the run. To export vehicle paths to CSV, use exportActorTrajectoryToCSV in MATLAB.
+  - The skill's licence allows use only with MathWorks products (see its LICENSE.md). Check your own MathWorks licence before you reuse it.
 output_sample:
   input:
     - Your RoadRunner scenario, open or saved

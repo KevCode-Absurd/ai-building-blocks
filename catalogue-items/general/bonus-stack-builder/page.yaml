@@ -26,6 +26,7 @@ not_for:
   - "You have no offer yet and want to build one from a buyer's problem. Use the Offer builder that answers buyer doubts."
   - "You want to know how buyers will compare your price with others. Use the Commodity trap checker."
   - "You want a first low-cost step to bring buyers in. Use the Front-end offer picker."
+  - "You want a quick first pass with fewer checks: use the Bonus idea matcher."
 
 you_give:
   - "Your offer: what is in it, and the price"

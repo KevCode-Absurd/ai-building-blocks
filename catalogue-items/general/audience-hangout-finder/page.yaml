@@ -135,7 +135,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "An audience research tool such as SparkToro", why: "Shows which sites, podcasts and accounts an audience follows more than average."}
+    - {name: "An audience research tool such as SparkToro", why: "Shows which sites, podcasts and accounts an audience follows more than average. SparkToro is a paid tool."}
     - {name: "Any good chat AI", why: "Turns your notes and data into a ranked map with this skill."}
   inputs:
     - "A survey of customers asking where they get advice"

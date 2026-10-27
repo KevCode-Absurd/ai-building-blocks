@@ -40,7 +40,14 @@ Queries all return requests within a date window and aggregates them by return r
 2. Aggregate by: return reason → product → SKU; calculate return count and % of total returns per bucket
 
 3. **OPERATION:** `orders` — query (for return rate context)
-   **Inputs:** Same date window, `first: 250`; count total orders as denominator for return rate calculation
+   **Inputs:** Same date window (`created_at` on orders, matching the returns query), `first: 250`, pagination cursor; page through until `hasNextPage: false` and add up the orders on every page. That total is the denominator for the return rate. Do not stop after the first page.
+
+4. Map each Shopify `returnReason` code to the output label, and keep the raw code in the CSV:
+   - `SIZE_TOO_LARGE`, `SIZE_TOO_SMALL` → Wrong size/fit
+   - `NOT_AS_DESCRIBED`, `COLOR`, `STYLE` → Not as described
+   - `DEFECTIVE` → Damaged/defective
+   - `UNWANTED` → Changed mind
+   - `WRONG_ITEM`, `OTHER`, `UNKNOWN` and any code not listed → Other
 
 ## GraphQL Operations
 
@@ -92,13 +99,8 @@ query ReturnsAnalysis($query: String!, $after: String) {
 
 ```graphql
 # orders:query — validated against api_version 2025-01
-query OrderCountForPeriod($query: String!) {
-  orders(first: 1, query: $query) {
-    pageInfo {
-      hasNextPage
-    }
-  }
-  ordersCount: orders(first: 250, query: $query) {
+query OrderCountForPeriod($query: String!, $after: String) {
+  orders(first: 250, after: $after, query: $query) {
     edges {
       node {
         id

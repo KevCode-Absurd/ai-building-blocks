@@ -29,12 +29,14 @@ you_get:
   - Error messages with a clear next step
   - Built versions in your code
 how_to_use:
+  - Gather the screen, what data it loads or saves, any real error messages from your backend, and the phone and desktop widths you support.
   - Open your AI tool and paste in this skill. If it can read files, give it access to your project.
   - Paste or attach the screen you are building. Add what data it loads or saves.
   - Check the state list it writes first. Say which states matter most to you.
   - Let it build each state with your existing components and copy style.
   - Read the report at the end. Answer any open questions, such as what an error should say.
   - Test the states in your own app with slow, failed and offline requests.
+  - Send the open decisions to the right person, such as the exact error wording to your backend developer, then ask your AI to update the states.
 output_sample:
   input:
     - Your screen or component, as code, a screenshot or a description

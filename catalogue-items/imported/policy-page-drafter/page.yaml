@@ -19,6 +19,7 @@ not_for:
   - "You run a health or finance business with strict rules: go straight to a lawyer who knows your sector."
   - "Your site is already live and you don't know what data it collects: find out first, or ask a lawyer to audit it."
   - "You need a policy that is certified as legal: this draft is not legal advice, so ask a qualified attorney to sign it off."
+  - "You only need a basic cookie banner for a small site: use the consent tool built into your site platform, or the regulator's own guidance for your country."
 you_give:
   - Your business description and country
   - The data you collect and why you collect it
@@ -34,7 +35,8 @@ you_get:
 how_to_use:
   - Write down the facts in the list above. Be exact about the tools you use.
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions, then your facts. No code or paid tools are needed.
-  - "Say which document you want: privacy policy, terms or cookie notice."
+  - "Say which document you want: privacy policy, terms or cookie notice. Tell your AI today's date."
+  - Your AI may not be able to look up current law. Check each law it names against your regulator's own website before you publish.
   - Check each open question against your real tools and settings. Fix anything the draft got wrong.
   - Send the draft and the open questions to a qualified lawyer before you publish.
 output_sample:
@@ -57,3 +59,4 @@ output_sample:
       contains: A checklist for each law that applies, so you can see what is still open.
     - name: Open questions and disclaimer
       contains: Gaps to raise with your lawyer, plus a note that this is a template and not legal advice.
+next: [gdpr-privacy-checker]

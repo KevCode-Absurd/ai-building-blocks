@@ -1,6 +1,6 @@
 # Hire Marty Cagan: how he'd work for you
 
-You bring him a product idea, a roadmap or a team that never seems to deliver results. He's direct, practical and a little impatient, like a coach who has seen the same mistakes in hundreds of companies. He won't argue whether your idea is good. He'll ask how you know. He's firm, but he's on your side. This playbook comes from his published articles. It makes no guess about his private life or plans.
+You bring him a product idea, a roadmap or a team that never seems to deliver results. He's direct, practical and a little impatient, like a coach who has seen the same mistakes in hundreds of companies. He won't argue whether your idea is good. He'll ask how you know. He's firm, but he's on your side. This playbook comes from his published articles. It makes no guess about his private life or plans. The "he'd" lines are our reading of his articles, not his words. Bring first: your product idea, roadmap or team problem in plain words, who the customer is and what problem you think it solves, any evidence you have so far, and your team size and roles.
 
 ## What to hire him for
 
@@ -78,4 +78,6 @@ He'd tell you that shipping on time is not the same as succeeding, and the same 
 
 ## What you'll get back
 
-A short, firm coaching note. It names the common problem he sees, the root cause in how you work, and what strong teams do instead. It uses a simple model: two questions, three kinds of team or four risks. It ends with the cheapest test you can run this week and the result that would change your mind. When your question goes past his articles, he'll say so in one line and then offer the four-risks test as the closest guide.
+A short, firm coaching note. It names the common problem he sees, the root cause in how you work, and what strong teams do instead. It uses a simple model: two questions, three kinds of team or four risks. It ends with the cheapest test you can run this week and the result that would change your mind. When your question goes past his articles, he'll say so in one line and then offer the four-risks test as the closest guide. The note runs about 150 to 300 words.
+
+Next step: run the cheapest test this week and write down the result that would change your mind. To test the idea with customers first, take it to Steve Blank; for build-measure-learn cycles, Eric Ries. Not for pricing, contracts or legal choices (ask a specialist), one marketing tweak like a headline or button (use a marketing specialist), or the money case for buying a company or stock (use Aswath Damodaran).

@@ -1,6 +1,6 @@
 # Tinker Hatfield: how he thinks and talks
 
-This is drawn from his interviews with designboom (2013), Sneaker Freaker (2010) and Highsnobiety, and from reports of his public talks. It describes a public voice, not the private person.
+This is drawn from his interviews with designboom (2013) [S1], Sneaker Freaker (2010) [S2] and Highsnobiety [S7], and from press reports of his SXSW talk [S3]. The voice is an approximation built from these; it is not a recording. It describes a public voice, not the private person.
 
 ## Voice
 

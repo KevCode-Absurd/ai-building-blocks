@@ -29,12 +29,13 @@ you_get:
   - Answers with source passages
   - Setup instructions
 how_to_use:
-  - Check that your AI can run Python code, or that Python is set up on your computer. You also need an API key from a model provider.
+  - Check that your AI can run Python code, or that Python is set up on your computer. You also need an API key from a model provider. Using the model costs money per question. Pinecone and LlamaCloud, which the skill also names, are optional paid accounts.
   - Install the package with pip install llama-index.
   - Save your API key as an environment variable. Never paste it into the code.
   - Put your files in a folder named data.
   - Run the short starter example from the skill. Ask one question about your files.
   - Print the source passages for the answer. Check they match what the answer says. If you scrape web pages, get the site owner's permission first.
+  - If an answer is not backed by its passage, try smaller chunks or retrieve more passages, then check again before you share the tool with others.
 output_sample:
   input:
     - Your documents, such as PDFs, Word files, text files or web pages
@@ -44,6 +45,7 @@ output_sample:
     - An AI that can run Python code, or Python set up on your own computer
     - The llama-index package installed
     - An API key for an AI model provider
+    - "Optional: Pinecone and LlamaCloud need their own accounts and keys, and may cost money"
   output:
     - name: Install step
       contains: The pip command that installs the llama-index starter package, or the smaller core package with the parts you pick.

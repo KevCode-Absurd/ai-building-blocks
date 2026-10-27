@@ -56,7 +56,7 @@ The event itself is the smallest part of event marketing. Every format follows t
 - Create content while there (see Content Arc below) — the event is a recording studio you already paid for.
 
 **After (where pipeline is won or lost)**
-- **The 24–48 hour window.** Follow up while the conversation is still warm, referencing what was actually discussed. Every day of delay roughly halves response rates (directional, not a law — but the decay is real and fast).
+- **The 24–48 hour window.** Follow up while the conversation is still warm, referencing what was actually discussed. The author's rule of thumb is that response rates fall fast with each day of delay. This is unsourced, so do not quote a rate.
 - Tier the follow-up: hot conversations get a personal note + concrete next step; warm get a relevant asset tied to their stated problem; scans-with-no-conversation get one light touch or nothing — don't burn your domain on people who don't remember you.
 - Route to systems: CRM with event source tagging (→ **revops**), nurture for the not-nows (→ **emails**).
 
@@ -66,7 +66,7 @@ The event itself is the smallest part of event marketing. Every format follows t
 |---|---|---|---|
 | **Webinar** | Lead gen + education at scale | Low-mid | The flagship repeatable format — full funnel in [webinar-funnel.md](references/webinar-funnel.md) |
 | **Workshop** | Product-qualified leads, activation | Mid | Hands-on beats presentation for conversion; smaller and deeper than a webinar |
-| **Dinner / small gathering** | Exec relationships, ABM accounts | Mid | 8–14 seats, no pitch, curated guest mix — the highest meetings-per-dollar format in B2B |
+| **Dinner / small gathering** | Exec relationships, ABM accounts | Mid | 8–14 seats, no pitch, curated guest mix — often a strong meetings-per-dollar format in B2B (the author's judgement, unsourced) |
 | **Meetup series** | Local community, recurring presence | Mid | Consistency beats production value; hand hosting duties to community members over time (→ **community-marketing**) |
 | **Virtual summit** | List building via partner audiences | High | Multi-speaker = built-in distribution; every speaker promotes (→ **co-marketing** for the partner mechanics) |
 | **User conference** | Retention, expansion, category authority | Very high | Don't attempt before you have a community that would attend without being begged |
@@ -119,6 +119,8 @@ Events produce your highest-proof content — capture it deliberately:
 - **Chasing the biggest conferences.** Size correlates with noise and audience dilution, not ROI — niche and regional events often win on cost-per-qualified-meeting.
 
 ## Related Skills
+
+These names come from the original collection. Only Cold email writer and Email sequence writer have matching items in this library. For the rest, handle the task by hand or outside this skill.
 
 - **launch** — the event is a launch moment (announcement, Product Hunt, go-live)
 - **co-marketing** — joint webinars and partner summits: partnership mechanics live there, event execution here

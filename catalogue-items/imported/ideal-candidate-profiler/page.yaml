@@ -36,6 +36,7 @@ how_to_use:
   - Ask your AI to build the candidate persona.
   - Read the result with your hiring manager. Fix anything that does not match your real hires.
   - Use the outreach themes and community list to plan your sourcing. Leave out age, family status and other protected traits.
+  - Check before use. The persona is an assumption. Test it against your past hires and real market data. It is not evidence about any named person.
 output_sample:
   input:
     - Your job description

@@ -1,6 +1,6 @@
 # Bill Gates: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Honesty note (2026-10-21 second pass): we have now read six of his own texts. They are the 2007 Harvard commencement address [S7], the 2013 annual letter [S3], the 2014 annual letter on three myths about poverty and aid [S10], the 2008 Davos speech on "creative capitalism" [S9], a public copy of his January 2002 Trustworthy Computing memo [S8], and the National Constitution Center's excerpt of the 1995 internet memo [S2]. The 1995 memo is an excerpt, and the 2002 memo is a copy on a news site, not Microsoft's own archive. The 1976 open letter facts [S1] still come from the Wikipedia article on it, and the 2025 foundation plan [S6] from a news report, so those are less checked. We found no free full transcript of his long interviews, such as the 1993 Smithsonian video history, and no free text of his memoir. Pages on Gates Notes and the Henry Ford oral history could not be opened.
 

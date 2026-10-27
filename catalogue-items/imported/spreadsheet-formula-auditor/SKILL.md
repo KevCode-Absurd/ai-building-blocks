@@ -15,9 +15,12 @@ most Indian errors:
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so two commas divide by 1,000,000 (a million),
+  not by 10,000,000 (a crore). The number then shows **10× too large under a crore
+  label**. Divide by `10000000` in a live formula and label the column
+  `Total Revenue (₹ Cr)`.
+
+If `india-market-conventions`, `india-market-data` or `NOT-ADAPTABLE.md` are not available in your session, say so, carry on with the checks below, and list what you could not check.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
@@ -162,6 +165,8 @@ For **model** scope, prepend a summary line:
 > Model type: [DCF/LBO/3-stmt/...] — Overall: [Clean / Minor Issues / Major Issues] — [N] critical, [N] warnings, [N] info
 
 **Don't change anything without asking** — report first, fix on request.
+
+Next: sort the fixes by severity, fix the critical rows first, and run the audit again after the edits. For a model that needs rebuilding, hand the list to financial-model-builder.
 
 ---
 

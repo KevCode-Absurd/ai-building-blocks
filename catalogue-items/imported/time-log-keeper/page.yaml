@@ -30,12 +30,12 @@ you_get:
   - Flags where it was unsure
   - A time review when you ask
 how_to_use:
-  - Copy the companion time-ledger template into your Notion workspace. Keep "time-ledger" in the database title.
+  - Copy the companion time-ledger template into your Notion workspace. It is free and linked from the source repo (github.com/cruisekkk/time-ledger), which is listed under Built with ideas from. Keep "time-ledger" in the database title.
   - Connect Notion to your AI and give it access to that database. This needs a paid Claude plan today.
   - Paste the skill into a chat, or add it to your AI tool.
   - 'Type what you did, such as "log it: read papers 2h, gym 1h".'
   - Approve the first write if Notion asks. Then check the rows in Notion.
-  - Answer any questions about rows marked To-confirm. Say "tidy up my time ledger" to clear them in one go.
+  - Answer any questions about rows marked To-confirm. Say "tidy up my time ledger" to clear them in one go. At the end of the week, ask where your time went and plan the next week from it.
 output_sample:
   input:
     - A plain note of what you did, such as "read papers 2h, gym 1h"

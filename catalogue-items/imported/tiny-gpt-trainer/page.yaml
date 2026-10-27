@@ -31,8 +31,8 @@ you_get:
   - Settings to try for a bigger model
 how_to_use:
   - Use an AI that can run Python code, or run the steps on your own computer. Install PyTorch and the other packages first.
-  - Get the nanoGPT code from GitHub and put your text file in a plain .txt file.
-  - Ask your AI to prepare your text, then write a config that fits your computer.
+  - Get the nanoGPT code from GitHub and save your text as a plain .txt file in its data/custom folder.
+  - Ask your AI to prepare your text, then write a config that fits your computer. For the small CPU run you only need torch, numpy and tqdm. The wandb, datasets and transformers packages are optional. Keep wandb_log = False in the config so no account is needed.
   - Start training. A small text file takes about five minutes on a CPU.
   - Ask your AI to make sample text from the trained model and read it.
   - Change one setting, such as layers or training steps, and train again to compare.
@@ -53,8 +53,9 @@ output_sample:
     - name: Trained model folder
       contains: The saved model from the training run, ready to make new text.
     - name: Sample text
-      contains: New writing from the model in the style of your text.
+      contains: A short excerpt of about 500 characters per sample (the default length), written in the style of your text. Expect rough, often odd text from a tiny model.
     - name: Training notes
-      contains: A short note on how training works and what the loss and settings mean.
+      contains: A short note, a few lines long, on how the training run went and what the loss number and settings mean.
     - name: Scale-up settings
       contains: Changes to try for a bigger model, or a fix if you run out of memory.
+next: [tokenizer-trainer]

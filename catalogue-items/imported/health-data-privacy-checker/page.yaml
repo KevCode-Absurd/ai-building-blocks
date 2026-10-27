@@ -35,7 +35,7 @@ how_to_use:
   - Paste any policies, notices or architecture notes you have (optional).
   - Read the gap table first. Fix the high risk items before the rest.
   - Ask for any drafts you need, such as a business associate agreement or privacy notice.
-  - Have a HIPAA attorney check the result before you rely on it.
+  - Have a HIPAA attorney check the result before you rely on it. Rules and enforcement cases change, so check any date or fine it quotes at hhs.gov first.
 output_sample:
   input:
     - A short description of your app, clinic or process and how it uses health data
@@ -55,3 +55,4 @@ output_sample:
       contains: On request, a short explanation of any HIPAA rule that applies to you.
     - name: Disclaimer
       contains: A reminder that this is information, not legal advice, and a HIPAA attorney should confirm.
+next: [gdpr-privacy-checker, privacy-policy-drafter]

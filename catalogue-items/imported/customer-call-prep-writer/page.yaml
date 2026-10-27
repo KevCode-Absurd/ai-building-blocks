@@ -35,6 +35,7 @@ how_to_use:
   - Type the company name. Add the people on the call and the call type if you know them.
   - Read the brief. Check that each talking point matches a signal it names.
   - If it says data is thin, believe it. Look in Common Room yourself for what is missing.
+  - After the call, log the outcome and next steps in your CRM and send a follow-up note.
 output_sample:
   input:
     - The company name
@@ -50,7 +51,7 @@ output_sample:
     - name: Company Snapshot
       contains: Four to six bullets on account status, recent signals and activity.
     - name: Attendee Profiles
-      contains: "For each person: role, recent activity, persona if available and a personal hook."
+      contains: "For each person: role, recent activity, persona if available and a work-related hook, such as a talk or post they published."
     - name: Signal Highlights
       contains: The three signals that matter most for this call, plus any big news from the last 14 days.
     - name: Talking Points

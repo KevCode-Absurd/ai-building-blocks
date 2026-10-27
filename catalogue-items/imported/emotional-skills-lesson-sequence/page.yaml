@@ -31,10 +31,11 @@ you_get:
   - Teacher notes
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
-  - Describe what is happening in your class and name the year group.
+  - Describe what is happening in your class and name the year group. Do not paste student names or identifying details into Claude, ChatGPT or Gemini. Describe the situation in general terms, and follow your school's data-protection policy.
   - Add your time, your subject and what students know about RULER, if you wish.
   - Read the plan. Check it fits your school's wellbeing policy before you teach it.
-  - After the first step, look at how students placed themselves on the Mood Meter. Use that to adjust later lessons.
+  - After the first step, look at how students placed themselves on the Mood Meter. Use that to adjust later lessons. Pair it with Classroom belonging planner or Restorative conversation planner.
+  - This skill is adapted from Gareth Manning's work (GarethManning/education-agent-skills) under CC BY-SA-4.0. Anything you build from it must keep that licence.
 output_sample:
   input:
     - The situation in your class, such as anxiety before exams or conflict

@@ -35,12 +35,13 @@ alternatives: [capcut, descript, opus-clip, heygen]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Open veed.io and click Start for free. The sign-up steps were not on the page we read, so follow what the site shows you."
-  - "Add your video in the editor. We could not confirm where the upload button sits, so look for the upload option first."
+  - "Open veed.io and start for free with an account. Follow the sign-up screen the site shows you."
+  - "Add your video in the editor. Look for the upload option first."
   - "Open the subtitles tool. The site calls it an automatic subtitle generator. Pick the language you speak in the video."
   - "Read every subtitle line against the audio. Fix names, product words and numbers, and check the timing."
   - "To translate, open the video translator or dubbing tool and choose a language. Watch the result with someone who speaks it."
   - "Export and play the file from start to finish before you post it. Export formats and any watermark on the free plan are not stated on the pages we read."
+  - "Next, post the video or pass it to your team. For a long interview or podcast, use Descript instead. To cut one long video into short clips, use Opus Clip."
 needs:
   - "A video file, with clear speech for good subtitles."
   - "A free VEED account."
@@ -50,7 +51,7 @@ needs:
 example:
   task: "Add English subtitles to a one-minute product clip, then make a Spanish version."
   cost: "Subtitles are unlimited on paid plans, with a fair use limit of 50 hours a month (checked 26 Oct 2026). Translation counts against a monthly minute allowance that VEED does not state on its pricing page. Check your plan for the count."
-  reply: "A video with subtitle lines you can edit, and a second version in the other language. Our example shows the shape only, not a measured result. Export formats are not stated, so check what you get before you plan a workflow around a subtitle file."
+  reply: "Your video with subtitle lines you can edit, and a second version in the other language. You export it as a video file. A separate subtitle file is not confirmed. Our example shows the shape only, not a measured result. Export formats are not stated, so check what you get before you plan a workflow around a subtitle file."
 not_verified:
   - "Plan prices, and what the free plan allows for export and subtitles. The pricing page we could read did not show them."
   - "Whether free exports carry a watermark."

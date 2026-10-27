@@ -29,11 +29,12 @@ you_get:
   - A written story with the point, the proof and the next step
   - A slide deck with speaker notes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 4 skill files in the order they run: Dataset cleaner and validator, Data quality auditor, Data story writer and Presentation builder."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it the file and keep a copy of the original.
   - Read the quality report before the story is written, and tell it which columns to trust.
   - Say who the audience is and what they must decide.
+  - Before you present, read the speaker notes aloud once and check every figure against the cleaned file. If the numbers are money, run the deck through the Finance deck quality checker.
 output_sample:
   input:
     - Your raw data file, as CSV or Excel

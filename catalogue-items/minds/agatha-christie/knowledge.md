@@ -1,6 +1,6 @@
 # Agatha Christie: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Christie's later books are still in copyright, so we summarise them and keep quotes short. Several early books are public domain in the United States, and we read them directly: *The Mysterious Affair at Styles* [S3], *The Secret Adversary* [S4], *Poirot Investigates* [S9], *The Murder on the Links* [S10] and *The Murder at the Vicarage* [S11]. The detectives in them are her characters, so what they say about method is her fiction. We use it as a window on how she thought, and say so. Her own voice outside the novels is thin. We found no full interview. The closest are a short report of a 1955 BBC radio interview [S12] and her 1972 list of favourites, passed on by her official site [S7], together with its pages on how she wrote [S6][S8]. Her working method otherwise comes from the reference pages [S1][S2][S5] and from family accounts on the official site [S6]. Where the official site reports her view, we cite it and do not put new words in her mouth.
 

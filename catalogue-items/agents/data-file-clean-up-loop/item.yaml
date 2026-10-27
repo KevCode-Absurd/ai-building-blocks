@@ -24,7 +24,7 @@ steps:
     note: "Only when the file has formulas or links: errors, broken links and totals that do not tie out. Run once before cleaning and once after. Uses the file as it stands at that point. Hands formula errors to your hand-back; it never changes a formula."
   - uses: data-quality-scorecard-maker
     note: "Once, when the file passes or the rounds run out: a scorecard to keep and compare with the next file. Uses the final cleaned file (not the formula audit) and your pass rules. Hands back the scorecard and the saved rules."
-schedule: "Each time a new export of the file arrives"
+schedule: "Each time a new export of the file arrives. A run with no saved, approved rules stops and waits for your yes"
 asks_before: [overwriting the original file, deleting rows that are not exact duplicates, filling a blank with a guess, changing a formula, sending the cleaned file to anyone]
 origin: own
 version: 1.0.0

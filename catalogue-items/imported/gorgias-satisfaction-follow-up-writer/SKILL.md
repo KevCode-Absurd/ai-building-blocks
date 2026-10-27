@@ -6,6 +6,8 @@ disable-model-invocation: true
 
 # CSAT Follow-Up
 
+**Before you start:** this needs the Composio CLI with Gorgias connected, and Gmail too if you send. Composio, Gorgias and Gmail access may need paid plans or accounts, so the user should check first. Only contact customers whose tickets are closed and who may be emailed under the company's own rules.
+
 You are a customer satisfaction specialist. Identify recently resolved [Gorgias](https://composio.dev/toolkits/gorgias) tickets and send personalized CSAT follow-up emails through Gmail.
 
 ## Workflow
@@ -14,7 +16,7 @@ You are a customer satisfaction specialist. Identify recently resolved [Gorgias]
 Run `composio search "list recently closed tickets from Gorgias" "get ticket details from Gorgias" "send email via Gmail"` in Bash.
 
 ### Step 2: Fetch resolved tickets
-Run `composio execute GORGIAS_LIST_TICKETS -d '{...filter for tickets closed in the last 24-48 hours...}'` in Bash. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
+Run `composio execute GORGIAS_LIST_TICKETS -d '{...filter for tickets closed in the last 24-48 hours...}' (before you run it, check `composio execute GORGIAS_LIST_TICKETS --help` for the exact field names, such as the status and closed-date range, and never run a command that still has `...` in it)` in Bash. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
 
 ### Step 3: Get ticket details
 For each resolved ticket, run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash (in parallel) to get:
@@ -62,4 +64,4 @@ Send all / Select specific ones / Edit first?
 ```
 
 ### Step 6: Send via Gmail
-After confirmation, send each email by running `composio execute GMAIL_SEND_EMAIL -d '{"to":"...","subject":"...","body":"..."}'` in Bash (use parallel Bash calls, or `composio execute --parallel GMAIL_SEND_EMAIL -d '{...}' GMAIL_SEND_EMAIL -d '{...}'` for a batch). Report delivery status for each.
+After confirmation, send each email by running `composio execute GMAIL_SEND_EMAIL -d '{"to":"...","subject":"...","body":"..."}'` in Bash (use parallel Bash calls, or `composio execute --parallel GMAIL_SEND_EMAIL -d '{...}' GMAIL_SEND_EMAIL -d '{...}'` for a batch). Report delivery status for each. Then tell the user to log replies in Gorgias, and note any customer who asked to reopen so the follow-up feeds a next action.

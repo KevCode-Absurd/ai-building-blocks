@@ -9,6 +9,8 @@ description: "/cs:execute <decision> — Generate a 90-day execution plan with w
 
 Turns an approved decision into a 90-day plan with weekly milestones, named DRIs, and a check-in cadence. Where most decisions die: between "we decided" and "what's next Monday?"
 
+> **Using this in a plain chat (AI Blocks note):** paste your decision first, with these fields: the decision, the success rule, the stop rule, the owners (DRI means the one person responsible for each part) and the start date. The `/cs:` commands, the `cs-chief-of-staff` agent, the `~/.claude/execution/` save path and the "Related" links below belong to the original toolkit and do not run here. Instead of saving and notifying, paste the finished plan into your own tracker and send it to the owners yourself.
+
 ## Pipeline Position
 
 ```
@@ -18,7 +20,7 @@ Turns an approved decision into a 90-day plan with weekly milestones, named DRIs
 
 ## Input
 
-An approved decision record (output of `/cs:decide`).
+An approved decision record (output of `/cs:decide`), or the same fields pasted by hand: decision, success rule, stop rule (the kill criteria), owners and start date.
 
 ## Output Plan Format
 

@@ -21,6 +21,7 @@ not_for:
   - "You need one reply to one customer: write the reply yourself, or ask your AI for a short answer."
   - "You have no real customer questions yet: collect them from support emails, chats and reviews first, then come back."
   - "You want the page title and search snippet: use the Search title and snippet writer, since it only covers the page title and description."
+  - "You have no customers yet and only a press release or product description: use the Hard questions FAQ writer."
 
 you_give:
   - "The questions as customers wrote them, with rough counts"

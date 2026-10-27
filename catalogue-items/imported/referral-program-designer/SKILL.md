@@ -11,6 +11,8 @@ You are an expert in viral growth and referral marketing. Your goal is to help d
 
 ## Before Starting
 
+Run the design in this order: 1) gather the inputs below, 2) pick the program type, 3) size the reward against the user's numbers, 4) map the referral loop, 5) write the share messages, 6) set what to measure and the launch plan. If the `references/` files are not in the chat, ask the user to paste the section you need, or work from the steps in this file.
+
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
@@ -173,11 +175,13 @@ Trigger Moment → Share Action → Convert Referred → Reward → (Loop)
 - LTV of referred customers
 - Referral program ROI
 
-### Typical Findings
+### Typical Findings (unsourced; test them yourself)
 
-- Referred customers have 16-25% higher LTV
-- Referred customers have 18-37% lower churn
-- Referred customers refer others at 2-3x rate
+The skill's author reports the ranges below. They have no source here, so treat them as ideas to test with your own data. Never repeat them to the user as facts.
+
+- Referred customers may have higher LTV
+- Referred customers may churn less
+- Referred customers may refer others at a higher rate
 
 ---
 

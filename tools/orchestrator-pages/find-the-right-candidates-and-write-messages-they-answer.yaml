@@ -1,19 +1,22 @@
 new_slug: find-the-right-candidates-and-write-messages-they-answer
 name: Find the right candidates and write messages they answer
-summary: Give it a job description. Get who fits, a search plan and first messages that get replies.
+summary: Give it a job description. Get a profile of who fits, a week-by-week search plan, first messages and a pipeline update.
 job: hire-people
 thinking: medium
 thinking_why: Each step writes and plans from the step before. A mid-size model does it well. Use your strongest model for the messages if replies stay low.
 headline: Find the right people for a role and write first messages they answer
 subhead: Give it a job description. It profiles the person who fits, plans where to look week by week, and writes first messages and follow-ups for you to send. After two weeks, it turns your reply counts into a pipeline update.
 explain: |
-  A job post pulls in the people who are already looking. The best candidates are often not, so you have to find them and write to a stranger. Most first messages fail because they could go to anyone. They list the job and say nothing about why this person would care.
+  A job post pulls in the people who are already looking. Others are not, so you have to find them and write to a stranger. Many first messages fail because they could go to anyone. They list the job and say nothing about why this person would care.
 
   The steps fix that in order. First it describes who really fits: their motives, their habits and where they spend time. Then it turns that profile into a search plan with places, companies and search words. Then it writes short first messages and follow-ups built on what moves that person. You send them for two weeks and count the replies. The last step turns your counts into an update that says what to change.
 when:
   - You have a role to fill and almost no applicants.
   - You want a specific kind of person and do not know where they spend time.
   - Your first messages to candidates get ignored.
+not_for:
+  - "The role already gets a steady stream of applicants: a job post or a recruiter fits better."
+  - "You want to screen applicants who already applied: use the Applicant shortlist builder."
 you_give:
   - The job description or a short brief of the role
   - What the hiring manager cares about most (optional)
@@ -24,7 +27,7 @@ you_get:
   - First messages and follow-ups, plus replies for the usual answers
   - A short update for the hiring manager that says what to change next
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It is a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the job description. Add what the hiring manager really wants if you know it.
   - Read the profile and fix anything that is wrong before the plan and messages build on it.

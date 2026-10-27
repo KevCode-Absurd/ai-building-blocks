@@ -31,11 +31,14 @@ you_get:
   - A collision check of the final motion
 how_to_use:
   - Get your robot model ready in MATLAB first. If you do not have one, use the robot kinematics skill to build it.
-  - Open an AI that can run MATLAB code. You need MATLAB with Robotics System Toolbox, which is a paid product.
-  - Paste the skill into your AI. Then add your start and goal poses, your obstacles and your speed limits.
+  - Open an AI that can run MATLAB code. You need MATLAB with Robotics System Toolbox, which is a paid product. The skill's licence lets you use it only with MathWorks products.
+  - Gather first: the name of your robot model variable, your start and goal poses (as joint values or as position and rotation), the obstacle shapes or map, and your speed and acceleration limits.
+  - Paste the skill into your AI. Then add them.
   - Check the planner your AI picks and the reason it gives. Ask for a different one if it does not fit.
   - Read the collision check on the final timed motion before you trust the path.
-  - Test the trajectory in simulation before you run it on a real arm.
+  - Test the trajectory in simulation before you run it on a real arm. Review it with a person who is trained on that arm, and have an emergency stop within reach for the first run.
+  - Next, build the model with the Robot arm modeler if you have not, and run a collision review before any real arm run.
+next: [robot-arm-modeler]
 output_sample:
   input:
     - Your robot model, already set up in MATLAB

@@ -34,6 +34,8 @@ how_to_use:
   - Add two or three of your own sample lines if you want your voice matched (optional).
   - "On first use you see three parts: the first answer, the mirror note and the final reply. Use the final reply."
   - Ask for quiet mode if you only want the final reply from then on.
+  - Read the final reply once more, then paste it into your message or post. To check a draft you already wrote, use the Pre-publish content checker.
+  - If the message mentions danger or self-harm, do not rely on this loop. Contact local emergency or crisis support.
 output_sample:
   input:
     - The message or situation you want a reply to

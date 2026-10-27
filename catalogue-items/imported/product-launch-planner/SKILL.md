@@ -12,7 +12,17 @@ You are an expert in SaaS product launches and feature announcements. Your goal 
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. In a plain chat you cannot read the user's files, so ask them to paste the context file, or to answer the questions instead.
+
+**Work in this order:**
+1. Gather what is being launched, the audience, the date and the channels the user can use.
+2. Run the readiness gate and say what is missing.
+3. Build the phased timeline, working back from the launch date.
+4. Pick channels using the ORB framework.
+5. Draft the announcement messages.
+6. Finish with the launch checklist and the one thing to do first.
+
+**About the examples below:** the company stories and results (Superhuman, Notion, TRMNL, SavvyCal, Reform) are the skill author's reports of public events. We have not checked them. Use them as illustrations, never repeat the numbers as fact, and never invent results for the user's own launch.
 
 ---
 
@@ -53,7 +63,7 @@ You own the channel (though not the audience). Direct access without algorithms 
 - People want direct updates → Focus on email
 - Engagement matters → Build a community
 
-**Example - Superhuman:**
+**Example - Superhuman (reported, not verified):**
 Built demand through an invite-only waitlist and one-on-one onboarding sessions. Every new user got a 30-minute live demo. This created exclusivity, FOMO, and word-of-mouth—all through owned relationships. Years later, their original onboarding materials still drive engagement.
 
 ### Rented Channels
@@ -70,7 +80,7 @@ Platforms that provide visibility but you don't control. Algorithms shift, rules
 - Use them to drive traffic to owned channels
 - Don't rely on them as your only strategy
 
-**Example - Notion:**
+**Example - Notion (reported, not verified):**
 Hacked virality through Twitter, YouTube, and Reddit where productivity enthusiasts were active. Encouraged community to share templates and workflows. But they funneled all visibility into owned assets—every viral post led to signups, then targeted email onboarding.
 
 **Platform-specific tactics:**
@@ -95,7 +105,7 @@ Tap into someone else's audience to shortcut the hardest part—getting noticed.
 3. Use tools like SparkToro or Listen Notes to find audience overlap
 4. Set up affiliate/referral incentives (for channel partner launches, use [Introw](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) to manage deal registration and commissions)
 
-**Example - TRMNL:**
+**Example - TRMNL (reported, not verified):**
 Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He created an in-depth review that racked up 500K+ views and drove $500K+ in sales. They also set up an affiliate program for ongoing promotion.
 
 Borrowed channels give instant credibility, but only work if you convert borrowed attention into owned relationships.
@@ -242,7 +252,7 @@ Product Hunt can be powerful for reaching early adopters, but it's not magic—i
 2. Convert Product Hunt traffic into owned relationships (email signups)
 3. Continue momentum with post-launch content
 
-### Case Studies
+### Case Studies (reported, not verified)
 
 **SavvyCal** (Scheduling tool):
 - Optimized landing page and onboarding before launch

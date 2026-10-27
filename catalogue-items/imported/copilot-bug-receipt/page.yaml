@@ -17,6 +17,8 @@ how_to_use:
   - Read the status and the Gaps line. If it says partial or blocked, run the one next step it names.
   - Paste the new results back to update the receipt.
   - For the JSON receipt, use an AI that can run code and read files.
+  - This skill assumes a developer is involved, or someone who can run the checks. If you are not one, ask a developer for the check results first.
+  - Next, attach a verified receipt to the ticket or incident record. If it says partial, run the one step it names. For a second pair of eyes, ask a teammate for a code review.
 output_sample:
   input:
     - What went wrong and what should happen instead
@@ -60,3 +62,10 @@ you_get:
   - The single next step needed if proof is missing
   - A note on whether each check was run now or supplied by you
   - A JSON version of the receipt for CI (optional, needs code running)
+terms:
+  - term: repro
+    meaning: Short for reproduction. The steps or command that make the bug happen again.
+  - term: owner path
+    meaning: The route the data takes through the code from the input to the place where the bug shows.
+  - term: decisive layer
+    meaning: The part of the system where the check must pass to prove the fix, such as the database or the screen the user sees.

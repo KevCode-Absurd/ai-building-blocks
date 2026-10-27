@@ -30,11 +30,12 @@ you_get:
   - Chart suggestions
   - Recommendation and next step
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste your numbers, or attach your spreadsheet if your AI can read files. Say which columns and which time period matter.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. Any figures in the skill's example stories are invented teaching numbers. Replace them with your own data.
+  - Gather the metric, the time period, the baseline or target, and the decision you want from the audience. Paste your numbers, or attach your spreadsheet if your AI can read files.
   - Tell your AI who the audience is and the decision you want from them.
   - "Ask for a deck outline or a written report. Your AI picks a story shape: problem and solution, trend, or comparison."
   - Read the draft. Your AI should flag any number it cannot trace to your data. Fix or cut those before you present.
+  - Use the "Call to Action" section as the close of your deck, then build the slides in your presentation tool.
 output_sample:
   input:
     - Your numbers or analysis, pasted or as a spreadsheet

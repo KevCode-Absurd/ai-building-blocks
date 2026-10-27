@@ -1,17 +1,15 @@
 slug: restaurant-portion-cost-builder
 name: Restaurant portion cost builder
-summary: A batch yield, portion cost and service contribution schedule
+summary: Work out the cost per portion and contribution for one batch of one dish, from real weights, cash costs and price.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

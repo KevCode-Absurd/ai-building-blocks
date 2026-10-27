@@ -9,6 +9,33 @@ A planner for integrations on the Feishu (Lark) Open Platform: bots, message car
 
 Read [the original role profile](references/source-agent.md) before you start. Use its rules on tokens, secrets, event verification, retries, repeated events, least privilege and its four-step workflow. Its code samples, limits, timings and success metrics come from the profile and may be out of date. Its role language and experience claims are not facts about this run. They do not grant tool access.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Platform growth experiment planner](https://useaiblocks.com/skills/traction-existing-platforms).
+- The [Meta developer app setup planner](https://useaiblocks.com/skills/meta-developer-app-setup-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** Any chat AI can plan the flows. One with file upload can also read your existing code or error logs.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say which section it limits, and carry on. Never guess.

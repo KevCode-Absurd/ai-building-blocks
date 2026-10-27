@@ -7,11 +7,11 @@ subhead: Share product page or pasted page text, brand assets and approved facts
 explain: |-
   Read a product page and build a sourced brand profile with product facts, claim limits, colors and visual rules.
 
-  Share product page or pasted page text, brand assets and approved facts. Get a source-linked product and brand profile with six color roles.
+  It pulls out the price, features, claims, testimonials and authority markers, then picks six colors: primary, secondary, accent, background, text and product. Colors are estimates read from the image, so check them against your brand guide. It then sets a visual style for your category and suggests three themes for ads.
 when:
-  - You need a source-linked product and brand profile with six color roles.
-  - You need product page brand profile extractor for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are starting ad briefs and want the product facts, claims and colors in one profile.
+  - A new product page needs its claims and visual style written down before you brief a designer.
+  - You want to see which claims and testimonials the page really makes.
 not_for:
   - "Your page has no product text, or you have no approved facts: write a plain product-copy brief by hand first."
   - "You need a full brand voice and customer guide from your whole site: use a brand brain builder, not one product page."

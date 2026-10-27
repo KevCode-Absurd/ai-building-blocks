@@ -29,7 +29,7 @@ you_get:
   - Cross-exchange funding comparison
 how_to_use:
   - Open an AI that can run commands on your computer. A plain chat window cannot do this.
-  - Install Node.js version 24 or newer. Then ask your AI to run the install commands from Step 1 of the skill.
+  - Install Node.js version 24 or newer. Then ask your AI to run the install commands from Step 1 of the skill. Read them first. They install a global npm package and a plug-in from GitHub.
   - "Paste the skill into your AI and name a coin, for example: what is the funding on BTC?"
   - "Check the top lines of the reply first: price, funding rate and open interest. Ask for more detail if you need it."
   - Treat any funding gap between exchanges as a screen, not a sure gain. Fees and transfer costs are not included.

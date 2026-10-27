@@ -54,24 +54,26 @@ output_shape: |-
   MISSING                 <each gap and what it stops>
   CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Planning allocation, approved commitment and funded cash remain separate; no milestone or financing availability is inferred.
+  - what: Target share
+    how: Change the share you want to hold after a round. The cash needed for that company, the total need and the gap change.
+  - what: Reserve
+    how: Change the approved reserve. The headroom or gap changes, and the staged draw does not.
+  - what: Milestone ceiling
+    how: Change the approved ceiling. The authorized draw is the smallest of the request, the ceiling and the undrawn commitment.
+  - what: Workbook
+    how: Say you want a spreadsheet. Inputs, formulas and checks sit on separate sheets.
 judge:
   - Planning allocation, approved commitment and funded cash remain separate; no milestone or financing availability is inferred.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each company's stake, share count and target share on one line, and paste it in each run.
+  - Save the milestone sign-off next to step 3, so the ceiling can be traced.
+  - Run the Check secondary purchase cash exposure workflow next if the fund also buys a stake from another investor.
 works_best_with:
   tools:
     - name: A spreadsheet tool and an AI that reads files

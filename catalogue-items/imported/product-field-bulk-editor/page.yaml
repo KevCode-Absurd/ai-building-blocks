@@ -9,7 +9,7 @@ subhead: A custom field value set or cleared on every product that matches your 
 explain: |
   A custom field value set or cleared on every product that matches your filter, in one run instead of hundreds of manual edits. Typical fields include material, care notes and specs.
 
-  You name the products by tag, vendor or similar filter, plus the field's namespace, key and value. Claude queries the matching items, then sets or deletes the field. It can work on variants and customers too. The field is created on first use if it does not exist. This overwrites live store data, so you need an authenticated Shopify CLI session with write access. Preview the matches before you apply.
+  You name the products by tag, vendor or similar filter, plus the field's namespace, key and value. Claude queries the matching items, then sets or deletes the field. It works on products. The field is created on first use if it does not exist. This overwrites live store data, so you need an authenticated Shopify CLI session with write access. Preview the matches before you apply.
 when:
   - A new spec must be added to every product in a collection.
   - An old field value is wrong across many items.
@@ -35,7 +35,8 @@ how_to_use:
   - Paste the skill and give your store domain, filter, namespace, key and value. Leave dry run on.
   - Check the preview list of matching products and the field name. A typo creates a field no theme reads.
   - "Turn dry run off and run it. Keep the CSV: its old value column is your record to undo the change."
-  - Look at your storefront after a small test set before you run it on everything.
+  - Look at your storefront after a small test set before you run it on everything. Confirm your theme reads the new field on a test product.
+  - To undo, ask your AI to put back each old value from the CSV, and to delete the field where there was no old value. Keep the CSV until you have checked the storefront.
 output_sample:
   input:
     - Your store domain

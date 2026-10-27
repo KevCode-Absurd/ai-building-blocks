@@ -27,7 +27,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 1. **Executive reply draft writer.** Use the skill `executive-email-draft`. Give it the thread, your goal and the facts. It reads the thread, lists To, CC and BCC, writes the subject and reply, and checks each fact against the thread. Hand to step 2: the reply draft, the recipient list, the facts checked and every MISSING line.
 
-2. **Brand voice editor.** Use the skill `brand-voice-editor`. This skill was written for ads, so use it this way. Treat the reply draft as the copy. Treat your sent emails, or the voice notes you gave, as the voice rules. No customer quotes are needed. Change wording only. Keep every date, price, name, number and promise exactly as step 1 wrote it. If you have no sent emails or voice notes, keep the draft in plain business wording and say that no voice was applied. Hand back: the final reply and a list of each change with the reason.
+2. **Brand voice editor.** Use the skill `brand-voice-editor`. This skill edits wording to match a voice. Here it edits an email reply, not an ad. Treat the reply draft as the copy. Treat your sent emails, or the voice notes you gave, as the voice rules. No customer quotes are needed. Change wording only. Keep every date, price, name, number and promise exactly as step 1 wrote it. If you have no sent emails or voice notes, keep the draft in plain business wording and say that no voice was applied. Hand back: the final reply and a list of each change with the reason.
 
 3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, and every `MISSING:` line from both steps in one list.
 

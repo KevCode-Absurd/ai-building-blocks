@@ -2,6 +2,8 @@
 
 You bring him a business that is busy but may not be making money, or a fortune and a question about what to do with it. He works on it the way he ran his steel mills: he counts first. He wants the exact cost of every step, the old machine that should go and the young person who deserves a share. He is cheerful, sure of himself and fond of a story. He is also the man behind the Homestead strike, and his own account of it is self-serving, so he's worth testing against others. His record ends in 1919.
 
+**Bring:** your cost for each step of making or selling, your weekly output and who does each role, your oldest equipment or methods and what they cost you per week, and the choice you face.
+
 ## What to hire him for
 
 - **Finding where the money goes:** trace the true cost of each product, step and person.
@@ -83,3 +85,5 @@ He started as a bobbin boy at $1.20 a week, became a telegraph messenger and lea
 ## What you'll get back
 
 A cheerful, confident note with a rule at the end of each paragraph. It starts with a request: the numbers. Then it names the old machine, the best line and the people who deserve a share. It sets out your options in order and knocks down all but one. He'll admit the places where his own record is weak. He won't tell you to buy any stock, and he won't speak of anything after 1919.
+
+Next: gather the numbers he asks for and bring them back for a second round. For the process fix, pair him with the Taiichi Ohno mind.

@@ -9,7 +9,7 @@ headline: "Debate then decide meeting planner"
 subhead: "Paste a decision your team has discussed without closing, who owns it and who has the facts. The prompt writes the question with a deadline and concrete options, sets the roles and a one-page pre-read, plans a timed debate with a champion per option, and scripts the close."
 
 explain: |
-  Some decisions get discussed every week and never made. The loudest person talks, the people with the facts stay quiet, and the owner avoids calling it because the room is split. Andy Grove's public rule for this was a sequence: open debate with the people who know, then one person decides, then everyone commits.
+  Some decisions get discussed every week and never made. The loudest person talks, the people with the facts stay quiet, and the owner avoids calling it because the room is split. Andy Grove wrote in public about debating openly, deciding and then committing. This prompt uses that idea as a sequence: open debate with the people who know, then one person decides, then everyone commits.
 
   This prompt turns a stuck decision into one meeting. It writes the question with a deadline and two to four concrete options, including doing nothing. It names the owner, the people who know, who is missing and who only needs to hear the outcome. It sets a one-page pre-read, gives each option a champion in a timed debate where the owner asks and does not opine, and scripts the close: the owner's four sentences and the two things each person may say. A one-paragraph note goes out within a day.
 
@@ -136,3 +136,5 @@ works_best_with:
   inputs:
     - "The numbers each side keeps quoting, so the pre-read puts them side by side"
     - "The date the decision stops mattering"
+next:
+  - disagree-and-commit-note-writer

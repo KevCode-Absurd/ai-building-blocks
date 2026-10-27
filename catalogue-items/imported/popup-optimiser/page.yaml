@@ -31,10 +31,10 @@ you_get:
   - A/B test ideas with metrics
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Tell your AI what you want visitors to do, and which pages and traffic sources matter.
-  - Add your current popup results and your offer, if you have them. Answer any questions it asks.
+  - "Gather these first: your goal for visitors (for example email signups), your main traffic sources, your offer, and your current popup results if you have any."
+  - Tell your AI the goal, the pages and the traffic sources. Add your results and offer. Answer any questions it asks.
   - Read the plan. Check that the popup never shows on checkout or payment pages.
-  - Build the popup in your popup tool, then run one test at a time. Treat any benchmark numbers as rough rules to test, not promises.
+  - Build the popup in your popup tool, then run one test at a time. The benchmark numbers in the skill (such as 2 to 5 percent for email popups) are the author's rough guesses with no source. Measure your own rates.
 output_sample:
   input:
     - What you want visitors to do, such as join a newsletter or claim a discount
@@ -51,3 +51,4 @@ output_sample:
       contains: If you need more than one popup, the purpose, trigger and audience of each, plus rules so they never overlap.
     - name: Test hypotheses
       contains: Ideas to A/B test, each with what you expect to change and which numbers to watch.
+next: [signup-popup-builder, welcome-popup-offer-tester]

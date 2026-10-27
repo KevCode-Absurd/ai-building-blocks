@@ -32,10 +32,12 @@ you_get:
   - Still-frame, motion and loop-check notes with visible limits.
   - MP4 or GIF exports when requested and successfully rendered.
 how_to_use:
+  - Before you start, get three things ready: a Figma access token, an AI coding tool that can open a browser page, and FFmpeg for MP4 or GIF files. If that is new to you, ask a developer to set them up once.
   - Download the complete folder and read AI-BLOCKS-USAGE.md.
   - Give it to an AI coding environment that can read files and preview a browser page.
   - Supply the design, choose the showcase or website scope, and name requested formats.
   - Ask the AI to follow SKILL.md within that scope, then review the still and motion checks.
+  - Next, publish the MP4 or GIF, or hand the website section code to your site developer.
 output_sample:
   input:
     - A Figma frame or a static image you have permission to use
@@ -89,6 +91,13 @@ tweaks:
     how: Use a standalone showcase or limit work to selected website sections.
   - what: Exports
     how: Request only video or GIF formats you need and can render with available tools.
+terms:
+  - term: PSNR
+    meaning: A score for how closely the animated still matches your original image. Higher means closer.
+  - term: Loop seam
+    meaning: The moment the animation restarts. It should look the same as the first frame.
+  - term: Blur check
+    meaning: A light blur applied before comparing frames, so tiny edge differences do not count.
 works_best_with:
   tools:
     - name: An AI coding environment with a browser

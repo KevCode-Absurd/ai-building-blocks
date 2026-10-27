@@ -9,7 +9,7 @@ subhead: Get every product below your stock limit, grouped by supplier, as a lis
 explain: |
   A reorder list of every product that has dropped below your stock limit, grouped by supplier, so you can send one order per vendor instead of hunting through your admin. It reads live counts from your Shopify store and changes nothing.
 
-  You set the limit, with 10 units as the default, and can narrow it to one location. The skill pulls tracked variants at or under that number, pages through all of them, and includes zero stock unless you turn that off. It then sorts by vendor and writes out the product, variant, SKU and count. You need a Shopify login with permission to read products and inventory.
+  You set the limit, with 10 units as the default. Counts are store-wide. The skill pulls tracked variants at or under that number, pages through all of them, and includes zero stock unless you turn that off. It then sorts by vendor and writes out the product, variant, SKU and count. You need a Shopify login with permission to read products and inventory.
 when:
   - It is Monday and you need to know what to reorder this week.
   - You are tired of exporting inventory screens and sorting them by hand.
@@ -17,26 +17,26 @@ when:
   - Items keep selling out and you want a regular low-stock check.
 not_for:
   - Your products are made to order or not tracked in Shopify. Stock counts for those show as 0, so check them by hand instead.
-  - You run several warehouses and need exact counts for each one. Set a location, or run the list once per location.
+  - You run several warehouses and need exact counts for each one. This list uses store-wide totals and cannot filter by location, so use your inventory app for per-warehouse counts.
   - You need to change stock counts or place orders. This only reads your store, so use your supplier's order form or ask your team.
 you_give:
   - Your Shopify store address
   - A stock limit (default 10)
-  - A specific location to check (optional)
   - Whether to include zero-stock items (optional)
 you_get:
   - Low-stock variants listed by supplier
   - Product, SKU and current count for each
   - A file you can order from
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run code and use the Shopify command line, such as Claude Code. A plain chat window cannot read your store.
+  - Sign in to your store with the Shopify command line, with read access to products and inventory.
+  - Paste the skill and give your store address. Set the stock limit if you do not want 10, and say whether to leave out zero-stock items.
+  - Let it run the query and export the CSV. Only variants that Shopify tracks are listed. Untracked ones are left out, so check those by hand.
+  - Open the CSV and review it by vendor. Send each vendor's rows to your supplier order form or your purchasing process.
 output_sample:
   input:
     - Your Shopify store address
     - A stock limit (optional, default is 10)
-    - One location to check (optional)
     - Whether to include zero-stock items (optional)
   prerequisites:
     - An AI that can run code and sign in to Shopify (read access to products and inventory)
@@ -50,3 +50,4 @@ output_sample:
       contains: Counts of variants below the limit, unique products, vendors and errors, plus the file name.
     - name: restock_list_<date>.csv
       contains: One row per low-stock variant with vendor, product title, variant title, SKU and current stock, sorted by vendor then product.
+next: [supplier-order-splitter, purchase-order-reorder]

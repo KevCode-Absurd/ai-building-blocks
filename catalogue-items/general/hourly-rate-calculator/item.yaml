@@ -1,0 +1,23 @@
+slug: hourly-rate-calculator
+name: Hourly rate calculator
+summary: Give it your target pay, costs and billable hours. Get an hourly rate, a day rate and a project price.
+category: general
+boards: []
+type: skill
+role: make
+job: analysis
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - pricing-model-designer
+  - price-test-planner
+  - pricing-decision-planner

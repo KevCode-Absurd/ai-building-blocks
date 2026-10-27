@@ -1,0 +1,23 @@
+slug: first-employee-payroll-setup-planner
+name: First-employee payroll set-up planner
+summary: Say where you are and when your first hire starts. Get a dated payroll set-up plan and questions for your accountant.
+category: general
+boards: []
+type: skill
+role: make
+job: people
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+  - type: question
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - new-hire-plan-builder
+  - people-cost-budget-builder
+  - employee-or-contractor-checker

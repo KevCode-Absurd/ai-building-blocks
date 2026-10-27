@@ -5,7 +5,7 @@ name: Machine fault feature extractor
 summary: Find the signal features that show early faults in a motor, pump or gear. Give it sensor data, get a feature table and a health score in MATLAB.
 job: build-software
 headline: Machine fault feature extractor
-subhead: Give it vibration or sensor recordings from a motor, pump, fan, gear or bearing. It builds a table of features and picks the ones that best show a fault. You also get a single health score and the MATLAB code.
+subhead: Give it vibration or sensor recordings from a motor, pump, fan, gear or bearing. It builds a table of features and picks the ones that best show a fault. You also get a single health score and the MATLAB code. For engineers who are comfortable with MATLAB code.
 explain: |
   A set of useful numbers pulled from the vibration or sensor signals of a motor, pump or other rotating machine, ready for spotting faults early. It runs in MATLAB.
 
@@ -19,6 +19,7 @@ not_for:
   - "You want to sort several fault types from each other: use MATLAB's Classification Learner app instead."
   - "You want a model that flags odd behaviour without fault labels: use MATLAB's Time Series Anomaly Detector instead."
   - "Your data is images, video, a plain table with no time order, or very slow readings: ask an engineer for a simpler check."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Your sensor recordings, sampled at an even rate
   - The machine type and the sample rate
@@ -47,6 +48,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB code
     - MATLAB with the Predictive Maintenance Toolbox, which are paid tools
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Prepared signals
       contains: Your signals cleaned for analysis, using rotation-synchronised averaging or envelope steps when your data allows them.

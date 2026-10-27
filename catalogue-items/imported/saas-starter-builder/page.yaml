@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your product name
   - Two or three sentences about your product
-  - "Your sign-in choice: NextAuth, Clerk or Supabase"
+  - "Your sign-in choice: NextAuth (fully scaffolded). Clerk or Supabase need a developer to adapt the sign-in code."
   - "Your database choice: Neon, Supabase or PlanetScale"
   - "Your payment choice: Stripe or none"
   - Your list of features
@@ -40,6 +40,7 @@ how_to_use:
   - Let your AI build the project one phase at a time. After each phase, run the check it names.
   - Fill in .env.example with your own keys and copy it to a .env file.
   - Test a Stripe checkout with the test card before you go live.
+  - Next, deploy to a host and test the live Stripe webhook in test mode before you turn on real billing.
 output_sample:
   input:
     - Your product name

@@ -23,5 +23,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [gary-halbert]
 credits:
-  - {title: "The Boron Letters", by: "Gary Halbert", used: "The order of the steps: hungry audience ranker, reason-why deal writer, small test and rollout planner"}
+  - {title: "The Boron Letters", by: "Gary Halbert", used: "Inspiration for ranking groups by proof of buying, writing a deal with a believable reason why, and testing small before a rollout. The three-step order is this workflow's own design."}
 generated_from: intake/the-boron-letters/skeleton.yaml

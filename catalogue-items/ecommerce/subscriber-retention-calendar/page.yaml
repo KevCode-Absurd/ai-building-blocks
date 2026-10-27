@@ -149,3 +149,4 @@ terms:
     meaning: A rule that keeps a group, such as active subscribers, out of a certain email send.
   - term: Add-on
     meaning: A product added to a subscriber's next order, usually at a discount.
+next: [subscription-cancel-flow-builder, subscription-payback-checker]

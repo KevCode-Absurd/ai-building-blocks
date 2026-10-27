@@ -33,6 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Tell your AI which CI tool you use, where your collection and environment files live, and when the tests should run.
   - "Say which reports you want: JUnit, HTML or both. Add your Node.js version if you have a preference."
+  - Run the same newman command on your own computer first, against your collection and environment files, to confirm the tests pass.
   - Copy the pipeline file into your project, in the place your CI tool expects.
   - Add the secrets your AI lists in your CI tool's settings, then push a change to see the first run.
   - This skill only writes text, so it needs no code running. It helps if your AI can read your project files.
@@ -46,6 +47,7 @@ output_sample:
   prerequisites:
     - A Postman collection with tests in it
     - A project in a CI tool that you can edit
+    - For the Jenkins version, the JUnit and HTML Publisher plugins, and a NodeJS tool named NodeJS-18 set up in Jenkins. Without them the pipeline fails at setup
   output:
     - name: Pipeline file
       contains: A ready config for your CI tool that installs Newman, runs your collection and fails the build on a failed test.

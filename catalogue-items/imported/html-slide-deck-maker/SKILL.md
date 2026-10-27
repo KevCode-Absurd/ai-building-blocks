@@ -22,6 +22,7 @@ The PDF exporter starts a loopback-only server restricted to the selected deck d
 These paths remain unavailable in this catalog copy:
 
 - `<support-root>/scripts/deploy.sh`
+- `STYLE_PRESETS.md` and the `bold-template-pack` files are linked from GitHub in Phase 2 and are not bundled here. If you cannot open those links, make the three previews yourself from the Design Aesthetics section: one safe style, one bold style and one wildcard. Say that you did.
 
 Do not invoke a step that requires one of these files. Obtain the original material and review its dependencies, license, and effects before use. Independent inline steps and the bundled helpers can proceed within the user’s authorized scope.
 

@@ -24,6 +24,7 @@ Universal (store, format, dry_run) + skill-specific:
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
+| dry_run | bool | no | true | Preview which orders would change without executing any mutation. Set to false only after the person confirms the list |
 | action | string | yes | — | `hold` or `release` |
 | order_ids | array | no* | — | Array of order GIDs to target (e.g., `["gid://shopify/Order/123"]`) |
 | query_filter | string | no* | — | Shopify order search query to select orders (e.g., `"tag:fraud-review"`) |
@@ -64,7 +65,7 @@ query OrdersForHold($first: Int!, $after: String, $query: String) {
         id
         name
         displayFulfillmentStatus
-        fulfillmentOrders(first: 5) {
+        fulfillmentOrders(first: 5) { # reads only the first 5 fulfillment orders per order; report it if an order has more
           edges {
             node {
               id
@@ -189,12 +190,12 @@ No CSV. Inline summary table:
 |-------|-------|----------|
 | `fulfillmentOrder.status` is already `ON_HOLD` | Order already held | Skipped automatically — logged in output |
 | `fulfillmentOrder.status` is not `OPEN` or `ON_HOLD` | Order is already fulfilled, cancelled, or in progress | Cannot hold/release; skip and report |
-| `INVENTORY_OUT_OF_STOCK` reason without note | Some stores require a note for this reason | Add `reason_notes` parameter |
+| `INVENTORY_OUT_OF_STOCK` reason without note | Unconfirmed: some stores may require a note for this reason (an assumption to check) | Add `reason_notes` parameter |
 | `userErrors` from mutation | Insufficient scopes or invalid fulfillment order state | Verify `write_merchant_managed_fulfillment_orders` scope |
 
 ## Best Practices
 1. Use `query_filter: "tag:fraud-review"` to hold all orders tagged by your fraud detection process in one command.
 2. Set `hold_until` to automatically release holds after a review window — prevents holds being forgotten on customer orders.
 3. Always run `dry_run: true` first when using `query_filter` — confirm the order count before holding dozens of orders at once.
-4. Combine with `fulfillment-status-digest` to identify held orders and then batch-release them after resolving exceptions.
+4. To release, run this skill again with `action: release` on the same tag or order list after the review is done. (The `fulfillment-status-digest` skill named by the original author is not in this library.)
 5. The `AWAITING_PAYMENT` reason is visible to fulfillment staff and provides context for why an order is paused.

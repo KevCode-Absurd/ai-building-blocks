@@ -23,11 +23,11 @@ Flag a line for commentary if **either** is true:
 | **Δ vs prior** and **Δ vs budget** | Amount and % |
 | **Driver** | One sentence explaining the movement from underlying activity — not a restatement of the number |
 
-A driver explains *why*, not *what*: "Cloud spend up $1.2M on incremental GPU reservations for the May launch" — not "Cloud spend increased $1.2M (18%)."
+A driver explains *why*, not *what* (example only, not real data): "Cloud spend up $1.2M on incremental GPU reservations for the May launch" — not "Cloud spend increased $1.2M (18%)."
 
 ## Sourcing the driver
 
-Look at the activity behind the line (journal-source breakdown, vendor mix, headcount delta, volume × rate) via the GL system of record. If the driver isn't clear from the data, write "driver unclear — flag for controller" rather than inventing one.
+Look at the activity behind the line (journal-source breakdown, vendor mix, headcount delta, volume × rate). Use the detail the user pasted from their accounting system (for example a general ledger export). You do not need system access. If the driver isn't clear from the data, write "driver unclear — flag for controller" rather than inventing one.
 
 ## Output
 

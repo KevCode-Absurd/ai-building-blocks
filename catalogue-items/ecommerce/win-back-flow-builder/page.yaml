@@ -130,8 +130,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its predicted next-order date and customer value fields fit the advanced steps."}
-    - {name: "Shopify", why: "Order history gives the gap between purchases."}
+    - {name: "Klaviyo", why: "A paid email tool (it has a free plan with limits). The predicted next-order date and customer value steps need it or a tool with the same fields."}
+    - {name: "Shopify", why: "A paid store plan. Its order history gives the gap between purchases."}
     - {name: "Any good chat AI", why: "Any current chat AI can do the sums from pasted order data."}
   inputs:
     - "At least a few hundred past buyers, for stable gaps"

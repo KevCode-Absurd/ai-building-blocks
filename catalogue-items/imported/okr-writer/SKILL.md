@@ -20,6 +20,8 @@ When to use this skill: designing OKRs for the next quarter, auditing why curren
 
 ---
 
+> Added by AI Blocks: the other skills named below (roadmap-planning, feature-launch-playbook, product-analytics-setup, experiment-design, discovery-research-synthesis) are not part of this item. Skip them and give the same facts in plain words. If the full file is too long for your AI, use these parts: Objective design, Key result design, Scoring discipline and Mid-quarter recalibration.
+
 ## What this skill is for
 
 This skill spans OKR design and the operational rhythm around them. The PM-skill distinction:

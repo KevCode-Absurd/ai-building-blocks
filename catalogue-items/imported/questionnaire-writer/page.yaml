@@ -29,7 +29,7 @@ you_get:
   - Why each question matters
   - How-to-answer note and catch-all question
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tools are needed. The skill saves a Markdown file when your AI can. If your chat cannot save files, copy the questionnaire text from the reply.
   - "Answer the first question: who the questionnaire goes to, their role and how you know them."
   - "Answer the second question: what facts or decisions you need back from them."
   - Read the questionnaire it writes. Check that every item you named has a question.
@@ -53,3 +53,4 @@ output_sample:
       contains: Questions grouped by theme, most important first, each with one idea, an optional reason it matters and an empty answer space.
     - name: Anything else?
       contains: A closing catch-all question for anything you did not think to ask.
+next: [decision-record-writer]

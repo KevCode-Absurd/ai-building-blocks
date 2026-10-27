@@ -18,24 +18,25 @@ you_get:
   - A bounded wakeup dispatcher with retry and stale-claim recovery
   - A failure checklist and synthetic test cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the complete pack and give its instructions to your AI. Use an AI that can read your code.
+  - Give it your list of events that should wake an agent, the key that marks two events as the same, how long a claim may be held, and how agents store state.
+  - Read the dispatcher against your current heartbeat. The code is a starter, not a finished service.
+  - Run the test cases in a staging project before you turn it on.
 how_it_works:
-  - title: Step 1
-    text: Persist one event signal with a deduplication key.
-  - title: Step 2
-    text: Claim eligible events atomically.
-  - title: Step 3
-    text: Keep client and agent scope attached.
-  - title: Step 4
-    text: Respect pause and budget limits.
-  - title: Step 5
-    text: Dispatch a bounded heartbeat.
-  - title: Step 6
-    text: Mark consumed only after handoff.
-  - title: Step 7
-    text: Reset stale claims safely and avoid creating extra user-visible threads.
+  - title: Saves one signal per event
+    text: Builds a dedup key from agent, reason and source, so a repeat event is skipped.
+  - title: Claims events in one step
+    text: Moves pending rows to claimed in a single update, so two workers can't take the same one.
+  - title: Keeps scope attached
+    text: Every wakeup carries its client and agent, and a claim never crosses clients.
+  - title: Respects pause and budget
+    text: Leaves the wakeup pending when the agent is paused or over budget.
+  - title: Dispatches a bounded heartbeat
+    text: Wakes the agent for a capped number of events, with capped retries and no self-wakes.
+  - title: Marks done after handoff
+    text: Sets processed only once the agent has the work.
+  - title: Recovers stale claims
+    text: Puts claims older than the lease back in the queue, without opening a new thread.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:

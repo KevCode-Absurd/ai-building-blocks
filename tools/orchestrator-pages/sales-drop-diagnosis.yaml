@@ -30,9 +30,10 @@ you_get:
   - A test brief with three ideas aimed at different buyer doubts
   - Headlines for each idea, with the one to test first
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 4 skill files in the order they run: Ad sales drop analyst, Untried ad idea finder, Ad test brief writer and Ad headline writer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your inputs ready. It works step by step and saves each result.
+  - Have your inputs ready. Your ad results for two periods and your brand file are required. It works step by step and saves each result.
+  - Check the drop report before you act on it. Read the headlines for health or result claims before any go live.
 output_sample:
   input:
     - Your ad results export for this period, one row per ad
@@ -85,7 +86,7 @@ example:
     [the handoff pack] Follow HANDOFF.md.
 
     Ad results: this month and last month, 9 ads. Practice numbers.
-    Brand file: the Sprout brand file. Target cost per sale: $30.
+    Brand file: the Sprout brand file. Practice data. Target cost per sale: $30.
   output: |-
     STEP 1: DROP REPORT
     Counting check: browser and server purchases match within 3%.
@@ -99,7 +100,7 @@ example:
 
     STEP 3: TEST BRIEF
     Evidence: measured. Plan: refresh, because P1 wore out.
-    Idea 1: "The one I kept" | Doubt: "why switch?" | Answer: 80% of surveyed users take it daily.
+    Idea 1: "The one I kept" | Doubt: "why switch?" | Answer: 80% of surveyed users take it daily (a claim on the practice brand file).
 
     STEP 4: HEADLINES
     | The greens you'll still be taking next month. | moment | test first |

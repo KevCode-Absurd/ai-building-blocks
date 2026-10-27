@@ -22,7 +22,7 @@ not_for:
 you_give:
   - A text description or a source image
   - A mask for the area to change (optional)
-  - A computer with a GPU and Python
+  - A computer with a GPU and Python. Know your GPU model and Python version before you start.
   - A style or model preference (optional)
 you_get:
   - Python code that generates images
@@ -35,7 +35,7 @@ how_to_use:
   - Install the packages your AI lists, starting with the pip install line for diffusers, transformers, accelerate and torch.
   - Run the text-to-image code your AI gives you. The image is saved as output.png in the folder where you run it.
   - If you see an out-of-memory error, ask your AI for the memory settings in this skill and run again.
-  - Before you use an image for business, check the licence of the model you chose. Then try image-to-image, inpainting or ControlNet to refine it.
+  - Before you use an image for business, check the licence of the model you chose. Then try image-to-image, inpainting or ControlNet to refine it. Check output.png first, and make small changes to the prompt and run it again until it looks right.
 output_sample:
   input:
     - A text description of the picture you want

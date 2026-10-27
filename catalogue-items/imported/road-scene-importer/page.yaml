@@ -35,7 +35,7 @@ how_to_use:
   - Give your AI the path to your map file and say whether you want to load only or also build.
   - Tell it your asphalt, bridge or junction choices if you have any. Ask it to check if your map has closed loops.
   - Let it run the checks and the import. Fix anything the checks flag.
-  - Open the saved scene in RoadRunner and look over the roads by eye.
+  - "Open the saved scene, which sits in your RoadRunner project folder and is named after your map. Look over the roads by eye: that lanes run on without breaks, and that junctions and bridges look right. Only then ask for a full build."
 output_sample:
   input:
     - Your map file (.rrhd or .xodr)

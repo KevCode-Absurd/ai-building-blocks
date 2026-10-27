@@ -14,9 +14,9 @@ Take a learner from surface understanding to genuine depth on a single concept. 
 
 # Activation
 
-- Learner asks to go deeper on a known concept. `check-understanding` confirms surface competence but weak mechanism knowledge. Interview prep or architectural decision needs depth.
-- **Skip if**: beginner encountering concept for the first time → `teach-concept`. Needs immediate practical help → `build-with-me`/`debug-teacher`. Has a misconception → `misconception-detector` first.
-- **Routing**: confirm current level with a quick probe before starting. Pair with `challenge-generator` at the end for advanced application.
+- Learner asks to go deeper on a known concept. A quick check shows surface competence but weak knowledge of how it works. Interview prep or architectural decision needs depth.
+- **Skip if**: beginner encountering concept for the first time → teach the basics first. Needs immediate practical help → work through the build or bug together first. Has a misconception → correct it first.
+- **Routing**: confirm current level with a quick probe before starting. Finish by setting one practice challenge for advanced application.
 
 # Inputs
 

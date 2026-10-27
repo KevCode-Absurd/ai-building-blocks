@@ -42,7 +42,7 @@ Show advancement. Celebrate completions. Make the path visible. (See onboarding 
 
 The principles that make progress mechanics, checklists, and prompts actually work:
 
-- **Endowed Progress Effect** — people finish faster when progress is already started for them. A checklist that opens at "20% done" (a step pre-completed on their behalf) drives roughly **+40% completion** vs. starting at 0%. Give users a head start, don't make them start from nothing.
+- **Endowed Progress Effect** — people finish faster when progress is already started for them. A checklist that opens at "20% done" (a step pre-completed on their behalf) is reported in third-party research to raise completion by roughly **40%** vs. starting at 0%. Treat that as a rough example, not a promise, and check it against your own funnel data. Give users a head start, don't make them start from nothing.
 - **Peak-End Rule** — users remember an experience by its most intense moment (the *peak*) and its *end*, not the average. Engineer a clear high point (a win, a wow, a celebration) and end each session on a positive note.
 - **Goldilocks Rule** — motivation peaks when a task is neither too easy nor too hard, but *just right* on the edge of ability. Tune early steps so they're achievable but not trivial.
 - **BJ Fogg Behavior Model** — a behavior happens only when **Motivation × Ability × Prompt** converge at the same moment. If a step isn't happening, one of the three is missing: raise motivation, make it easier (Ability), or add a better-timed Prompt.
@@ -196,7 +196,7 @@ Define "stalled" criteria (X days inactive, incomplete setup)
 Track drop-off at each step:
 ```
 Signup → Step 1 → Step 2 → Activation → Retention
-100%      80%       60%       40%         25%
+100%      80%       60%       40%         25%   (example shape only; use your own numbers)
 ```
 
 Identify biggest drops and focus there.
@@ -243,7 +243,7 @@ When recommending experiments, consider tests for:
 
 ## References
 
-- **[references/minimum-path-to-value.md](references/minimum-path-to-value.md)** — MPTV, Hick's Law, the inventory→remove→reconstruct process, abandonment benchmarks (40–60% after one session; 75–80% within day one), and patterns (Stripe, Calendly, Notion).
+- **[references/minimum-path-to-value.md](references/minimum-path-to-value.md)** — MPTV, Hick's Law, the inventory→remove→reconstruct process, abandonment benchmarks (rough third-party figures of 40–60% after one session and 75–80% within day one; check against your own funnel data), and patterns (Stripe, Calendly, Notion).
 - **[references/activation-models.md](references/activation-models.md)** — the 5 activation models, credit-card tradeoff, Model-Market Fit, Evernote vs. Notion.
 - **[references/experiments.md](references/experiments.md)** — comprehensive A/B test and experiment ideas.
 

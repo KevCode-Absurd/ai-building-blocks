@@ -9,7 +9,7 @@ subhead: Give it your product and who it is for. It builds one brand file, adds 
 explain: |
   A brand that lives in your head gets said a little differently every time. Each new page, post or freelancer starts from nothing, and the work drifts. If you have no website yet, there is nothing to read the facts from.
 
-  The steps build the brand up in the order that keeps it consistent. First your answers become one brand file. Then it writes the core message, tagline options and proof for each audience. It adds tone, word choices and writing rules on top. Next it makes three different visual directions, scores each against your values and your buyer, and merges the best parts into one. Last it brings the brand file and the direction into a style guide with a real example for every rule.
+  The steps build the brand up in the order that keeps it consistent. First your answers become one brand file. Then it writes the core message, tagline options and proof for each audience. It adds tone, word choices and writing rules on top. Next it makes three different visual directions, scores each against your values and your buyer, and merges the best parts into one. Last it brings the brand file and the direction into a style guide. Each rule gets an example taken from your brand file, or a note that none is available.
 when:
   - You are starting a business or a project and have no website or brand file to read.
   - Your brand is only in your head and each new writer or designer asks you the same questions.
@@ -68,7 +68,7 @@ how_it_works:
   - title: Choose the visual direction
     text: Makes three different directions, scores each against your values and your buyer, merges the best parts, and writes photo rules you can answer with yes or no.
   - title: Write the style guide
-    text: Combines the brand file and the direction into one guide with a real example for every rule.
+    text: Combines the brand file and the direction into one guide. Each rule gets an example from your brand file, or a MISSING line if there is none.
 output_shape: |-
   STEP 1: BRAND FILE
     Product | buyers | rivals | proof | voice | gaps marked MISSING

@@ -36,6 +36,7 @@ how_to_use:
   - Add your store address. Say if you need Admin or Storefront access, and name your language if you have one.
   - Never paste secret keys into the chat. Use placeholders and add the real keys in your own code.
   - Run the code on your own computer or server. Check a small test first, such as 10 items, before a full run.
+  - Next, add paging for the full list, then rate-limit handling. The examples use API version 2025-01 and a Remix sign-in, so check both against Shopify's current docs. For simple data, Shopify's built-in export is quicker.
 output_sample:
   input:
     - What store data you want to read or change
@@ -48,7 +49,7 @@ output_sample:
     - Some comfort with code, or a developer to run it
   output:
     - name: Authentication setup
-      contains: Code that signs in to the Admin API, or the Storefront API with its public token.
+      contains: Code that signs in to the Admin API, or the Storefront API (a public token for browser code, a private token for server code).
     - name: Query or mutation
       contains: The GraphQL request that reads or changes the data you asked for.
     - name: Paging loop

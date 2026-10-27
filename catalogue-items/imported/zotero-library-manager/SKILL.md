@@ -142,8 +142,8 @@ The CLI and MCP server search a running Zotero desktop app, including indexed PD
 
 ## Citing Scientific Agent Skills
 
-This skill is part of Scientific Agent Skills by K-Dense. If it materially contributed to a
-manuscript, report, presentation, or code release, add the paper to the references or
+This skill is part of Scientific Agent Skills by K-Dense. Managing a Zotero library does not need this. Do not add the citation below to the user's work unless the user asks. If the user says this skill materially contributed to a
+manuscript, report, presentation, or code release and wants to credit it, add the paper to the references or
 software section and tell the user you did so:
 
 > Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent

@@ -16,7 +16,7 @@ when:
   - Several bugs sit in one area and fixing them one by one keeps failing.
   - You want a fix that does not break other parts of the app.
 not_for:
-  - "You have one bug with one clear symptom: ask your AI to debug it step by step, or hand it to a developer for a quick look."
+  - "You have one bug with one clear symptom: use the bug diagnoser."
   - "You have no access to the code or cannot run tests: ask a developer to check the feature with you first."
   - "The feature needs a full redesign: talk with your team about a rebuild before you patch anything."
 you_give:
@@ -35,10 +35,11 @@ you_get:
 how_to_use:
   - Use an AI that can read your project files and run commands, like a coding assistant in your terminal or editor. A plain chat window cannot run your tests.
   - Gather your project folder path, your test command, any error logs and the recent commit range if you know it.
-  - Paste the skill into your AI, then name the feature and describe what is broken.
+  - Paste the skill into your AI, then name the feature and describe what is broken. The skill mentions three companion skills (systematic debugging, verification before completion and scope). You do not need them. Your AI can follow the five phases without them.
   - Read the diagnosis report before you let it change anything. Check that the causes make sense.
   - Let it fix one issue at a time. If three fixes in a row cause new problems, it stops and asks you whether to rethink the design.
   - Read the completion report. Check the feature by hand if it has a screen.
+  - Before you merge, ask a second developer to read the change log, and run your full test suite.
 output_sample:
   input:
     - The name or folder of the broken feature
@@ -58,3 +59,4 @@ output_sample:
       contains: One entry per fix with the file, the issue, the change made and the test result.
     - name: Completion report
       contains: Files changed, fixes made, test totals, regressions found, and a check of each file that uses the feature.
+next: [bug-diagnoser, pull-request-reviewer]

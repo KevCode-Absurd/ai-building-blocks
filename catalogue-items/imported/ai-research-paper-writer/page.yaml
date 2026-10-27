@@ -2,7 +2,7 @@ thinking: high
 thinking_why: A strong paper needs a clear argument and checked claims.
 new_slug: ai-research-paper-writer
 name: AI research paper writer
-summary: Turn your research code and results into an AI research paper draft for NeurIPS, ICML, ICLR or ACL, with every citation checked.
+summary: Turn your research code and results into an AI research paper draft for NeurIPS, ICML, ICLR or ACL, with each citation looked up and unconfirmed ones marked.
 job: research-topics
 headline: AI research paper writer
 subhead: A full first draft of a machine learning paper, written from your code, results and notes, and aimed at venues such as NeurIPS, ICML, ICLR and ACL.
@@ -26,7 +26,7 @@ you_give:
   - Related papers you already know (optional)
 you_get:
   - A full paper draft in the conference style
-  - Real citations fetched from search, not memory
+  - Citations fetched from search, not memory. It cannot confirm them without web search, so check every one yourself
   - A list of unverified references
   - Feedback on the weak sections
 how_to_use:
@@ -45,6 +45,7 @@ output_sample:
   prerequisites:
     - An AI that can read your files, run code and search the web
     - A LaTeX setup or an Overleaf account to compile the draft
+    - "Optional: the Exa search tool it suggests is a separate service that may need its own account"
   output:
     - name: Paper draft
       contains: A full first draft in the target conference template, built from your repo, results and main claim.

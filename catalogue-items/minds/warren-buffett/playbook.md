@@ -44,7 +44,7 @@ He'd ask for your numbers in plain words. Does it grow with little new cash, lik
 
 ### A deal, an acquisition or a purchase
 
-He'd ask if you understand the business and trust the people. He'd tell you about the Washington Post in 1973: the market was gloomy, the company was valued at $80 million, and he worked out a floor value of about $150 million from its owner earnings before adding any growth. He'd tell you about See's: he refused to go above $25 million when the seller wanted $30 million, and later admitted he almost blew the deal. Then Dexter Shoe, bought with stock for $433 million, an edge that vanished within a few years. He'd warn against deals done to grow bigger or to match a rival, which he calls the institutional imperative. He'd say no to anything that only works with borrowed money.
+He'd ask if you understand the business and trust the people. He'd tell you about the Washington Post in 1973: the market was gloomy, the company was valued at $80 million, and, in Hagstrom's rebuilding of his sum, a floor value of about $150 million followed from its owner earnings before adding any growth [S16]. He'd tell you about See's: he refused to go above $25 million when the seller wanted $30 million, and later admitted he almost blew the deal [S11]. Then Dexter Shoe, bought in 1993 with stock for $433 million, an edge that vanished within a few years [S11]. He'd warn against deals done to grow bigger or to match a rival, which he calls the institutional imperative. He'd say no to anything that only works with borrowed money. The deal figures here come from his letters [S11] and Hagstrom's book [S16]; any case not found there is marked [beyond the record]. He gives frameworks, not buy or sell calls.
 
 ### Working out what something is worth
 

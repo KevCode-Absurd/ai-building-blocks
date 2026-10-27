@@ -35,6 +35,7 @@ how_to_use:
   - Type /shark, then your idea. Add price, costs and customers so far. Add --investors and a number from 2 to 10 if you want.
   - Read the one-line size check. Five investors means 11 helper calls, and each counts toward your plan usage.
   - Let the panel run. Then read BOARD.md and start with the first item on the homework list.
+  - Rewrite your pitch file with the new answers and run a fresh session. Check whether the panel's votes change.
 output_sample:
   input:
     - Your business idea in a few lines

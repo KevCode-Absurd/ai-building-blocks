@@ -39,7 +39,7 @@ not_for:
   - You want your results checked for waste first. Use the Paid Media Auditor agent.
   - You want to plan the campaign structure, bids and budget. Use the PPC Campaign Strategist agent or the Paid Social Strategist agent.
   - You want ad lines built only on facts and reviews. Use the Fact-based ad copy writer.
-  - You want one clean A/B test between two ads. Use the Two-version ad test planner.
+  - You want one clean A/B test between two ads. Use the Split-run test planner.
 you_give:
   - Your product or service, the offer and the price or terms
   - Who you sell to and what they worry about

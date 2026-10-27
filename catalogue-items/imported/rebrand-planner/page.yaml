@@ -19,6 +19,7 @@ not_for:
   - "You only want a small visual tweak with no change in strategy: make a simple refresh of your colors or fonts yourself."
   - "You are not sure the brand is the problem: first review what you have with a brand audit, then come back here."
   - "You need the full launch plan for the public day: use this plan for the big picture, then plan the launch step by step with your team."
+  - "You run a store and want a rename score and a keep, tweak or rename call: use the Store rebrand planner."
 you_give:
   - Why you want to rebrand, and what set it off
   - What is broken in the brand today
@@ -40,6 +41,7 @@ how_to_use:
   - Answer any questions your AI asks. It may push back if your reason is only a fresh look.
   - Read the diagnosis first. If it does not match your real problem, say so and ask for a redo.
   - Check the keep and change table with your team before you share the messages.
+  - Take the keep and change table into the brand messaging builder before any work goes public.
 output_sample:
   input:
     - Why you want to rebrand, and what set it off
@@ -64,3 +66,4 @@ output_sample:
       contains: "Four phases: internal, owned assets, public launch and the transition period."
     - name: Rebrand risks
       contains: Risks of customer confusion, lost recognition, staff doubt, bad timing and weak execution, with ways to lower each.
+next: [brand-messaging-builder, brand-health-auditor]

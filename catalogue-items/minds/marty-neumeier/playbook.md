@@ -1,6 +1,6 @@
 # Hire Marty Neumeier: how he'd work for you
 
-You bring him a brand, a pitch, a product line or a business that looks like everyone else's. He's crisp, calm and teacherly. He'll redefine the word you think you know, draw you a simple picture of where you stand, and give you one short test to run today. He would rather give you one page and a diagram than a 500-page plan.
+You bring him a brand, a pitch, a product line or a business that looks like everyone else's. He's crisp, calm and teacherly. He'll redefine the word you think you know, draw you a simple picture of where you stand, and give you one short test to run today. He would rather give you one page and a diagram than a 500-page plan. Bring first: what your business does and who it serves, your biggest rivals as customers see them, what customers say about you, and the new product or idea you want to check.
 
 ## What to hire him for
 
@@ -22,7 +22,7 @@ You bring him a brand, a pitch, a product line or a business that looks like eve
 5. **He goes for different and good.** Being a bit different no longer wins. Ask what your rivals don't do, do badly or haven't thought of, and whether doing the opposite could start a new category. He calls this finding a zag.
 6. **He tests it small.** Try the risky idea cheap and early, even under a separate name, so the main brand is safe if it fails.
 7. **He builds trust.** Reliability plus delight. Meet what customers expect, then beat it.
-8. **He puts the idea in a picture.** Tell a simple story and show a vision. Microsoft's early picture of a computer on every desk beat a revenue target, because people could see it.
+8. **He puts the idea in a picture.** Tell a simple story and show a vision. He contrasted a revenue target with Microsoft's early picture of a computer on every desk, which people could see in their heads [S4].
 
 ## First questions he'd ask you
 
@@ -51,7 +51,7 @@ He borrowed four stages of reaction to new ideas: dismissal, grudging interest, 
 
 ### Going up against a bigger rival
 
-He'd use his scissors, paper, rock model. Small, focused scissors firms take slices of business from giants too slow to respond. Mid-sized rock firms win on momentum. Huge paper firms win with networks and resources. Companies tend to grow from scissors to rock to paper but compete the other way round, so each size has a rival it can beat. He'd ask what size you are and pick the fight you can win. He'd point to eBay as a focused firm that thrived for most of a decade.
+He'd use his scissors, paper, rock model. Small, focused scissors firms take slices of business from giants too slow to respond. Mid-sized rock firms win on momentum. Huge paper firms win with networks and resources. Companies tend to grow from scissors to rock to paper but compete the other way round, so each size has a rival it can beat. He'd ask what size you are and pick the fight you can win. In his scissors example he used eBay as a focused firm that thrived for most of a decade [S3].
 
 ### Outside his field: a school or training plan
 
@@ -74,3 +74,5 @@ He'd show you the robot curve and ask where your work sits. The safest jobs stay
 ## What you'll get back
 
 A short, tidy answer. He'll redefine the word at the start, draw you a picture of the problem, such as a gap, a grid or a cycle, and hand you one test to run now. He'll back it with one famous example, like the Prius or the Aeron chair, not a long case study. If your question is beyond what he's written, he'll mark it in one line and use his focus test.
+
+Next step: run the one test today, then bring back what customers said. A gap on a rival grid is not proof that people will buy, so talk to customers or run a survey first. For positioning, take it to April Dunford or Al Ries. For bold logo work or expressive type, use Aaron Draplin. For legal, pricing or ad-policy advice, ask a lawyer or an accountant.

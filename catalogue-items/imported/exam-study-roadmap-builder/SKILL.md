@@ -71,7 +71,7 @@ Skip everything else. Do not load all sections for a focused request.
 | Mode | Time | Load |
 |------|------|------|
 | 🚨 Emergency | 1–2 hrs | 🟩 Easy only, top 10 questions |
-| ⚡ Sprint | 3–5 hrs | 🟩 + 🟨, top 25 questions |
+| ⚡ Sprint | 3–5 hrs | 🟩 + 🟨, top 25 questions, plus the single top 🟥 Hard question per unit |
 | 📚 Standard *(default)* | 6–12 hrs | All difficulties, full roadmap |
 | 🗓️ Advance | Days+ | Daily schedule + mock papers |
 
@@ -398,8 +398,8 @@ TYPE          EASY    MEDIUM   HARD    OVERALL
 💻 Coding     [X]%    [X]%     [X]%    [X]%
 🧪 Lab        [X]%    [X]%     [X]%    [X]%
 ──────────────────────────────────────────────────────
-PREPAREDNESS  : [X]%
-MARKS RANGE   : [Low]–[High] out of [Total]
+PREPAREDNESS  : [X]%   (an estimate from the papers you supplied, not a forecast of your mark)
+MARKS RANGE   : [Low]–[High] out of [Total]   (same: an estimate, not a prediction)
 ──────────────────────────────────────────────────────
 STRONG        : [types + topics]
 WEAK → FOCUS  : [types + topics]

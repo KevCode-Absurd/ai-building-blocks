@@ -24,6 +24,7 @@ not_for:
   - You need to decide whether to keep, fix or replace one ad. Use the campaign keep-or-change checker.
   - You have only one period of totals and no earlier one. It still writes the page, but there is no change column, so it can only describe.
   - You want a forecast or a budget plan. This reports what happened and proposes three actions; it doesn't predict.
+  - "You want a quick first pass with fewer checks: use the Ad results brief writer."
 
 you_give:
   - This period's totals from your ad platform export (Meta Ads Manager or Google Ads: spend, impressions, clicks, purchases, revenue), with the dates, the currency and what each column counts

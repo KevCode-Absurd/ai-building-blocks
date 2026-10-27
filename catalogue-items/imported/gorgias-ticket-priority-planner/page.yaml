@@ -40,7 +40,7 @@ how_to_use:
   - Run composio link gorgias and sign in to your Gorgias account when asked.
   - Add the downloaded folder to your AI and ask for the ticket triage by name.
   - Add a filter if you want one, such as a tag or a date range.
-  - Read the list. Check the P0 and P1 tickets first, and approve any account changes before they happen.
+  - Read the list. Check the P0 and P1 tickets first. The skill only reads tickets and changes nothing in Gorgias, so make any reply or update yourself.
 output_sample:
   input:
     - Your Gorgias account, linked through Composio
@@ -60,3 +60,4 @@ output_sample:
       contains: A table of feature requests, feedback and non-urgent questions.
     - name: Recommended Actions
       contains: A list of next steps for the most urgent tickets.
+next: [gorgias-support-reply-writer, gorgias-support-queue-action-planner]

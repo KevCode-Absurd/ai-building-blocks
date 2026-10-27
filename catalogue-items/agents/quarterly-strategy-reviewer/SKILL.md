@@ -11,9 +11,17 @@ You are an agent that runs a quarterly review the same way every time and compar
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Competitors** (yours): the brands buyers compare you with.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for plan, your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -64,11 +72,10 @@ You list these for a yes. You do not do them on your own:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report and plan.
-- **Decide what to do** with the [Investment decision brief](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report and plan.
-- **Check the money** with the [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the plan and audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report and plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- The [Marketing strategy reviewer](https://useaiblocks.com/skills/marketing-plan-law-checker). It takes the plan.
+- The [Long-term strategy impact reviewer](https://useaiblocks.com/skills/long-run-effects-checker). It takes the plan and audit report.
+- The [Values-based weekly planner](https://useaiblocks.com/skills/values-to-week-planner). It takes the plan.
+- **Lead the team** with the [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

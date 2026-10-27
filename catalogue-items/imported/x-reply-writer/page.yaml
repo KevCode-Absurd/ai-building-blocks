@@ -34,7 +34,7 @@ how_to_use:
   - Paste the tweet you want to reply to. Say how old it is.
   - Add your own view or a short story from your work (optional). It helps the reply sound like you.
   - Read the result. If it says skip, skip. If it gives a reply, check that it reads well without the original tweet.
-  - Post the reply yourself. The skill never posts for you.
+  - Post the reply yourself. The skill never posts for you. Then watch whether it gets replies or likes. If you have a gap that deserves its own post, write that post separately. The optional VoiceMoat connector can help with that.
 output_sample:
   input:
     - The text of the tweet you want to reply to

@@ -1,0 +1,135 @@
+new_slug: first-employee-payroll-setup-planner
+name: First-employee payroll set-up planner
+summary: Say where you are and when your first hire starts. Get a dated payroll set-up plan and questions for your accountant.
+job: hire-people
+thinking: medium
+thinking_why: It orders a long list of tasks and has to separate what you know from what to check locally.
+headline: First-employee payroll set-up planner
+subhead: Tell it your country, how you want to run payroll, and when your first hire starts. It lists what to register, what to collect, what to decide and what to check, in order, with a date and an owner for each task. It ends with questions for your accountant.
+explain: |
+  Paying your first employee is the point where a business starts to owe more than a wage. There are registrations, tax payments, records and often insurance or a pension, and the rules depend on where you are. Missing one is hard to fix later.
+
+  This skill gives you the list and the order, not the local rules. You tell it your country and start date. It lays out the tasks every first hire needs, in the order that avoids rework, and marks the ones where your tax office or accountant must confirm the details. You get a plan with dates working back from the first pay day.
+when:
+  - You are about to take on your first employee and have never set up payroll.
+  - You have a start date and want to work back to what must be done before it.
+  - You want a list of questions ready before you meet your accountant.
+not_for:
+  - "You're not sure the person is an employee: use the Worker classification reviewer first."
+  - "You want the tax and pay figures worked out: your accountant or payroll service does that."
+  - "You want the first week of work planned for the new hire: use the New hire plan builder."
+you_give:
+  - Your country, and your business type (sole owner, company, partnership)
+  - The start date of the first hire and how often you will pay them
+  - "How you plan to run payroll: yourself, with software, with your accountant, or not sure"
+  - What you have already done, such as registered as an employer (optional)
+you_get:
+  - A set-up plan in order, with a date and an owner for each task
+  - Which tasks need your tax office or accountant to confirm local rules
+  - The records to keep from the first pay day
+  - Questions for your accountant
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your country, business type, the start date and the pay frequency.
+  - Say how you plan to run payroll, or say you are not sure and ask it to compare the three usual ways.
+  - Check each task marked CONFIRM against your tax office's own site or with your accountant.
+  - Put the dated tasks in your calendar, and take the questions to your accountant.
+output_sample:
+  input:
+    - Your country, business type, first start date and pay frequency
+    - How you plan to run payroll, or that you are not sure
+    - What you have already done (optional)
+  output:
+    - name: Your situation
+      contains: Your country, business type, start date and pay frequency, as you gave them.
+    - name: Plan
+      contains: Tasks in order, each with a date, an owner and a flag where your tax office or accountant must confirm.
+    - name: How to run payroll
+      contains: The option that fits what you said, and why.
+    - name: Each pay run
+      contains: The steps of one pay run, from hours or salary to payment and filing.
+    - name: Records to keep
+      contains: What to file from the first pay day.
+    - name: Questions
+      contains: What to ask your accountant, one line each.
+    - name: Missing
+      contains: Anything you did not tell it that changes the plan.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Fixes the dates
+    text: Takes your start date and pay frequency and works back from the first pay day.
+  - title: Lists the registrations
+    text: Names the kinds of registration an employer usually needs, marked CONFIRM for your country.
+  - title: Lists what to collect
+    text: Names what to get from the new hire before they start, such as bank details and proof they can work.
+  - title: Picks a way to run payroll
+    text: Compares doing it yourself, software and a provider, using what you said.
+  - title: Sets the pay run
+    text: "Lays out each pay run: hours or salary, deductions, payslip, payment, and the payments due to the tax office."
+  - title: Lists records and cover
+    text: Names what to keep, and the kinds of insurance or pension that may apply, marked CONFIRM.
+  - title: Writes the questions
+    text: Turns every CONFIRM into a question for your accountant.
+output_shape: |
+  YOUR SITUATION
+  <country, business type, start date, pay frequency>
+
+  PLAN
+  1. <task> | By: <date> | Owner: <you / accountant / provider> | CONFIRM: <yes / no>
+
+  HOW TO RUN PAYROLL
+  <option you leaned to, and why>
+
+  EACH PAY RUN
+  <steps, in order>
+
+  RECORDS TO KEEP
+  <list>
+
+  QUESTIONS FOR YOUR ACCOUNTANT
+  - <question>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Start date
+    how: Give the real date. A plan that works back from a date shows what is already late.
+  - what: How you run payroll
+    how: Say it plainly. Doing it yourself needs more steps than handing it to a provider.
+  - what: Your country
+    how: Name it. Every task flagged CONFIRM depends on it.
+  - what: What you've done
+    how: Say what is already registered or set up, so the plan starts from where you are.
+judge:
+  - "Tasks are in an order that works: register, collect, set up, run, record."
+  - Every task that depends on local rules is marked CONFIRM.
+  - No tax rate, threshold or payment date appears unless you gave it.
+  - Each task has an owner and a date, or says MISSING.
+  - It is clear that your accountant confirms the local rules.
+test:
+  - Ask your accountant to read the plan. Note which tasks they would add or remove.
+  - Change the start date to two weeks sooner. The plan should show which tasks no longer fit.
+  - Run it again for the same facts. The order of tasks should stay the same.
+improve:
+  - Save your country, business type and chosen payroll method in your about-me note.
+  - Add the names your tax office uses for each registration and payment, so the plan uses them.
+  - Keep the final plan as a template for the second hire, and edit it after the first pay run.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Ordering a long task list and writing questions is text work any strong chat AI does well.
+    - name: Payroll software or your accountant
+      why: They run the pay and hold the current local rules.
+  inputs:
+    - Your tax office's page for new employers
+    - A signed offer letter or contract
+    - A quote from a payroll provider or your accountant
+terms:
+  - term: Pay run
+    meaning: One round of working out pay, taking deductions, paying the person and reporting it.
+  - term: Deductions
+    meaning: Amounts taken out of gross pay, such as tax, as your country's rules require.

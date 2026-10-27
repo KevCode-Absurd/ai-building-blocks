@@ -48,6 +48,7 @@ output_sample:
     - Segments or metrics you care about (optional)
   prerequisites:
     - Web search in your AI, or consensus numbers you paste in
+    - "Optional: an options data feed for the implied move, which is usually paid or needs an API"
   output:
     - name: Header
       contains: Company, quarter, results date and time, and whether the date was confirmed.

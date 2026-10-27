@@ -11,6 +11,8 @@ metadata:
 
 Four-phase framework for onboarding enterprise customers from contract to value realization. The goal isn't just go-live — it's sustained adoption that doesn't cliff at Week 12.
 
+What you hand back: an owner check, a pre-kickoff checklist, a four-phase plan with owners and checks, warning signs, and checks that use is holding after go-live. Aim for two to four pages. The Week 4 and Week 12 patterns are the author's experience, not measured facts.
+
 ## When to Use
 
 **Triggers:**
@@ -454,4 +456,4 @@ Are active users growing Week 6 → Week 12?
 
 ---
 
-*Based on enterprise onboarding across multiple platform companies — designing partner onboarding directly and collaborating closely with CS on customer onboarding. Not theory — lessons from seeing Week 4 ghosting happen repeatedly and learning that go-live ≠ success, and understanding the adoption cliff that kills 30% of deals in first year.*
+*The author's own account (not checked here): enterprise onboarding work, designing partner onboarding directly and working closely with customer success. Not theory — lessons from seeing Week 4 ghosting happen repeatedly and learning that go-live ≠ success, and understanding the adoption cliff that the author says costs accounts in the first year. These are one author's experience. The week numbers are patterns, and no figure here is sourced.*

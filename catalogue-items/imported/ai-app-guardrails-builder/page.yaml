@@ -39,6 +39,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. It works best when your AI can run Python. If it cannot, every test is marked NOT RUN.
   - Paste your notes. Answer any question your AI asks. Skipped inputs are listed as missing, not guessed.
   - Run the test plan yourself with fake data. Fix any rule that does not give the result the plan expects.
+  - Next, run the test plan with fake data and record each NOT RUN result. Then write the placeholder checks before any release.
   - Do not ship until you have written the placeholder checks and tested real attacks. Pair it with the AI agent attack tester.
 output_shape: |
   Rules summary: <risk> | <input or output rail> | <method> | <what it needs>

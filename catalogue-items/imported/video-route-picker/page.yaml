@@ -30,7 +30,7 @@ you_get:
   - Notes on assets, rights and export
 how_to_use:
   - "Write down four things: what the video is about, its length and shape, footage you already have, and any tools or budget."
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed. If the skill mentions stage-plan or stage-assemble, those need a separate video tool, so in a chat you get the written plan only.
   - "Add this line, then your four details: Pick the route for this video and lock it. Give me the full plan."
   - Check the reply. It should name one route (or a mixed plan), give reasons, and list the script, storyboard, on-screen text and export target.
   - If the route looks wrong, say why and ask your AI to pick again before you start work.

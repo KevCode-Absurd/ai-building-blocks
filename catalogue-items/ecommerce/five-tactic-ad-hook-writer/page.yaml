@@ -16,6 +16,7 @@ not_for:
   - "You have no approved claims or checked numbers yet: get them from your team or product owner first, then come back."
   - "You need full ad copy, not just the first line: write the body copy with your AI in a normal chat, using the best hook as the opener."
   - "You want a longer script or a long headline: this tool keeps each hook to 3 to 7 words."
+  - "You want hooks for Reels or TikTok with a first picture: use the Short video hook writer."
 you_give:
   - Product facts
   - Angle
@@ -47,17 +48,17 @@ how_it_works:
   - title: Check the inputs
     text: Confirm product facts, angle, buyer and approved claims. Mark facts that are missing.
   - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
+    text: Gather the product, the pain or promise, the buyer, the tone, the format and the awareness stage. Ask for anything missing.
   - title: The 5 Hook Tactics
-    text: Follow the the 5 hook tactics section in the full method and keep its required fields and decision rules.
+    text: Use pattern interrupt, question, bold claim, direct callout and story. Use numbers and stories only from your own proof.
   - title: Generate 10-15 Hooks
-    text: Follow the generate 10-15 hooks section in the full method and keep its required fields and decision rules.
+    text: Write 10 to 15 hooks of 3 to 7 words, mixed across the five tactics, each labelled with its tactic.
   - title: Rank
-    text: Follow the rank section in the full method and keep its required fields and decision rules.
+    text: Score each hook on how specific it is, how natural it sounds and how well it stops the scroll. Put the best first.
   - title: Production Notes
-    text: Follow the production notes section in the full method and keep its required fields and decision rules.
+    text: For each top hook, suggest the visual, the delivery and the tempo.
   - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
+    text: Keep every hook to 3 to 7 words, with no marketing clichés and no invented claims.
   - title: Review the result
     text: Return ten to fifteen hooks grouped by tactic, with first test picks. Check facts, math and the decisions before any action.
 thinking: medium

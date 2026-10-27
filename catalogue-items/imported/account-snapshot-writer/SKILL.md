@@ -3,6 +3,14 @@ name: account-research
 description: "Research a company using Common Room data. Triggers on 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]', or any account-level question."
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `references/my-company-context.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Account Research
 
 Retrieve and synthesize account information from Common Room. Handles four interaction patterns: full overviews, targeted field questions, sparse data situations, and combined MCP data + LLM reasoning.

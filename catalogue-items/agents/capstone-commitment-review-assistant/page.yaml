@@ -23,7 +23,7 @@ when:
 not_for:
   - You are setting up the team agreement for the first time. Use the Capstone team agreement planner.
   - You only need one person's handover written. Use the Handover note writer.
-  - You want an action list from one set of meeting notes. Use the Action item tracker.
+  - You want an action list from one set of meeting notes. Use the Executive action register keeper.
   - You want to mark student work or judge who contributed what. Use the Student rubric feedback writer, and leave grades to the teacher.
   - You want it to message your team or change a shared task board. It prepares drafts and takes no action.
 

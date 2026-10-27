@@ -12,7 +12,7 @@ Answer natural language questions about AWS resources by translating intent into
 **STRICTLY READ-ONLY.** This skill exclusively uses:
 - `aws <service> describe-*`
 - `aws <service> list-*`
-- `aws <service> get-*`
+- `aws <service> get-*` only for the named calls used in this file, such as `get-caller-identity`, `get-resources`, `get-bucket-encryption`, `get-bucket-policy`, `get-function-configuration` and `get-cost-and-usage`. Do not run any other `get-*` call.
 - `aws sts get-caller-identity`
 - `aws configure get`
 - `aws resourcegroupstaggingapi get-resources`
@@ -21,6 +21,8 @@ Answer natural language questions about AWS resources by translating intent into
 
 **NEVER** run any of the following, regardless of what the user asks:
 `create-*`, `run-*`, `start-*`, `stop-*`, `reboot-*`, `delete-*`, `terminate-*`, `put-*`, `update-*`, `modify-*`, `attach-*`, `detach-*`, `send-*`, `publish-*`, `invoke-*`, `execute-*`
+
+Also never run `aws secretsmanager get-secret-value` or `aws ssm get-parameter`, even though they match `get-*`. They return secret values. Show names and details only.
 
 If the user's query implies a write action, respond:
 > "This skill is read-only. I can show you the current state of [resource], but I cannot [create/modify/delete] it. Would you like to see what currently exists?"

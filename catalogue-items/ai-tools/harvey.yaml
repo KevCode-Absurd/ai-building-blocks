@@ -38,9 +38,11 @@ checked: 26 Oct 2026
 first_result:
   - "Use the Request a Demo link at harvey.ai. No self-serve sign-up is described."
   - "Bring the kind of work you want to try, such as a batch of vendor contracts, and roughly how many you handle."
+  - "Before you share any client documents, ask in writing how Harvey stores them, whether they are used to train models, and who its sub-processors are. Put the answers in the contract."
   - "Ask to see it on one batch of your own documents, with your lawyers in the room."
   - "Ask what each answer links back to, so a lawyer can check it against the source."
   - "Agree who reviews the output before it goes to a client."
+  - "You end with research or contract findings, linked to the text, for a lawyer to check. Next: for a first read before you see a lawyer, try Claude or ChatGPT."
 needs:
   - "A firm or company plan agreed through a demo."
   - "A set of your own documents to test, with permission to share them."

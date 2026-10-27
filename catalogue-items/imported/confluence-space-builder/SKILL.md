@@ -3,13 +3,22 @@ name: "confluence-expert"
 description: Atlassian Confluence expert for creating and managing spaces, knowledge bases, and documentation. Configures space permissions and hierarchies, creates page templates with macros, sets up documentation taxonomies, designs page layouts, and manages content governance. Use when users need to build or restructure a Confluence space, design page hierarchies with permission structures, author or standardise documentation templates, embed Jira reports in pages, run knowledge base audits, or establish documentation standards and collaborative workflows.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `project-management/references/atlassian-mcp-tools.md`
+- `../atlassian-templates/scripts/template_scaffolder.py`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Atlassian Confluence Expert
 
 Master-level expertise in Confluence space management, documentation architecture, content creation, macros, templates, and collaborative knowledge management.
 
 ## Atlassian MCP Integration
 
-**Primary Tool**: Atlassian Remote MCP server (bundled `.mcp.json`, server key `atlassian`). Tools are camelCase and surface as `mcp__atlassian__<toolName>`. **Canonical tool list**: `project-management/references/atlassian-mcp-tools.md`. Never invent tool names — if a capability isn't in that list, it is not available via MCP.
+**Primary Tool**: Atlassian Remote MCP server (bundled `.mcp.json`, server key `atlassian`). Tools are camelCase and surface as `mcp__atlassian__<toolName>`. **Tool list**: the file `project-management/references/atlassian-mcp-tools.md` is not in this copy, so use only the Atlassian tool names your AI can actually see. Never invent tool names — if a capability isn't there, it is not available via MCP. For page bodies, write the storage-format XHTML by hand (see `references/macro-cheat-sheet.md`).
 
 **Key Operations** (obtain `cloudId` once via `mcp__atlassian__getAccessibleAtlassianResources`):
 

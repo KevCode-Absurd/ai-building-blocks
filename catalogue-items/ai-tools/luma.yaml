@@ -20,7 +20,7 @@ best_for:
   - Developers who want video in their own app through the API.
 not_for:
   - Long videos with one continuous take.
-  - People who want a free plan, since the pricing page lists none.
+  - People who want a free plan, since the pricing page lists none. Kling offers free daily credits.
 pricing:
   model: subscription
   from: "US$30 per month"
@@ -32,5 +32,21 @@ runs_in: [web, mobile, api]
 blocks: []
 alternatives: [kling, runway, pika, veo]
 last_checked: 2026-10-21
+first_result:
+  - "Go to lumalabs.ai and sign up. The pricing page lists no free plan, so check the credits first."
+  - "Open Dream Machine. Upload a product photo, or type a one-sentence description."
+  - "Make one short clip. Watch it for warped product details and any text."
+  - "Make a second version and keep the better one."
+  - "Add voice or music in another tool, such as ElevenLabs or CapCut."
+  - "You end with a short video clip."
+  - "Next: plan the shot first with the Video ad shot list maker."
+needs:
+  - "A Luma account on a paid plan."
+  - "A product photo or a one-sentence description."
+  - "Credits. Plus includes 10,000."
+not_verified:
+  - "Whether any free trial exists."
+  - "How many credits one clip uses."
+  - "The licence for commercial use on each plan."
 sources:
   - https://lumalabs.ai/pricing

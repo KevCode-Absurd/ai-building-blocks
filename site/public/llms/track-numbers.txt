@@ -1,6 +1,6 @@
 # Track your numbers: AI Blocks
 
-> 99 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 100 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Acquired asset earnings adjustment checker](https://useaiblocks.com/skills/purchased-amortization-eps-bridge): Share acquired asset charges and their tax effect. Compare reported earnings per share with an adjusted view.
 - [Ad data quality checker](https://useaiblocks.com/skills/ad-data-quality-checker): Give it ad and sales data with dates and time zone. Pick checks, like spend totals or duplicate leads, and get full BigQuery findings.
@@ -25,6 +25,7 @@
 - [Donated goods stock handover checker](https://useaiblocks.com/workflows/reconcile-donated-goods-records): Share donation receipts, distributions, dates and stock counts. Get an item-by-item quantity check, missing records and handover notes.
 - [Employee share dilution cash calculator](https://useaiblocks.com/skills/sbc-share-offset-cost): Share net employee shares and repurchase assumptions. Estimate the cash to offset dilution beside the reported pay expense.
 - [Energy contract cash modeler](https://useaiblocks.com/skills/contracted-energy-cash-model): Share accepted energy volumes, contract prices and costs. Get a three-year view of operating cash.
+- [Expense report builder](https://useaiblocks.com/skills/expense-report-builder): Paste receipts and notes. Get an expense report with totals by category, a reason for each line and gaps to fix.
 - [Experiment tracker](https://useaiblocks.com/agents/agency-project-management-experiment-tracker): Plan an A/B test before launch, then read the result. Get sample size, stop rules, a go or stop call and the lesson to keep.
 - [Extra week sales growth checker](https://useaiblocks.com/skills/extra-week-revenue-comparability): Share annual sales and the extra week's sales. Compare reported growth with growth over a matching period.
 - [First-party tracking pixel builder](https://useaiblocks.com/skills/first-party-tracking-pixel): Set up a first-party tracking pixel for your website. Answer a few questions and get a script, a collector and a Postgres database you own.

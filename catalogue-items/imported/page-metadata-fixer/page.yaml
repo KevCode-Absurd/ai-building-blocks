@@ -36,7 +36,8 @@ how_to_use:
   - Give it your site code, or paste the head section of two or three key pages. Add your live domain.
   - Read the audit table first. The first rows are the ones that matter most.
   - Apply the fixes. Check that your AI changed only metadata and not other code.
-  - Publish. Then paste your live link into each platform's preview checker to see the share card.
+  - Publish. Then paste your live link into each platform's preview checker to see the share card. This only works once the page is online, so do it after launch if your site is not live yet.
+  - If you changed the canonical link, ask Google Search Console to re-index the page. Then use the SEO auditor for content, speed and links.
 output_sample:
   input:
     - Your site code, or the head section of your pages
@@ -97,3 +98,4 @@ terms:
     meaning: The title, picture and text shown when someone shares your link. Also called Open Graph.
   - term: Structured data
     meaning: Code that describes a page, such as a product, so search engines can read it.
+next: [link-preview-fixer, seo-auditor]

@@ -18,6 +18,7 @@ not_for:
   - "You face a cheap choice you can undo: run a quick test instead of mapping your knowledge."
   - "You want hard questions to test what you know: use the Real knowledge tester."
   - "You need facts about a market or field: ask a person who works in it, or read the source reports."
+  - "You want five plain questions you answer without notes, sorted into yes, no or too tough: use the Circle of competence sorter."
 you_give:
   - The topic or decision
   - What you have done, studied or read about it

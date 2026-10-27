@@ -7,7 +7,6 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
   - {type: question, required: true}
   - {type: document, required: false}
 outputs:
@@ -17,9 +16,9 @@ outputs:
 uses: [documentation-system-planner, process-and-sop-writer, on-call-runbook-writer, sop-and-runbook-checker]
 steps:
   - {uses: documentation-system-planner, note: "Where documentation lives, how pages are named, who owns each, how often it is reviewed and how a stale page is caught."}
-  - {uses: process-and-sop-writer, note: "A standard procedure for each repeat task: the steps in order, who does each, what good looks like and what to do when a step fails."}
+  - {uses: process-and-sop-writer, note: "A standard procedure for each repeat task: the steps in order, who does each, what good looks like and what to do when a step fails. Takes the system plan from step 1."}
   - {uses: on-call-runbook-writer, note: "A runbook for each thing that breaks: the signs, what to check in order, the fix, who to call and when to stop and escalate."}
-  - {uses: sop-and-runbook-checker, note: "Each procedure and runbook followed as a newcomer would, step by step, with every place they would get stuck, need to ask or find a missing step."}
+  - {uses: sop-and-runbook-checker, note: "Each procedure and runbook followed as a newcomer would, step by step, with every place they would get stuck, need to ask or find a missing step. Takes the procedures from step 2 and the runbooks from step 3."}
 origin: own
 version: 1.0.0
 example_pending: true

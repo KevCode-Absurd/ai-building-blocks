@@ -7,6 +7,32 @@ description: "Check a Meta Ads account against 30 tests across tracking, creativ
 
 Paste your Meta Ads exports and tracking screenshots. You get 30 checks marked PASS, WARNING or FAIL, a score out of 100 for each of four areas, how much of the account the audit could see, and a ranked fix list.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan what to test** with the [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
+- **Plan what to test** with the [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the audit report.
+- **Write the ad copy** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Meta Ads Manager and Events Manager:** These are the sources of your export and your tracking screenshots. Export at ad level, and use the same attribution window throughout.
+- **Any good chat AI:** It reads pasted tables and screenshots. It needs no connection to your ad account.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the report. No API key or account login is needed. The user pastes or attaches the data. Do not fetch any account yourself.

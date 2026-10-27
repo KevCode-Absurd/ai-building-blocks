@@ -30,7 +30,7 @@ you_get:
   - A list of spots that look risky to read
 how_to_use:
   - Open your AI tool and paste the skill text, or upload the skill folder if your tool allows files.
-  - Share the code or module. Say which area matters most, if you have one.
+  - Share the code or module. Say which area matters most, if you have one. For a large codebase, split it by module and read one module or a few files per request.
   - Ask for the orientation map first. Check that the modules and entry points match what you know.
   - Ask your AI to go function by function. It asks why each block exists (5 Whys) and how it works (5 Hows).
   - Ask for a final summary of purpose, assumptions, rules that must hold and spots that are risky to read.

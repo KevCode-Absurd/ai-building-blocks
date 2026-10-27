@@ -25,7 +25,7 @@ Processes refunds and creates replacement orders without navigating the Shopify 
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | true | Preview operations without executing mutations. Set to false only after the user has confirmed the preview |
 | order_id | string | yes | — | GID of the order (e.g., `gid://shopify/Order/12345`) |
 | refund_line_items | array | no | all refundable | Array of `{line_item_id, quantity}` to refund; if omitted, refunds all refundable quantities |
 | reason | string | no | other | Refund reason: `customer`, `fraud`, `inventory`, `declined`, `other` |
@@ -43,7 +43,8 @@ Processes refunds and creates replacement orders without navigating the Shopify 
    **Expected output:** Full order with `displayFinancialStatus`, `lineItems` (with `refundableQuantity`), `transactions`, `customer`, `shippingAddress`; verify order is refundable before proceeding
 
 2. **OPERATION:** `refundCreate` — mutation
-   **Inputs:** `input.orderId`, `input.refundLineItems` (from parameter or all refundable), `input.notify`, `input.note: <reason>`
+   **Before this step:** show the user the order name, each item and quantity, and the refund amount from the dry run, and wait for an explicit yes. Do not run the mutation without it.
+   **Inputs:** `input.orderId`, `input.refundLineItems` (each with `lineItemId`, `quantity` and `restockType`; from parameter or all refundable), `input.transactions` (each with `amount`, `gateway`, `kind: REFUND` and `parentId`, taken from the order's original sale transaction in Step 1; without it Shopify records the refund but does not send money back), `input.notify`, `input.note: <reason>`
    **Expected output:** `refund.id`, `refund.totalRefundedSet`, `userErrors`
 
 3. **OPERATION:** `draftOrderCreate` — mutation (only if `create_replacement: true`)
@@ -221,7 +222,7 @@ No CSV output. The session completion summary reports the refund ID and amount. 
 | `refundableQuantity` is 0 | Line item already fully refunded | Check order refund history |
 | `userErrors` from refundCreate | Invalid refund amounts or order not refundable | Check `displayFinancialStatus` — must not be `REFUNDED` |
 | `userErrors` from draftOrderCreate | Invalid line items or customer | Verify product variants still exist |
-| Order not found | Invalid order GID | Use `order-lookup-and-summary` skill to find the correct order ID |
+| Order not found | Invalid order GID | Find the correct order ID in the Shopify admin (open the order and copy its long gid:// ID), or use the order lookup assistant from this library |
 
 ## Best Practices
 1. Always run `dry_run: true` first — Step 2 is irreversible. Verify `refundableQuantity` per line item in Step 1 output before committing.

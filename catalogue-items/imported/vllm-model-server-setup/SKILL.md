@@ -106,7 +106,7 @@ vllm serve <awq-model-id> \
 vllm serve <model-id> --enable-prefix-caching
 ```
 
-Tensor parallel size must divide the model's number of attention heads evenly. Two, four and eight GPUs usually work. Check the model's config, and do not assume any size will.
+Tensor parallel size must divide the model's number of attention heads evenly. Open the model's config, read its number of attention heads, and pick a GPU count that divides it evenly. Do not assume any size will work.
 
 **Step 2: Test with limited traffic**
 

@@ -33,10 +33,10 @@ you_get:
 how_to_use:
   - Open an AI that can run Python code on a computer with an NVIDIA GPU. A plain chat window can only explain the steps.
   - Paste this skill into your AI, then name your base model.
-  - Add your file of prompts with chosen and rejected answers. Ask your AI to check the format first.
+  - Add your file of prompts with chosen and rejected answers, as JSON or CSV with the columns prompt, chosen and rejected. Ask your AI to check the format first.
   - Ask your AI to pick a method. DPO is the simplest if you have answer pairs.
   - Run the training script. If the GPU runs out of memory, ask for smaller batch sizes or LoRA.
-  - Compare the tuned model with the original on the same prompts before you use it.
+  - Compare the tuned model with the original on the same prompts before you use it. Then test on new prompts the model has not seen, or clean your dataset and run again.
 output_sample:
   input:
     - The name of a base model to tune

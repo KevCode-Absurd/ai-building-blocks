@@ -34,8 +34,10 @@ how_to_use:
   - Write down the decision your visitors want help with, in one sentence.
   - Gather your formula and any benchmark numbers. Note the source for each number.
   - Describe your audience and what you want from the lead, such as a sales call or a newsletter signup.
-  - Paste the skill into Claude, ChatGPT or Gemini, then add your notes. No code or web access is needed.
-  - Ask for the calculator design. Check that the result is free and that every number has a source before you pass it on.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in, then add your notes. No code or web access is needed.
+  - Check the idea first. List the three decisions a visitor makes after seeing the result. If you cannot name three, use a checklist instead.
+  - "Ask for the design in this order: the decision, the inputs, the formula and its sources, the result, then the email tiers. Check that the result is free and that every number has a source."
+  - After you approve it, hand the spec and the method note to a developer. Pair it with the copy for the page that holds the calculator.
 output_sample:
   input:
     - The decision your visitors want help with

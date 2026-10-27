@@ -9,6 +9,14 @@ metadata:
   updated: 2026-03-15
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `./scripts/convert.sh`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Terraform Patterns
 
 > Predictable infrastructure. Secure state. Modules that compose. No drift.
@@ -409,12 +417,15 @@ jobs:
   apply:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    # Manual approval: in GitHub, open Settings > Environments > production
+    # and add Required reviewers. The job waits there until a person approves.
     environment: production
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
       - run: terraform init
-      - run: terraform apply -auto-approve
+      - run: terraform plan -input=false -out=tfplan
+      - run: terraform apply -input=false tfplan   # applies the saved plan only, no -auto-approve
 ```
 
 ### Drift Detection
@@ -434,8 +445,9 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
       - run: terraform init
       - run: |
+          set +e
           terraform plan -detailed-exitcode -out=drift.tfplan 2>&1 | tee drift.log
-          EXIT_CODE=$?
+          EXIT_CODE=${PIPESTATUS[0]}   # terraform's exit code, not tee's
           if [ $EXIT_CODE -eq 2 ]; then
             echo "DRIFT DETECTED — review drift.log"
             # Send alert (Slack, PagerDuty, etc.)

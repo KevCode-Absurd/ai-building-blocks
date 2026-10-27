@@ -11,7 +11,7 @@ explain: |
 
   It starts with your past spend and results for each channel. It fits a curve that flattens as spend grows, and caps channels that look great only because they were small. A blank spend cell is treated as missing, never as zero.
 
-  For a new budget it splits the money using a rule that keeps spend from piling into one channel. It then runs thousands of random draws to give a cautious case (p10) and an optimistic case (p90). Last, it checks the method against past periods to show how far off it could be.
+  For a new budget it splits the money using a rule that keeps spend from piling into one channel. It then runs thousands of random draws to give a cautious case (p10) and an optimistic case (p90). Last, your AI works out how far off the method was on past periods you held back, or says the check was not run. The script does not do this check for you.
 
   The result is a forecast from your own history. It is not proof that more spend causes more results. This skill comes from wizard7558's attribution skills, shared under MIT.
 when:
@@ -37,12 +37,13 @@ you_get:
   - Funnel counts at each step for each case
   - An error check on past periods, or a clear note that it was not run
 how_to_use:
-  - Download the skill folder from this page. Keep scripts and references with SKILL.md. Use an AI that can run Python with numpy, such as Claude Code or ChatGPT with data analysis.
+  - Download the skill folder from this page. Keep scripts and references with SKILL.md. Use an AI that can run Python with numpy, such as Claude Code or ChatGPT with data analysis. These may need a paid plan or an API key.
   - Put your history in a sheet with one row per period and channel. Columns are the period, the channel, spend and results. Leave blank any spend you do not know.
   - Tell your AI your new total budget and the period it covers. Keep the same unit as the history, such as monthly for monthly data.
   - Ask it to follow the skill and run scripts/run-budget-scenario.py. To test the setup first, run it on references/scenario-fixtures.json.
   - Read the inputs-used section first, then the cautious and optimistic range. Ask for the error check on past periods before you trust the forecast.
   - Use the range, not one number, in your plan. Test a bigger spend in one channel before you commit all of it.
+  - After that test, add the actual results to your history sheet and run the planner again for the next budget round.
 how_it_works:
   - title: Calibrate
     text: It reads spend and results by channel, and treats missing spend as a gap, not as zero.
@@ -55,7 +56,7 @@ how_it_works:
   - title: Project the funnel
     text: It turns the results into counts at each funnel step using your own step rates.
   - title: Check against the past
-    text: It compares forecasts with periods held back, and reports the error. It states that forecasts are not proof of cause.
+    text: Your AI compares forecasts with periods held back and reports the error, or writes BACKTEST NOT RUN with the reason. The script does not do this step. It states that forecasts are not proof of cause.
 output_shape: |-
   INPUTS USED
     <periods> | <channels> | <gaps found> | <return and error: supplied or worked out>

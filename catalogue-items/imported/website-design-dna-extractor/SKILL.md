@@ -257,6 +257,7 @@ For each step:
 - Read `references/step3-taste.md`
 - Inputs: Step 1 + Step 2 outputs
 - Produce: 4 taste principles (each Trigger / Decision / Reason / Evidence), at least one Restraint trade-off
+- Tag each Reason "observed" (a measurement shows it) or "inferred" (your reading of why the designer chose it), and name the measurement that supports it. Inferred reasons are not facts about what the company intended.
 
 #### Step 4 — Observer
 - Read `references/step4-observer.md`
@@ -275,7 +276,7 @@ Then write two files into the **current working directory** (use `pwd` if you ne
 - `./{domain}.md` — the Markdown portion
 - `./{domain}.json` — the JSON, pretty-printed with 2-space indent
 
-If either file already exists, overwrite without asking. Users invoking this skill twice on the same site expect the latest analysis to win.
+If either file already exists, tell the user which file you are replacing before you write it. Users invoking this skill twice on the same site expect the latest analysis to win.
 
 ### Phase 4 — Self-audit (Anti-Slop pass)
 
@@ -312,6 +313,8 @@ python3 -m json.tool ./{domain}.json > /dev/null && echo "valid" || echo "INVALI
 If any check fails, fix and re-run before shipping.
 
 ### Phase 5 — Export for your build tool
+
+Exports can append to or change existing instruction files (CLAUDE.md, GEMINI.md, copilot-instructions.md, .cursor and .windsurf rules). Ask the user to confirm before any write to a file that already exists.
 
 You already captured `{exportTarget}` in Phase 0. Do not ask again.
 

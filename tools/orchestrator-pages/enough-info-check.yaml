@@ -1,6 +1,6 @@
 new_slug: enough-info-check
 name: Check you know enough before you act
-summary: Check what you know before you act. Get hard questions, an honest score and a learn, borrow, start small or pass plan for the first week.
+summary: Describe what you are about to do. Get your knowledge tested, then a learn, borrow, start small or pass plan.
 job: think-and-decide
 thinking: high
 thinking_why: It has to test your claims honestly, including the ones you feel sure about. Give it your strongest model.
@@ -29,7 +29,7 @@ you_get:
   - A check of whether your adviser gains or loses with the advice
   - A choice of learn, borrow, start small or pass, with a first-week plan and a retest date
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Answer the hard questions from memory. Say so when you are guessing.
   - Do the first week of the plan and book the retest.

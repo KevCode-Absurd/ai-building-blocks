@@ -54,6 +54,8 @@ SMS is not "another email." Use it where the channel's properties win:
 | Win-back lapsed customers | **Both** | SMS for the strong nudge, email for the offer detail |
 | Post-purchase upsell | **SMS** | High open rate, ride the purchase momentum |
 
+**About the numbers:** open rates, costs, lift, settlement sizes and healthy ranges in this skill are rough industry figures, not measured for your business. Treat them as guides and check them with your SMS provider.
+
 **General rule**: SMS earns the right to interrupt because of opt-in. Use it for messages that genuinely benefit from immediacy. If it could wait 24 hours, send it via email.
 
 ---
@@ -73,6 +75,8 @@ If most customers are outside the US (LATAM, Europe, Africa, Middle East, India,
 ---
 
 ## Compliance — Read First
+
+**This is not legal advice.** Rules change by country and state. Before you send, confirm the TCPA, 10DLC and CASL points below with a lawyer or your SMS provider.
 
 **Compliance is the foundation, not an afterthought.** A single TCPA class-action settlement runs $5M–$40M. The basics:
 
@@ -290,7 +294,7 @@ When the user asks for an SMS plan, return:
 3. **Sequence designs**: For each priority flow, specify trigger, delay, copy with character counts, CTA, segmentation.
 4. **Platform recommendation**: Based on stack, list size, and complexity.
 5. **Measurement plan**: KPIs, benchmarks, A/B test queue.
-6. **Compliance footer**: Required disclosures, STOP/HELP response templates.
+6. **Compliance footer**: Required disclosures, STOP/HELP response templates, and the line "Not legal advice: confirm with a lawyer or your SMS provider before sending."
 
 Keep recommendations specific. Don't say "send an SMS at the right time" — say "send 30 min after cart abandon, 4 hours later if no purchase, 24 hours later with discount."
 

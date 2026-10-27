@@ -5,17 +5,17 @@ description: "Check an adviser's success fee against the engagement letter, cred
 
 # Check adviser fees in seller proceeds
 
-Check an adviser's success fee and see how the unpaid invoice reduces what the seller receives at closing.
+Check an adviser's success fee and see how the unpaid invoice reduces what the seller receives at closing. The fee has two tiers, a minimum and a retainer credit. The tier rate applies only to the slice of value inside its band.
+
+**When not to use it:** You want the whole seller cash bridge with working capital and escrow (use Reconcile seller closing cash). Your price depends on leakage between the locked-box date and closing (use Reconcile a locked-box closing price). The adviser charges a flat fee with no tiers (check the invoice by hand).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
+- The [Seller closing proceeds and retained cash checker](https://useaiblocks.com/workflows/reconcile-seller-closing-cash). It takes the spreadsheet and document.
+- The [Locked-box deal price checker](https://useaiblocks.com/workflows/reconcile-a-locked-box-closing-price). It takes the document and spreadsheet.
+- The [Seller rollover and incentive checker](https://useaiblocks.com/workflows/separate-rollover-and-management-incentives). It takes the document and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -23,29 +23,28 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for document, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
+- **A spreadsheet tool and an AI that reads files:** The fee is slice-by-slice arithmetic. The AI should recalculate it and show each line.
 <!-- /needs -->
 
 ## What you need
 
 Ask once for anything below that is missing and changes the result. Take the reporting date, currency, scale and accounting basis from the user.
 
-- The engagement letter: fee tiers, minimum, definition of transaction value, retainer credit rule
-- Proof of retainer paid
-- The agreed deal value and the price bridge
-- The draft closing statement and other unpaid seller expenses
+- The engagement letter: the two fee rates, the value where the first tier ends, the minimum fee, how transaction value is defined, and the retainer credit rule.
+- Proof of the retainer paid, with its date and amount.
+- The agreed deal value and the price bridge from the signed agreement.
+- The draft closing statement, the closing date, the debt payoff and cash at that date, and the other unpaid seller expenses.
 
 If an item stays missing, write `MISSING:` with what it stops. Never invent it, set it to zero or borrow a figure from an example.
 
@@ -61,9 +60,15 @@ Read each component SKILL.md in full if it is attached. If it is not, follow the
 
 ## Steps
 
-1. **Adviser fee tier checker** (`adviser-fee-tier-checker`). Compute the two-slice marginal fee, the minimum and the paid-retainer credit the letter allows. Save the gross fee, the credit used and the remaining invoice as separate lines. Hand the next step the unpaid invoice. Save `outputs/step-1-adviser-fee-tier-checker.md` and any native file. Stop this step if a tool or input is missing.
+1. **Adviser fee tier checker** (`adviser-fee-tier-checker`). It reads the engagement letter, the retainer proof and the deal value. It works in this order, with each line labelled:
+   - Settle what the letter counts as transaction value (assumed debt, contingent consideration, rollover) before any rate is applied.
+   - Apply the tier 1 rate to the value up to the band limit.
+   - Apply the tier 2 rate to the value above it.
+   - Add the two slices and compare the total with the minimum fee. The higher one is the gross fee.
+   - Subtract only the retainer credit the letter allows. The invoice cannot go below zero, and a credit larger than the fee is flagged.
+   It returns the gross fee, the credit used and the invoice still due, as separate lines. Save `outputs/step-1-adviser-fee-tier-checker.md` and any native file. Stop this step if a tool or input is missing.
 
-2. **Closing equity proceeds checker** (`closing-equity-proceeds-checker`). Include only the unpaid invoice with the other seller expenses, with currency and scale stated. Reconcile to the draft closing statement. Keep cash already paid out of the deductions. Hand the next step seller proceeds. Save `outputs/step-2-closing-equity-proceeds-checker.md` and any native file. Stop this step if a tool or input is missing.
+2. **Closing equity proceeds checker** (`closing-equity-proceeds-checker`). It reads only the unpaid invoice from `outputs/step-1-adviser-fee-tier-checker.md`, with the deal price, cash, debt payoff, debt-like items and other unpaid seller expenses. Seller proceeds = deal price + included cash - debt payoff - debt-like items - unpaid seller expenses, each taken off once. Retainer cash already paid is not a deduction. It ties the result to the draft closing statement line by line and explains each difference. It returns seller proceeds and the tie. Save `outputs/step-2-closing-equity-proceeds-checker.md` and any native file. Stop this step if a tool or input is missing.
 
 ## Workbook (only if the user asks for one)
 
@@ -73,19 +78,19 @@ Build it with the tools you have. Keep inputs, calculations and checks apart, sh
 
 Return, in this order:
 
-- Fee calculation: slices, minimum, gross fee
-- Retainer credit and invoice still due
-- Seller proceeds tied to the closing statement
+- SCOPE AND SOURCES: the engagement letter, retainer proof, closing statement and dates
+- FEE CALCULATION: tier 1 slice, tier 2 slice, minimum and gross fee
+- RETAINER AND INVOICE: the credit used and the invoice still due
+- SELLER PROCEEDS: the price bridge, unpaid expenses, cash to the seller and the tie to the statement
 - MISSING and CHECKS MISSED
 
 ## Acceptance
 
-- Only the unpaid invoice enters unpaid seller expenses; prepaid retainer cash is not deducted again.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
-- Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
-- A real zero, missing evidence and a ratio that does not apply are three different things. Say which one it is.
-- Never force a total to tie with an unexplained plug. Show the difference.
+- The tier 2 rate is applied only to the value above the band limit, not to the whole price.
+- The fee is at least the minimum, and the credit is no more than the letter allows.
+- Only the unpaid invoice enters the seller's expenses. The prepaid retainer is not deducted again.
+- Seller proceeds tie to the draft closing statement, or each difference is explained.
+- Each input traces to its source, date, currency and scale. A real zero, missing evidence and a ratio that does not apply are three different things. Say which one it is.
 
 ## Hand back
 

@@ -22,7 +22,7 @@ best_for:
   - Quick images for posts and mock-ups.
 not_for:
   - Work that needs the exact same answer every time.
-  - Teams outside the Google account system.
+  - Teams outside the Google account system. Use Claude or ChatGPT instead.
 pricing:
   model: freemium
   from: US$4.99 per month
@@ -38,5 +38,22 @@ blocks:
   - gemini-research-report-writer
 alternatives: [chatgpt, claude, perplexity, microsoft-copilot]
 last_checked: 2026-10-21
+first_result:
+  - "Go to gemini.google.com and sign in with a Google account. The free plan needs nothing else."
+  - "Ask one question you can check, such as a short overview of a market. For a report with sources, ask for Deep Research."
+  - "Open the sources it lists and check the key claims on those pages."
+  - "To use your own material, add a file to the chat, or connect Gmail and Drive. Ask for a summary and check it."
+  - "To make an image, describe it. Ask for changes in your next message."
+  - "You end with an answer, a sourced report or an image. Copy the report into a doc to keep it."
+  - "Next: for a full report use the Gemini research report writer. For pictures and clips use the Gemini image and video maker."
+needs:
+  - "A Google account."
+  - "A clear question or a short brief."
+  - "Files or links for it to read (optional)."
+  - "A paid Google AI plan only if you hit the free limits."
+not_verified:
+  - "Where Deep Research and the image tools sit in the menu."
+  - "Daily limits on the free plan."
+  - "Which Google app features work with a work or school account."
 sources:
   - https://gemini.google/us/subscriptions/

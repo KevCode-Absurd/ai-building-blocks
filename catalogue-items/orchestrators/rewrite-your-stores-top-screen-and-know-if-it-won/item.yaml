@@ -15,11 +15,12 @@ inputs:
   - {type: web_page, required: false}
 outputs:
   - {type: audit_report}
+  - {type: copy_draft}
 uses: [store-hero-section-writer, one-change-experiment-planner, store-test-verdict-maker]
 steps:
-  - {uses: store-hero-section-writer, note: "Starts from your offer, proof and ad. It makes the top-screen copy and a first test plan."}
-  - {uses: one-change-experiment-planner, note: "Turns the test plan from step 1 into a test that changes the top screen and nothing else."}
-  - {uses: store-test-verdict-maker, note: "Reads the test plan from step 2 and your exported numbers. It says whether to ship the new top screen."}
+  - {uses: store-hero-section-writer, note: "Starts from your offer, proof and ad. It makes the top-screen copy and a first test plan, and hands the plan to step 2."}
+  - {uses: one-change-experiment-planner, note: "Turns the test plan from step 1, and your question, into a test that changes the top screen and nothing else."}
+  - {uses: store-test-verdict-maker, note: "Follows the pause. Reads the test plan from step 2 and your exported numbers: visits and orders per version, the dates and anything else that changed. It says whether to ship the new top screen."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/rewrite-your-stores-top-screen-and-know-if-it-won/skeleton.yaml

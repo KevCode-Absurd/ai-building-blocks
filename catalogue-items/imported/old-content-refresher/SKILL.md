@@ -145,6 +145,8 @@ Detail in [`references/refresh-vs-merge-vs-delete.md`](references/refresh-vs-mer
 
 ---
 
+> Added by AI Blocks, output layout: return one table with one row per post and these columns: post, signals seen, decision (refresh, merge or delete), depth (light edit, substantial revision, full rewrite or structural redesign), priority. Use only the traffic and ranking data the person gave you. If a post has no data, write MISSING in the row. For a merge or delete, name the redirect target (the closest sibling post, or the hub page) and ask the content owner to approve it before anything is removed.
+
 ## Refresh execution patterns
 
 Who does the work, how it ships.

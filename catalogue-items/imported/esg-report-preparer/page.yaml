@@ -36,7 +36,7 @@ how_to_use:
   - "Say which standard you report against: SASB, GRI or TCFD. If you are not sure, say so."
   - Paste your energy, travel, waste, HR and board details. Add your targets and last report if you have them.
   - Read the scorecard first. Check that every target comes from you, and mark any gap you cannot fill.
-  - Have a qualified assurance provider check the figures before you publish.
+  - Have a qualified assurance provider check the figures before you publish. Gaps are marked as missing, never filled with estimates.
 output_sample:
   input:
     - Your energy, travel and waste data
@@ -46,9 +46,9 @@ output_sample:
     - Your targets and your previous report (optional)
   output:
     - name: Scorecard
-      contains: Your key measures set against your targets, plus a rating of how closely you match SASB or GRI.
+      contains: A table with one row per measure (your figure, your target, the gap), plus a rating of how closely you match SASB or GRI.
     - name: "The Findings: Environmental"
-      contains: A summary of carbon, waste and water, with emissions split into scope 1, 2 and 3.
+      contains: A short summary of carbon, waste and water, with emissions split into scope 1, 2 and 3. A bounded list of findings per area.
     - name: "The Findings: Social"
       contains: A summary of pay gaps, diversity in management, staff turnover and community impact.
     - name: "The Findings: Governance"

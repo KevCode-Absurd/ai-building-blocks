@@ -31,6 +31,8 @@ export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 export JUPYTER_NOTEBOOK_CLI="$CODEX_HOME/skills/jupyter-notebook/scripts/new_notebook.py"
 ```
 
+> Added by AI Blocks: these paths assume the Codex CLI. If you use another AI, set JUPYTER_NOTEBOOK_CLI to wherever you saved scripts/new_notebook.py from this skill folder. If you cannot run the script, copy assets/experiment-template.ipynb or assets/tutorial-template.ipynb and edit the title cell by hand. Run the script first, then fill in the cells.
+
 User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).
 
 ## Workflow

@@ -1,6 +1,6 @@
 # Rumi: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Rumi died in 1273 and the old English translations we read are in the public domain, so we can quote short lines from them. We read the opening poem and several tales in Redhouse's 1881 *Mesnevi*, Book One [S3], the life and selections in Davis's 1907 *Persian Mystics* [S4], Hastie's 1903 *Festival of Spring* from the Divan, reopened in the 2026-10-21 check [S5], Whinfield's abridged *Masnavi*, 1887 (the 1898 printing) [S6] and Nicholson's 1898 *Selected Poems from the Divani Shamsi Tabriz* [S7]. Wikipedia pages supply context [S1][S2]. These are 19th and early 20th century English versions, not the Persian, so the words and rhymes are the translators', and the lives of Rumi in them mix legend with fact. The old texts were read through a summarising reader, so we keep details modest. We take his method from the shape of the tales, not from the English phrasing.
 

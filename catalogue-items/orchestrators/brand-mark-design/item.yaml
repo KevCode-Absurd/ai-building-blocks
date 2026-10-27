@@ -14,12 +14,14 @@ outputs:
   - {type: audit_report}
 uses: [design-brief-rules-writer, brand-mark-system-planner, logo-strength-tester]
 steps:
-  - {uses: design-brief-rules-writer, note: "A brief with tight limits that give room to play, instead of a blank page"}
-  - {uses: brand-mark-system-planner, note: "A mark plan that starts from the brief, tests small and works as a system. Reads the brief from the step before"}
-  - {uses: logo-strength-tester, note: "Each one scored on seven tests, with a keep, fix or drop call"}
+  - {uses: design-brief-rules-writer, note: "Reads your job and audience. Returns a brief with tight limits that give room to play, instead of a blank page"}
+  - {uses: brand-mark-system-planner, note: "Reads the brief from step 1. Returns a mark plan that tests small and works as a system, and a list of ideas to sketch"}
+  - {uses: logo-strength-tester, note: "Reads the mark plan from step 2 and your finished options. Scores each on seven tests, with a keep, fix or drop call"}
 origin: rebuilt
 version: 1.0.0
 minds: [paul-rand, michael-bierut, massimo-vignelli]
 credits:
-  - {title: "Paul Rand and Michael Bierut on logo design", by: "Paul Rand and Michael Bierut", used: "The order of the steps: design brief rules writer, brand mark system planner, logo strength tester"}
+  - {title: "Design and the Play Instinct", by: "Paul Rand, 1965", used: "The brief step: limits that make play possible, and one idea the work must carry"}
+  - {title: "I'm With Her", by: "Michael Bierut, 2017", used: "The mark plan step: reading the brief for the answer already in it"}
+  - {title: "Logos, Flags, and Escutcheons", by: "Paul Rand, 1991", used: "The test step: seven qualities a mark should have. The order of the three steps is this workflow's own."}
 generated_from: intake/paul-rand-and-bierut-logo-design/skeleton.yaml

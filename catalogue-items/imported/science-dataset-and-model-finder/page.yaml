@@ -30,11 +30,12 @@ you_get:
   - Runtime and access warnings
   - Links to demos and write-ups
 how_to_use:
-  - Open an AI that can run Python and reach the web. Claude, ChatGPT and Gemini can do this in some plans.
+  - Open an AI that can run Python and reach the web. Running code and web access are often paid features of Claude, ChatGPT or Gemini, or come with coding tools such as Claude Code or Codex. Check your plan. The catalogue fetch needs this. Without it, run scripts/fetch_catalog.py yourself and paste what it prints into the chat, or search the Hugging Science catalogue by hand.
   - Paste the skill text into the chat, or upload the skill folder if your AI takes files.
   - Tell it your science field and the task you want done. Add your data type, data size and computer power if you know them.
   - Read the shortlist and the warnings first. Check which picks need their own software or a token.
   - Before you use a pick, note its exact repository, version and licence. Then check it on its Hugging Face page.
+  - Next, to load a pick, follow references/using-datasets.md for a dataset or references/using-models.md for a model.
 output_sample:
   input:
     - Your science field, such as protein design or climate

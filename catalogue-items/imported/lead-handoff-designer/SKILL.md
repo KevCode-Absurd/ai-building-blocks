@@ -141,7 +141,7 @@ Define response times and document them:
 
 ### Speed-to-Lead
 
-Response time is the single biggest factor in lead conversion:
+Response time is a major factor in lead conversion. The figures below come from a vendor's published claims. Treat them as rough, unverified, and different for every market. Do not quote them as the person's own results:
 - Contact within **5 minutes** = 21x more likely to qualify (Lead Connect)
 - After **30 minutes**, conversion drops by 10x
 - After **24 hours**, the lead is effectively cold
@@ -275,6 +275,8 @@ Document every exception. Track which non-standard terms get requested most — 
 ## RevOps Metrics Dashboard
 
 ### Key Metrics
+
+The benchmarks below are rough rules of thumb from the original skill. They vary by market and have no source. Use them only to give a sense of scale. Prefer the person's own past numbers.
 
 | Metric | Formula / Definition | Benchmark |
 |--------|---------------------|-----------|

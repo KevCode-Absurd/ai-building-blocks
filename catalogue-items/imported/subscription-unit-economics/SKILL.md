@@ -22,6 +22,8 @@ most Indian errors:
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
 
+> In this copy, `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not included. If you do not have them, follow the two rules above, say in the output that the market-data sources were not loaded, and do not state Indian market figures from memory.
+
 ## Workflow
 
 ### Step 1: Identify Business Model
@@ -74,7 +76,7 @@ Show both absolute $ and indexed (Year 0 = 100%) views.
 
 ### Step 3: Benchmarking
 
-Compare unit economics to relevant benchmarks:
+Compare unit economics to relevant benchmarks. These ranges are common rules of thumb, not sourced data. Check them against the sector before quoting them:
 - **SaaS Rule of 40**: Growth rate + EBITDA margin > 40%
 - **SaaS Magic Number**: Net new ARR / prior period S&M spend > 0.75x
 - **NDR benchmarks**: Best-in-class >120%, good >110%, concerning <100%
@@ -111,4 +113,4 @@ Synthesize into a revenue quality assessment:
 - For usage-based models, focus on consumption trends and expansion patterns rather than traditional ARR metrics
 - Professional services revenue should be evaluated separately — it's not recurring and margins are typically lower
 
-- **Runbook:** [`references/runbook-unit-economics.md`](references/runbook-unit-economics.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+- **Runbook:** [`references/runbook-unit-economics.md`](references/runbook-unit-economics.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract). Skills it names that are not in this copy can be skipped.

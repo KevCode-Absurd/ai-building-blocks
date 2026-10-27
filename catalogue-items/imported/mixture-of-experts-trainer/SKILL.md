@@ -36,7 +36,7 @@ Give the user, in order:
 2. **Code**: the sparse layer and the training script or config for that framework, taken from this file and its references.
 3. **Settings to check**: learning rate, auxiliary loss weight, router z-loss weight, capacity factor. Label each as a starting point, not a proven value.
 4. **Install steps**: exact commands and versions to confirm.
-5. **What to watch**: expert usage balance, loss, gradient size, dropped tokens.
+5. **What to watch**: expert usage balance, loss, gradient size, dropped tokens. If a run fails, check the GPU setup with the multi-GPU training setup helper before you retry.
 6. **Open questions**: anything missing, marked MISSING.
 
 If the compute budget, GPU count or goal is missing, ask once, then mark it MISSING. Never invent budgets, model sizes or speed-up figures. Say that code here is a starting sketch: the user must run it on their own GPUs and check flags against the version of DeepSpeed or Megatron-DeepSpeed they install.
@@ -294,6 +294,8 @@ total_loss = lm_loss + 0.01 * aux_loss + 0.001 * router_z_loss(gate_logits)
 
 ### Training Script
 
+This file uses two entry-point names, `pretrain_gpt_moe.py` above and `pretrain_moe.py` below. They come from different Megatron-DeepSpeed versions. Use the entry-point script that exists in the version you install, and check each flag against its `--help`.
+
 ```bash
 #!/bin/bash
 
@@ -470,6 +472,7 @@ moe_lr_decay_iters = 500000
 moe_loss_coeff = 0.01    # Auxiliary loss (load balancing)
 router_z_loss_coeff = 0.001  # Router entropy (stability)
 
+# These thresholds are rules of thumb to test, not proven values.
 # If load imbalance persists, increase aux loss
 if max_expert_usage / min_expert_usage > 2.0:
     moe_loss_coeff = 0.1  # Stronger load balancing
@@ -486,11 +489,12 @@ if grad_norm > 10.0:
 optimizer = Adam(model.parameters(), lr=6e-4)
 
 # ✅ Good: Lower LR for MoE
-# You define these two lists: put the router and expert weights in moe_params
-# and everything else in non_moe_params (split model.named_parameters() by name).
+# Split the parameters by name. Adjust the test to match your layer names.
+moe_params = [p for n, p in model.named_parameters() if 'expert' in n or 'router' in n or 'gate' in n]
+non_moe_params = [p for n, p in model.named_parameters() if not ('expert' in n or 'router' in n or 'gate' in n)]
 optimizer = Adam([
-    {'params': model.non_moe_params, 'lr': 6e-4},
-    {'params': model.moe_params, 'lr': 1e-4}
+    {'params': non_moe_params, 'lr': 6e-4},
+    {'params': moe_params, 'lr': 1e-4}
 ])
 
 # ❌ Bad: No load balancing

@@ -6,6 +6,8 @@ argument-hint: "[reg name, or paste reg text/summary]"
 
 # /policy-diff
 
+**In a plain chat:** the config folder and the `/regulatory-legal:` commands below belong to the full Claude plugin and may not exist. If they do not, ask the user to paste their policy list (policy name, owner, where it lives) and continue from that. Do not invent a policy library. Without web or research access, the rule's status stays unverified: say so, and tell the user to check the Federal Register or ask counsel before relying on any date.
+
 1. Load `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` → policy library index.
 2. Use the workflow below.
 3. Extract requirements from the reg. Match to indexed policies.

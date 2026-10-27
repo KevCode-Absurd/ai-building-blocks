@@ -42,10 +42,9 @@ THE BUSINESS (one sentence). FIVE ANSWERS (each KNOW, GUESS or BLANK). YOUR EDGE
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Decide what to do** with the [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Business expertise reviewer](https://useaiblocks.com/skills/circle-of-competence-sorter). It takes the audit report.
+- The [Long-run business return calculator](https://useaiblocks.com/skills/long-hold-return-calculator). It takes the audit report.
+- The [Company management record reviewer](https://useaiblocks.com/skills/owner-minded-management-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

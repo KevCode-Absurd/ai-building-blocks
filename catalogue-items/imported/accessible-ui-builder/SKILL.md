@@ -3,6 +3,14 @@ name: frontend-ui-engineering
 description: Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requirements, managing state, or when the output needs to look and feel production-quality rather than AI-generated.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../../references/accessibility-checklist.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Frontend UI Engineering
 
 ## Overview
@@ -305,7 +313,7 @@ function useToggleTask() {
 
 ## See Also
 
-For detailed accessibility requirements and testing tools, see `../../references/accessibility-checklist.md`.
+For detailed accessibility requirements and testing tools, see `../../references/accessibility-checklist.md`. That file is not in this copy, so do the checks by hand, or run the Accessibility checker skill on the finished screen.
 
 ## Common Rationalizations
 

@@ -33,7 +33,8 @@ how_to_use:
   - Download the complete skill folder and give it to your AI. Keep its references beside SKILL.md.
   - Read AI-BLOCKS-USAGE.md, then ask your AI to follow SKILL.md for the public URL you supply.
   - Choose the page scope and output location. The basic output is the Markdown guide and JSON file.
-  - Review the measured evidence and any proposed coding-tool configuration changes before applying them.
+  - Review the measured evidence and any proposed coding-tool configuration changes before applying them. A coding-tool export can add to or change your existing instruction files, so confirm before it writes.
+  - Read the reasons as inferred, not as what the company said. Only the measured values are facts.
 output_sample:
   input:
     - A public website link that opens without signing in
@@ -91,3 +92,4 @@ works_best_with:
       why: Captures the public page and its visible styles in an isolated browser.
     - name: An AI that can read local files
       why: Reads the full reference files and saves the guide in your chosen folder.
+next: [design-token-builder]

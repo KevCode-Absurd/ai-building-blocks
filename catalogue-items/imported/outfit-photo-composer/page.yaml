@@ -17,7 +17,7 @@ when:
   - You want to test outfit ideas before you pay for photography.
 not_for:
   - "You need buyers to see exact fit or fabric detail: use a real photo shoot or flat shots, and say any AI image is AI-made."
-  - "You have more than eight items: split them into two outfits, then add the rest with the wear-everything skill."
+  - "You have more than eight items: make two outfit photos instead, or use the Accessory try-on photo maker for the extras."
   - "You want to use someone's real face to endorse your shop: ask that person for a signed photo shoot instead."
 you_give:
   - Up to eight photos, one item in each
@@ -38,6 +38,8 @@ how_to_use:
   - Fix the model, pose, background and light. Reuse the same words for every outfit so a set looks alike.
   - Run a test first to see the cost. Then run it for real and ask for two to four versions. This needs code running and an image model account, and each run costs credits.
   - Check item count, colours, layers and patterns. Review every photo before you publish, and say it is AI-made.
+  - The detailed skill file is written in Chinese. Your AI reads it fine and answers in English. Each photo file must be 20KB to 15MB, up to 8192 by 8192 pixels, in jpg, jpeg, png, heic or webp.
+  - To tidy a single item photo before you start, use the Product photo retoucher. Before you publish, check the outfit photo with the AI product photo inspector.
 output_sample:
   input:
     - Up to eight photos, one item in each (sweater, hat, necklace, trousers, bag, shoes)
@@ -57,3 +59,4 @@ output_sample:
       contains: Two to four versions of the same outfit so you can choose the best one.
     - name: Check list
       contains: A review of item count, colour mix-ups, layer order and pattern position.
+next: [ai-product-photo-inspector, accessory-try-on-photo-maker]

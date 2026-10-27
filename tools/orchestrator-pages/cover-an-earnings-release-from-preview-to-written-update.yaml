@@ -17,10 +17,11 @@ when:
 not_for:
   - "You follow a private company or have no release and transcript: write notes by hand or ask your AI for a plain summary of what you do have."
   - "You only want a note before the release: run the earnings-preview-writer skill by itself."
-  - "You want the real earning power in an annual report: use the Debt and preferred dividend coverage checker, or a person who reads accounts."
+  - "You want the real earning power in an annual report: use the workflow Find a company's real earning power and its tricks."
 you_give:
   - The company and what you already think matters
   - "After the release: the release and the call transcript"
+  - Last quarter's call transcript (optional, for the tone comparison)
   - Your past notes on the company (optional)
 you_get:
   - A preview with what matters, the numbers to watch and what counts as a surprise
@@ -59,9 +60,9 @@ how_it_works:
   - title: The release lands
     text: A pause. Wait for the release and the call. Paste the release and the transcript.
   - title: Read the call's tone
-    text: Reads where management was confident, hedged or dodged, and compares the tone with last quarter.
+    text: Reads where management was confident, hedged or dodged, with a quote for each. It compares the tone with last quarter when you give it last quarter's transcript.
   - title: Write the recap
-    text: Compares the quarter with the preview and sources every number to the release.
+    text: Compares the quarter with the preview and names the source of every number, the release first.
   - title: Write the update
     text: "Writes the update: what changed, what did not and what to watch next, with no buy or sell advice."
 output_shape: |-
@@ -95,9 +96,11 @@ tweaks:
   - what: What matters
     how: Give your own view before the release. The recap is then an honest test of it.
   - what: Past notes
-    how: Paste what management promised last time. The tone read checks whether they kept to it.
-  - what: Your format
-    how: Give a past update you liked. Step 4 writes in that shape.
+    how: Paste what management promised last time. Step 4 reads your notes beside the recap.
+  - what: Last quarter's transcript
+    how: Add it so the tone read can say how the tone moved.
+  - what: Your format and market
+    how: Give a past update you liked, and name the market and fiscal year. The update step is written for Indian markets by default.
   - what: The transcript
     how: A full transcript beats a summary. The tone read needs the exact words and the dodges.
 judge:
@@ -129,3 +132,5 @@ works_best_with:
 terms:
   - term: Guidance
     meaning: Management's own forecast for the next period, given on the call or in the release.
+next: [real-earning-power, earnings-preview-writer]
+before: []

@@ -23,11 +23,12 @@ date_added: "2026-02-27"
 
 ## Instructions
 
-1. Capture entities, access patterns, and scale targets (rows, QPS, retention).
+1. Ask for the Postgres version in use (some advice differs for PG15+ and PG18+). Capture entities, access patterns, and scale targets (rows, QPS, retention).
 2. Choose data types and constraints that enforce invariants.
 3. Add indexes for real query paths and validate with `EXPLAIN`.
 4. Plan partitioning or RLS where required by scale or access control.
 5. Review migration impact and apply changes safely.
+6. Tell the user what to do next: check the first output against their real queries, then apply it with their existing migration tool.
 
 ## Safety
 
@@ -90,7 +91,7 @@ date_added: "2026-02-27"
 
 ## Row-Level Security
 
-Enable with `ALTER TABLE tbl ENABLE ROW LEVEL SECURITY`. Create policies: `CREATE POLICY user_access ON orders FOR SELECT TO app_users USING (user_id = current_user_id())`. Built-in user-based access control at the row level.
+Enable with `ALTER TABLE tbl ENABLE ROW LEVEL SECURITY`. Create policies: `CREATE POLICY user_access ON orders FOR SELECT TO app_users USING (user_id = current_user_id())`. Built-in user-based access control at the row level. `current_user_id()` is not built into Postgres. Define it first, for example as a function that reads `current_setting('app.user_id')`, or replace it with your app's own way of naming the signed-in user.
 
 ## Constraints
 

@@ -35,6 +35,7 @@ how_to_use:
   - Describe your business, the tools you use and the controls you already have. Add your audit date if you have one.
   - Read the readiness summary first. Then check the status of each item against what you really have.
   - Take the top ranked gaps into a fix plan. Ask an auditor or lawyer to confirm your scope before you act on it.
+  - Next, turn each top gap into an owner and a due date. Re-run the checklist when you have fixed them, to see your new readiness.
 output_sample:
   input:
     - The framework or frameworks you want, such as SOC 2 or GDPR

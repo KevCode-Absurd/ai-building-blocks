@@ -7,9 +7,9 @@ thinking_why: It reasons by elimination and by pattern, and has to keep guesses 
 headline: Find the real reason a result was far better or worse than normal
 subhead: Describe a result that surprised you with the numbers you have. It rules out causes the facts cannot support, ranks the likely ones, checks them through several fields and through who was paid for what, then sorts each into copy, adapt, skip or luck for your own case.
 explain: |
-  When something does far better or worse than normal, the usual explanation is a story that fits. Charlie Munger worked these out aloud and from both ends. He guessed the cause, asked what had to be true if it were right, and crossed out what the facts could not support. He also looked for four patterns that explain most extreme results.
+  When something does far better or worse than normal, the usual explanation is a story that fits. A better way is to work from both ends. Guess the cause, ask what would have to be true if it were right, and cross out what the facts cannot support.
 
-  This workflow follows that method. It rules causes out by fact and tests the four patterns: one or two things pushed far, many factors adding up past a tipping point, steady excellence on many fronts, and a big wave. It checks the ranked causes through several fields and through the rewards behind the behaviour. It ends by sorting each cause into copy, adapt, skip or luck, with a small test for each idea you keep.
+  This workflow does that. The order of its steps comes from Poor Charlie's Almanack by Charlie Munger. It rules causes out by fact and tests four patterns that explain extreme results: one or two things pushed far, many factors adding up past a tipping point, steady excellence on many fronts, and a big wave. It checks the ranked causes through several fields and through the rewards behind the behaviour. It ends by sorting each cause into copy, adapt, skip or luck, with a small test for each idea you keep.
 when:
   - A store, product or person is doing far better than the rest and you want to know why.
   - Something failed and the stories you hear do not add up.
@@ -29,7 +29,7 @@ you_get:
   - Whether pay and rewards explain the result
   - Each cause sorted as copy, adapt, skip or luck, with a small test and a pass number for the ideas you keep
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and four skill files, in the order they run: Surprise cause ranker, Many-field model checklist runner, Incentive checker and Copy-or-skip lesson writer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the result with numbers and a fair comparison. Say what you already believe about the cause.
   - Run the first test it suggests before you copy anything.

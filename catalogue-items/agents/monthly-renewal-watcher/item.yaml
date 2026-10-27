@@ -20,7 +20,7 @@ steps:
   - { uses: account-catch-up-brief-writer, note: "For each renewal inside 60 days: one brief on what is going on with the account from notes, email and calls you give it. Uses those notes for each account, not step 1's plan. Passes on the brief." }
   - { uses: deal-health-reviewer, note: "Only for a renewal marked at risk, or one where you want a price rise: health, gaps and the next actions. Uses the account notes and renewal numbers, with the brief from step 2. Passes on the health call." }
   - { uses: customer-success-plan-writer, note: "Only when an at-risk account has not reached the result it bought the product for: the plan to get them there before the date. Uses what they bought for and where they are now, from the brief, with any customer words. Passes on the success plan." }
-  - { uses: post-sale-follow-up-planner, note: "Only for a healthy renewal: the thank-you and the plan to keep them, so a safe renewal stays safe. Uses the account story from the brief. Passes on the follow-up plan." }
+  - { uses: post-sale-follow-up-planner, note: "Only for a healthy renewal: the thank-you and the plan to keep them, so a safe renewal stays safe. Uses the account story from the brief. Passes on the follow-up plan. It uses step 2's brief, not step 4's plan; the two run side by side." }
 schedule: "On the first working day of each month"
 asks_before: [ contacting any customer, changing a price, term or renewal date, offering a discount or credit, letting a contract lapse, sharing account notes with anyone outside your team ]
 minds: [ dharmesh-shah ]

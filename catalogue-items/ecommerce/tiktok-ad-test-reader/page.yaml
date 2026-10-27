@@ -11,7 +11,7 @@ subhead: Paste the numbers from your first days of TikTok test ads. It reads eac
 explain: |
   The first days of a TikTok test are full of noise. One ad has a low CTR (the share of viewers who click), another has a high CPM (the cost of 1,000 views), and it's hard to know what to change. Judge too soon and you cut ads that needed more data.
 
-  This skill waits until an ad has spent $50 or reached 1,000 impressions. Then it checks it against lines for the first 24 hours and for day 3. It tells a creative problem from an audience problem, and calls keep, fix the hook, fix the audience or kill. After 3 days it kills the bottom half, moves the budget to the winners and plans the next test. The lines come from one agency's US-market practice, so give it your break-even cost per sale and it resets the cost lines.
+  This skill waits until an ad has spent $50 and reached 1,000 impressions. Then it checks it against lines for the first 24 hours and for day 3. It tells a creative problem from an audience problem, and calls keep, fix the hook, fix the audience or kill. After 3 days it kills the bottom half, moves the budget to the winners and plans the next test. The lines come from one agency's US-market practice, so give it your break-even cost per sale and it resets the cost lines.
 
 when:
   - Your TikTok test ads have run for a day or three and you don't know which to cut.
@@ -35,7 +35,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste each ad's numbers and say how long it has run. Wait for $50 of spend or 1,000 views.
+  - Paste each ad's numbers and say how long it has run. Wait until each ad has $50 of spend and 1,000 views.
   - Add your break-even cost per sale so it can reset the cost lines to your store.
   - "Do what it says after day 3: cut the bottom half, move the budget and launch the next variations."
 output_sample:
@@ -62,7 +62,7 @@ output_sample:
 
 how_it_works:
   - title: Checks the data is enough
-    text: Under $50 spend or 1,000 impressions, an ad is marked too early and not judged.
+    text: Until an ad has both $50 spend and 1,000 impressions, it is marked too early and not judged.
   - title: Reads the first 24 hours
     text: CTR above 1 percent, watch time above 25 percent, CPM under $15, with a cross-check on typical ranges.
   - title: Reads day 3
@@ -74,7 +74,7 @@ how_it_works:
   - title: Acts after 3 days
     text: It kills the bottom 50 percent, puts budget on the winners and starts new variations. It waits longer for pricey products.
   - title: Plans the next test
-    text: Three creatives across two audiences, or 3 hooks by 3 angles by 3 calls to action, then a warm-audience retest.
+    text: Either 3 creatives across 2 audiences (the 3x2 plan) or 3 hooks by 3 angles by 3 calls to action (the 3x3 method), then a warm-audience retest.
   - title: Scores each ad
     text: Creative lines count for 60 points and audience lines for 40. The sum is shown.
 
@@ -91,7 +91,7 @@ output_shape: |
 
   TEST SCORE  <n>/100 (average of the ads above)
   AFTER DAY 3
-  Kill: <ads> | Put budget on: <ads> | New variations: <plan>
+  Kill: <ads> | Put budget on: <ads> | New variations: <3x2 plan or 3x3 method>
   Retest on warm: <ads>
 
   MISSING: <break-even | day-3 numbers | audience>

@@ -10,6 +10,7 @@ inputs:
   - {type: plan, required: true}
   - {type: offer, required: true}
   - {type: video_ads, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: plan}
   - {type: brief}

@@ -19,6 +19,7 @@ not_for:
   - "You have under 8 to 12 weeks of sales history: get a supplier forecast or wait for more sales data first."
   - "You need live stock counts from your store or warehouse system: use your own inventory tool, as this only works from numbers you paste in."
   - "You want exact Amazon fees: check Amazon's current fee page, because the cost ranges here are rough planning guides."
+  - "You need a full warehouse system (WMS) or forecasting software that runs on its own: use one of those tools. For one product's demand, use the demand forecast planner."
 you_give:
   - Product list with sales per month
   - Lead times from suppliers
@@ -35,9 +36,11 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Tell your AI how you fulfill orders, how many products you have, and how many orders you ship a month.
   - Paste your product list with monthly sales, supplier lead times and current stock. Add your costs if you have them.
+  - If you only have monthly totals, say so. Safety stock needs how much daily sales swing, so your AI will use a simpler estimate, such as your best day minus your average day, and mark it as a rough guide.
   - Check the ABC ranking and the reorder points. Fix any number that looks wrong, such as a lead time.
   - Take the Critical rows to whoever does your buying, and act on them first.
   - Run it again each month with fresh sales and stock numbers. Check the cost ranges against your own quotes and Amazon's current fees.
+next: [reorder-quantity-planner, demand-forecast-planner]
 output_sample:
   input:
     - Your fulfillment model, such as self-fulfill, Amazon FBA, FBM, Walmart, 3PL or dropshipping

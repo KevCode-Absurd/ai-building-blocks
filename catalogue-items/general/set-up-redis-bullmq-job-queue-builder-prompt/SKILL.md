@@ -5,6 +5,29 @@ description: Get a coding brief for a Redis and BullMQ job queue, with scoped jo
 
 # Set Up Redis + BullMQ Job Queue prompt
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [TypeScript agent worker builder](https://useaiblocks.com/skills/course-wide-implementation-planner).
+- The [Supabase connection prompt writer](https://useaiblocks.com/prompts/connect-code-to-supabase-builder-prompt).
+- The [Render worker deployment planner](https://useaiblocks.com/prompts/deploy-worker-to-render-builder-prompt).
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -15,7 +38,7 @@ description: Get a coding brief for a Redis and BullMQ job queue, with scoped jo
 - Keep output portable across AI tools; state what can be drafted without the named integrations. Do not claim a render, query, delivery or runtime test happened unless it did.
 - Project paths in the source are examples. Inspect the user-selected repository; never assume another desktop repository or an absent private skill exists.
 - List missing schemas, modules, API permissions and setup prerequisites before implementation. If a reference dependency is unavailable, produce a self-contained specification or identify the exact gap.
-- Do not install dependencies, provision services, start schedules, deploy or mutate accounts merely because an example build prompt says to. Use the current user-authorized scope.
+- Do not install dependencies, provision services, start schedules, deploy or mutate accounts merely because an example build prompt says to. Use the current user-authorized scope. The packages the build prompt names (bullmq and ioredis) are the exception: install them only after the user says yes.
 
 These working rules control the procedure below. If an example assumes a client, person, provider, price or threshold, replace it with the user's verified setting.
 
@@ -23,7 +46,7 @@ These working rules control the procedure below. If an example assumes a client,
 
 
 
-Copy this into Claude Code to create a working job queue from scratch.
+Copy this into Claude Code to create a working job queue from scratch. The prompt creates every file itself, including the test script `scripts/test-queue.ts`, which does not ship in this folder. Run the prompt first, then the test.
 
 ---
 
@@ -39,7 +62,7 @@ Do these things:
    - Read REDIS_URL from process.env
    - If missing, throw a clear error
    - Create and export a Redis connection instance
-   - If the URL starts with "rediss://", enable TLS with rejectUnauthorized: false
+   - If the URL starts with "rediss://", enable TLS and keep certificate checks on (the default). Only if I tell you my Redis server uses a self-signed certificate, set rejectUnauthorized: false, add a comment that it is for testing only, and tell me to turn the checks back on before real use
    - Add a comment explaining: "This connection is shared by queues and workers"
 
 3. Create lib/queue/agent-queue.ts:
@@ -118,7 +141,7 @@ Done
 - A worker that processes jobs concurrently
 - The exact same infrastructure your agent system runs on
 
-The only thing missing: instead of logging "Processing job," the worker will look up the right agent and call `agent.handleJob()`. That comes in Course 2.
+The only thing missing: instead of logging "Processing job," the worker should do the real work. Once the test run logs all three jobs as completed, ask your coding AI to replace the logging in `lib/queue/worker.ts` with the real job handler for each agent.
 
 
 ## Final check

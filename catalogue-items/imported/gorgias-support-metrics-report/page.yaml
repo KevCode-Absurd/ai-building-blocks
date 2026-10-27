@@ -69,3 +69,4 @@ output_sample:
       contains: The busiest day, the most common issue and the longest open ticket.
     - name: Google Sheet export
       contains: A sheet named Support Metrics with the report data, plus a link to share. Only if you ask.
+next: [gorgias-weekly-support-report, gorgias-support-queue-action-planner]

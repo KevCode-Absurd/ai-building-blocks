@@ -35,7 +35,7 @@ how_to_use:
   - Describe your Git problem in plain words, such as "split my edits into clean commits" or "fix the conflict in this merge".
   - Let it check your repo first. Read the plan it gives you.
   - Say yes only when it asks before a command that rewrites history, such as a force push or a hard reset.
-  - Run your tests on the branch, then ask for a review.
+  - Run your tests on the branch, then ask for a review. Next, ask for the pull request text and a pre-commit check so the same mess does not come back.
 output_sample:
   input:
     - Your Git problem in plain words
@@ -59,3 +59,4 @@ output_sample:
       contains: Pre-commit checks and a .gitignore that skips build files, secrets and system files.
     - name: Pull request
       contains: A title and body ready for review, opened through the GitHub or GitLab command line.
+next: [pull-request-writer, pre-commit-hook-setter, release-preparer]

@@ -36,6 +36,8 @@ Codebase → Scan for each ASI control:
 
 ## The 10 Risks
 
+These ASI-01 to ASI-10 names and numbers are the skill author's list. Check them against the current published OWASP material before you quote them as the official standard.
+
 | Risk | Name | What to Look For |
 |------|------|-----------------|
 | ASI-01 | Prompt Injection | Input validation before tool calls, not just LLM output filtering |
@@ -264,6 +266,8 @@ Verify the system can detect and respond to agent behavioral drift.
 ---
 
 ## Compliance Report Format
+
+The report below is an illustration. The date, project name and findings are made up and are not a real result. A keyword found in code (such as "sanitize" or "PolicyEngine") is only a starting point. Mark a risk PASS only after you have followed the code path and seen it work. Otherwise mark it "NOT CONFIRMED".
 
 ```markdown
 # OWASP ASI Compliance Report

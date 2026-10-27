@@ -14,6 +14,8 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ## Purpose
 Identifies variants with a `compareAtPrice` that no longer represents a genuine discount and clears it, so storefront strikethrough pricing reflects real savings rather than legacy noise. Two conditions are flagged: (a) `compareAtPrice <= price` (no discount, often left over from a price increase), and (b) `compareAtPrice` set for longer than `max_age_days` (stale "always on sale" optics that hurt long-term price perception and can violate advertising standards in some regions). Defaults to dry-run.
 
+Limit: the "stale" rule uses the variant's `updatedAt` date as a stand-in for when the compare-at price was set. Any product edit resets that date, so a live sale price can be cleared by mistake. Tell the user this before every run, and to turn off `clean_stale` during sales.
+
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,write_products`
 - API scopes: `read_products`, `write_products`
@@ -48,6 +50,8 @@ Identifies variants with a `compareAtPrice` that no longer represents a genuine 
    **Expected output:** Updated variants with `compareAtPrice` set to null; collect `userErrors` per batch
 
 4. Write the CSV (always, even on dry run) for audit trail and revert capability.
+
+The filter in step 2 is the only check before a live run. Do not set `dry_run` to false until the user has reviewed the CSV row by row and said yes.
 
 ## GraphQL Operations
 
@@ -164,4 +168,4 @@ CSV file `compare_at_cleanup_<YYYY-MM-DD>.csv` with columns:
 2. Disable `clean_stale` (set `clean_stale: false`) during long planned promotions — your "stale" sale is actually intentional.
 3. Use `collection_id` to scope the cleanup to evergreen products and exclude an active sale collection.
 4. After running live, spot-check 5–10 variants in the storefront to confirm strikethrough pricing is gone.
-5. Schedule a quarterly run as part of catalog hygiene; combine with `seo-metadata-audit` and `product-data-completeness-score` for an end-of-quarter merchandising sweep.
+5. Schedule a quarterly run as part of catalog hygiene.

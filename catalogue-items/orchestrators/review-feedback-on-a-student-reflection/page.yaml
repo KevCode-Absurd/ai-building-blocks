@@ -39,7 +39,8 @@ you_get:
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
-  - Paste the project record, the reflection draft, the comments and the rubric. Take names out first.
+  - Check your school's data-protection policy allows student work in an AI service. If it does not, stop here.
+  - Paste the project record, the reflection draft, the comments and the rubric. Take out names and anything else that points to one student.
   - Read the feedback review first. Check that each comment is linked to the right rubric line before you use any rewrite.
   - Send the revision prompts to the student. Do not send a rewritten reflection. Ask the student to rewrite their own.
 how_it_works:

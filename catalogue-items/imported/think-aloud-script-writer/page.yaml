@@ -30,11 +30,12 @@ you_get:
   - Pause points with questions for students
   - Lines that address common errors
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page. No code or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or copy its instructions from this page and paste them in. No code or paid tools are needed.
   - Type the task you will model, your students' year group and the subject.
   - Add the mistakes students often make (optional), and how many minutes you want (optional).
   - Read the script before class. Check that the pause points and wrong-turn moments sound like you.
   - Say the script in class. Stop at each pause point and ask students the question.
+  - Next, ask your AI for a retrieval quiz or a worked example on the same task, so students practise the thinking you just showed.
 output_sample:
   input:
     - The task you will model
@@ -51,3 +52,4 @@ output_sample:
       contains: Moments to stop and check that students are following, with questions to ask.
     - name: Delivery Notes
       contains: Tips on how to say the script so it sounds like real thinking.
+next: [online-worked-example-builder, retrieval-quiz-writer, metacognition-prompts]

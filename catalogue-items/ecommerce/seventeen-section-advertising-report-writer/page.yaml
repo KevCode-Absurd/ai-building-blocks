@@ -12,7 +12,7 @@ when:
   - It is the end of the month and a client or boss wants a report.
   - You run Meta and Google ads for a Shopify store and need one view.
   - You want to explain why results moved, with numbers.
-  - You need clear next steps with this week, month and quarter actions.
+  - You want clear next steps for this week, this month and this quarter.
 not_for:
   - "You want a quick check on one campaign: ask your AI for a simple pacing check on that campaign instead."
   - "You have no export from the month before: get last month's numbers first, or the report cannot show changes."
@@ -65,20 +65,17 @@ output_sample:
       contains: Per-platform tables, trend descriptions, top five campaigns per platform and top and bottom three creatives.
 how_it_works:
   - title: Check the inputs
-    text: Confirm current and prior period ad exports, store results, targets and client context. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Data
-    text: Follow the collect data section in the full method and keep its required fields and decision rules.
-  - title: Calculate KPIs
-    text: Follow the calculate kpis section in the full method and keep its required fields and decision rules.
-  - title: The 17 Sections
-    text: Follow the the 17 sections section in the full method and keep its required fields and decision rules.
-  - title: Narrative Voice
-    text: Follow the narrative voice section in the full method and keep its required fields and decision rules.
-  - title: Executive Summary Template
-    text: Follow the executive summary template section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a seventeen-section client report with owned next actions. Check facts, math and the decisions before any action.
+    text: Check the date range on each export. Confirm you have this month and last month for Meta, Google Ads and Shopify. Mark anything missing as not supplied.
+  - title: Work out the key numbers
+    text: ROAS, CPA, CTR, CPC, CPM, AOV, MER and CAC, with the change from last month and last year.
+  - title: Label each change
+    text: Strong positive, moderate positive, flat, moderate decline or significant decline, using set bands.
+  - title: Write the 17 sections in order
+    text: From the cover page and KPI snapshot to the creative snapshots. Each claim carries a number from your data.
+  - title: Write the summary and next steps
+    text: Nine bullets in The Good, The Watch and The Path, then actions for this week, month and quarter.
+  - title: Check every figure
+    text: Compare each number with your exports. Fix anything marked not supplied before you share the report.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+next: [next-dollar-budget-allocator, ad-test-budget-calculator]

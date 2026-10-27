@@ -42,6 +42,8 @@ When a user requests file organization help:
 
 2. **Analyze Current State**
 
+   Before anything moves, tell the user to back up the folder or work on a copy. Moves made by this skill are not undone automatically.
+
    Review the target directory:
 
    ```bash
@@ -96,7 +98,7 @@ When a user requests file organization help:
 
 4. **Find Duplicates**
 
-   When requested, search for duplicates:
+   When requested, search for duplicates. The commands below work on Linux and macOS, but not everywhere: `md5` is macOS only (on Linux use `md5sum`), and `find -printf` is GNU/Linux only. On Windows, use PowerShell, for example `Get-ChildItem -Recurse -File | Get-FileHash | Group-Object Hash | Where-Object Count -gt 1`:
 
    ```bash
    # Find exact duplicates by hash
@@ -180,7 +182,7 @@ When a user requests file organization help:
    **Important Rules**:
 
    - Always confirm before deleting anything
-   - Log all moves for potential undo
+   - Write every move to a log file named `tidy-moves.log` in the target folder, one line per move as `old path -> new path`. This is the only way back. Moves are not reversed automatically
    - Preserve original modification dates
    - Handle filename conflicts gracefully
    - Stop and ask if you encounter unexpected situations
@@ -196,7 +198,7 @@ When a user requests file organization help:
 
    - Created [X] new folders
    - Organized [Y] files
-   - Freed [Z] GB by removing duplicates
+   - Freed [Z] GB by removing duplicates (only if you measured it; otherwise leave this line out)
    - Archived [W] old files
 
    ## New Structure

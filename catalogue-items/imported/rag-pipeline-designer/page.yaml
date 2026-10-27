@@ -35,8 +35,9 @@ how_to_use:
   - "Build your test questions: write 10 to 30 real questions your users ask, give each an ID, and save them as queries.json."
   - "Build ground truth: for each question ID, list the document IDs that hold the answer, and save it as ground_truth.json."
   - Run chunking_optimizer.py on your documents folder. Read the recommended strategy and check the sample chunks.
-  - Write your requirements file, then run rag_pipeline_designer.py to get design.json. Treat every cost as an estimate.
+  - "Write your requirements file with these keys, all required: document_types, document_count, avg_document_size (in characters), queries_per_day, query_patterns, latency_requirement, budget_monthly, accuracy_priority (0 to 1), cost_priority (0 to 1) and maintenance_complexity. Then run rag_pipeline_designer.py to get design.json. Treat every cost as an estimate."
   - Run retrieval_evaluator.py with your questions, documents and ground truth. If scores are low, change one thing and run it again.
+  - When the scores pass, give design.json and the test results to a developer to build it.
 output_sample:
   input:
     - A folder of your documents (.md or .txt files)
@@ -46,6 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can run code, or Python 3 on your own computer
     - The skill folder with its three Python tools
+    - For the paid embedding and vector database tiers it suggests, a provider account and API key. Check live prices before you sign up.
   output:
     - name: chunking.json
       contains: Corpus facts, results for each chunking strategy, the recommended strategy and a few sample chunks to check.

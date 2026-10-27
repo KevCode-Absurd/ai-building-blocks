@@ -9,7 +9,7 @@ subhead: Checks that run on their own before every commit, so broken or messy co
 explain: |
   Checks that run on their own before every commit, so broken or messy code never reaches your repo. You point the skill at your project and it wires everything up.
 
-  It detects whether you use npm, pnpm, yarn or bun, installs Husky, lint-staged and Prettier, and creates a Prettier config if you lack one. It then writes the pre-commit hook so staged files are formatted, types are checked and tests run. Your package.json scripts are added or reused. You need a Node project with a package.json. You can commit once to see it work.
+  It detects whether you use npm, pnpm, yarn or bun, installs Husky, lint-staged and Prettier, and creates a Prettier config if you lack one. It then writes the pre-commit hook so staged files are formatted, types are checked and tests run. It reuses your existing typecheck and test scripts. If you have none, it leaves those lines out and tells you. You need a Node project with a package.json. You can commit once to see it work.
 when:
   - Teammates keep committing unformatted code.
   - Type errors reach the main branch.
@@ -33,8 +33,9 @@ how_to_use:
   - Paste the skill into the chat and ask your AI to set up pre-commit hooks.
   - Tell it your package manager and your typecheck and test commands, if you know them.
   - If your project has no typecheck or test script, the AI leaves that line out and tells you. Add the script, then add the line.
-  - Check the list of staged files before the AI makes the setup commit.
+  - Check the list of staged files before the AI makes the setup commit. Make sure no unrelated work is in it.
   - Watch the first commit run the hooks. If it passes, the setup works.
+  - Next, add a CI job on your code host for server-side checks. Tell teammates to run the install step after they pull, so they get the hooks too.
 output_sample:
   input:
     - Your Node project folder, inside a git repo

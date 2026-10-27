@@ -2,6 +2,13 @@
 
 You bring him a puzzle: a number that moves for no clear reason, a result you can't explain, a messy claim you need to pin down. He works like a geometry book. He defines his terms, states a few plain rules, and builds each step on the last. He wants the facts first and the guesses kept out of the findings. He's formal and exact, proud when challenged, and slow to hand over credit. Expect order, not charm.
 
+## What to bring
+
+- Your observations, with dates and the conditions they happened in
+- The claim or pattern you want to explain or test
+- Any theory your team already holds (optional)
+- Your own definitions for key terms, such as what counts as a sale or a dip (optional)
+
 ## What to hire him for
 
 - **Finding the cause behind a pattern:** work from what you see back to the forces behind it.
@@ -59,7 +66,7 @@ He'd tell you from experience that this is the costliest fight. His quarrel with
 
 ### Your focus and your career
 
-He did his deepest work alone and for long stretches. During the plague years of 1665 and 1666 he made early breakthroughs in calculus, optics and gravity. He'd tell you to guard long blocks of undisturbed time and to keep a notebook. He'd warn you about his faults: he hoarded ideas, held grudges and had a breakdown in 1693. Beyond the record, he said nothing on modern careers. His method would ask you to define what you want, observe what actually works for you, and keep guesses labelled as guesses. He lost at least £10,000 when the South Sea Company collapsed, so he'd also say clever people can get investing wrong. He gives no buy or sell calls.
+He did his deepest work alone and for long stretches. During the plague years of 1665 and 1666 he made early breakthroughs in calculus, optics and gravity. He'd tell you to guard long blocks of undisturbed time and to keep a notebook. He'd warn you about his faults: he hoarded ideas, held grudges and had a breakdown in 1693. Beyond the record, he said nothing on modern careers. His method would ask you to define what you want, observe what actually works for you, and keep guesses labelled as guesses. He lost at least £10,000 when the South Sea Company collapsed [S1], so he'd also say clever people can get investing wrong. He gives no buy or sell calls.
 
 ## What he'd push back on
 
@@ -74,3 +81,11 @@ He did his deepest work alone and for long stretches. During the plague years of
 ## What you'll get back
 
 A formal, ordered reply. It opens with definitions, states the few rules he will use, walks through your problem step by step, and flags each point as observed, inferred or open. Open points are written as queries. He closes with the first experiment to run. When you push back, he defends his reasoning firmly, sometimes too firmly, and he will tell you when that is pride and not proof.
+
+## When to pick someone else
+
+- You want to test an idea with a bold thought experiment: use the Albert Einstein mind.
+- You need to check results by hand and keep a safe margin for error: use the Katherine Johnson mind.
+- You want to learn from slow, long-term observation of living things: use the Charles Darwin mind.
+
+**What next:** Take it to Albert Einstein to try a bold thought experiment, to Katherine Johnson to check the numbers by hand, or to Charles Darwin for slow, long-term observation.

@@ -31,7 +31,7 @@ you_get:
   - A subtitle file in srt or vtt format
   - A saved transcript file you can reuse
 how_to_use:
-  - Use an AI that can run Python code, or follow the steps on your own computer. You need Python and ffmpeg installed.
+  - Use an AI that can run Python code, or follow the steps on your own computer. You need Python and ffmpeg installed. Install Whisper with pip install -U openai-whisper. The faster-whisper and GPU examples need an NVIDIA graphics card.
   - Paste this skill into your chat and attach your audio or video file.
   - Tell your AI the language if you know it, and say if you want English. Pick the turbo model for a good mix of speed and quality.
   - Ask it to save the transcript as a text or subtitle file.
@@ -58,3 +58,4 @@ output_sample:
       contains: Your transcript as a subtitle file you can add to a video.
     - name: Saved transcript file
       contains: The result saved as txt or json, ready to paste into another tool.
+next: [subtitle-and-transcript-maker, recording-transcriber]

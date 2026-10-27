@@ -10,7 +10,7 @@ description: >
   site that should feel cinematic or premium. Trigger on phrases like "make it feel
   alive", "Apple-style animation", "sections that overlap", "product rises between
   sections", "immersive", "scrollytelling", or any scroll-driven visual effect.
-  Covers 45+ techniques across 8 categories. Always inspects, judges, and plans assets before coding. Use aggressively for ANY web design task.
+  Covers 45+ techniques across 8 categories. Always inspects, judges, and plans assets before coding. Use it for scroll-driven or cinematic sites, not for plain brochure pages. 2.5D means flat images stacked in layers that move at different speeds to fake depth.
 license: MIT
 metadata:
   version: 1.0.0
@@ -18,6 +18,16 @@ metadata:
   category: engineering-team
   updated: 2026-03-13
 ---
+
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `assets/hero-section.html`
+- `assets/hero-section.css`
+- `assets/hero-section.js`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
 
 # Epic Design Skill
 
@@ -64,7 +74,7 @@ Before writing a single line of code, do ALL of the following in order.
 
 ### B. Inspect every uploaded image asset
 
-Run `scripts/inspect-assets.py` on every image the user has provided.
+Run `scripts/inspect-assets.py` on every image the user has provided. If you cannot run scripts, look at each image yourself and say so.
 > **Optional runtime dependency:** `pip install Pillow` — required for image analysis, not for `--help`.
 For each image, determine:
 
@@ -242,9 +252,7 @@ These are MANDATORY in every output:
 </section>
 ```
 
-→ Full boilerplate: `assets/hero-section.html`
-→ Full CSS system: `assets/hero-section.css`
-→ Full JS engine: `assets/hero-section.js`
+The full hero boilerplate files are not in this copy. Build the page from the markup pattern above and the techniques in `references/`.
 
 ---
 
@@ -332,7 +340,7 @@ Always deliver:
 
 ## Validation
 
-After building, run the validation script to check quality:
+After building, run the validation script to check quality. If you cannot run scripts, read the HTML and check the layers by hand, and say so:
 
 ```bash
 node scripts/validate-layers.js path/to/index.html

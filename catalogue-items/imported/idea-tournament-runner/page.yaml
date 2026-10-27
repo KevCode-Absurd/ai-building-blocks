@@ -31,9 +31,10 @@ you_get:
 how_to_use:
   - Write your ideas in a list. Give each one a short title and a line or two. Rough is fine.
   - Open your AI. Paste in the skill text, then paste your ideas. If your AI can use files, save them as ideas.md.
-  - Ask it to set up your idea island, then run round one. It needs no paid service or API key beyond your AI.
-  - Read the scores and the Decisions Needed list. You choose what to keep, set aside or wake up.
+  - Ask it in plain words, such as "set up my idea island, then run round one". The slash commands in the skill file, such as /idea-darwin round, only work where the skill is installed. In a plain chat, ask in words. No paid service or API key is needed beyond your AI.
+  - Read the round briefing, which has a table of your ideas with six scores each, then a Decisions Needed list. You choose what to keep, set aside or wake up.
   - Add new ideas or outside input, like news or notes, then ask for another round. Repeat until a few ideas stand out.
+  - Take the top one or two survivors into a validation plan, such as the Five-day idea test planner, before you spend time on them.
 output_sample:
   input:
     - Your list of rough ideas, each with a short title and a line or two

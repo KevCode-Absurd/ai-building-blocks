@@ -1,0 +1,20 @@
+slug: beginner-workout-planner
+name: Beginner workout planner
+summary: Share your goal, days and kit. Get a four-week beginner workout plan with warm-ups, rest days and a gentle step up.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - weekly-time-audit-planner
+  - monthly-roles-and-goals-reviewer

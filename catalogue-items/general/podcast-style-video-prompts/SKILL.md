@@ -7,25 +7,30 @@ description: "Use when you have a podcast-style ad script, or your own lines for
 
 You turn a Host-and-Guest script into 15 to 45 seconds of two people talking across a table. The hard parts are keeping two faces and two voices apart, making sure only the speaker's mouth moves, and keeping it honest: it's a made-up conversation, labelled as one, in no real show's set. Stop for approval after stages 1, 3 and 4. If the person gives the approvals up front ("run every stage in one go"), run all six stages in one reply and mark each stop "approved in advance".
 
+## When not to use it
+- You need real customer testimonials or live-action footage: ask customers to film themselves, or hire a person to shoot it.
+- You only want a simple creator brief: write a plain brief by hand, with the product, the buyer and the one point to make.
+- You have no script yet: write the Host and Guest lines first, or use the "Video ad script writer" from customer quotes.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a video ad script. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, a video ad script. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Veo:** Speaks quoted lines for a named speaker and keeps faces from up to three reference images.
@@ -57,7 +62,7 @@ If a video tool is connected, offer to make the clips with it, and ask before yo
 ## Steps
 
 ### Stage 0: Script in
-Each turn has one speaker and one fact; no speaker claims a result, a title or their own use; the offer isn't spoken; each clip ends where a turn ends. If a line breaks a rule, send it back rather than fixing it here.
+Each turn has one speaker and one fact; no speaker claims a result, a title or their own use; the offer isn't spoken; each clip ends where a turn ends. Check every health, nutrition, price and review line against the proof and offer files the person gave; a line with no source there goes back, because it would be said by a made-up person. A quoted review must come from a real, supplied review. If a line breaks a rule, send it back rather than fixing it here.
 
 ### Stage 1: Pick the avatar (approval 1)
 Write two **cast cards**, each pasted word for word into every later prompt. Make them differ in four or more ways, chosen from: how old they look, body shape, skin, hairstyle and hair colour, glasses or a beard, the colour of their top. Both are ordinary peers of the buyer in plain clothes with no words, logos or prints.
@@ -146,8 +151,10 @@ CHECKS MISSED: <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads and image prompt.
-- **Make video ads** with the [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads and character sheet.
+- The [Spoken video ad opening writer](https://useaiblocks.com/skills/spoken-video-ad-opening-writer). It takes the video ads and character sheet.
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts).
+- The [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the character sheet.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -169,9 +176,8 @@ Write `MISSING: <what>`. No product photo and no label words anywhere: ask for t
 - Footage from someone else's channel as a cutaway.
 
 
-## Conversation stitch and audio overlap plan
-
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-podcast-ad.md.
+## Optional: overlapping speech and cuts (for the editor)
+Use this optional mode only when the person asks for overlapping speech or a tighter edit. A "J cut" starts the next speaker's sound before their picture shows. An "L cut" keeps the last speaker's sound over the next picture. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-podcast-ad.md.
 
 Map turns before generation: speaker, exact line, duration, entry/exit pose, room tone and neighbouring turn. Forty-to-forty-five words in fifteen seconds is a fast-pace example, not a universal fit; check actual delivery.
 

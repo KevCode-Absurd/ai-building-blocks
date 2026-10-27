@@ -66,7 +66,7 @@ Aggregations:
 
 4. Aggregate MRR / ARR / subscribers / ARPU
 
-5. For churn: count cancellations where `updatedAt` is within `churn_window_days` and status moved to `CANCELLED`; count contracts that existed and were `ACTIVE` at `as_of - churn_window_days`
+5. For churn: count cancellations where `updatedAt` is within `churn_window_days` and status moved to `CANCELLED` (`updatedAt` can also change for reasons other than cancelling, so say in the report that churn is approximate); count contracts that existed and were `ACTIVE` at `as_of - churn_window_days`
 
 6. Build a per-product breakdown so finance can see which subscription SKUs drive MRR
 
@@ -194,5 +194,5 @@ CSV file `subscription_mrr_<YYYY-MM-DD>.csv` with columns:
 - Run on the **first day of every month** so MRR snapshots align with finance's monthly close cadence.
 - Track MRR week-over-week to catch payment-failure spikes early — `FAILED` contracts that don't recover become churn within 30 days.
 - Pre-paid annual subscriptions inflate ARR without inflating cash flow in any given month — keep them separate when reporting to investors who want a cash-flow view.
-- Pair with `churn-risk-scorer` (transactional churn) to triangulate subscription churn vs. one-time-purchase churn — they deserve separate retention strategies.
+- Pair with `churn-risk-finder` to triangulate subscription churn vs. one-time-purchase churn — they deserve separate retention strategies.
 - Multi-currency stores: report MRR per currency; converting via spot FX rates produces a misleading number that fluctuates with exchange rates rather than business performance.

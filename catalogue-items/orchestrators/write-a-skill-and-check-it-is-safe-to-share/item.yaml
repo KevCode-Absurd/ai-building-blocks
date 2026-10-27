@@ -7,14 +7,18 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - { type: brief, required: true }
+  - { type: question, required: true }
+  - { type: document, required: false }
+  - { type: skill_files, required: false }
 outputs:
+  - { type: skill_files }
+  - { type: security_report }
   - { type: audit_report }
 uses: [ skill-writer, skill-quality-tester, skill-trigger-auditor, skill-safety-checker, skill-portability-checker ]
 steps:
   - { uses: skill-writer, note: "Turns your description of the job into a skill folder with test prompts. Hands steps 2 and 3 the skill folder." }
-  - { uses: skill-quality-tester, note: "Reads the skill folder from the step before and scores it with a fix list. Hands you the score and fix list to apply at the pause." }
-  - { uses: skill-trigger-auditor, note: "Reads the same skill folder and grades the line that decides when it runs. Hands you the trigger grade; apply it with step 2's fixes at the pause." }
+  - { uses: skill-quality-tester, note: "Reads the skill folder from the step before, checks it by reading only, then scores it with a fix list. Hands you the score and fix list to apply at the pause." }
+  - { uses: skill-trigger-auditor, note: "Reads the same skill folder, not step 2's score, and grades the line that decides when it runs. Hands you the trigger grade; apply it with step 2's fixes at the pause." }
   - { uses: skill-safety-checker, note: "Scans the fixed skill files for risky code and data leaks. Takes your revised skill files from the pause, not step 3's grade. Hands step 5 a risk list; fix any blocking risk first." }
   - { uses: skill-portability-checker, note: "Checks the same files will load in other AI tools, so you can share them. Takes the same revised files, not step 4's report, and hands you the verdict on sharing." }
 origin: rebuilt

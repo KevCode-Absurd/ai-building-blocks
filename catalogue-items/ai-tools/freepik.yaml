@@ -35,5 +35,22 @@ blocks:
   - image-upscale-checker
 alternatives: [krea, higgsfield, canva, adobe-firefly]
 last_checked: 2026-10-21
+first_result:
+  - "Go to freepik.com and sign in. Freepik now runs as Magnific, so you may see that name. No free plan was shown."
+  - "Check your plan and credits first. Credits last one year, and each model uses them at a different rate."
+  - "Pick one job: find a stock image, make an image from a description, or enlarge a picture you already have."
+  - "For an AI image, write the subject, the setting and the style. Try two models on the same description."
+  - "Check hands, text and logos. Check what the licence allows before you use a stock or AI image in an ad."
+  - "You end with images or video clips to download."
+  - "Next: check an enlarged picture with the Image upscale checker."
+needs:
+  - "A Freepik account and a plan with credits."
+  - "A written description, or the picture you want to enlarge."
+  - "A note of where the image will be used, so you can check the licence."
+not_verified:
+  - "Sign-in steps, because the pricing page redirects to Magnific."
+  - "Plan prices in US dollars."
+  - "How many credits each model uses."
+  - "Licence rules for AI images used in ads."
 sources:
   - https://www.magnific.com/pricing

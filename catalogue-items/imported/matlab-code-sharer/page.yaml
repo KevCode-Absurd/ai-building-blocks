@@ -5,9 +5,9 @@ name: MATLAB code sharer
 summary: Share MATLAB code online. Give it your files. You get them on GitHub or MATLAB Drive, plus an Open in MATLAB Online link anyone can click.
 job: ship-and-host
 headline: MATLAB code sharer
-subhead: Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can run your code without installing anything.
+subhead: Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can open and run your code in a browser with MATLAB Online, without installing MATLAB. They need a MathWorks account, and what they can run depends on their access.
 explain: |
-  Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can run your code without installing anything.
+  Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can open and run your code in a browser with MATLAB Online, without installing MATLAB. They need a MathWorks account, and what they can run depends on their access.
 
   The skill first checks where your files are: only on your computer, already on GitHub, on MATLAB Drive, or on File Exchange. Local files get uploaded first. Then it builds the correct link for that place, for example leaving out the file name to open a whole GitHub repository, or pointing to the root for a shared Drive folder. For GitHub it can also make an Open in MATLAB Online badge for your README.
 when:
@@ -19,6 +19,7 @@ not_for:
   - "You only want to run your code on your own computer: open it in MATLAB there, no upload needed."
   - "Your code must stay private: use a MATLAB Drive share and send the link only to people you trust, not a public GitHub repo."
   - "You want to try MATLAB Online or ask about licences and accounts: use the MathWorks site or support."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Your MATLAB files, or the link to your repo, Drive share or File Exchange page
   - "Where you want to share them: GitHub, MATLAB Drive or File Exchange (optional)"
@@ -29,11 +30,11 @@ you_get:
   - A README badge (optional)
   - Upload steps in plain words
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste this skill. Add your MATLAB files or your repo link.
+  - Open Claude, ChatGPT or Gemini and paste this skill. Add your MATLAB files or your repo link. A chat AI cannot run commands or upload files for you, so you do those steps by hand.
   - Tell your AI who will open the code. It picks GitHub, MATLAB Drive or File Exchange with you.
   - For GitHub, your AI needs to run commands and use the gh tool. If it can't, it gives you the steps to do yourself.
   - Check the files before you say yes to a public GitHub repo. A public repo shows your code to anyone on the internet.
-  - For MATLAB Drive or File Exchange, follow the upload steps on the MathWorks site. Paste the share link or ID back to your AI.
+  - For MATLAB Drive or File Exchange, follow the upload steps on the MathWorks site. Paste the share link, or the ID from the File Exchange page address, back to your AI. It builds the final link from that.
   - Click the finished link to test it. Then send it, or add the badge to your README.
 output_sample:
   input:
@@ -43,6 +44,8 @@ output_sample:
   prerequisites:
     - A GitHub account and the gh tool for the GitHub path, which needs an AI that can run commands
     - A MathWorks account for MATLAB Drive or File Exchange
+    - "For the people you share with: a MathWorks account and MATLAB Online access, which depends on their licence"
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Starting point check
       contains: "Where your files are now: only on your computer, on GitHub, on MATLAB Drive or on File Exchange."

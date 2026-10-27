@@ -11,7 +11,7 @@ subhead: "Paste your story idea. It states the idea the story proves, names the 
 explain: |
   A story can have good scenes and still go nowhere. The usual causes are an idea that runs out halfway, scenes where nothing changes, and a narrator who explains what the pictures should already show. The writer is too close to see any of these.
 
-  This workflow tests the story from the top down. It first checks whether the central idea is strong enough to carry the whole story and what argues against it. Then it goes through the scenes in order, writes down what changes in each and which choice causes it, and flags the scenes where nothing turns. You then write the script. The last step removes the voice-over and judges whether the story still works, so only lines that add meaning stay. The method comes from Robert McKee's story seminars.
+  This workflow tests the story from the top down. It first checks whether the central idea is strong enough to carry the whole story and what argues against it. Then it goes through the scenes in order, writes down what changes in each and which choice causes it, and flags the scenes where nothing turns. You then write the script. The last step removes the voice-over and judges whether the story still works, so only lines that add meaning stay. The checks draw on ideas from Robert McKee's story teaching, such as the controlling idea and scenes that turn. The order of the three steps is this library's own design.
 
 when:
   - You are writing a short film, an ad, a novel or a customer story and aren't sure the idea is strong enough to carry it.
@@ -25,7 +25,7 @@ not_for:
 you_give:
   - Your story idea in a few sentences, and who it is for
   - Your scene list in order, one line per scene
-  - Your script or draft written from the scenes
+  - Your script or draft written from the scenes (after the pause, for step 3)
   - Your medium, such as an ad, short film or case study (optional)
 
 you_get:
@@ -34,7 +34,7 @@ you_get:
   - A verdict on each voice-over line, and a version of the script with the telling lines cut or turned into scenes
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and three skill files, in the order they run: Story premise tester, Scene turn checker and Voice-over stripping test."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your story idea. It tests the idea and then asks for your scene list.
   - It stops after the scene check. Write the script from the scene list, fixing the flagged scenes first.

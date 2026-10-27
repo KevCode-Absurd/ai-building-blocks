@@ -5,7 +5,7 @@ name: Model launch engineer
 summary: Turn a trained model into a live service. Give it your model file and get an API, a Docker container and deploy files to host it.
 job: ship-and-host
 headline: Model launch engineer
-subhead: Give it a trained model. Get it running as a live service with an API and container. Bring the trained model file. Use the result to plan your next step.
+subhead: Give it a trained model. Get it running as a live service with an API and container. Bring the trained model file.
 explain: |
   A trained model running as a live service that other programs can call, packaged so it starts the same way on any machine.
 
@@ -37,6 +37,8 @@ how_to_use:
   - Check the API code and Dockerfile your AI writes before you build anything.
   - Build the container and deploy it. You need Docker and a hosting account, which may cost money.
   - Read the smoke test results and fix any failed test before real users call the service.
+  - Do not expose the API to the internet until it needs an API key or sits on a private network. The sample Kubernetes service is open by default.
+  - If a smoke test fails, read the log, fix the cause and rebuild. Release to a small share of users first, and watch the logs before you send everyone to it.
 output_sample:
   input:
     - Your trained model file

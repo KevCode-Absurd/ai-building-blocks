@@ -40,6 +40,10 @@ Before building optimization models, understand:
 
 ---
 
+> Added by AI Blocks: the code examples below are templates that show the method, and the numbers in them are examples. Before you run one, make sure its imports and your data are defined. If it fails, fix it and tell the person what you changed. Do not present an example's result as the person's answer.
+>
+> Next steps: when the person picks a plan, check each limit against their real rules, rerun with changed limits to see how the plan moves, then pass the chosen plan to whoever will carry it out.
+
 ## Optimization Problem Types
 
 ### Linear Programming (LP)
@@ -62,7 +66,8 @@ Before building optimization models, understand:
 from pulp import *
 import pandas as pd
 
-def production_planning_lp(products, resources, demand, capacity, costs):
+def production_planning_lp(products, resources, demand, capacity, costs,
+                           resource_usage):
     """
     Determine optimal production quantities
 
@@ -74,7 +79,8 @@ def production_planning_lp(products, resources, demand, capacity, costs):
     resources: list of resource names
     demand: dict {product: demand_quantity}
     capacity: dict {resource: available_capacity}
-    costs: dict {(product, resource): cost_per_unit}
+    costs: dict {product: cost_per_unit}
+    resource_usage: dict {product: {resource: units used per unit made}}
     """
 
     # Create problem
@@ -97,7 +103,7 @@ def production_planning_lp(products, resources, demand, capacity, costs):
                 f"Meet_Demand_{product}"
 
     # 2. Resource capacity
-    # Assume resource_usage[product][resource] is known
+    # resource_usage[product][resource] is passed in as a parameter
     for resource in resources:
         prob += lpSum([resource_usage[product][resource] * production[product]
                       for product in products]) <= capacity[resource], \
@@ -130,7 +136,7 @@ demand = {
 
 capacity = {
     'Labor': 1000,  # hours
-    'Machine': 800,  # hours
+    'Machine': 1000,  # hours (example value, chosen so the example is feasible)
     'Material': 5000  # units
 }
 
@@ -146,7 +152,8 @@ resource_usage = {
     'Product_C': {'Labor': 1.5, 'Machine': 4, 'Material': 12}
 }
 
-result = production_planning_lp(products, resources, demand, capacity, costs)
+result = production_planning_lp(products, resources, demand, capacity, costs,
+                               resource_usage)
 print(f"Optimal Cost: ${result['total_cost']:,.2f}")
 print("Production Plan:")
 for product, qty in result['production_plan'].items():
@@ -443,6 +450,14 @@ print(result['products'][['sku', 'optimal_safety_stock', 'inventory_value']])
 **Weighted Sum Approach:**
 
 ```python
+from pulp import *
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Before you run this, define customers, facilities, demand (per customer) and
+# costs, a dict with 'fixed' {facility: cost}, 'transport' {(customer, facility): cost}
+# and 'distance' {(customer, facility): distance}. The values below are your own data.
+
 def multi_objective_network_design(customers, facilities, demand, costs,
                                    alpha=0.6, beta=0.4):
     """
@@ -483,12 +498,33 @@ def multi_objective_network_design(customers, facilities, demand, costs,
         ) / max_distance
     ), "Weighted_Objective"
 
-    # Add constraints (similar to previous examples)
-    # ... demand, capacity, facility opening constraints ...
+    # Constraints
+    # 1. Each customer's demand is fully served
+    for i in customers:
+        prob += lpSum([x[i,j] for j in facilities]) == demand[i], f"Demand_{i}"
 
-    prob.solve()
+    # 2. A customer can only be served from a facility that is open
+    for i in customers:
+        for j in facilities:
+            prob += x[i,j] <= demand[i] * y[j], f"Open_{i}_{j}"
 
-    return extract_results(prob, y, x)
+    prob.solve(PULP_CBC_CMD(msg=0))
+
+    total_flow = sum(demand.values())
+    total_cost = (
+        sum(costs['fixed'][j] * y[j].varValue for j in facilities) +
+        sum(costs['transport'][i,j] * x[i,j].varValue
+            for i in customers for j in facilities)
+    )
+    avg_distance = sum(costs['distance'][i,j] * x[i,j].varValue
+                       for i in customers for j in facilities) / total_flow
+
+    return {
+        'status': LpStatus[prob.status],
+        'total_cost': total_cost,
+        'avg_distance': avg_distance,
+        'open_facilities': [j for j in facilities if y[j].varValue > 0.5]
+    }
 
 # Run with different weights to get Pareto frontier
 pareto_solutions = []

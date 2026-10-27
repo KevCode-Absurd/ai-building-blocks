@@ -33,7 +33,8 @@ how_to_use:
   - Paste your idea, notes or draft. Add any facts, numbers or a sample of your own posts.
   - Check the one-sentence idea your AI gives back. If it asks which part is the point, answer it.
   - Read the X post and the LinkedIn post. Look for lines that appear in both, and ask for a rewrite if you find one.
-  - Edit to your voice, then post. Posting is by hand. The optional VoiceMoat connector in the skill needs a paid plan and is not needed for the writing.
+  - Edit to your voice, then post. Posting is by hand. The last section of the skill is about the optional VoiceMoat connector (paid plan). Your AI can skip it.
+  - After a few days, see which post got more replies. Tell your AI what worked and ask it to use that shape next time.
 output_sample:
   input:
     - Your idea, rough notes or a draft

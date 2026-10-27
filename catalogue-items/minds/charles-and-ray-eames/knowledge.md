@@ -1,6 +1,6 @@
 # Charles and Ray Eames: what they knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: this mind is a pair. Charles and Ray Eames worked as equal creative partners for almost 40 years, though Charles was the public face and often got the credit [S4][S5]. Most of their recorded words are Charles's, so we mark who said what when we know. The main own-words source is the 1972 film *Design Q&A*, in which Charles answers 29 questions for both of them [S1]. We add their statements as quoted by Herman Miller [S2], a page of sourced quotes [S3], and reference pages from Wikipedia, the Library of Congress and the Eames Foundation [S4] to [S14]. The Eames Foundation's biography and design-legacy pages [S13][S14] quote them on several points. Public record in their own words is thin, mostly Charles's 1972 answers and short quoted lines. Their own words are still under copyright, so quotes stay short.
 

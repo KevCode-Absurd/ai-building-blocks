@@ -143,7 +143,7 @@ This causes load spikes, connection-pool exhaustion, and cascading timeouts.
 Fires only on leap years — February 29, 2024 / 2028 / 2032… If someone writes this
 expecting "end of February," they'll be confused for 3 out of every 4 years.
 
-**Fix:** use `0 0 28 2 *` and handle the 29th case in the script if needed.
+**Fix:** `0 0 28 2 *` does not cover leap years, because it never runs on the 29th. If you need the real last day of February, run `0 0 28-29 2 *` and have the script exit unless tomorrow is in March.
 
 ## Using the validation script
 

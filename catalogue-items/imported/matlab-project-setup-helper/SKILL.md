@@ -190,6 +190,7 @@ startup-files = [
 ]
 
 [project.shortcuts]
+# Example only: scripts/analyze.m must exist in the project before you add this shortcut.
 "Run Analysis" = {path = "scripts/analyze.m"}
 ```
 

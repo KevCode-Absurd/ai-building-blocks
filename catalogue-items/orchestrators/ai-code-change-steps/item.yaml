@@ -14,8 +14,8 @@ outputs:
 uses: [test-list-writer, structure-behaviour-split, ai-coding-agent-rules-writer]
 steps:
   - {uses: test-list-writer, note: "An ordered list of cases to test, smallest first, before any code"}
-  - {uses: structure-behaviour-split, note: "It split into tidy-ups and new-behaviour steps, each small enough to review alone. Reads the plan from the step before"}
-  - {uses: ai-coding-agent-rules-writer, note: "A plan file and standing rules that make an AI coding agent work one test at a time. Reads the plan from the step before"}
+  - {uses: structure-behaviour-split, note: "Reads the test list from step 1. Returns the change split into tidy-up steps and new-behaviour steps, each small enough to review alone."}
+  - {uses: ai-coding-agent-rules-writer, note: "Reads the steps from step 2. Returns a plan file and standing rules that make an AI coding agent work one test at a time."}
 origin: rebuilt
 version: 1.0.0
 minds: [kent-beck]

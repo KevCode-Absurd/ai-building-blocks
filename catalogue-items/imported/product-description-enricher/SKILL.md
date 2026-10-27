@@ -28,7 +28,7 @@ All skills accept these universal parameters:
 |-----------|--------|----------|---------|-------------|
 | store     | string | yes      | —       | Store domain (e.g., mystore.myshopify.com) |
 | format    | string | no       | human   | Output format: `human` (default) or `json` |
-| dry_run   | bool   | no       | false   | Preview mutations without executing |
+| dry_run   | bool   | no       | true    | Preview mutations without executing. Set to false only after the user has approved the before/after preview |
 
 Skill-specific parameters:
 
@@ -50,7 +50,7 @@ Skill-specific parameters:
    **Inputs:** `first: 100`, optional filter; fields `descriptionHtml`, `title`, `productType`, `options`, `tags`, `metafields(first: 30)`; paginate.
    **Expected output:** Products whose stripped-text description is below `min_chars`, plus the structured facts available to enrich from.
 
-2. **COMPUTE (no API):** for each thin product, draft `descriptionHtml`: a one-line benefit hook + a short facts list built ONLY from real product data (no invented specs), honoring `brand_voice`. Emit a before/after preview.
+2. **COMPUTE (no API):** for each thin product, draft `descriptionHtml`: a one-line benefit hook + a short facts list built ONLY from real product data (no invented specs). The hook may only restate facts found in the product's title, options, type and metafields. It must not add performance, health or quality claims, honoring `brand_voice`. Emit a before/after preview.
 
 3. **OPERATION:** `productUpdate` — mutation
    **Inputs:** `{ id, descriptionHtml }` per approved product.

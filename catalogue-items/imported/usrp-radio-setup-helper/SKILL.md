@@ -247,7 +247,7 @@ To make persistent, add to `/etc/sysctl.conf` and configure the interface in `/e
 - Increase Receive Buffers to maximum (varies by adapter: Intel may support 2048+, Realtek often caps at 512)
 - Disable power saving: `Disable-NetAdapterPowerManagement -Name "<adapter>"`
 - Disable all protocols except TCP/IPv4 on the radio NIC
-- Disable Windows Firewall on the radio NIC interface
+- Disable Windows Firewall on the radio NIC interface only, never for all networks. Turn it back on once the connection test passes.
 
 All Windows NIC configuration commands (`New-NetIPAddress`, `netsh`, `Set-NetAdapterAdvancedProperty`) require an elevated (Administrator) terminal. MATLAB `system()` calls cannot elevate — the user must run these from an admin prompt.
 

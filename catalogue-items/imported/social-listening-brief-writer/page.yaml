@@ -32,7 +32,8 @@ you_get:
   - A note on how far to trust the sample
   - Risks, openings and next steps
 how_to_use:
-  - Make a ScrapeCreators account and copy your API key. This is a paid data service.
+  - Make a ScrapeCreators account and copy your API key. This is a paid data service, so set a spending cap before your first run.
+  - The skill scrapes public posts. Platform terms may restrict that, so check them first. Remove or anonymise usernames before you share the brief.
   - Use an AI that can run code and reach the web. Set the key as SCRAPECREATORS_API_KEY in that tool.
   - Paste the skill into your AI. Then give it your topic, two or three platforms and a time range, such as the last 30 days.
   - Read the Executive Summary first. Check the confidence line and the quotes before you trust a theme.

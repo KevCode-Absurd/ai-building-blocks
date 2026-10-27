@@ -33,7 +33,7 @@ Walks through recently approved or closed returns and restocks inventory for eac
 
 ## Safety
 
-> ⚠️ Step 2 executes `inventoryAdjustQuantities` mutations that immediately add units to the `available` count at the destination location. Restocking damaged or unsalable inventory inflates available stock and causes oversells. The default is `dry_run: true` — review the preview CSV to confirm each return line item is genuinely sellable before committing. By default `skip_defective: true` excludes `DEFECTIVE` returns. Each restock posts a permanent entry in Shopify's inventory activity log with reason `restock`.
+> ⚠️ Step 3 executes `inventoryAdjustQuantities` mutations that immediately add units to the `available` count at the destination location. Restocking damaged or unsalable inventory inflates available stock and causes oversells. The default is `dry_run: true` — review the preview CSV to confirm each return line item is genuinely sellable before committing. By default `skip_defective: true` excludes `DEFECTIVE` returns. Each restock posts a permanent entry in Shopify's inventory activity log with reason `restock`.
 
 ## Workflow Steps
 

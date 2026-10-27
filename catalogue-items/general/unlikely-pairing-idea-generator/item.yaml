@@ -1,6 +1,6 @@
 slug: unlikely-pairing-idea-generator
 name: "Unlikely pairing idea generator"
-summary: "Name two fields, styles or tones. Get ten odd pairings, one limiting rule and a shortlist that passes a not-safe check."
+summary: "Name two fields, styles or tones. Get ten odd pairings, one limiting rule and a shortlist that passes a comfort check."
 category: general
 type: skill
 role: make
@@ -14,6 +14,6 @@ origin: rebuilt
 version: 1.0.0
 minds: [david-bowie]
 credits:
-  - {title: "Commencement address, Berklee College of Music, 8 May 1999", by: "David Bowie", url: "https://college.berklee.edu/commencement/past", used: "Working for the right audience and not the crowd, and pushing past what feels safe"}
-  - {title: "David Bowie on the art and process of songwriting", by: "Louder / Classic Rock", url: "https://www.loudersound.com", used: "Setting one hard limit, letting an accident in and moving an idea to a new key or format"}
-  - {title: "David Bowie advice to young artists", by: "Far Out Magazine, 2020", used: "Combining influences in odd ways and expecting most attempts to fail"}
+  - {title: "Commencement address, Berklee College of Music, 8 May 1999", by: "David Bowie", url: "https://college.berklee.edu/commencement/past", used: "Our paraphrase of the idea, not a quote: working for the right audience and not the crowd, and pushing past what feels safe"}
+  - {title: "David Bowie on the art and process of songwriting", by: "Louder / Classic Rock", url: "https://www.loudersound.com", used: "Our paraphrase of the idea, not a quote: setting one hard limit, letting an accident in and moving an idea to a new key or format"}
+  - {title: "David Bowie advice to young artists", by: "Far Out Magazine, 2020", used: "Our paraphrase of the idea, not a quote: combining influences in odd ways and expecting most attempts to fail"}

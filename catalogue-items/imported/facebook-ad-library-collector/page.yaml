@@ -5,18 +5,19 @@ name: Facebook ad library collector
 summary: Find the live ads any brand runs on Facebook and Instagram. Give it a Page link or keyword and get one row per ad from the Ad Library.
 job: study-competitors
 headline: Facebook ad library collector
-subhead: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites. Bring a brand name, Page link or keyword. Use the result to plan your next step.
+subhead: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. It runs a paid Apify scraper on Meta's public Ad Library. Use the rows for a swipe file or a teardown.
 explain: |
-  A spreadsheet of every ad a competitor is running on Facebook and Instagram, with the creative links and start dates, so you can see which ads have stayed live the longest. Long-running ads usually mean they make money.
+  A spreadsheet of every ad a competitor is running on Facebook and Instagram, with the creative links and start dates, so you can see which ads have stayed live the longest. Long-running ads may be working, but run length is a guess, not proof.
 
   You give it a Page link or a keyword. For a Page, it uses the page URL. For a keyword, it builds a public Ad Library search link with your country, words and active status. It then runs an Apify scraper and returns one row per ad. For political ads it also pulls the reach and spend figures that are disclosed. It needs an Apify account and token, and the scraper charges per result.
 when:
   - You want to see what ads a rival brand is running right now.
   - You are testing a product idea and want to know who already advertises for the same keyword.
-  - You need a list of long-running ads to copy angles from.
+  - You need a list of long-running ads to study angles from.
   - You want video and image links from a competitor to save for a swipe file.
 not_for:
   - "You want to create, pause or measure your own Facebook ads: use Meta Ads Manager or the Meta Marketing API with your own account."
+  - "You want to turn the rows into a swipe file or a write-up: use the competitor ad swipe file builder or the competitor ad teardown writer."
   - "You want TikTok or Google ads: this only reads the Meta Ad Library, so use that platform's own public ad library."
   - "You need exact spend or reach for normal ads: Meta only shares these for political and issue ads, and some EU and UK ads."
 you_give:
@@ -37,6 +38,8 @@ how_to_use:
   - Set a cap on ads, for example 200. Check the cost estimate before a big run.
   - Read the report. Look at the longest-running ads first, and open their links to see the creative.
   - Treat long-running ads as a guess about what works, not proof.
+  - This is a paid third-party scraper. Check Meta's Ad Library terms before you use the data. Use it to study ads, not to copy them.
+  - Next, save the best rows in a swipe file or write a teardown.
 output_sample:
   input:
     - A brand's Facebook Page link, or a keyword
@@ -60,3 +63,4 @@ output_sample:
       contains: Age range, gender and countries for EU and UK ads, when you ask for ad details.
     - name: Report
       contains: Ad count, how many are active, the longest-running ads with links, and common formats.
+next: [competitor-ad-swipe-file-builder, competitor-ad-teardown-writer, competitor-ad-gap-finder]

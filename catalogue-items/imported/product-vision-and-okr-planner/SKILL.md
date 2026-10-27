@@ -54,14 +54,18 @@ See `references/strategy_types.md` for detailed guidance.
 
 ### Step 2: Gather Input Metrics
 
+Pass your real figures to the script as a JSON string with the `--metrics` flag. The numbers below are examples only. Replace them with your own. In JSON, "current" and "target" are your MAU now and your MAU goal; "current_nps" and "target_nps" are your NPS now and your NPS goal.
+
 ```json
 {
-  "current": 100000,      // Current MAU
-  "target": 150000,       // Target MAU
-  "current_nps": 40,      // Current NPS
-  "target_nps": 60        // Target NPS
+  "current": 100000,
+  "target": 150000,
+  "current_nps": 40,
+  "target_nps": 60
 }
 ```
+
+Example: `python scripts/okr_cascade_generator.py growth --metrics '{"current":100000,"target":150000,"current_nps":40,"target_nps":60}'`
 
 ### Step 3: Configure Teams & Run Generator
 

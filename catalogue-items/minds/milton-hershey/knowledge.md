@@ -1,6 +1,6 @@
 # Milton Hershey: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Source check, 21 October 2026: this pass re-read the two letters to his uncle (January 1881 and January 1882) as posted by the Hershey Community Archives [S4][S5], the Archives' pages on his Philadelphia years, the school, the gift, advertising and the Titanic booking [S3][S6][S7][S8][S9], and the Archives' life summary [S2]. Hershey's own words are still thin: the two letters and a short radio clip [S10]. Everything else is the Archives or Wikipedia telling what he did, so treat those lines as context, not as his own words.
 

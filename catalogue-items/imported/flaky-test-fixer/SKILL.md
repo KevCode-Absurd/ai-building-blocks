@@ -14,7 +14,7 @@ Diagnose and fix a Playwright test that fails or passes intermittently using a s
 
 `$ARGUMENTS` contains:
 - A test file path: `e2e/login.spec.ts`
-- A test name: ""should redirect after login"`
+- A test name: `"should redirect after login"`
 - A description: `"the checkout test fails in CI but passes locally"`
 
 ## Steps
@@ -47,7 +47,7 @@ Run with full tracing:
 npx playwright test <file> --trace=on --retries=0
 ```
 
-Read the trace output. Use `/debug` to analyze trace files if available.
+Open the trace with `npx playwright show-trace <path to trace.zip>` and read the timeline: which action failed, what the page looked like, and which network calls were still running.
 
 ### 3. Categorize the Failure
 
@@ -84,7 +84,7 @@ Every failing test falls into one of four categories:
 
 **Infrastructure:**
 - Increase timeout for slow CI runners
-- Add retries in CI config (`retries: 2`)
+- Add retries in CI config (`retries: 2`) only as a last resort, after you have found the cause. Retries hide flakes, they do not fix them
 - Check for browser OOM (reduce parallel workers)
 - Ensure browser dependencies are installed
 
@@ -104,6 +104,10 @@ Suggest:
 - Add to CI with `retries: 2` if not already
 - Enable `trace: 'on-first-retry'` in config
 - Add the fix pattern to project's test conventions doc
+
+## Next
+
+Once the test is stable, commit the fix with the trace as evidence and re-run the full suite in CI. If the flake returns, keep the new trace and run these steps again from step 1.
 
 ## Output
 

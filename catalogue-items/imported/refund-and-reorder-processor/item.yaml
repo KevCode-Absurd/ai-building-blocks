@@ -5,7 +5,7 @@ category: general
 boards: []
 type: skill
 role: orchestrate
-job: ops
+job: help-customers
 level: advanced
 inputs:
   - type: tool_connection

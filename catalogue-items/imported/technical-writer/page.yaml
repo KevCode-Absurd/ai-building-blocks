@@ -18,6 +18,8 @@ when:
   - You must record why a technical decision was made.
 not_for:
   - "You need marketing copy or a sales page: write it with a copywriter or a marketing prompt, since this skill works from a spec or code."
+  - "You have no product, API or codebase to document, such as a business with no software: this skill is for teams that ship software. Use a how-to or SOP writer instead."
+  - "You want release notes from git commits: use the release notes writer. For a machine-readable API file, use the API spec writer."
   - "You need a help article for end users and have no spec or source material: ask your support lead for the facts first."
   - "You need the examples tested: run them yourself or ask an engineer, because your AI cannot run code unless you give it a way to."
 you_give:
@@ -31,12 +33,14 @@ you_get:
   - Links and next steps
   - A list of facts to confirm
 how_to_use:
+  - Before you start, gather: the feature, the reader, the document type, and the code or schema. Your AI only sees what you give it.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say which document you want and who will read it, for example an API reference for outside developers.
   - Paste your source material, such as code, a schema or design notes. Attach files if your AI accepts them.
   - Read the result and the list of facts to confirm. Ask your team to answer them.
   - Run every code example yourself. Your AI can compare docs with the code you gave it, but it cannot run them unless you give it a way to.
   - Publish the document. Link the reference from your getting-started tutorial, or use the changelog as the base for release notes.
+next: [release-notes-writer, developer-docs-writer]
 output_sample:
   input:
     - The feature, API or tool to document

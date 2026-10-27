@@ -7,6 +7,8 @@ description: Framework for building competitive landscape decks — market posit
 
 > Modified by AI Blocks on 2026-10-24: method/copy repair.
 
+Every number in the templates below (for example $4.96B, $25.1B, ●●● $160B and the 30/50/20 scenario odds) is a placeholder that shows the layout. None of it is real data. Replace each one with a sourced figure for the companies the user chose, or write "not available". The user sets any scenario odds. Never assume them.
+
 ## Environment check
 
 This skill works in both the PowerPoint add-in and chat. Identify which you're in before starting — the mechanics differ, the workflow doesn't:
@@ -124,7 +126,7 @@ Industry not listed — pick the metrics investors and operators benchmark on.
 
 Size, growth, drivers, headwinds. With sources.
 
-Correct: "Embedded payments is $80-100B in 2024, growing 20-25% CAGR (McKinsey 2024)"
+Correct (layout only; the figures and source are placeholders): "[Market] is $[X]B in [year], growing [Y]% CAGR ([source, year])"
 Wrong: "The market is large and growing rapidly"
 
 ### Step 2 — Industry economics

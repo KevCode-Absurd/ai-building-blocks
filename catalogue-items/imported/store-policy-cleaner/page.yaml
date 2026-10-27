@@ -30,11 +30,11 @@ you_get:
   - Clean plain text versions
   - A preview before any live change
 how_to_use:
-  - Give your AI the skill text and your Shopify store address. It needs to run Shopify commands, so use a tool that can, such as Claude Code.
+  - Give your AI the skill text and your Shopify store address. It needs to run Shopify commands, so use a tool that can, such as Claude Code. Claude Code and similar tools may need a paid plan or API access.
   - Sign in to your store when asked. Keep it on audit only for the first run.
   - Read the policy table. Look for policies that are missing, thin or image-only.
-  - Have a lawyer check your policy wording. Save the approved text as one file per policy.
-  - Run it again in apply mode with your folder of files. Check the preview before you let it write.
+  - Have a lawyer check your policy wording. Save the approved text as one HTML file per policy, named for its type, such as REFUND_POLICY.html. Put them all in one folder.
+  - Run it again in apply mode with your folder of files. The preview (dry run) is on by default and writes nothing. Check it, then turn the dry run off to let it write.
   - Run the audit once more to confirm every policy now reads as plain text.
 output_sample:
   input:

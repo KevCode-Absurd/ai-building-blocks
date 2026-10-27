@@ -33,10 +33,10 @@ you_get:
   - A list of pauses, budget moves and launches to approve
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run today's check.
-  - Put this week's ad results in one folder, or attach them in the chat. Connect the account read-only if you can.
+  - Put this week's ad results in one folder, or attach them in the chat. The export works with no connection. A read-only Meta connection needs your own login or access token, and some connector tools charge a fee.
   - Give it your target and, for your best ad, the transcript.
   - Read the list. Approve the pauses and launches you agree with.
-  - Run it again in three or four days. It adds the new rows to its history and looks for the trend.
+  - Run it again in three or four days. The first run only starts the history. From the second run it looks for a slide.
 output_sample:
   input:
     - Ad results for the last 7 days, one row per ad
@@ -130,7 +130,7 @@ works_best_with:
     - name: Claude Code
       why: It can keep the history files and run on a timer.
     - name: Meta Ads Manager
-      why: Export ad-level results with frequency, hook rate and hold rate. The daily checker can read it directly if connected read-only.
+      why: Export ad-level results with frequency, hook rate and hold rate. The export needs no setup. A direct read-only link needs access through your own login or token.
   inputs:
     - The transcript of your best ad
     - Your stock position for the products you advertise most

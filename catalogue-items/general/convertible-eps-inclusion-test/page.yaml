@@ -4,12 +4,14 @@ headline: Convertible EPS inclusion test
 summary: Check if a convertible adds or cuts your diluted EPS. Compare basic EPS with incremental EPS to decide whether to include the dilution.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "A convertible only counts as dilutive when it lowers EPS, so the numerator and the share count must be tested together."
 subhead: Give it your profit, share counts and the convertible's terms. It compares basic EPS with the extra earnings per extra share from conversion. You get a clear call on whether to include the dilution.
 explain: |-
-  A single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS.
+  A convertible bond or note can turn into shares. If it does, profit rises a little (you stop paying the interest) and the share count rises a lot. This test checks whether that lowers EPS (earnings per share). If it does, the convertible is dilutive and counts in diluted EPS.
 
-  Public equity and share counts. Illustrative figures. Basic EPS is 100/100 = $1. Incremental EPS is 2/50 = $0.04 and candidate EPS is 102/150 = $0.68. A $60 million adjustment instead raises EPS to $1.066667 and fails the profitable anti-dilution test.
+  The rule is simple. Incremental EPS = after-tax interest saved ÷ extra shares. If that is lower than basic EPS, include the convertible. If it is higher, leave it out.
+
+  Practice numbers, not a real company: basic EPS is 100 / 100 = $1.00. Incremental EPS is 2 / 50 = $0.04, so the convertible counts. Diluted EPS is 102 / 150 = $0.68. With a $60 million adjustment instead, EPS would rise to $1.07, so the convertible would be left out.
 when:
   - You have one convertible bond or note and need to know if it dilutes EPS.
   - You are building a diluted EPS schedule and want each number traced to a source.
@@ -19,6 +21,7 @@ not_for:
   - "You have a loss, several convertibles, contingent settlement, cash elections or participating securities: ask an accountant for a full IAS 33 analysis."
   - "You want to check a fund or investor statement: use a plain review by your fund administrator or accountant instead."
   - "You need to know if a contract allows conversion: read the contract with your lawyer first, then come back."
+  - "Your dilution comes from options, not a convertible: use the Treasury-stock option dilution instead."
 you_give:
   - Profit from continuing operations for ordinary shareholders.
   - Basic weighted average shares.
@@ -75,10 +78,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Assumed conversion date"
+    how: "Take the assumed conversion date from the profit figures, the share count and the convertible terms. Use one currency and scale on every line."
+  - what: "After-tax interest saved"
+    how: "Change the after-tax interest saved and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Numerator and denominator adjustments use the same assumed conversion date.
 judge:
@@ -91,8 +94,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one convertible EPS test you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define incremental EPS into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -107,3 +110,6 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+next:
+  - treasury-stock-option-dilution
+  - weighted-average-share-schedule

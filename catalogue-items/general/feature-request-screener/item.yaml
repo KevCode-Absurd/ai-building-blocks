@@ -18,3 +18,4 @@ version: 1.0.0
 minds: [jason-fried]
 credits:
   - {title: "Getting Real", by: "Jason Fried and 37signals", url: "https://basecamp.com/gettingreal", used: "Starting with no, counting only repeat requests, hidden costs of a feature, ignoring feature requests that do not fit the vision and making opinionated software"}
+needs_mode: manual

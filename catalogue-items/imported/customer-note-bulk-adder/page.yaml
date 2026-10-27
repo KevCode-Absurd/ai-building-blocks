@@ -9,7 +9,7 @@ subhead: Adding the same note to fifty customer records by hand is slow and easy
 explain: |
   Adding the same note to fifty customer records by hand is slow and easy to get wrong. Give it a customer filter and a note and it adds the note to every matching Shopify customer in one go.
 
-  You choose the filter, such as a tag or a minimum spend. It runs a dry run first by default, listing who would be changed so you can check the list. The note is added to the end of the existing note with a time stamp, unless you choose to replace it, which wipes the old text. Notes are for staff only and customers never see them. This changes live customer data and needs Shopify write access.
+  You choose the filter, such as a tag or a minimum spend. It runs a dry run first by default, listing who would be changed so you can check the list. The note is added above the existing note, with a date at the start, unless you choose to replace it, which wipes the old text. Notes are for staff only and customers never see them. This changes live customer data and needs Shopify write access.
 when:
   - You finished a campaign and want to flag everyone who received it.
   - You imported customers and want to record where they came from.
@@ -33,9 +33,10 @@ how_to_use:
   - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
   - "Sign in first. Run the Shopify CLI command: shopify store auth --store your-store.myshopify.com --scopes read_customers,write_customers."
   - "Give your AI the SKILL.md file and say: follow this skill. Add your store, your filter, such as tag:vip, and your note, such as 2026-04-11: VIP spend tier."
+  - Test on a small filter first, such as one tag with a handful of customers, before you run a broad spend filter.
   - Leave dry run on for the first pass. Check the list of matching customers and the notes they would get.
   - Run it again with dry run off. Keep append on unless you mean to wipe old notes.
-  - Open the annotation log CSV and check the results and any errors.
+  - Open the annotation log CSV and check the results and any errors. Save it with the campaign record, and use the same filter later to check the notes are in place.
 output_sample:
   input:
     - Your store address, such as mystore.myshopify.com

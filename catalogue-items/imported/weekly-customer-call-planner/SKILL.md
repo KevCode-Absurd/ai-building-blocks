@@ -12,12 +12,14 @@ Generate a single comprehensive weekly briefing that covers every external custo
 ### Step 1: Get the Week's External Meetings
 
 **Option A — Calendar connected:**
-Use the `~~calendar` connector to fetch all meetings scheduled in the next 7 days (or a user-specified range). Filter to keep only external meetings — those with attendees from outside your organization. Discard internal-only meetings, one-on-ones with colleagues, and recurring internal syncs.
+Use your connected calendar tool (Google Calendar or Outlook, whichever the user has linked) to fetch all meetings scheduled in the next 7 days (or a user-specified range). Filter to keep only external meetings — those with attendees from outside your organization. Discard internal-only meetings, one-on-ones with colleagues, and recurring internal syncs.
 
 Identify for each external meeting:
 - Company name
 - Meeting date and time
 - External attendee names and email addresses
+
+If no calendar tool is connected, go to Option B and tell the user why.
 
 **Option B — No calendar connected:**
 Ask the user: "To build your weekly prep brief, I'll need your upcoming external calls. Please list them: company name, date/time, and attendee names."
@@ -37,8 +39,8 @@ This prevents wasted research on cancelled or incorrect meetings.
 ### Step 3: Research Each Meeting
 
 For each confirmed external meeting, run in parallel where possible:
-1. **Account research** — full account snapshot using the account-research skill
-2. **Contact research** — profile for each external attendee using the contact-research skill
+1. **Account research** — a full account snapshot. If you have an account-research skill, use it. If not, pull from Common Room: the account's size, open opportunities, recent activity and signals, and note anything missing.
+2. **Contact research** — a profile for each external attendee. If you have a contact-research skill, use it. If not, pull from Common Room: role, recent activity and past conversations, and note anything missing.
 
 Common Room data is the primary source. After CR research, run a quick **recency check** for each company — this is supplementary, not primary:
 - Search `"[company name]" news` scoped to the last 7 days

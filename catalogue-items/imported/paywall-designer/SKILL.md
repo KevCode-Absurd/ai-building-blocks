@@ -86,7 +86,7 @@ After X days of free use:
 
 4. **Pricing** - Clear, simple, annual vs. monthly options
 
-5. **Social Proof** - Customer quotes, "X teams use this"
+5. **Social Proof** - Customer quotes, "X teams use this". Use only real customer quotes and usage numbers the user can verify. If they have none, leave this element out. Never write a quote or a count yourself.
 
 6. **CTA** - Specific and value-oriented: "Start Getting [Benefit]"
 

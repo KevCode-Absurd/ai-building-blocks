@@ -138,3 +138,4 @@ terms:
     meaning: A text with a picture or other media, which costs more than plain SMS.
   - term: Smart sending
     meaning: A setting that stops a person getting more than one campaign in a set time, such as 24 hours.
+next: [sms-send-planner]

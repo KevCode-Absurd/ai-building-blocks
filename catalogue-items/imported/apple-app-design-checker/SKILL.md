@@ -8,7 +8,7 @@ date_added: '2026-02-27'
 
 # Apple HIG: Design Foundations
 
-Check for `.claude/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
+Check for `.claude/apple-design-context.md` before asking questions. If it does not exist (for example in a web chat), ask the user to paste their design notes. Use existing context and only ask for information not already covered.
 
 ## Key Principles
 
@@ -71,6 +71,8 @@ Consider how principles interact:
 2. **Note platform differences** for the user's target platforms.
 3. **Provide concrete code patterns** (SwiftUI/UIKit/AppKit).
 4. **Explain accessibility impact** (contrast ratios, Dynamic Type scaling, VoiceOver behavior).
+
+Put the findings in a table with these columns: screen, principle, finding, fix and accessibility impact.
 
 ## Questions to Ask
 

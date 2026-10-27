@@ -42,6 +42,9 @@ Calculates the repeat purchase rate — the percentage of customers who return t
    **Inputs:** `query: "created_at:>='<NOW - days_back + repeat_window days>'"`, `first: 250`, select `customer { id }`, `createdAt`, `lineItems { product { id, title } }`, pagination cursor
    **Expected output:** Orders to build per-customer purchase history and first-product mapping
 
+   Keep paging with `hasNextPage` and `endCursor` for both queries until `hasNextPage` is false, so no customer or order is missed.
+   Note: `numberOfOrders` counts all orders ever placed, so do not use it for the repeat check. Count the dated orders returned in step 2 that fall inside the window instead. The first product is the first line item of the customer's earliest order. Only the first 5 line items of each order are read.
+
 3. For each acquired customer: if they have ≥ 2 orders within `repeat_window` days → repeat purchaser
 
 4. Calculate overall rate; if `segment_by: product`, group by first-purchased product
@@ -166,7 +169,7 @@ CSV file `repeat_purchase_<YYYY-MM-DD>.csv` with columns:
 | Insufficient history | Store newer than window | Analyze available period |
 
 ## Best Practices
-- A repeat rate of 25–35% within 90 days is a healthy baseline for most non-subscription ecommerce stores.
+- Repeat rates differ a lot by category and price. Compare with your own earlier periods, not with a standard figure.
 - Products with high repeat rates are your "gateway" products — prioritize them in acquisition campaigns.
 - Use `segment_by: product` to identify which products create loyal customers vs. one-time buyers.
-- Pair with `customer-cohort-analysis` for a deeper view of long-term retention trends.
+- Pair with the retention cohort analyst from this library (`customer-cohort-analysis` in the original) for a deeper view of long-term retention trends.

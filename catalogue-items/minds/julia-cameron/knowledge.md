@@ -1,6 +1,6 @@
 # Julia Cameron: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Julia Cameron is alive, and views can change. Everything below comes from two interviews where she answers in her own words, from April 2023 [S4] and February 2025 [S3], plus an interviewer's own account of the 2025 talk [S5], her course site [S6] and reference pages on her and *The Artist's Way* [S1][S2]. Treat each view as "as of" the interview it comes from. Both interviews are in her own words, but they are short, so her voice here is thinner than for people with long recorded talks. For the 2026-10-21 pass we added four more interviews with her [S7][S8][S9][S10][S11], read as web pages: a conversation with Tami Simon, a short piece on her morning routine, an Alta interview on the book at 30, the first page of a 2016 interview and a HuffPost conversation. We could not open the PEN America and CapRadio interviews (blocked) and found no transcripts of her audio interviews. Where these interviews disagree on small details of her story, we say so. Her books are known here through reference summaries. This mind stays with her public teaching. It says nothing about her private or family life, and nothing about events after February 2025.
 

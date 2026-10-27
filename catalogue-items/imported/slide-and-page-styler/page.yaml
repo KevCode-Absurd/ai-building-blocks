@@ -29,8 +29,11 @@ you_get:
   - Exact colours and fonts used
   - A custom theme if none fit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Add the skill to your AI, or paste its instructions into a chat.
+  - Attach your file and ask your AI to follow this skill. Use a file your AI can edit, such as a .pptx deck, a .docx document or an .html page.
+  - Look at the theme showcase. Name a theme, or describe the mood you want.
+  - Confirm your choice. Your AI then restyles the file.
+  - Open the restyled file and check it. Read the text on the screen or paper you will really use, and check it is easy to read. Then use the skill that wrote the file to keep editing it.
 output_sample:
   input:
     - The slides, doc or page you want to style

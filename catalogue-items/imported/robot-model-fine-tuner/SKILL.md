@@ -8,6 +8,19 @@ tags: [OpenPI, Physical Intelligence, VLA, Robotics, JAX, PyTorch, Fine-Tuning, 
 dependencies: [uv>=0.4.0, jax>=0.4.30, torch>=2.1.0, transformers>=4.53.2]
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `scripts/serve_policy.py`
+- `scripts/compute_norm_stats.py`
+- `scripts/train.py`
+- `examples/convert_jax_model_to_pytorch.py`
+- `scripts/train_pytorch.py`
+- `examples/simple_client/main.py`
+
+Do not say you read or ran them from this folder. They live in the public openpi repo (https://github.com/Physical-Intelligence/openpi), which Workflow 0 clones. Fetch them from that clone before you run any command here, and run every `uv run` command from inside the clone.
+
 # OpenPI Fine-Tuning and Serving
 
 End-to-end workflows for fine-tuning and serving Physical Intelligence's OpenPI models (pi0, pi0-fast, pi0.5) on robot manipulation tasks from the public `openpi` repository. Covers blank-machine setup, JAX training, PyTorch training, checkpoint conversion, and policy inference serving.

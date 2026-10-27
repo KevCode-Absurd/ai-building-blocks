@@ -29,12 +29,14 @@ you_get:
   - Shine, texture and drape changed to match the swatch
   - A fix sentence to add if the shape or colour comes out wrong
 how_to_use:
+  - "Before you start, check three things. You need a dlazy account with credits and the dlazy command line tool installed. Each image costs credits, so ask your AI to do a dry run first, which shows the cost without charging. Each photo must be a jpg, png or webp file between 20KB and 15MB, and larger than 400 by 400 pixels."
   - Take a clear photo of your garment on a plain background. Take a close-up photo of the fabric swatch in even light.
   - Open an AI that can run commands and has the dlazy tool, with a dlazy account and credits. Add both images and paste this skill.
   - Tell your AI the garment type and the fabric name. Ask it to follow the skill. The skill file is in Chinese, so ask your AI to answer in English.
-  - Let it write the prompt and make the image. Ask for the high quality setting.
+  - Let it write the prompt and make the image. Ask for the high quality setting. The prompt should name the fabric's look and how it hangs, for example "lustrous highlights along the folds, fluid drape" for satin, or "vertical ridges, matte pile" for corduroy. It should also say "same cut, same lengths, same collar, cuff and hem, same camera angle, replace only the material".
   - Check that the outline matches, the colour is right and the seams are still there. If not, ask for the fix lines.
   - Treat the image as a preview. It does not show real feel or weight.
+  - Next, save the fabric images you like, compare them with the physical swatch order, and pass the chosen fabric to your maker or pattern maker.
 output_sample:
   input:
     - Your garment style sheet image, on a plain background

@@ -6,7 +6,7 @@ argument-hint: "<issue summary> [customer name]"
 
 # /customer-escalation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> The `~~` names below (support platform, CRM, chat, project tracker, knowledge base) are optional tool slots. If you have no connected tools, the user pastes the details in instead. Do not ask for tools the user does not have.
 
 Package a support issue into a structured escalation brief for engineering, product, or leadership. Gathers context, structures reproduction steps, assesses business impact, and identifies the right escalation target.
 
@@ -71,8 +71,8 @@ If the issue is a bug, follow the reproduction step best practices below to docu
 
 **Severity:** [Critical / High / Medium]
 **Target team:** [Engineering / Product / Security / Leadership]
-**Reported by:** [Your name/team]
-**Date:** [Today's date]
+**Reported by:** [from the user's input, or "not given"]
+**Date:** [from the user's input, or "not given"]
 
 ### Impact
 - **Customers affected:** [Who and how many]
@@ -131,6 +131,8 @@ After generating the escalation:
 - The customer needs guidance or training, not a fix
 - The issue is a known limitation with a documented alternative
 - Previous similar tickets were resolved at the support level
+
+In those cases no brief is needed. Fix it in support and check the knowledge base for the known answer.
 
 ### Escalate When:
 - **Technical**: Bug confirmed and needs a code fix, infrastructure investigation needed, data corruption or loss

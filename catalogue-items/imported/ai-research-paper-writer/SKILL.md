@@ -35,7 +35,7 @@ The typical workflow starts with a research repository containing code, results,
 **This is the most important rule in academic writing with AI assistance.**
 
 ### The Problem
-AI-generated citations have a **~40% error rate**. Hallucinated references—papers that don't exist, wrong authors, incorrect years, fabricated DOIs—are a serious form of academic misconduct that can result in desk rejection or retraction.
+AI-generated citations are often wrong (the author puts it at about 40%, with no source given). Hallucinated references—papers that don't exist, wrong authors, incorrect years, fabricated DOIs—are a serious form of academic misconduct that can result in desk rejection or retraction.
 
 ### The Rule
 **NEVER generate BibTeX entries from memory. ALWAYS fetch programmatically.**
@@ -58,6 +58,8 @@ If you cannot programmatically verify a citation, you MUST:
 **Always tell the scientist**: "I've marked [X] citations as placeholders that need verification. I could not confirm these papers exist."
 
 ### Recommended: Install Exa MCP for Paper Search
+
+Exa is a separate service. It may need its own account and may cost money. Check its site before you install it.
 
 For the best paper search experience, install **Exa MCP** which provides real-time academic search:
 

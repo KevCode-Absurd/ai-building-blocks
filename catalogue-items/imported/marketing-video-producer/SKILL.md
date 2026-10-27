@@ -298,7 +298,7 @@ Output: Ready-to-publish video
 1. **Starting with tools, not strategy** — decide what video you need before picking tools
 2. **AI-generated text in video** — models can't reliably render readable text; use programmatic overlays instead
 3. **Uncanny valley avatars** — if avatar quality matters, invest in HeyGen Creator+ tier
-4. **No captions** — 85% of social video is watched without sound
+4. **No captions** — many viewers watch social video with the sound off, so add captions
 5. **Wrong aspect ratio** — 9:16 for social, 16:9 for YouTube/website, 1:1 for feeds
 6. **Over-producing** — authentic often outperforms polished, especially on TikTok
 

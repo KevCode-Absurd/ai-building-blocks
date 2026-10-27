@@ -42,7 +42,7 @@ Computes cancellation rate (cancelled orders / total orders) over a configurable
 
 3. For cancelled orders, group by `cancelReason` and by time bucket. Compute rate per bucket and per reason.
 
-4. Identify time buckets where any single reason exceeds 2x its trailing 7-bucket average — flag as anomalies.
+4. Identify time buckets where any single reason exceeds 2x its trailing 7-bucket average — flag as anomalies. For the first 7 buckets there is no full trailing average. Use the average of the buckets before it, and skip the first bucket. Mark these early flags as low confidence.
 
 ## GraphQL Operations
 
@@ -111,7 +111,7 @@ For `format: human` (default):
 CANCELLATION ANALYSIS  (<days_back> days, by <bucket>)
   Total orders:        <n>
   Cancelled orders:    <n>  (<pct>%)
-  Lost revenue:        $<amount>
+  Lost revenue:        <amount> <currencyCode>
 
   By reason:
     CUSTOMER     <n>  (<pct>%)
@@ -159,7 +159,7 @@ CSV file `cancellation_analysis_<YYYY-MM-DD>.csv` with columns:
 | Cancelled order created outside window | Cancellation happened in window but order older | Excluded by design — analyses creation cohort |
 
 ## Best Practices
-- A baseline cancellation rate of 1–3% is typical; spikes above 5% warrant investigation.
+- Compare the cancellation rate with your own store's past rate. As a rough guide with no source, some stores see a few percent, but yours may differ, so look at changes against your own history.
 - Sustained `INVENTORY` cancellations indicate a sync issue between storefront stock and warehouse — pair this skill with `multi-location-inventory-audit`.
 - Sustained `FRAUD` cancellations indicate either improving fraud filters (good) or a coordinated attack (bad) — cross-reference with `order-risk-report`.
 - High `DECLINED` rates often correlate with checkout friction or expired payment methods — investigate alongside checkout abandonment data.

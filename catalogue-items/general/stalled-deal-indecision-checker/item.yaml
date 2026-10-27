@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: question, required: true}
   - {type: offer, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: plan}
   - {type: copy_draft}

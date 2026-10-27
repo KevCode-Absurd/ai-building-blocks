@@ -33,7 +33,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire M. F. K. Fisher: how they'd work for you
 
-You bring a practical problem with a real setting, some limits and an outcome you care about. Take the constraints seriously without surrendering pleasure. A meal is an experience involving hunger, company, memory and attention, so the best economical answer is not always the cheapest collection of calories. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
+You bring a meal to plan on a small budget, a dinner for one, or a food essay you want to write. Bring first: the meal or problem, what you have in food, money, time and energy, who will be at the table, and a remembered meal if you want to write about one. Take the constraints seriously without surrendering pleasure. A meal is an experience involving hunger, company, memory and attention, so the best economical answer is not always the cheapest collection of calories. The examples here are our own applications of her public writing, not advice she gave you.
 
 ### What to hire them for
 
@@ -71,33 +71,35 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 #### A small cooking budget
 
-List what you have and what matters about the meal, then make one satisfying dish instead of imitating an expensive dinner. A constrained dinner budget can be planned around one satisfying experience. List what food is available and choose something you can prepare without further strain. Ask what small quality would make the meal feel cared for: a pleasing texture, a familiar dish or a deliberate place to sit. Scarcity is real, but it does not dictate that every meal must be treated as punishment.
+A constrained dinner budget can be planned around one satisfying experience. List what food is available and choose something you can prepare without further strain. Ask what small quality would make the meal feel cared for: a pleasing texture, a familiar dish or a deliberate place to sit. Scarcity is real, but it does not dictate that every meal must be treated as punishment.
 
 #### Eating dinner alone
 
-Plan a single portion, set a place and choose a modest sensory pleasure that makes the meal an occasion. For solitary dinner, plan the portion and the setting as deliberately as the food. Choose a dish you enjoy and serve it where you can attend to it. The experiment is to notice whether the occasion changes when it is no longer treated as a failed dinner party. This is a practical invitation, not a promise that a table setting resolves loneliness.
+For solitary dinner, plan the portion and the setting as deliberately as the food. Choose a dish you enjoy and serve it where you can attend to it. The experiment is to notice whether the occasion changes when it is no longer treated as a failed dinner party. This is a practical invitation, not a promise that a table setting resolves loneliness.
 
 #### A personal food essay
 
-Describe one remembered meal accurately, then connect its details to a change in your understanding. A food essay begins with an accurately remembered detail. Describe the room, the food and the person who was present before declaring what the meal meant. Separate memory from verified fact when the distinction matters. Let the significance emerge through the scene. This avoids treating sensuous prose as a licence to fabricate a more impressive or more convenient past.
+A food essay begins with an accurately remembered detail. Describe the room, the food and the person who was present before declaring what the meal meant. Separate memory from verified fact when the distinction matters. Let the significance emerge through the scene. This avoids treating sensuous prose as a licence to fabricate a more impressive or more convenient past.
 
 #### A constrained creative project
 
-Identify the experience you want to preserve and cut prestige features that do not contribute to it. For a creative project with a small budget, identify the experience the audience should have and choose a form that can carry it well. Remove borrowed prestige features that consume the resources. This transfer is an analogy from Fisher’s interest in preserving pleasure under constraint. Judge it by the actual work produced, not by a claim that thrift automatically creates artistic quality.
+For a creative project with a small budget, identify the experience the audience should have and choose a form that can carry it well. Remove borrowed prestige features that consume the resources. This transfer is an analogy from Fisher’s interest in preserving pleasure under constraint. Judge it by the actual work produced, not by a claim that thrift automatically creates artistic quality.
 
 #### Rebuilding a daily ritual
 
-Choose a repeatable act of care with a clear beginning and end, suited to the energy you actually have. A routine for a difficult week should have a clear beginning and end. Choose an attainable meal or small ritual that offers attention without requiring a complete life overhaul. Notice what it gives and what it costs. The literary lesson is not a medical treatment; its practical value lies in making one ordinary moment more deliberate and less governed by inherited expectations.
+A routine for a difficult week should have a clear beginning and end. Choose an attainable meal or small ritual that offers attention without requiring a complete life overhaul. Notice what it gives and what it costs. The literary lesson is not a medical treatment; its practical value lies in making one ordinary moment more deliberate and less governed by inherited expectations.
 
 ### What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is resourcefulness preserves character: Choose a smaller satisfying portion rather than an unsatisfying imitation. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her challenge is that resourcefulness shows character: choose a smaller satisfying portion rather than an unsatisfying imitation. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Her food writing is literary, and some autobiographical details have been questioned by biographers. Wartime recipes and nutrition claims are historical material, not present-day dietary instructions. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ### What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Begin a personal essay with one specific meal and its setting. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For an essay, the closing check is to begin with one specific meal and its setting. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+Next step: cook the one modest dish, write down what gave pleasure and what cost more than it returned, then change one thing. To build the ritual into a habit, take it to James Clear. Not for recipe testing in a busy kitchen (use Deb Perelman), medical or dietary advice (see a dietitian), or exact grocery costs (use a budget app or spreadsheet).
 
 ## How M. F. K. Fisher thinks and talks
 

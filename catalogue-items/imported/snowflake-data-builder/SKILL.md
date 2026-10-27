@@ -184,7 +184,7 @@ session = Session.builder.configs({
 - Never hardcode credentials.
 - DataFrames are lazy — executed on `collect()`/`show()`.
 - Do NOT use `collect()` on large DataFrames — process server-side.
-- Use **vectorized UDFs** (10-100x faster) for batch/ML workloads instead of scalar UDFs.
+- Use **vectorized UDFs** (often much faster, depending on the workload; measure it) for batch/ML workloads instead of scalar UDFs.
 
 ## dbt on Snowflake
 

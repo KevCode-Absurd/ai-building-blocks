@@ -85,7 +85,7 @@ SEO signals to capture:
 
 ### 5. Social Media Sentiment
 
-Capture recent mentions via Twitter/X API v2, Reddit, or LinkedIn. Look for recurring praise, complaints, and feature requests. See `references/data-collection-guide.md` for API query examples.
+Capture recent mentions via Twitter/X API v2 (a paid API), Reddit, or LinkedIn. Use official APIs or collect by hand: scraping these sites can break their terms. Look for recurring praise, complaints, and feature requests. See `references/data-collection-guide.md` for API query examples.
 
 ---
 

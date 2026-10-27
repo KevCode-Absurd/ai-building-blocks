@@ -13,11 +13,11 @@ inputs:
 outputs:
   - {type: copy_draft}
   - {type: plan}
-uses: [payment-reminder-letter-writer, can-they-pay-deal-checker, late-invoice-reminder-writer]
+uses: [payment-reminder-letter-writer, can-they-pay-deal-checker, payment-reminder-letter-writer]
 steps:
   - {uses: payment-reminder-letter-writer, note: "A reminder that assumes good faith, makes paying easy and gives a reason to do it now, in Robert Collier's manner. You send it and wait before step 2."}
   - {uses: can-they-pay-deal-checker, note: "Uses your own invoice, history and what you know of their means, not the reminder text from step 1. Works out a range they can realistically pay and when, and proposed terms (a plan, a part payment, a date), following Keynes's rule to ask only for what can be paid. It hands the proposed terms to step 3."}
-  - {uses: late-invoice-reminder-writer, note: "Uses the proposed terms from step 2 and your invoice facts and history. Writes a firmer follow-up that states the consequence plainly, restates the terms and leaves the door open. You decide whether to send it."}
+  - {uses: payment-reminder-letter-writer, note: "Uses the proposed terms from step 2 and your invoice facts and history. Writes a firmer follow-up that states the consequence plainly, restates the terms and leaves the door open. You decide whether to send it."}
 origin: own
 version: 1.0.0
 minds: [robert-collier, john-maynard-keynes]

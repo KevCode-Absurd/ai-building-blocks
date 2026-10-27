@@ -31,10 +31,11 @@ you_get:
   - Guardrails and handoff points
   - Review notes on an existing loop
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat. To scan your work or review an existing loop, also paste the two reference files, references/discover.md (for finding repeated work) and references/audit.md (for reviewing a loop). Designing a new loop needs only the main text.
   - "Say what you want: design a loop, find one, review yours, or scan your work for repeated jobs."
   - "Answer the short questions one at a time: the job, when it runs, what it can touch, how you will know it worked, and when it should stop."
   - Read the prompt you get back. Check the stop rule and the approval line before you use it.
+  - Run the prompt on one real job for a trial cycle. Then compare the stop rule and the approval line with what actually happened before you widen it.
   - To scan code or threads, use an AI that can read them. To search published loops, use one with web access.
 output_sample:
   input:
@@ -59,3 +60,4 @@ output_sample:
       contains: "Only for find requests: up to three published loops, each with its title, link, fit and the small change needed."
     - name: Audit fixes
       contains: "Only for reviews: the weak spots found in your loop and the repairs, with your goal kept."
+next: [prompt-change-tester]

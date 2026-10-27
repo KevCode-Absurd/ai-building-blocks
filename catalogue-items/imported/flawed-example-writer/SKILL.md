@@ -178,7 +178,7 @@ Return your output in this exact format:
 
 **The error (teacher reference):** Step 2 and 3. Sam adds numerators and denominators separately, treating fraction addition like whole number addition. This is the most common fraction error and reflects a fundamental misconception about what fractions ARE — the denominator names the size of the parts, and you cannot add parts of different sizes by adding the size-names.
 
-**Why this error is realistic:** Students who have just learned to add whole numbers extend the same logic to fractions. It "looks right" — you're adding the tops and adding the bottoms, just like you'd add two whole numbers. The error is so common that research consistently finds it in 30–50% of students learning fraction addition.
+**Why this error is realistic:** Students who have just learned to add whole numbers extend the same logic to fractions. It "looks right" — you're adding the tops and adding the bottoms, just like you'd add two whole numbers. The error is very common among students learning fraction addition.
 
 **Error Analysis Scaffold (for students):**
 1. "Read Sam's solution. Does each step make sense?"

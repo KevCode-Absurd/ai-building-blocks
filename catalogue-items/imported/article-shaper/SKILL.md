@@ -1,6 +1,6 @@
 ---
 name: writing-shape
-description: "Writing, exploit: shape raw material into an article, paragraph by paragraph."
+description: "Writing: commit to a structure and shape raw material into an article, paragraph by paragraph."
 disable-model-invocation: true
 ---
 
@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 The user has passed (or will pass) a markdown file of raw material. Treat it as the input pile: anything from a tidy list of fragments to a wall of unstructured prose to a transcript. The format does not matter. Read it end-to-end before doing anything else.
 
-Then run a shaping session that produces a separate article document. This is **exploit**: the exploring is done, the pile is fixed: commit to a structure and mine the pile to fill it. Do not edit the raw material file: it is read-only to this skill.
+Then run a shaping session that produces a separate article document. The exploring is done and the pile is fixed: commit to a structure and mine the pile to fill it. Do not edit the raw material file: it is read-only to this skill.
 
 If the user did not say where to save the article, ask once and remember the path.
 

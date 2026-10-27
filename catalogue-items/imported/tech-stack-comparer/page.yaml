@@ -30,10 +30,11 @@ you_get:
   - Security and community notes
   - A recommendation with reasons
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the options, your workload and what matters most. Give each priority a weight if you can.
+  - Ask for the sections in order: weighted comparison, five-year cost, community health, security notes, then the recommendation.
+  - Check the cost and security figures against current vendor pricing and advisories. They are estimates built from your inputs and from public data.
+  - If you are weighing a move between stacks, ask for the migration estimate. Then write your pick up as a decision note, and use the Vendor comparison writer if a contract is involved.
 not_for:
   - "The choice is trivial or already made. If the tools are alike or a manager has set one, skip the analysis."
   - "You are comparing vendor quotes or a contract renewal. Use the Vendor comparison writer."
@@ -47,6 +48,8 @@ output_sample:
     - Codebase size, if you are weighing a move (optional)
   prerequisites:
     - Python 3 if you want the bundled scripts to run the numbers (optional)
+    - Internet access, for the community and security checks that read GitHub, npm and vulnerability sources. Without it, the AI works from what you paste.
+    - The cost figures are estimates from your inputs, not quotes
   output:
     - name: Weighted comparison
       contains: Each option scored against your priorities, side by side.
@@ -60,3 +63,4 @@ output_sample:
       contains: Effort, risk and timeline for moving between stacks, if asked.
     - name: Recommendation
       contains: A pick with reasons and a confidence level of high, medium or low.
+next: [vendor-comparison-writer, copilot-build-evidence-map]

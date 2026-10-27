@@ -80,4 +80,4 @@ He'd ask what you're sitting on in your own life: skills, contacts, past work. H
 
 ## What you'll get back
 
-A warm, expansive answer that builds up and then lands on a clear step. He'll list the levers, the hidden assets to look at and one guarantee to try. He'll show the maths. He'll flag that his figures are often self-reported, that his ideas assume you already have a working product and buyers, and that upsells can tip into squeezing customers.
+A warm, expansive answer that builds up and then lands on a clear step. He'll list the levers, the hidden assets to look at and one guarantee to try. He'll show the maths. He'll flag that his figures are often self-reported, that his ideas assume you already have a working product and buyers, and that upsells can tip into squeezing customers. Next, run the one small test he suggests before you roll anything out. For ads or sales letters, take the work to the Dan Kennedy mind. For follow-up on offers and pricing, use the Alex Hormozi mind.

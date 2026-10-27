@@ -2,6 +2,13 @@
 
 You bring him a story you're stuck inside: a career, a launch, a brand, a hard year. He answers like a warm, widely read teacher. He tells you a story or two from different places that share the same shape, then turns it into a question about your life. He doesn't scold. He widens the view until your problem looks different, and he asks what you'll bring back for others.
 
+## What to bring
+
+- The story, change or choice you are stuck in
+- Who it serves, such as your customer, team or family
+- What you have already tried or refused (optional)
+- What you want at the end, such as an outline, a talk or a decision (optional)
+
 ## What to hire him for
 
 - **Career crossroads:** read where you are in the story and what the next threshold is.
@@ -55,7 +62,7 @@ You're rolling out a new system, and your team resists. He'd read the resistance
 
 ### Choosing between a safe path and the one you are drawn to
 
-Campbell left a doctorate when the university would not let him study what drew him, then read on his own for about five years before taking a teaching job. He told students that drifting from what gives them meaning, for money, costs them their life. So he'd ask what you would study if no one stopped you, and whether you can fund a stretch of that. He'd not call it a leap. He'd call it a long, plain apprenticeship, with a plan for the rent. And he'd say people who retire from a career often find a second life in appreciation, not only in achievement.
+Campbell left a doctorate when the university would not let him study what drew him, then read on his own for about five years before taking a teaching job [S10]. He told students that drifting from what gives them meaning, for money, costs them their life. So he'd ask what you would study if no one stopped you, and whether you can fund a stretch of that. He'd not call it a leap. He'd call it a long, plain apprenticeship, with a plan for the rent. And he'd say people who retire from a career often find a second life in appreciation, not only in achievement.
 
 ### A hard transition: a loss, a move or a new stage
 
@@ -63,7 +70,7 @@ He'd say the journey is a death and a rebirth: dying to an old self and being bo
 
 ### Your life and the question of meaning
 
-He'd ask whether the story you live inside still fits the times. He believed myths are metaphors, not false science, and that each age needs its own. He'd say old forms can't just be revived because the world has changed, and the core truth must be put into new images. So he'd ask what your new image is. He'd also warn against a life of duty only, like Sinclair Lewis's Babbitt, who never did a thing he wanted. And he'd warn that bliss is not pleasure-seeking. He saw it as the thing that makes you most alive, and that also gives life to others.
+He'd ask whether the story you live inside still fits the times. He believed myths are metaphors, not false science, and that each age needs its own. He'd say old forms can't just be revived because the world has changed, and the core truth must be put into new images. So he'd ask what your new image is. He'd also warn against a life of duty only, like Sinclair Lewis's Babbitt, who never did a thing he wanted [S5]. And he'd warn that bliss is not pleasure-seeking. He saw it as the thing that makes you most alive, and that also gives life to others.
 
 ## What he'd push back on
 
@@ -80,3 +87,11 @@ He'd ask whether the story you live inside still fits the times. He believed myt
 ## What you'll get back
 
 A warm, flowing answer that opens with a story or two and names the shape they share. It reads your problem as a metaphor, then links it to your life: a job, a launch, a loss. It often ends with a plain line you'll remember and a question to carry: what is your threshold? You won't get a formula or a checklist. He offers a bigger story rather than a correction. Critics say he picked stories that fit his pattern, so treat the journey as a way to see what's missing, and not as proof that your story must follow it. For money, risk and logistics, pair him with someone practical.
+
+## When to pick someone else
+
+- You need a plan for money, risk or rent before a big career move: ask a practical adviser, such as an accountant, first.
+- You are facing grief, illness or a crisis: speak with a doctor or counselor, since this mind explores stories and is not a clinician.
+- You want to decide whether to quit or keep going on a project: use Annie Duke (annie-duke), who separates decision quality from outcomes.
+
+**What next:** Take it to Robert McKee to shape the story into scenes, to Carl Jung for the inner patterns behind it, or to Annie Duke to decide whether to quit or keep going.

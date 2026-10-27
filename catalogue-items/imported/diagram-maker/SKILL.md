@@ -6,7 +6,7 @@ version: 1.117.3
 
 # Diagram Generator
 
-Create professional SVG diagrams across multiple diagram types. All output is a single self-contained `.svg` file with embedded styles and fonts.
+Create professional SVG diagrams across multiple diagram types. The diagram is a single `.svg` file with embedded styles. The font loads from Google Fonts, so the SVG needs internet access to show it. A @2x PNG is also saved next to the SVG (see Script).
 
 ## Supported Diagram Types
 
@@ -209,7 +209,7 @@ Rounded-rect states with double-border for composite states. Filled circle for i
 
 ## Output Rules
 
-1. Output a **single `.svg` file** — no external dependencies except the Google Fonts import
+1. Output a **single `.svg` file** — no external dependencies except the Google Fonts import. The @2x PNG in the Script step is a second file made from it
 2. Set `viewBox` to fit all content with 30px padding; do NOT set fixed `width`/`height` attributes (let the SVG scale responsively)
 3. Include `xmlns="http://www.w3.org/2000/svg"` on the root `<svg>` element
 4. Put all `<style>`, `<defs>`, markers, and patterns at the top of the SVG

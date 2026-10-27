@@ -9,7 +9,7 @@ subhead: Paste your product idea and what you know. It rates the four risks (wil
 explain: |
   Many product plans fail in two ways. The team builds something nobody wanted, or it keeps a roadmap that is just a list of features with dates. Nobody can say what each feature should change, so nobody can say when it worked.
 
-  This workflow starts with the idea and rates the four risks: value, usability, feasibility and viability. It names an owner for each and picks the cheapest test for the riskiest one. Then it takes your feature list and turns each item into a problem for a named customer with one result you can measure. The order comes from Marty Cagan's article "The Four Big Risks" and his writing on teams that solve problems instead of shipping features.
+  This workflow starts with the idea and rates the four risks: value, usability, feasibility and viability. It names an owner for each and picks the cheapest test for the riskiest one. Then it takes your feature list and turns each item into a problem for a named customer with one result you can measure. The method is inspired by Marty Cagan's article "The Four Big Risks".
 when:
   - You have a product idea and want to know which risk to test first, before you spend on building.
   - Your roadmap is a list of features and nobody can say what each one should change.
@@ -32,7 +32,7 @@ you_get:
   - Your list sorted into features, problems and results
   - Three to five problems for named customers, each with one result to measure and a review point in place of a date
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your idea and your feature list. It works step by step and saves each result.
   - Run the cheapest test on the riskiest risk, then bring back what you learn.

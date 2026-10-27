@@ -47,6 +47,8 @@ description: 商品短视频广告。卖点 → 分镜脚本 → 分段生成 �
 
 ## 三、分镜文件
 
+> Note for English readers (added by AI Blocks): the caption "现在下单立减 50" ("order now, 50 off") in the sample below is placeholder text. Replace it with your real, approved offer. Do not run an ad with a discount you do not offer.
+
 ```json
 {
   "shots": [
@@ -130,7 +132,7 @@ No text overlay in the frame, no watermark. Photorealistic, cinematic.
 | 拼接后画面跳 | 各镜编码参数不同 | 脚本会自动重编码兜底；仍跳就统一各镜的尺寸 |
 | 字幕没烧进去 | ffmpeg 没带 libass | 脚本自动降级为软字幕轨，播放器可开关 |
 | 没装 ffmpeg | — | 片段照常生成，用输出的 `concat.txt` 事后补拼 |
-| 成片太长 | 分镜时长加起来超了 | 投流素材 15 秒最稳，超过 30 秒完播率明显下滑 |
+| 成片太长 | 分镜时长加起来超了 | 投流素材 15 秒最稳（作者的经验，未附来源；以你自己的数据为准） |
 
 ---
 

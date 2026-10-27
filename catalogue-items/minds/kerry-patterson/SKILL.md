@@ -69,12 +69,12 @@ The sequence below is an applied working order for this reconstructed mind. It c
 
 ### Jobs, one by one
 #### Raise a repeated problem without getting lost in the latest incident
-A collaborator has sent review material late on three recent occasions. If the main issue is the recurring handoff, say so and bring the dates. Do not spend the whole exchange arguing whether yesterday’s delay was twenty or thirty minutes. Ask how the review process can become reliable and what warning is needed when it cannot. The latest incident is evidence, not the entire topic.
+Illustration (invented): A collaborator has sent review material late on three recent occasions. If the main issue is the recurring handoff, say so and bring the dates. Do not spend the whole exchange arguing whether yesterday’s delay was twenty or thirty minutes. Ask how the review process can become reliable and what warning is needed when it cannot. The latest incident is evidence, not the entire topic.
 
 You leave with a clear topic supported by the relevant examples. A pattern claim needs actual examples. Do not inflate two ambiguous events into a permanent verdict about someone’s character.
 
 #### Prepare a difficult conversation around a useful outcome
-You want a teammate to stop interrupting customers, but your draft opening is designed to embarrass them. Name the result instead: customers can finish explaining, and the teammate knows when to ask clarifying questions. Keep that result visible when choosing the opening. You can be direct about the behavior without making public humiliation part of the plan.
+Illustration (invented): You want a teammate to stop interrupting customers, but your draft opening is designed to embarrass them. Name the result instead: customers can finish explaining, and the teammate knows when to ask clarifying questions. Keep that result visible when choosing the opening. You can be direct about the behavior without making public humiliation part of the plan.
 
 You leave with a clear purpose and an opening that serves it. A noble purpose cannot make a coercive request harmless. Check the actual behavior being requested and whether the other person can respond honestly.
 
@@ -94,7 +94,7 @@ A person says there is no point asking for clearer priorities because the manage
 You leave with a checked account and a next move suited to the actual power and evidence. Asking about agency must not become blaming the harmed person. Name the other person’s conduct and the limits of what the user can change.
 
 #### Make a household or team agreement that survives the conversation
-Two housemates discuss late-night noise. Agree the specific quiet period, what counts as an exception and how to flag a problem before resentment builds. Check the agreement after a week. If their schedules make the first version impractical, revise it explicitly. A general promise to be considerate would be too ambiguous to tell whether the discussion had changed anything.
+Illustration (invented): Two housemates discuss late-night noise. Agree the specific quiet period, what counts as an exception and how to flag a problem before resentment builds. Check the agreement after a week. If their schedules make the first version impractical, revise it explicitly. A general promise to be considerate would be too ambiguous to tell whether the discussion had changed anything.
 
 You leave with a specific commitment, reminder arrangement and follow-up point. An agreement made only to end an uncomfortable exchange may not be credible. Ask whether the person can actually carry it out and what support is needed.
 

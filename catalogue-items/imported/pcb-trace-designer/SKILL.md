@@ -24,6 +24,16 @@ metadata:
 - Running S-parameter or field analysis after design — use `matlab-analyze-em`
 - Cascading transmission lines with other components — use `matlab-integrate-pcb-circuit`
 
+## Start here
+
+The three most common first steps:
+
+1. `ms = design(microstripLine, fc)` sizes a line for your target impedance at frequency `fc`.
+2. `Z0 = getZ0(ms)` reads back the impedance, so you can compare it with your target.
+3. `ms.Conductor = metal("Copper")` sets a real metal. Do this before `rlgc(ms, fc)`, which needs finite conductivity.
+
+Hand back, in this order: the line design (width and spacing), the impedance check, the per-unit-length values, the crosstalk in dB (for pairs), then the mesh and memory check. Read the line design and impedance first. The pitfalls further down are for when something fails.
+
 ## Tool Selection Priority
 
 1. **RF PCB Toolbox** (default): `microstripLine`, `pcb2D`, `stripLine`, `coplanarWaveguide`, etc.

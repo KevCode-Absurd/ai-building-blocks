@@ -14,9 +14,9 @@ Audit a product page against peer-reviewed findings and return prioritized chang
 
 ## When not to use
 
-- A cart, checkout, or payment form → `checkout-ux`
-- Writing the description → `product-copy`; briefing photos/video → `product-visuals`
-- Discount framing → `discounts`; setting the price → `pricing`
+- A cart, checkout, or payment form → the Checkout page auditor (`checkout-page-auditor`)
+- Writing the description → the Product description writer (`product-description-writer`); briefing photos/video → the Product shoot brief writer (`product-shoot-brief-writer`)
+- Discount framing → write the offer text on its own; setting the price → the Price test planner (`price-test-planner`)
 
 ## Inputs
 
@@ -44,13 +44,17 @@ Collect, or state your assumption:
 
 Rank by expected effect × distance from the rule. Cart and payment-step issues are out of scope here; Depth: `checkout-ux`.
 
+## Before you start
+
+Social proof checks need a view or purchase count. If the user has none, say so, skip those checks, and list which checks you skipped.
+
 ## Output
 
 | # | Issue | Change | Measured effect (study context) | Source |
 |---|---|---|---|---|
 | 1 | Single "Add to cart" on a multi-unit product | Buy 1 / 2 / 5 buttons | +14% conversion | Duke & Amir 2023 |
 
-Close with what the page already does right.
+Close with what the page already does right. Every effect size above is from one study (named in the Source column and in reference.md). Treat it as a guide, not a promise.
 
 ## Common mistakes
 

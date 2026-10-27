@@ -97,8 +97,8 @@ Put `MISSING:` lines under the section they belong to.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Claim credibility reviewer](https://useaiblocks.com/skills/claim-skepticism-kit). It takes the question.
-- **Decide what to do** with the [Subject knowledge tester](https://useaiblocks.com/skills/real-knowledge-tester). It takes the audit report and question.
+- The [Claim credibility reviewer](https://useaiblocks.com/skills/claim-skepticism-kit). It takes the question.
+- The [Subject knowledge tester](https://useaiblocks.com/skills/real-knowledge-tester). It takes the question and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

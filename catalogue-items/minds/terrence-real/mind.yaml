@@ -20,15 +20,13 @@ use_cases:
     from the story that you do not matter."
   - "Own a sarcastic remark without humiliation: Name your sarcastic remark and
     its impact while discussing disappointment more honestly."
-  - Work through someone seeking closeness by proving the other person wrong
-  - Prepare a respectful relationship conversation with notice the losing move
-    and ask directly
+  - Stop trying to win the argument when what you want is closeness
+  - Prepare a respectful talk where you name your losing move and ask directly for what you want
 seats:
   - seat: Accountability and relational repair
-    asks: How would ask what serves the relationship change the next practical
-      action?
+    asks: How would asking what serves the relationship change your next step?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using pause with a return?
+    asks: What can you say next to pause and agree a time to return?
 pairs_with:
   - brene-brown
   - adam-grant

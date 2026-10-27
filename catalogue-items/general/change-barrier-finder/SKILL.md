@@ -7,26 +7,32 @@ description: Use when you want a person or group to change something and pushing
 
 When people resist a change, the usual move is to push harder. That often makes them dig in. This skill looks for what is holding them back and writes a plan that removes it. Each barrier is tested against what the person actually said, not assumed. To plan a talk that starts from what they want, use "Buy-in conversation planner".
 
+## When not to use
+
+- You have a one-off decision and nobody is resisting. Ask them in a plain request.
+- You want to plan the talk itself, starting from what they want. Use the Buy-in conversation planner.
+- You have no words, emails or notes from the person. Gather some first, or every barrier stays a guess.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Testing barriers against text and writing a plan is language work a strong chat AI does well.
@@ -43,7 +49,7 @@ How to start:
 
 1. **State the change and who must make it.** Write the change in one sentence, and the person or group who must act. Name whoever else they listen to.
 2. **Check for feeling pushed.** Look in their words for signs they feel told what to do: defensive replies, doing the opposite, sudden objections. If present, plan to ask instead of tell: write two questions that let them persuade themselves, and a menu of two or three options for them to choose from.
-3. **Check attachment to the current way.** Look for signs they cling to what they have, such as 'we have always done it this way' or fear of losing what they know. Write the cost of doing nothing in numbers or events, honestly, so they can see what staying put costs.
+3. **Check attachment to the current way.** Look for signs they cling to what they have, such as 'we have always done it this way' or fear of losing what they know. Write the cost of doing nothing using only figures or events the user gave you, so they can see what staying put costs. Mark any other cost `GUESS`.
 4. **Check distance.** Compare what you ask with what they already accept. If it is far, write a smaller first step that sits inside what they accept, and a path of steps toward the full change.
 5. **Check uncertainty.** Look for fear of the unknown or of being first. Write a low-risk trial: small, short, reversible, with a clear way to stop. State what they lose if it fails.
 6. **Check whether one source of proof is enough.** For a big change, one source rarely convinces. Write which two or three sources of proof to bring (people like them, data, a trial result) and who should deliver each.
@@ -58,9 +64,8 @@ The change and who must make it. The five barrier checks, each with evidence fro
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
-- **Say it to the room** with the [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). It takes the plan.
-- **Lead the team** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
+- The [Sales agreement question planner](https://useaiblocks.com/skills/yes-ladder-question-writer). It takes the plan.
+- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

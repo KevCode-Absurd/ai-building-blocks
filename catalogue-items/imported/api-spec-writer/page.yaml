@@ -35,6 +35,7 @@ how_to_use:
   - "Answer the few questions it asks: spec version, file format, sign-in type and main data shapes. It skips what you already told it."
   - Check the endpoint table at the end against your real API. Fix any wrong path or field name.
   - Save the spec as a .yaml or .json file. This skill needs no code running. To check the file, paste it into a validator such as Spectral.
+  - The spec is a draft. Check it against the live API before you send it to partners or publish it.
 output_sample:
   input:
     - A plain description of your API, or your route code

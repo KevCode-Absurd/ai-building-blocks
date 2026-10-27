@@ -39,6 +39,7 @@ how_to_use:
   - Add any vendor quotes you hold. They are better than the estimates in the skill.
   - Answer its questions. It marks missing numbers instead of guessing.
   - Check each payback. Does it come from a quote or your own figure? Ask it to say which.
+  - Before you show any payback, check that every sample cost or pick rate in the result has been replaced by a vendor quote or your own figure.
   - Take the top two options to vendors for quotes. Ask for a trial or a pilot first.
 how_it_works:
   - title: Ask why
@@ -102,3 +103,4 @@ terms:
     meaning: A system that brings stock to the picker instead of the picker walking to it.
   - term: Put-to-light
     meaning: Lights that show a worker which slot gets each item when sorting orders.
+next: [warehouse-slot-assigner]

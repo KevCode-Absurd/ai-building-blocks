@@ -12,11 +12,11 @@ outputs:
   - {type: plan}
 uses: [launch-readiness-seam-checker, error-message-designer]
 steps:
-  - {uses: launch-readiness-seam-checker, note: "The joins between parts, what wins when things pile up, and a run-through plan"}
-  - {uses: error-message-designer, note: "What the alarm says, what the person decides and how the system recovers. Reads the audit report from the step before"}
+  - {uses: launch-readiness-seam-checker, note: "Lists every part and each join between parts with what passes across it, ranks every job, decides what is dropped under overload, scores readiness and plans a run-through. Hands step 2 the parts, joins and gaps."}
+  - {uses: error-message-designer, note: "Takes step 1's joins and gaps. Lists the mistakes people say can't happen, how each is detected, a safe restart point, and each alarm with its go or no-go decision."}
 origin: rebuilt
 version: 1.0.0
 minds: [margaret-hamilton]
 credits:
-  - {title: "What the Errors Tell Us", by: "Margaret Hamilton", used: "The order of the steps: launch readiness seam checker, error warning and recovery designer"}
+  - {title: "What the Errors Tell Us", by: "Margaret Hamilton", used: "The order of the steps is inspired by this paper: launch readiness seam checker, then error warning and recovery designer"}
 generated_from: intake/what-the-errors-tell-us/skeleton.yaml

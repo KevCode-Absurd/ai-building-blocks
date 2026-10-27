@@ -33,7 +33,7 @@ how_to_use:
   - Start your app, or have its live address ready. Use an AI that can run code and open a browser.
   - Paste the skill into your chat, or open its folder in your AI tool.
   - Give your app address. Say how many shots you need and what they are for.
-  - Share test account login details only if the screens need them. Use a test account, never a real one.
+  - Share test account login details only if the screens need them. Use a test account, never a real one. Set the email and password as environment variables on your computer, so they are not written into the script file.
   - Check the list of screens your AI suggests. Remove or add any before it captures.
   - Open the screenshots folder and check each image. Then upload them to Product Hunt, your landing page, your docs or your social posts.
 output_sample:
@@ -55,3 +55,4 @@ output_sample:
       contains: One numbered PNG per screen, named after the feature, such as 01-dashboard-overview.png.
     - name: Summary
       contains: A list of the files, their size on disk and their resolution, plus follow-up ideas.
+next: [screenshot-privacy-masker, app-store-listing-optimiser, launch-checklist-runner]

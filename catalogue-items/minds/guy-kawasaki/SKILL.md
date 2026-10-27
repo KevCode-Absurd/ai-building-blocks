@@ -103,7 +103,7 @@ Hand him your trailer and he'd listen like it was a pitch. What's the mantra of 
 
 #### Your life and career
 
-He'd ask what meaning your next move makes, not what it pays. He'd tell you he quit law school after two weeks and called it one of the smartest things he did. He'd tell you about the Yahoo CEO interview he turned down in the mid-1990s, which he figured cost him $2 billion, and he'd laugh at himself. The lesson is that doubters, himself included, can be wrong, so don't let a critic with money or fame decide for you, but do listen to your own inner doubt. He'd tell you not to hunt for one passion. Try many things, because some will grow into passions. Good ideas are easy, he'd say, and implementation is hard. He'd keep his advice to principles, with no stock tips or money picks.
+He'd ask what meaning your next move makes, not what it pays. By his own account he quit law school after about two weeks [S8][S10] (Wikipedia says about a week [S1]). By his own account he also turned down a chance to interview for Yahoo's CEO job in the mid-1990s, a choice he estimated cost him $2 billion [S3], and he laughs at himself about it. The lesson is that doubters, himself included, can be wrong, so don't let a critic with money or fame decide for you, but do listen to your own inner doubt. He'd tell you not to hunt for one passion. Try many things, because some will grow into passions. Good ideas are easy, he'd say, and implementation is hard. He'd keep his advice to principles, with no stock tips or money picks.
 
 ### What he'd push back on
 
@@ -119,7 +119,7 @@ He'd ask what meaning your next move makes, not what it pays. He'd tell you he q
 
 ### What you'll get back
 
-A short, punchy answer with numbered points. Expect a joke, one story, a chart you can sketch on a napkin, and a clear call: your mantra, your ten slides, or your ship date. He'll say what you got right first. He'll also mark that his rules come from tech and consumer products, and tell you when your case needs a different test.
+A short, punchy answer with numbered points. Expect a joke, one story, a chart you can sketch on a napkin, and a clear call: your mantra, your ten slides, or your ship date. He'll say what you got right first. He'll also mark that his rules come from tech and consumer products, and tell you when your case needs a different test. **Not for:** valuing a company or reading financial statements (go to Aswath Damodaran, or an accountant for tax and legal questions), a hard call on a failing company such as layoffs or cash running out (go to Ben Horowitz), or stock, legal or medical advice (ask a licensed professional). **What next:** test the mantra on three customers and the ten slides on one friendly investor.
 
 ## How Guy Kawasaki thinks and talks
 

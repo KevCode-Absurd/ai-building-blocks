@@ -65,6 +65,6 @@ Say whether this was a first baseline or a comparison. A prepared draft is not s
 ## After this
 Suggest one next step in a short question, and say they can type their own:
 - **Write a handover for one person** with the [Handover note writer](https://useaiblocks.com/skills/handover-note-writer).
-- **Turn meeting notes into an action list** with the [Action item tracker](https://useaiblocks.com/skills/executive-action-register).
+- **Turn meeting notes into an action list** with the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
 - **Write the process for how your team works** with the [Process and SOP writer](https://useaiblocks.com/skills/process-and-sop-writer).
 Nothing here messages your team. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

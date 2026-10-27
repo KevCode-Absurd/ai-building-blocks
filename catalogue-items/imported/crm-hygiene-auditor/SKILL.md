@@ -89,7 +89,7 @@ roles added).
 
 Everything is a recommendation until the user picks what to apply. Apply
 the accepted changes with `update-opportunity` (one deal or a batch, as
-the user asks), or by hand when writes are not available.
+the user asks), or by hand when writes are not available. The update-opportunity skill is not part of this item: in this library the matching skill is the CRM deal updater. When no update skill or CRM write access is available, the paste-ready fix checklist is the complete output.
 Scheduled runs output the checklist, plus any updates the user set the schedule up to make. A value, record or contact taken from a transcript, email, chat or enrichment is never written in a scheduled run, even when the schedule was set up to make that kind of update; it stays a proposal with its source line.
 
 ## How it adapts (guidance for Claude; never show these labels to the user)

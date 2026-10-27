@@ -12,7 +12,7 @@ Generate two complementary onboarding documents that together give any engineer 
 
 ## When to Use
 - User asks for onboarding docs or getting-started guides
-- User runs `/deep-wiki:onboard` command
+- User runs `/deep-wiki:onboard` command (that command is not part of this copy; a plain request for the two guides does the same job)
 - User wants to help new team members understand a codebase
 
 ## Language Detection
@@ -24,6 +24,14 @@ Scan the repository for build files to determine the primary language for code e
 - `pyproject.toml` / `setup.py` / `requirements.txt` → Python
 - `go.mod` → Go
 - `pom.xml` / `build.gradle` → Java
+
+## Steps
+
+1. Read the build files and note the main language.
+2. List the entry points and the main folders.
+3. Trace the main data path through the code.
+4. Write Guide 1, then Guide 2, in that order.
+5. Check that every claim has a file and line, and that every command was seen in the repo or run.
 
 ## Guide 1: Principal-Level Onboarding
 
@@ -47,8 +55,9 @@ Scan the repository for build files to determine the primary language for code e
 ### Rules
 - Every claim backed by `(file_path:line_number)` citation
 - Minimum 3 Mermaid diagrams (architecture, data flow, dependency graph)
-- All Mermaid diagrams use dark-mode colors (see wiki-vitepress skill)
+- All Mermaid diagrams use dark-mode colours: light text (such as #e6edf3) on dark fills (such as #161b22 or #21262d), with light lines
 - Focus on WHY decisions were made, not just WHAT exists
+- If a claim has no matching file and line, label it "unverified". Never cite a line you did not read.
 
 ## Guide 2: Zero-to-Hero Contributor Guide
 
@@ -74,8 +83,8 @@ Scan the repository for build files to determine the primary language for code e
 ### Rules
 - All code examples in the detected primary language
 - Every command must be copy-pasteable
-- Include expected output for verification steps
-- Use Mermaid for workflow diagrams (dark-mode colors)
+- Include expected output for verification steps. Take it from a real run or from the code. If you could not run the command, write "expected output: unverified"
+- Use Mermaid for workflow diagrams (dark-mode colours, as above)
 - Ground all claims in actual code — cite `(file_path:line_number)`
 
 ### When to Use

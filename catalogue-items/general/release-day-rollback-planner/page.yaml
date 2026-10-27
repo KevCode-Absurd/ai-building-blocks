@@ -115,6 +115,7 @@ improve:
   - "Add your team's rule for who approves a release."
   - "Save the plan after each release and note what you changed."
 
+before: []
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}

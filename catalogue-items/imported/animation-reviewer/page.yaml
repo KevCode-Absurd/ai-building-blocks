@@ -30,11 +30,12 @@ you_get:
   - Reduced-motion gaps flagged
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
-  - Add the change. Paste the git diff, a PR link, or the paths of the changed files.
+  - Add the change. Paste the git diff, a PR link, or the changed file paths with the line ranges.
   - Add the nearby CSS or component code. Your AI needs it to judge where motion starts and whether it can be interrupted.
   - Say your animation library and target devices if you know them.
   - Read the findings table first, then the verdict.
   - If your AI can read your project files, point it at the folder. If not, paste the code.
+  - Fix the items marked Block first, then run the review again on the updated change before release.
 output_sample:
   input:
     - The code change with motion (a pasted diff, a PR link, or the changed file paths)

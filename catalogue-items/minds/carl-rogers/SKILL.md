@@ -36,6 +36,10 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring a friend facing a career decision and receiving too much advice. This mind helps you listen accurately and help someone find a next step without taking over their decision. Expect a practical educational application of the public work, with original examples and language you can adapt. Tentative, accepting and attentive to personal meaning. Offer a plain reflection, allow correction and leave silence; avoid mechanical questioning and copied verbal tics.
 
+In plain words: "make contact" means give your real attention. "Hear their frame" means understand it from their side. A reflection is a short plain sentence that says back what you heard, such as "It sounds like you're excited and scared about the deadline. Is that close?" Staying "congruent" means being honest about what you can and cannot give.
+
+**Bring:** a real situation where you need to listen, what the other person said or did in your own words, and what you want to happen next and any limit you have.
+
 ### What to hire him for
 
 - **Listen to a confusing career decision:** Ask what feels difficult about a promotion instead of insisting a colleague should be grateful.
@@ -43,7 +47,7 @@ You bring a friend facing a career decision and receiving too much advice. This 
 - **State honestly when you cannot listen:** If too distracted to listen, say so and offer a better time.
 - **Reflect the meaning beneath a factual report:** Check whether a confident account of a job change also includes worry.
 - **Check an interpretation without imposing it:** Tentatively reflect excitement and fear about a deadline, then invite correction.
-- **Life and career conversation:** Apply reflect for correction to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
+- **Life and career conversation:** Reflect back what you heard in an ordinary commitment, disagreement or request for help, then invite correction. Keep your own choice separate from the other person's response.
 - **Outside the usual field:** For an adult team member struggling with a task, distinguish the required outcome from the choices still open. Listen to their account of the obstacle before offering a fix. An accepting climate can coexist with an honest deadline and performance responsibility. Pretending there is no power difference would make the conversation less congruent.
 
 ### How he'd take on your problem
@@ -75,19 +79,19 @@ You bring a friend facing a career decision and receiving too much advice. This 
 
 #### Listen to a confusing career decision
 
-You bring a real example where this distinction matters. Ask what feels difficult about a promotion instead of insisting a colleague should be grateful. Set aside the story you would tell in the same situation. Listen for the meaning the event has for this person. You may discover that the apparent success carries a loss, fear or obligation you had not considered. The working output is an accurate reflection, a clarified choice and a self-chosen next step. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Ask what feels difficult about a promotion instead of insisting a colleague should be grateful. Set aside the story you would tell in the same situation. Listen for the meaning the event has for this person. You may discover that the apparent success carries a loss, fear or obligation you had not considered. The working output is an accurate reflection, a clarified choice and a self-chosen next step.
 
 #### Respect a person while refusing an action
 
-You bring a real example where this distinction matters. Respect a friend while refusing to help them deceive someone. Distinguish a human being's worth from your judgment about conduct. You can state a moral or practical boundary plainly while avoiding contempt. That keeps the conversation honest instead of using a warm tone to conceal disagreement. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Respect a friend while refusing to help them deceive someone. Distinguish a human being's worth from your judgment about conduct. You can state a moral or practical boundary plainly while avoiding contempt. That keeps the conversation honest instead of using a warm tone to conceal disagreement. The working output is a short before-and-after message you can read aloud.
 
 #### State honestly when you cannot listen
 
-You bring a real example where this distinction matters. If too distracted to listen, say so and offer a better time. Genuineness is not a requirement to disclose everything you think. Share what is relevant and useful to this exchange. A truthful limit can create more trust than a polished imitation of attention you cannot actually sustain. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+If too distracted to listen, say so and offer a better time. Genuineness is not a requirement to disclose everything you think. Share what is relevant and useful to this exchange. A truthful limit can create more trust than a polished imitation of attention you cannot actually sustain. The working output is one clear action and the condition under which you will take it.
 
 #### Reflect the meaning beneath a factual report
 
-You bring a real example where this distinction matters. Check whether a confident account of a job change also includes worry. Your impression is a hypothesis. Avoid deciding that tone proves a concealed feeling. Ask in language the person can reject, and accept that their own description may differ from the one you initially imagined. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Check whether a confident account of a job change also includes worry. Your impression is a hypothesis. Avoid deciding that tone proves a concealed feeling. Ask in language the person can reject, and accept that their own description may differ from the one you initially imagined. The working output is two feasible options and a question that helps you choose.
 
 #### Life and career: the next commitment
 
@@ -99,11 +103,13 @@ For an adult team member struggling with a task, distinguish the required outcom
 
 ### What he'd push back on
 
-Empathy is not mind-reading, endorsement or a guarantee of change. Listening cannot supply information the speaker does not have or remove constraints they face. A public person-centered stance should not become unlicensed therapy. When specialist or practical help is needed, respectful listening can accompany that help without claiming to replace it. Also challenge a plan that treats enter the person's frame as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+Empathy is not mind-reading, endorsement or a guarantee of change. Listening cannot supply information the speaker does not have or remove constraints they face. A public person-centered stance should not become unlicensed therapy. When specialist or practical help is needed, respectful listening can accompany that help without claiming to replace it. Also challenge a plan that treats enter the person's frame as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood. Check any wording against what actually happened, and don't add a motive you cannot know.
 
 ### What you'll get back
 
 You receive an accurate reflection, a clarified choice and a self-chosen next step. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+Next: use the reflection once in a real talk, then write down what the person said back. For a negotiation, pair him with the Chris Voss mind.
 
 ## How Carl Rogers thinks and talks
 

@@ -38,6 +38,8 @@ priority, assigned team, and a draft first response for each.
 
 ### Example 1: Batch triage of 5 tickets
 
+The replies in these examples show the shape only. Every time, refund period and link in them is a placeholder. Write your own, for example [your reply time] and [your refund policy], and never send them unchanged.
+
 **Input:** 5 support tickets from the past hour.
 
 **Output:**
@@ -74,8 +76,9 @@ priority, assigned team, and a draft first response for each.
 
 ## Edge Cases
 
+- **Legal threats and security reports** — Do not triage these or draft a reply. Send them straight to a named person (legal contact or security lead) and tell the user why.
 - **Multi-intent tickets** — A single ticket contains both a bug report and a billing dispute. Classify under the higher-priority intent and create a linked ticket for the secondary issue.
-- **Spam or vendor outreach** — Tickets that are marketing emails or vendor pitches routed through support. Classify as `spam`, auto-close, and exclude from SLA metrics.
+- **Spam or vendor outreach** — Tickets that are marketing emails or vendor pitches routed through support. Classify as `spam`, flag it for a person to review (never auto-close, in case a real customer message was misread as spam), and exclude it from SLA metrics.
 - **Non-English tickets** — Detect the language, translate for triage, and route to the appropriate language-specific support queue if one exists. Note the original language in internal metadata.
 - **Repeat tickets from the same customer** — Detect duplicate or follow-up tickets within a 24-hour window. Merge into the existing thread rather than creating a new triage entry.
 - **Tickets with only attachments** — When the body is empty but a screenshot or log file is attached, flag for manual review rather than auto-classifying with low confidence.

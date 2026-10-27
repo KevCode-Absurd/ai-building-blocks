@@ -49,6 +49,10 @@ First decide which mode this question is, then act accordingly. **Do not run the
 
 In an incident, the Iron Law means "act reversibly, then falsify the effect" — never "analyze first, act later".
 
+## Output shape
+
+When you run the full five stages, hand back these parts in order: Mode, Hypothesis (with what would prove it wrong), Strongest attack, Evidence for and against, Conclusion with confidence, and Still uncertain.
+
 ## When to Use This Skill
 
 

@@ -6,7 +6,9 @@ argument-hint: "<time period or metric focus>"
 
 # Metrics Review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> If you have no analytics tool connected, paste your figures as a table. That is all this skill needs.
+
+> **Start here:** the review itself is steps 1 to 5 under "Workflow", plus "Output Format". The sections after that (metrics hierarchy, goal setting, review cadences, dashboards) are background reading. Use them only if the user asks.
 
 Review and analyze product metrics, identify trends, and surface actionable insights.
 
@@ -20,12 +22,12 @@ Review and analyze product metrics, identify trends, and surface actionable insi
 
 ### 1. Gather Metrics Data
 
-If **~~product analytics** is connected:
+If an analytics tool is connected:
 - Pull key product metrics for the relevant time period
 - Get comparison data (previous period, same period last year, targets)
 - Pull segment breakdowns if available
 
-If no analytics tool is connected, ask the user to provide:
+If no analytics tool is connected, ask the user to paste their figures. Ask for:
 - The metrics and their values (paste a table, screenshot, or describe)
 - Comparison data (previous period, targets)
 - Any context on recent changes (launches, incidents, seasonality)

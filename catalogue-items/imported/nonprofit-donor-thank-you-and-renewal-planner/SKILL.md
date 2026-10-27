@@ -11,6 +11,8 @@ metadata:
 
 # Donor Retention & Stewardship
 
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-donor-pipeline is the Nonprofit donor relationship planner. nonprofit-annual-appeals is the Nonprofit annual appeal planner. If a skill you need is not in this library, say so and carry on with the steps here.
+
 ## When to Use This Skill
 
 Use this skill for everything that happens **after** a gift is made — not for moving new prospects
@@ -52,6 +54,10 @@ highest-risk, highest-leverage window — most new-donor attrition is preventabl
 specific onboarding sequence rather than silence until the next mass appeal.
 
 ## Acknowledgment/Thank-You Process Design
+
+> Added by AI Blocks: the receipt elements below follow US tax rules. Rules differ in other countries. Have a qualified accountant or lawyer check receipt wording for your country before you use it. Do not invent receipt wording or tax details you were not given.
+
+> What to gather first: a table of gifts with donor ID, gift date and amount (a CSV or spreadsheet works), your current receipt and thank-you text, and your donor contact preferences. If something is missing, write MISSING: <what> and ask.
 
 1. **Speed**: send the tax receipt/acknowledgment within 24-48 hours of gift receipt; treat
    anything beyond a week as a process failure. Speed is one of the most consistently cited

@@ -1,6 +1,6 @@
 new_slug: fast-decision-evidence
 name: "Make a fast, committed decision with the right evidence"
-summary: "Stop a debate that won't end. Paste the choice and get its door type, how much evidence is enough, and a note that commits your team."
+summary: "Paste a choice you keep debating. Get its door type, how much evidence is enough, and a note that commits the team."
 job: think-and-decide
 thinking: high
 thinking_why: "It weighs reversibility, evidence and disagreement. Give it your strongest model."
@@ -9,9 +9,9 @@ headline: "Stop a debate by knowing how much evidence is enough"
 subhead: "Paste a choice you keep debating and what each person thinks. It sorts the choice as one you can undo or not, tests whether numbers or judgment should settle it, sets a bar for enough evidence and writes a note that records the doubts and commits the team."
 
 explain: |
-  Slow decisions rarely come from hard choices. They come from not knowing what would settle it, how much evidence is enough and when the talking should stop. The loudest or most patient voice wins, and the team drifts.
+  Slow decisions often come from not knowing what would settle it, how much evidence is enough and when the talking should stop. The loudest or most patient voice wins, and the team drifts.
 
-  This workflow first sorts the choice by whether you can undo it. It then asks if your own numbers can settle it or if it needs a written judgment with the short-term math argued against it. It sets a bar for evidence, about 70 percent of what you wish you knew for most reversible choices, and compares the cost of being wrong with the cost of waiting. The last step records each person's doubt in one fair line, tests whether the clash is about facts or about aims, and writes the note that commits the team. The ideas come from Jeff Bezos's letters to shareholders.
+  This workflow first sorts the choice by whether you can undo it. It then asks if your own numbers can settle it or if it needs a written judgment with the short-term math argued against it. It sets a bar for evidence, about 70 percent of what you wish you knew for most reversible choices, and compares the cost of being wrong with the cost of waiting. The last step records each person's doubt in one fair line, tests whether the clash is about facts or about aims, and writes the note that commits the team. The ideas are inspired by Jeff Bezos's letters to shareholders.
 
 when:
   - A decision has been argued in several meetings with no end.
@@ -35,7 +35,7 @@ you_get:
   - A note with each dissent on record, the commit lines and the review date
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the choice, your numbers and what each person thinks. It works step by step.
   - Send the team note. Act on the call and look again on the review date.

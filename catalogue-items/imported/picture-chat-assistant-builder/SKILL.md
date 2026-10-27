@@ -8,6 +8,15 @@ tags: [LLaVA, Vision-Language, Multimodal, Visual Question Answering, Image Chat
 dependencies: [transformers, torch, pillow]
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `scripts/v1_5/pretrain.sh`
+- `scripts/v1_5/finetune.sh`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # LLaVA - Large Language and Vision Assistant
 
 Open-source vision-language model for conversational image understanding.
@@ -295,6 +304,8 @@ llm = LLaVALLM()
 ```
 
 ### Gradio App
+
+Note: `ask_llava` below is a helper you write yourself by wrapping the code from Basic usage (load the image, build the prompt, call `model.generate`). It is not part of the LLaVA package, so this snippet is a sketch, not a complete app.
 
 ```python
 import gradio as gr

@@ -80,9 +80,13 @@ Only create if no Prettier config exists. Use these defaults:
 
 ### 8. Commit
 
-Stage all changed/created files and commit with message: `Add pre-commit hooks (husky + lint-staged + prettier)`
+List the files this setup changed or created. Stage only those, after the user confirms no unrelated work is in the list. Then commit with message: `Add pre-commit hooks (husky + lint-staged + prettier)`
 
 This will run through the new pre-commit hooks: a good smoke test that everything works.
+
+## Next
+
+Hooks run on each person's machine only. Add the same checks as a CI job on your code host for a server-side check. Teammates get the hooks after they pull and run the install step.
 
 ## Notes
 

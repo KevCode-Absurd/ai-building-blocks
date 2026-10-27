@@ -31,6 +31,8 @@ Ask once for anything missing. Never invent it.
 
 Section 2 bans gradients, but Section 6 and Section 7 suggest radial gradients for backgrounds. Follow Section 2 and skip those gradient options. For section depth, use a flat tint from the palette, a very low-opacity photo or a thin line pattern instead of a gradient. Where a brand system already sets fonts or colours, the brand wins over Section 3 and Section 4.
 
+Lyon Text, the first serif named in Section 3, is a paid font that needs a licence. Use Newsreader or Instrument Serif (both free) as the default, and name Lyon Text only if the user already has a licence.
+
 ## Output (added by AI Blocks)
 
 Return these parts, in this order. Skip a part only if the request does not call for it.

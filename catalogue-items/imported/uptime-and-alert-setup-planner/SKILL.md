@@ -182,7 +182,7 @@ If tier 1 alerts fire frequently, alert fatigue sets in. People stop responding.
 
 Where do alerts go?
 
-- Tier 1: paging system (e.g., PagerDuty). Do not onboard onto Opsgenie: Atlassian ended sales in June 2025 and support ends April 2027. Direct to on-call.
+- Tier 1: paging system (e.g., PagerDuty). Do not onboard onto Opsgenie: Atlassian ended sales in June 2025 and support ends April 2027 (vendor dates can change, so check Atlassian's current notice before you rely on them). Direct to on-call.
 - Tier 2: chat channel (Slack, Teams). Tagged with the area.
 - Tier 3: dashboard or log only.
 
@@ -222,7 +222,7 @@ Tune the system. Monitoring drifts without active maintenance.
 
 **Single-region monitoring.** Your monitoring service in the same region as your site means you'll miss regional outages and you'll get woken up when monitoring itself has issues.
 
-**Monitoring the monitoring.** Or rather, not. If your alerting platform is down, who tells you? Most paging services offer their own status feeds. Subscribe.
+**Monitor your alerting service too.** If your alerting platform is down, who tells you? Most paging services offer their own status feeds. Subscribe, and set up a check that tells you when it is down.
 
 **Too many tiers of severity.** P0/P1/P2/P3/P4 with different SLAs becomes a sorting exercise. Three tiers (page, notify, log) is plenty.
 

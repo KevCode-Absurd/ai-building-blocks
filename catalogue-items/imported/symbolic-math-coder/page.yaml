@@ -36,15 +36,16 @@ how_to_use:
   - Describe your equation in plain words. Add known values and any assumptions, such as a variable being positive.
   - "Say what form you want back: exact answer, numeric function, or transfer function."
   - Copy the MATLAB code your AI returns and run it. Check the exact result first, then the numeric function, then the assumptions.
-  - If MATLAB shows an error, paste the message back to your AI and ask it to fix the code.
+  - If MATLAB shows an error, paste the message back to your AI and ask it to fix the code. Next, run the numeric function on your data, for example with ode45, or ask for C code with matlabFunction and codegen.
 output_sample:
   input:
     - Your equation or formula in plain words
     - Known values or assumptions for each variable (optional)
     - The form you want back, such as exact, numeric or transfer function (optional)
   prerequisites:
-    - MATLAB with the Symbolic Math Toolbox
+    - MATLAB with the Symbolic Math Toolbox (both are paid MathWorks products)
     - An AI that can write code, and ideally run MATLAB
+    - The MathWorks licence allows you to use this skill only with MathWorks products (see LICENSE.md)
   output:
     - name: MATLAB code
       contains: Script that declares the symbolic variables with assumptions, then differentiates, integrates, solves or transforms your expression.

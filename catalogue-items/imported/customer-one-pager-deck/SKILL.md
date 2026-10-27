@@ -15,6 +15,10 @@ description: Build a customer deck, one-pager or leave-behind from your account 
 - Missing connector: work with what is available and say plainly what was used and what was not. Uploaded or pasted files are a complete input, not an apology: read what was uploaded before asking for anything, use the file's own column headers, and if a required input is missing ask once for that upload or paste. When today's date falls outside an upload's dates, anchor "today", "this week" and lookbacks on the upload's dates and say which date was used. At the start, check which tools this session has with a cheap read (who-am-I, one record); use what answers, and work from files only when nothing answers. If two tools answer for the same job (for example Gmail and Outlook), prefer the one matching the CRM user's email domain, otherwise ask once; never merge or pick silently. If a connected tool refuses a write (for example an admin turned the write tool off), keep reading, turn the change into a checklist or paste-ready text the person applies, quote the refusal, and never retry or reach for another tool to make it. A validation or field error on an allowed write is reported as that error, not treated as writes turned off.
 - Rendering: transient analysis as an artifact; anything a second person or a second week touches as a Page; anything presented as Slides; fall back to an artifact plus export when those are unavailable.
 
+## In a plain chat, with no connectors
+
+Pasted text is enough. The minimum input is your account notes and your approved product material. Expect three stages: a content inventory (what each claim rests on), an outline for you to approve, then the finished asset. The connector and permission rules above apply only if a CRM, email or docs tool is connected.
+
 Turn approved content
 plus account context into a finished, prospect-specific asset. The
 shape is loose - one-pager, deck, leave-behind, FAQ - but the content

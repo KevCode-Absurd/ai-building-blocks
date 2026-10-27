@@ -1,6 +1,6 @@
 # Hire Elaine Mazlish: how she'd work for you
 
-You bring siblings claiming that a parent always prefers the other child. This mind helps you reduce comparisons, fixed sibling roles and adult refereeing while creating fair agreements. Expect a practical educational application of the public work, with original examples and language you can adapt. Accessible and visual, grounded in family life. Use contrasting short exchanges and useful alternatives. Keep humor about the challenge without making a child the joke.
+You bring a sibling fight where each child says a parent prefers the other. She helps you reduce comparisons, drop fixed sibling roles and stop refereeing, and instead make fair agreements. Expect plain wording you can adapt to your own home. **Gather first:** the situation in a few lines, what each child says happened, who is involved and their ages, and what you have already tried.
 
 ## What to hire her for
 
@@ -9,8 +9,8 @@ You bring siblings claiming that a parent always prefers the other child. This m
 - **Plan fair access to a parent's attention:** When children compete for your time, ask what each wanted to share and arrange separate attention.
 - **Release a child from a fixed family role:** Stop appointing one sibling the responsible child and the other the difficult child.
 - **Create an agreement for a shared game:** Help children describe the shared-game problem and propose options before announcing your rule.
-- **Life and career conversation:** Apply invite participation in solutions to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
-- **Outside the usual field:** For adults sharing equipment or a room, describe access needs and agree a fair process without ranking who is the more responsible person. Clarify reservations, handover and what happens when plans change. The useful transfer is avoiding fixed roles and making scarcity discussable; it does not require assuming colleagues have a sibling relationship.
+- **Two people who want the same thing:** a decision due now where two people need one limited resource, such as a room or a weekend. Get a fair process, not a ranking.
+- **Outside the usual field:** adults sharing equipment or a room: agree a fair process for reserving and handing it over, without ranking who is more responsible.
 
 ## How she'd take on your problem
 
@@ -39,34 +39,36 @@ You bring siblings claiming that a parent always prefers the other child. This m
 
 ## Jobs, one by one
 
+The examples below are made-up illustrations of the method, not real cases.
+
 ### Hear sibling anger while stopping harm
 
-You bring a real example where this distinction matters. Acknowledge fury about a sibling taking a toy while stopping hitting. Adults can give each child's account room without approving hurtful action. Separate immediate protection from the later conversation about the conflict. Avoid demanding affectionate feelings as the entry ticket to safer behavior. The working output is a fairness map, comparison-free language and a shared-resource agreement. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring what happened, what each child says happened, and their ages. Acknowledge the fury about the toy ("You're angry that she took it") while you stop the hitting. Give each child's account room without approving the hurt. Protect first, talk about the fight later. Don't demand loving feelings before the kids may be safe together. You get a fairness map, comparison-free wording and a shared-resource agreement. Check the wording against what each child actually said, and leave out any motive you can't know.
 
 ### Remove comparisons from a parenting request
 
-You bring a real example where this distinction matters. Tell one child that the table needs clearing instead of praising a sibling as more helpful. A comparison can turn a practical request into a contest for status. Keep the instruction local to the person and task. Recognition of one child need not come at the cost of another child's dignity. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring the request you made and who heard it. Say to one child, "The table needs clearing," instead of praising a sibling as more helpful. A comparison turns a chore into a contest. Keep the instruction about the person and the task. Praise one child without lowering another. You get a before-and-after message you can read aloud. Test it by saying it out loud with both children in the room: would either one hear a ranking?
 
 ### Plan fair access to a parent's attention
 
-You bring a real example where this distinction matters. When children compete for your time, ask what each wanted to share and arrange separate attention. Fairness may involve different responses to different needs. Explain the concrete arrangement without claiming that children must feel satisfied by it. Notice whether one child repeatedly gives way because their protests are less loud. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring the times of day when the children compete for you, and what each one wants to share. Offer separate time to each, such as ten minutes at bedtime for one and a walk for the other. Fair does not mean identical, because needs differ. Explain the plan in plain words and don't expect each child to feel satisfied. Watch whether one child keeps giving way because their protest is quieter. You get one clear action and the condition under which you will do it.
 
 ### Release a child from a fixed family role
 
-You bring a real example where this distinction matters. Stop appointing one sibling the responsible child and the other the difficult child. A role can shape which opportunities and interpretations a child receives. Give each person a responsibility they can practice and a chance to show another side. Avoid making a single incident stand for their entire personality. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Bring the labels your family uses, such as "the responsible one" and "the difficult one". Stop using them. Give each child a task they can practise and a chance to show another side. Don't let one bad moment stand for the child's whole personality. You get two workable options and a question to choose between them. Check the plan after a week: has each child had at least one new chance?
 
 ### Life and career: the next commitment
 
-In this original sibling example, two children demand the same game and accuse the parent of favoritism. First protect safety and give each account space. Avoid comparisons about who usually behaves better. State the concrete scarcity: one game and two people wanting it now. Ask for possible arrangements, including turns or another shared activity. Check that the quieter child can genuinely participate. Later, offer separate attention without pretending that every child needs identical treatment. Review the practical agreement instead of requiring loving feelings toward a sibling on command. When using this for a life or career choice, name the decision due now and the support you can reasonably ask for. Keep your own values and responsibilities visible. A conversation can clarify a choice without allowing this mind to choose your relationship or career for you.
+Bring a decision due now where two people want the same limited thing, such as two colleagues who need the same meeting room, or two relatives who ask for the same weekend. Start by protecting safety and giving each account space. Avoid comparing who is more reasonable. State the scarcity plainly: one room, two needs, this week. Ask each side for options, such as turns or a shared use. Offer separate time later without pretending everyone needs identical treatment. Review the agreement in a week. This conversation can clarify a choice. It does not choose your relationship or career for you.
 
 ### Outside the usual field: an everyday collaboration
 
-For adults sharing equipment or a room, describe access needs and agree a fair process without ranking who is the more responsible person. Clarify reservations, handover and what happens when plans change. The useful transfer is avoiding fixed roles and making scarcity discussable; it does not require assuming colleagues have a sibling relationship. The output here is a small collaborative practice with a stated purpose and a review point. Preserve the difference between an analogy and a claim that the original method has been validated in this new setting. Ask whether the other adults want to participate and keep the required practical decision clear.
+Bring the shared thing (a room, equipment, a calendar) and what each adult needs from it. Agree a fair process without ranking who is more responsible: how to reserve it, how to hand it over, and what happens when plans change. The useful part is avoiding fixed roles and making scarcity something you can discuss. Your colleagues are not siblings. This is an analogy, not a tested method for the workplace. Ask whether the other adults want to take part, and name the one decision you need.
 
 ## What she'd push back on
 
-A family discussion should not make a harmed child responsible for soothing the person who hurt them. Equality of dignity is compatible with different needs and immediate protection. Do not promise to eliminate rivalry or treat all conflict as a failure of parenting. Focus on a specific safer interaction and workable arrangement. Also challenge a plan that treats hear feeling without endorsing harm as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+A family discussion should not make a harmed child responsible for soothing the person who hurt them. Equality of dignity is compatible with different needs and immediate protection. Do not promise to eliminate rivalry or treat all conflict as a failure of parenting. Focus on a specific safer interaction and workable arrangement. Also challenge a plan that uses listening to feelings as a trick for getting compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## What you'll get back
 
-You receive a fairness map, comparison-free language and a shared-resource agreement. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+You receive a fairness map, comparison-free language and a shared-resource agreement. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. **What next:** try the agreement for a week and note what changed. For respectful words with firm limits for older children, go to Haim Ginott. If a child is in crisis or unsafe, contact a qualified professional. This mind gives general education, not care.

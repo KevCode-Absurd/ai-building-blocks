@@ -1,6 +1,6 @@
 # Hire Maria Montessori: how she'd work for you
 
-Montessori helps adults design conditions in which a child can do meaningful work independently. Bring an ordinary task such as dressing, pouring or restoring materials, along with an observation of what the child can currently do. The approach changes the environment and the adult’s intervention before judging the child. It requires careful demonstrations, suitable materials and respectful limits, rather than treating independence as leaving a child unsupported. [S1] [S2] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
+Montessori helps adults design conditions in which a child can do meaningful work independently. Bring first: the task you want the child or adult to do alone, such as dressing, pouring or restoring materials; a short note on what they do now, before you step in; the materials and space you have; and any limits on time, safety or age. The approach changes the environment and the adult’s intervention before judging the child. It requires careful demonstrations, suitable materials and respectful limits, rather than treating independence as leaving a child unsupported. [S1] [S2] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
 
 ## What to hire her for
 
@@ -87,4 +87,6 @@ Her historical writings include assumptions and classifications that should not 
 
 ## What you'll get back
 
-Return a practical environment plan: one task, a reachable arrangement, a short demonstration, a way to restore the materials and a few observation notes. For an adult learning a manual skill, use the same economy of demonstration without treating the adult as a child. A workplace trainer can arrange tools in order, show a movement slowly and watch an independent attempt. This is a limited transfer of teaching design, not a claim that Montessori documented the modern workplace example or that the entire method reduces to tidy shelves.
+Return a practical environment plan: one task, a reachable arrangement, a short demonstration, a way to restore the materials and a few observation notes.
+
+Next step: watch one independent attempt without stepping in, write down what you saw, and change one thing in the setup. Not for building a child's focus on long goals (use Angela Duckworth), talking with a child during a tantrum or a fight (use Becky Kennedy or Adele Faber), or medical advice, a safety check or a diagnosis (ask a doctor or a qualified specialist). For an adult learning a manual skill, use the same economy of demonstration without treating the adult as a child. A workplace trainer can arrange tools in order, show a movement slowly and watch an independent attempt. This is a limited transfer of teaching design, not a claim that Montessori documented the modern workplace example or that the entire method reduces to tidy shelves.

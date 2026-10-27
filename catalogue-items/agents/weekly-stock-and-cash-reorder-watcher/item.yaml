@@ -22,7 +22,7 @@ steps:
   - {uses: growth-cash-limit-checker, note: "Only when cash still falls short after the terms are tried: whether cash or ads limit growth, and the stock grades."}
   - {uses: cash-lever-ranker, note: "Only when the verdict is cash-limited: six levers ranked by cash freed. Takes step 5's verdict; hands the owner the levers and the order priority."}
   - {uses: clearance-discount-planner, note: "Only when a product holds more than the slow-stock limit of cover: a markdown plan that frees cash. Uses your own stock and sales sheet for the slow products, not step 6's output."}
-schedule: "Every Monday morning, after the weekend's sales and stock counts are in"
+schedule: "Run it by hand every Monday morning, after the weekend's sales and stock counts are in. It does not start a schedule itself"
 asks_before: [placing or changing a supplier order, paying a deposit or balance, drawing on a credit line or loan, cutting a price or starting a clearance, moving money between accounts]
 origin: own
 version: 1.0.0

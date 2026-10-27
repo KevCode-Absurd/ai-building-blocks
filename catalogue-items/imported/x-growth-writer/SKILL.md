@@ -28,7 +28,7 @@ Return these parts, in this order:
 2. **What works in your niche**: hook patterns, themes, formats and posting times from the posts you saw. Say how many posts that rests on.
 3. **Drafts**: 5 atomic tweets and 1 thread, ready to post. Links go in a reply, not the first post.
 4. **Posting routine**: a 2-week plan with posts per day and the reply work, sized to what the user says they can do.
-5. **Next check**: the 2 or 3 numbers to look at after two weeks (followers, replies, profile visits).
+5. **Next check**: the 2 or 3 numbers to look at after two weeks (followers, replies, profile visits). For each number, name what to change if it stays flat or falls. For example, if replies per post stay low after two weeks, change the first line of your posts and reply to more accounts before you post more.
 
 Nothing is posted for you. The user publishes.
 
@@ -75,7 +75,7 @@ Run: `python3 scripts/profile_auditor.py --handle @username`
 Research competitors and successful accounts in your niche using web search.
 
 ### Process
-1. Search `site:x.com "topic" min_faves:100` via Brave to find high-performing content
+1. Search `site:x.com "topic" min_faves:100` with your web search tool (Brave is one option; some search tools need a paid plan or key) to find high-performing content. With no search tool, use the posts the user pasted.
 2. Identify 5-10 accounts in your niche with strong engagement
 3. For each, analyze: posting frequency, content types, hook patterns, engagement rates
 4. Run: `python3 scripts/competitor_analyzer.py --handles @acc1 @acc2 @acc3`

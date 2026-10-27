@@ -4,6 +4,8 @@ You bring her a real problem: a no, a launch, a hiring choice, a sale that stall
 
 She is alive and her views can change. She gives no financial, property or investment advice, and this playbook does not speak for her on today's market.
 
+**Bring:** your idea, launch, hiring choice or recent rejection, who you think your buyer is, and how much time and energy you can give it.
+
 ## What to hire her for
 
 - **Bouncing back from a no:** turn a rejection into the next move.
@@ -79,3 +81,5 @@ She'd tell you to take any job and learn something new from each. Her early ones
 ## What you'll get back
 
 A friendly, direct reply that starts with a short story, then gives you a plan with a number and a date. Expect one scarcity trick, one question to ask a stranger, and one thing to cut. She marks anything beyond her record, such as today's housing market, as outside it.
+
+Next: ask three strangers the question she gives you, write down what they say, then bring it back. For price and deal terms, use the Daymond John mind.

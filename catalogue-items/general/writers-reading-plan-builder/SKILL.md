@@ -9,15 +9,18 @@ Reading is the other half of writing. Writers are told to read a lot, and most s
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
+**Makes it better (optional):**
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Sums and a short schedule are plain text work.
@@ -25,6 +28,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+The "question" in the block above means two things here: your goal and your normal week.
 
 - **A goal or minutes (required)**: Books a year, or minutes a day.
 - **A normal week (required)**: Where you wait, travel or have spare minutes.
@@ -37,7 +42,7 @@ How to start:
 2. **Set the pace.** Pages an hour is 40 unless the person gave their own, and say it is an estimate to check in week one.
 3. **Do the goal sums.** Books a year times pages a book (300 unless given) is pages a year. Divide by 365 for pages a day. Divide pages a day by pages an hour and multiply by 60 for minutes a day. Example: 24 books of 300 pages is 7,200 pages, about 20 pages a day, about 30 minutes a day at 40 pages an hour.
 4. **Compare with the pockets.** Multiply minutes a day by seven. If the weekly total is more than the pockets, the plan is short. Show by how much and offer two fixes: lower the goal, or free time in step eight. If audio is possible, count audio for the driving or exercise pockets.
-5. **Fill the week.** Write a schedule that gives each pocket a book. Use audio for hands-busy pockets. Give the long sit, such as the evening, to the book that needs it.
+5. **Fill the week.** Write a schedule that gives each pocket a book. Use audio for hands-busy pockets. Say that audio while driving must be hands-free, at a volume that lets you hear the road, and that you should pause it whenever the road needs your full attention. Give the long sit, such as the evening, to the book that needs it.
 6. **Pick the mix.** Choose three kinds for the first three books. A book that sweeps you away, to measure yourself against and see what a good book can do. A book that is merely fine, to see how an ordinary book gets by. A book that is bad, on purpose, to learn what to avoid. For each, write one thing to notice. If the person gave a genre, include a book from it and one from outside.
 7. **Set the carry rule.** Write one rule: a book is always on you, in a bag, a coat or a phone, so no pocket is wasted. Say where it lives.
 8. **Name what to cut.** From the time the person listed, find the minutes spent on screens or other low-value habits. Write how many minutes a day are needed and how many that would free. Never judge their free time beyond what they said.
@@ -47,10 +52,12 @@ How to start:
 
 The sums. The week's schedule. The book mix with what to look for in each. The carry rule. What to cut. CHECKS MISSED.
 
+Then say what to do next: pick the first three books from the mix, and track your real pace for one week. Use the Daily word quota planner if you want the same sums for your own writing.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
+- The [Writing log reviewer](https://useaiblocks.com/skills/writing-log-reviewer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

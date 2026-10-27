@@ -65,7 +65,7 @@ how_it_works:
   - title: Sharpen the want
     text: "Fixes the one want and the one thing the product does for it. Keeps only the moves your facts support, such as the product in action or the problem in full, and writes a block for each."
   - title: Build belief
-    text: "Scores each claim for how readily a doubtful reader accepts it, then reorders the draft so no claim asks for more than one point more belief than the one before."
+    text: "Scores each claim for how readily a doubtful reader accepts it, then reorders the draft so the ladder never jumps two points of belief."
   - title: Show how it works
     text: "Lists the reasons your facts give for the result and writes them as a chain of cause and effect, with no link that lacks a fact."
   - title: Match claims to proof

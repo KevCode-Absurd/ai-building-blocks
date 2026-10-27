@@ -59,11 +59,9 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
-- **Understand your buyers** with the [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
-- **Write the ad copy** with the [Ad headline ideas](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
+- The [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
+- The [Deal competitor playbook builder](https://useaiblocks.com/skills/deal-competitor-playbook-builder).
+- The [Lost deal pitch reviewer](https://useaiblocks.com/skills/monthly-lost-deal-reviewer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

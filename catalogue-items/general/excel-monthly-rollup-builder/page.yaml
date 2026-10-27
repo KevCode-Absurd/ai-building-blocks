@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel monthly rollup builder
 subhead: Share dated operational records. Get an Excel monthly summary with traceable counts, totals and rates. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share dated operational records. Get an Excel monthly summary with traceable counts, totals and rates.
+  Monthly numbers built by hand drift from the records behind them. This builds the summary with formulas that count your source rows, so every figure can be traced and rerun.
 
 
   It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -15,9 +15,9 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share dated operational records. Get an Excel monthly summary with traceable counts, totals and rates.
-  - Dated source records, record grain, inclusion rules, timezone, month boundaries and definitions of requested measures.
-  - You need a checked copy while keeping your original files intact.
+  - You have dated records and need counts, totals and rates by month.
+  - Month-end numbers keep being rebuilt by hand and nobody can trace them.
+  - You need a monthly table where every figure points back to its source rows.
 not_for:
   - "Your records have no dates, or you only need a one-off list: use a pivot table or a filtered view in Excel."
   - "You want a chart or slide from the monthly numbers: build the chart in Excel or PowerPoint after this step."
@@ -101,3 +101,4 @@ tests:
     expected: Show 60% and 30%; the combined completion rate is 15/30, not 45%.
   - input: A record falls exactly at 1 February 00:00 in the chosen timezone
     expected: Count it in February only.
+next: [excel-powerpoint-number-checker]

@@ -5,7 +5,7 @@ name: Live audio processing builder
 summary: Build a live audio processing chain in MATLAB. Get frame-by-frame code for filters, EQ, compressors and level meters you can tune as sound plays.
 job: build-software
 headline: Live audio processing builder
-subhead: A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
+subhead: A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it. For MATLAB users with Audio Toolbox.
 explain: |
   A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
 
@@ -19,11 +19,12 @@ not_for:
   - "You only need to play or record sound through a device: use the matlab-play-record-audio skill."
   - "You want to process a whole audio file in one go, not frame by frame: use a plain offline script in MATLAB."
   - "You want to make a VST or AU plugin, or run deep learning on audio: this skill does neither, so use MATLAB's own plugin tools or a separate model workflow."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The effect or chain you want
   - "Audio source: file or live input"
   - Sample rate
-  - MATLAB with Audio Toolbox
+  - "Your MATLAB release and Audio Toolbox licence: some patterns need R2023b or R2024b"
 you_get:
   - A frame-by-frame MATLAB script
   - Filter and equaliser setup
@@ -46,6 +47,7 @@ output_sample:
   prerequisites:
     - MATLAB with Audio Toolbox, which is paid licensed software
     - An AI that can write MATLAB code, ideally one that can also run it
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Source setup
       contains: Code that reads a file or live input one frame at a time.

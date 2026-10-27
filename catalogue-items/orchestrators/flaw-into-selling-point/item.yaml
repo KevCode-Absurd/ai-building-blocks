@@ -14,7 +14,7 @@ outputs:
   - {type: audit_report}
 uses: [market-stage-reader, product-handicap-reframer, how-it-works-copy-writer, usp-claim-checker]
 steps:
-  - {uses: market-stage-reader, note: "The same stage read as the headline workflow, reused here."}
+  - {uses: market-stage-reader, note: "Names what buyers want and how worn out the claims are, and writes a stage brief for the steps after it."}
   - {uses: product-handicap-reframer, note: "Reads the stage brief and the product facts, and turns the main handicap into a reason to buy."}
   - {uses: how-it-works-copy-writer, note: "Reads the reframed draft from the step before."}
   - {uses: usp-claim-checker, note: "Checks the draft from the step before."}
@@ -22,5 +22,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [eugene-schwartz]
 credits:
-  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz", used: "The order of the steps: read how aware and how jaded your buyers are, give the product a new definition, explain how it works so the new frame is believed, check the claim is yours and not a rival's"}
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz", used: "Inspiration for reading how aware and how worn out your buyers are, and for giving a product a new true meaning. A third-party summary, so treat its detail as second-hand. The four-step order is this workflow's own design."}
 generated_from: intake/breakthrough-ads-handicap/skeleton.yaml

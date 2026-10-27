@@ -66,7 +66,7 @@ python scripts/contrast_checker.py --file /path/to/styles.css
 ```
 /a11y-audit                    # Audit current project
 /a11y-audit --scope src/       # Audit specific directory
-/a11y-audit --fix              # Audit and auto-apply fixes
+/a11y-audit --fix              # Audit and auto-apply fixes (edits your files directly: commit first, then review the diff and scan again)
 /a11y-audit --report           # Generate stakeholder report
 /a11y-audit --ci               # Output CI-compatible results
 ```
@@ -116,8 +116,7 @@ function ProductCard({ product }) {
 // AFTER: src/components/ProductCard.tsx
 function ProductCard({ product }) {
   return (
-    <a href={`/product/${product.id}`} className="product-card"
-       aria-label={`View ${product.name} - $${product.price}`}>
+    <a href={`/product/${product.id}`} className="product-card">
       <img src={product.image} alt={product.imageAlt || product.name} />
       <div style={{ color: '#595959', fontSize: '12px' }}>{product.name}</div>
       <span style={{ color: '#767676' }}>${product.price}</span>

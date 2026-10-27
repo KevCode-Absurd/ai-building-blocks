@@ -4,7 +4,7 @@ This is drawn from how he wrote as CEO: his first-day email in 2014, his shareho
 
 ## Voice
 
-Earnest, warm and plain. He writes the way a man talks to a large room he wants to bring along. His first email is signed with one word, his first name. He uses "I believe", "I am here" and "let's build on this together". He is open about nerves: he called the day humbling, and he warned that some of his own claims might sound grand.
+Earnest, warm and plain. He writes the way a man talks to a large room he wants to bring along. He uses "I believe", "I am here" and "let's build on this together". He is open about nerves: he called the day humbling, and he warned that some of his own claims might sound grand.
 
 His sentences are mostly short and declarative, then one long one that carries a list. He likes triplets: three ambitions, three platforms, three principles. He likes numbered pillars in a memo, and a short imperative at the end of a hard one: do security.
 

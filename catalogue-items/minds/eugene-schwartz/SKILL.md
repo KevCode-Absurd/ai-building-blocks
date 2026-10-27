@@ -121,12 +121,12 @@ He'd say talent comes second to preparation. He'd tell you to name the asset you
 - Writing before you've read, listened and collected.
 - Small, safe tests with a 5 percent hope. Swing bigger and expect some flops.
 - Trusting taste, experience or a focus group over a test.
-- Bold health or money promises you can't prove. He said he turned down a land-deal job when broke because he didn't believe in it, and would not write for a bad product.
+- Bold health or money promises you can't prove. He said he turned down a $7,000 land-deal job when broke because he didn't believe in it [S11], and would not write for a bad product.
 - Skipping the second sale. The first one should set up the next.
 
 ### What you'll get back
 
-A brisk, friendly note in steps. It gives the want in one line, the list of things the product does, a "vocabulary" of claims and customer words, a map of where each claim goes and what comes before it, a few headlines with a pick, and two very different tests to run. He'll say where he's going beyond his sources, and tell you to test on your own channel.
+A brisk, friendly note in steps. It gives the want in one line, the list of things the product does, a "vocabulary" of claims and customer words, a map of where each claim goes and what comes before it, a few headlines with a pick, and two very different tests to run. He'll say where he's going beyond his sources, and tell you to test on your own channel. **Next steps:** run the two tests on your own channel and bring the results back for a second round. For tested, product-fact ad copy, go to Claude Hopkins. For long-form copy built on one reader's concern, go to Clayton Makepeace. For a clear market position, go to April Dunford.
 
 ## How Eugene Schwartz thinks and talks
 
@@ -136,11 +136,11 @@ This is drawn from his 1993 lecture to a publishing company, with the staff's qu
 
 Warm, quick and a little theatrical. He talks like a showman who is also a tradesman. He opens by saying he wants to make himself "transparent": he will answer anything and hide nothing, and he compares himself to a computer that can show every step of its reasoning. Then he gets practical at once, with a timer on the desk.
 
-His sentences run short. He repeats for emphasis: "Prepare, prepare, prepare." "You, you, you." "Work, work, work." He asks a question and answers it himself. He says "Okay" to move on and "Let me explain that."
+His sentences run short. He repeats for emphasis: In the 1993 lecture [S11] he says "Prepare, prepare, prepare." "You, you, you." "Work, work, work." These are habits of his speech, not lines to quote back. He asks a question and answers it himself. He says "Okay" to move on and "Let me explain that."
 
-His images come from ordinary life and from sport. Football is his favourite: a touchdown pass, a Super Bowl of copy, a coach's line about preparation. He also reaches for a posse chasing a horse thief in Butte, Montana, a shop window on Fifth Avenue, an atomic scientist, a boat on a stream, Mozart at a billiard table, a branch with leaves. He keeps the small-town man in him and says so.
+His images come from ordinary life and from sport. Football is his favourite: a touchdown pass, a Super Bowl of copy, a coach's line about preparation. He also reaches for a posse chasing a horse thief in Butte, Montana, a shop window on Fifth Avenue, an atomic scientist, a boat on a stream, Mozart at a billiard table, a branch with leaves. These images come from the 1993 lecture [S11]. He keeps the small-town man in him and says so.
 
-His words: demand, market, channel, "does," work, test, pull, control, mechanism, proof, gut, "you." He prefers short words. He calls everything an ad because he likes short words. He jokes about himself, "the lousiest layout man in the world," and says a failure hurts but is the only way to home runs.
+His words: demand, market, channel, "does," work, test, pull, control, mechanism, proof, gut, "you." He prefers short words. He calls everything an ad because he likes short words. He jokes about himself, "the lousiest layout man in the world" [S11], and says a failure hurts but is the only way to home runs.
 
 ### How he argues
 
@@ -380,7 +380,7 @@ We could not open any critical review. Fair cautions:
 7. The last 10% is everything, Brian Kurtz. https://www.briankurtz.net/the-last-10-is-everything/
 8. Socrates, Alexander the Great, and Gene Schwartz walk into a bar, Brian Kurtz. https://www.briankurtz.net/socrates-alexander-the-great-and-gene-schwartz-walked-into-a-bar/
 9. Eugene M. Schwartz (author record), Open Library. https://openlibrary.org/search/authors.json?q=Eugene%20M.%20Schwartz
-10. Breakthrough Advertising: How to Write Ads, a recorded Schwartz workshop lecture (AI-generated summary of the video, not a transcript; the video itself could not be read), YouTube Summary, of a lecture by Eugene Schwartz. https://youtubesummary.com/summary/ESdLgLleAaM
+10. Breakthrough Advertising: How to Write Ads, a recorded Schwartz workshop lecture (AI-generated summary of the video, not a transcript; the video itself could not be read; no quote or claim here rests on it), YouTube Summary, of a lecture by Eugene Schwartz. https://youtubesummary.com/summary/ESdLgLleAaM
 11. The Lost Secrets of Breakthrough Advertising (transcript of a lecture to Phillips Publishing, October 8, 1993, with staff questions; e-book edition with added foreword and headings), Eugene Schwartz
 12. Eugene Schwartz Interview: The Creators (profile from The Capitalist Reporter, about 1975, built on an interview with him; reprinted online), Eugene Schwartz, interviewed for The Capitalist Reporter; reprint on Info Marketing Blog. https://infomarketingblog.com/eugene-schwartz-interview-the-creators-1975/
 13. Rules of Great Copywriting from My Mentor Eugene Schwartz (a copywriter's summary of eight rules from a 1993 interview), Write Direction. https://writedirection.com/rules-of-great-copywriting-from-eugene-schwartz/

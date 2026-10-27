@@ -22,5 +22,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger, warren-buffett]
 credits:
-  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The order of the steps: do you understand it?, will it last?, can you trust the people?, is the price right?, turn it upside down, make the call"}
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "Inspired by its idea of testing a choice on what you understand, whether it will last, the people and the price, then turning it upside down and making the call"}
 generated_from: intake/munger-models-four-filters/skeleton.yaml

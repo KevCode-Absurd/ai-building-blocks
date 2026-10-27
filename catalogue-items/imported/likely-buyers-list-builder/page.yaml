@@ -11,7 +11,7 @@ explain: |
 
   You describe the company. It looks for strategic buyers in four groups: direct rivals, neighbours in nearby markets, customers or suppliers, and large companies that grow by buying. Then it adds financial sponsors, such as funds that want a new platform or an add-on to a company they own. Each buyer is scored on fit, ability to pay and deal history.
 
-  The list is sorted into three tiers. Tier 1 is the first wave of calls. A focused list of 30 to 40 well-checked names beats 200 loose ones. Any buyer or contact it cannot source is marked TO VERIFY, so no invented names reach your pitch.
+  The list is sorted into three tiers. Tier 1 is the first wave of calls, with about 5 to 10 names. Tiers 2 and 3 hold about 10 to 15 and 10 to 20. A focused list of 30 to 40 well-checked names beats 200 loose ones. Any buyer or contact it cannot source is marked TO VERIFY, so no invented names reach your pitch.
 when:
   - You are preparing to sell a business and need a buyer universe before you meet a banker.
   - You advise a seller and must pitch a target list to them.
@@ -22,6 +22,7 @@ not_for:
   - You want to size up one deal you have been sent. Use the Deal screening memo writer.
   - You want to find customers to sell to. Use the Ideal buyer profiler.
   - You need verified contact details. This gives roles and where to look, not a phone book.
+  - Your company is outside India. This skill is built for Indian markets and units, and the files of Indian sources it names are not included here. It will say so, and use only the rules in the skill.
 you_give:
   - A description of the company, its sector and what it sells
   - Revenue, profit (EBITDA) and growth, in crore if Indian

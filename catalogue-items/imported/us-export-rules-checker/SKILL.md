@@ -268,6 +268,8 @@ US persons — regardless of location — are prohibited from:
 
 ## Regulatory Status — September 2026 (state where relevant)
 
+**Check before relying on this section.** These rule citations, the settlement and the GAO reference are the author's notes as of September 2026. This copy was imported on 2026-10-20, so they were not re-checked here. Verify each against the Federal Register and the BIS website before you act on it, and say the date you checked.
+
 **Drone/UAV classification changed (final rule, 91 FR 52501, effective August 13, 2026)** — apply this decision logic to every UAV question:
 1. **Endurance < 3 hours** → **9A012.a.1**, controlled **AT-only** (NS2 removed): license-free to most destinations. Software/technology follows: NS removed from **9D001, 9D002, 9D004, 9E001** for sub-3-hour UAVs.
 2. **Endurance ≥ 3 hours** → **9A012.a.2**: **NS Column 1 + AT1**, plus **MT1 if range ≥ 300 km**.

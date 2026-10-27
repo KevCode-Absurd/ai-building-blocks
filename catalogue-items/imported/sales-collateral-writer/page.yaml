@@ -20,20 +20,23 @@ not_for:
   - "You want to learn why buyers say yes or leave: run buyer interviews with a person, not this skill."
   - "You need a cold outreach email: write it as a short email with a cold email tool or template, not a sales deck."
 you_give:
-  - What you sell and who it is for
-  - The deal or buyer to target
-  - Proof points such as results (optional)
-  - Your sales process and deal size
+  - What you sell, in one or two sentences, and who it is for
+  - The deal or buyer to target, and the buyer's role
+  - Proof points you can back up, such as real results (optional)
+  - Your sales process, deal size and sales cycle length
+  - Collateral you already have (optional)
 you_get:
   - A pitch deck outline
   - A one-pager
   - An objection handling sheet
   - A demo script
+  - A win-loss report or a proposal, if you ask for them
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed.
   - "Tell your AI which asset you want: a deck, one-pager, objection sheet or demo script."
   - Share what you sell, who the buyer is, your deal size and any proof you can back up.
   - Answer the questions it asks about your sales process and the stage of the deal.
+  - "For a deck: paste the deal size, the buyer's role and what they care about. For a one-pager: paste your best proof and the one action you want the buyer to take. For an objection sheet: paste the objections reps hear most. For a demo script: paste the buyer's use case and how long the demo runs."
   - Read the draft and check every claim has proof. Test it with one rep before you send it.
 output_sample:
   input:

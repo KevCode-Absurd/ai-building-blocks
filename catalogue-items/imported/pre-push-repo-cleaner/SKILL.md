@@ -21,7 +21,9 @@ As a senior engineer, you're doing the final review before pushing this code to 
 
 ## Your Job  
 
-Review the entire codebase file by file. Read the code carefully. Fix issues right away. Don't just note problems—make the necessary changes.  
+Review the entire codebase file by file. Read the code carefully. Fix small, safe issues right away. Don't just note problems—make the necessary changes. Deleting files and removing secrets need the user's yes first (see step 1).
+
+**Before you start:** ask the user to commit or back up the project first, so every change can be undone. Do not begin until they say it is done.  
 
 ## Audit Process  
 
@@ -29,7 +31,7 @@ Review the entire codebase file by file. Read the code carefully. Fix issues rig
 
 Start by looking for files that shouldn't be on GitHub:  
 
-**Delete these immediately:**  
+**Remove these, but list the files first and get the user's yes before deleting. Never delete a file that may be the user's own work (for example `*_old.*`, `*_copy.*`, `scratch.*` or `vendor/`) without asking:**  
 - OS files: `.DS_Store`, `Thumbs.db`, `desktop.ini`  
 - Logs: `*.log`, `npm-debug.log*`, `yarn-error.log*`  
 - Temp files: `*.tmp`, `*.temp`, `*.cache`, `*.swp`  
@@ -45,7 +47,7 @@ Start by looking for files that shouldn't be on GitHub:
 - Files containing: `password`, `api_key`, `token`, `secret`, `private_key`  
 - `*.pem`, `*.key`, `*.cert`, `credentials.json`, `serviceAccountKey.json`  
 
-If you find secrets in the code, mark it as a CRITICAL BLOCKER.  
+If you find secrets in the code, mark it as a CRITICAL BLOCKER. With the user's yes, remove a tracked `.env` from git without deleting the local file (`git rm --cached .env`, then add it to `.gitignore`). Tell the user to rotate (replace) any key that was ever committed, because it stays in git history.  
 
 ### 2. Fix .gitignore  
 
@@ -103,7 +105,7 @@ Look through each code file and check:
 - Pagination is present on list endpoints  
 
 **Dependencies:**  
-- Run `npm audit` or an equivalent tool  
+- Run `npm audit` (or `pip-audit`, `bundle audit` or the equivalent for the language). If there is no package manager, say so and skip this check  
 - Flag critically outdated or vulnerable packages  
 
 ### 5. Scalability Check  
@@ -227,7 +229,7 @@ Overall: 9/10
 ## Key Principles  
 
 - Read the code thoroughly, don't skim  
-- Fix issues immediately, don’t just document them  
+- Fix small, safe issues immediately. For deletions and secrets, ask first  
 - If uncertain about removing something, ask the user  
 - Test after making changes  
 - Be thorough but practical—focus on real problems  

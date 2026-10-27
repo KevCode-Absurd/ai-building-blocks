@@ -16,9 +16,9 @@ when:
   - You have a board with many rails and need all of them checked in one run.
   - You need to find which power nets are on an imported layout.
 not_for:
-  - "You need to import Gerber, ODB++ or Allegro files first: use the matlab-read-pcb-layout skill, then come back here."
-  - "You want S-parameters or EM field results: use the matlab-analyze-em skill."
-  - "You want crosstalk between signal traces: use the matlab-design-pcb-transmission-line skill."
+  - "You need to import Gerber, ODB++ or Allegro files first: use the PCB layout file reader, then come back here."
+  - "You want S-parameters or EM field results: use the PCB signal loss analyzer or run an EM analysis in MATLAB."
+  - "You want crosstalk between signal traces: use the PCB trace designer."
 you_give:
   - An imported PCB layout
   - The power net names or voltages (optional)
@@ -31,9 +31,9 @@ you_get:
   - Pass or fail against your rules
 how_to_use:
   - Check your tools first. This skill needs MATLAB with the RF PCB Toolbox, and both are paid licences. Your AI must be able to run MATLAB code.
-  - Import your board first with the matlab-read-pcb-layout skill. A .brd file also needs Cadence extracta installed.
+  - Import your board first with the PCB layout file reader. A .brd file also needs Cadence extracta installed.
   - Collect the load current for each rail from a datasheet or your power budget. Do this before the run, because the checks depend on it.
-  - Give your AI this skill, then tell it your source and load locations and your limits for drop, current density and via current.
+  - Give your AI this skill, then tell it your source and load locations and your limits for drop, current density and via current. The example limits in the skill (such as 0.5 mA/mil² and 1 A) are placeholders. Replace them with your own design rules before you trust any pass or fail.
   - Ask it to list the power nets first. Confirm the rails and voltages are right, then run one rail or all rails in a batch.
   - Read the pass or fail table. Fix failing rails in your CAD tool, import the board again and rerun.
 output_sample:
@@ -45,7 +45,7 @@ output_sample:
     - Load current for each rail, from a datasheet or power budget
   prerequisites:
     - MATLAB with the RF PCB Toolbox, both paid licences
-    - A PCB layout imported with the matlab-read-pcb-layout skill
+    - A PCB layout imported with the PCB layout file reader
     - Cadence extracta installed, if your file is a .brd file
   output:
     - name: Power net list
@@ -60,3 +60,4 @@ output_sample:
       contains: Pass or fail for each rail against your limits for current density, voltage margin and via current.
     - name: Batch summary
       contains: One row per rail with nominal voltage, minimum and maximum voltage, worst drop, peak current density, maximum via current and pass or fail.
+next: [pcb-trace-designer]

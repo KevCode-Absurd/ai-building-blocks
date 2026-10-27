@@ -32,9 +32,11 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Tell your AI what you want to set up, such as a tool to install or services to connect.
   - Paste any docs or steps you have (optional). You can also describe what is on your screen now.
+  - Before you run a command or change a file, check it is right for your machine and approve it yourself.
   - Do the one step it shows, then reply "done" or tell it what you see.
   - Keep going until it says setup is complete. Then test that the tool works.
   - If a step fails, say what went wrong. Your AI adds the fix as a new step.
+  - When setup is done, save the finished steps as a short note for your team, or write a test checklist to go with it.
 output_sample:
   input:
     - What you want to set up

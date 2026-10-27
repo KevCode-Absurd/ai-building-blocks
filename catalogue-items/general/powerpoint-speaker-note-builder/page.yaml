@@ -42,6 +42,7 @@ how_to_use:
   - Answer any question it asks about missing facts.
   - Open the new deck and check that each note sits on the right slide.
   - Read the open items list, fix what is missing, then rehearse with a real timer.
+  - Do a question-and-answer practice pass. For a take-home copy, use the PowerPoint audience handout builder, which keeps your notes out of the audience file.
 output_sample:
   input:
     - Your PowerPoint deck (.pptx)
@@ -91,7 +92,7 @@ tweaks:
   - what: The result you need
     how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
+    how: Say which PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - Notes remain attached to the correct slide.
   - Timing estimates are not described as a completed rehearsal.
@@ -112,3 +113,5 @@ tests:
     expected: Budget six minutes for the content and label the draft timing estimate.
   - input: A slide number changed during reordering
     expected: Attach the note to the actual slide identity, not the old ordinal alone.
+before: []
+next: [powerpoint-audience-handout-builder, powerpoint-accessibility-reviewer]

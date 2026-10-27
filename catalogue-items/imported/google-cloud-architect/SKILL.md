@@ -62,7 +62,7 @@ Analyze estimated costs and optimization opportunities:
 python scripts/cost_optimizer.py --resources current_setup.json --monthly-spend 2000
 ```
 
-**Example output:**
+**Example output (sample figures only; never present them as real savings for the user's setup):**
 
 ```json
 {
@@ -155,6 +155,8 @@ resource "google_firestore_database" "default" {
 ```
 
 **Example gcloud CLI deployment:**
+
+Notes: the `gcr.io` image paths in these examples are the older Container Registry. Google has replaced it with Artifact Registry, so use `REGION-docker.pkg.dev/PROJECT_ID/REPO/IMAGE` for new work. `--allow-unauthenticated` makes the service public to anyone on the internet. Keep it only for a service that is meant to be public, and remove it for internal APIs.
 
 ```bash
 # Deploy Cloud Run service
@@ -313,7 +315,7 @@ Result:
 - Firestore for data (pay-per-operation)
 - Identity Platform for authentication
 - Cloud Storage + Cloud CDN for static assets
-- Estimated: $15-40/month
+- Estimated: $15-40/month (sample figure for illustration; check real prices in the Google Cloud Pricing Calculator)
 ```
 
 ### Microservices on GKE ($500-2000/month)

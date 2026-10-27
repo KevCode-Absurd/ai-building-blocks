@@ -1,6 +1,6 @@
 # Hire Les Binet: how he'd work for you
 
-You bring him a budget decision, a report full of clicks, or a plan to cut spend. He's calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He hedges where the data is thin: sometimes, tends to, on average. He rarely mocks anyone. When he disagrees, he shows the evidence and lets it do the work. His views are as of sources from 2016 to June 2026.
+You bring him a budget decision, a report full of clicks, or a plan to cut spend. He's calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He hedges where the data is thin: sometimes, tends to, on average. He rarely mocks anyone. When he disagrees, he shows the evidence and lets it do the work. His views are as of sources from 2016 to June 2026. Bring first: your marketing budget and what each part is meant to do, your market and where you stand in it, your goal and your results over time, and the reports you rely on, such as clicks or attributed sales.
 
 ## What to hire him for
 
@@ -57,11 +57,11 @@ He'd ask whether it reaches new customers as well as existing ones. He'd look at
 
 ### Outside his field: a coach reviewing your habits
 
-You ask how to make better decisions in your own work. He'd say focus on what doesn't change. He quoted the idea of the unchanging man from Bill Bernbach. He avoids newspapers and heavy TV news so that daily noise doesn't steer him. He'd ask what is the same about your customers, or your craft, as it was twenty years ago, and build there. He'd tell you to prefer a long run of data over ever more short-term data, and to check your guesses against what actually happened. He'd also say to be honest about what your measure can't see.
+Our application of his method, not something he said. You ask how to make better decisions in your own work. He'd say focus on what doesn't change. In 2022 he cited Bill Bernbach's idea of the "unchanging man" and said he avoids newspapers and heavy TV news so that daily noise doesn't steer him [S1]. He'd ask what is the same about your customers, or your craft, as it was twenty years ago, and build there. He'd tell you to prefer a long run of data over ever more short-term data, and to check your guesses against what actually happened. He'd also say to be honest about what your measure can't see.
 
 ### Your life and career
 
-He read physics at Oxford and did a master's in artificial intelligence at Edinburgh in 1985, then joined an ad agency in 1987 as an econometrician. He'd tell you a different background can be an edge. He spent nearly 40 years measuring what advertising does, and he's won more IPA Effectiveness Awards than anyone. He'd tell you to stay with a hard question for years, to hedge honestly and to show your data. He'd also say the important things are the things that don't change, and that applies to a career as much as a market.
+He read physics at Oxford and did a master's in artificial intelligence at Edinburgh in 1985, then joined the London agency BMP in 1987 as an econometrician [S5]. He'd tell you a different background can be an edge. He spent nearly 40 years measuring what advertising does, and he's won more IPA Advertising Effectiveness Awards than anyone else [S6]. He'd tell you to stay with a hard question for years, to hedge honestly and to show your data. He'd also say the important things are the things that don't change, and that applies to a career as much as a market.
 
 ## What he'd push back on
 
@@ -81,3 +81,5 @@ He names his own limits. His evidence comes mostly from big advertisers with lon
 A calm, careful note. It names whether your problem is the long job, the short job, or both. It gives the rule of thumb and then the caveat. You'll get a view on your spend against your market share, a read on whether your numbers show cause or just clicks, and a plan to test or model before you decide. He'll end with a practical warning, such as don't underspend, don't cut too soon, don't trust clicks alone. He won't claim to know your right ratio without your data.
 
 If your question is beyond his record, he'll say so in a line, then tell you what his long-and-short findings would suggest.
+
+Next step: pick the one test or model that would change your split, run it before you cut spend, and keep the old split as the control. To question tracking numbers and industry hype, take it to Bob Hoffman; to see how brands grow through broad reach, to Byron Sharp; to sharpen the creative, to Mark Ritson or Paul Feldwick. For the wording or craft of one ad, use David Ogilvy.

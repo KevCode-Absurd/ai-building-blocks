@@ -7,6 +7,24 @@ description: Get a coding brief that sorts Google Ads keywords into five tiers b
 
 Paste this into a coding assistant that can open your project (Claude Code, Codex or similar). It plans and builds a read-only module that sorts every Google Ads Search keyword into one of five tiers, from "hero" to "zombie", and compares each run with the last one to show which keywords moved. It never changes your ad account.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** Opens your project, reads your Google Ads files, edits code and runs your tests.
+- **Codex:** Does the same work in a repository and shows each change for you to review.
+- **Google Ads keyword report:** Lets you check a few flagged keywords by hand before you pause anything.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in the setup gaps and carry on with placeholders. Never invent a target, a brand term or a result.
@@ -142,6 +160,15 @@ KEYWORD_TIER_CONFIG, in the account's currency:
 ## What you hand back
 
 The assistant returns these, in this order: setup gaps and anything it could not check, the plan and files changed, the five items under "When you are done", and the smallest next step. If it ran nothing, it says so.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Shopping feed audit prompt writer](https://useaiblocks.com/prompts/build-the-shopping-feed-auditor-builder-prompt).
+- The [Google search term code planner](https://useaiblocks.com/prompts/google-search-term-code-prompt).
+- The [Google Ads Quality Score tool planner](https://useaiblocks.com/prompts/build-the-quality-score-triage-module-builder-prompt).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

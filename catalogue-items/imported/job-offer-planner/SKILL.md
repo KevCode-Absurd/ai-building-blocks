@@ -9,6 +9,15 @@ description: "This skill should be used when the user asks to make an offer, off
 
 Construct competitive offer packages, design negotiation strategies, and close candidates. Bridge the gap between what the company can offer and what the candidate wants.
 
+## Steps
+
+1. Gather first: the role and pay range, budget limits, the candidate's stated expectations, and any rival offers.
+2. Build the offer package (Offer Construction).
+3. Set market position (Market Positioning).
+4. Plan the negotiation: BATNA, concession order, anchoring, deadlines.
+5. Prepare for a counter-offer from their current employer.
+6. Plan the close and write the call scripts.
+
 ## Offer Construction
 
 Components of a total compensation package:
@@ -85,7 +94,7 @@ Rule: Always know where your offer sits relative to market before presenting it.
 
 - "If you get to the offer stage, your current employer may counter. Have you thought about how you'd handle that?"
 - "What would need to change at [Current Company] for you to want to stay? And if they could change it, why haven't they already?"
-- Data point: 50-80% of candidates who accept counter-offers leave within 18 months anyway
+- Data point (only if you can cite a named, dated source; otherwise leave it out): many recruiters say candidates who accept counter-offers often leave later
 
 ### When Counter-Offer Happens
 
@@ -93,7 +102,7 @@ Rule: Always know where your offer sits relative to market before presenting it.
 - Ask: "What specifically did they offer?" (understand the full picture)
 - Reframe: "If they valued you this much, why did it take your resignation to show it?"
 - Address the real motivation: "You started this process for reasons beyond money. Have those reasons changed?"
-- Share statistics: counter-offer acceptance outcomes, trust dynamics, career progression
+- Share only figures you can source: counter-offer acceptance outcomes, trust dynamics, career progression
 - Never bad-mouth the current employer
 - Give them space: "Take the weekend. This is a big decision."
 

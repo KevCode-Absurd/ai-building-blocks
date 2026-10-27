@@ -46,7 +46,7 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 - The fade, stable and implied cases are labelled and kept apart; excess returns are not assumed to last forever without evidence; differences are explained and no figure is blended across incompatible cases.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+- Match enterprise or equity cash flows to the corresponding discount rate.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
 - Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.

@@ -9,12 +9,12 @@ subhead: Tell it a topic, a subreddit or a user. It collects the public posts an
 explain: |
   Reddit posts and comments in a table you can sort and study, without needing a Reddit API key. Ask for a topic, a subreddit or a user, and get structured rows back.
 
-  The skill turns your request into a single run of an Apify actor. You can search by keyword, set a date window, pull every comment in a thread, or get the newest posts from several subreddits. This helps with brand watching, finding what people ask for, or tracking mentions since a date. The actor is a paid service charged per result, built by the skill author, and it needs an Apify account. It collects data from websites, so respect Reddit's terms.
+  The skill turns your request into a single Apify run. You can search by keyword, set a date window, pull every comment in a thread, or get the newest posts from several subreddits. This helps with brand watching, finding what people ask for, or tracking mentions since a date. The Apify run is a paid service charged per result, built by the skill author, and it needs an Apify account. Scraping Reddit may break Reddit's terms, so check them first and collect public data only.
 when:
   - You want every post where someone asks for an alternative to a rival tool.
   - You want to see who mentioned your brand since last month.
   - You need the full comment thread for a research project.
-  - You lost Reddit API access and still need the data.
+  - You need public posts for research, and Reddit's terms allow how you plan to use them. Never use this to get round an access block.
 not_for:
   - "You want to reply or post on Reddit: this only reads data, so use the official Reddit API with your own account."
   - "You need ongoing, long-term Reddit access: try the official Reddit API first, then use this for gaps."
@@ -36,6 +36,7 @@ how_to_use:
   - Check the cost estimate and terms it shows. The Apify actor charges per result.
   - Approve the run, then look over the tables. Check for any note about cut-off results.
   - Respect Reddit's terms and rate limits. It reads public data only.
+  - Usernames, bios and comment authors are personal data. Collect only the fields your analysis needs, and delete the export when the project ends.
 output_sample:
   input:
     - A topic, subreddit, user or thread link

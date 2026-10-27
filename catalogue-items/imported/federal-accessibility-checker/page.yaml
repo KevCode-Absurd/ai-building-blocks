@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe your site, app or document. Say who uses it and who buys it.
-  - Add any earlier audit results and your deadline if you have them.
+  - Add any earlier audit results and your deadline if you have them. Have ready: the site or document address, who uses it, which agency buys it, and any earlier audit.
   - "Say what you want: a gap list, an audit table, a fix plan, VPAT notes or purchase wording."
   - Read the result and check each criterion against your real product. Your AI works from your description and does not run tests.
-  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency.
+  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency. Check any law dates the result gives on the government's own site before you use them.
+  - Then fix the gaps with the WCAG accessibility fixer, and run a scan with a tool such as axe or WAVE.
 output_sample:
   input:
     - A description or link for your site, app or document
@@ -53,3 +54,4 @@ output_sample:
       contains: Draft conformance level and remarks for each criterion, ready to paste into your report.
     - name: Procurement clauses
       contains: Draft purchasing language that cites Section 508 and WCAG 2.0 AA, if you need it.
+next: [wcag-accessibility-fixer, accessibility-standards-checker, rfp-response-builder]

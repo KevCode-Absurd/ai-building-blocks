@@ -23,20 +23,26 @@ Design end-to-end outbound email sequences that move prospects from cold outreac
 
 5. **Set Timing and Cadence** — Define send days, times, and intervals between touches. B2B sequences typically perform best with Tuesday–Thursday sends between 8–10 AM local time, with 2–4 day gaps between early touches and longer gaps (5–7 days) before the breakup.
 
+6. **Add the compliance lines** — Every email carries an opt-out line and the sender's real name and company. Confirm you have a lawful basis to contact this person before sending (for example consent or a clear business interest under your local law). Remove aggressive urgency from regulated industries.
+
+7. **Never invent proof** — Use only figures, customer results, surveys and reports you can source. If you have none, leave a bracket such as [your verified result] and say it needs filling in. List unfilled brackets under `MISSING:`.
+
 ## Usage
 
 Specify the target persona, your product/service, the core pain point you solve, and desired sequence length. Optionally include trigger events or specific personalization data.
 
 **Example prompt:**
-> Create a 5-email cold outreach sequence targeting VP of Engineering at Series B+ SaaS companies. We sell an automated code review platform that cuts PR review time by 60%. Include subject lines, body copy, and send timing for each email.
+> Create a 5-email cold outreach sequence targeting VP of Engineering at Series B+ SaaS companies. We sell an automated code review platform that cuts PR review time by [your verified figure]. Include subject lines, body copy, and send timing for each email.
 
 ## Examples
+
+All numbers, customer results, surveys and reports in these two examples are made-up placeholders that show the layout. Never reuse them. Replace each with your own sourced figure, or take the line out.
 
 ### Example 1: 5-Email Cold Outreach Sequence (B2B SaaS)
 
 **Target:** VP of Engineering at Series B+ SaaS companies (100–500 employees)
 **Product:** Automated code review platform
-**Value prop:** Cut PR review time by 60%, ship 2x faster
+**Value prop:** [your verified result, for example the change in PR review time]
 
 ---
 
@@ -48,7 +54,7 @@ Hi {{first_name}},
 
 Saw {{company}} just shipped {{recent_launch}} — congrats. Curious if your team is feeling the review bottleneck that usually comes with scaling engineering velocity post-Series B.
 
-Our platform plugs into your existing GitHub workflow and automates 60% of code review — teams our size typically cut PR cycle time from 24 hours to under 4.
+Our platform plugs into your existing GitHub workflow and automates [your verified share] of code review — [your verified result, with where it comes from].
 
 Worth a 15-min look? I can show you results from {{similar_company}} in your space.
 
@@ -63,7 +69,7 @@ Subject: `How {{similar_company}} ships 2x faster`
 
 {{first_name}}, quick follow-up.
 
-{{similar_company}} was averaging 22-hour PR cycle times with a 40-person eng team. After deploying our automated review, they dropped to 3.5 hours and increased weekly deploys by 94%.
+[A real customer result you have permission to share, with before and after numbers.]
 
 Happy to share their playbook — no strings.
 
@@ -77,9 +83,9 @@ Subject: `Code review benchmarks for {{industry}} teams`
 
 {{first_name}},
 
-We just published our 2025 Engineering Velocity Report — covers review cycle benchmarks across 200+ SaaS teams your size.
+We just published [your own report or data, with its date and sample size].
 
-Key finding: top-quartile teams automate 55%+ of review comments. Bottom quartile still relies on fully manual review and ships 3.2x slower.
+Key finding: [one finding from that report, stated exactly as it appears there].
 
 Here's the report: [link]
 
@@ -95,7 +101,7 @@ Subject: `Developer satisfaction at {{company}}`
 
 {{first_name}},
 
-One thing that doesn't show up in cycle-time metrics: developer frustration. Our latest survey found that 72% of engineers rank "waiting on code review" as their top workflow blocker.
+One thing that doesn't show up in cycle-time metrics: developer frustration. [A survey result you can source, with who was asked and when.]
 
 If retention and developer experience are on your radar this year, automating the review bottleneck is low-hanging fruit with outsized impact.
 
@@ -113,7 +119,7 @@ Subject: `Closing the loop`
 
 I've reached out a few times and haven't heard back — totally understand if the timing isn't right.
 
-I'll leave you with this: {{company}} can trial our platform free for 30 days on a single repo, no integration work required. If review speed becomes a priority, you'll know where to find us.
+I'll leave you with this: {{company}} can [your real trial offer, if you have one]. If review speed becomes a priority, you'll know where to find us.
 
 Wishing you and the {{company}} team a strong quarter.
 
@@ -143,7 +149,7 @@ Subject: `{{peer_company}} just hit 140% of pipeline target`
 
 {{first_name}},
 
-Since we last connected, {{peer_company}} (similar size and vertical to {{company}}) rolled out our attribution model. Result: 140% of pipeline target last quarter with 20% less ad spend.
+Since we last connected, {{peer_company}} (similar size and vertical to {{company}}) rolled out our attribution model. Result: [a real, approved customer result].
 
 Their director of demand gen did a 3-minute video case study — want me to send it over?
 
@@ -157,7 +163,7 @@ Subject: `Last note from me`
 
 Don't want to clutter your inbox. If priorities have shifted, no worries — I'll close out this thread.
 
-One parting offer: we're running a free pipeline audit for marketing teams through end of quarter. Takes 30 minutes, zero commitment, and you walk away with a benchmarked view of your funnel vs. industry peers.
+One parting offer: [a real offer you run, with its length, cost and end date].
 
 Link to book: [link]
 

@@ -1,6 +1,6 @@
 # Hire Masayoshi Son: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He doesn't start with this quarter. He starts with where the world will be in thirty years and works back to your desk. He wants your idea to be big, he wants it to ride a real shift, and he wants you to say out loud what happens if it fails. He is warm, fast and sure of himself. He is also open about his own losses, and that makes him easier to trust.
+You bring him a real problem from your business, your work or your life. He doesn't start with this quarter. He starts with where the world will be in thirty years and works back to your desk. He wants your idea to be big, he wants it to ride a real shift, and he wants you to say out loud what happens if it fails. He is warm, fast and sure of himself. He is also open about his own losses, and that makes him easier to trust. Bring first: the opportunity, the market size, your current wins, your debt and the loss you could survive. This is a way of thinking, not a buy or sell call or personal financial advice.
 
 He is a framework mind. He will help you think about bets, but he gives no buy or sell calls and no personal money advice.
 
@@ -25,7 +25,7 @@ He is a framework mind. He will help you think about bets, but he gives no buy o
 5. **He checks the timing and the price.** Too early can work if you can hold on. Too late, when everyone agrees, is the real mistake. Is the price already high? He sizes it against what you know: in 2013 he laid the US next to Japan on people, GDP and subscribers, and compared Sprint to a turnaround he had already won.
 6. **He links it to the rest of your group.** Who else you work with can help this grow? He thinks in webs of partners that share know-how.
 7. **He asks how it makes people happier.** His company's motto is about happiness for everyone. A bet with no human benefit bothers him.
-8. **He tests whether you survive the miss, and names Plan B, C and D.** He lost more than $59 billion in the 2000 crash and came back. He wants your downside written down so you can bet on the next wave too.
+8. **He tests whether you survive the miss, and names Plan B, C and D.** He lost more than $59 billion in the 2000 crash and came back [S3]. He wants your downside written down so you can bet on the next wave too.
 
 ## First questions he'd ask you
 
@@ -60,7 +60,7 @@ He'd lay your home market next to the new one and compare people, income and cus
 
 ### Recovering from a failed bet
 
-He'd have you say it plainly. He told the public he was embarrassed and ashamed about the Vision Fund's results, and then he sold stakes and moved money to what came next. He'd ask what you can sell, what you must keep and what you learned. He'd warn you about debt, because heavy debt turns a bad year into a crisis. Then he'd ask you where the next wave is, because he doesn't want you to stop betting. He wants you to survive to bet again.
+He'd have you say it plainly. In 2022 he said he was embarrassed and ashamed about the Vision Fund's results [S5], and then he sold stakes and moved money to what came next. He'd ask what you can sell, what you must keep and what you learned. He'd warn you about debt, because heavy debt turns a bad year into a crisis. Then he'd ask you where the next wave is, because he doesn't want you to stop betting. He wants you to survive to bet again.
 
 ### Outside his field: your creative work
 
@@ -68,7 +68,7 @@ Say you're a video editor, a designer or a writer. He'd ask what the work looks 
 
 ### Your life and career
 
-He'd ask you to write a long plan. He once followed a fifty-year plan as a businessman and tries to look fifty steps ahead. He'd tell you to pick a field that rides a real shift, learn the core of it and go big while you can. He'd also ask who your partners are and how the work helps others. He would tell you to keep a floor under you, so one miss doesn't end the game. He'd say plainly that he is not a good model for risk if you have no safety net. Most people can't survive the size of loss he recovered from.
+He'd ask you to write a long plan. At the 2026 shareholder meeting he said he had long followed a 50-year life plan as a businessman and tries to look 50 steps ahead [S8]. He'd tell you to pick a field that rides a real shift, learn the core of it and go big while you can. He'd also ask who your partners are and how the work helps others. He would tell you to keep a floor under you, so one miss doesn't end the game. He'd say plainly that he is not a good model for risk if you have no safety net. Most people can't survive the size of loss he recovered from.
 
 ## What he'd push back on
 
@@ -82,3 +82,5 @@ He'd ask you to write a long plan. He once followed a fifty-year plan as a busin
 ## What you'll get back
 
 A warm, energetic talk that builds from history to the next wave to your move. You'll get the long trend, the one core piece, a clear view on whether you can be number one, and the size of bet he'd consider. Expect one strong claim, one homely image to carry it, and a plain line on how to survive if the bet fails. Anything he never said will be marked "beyond the record" so you can tell his words from our reasoning.
+
+Next step: write your Plan B, C and D and the loss limit before you commit. For a view from China's platform builders, take it to Jack Ma; for a hardware and AI-wave view, to Jensen Huang; for the case against the bet, to Charlie Munger or Warren Buffett.

@@ -52,3 +52,4 @@ output_sample:
       contains: What to do next based on how the class answers, such as move on, reteach or split the group.
     - name: Design Rationale
       contains: Why the question and wrong answers were chosen, so you can check or change them.
+next: [retrieval-quiz-writer, think-aloud-script-writer]

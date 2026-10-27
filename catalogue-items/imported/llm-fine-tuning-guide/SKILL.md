@@ -270,6 +270,7 @@ import unsloth
 import os
 import re
 from unsloth import FastLanguageModel
+from datasets import load_dataset
 from trl import GRPOTrainer, GRPOConfig
 
 def reviewed_revision(variable):
@@ -279,6 +280,7 @@ def reviewed_revision(variable):
     return revision.lower()
 
 model_revision = reviewed_revision("UNSLOTH_MODEL_REVISION")
+dataset_revision = reviewed_revision("UNSLOTH_DATASET_REVISION")
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "unsloth/Qwen3-4B",
     revision = model_revision,
@@ -289,6 +291,13 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     gpu_memory_utilization = 0.6,
 )
 model = FastLanguageModel.get_peft_model(model, r = 32, lora_alpha = 32)
+
+# Replace the placeholder with your own prompt dataset. GRPO needs a "prompt" column.
+dataset = load_dataset(
+    "<your-prompt-dataset>",
+    revision = dataset_revision,
+    split = "train",
+)
 
 def reward_length(completions, **kwargs):
     """Placeholder. Replace with a task-specific verifier."""

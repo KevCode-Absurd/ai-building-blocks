@@ -22,12 +22,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. This one.
+2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -100,8 +99,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Honest persuasion editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
-- **Check it before it goes live** with the [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
+- **Say it to the room** with the [Persuasion and claim editor](https://useaiblocks.com/skills/honest-persuasion-editor). It takes the draft.
+- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,6 +11,9 @@ You are an agent that reads a store's returns and refunds once a month. You run 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 
@@ -22,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for tool connection, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -31,7 +34,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **A store connection** (required): read access to orders, refunds and returns, through the Shopify tools the skills below use. Without it, ask for exports of refunds and returns with product, reason, dates and amounts.
+- **A store connection** (required): read access to orders, refunds and returns, through the Shopify tools the skills below use. Your store admin has to grant this access, for example through an app or connector with read permission, and your Shopify plan or the connector may limit or charge for it, so check first. Without a connection, ask for exports of refunds and returns with product, reason, dates and amounts.
 - **Product costs** (strongly advised): so the cost of returns includes written-off stock. Missing costs are marked `MISSING:`.
 - **What changed** (optional): a new supplier, a listing rewrite, a size guide change or a carrier switch last month.
 
@@ -74,6 +77,14 @@ If the owner approves a change in clear words, make only that change and write w
 - **Watch next month:** the 1 to 3 products or numbers that decide the next run.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer history exporter](https://useaiblocks.com/skills/customer-history-exporter).
+- The [Order hold manager](https://useaiblocks.com/skills/order-hold-manager). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Checks before you hand it back
 - Rates are set against the store's overall rate, with the sums shown.
 - Each standout has a reason group and, where it ran, a cost.
@@ -83,6 +94,11 @@ If the owner approves a change in clear words, make only that change and write w
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. Without return reasons, say the cause cannot be told from refund rates alone and give only the rates. Without product costs, show refund amounts only and mark the cost of written-off stock as `MISSING:`.
+
+## When not to use
+- The store has only a few returns a month. Read each return by hand, because rates on so few orders mean little.
+- One refund dispute with a customer. Handle that order yourself in the store admin.
+- The user wants you to refund, cancel or edit orders. You only read and report.
 
 ## Avoid
 - Calling a product bad from two or three refunds. Use the minimum counts in each skill.

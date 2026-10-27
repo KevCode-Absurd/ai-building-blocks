@@ -11,6 +11,13 @@ You are an Upstream Energy Analyst. Your goal is to estimate the economic value 
 
 ## Initial Assessment
 
+Ask for these inputs, with units, before you start. Mark anything missing as MISSING and do not invent it:
+- Reserve volumes for 1P, 2P and 3P, in MMbbl (oil) or Bcf (gas)
+- Annual production, or the decline rate
+- Lifting cost and F&D cost, in dollars per BOE
+- The price deck: the oil and gas prices you will use, and the basis (a 12-month average or a forward curve)
+- Tax rate and any royalties
+
 1. **Reserve Categorization**
    - **Proved (1P)**: 90% probability of recovery.
    - **Probable (2P)**: 50% probability of recovery.
@@ -70,7 +77,15 @@ You are an Upstream Energy Analyst. Your goal is to estimate the economic value 
 ---
 
 ## Scripts
+
+If you cannot run code, work through the formulas in the PV-10 section by hand, year by year, and show every line. calculate.py is a helper and is not required.
 - [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math.
+
+---
+
+## Next steps
+
+Treat the PV-10 as a screening estimate. Check it against a qualified reserves engineer's report before you rely on it for a lender, a filing or a purchase. For decommissioning costs or a whole-company value, use the related skills below.
 
 ---
 

@@ -32,9 +32,11 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run MATLAB code. You need MATLAB R2025a or newer with the PDE Toolbox.
   - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - Pick one set of units and keep to it, for example metres, pascals, watts and kelvin. The toolbox has no units of its own, so a mix-up gives wrong numbers with no warning.
   - Describe your part, its materials, and the loads, fixed faces or temperatures. Say which analysis you want. Attach your CAD file if you have one.
   - Ask your AI to build, mesh, solve and plot the model, then report the key values.
-  - Check the mesh quality and compare the numbers with a hand calculation before you use them in a design decision.
+  - Check the mesh quality and compare the peak values with a hand calculation before you use them in a design decision.
+  - Have an engineer review and sign off the result before you act on it. Then ask your AI to refine the mesh and rerun to see if the answer changes.
 output_sample:
   input:
     - Your part shape, as a CAD file (STEP or STL) or simple shapes with sizes
@@ -54,6 +56,7 @@ output_sample:
     - name: Solved result
       contains: "The solution for your case: steady, time-varying, vibration or frequency."
     - name: Derived values
-      contains: Values read from the result, such as peak stress, temperature, displacement or reaction forces.
+      contains: One table of values read from the result, such as peak stress, temperature, displacement or reaction forces, with their units.
     - name: Plots
-      contains: Plots of the fields across the part, such as temperature or stress.
+      contains: Plots of the fields across the part, such as temperature or stress, saved as named image files.
+next: [matlab-chart-maker, matlab-report-builder]

@@ -1,7 +1,7 @@
-# Board taxonomy and near-duplicate keys
+# Clearing near-duplicates (optional)
 
-Keep the public-library access rules above. Authorized Foreplay collection belongs in the separate connector/export workflow, not an unannounced scope change here.
+Use this to tidy a big pile before you file it. It adds no new types: use the nine on the map above, and a second tag never makes an extra row.
 
-Index study jobs: identity, use/demo, problem, comparison, mechanism, real customer proof, founder story, education, occasion, offer and native/editorial structure. Adjust these eleven starting buckets to the sample. Secondary tags do not create extra ad rows.
+Remove repeats by library ID first. For likely variants, compare the advertiser, the destination link, the opening of the caption and the picture itself. A shared link alone does not prove two ads are the same. Keep real message variants as one card, with the variants noted (step 2). Spread the board across advertisers and formats. Run time shows how long an ad has been kept, not whether it made money. Keep the library ID and your own notes, and do not copy or share a rival's pictures or films outside your own study board.
 
-Deduplicate original source IDs first. For likely variants compare advertiser, normalized destination, caption opening and available media hash. A shared URL alone does not prove identical creative. Retain legitimate message variants with links. Balance advertisers and formats; a two-per-brand shortlist rule is optional, not a corpus law. Age is longevity only, not profitability. Keep rights notes and share links or original analysis rather than redistribute raw competitor media.
+Foreplay and other ad-saving tools are paid services outside this skill. It only works from ads you collected by hand from the public Meta Ad Library.

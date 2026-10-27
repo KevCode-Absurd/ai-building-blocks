@@ -9,7 +9,6 @@ level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
   - {type: question, required: true}
-  - {type: brief, required: false}
 outputs:
   - {type: document}
 uses: [dataset-profiler, data-analyst, analysis-checker, insight-brief-writer]

@@ -7,9 +7,9 @@ thinking_why: It follows a fixed process but must choose formats, themes and rul
 headline: Run a review of a finished project that teaches the team and blames no one
 subhead: Name a project that just ended. It plans the prep with a form asking each person for five things to do again and five never again, sorts the answers and your numbers into themes, writes a timed agenda with wording rules, and turns each lesson into a rule for next time.
 explain: |
-  Most project reviews fail before the meeting starts. People are tired, they want to move on and they do not want to reopen an old argument. Ed Catmull's account of Pixar's reviews says much of the value comes from the preparing. It forces each person to think before they speak.
+  Many project reviews fail before the meeting starts. People are tired, they want to move on and they do not want to reopen an old argument. Good preparation makes each person think before they speak. The approach is inspired by Ed Catmull's Creativity, Inc.
 
-  This workflow builds that preparation. It picks a format that differs from your last one, since people learn to game a repeated format. It asks for two short lists, because honesty is easier when good and bad sit side by side. It sets numbers beside the lists, and treats the numbers as one way of seeing, not as the answer. Then it writes an agenda that asks what caused something and never whose fault it was, sets aside time for old hurts, and ends with the lessons as rules the next team can check.
+  This workflow builds that preparation. It picks a format that differs from your last one, so the answers are not rehearsed. It asks for two short lists, what to do again and what never to do again, so good and bad sit side by side. It sets numbers beside the lists, and treats the numbers as one way of seeing, not as the answer. Then it writes an agenda that asks what caused something and never whose fault it was, sets aside time for old hurts, and ends with the lessons as rules the next team can check.
 when:
   - A project has just ended, well or badly, and you want the team to learn without blame.
   - Your last review turned into polite thanks or an argument.
@@ -29,7 +29,7 @@ you_get:
   - A timed agenda with wording rules, facilitator lines, a slot for old hurts and questions for the next project
   - Each lesson written as a rule with its root cause, ready to check next time
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Send the form from step 1 and collect the lists and numbers. Bring them to step 2.
   - Hold the review using the agenda, then bring what was said and decided to the last step.

@@ -34,7 +34,9 @@ how_to_use:
   - If you have saved brand notes in .agents/brand-context.md, paste them in too. Your AI reads them first and skips questions it can already answer.
   - "Answer the six questions: the moment you started, the founder's background, what you believe, what your customer struggles with, your promise, and where the brand is now."
   - Say if you want first person from the founder or third person from the brand. Say if the tone should be raw or polished.
-  - Read the three versions. Check that each opens with a scene or a question, not a founding year, and fix any detail that is not true.
+  - If an answer is missing, leave that part out or mark it for the founder to fill in. Do not let the AI invent it.
+  - Read the three versions. Check that each opens with a scene or a question, not a founding year. Keep only scenes, quotes and dates the founder can confirm, and replace anything invented with a marked placeholder.
+  - Put the long story on your About page, the short one on your homepage or in a pitch, and the one-liner in bios. For a tagline, use the Brand messaging builder.
 output_sample:
   input:
     - The moment you decided to start the brand

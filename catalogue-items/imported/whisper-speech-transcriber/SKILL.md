@@ -23,7 +23,6 @@ OpenAI's multilingual speech recognition model.
 - Multilingual audio processing
 
 **Metrics**:
-- **72,900+ GitHub stars**
 - 99 languages supported
 - Trained on 680,000 hours of audio
 - MIT License
@@ -187,10 +186,12 @@ for audio_file in audio_files:
         f.write(result["text"])
 ```
 
-## Real-time transcription
+## Faster transcription with faster-whisper (files, not live audio)
+
+This is a faster way to transcribe a saved file. It is not live captioning (see Limitations).
 
 ```python
-# For streaming audio, use faster-whisper
+# For faster file transcription, use faster-whisper
 # pip install faster-whisper
 
 from faster_whisper import WhisperModel
@@ -308,7 +309,7 @@ Full list: 99 languages total
 
 ## Resources
 
-- **GitHub**: https://github.com/openai/whisper ⭐ 72,900+
+- **GitHub**: https://github.com/openai/whisper
 - **Paper**: https://arxiv.org/abs/2212.04356
 - **Model Card**: https://github.com/openai/whisper/blob/main/model-card.md
 - **Colab**: Available in repo

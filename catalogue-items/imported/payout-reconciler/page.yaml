@@ -36,6 +36,8 @@ how_to_use:
   - Ask your AI to run the payout reconciliation skill. Give it your store address, and days to look back or a tolerance if you want to change them.
   - Open the CSV file and check each flagged payout in your Shopify admin. Flags are leads, not confirmed errors.
   - Payouts still in transit are skipped. Run it again after they are paid.
+  - A refund can land in the next payout, so a flag may only mean the refund fell in a different window. Check the next payout before you treat a flag as an error.
+  - Match the paid total with the deposit in your bookkeeping software or send the CSV to your accountant.
 output_sample:
   input:
     - Your store address
@@ -57,3 +59,4 @@ output_sample:
       contains: Counts of payouts, matches and gaps, plus the total size of the gaps and the top ones.
     - name: payout_reconciliation CSV file
       contains: One row per payout with its figures, difference, currency and a verdict of ok or discrepancy.
+next: [account-reconciler, books-reconciliation-pl]

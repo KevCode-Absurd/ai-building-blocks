@@ -37,6 +37,7 @@ how_to_use:
   - Paste your list and dates below the instructions and send them.
   - Check the table covers every topic and that each review comes after the topic is first taught.
   - Change any gap that does not fit your timetable, using the spacing note to guide you.
+  - Next, turn each review slot into ready-made questions with the retrieval quiz writer.
 output_sample:
   input:
     - Your list of topics
@@ -53,3 +54,4 @@ output_sample:
       contains: Brief retrieval activities to use in each review slot.
     - name: Teacher Guidance
       contains: Tips on how to run the plan and adjust it if the term changes.
+next: [retrieval-quiz-writer]

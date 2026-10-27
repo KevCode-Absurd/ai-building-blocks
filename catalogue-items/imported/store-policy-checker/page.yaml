@@ -5,7 +5,7 @@ name: Store policy checker
 summary: Check your store policies for gaps, clashes and unclear wording. Give it your store link or policy text. You get fixes to paste in.
 job: check-contracts
 headline: Store policy checker
-subhead: Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in. Bring your store link or pasted policy text. Use the result to plan your next step.
+subhead: Get gaps, clashes and unclear wording in your store policies, with fixes to paste in. Use the result to plan your next step.
 explain: |
   A check of your shop's refund, shipping, privacy and terms pages that tells you what is missing, what contradicts itself and what will confuse customers, with fixed wording to paste in. Give it a store link or the policy text.
 
@@ -30,7 +30,7 @@ you_get:
   - Rewritten wording to paste in
   - Notes on region rules
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Reading a store link needs an AI that can run a script. If yours can't, paste your policy text instead.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Reading a store link needs an AI that can run the script (scripts/fetch_policies.py), which must sit in the skill folder next to SKILL.md. A store link cannot be read from the text alone. If yours can't, paste your policy text instead.
   - Paste your store link, or paste the text of your refund, shipping, privacy and terms policies. Add your FAQ if it mentions returns or shipping.
   - Add the regions you sell to and any facts your policies leave out (optional).
   - Read the score and the Fix these first list. Check each quote against your store.

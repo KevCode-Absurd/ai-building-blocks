@@ -16,6 +16,7 @@ how_to_use:
   - Add your tool list, your settings and two or three bad results if you have them. More detail gives better findings.
   - Ask your AI to run the five checks and give the report.
   - Read the three serious problems first. Fix the top one, then run the check again.
+  - Anything you did not share shows as "not assessed" instead of getting a score. Add the missing detail and run it again.
 output_sample:
   input:
     - Your workflow description

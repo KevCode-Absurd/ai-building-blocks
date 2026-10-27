@@ -22,7 +22,7 @@ steps:
   - uses: debt-reserve-rollforward-builder
     note: Calculate reserve requirement, approved draws and top-up need from the same debt schedule. Use a sourced cash-after-senior-service limit for preliminary funding and pass requirement, need and opening reserve separately to the waterfall.
   - uses: project-payment-waterfall-builder
-    note: Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, correct the input map and record the reconciliation instead of forcing a plug.
+    note: Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, list the mismatched line, the two amounts and which source to re-pull (the debt schedule or the reserve statement). Re-pull that source, rerun the tie, and record the reconciliation and its reason instead of forcing a plug.
 execution: coordinator
 origin: own
 version: 1.0.0

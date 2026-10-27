@@ -23,6 +23,8 @@ This skill enables an AI agent to conduct a rigorous, structured literature revi
 
 5. **Synthesize Themes and Findings:** Organize extracted data into themes or categories that emerge across papers. Identify areas of consensus, debate, and gaps in the literature. Write a narrative synthesis that connects individual findings into a coherent story, supported by a summary comparison table.
 
+AI Blocks note: never write an author name, year, DOI, quote or study result from memory. Cite only papers you opened or that the user pasted. If you cannot open a source, mark it `unverified` and do not cite it as a finding. If you have no search access, say so, and review only what the user supplied.
+
 6. **Write the Review Document:** Produce the final literature review with these sections: introduction and research question, methodology (search strategy, criteria, PRISMA flow), thematic synthesis, discussion of gaps and future directions, and a complete reference list in a standard citation format.
 
 ## Usage
@@ -37,6 +39,8 @@ in evaluating reasoning, safety, and real-world task completion?
 ```
 
 ## Examples
+
+The counts, scores and findings in these examples are illustrative placeholders to show the layout. They are not real search results. Check every reference and figure against its original source before you use it.
 
 ### Example 1: Literature Review on LLM Evaluation Benchmarks
 

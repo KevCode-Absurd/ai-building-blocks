@@ -9,7 +9,7 @@ subhead: Answer questions about your time, skill and how you acted in the last b
 explain: |
   Most people pick an investing approach by accident. A friend's tip, a hot year or a scare sets it. Then they change it again at the next scare.
 
-  This workflow follows the plain path in The Intelligent Investor by Benjamin Graham. The return you can fairly aim for depends on the effort you will really bring, not on the risk you take. So it starts by sorting you as a defensive investor (safety and little bother) or an enterprising one (real research). It then sets a split between stocks and bonds inside a quarter-to-three-quarters range, starting at half and half, with a rule that restores the split when prices move it. It picks the bond kind with two small sums, one for tax and one for price swing, and puts the plan on one page with what you will not do. It names no fund and no security.
+  This workflow is inspired by The Intelligent Investor by Benjamin Graham. The return you can fairly aim for depends on the effort you will really bring, not on the risk you take. So it starts by sorting you as a defensive investor (safety and little bother) or an enterprising one (real research). It then sets a split between stocks and bonds inside a quarter-to-three-quarters range, starting at half and half, with a rule that restores the split when prices move it. It picks the bond kind with two small sums, one for tax and one for price swing, and puts the plan on one page with what you will not do. It names no fund and no security.
 when:
   - You are starting to invest and want a plan before you put money in.
   - You keep changing your approach every time prices move.
@@ -29,7 +29,7 @@ you_get:
   - A bond choice by tax, length and safety
   - A one-page policy with what you will not do and a review date
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Answer with what you actually did, not what you wish you had done. It works step by step and saves each result.
   - Print the last page and read it again on the review date.
@@ -58,7 +58,7 @@ how_it_works:
   - title: Picks the bonds
     text: Does the tax sum and the price-swing sum, ranks safe kinds first and keeps high-yield bonds out.
   - title: Writes the policy
-    text: Puts the plan on one page with a fair expectation after tax and inflation, a not-to-do list and a rule for taking advice.
+    text: Puts the plan on one page with the return you expect from your own figures (or a MISSING line if you gave none), a not-to-do list and a rule for taking advice.
 output_shape: |-
   STEP 1: YOUR TYPE
     Type: <DEFENSIVE / ENTERPRISING / NEITHER YET> | Why, ranked: <list> | Paths to skip: <list>
@@ -101,3 +101,5 @@ terms:
     meaning: A person who will do real research and starts from the same plain base.
   - term: Rebalancing
     meaning: Selling a little of what has grown and buying what has shrunk so the split goes back to your plan.
+next: [defensive-stock-screen]
+before: []

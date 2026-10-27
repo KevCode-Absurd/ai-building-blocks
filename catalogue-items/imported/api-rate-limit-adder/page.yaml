@@ -9,7 +9,7 @@ subhead: Your API gets a request limit that works across every server instance, 
 explain: |
   Your API gets a request limit that works across every server instance, so one bad actor cannot flood your login or sign-up routes. You get the code in place and a clear reason for each choice.
 
-  The skill uses the Upstash rate limit library with Upstash Redis, so all instances share the same counters. You need an Upstash account and two keys set in your environment. It picks a window type for each route: sliding window for smooth limits, fixed window for simple ones, and token bucket where short bursts are fine. The limiter is built once, outside the handler, so blocked callers are turned away without a database call. Over-limit callers get a 429 reply.
+  The skill uses the Upstash rate limit library with Upstash Redis, so all instances share the same counters. You need an Upstash account and two keys set in your environment, or nothing works. If Redis is down, requests pass after a short wait (the limit fails open). IP counts can be faked unless your proxy sets the header. It picks a window type for each route: sliding window for smooth limits, fixed window for simple ones, and token bucket where short bursts are fine. The limiter is built once, outside the handler, so blocked callers are turned away without a database call. Over-limit callers get a 429 reply.
 when:
   - Your login or sign-up route is being hammered.
   - An AI endpoint costs money per call and needs a cap per user.
@@ -36,6 +36,7 @@ how_to_use:
   - Add your two Upstash keys to your environment file yourself. Do not paste them into the chat.
   - Check the limits before you deploy. Limits that are too strict can lock out real users.
   - Test a route by sending more calls than allowed. You should see a 429 reply.
+  - Next, add real sign-in checks on those routes. For calls to other services, add a queue or a retry handler.
 output_sample:
   input:
     - The routes you want to protect
@@ -57,3 +58,4 @@ output_sample:
       contains: The key each route counts by, such as user id, API key or IP address.
     - name: Analytics (optional)
       contains: Usage stats on blocked and allowed calls, if you switch them on.
+next: [api-security-checker, api-retry-handler, api-test-suite-builder]

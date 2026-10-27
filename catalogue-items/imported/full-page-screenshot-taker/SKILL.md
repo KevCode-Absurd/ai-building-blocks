@@ -20,6 +20,8 @@ node "${SKILL_DIR}/scripts/full-page-screenshot.mjs" --check
 
 If Chrome check fails, instruct user to open `chrome://inspect/#remote-debugging` and enable **"Allow remote debugging for this browser instance"**.
 
+**Safety:** remote debugging lets other programs on the computer use the user's signed-in browser sessions. Tell the user to turn it off again after the capture. Do not use `--url` on logged-in pages (see Option B); use an already-open tab instead.
+
 ## Workflow
 
 ### Option A: Screenshot an already-open tab (recommended for authenticated pages)

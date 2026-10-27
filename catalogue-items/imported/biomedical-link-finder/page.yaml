@@ -30,12 +30,13 @@ you_get:
   - The saved query and raw response
   - Warnings about partial or weak results
 how_to_use:
-  - Use an AI that can run Python 3.10 or newer and reach the internet. A plain chat window cannot run this skill.
+  - Use an AI that can run Python 3.10 or newer and reach the internet. A plain chat window cannot run this skill. If you do not code, ask a technical colleague to set it up.
   - Make sure your question is public. Do not include patient details or private research ideas.
   - Ask your AI to run the preflight check. It tests that the ARAX service is online without sending your question.
   - Ask it to look up your term and show you the proposed identifier. Check that the name and category are right.
   - Ask it to run one one-hop query with that identifier and the link type you want.
   - Open summary.json to see each link, its sources and papers. Open response.json if you need the full detail.
+  - Next, look up each returned link and its paper IDs in PubMed or another trusted database, and check them by hand before you act on any of them.
 output_sample:
   input:
     - A disease, gene or drug name
@@ -56,3 +57,8 @@ output_sample:
       contains: A short list of linked facts, each with its link type, sources and papers.
     - name: Warnings
       contains: Notes on partial results, provider errors, missing paper details or empty results.
+terms:
+  - term: identifier
+    meaning: A standard code for one gene, drug or disease, so the service knows exactly which one you mean.
+  - term: one-hop query
+    meaning: A question about everything directly linked to one thing, with no steps in between.

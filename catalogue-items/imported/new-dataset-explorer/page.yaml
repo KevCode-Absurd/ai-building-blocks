@@ -16,8 +16,8 @@ when:
   - Your totals look wrong and you suspect bad rows.
   - You need a quick profile for a data handover.
 not_for:
-  - "You already have a clear question or a decision to make: use a data analysis skill or ask your AI that question directly."
-  - "You need the data cleaned or fixed: this only reports problems, so fix them in your spreadsheet or ask your AI to clean it next."
+  - "You already have a clear question or a decision to make: use the Data analyst or ask your AI that question directly."
+  - "You need the data cleaned or fixed: this only reports problems, so fix them in your spreadsheet or use the Data cleaner next."
   - "Your file is not a table, such as a PDF or a stack of notes: use a plain chat and ask your AI to pull out the numbers first."
 you_give:
   - A table of data (CSV, Excel or similar)
@@ -31,11 +31,11 @@ you_get:
   - Outliers and a short findings summary
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a mode that can run code and read files. Data analysis tools may need a paid plan.
-  - Paste the skill text into the chat.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The code in it needs Python with pandas, seaborn, matplotlib and (for the optional HTML report) ydata-profiling, so your AI must be able to run or install them.
   - Attach your CSV or Excel file.
   - Add your question or the column you want to predict, if you have one.
   - Read the quality section first. Fix the problems it lists before you build a report or model.
-  - Run it again after cleaning to check the fixes worked.
+  - Fix the problems with the Data cleaner, then run this again to confirm the fixes worked.
 output_sample:
   input:
     - Your data file (CSV, Excel or similar)
@@ -56,3 +56,4 @@ output_sample:
       contains: Count and share of unusual values per number column using the IQR method, with rows odd in several columns.
     - name: EDA report
       contains: A short summary of what you can trust, what needs cleaning first, and suggested next steps.
+next: [data-cleaner, data-analyst]

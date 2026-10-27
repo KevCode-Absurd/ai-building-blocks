@@ -7,6 +7,24 @@ description: Get a coding brief to deploy your always-on agent worker to Render,
 
 Paste this into a coding assistant that can open your project (Claude Code, Codex or similar). It plans the files that put a long-running agent worker on Render so it runs all day. It writes a Render config file, checks that the worker starts and stops cleanly, lists the secret names Render needs, and writes a go-live checklist with a rollback step. It never deploys, never creates a Render service and never sees your secret values.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** Opens your project, reads the start file and drafts the config and checklist as files.
+- **Render:** The service the plan is written for. Check its pricing page and Blueprint docs before you choose.
+- **GitHub:** Render deploys from your repository, so each push starts a new deploy.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in the setup gaps and carry on with placeholders. Never invent a path, a plan name or a price.
@@ -123,6 +141,13 @@ A checklist I tick by hand, with these items:
 ## What you hand back
 
 The assistant returns these, in this order: setup gaps and anything it could not check, the files it wrote or drafted, the six items under "When you are done", and the smallest next step. If it ran nothing, it says so.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Redis BullMQ job queue code planner](https://useaiblocks.com/prompts/set-up-redis-bullmq-job-queue-builder-prompt).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Expected start lines (illustration only)
 

@@ -9,7 +9,7 @@ subhead: Paste your rivals and what you sell. It finds the word each rival owns,
 explain: |
   A brand that says four things is remembered for none. Strong brands own one simple word, and a word one rival already holds is almost impossible to take. Some words, like quality, belong to nobody because every brand claims them.
 
-  This workflow maps which words rivals own and which are open or empty. It lists candidate words of four kinds, drops any that are taken, and tests the rest on four points: simple, wanted, true and opposed. It prefers a word opposite to the leader's. It then finds a flaw buyers already believe and writes lines that admit it and turn to your word, because buyers trust an admission before a boast. Last, it marks every product, customer group and message as feeding or blurring the word, and cuts the product line, narrows the target and sets a rule against changing the position at budget time. The ideas come from "The 22 Immutable Laws of Marketing" by Al Ries and Jack Trout (1993).
+  This workflow maps which words rivals own and which are open or empty. It lists candidate words of four kinds, drops any that are taken, and tests the rest on four points: simple, wanted, true and opposed. It prefers a word opposite to the leader's. It then finds a flaw buyers already believe and writes lines that admit it and turn to your word, because buyers trust an admission before a boast. Last, it marks every product, customer group and message as feeding or blurring the word, and cuts the product line, narrows the target and sets a rule against changing the position at budget time. It draws on ideas from "The 22 Immutable Laws of Marketing" by Al Ries and Jack Trout (1993). The step order is this workflow's own.
 when:
   - You say too many things and buyers can't say what you stand for.
   - Research says buyers want something and you suspect a rival already owns it.
@@ -18,6 +18,7 @@ not_for:
   - "Your brand has one clear product and already owns a word: keep it and skip this, or ask a marketing person to check it still holds."
   - "You want to judge how far your brand reaches today: use the Brand reach reviewer."
   - "You want to test whether your edge over rivals is real: use the Competitive advantage tester."
+  - "No rival holds a category and you want to create a new one: use Find a category to be first in and launch it."
 you_give:
   - Your main rivals, with their taglines or homepage lines
   - Customer reviews that name you and your rivals (optional)

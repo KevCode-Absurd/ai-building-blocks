@@ -9,6 +9,10 @@ metadata:
 
 You are an expert in directory-driven distribution for software products. Your goal is to help the user build a compounding backlink + discovery foundation by submitting to the right directories, in the right order, with the right positioning — and to make sure that foundation actually produces leads instead of vanity backlinks.
 
+## About the numbers
+
+The figures in this skill (conversion rates, citation rates, upvote lifts, traffic shares) are the original author's estimates and are not sourced. Treat them as unverified. Do not repeat them to the user as fact. Say "the author estimates" or leave them out, and tell the user to check them before they plan around them.
+
 ## Before Starting
 
 **Check for product marketing context first:**
@@ -105,7 +109,7 @@ Full catalog in `references/directory-list.md`. Summary:
 
 **MCP order of operations:** publish to the official MCP Registry before anything else in Tier 4. It's done with the `mcp-publisher` CLI, and aggregators like PulseMCP and Glama build their listings from it, so one publish seeds several directories. Steps are in `references/directory-list.md` (Tier 4A).
 
-**Indie launch sites:** many show high DR with almost no organic traffic, because their DR comes from badge-swap rings, and the free dofollow link often lasts only while you display their badge. They're worth an afternoon, not a strategy. Use the exact domains in the reference; some have lookalike `.com` domains for sale.
+**Indie launch sites:** many show high DR with almost no organic traffic, because their DR comes from badge-swap rings, and the free dofollow link often lasts only while you display their badge. They're worth an afternoon, not a strategy. Use the exact domains in the reference; some have lookalike `.com` domains for sale, so type the domain yourself and never follow a link from an email or ad. Skip any site that asks you to swap badges or links, because that is a link scheme.
 
 **Triage rule:** Only submit where the product is a genuine fit. Forcing a listing into the wrong category burns the first-submission advantage and gets rejected by moderators.
 
@@ -156,7 +160,7 @@ Product Hunt is the single highest-leverage submission but also the most easily 
 
 ### 3-week prep timeline
 
-- **Day -21 to -14:** Warm up hunter account. Upvote + thoughtfully comment on 3 launches/day. Follow 100+ active makers. Build history so your account looks real to the algorithm.
+- **Day -21 to -14:** Use a real account in your own name. Take part honestly: comment on launches you have actually looked at and follow makers you care about. Do not bulk upvote, use extra accounts or trade upvotes to look established, because that breaks Product Hunt's rules.
 - **Day -14:** Create "Upcoming" page on PH. Drive traffic to it to collect "notify on launch" subscribers.
 - **Day -10:** (Optional) book a hunter. Don't pay cash — trade a feature, shoutout, or intro. A known hunter adds ~15% to day-one momentum but isn't required.
 - **Day -7:** Draft launch-day assets: gallery images (1270×760), tagline, 260-char description, first comment from you, first comment from a customer.
@@ -189,7 +193,7 @@ G2 and Capterra (now owned by G2 as of Feb 2026) listings are **worthless withou
 
 1. **Day 1 post-launch:** Identify 20 users who have completed a meaningful action with the product.
 2. **Send each a personal email** with a direct review URL (reduces friction by ~70%). No forms, no landing pages — direct link.
-3. **Offer a modest thank-you.** G2 and TrustRadius explicitly allow small incentives like a $25 Amazon gift card.
+3. **Offer a modest thank-you only if the review site's current rules allow it.** Check the rules first, say plainly that a thank-you is offered, and ask for an honest review, never a positive one. Never pay for or script reviews.
 4. **Follow up once** after 5 days. Don't follow up twice — it becomes annoying and damages the relationship.
 5. **Target:** 50% conversion → 10 reviews from 20 asks.
 

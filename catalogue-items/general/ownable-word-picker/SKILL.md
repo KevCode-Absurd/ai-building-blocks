@@ -12,7 +12,7 @@ A brand that stands for one simple word is easier to remember than one that list
 This skill runs in any chat AI. It needs no files, web access or paid tools. It cannot pick a word without a word map, and it never invents proof, a buyer quote or a rival's claim.
 
 **What you need:**
-- **A word map** (yours, or made by the [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper)): which rival owns which word, and which words are open or empty. The [Open word finder](https://useaiblocks.com/prompts/open-word-finder) gives a quicker version.
+- **A word map** (yours, or made by the [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper)): which rival owns which word, and which words are open or empty.
 
 **Makes it better (optional):**
 - **What you sell, and your proof** (yours): tests, numbers, awards, firsts or customer results. Without proof, the true test scores low.

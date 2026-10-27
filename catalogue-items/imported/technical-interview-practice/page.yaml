@@ -18,6 +18,7 @@ you_get:
   - A practice interview with questions and follow-ups.
   - Scores from one to five for correctness, clarity, tradeoffs and edge cases.
   - Specific gaps and the next topic to practice.
+next: [technical-topic-deep-dive, retrieval-quiz-writer]
 how_it_works:
   - title: Step 1
     text: Set the interview scope and start with an easier warm-up.
@@ -26,11 +27,12 @@ how_it_works:
   - title: Step 3
     text: End the interview, score four areas and suggest practice for weak answers.
 how_to_use:
+  - Before you start, have your target job description or topic notes ready. You need only a standard chat AI. No paid tool is needed.
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Tell your AI the interview type, topic, your level, your time setting and any weak areas.
   - Answer as you would in a real interview. Explain your thinking out loud. Your AI will not correct you until the end.
   - Say when you are done. Your AI then gives your four scores, your gaps and what to practice next.
-  - Practice the weak spot it names, then run a new interview on the same topic.
+  - Practice the weak spot it names, then run a new interview on the same topic. To learn the weak topic first, use the technical topic deep dive. To drill recall, use the retrieval quiz writer.
 output_sample:
   input:
     - "Your interview type: coding, system design, or behavioral plus technical"

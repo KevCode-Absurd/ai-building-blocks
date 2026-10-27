@@ -17,7 +17,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Forecasts future demand for each SKU based on historical sales velocity, trend analysis, and optional seasonality adjustments. Calculates reorder points (when to order) and suggested reorder quantities (how much to order) factoring in vendor lead times and safety stock. Read-only — no mutations.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_products,read_inventory`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_products,read_inventory` (check this against the current Shopify CLI docs, since the command can change; if the store login fails, ask the user to sign in to the store with the Shopify CLI themselves and try again)
 - API scopes: `read_orders`, `read_products`, `read_inventory`
 
 ## Parameters
@@ -46,6 +46,7 @@ Forecasts future demand for each SKU based on historical sales velocity, trend a
 2. Calculate per-variant sales velocity:
    - Daily sales rate = total units sold / days_back
    - Weekly trend: compare last 30 days vs prior 30 days for trend direction
+   - trend_multiplier = units sold in the last 30 days ÷ units sold in the prior 30 days, held between 0.5 and 2.0 (use 1.0 if the prior 30 days had no sales)
    - Forecasted demand = daily_rate × forecast_days × trend_multiplier
 
 3. **OPERATION:** `productVariants` — query
@@ -58,6 +59,7 @@ Forecasts future demand for each SKU based on historical sales velocity, trend a
 
 5. Calculate reorder metrics:
    - **Days of Stock** = current_inventory / daily_sales_rate
+   - **Safety stock (units)** = safety_stock_days × daily_sales_rate
    - **Reorder Point** = (lead_time_days + safety_stock_days) × daily_sales_rate
    - **Reorder Quantity** = forecast_days × daily_sales_rate + safety_stock - current_inventory
    - **Stockout Date** = today + (current_inventory / daily_sales_rate) days

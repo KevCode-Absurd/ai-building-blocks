@@ -64,11 +64,9 @@ BRIEF: audience | position | proof | what not to say
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Job experience mapper](https://useaiblocks.com/skills/job-experience-mapper). It takes the buyer brief.
-- **Check the money** with the [Debt payoff planner](https://useaiblocks.com/skills/debt-payoff-planner). It takes the buyer brief.
-- **Test the idea with real people** with the [Business model assumption tester](https://useaiblocks.com/skills/business-model-guess-tester). It takes the buyer brief.
-- **Shape the product** with the [Beta program planner](https://useaiblocks.com/skills/beta-program-planner). It takes the buyer brief.
-- **Decide what to do** with the [Business backup and cash planner](https://useaiblocks.com/prompts/slack-and-backup-planner). It takes the buyer brief.
+- The [Positioning statement writer](https://useaiblocks.com/skills/positioning-statement-writer).
+- The [Go-to-market positioning planner](https://useaiblocks.com/skills/go-to-market-positioning-planner). It takes the brief.
+- The [Positioning idea generator](https://useaiblocks.com/skills/positioning-idea-generator). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

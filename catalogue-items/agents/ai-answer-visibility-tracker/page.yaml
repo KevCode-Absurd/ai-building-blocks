@@ -38,7 +38,7 @@ how_to_use:
   - Add the agent to your AI. In Claude Code, save it in .claude/agents or add it as a skill. In Claude, ChatGPT or Gemini, paste it at the start of a chat. It keeps a visibility folder, so Claude Code is easiest; in a plain chat, paste last month's numbers.
   - The first month, give it your product facts and rivals. It builds a list of 10 to 20 shopper questions and saves it. Do not edit the list later, or months cannot be compared.
   - Pick the assistants and use the same ones every month, with web search on. Your AI can only ask the assistant it runs in. For any other, paste each question in yourself and paste the answer back.
-  - Check the terms of each assistant before you repeat questions many times. Free versions often skip web search, and some features may need a paid plan. No paid tool is needed.
+  - The agent stops before step 2 until you confirm you have checked the terms of each assistant for repeated questions. Some limit repeated or automated use. Free versions often skip web search, and some features may need a paid plan. No paid tool is needed.
   - Read the wrong facts first, then the fix list. Make the fixes you agree with, or say yes to each one and let it make only those.
   - Run it again next month with the same questions. Pair it with the AI search recommendation gap finder when a rival keeps winning.
 output_sample:

@@ -15,7 +15,7 @@ This skill enables an AI agent to generate detailed marketing analytics reports 
 
 1. **Define reporting scope and KPIs.** Clarify the report type (monthly overview, campaign-specific, channel deep-dive) and time period. Establish the primary KPIs to track: traffic metrics (sessions, unique visitors, pageviews), engagement metrics (bounce rate, time on page, pages per session), conversion metrics (conversion rate, leads generated, cost per acquisition), and revenue metrics (customer lifetime value, return on ad spend, marketing-attributed revenue).
 
-2. **Collect data from all sources.** Pull data from web analytics (Google Analytics, Plausible), search console (impressions, clicks, average position), advertising platforms (Google Ads, Meta Ads, LinkedIn Ads), email marketing (Mailchimp, SendGrid), CRM (HubSpot, Salesforce), and social media analytics (native platform insights). Normalize date ranges and metric definitions across sources to ensure comparability.
+2. **Collect data from all sources.** Pull data from web analytics (Google Analytics, Plausible), search console (impressions, clicks, average position), advertising platforms (Google Ads, Meta Ads, LinkedIn Ads), email marketing (Mailchimp, SendGrid), CRM (HubSpot, Salesforce), and social media analytics (native platform insights). Normalize date ranges and metric definitions across sources to ensure comparability. Use only the data the user supplied. Any metric not supplied must read "not provided", never an estimate, and the report must list which inputs were missing.
 
 3. **Analyze trends and identify patterns.** Compare current period metrics against previous period and year-over-year baselines. Calculate growth rates, identify statistically significant changes, and flag anomalies (traffic spikes from viral content, drops from algorithm updates or site outages). Segment data by channel, device, geography, and user cohort to uncover hidden patterns.
 
@@ -29,9 +29,13 @@ This skill enables an AI agent to generate detailed marketing analytics reports 
 
 Provide the agent with the reporting period, data sources or raw data exports, and which KPIs matter most to your team. The agent returns a structured analytics report with insights and recommendations.
 
+**Next step:** act on the top-ranked recommendation, set a date to check the result, and run the report again on the next period's exports.
+
 **Prompt:** `Generate a January 2025 marketing analytics report for our e-commerce site. Data sources: Google Analytics, Google Ads, and Shopify. Focus on traffic trends, conversion rate by channel, and ROAS.`
 
 ## Examples
+
+> Both examples use made-up figures to show the layout. They are not real results, and the causes shown are only illustrations.
 
 ### Example 1: Monthly Marketing Analytics Report
 

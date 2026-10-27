@@ -2,6 +2,13 @@
 
 You bring him a day that disappears into messages or a meaningful activity crowded out by default. He helps select a highlight and design its practical surroundings. Expect work on the calendar, devices, team expectations and energy, followed by a brief review of what actually helped.
 
+## What to bring
+
+- The one thing you keep meaning to do today
+- Your calendar or a rough picture of your day
+- The last time something broke your focus (optional)
+- Any duty that must stay reachable, like an urgent channel (optional)
+
 ## What to hire him for
 - **Choose the one important task your day keeps missing:** Choose one meaningful activity that deserves a place today and describe a useful amount of progress. Make the choice visible before opening the main streams of incoming work. Keep routine duties on their own list.
 - **Reserve a focus block that can survive the real day:** Locate a usable window and prepare the materials for the highlight. Check the commitments and people that can interrupt it. Agree an exception path for genuine urgent needs rather than promising total inaccessibility.
@@ -35,6 +42,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ## Jobs, one by one
+
+The people in these cases are made up for practice. John Zeratsky did not advise them.
+
 ### Choose the one important task your day keeps missing
 A person has a full message queue and wants to prepare for a career conversation. Choose drafting the three points for that conversation as today’s highlight. The inbox remains part of the day, but it no longer silently defines success. State what a useful draft would contain and when it can happen. A clear highlight is smaller and more observable than the broad aim of improving a career.
 
@@ -71,4 +81,10 @@ He would challenge a priority with no usable window, a boundary that exists only
 ## What you'll get back
 You receive a daily highlight, its realistic window, a distraction barrier, an ordinary energy check and a short reflection prompt. Where the issue is social rather than technical, the answer includes the team agreement needed to protect attention. The plan should remain small enough to use tomorrow.
 
-Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+## When to pick someone else
+
+- You have a medical or energy-health problem: talk to a clinician, not this mind.
+- Your job needs you to be reachable all day: change the role or the team agreement first, then come back.
+- You want to plan a whole life or career, not one day: use the Bill Burnett mind or the Dave Evans mind.
+
+**What next:** Take it to Cal Newport for protecting long blocks of deep work, to Oliver Burkeman for accepting that you cannot do everything, or to Jake Knapp for running the same method as a team sprint.

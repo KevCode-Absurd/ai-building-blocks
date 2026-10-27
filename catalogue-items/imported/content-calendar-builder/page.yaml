@@ -33,7 +33,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Tell it your product, who buys it, your platforms, your goal and how many weeks to plan.
   - Add links to rival accounts if you have them (optional).
-  - Paste in customer reviews you can access if your AI cannot open them. Web access helps but is not needed.
+  - Paste in customer reviews you can access if your AI cannot open them. Web access helps but is not needed. Some sites block automated reading or limit it in their terms, so pasting is safer.
+  - Follower counts and posting rates are only what your AI could see. If it could not see a number, it should say "unknown".
   - Check the customer words and rival gaps first. Fix anything that does not match your shop.
   - Put the calendar in your scheduling tool. Run the audit again after four weeks.
 output_sample:

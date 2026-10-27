@@ -42,7 +42,7 @@ npm install @paperjsx/json-to-pdf
 3. Run the script to generate the output file
 4. Validate the output file exists and is non-zero bytes
 
-Do **not** write imperative PaperJSX API code. The execution model is always: JSON spec in, document file out.
+Do not hand-draw documents with low-level PaperJSX calls. Build a JSON spec and pass it to the package's render function, as the examples below do. The execution model is always: JSON spec in, document file out.
 
 ## Example: PPTX generation
 
@@ -114,6 +114,10 @@ const buffer = await SpreadsheetEngine.render(spec);
 fs.writeFileSync("revenue.xlsx", buffer);
 console.log("Generated revenue.xlsx");
 ```
+
+## Example: PDF generation
+
+No PDF code sample is included in this skill. The PDF fields (invoice, report and chart document) are listed in `references/json-schema.md`. Check the `@paperjsx/json-to-pdf` package's own documentation for its render call, and say so to the user instead of guessing the call.
 
 ## Validation
 

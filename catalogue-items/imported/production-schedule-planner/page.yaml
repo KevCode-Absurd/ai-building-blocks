@@ -31,12 +31,14 @@ you_get:
   - Machine utilisation
   - Bottleneck and late job warnings
 how_to_use:
+  - "Gather first: job times for each machine, due dates, the number of machines and shift hours."
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
   - "Describe your shop: job shop or flow shop, how many machines, shifts, and any tooling or labour limits."
   - Paste your jobs as a table with job ID, machine, routing order, processing time, due date and setup time.
   - Say your main goal, such as fewer late jobs or shortest total time.
   - For the optimised schedule and Gantt chart, use an AI that can run Python code. Without it, you still get a reasoned job order.
   - Check the bottleneck and late job warnings. Change any job that has moved, then run it again.
+  - Next, share the schedule with the shop floor and hold a short daily re-plan. Pass the late-job list to purchasing or sales so customers hear early.
 output_sample:
   input:
     - Your jobs, with the machines each one needs and in what order

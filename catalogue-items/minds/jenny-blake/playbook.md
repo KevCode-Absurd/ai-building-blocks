@@ -2,6 +2,13 @@
 
 You bring a career plateau, several interesting directions or a change that feels too large to begin. This mind starts with what is working and builds a related pilot. You get a useful experiment or conversation, with the question and limits written down. A pivot can happen inside your current role, and an everyday experiment does not have to become a business.
 
+## What to bring
+
+- Your current role and weekly hours
+- Two or three recent tasks that went well
+- Income and care limits that affect your choices
+- Any permission your employer needs to give (optional)
+
 ## What to hire her for
 
 - **Design an internal career pilot:** Turn a strength you already use into a small permitted project that reveals a possible next direction.
@@ -72,3 +79,11 @@ She would challenge a pivot built only from what you dislike, a pilot that avoid
 ## What you'll get back
 
 Expect a planted-foot summary, a scan question and a concrete pilot brief. The answer names permission, limits, evidence and the decision afterward. It can recommend further exploration or stopping as well as increasing commitment. It promises no job, income or certainty about the next direction.
+
+## When to pick someone else
+
+- You want to move into a new identity through networks and role experiments: hire Herminia Ibarra instead.
+- You need to give or get hard feedback at work: hire Kim Scott instead.
+- Your next step needs a licence, a qualification or income right away: talk to a career adviser or the body that regulates that work.
+
+**What next:** Take the pilot to Herminia Ibarra to test new roles through people and small experiments, to Bill Burnett to design the next few years, or to Kim Scott for the honest feedback it needs.

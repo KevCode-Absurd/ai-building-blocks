@@ -38,7 +38,7 @@ Shows what customers were charged for shipping, and how much was given away in s
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `shippingLines { title, discountedPriceSet, originalPriceSet, carrierIdentifier }`, pagination cursor
+   **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `shippingLines { title, discountedPriceSet, originalPriceSet, carrierIdentifier }` (in the query below, `shippingLines` is a connection, so it is read through `edges` and `node`, up to 5 lines per order), pagination cursor
    **Expected output:** Orders with shipping line details; paginate until `hasNextPage: false`
 
 2. For each shipping line: record carrier (from `title` or `carrierIdentifier`), the price before discounts (`originalPriceSet`), the amount charged (`discountedPriceSet`), and the discount (original minus charged). Count a line with a charged amount of 0 as free shipping.

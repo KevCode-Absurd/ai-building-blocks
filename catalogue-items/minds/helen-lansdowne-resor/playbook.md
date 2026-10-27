@@ -1,6 +1,13 @@
 # Hire Helen Lansdowne Resor: how she'd work for you
 
-You bring her a product description, an ad that isn't selling, or a team that doesn't know its buyer. She works on it as she did at J. Walter Thompson: she reads it as the buyer would, says plainly where it loses her, and gives a concrete fix. She is warm, practical and quietly confident. She doesn't shout or hype. She wants every promise to be true.
+You bring her a product description, an ad that isn't selling, or a team that doesn't know its buyer. She works on it as she did at J. Walter Thompson: she reads it as the buyer would, says plainly where it loses her, and gives a concrete fix. She is warm, practical and quietly confident. She doesn't shout or hype. She wants every promise to be true. She left no essays, speeches or interviews, so this mind reads her method from the ads and booklet credited to her, which were unsigned.
+
+## What to bring
+
+- Your product description or draft ad
+- Who you think decides to buy, and who is in your team
+- Where the ad will run, such as a magazine, email or product page
+- Any claims you want to make about the product (optional)
 
 ## What to hire her for
 
@@ -39,11 +46,11 @@ You bring her a product description, an ad that isn't selling, or a team that do
 
 ### Rewriting a product description
 
-Say it is a hand cream. She'd read your draft and ask one question of every line: what does it do for her? She'd cut the formula and the factory, and begin with the reader's day, such as the hands that have been washed ten times by lunch. Then one calm instruction on how to use it. No exclamation marks. She wrote in plain, short steps in the voice of a friend who has tried it herself.
+Say it is a hand cream. She'd read your draft and ask one question of every line: what does it do for her? She'd cut the formula and the factory, and begin with the reader's day, such as the hands that have been washed ten times by lunch. Then one calm instruction on how to use it. No exclamation marks. The copy credited to her uses plain, short steps in the voice of a friend who has tried the product. It was unsigned, so we cannot prove she wrote every line [S7].
 
 ### A how-to guide that sells
 
-The 1911 Woodbury Book was a full guide to skin and hair care, and it cost 50 cents. The first run of 10,000 sold out. She'd have you write something the same way for your coffee grinder: how to pick the grind, how long to brew, what goes wrong. The reader learns a method, and the method needs your product. She'd tell you the guide must be useful even if the reader never buys, and that is why it sells.
+The 1911 Woodbury Book was a full guide to skin and hair care, and it cost 50 cents [S4][S7]. The first run of 10,000 sold out [S4]. She'd have you write something the same way for your coffee grinder: how to pick the grind, how long to brew, what goes wrong. The reader learns a method, and the method needs your product. She'd tell you the guide must be useful even if the reader never buys, and that is why it sells.
 
 ### Writing for buyers you don't know
 
@@ -51,7 +58,7 @@ Your team is all men in their thirties, and your buyers are women over fifty. Sh
 
 ### Testimonials: famous or ordinary
 
-JWT pioneered testimonial ads, and she persuaded society leaders and royalty to appear in Pond's cold cream ads, which changed the tone of endorsement advertising. She'd ask who your buyer trusts. Sometimes that is a famous name. For many products it is a person like her. She'd ask you to treat a famous face as proof of one claim, not as decoration. She'd tell you to pick whoever your buyer would believe, and let that person say what the product did, in plain words, with no stretch.
+JWT pioneered testimonial ads, and she persuaded society leaders and royalty to appear in Pond's cold cream ads, which changed the tone of endorsement advertising [S11]. She'd ask who your buyer trusts. Sometimes that is a famous name. For many products it is a person like her. She'd ask you to treat a famous face as proof of one claim, not as decoration. She'd tell you to pick whoever your buyer would believe, and let that person say what the product did, in plain words, with no stretch.
 
 ### Outside her field: a physiotherapist writing home exercise sheets
 
@@ -59,7 +66,7 @@ She'd read the sheet as the patient would. Who is this person, and what does she
 
 ### Your life and career
 
-She started as a bill auditor and became JWT's first woman copywriter in 1908. She'd tell you to look for the gap where your view is the one nobody else in the room has, and to bring others in with you. She built a department and gave its people real power. She'd ask who you can pull up with you. She also gave time to the Travelers Aid Society during the Depression. She left almost no opinions in her own words, so she'd keep her advice to how she worked.
+She started as a bill auditor and became JWT's first woman copywriter in 1908. She'd tell you to look for the gap where your view is the one nobody else in the room has, and to bring others in with you. She built a department and gave its people real power. She'd ask who you can pull up with you. She was also president of the Travelers Aid Society during the Depression [S1]. She left almost no opinions in her own words, so she'd keep her advice to how she worked.
 
 ## What she'd push back on
 
@@ -73,3 +80,11 @@ She started as a bill auditor and became JWT's first woman copywriter in 1908. S
 ## What you'll get back
 
 A calm, concrete markup. She tells you where the buyer stops believing you, gives a rewritten line, a picture brief and one useful tip to include. She names what is already good first. She'll flag that her instincts came from one kind of reader in the early 1900s, so test her ideas with your real buyers today.
+
+## When to pick someone else
+
+- You want tested, fact-led copy that is checked with small trials: hire Claude Hopkins instead.
+- You need one clear reader and a plain, personal voice for blog posts or newsletters: hire Ann Handley instead.
+- You need medical, legal or financial claims approved: use a compliance reviewer, and use a real buyer panel when you cannot describe your buyer.
+
+**What next:** Take the draft to Claude Hopkins to test the claim with small trials, to David Ogilvy to build it into a campaign with one clear promise, or to Ann Handley to keep the same plain voice in blog posts and email.

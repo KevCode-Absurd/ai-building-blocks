@@ -83,7 +83,7 @@ d.KernelExecutionTimeout
 
 If WDDM: the GPU is shared with the display — long-running kernels may be killed by the OS watchdog, and the GPU may exhibit unstable behaviour when low on memory. If `d.KernelExecutionTimeout` is `true`, kernel timeouts are active.
 
-TCC or MCDM avoid these issues but are only available on select professional and data centre GPUs not connected to a display. If switching is not an option, and user experiences kernel timeouts, advise: increase TDR timeout in Windows Registry, close other GPU-accelerated apps, or break computation into smaller chunks.
+TCC or MCDM avoid these issues but are only available on select professional and data centre GPUs not connected to a display. If switching is not an option, and user experiences kernel timeouts, advise: increase TDR timeout in Windows Registry (only as a last resort; tell the user to back up the registry or make a restore point first, because a wrong edit can break Windows), close other GPU-accelerated apps, or break computation into smaller chunks.
 
 ### 6. Benchmark GPU performance (optional)
 

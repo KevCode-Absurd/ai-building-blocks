@@ -81,7 +81,7 @@ Measure brand health at each stage of the funnel:
 What people think and feel about the brand:
 
 **Brand sentiment** — positive/neutral/negative mentions across:
-- Social media (use: Brandwatch, Mention, or manual sampling)
+- Social media (use: Brandwatch or Mention, which are paid tools, or free options such as manual sampling or Google Alerts)
 - Review platforms (G2, Trustpilot, Google Reviews, App Store)
 - Press and media mentions
 
@@ -102,12 +102,12 @@ A simple 1–5 scoring framework to track overall brand health:
 | Dimension | Score (1–5) | How to measure | Frequency |
 |-----------|-------------|----------------|-----------|
 | Awareness | | Aided/unaided survey | Quarterly |
-| Differentiation | "Is this brand different from alternatives?" | Bi-annually |
-| Relevance | "Is this brand relevant to you?" | Bi-annually |
-| Trust | "Do you trust this brand?" | Bi-annually |
-| Preference | "Would you choose this brand?" | Quarterly |
-| Loyalty | NPS + retention rate | Monthly |
-| **Overall Brand Health** | Average of above | | |
+| Differentiation | | "Is this brand different from alternatives?" | Bi-annually |
+| Relevance | | "Is this brand relevant to you?" | Bi-annually |
+| Trust | | "Do you trust this brand?" | Bi-annually |
+| Preference | | "Would you choose this brand?" | Quarterly |
+| Loyalty | | NPS + retention rate | Monthly |
+| **Overall Brand Health** | | Average of above | |
 
 Track this scorecard over time. Direction matters more than absolute score.
 
@@ -117,7 +117,7 @@ Track this scorecard over time. Direction matters more than absolute score.
 
 **Organic/SEO brand signals:**
 - Branded keyword search volume (Google Search Console)
-- Brand mention growth (Google Alerts, Mention.com)
+- Brand mention growth (Google Alerts is free, Mention.com is paid)
 - Backlink growth to homepage (brand authority indicator)
 
 **Social media brand metrics:**

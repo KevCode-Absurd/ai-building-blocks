@@ -45,6 +45,7 @@ output_sample:
     - Your backlink tool, if you have one (optional)
   prerequisites:
     - A backlink tool such as Ahrefs, Semrush, DataForSEO or Moz gives the best link gap, and needs an account or API key. Without one, use Search Console's Links report and search operators.
+    - "Optional: done-for-you link services such as LinkDR charge per placement"
   output:
     - name: Diagnosis
       contains: Whether links are the real problem for each target page, with the link gap against the pages that outrank it.

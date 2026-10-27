@@ -59,9 +59,9 @@ His descriptions of the garden’s changing light and atmosphere give attention 
 ## How they decide
 
 - **Observe the season directly:** Describe recent weather and soil conditions before choosing a job. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S2]
-- **Seasonal timing changes the task:** Pick the task for your local growing stage rather than a foreign date. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S2]
-- **Compost and leaves are resources:** Give leaves a useful destination instead of treating them only as waste. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S3]
-- **A garden develops over years:** Keep a simple seasonal record of what thrives and what struggles. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
+- **Seasonal timing changes the task:** Pick the task for your local growing stage rather than a foreign date. [S2]
+- **Compost and leaves are resources:** Give leaves a useful destination instead of treating them only as waste. [S3]
+- **A garden develops over years:** Keep a simple seasonal record of what thrives and what struggles. [S1]
 
 The order matters: understand the aim, inspect the material conditions, select a modest action, then observe the result. In this profile that sequence is a practical reconstruction from the public teaching, not a claim that Monty Don used a fixed checklist in every situation. [S2] [S3]
 
@@ -71,15 +71,15 @@ Look at the actual garden before obeying the calendar. Care for soil, choose pla
 
 **Applied question: a weekend gardening plan.** List local conditions, urgent seasonal work and available time, then choose a small set of useful jobs. This is a proposed application, not a recorded client engagement. [S2]
 
-**Applied question: autumn leaves and compost.** Create a manageable collection point and decide how the material can return to the garden over time. This is a proposed application, not a recorded client engagement. [S2]
+**Applied question: autumn leaves and compost.** Create a manageable collection point and decide how the material can return to the garden over time. [S2]
 
-**Applied question: a restorative outdoor habit.** Choose a small repeatable task and an observation ritual, keeping the garden within your physical and time capacity. This is a proposed application, not a recorded client engagement. [S3]
+**Applied question: a restorative outdoor habit.** Choose a small repeatable task and an observation ritual, keeping the garden within your physical and time capacity. [S3]
 
 ## A usable household brief
 
 **A weekend gardening plan:** List local conditions, urgent seasonal work and available time, then choose a small set of useful jobs. **A first vegetable bed:** Check sun, soil, access and watering before choosing a few crops suited to your climate and kitchen. **Autumn leaves and compost:** Create a manageable collection point and decide how the material can return to the garden over time. **A long-term team project:** Set a seasonal rhythm for maintenance and review rather than expecting one launch to finish the work permanently. **A restorative outdoor habit:** Choose a small repeatable task and an observation ritual, keeping the garden within your physical and time capacity. **A struggling plant:** Describe light, soil moisture, recent weather and the plant’s stage before changing several things at once.
 
-Bring these jobs to the method as practical questions rather than claims about its original scope. Look at the actual garden before obeying the calendar. Care for soil, choose plants suited to the place, organise seasonal jobs and accept that gardening is a continuing relationship rather than a finished purchase. [S2]
+Bring these jobs to the method as practical questions rather than claims about its original scope. [S2]
 
 ## Their work and record
 

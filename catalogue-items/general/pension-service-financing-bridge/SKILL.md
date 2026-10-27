@@ -11,6 +11,30 @@ It uses a simple pattern: net interest is the opening deficit times the discount
 
 Not for: accounts under another standard such as US GAAP (use that standard's pension note); size of the obligation or asset values (that takes an actuary); or splitting funded-status movements into contributions and everything else (use "Pension funded-status change schedule").
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Spreadsheet** with the [Pension funding gap tracker](https://useaiblocks.com/skills/pension-funded-status-change). Bring spreadsheet, document (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for spreadsheet, document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
+- **Node.js 20 or later:** Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
+<!-- /needs -->
+
 ## What you need
 
 - **Opening net pension deficit** (required): from the prior year's pension note. Positive means the plan is short.
@@ -75,3 +99,12 @@ Begin with one line: "Have a qualified accountant review this before anyone uses
 - **CHECKS RUN**: each tie-out and its result, and whether the script or a workbook was used.
 - **MISSING**: `MISSING:` lines with the result each one blocked.
 - **CHECKS MISSED**: each check that failed or could not run, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pension funding gap tracker](https://useaiblocks.com/skills/pension-funded-status-change). It takes the spreadsheet and document.
+- **Check the money** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+

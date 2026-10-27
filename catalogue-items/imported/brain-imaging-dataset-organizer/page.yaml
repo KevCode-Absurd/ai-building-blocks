@@ -5,7 +5,7 @@ name: Brain imaging dataset organizer
 summary: Turn raw brain imaging files into a BIDS dataset, with correct names, folders and metadata files, and a list of problems to fix before you share.
 job: research-topics
 headline: Brain imaging dataset organizer
-subhead: Give it brain imaging files. Get them named, laid out and described to the BIDS standard, with problems flagged. Bring your raw imaging or recording files. Use the result to plan your next step.
+subhead: Give it brain imaging files. Get them named, laid out and described to the BIDS standard, with problems flagged. Bring your raw imaging or recording files. Then fix the problem list and re-run the validator, and check your target archive's own rules before you submit.
 explain: |
   Get a pile of brain imaging and related files named, laid out and described to the BIDS standard, so other people and tools can read them at once. Problems are flagged before you share or submit.
 
@@ -31,6 +31,7 @@ you_get:
   - Notes on what to fix
 how_to_use:
   - Open Claude, ChatGPT or Gemini with a mode that can run code and read your files. Plain chat can only give advice.
+  - Before you upload, check that the files are de-identified (no names, dates of birth or faces in the scans) and that participant consent allows sharing them with an AI tool. Keep the original scanner files in your own storage.
   - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
   - Add your files or folder, then say what the study is, how many subjects and sessions, and which kind of data it is.
   - Name your target archive if you have one, so your AI can note any extra rules to check.

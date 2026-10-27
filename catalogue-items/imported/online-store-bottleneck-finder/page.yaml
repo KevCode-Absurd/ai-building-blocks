@@ -11,7 +11,7 @@ explain: |
 
   Your AI works out your cost per order. It then checks four areas: cash flow, stock, shipping and logistics, and what it costs to win a customer against what that customer is worth. Each area is rated against rough rules of thumb, which you can change.
 
-  Those rules of thumb come from the original skill and are not facts for every store. Anything you do not give is marked NOT CHECKED. Nothing is guessed.
+  Those rules of thumb are rough starting defaults from the original skill, with no source, and are not facts for every store. Anything you do not give is marked NOT CHECKED. Nothing is guessed.
 when:
   - Sales are fine but you never seem to have cash.
   - Too much money sits in stock that moves slowly.

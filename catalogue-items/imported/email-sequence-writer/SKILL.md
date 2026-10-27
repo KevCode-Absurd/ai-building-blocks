@@ -278,6 +278,13 @@ For the full blacklist, use the **copywriting** skill's AI-tells reference.
 
 ---
 
+## Workflow
+
+1. Confirm the goal, the trigger and the audience (see Initial Assessment).
+2. Set the sequence length and the gaps between emails.
+3. Draft each email, one job per email, with a subject line, preview text and one button.
+4. Write the metrics plan: what to measure and what to compare it against.
+
 ## Output Format
 
 ### Sequence Overview
@@ -318,7 +325,7 @@ What to measure and benchmarks
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key email tools:
+Some of these tools are paid and prices change, so check each one's current pricing before you choose. For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key email tools:
 
 | Tool | Best For | MCP | Guide |
 |------|----------|:---:|-------|

@@ -15,7 +15,7 @@ steps:
   - {uses: api-security-checker, note: "Finds the gaps in your API routes and writes a fix for each one. It hands the fixes (the code change) to step 2, and the security report to step 4 as the story."}
   - {uses: test-gap-finder, note: "Reads the fixes from the step before and lists the ones no test would catch, with the tests to add. You add them and run your suite before step 3."}
   - {uses: pull-request-risk-reviewer, note: "Uses the fixes from step 1 plus the tests you added, not step 2's report itself. Reviews that finished change for harm the fixes could cause, and hands the review notes to step 4."}
-  - {uses: pull-request-writer, note: "Uses the fixes and tests from the change, the security report from step 1 and the review notes from step 3. Turns them into a pull request a reviewer can follow, with the security gaps as the story."}
+  - {uses: pull-request-writer, note: "Reads your own change (step 1's fixes plus the tests you added), with the security report from step 1 and the review notes from step 3. Turns them into a pull request a reviewer can follow, with the security gaps as the story."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/fix-api-security-gaps-with-tests-and-a-clear-pull-request/skeleton.yaml

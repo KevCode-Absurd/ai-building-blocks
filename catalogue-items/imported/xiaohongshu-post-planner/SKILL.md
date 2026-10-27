@@ -53,7 +53,7 @@ For each post, provide:
 2. **Title** (2-3 options) - Primary keyword in first 8 chars, emotional trigger, 18-22 chars optimal
 3. **Body Content** - Hook sentence, short paragraphs, strategic emoji, highlighted key info, CTA
 4. **Hashtags** - 3-5 mix of high-volume and niche tags
-5. **Comment Engagement Plan** - Seed comments and anticipated Q&A
+5. **Comment Engagement Plan** - Questions you expect real readers to ask, with a reply drafted for each. Never post seed comments from your own, staff or paid accounts as if they were real users: that is fake engagement and breaks Xiaohongshu rules. Answer questions openly as the brand, or wait for real users to ask.
 
 ### Step 4: Optimize for the Algorithm
 
@@ -65,13 +65,15 @@ Apply these ranking factors in priority order:
 
 ## Examples
 
+*These are layout examples only. Any first-person experience, result, number or day count in a draft must be real and checked before posting. Do not publish a result the user did not get.*
+
 ### Example 1: Beauty Product Review
 
 Title: 用了28天，皮肤真的变好了｜实测这款平价精华
 Cover: Before/After face photo with product in corner, soft pink overlay
 Body: 这款精华我用了整整28天，今天来交作业...
 Hashtags: #平价护肤 #精华推荐 #28天打卡
-Seed Comment: "姐妹们，我油皮可以用吗？"
+Likely reader question (answer it openly, do not post it yourself as a fake user): "姐妹们，我油皮可以用吗？"
 
 ### Example 2: Travel Destination
 
@@ -79,7 +81,7 @@ Title: 上海被低估的咖啡馆！拍照绝了
 Cover: Cafe interior shot with warm tones, location pin overlay
 Body: 周末不想人挤人？这家藏在法租界的小店...
 Hashtags: #上海咖啡 #周末去哪 #小众探店
-Seed Comment: "地址在哪里呀？"
+Likely reader question (answer it openly, do not post it yourself as a fake user): "地址在哪里呀？"
 
 ## Best Practices
 

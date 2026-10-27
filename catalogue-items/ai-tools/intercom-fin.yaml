@@ -36,5 +36,23 @@ blocks:
   - support-capacity-planner
 alternatives: [zendesk-ai, gorgias, hubspot-breeze]
 last_checked: 2026-10-21
+first_result:
+  - "Start at intercom.com/fin. We did not check whether you can sign up on your own or must book a demo."
+  - "Read your help articles first. Fin answers from them, so fix old pages and fill gaps."
+  - "Connect Fin to your help content and to your helpdesk."
+  - "Test it with your ten most common customer questions. Read each answer against your policy."
+  - "Set when a chat should pass to a person. Turn Fin on for a small share of chats."
+  - "Read the first live chats each day. You pay per resolution, so watch the count."
+  - "You end with customers getting answers from your help content, and staff taking only the chats Fin cannot solve."
+  - "Next: plan your team with the Support capacity planner, or find what to automate with the Chat export need finder."
+needs:
+  - "Help articles that are current and clear."
+  - "A helpdesk, or an Intercom account."
+  - "Your refund and returns rules, written down."
+  - "A budget per resolution, from US$0.99, plus the monthly minimum."
+not_verified:
+  - "Whether you can sign up without a demo."
+  - "What counts as a resolution."
+  - "Which helpdesks Fin works on top of, beyond Intercom's own."
 sources:
   - https://www.intercom.com/pricing

@@ -10,6 +10,7 @@ level: advanced
 inputs:
   - {type: store_capture, required: true}
   - {type: brand_brain, required: false}
+  - {type: theme_files, required: false}
 outputs:
   - {type: audit_report}
 uses: []

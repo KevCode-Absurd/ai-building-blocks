@@ -9,7 +9,7 @@ subhead: Name your business goal. Get a main page and supporting articles, ranke
 explain: |
   A content plan built around one main page and a set of supporting articles that link to it, so search engines see you as an authority on the subject. It also tells you what to write first.
 
-  You give the topic, main keyword, audience, content you already have and what readers should do next. The skill designs a pillar page with a title, intent and length target, then 5 to 10 cluster articles, each with its own search intent and keyword. It skips near-duplicates to hit a number. Each article gets a role in the link structure and a place in a publishing order, so you start with the pieces most likely to win.
+  You give the topic, main keyword, audience, content you already have and what readers should do next. The skill designs a pillar page with a title, intent and length target, then 5 to 10 cluster articles, each with its own search intent and keyword. It plans 10 pages only when there are 10 distinct search intents, and 5 to 9 otherwise. It skips near-duplicates to hit a number. Each article gets a role in the link structure and a place in a publishing order, so you start with the pieces most likely to win.
 when:
   - You want to rank for a whole subject, not just one keyword.
   - You have a blog full of random posts and no plan.
@@ -36,7 +36,7 @@ how_to_use:
   - Add your main topic, main keyword, audience and what readers should do next.
   - Add your existing page titles and extra keywords if you have them (optional). The skill does not measure search volume, so paste volumes from your own keyword tool, or treat its volume labels as estimates.
   - Check that no two articles share a keyword or search intent.
-  - Start with the Priority 1 articles, then hand the plan to a writer or to your AI.
+  - Publish the Foundational Page Plan first. Then write the Priority 1 articles, then hand the plan to a writer or to your AI.
 output_sample:
   input:
     - Your main topic and main keyword
@@ -61,3 +61,4 @@ output_sample:
       contains: "Two direct-answer pages to include: one FAQ page and one What Is explainer."
     - name: Cluster Health Checklist
       contains: A tick list to check keywords are unique, every article links back, and nothing competes for the same intent.
+next: [title-and-meta-tag-writer, on-page-seo-tuner]

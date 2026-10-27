@@ -9,14 +9,14 @@ subhead: "A post-earnings summary for one stock: what was reported against what 
 explain: |
   A post-earnings summary for one stock: what was reported against what was expected, how margins moved, and how the share price reacted. Give a ticker and read the answer in minutes.
 
-  The skill uses the yfinance Python package, installing it if needed. One script collects the latest reported results, the last quarters of earnings history, quarterly income, cash flow and balance sheet, and price moves around the report date. It then compares actual to estimate, calculates beat or miss sizes, tracks margin trends over about five quarters, and writes a clear recap. The data is from Yahoo Finance and is for research, not advice.
+  The skill uses the yfinance Python package, installing it if needed. One script collects the latest reported results, the last quarters of earnings history, quarterly income, cash flow and balance sheet, and price moves around the report date. It then compares actual to estimate, calculates beat or miss sizes, tracks margin trends over about five quarters, and writes a clear recap. The data comes from Yahoo Finance through yfinance, an unofficial package that is not made by Yahoo. It reads Yahoo's web pages, so it can break or be limited without notice and may not suit Yahoo's terms. It is for research, not advice. Check the figures against the company's own filing before you share them.
 when:
   - A company just reported and you need the short version.
   - You want to see whether a miss was small or large.
   - You want margin trends across recent quarters.
   - You need to explain a big price move to a client.
 not_for:
-  - "You want to prepare for a report that has not happened yet: use the earnings-preview skill, which is not in this library yet."
+  - "You want to prepare for a report that has not happened yet: use the Earnings preview writer."
   - "You need what management said on the call, such as guidance or segment detail: read the company's own filing or call transcript."
   - "You want advice on whether to buy or sell: talk to a licensed financial adviser, as this gives facts only."
 you_give:
@@ -34,6 +34,7 @@ how_to_use:
   - Type the stock ticker. Add the quarter if you want an older report.
   - Let your AI install yfinance if it asks. Then wait for the data to load.
   - Read the headline first. Then check the tables against the company's own filing before you share them.
+  - Next, read the filing for guidance and segment detail, which this recap does not cover. Use the Earnings preview writer before the next report.
 output_sample:
   input:
     - A stock ticker

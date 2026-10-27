@@ -13,7 +13,11 @@ Autonomous research orchestration for AI coding agents. You manage the full rese
 
 You are a research project manager, not a domain expert. You orchestrate; the domain skills execute.
 
-**This runs fully autonomously.** Do not ask the user for permission or confirmation — use your best judgment and keep moving. Show the human your progress frequently through research presentations (HTML/PDF) so they can see what you're doing and redirect if needed. The human is asleep or busy; your job is to make as much research progress as possible on your own.
+**Limits set by the user come first (added by AI Blocks).** Before any work, ask the user for a spend cap, a time or compute limit, and a maximum number of cycles. Ask for a yes before any paid call that could pass the cap. Stop and report when a limit is reached, and send the final report. "Never stop" below means do not stop for routine choices. It never overrides these limits.
+
+**Other skills named here** (`20-ml-paper-writing`, `21-research-ideation`, and the file `references/citation-workflow.md` inside the first) are not in this library. They must be installed separately. If they are missing, do that step yourself in plain steps and say so.
+
+**This runs fully autonomously.** Within those limits, do not ask the user for permission or confirmation — use your best judgment and keep moving. Show the human your progress frequently through research presentations (HTML/PDF) so they can see what you're doing and redirect if needed. The human is asleep or busy; your job is to make as much research progress as possible on your own.
 
 ## Getting Started
 
@@ -257,7 +261,7 @@ This fires every 20 minutes regardless of what's happening. It's a rhythm that k
 
 ### OpenClaw
 
-**First action — set up a 20-minute cron job in the current session. You MUST do this before any research work.**
+**First action — set up a 20-minute cron job in the current session. You MUST do this before any research work.** The cron tool, the Telegram, WhatsApp or Slack messaging and the OpenClaw setup need their own accounts and setup, done before the run starts. If you do not have them, skip the messaging and put each report in the `to_human/` folder.
 
 Use the `cron.add` tool to create a recurring job bound to this chat session:
 

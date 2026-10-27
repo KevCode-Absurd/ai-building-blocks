@@ -31,6 +31,8 @@ If the trust gap is unclear, ask before proceeding.
 ## PSYCHOLOGICAL FRAMEWORK: TRUST-GAP MATCHING
 
 ### Mechanism
+The author-year references in this skill are unverified background. Do not present them to the user as research.
+
 People use social proof as a shortcut for uncertainty reduction, especially when they cannot evaluate quality directly. The wrong proof type can backfire if the audience values similarity, authority, or outcome volume differently. Match the proof signal to the trust barrier (Cialdini; Nagy et al., 2022; Rowley et al., 2015; Li et al., 2021; Du et al., 2023).
 
 ### Execution Steps

@@ -25,6 +25,8 @@ metadata:
 
 Plan collision-free paths for manipulators and convert them to time-optimal trajectories that respect velocity and acceleration limits.
 
+> **Safety (added by AI Blocks).** A planned path is not a safe path for a real arm. Plan and check it in simulation first. Tell the user to have a trained person review the motion, keep people out of the work area and keep an emergency stop within reach for the first real run.
+
 ## When to Use
 
 - Moving a robot arm between joint configurations or Cartesian poses — regardless of whether the user says "trajectory," "motion," "path," or "plan"

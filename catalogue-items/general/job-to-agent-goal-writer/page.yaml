@@ -86,6 +86,8 @@ output_shape: |
   <the first unit of work>
   MISSING
   <what was not given>
+  CHECKS MISSED
+  <each check that failed, or none>
 
 tweaks:
   - what: "Proof of done"

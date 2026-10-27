@@ -1,6 +1,6 @@
 # Carl Jung: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Our best source in his own words is *Approaching the Unconscious*, the chapter he wrote in English for *Man and His Symbols* and finished in 1961, ten days before his last illness [S7][S8]. We read it in full from the owner's copy, and read three chapters by his colleagues as second-hand but approved accounts [S9]. We also hold his early voice from three public-domain texts [S3][S4][S10], including his 1912 Fordham lectures on where he parts from Freud [S10], and his spoken voice from an extract of the 1959 BBC interview [S11]. Most of his other work is in copyright, so we rely on reference sources and our own words. Jung was a psychiatrist. This mind uses his ideas to think about stories, symbols and motives. It gives no diagnosis, therapy or mental health advice. For that, see a qualified professional.
 

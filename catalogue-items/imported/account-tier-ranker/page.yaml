@@ -5,11 +5,11 @@ name: Account tier ranker
 summary: Tier your accounts by fit and activity so you know where to spend time. Get scores, a tier and a next move for each account.
 job: sell-and-negotiate
 headline: Account tier ranker
-subhead: Give it a list of accounts or your whole book, your ideal customer profile and a connected CRM. It scores each account for fit from 0 to 10 using size, industry and tools, then scores recent activity. You get both scores, a tier for each account, the reason behind each score and a suggested move per tier.
+subhead: Give it a list of accounts or your whole book, your ideal customer profile and a connected CRM or a spreadsheet. It scores each account for fit from 0 to 10 using size, industry and tools, then scores recent activity. You get both scores, a tier for each account, the reason behind each score and a suggested move per tier.
 explain: |
   A long list of accounts becomes a short list of where your time pays off most. Each account is scored for fit and for activity, with a plain reason.
 
-  The skill reads your ideal customer profile from your setup, then pulls the account set you named or your whole book. It scores fit from 0 to 10, using traits such as size, industry and tools. It then scores engagement from 0 to 10 from recent contact, visits and product use. The two scores combine into a tier, and each tier gets a recommended move: pursue, nurture or leave alone. It needs your CRM connected.
+  The skill reads your ideal customer profile from your setup, then pulls the account set you named or your whole book. It scores fit from 0 to 10, using traits such as size, industry and tools. It then scores engagement from 0 to 10 from recent contact, visits and product use. The two scores combine into four groups, and each gets a recommended move. Tier A (high fit, high activity): push the open deal. Tier B (high fit, low activity): start outreach. Tier C (low fit, high activity): hold one call to confirm fit. Deprioritized (low fit, low activity): leave alone and review each quarter. A connected CRM is best, and a spreadsheet of your accounts works too.
 when:
   - You have more accounts than hours and need to pick where to focus.
   - A new quarter starts and you want to reset priorities.
@@ -22,7 +22,7 @@ not_for:
 you_give:
   - A list of accounts, or your full book
   - Your ideal customer profile
-  - A connected CRM
+  - A connected CRM or a spreadsheet of your accounts
   - Which signals count as engagement (optional)
 you_get:
   - A fit score and an activity score for each account
@@ -30,7 +30,8 @@ you_get:
   - A reason behind each score
   - A suggested move per tier
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - "Write your ideal customer profile first if you have none: the industries, the size range, the job titles you sell to, and the red flags that rule an account out. The default scoring weights apply unless you change them."
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your CRM, email and calendar.
 output_sample:

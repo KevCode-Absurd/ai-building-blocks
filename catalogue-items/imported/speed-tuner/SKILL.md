@@ -3,6 +3,14 @@ name: performance-optimization
 description: Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load times need improvement, when N+1 query patterns need fixing, or when profiling reveals bottlenecks.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../../references/performance-checklist.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Performance Optimization
 
 ## Overview
@@ -128,7 +136,7 @@ Fix the one thing Step 2 identified, nothing else. The anti-patterns below are t
 - **Unbounded data fetching.** Every list endpoint paginates with a limit and a stable order. [Pattern](references/optimization-patterns.md#unbounded-data-fetching).
 - **Queries that ignore their index.** "Add an index" is the guess; `EXPLAIN ANALYZE` is the measurement. A `Seq Scan` where you expected an index, a `rows=` estimate off by an order of magnitude, and a `Sort` node above the scan each call for a different fix; a bad `rows=` estimate means stale statistics, so run `ANALYZE` rather than adding an index. Index for the shape of the query (equality columns first, then the range or sort column). A plain index will not help a query on a low-selectivity dominant value (a partial index serves the rare value), a leading wildcard (needs trigram or full-text), or a function applied to the column (index the expression, as in `WHERE lower(email) = ?`), and every index taxes every write. Re-run the plan afterwards; an index that did not change it is a revert. [Pattern](references/optimization-patterns.md#queries-that-ignore-their-index).
 - **Connection pool exhaustion.** Signature: *every* endpoint slows at once, time is spent waiting for a connection rather than executing, and the database shows mostly idle sessions. One pool per process, sized so `instances × max` stays under the database's connection ceiling. Bigger is not faster; it relocates the queue to the database where it is harder to see. With unbounded instance counts (serverless, autoscaling), multiplex through a proxy (pgbouncer, RDS Proxy) instead of raising `max`. [Pattern](references/optimization-patterns.md#connection-pool-exhaustion).
-- **Missing caching.** Cache what is expensive to produce and read far more often than it changes; caching an already-fast query adds a network hop and a staleness bug in exchange for nothing. Pick the layer deliberately (in-process, shared, CDN). Every input that changes the response belongs in the key (tenant, locale, permissions, feature flags): a key that omits the viewer is how one user's data gets served to another. Choose one invalidation strategy (TTL, event or tag based, versioned keys) and state the acceptable staleness window explicitly. Guard hot keys against the stampede: serve stale while one request recomputes, or coalesce concurrent misses behind a single in-flight promise. Never cache what must be fresh (balances, permissions, inventory at checkout). [Pattern](references/optimization-patterns.md#missing-caching-backend); request coalescing, write strategies, and negative caching in `../../references/performance-checklist.md`.
+- **Missing caching.** Cache what is expensive to produce and read far more often than it changes; caching an already-fast query adds a network hop and a staleness bug in exchange for nothing. Pick the layer deliberately (in-process, shared, CDN). Every input that changes the response belongs in the key (tenant, locale, permissions, feature flags): a key that omits the viewer is how one user's data gets served to another. Choose one invalidation strategy (TTL, event or tag based, versioned keys) and state the acceptable staleness window explicitly. Guard hot keys against the stampede: serve stale while one request recomputes, or coalesce concurrent misses behind a single in-flight promise. Never cache what must be fresh (balances, permissions, inventory at checkout). [Pattern](references/optimization-patterns.md#missing-caching-backend); request coalescing, write strategies, and negative caching are not covered in this copy, so work them out from the measurements.
 
 **Frontend**
 
@@ -211,7 +219,7 @@ npx lhci autorun
 
 ## See Also
 
-For detailed performance checklists, optimization commands, and anti-pattern reference, see `../../references/performance-checklist.md`.
+The detailed checklist file is not included in this copy. Use the steps above and the patterns in `references/optimization-patterns.md`.
 
 
 ## Common Rationalizations
@@ -221,7 +229,7 @@ For detailed performance checklists, optimization commands, and anti-pattern ref
 | "We'll optimize later" | Performance debt compounds. Fix obvious anti-patterns now, defer micro-optimizations. |
 | "It's fast on my machine" | Your machine isn't the user's. Profile on representative hardware and networks. |
 | "This optimization is obvious" | If you didn't measure, you don't know. Profile first. |
-| "Users won't notice 100ms" | Research shows 100ms delays impact conversion rates. Users notice more than you think. |
+| "Users won't notice 100ms" | Small delays can add up, and users often notice more than you expect. Measure on your own pages to see the effect. |
 | "The framework handles performance" | Frameworks prevent some issues but can't fix N+1 queries or oversized bundles. |
 | "The query is slow, add an index" | Read the plan first. The index may already exist and be unusable, and every index taxes writes forever. |
 | "Just cache it" | Caching an already-cheap call buys nothing and adds a staleness bug. Cache what is expensive *and* re-read far more than written. |

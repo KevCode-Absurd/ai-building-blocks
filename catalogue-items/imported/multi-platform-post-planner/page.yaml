@@ -5,7 +5,7 @@ name: Multi-platform post planner
 summary: Turn one idea into social media posts for X, LinkedIn, Instagram and Facebook. Get hooks, hashtags and a weekly posting plan.
 job: grow-social
 headline: Multi-platform post planner
-subhead: Say what you want to share. Get posts made for each platform, with hooks and a posting plan. Bring what you want to share. Use the result to plan your next step.
+subhead: Say what you want to share. Get posts made for each platform, with hooks and a posting plan. Bring what you want to share.
 explain: |
   Posts for X, LinkedIn, Instagram and Facebook from one idea, each written to suit its platform, plus a plan for when to post.
 
@@ -36,6 +36,7 @@ how_to_use:
   - Add your brand voice notes if you have them (optional).
   - Read each post. Swap any offer, number or story you did not give with your own facts.
   - Check the posting times against your own analytics before you schedule anything.
+  - Next, track results each week and paste them into your next request, so the plan learns what works for your audience.
 output_sample:
   input:
     - What you want to share

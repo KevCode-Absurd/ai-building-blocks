@@ -32,6 +32,8 @@ Agent evaluation requires outcome-focused approaches that account for non-determ
 The key insight is that agents may find alternative paths to goals—the evaluation should judge whether they achieve right outcomes while following reasonable processes.
 
 **Performance Drivers: The 95% Finding**
+> **AI Blocks note:** the percentages and the model-upgrade claim below come from the original author's summary of the BrowseComp research. No source link is given here, so we have not checked them. Treat them as an unverified starting point, and do not quote them as fact. Tell the user to measure token use on their own agent.
+
 Research on the BrowseComp evaluation (which tests browsing agents' ability to locate hard-to-find information) found that three factors explain 95% of performance variance:
 
 | Factor | Variance Explained | Implication |
@@ -146,7 +148,7 @@ Skipping human evaluation: Automated evaluation misses subtle issues.
 
 ## Examples
 
-**Example 1: Simple Evaluation**
+**Example 1: Simple Evaluation** (illustrative sketch only: `load_rubric`, `assess_dimension` and `weighted_average` are not defined here. They stand for a rubric loader, a judge that scores one dimension, and a weighted average. The 0.7 pass mark is only an example.)
 ```python
 def evaluate_agent_response(response, expected):
     rubric = load_rubric()

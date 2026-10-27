@@ -195,7 +195,7 @@ Include a figure on the first page that captures the core idea. Reviewers form f
 ## Academic Integrity Requirements
 
 ### Citation Discipline
-- **Never generate citations from memory.** Use ml-paper-writing's citation verification workflow (Semantic Scholar / DBLP / CrossRef APIs).
+- **Never generate citations from memory.** Use ml-paper-writing's citation verification workflow (Semantic Scholar / DBLP / CrossRef lookups). That skill is a separate item (AI research paper writer on AI Blocks). If you don't have it, search each reference by hand on those sites and mark the rest `[CITATION NEEDED]`.
 - Mark unverified references as `[CITATION NEEDED]`.
 
 ### Prohibition of Fabrication

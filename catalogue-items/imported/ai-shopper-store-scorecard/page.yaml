@@ -9,7 +9,7 @@ subhead: Can an AI shopping assistant actually read your Shopify store? In about
 explain: |
   Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores.
 
-  A small Python script visits your store politely. It follows robots.txt, waits a second between requests and sends about 15 requests. It checks six things: AI crawlers allowed in and an llms.txt file, shipping and returns in structured data, star ratings in structured data, barcodes, descriptions of 80 words or more, and image alt text. The report says what an AI agent cannot answer because of each gap. It needs Python. A fuller paid audit is mentioned at the end.
+  A small Python script visits your store politely. It follows robots.txt, waits a second between requests and sends about 15 requests. It checks six things: AI crawlers allowed in and an llms.txt file, shipping and returns in structured data, star ratings in structured data, barcodes, descriptions of 80 words or more, and image alt text. The report says what an AI agent cannot answer because of each gap. The 99 stores come from the skill author's own October 2026 study. It is not published with the skill, so treat the comparison as a rough guide. It needs Python. A fuller paid audit is mentioned at the end.
 when:
   - You want a fast read on whether AI shopping tools can see your products.
   - You wonder how your store compares with other Shopify stores.
@@ -29,6 +29,7 @@ you_get:
   - A comparison with 99 stores
   - Plain notes on what AI agents cannot do because of each gap
 how_to_use:
+  - This skill was first called agent-ready-quick-check, so look for that name in its files.
   - Open an AI that can run Python code, such as Claude with code tools turned on.
   - Add the skill file and the script folder to the chat.
   - "Tell your AI: run the quick check on your store link."
@@ -54,3 +55,4 @@ output_sample:
       contains: Three to five bullets saying what an AI agent cannot answer because of each gap.
     - name: Paid audit line
       contains: One closing line pointing to the full audit in the paid Store Ops Pack.
+next: [structured-data-writer, llms-txt-writer, ai-search-audit]

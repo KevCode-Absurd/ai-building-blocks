@@ -17,6 +17,8 @@ description: Build a single-company equity research earnings preview — a 4-5 p
 
 **Indian companies and actuals.** The actuals path below (EDGAR XBRL) covers US filers only. For an NSE or BSE company, you must treat reported actuals as manual review. Ask the user to paste the latest quarterly results (from the company's results filing on NSE or BSE), or write `not available from free sources` in the cell and add it to the MANUAL REVIEW table. Consensus and prices for Indian tickers come from yfinance (for example `RELIANCE.NS`); check the figures exist before you build on them. Never put a US figure in an Indian company's table.
 
+**US-only steps.** The EDGAR, FRED, CBOE and SEC full-text search steps work for US companies only. For an Indian company, skip them, mark those items `not available`, and ask the user to paste Indian actuals. **Scraping note.** `yfinance` reads Yahoo Finance pages without a licence from Yahoo, so tell the user to check Yahoo's terms of use before routine or commercial use.
+
 **Not advice.** The report is a research aid. It is not investment advice. Say that in the header and in the closing line of the answer.
 
 **If an input is missing.** No ticker or company: ask once. No quarter: take the next reporting quarter from the yfinance calendar and state it. No point of view from the user: skip that section; do not make one up.

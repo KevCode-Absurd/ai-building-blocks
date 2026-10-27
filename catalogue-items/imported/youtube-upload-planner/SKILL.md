@@ -14,10 +14,9 @@ A plan that does not fit the week is a list of regrets. Ask two questions before
 
 ## Before you write
 
-1. Read `~/.claude/youtube/voice.md` if it exists. That is the user's voice profile: how they talk
-   on camera, the words they never use, who they are talking to, what they will not claim. If it
-   does not exist, ask for **three of their own videos**, read or transcribe them, infer the voice,
-   and write the file. A script in the wrong voice is worse than no script, because they have to
+1. If the user pasted voice notes, or you can read `~/.claude/youtube/voice.md` (only possible in a tool with file access, such as Claude Code), use that voice profile: how they talk
+   on camera, the words they never use, who they are talking to, what they will not claim. If you
+   have neither, ask the user to paste **three of their own videos** (transcripts) or voice notes into the chat, and summarise the voice before you write. If you can save files, write the file; if not, say the user must paste the samples again next time. A script in the wrong voice is worse than no script, because they have to
    read it out loud.
 2. Never invent a number, a result or a source. If a figure would strengthen it and you do not have
    one, ask for it or write the line without it.
@@ -28,8 +27,7 @@ A plan that does not fit the week is a list of regrets. Ask two questions before
   channel's own analytics say is best - ask for that, do not assume Tuesday.
 - **One cheap one.** Built from something that exists: a clip, a reaction, a follow-up to the
   comment that got the most replies last week.
-- **Shorts from the anchor.** Three, cut from the long video, not written separately. `/yt-shorts`
-  finds them.
+- **Shorts from the anchor.** Three, cut from the long video, not written separately. List the timestamps of three clips from the anchor video that work alone. If you have a clip-cutting tool, use it to cut them.
 
 Three uploads on a seven-day week, not seven. A plan that posts daily is not a plan anyone
 recognises, and the empty days are what make the filled ones survive a bad week.

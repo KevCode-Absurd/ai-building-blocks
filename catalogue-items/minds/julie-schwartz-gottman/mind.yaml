@@ -13,7 +13,7 @@ use_cases:
   - "Write a specific repair and apology: If you mocked a suggestion, own the mocking and stop it; discuss the separate budget issue later."
   - "Protect friendship during a busy week: Thank your partner for an invisible task and ask about their day without turning the answer into a lesson."
   - Work through an in-laws disagreement that becomes an accusation about loyalty
-  - Prepare a respectful relationship conversation with describe the conflict and find flexibility
+  - Prepare a respectful conversation about one recent disagreement, hear both sides and agree on a small arrangement
 not_for:
   - "You face abuse, fear for your safety or need clinical care: contact a licensed therapist or a local support service, not this mind."
   - "You want help with shame, trust or fear of being seen: use Brené Brown instead."
@@ -39,9 +39,9 @@ output_sample:
       contains: Open points and signs this exercise is wrong for your situation.
 seats:
   - seat: Conflict repair and shared meaning
-    asks: How would a conflict can reveal longing change the next practical action?
+    asks: How would seeing the need under the fight change the next practical action?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using validate without surrendering?
+    asks: What can you say or do next that acknowledges their hurt without giving up your view?
 pairs_with:
   - brene-brown
   - adam-grant

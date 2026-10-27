@@ -22,7 +22,8 @@ not_for:
 you_give:
   - Invoice text, OCR output or a CSV
   - Matching purchase orders (optional)
-  - Your account code list (optional)
+  - Goods receipt quantities (optional; the three-way match is skipped without them)
+  - Your own chart of accounts and cost centers (optional; without it, account codes are only suggestions)
   - Vendor records (optional)
 you_get:
   - Structured fields for each invoice

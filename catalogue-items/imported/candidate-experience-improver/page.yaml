@@ -30,10 +30,11 @@ you_get:
   - Message drafts for each stage
   - A short survey to measure experience
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. It runs in any AI chat. No paid tool or API key is needed.
+  - Send your hiring steps from application to offer, the roles you hire for, and your drop-off numbers if you have them.
+  - Ask for the candidate path map first. Check each stage's wait time and how the candidate feels.
+  - Then ask for the stage messages and the survey. Edit the messages so they sound like your company.
+  - Next, take the top friction point into the Candidate message drafter or the Hiring interview designer. Run the survey after each stage for a month, then check the map again.
 not_for:
   - "You want to write the message to one candidate: use Candidate message drafter."
   - "You want to design the interview itself: use Hiring interview designer."

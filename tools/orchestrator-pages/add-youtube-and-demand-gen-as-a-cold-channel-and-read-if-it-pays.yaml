@@ -15,15 +15,15 @@ when:
   - You ran a YouTube test, got mixed numbers, and cannot tell which ads to keep or what to change.
   - You have many site visitors who left without buying and want a plan to win them back with video.
 not_for:
-  - "Your store has no proven offer or Meta video results yet: start with Google Shopping or brand Search first, then come back."
-  - "You only want to read results from a YouTube test you already ran: use the Ad results report writer."
+  - "You have no proven Meta video ad, or no steady Google Shopping and brand Search yet: build those first with the Bestseller Shopping campaign builder and the Branded Search and Shopping builder, then come back."
+  - "You only want to read results from a YouTube test you already ran: use the YouTube ad results reader on its own."
   - "Your sales dropped and you need to know why: use the Ad sales drop analyst."
 you_give:
   - Your Google results (spend, sales and cost per sale by campaign)
   - Your best video ads from Meta or TikTok, with their results
   - Your average order value, margin and break-even cost per new customer
   - The landing page you would send YouTube traffic to
-  - Your offer, shipping and returns terms, and audience list sizes
+  - Your offer, shipping and returns terms, and the size of your audience lists
   - Your brand file (optional)
 you_get:
   - A yes or wait call with a readiness score out of 100, a starting budget split and what to skip
@@ -84,13 +84,13 @@ output_shape: |-
     Files: <each step's file> | MISSING: <every line, in one list>
 tweaks:
   - what: Your average order value
-    how: Under about $50, step 1 will likely say wait. YouTube cold traffic needs a daily budget near three times your order value to learn.
+    how: This is a rough rule of thumb, not a Google rule. Under about $50, step 1 will likely say wait, and cold traffic tends to need a daily budget near three times your order value to learn.
   - what: Your break-even cost per new customer
     how: Step 3 judges every ad against it. Without it, the cost check is skipped and the verdict leans on softer numbers.
   - what: Split results by placement
     how: Shorts and in-stream behave differently. Give step 3 results for each so ads are not judged against the wrong benchmark.
   - what: Your list sizes
-    how: Step 4 needs about 1,000 people in a list. Smaller lists get a broad visitor or email plan instead.
+    how: Step 4 works best with about 1,000 people in a list (a rule of thumb, not a Google minimum). Smaller lists get a broad visitor or email plan instead.
 judge:
   - The yes or wait call lists which checks passed, and a hard stop forces wait.
   - The cold plan uses the videos and page you gave it, and says what it assumed.

@@ -4,12 +4,12 @@ headline: Management equity hurdle checker
 summary: Check what management earns above a fixed equity hurdle. Give it your incentive terms and equity value. You get the vested payout and any shortfall.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The hurdle is a threshold on equity value, so the order of claims and the vested share must be read from the signed terms."
 subhead: Give it your signed incentive terms and the equity value. It takes the hurdle off the equity value, then applies the participation and vesting percentages. You get the payout, what is left for others, and any shortfall.
 explain: |-
   Vested management proceeds, senior residual and hurdle shortfall.
 
-  Private equity incentives. Illustrative figures only. Equity160 less hurdle100 gives60;10% participation with75% vesting pays4.5. Equity80 pays management zero.
+  Private equity incentives. Illustrative figures only. Equity of 160 less a hurdle of 100 leaves 60. At 10% participation and 75% vesting, management is paid 60 x 10% x 75% = 4.5. Equity of 80 is below the hurdle, so management is paid zero.
 when:
   - You need to know what management earns above a fixed equity hurdle.
   - A deal team wants to check a private equity incentive plan.
@@ -19,6 +19,7 @@ not_for:
   - "Your hurdle has a catch-up, ratchet, option exercise price or leaver forfeiture: ask a legal or tax adviser, because this checker leaves those out."
   - "You need a tax, employment or fair-value accounting view: use an accountant or tax adviser."
   - "You need legal advice on whether the award terms apply: ask a lawyer who has read the signed documents."
+  - "You need a seller's cash and ownership after rolling proceeds into the buyer's equity: use the Rollover equity ownership checker instead."
 you_give:
   - Your signed incentive terms.
   - Net equity value left to share out, with its date.
@@ -75,12 +76,13 @@ output_shape: |-
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING lines
+  CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Equity value date"
+    how: "Take the equity value date from the incentive terms and the net equity value. Use one currency and scale on every line."
+  - what: "Net equity value"
+    how: "Change the net equity value and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Hurdle is an equity-value threshold after debt and prior claims.
 judge:
@@ -93,8 +95,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one management payout you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define equity hurdle into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

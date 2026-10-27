@@ -1,6 +1,6 @@
 new_slug: defensive-stock-screen
 name: Screen stocks with a defensive investor's seven tests
-summary: Screen stocks with a defensive investor's seven tests. Paste company figures and get each name passed or failed, price sums shown, and a short list.
+summary: Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list.
 job: money-and-investing
 thinking: high
 thinking_why: It runs five skills in a row and every one works on pasted figures. Give it your strongest model, and check the sums.
@@ -9,7 +9,7 @@ subhead: Paste figures for the companies you are looking at. It tests size, fina
 explain: |
   A plain investor does not need to find the next big winner. They need a list of companies that are large, strong, steady and not overpriced, and a way to cut a long list down fast.
 
-  This workflow follows the seven tests in The Intelligent Investor by Benjamin Graham. Five tests check the company: size, financial strength, a profit in each of ten years, a long unbroken dividend and a minimum of growth. Two check the price: no more than fifteen times three-year average earnings and no more than one and a half times book value, with a combined limit. Between them it checks the per-share earnings for traps, because the price tests are only as good as the earnings they use. Popular growth names usually fail on price, and that is on purpose. The result is a spread list of ten to thirty names, with rules for when you may change it. It names no company to buy.
+  This workflow is built on the seven tests for a defensive investor in Benjamin Graham's The Intelligent Investor. Five tests check the company: size, financial strength, a profit in each of ten years, a long unbroken dividend and a minimum of growth. Two check the price: no more than fifteen times three-year average earnings and no more than one and a half times book value, with a combined limit. Between them it checks the per-share earnings for traps, because the price tests are only as good as the earnings they use. Popular growth names usually fail on price, and that is on purpose. The result is a spread list of ten to thirty names, with rules for when you may change it. It names no company to buy.
 when:
   - You want a list of sound companies to hold for years with little fuss.
   - Someone gave you a stock tip and you want to test it against plain rules.
@@ -29,7 +29,7 @@ you_get:
   - A pass or fail on three price ceilings, with every sum shown
   - A spread list, caps for any one name and industry, and a holding plan
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the figures. Mark any year you cannot find, since a gap is marked unknown, not guessed.
   - Read the cuts first. Most companies fail at least one test.

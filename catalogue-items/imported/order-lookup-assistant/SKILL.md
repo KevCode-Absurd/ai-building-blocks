@@ -15,7 +15,8 @@ Retrieves complete order details for a customer without requiring navigation thr
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify auth login --store <domain>`
-- API scopes: `read_orders`, `read_customers`
+- API scopes: `read_orders`, `read_customers`. Orders older than 60 days also need `read_all_orders`.
+- Customer names, emails, phones and addresses will pass through the AI tool you run this in. Use a tool your business already trusts with customer data, and do not paste results into public places.
 
 ## Parameters
 
@@ -23,16 +24,19 @@ Retrieves complete order details for a customer without requiring navigation thr
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | false | Has no effect here: this skill runs one read-only query and no mutations |
 | lookup_by | string | yes | — | `order_number`, `email`, or `phone` |
 | lookup_value | string | yes | — | The value to search for (e.g., `#1001`, `jane@example.com`, `+15551234567`) |
 | limit | integer | no | 5 | Maximum number of orders to return |
 
 ## Workflow Steps
 
-1. **OPERATION:** `orders` — query
-   **Inputs:** `first: <limit>`, `query: "name:<order_number>"` or `"email:<email>"` or `"phone:<phone>"` depending on `lookup_by`
+1. Confirm the Shopify CLI is signed in to the store (`shopify auth login --store <domain>`). If it is not, stop and ask the user to sign in.
+2. Build the search text from `lookup_by`: `name:<order_number>`, `email:<email>` or `phone:<phone>`.
+3. **OPERATION:** `orders` — query
+   **Inputs:** `first: <limit>`, `query:` the search text from step 2
    **Expected output:** Full order objects with financial status, fulfillment status, line items, shipping address, tracking, refunds
+4. Format the result as the Output Format section describes. If no order matches, say so and show the Error Handling tips. Never guess an order.
 
 ## GraphQL Operations
 

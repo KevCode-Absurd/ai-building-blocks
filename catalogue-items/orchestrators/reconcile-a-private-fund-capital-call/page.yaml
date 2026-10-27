@@ -77,15 +77,16 @@ output_sample:
 
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+    how: Use the same reporting date, currency and scale for the register, the notices and the call budget.
+  - what: Excused investors
+    how: List who is excused from this call. They come out of the total eligible commitments, and the shares must still add up to 100%.
+  - what: Restored amounts
+    how: Give dated distribution records and the clause that lets the fund call them back. Without them, nothing is added back and the gap is marked MISSING.
   - what: Acceptance
-    how: NAV, commitment, recallable capital and call allocation remain distinct; no notice is issued or money requested.
+    how: NAV, commitment, recallable capital and call allocation stay distinct. The callable balance ties to dated notices, and no notice is issued or money requested.
 judge:
   - NAV, commitment, recallable capital and call allocation remain distinct; no notice is issued or money requested.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

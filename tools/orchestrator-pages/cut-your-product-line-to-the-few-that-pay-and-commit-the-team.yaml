@@ -9,7 +9,7 @@ subhead: Give it your products, programmes and their numbers. It cuts the line t
 explain: |
   Product lines grow by addition. Every launch adds a product and no review ever removes one. Soon the team spends most of its time on products that make a tenth of the money, and the two that matter get what is left.
 
-  This workflow does the cutting with numbers and a clear order. It ranks the products by what they really earn and what they cost in attention, and cuts the line in the manner of Steve Jobs's 1997 cull at Apple. It reviews every programme the same way, keep or cut, as Jeff Bezos and Warren Buffett judge what to stop. It writes the give-up list: what you will no longer do, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice. Then it writes the disagree-and-commit note, in Bezos's manner, so people who argued against a cut can still commit to it.
+  This workflow does the cutting with numbers and a clear order. It ranks the products by what they really earn and what they cost in attention, and cuts the line in the manner of Steve Jobs's 1997 cull at Apple. It reviews every programme the same way, keep or cut, drawing on how Jeff Bezos and Warren Buffett judge what to stop. It writes the give-up list: what you will no longer do, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice. Then it writes the disagree-and-commit note, in Bezos's manner, so people who argued against a cut can still commit to it.
 when:
   - You have thirty products and five of them make most of the money.
   - Every meeting is about a product nobody would launch today.
@@ -29,9 +29,9 @@ you_get:
   - "A give-up list: what you will no longer do, said plainly"
   - A disagree-and-commit note for the team
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your products, programmes and their numbers. It ranks and cuts.
+  - Paste your products and programmes with revenue, margin and team hours, what the business is for, and who owns each one. It ranks and cuts.
   - Read the cuts and the give-up list. Argue with any, then decide.
   - Read the commit note with the people who disagreed, then send it.
 output_sample:
@@ -41,7 +41,7 @@ output_sample:
     - Who owns each product
     - Your brand file (optional)
   prerequisites:
-    - An AI that can read the files in the handoff pack
+    - An AI that can read files, such as Claude Code or a Claude Project. In a plain chat window, paste HANDOFF.md and then each skill file in turn.
     - A buyer brief or brand brain helps but is optional
   output:
     - name: "Step 1: The cut line"
@@ -128,3 +128,5 @@ works_best_with:
 terms:
   - term: Disagree and commit
     meaning: Jeff Bezos's phrase for recording an honest disagreement and then backing the decision fully.
+next: [announce-a-change-of-direction-and-bring-the-team-with-you, smallest-test-picker]
+before: []

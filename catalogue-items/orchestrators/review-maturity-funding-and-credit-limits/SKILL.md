@@ -7,6 +7,14 @@ description: "Line up debt maturities against cash and confirmed funding, then c
 
 A maturity funding ladder and a connected exposure exceptions pack. Two steps run in order, and each one hands a checked result to the next.
 
+## When to use, and when not to
+
+Use it when several loans fall due and you want the first gap, or when you lend to one borrower or group and want total exposure against your limit.
+
+- You only need the order of cash payments and receipts by date: use the Settlement liquidity ladder builder.
+- You want a plan to restructure debt you cannot pay: use the Debt restructuring plan drafter.
+- You want approval to lend: this is a check, not a credit decision. Approval stays with your committee.
+
 ## Before you start
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
@@ -32,9 +40,9 @@ Read this file and every component SKILL.md in full before its step. A matching 
 
 ## Steps
 
-1. **Debt maturity funding ladder** (`debt-maturity-funding-ladder`). Roll actual cash and confirmed funding through the contractual maturities. Pass any same-party refinancing amounts and dates to step 2 as source observations. Leave every unfunded maturity visible. Preserve original sources and check the meaning, units and period of each input before you use earlier work. Save `outputs/step-1-debt-maturity-funding-ladder.md` and any native file. Stop this step if a tool or input is missing, and say which. **Gate before step 2:** every funding line is confirmed in writing, and each unfunded maturity is still shown.
+1. **Debt maturity funding ladder** (`debt-maturity-funding-ladder`). Roll actual cash and confirmed funding through the contractual maturities. For each date, running position = the prior position + confirmed cash and funding arriving − maturities due. The shortfall is how far that position sits below the minimum cash floor. Pass any same-party refinancing amounts and dates to step 2 as source observations. Leave every unfunded maturity visible. Preserve original sources and check the meaning, units and period of each input before you use earlier work. Save `outputs/step-1-debt-maturity-funding-ladder.md` and any native file. Stop this step if a tool or input is missing, and say which. **Gate before step 2:** every funding line is confirmed in writing, and each unfunded maturity is still shown.
 
-2. **Credit exposure limit checker** (`credit-exposure-limit-checker`). Check the connected funded and undrawn exposure from the confirmed facilities against the supplied limit. Keep any independent exposure constraint. Do not put unused limit room into step 1 as committed funding. Preserve original sources and check the meaning, units and period of each input before you use earlier work. Save `outputs/step-2-credit-exposure-limit-checker.md` and any native file. Stop this step if a tool or input is missing, and say which. **Gate before the hand back:** exposure uses the approved factor, and no unused limit room is counted as funding.
+2. **Credit exposure limit checker** (`credit-exposure-limit-checker`). Check the connected funded and undrawn exposure from the confirmed facilities against the supplied limit. Total exposure = funded loans + undrawn commitments × the approved factor + exposure to connected parties. Gap or room = the limit − total exposure. Keep any independent exposure constraint. Do not put unused limit room into step 1 as committed funding. Preserve original sources and check the meaning, units and period of each input before you use earlier work. Save `outputs/step-2-credit-exposure-limit-checker.md` and any native file. Stop this step if a tool or input is missing, and say which. **Gate before the hand back:** exposure uses the approved factor, and no unused limit room is counted as funding.
 
 ## Workbook checks
 
@@ -44,7 +52,9 @@ For a requested workbook, use the spreadsheet tool you have and any template sup
 
 - Only confirmed proceeds fund a maturity. Unused exposure limit is not cash and not loan approval. Funding and monitoring limits stay separate.
 - Each material input traces to its source, date, currency, scale, sign and period. Unresolved items stay as MISSING: lines.
-- Opening balances, additions, deductions and closing balances reconcile. Cash flows are matched to the right discount rate where one is used.
+- Each ladder row ties to the one before it: the opening position plus cash and funding in, less maturities, equals the closing position. The shortfall is measured against the floor.
+- The exposure total uses the approved conversion factor from the written limit policy, and the limit has a date.
+- Each refinancing counted has a signed facility letter. Anything without one stays out of the totals.
 - Real zeros, unavailable evidence and inapplicable ratios are told apart. No statement is forced to tie with an unexplained plug.
 - Original source locations, assumptions, formula conventions, failed checks and actual verification results are saved. End with CHECKS MISSED: none, or the exact outstanding checks.
 

@@ -45,6 +45,7 @@ Provide the database schema (or point to your migration files) and specify the t
 
 ```python
 """seed.py — Seed development database with realistic test data."""
+import os
 import random
 from datetime import datetime, timedelta
 from faker import Faker
@@ -68,6 +69,9 @@ NUM_ORDERS = 100
 
 
 def seed():
+    # Guard: never seed production. Set APP_ENV=production there and this stops.
+    if os.environ.get("APP_ENV", "development") == "production":
+        raise SystemExit("Refusing to seed production.")
     conn = psycopg2.connect(**DB_CONFIG)
     cur = conn.cursor()
 
@@ -110,9 +114,21 @@ def seed():
         if row:
             product_ids.append(row[0])
 
-    # Seed orders with order items
+    # On a second run the inserts above return nothing (the rows exist), so reload the ids
+    if not user_ids:
+        cur.execute("SELECT id FROM users")
+        user_ids = [r[0] for r in cur.fetchall()]
+    if not product_ids:
+        cur.execute("SELECT id FROM products")
+        product_ids = [r[0] for r in cur.fetchall()]
+    if not user_ids or not product_ids:
+        raise SystemExit("No users or products to link orders to.")
+
+    # Seed orders with order items (skipped if orders already exist, so a re-run adds no duplicates)
+    cur.execute("SELECT count(*) FROM orders")
+    num_orders = 0 if cur.fetchone()[0] else NUM_ORDERS
     statuses = ["pending", "confirmed", "shipped", "delivered"]
-    for _ in range(NUM_ORDERS):
+    for _ in range(num_orders):
         user_id = random.choice(user_ids)
         status = random.choice(statuses)
         items = random.sample(product_ids, k=random.randint(1, 5))
@@ -142,7 +158,7 @@ def seed():
     conn.commit()
     cur.close()
     conn.close()
-    print(f"Seeded {len(user_ids)} users, {len(product_ids)} products, {NUM_ORDERS} orders.")
+    print(f"Seeded {len(user_ids)} users, {len(product_ids)} products, {num_orders} orders.")
 
 
 if __name__ == "__main__":

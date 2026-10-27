@@ -11,7 +11,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
 - Azure MCP server configured and authenticated
 - GitHub MCP server configured and authenticated  
 - Target GitHub repository identified
-- Azure resources deployed (IaC files optional but helpful)
+- Azure resources deployed, and IaC files for them (Step 2 stops if there are none)
 - Prefer Azure MCP tools (`azmcp-*`) over direct Azure CLI when available
 
 ## Workflow Steps
@@ -74,9 +74,11 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
    - For custom analysis, use KQL queries:
    ```kql
    // CPU utilization for App Services
-   AppServiceAppLogs
+   AzureMetrics
+   | where ResourceProvider == "MICROSOFT.WEB"
+   | where MetricName == "CpuPercentage"
    | where TimeGenerated > ago(7d)
-   | summarize avg(CpuTime) by Resource, bin(TimeGenerated, 1h)
+   | summarize avg(Average) by Resource, bin(TimeGenerated, 1h)
    
    // Cosmos DB RU consumption  
    AzureDiagnostics
@@ -199,14 +201,11 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
    **IaC Files Detected**: [Yes/No - based on file_search results]
    
    ```bash
-   # If IaC files found: Show IaC modifications + deployment
+   # Show the IaC modification + deployment
    # File: infrastructure/bicep/modules/app-service.bicep
    # Change: sku.name: 'S3' → 'B2'
+   # Before deploying, note the current SKU and settings so the change can be rolled back.
    az deployment group create --resource-group [rg] --template-file infrastructure/bicep/main.bicep
-   
-   # If no IaC files: Direct Azure CLI commands + warning
-   # ⚠️ No IaC files found. If they exist elsewhere, modify those instead.
-   az appservice plan update --name [plan] --sku B2
    ```
    
    ### 📊 Evidence
@@ -291,7 +290,7 @@ This workflow analyzes Infrastructure-as-Code (IaC) files and Azure resources to
 ## Error Handling
 - **Cost Validation**: If savings estimates lack supporting evidence or seem inconsistent with Azure pricing, re-verify configurations and pricing sources before proceeding
 - **Azure Authentication Failure**: Provide manual Azure CLI setup steps
-- **No Resources Found**: Create informational issue about Azure resource deployment
+- **No Resources Found**: Stop and tell the user there is nothing to review
 - **GitHub Creation Failure**: Output formatted recommendations to console
 - **Insufficient Usage Data**: Note limitations and provide configuration-based recommendations only
 

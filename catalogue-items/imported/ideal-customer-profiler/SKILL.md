@@ -115,14 +115,14 @@ Articulate what they're trying to accomplish:
 Synthesize specific problem areas:
 - Before state (current situation and frustrations)
 - Desired after state (ideal future state)
-- Gap size and impact quantification
+- Gap size and impact quantification (use only figures in the pasted data; otherwise leave blank or label as an estimate)
 - Emotional dimensions of the problem
 - Resource constraints preventing solutions
 - Skepticism or hesitations
 - Success criteria for solution
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Paste into your chat, or pass as arguments if your tool supports them:
 - Research data (surveys, interviews, transcripts)
 - Customer success/metrics data
 - Product usage analytics
@@ -136,7 +136,7 @@ A comprehensive ICP definition including:
 - Behavioral profile (buying patterns, adoption style)
 - Complete JTBD mapping (functional, emotional, social jobs)
 - Top 5-7 pain points and specific needs
-- Quantified impact metrics (cost of problem, value of solution)
+- Impact metrics (cost of problem, value of solution): only figures present in the data, or labelled as estimates; leave blank if unknown
 - Decision-making process and key stakeholders
 - Typical customer journey and timeline
 - Go-to-market implications and messaging

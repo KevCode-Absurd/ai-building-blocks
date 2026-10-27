@@ -11,26 +11,26 @@ This is different from a narrated script with a picture for every line. This ski
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, customer words, your offer. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, customer words, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI can write the script from your facts. Paste your reviews rather than describing them.
@@ -50,26 +50,26 @@ Does not fit:
 - Simple, low-priced, impulse items. A short demo is enough.
 - A first VSL longer than about 3 minutes. Longer means higher edit cost. Start at 1 to 3 minutes before 10-minute formats.
 - Stores without real proof. Do not invent a study, a count or a customer.
-- One example account made about 2.5 to 3 ROAS on a first purchase and earned its profit from repeat orders. Check your own payback before spending.
+- Stores that rely on repeat orders for profit. A VSL may not pay back on the first purchase. Work out your own payback before spending.
 - Health and supplement claims need to stay compliant. Check them against the platform's ad rules, the law where you sell and a qualified person before you run the ad.
 
 ## Steps
 1. **Confirm the fit.** A VSL suits complicated products that are hard to explain, low-trust categories, and new categories that need education first. If the product is simple, say a short demo will do.
 2. **Choose the starting length.** Start at 1 to 3 minutes. The range is 45 seconds to 20 minutes. Plan a longer master edit only if you can afford the edit.
 3. **Write the seven parts in order, with timings.**
-   1. **Hook.** Speak to the people who have the problem. Do not open with the brand story. A call-out to several closely related groups can widen the audience (one strong example named three related conditions), but each group must still be relevant to the product.
+   1. **Hook.** Speak to the people who have the problem. Do not open with the brand story. A call-out to several closely related groups can widen the audience (for example, naming three related conditions), but each group must still be relevant to the product.
    2. **Problem.** Use the customer's words. Teach why it happens, so the viewer does not yet see a product.
    3. **Mechanism.** Explain why the solution works. Say what it does and why it matters. A claim without a why is weak.
    4. **Objection handling.** Use reviews, tickets and survey answers on why people almost did not buy, and why past fixes failed.
    5. **Proof.** Real customer videos, numbers, customer count, studies. Do not bury it.
    6. **Risk reversal.** A clear guarantee, such as 90 days to try. Only offer what the store honours.
    7. **Call to action.** A clear offer. Always include one, unless the ad is deliberately top of funnel and retargeted by how long people watched.
-4. **Treat the order as a test variable.** One strong example put objection handling before the mechanism. Another could put the mechanism before the problem.
-5. **Complete the bridge slowly.** Do not jump from education straight to "buy our product". One critique of a strong ad said the bridge was too aggressive, and suggested explaining the rest of the why first (for example, the full set of things the product needs to work), then bringing in the product.
+4. **Treat the order as a test variable.** The usual order is a starting point. Try objection handling before the mechanism, or the mechanism before the problem.
+5. **Complete the bridge slowly.** Do not jump from education straight to "buy our product". A bridge that is too aggressive loses viewers. Explain the rest of the why first (for example, the full set of things the product needs to work), then bring in the product.
 6. **Use numbers carefully.** A statistic that shows many people have the problem can widen the audience. Only use a figure the store can source, and explain any unfamiliar word. Do not invent or round up a number.
-7. **Write 3 to 6 hooks once the body is done.** About 80% of viewers leave before the body starts, so hooks are the main thing to test.
+7. **Write 3 to 6 hooks once the body is done.** Many viewers leave before the body starts, so hooks are the main thing to test. Do not quote a drop-off percentage as fact. Tell the user to read their own watch-time numbers.
 8. **Plan the cuts.** From one master edit, make a 45-second, a 2-minute and a 5-minute version. Make modular variants: mechanism before the problem in one, problem agitation pulled earlier in another. Test them against each other.
-9. **Write editor notes.** Mix kinds of footage (real customer video, AI-made customer-style video, animation, animated stills) but keep one consistent look: mostly customer video, or all animation. Use large, readable text, since VSLs skew to older viewers. Do not show made-up people as real customers, doctors or experts. Say any visuals are not a real person where that matters.
+9. **Write editor notes.** Mix kinds of footage (real customer video, AI-made customer-style video, animation, animated stills) but keep one consistent look: mostly customer video, or all animation. Use large, readable text, because most people watch on a phone. Check who your audience is before you choose text size. Do not show made-up people as real customers, doctors or experts. Say any visuals are not a real person where that matters.
 10. **Write the landing page brief.** Send people to a page built for this VSL, such as an advertorial or a dedicated page, not a standard product page, so the story carries on. List the parts the page must repeat.
 11. **Run the checks** and fix any that fail.
 
@@ -100,11 +100,11 @@ MISSING: <what would sharpen this>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
-- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script and buyer brief.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+- The [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker). It takes the script.
+- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the script.
+- The [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the script.
+- **Check it before it goes live** with the [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker). It takes the script.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

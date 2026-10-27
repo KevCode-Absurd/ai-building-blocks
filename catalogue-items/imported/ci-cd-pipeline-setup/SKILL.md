@@ -49,6 +49,8 @@ Set up a CI/CD pipeline for my Node.js Express app hosted on GitHub.
 
 ## Examples
 
+In both examples, set `TEST_DB_PASSWORD` as a secret (GitHub) or a masked CI/CD variable (GitLab). Use a throwaway value that is only for tests. Never put a password in the file.
+
 ### Example 1: GitHub Actions Workflow for a Node.js Application
 
 ```yaml
@@ -88,7 +90,7 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_PASSWORD: testpass
+          POSTGRES_PASSWORD: ${{ secrets.TEST_DB_PASSWORD }}
           POSTGRES_DB: testdb
         ports:
           - 5432:5432
@@ -106,7 +108,7 @@ jobs:
       - run: npm ci
       - run: npm test -- --coverage
         env:
-          DATABASE_URL: postgres://postgres:testpass@localhost:5432/testdb
+          DATABASE_URL: postgres://postgres:${{ secrets.TEST_DB_PASSWORD }}@localhost:5432/testdb
       - uses: actions/upload-artifact@v4
         with:
           name: coverage-${{ matrix.node-version }}
@@ -212,8 +214,8 @@ test:
     - postgres:16
   variables:
     POSTGRES_DB: testdb
-    POSTGRES_PASSWORD: testpass
-    DATABASE_URL: "postgresql://postgres:testpass@postgres:5432/testdb"
+    POSTGRES_PASSWORD: $TEST_DB_PASSWORD
+    DATABASE_URL: "postgresql://postgres:${TEST_DB_PASSWORD}@postgres:5432/testdb"
   script:
     - python -m venv .venv
     - source .venv/bin/activate
@@ -257,7 +259,7 @@ deploy_production:
 - **Fail fast:** Order pipeline stages so that quick checks (linting, formatting) run first, preventing wasted compute on code that will fail review anyway.
 - **Pin action and image versions:** Always use specific version tags for CI actions and Docker images (e.g., `actions/checkout@v4`, `python:3.12-slim`) to ensure reproducible builds and avoid supply-chain attacks.
 - **Scope secrets tightly:** Restrict secrets to the environments and branches that need them. Use environment-level protection rules to require manual approval before production deployments.
-- **Cache aggressively:** Cache dependency installations, Docker layers, and build artifacts between pipeline runs. This can reduce pipeline duration by 50% or more on typical projects.
+- **Cache aggressively:** Cache dependency installations, Docker layers, and build artifacts between pipeline runs. How much time it saves varies by project.
 - **Use matrix builds for compatibility:** Test across multiple language versions and operating systems in parallel to catch compatibility issues early without increasing pipeline wall-clock time.
 - **Implement deployment gates:** Use manual approval steps, health check verifications, or canary analysis before promoting a release to production to reduce the blast radius of bad deployments.
 

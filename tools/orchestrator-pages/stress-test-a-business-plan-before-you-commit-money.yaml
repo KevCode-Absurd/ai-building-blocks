@@ -10,6 +10,8 @@ explain: |
   A business plan is written to persuade, which makes it the worst document for finding its own flaws. The assumptions are buried in the forecast and the one risk that could end the company is a line in a list of twenty.
 
   This workflow attacks the plan on purpose. It first squeezes the plan onto a one-page canvas so every assumption is visible. It writes the strongest honest case for killing the idea. It stress tests each assumption: what if it is half as good, what if it takes twice as long. It then checks for risks of ruin, in Nassim Taleb's manner: the ones you cannot recover from. Last it runs a pre-mortem: it imagines the plan has failed a year from now and writes the most likely story of why, so you can fix that story before it happens.
+
+  The Bad-year break-even tester checks one number. This workflow attacks every assumption in the plan, the risks you cannot recover from, and the story of how it fails.
 when:
   - You are about to sign a lease, hire or spend savings on a plan.
   - Everyone around you likes the plan, which worries you.
@@ -17,7 +19,7 @@ when:
 not_for:
   - "You have no money, lease or guarantee at stake yet: run a simple test with a few real customers first."
   - "You only want to check one number, such as break-even in a bad year: use the Bad-year break-even tester."
-  - "You want to know if the idea suits AI rather than whether the business works: use the AI suitability reviewer."
+  - "You want to know if the idea suits AI rather than whether the business works: use the AI-fit problem checker."
 you_give:
   - The business plan, however rough
   - "The numbers behind it: costs, prices, how many customers and when"
@@ -29,7 +31,7 @@ you_get:
   - Each assumption stress tested at half as good and twice as slow, and a ruin-risk check
   - "A pre-mortem: the most likely story of failure and what to change now"
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and five skill files, in the order they run: Lean canvas builder, Business idea killer, Business assumption stress tester, Ruin risk stress tester and Plan pre-mortem runner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the plan and the numbers. It writes the canvas and the case against.
   - Read the stress tests and the ruin risks. Decide which you can remove.
@@ -42,7 +44,6 @@ output_sample:
     - What you fear most (optional)
   prerequisites:
     - A chat AI that can work through several steps and keep each result
-    - A buyer brief from the Buyer brief writer (optional)
   output:
     - name: One-page canvas
       contains: Problem, customers, solution, channels, revenue, costs and advantage, with every assumption marked.

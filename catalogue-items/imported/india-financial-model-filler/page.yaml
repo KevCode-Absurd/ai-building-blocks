@@ -35,9 +35,9 @@ you_get:
   - A gap list of cells it could not fill
 how_to_use:
   - Use an AI that can run commands and read your files, such as Claude Code. Install the officecli tool first.
-  - Open the skill. Give your AI the template and the company's results files, and tell it which years to fill.
+  - Open the skill. Give your AI the template and the company's results files, and tell it which years to fill. The US-only parts of the skill, the SEC filing guide and the 80% tax loss limit, are skipped for Indian companies.
   - Check the tab map it shows you before it touches any cell. Fix the mapping if a tab is read wrongly.
-  - Approve each statement in turn: historicals, then income statement, then balance sheet, then cash flow.
+  - Approve each statement in turn, starting with historicals, then income statement, then balance sheet, then cash flow.
   - Open the Checks tab. Every balance and cash check should pass before you use the model.
   - Read the gap list. Fill those cells from the filing yourself, then move on to valuation.
 output_sample:

@@ -5,6 +5,10 @@ description: Establishes a project's quality bar as a written contract and stops
 
 # Constraint-Driven Development
 
+**In short:** read the project, ask four questions (each with a default), write CONSTRAINTS.md with numbers, install the checks it names, and watch for any change that lowers the bar. The steps are 1 to 7 below.
+
+**Skills and commands named here** (`interview-me`, `code-review-and-quality`, `test-driven-development`, `security-and-hardening`, `ci-cd-and-automation`, and the `/build`, `/test`, `/review` and `/ship` commands) come from the author's own skill pack. They are not in this library. If you do not have them, ask the questions one at a time yourself, and run the checks with your own scripts or CI.
+
 ## Overview
 
 Other skills in this pack describe what good looks like. `code-review-and-quality` gives you five axes. `test-driven-development` gives you a cycle. `security-and-hardening` gives you a threat list. All of that lives in prose the agent reads and may or may not follow, and none of it survives the end of the session.
@@ -97,7 +101,7 @@ One file at the repo root. Any agent on any harness can read it, and a change to
 ```markdown
 # Constraints
 
-Last reviewed: 2026-08-08 by @addy
+Last reviewed: [date] by [name]
 
 ## Floor (always enforced, no setup required)
 
@@ -134,7 +138,7 @@ number and no command in this column is an aspiration, not a constraint.
 
 | ID | Rule | Path | Reason | Owner | Expires |
 |----|------|------|--------|-------|---------|
-| W1 | `no-explicit-any` | `src/legacy/**` | Rewrite tracked in ENG-441 | @addy | 2026-11-01 |
+| W1 | `no-explicit-any` | `src/legacy/**` | Rewrite tracked in [ticket] | [owner] | [date] |
 ```
 
 Then add one line to `AGENTS.md` and `CLAUDE.md`: `Read CONSTRAINTS.md before writing code. Do not weaken it to make a change pass.`

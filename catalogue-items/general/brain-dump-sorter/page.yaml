@@ -15,6 +15,7 @@ not_for:
   - "You have one choice to make: write down the options and talk it through with your AI or a trusted person."
   - "You need a formal project plan with dates and owners: use a project planning tool or a plain spreadsheet."
   - "You want a tidy rewrite of your notes: ask your AI to edit them. This prompt keeps your own words."
+  - "You want your thoughts grouped into projects, ideas and tasks with offers of help: use the Brain dump organizer."
 you_give:
   - Your dump, in any order
   - What matters this week (optional)
@@ -75,6 +76,9 @@ output_shape: |-
 
   MISSING
   <e.g. what matters this week>
+
+  CHECKS MISSED
+  <any check that failed or could not run, or none>
 tweaks:
   - what: Groups
     how: Ask for work and home kept apart.

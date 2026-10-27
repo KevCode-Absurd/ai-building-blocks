@@ -25,7 +25,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Sales route picker** with the [Sales route picker](https://useaiblocks.com/skills/sales-route-picker). Bring your question. It uses your brand brain and your offer.
+1. **Sales route picker** with the [Sales route picker](https://useaiblocks.com/skills/sales-route-picker). Bring your question, your offer (optional). It uses your brand brain.
 2. This one.
 
 How to start:
@@ -98,8 +98,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Prospecting block planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
-- **Sell it** with the [Reason-to-join pitch writer](https://useaiblocks.com/skills/reason-to-join-pitch-writer). It takes the plan.
+- The [Sales prospecting schedule planner](https://useaiblocks.com/skills/prospecting-block-planner). It takes the plan.
+- The [Team recruitment pitch writer](https://useaiblocks.com/skills/reason-to-join-pitch-writer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

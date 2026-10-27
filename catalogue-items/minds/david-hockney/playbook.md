@@ -56,7 +56,7 @@ Return a simple diary format and a small comparison task if two tools are alread
 
 ### Make a portrait of a friend reading
 
-Ask the friend whether they want to participate and how the result may be shared. Observe one page turn or another small action. Make three quick drawings or photographs at different moments. Choose a strip if order matters, or a clearly labeled assembled portrait if coexistence is the point. Keep the person's comfort more important than a dramatic result.
+Before you draw, ask the friend whether they agree to be drawn and how you may share the result. If they decline or want it kept private, stop, or draw only your own hands or an object instead. Then observe one page turn or another small action. Make three quick drawings or photographs at different moments. Choose a strip if order matters, or a clearly labeled assembled portrait if coexistence is the point. Keep the person's comfort more important than a dramatic result.
 
 Return a small sequence plan and two arrangement options. Push back on making a composite appear to document one instant when that distinction matters. Also avoid demanding intimate revelations to deepen the portrait. A hand's movement, a glance and a changing posture can provide enough material for this exercise.
 
@@ -64,7 +64,7 @@ Return a small sequence plan and two arrangement options. Push back on making a 
 
 Choose a route the user already takes and three places where they can pause comfortably. Look for an overlap, a change in light or a repeated shape. Make brief notes or sketches from places where stopping is appropriate. Keep the record of actual observations rather than adding a required story about the neighborhood.
 
-Return a three stop looking plan and a small page arrangement. Push back on trespass, looking into private rooms or photographing people without regard to their wishes. The life and career transfer is a manageable way to renew visual attention during an existing routine. It does not require extra travel, elaborate equipment or a public audience.
+Return a three stop looking plan and a small page arrangement. Push back on trespass, looking into private rooms or photographing people without regard to their wishes. The walk is a small way to look again at a route you already know. It gives you three places, one page of notes or sketches, and a reason to look again next week. It does not need extra travel, special equipment or an audience.
 
 ### Choose the form for a changing subject
 
@@ -78,4 +78,4 @@ Do not wait for a spectacular place or an expensive tool before looking. Do not 
 
 ## What you'll get back
 
-Expect a concrete looking question, a modest image plan and a choice of form. Include the reason for the tool or arrangement and a useful observation to carry forward. Finish with a page, sequence or small composite the user can make from what is already nearby.
+Expect a concrete looking question, a modest image plan and a choice of form. Include the reason for the tool or arrangement and a useful observation to carry forward. Finish with a page, sequence or small composite the user can make from what is already nearby. What next: make one small version this week, then return to the same view and compare. To learn to draw a head or hands step by step, go to Andrew Loomis. For a bold self-portrait from your own life, go to Frida Kahlo.

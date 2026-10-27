@@ -19,6 +19,7 @@ not_for:
   - "You need to train, tune or pick features for a model: do that in MATLAB first, then come back to explain the result."
   - "Your model reads images, text or signals: this skill only works on rows and columns of data, so use a method built for that type of data."
   - "Your model predicts more than one result at once: split it into one model per result, or ask a data scientist for help."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - A trained model on table data
   - The data it was trained or tested on
@@ -47,6 +48,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB code
     - MATLAB with the Statistics and Machine Learning Toolbox
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Ranked inputs
       contains: A table of the inputs that matter most, ordered by how much each one changes the model's answer.

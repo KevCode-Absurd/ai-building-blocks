@@ -116,7 +116,7 @@ Agent:
 - It will not write flattery, a disguised advert, or a comment designed to bait the author.
 - **Optional connector.** The closing section describes a hosted VoiceMoat MCP connector. Nothing above needs it. It needs a paid VoiceMoat plan (Pro or Enterprise) and the user's own sign-in (OAuth, no API keys). When its tools are called, post text and account data are read from or sent to voicemoat.com. Without it, this skill makes no network calls.
 
-## What changes when VoiceMoat is connected
+## What changes when VoiceMoat is connected (optional, paid)
 
 A comment carries your name at full size, so it is a voice surface, not a
 throwaway:

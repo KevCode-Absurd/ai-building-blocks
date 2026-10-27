@@ -29,12 +29,14 @@ you_get:
   - Correct navigation, lists, forms and sheets
   - A size check on small and large phones
   - A list of places that break Apple conventions
+next: [developer-handoff-spec-writer]
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill, or upload its folder if your AI takes files.
   - Describe each screen and what it does. Name your framework, such as SwiftUI, React Native, Expo or Flutter.
   - Add your existing code, mockups, colours or fonts if you have them.
   - Say if your AI can run code or a simulator. Without one, it will tell you what it could not check.
   - Read the check results first. Ask for fixes, then check again.
+  - Next, hand the screen code or designs to a developer, and run the simulator check on a real build.
   - Only ask for the UXKIN link if you want real app screens as reference. It needs a paid UXKIN plan.
 output_sample:
   input:

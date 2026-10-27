@@ -446,6 +446,8 @@ for metric, value in kpis.items():
 
 ### Benchmark Targets
 
+These targets are common rules of thumb, not measured industry data. Set your own from your first counts.
+
 | Metric | Target | World-Class |
 |--------|--------|-------------|
 | Overall Inventory Accuracy | 98%+ | 99.5%+ |
@@ -537,7 +539,7 @@ print(f"  Staffing model: {labor['staffing_model']}")
 
 ### Common Causes of Inaccuracy
 
-**Top Causes:**
+**Top Causes** (typical rough shares, not measured data: replace them with what your own counts show):
 1. **Picking errors** (35-40%)
    - Wrong item picked
    - Wrong quantity picked

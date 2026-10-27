@@ -37,7 +37,7 @@ how_to_use:
   - Say which period, team or rep you want. Say if you want wins, losses or both.
   - Add call transcripts or late-stage emails for your biggest deals (optional).
   - Check the headline and the sample sizes first. Small groups mean weak patterns.
-  - Use the actions to plan coaching or a process change. The skill only reads your CRM and changes nothing.
+  - Use the actions to plan coaching or a process change. For deals still open, use deal-health-reviewer. The skill reads your CRM. It changes a record only if you ask it to, and only through your CRM connector.
 output_sample:
   input:
     - Closed deals from your CRM, or an uploaded export file
@@ -63,3 +63,4 @@ output_sample:
       contains: One evidenced line on what happened in each of the biggest losses.
     - name: Recommended actions
       contains: Process changes, coaching points by rep and data you should start recording.
+next: [deal-health-reviewer]

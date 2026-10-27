@@ -55,7 +55,7 @@ Default mode: **full**. Switch with `/bulletmind lite|full|ultra` when the user 
 | ----- | --------------------------------------------------------------------------------------------------- |
 | lite  | clean hierarchical bullets, light restructuring, preserve sentence flow                             |
 | full  | default strict hierarchy, balanced compression, clear grouping + splitting                          |
-| ultra | deep hierarchical decomposition, aggressive splitting, high granularity, maximal structural clarity |
+| ultra | deep hierarchical decomposition, aggressive splitting, high granularity, maximal structural clarity. It may split sentences into many short bullets, but it still drops no fact and changes no meaning. |
 
 ---
 

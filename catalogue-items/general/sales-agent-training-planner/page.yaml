@@ -140,6 +140,7 @@ improve:
   - "Save agent feedback in a notes file."
   - "Pair it with \"Post-sale follow-up planner\" so agents keep their buyers."
 
+next: []
 works_best_with:
   tools:
     - {name: "A spreadsheet", why: "Model the pay at three sales levels against your margin."}

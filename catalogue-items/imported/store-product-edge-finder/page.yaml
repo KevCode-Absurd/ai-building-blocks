@@ -22,8 +22,8 @@ not_for:
 you_give:
   - Your store and product
   - Two to five competitor stores
-  - Competitor reviews (optional)
-  - Your own reviews (optional)
+  - Competitor reviews (optional), one per line with star rating and date
+  - Your own reviews (optional), in the same format
 you_get:
   - A competitor comparison matrix
   - A list of customer pain points
@@ -36,7 +36,9 @@ how_to_use:
   - Paste competitor reviews if you have them, one review per line with the star rating and date. Add your own reviews the same way.
   - Ask your AI to build the comparison, pain points, unique value and action plan.
   - Check the result against the rival sites yourself. Treat any impact figure as a rough guess, not a promise.
-  - Take the top action on the list and test it on your homepage first.
+  - Take the top action on the list and test it on your homepage first. Run the analysis again after that change has been live for a few weeks.
+  - To rewrite the homepage message from your new angle, use the product page auditor or the sales copy reviewer.
+next: [review-insight-finder, product-page-auditor]
 output_sample:
   input:
     - Your store link and product category
@@ -54,4 +56,4 @@ output_sample:
     - name: Differentiation opportunities
       contains: Gaps where you can stand apart, such as shipping terms, brand story, service or guarantees.
     - name: Action plan
-      contains: A ranked list of changes with high, medium or low priority and the expected impact.
+      contains: A ranked list of changes with high, medium or low priority and a rough impact guess.

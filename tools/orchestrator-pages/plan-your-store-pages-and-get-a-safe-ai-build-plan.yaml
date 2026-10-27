@@ -16,6 +16,7 @@ when:
   - You are worried an AI edit could break the live store.
 not_for:
   - "Your store already has its products and menu set up: use the Landing page design planner to plan a single page."
+  - "You sell on WooCommerce or another platform: stop here. Steps 3 and 4 are for Shopify only."
   - "You need one small text change: use your store's own theme editor."
   - "You want a page that matches one ad: use the Ad-matched landing page writer."
 you_give:
@@ -32,7 +33,7 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give real products with real prices. Without them, the build will invent some.
-  - Before step 4, check that you have Claude Code, Node, Git and the Shopify CLI.
+  - Before step 4, check that you have a paid Claude plan that includes Claude Code, plus Node, Git and the Shopify CLI. You also need a Shopify store you can sign in to.
   - Run the build on a copy of your theme only. Publish it yourself after you check it on your phone.
 output_sample:
   input:
@@ -41,7 +42,8 @@ output_sample:
     - The doubts buyers have, and any proof you hold (optional)
     - Your store domain, theme name and screenshots of sections you like (optional)
   prerequisites:
-    - Claude Code, Node, Git and the Shopify CLI, for the build in step 4
+    - A paid Claude plan that includes Claude Code, and a Shopify store you can sign in to, for the build in step 4. One source video put the Claude plan at about 20 dollars a month, so check current prices
+    - Node, Git and the Shopify CLI installed on your computer, for the build in step 4
     - A brand brain from the Website brand brain builder (optional)
   output:
     - name: "Step 1: Products and variants"
@@ -80,7 +82,7 @@ output_shape: |-
     Files: <each step's file> | MISSING: <every line, in one list>
 tweaks:
   - what: Platform
-    how: Say Shopify or WooCommerce. The variant clicks in step 1 are written for WooCommerce and carry over to Shopify with fewer options.
+    how: This workflow is built for Shopify. Step 1 can also plan products for WooCommerce, but the page sections in step 3 and the build plan in step 4 are for Shopify only. WooCommerce stores are not covered.
   - what: Catalogue size
     how: Under about 15 products, skip filters and use collections and a short menu. Filters pay off from about 30.
   - what: Proof you hold

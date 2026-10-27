@@ -7,7 +7,7 @@ thinking_why: It has to judge how past decisions were made and turn them into sh
 headline: Stop repeating the same decision mistake with a one-page checklist
 subhead: Name a kind of decision you make again and again. It logs your past mistakes and other people's by cause, turns the repeats into twelve questions or fewer, runs a live decision through them, and after the result it edits the list and writes practice cases.
 explain: |
-  Pilots do not trust memory before take-off. They use a checklist, because the errors that crash planes come when a skilled person is sure, busy or excited. Charlie Munger said the same tool belongs in any field where you decide under pressure, and that it works best when you also run problems forward and backward.
+  Skilled people still repeat the same mistakes, most often when they are sure, busy or excited. A written checklist catches what memory misses. The idea is inspired by Charlie Munger's Poor Charlie's Almanack.
 
   This workflow builds that tool from your own record. It sorts your past cases by how they were decided, not only by how they ended, and names the causes that repeat. It turns them into a short list with pass lines. You then run it on a live decision, and later you bring back the result. It judges the call by its process, edits the list and writes practice cases so the habit stays sharp.
 when:
@@ -29,7 +29,7 @@ you_get:
   - A live decision answered item by item, with a call and a record
   - An edited list, a version log and practice cases
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give the first two steps your honest past cases, including the ones you would rather forget. Then print the checklist.
   - Use the list on your next real decision. When the result is known, bring the saved record back for the last step.

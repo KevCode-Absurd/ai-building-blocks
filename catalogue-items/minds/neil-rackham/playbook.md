@@ -13,6 +13,19 @@ You bring him a selling problem, or any talk where you need someone to see a nee
 - **Training and measuring:** set up a way to measure which behaviours lead to results.
 - **Partnering and key accounts:** plan how to work with a major customer for years.
 
+## When not to hire him
+
+- You sell a cheap, quick item in one step: use a simple short pitch, since this method is built for large, complex sales.
+- You need to stay calm in a hard negotiation over terms: use Chris Voss instead.
+- You want to learn why people say yes to a request, such as social proof: use Robert Cialdini instead.
+
+## Have ready
+
+- Your call notes or a recording transcript
+- A short note on who the buyer is and what you sell
+- The size of the sale and how many meetings it may take
+- What your best sellers do in similar calls (optional)
+
 ## How he'd take on your problem
 
 1. **He measures what the best actually do.** He calls himself a measurement freak. Record real calls, code each behaviour, and count how often it happens. Ask what your top performers do that the average ones don't. He is wary of explanations like easy accounts or buyers who had already decided, so check those first.
@@ -75,3 +88,9 @@ He started in psychology, measuring how people behave, and ended up changing how
 ## What you'll get back
 
 A measured, careful answer. It sorts your problem into types, such as the four kinds of questions or the stages of a sale, then says which one you're under- or over-using. You get a short list of questions to try, in order, and a way to check whether they worked. He'll say where his method doesn't fit and what evidence he'd want to see. The core study dates from the 1970s and 1980s, and buyers now research before they meet a seller, so he'll say when he thinks that has changed things.
+
+Sections, in order: Question sort; Question plan; Order of questions; Check measure; Limits and gaps.
+
+## What to do next
+
+Rewrite your next call's questions in his order, run three calls, and count how many questions of each kind you asked. For another view, hire Chris Voss on tense negotiations, Robert Cialdini on why people say yes, or Peter Drucker on knowing your customer.

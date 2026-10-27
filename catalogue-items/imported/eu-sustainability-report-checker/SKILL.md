@@ -99,13 +99,13 @@ Ensure companies disclose consistent, comparable, and reliable sustainability in
 
 ### In-Scope Entities
 
-Post-Omnibus scope (Directive (EU) 2026/470 — supersedes the original wave structure):
+Post-Omnibus scope (Directive (EU) 2026/470 — supersedes the original wave structure; this and every dated legal reference in this file is unverified and must be confirmed against the Official Journal):
 
 | Category | Criteria | Status |
 |----------|----------|--------|
 | **In mandatory scope** | Large undertakings with **>1,000 employees AND net turnover >€450M** | Wave-one NFRD-era reporters continue; others report per the amended timeline as transposed |
 | **Below the threshold (≤1,000 employees or ≤€450M)** | Formerly wave 2/3 companies and listed SMEs | **Out of mandatory scope** — the VSME-based voluntary standard — now Delegated Regulation (EU) 2026/1560, in force September 24, 2026 — is the reporting vehicle if stakeholders request data, and caps what in-scope reporters may demand of ≤1,000-employee value-chain partners |
-| **Non-EU companies** | Thresholds under review in the Omnibus package | Confirm current Art. 40a status before advising — do not rely on the pre-2026 €150M construct without checking |
+| **Non-EU companies** | Undetermined until confirmed with counsel | Thresholds are under review in the Omnibus package. Confirm current Art. 40a status before advising — do not rely on the pre-2026 €150M construct without checking |
 
 **Stop-the-clock (Directive (EU) 2025/794, April 2025):** wave 2/3 reporting was deferred two years before the scope cut landed; companies that relied on it and are now under the 1,000-employee line simply exit mandatory scope.
 
@@ -235,6 +235,8 @@ Where value chain data is unavailable, companies may use:
 ---
 
 ## Implementation Timelines
+
+> Superseded history. This table shows the older wave structure. Do not use it to give a first reporting year. Use the Omnibus note below, and label every date "unverified, to confirm with counsel".
 
 | Milestone | Date |
 |-----------|------|

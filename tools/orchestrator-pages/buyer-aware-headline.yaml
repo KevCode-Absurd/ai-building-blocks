@@ -9,7 +9,7 @@ headline: "A headline that fits what your buyers know and what they have already
 subhead: "Give it your product facts and what rivals claim. It places your buyers on an awareness scale and your market on a claim-fatigue scale, writes headlines that make only the moves that stage allows, checks each promises something worth reading for, and plans a small test between the best two."
 
 explain: |
-  A headline that works on a buyer who already wants your product fails on someone who has never thought about the problem. A bold claim that was fresh three years ago may now be the one every rival makes. Most teams write the headline they like and test it.
+  A headline that works on a buyer who already wants your product fails on someone who has never thought about the problem. A bold claim that was fresh three years ago may now be the one every rival makes.
 
   This workflow starts earlier. It reads your buyers and your market, using a summary of Eugene Schwartz's Breakthrough Advertising as its source. It names the want buyers already have, places them from ready to buy down to unaware, lists the claims in your market oldest first and sets how worn the claims are. Then it writes one headline per allowed move: name the deal, make the claim bigger, give a new reason it works, make that reason better, or speak to who the buyer is. A promise check follows, and last a keyed test plan that picks headlines which differ in kind. The source is a third-party summary, so treat its detail as second-hand.
 
@@ -21,6 +21,7 @@ not_for:
   - "Your market has no rival claims to read, or buyers already know your product well: use the Ad headline writer for a simple set of headlines."
   - "You only need new opening lines for an ad, not a read of your market: use the Ad hook writer."
   - "You want to check ad claims for proof, not write headlines: use the Ad claims checker."
+  - "You want twenty or more headlines sorted by type, with a cover test: use Get headlines sorted by type and the three worth testing."
 
 you_give:
   - Your product facts, including what it does for the buyer
@@ -116,7 +117,7 @@ improve:
   - Save the stage call with its date and re-read the market every few months.
   - Keep every tested headline with its move and result, and look back at which moves win for you.
   - Add your own banned claims to the check.
-  - Run the body copy workflow next, so the copy under the headline fits the same stage.
+  - Write the copy under the headline for the same stage, so the page does not drop back to a claim buyers have heard.
 
 works_best_with:
   tools:

@@ -21,6 +21,7 @@ not_for:
   - "You are the only person on the store and have no staff: a password manager and a second step on your email and admin are enough."
   - "You need a full security test of your site code or payment setup: hire a security professional or ask your platform's support."
   - "You want rules for spotting scam emails: write a short staff note on phishing instead, as this checks sign-in setup only."
+  - "You want a quick first pass with fewer checks: use the Sign-in policy drafter."
 
 you_give:
   - "How people sign in today: password, email link, social login or passkey"
@@ -146,3 +147,4 @@ terms:
     meaning: A list of passwords already leaked from other sites. A password on it is unsafe even if it looks strong.
   - term: Credential stuffing
     meaning: Trying stolen email and password pairs from another site on yours.
+next: [sign-in-policy-drafter, staff-phishing-rules-briefer, store-security-checkup]

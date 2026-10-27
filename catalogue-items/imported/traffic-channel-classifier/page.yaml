@@ -5,7 +5,7 @@ name: Traffic channel classifier
 summary: Sort your visits and orders into the same 11 traffic channels, whatever tool they came from. Use it as a traffic channel classifier.
 job: track-numbers
 headline: Traffic channel classifier
-subhead: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from. Bring visit or order rows with source, medium, referrer and click ID fields. Use the result to plan your next step.
+subhead: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from. Then build a channel report or compare your GA4 and Shopify totals.
 explain: |
   Every visit and order gets one of the same 11 channel labels, whether it came from GA4, a tracking pixel, Shopify or an ad network. Your reports stop disagreeing about what counts as paid social or email.
 
@@ -31,11 +31,11 @@ you_get:
   - Test cases to check the setup
 how_to_use:
   - Download the skill folder, or paste the skill text into a chat with your AI.
-  - Check you have what you need. The script needs Node. The BigQuery function needs your own BigQuery data and may cost money.
-  - Paste or upload your rows. Say which system they came from, such as GA4 or Shopify.
+  - Check you have what you need. Minimum: an AI that can run Node, or no code at all if you only need a few rows labelled by hand. The BigQuery function needs your own BigQuery project and may cost money.
+  - Paste or upload your rows as a CSV, one row per visit or order. Use columns such as source, medium, referrer, click ID (gclid, fbclid and so on), landing page URL and any native channel. Say which system they came from, such as GA4 or Shopify.
   - Ask your AI to follow the skill and label each row. Ask it to keep the rule and raw signals next to each label.
   - Check any rows labelled Other. Add native labels or landing page URLs if you have them, then run again.
-  - Run the test cases after any change to make sure the labels still match.
+  - Run the test cases after any change to make sure the labels still match. Then use the labelled rows for a channel report. For spend or return on ad spend, use your ad platform's reports.
 output_sample:
   input:
     - Visit or order rows with source, medium, referrer and click ID fields

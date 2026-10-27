@@ -4,12 +4,12 @@ headline: Post-money SAFE ownership checker
 summary: Check how much of the company a SAFE holder owns after the SAFE converts, and after a later priced round. Built for cap-only post-money SAFEs.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "A SAFE is not stock until it converts, so the cap, the share count and the later round must each come from the signed documents."
 subhead: Give it your cap-only post-money SAFE, the amount received, the cap and the later round's dilution. It works out the ownership the SAFE gives, then what is left after the later round. You get a plain bridge, an editable workbook and a list of open questions.
 explain: |-
   A cap-binding ownership bridge and unresolved conversion conditions.
 
-  Venture financing. Illustrative figures only. 100/1000=10%; retaining80% leaves8%. Investment200 produces20% and16%.
+  Venture financing. Illustrative figures only. An amount of 100 at a post-money cap of 1,000 gives 100 / 1,000 = 10%. If a later round dilutes by 20%, the holder keeps 80% of that: 10% x 0.8 = 8%. An amount of 200 at the same cap gives 20%, and 16% after the same round.
 when:
   - You hold or issued a cap-only post-money SAFE and want to know the ownership it converts to.
   - A priced round is coming and you want to see how it dilutes the SAFE holder.
@@ -19,6 +19,7 @@ not_for:
   - "Your SAFE has only a discount, an MFN term, or more than one class of SAFE: ask a startup lawyer or use a cap table tool, since this skill does not solve those."
   - "You need a legal reading of what the SAFE says or advice on whether to sign: ask a lawyer."
   - "You want to guess later dilution from a headline valuation: get the dilution figure from the round documents first, because this skill only uses a figure you give it."
+  - "You need to size an option pool top-up before new money: use the Option pool top-up checker instead."
 you_give:
   - Your signed cap-only post-money SAFE
   - The amount the company received under the SAFE
@@ -79,10 +80,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Conversion date"
+    how: "Take the conversion date from the signed SAFE and the later round documents. Use one currency and scale on every line."
+  - what: "The later round's dilution"
+    how: "Change the the later round's dilution and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Investment and cap use identical currency and scale.
 judge:
@@ -95,8 +96,10 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one SAFE ownership you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define post-money cap into SKILL.md, so every run uses your wording."
+before: []
+next: [option-pool-top-up-checker, weighted-average-antidilution-checker]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

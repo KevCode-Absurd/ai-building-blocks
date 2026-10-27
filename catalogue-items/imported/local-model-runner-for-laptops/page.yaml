@@ -9,7 +9,7 @@ subhead: An AI model running on a Mac, a plain CPU or a non-Nvidia graphics card
 explain: |
   An AI model running on a Mac, a plain CPU or a non-Nvidia graphics card, with no CUDA needed. Name the model and your computer and get the commands that start it.
 
-  It uses llama.cpp, which runs compact GGUF models from 1.5 to 8 bits. It builds for Apple Metal, AMD ROCm or plain CPU, then downloads or converts the model. You can chat in the terminal or start a server that speaks the OpenAI style, so existing apps can connect. On a CPU it can run four to ten times faster than standard PyTorch. It explains the quantization formats so you pick one that fits your memory.
+  It uses llama.cpp, which runs compact GGUF models from 1.5 to 8 bits. It builds for Apple Metal, AMD ROCm or plain CPU, then downloads or converts the model. You can chat in the terminal or start a server that speaks the OpenAI style, so existing apps can connect. The author says it can run several times faster than standard PyTorch on a CPU, but gives no test conditions, so your speed will differ. It explains the quantization formats so you pick one that fits your memory.
 when:
   - You have an M-series Mac and want a local model.
   - Your graphics card is AMD or Intel.
@@ -32,7 +32,7 @@ you_get:
   - A quantization choice that fits
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste this skill into the chat.
-  - Tell it the model name, your computer and its memory, your operating system, and whether you want chat or a server.
+  - Gather first the model name, your computer and its memory (RAM, or video memory if you have a graphics card), your operating system, and about how much free disk space you have. Then tell your AI these, and whether you want chat or a server.
   - Read the commands it gives you and check the model size fits your memory.
   - Run the commands one at a time in your terminal. Your AI cannot run them for you in a normal chat.
   - Send the test request to check the server works, then point your app at it.

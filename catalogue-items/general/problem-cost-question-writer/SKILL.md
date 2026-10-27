@@ -67,9 +67,9 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Lost deal evidence and pitch revision review](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
-- **Lead the team** with the [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
+- The [Sales channel experiment planner](https://useaiblocks.com/skills/traction-sales).
+- The [Sales call question planner](https://useaiblocks.com/skills/sales-call-question-planner).
+- The [Sales argument planner](https://useaiblocks.com/skills/buyer-matched-argument-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

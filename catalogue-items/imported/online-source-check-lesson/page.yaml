@@ -9,7 +9,7 @@ subhead: Describe your learners. Get a lesson that teaches them to check website
 explain: |
   A lesson that teaches students to judge a website or post by leaving it and checking what others say, the way professional fact checkers do. Reading the page harder does not work. Looking across other sources does.
 
-  You describe your learners and the kind of source, such as a news site, a social post or a health page. The skill builds a protocol around lateral reading: stop and ask who is behind it, investigate the source in a new tab, find better coverage, and trace claims back to the original. It adds practice examples, prompts for students to explain their reasoning, and a way to see who is improving. It draws on published research on how students evaluate online information.
+  You describe your learners and the kind of source, such as a news site, a social post or a health page. The skill builds a protocol around lateral reading: stop and ask who is behind it, investigate the source in a new tab, find better coverage, and trace claims back to the original. It adds practice examples, prompts for students to explain their reasoning, and a checklist students use on their own. It draws on published research on how students evaluate online information.
 when:
   - Your students trust the first search result they see.
   - You teach media literacy and need a hands-on activity.
@@ -31,11 +31,12 @@ you_get:
   - A way to check understanding
 how_to_use:
   - "Gather three things: the age or year group of your learners, the type of source, and why they are checking it."
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
   - Type your three details. Add the topic and any mistakes you have seen, if you like (optional).
   - "Read what comes back: the steps, a script for you to model, red and green flags, and a student checklist."
-  - Check the example source in the script. If it names a real group, check the facts before you teach them.
+  - Check the example source in the script. The sample in the skill uses a made-up website, trade body and study. Do not teach them as facts. Replace them with a source you have checked yourself.
   - Print the checklist. Model the steps on one source, then let learners try it on their own.
+  - Next, teach learners to check AI answers with the AI claim fact-check lesson builder.
 output_sample:
   input:
     - The age or year group of your learners
@@ -54,3 +55,4 @@ output_sample:
       contains: A short list learners tick off as they check a source on their own.
     - name: Known Limitations
       contains: Where the method falls short, so you know when to add something else.
+next: [ai-fact-check-lesson]

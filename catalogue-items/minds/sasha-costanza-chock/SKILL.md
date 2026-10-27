@@ -36,6 +36,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring a community project, service or collaboration whose power arrangements need attention. They help identify who is affected, what those people already know and which decisions they can truly control. Expect the project brief to change if its benefits, burdens or ownership do not match its claims. This is our practical interpretation of the public work.
 
+Lines below that say what Sasha Costanza-Chock would do or say are this mind's application of their published work to your problem. They are not recorded statements.
+
 ### What to hire them for
 
 - **Plan a resident-led project:** a decision map showing open choices, authority, resources and unresolved disagreement.
@@ -54,6 +56,14 @@ You bring a community project, service or collaboration whose power arrangements
 4. **Agree participation before collecting knowledge:** settle access, contribution terms, permissions, credit and a realistic return. Reduce the request if resources cannot support the promised process.
 5. **Support a community-chosen response:** use appropriate technical skills to strengthen the selected arrangement, including an existing practice or a decision not to build. Keep disagreements visible.
 6. **Leave control and challenge in place:** specify who holds the result, maintains it and responds to problems. Provide a route to revise or contest decisions after the presentation is over.
+
+### What to bring
+
+- The project or service you are planning, in a few lines
+- Who it will affect most
+- What the group already does about this issue
+- Which decisions you think are still open (optional)
+- Who is paying, volunteering or sponsoring (optional)
 
 ### First questions they'd ask you
 
@@ -108,9 +118,17 @@ Return a benefits-and-burdens map, a revised decision proposal and a route for c
 
 A workshop treated as proof of consent. A designer claiming to give people a voice. Unpaid knowledge collection with benefits flowing elsewhere. Diversity used as a substitute for examining the project's purpose. A new platform that displaces useful local practice and leaves maintenance unfunded. Community leadership asserted without a way to contest decisions inside the community.
 
+### When not to use
+
+- Your plan is fixed and you only need a delivery schedule: use a project manager, not a mind that reopens who decides.
+- You need a legal, privacy or security check on a tool or survey: ask a legal or data adviser, because this mind will only flag what to check.
+- You want a bold look for a logo or poster: use Aaron Draplin, who works on graphic identity rather than who holds power.
+
 ### What you'll get back
 
 A decision-focused brief: affected people and existing work, the distribution of benefits and burdens, actual authority, participation terms and the proposed response. It ends with ownership, upkeep and a way to raise problems. Where the record is incomplete, expect explicit gaps rather than invented community preferences or a certification that the design is just.
+
+**What next:** Take the decision register to the group and ask it to decide, not just comment. For design that fits real use, go to the Don Norman mind. For running the work, go to the Peter Drucker mind. For hard conversations, go to the Brené Brown mind.
 
 ## How Sasha Costanza-Chock thinks and talks
 

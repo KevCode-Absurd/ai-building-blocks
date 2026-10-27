@@ -17,7 +17,7 @@ license_source: "https://github.com/morsechimwai/lemmaly/blob/main/LICENSE"
 
 Every loop has time complexity and space complexity. A loop that calls a paid API has a third: **dollars per execution**. The model tracks the first two automatically. It does not track the third, so it ships code where a single bug — a retry without bound, a stream reconnect storm, an agent that re-queues itself, a webhook that fires the same job twice — silently spends real money.
 
-The canonical incident: developer writes a Fal.ai image-generation loop. Loop "obviously terminates" because it iterates over a fixed list. The list comes from a callback that fires on every Inngest retry. Each retry doubles the list. By morning, the bill is **$200**. Tests pass. Code review passed. The bug is not in the loop body. The bug is that **no one stated the wallet invariant**.
+An illustrative example (not a verified real incident): a developer writes a Fal.ai image-generation loop. Loop "obviously terminates" because it iterates over a fixed list. The list comes from a callback that fires on every Inngest retry. Each retry doubles the list. By morning, the bill is **$200**. Tests pass. Code review passed. The bug is not in the loop body. The bug is that **no one stated the wallet invariant**.
 
 runaway-guard fixes this. State the max calls. State the max dollars per run. State the max dollars per day. Set the same caps in the provider dashboard so a code bug cannot bypass them. Then write the code.
 
@@ -120,6 +120,8 @@ Before producing code that calls a paid API, your message must contain — in th
 If any of 1–7 is missing, do not emit code.
 
 ## Worked trap — the Inngest + Fal $200 night
+
+This is an illustrative example, not a verified real incident. The provider names, prices, dashboard paths and retry defaults in it are not dated. Check each one on the provider's own site before you rely on it.
 
 This is the canonical case. Observe how each rule would have caught it.
 

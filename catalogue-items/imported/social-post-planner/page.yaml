@@ -35,7 +35,8 @@ how_to_use:
   - Share your story, your offers and a few topics. Say how often you can post (optional).
   - Ask for a content calendar first. Check that the mix of topics fits you.
   - Ask for drafts for each platform. Edit them so they sound like you before you post.
-  - For listening, check each site's terms first. Some tools need a paid plan or a key, so check before you start.
+  - "For listening, the Reddit, Hacker News and Bluesky recipes fetch live pages. That may break each site's rules, so use the official API or skip it. Some tools also need a paid plan or a key, so check before you start."
+  - "You end with a 4-week calendar (posts per platform per week), then a draft for each post."
 output_sample:
   input:
     - Your platforms, such as LinkedIn, X, Instagram, TikTok or Facebook

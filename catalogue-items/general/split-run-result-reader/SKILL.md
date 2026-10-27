@@ -9,18 +9,24 @@ A test result is a few numbers, and numbers are easy to over-read. This skill tu
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+2. **Your offer** with the [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner). Bring plan. It uses your brand brain and your offer.
+3. This one.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results, plan. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, plan, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A spreadsheet:** Holds the counts and gives the audience and reply sums.
@@ -39,7 +45,7 @@ How to start:
 
 1. **Set out the table.** One row per version: key, audience, replies, reply rate (replies divided by audience), sales, spend. Mark any blank as `MISSING:`.
 2. **State the gap as a percentage.** Take the leader's replies minus the other's, divided by the other's. Example: A has 130 replies and B has 100; the gap is 30 divided by 100, so A is 30 percent better. Say which version leads and by how much, in one line.
-3. **Check the gap against luck.** With equal audiences, add the two reply counts and take the square root. If the gap in replies is more than twice that number, it is probably real. Example: 130 and 100; 230, square root about 15; the gap of 30 is about 2 times that, so it is borderline. 150 and 100: 250, root about 16; the gap of 50 is over 3 times, so it is likely real. If audiences are unequal, compare reply rates and say the check is rough. Under about fifty replies in total, say the test is too small to call.
+3. **Check the gap against luck.** This is a rough rule of thumb, not a full statistics test. With equal audiences, add the two reply counts and take the square root. If the gap in replies is more than twice that number, it is probably real. Example: 130 and 100; 230, square root about 15, twice that is about 30; the gap of 30 is right at the line, so it is borderline. 150 and 100: 250, root about 16; the gap of 50 is over 3 times, so it is likely real. If audiences are unequal, compare reply rates and say the check is rough. Under about fifty replies in total, say the test is too small to call.
 4. **Check the test stayed fair.** Compare the plan with what happened: did both go at the same time, to matched halves, with one difference, the same offer and the keys intact? Note anything that broke. A broken test may only support a rerun.
 5. **Follow replies to sales.** Where sales are known, work out sales per hundred replies and cost per sale for each version. In general, the version with more replies also has more sales, but not always. If the reply item was free and the lead version also has far fewer sales per reply, say the extra replies were probably people after the free item.
 6. **Work out cost.** Cost per reply is spend divided by replies. If two versions cost the same to run, the cheaper cost per reply wins. If one version costs more to produce or send, include it.
@@ -59,11 +65,8 @@ The table. The gap as a percentage and the luck check, with sums shown. A line o
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the audit report and lessons.
-- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the lessons.
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Write the ad copy** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the audit report and lessons.
+- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -32,7 +32,7 @@ you_get:
   - "Next step: check the flagged weeks before you draw conclusions, then cite the data source, filters and snapshot in your report."
 how_to_use:
   - Use an AI that can run Python 3.11 or newer and reach the web, such as Claude with code running. No login is needed.
-  - Give it the skill and tell it your virus, region and time window.
+  - Give it the skill and tell it your virus, region and time window. Say where to save the results, such as a folder or a file name.
   - Ask it to check reporting delay first with the reporting_lag script, so you know which recent weeks to trust.
   - Ask it to run lineage_prevalence for the top lineages, then resolve_lineage to check what each name means now.
   - Ask for mutation_profile if you want mutation frequencies for a lineage.
@@ -59,3 +59,10 @@ output_sample:
       contains: How often each site changes in a lineage, with coverage, and a side-by-side view of two lineages if you ask.
     - name: Provenance notes
       contains: The filters, data version and queries used, so you can repeat the run.
+terms:
+  - term: lineage
+    meaning: A named branch of a virus family tree, such as a variant name.
+  - term: sequence share
+    meaning: The part of submitted virus sequences that belong to one lineage. It is not the part of people infected.
+  - term: reporting lag
+    meaning: The days between a sample being taken and its sequence appearing in public data. Recent weeks look thin until it catches up.

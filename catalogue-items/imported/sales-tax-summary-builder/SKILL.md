@@ -24,7 +24,7 @@ Aggregates tax amounts collected across all orders in a period, broken down by t
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | days_back | integer | no | 90 | Lookback window (use 30/90 to match filing periods) |
 | group_by | string | no | jurisdiction | Breakdown: `jurisdiction` or `rate` |
-| exclude_refunded | bool | no | true | Exclude tax from fully refunded orders |
+| exclude_refunded | bool | no | true | Remove the tax of fully refunded orders from the totals. Partly refunded orders are not removed: they are flagged and listed on their own |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
@@ -37,9 +37,12 @@ Aggregates tax amounts collected across all orders in a period, broken down by t
    **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `taxLines { title, rate, priceSet }`, `refunds { refundLineItems }`, pagination cursor
    **Expected output:** All paid orders with tax lines; paginate until `hasNextPage: false`
 
-2. If `exclude_refunded`: subtract tax amounts from fully refunded orders
+2. Check each order's refunds:
+   - Fully refunded (refunded total equals the order total): if `exclude_refunded` is true, leave its tax out of the totals.
+   - Partly refunded: keep its tax in the totals, flag the order, and list it in a separate "Partly refunded orders" block with its order name, tax and amount refunded, so the user or their accountant can adjust by hand.
+   - Not refunded: no change.
 
-3. Group by `group_by` (jurisdiction title or rate); sum `taxLine.priceSet.shopMoney.amount`
+3. Group by `group_by` (jurisdiction title or rate): one row per distinct `taxLine.title` (or per distinct `taxLine.rate`). For each row, sum `taxLine.priceSet.shopMoney.amount` over the orders kept in step 2, and also count the orders. Show a grand total at the bottom.
 
 ## GraphQL Operations
 
@@ -150,7 +153,7 @@ CSV file `tax_liability_<YYYY-MM-DD>.csv` with columns:
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | No tax lines on orders | Tax not configured or tax-exempt orders | Report $0 for those orders |
-| Orders with partial refunds | Tax credit complex to calculate | Flag in output; exclude from totals if `exclude_refunded: true` |
+| Orders with partial refunds | Tax credit complex to calculate | Keep their tax in the totals; flag them and list them in the "Partly refunded orders" block |
 
 ## Best Practices
 - This report reflects tax *collected* from customers — it is not a substitute for Shopify Tax or a professional nexus analysis.

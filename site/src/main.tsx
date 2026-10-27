@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import "./hub.css";
 import App from "./App";
 import { Persistence } from "./AccountPersistence";
 import PublicOpening from "./PublicOpening";

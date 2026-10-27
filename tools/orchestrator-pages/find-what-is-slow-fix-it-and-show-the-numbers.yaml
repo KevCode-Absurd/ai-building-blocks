@@ -29,7 +29,7 @@ you_get:
   - The biggest bottleneck fixed in code, measured before and after
   - A pull request that shows the timings
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
   - Describe what is slow and how long it takes. Add any logs you have.
   - Run the timings the first step plans. Tell it the numbers for the top stage.
@@ -99,3 +99,5 @@ improve:
   - Keep the timing script in the project so the next change can be measured the same way.
   - If the top stage is a design problem, not a code problem, plan that change as its own job.
   - Not worth running when the slowness is a known, one-off cost, such as a first load.
+next: []
+before: []

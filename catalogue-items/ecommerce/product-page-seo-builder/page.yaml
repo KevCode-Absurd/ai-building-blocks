@@ -138,7 +138,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Title, listing and handle fields, a redirect on rename, and the notify-me and shop-similar buttons through apps or theme edits."}
+    - {name: "Shopify", why: "Title, listing and handle fields, a redirect on rename, and the notify-me and shop-similar buttons through apps or theme edits. You need a paid Shopify plan."}
     - {name: "Google Search Console", why: "Free. Shows whether a product page gets impressions before you decide to rank or noindex it."}
     - {name: "Any good chat AI", why: "Drafts the copy from your facts and checks the character counts."}
   inputs:

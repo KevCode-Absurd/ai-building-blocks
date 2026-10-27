@@ -29,7 +29,7 @@ you_get:
   - A margin and terms check with a clear yes, no or counter
   - A mutual action plan to signature to share with the buyer
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 4 skill files in the order they run: Call follow-up drafter, Sales proposal writer, Deal desk reviewer and Mutual action plan builder."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the transcript or notes and your price and discount rules. It drafts the follow-up and the proposal.
   - Read the deal desk review. If it says counter, change the proposal before sending.

@@ -1,0 +1,135 @@
+new_slug: tax-set-aside-planner
+name: Tax set-aside planner
+summary: Give the tax share your accountant quotes. Get a rule for each payment, a place to keep it and dates to check.
+job: manage-tax
+thinking: low
+thinking_why: It follows a fixed method and does simple sums from numbers you give it.
+headline: Tax set-aside planner
+subhead: "Tell it the share of income to put aside for tax, from your accountant or tax office, and how you get paid. It builds a simple routine: how much to move from each payment, where to keep it, how to track it and what to do before each tax payment, including quarterly ones if you pay them."
+explain: |
+  Self-employed people often get a tax bill larger than the cash they have. The money came in during the year and was spent. The bill arrives later, sometimes in quarterly payments, and there is nothing set aside to pay it.
+
+  This skill builds the habit that stops that. You give it the share your accountant or tax office suggests you keep aside, and how you are paid. It turns the share into one rule you can follow every time money arrives: move this much, to this place, on this day. It shows the sums on example payments, sets up a way to track what you have put aside, and lists the dates to check before each payment. It never picks a tax rate for you. If you don't have one, it tells you how to get one.
+when:
+  - You are self-employed or freelance and want tax savings set up before the bill arrives.
+  - You pay quarterly estimated taxes, or other regular instalments, and want the money ready.
+  - You had a tax bill that surprised you and want to avoid it next time.
+not_for:
+  - "You don't have a share to use: ask your accountant or tax office, or use their own estimate tool."
+  - "You want to prepare your tax return: use the Self-assessment tax return checklist."
+  - "You want to work out what tax you owe: ask an accountant."
+you_give:
+  - The share of income to put aside, from your accountant or tax office
+  - "How you are paid: how often, and about how much"
+  - The dates your tax payments are due, if you pay in instalments (optional)
+  - What you have set aside so far (optional)
+you_get:
+  - One rule to follow each time you are paid
+  - A table showing the rule on example payments you give
+  - A way to track what you have put aside
+  - A list of dates and checks before each tax payment
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the share your accountant or tax office suggests. If you don't have one, ask them first.
+  - Say how often you get paid and roughly how much, and list your tax payment dates if you have them.
+  - Set up a separate account or pot for the money you put aside.
+  - Follow the rule for one month, then ask the skill to check your numbers against what you set aside.
+output_sample:
+  input:
+    - The share to put aside, from your accountant or tax office
+    - How often you are paid, and about how much
+    - Your tax payment dates, if you pay in instalments (optional)
+  output:
+    - name: Your share
+      contains: The share you gave and who gave it.
+    - name: The rule
+      contains: One rule to follow each time you are paid.
+    - name: Examples
+      contains: The rule applied to example payments you gave, with the sums shown.
+    - name: The pot
+      contains: Where to keep the money and what it is for.
+    - name: Dates and checks
+      contains: Each tax payment date you gave, with a check to do before it.
+    - name: Tracker
+      contains: A table to record money in, set aside and paid out.
+    - name: Missing
+      contains: Anything you did not tell it, such as a missing share.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Takes your share
+    text: Uses the share you give, and never picks one for you.
+  - title: Writes the rule
+    text: Turns it into one clear rule for each time you are paid.
+  - title: Shows the sums
+    text: Applies the rule to example payments and shows the working.
+  - title: Sets up the pot
+    text: Says where to keep the money so you don't spend it.
+  - title: Sets the dates
+    text: Lists tax payment dates you gave and what to check before each.
+  - title: Adds a tracker
+    text: Gives a simple table to record money in, set aside and paid out.
+  - title: Checks itself
+    text: Re-does the sums and names any check it missed.
+output_shape: |
+  YOUR SHARE
+  <the share you gave, and who gave it>
+
+  THE RULE
+  Each time you are paid: move <share> to <place> on <day>.
+
+  EXAMPLES
+  Payment <amount> -> Set aside <amount> -> You keep <amount>
+
+  THE POT
+  <where to keep it, and what it is for>
+
+  DATES AND CHECKS
+  <payment date you gave> -> <check to do before it>
+
+  TRACKER
+  Date | Paid in | Set aside | Running total | Paid to tax office
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The share
+    how: Use the one from your accountant or tax office. If your income changes a lot, ask whether to review it midyear.
+  - what: How you are paid
+    how: Say if payments are steady or uneven. Uneven income may need a larger buffer in the pot.
+  - what: Payment dates
+    how: Give the exact dates from your tax office. The checks are tied to them.
+  - what: What you have saved
+    how: Say it, so the tracker starts from where you are.
+judge:
+  - The share in the plan is the one you gave.
+  - Each example can be checked by hand from the payment and the share.
+  - No tax rate, threshold or date appears unless you gave it.
+  - The plan names a separate place to keep the money.
+  - It says an accountant or tax office decides how much you owe.
+test:
+  - Apply the rule to a real payment you received. Check the set-aside figure by hand.
+  - Change the share and run it again. Every example should change by the same proportion.
+  - After a month, compare your tracker with your pot. The two should match.
+improve:
+  - Save your share in your about-me note once your accountant confirms it, and update it when they change it.
+  - Add the exact names your tax office uses for each payment, so the dates in the plan match your letters.
+  - Pair it with the Cash forecast builder if you also want to see the months ahead.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Turning a share into a routine and checking sums is quick work for any strong chat AI.
+    - name: Your accountant or tax office
+      why: They give the share and the payment dates. Use their figures, not the skill's.
+  inputs:
+    - Your last tax bill and the dates you paid it
+    - A list of your last twelve payments received
+    - A statement from your accountant on how much to set aside
+terms:
+  - term: Set aside
+    meaning: Money moved out of your spending account into a separate pot, kept for tax.
+  - term: Instalment
+    meaning: A part of a tax bill paid at a set date, rather than all at once.

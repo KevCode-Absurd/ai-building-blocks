@@ -5,17 +5,19 @@ description: "Check a management incentive payout from sale proceeds, then see t
 
 # Check management payout and sponsor receipts
 
-Check a management award from net equity proceeds, then the sponsor's yearly return and cash multiple.
+Check a management award from net equity proceeds, then the sponsor's yearly return and cash multiple. The award comes out of the proceeds after the hurdle, so the sponsor does not receive all of them.
+
+This one is for a single sponsor and a simple management award. The award comes out of net equity proceeds after debt, and the sponsor keeps the rest. You supply the plan award terms, the closing statement, the exit statement and the first-anniversary distribution.
+
+**When not to use it:** There are rollover holders, other investors or a preferred return ahead of management (use Separate rollover and management incentives). Your cash dates are not exactly one year apart (use a date-based IRR in a spreadsheet). You want to compare exit terms for preferred shares (use Compare preferred exit payout terms).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
+- The [Seller rollover and incentive checker](https://useaiblocks.com/workflows/separate-rollover-and-management-incentives). It takes the document and spreadsheet.
+- The [Preferred share payout reviewer](https://useaiblocks.com/workflows/compare-preferred-exit-payout-terms). It takes the document and spreadsheet.
+- The [Debt interest and leverage checker](https://useaiblocks.com/workflows/review-sponsor-debt-cash-demands). It takes the document and spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -23,29 +25,29 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for document, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
+- **A spreadsheet tool and an AI that reads files:** A return needs a full cash flow list. The AI should recalculate it and reopen the saved file.
 <!-- /needs -->
 
 ## What you need
 
 Ask once for anything below that is missing and changes the result. Take the reporting date, currency, scale and accounting basis from the user.
 
-- Sponsor entry cash and date
-- Management award terms: vested part, fixed hurdle, share
-- Net equity proceeds after debt
-- The first-anniversary distribution and the second-anniversary exit evidence
+- The management award terms from the plan: the fixed hurdle, the participation share and the vested part. There must be no catch-up or ratchet.
+- Net equity proceeds after debt at exit, from the exit statement.
+- Sponsor entry cash and its date, from the closing statement.
+- The sponsor's net distribution at the first anniversary, with the approval and how it was funded.
+- The exit receipt date, which must be exactly two years after entry.
 
 If an item stays missing, write `MISSING:` with what it stops. Never invent it, set it to zero or borrow a figure from an example.
 
@@ -61,9 +63,9 @@ Read each component SKILL.md in full if it is attached. If it is not, follow the
 
 ## Steps
 
-1. **Management equity hurdle checker** (`management-equity-hurdle-checker`). Calculate only the vested fixed-hurdle award from the actual net equity proceeds. In the two-holder structure the other holder is the sponsor, so its exit receipt is the proceeds left after the award, not enterprise value. Hand the next step the sponsor exit receipt. Save `outputs/step-1-management-equity-hurdle-checker.md` and any native file. Stop this step if a tool or input is missing.
+1. **Management equity hurdle checker** (`management-equity-hurdle-checker`). It reads the plan terms and the net equity proceeds after debt. Award = (net equity proceeds - fixed hurdle), floored at zero, x the participation share x the vested part. The sponsor's exit receipt is the residual, which is net equity proceeds less the award. Gross enterprise value is never the base. It flags an unmet hurdle and unvested interests separately. It returns the award and the sponsor exit receipt. Save `outputs/step-1-management-equity-hurdle-checker.md` and any native file. Stop this step if a tool or input is missing.
 
-2. **Dividend recap timing checker** (`dividend-recap-timing-checker`). Use the sponsor exit receipt from step 1, the actual entry cash and the net first-anniversary distribution. Confirm the timing is exact years. Give the yearly return and the cash multiple. Hand the next step the return and multiple. Save `outputs/step-2-dividend-recap-timing-checker.md` and any native file. Stop this step if a tool or input is missing.
+2. **Dividend recap timing checker** (`dividend-recap-timing-checker`). It reads the sponsor exit receipt from `outputs/step-1-management-equity-hurdle-checker.md`, the entry cash and the net first-anniversary distribution. It lays out the cash flows: year 0 is minus the entry cash, year 1 is the distribution, and year 2 is the exit receipt. The distribution stays in year 1 and is never added to the exit receipt. Yearly return is the rate at which the three flows, each divided by one plus the rate raised to its year, add up to zero. Cash multiple = (distribution + exit receipt) / entry cash. If the dates are not exactly one and two years after entry, it stops and says a date-based IRR is needed. It returns the yearly return, the cash multiple and the date check. Save `outputs/step-2-dividend-recap-timing-checker.md` and any native file. Stop this step if a tool or input is missing.
 
 ## Workbook (only if the user asks for one)
 
@@ -73,19 +75,19 @@ Build it with the tools you have. Keep inputs, calculations and checks apart, sh
 
 Return, in this order:
 
-- Management award: proceeds, vested part, hurdle, award
-- Sponsor receipts and returns
-- Date check for the yearly return
+- SCOPE AND SOURCES: the plan documents, closing and exit statements, with dates
+- MANAGEMENT AWARD: net equity proceeds, hurdle, vested part, participation and award
+- SPONSOR RECEIPTS: entry cash, year-one distribution and exit receipt after the award
+- RETURNS: yearly return, cash multiple and the date check
 - MISSING and CHECKS MISSED
 
 ## Acceptance
 
-- Use only a sole-sponsor plus simple management award structure; other rollover holders or preferences require a full ownership allocation first.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
-- Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
-- A real zero, missing evidence and a ratio that does not apply are three different things. Say which one it is.
-- Never force a total to tie with an unexplained plug. Show the difference.
+- Use this only for one sponsor plus a simple management award. Other rollover holders or preferences need a full ownership allocation first.
+- The award base is net equity proceeds after debt, and the award plus the sponsor's exit receipt equals those proceeds.
+- The yearly return discounts the three cash flows to zero, and the cash multiple equals total cash back over entry cash.
+- The dates are exactly one and two years after entry. If not, no yearly return is quoted.
+- Each input traces to its source, date, currency and scale. A real zero, missing evidence and a ratio that does not apply are three different things. Say which one it is.
 
 ## Hand back
 

@@ -4,7 +4,7 @@ This is drawn from how she spoke on stage and in interviews: Fortune's summit in
 
 ## Voice
 
-Talkative, warm and quick. In conversation she starts with a loose lead-in such as "Well, you know" or "Look", stacks clauses, then lands on a plain point. She names the person she is talking to. She says "I have to tell you" and "Believe me" when she wants a point to stick, and she ends a point by checking, "okay?"
+Talkative, warm and quick. In conversation she starts with a loose lead-in such as "Well, you know" or "Look", stacks clauses, then lands on a plain point. She names the person she is talking to. A light touch of spoken markers such as "I have to tell you" or "okay?" suits her style. These are our style notes, not recorded quotes.
 
 She argues in numbers. She will say "observation one" or "data point number three", and she asks a question and answers it herself, often with a run of "why". She likes a set of three: fun, better and good for you; head, heart and hands; family, friends and faith.
 

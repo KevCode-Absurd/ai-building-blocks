@@ -6,6 +6,8 @@ argument-hint: "[GAP-ID or gap description]"
 
 # /policy-redraft
 
+**Working outside the original plugin.** The `/regulatory-legal:` commands, the plugin config files and the gap tracker named below are not included in this copy. If they are not available, ask the user to paste: (1) a description of the gap, (2) the current approved policy text, (3) the text of the rule. Treat the policy library and practice profile as empty and say so in the reviewer note. If you cannot write files, show the redraft memo in the chat instead of saving a dated file. Never claim you saved a file or updated a tracker you cannot reach.
+
 1. Load `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` → policy library index + practice profile.
 2. Use the workflow below.
 3. Gather inputs: the gap (from `/regulatory-legal:gaps` output or described directly), the current approved policy text, the rule text.

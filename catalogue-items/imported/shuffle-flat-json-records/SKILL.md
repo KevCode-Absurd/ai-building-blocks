@@ -114,6 +114,8 @@ data.
 Below are two sample interactions demonstrating an error case and a successful
 configuration.
 
+These examples show a command-style start. In Claude, ChatGPT or Gemini, paste the array and your rules into the chat instead.
+
 ### Missing File
 
 ```text

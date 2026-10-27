@@ -101,11 +101,9 @@ Pick only what the gaps call for. Starred questions suit the call.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Fill the gaps in your brand brain** with the [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
-- **Make an offer people want** with the [Customer offer builder](https://useaiblocks.com/skills/offer-builder). It takes the brand brain.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the brand brain.
-- **Make image ads** with the [Winning image ad style finder](https://useaiblocks.com/skills/winning-image-ad-style-finder). It takes the brand brain.
-- **Make product photos** with the [Product gallery doubt review and image builder](https://useaiblocks.com/workflows/product-gallery-answers). It takes the brand brain.
+- The [Brand guide builder](https://useaiblocks.com/skills/brand-guide-builder). It takes the brand brain.
+- The [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the brand brain.
+- The [Brand health auditor](https://useaiblocks.com/skills/brand-health-auditor). It takes the brand brain.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

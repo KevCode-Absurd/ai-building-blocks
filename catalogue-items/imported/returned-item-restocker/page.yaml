@@ -34,7 +34,7 @@ how_to_use:
   - Sign in to your store with the Shopify CLI. Give it access to returns, inventory and locations.
   - Give your store address. Add the days to look back, a location or return reasons if you want to narrow it.
   - Run it in preview mode first. Check the CSV and make sure each item can be sold again.
-  - Ask your AI to run it for real. Stock changes right away and shows in Shopify's inventory history.
+  - "To go live, tell your AI to run it with dry_run set to false (for example, \"run it for real, dry_run: false\"). Stock changes right away and shows in Shopify's inventory history."
   - Check the new stock counts in Shopify against the CSV.
 output_sample:
   input:

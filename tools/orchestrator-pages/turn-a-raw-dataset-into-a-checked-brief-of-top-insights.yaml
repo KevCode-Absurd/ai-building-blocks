@@ -28,7 +28,7 @@ you_get:
   - A check of the method, the sums and any bias, with fixes to make
   - A brief of the top three to five insights, ranked, each with a next action
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 4 skill files in the order they run: Dataset profiler, Data analyst, Analysis checker and Insight brief writer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach your data file. Step 1 reports on it and stops.
   - Pause. Fix or drop the columns the profile flagged, then write your one question in plain words.

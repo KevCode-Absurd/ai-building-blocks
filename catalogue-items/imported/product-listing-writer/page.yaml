@@ -37,6 +37,7 @@ how_to_use:
   - Add competitor links, or your current listing if you want it improved (optional).
   - Read the result. Check every number and claim against your real product. Fix any line marked [confirm].
   - Copy the title, bullets, description and tags into your listing.
+  - After a few weeks of sales data, run the skill again in Optimize mode with your live listing.
 output_sample:
   input:
     - Your product name, key features and specs

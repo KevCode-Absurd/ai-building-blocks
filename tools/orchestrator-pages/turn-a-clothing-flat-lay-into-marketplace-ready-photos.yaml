@@ -31,7 +31,7 @@ you_get:
   - A fault report on the set, with lines to add to a retry
   - A pass or reject check per marketplace rule, with a fix
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 5 skill files in the order they run: Product photo retoucher, Ghost mannequin photo maker, Fabric close-up maker, AI product photo inspector and Marketplace photo rule checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach your flat-lay photo. Say which marketplace you list on.
   - At each pause, save the picture you like and attach it for the next step.
@@ -52,7 +52,7 @@ output_sample:
     - name: Fabric close-ups
       contains: Close-ups of the weave and stitching, each with the area it shows.
     - name: Fault report
-      contains: A risk rating per picture, eight checks, a use, retry or retouch call, and fix lines.
+      contains: A risk rating per picture, eight named fault checks, a use, retry or retouch call, and fix lines.
     - name: Marketplace check
       contains: A pass or reject for each marketplace rule, with a fix for every reject.
     - name: HAND-BACK SUMMARY
@@ -93,7 +93,7 @@ output_shape: |-
   PAUSE: you gather the set
 
   STEP 4: FAULT REPORT
-    Risk rating per picture | eight checks | use, retry or retouch | fix lines
+    Risk rating per picture | eight checks (garment shape, face, hands, body shape, garbled text, light and shadow, cut-out edges, rule risks) | use, retry or retouch | fix lines
 
   PAUSE: you fix flagged pictures
 

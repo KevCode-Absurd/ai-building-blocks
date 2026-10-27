@@ -27,8 +27,8 @@ you_get:
   - Missing facts and next action
 how_to_use:
   - Open Claude, ChatGPT or Gemini and add the full skill pack. Use an AI that can read and save files.
-  - Share your product description, launch plan and any new results. Add your saved state file if you have one.
-  - Tell it your cash and time limits, and the date window to look at.
+  - Share your product description, who you think the buyer is, and your launch plan. Add any new results with dates (signups, activations, paid customers). Add your saved state file if you have one.
+  - Tell it your cash and time limits, and the dates to look at.
   - Ask it to follow the steps and mark any missing facts instead of guessing.
   - Read the decision log. Approve any send, spend or account change yourself before it happens.
 output_sample:
@@ -41,7 +41,7 @@ output_sample:
     - An AI that can read your files and save files to a folder you choose
   output:
     - name: agent-state.json
-      contains: Product revision, buyer evidence, selected test, cash and time caps, cohort window, results seen and decision date.
+      contains: Product revision, buyer evidence, selected test, cash and time caps, the dates looked at, results seen and decision date.
     - name: decision-log.md
       contains: The dated decision, the evidence behind it, the gaps that remain and one next action.
     - name: Dated state
@@ -54,7 +54,7 @@ how_it_works:
   - title: Compare saved state
     text: Check which sources, dates or results changed since the last run.
   - title: Choose the needed work
-    text: If the buyer or problem is unclear, use the position adviser first. If positioning is supported but there are no launch results, prepare a first-customer plan. If a self-serve funnel has mature observed results, assess activation and expansion. If results are missing, immature or unchanged, return pending or unchanged instead of claiming growth. Keep assumptions separate from observed customer outcomes.
+    text: If the buyer or problem is unclear, work on positioning first. If positioning holds but there are no launch results, prepare a first-customer plan. If a self-serve funnel has mature results, assess activation and expansion. Results are mature when at least one full trial or buying cycle has passed since launch and you have signups, activations and paid customers for the same dates. If results are missing, too early or unchanged, return pending or unchanged instead of claiming growth. Keep assumptions separate from real customer outcomes. The branches run in order (positioning, then first customers, then growth). Only one runs each time.
   - title: Save the decision
     text: Record evidence, remaining gaps and one next action. Keep external action status explicit.
 output_shape: |-
@@ -78,4 +78,5 @@ test:
 improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
+  - Run it again when the next batch of results is in. It starts from your saved state.
 terms: []

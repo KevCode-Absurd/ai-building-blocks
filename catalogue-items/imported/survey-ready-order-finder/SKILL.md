@@ -25,7 +25,7 @@ Builds the recipient list for a post-purchase survey campaign by selecting order
 | survey_min_days | integer | no | 7 | Earliest days after fulfillment to survey (give time for delivery + initial use) |
 | survey_max_days | integer | no | 14 | Latest days after fulfillment to survey (recall fades after ~2 weeks) |
 | marketing_consent_only | bool | no | true | Restrict to customers with `marketingState: SUBSCRIBED` |
-| exclude_repeat_recipients_days | integer | no | 90 | Skip customers who were already on a survey list within this window (caller-tracked) |
+| exclude_repeat_recipients_days | integer | no | 90 | Skip customers who were already on a survey list within this window (caller-tracked: this skill does not apply it, so remove earlier recipients from the CSV yourself) |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
@@ -37,6 +37,7 @@ Builds the recipient list for a post-purchase survey campaign by selecting order
 1. Compute window: `latest_fulfilled_at = NOW - survey_min_days`, `earliest_fulfilled_at = NOW - survey_max_days`
 
 2. **OPERATION:** `orders` — query
+   **Note:** `updated_at` is only a rough pre-filter. An order is updated when it is fulfilled, so none in the window are missed. Step 3 does the exact check on the fulfilment date.
    **Inputs:** `query: "fulfillment_status:fulfilled financial_status:paid -status:cancelled updated_at:>=<earliest_fulfilled_at>"`, `first: 250`, select `displayFulfillmentStatus`, `displayFinancialStatus`, `cancelledAt`, `fulfillments { createdAt, displayStatus, deliveredAt }`, `refunds { id, createdAt }`, `customer { id, defaultEmailAddress { emailAddress, marketingState }, displayName, locale }`, pagination cursor
    **Expected output:** All candidate orders; paginate until `hasNextPage: false`
 
@@ -165,8 +166,8 @@ CSV file `post_purchase_survey_<YYYY-MM-DD>.csv` with columns:
 | Customer with no email | Phone-only profile | Skip — survey campaigns assume email channel |
 
 ## Best Practices
-- Send the survey 7–14 days after fulfillment: 7 days is enough for delivery + first use, 14 days is the sweet spot before recall decays.
-- For high-cost or considered-purchase categories (furniture, electronics), extend `survey_max_days` to 30 — customers form opinions later.
-- Pair with `customer-cohort-analysis` to compare survey-respondent retention vs. non-respondents — engaged respondents are typically your stickiest cohort.
+- Rules of thumb, not sourced findings: send the survey 7–14 days after fulfillment. 7 days is usually enough for delivery and first use, and memory of the purchase tends to fade after about two weeks.
+- For high-cost or considered-purchase categories (furniture, electronics), consider extending `survey_max_days` to 30, since people may need longer to form an opinion.
+- Compare survey respondents with non-respondents in your own data before you draw any conclusion about them.
 - Never include customers with refunded or cancelled orders — surveying them invites complaints, not feedback you can act on.
 - Run this skill on a daily schedule and feed the CSV directly into your email automation; manual cadence ruins the time-window targeting.

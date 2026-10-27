@@ -31,11 +31,12 @@ you_get:
   - Conversion scripts you can rerun
 how_to_use:
   - Check you have MATLAB and RoadRunner. Both are paid and must be installed and licensed before you start.
-  - Use an AI that can run MATLAB code and write files. A plain chat window cannot finish this job.
+  - Use an AI that can run MATLAB code and write files, through the MATLAB MCP tool. A plain chat window or any other code runner cannot finish this job. This copy leaves out eight supporting files from the original roadrunner-rrhd-authoring skill. Your AI should stop and ask you for them before it does the steps that need them.
   - Paste this skill into your AI and give it your .osm file, your project folder and where to save the result.
   - Let your AI run every step. It must not stop after lanes and boundaries.
   - Check that the results list shows all checks passed before the file is saved.
   - Open the new .rrhd file in RoadRunner and look over lanes, junctions and signs.
+  - Next, compare the junction, sign and speed-limit counts in the new .rrhd with the source .osm. Rerun the saved .m scripts after any edit.
 output_sample:
   input:
     - Your Lanelet2 map file (.osm)

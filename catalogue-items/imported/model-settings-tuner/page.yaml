@@ -32,10 +32,14 @@ you_get:
   - A ranking of which settings mattered
 how_to_use:
   - Open Claude, ChatGPT or Gemini, and paste in this skill. Pick a tool that can run code.
+  - Optuna, Ray Tune and TensorBoard are free options. Weights & Biases is optional too, but it is a paid service that needs an account. You can run the search without any of them.
   - Add your model and training code. Name the score to improve, such as F1 or error.
   - Say how much you can spend, as a number of trials or hours. Name any settings to keep fixed (optional).
   - Ask for the search plan first. Check the ranges and the method before it runs trials.
   - When the search ends, read the best settings and the importance ranking. Retest the final model on data it has not seen.
+  - Next, keep a log of the run with the best settings and the score. Retrain the final model with them and check it with the statistical model checker.
+next:
+  - statistical-model-checker
 output_sample:
   input:
     - Your model and training code

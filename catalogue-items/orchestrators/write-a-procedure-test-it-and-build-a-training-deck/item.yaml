@@ -8,15 +8,15 @@ job: ops
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: brief, required: false}
 outputs:
+  - {type: document}
   - {type: slide_deck}
 uses: [process-and-sop-writer, sop-and-runbook-checker, technical-doc-proofreader, presentation-builder]
 steps:
   - {uses: process-and-sop-writer, note: "Starts from how you describe the work. Makes the written procedure the later steps check and teach from."}
   - {uses: sop-and-runbook-checker, note: "Reads the procedure and lists what a new person would trip on."}
   - {uses: technical-doc-proofreader, note: "Reads the updated procedure and returns a list of slips, so the final version uses one name for each thing."}
-  - {uses: presentation-builder, note: "Turns the finished procedure into slides a new starter can be taught from."}
+  - {uses: presentation-builder, note: "Turns the updated procedure, with the proofread term choices applied, into slides a new starter can be taught from."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-procedure-test-it-and-build-a-training-deck/skeleton.yaml

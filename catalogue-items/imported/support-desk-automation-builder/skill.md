@@ -33,7 +33,7 @@ Ask the user about their support infrastructure:
 Create the skill directory structure in their repository:
 
 ```bash
-mkdir -p support-automation/{scripts,references/common-responses}
+mkdir -p support-automation/{scripts,lib,references/common-responses}
 touch support-automation/config.ts
 touch support-automation/README.md
 ```
@@ -42,6 +42,7 @@ Create `.claude/skills/support/skill.md` if they want it as a Claude skill (reco
 
 **Files to create:**
 - `config.ts` - Environment variable loading and shared configuration
+- `lib/` - Helper files for your help desk, billing tool and database (inside `support-automation/`)
 - `README.md` - Human-readable documentation
 - `skill.md` - Claude skill definition (if using as skill)
 - `scripts/` - All automation scripts
@@ -88,6 +89,8 @@ Based on their stack, plan the scripts they'll need.
 
 **Always create:**
 - `check-setup.ts` - Validates all required environment variables exist
+
+**Approval gate (required):** `reply-to-ticket.ts`, `close-ticket.ts`, `issue-refund.ts` and `cancel-subscription.ts` change a ticket or a payment. Each one must exit with an error unless the caller passes `--approved`, and the AI may only pass `--approved` after the user has read the exact message or amount and said yes in chat. Without the flag, the script prints what it would do and stops.
 
 ## Step 4: Write the Configuration File
 
@@ -145,7 +148,7 @@ For each planned script:
 ```typescript
 #!/usr/bin/env tsx
 import '../config';
-import { getTicket } from '../../lib/support-platform';
+import { getTicket } from '../lib/support-platform';
 
 async function main() {
   const ticketId = process.argv[2];
@@ -428,6 +431,7 @@ Present to the user:
 - Use access token authentication
 - Conversations API
 - Note the difference between admins and bots
+- Conversations can have multiple participants
 - Pagination with cursor-based approach
 
 ### Stripe
@@ -435,12 +439,6 @@ Present to the user:
 - Search API for finding customers
 - Idempotency keys for refunds
 - Expand parameters for nested objects
-
-### Intercom
-- Token-based authentication
-- Conversations can have multiple participants
-- Admin vs bot replies
-- Pagination with cursor
 
 ### Front
 - OAuth or API token

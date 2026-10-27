@@ -36,6 +36,7 @@ how_to_use:
   - Add a profile name or a price limit if you want to narrow the check (optional).
   - Read the list of zones with no rate first. Fix those in Shopify before anything else.
   - Open the CSV to review zones with only manual rates, and decide which are on purpose.
+  - Next, fix any zero-rate zones in your Shopify shipping settings, then run the audit again to confirm the flags have cleared.
 output_sample:
   input:
     - Your Shopify store address

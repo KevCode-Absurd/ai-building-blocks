@@ -14,6 +14,8 @@ Audit the project's real recurring workflows before recommending skills. Prefer 
 
 Recommend updates before new skills when an existing project skill is already close to the needed behavior.
 
+**Privacy first.** Memory notes and session logs can hold private project or personal details. Before reading them, tell the user which folders you will read and let them skip any. Quote only the short task patterns you need as evidence, never secrets, keys or personal data. If you are not in a Codex-style tool with a `~/.codex` folder, ask the user to paste a few past session summaries or task lists instead.
+
 ## When to Use
 - When the user asks what skills a project needs or which existing skills should be updated.
 - When recommendations should be grounded in project history, memory files, and local conventions.

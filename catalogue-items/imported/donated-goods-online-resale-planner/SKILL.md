@@ -21,12 +21,11 @@ valuable item, should we list it online," "set up our ShopGoodwill/eBay workflow
 complaints on online orders," "build a research process for identifying high-value donations."
 
 **Boundary:** this skill covers the online marketplace channel only. Identifying that a specific item
-is online-worthy happens partly during grading (`nonprofit-donation-intake-grading` — items flagged
+is online-worthy happens partly during grading (the Donated goods intake planner — items flagged
 during triage as high-value get routed here) and the floor-facing pricing/display of everything else
-stays in `nonprofit-retail-pricing-merchandising`. Register/POS operations and cash handling for
-in-store sales are `nonprofit-retail-store-operations`. If an item needs formal tax-valuation
-documentation for the donor (Form 8283, qualified appraisal), that's `nonprofit-in-kind-gift-
-acceptance` — handle that in parallel with, not instead of, the listing decision.
+stays with a retail pricing guide (not in this library yet). Register and cash handling for
+in-store sales are outside this skill. If an item needs formal tax-valuation
+documentation for the donor (Form 8283, qualified appraisal), ask a tax adviser — handle that in parallel with, not instead of, the listing decision.
 
 ## Core Framework: The Online Resale Pipeline
 
@@ -70,7 +69,7 @@ Treat online resale as a distinct operational pipeline parallel to the floor, no
    committing to list; if there's no resale comp history, the item likely belongs on the floor, not
    online.
 3. **Standardize photography**: neutral background, multiple angles, close-ups of maker's marks/flaws/
-   damage, and a consistent lighting setup — poor photos are the single biggest suppressor of online
+   damage, and a consistent lighting setup — poor photos are, in the author's judgement, a common reason for weak online
    sell-through for otherwise good inventory.
 4. **Write listings with full condition disclosure** and accurate measurements/specifications;
    under-disclosure drives returns and dispute rates that hurt the seller rating far more than a

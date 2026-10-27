@@ -72,7 +72,7 @@ Rate potential partners (1-5) on:
 - Whose content does your audience share?
 
 **Data sources:**
-- Crossbeam or Reveal for account overlap
+- Crossbeam or Reveal for account overlap (paid tools; customer surveys work for free)
 - Customer surveys ("what else do you use?")
 - G2/Capterra category neighbors
 - Job postings mentioning your tool + others
@@ -91,7 +91,9 @@ Co-marketing is one of **five partnership types**. Know the taxonomy so you rout
 | **Co-marketing** | Joint content/campaigns with a peer | Borrowed audience, brand halo |
 | **App Store / Marketplace** | List inside a platform's ecosystem | Built-in distribution, effective CAC |
 
-**Flagship proof:** HubSpot's partner program = **$100M ARR, ~40% of revenue, 3,400+ partners.** Mature programs average **~28% of revenue and 2× growth**.
+**The figures below are the original author's claims. No source is given here and they were not checked. Do not repeat them to the user as fact unless they confirm them. Treat them as examples to verify.**
+
+**Flagship proof (author's claim):** HubSpot's partner program = **$100M ARR, ~40% of revenue, 3,400+ partners.** Mature programs average **~28% of revenue and 2× growth**.
 
 Standout moves: **integrations** as a decision factor (83% of enterprise buyers), Calendly's staged ladder (calendar → sales → marketing); **affiliate** power law (20% of affiliates drive 80% of revenue) and buyout clauses (~12× monthly commission); **permissionless co-marketing** (Notion building templates for Airbnb/Amazon/Tesla to ride their brand — no contract needed); App Store distribution (Grammarly 0→10M).
 

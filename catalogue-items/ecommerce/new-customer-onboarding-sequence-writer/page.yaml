@@ -9,7 +9,7 @@ headline: "New customer onboarding sequence writer"
 subhead: Give it your product, how long results take and how customers use it. It writes about six emails and four texts for days 0 to 14, a touch map out to day 100, a review and referral timing rule, and a survey that finds the habit linked to people staying.
 
 explain: |
-  Most cancels and lost second orders happen early. Customers wait for the box, feel unsure, and then either forget the product or stack up more than they use. One source says most churn happens in the first 100 days. The common fix is to send more emails, which backfires. In the supplement example, cancels cluster just after delivery, days 7 to 14, and every extra email in that window reminds people they could cancel.
+  Most cancels and lost second orders happen early. Customers wait for the box, feel unsure, and then either forget the product or stack up more than they use. One source says most churn happens in the first 100 days. The common fix is to send more emails, which backfires. In the supplement example, cancels clustered just after delivery, days 7 to 14, and every extra email in that window reminds people they could cancel. Check this against your own cancels by day.
 
   This skill teaches first, then goes quiet at the right time. It is heavy on education in days 0 to 7, backs off in days 7 to 14, and sends a short check-in after that. It uses a survey of how people fit the product into their day, because the habit linked to staying becomes the thing every email teaches. It branches for subscribers and one-time buyers.
 

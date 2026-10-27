@@ -23,7 +23,7 @@ This skill enables an AI agent to write persuasive marketing and sales copy that
    Define the brand voice (authoritative, friendly, playful, luxurious, bold) and the specific tone for this piece (urgent, empathetic, excited, reassuring). If brand guidelines are provided, follow them precisely. If not, infer an appropriate voice from the product category and audience.
 
 4. **Draft the Copy**
-   Write the copy following the chosen framework's structure. Open with a strong hook. Build emotional engagement through the body — agitate the pain, paint the transformation, or stack the benefits. Close with a clear, specific CTA. Every sentence should earn its place; cut anything that does not move the reader toward the CTA.
+   Write the copy following the chosen framework's structure. Open with a strong hook. Build emotional engagement through the body — agitate the pain, paint the transformation, or stack the benefits. Close with a clear, specific CTA. Use only numbers, testimonials and names the user gives you. Where a real figure or quote is missing, write [placeholder: real figure or quote needed] and do not invent one. Every sentence should earn its place; cut anything that does not move the reader toward the CTA.
 
 5. **Optimize the CTA**
    Replace generic phrases like "Submit" or "Click Here" with benefit-driven language like "Start Your Free Trial." Consider the commitment level — a free trial CTA differs from a $5,000 enterprise demo request. Use urgency elements only when they are truthful.
@@ -46,6 +46,8 @@ Example prompt: "Write a landing page hero section for our project management to
 
 ## Examples
 
+The examples below show layout only. Every figure, name and quote in them is a placeholder, not a real result. Never reuse them. Health, money or legal claims need a person with that expertise to check them before you publish.
+
 ### Example 1: Landing Page Hero Section (PAS Framework)
 
 **Input:** "SaaS product: CloudSync — automated file backup for freelancers. Audience: freelancers who have lost files before. Goal: free trial signups."
@@ -55,7 +57,7 @@ Example prompt: "Write a landing page hero section for our project management to
 > **Variant A (Fear-driven):**
 >
 > **Headline:** One Crashed Hard Drive Away from Losing Everything?
-> **Subheadline:** Freelancers lose an average of 4.7 hours of work per data loss incident.
+> **Subheadline:** Freelancers lose [real figure, with its source] of work per data loss incident.
 > **Body:** You have spent months building your portfolio and client deliverables. One spilled coffee, one ransomware email, and it can all vanish. CloudSync backs up every file change automatically to encrypted cloud storage. If disaster strikes, restore everything in minutes.
 > **CTA:** Start Your Free 14-Day Backup — No Credit Card Needed
 >
@@ -80,7 +82,7 @@ Example prompt: "Write a landing page hero section for our project management to
 >
 > **Email 2 — Desire (Day 1)**
 > **Subject:** "I finally sleep through the night" — here is what changed
-> **Body:** Sarah, a marketing director, was averaging 5.2 hours of broken sleep. Two weeks with FitTrack revealed the culprit: late-evening screen time. One habit change, and her sleep score jumped 34%. That is why 92% of users feel healthier after 30 days. Code **FIT20** still active. **[Get Your FitTrack Now]**
+> **Body:** [Real customer name and role, used with their permission] was [their real situation]. [What they found and changed, in their words]. [Their real result.] [A real figure about all users, only if you have the survey or data to back it.] Code **FIT20** still active. **[Get Your FitTrack Now]**
 >
 > **Email 3 — Action (Day 2)**
 > **Subject:** Last call — your 20% code expires tonight
@@ -90,7 +92,7 @@ Example prompt: "Write a landing page hero section for our project management to
 
 - **Lead with the benefit, not the feature.** "Save 3 hours every week" beats "Automated scheduling engine." Translate every feature into the outcome it creates.
 - **Write for scanners.** Use short paragraphs, bold key phrases, and subheadings. Put the most important message in the first line.
-- **Use specific numbers.** "Join 14,327 freelancers" is more credible than "Join thousands." Specificity builds trust.
+- **Use specific numbers.** A real, exact number is more credible than "thousands". Use only numbers the user can back up. If there is no real number, leave it out or use a placeholder.
 - **Match the CTA to the commitment level.** Low-commitment offers (free trial) earn bolder CTAs than high-commitment asks (enterprise demo). Reduce friction with "No credit card required."
 - **Create honest urgency.** Real deadlines and genuine scarcity drive action. Fake urgency erodes trust.
 - **Test one variable at a time.** In A/B variants, change only the headline or only the CTA — not both — so results are actionable.

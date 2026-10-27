@@ -1,12 +1,12 @@
 ---
 name: writing-beats
-description: Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.
+description: Writing; commit to a path through your raw notes and assemble them into a journey of beats, grounding each term before a beat leans on it.
 disable-model-invocation: true
 ---
 
 <what-to-do>
 
-The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.
+The user has passed (or will pass) a markdown file of raw material. The exploring is done and the pile is fixed. Commit to a path through it and mine the pile to fill each beat.
 
 If the user did not say where to save the article, ask once and remember the path.
 

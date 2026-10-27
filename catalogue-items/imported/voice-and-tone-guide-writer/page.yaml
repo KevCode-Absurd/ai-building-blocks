@@ -30,7 +30,7 @@ you_get:
   - Words and phrases to use and avoid
   - Side-by-side before and after examples
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. Paste in the full skill text, not only this page. No code, files or paid tools are needed.
   - Tell your AI about your brand and who you write for. Paste 5 to 10 writing samples if you have them.
   - Name 3 to 5 brands whose voice you like, and any traits you already want.
   - Read the voice traits first. Check that each one has a clear 'not' limit, and change any that sound like every other brand.
@@ -57,3 +57,4 @@ output_sample:
       contains: Specific phrases and constructions your writers should avoid.
     - name: References
       contains: The brands and writers the voice draws from.
+next: [draft-brand-voice-checker, brand-guide-builder]

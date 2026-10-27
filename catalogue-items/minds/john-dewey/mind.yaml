@@ -42,9 +42,9 @@ seats:
   - seat: Learning in daily life
     asks: What connection did this activity help the learner understand?
 pairs_with:
-  - richard-feynman
-  - cal-newport
-  - adam-grant
+  - maria-montessori
+  - seymour-papert
+  - paulo-freire
 last_checked: 2026-10-23
 sources:
   - n: 1

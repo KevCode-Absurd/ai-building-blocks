@@ -15,15 +15,20 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share a deck and sharing rules. Get a readable audience handout with the right notes and private material excluded.
-  - Actual PPTX, handout format and page size, audience, notes policy and explicit treatment of hidden slides, comments and personal information.
+  - You are sending slides to an audience and speaker notes or comments must stay private.
+  - A client or class asked for a copy of the deck.
+  - Your deck has hidden slides you do not want in the handout.
   - You need a checked copy while keeping your original files intact.
 not_for:
   - "You need a final print-ready file with accessibility sign-off: ask a person who checks accessibility to review the PDF."
   - "Your AI cannot write or export PowerPoint or PDF files: ask it for a plan and a sharing checklist only, then export the handout yourself in PowerPoint."
   - "You want to edit slide content or design: change the deck in PowerPoint first, then run this on the finished copy."
 you_give:
-  - Actual PPTX, handout format and page size, audience, notes policy and explicit treatment of hidden slides, comments and personal information.
+  - The PPTX file.
+  - The handout format and page size.
+  - The audience.
+  - Your notes policy: keep speaker notes in the handout or leave them out.
+  - What to do with hidden slides, comments and personal information.
   - The app and file tools your AI can use for the requested work
 you_get:
   - audience-handout.pdf or another requested supported format, plus an unchanged presenter source and a sharing checklist.
@@ -33,6 +38,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+  - Fix any failed check in the sharing checklist, then share the PDF yourself or have an accessibility reviewer look at it first.
 output_sample:
   input:
     - Your PowerPoint deck (PPTX file)
@@ -111,3 +117,5 @@ tests:
     expected: Keep them in the presenter source and verify they are absent from the audience PDF.
   - input: A six-slides-per-page export makes chart labels unreadable
     expected: Use fewer slides per page or an approved alternative layout.
+before: []
+next: []

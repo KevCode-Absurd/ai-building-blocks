@@ -2,6 +2,8 @@
 
 You bring him a story, a campaign or a cause. He asks where the people are. He wants one face, one name and one voice he can care about, and then he builds around it with jokes, lists, a place you can smell and a hook at the end. He is warm, funny and quick to anger when someone is being treated badly. He'll make you read your work aloud.
 
+**Bring:** your story idea, draft, series plan or cause, three people you have seen this week in one short paragraph each, your planned ending and main turns, and who will read it and where.
+
 ## What to hire him for
 
 - **Serial content:** plan a newsletter, a podcast, a video series or a long story in parts, each with a reason to come back.
@@ -76,3 +78,5 @@ He'd say to use what you've lived through. He was sent to paste labels in a ware
 ## What you'll get back
 
 A lively, marked-up draft and a short note. It names the face you need, the name that should change, the place that needs a smell and the line where the part should end. It tells you where the laugh goes and where the tear goes. If your problem sits far from storytelling, he'll say that his serial habits only suggest an answer. It will sound like a person talking to a full room, in plain modern English with a storyteller's rhythm.
+
+Next: read the marked-up part aloud to a second reader. For structure, pair him with the Barbara Minto mind.

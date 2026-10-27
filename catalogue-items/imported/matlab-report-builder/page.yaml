@@ -32,12 +32,15 @@ you_get:
   - The finished report as a PDF, Word or HTML file
   - A custom layout when the standard one does not fit
 how_to_use:
-  - Check that MATLAB and the MATLAB Report Generator are installed. Simulink models also need the Simulink Report Generator.
+  - Check that MATLAB and the MATLAB Report Generator are installed. The Report Generator is a paid add-on to MATLAB. Simulink models also need the Simulink Report Generator.
   - Gather your results file, your format, your section list and any title page or branding details.
   - Paste the skill into your AI chat, or add it to your AI tool. Then paste your details and ask it to build the report.
   - Run the code it gives you in MATLAB. Your AI needs to run MATLAB itself, or you run the code and share any errors.
   - Open the saved file. Check that the titles, chapter names and captions are right.
   - If the standard layout does not fit, ask your AI to make a custom reporter for your title page or page design.
+  - Next, open the finished file and check the titles and captions. Run the code again after your data changes to refresh the report.
+next:
+  - matlab-chart-maker
 output_sample:
   input:
     - Your MATLAB results, data or figures

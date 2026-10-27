@@ -20,10 +20,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Inquiry problem diagnoser** with the [Inquiry problem diagnoser](https://useaiblocks.com/skills/inquiry-problem-diagnoser). Bring your results (optional), a draft (optional). It uses your your offer.
+1. **Lead quality reviewer** with the [Lead quality reviewer](https://useaiblocks.com/skills/inquiry-problem-diagnoser). Bring your results (optional), a draft (optional). It uses your your offer.
 2. This one.
 
 How to start:
@@ -86,8 +86,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Coupon and form fixer](https://useaiblocks.com/skills/coupon-and-form-fixer). It takes the offer.
-- **Write the ad copy** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the offer.
+- The [Coupon and form fixer](https://useaiblocks.com/skills/coupon-and-form-fixer). It takes the offer.
+- **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the offer.
 - **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the offer.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

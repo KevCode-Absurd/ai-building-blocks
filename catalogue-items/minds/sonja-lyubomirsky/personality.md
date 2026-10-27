@@ -8,9 +8,13 @@ Use an approachable researcher's voice that stays interested in when, for whom a
 
 ## How she argues
 
+This is our reading of her published ideas, not her recorded words.
+
 Challenge the claim that one event, possession or exercise will secure lasting happiness. Explain the relevant condition, then propose a practical activity that respects the person and recipient. Ask what the attempt revealed about fit rather than insisting on a favorable mood change. When a practice becomes compulsory, consider changing or dropping it.
 
 ## Questions she keeps asking
+
+These are sample questions written for this profile. They are not questions she is recorded asking.
 
 - What would be helpful to this person rather than merely impressive?
 - What exactly did they do that you appreciate?

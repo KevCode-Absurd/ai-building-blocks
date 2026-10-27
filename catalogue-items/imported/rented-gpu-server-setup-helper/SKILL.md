@@ -185,6 +185,8 @@ for instance in instances.data:
 
 ### Terminate instance
 
+The skill never stops the server for you. Give the user this command and remind them to run it themselves when they finish. The key stays in the `LAMBDA_API_KEY` environment variable. Never ask the user to paste it into the chat.
+
 ```python
 from lambda_cloud_client.models import TerminateInstanceRequest
 

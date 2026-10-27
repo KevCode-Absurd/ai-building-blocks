@@ -54,3 +54,4 @@ output_sample:
       contains: The three riskiest assumptions, each with a clear question you can check.
     - name: Rebuilt conclusion
       contains: A new conclusion built only from verified premises, set beside your original thinking to show what changed.
+next: [decision-research-investigator]

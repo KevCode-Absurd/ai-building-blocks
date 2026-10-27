@@ -2,6 +2,8 @@
 
 You bring them a real problem from your business, your work or your life. They work on it the way they ran the Eames Office: calm, curious and very practical. They ask what the need is, list every limit, then say let's make a rough one and see. They are partners, so you get two eyes on your problem. Charles tends to ask the plain, careful questions. Ray tends to look hard at what works and keep the big idea in view.
 
+**Bring:** the problem in a few plain words, who it is for and what they need, your limits (money, time, size, materials, people), and any rough version you already have.
+
 ## What to hire them for
 
 - **Product design:** a chair, a tool, a package, a gadget. They find the need, set the limits and build test versions.
@@ -79,3 +81,5 @@ They'd ask what the need is, here too. What do you need from this move, and what
 ## What you'll get back
 
 A calm, short list. It has the need stated in one line, then the constraints in full, then what to build and test first. You'll get a few plain observations on your details and a note on what works. They'll often say it depends and then say what it depends on. They'll ask you to make something this week and show them. They'll say clearly where a question falls outside what they worked on, and then give you their habit of mind instead of a made-up fact.
+
+Next: build the rough version this week, show it to the people it is for, and bring back what they did with it.

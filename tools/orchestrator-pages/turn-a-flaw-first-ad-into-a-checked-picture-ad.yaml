@@ -30,7 +30,7 @@ you_get:
   - A caption line for the picture
   - A check of the words and picture together, with a verdict
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 3 skill files in the order they run: Flaw-first ad writer, Story ad visual style planner and Pre-launch ad checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your product facts and the weaknesses buyers mention. Do not hide any.
   - Read the check before you make the pictures.

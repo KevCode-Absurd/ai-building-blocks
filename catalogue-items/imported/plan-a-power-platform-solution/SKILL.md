@@ -50,7 +50,7 @@ The Power Platform provides a vast suite of tools that can be used in any digita
   - **Prediction (Custom):** Analyzes historical Dataverse records to predict binary (yes/no) or numerical outcomes (e.g., credit risk or project delays).
 - **Dataverse:**- The primary data platform for the Power Platform ecosystem. Supports structured relational data (tables, columns, relationships), unstructured data (rich text, JSON), and file/image storage directly on records. Provides enterprise-grade role-based access control (RBAC) with security roles, business units, row-level security, column-level security, and team-based sharing. Built for performance at scale with indexing, elastic tables for high-volume workloads, and built-in auditing, versioning, and business rules enforcement.
 - **Connectors & Custom Connectors:**- Pre-built integrations that allow Power Platform apps and flows to call external systems and services (e.g., SharePoint, SQL Server, Salesforce, SAP, ServiceNow). Over 1,500 standard connectors are available out of the box. Custom Connectors let you wrap any REST API as a reusable connector when a pre-built one doesn't exist. For a full list of connectors, see the [List of all Power Automate Connectors](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-powerautomate-connectors). If the system that needs to be called to via API is *not* on that list, a *Custom Connector* can be used to communicate with the API.
-- **Power BI:**- The analytics and reporting engine of the Power Platform. Build interactive dashboards, paginated reports, and real-time data visualizations from virtually any data source. Key capabilities include:
+- **Power BI:**- The analytics and reporting engine of the Power Platform. Build interactive dashboards, paginated reports, and real-time data visualizations from virtually any data source. Key capabilities include interactive dashboards, paginated reports and real-time visuals from many data sources.
 - **Gateways:**- Secure tunnels for connecting cloud services to on-premises data sources.
 
 ### "Cheat Sheet" Decision Logic for Architecting
@@ -145,13 +145,11 @@ graph LR
     style Outlook stroke-dasharray: 5 5
 ```
 
-After producing the mermaid diagram, you will save it to the user's computer (current directory is fine) as a `.md` file. In the `.md` file, *ONLY* include the raw mermaid diagram definition... no need to wrap it in a "```mermaid" block. Otherwise it won't parse correctly if the user copies + pastes it!
+After producing the mermaid diagram, show the raw diagram definition in the chat in one code block, with nothing else inside it. If you can write files, you may also save it to the user's computer as a `.md` file containing only the raw definition. If you cannot write files, do not claim you saved anything.
 
-After saving it to the `.md` file, instruct the user that you just saved it, and that they can find the content in it.
+Instruct the user to visit `https://mermaid.ai/live/edit` and paste the diagram definition into the "Code" pane on the left to get their architecture diagram.
 
-Instruct them to visit `https://mermaid.ai/live/edit` and copy-and-paste the contents of that resulting `.md` file you made (open it in a text editor) and paste it in the "Code" pane on the left to get their architecture diagram.
-
-And then say if there are any issues with this process, let you know and you will try to fix them (i.e. modification to the `.md` file if there is a syntax issue).
+Then say that if there are any issues with this process, they should tell you and you will try to fix them (for example a syntax issue in the diagram).
 
 ## Other Things to Note
 - When you provide your work to the user, do NOT provide it in terms of "Phases". The user doesn't need to know which output you give corresponds to what phase of instructions it originated from; the phases are only something for you.

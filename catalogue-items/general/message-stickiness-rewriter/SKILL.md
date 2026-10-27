@@ -7,6 +7,8 @@ description: "Paste it above a tagline, pitch line or short message nobody remem
 
 Three rewrites of a message, built to be understood and remembered.
 
+Not for a long sales page or a full email, and not for legal, safety or compliance wording (a punchy rewrite can change the meaning; ask a lawyer or an editor). To run every memory check on a message, use "Memorable message writer".
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -48,8 +50,9 @@ MISSING: any proof you needed and did not have.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Fresh draft review](https://useaiblocks.com/skills/cold-reread-marker). It takes the draft.
-- **Design it** with the [Plain error message writer](https://useaiblocks.com/prompts/plain-error-message-writer). It takes the draft.
+- The [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer). It takes the draft.
+- The [Emotional scene editor](https://useaiblocks.com/prompts/feeling-to-action-rewriter). It takes the draft.
+- The [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

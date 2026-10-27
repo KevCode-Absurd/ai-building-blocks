@@ -21,7 +21,7 @@ best_for:
   - Recruiters who need notes sent to their hiring system.
   - "Teams that want recorded meetings in one searchable place."
 not_for:
-  - People who dislike a note-taker bot joining the call.
+  - People who dislike a note-taker bot joining the call, or calls where you cannot tell everyone that it is recording.
   - Heavy use on the free plan, which has limited transcription credits.
 pricing:
   model: freemium
@@ -39,6 +39,22 @@ blocks:
   - meeting-coaching-analyst
 alternatives: [otter, granola, notion-ai, descript]
 last_checked: 2026-10-21
+first_result:
+  - "Go to fireflies.ai and sign up. Connect your calendar so it can see your meetings."
+  - "Tell everyone on the call that a note-taker is joining. In some places you need each person's consent to record."
+  - "Try it on one low-stakes meeting first, such as an internal check-in."
+  - "After the call, open the transcript. Read the summary and check each action item against what was said."
+  - "Search the transcript for a word you remember. Send the notes to your CRM or Slack if you use them."
+  - "You end with a transcript, a summary and a list of action items for each call."
+  - "Next: review how your calls go with the Meeting coaching analyst."
+needs:
+  - "A Fireflies account. The free plan has limited transcription credits."
+  - "A calendar, and a call tool such as Zoom, Google Meet or Microsoft Teams."
+  - "Consent from everyone on the call. Recording laws differ by place."
+not_verified:
+  - "Plan prices. The pricing page showed no dollar amounts."
+  - "How the bot joins each call tool."
+  - "Recording-consent rules for your place and your guests' places. Ask a lawyer if you are unsure."
 sources:
   - https://fireflies.ai
   - https://fireflies.ai/pricing

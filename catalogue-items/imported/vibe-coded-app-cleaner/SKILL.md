@@ -44,12 +44,14 @@ Always:
 
 ## Step 1 — Reconnaissance (read before touching)
 
+These commands need a Unix-style shell (macOS, Linux or WSL). `npx` needs Node installed. If you are on Windows without a Unix shell, ask your AI to use its own file search instead.
+
 Before changing anything, map the codebase:
 
 ```bash
 # List all pages/routes
 find . -type f \( -name 'page.js' -o -name 'page.jsx' -o -name 'page.ts' -o -name 'page.tsx' \)
-find pages -type f \( -name '*.js' -o -name '*.jsx' -o -name '*.ts' -o -name '*.tsx' \) | rg -v '/_' | sort
+find pages -type f \( -name '*.js' -o -name '*.jsx' -o -name '*.ts' -o -name '*.tsx' \) | grep -v '/_' | sort
 
 # Find broken imports (TS projects)
 npx tsc --noEmit 2>&1 | head -80
@@ -58,7 +60,7 @@ npx tsc --noEmit 2>&1 | head -80
 npx ts-prune 2>/dev/null | head -40
 
 # Check for console.log / debug leftovers
-grep -r "console\.log\|debugger\|TODO\|FIXME\|HACK" --include="*.{js,ts,jsx,tsx}" -l
+grep -r "console\.log\|debugger\|TODO\|FIXME\|HACK" --include="*.js" --include="*.ts" --include="*.jsx" --include="*.tsx" -l
 ```
 
 Document what you find. Do NOT change yet.
@@ -92,10 +94,10 @@ A file/export is safe to remove **only if**:
 
 ```bash
 # Check if a file is imported anywhere
-grep -r "from.*my-file\|require.*my-file" --include="*.{js,ts,jsx,tsx}" .
+grep -r "from.*my-file\|require.*my-file" --include="*.js" --include="*.ts" --include="*.jsx" --include="*.tsx" .
 
 # Check if a component is used anywhere  
-grep -r "MyComponent" --include="*.{js,ts,jsx,tsx}" .
+grep -r "MyComponent" --include="*.js" --include="*.ts" --include="*.jsx" --include="*.tsx" .
 ```
 
 ---
@@ -149,7 +151,7 @@ export function buildPageMetadata({ title, description, path, image }) {
 
 ```bash
 # List all env vars used in code
-grep -r "process\.env\." --include="*.{js,ts,jsx,tsx}" . | grep -oP 'process\.env\.\w+' | sort -u
+grep -r "process\.env\." --include="*.js" --include="*.ts" --include="*.jsx" --include="*.tsx" . | grep -oP 'process\.env\.\w+' | sort -u
 
 # Compare against .env.example or .env.local
 cat .env.example 2>/dev/null || cat .env.local 2>/dev/null

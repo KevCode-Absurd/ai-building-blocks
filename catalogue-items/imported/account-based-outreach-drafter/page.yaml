@@ -31,9 +31,10 @@ you_get:
   - The signals each message is based on
   - A suggested contact, if you gave only a company
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can connect to your Common Room account.
+  - Pick one draft, adapt it, send it yourself and log the outreach in your CRM or Common Room.
 output_sample:
   input:
     - A company name or a contact name
@@ -43,6 +44,7 @@ output_sample:
   prerequisites:
     - A Common Room account connected to your AI
     - Web search, for when Common Room has little on the target
+    - Spark enrichment is optional. It is a separate Common Room service with its own licence, and the skill works without it
   output:
     - name: Email
       contains: A subject line and a short body of 3 to 5 sentences built on the strongest signal.

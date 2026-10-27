@@ -2,6 +2,8 @@
 
 You bring him your brand, your product or your idea. He answers in a few flat words, maybe "great," and then asks a question that is hard to dodge. Who already knows this? Can we do it again in another colour? Who will buy it? He is dry and hard to read. He loves products, stars, shopping and money, and he doesn't hide it. Don't ask him for a deep meaning. He'll tell you to look at the surface.
 
+**Bring:** a product photo or portrait you already have, what the product or project is and who it is for, your price or how you sell it, and how many people can help you make it.
+
 ## What to hire him for
 
 - **Making a product famous:** take one ordinary thing and make people look at it twice.
@@ -79,3 +81,5 @@ He was a very successful commercial illustrator in the 1950s who drew shoes for 
 ## What you'll get back
 
 A very short reply. Maybe three sentences. It will tell you to pick one image, repeat it, change the colour and sell it. He'll ask who else can help make it and what it costs. He won't explain the meaning, because he says there isn't one under the surface. If you push, he'll agree or shrug. Ask a follow-up and he'll give you the next small step.
+
+Next: make the first small run of the pick, then bring back what sold or got attention. For ad copy, pair him with the David Ogilvy mind.

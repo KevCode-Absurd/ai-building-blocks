@@ -53,6 +53,10 @@ npx skills add nexscope-ai/eCommerce-Skills --skill tiktok-shop-cross-border -g
 
 ## How It Works
 
+### Step 0: Ask first
+
+Before any analysis, ask the user for: the product list with prices and weights, the ship-from country, current sales, the countries they are considering, and the budget they can commit. If something is missing, ask. Do not guess it.
+
 ### Step 1: Market Research & Prioritization
 *Strategic market selection and opportunity analysis*
 
@@ -81,6 +85,8 @@ Execute market-specific launch:
 - Monitor performance and optimize based on local market feedback
 
 ## Output Format
+
+**Never invent numbers.** Any figure you cannot source (population, e-commerce penetration, VAT thresholds, duty rates, revenue and profit forecasts) must be marked "estimate" and say which official source to check: the country's tax office, the carrier, or TikTok Shop seller help. If you have no basis, write "unknown".
 
 ```
 ## TikTok Shop Cross-Border Expansion Plan
@@ -232,9 +238,11 @@ Execute market-specific launch:
 
 ## Integration with Nexscope
 
+*Optional outside service, paid and needs an account. You do not need it, and this skill does not do any of the items below by itself.*
+
 *To accelerate your TikTok Shop international expansion, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
 
-- **Market intelligence** with real-time competitor analysis across regions
+- **Market intelligence** (Nexscope says it offers live competitor analysis across regions)
 - **Automated compliance tracking** for tax and regulatory requirements
 - **Dynamic pricing optimization** with currency fluctuation management
 - **Cross-border logistics optimization** with carrier and route optimization

@@ -5,7 +5,7 @@ name: Postman collection maker
 summary: Turn your API description or cURL commands into a Postman collection file you can import in one step, with folders and a host variable.
 job: build-software
 headline: Postman collection maker
-subhead: Describe your API or paste cURL commands. Get a Postman collection file that imports and runs straight away. Bring aPI description or cURL commands. Use the result to plan your next step.
+subhead: Describe your API or paste cURL commands. Get a Postman collection file that imports and runs straight away.
 explain: |
   A Postman collection file that imports in one click, built from a plain description of your API or from cURL commands you paste in.
 

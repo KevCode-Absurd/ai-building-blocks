@@ -130,10 +130,10 @@ Grow by entering entirely new markets with new products.
 1. Define current market and product clearly
 2. Analyze each quadrant:
    - Identify 2-3 specific opportunities per quadrant
-   - Assess market size and growth potential
-   - Estimate required resources and investment
+   - Assess market size and growth potential (use only figures the user gave or sources you can name; write "unknown" if there are none)
+   - Estimate required resources and investment (same rule: no invented numbers)
    - Evaluate competitive dynamics
-   - Define success metrics
+   - Define success metrics (ask the user for their targets; do not make them up)
 3. Prioritize opportunities by:
    - Strategic fit with company vision
    - Revenue potential and growth rate

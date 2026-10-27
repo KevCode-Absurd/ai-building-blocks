@@ -5,9 +5,9 @@ name: Prompt injection defender
 summary: Find where hidden instructions in emails, web pages or files could take over your AI app. Get a prompt injection defense plan with fixes and tests.
 job: secure-code
 headline: Prompt injection defender
-subhead: A threat map and a fix list for your AI app, so text it reads cannot take it over. You see exactly where hidden instructions could get in and what they could reach.
+subhead: A threat map and a fix list for your AI app, to reduce how far hidden instructions in the text it reads can reach. You see where they could get in and what they could reach. Some risk always remains after the fixes.
 explain: |
-  A threat map and a fix list for your AI app, so text it reads cannot take it over. You see exactly where hidden instructions could get in and what they could reach.
+  A threat map and a fix list for your AI app, to reduce how far hidden instructions in the text it reads can reach. You see where they could get in and what they could reach. Some risk always remains after the fixes.
 
   You describe the app, its tools, data, permissions and every source of input: users, web pages, email, files, images and other agents. The skill maps trust boundaries, lists attacker paths and states what must always hold true. It then plans defences that limit damage: separate untrusted content, narrow tool rights, block data leaving, protect secrets and keep approval checks outside the model. It adds tests and notes the risk that remains. It assumes the model can be fooled.
 when:
@@ -32,6 +32,7 @@ you_get:
   - Injection tests
   - Residual risk notes
 how_to_use:
+  - You need an AI that can read your uploaded files, and either your codebase or a detailed description of your app. A non-developer can use the detailed description.
   - Download the skill folder. It holds SKILL.md, references/defense-patterns.md and scripts/audit_boundary_manifest.py.
   - Open Claude, ChatGPT or Gemini. Upload SKILL.md, or paste its text into the chat. Add the other two files if your AI can read files.
   - Describe your app in a few lines. Say what it does, where its text comes from, what tools it can use and what secrets it can reach.

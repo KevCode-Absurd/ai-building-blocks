@@ -57,8 +57,7 @@ Adapt to whatever you receive:
 3. **Ask when stuck.** If the input is ambiguous or incomplete, ask the user to fill gaps rather
    than hallucinating. The user is a collaborator, not a passive consumer.
 4. **Handle partial inputs gracefully.** Not every ARA field will be fillable from every input.
-   Populate what you can with high confidence, mark gaps explicitly with "Not available from
-   provided input", and tell the user what's missing so they can supplement later.
+   Populate what you can with high confidence, mark gaps explicitly with "Not specified", and tell the user what's missing so they can supplement later.
 
 ## Workflow
 
@@ -191,7 +190,7 @@ before structural checks run.
 
 ### Step 5: Validate
 
-Run ARA Seal Level 1 validation. Perform these checks:
+Run ARA Seal Level 1 validation. There is no validator script in this folder. You run the checks yourself by reading `references/validation-checklist.md` and testing each item against the files you wrote. Perform these checks:
 - All mandatory dirs exist: `logic/`, `logic/solution/`, `src/`, `src/configs/`, `trace/`, `evidence/`
 - All mandatory files exist and are non-empty
 - PAPER.md has YAML frontmatter with title, authors, year
@@ -238,7 +237,7 @@ Print a summary:
 4. **Every claim has proof**: Proof field references experiment IDs (E01, E02), not file paths
 5. **Cross-layer binding**: Claims ↔ Experiments ↔ Evidence ↔ Code refs must all resolve
 6. **Dead ends matter**: Include failed approaches, rejected alternatives, ablation findings
-7. **"Not specified"**: If information is genuinely unavailable, write "Not specified in paper" — never guess
+7. **"Not specified"**: If information is genuinely unavailable, write "Not specified" — never guess
 8. **No fake source labels**: Never call a derived subset `Table N` or `Figure N` unless it faithfully reproduces the original source object
 9. **No synthetic trace history**: Do not invent decisions, dead ends, or experiments that are not explicit in the provided inputs; if a trajectory is inferred, mark it as inferred or omit it
 10. **Evidence-limited wording**: Do not use stronger language than the evidence supports; separate direct observations from interpretation

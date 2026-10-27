@@ -5,7 +5,7 @@ category: general
 boards: []
 type: skill
 role: make
-job: ops
+job: research-topics
 level: intermediate
 inputs:
   - type: question

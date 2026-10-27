@@ -9,7 +9,7 @@ subhead: Give it your product facts, price, unit profit and a keyword export. It
 explain: |
   Most new Amazon products launch cold. The listing uses guessed keywords, the ads burn cash before there are reviews, the stock runs out in week three, and nobody knew the launch was happening. Each of those mistakes costs rank, and rank is hard to win back.
 
-  The steps fix them in order, each one using the last. First it picks true, searched phrases. The listing and the ads are both built from those phrases, so they agree. Then it sets the ad budget from your unit profit, so you only risk what you can lose. It pauses while you place your stock order, because the stock plan needs your maker's lead time and monthly capacity. It pauses again while you send stock in and build a wait list. Then it plans launch day around the live listing, the ads and the stock that arrived.
+  The steps fix them in order, each one using the last. First it picks true, searched phrases. The listing and the ads are both built from those phrases, so they agree. Then it sets the ad budget from your unit profit, so you only risk what you can lose. It sizes your first stock order from your maker's lead time and monthly capacity, then pauses while you place that order. It pauses again while you send stock in and build a wait list. Then it plans launch day around the live listing, the ads and the stock that arrived.
 when:
   - You have chosen a private-label product and want the listing, ads, stock and launch plan ready together before you press go.
   - Your last launch had no early sales, or ran out of stock after a few weeks.
@@ -33,7 +33,7 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your keyword export and your unit profit ready before you start. Without unit profit it will not set an ad budget.
-  - After the ads, it stops and asks you to place the stock order. Come back with your maker's lead time and capacity.
+  - After the ads, it sizes your first stock order from your maker's lead time and capacity, then stops so you can place that order.
   - After the stock is sent, it stops again. Use that wait to post videos and send samples, then carry on with launch week.
 output_sample:
   input:
@@ -66,9 +66,9 @@ how_it_works:
   - title: Build launch ads
     text: Sets a budget from unit profit, then builds an automatic, a keyword and a rival-product campaign, with negatives and a stop rule.
   - title: Plan the stock
-    text: Pauses for your maker's lead time. Sizes the first order at three to six months of sales and gives a shipment checklist.
+    text: Uses your maker's lead time and monthly capacity to size the first order at three to six months of sales, with a shipment checklist. Then it pauses so you can place that order.
   - title: Plan launch week
-    text: Pauses while stock ships. Then plans the wait list, samples, launch-day email, first-week offer with its cost, and an honest review plan.
+    text: Pauses while stock ships to Amazon. Then plans the wait list, samples, launch-day email, first-week offer with its cost, and an honest review plan.
 output_shape: |-
   STEP 1: KEYWORD SHORTLIST
     Main phrase | secondary phrases | bullet phrases | backend phrases | dropped | phrases for ads

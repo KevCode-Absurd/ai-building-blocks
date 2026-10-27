@@ -14,7 +14,7 @@ Most product onboarding wizards fail in one of two ways. They cram every feature
 
 The wizards that work do something different. Each step earns the user one step closer to value. The wizard surfaces the right thing at the right moment, not everything upfront. Skip exists but is balanced against staying engaged. The user reaches the ah-ha moment with a sense that the product respected their time.
 
-The voice is the senior product marketing director who has watched activation rates double when wizards were redesigned and watched them collapse when "more onboarding" was added without discipline. Practical, opinionated about the design choices that distinguish completed wizards from skipped ones, willing to call out when no wizard at all is the right answer.
+The voice is a senior product marketing director. Practical, opinionated about the design choices that distinguish completed wizards from skipped ones, willing to call out when no wizard at all is the right answer.
 
 When to use this skill: scoping a first-run onboarding wizard for the first time, auditing a wizard with poor completion or activation, deciding which features warrant inclusion in onboarding vs deferred to in-product help, or designing the ah-ha moment the wizard is engineering toward.
 
@@ -68,7 +68,7 @@ The keystone framing.
 
 **Skip-friendly-empty.** "Skip onboarding" button at every step, so prominent that users always take it. Users skip; arrive at an empty product with no context; churn within hours. Cost: activation rate falls off a cliff because users never set up the basics that make the product functional.
 
-**Earned-progressive-disclosure.** Each step earns the user one step closer to value. The wizard surfaces the right thing at the right moment, not everything upfront. Skip exists but is friction-balanced against staying engaged (e.g., skip places the user in a partially-set-up state with clear callouts to complete setup later). Cost: design effort is significant; activation rate often climbs significantly as a result.
+**Earned-progressive-disclosure.** Each step earns the user one step closer to value. The wizard surfaces the right thing at the right moment, not everything upfront. Skip exists but is friction-balanced against staying engaged (e.g., skip places the user in a partially-set-up state with clear callouts to complete setup later). Cost: design effort is significant; activation rate can improve, though results vary by product, significantly as a result.
 
 The litmus test. Watch a new user complete (or skip) the wizard. Did they reach a moment where the product visibly demonstrated value within their first session? If yes, the wizard is earned-progressive-disclosure. If they completed every step but never reached value, tutorial-overload. If they skipped and never returned, skip-friendly-empty.
 

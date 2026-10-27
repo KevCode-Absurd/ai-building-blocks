@@ -41,9 +41,11 @@ If the user has no Shopify access in this chat, do not guess. Give them the prev
 
 **Before removing a tag,** check whether it drives a rule. Ask the user, or look at their automated collections, for rules that use this tag. Removing it can drop products out of a collection or a customer group. Say which ones you found, or say you could not check.
 
-> ⚠️ Step 2 executes bulk tag mutations. `tagsRemove` is irreversible — if you remove the wrong tag, you must re-add it manually or run this skill again with `action: add`. Run with `dry_run: true` to see the full product list before committing. For large catalogs (1000+ products), dry_run is strongly recommended before any removal operation.
+> ⚠️ Step 2 executes bulk tag mutations. `tagsRemove` has no built-in undo, but you can put the tags back: after a new preview, run this skill with `action: add` and the tags listed in `previous_tags` in the saved CSV. Keep the CSV until you have checked the products. Run with `dry_run: true` to see the full product list before committing. For large catalogs (1000+ products), dry_run is strongly recommended before any removal operation.
 
 ## Workflow Steps
+
+Order: run step 1 and show the preview. Ask for a yes. Only then run step 2 with `dry_run: false`. A preview alone changes nothing.
 
 1. **OPERATION:** `products` — query
    **Inputs:** `first: 250`, `query` built from the target: `collection_id:<numeric id from the collection GID>` for a collection, `tag:'<filter_tag>'` for a tag, or `query_filter` as given. If more than one target is given, join them with `AND`. Paginate until all matching products are fetched.

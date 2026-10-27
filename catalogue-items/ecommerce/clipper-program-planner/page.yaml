@@ -151,7 +151,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "It writes the terms, brief and checklist from your claims list."}
-    - {name: "A clip marketplace", why: "A site where clippers sign up, post clips of your content and are paid per approved view. This plan assumes one that lets you approve before paying. Read its terms on paid posts, reposting and music first."}
+    - {name: "A clip marketplace", why: "A site where clippers sign up, post clips of your content and are paid per approved view. This plan assumes one that lets you approve before paying. Read its terms on paid posts, reposting and music first. Marketplaces usually charge fees on top of what you pay clippers, so check the fees before you set your cap."}
     - {name: "Google Drive", why: "A shared drive for the footage clippers may use, with a clear folder of what is off limits."}
   inputs:
     - "Your claims register or a list of banned claims"

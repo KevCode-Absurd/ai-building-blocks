@@ -92,6 +92,8 @@ Agent:
 
 ## What changes when VoiceMoat is connected
 
+Skip this section unless you have the VoiceMoat connector. Nothing above needs it. If you have no connector, never offer to publish or schedule posts; the person posts by hand.
+
 This is the workflow that gains the most from connecting, because VoiceMoat
 holds your two platforms separately rather than as one setting:
 

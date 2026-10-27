@@ -31,9 +31,9 @@ you_get:
 how_to_use:
   - Open the chat where you have been working. This works best after a long back and forth.
   - Paste the skill text into the chat if your AI does not have it yet.
-  - Type "step back" or "are we on track". Add your real goal in a sentence if you can.
-  - Read the reply. It is plain prose with no headings, and it ends with Continue, Pivot or Pause.
-  - Act on the last line. Answer the question it raises, switch course, or carry on. It needs no code, files or paid tools.
+  - Type "step back" or "are we on track". Add your real goal and your doubts in a sentence or two. It reads only this chat, so a short or fresh chat gives a thin answer.
+  - Read the reply. It is flowing prose with no headings. It covers the six areas listed below in that order, and ends with Continue, Pivot or Pause.
+  - Act on the last line. If it says Pause, write down the question it names and answer it before your next message. If it says Pivot, switch course. If it says Continue, carry on. It needs no code, files or paid tools.
 output_sample:
   input:
     - Your current chat, where you have been working for a while

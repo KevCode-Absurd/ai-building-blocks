@@ -30,11 +30,13 @@ you_get:
   - Formula columns
   - Table or card views with summaries
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md. If your AI accepts files, also upload the guide file in the skill folder.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Also give your AI references/detailed-guide.md from the skill folder. The steps depend on it.
+  - Start small. Ask for one filter and one view first, and check that it loads in Obsidian before you ask for the full set of views.
   - Tell your AI which notes to show, which columns you want and any calculations. Paste one sample note with its properties if you can.
   - Ask for a .base file. Copy the result into a new file in your vault and name it with the .base ending.
   - Open the file in Obsidian. Check that each view loads and that the filters match your notes.
   - If a view fails or looks wrong, paste the error or a description back into the chat and ask for a fix. Then adjust columns or formulas and run it again.
+  - Save a copy of the working .base file before you edit it further. Pair it with your note template so new notes get the same properties.
 output_sample:
   input:
     - Which notes to include, by tag, folder or property

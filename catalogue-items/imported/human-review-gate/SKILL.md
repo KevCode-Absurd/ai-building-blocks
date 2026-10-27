@@ -16,7 +16,7 @@ Machine verification answers *"do the checks pass?"* — `engineering/agent-harn
 This answers what no script can: **has a person looked at this, and are their objections
 resolved?** Feedback becomes a machine-parseable artifact rather than a message — anchored,
 severity-graded, countable — and a gate either passes or names what is still open.
-**Before starting**, establish: which artifact (`.md`/`.html`), who the named reviewer is (a
+**Before starting**, gather these four things: which artifact (`.md`/`.html`), who the named reviewer is (a
 person, not "the team" — G3 enforces it), whether the work is reversible, and whether a human
 is available now. Read `human-gate-context.md` first if it exists.
 

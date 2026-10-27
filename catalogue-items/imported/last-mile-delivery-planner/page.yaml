@@ -41,7 +41,7 @@ how_to_use:
   - "Paste them in and say whether you use your own drivers or gig drivers."
   - "Check the cost breakdown first. If a line is wrong or MISSING, fix it and ask again."
   - "Try one change for a few weeks and compare the numbers you track. Do not buy software or lockers on a guess."
-  - "Run the skill again with the new numbers."
+  - "Run the skill again with the new numbers. To fix stop order, use the Delivery route planner. To fit customer time slots, use the Delivery time slot route planner."
 how_it_works:
   - title: Learn your service
     text: Asks what you deliver, your area, drops per day, cost and failed delivery rate.

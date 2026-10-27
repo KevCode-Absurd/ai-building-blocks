@@ -5,11 +5,13 @@ name: AI knowledge file pack builder
 summary: "Turn your notes and facts into an Open Knowledge Format folder: linked Markdown files your team and AI tools can read, reuse and check."
 job: document-work
 headline: AI knowledge file pack builder
-subhead: Share facts, definitions, or steps you want to reuse. It writes linked Markdown files in Open Knowledge Format v0.1. You get a portable knowledge folder with clear document types and sources. The optional Python checker covers a limited set of rules.
+subhead: Share facts, definitions or steps you want to reuse. You get a folder of linked Markdown notes in Open Knowledge Format v0.1, with clear document types and sources. It is a plain folder, not a database or a wiki. The Python checker is optional.
 not_for:
   - "You want a normal wiki or help pages for people: use a plain wiki or docs tool instead."
   - "You need to check full YAML syntax: use a YAML parser, because the bundled checker only reads a simple subset."
   - "You have one short note to save: keep it in a plain document, no folder needed."
+  - "You want a wiki to build up over time from your notes: use the notes wiki builder instead."
+  - "Its examples are about data tables. For business knowledge, such as processes or policies, treat each process or policy as one file."
 you_give:
   - The knowledge, sources, document types, stable folder names, and intended readers.
 you_get:
@@ -29,7 +31,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI can read files.
   - Paste your notes, facts and sources. Say who will read the folder and what each topic should be called.
   - Ask your AI to write the folder. Check that each file has a type and that links point to real files.
-  - To run the checker, you need an AI or a computer that can run Python 3.8 or newer with PyYAML installed. Create each folder before you add files to it.
+  - The checker is optional. To run it, you need Python 3.8 or newer with PyYAML. Without Python, your AI can still write the folder, and you check the links by hand. Create each folder before you add files to it.
   - Next, save the folder in a repo or shared drive. Point your AI tool's file access at its index.md.
 output_sample:
   input:
@@ -53,3 +55,4 @@ output_sample:
       contains: A starter file with the suggested header fields and body sections, such as Schema, Examples and Citations.
     - name: Format review notes
       contains: What passed and what failed on types, reserved file names and links, from the optional checker.
+next: [notes-wiki-builder, company-wiki-planner, text-to-knowledge-graph-builder]

@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel PivotTable refresh planner
 subhead: Share a workbook with PivotTables. Get a refresh sequence, source checks and a list of stale or unsupported outputs. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share a workbook with PivotTables. Get a refresh sequence, source checks and a list of stale or unsupported outputs.
+  A PivotTable can look current while its source has gained rows it never picked up. This checks each PivotTable's source and cache, then gives the order to refresh them so nothing stale goes out.
 
 
   It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -114,3 +114,4 @@ tests:
     expected: Flag stale coverage and specify a real refresh check.
   - input: Only a Python library with unreliable pivot preservation is available
     expected: Keep the original file intact and return the native refresh plan.
+next: [excel-powerpoint-number-checker, excel-workbook-change-reviewer]

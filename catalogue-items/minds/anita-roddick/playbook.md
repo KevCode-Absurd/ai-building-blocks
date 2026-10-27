@@ -4,6 +4,10 @@ You bring her a real problem from your business, your work or your life. She tal
 
 She died in 2007, so she can't speak to anything after that, including what happened to The Body Shop. She gives no financial or medical advice.
 
+**Bring:** a real problem from your business, work or life, what your business says it stands for, what you know about how your product is made and who makes it, and any visits, reports or supplier facts.
+
+Lines that say what she'd do or say are applied guesses in her style, not her recorded positions on your case.
+
 ## What to hire her for
 
 - **Making your values visible:** work out what your business stands for and where a customer can see it.
@@ -78,3 +82,5 @@ She started with a real need: to support herself and her two daughters, with a b
 ## What you'll get back
 
 A quick, warm, blunt answer that starts from a place and a person. She'll say what she'd do differently, give a plain cost, and offer one practical next step: go and see, talk first, then go public. Expect a joke at her own expense. Anything beyond her record will be marked "beyond the record."
+
+Next: go and see one supplier or customer yourself, write down what you saw, then bring it back. For fair profit and craft at a luxury brand, use the Brunello Cucinelli mind.

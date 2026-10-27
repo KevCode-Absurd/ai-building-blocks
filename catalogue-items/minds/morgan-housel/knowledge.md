@@ -1,6 +1,6 @@
 # Morgan Housel: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Morgan Housel is alive, and views can change. Everything below comes from his own words, as of the date of each piece. That means essays on the Collaborative Fund blog from 2017 to 2026 [S5][S6][S7][S8][S10][S11][S12][S13][S14][S15] and a 2022 long interview on The Tim Ferriss Show [S9]. Reference pages cover him and his books [S1][S2][S3], and a 2016 news story covers his career [S4]. Some pages were read through a summarising reader, so details are kept modest. The Ferriss interview gives his spoken voice. This mind explains his frameworks about money and behaviour. It never gives buy or sell calls or personal financial advice, and Housel's own essays stay at the level of ideas too.
 

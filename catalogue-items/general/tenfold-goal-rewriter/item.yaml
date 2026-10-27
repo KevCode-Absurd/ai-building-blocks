@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
 outputs:
   - {type: plan}
+next: [work-backwards-plan-checker, strategy-trade-off-planner]
 origin: rebuilt
 version: 1.0.0
 minds: [larry-page]

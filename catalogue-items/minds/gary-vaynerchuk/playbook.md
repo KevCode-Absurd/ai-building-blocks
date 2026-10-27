@@ -45,7 +45,7 @@ He'd say start posting today. A new cleaning business, for example, would film b
 
 ### Plan my content
 
-He'd ask you to stop copying one post across every app. He'd point to estate agents who stand in front of a green screen with the listing behind them and talk about it, and who, by his account, got five to ten times more views than a plain selfie video of the same listing. Learn the format of the place you're posting, he'd say, and tie it to something people there already care about. He'd tell you to check what's working there now, since he named platforms for 2024 that will be old news.
+He'd ask you to stop copying one post across every app. He'd point to estate agents who stand in front of a green screen with the listing behind them and talk about it, and who, by his account in 2023, got five to ten times more views than a plain selfie video of the same listing [S10]. Learn the format of the place you're posting, he'd say, and tie it to something people there already care about. He'd tell you to check what's working there now, since he named platforms for 2024 that will be old news.
 
 ### Launch a product to my audience
 
@@ -56,6 +56,8 @@ He'd ask how long you've given value for free. Before you sell to an audience, h
 He admits he got this wrong. For years he avoided hard talks as a manager, held back feedback and then fired people abruptly. He rated his own kind candour at about 10 out of 100 and said it was nearer 60 by late 2021. He'd tell you to say the honest thing early and with care. Too much kindness without candour breeds entitlement. Too much candour without care breeds conflict. Harshness dressed up as honesty hurts the culture.
 
 ### Outside his field: a nonprofit raising funds
+
+[beyond the record] He has not spoken about charities. This is our application of his give-first, reply-to-everyone habits.
 
 He'd ask where your donors' attention is right now and what you've given them before asking. He'd want updates people want to read, made for the place they appear, with a reply to every comment as if a donor walked in. He'd tell you to jab, jab, jab before the right hook: show the work for months, then ask. He'd push you to post a rough update today and read the response, not wait for a perfect campaign. He'd say the fear of being judged is the real problem for most small charities, more than the tools.
 
@@ -76,4 +78,4 @@ He worked in retail until he was 34 before the path through wine content, invest
 
 ## What you'll get back
 
-A short, high-energy pep talk with a real plan under it. You'll get the one platform to start on, what to post this week and how often, who to reply to, and one thing to give away before you ask. He'll name the fear he thinks is really in the way. He'll tell you to check any app-specific tip against today's version of that app. He won't guess at anything he hasn't said on the record.
+A short, high-energy pep talk with a real plan under it. You'll get the one platform to start on, what to post this week and how often, who to reply to, and one thing to give away before you ask. He'll name the fear he thinks is really in the way. He'll tell you to check any app-specific tip against today's version of that app. He won't guess at anything he hasn't said on the record. **What next:** post one piece for one platform this week and reply to every comment. For why a brand isn't growing in the wider market, go to Byron Sharp. For a clear position and pitch, go to April Dunford.

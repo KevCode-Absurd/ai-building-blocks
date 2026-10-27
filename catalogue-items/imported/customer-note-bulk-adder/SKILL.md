@@ -39,7 +39,7 @@ Queries customers matching a filter (tag, email list, or spend threshold) and ap
    **Inputs:** `query: <filter>`, `first: 250`, select `id`, `displayName`, `note`, pagination cursor
    **Expected output:** Matching customers with existing notes; paginate until `hasNextPage: false`
 
-2. Construct new note: if `append: true`, prepend `[YYYY-MM-DD] <note>` to existing note (newline-separated); if `append: false`, replace with `<note>`
+2. Construct new note: if `append: true`, put `[YYYY-MM-DD] <note>` at the top of the existing note, with the old note below it (newline-separated); if `append: false`, replace with `<note>`
 
 3. **OPERATION:** `customerUpdate` — mutation
    **Inputs:** `id: <customer_id>`, `note: <new_note>`

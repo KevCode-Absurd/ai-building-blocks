@@ -9,6 +9,14 @@ metadata:
   updated: 2026-03-16
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `./scripts/convert.sh`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Docker Development
 
 > Smaller images. Faster builds. Secure containers. No guesswork.
@@ -347,9 +355,7 @@ cp -r claude-skills/engineering/docker-development ~/.claude/skills/
 ```
 
 ### Multi-tool install
-```bash
-./scripts/convert.sh --skill docker-development --tool codex|gemini|cursor|windsurf|openclaw
-```
+The author's `./scripts/convert.sh` is not in this catalogue copy, so skip it. In another AI tool, paste this skill text into the chat instead.
 
 ### OpenClaw
 ```bash

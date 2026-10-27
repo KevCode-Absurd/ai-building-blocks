@@ -10,6 +10,8 @@ explain: |
   Tell it what the picture is for and it hands back a ready plan: the tool to use, the prompt to paste, the exact pixel size and the file name to save it under.
 
   It first asks about the goal, the place the image will sit and the size. Then it picks between an AI image model and a design tool such as Canva or Figma. It follows a set workflow for each image type, for example 1200 by 630 for a blog hero that doubles as a share image.
+
+  Several tools it may suggest, such as Midjourney, Flux, Ideogram and Recraft, are paid or charge per image. They need an account or API key before you start. Platform image sizes change, so check each platform's own help page before you publish.
 when:
   - You need a hero image for a blog post and do not know what size to ask for.
   - You want a set of social graphics that all match one brand look.
@@ -19,6 +21,7 @@ not_for:
   - "You need paid ad images with each platform's ad specs: use the ad-creative skill from the same source, or the ad rules on the platform itself."
   - "You need a video: use a video tool or a person who edits video, because this plan covers still images only."
   - "You want a full brand look from scratch: ask a designer for a logo and style guide first, then bring it here."
+  - "You want a quick prompt for a blog header or social post: use the Marketing image prompt writer."
 you_give:
   - What the image is for
   - Where it will be shown
@@ -36,6 +39,7 @@ how_to_use:
   - Check the tool it picks. Some tools need a paid plan or API key.
   - Paste the prompt into that tool, set the size it gave you, and save the file under the name it suggests.
   - If your AI can make images itself, ask it to run the prompt for you.
+  - Before you publish, add alt text, check the file in the platform's preview, and confirm the size on the platform's help page. For paid ad images, take the file to the Ad creative variation planner.
 output_sample:
   input:
     - What the image is for, such as a blog hero or social graphic

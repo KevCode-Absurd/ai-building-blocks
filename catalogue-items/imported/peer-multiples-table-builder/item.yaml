@@ -16,6 +16,7 @@ uses: []
 origin: imported
 warnings:
   - paid:FactSet
+  - scrapes
 source:
   by: nighomni123
   repo: nighomni123/fsi-skills-india

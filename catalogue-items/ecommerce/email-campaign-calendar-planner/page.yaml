@@ -62,7 +62,7 @@ output_sample:
       contains: Any check that failed and any input you did not give, such as fixed dates or team size.
 how_it_works:
   - title: Picks the pace
-    text: By monthly revenue and team size. Under $50,000 a month, 2 to 3 campaigns a week. Above that, 3 to 4. Rarely above 5. A small team starts at 2 a week.
+    text: By monthly revenue and team size. Under $50,000 a month, 2 to 3 campaigns a week. Over $50,000, 3 to 4. Over $200,000, 4 to 5. Rarely above 5. A small team starts at 2 a week. These are agency rules of thumb, so test them against your own unsubscribes and revenue per send.
   - title: Locks the fixed dates
     text: Launches, restocks and sales go in first. Sale events stay rare so customers do not learn to wait.
   - title: Adds fitting holidays

@@ -28,12 +28,13 @@ you_get:
   - Decisions and patterns files
   - Savings dashboard
 how_to_use:
-  - Open your project in an AI that can read and edit files, such as Claude Code.
+  - Open your project in an AI that can read and edit files, such as Claude Code. Tools like this usually need a paid plan or an API key, so check before you start.
   - Paste this skill into the chat, or add it to your project.
   - Type "go ham". Your AI finds your project type and writes the context files.
   - Open .memory/inbox.md. Confirm or reject each guess.
   - Type "ham savings" to see rough savings. These are estimates, not measured costs.
   - Type "ham dashboard" to see charts. This needs Node.js 18 or newer.
+  - Keep it fresh. Type "ham audit" every two weeks, and "ham route" after you add a new folder.
 output_sample:
   input:
     - Your project folder

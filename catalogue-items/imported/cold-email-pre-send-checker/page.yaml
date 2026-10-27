@@ -19,6 +19,7 @@ not_for:
   - "You are writing a newsletter or a bulk campaign: use your email tool's own compliance checks, and have a lawyer review the setup."
   - "You are replying to someone who already wrote back: send a normal reply, as there is nothing to test."
   - "You need legal advice: ask a lawyer or read your regulator's guidance, as this only checks basics."
+  - "You only want each claim in the email tested, with no legal notes: use the Cold email claim checker."
 you_give:
   - The draft with subject and body
   - Text from the prospect's page

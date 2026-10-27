@@ -4,12 +4,12 @@ headline: Fund recycling capacity checker
 summary: Check how much of your fund's recycling cap is left and how much of a distribution you can reinvest. Give it the cap, the amount used and the distributions.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The cap comes from the agreement's own definitions, so each base and each eligible distribution must be confirmed."
 subhead: Give it your fund's recycling cap and what you have used so far. It works out what is left to reuse from new distributions. You also see the excess it leaves out.
 explain: |-
-  Remaining cap, reusable amount, excluded excess and prior cap overuse.
+  A fund agreement often lets you reinvest distributions up to a cap. This works out how much of the cap is left, how much of a new distribution fits under it and how much is left out. Any past overuse stays visible.
 
-  Private fund commitments. Illustrative figures only. Cap20 on commitment100, used12, leaves8 of15 eligible distributions reusable. Used18 leaves only2.
+  Illustrative figures only. A 20% recycling cap on a commitment of 100 is 20. With 12 already recycled, 8 is left, so 8 of 15 eligible distributions can be reused and 7 is left out. With 18 already recycled, only 2 is left.
 when:
   - A fund distribution arrives and you need to know how much can be reinvested.
   - You must show a reviewer how the recycling cap was used.
@@ -19,6 +19,7 @@ not_for:
   - "You need to know if a distribution is legally eligible by date or recall rights: ask your fund's lawyer or the fund administrator."
   - "You want to decide on a new investment: use your investment committee process, as spare cap does not approve a deal."
   - "You need to track recalled amounts or commitment changes: use the fund administrator's ledger, as this checks one cap only."
+  - "You need to split a capital call across commitments: use the Capital call allocation checker instead."
 you_give:
   - The commitment cap base from your fund agreement.
   - The recycling fraction in the agreement.
@@ -79,10 +80,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Distribution date"
+    how: "Take the distribution date from the fund agreement and the distribution records. Use one currency and scale on every line."
+  - what: "Recycled amount to date"
+    how: "Change the recycled amount to date and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Eligible distributions are confirmed separately; a cash receipt is not automatically recyclable.
 judge:
@@ -95,8 +96,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one fund recycling cap you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define recycling cap into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -111,3 +112,4 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+next: [capital-call-allocation-checker]

@@ -169,7 +169,7 @@ After references are checked:
 
 **Options:**
 - Track them down on LinkedIn
-- Use their personal email/phone
+- Use their personal email/phone only if they have agreed to be contacted that way
 - Include their new company in reference list
 - Explain "Former manager, now at [New Company]"
 

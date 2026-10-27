@@ -14,13 +14,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
+**Makes it better (optional):**
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a buyer brief, plan. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -49,11 +52,9 @@ THREE OPTIONS, each with Title (count), Description (count) and Angle. Then SOCI
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter). It takes the draft.
-- **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
-- **Read your ad results** with the [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
+- The [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner). It takes the draft.
+- The [Title and meta tag writer](https://useaiblocks.com/skills/title-and-meta-tag-writer). It takes the draft.
+- The [YouTube description and tags writer](https://useaiblocks.com/skills/youtube-description-tags).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

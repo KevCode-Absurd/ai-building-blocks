@@ -7,7 +7,7 @@ job: research-topics
 headline: Research hypothesis builder
 subhead: Testable explanations for something you observed, with rival explanations, predictions that tell them apart and a plan to test them. It keeps you from falling for the first story that fits.
 explain: |
-  Testable explanations for something you observed, with rival explanations, predictions that tell them apart and a plan to test them. It keeps you from falling for the first story that fits.
+  Testable explanations for something you observed, with rival explanations, predictions that tell them apart and a plan to test them. It keeps you from falling for the first story that fits. It is for researchers and analysts who already have data or observations, not a general business tool.
 
   Starting with your observation, it writes a clear question, then several candidate hypotheses. For each it states what would have to be true, what rival explanation could explain the same data, and what result would tell them apart. It keeps association and cause separate and never claims a hypothesis is proven or new. It includes small local Python tools that handle your files without a network. It stops at ethics, safety and privacy gates and does not rank ideas for you.
 when:
@@ -32,11 +32,11 @@ you_get:
   - Measurement and testing plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions, or upload the skill folder if your AI accepts files.
-  - Describe what you saw in plain words. Add your field, your data and any limits on what you can measure.
-  - If your data is private or unpublished, check you may share it before you paste it.
+  - Describe what you saw in plain words. Have these ready. The observation in a few plain sentences, where the data came from, your field, any privacy or approval limits on the data, and any limits on what you can measure. If your data is private or unpublished, check you may share it before you paste it.
   - Ask your AI to follow the skill. Read the rival explanations and predictions before you pick a test.
   - Check that nothing is called proven or new. Ask for a rewrite if it is.
-  - The small Python tools need an AI that can run code. Without that, the chat steps still work.
+  - The small Python tools need a Python-capable AI that can run code. Without that, the chat steps still work.
+  - Next, preregister the test plan, or take it to a statistician to check the design and sample size.
 output_sample:
   input:
     - What you observed, or your data
@@ -61,3 +61,4 @@ output_sample:
       contains: A design and analysis matched to the claim, written before you see results so it can be preregistered.
     - name: Replication and update notes
       contains: How to repeat the test and when to change your view after new evidence.
+next: [study-design-and-randomizer, sample-size-planner]

@@ -30,11 +30,12 @@ you_get:
   - A recommended action for each flag
 how_to_use:
   - Open Claude Code, Cursor, Codex or Gemini CLI. This skill needs a tool that can run commands.
-  - Sign in to your store with read access to customers, using the Shopify CLI.
+  - Install the Shopify CLI if you do not have it, then sign in to your store with read access to customers (shopify store auth).
   - Paste the skill into your AI and give it your store address.
   - Say if you want all customers or only those who accept marketing. Only marketing customers is the default.
   - Open the CSV and check the rows marked review before you act on them.
   - Import the suppression list into your email platform. Do not delete customers from Shopify. Store the CSV safely and delete it when you are done, as your privacy policy requires.
+next: [marketing-consent-auditor]
 output_sample:
   input:
     - Your Shopify store address

@@ -33,6 +33,7 @@ The result: responses that feel like a real person, not a helpful assistant.
 - Factual lookups ("what's the capital of France")
 - Code generation
 - Data analysis or structured outputs
+- Signs the person may be in danger or may harm themselves: drop this loop, answer with plain care, and point them to local emergency or crisis support
 
 ## The Process
 

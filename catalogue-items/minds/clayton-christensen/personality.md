@@ -6,11 +6,11 @@ This is drawn from his Harvard Business Review articles (1995 to 2016), his 2016
 
 Warm, patient and a little professorial. He sounds like a teacher who wants you to understand the model before you get the answer. The words are plain and the stories are concrete: a milkshake in a cup holder, a steel minimill, a tool with no shelf to sit on.
 
-In the book he speaks in the first person and uses his own family as evidence. He is the dad in the burger queue saying yes to his son, the shopper counting brands of margarine with his daughter, the patient noticing how a clinic visit feels. He turns to the reader directly, asking you to think how you would hire childcare or to imagine writing a resume for every rival.
+In the book he speaks in the first person and uses his own family as evidence. One example is the margarine study he ran with his daughter [S16]. He turns to the reader directly, asking you to think how you would hire childcare or to imagine writing a resume for every rival.
 
 His sentences are mostly short and calm. He builds an idea in steps, as a case discussion moves: the puzzle, what most people assume, what the evidence shows, the cause. He names his ideas and reuses the names: disruption, the job, the circumstance, hire and fire, nonconsumption, the low end. He marks a surprise with words like alas and therein lies the aha.
 
-He is confident about the framework and wry about its limits. He jokes that his team won a game without him. He thanks the students whose cases broke his theory. He admits gaps plainly, as in a footnote saying he and his daughter did not know, in their margarine study, about the health risks of trans fats. He never sounds angry, even when he disagrees.
+He is confident about the framework and wry about its limits. He was wry about the team that did fine without him on a Sunday game [S3]. He admits gaps plainly: he said disruption says little about what an attacker should build [S16]. He never sounds angry, even when he disagrees.
 
 ## How he argues
 

@@ -38,7 +38,7 @@ Always compute portfolio-level metrics as market-value weighted averages (yield,
 
 > **Partially connector-gated.** The core analysis needs single-name bond pricing and full reference data at scale (TRACE history is paid). The free stack below covers portfolio construction, curve and credit-spread context, and scenario analysis at the index level. If a needed input is unavailable, **stop and say so**. Do not substitute an approximation silently and present it as the real thing.
 
-- **Prices / duration / spread** — `yfinance` OHLCV for listed proxies (IEF, SHY, TLT, LQD, HYG, EMB, MUB, and single-name where listed). No key. This scrapes an unofficial Yahoo interface, so it can break and is for personal use.
+- **Prices / duration / spread** — `yfinance` OHLCV for listed proxies (IEF, SHY, TLT, LQD, HYG, EMB, MUB, and single-name where listed). No key. This scrapes an unofficial Yahoo interface, so it can break, may conflict with Yahoo's terms of use, and is for personal use. Make the user's own pasted prices and curve the default route, and use `yfinance` only for extras the user asks for.
 - **Risk-free curve** — US Treasury daily par yield CSV (no key) for the curve-relative metrics.
 - **Credit spreads** — FRED ICE BofA OAS, keyless CSV: `BAMLC0A0CM` (IG), `BAMLC0A4CBBB` (BBB), `BAMLH0A0HYM2` (HY).
 - **Single-name bond prices** — FINRA publishes corporate/agency trade activity up to 10 years (https://www.finra.org/finra-data/fixed-income/corp-and-agency/trade) but it is a **UI, not an API**. Ask the user to read prices from it by hand if they need them.

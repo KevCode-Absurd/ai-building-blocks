@@ -18,7 +18,8 @@ when:
 not_for:
   - "You need a full unit plan: plan the unit yourself or ask your AI for a unit outline first."
   - "You need an assessed exam paper: write it with your exam board's past papers, since this set is for practice only."
-  - "Learners have not seen a model yet: show a worked example first, then come back to build the practice set."
+  - "Learners have not seen a model yet: use the Worked example practice skill to show one first, then come back to build the practice set."
+  - "You want staff training in a business: this skill is built for teachers and tutors. It still works if you give your own skill and level, but check the problems fit your work."
 you_give:
   - Skill or topic to practise
   - Learner level or age
@@ -35,6 +36,7 @@ how_to_use:
   - Fill in the skill to practise, your learners' level and how many problems you want.
   - Add the errors learners often make and the worked example they have seen, if you have them.
   - Read the set. Check the order of difficulty and fix any problem that looks wrong before you print it.
+  - Next, hand out the set and use the monitoring guide while learners work. Then write a follow-up set that mixes this skill with older ones.
 output_sample:
   input:
     - The skill to practise
@@ -51,3 +53,4 @@ output_sample:
       contains: Ways to give extra support or extra challenge to different learners.
     - name: Monitoring guide
       contains: What to watch for while learners work and when to step in.
+next: [worked-example-practice]

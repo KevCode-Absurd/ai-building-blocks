@@ -17,7 +17,7 @@ Architect multi-stage interview processes that reliably assess must-have compete
 4. **Front-load deal-breakers** — assess the hardest-to-find requirements first so you fail fast on mismatches and don't waste candidate or interviewer time
 5. **Candidate experience matters** — communicate the full timeline upfront, provide prep materials before each stage, minimize ghosting windows (no silence > 48 hours between stages)
 6. **Each interviewer should have a distinct assessment area** — minimize overlap between interviewers. Overlap wastes interviewer bandwidth and frustrates candidates who repeat themselves.
-7. **Include at least one practical/work-sample assessment for technical roles** — structured work samples are the strongest predictor of job performance (r=0.54 vs. r=0.38 for unstructured interviews)
+7. **Include at least one practical/work-sample assessment for technical roles** — structured work samples are the strongest predictor of job performance (research on hiring methods reports that work samples predict performance better than unstructured interviews; cite a source before you quote a figure)
 8. **Structured > unstructured** — every stage should have a rubric, defined competencies, and advance/reject criteria before the first candidate enters the process
 9. **Debrief before deciding** — interviewers submit independent written feedback before the group debrief to prevent anchoring bias
 10. **Iterate the process** — after every 5 hires (or quarterly), review pass-through rates by stage, interviewer calibration, and candidate feedback to identify broken stages
@@ -155,7 +155,7 @@ For complete stage-by-stage breakdowns, competency matrices, and interviewer gui
 
 Each stage in `interview-plan.md` should list competencies assessed and then POINT to the relevant operator file. Never duplicate questions across files; every update should only require changing one file.
 
-When generating an interview plan for a role, produce this structure and save to `roles/[role-name]/interview-plan.md`:
+When generating an interview plan for a role, produce this structure. If you can save files, save it to `roles/[role-name]/interview-plan.md`. In a plain chat, return it in the chat as Markdown with the same sections. The operator files named below (`scorecards.md`, `screening-guide.md`, `take-home-exercise.md`, `teamtailor-setup.md`) are not in this copy, so refer to them as "to be written":
 
 ```markdown
 # Interview Plan: [Role Title]

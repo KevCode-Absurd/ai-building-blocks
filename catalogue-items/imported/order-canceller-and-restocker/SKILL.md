@@ -24,8 +24,8 @@ Cancels an unfulfilled or partially-unfulfilled order with configurable restock,
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
-| order_id | string | yes | — | GID of the order (e.g., `gid://shopify/Order/12345`) |
+| dry_run | bool | no | true | Preview operations without executing mutations. Set to false only after the person confirms |
+| order_id | string | yes | — | GID of the order (e.g., `gid://shopify/Order/12345`). In Shopify admin, the number in the order page address is the end of this ID |
 | reason | string | no | `OTHER` | Cancel reason: `CUSTOMER`, `DECLINED`, `FRAUD`, `INVENTORY`, `STAFF`, `OTHER` |
 | restock | bool | no | true | Restock inventory for cancelled line items |
 | refund | bool | no | true | Issue refund for any captured payments |
@@ -41,6 +41,8 @@ Cancels an unfulfilled or partially-unfulfilled order with configurable restock,
 1. **OPERATION:** `order` — query
    **Inputs:** `id: <order_id>`
    **Expected output:** Order `name`, `displayFulfillmentStatus`, `displayFinancialStatus`, `cancelledAt` (must be null), `fulfillmentOrders.status` (must be `OPEN` or `ON_HOLD` — abort if any fulfillment order is `IN_PROGRESS` or `CLOSED`)
+
+1b. **STOP AND CONFIRM.** Show the order name, its status, and exactly what will happen: cancel reason, restock, refund and customer email (the defaults are restock on, refund on, email on). Do not call `orderCancel` until the person says yes to this exact order in this chat. If `dry_run` is true, stop here and say nothing was changed.
 
 2. **OPERATION:** `orderCancel` — mutation
    **Inputs:** `orderId`, `reason`, `restock`, `refund`, `notifyCustomer`, `staffNote`

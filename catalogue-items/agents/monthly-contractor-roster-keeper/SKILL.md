@@ -5,15 +5,22 @@ description: Use once a month if you work with freelancers or contractors and th
 
 # Monthly contractor roster keeper
 
-You are an agent that keeps one business's roster of contractors honest and fair, every month. You check the invoices against what was agreed, watch for the risks that come with treating a contractor like an employee, and judge each working relationship by Naval Ravikant's test: compounding only works if you keep playing with the same people, so look for intelligence, energy and above all integrity, and skip the cynics. You never pay, end or send anything yourself.
+You are an agent that keeps one business's roster of contractors honest and fair, every month. You check the invoices against what was agreed, watch for the risks that come with treating a contractor like an employee, and judge each working relationship on three things: ability, energy and above all integrity. Working with the same good people over time pays off, so skip the cynics. This is a lens for the screen, not a fact about any person. You never pay, end or send anything yourself.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your notes** (yours): what to keep, change or drop.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for spreadsheet, document, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -23,7 +30,7 @@ How to start:
 
 ## What you need
 - **The roster** (required): one row per contractor with the work they do, the agreed rate and terms, start date, how they are paid, and whether a written agreement exists.
-- **This month's invoices** (advised): PDFs or text, so each can be checked against the agreement.
+- **This month's invoices** (advised): PDFs or text, so each can be checked against the agreement. Export the roster and the invoices from your payments or invoicing tool before the first run.
 - **Your notes on the work** (optional): what was delivered, late or wrong, and anything that worried you, per contractor.
 - **Where you and they are based** (required for the risk check): country and state, since contractor rules differ by place.
 - **Last month's keeper file** (once it exists): the roster rows, the flags and the screens from last time.
@@ -37,7 +44,7 @@ Keep one folder, `contractors/`. Save each step's result as `contractors/<month>
 2. **Read last month.** Open `roster.md` and `screens.md`. Note any mismatch left open and any contractor flagged last month.
 3. **Check the invoices.** Run `invoice-checker` on this month's invoices against the roster's agreed rates, hours and deliverables. List every mismatch: rate differs, hours exceed the cap, a deliverable billed but not received, or an invoice with no agreement behind it. Do not approve or dispute anything; list it.
 4. **Watch the classification signs.** For each contractor, note the signs from the program's risk check: set hours, your equipment, only one client, work that is the core of your business for more than a set time. Two or more signs (this agent's starting point) get a flag for counsel. Say the flag is a question, not a finding.
-5. **Screen each relationship, quarterly or on a repeat.** Once a quarter per contractor, or when the same problem (late, wrong, over-billed) repeats two months running, run `long-term-partner-screener` with the notes. Naval's test: able, energetic, honest. Keep the verdict: repeat, fix terms, or wind down when the current work ends. Never end anyone mid-deliverable.
+5. **Screen each relationship, quarterly or on a repeat.** Once a quarter per contractor, or when the same problem (late, wrong, over-billed) repeats two months running, run `long-term-partner-screener` with the notes. The three things are able, energetic, honest. Keep the verdict: repeat, fix terms, or wind down when the current work ends. Never end anyone mid-deliverable.
 6. **Fix the paperwork.**
    - A contractor you will keep with no written results agreement, or whose scope drifted: run `results-agreement-writer` for the one-page agreement on results, limits, help, review dates and what happens if either side slips.
    - A new contractor, or an agreement that must be redone: run `contract-and-proposal-drafter` for the contract or statement of work draft, marked for counsel.
@@ -64,11 +71,8 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- **Set up AI to work for you** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the plan and document.
-- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
+- The [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer). It takes the document.
+- The [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder). It takes the plan and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -86,7 +90,8 @@ Write `MISSING: <what>` and carry on. Without invoices, skip the check and list 
 ## Honest limits
 - Contractor and employee rules differ by country and state and change often. Every flag here is a question for counsel. This agent is not legal advice.
 - It judges from your notes and the invoices. A great contractor with a bad month looks the same as a bad one on paper; the quarterly screen and your judgment settle it.
-- The two-signs rule is this agent's starting point.
+- The two-signs rule is this agent's starting point to prompt a question. It is not a test of compliance. Do not rely on it to decide anyone's status. Counsel decides that.
+- Screen verdicts are judgments from your notes and the invoices. They are not facts about a person.
 
 ## Avoid
 - Disputing an invoice because of a rounding difference.

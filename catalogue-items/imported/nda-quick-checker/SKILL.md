@@ -7,6 +7,8 @@ argument-hint: "<NDA file or text>"
 # /triage-nda -- NDA Pre-Screening
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+>
+> Added by AI Blocks: CONNECTORS.md and legal.local.md are not included here. If you cannot find them, skip them and use the defaults below, or paste your own NDA rules. The "@$1" means the NDA you attach in Claude Code. In a chat, paste the NDA after these instructions.
 
 Triage the NDA: @$1
 

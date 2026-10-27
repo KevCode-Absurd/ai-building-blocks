@@ -13,7 +13,7 @@ use_cases:
   - "Explain a pause without disappearing: Instead of leaving without explanation, say you feel overwhelmed, need a pause and intend to return."
   - "Revisit one difficult relationship moment: When calm, recount trigger, interpretation, response and what you hoped the other would understand."
   - Work through a pursue-withdraw argument after someone feels ignored
-  - Prepare a respectful relationship conversation with trace the cycle and ask for a response
+  - Prepare a calm talk that traces the cycle and asks for a response
 not_for:
   - "Your situation involves threats, abuse or fear for your safety: contact a professional or a local support service, not an AI advisor."
   - "You want help with shame, courage or trust at work: hire Brené Brown instead."
@@ -39,9 +39,9 @@ output_sample:
       contains: What stays uncertain and what would make the exercise a poor fit, such as safety concerns.
 seats:
   - seat: Connection beneath the argument
-    asks: How would name the cycle together change the next practical action?
+    asks: How would naming the cycle together change your next step?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using connection needs are human?
+    asks: What can you say next that treats the need for connection as human?
 pairs_with:
   - brene-brown
   - adam-grant

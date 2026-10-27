@@ -213,7 +213,7 @@ def optimize_network(customers, facilities, demand, costs):
 
     return results
 
-# Example usage
+# Example usage. Every number below is a sample. Replace them with your own quotes.
 customers = ['Customer_A', 'Customer_B', 'Customer_C']
 facilities = ['DC_1', 'DC_2', 'DC_3']
 
@@ -237,7 +237,13 @@ costs = {
     'transport': {
         ('Customer_A', 'DC_1'): 5.0,
         ('Customer_A', 'DC_2'): 8.0,
-        # ... (distance-based rates)
+        ('Customer_A', 'DC_3'): 6.5,
+        ('Customer_B', 'DC_1'): 7.0,
+        ('Customer_B', 'DC_2'): 4.5,
+        ('Customer_B', 'DC_3'): 9.0,
+        ('Customer_C', 'DC_1'): 9.5,
+        ('Customer_C', 'DC_2'): 6.0,
+        ('Customer_C', 'DC_3'): 5.5
     },
     'handling': {
         'DC_1': 2.0,
@@ -274,7 +280,7 @@ print(f"Open facilities: {result['open_facilities']}")
 - IT systems (WMS, etc.)
 - Utilities (electricity, HVAC)
 
-**Typical Ranges:**
+**Typical Ranges** (generic placeholders, not sourced data. Replace them with your own quotes before you use them):
 - Small DC (50K sq ft): $500K - $1M/year
 - Medium DC (200K sq ft): $2M - $4M/year
 - Large DC (500K+ sq ft): $5M - $10M+/year
@@ -383,6 +389,14 @@ print(f"Inventory reduction: {current_inventory - new_inventory:,.0f} units")
 
 **Trade-off Analysis:**
 ```python
+from math import radians, sin, cos, asin, sqrt
+
+def haversine_distance(a, b):
+    """Great-circle distance in miles. a and b are (lat, lon) pairs in degrees."""
+    lat1, lon1, lat2, lon2 = map(radians, (a[0], a[1], b[0], b[1]))
+    h = sin((lat2 - lat1) / 2) ** 2 + cos(lat1) * cos(lat2) * sin((lon2 - lon1) / 2) ** 2
+    return 2 * 3958.8 * asin(sqrt(h))
+
 def service_level_analysis(dc_locations, customer_locations):
     """Analyze service coverage from network"""
 
@@ -576,7 +590,8 @@ class NetworkDesigner:
         cust_coords = self.customers[['lat', 'lon']].values
         fac_coords = self.facilities[['lat', 'lon']].values
 
-        # Haversine distance in miles
+        # Rough distance in miles: straight-line degrees times 69.
+        # This is only close for short distances. For real work, use haversine_distance (defined above).
         distances = cdist(cust_coords, fac_coords, metric='euclidean')
         distances *= 69  # Approx miles per degree
 

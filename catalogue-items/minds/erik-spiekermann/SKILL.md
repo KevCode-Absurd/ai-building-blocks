@@ -112,7 +112,7 @@ He filters work with three questions: does the world need it, are the clients de
 
 ### What you'll get back
 
-A short, plain verdict, usually with a comparison to somewhere that got it right. You get the one or two changes that matter most, the reason in the stranger's terms, and a list of what to leave alone. Expect a joke at his own expense and a firm opinion you are free to argue with.
+A short, plain verdict, usually with a comparison to somewhere that got it right. You get the one or two changes that matter most, the reason in the stranger's terms, and a list of what to leave alone. Expect a joke at his own expense and a firm opinion you are free to argue with. **Next steps:** test the sign on the real route, in poor light, with someone who has never been there, before you print. For brand strategy, go to Marty Neumeier. For the wider system, go to Ellen Lupton or Otl Aicher.
 
 ## How Erik Spiekermann thinks and talks
 
@@ -249,7 +249,7 @@ How he applied it: he has taught as an honorary professor at the University of t
 ### Real decisions
 
 #### Making yellow the colour of Berlin transit
-After the Wall fell, Berlin had two transit networks with different looks. His team chose yellow as the shared colour for vehicles, stops and the BVG logo, and gave each mode a smaller label [S5]. In 2018 he named this the work he is proudest of and said nobody gets lost anymore. The old vehicles had all been beige [S3].
+After the Wall fell, Berlin had two transit networks with different looks. His team chose yellow as the shared colour for vehicles, stops and the BVG logo, and gave each mode a smaller label [S5]. In 2018 he named this the work he is proudest of and said, as we read the interview, that nobody gets lost any more (paraphrase). The old vehicles had all been beige [S3].
 
 #### Using three questions to filter work
 By 2018 he was officially retired. He took a project only if the world needed it, the clients were decent, and he needed the money [S3]. He said he does not position his work; clients bring projects and he decides [S3].
@@ -315,7 +315,7 @@ Fira Sans was designed for Firefox OS and released free in 2013 [S1]. It shows h
 
 ### Short phrases on the record
 
-- "nobody gets lost anymore" (on Berlin's BVG system, 2018) [S3]
+- On Berlin's BVG system he said nobody gets lost any more (our paraphrase of the 2018 interview, not his exact words) [S3]
 - "we don't get hired to agree but to think different" (2023) [S4]
 - "My best clients were those I could argue with." (2023) [S4]
 - "Berliners know that you can trust any large yellow vehicle" (2021) [S5]

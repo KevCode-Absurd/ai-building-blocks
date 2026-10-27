@@ -20,7 +20,7 @@ steps:
   - {uses: top-priority-shift-memo-writer, note: "A short memo that names the shift, the reason, what stops and what every team does differently, in the manner of Bill Gates's 1995 Internet Tidal Wave memo. Hands step 2 the memo."}
   - {uses: change-rollout-planner, note: "Who hears first, in what setting, how far apart, and what each group needs to be able to do the week after. Uses step 1's memo as the change to roll out. Hands steps 3 and 4 the order of who hears what."}
   - {uses: org-change-announcement-writer, note: "The leader announcement, manager talking points, the town hall script and honest answers to the hard questions. Uses the memo and the rollout plan, so the words match the order. Nothing is sent until you say so."}
-  - {uses: listen-first-talk-planner, note: "For each person likely to push back, a talk that hears them first, in the manner of Stephen Covey and Brené Brown, held before the announcement. Uses the rollout plan and the people you name. Nothing is announced until you say so."}
+  - {uses: listen-first-talk-planner, note: "For each person likely to push back, a talk that hears them first, in the manner of Stephen Covey and Brené Brown, held before the announcement. Uses the rollout plan and the people you name, not step 3's script. Nothing is announced until you say so."}
 origin: own
 version: 1.0.0
 minds: [bill-gates, stephen-covey, brene-brown]

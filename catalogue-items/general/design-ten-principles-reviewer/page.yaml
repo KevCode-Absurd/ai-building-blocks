@@ -21,6 +21,7 @@ not_for:
   - "You need to choose between two finished designs: test them with real users, or ask a few people which one they understand faster."
   - "You want to judge brand strategy or positioning: use a brand strategist or a brand workshop instead."
   - "You want to plan how to remove features from a product: use the Feature cutting planner after this review."
+  - "You want a spec, API or file format checked: use the Design principles checker."
 
 you_give:
   - What the product, page or piece is, in your words

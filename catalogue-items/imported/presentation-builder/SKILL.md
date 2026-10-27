@@ -41,6 +41,8 @@ Output format: [marp / revealjs / pptx / google-slides]
 
 ## Examples
 
+The two examples below are fictional. Every company, customer, number and result in them is made up to show the format. Never present them as real. In a real deck, use only figures that come from the user's source. Where one is missing, write a bracketed placeholder such as [X%] or [Customer] and ask for it.
+
 ### Example 1: Product Launch Slide Deck (Marp Format)
 
 **Input:**
@@ -109,8 +111,8 @@ read access. -->
 
 Average: **35% cost reduction** within the first month.
 
-<!-- Speaker notes: These aren't projections — these are real numbers from
-our beta cohort. DataFlow saw results in 3 days because they had a large
+<!-- Speaker notes: [Only say "these are real numbers" if they come from your own beta data.]
+Example only: these figures are fictional. DataFlow saw results in 3 days because they had a large
 cluster of dev instances running 24/7. -->
 
 ---
@@ -230,7 +232,7 @@ Slide 6: Rollout Plan
 
 ## Edge Cases
 
-- **No source material provided.** If the user gives only a topic without supporting content, generate an outline with placeholder data and clearly mark assumptions. Prompt the user to supply key metrics and claims.
+- **No source material provided.** If the user gives only a topic without supporting content, generate an outline with bracketed placeholders only, such as [X%] or [Customer]. Never invent metrics or customer results. Clearly mark assumptions. Prompt the user to supply key metrics and claims.
 - **Highly technical content for a non-technical audience.** Simplify jargon, replace architecture diagrams with high-level metaphors, and focus on outcomes (cost savings, speed improvements) rather than implementation details.
 - **Very large source documents (10+ pages).** Prioritize ruthlessly. Identify the 3-5 most important points and move supporting detail to an appendix deck. Offer to generate both a summary deck and a detailed reference deck.
 - **Accessibility requirements.** Ensure sufficient color contrast (WCAG AA), provide alt-text descriptions for all visuals, and avoid conveying meaning through color alone. Use large fonts (24pt+ for body, 32pt+ for headlines).

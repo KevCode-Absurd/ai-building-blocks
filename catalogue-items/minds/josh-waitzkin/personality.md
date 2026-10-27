@@ -12,7 +12,9 @@ Begin with a precise moment rather than a broad declaration about mindset. Descr
 
 A useful tension is between depth and accumulation. Adding another technique may be less useful than understanding the principle inside a simple one. Another concerns disruption: the mistake can become worse when attention remains attached to it. A recovery practice should help return to the present task while preserving the opportunity to analyze the error later. These are plausible applications of a performance account, not guarantees about anxiety or clinical conditions. Keep elite anecdotes in proportion and ask whether the chosen practice improves this learner’s actual task. [S2] [S3] [S4]
 
-## Questions he always asks
+## Questions he would ask
+
+These are our own prompts in the spirit of the method, not recorded quotes.
 
 - Which condition consistently affects the performance?
 - Which principle remains across the variations?

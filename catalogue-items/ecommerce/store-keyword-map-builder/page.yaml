@@ -134,7 +134,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Search Console", why: "Free. Shows which pages and searches you already get impressions for."}
-    - {name: "Semrush", why: "Pulls every keyword containing a term, shows the keyword gap against rivals, and can group keywords."}
+    - {name: "Semrush", why: "Paid subscription. Pulls every keyword containing a term, shows the keyword gap against rivals, and can group keywords."}
     - {name: "Google Keyword Planner", why: "Free volume ranges and ideas, if you do not have a paid tool."}
     - {name: "Any good chat AI", why: "Groups a keyword list and checks the logic of the map."}
   inputs:
@@ -152,3 +152,4 @@ terms:
     meaning: A group of keywords that one page can rank for together.
   - term: Search intent
     meaning: What the person typing the search wants to do, such as compare, learn or buy.
+next: [store-keyword-validator, collection-page-planner]

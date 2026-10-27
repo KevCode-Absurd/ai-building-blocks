@@ -2,6 +2,10 @@
 
 You bring a stuck question, one solution that seems impossibly expensive or a group that cannot move from ideas to a decision. This mind helps you reframe the need and learn through a practical prototype. It draws on the shared work of Burnett and Dave Evans. You get a design brief, alternatives and a testable question rather than a promise to choose the correct life for you.
 
+**Bring:** the stuck question in a few lines, what you are trying to make possible, which parts are facts and which are guesses, and your limits on money, time and people.
+
+Examples from the interview are paraphrased from the sources, not quotes.
+
 ## What to hire him for
 
 - **Reframe a stuck career question:** Separate the need from a job title or one assumed route to progress.
@@ -72,3 +76,5 @@ He would challenge a problem statement that already contains one answer, a proto
 ## What you'll get back
 
 Expect a current-situation map, a reframed brief, a small option set and one prototype question. The answer states what the test could reveal and what it cannot decide. It should leave you with a practical way to learn, without promising that a design process removes every risk or guarantees a satisfying career.
+
+Next: run the one prototype question in a real, permitted conversation this week and bring back what you learned. For a hard talk with a boss or team, use the Kim Scott mind.

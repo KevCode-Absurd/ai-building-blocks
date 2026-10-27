@@ -186,6 +186,8 @@ See [references/chaos-engineering.md](references/chaos-engineering.md) when desi
 
 ## Quick Diagnostic
 
+Plain-English notes for advanced terms (added by AI Blocks): *Universal Scalability Law* is a model of why adding servers gives less and less extra speed. *Expand-contract* is a way to change a database in two safe steps, so old and new code both keep working. *SLI, SLO, SLA* are the measure (SLI), the target for it (SLO) and the promise to customers (SLA).
+
 Audit any production system:
 
 | Question | If No | Action |

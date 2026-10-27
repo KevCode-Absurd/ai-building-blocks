@@ -272,7 +272,7 @@ Alerts have two severity dimensions:
 
 ### Copilot Autofix
 
-GitHub Copilot Autofix generates fix suggestions for CodeQL alerts in pull requests automatically — no Copilot subscription required. Review suggestions carefully before committing.
+GitHub Copilot Autofix generates fix suggestions for CodeQL alerts in pull requests. Plan and pricing rules for Autofix can change, so check GitHub's current docs to see what your plan includes. Review suggestions carefully before committing.
 
 ### Alert Triage in PRs
 

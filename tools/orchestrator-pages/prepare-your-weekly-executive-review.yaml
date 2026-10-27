@@ -1,22 +1,25 @@
 new_slug: prepare-your-weekly-executive-review
 name: Prepare your weekly executive review
-summary: Share this week's notes and tasks. Get a commitment review, decisions due and priorities for next week.
+summary: Give it this week's notes, threads and tasks. Get one action list, a review of open commitments and next week's priorities.
 job: organise-work
 headline: Prepare your weekly executive review
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share this week's notes and tasks. Get a commitment review, decisions due and priorities for next week. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Name the week you want to review, then give it your notes, email threads and tasks from that week. It builds one action list with owners and deadlines, shows which commitments are done and which are open, and sets next week's priorities. Your AI marks gaps and returns work you can review before acting.
 explain: |-
-  Share this week's notes and tasks. Get a commitment review, decisions due and priorities for next week.
+  A week of meetings leaves actions spread across notes and threads, and nobody can say which ones are still open. This review pulls them into one list, then uses that list to set next week's priorities.
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You end the week with actions spread across meeting notes and email threads, and cannot say which are still open.
+  - You want last week's open commitments carried into next week's priorities.
+  - You want one list you can review with your team on a set day each week.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The date window to cover
+  - This week's meeting notes and email threads
+  - Your task list, or last week's action register
+  - Next week's calendar
+  - Your goals and any limits on your time
 you_get:
   - Weekly action register
   - Progress and unresolved commitments
@@ -57,6 +60,7 @@ not_for:
   - "You only need today's plan and meeting briefs: use Prepare your executive day."
   - "You want a plan for the week built around your goals: use Plan a week that puts what matters first."
   - "You need a weekly review you run on a schedule: use the Weekly review keeper."
+  - "You only need to turn one set of meeting notes into owned actions and follow-up drafts: use Turn meetings into owned actions."
 output_sample:
   input:
     - This week's meeting notes and email threads

@@ -53,6 +53,20 @@ His views come from Netflix letters, the culture memo and his own long interview
 - **Checking a hire:** run references the way he does, through people who know the candidate.
 - **Your own path:** a job you've outgrown, or a culture that doesn't fit you.
 
+### When not to hire him
+
+- You need a founder's view on product design and customer experience: use the Brian Chesky mind instead.
+- You need hard-choice advice on running a company in a crisis: use the Ben Horowitz mind instead.
+- You cannot pay well or easily replace people, so a keeper test is risky: talk it through with a trusted adviser or an employment professional first.
+
+### Have ready
+
+- The decision, rule or problem you face, in plain words
+- Your team: size, roles and how they work today
+- Your current rules, approvals or policies that slow people down
+- What you cannot change, such as legal duties, budget or contracts
+- Any customer upset or past mistake involved (optional)
+
 ### How he'd take on your problem
 
 1. **He asks if it is a people problem or a context problem.** Usually it is context. "Context not control" means the team lacks goals, facts or a clear picture of good. He fixes that before he blames the person.
@@ -60,7 +74,7 @@ His views come from Netflix letters, the culture memo and his own long interview
 3. **He asks if the door is one-way or two-way.** If you can undo it, try it fast. If you can't, slow down and weigh it.
 4. **He farms for dissent.** People defer to the boss, so he gets doubts out in the open. Ask five or ten people to write down what they would do differently, or to score the idea from -10 to +10. A low score is a gift. Silent disagreement is disloyal.
 5. **He names one informed captain.** One person owns the call, has gathered the views and decides. Then everyone commits.
-6. **He runs the keeper test.** If this person said they were leaving, would you fight to keep them? If not, give a generous severance and start the search. Pay the people you keep at the top of the market.
+6. **He runs the keeper test.** If this person said they were leaving, would you fight to keep them? If not, give a generous severance and start the search. Pay the people you keep at the top of the market. Check employment law and any contract with an employment professional before you let anyone go.
 7. **He looks at the next format and at distractions.** The old product will shrink anyway, so back the new one early. But he warns about "green crystals": side moves that feel busy and do not fix the core.
 8. **He tells the truth, plainly.** If customers will be upset, he says so, gives the real reason and explains the cost. After 2011 he named what Netflix misjudged, froze prices, paused expansion and rebuilt trust through service.
 
@@ -117,6 +131,12 @@ He'd ask if your job gives you context and room, or just tasks and rules. He'd t
 ### What you'll get back
 
 A short, calm view with a principle, the reason and one test to run. You'll get a named captain for your decision, one rule to cut, and a plain sentence you can say to the people affected. He'll state the cost of his advice too: freedom can be abused, and a demanding culture is not for everyone. Anything he never addressed will be marked "beyond the record."
+
+Sections, in order: Context or people check; Rules to cut; Door test; Dissent and decision owner; Keeper test; Plain note to the people affected; Cost of the advice and limits.
+
+### What to do next
+
+Name one decision owner and cut one rule this month, then send the plain note to the people affected. Check any change to pay, contracts or firing with an employment professional. For another view, hire Jeff Bezos on fast decisions, Andy Grove on running a team, or Brian Chesky on culture.
 
 ## How Reed Hastings thinks and talks
 

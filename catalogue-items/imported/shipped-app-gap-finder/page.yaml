@@ -17,6 +17,7 @@ when:
   - You want a score and a to-do list for your project.
 not_for:
   - "You want line-by-line security checks while you write code: use a code-time security review in your editor instead."
+  - "Your repo holds unpublished or sensitive code you do not want signals sent about, or has secrets in its folder: do not run this."
   - "Your repo is private or not on GitHub: the audit reads public GitHub signals, so ask a developer to review it by hand."
   - "You build a library or command line tool: the score is only partial, so use a code review from a person."
 you_give:
@@ -32,6 +33,7 @@ you_get:
 how_to_use:
   - "Check first: your repo must be public on GitHub, and it must not hold secrets or private files. The audit runs an outside npm package, pinned to commitshow@0.3.23, on your machine. It sends your repo's public signals and live link to api.commit.show. Run it only if you approve that."
   - Open your AI in your project folder. It needs to run code and read files. Chat-only AI cannot run this.
+  - Stop here unless approved. The next step runs an npm package that can read your local files and environment variables. Only run it in a folder with no secrets.
   - "Ask your AI to run: mkdir -p .commitshow, then npx commitshow@0.3.23 audit . --json, saving the result in .commitshow/audit.json. The first run takes 60 to 90 seconds."
   - Read the score and the top concerns. Ask your AI to check the file named in the concern you care about, since the audit can flag a gap that is fixed elsewhere.
   - Ask for a small fix to one concern. Look at the diff and approve it before anything changes.

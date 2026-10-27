@@ -17,3 +17,4 @@ version: 1.0.0
 minds: [peter-thiel, reid-hoffman]
 credits:
   - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Starting with a market so small you can own it, the traits of a good first target (small, close together, in real need, lightly served), the red flag of a small share of a big market, and why a thin or scattered group fails"}
+needs_mode: manual

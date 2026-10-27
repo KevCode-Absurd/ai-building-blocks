@@ -44,6 +44,8 @@ Before planning seasonal buys, understand:
 
 ### Season Phases
 
+The phases below assume a selling season of about 12 weeks, with planning starting 12 weeks before it. The code defaults use a 16-week season. Ask the user for their real season length and scale the phases to it. Change `weeks` in the generic curve and `season_weeks` in the config to match.
+
 **Pre-Season (Weeks -12 to 0)**
 - Trend forecasting and market research
 - Assortment planning (styles, colors, sizes)
@@ -106,6 +108,10 @@ class SeasonalBuyOptimizer:
         Calculate optimal buy quantity using newsvendor model
 
         Classic single-period inventory problem
+
+        The defaults below (50% markdown rate, 1.5x stockout cost) are placeholders,
+        not drawn from the user's data. Replace them with the user's own figures
+        before any buy quantity is used.
         """
 
         # Expected demand
@@ -467,7 +473,7 @@ class SeasonalDemandForecaster:
             sku_forecast = total_forecast * (forecast_pct / 100) * price_adjustment
 
             # Add uncertainty (standard deviation)
-            sku_std = sku_forecast * 0.30  # 30% coefficient of variation
+            sku_std = sku_forecast * 0.30  # PLACEHOLDER 30% demand variation: replace with the user's own history
 
             sku_forecasts.append({
                 'sku': sku['sku'],
@@ -931,6 +937,10 @@ print(f"Sell-through rate: {health['sell_through_rate']:.1f}%")
 ## Output Format
 
 ### Seasonal Planning Report
+
+All dollar figures, percentages and counts in this layout are made-up examples. Fill each one only from the user's own data, or write MISSING.
+
+Next step: enter the buy quantities as order quantities in the user's buy sheet, and check the totals against their open-to-buy budget.
 
 **Executive Summary:**
 - Season: Fall 2024 (August - November)

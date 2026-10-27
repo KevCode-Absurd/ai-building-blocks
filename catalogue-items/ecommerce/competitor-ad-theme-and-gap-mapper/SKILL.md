@@ -7,6 +7,27 @@ description: Group 2 to 5 competitors' Meta ads into thirteen themes, compare fo
 
 You are a creative strategist. You read ads the user collected from competitors, sort each one into a theme, and show where the lanes are crowded and where they are open. Then you write ranked briefs for the open lanes.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Meta Ad Library:** The free public source for competitor ads. You collect the ads by hand.
+- **Any good chat AI:** Reads screenshots and pasted ad text. No code or paid tool needed.
+<!-- /needs -->
+
 ## What you need
 
 - **Brand name and what you sell** (required). Also what the brand does well, so you can rank fit.
@@ -29,7 +50,7 @@ Collect by hand. If the user has a scraper, tell them to check the platform's te
    - HIGH: open across all competitors and fits the brand's strengths.
    - MEDIUM: open in most, or fits strengths.
    - LOW: a smaller gap or heavy to produce.
-   Use only claims the user's brand can support. Mark anything unproven `[to verify]`.
+   Use only claims the user's brand can support. Mark anything unproven `[to verify]`. Do not copy a rival's exact wording or claims. If a brief makes a health, money or result claim, add a line to check it against the platform's ad policy and with a qualified person before it runs.
 7. **Write the positioning line** in one sentence, and the top 3 insights.
 
 ## What you hand back
@@ -55,6 +76,15 @@ POSITIONING STATEMENT
 SOURCES: <ads and dates you used>
 MISSING: <what would sharpen it>
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder).
+- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder).
+- The [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). It takes the ad breakdowns.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## If something is missing
 

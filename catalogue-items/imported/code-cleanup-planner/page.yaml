@@ -9,7 +9,7 @@ subhead: Messy code gets a short list of named problems and a safe order for fix
 explain: |
   Messy code gets a short list of named problems and a safe order for fixing them. The code ends up easier to read and change, and it still does the same thing.
 
-  It scans for long functions, deep nesting, copied logic, unexplained hard-coded numbers, dead code and bloated parameter lists, and says where each one is and why it hurts. Each problem gets a matching move, such as extract a function, rename, simplify a condition or name a constant. The moves are put in a sequence of small steps, applied one at a time. Tests run after each step, and it writes simple tests first if none exist.
+  It scans for long functions, deep nesting, copied logic, unexplained hard-coded numbers, dead code and bloated parameter lists, and says where each one is and why it hurts. Each problem gets a matching move, such as extract a function, rename, simplify a condition or name a constant. The moves are put in a sequence of small steps, applied one at a time. Tests run after each step, and it writes simple tests first if none exist. Unlike a plain "refactor this" prompt, it lists the problems first and waits for your yes on the plan before it changes anything.
 when:
   - A function has grown to three hundred lines and nobody wants to touch it.
   - You inherited code with copied blocks all over.
@@ -30,10 +30,11 @@ you_get:
   - Tests run after each change
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the full text of this skill into the chat.
-  - Paste the code you want cleaned up. Add a goal, such as fewer nested ifs, if you have one.
+  - Paste the code you want cleaned up, or attach the files. The test step needs an AI that can open your project files and run a test command. Add a goal, such as fewer nested ifs, if you have one.
   - Add your test command and any files to leave alone (optional).
   - Read the list of problems and the plan first. Approve it before any change is made.
   - Check that the tests pass after each step. A chat AI cannot run your tests, so run them yourself or use an AI that can run code.
+  - Paste the change summary into your pull request. Then run the Bug and security code reviewer on the changed files.
 output_sample:
   input:
     - The code you want cleaned up

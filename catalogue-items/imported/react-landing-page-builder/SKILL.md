@@ -14,6 +14,10 @@ Generate high-converting landing pages from a product description. Output comple
 
 ## Core Capabilities
 
+**Use only real facts.** Every number, trial term, quote, customer name and FAQ answer in the examples below is a placeholder. Replace each one with a verified fact from the user. If the user has no real testimonial or answer, leave that section out or mark it `[to be supplied]`. Never invent quotes, reviews or figures.
+
+**When not to use:** this writes new pages only. For many pages or a CMS, use a site builder. For a page without code, use a site builder or a web designer. To check an existing page, use a landing page auditor.
+
 - 5 hero section variants (centered, split, gradient, video-bg, minimal)
 - Feature sections (grid, alternating, cards with icons)
 - Pricing tables (2–4 tiers with feature lists and toggle)
@@ -30,7 +34,7 @@ Generate high-converting landing pages from a product description. Output comple
 Follow these steps in order for every landing page request:
 
 1. **Gather inputs** — collect product name, tagline, audience, pain point, key benefit, pricing tiers, design style, and copy framework using the trigger format below. Ask only for missing fields.
-2. **Analyze brand voice** (recommended) — if the user has existing brand content (website copy, blog posts, marketing materials), run it through `marketing-skill/skills/content-production/scripts/brand_voice_analyzer.py` to get a voice profile (formality, tone, perspective). Use the profile to inform design style and copy framework selection:
+2. **Analyze brand voice** (recommended) — if the user has existing brand content (website copy, blog posts, marketing materials), run it through `marketing-skill/skills/content-production/scripts/brand_voice_analyzer.py` (that script is not included here, so skip it and read the tone and formality from the pasted copy yourself) to get a voice profile (formality, tone, perspective). Use the profile to inform design style and copy framework selection:
    - formal + professional → **enterprise** style, **AIDA** framework
    - casual + friendly → **bold-startup** style, **BAB** framework
    - professional + authoritative → **dark-saas** style, **PAS** framework
@@ -193,6 +197,6 @@ Inject `FAQPage` JSON-LD via `<script type="application/ld+json" dangerouslySetI
 
 ## Related Skills
 
-- **Brand Voice Analyzer** (`marketing-skill/skills/content-production/scripts/brand_voice_analyzer.py`) — Run before generation to establish voice profile and ensure copy consistency
+- **Brand Voice Analyzer** (`marketing-skill/skills/content-production/scripts/brand_voice_analyzer.py`, not included here and optional) — Run before generation to establish voice profile and ensure copy consistency
 - **UI Design System** (`product-team/ui-design-system/`) — Generate design tokens from brand color before building the page
 - **Competitive Teardown** (`product-team/competitive-teardown/`) — Competitive positioning informs landing page messaging and differentiation

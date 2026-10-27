@@ -20,8 +20,8 @@ not_for:
   - "You only want to set up monitoring or alerts for a new service: use your monitoring tool's own setup guide."
   - "Your service is fine and you want a plain bug fix: ask a developer or use your normal bug tracker."
 you_give:
-  - A short description of the incident
-  - How many users are hit, what revenue is at risk, and which service promises are hurt
+  - A short description of the incident, and the service that is hurt
+  - The share of users affected (for example 25%) and the business impact as low, medium or high
   - Timestamped events from logs or chat, one line per event with the time first
   - The team roles you have available (optional)
 you_get:
@@ -31,11 +31,12 @@ you_get:
   - One ordered timeline with gaps and durations
   - A blame-free incident review with follow-up actions
 how_to_use:
-  - Open your AI and paste the skill text. If your AI can run code, upload the skill folder with its Python scripts.
+  - Open your AI and paste the skill text. If your AI can run code, upload the skill folder with its Python scripts. If it cannot, paste the same fields and ask it to give the same sections by hand.
   - During the outage, paste your incident description and impact numbers. Ask for the severity, the response team and the update messages.
   - Check the severity. Send the updates, and change the times and details in the templates first.
   - After the fix, paste your timestamped logs and chat messages. Ask for one ordered timeline and a list of gaps.
   - Ask for the post-incident review. Read the root cause and follow-up actions with your team before you share it.
+  - Send each follow-up action to a named owner with a date, and check them at your next team meeting.
 output_sample:
   input:
     - A short description of the outage
@@ -46,14 +47,15 @@ output_sample:
     - The three tools are Python scripts. Your AI needs to run code to use them, or it can follow the same steps by hand in chat.
   output:
     - name: Severity level
-      contains: A rating from SEV1 to SEV4 based on users hit, revenue and service promises.
+      contains: One line with the level, SEV1 to SEV4, and the reason it was chosen from users hit, revenue and service promises.
     - name: Response team and first actions
-      contains: Who to pull in and what to do in the first minutes.
+      contains: A bullet list of who to pull in and what to do in the first minutes, each with a time limit.
     - name: Communication templates
       contains: Ready-to-fill messages for the team, leaders and customers, matched to the severity.
     - name: Incident timeline
-      contains: Your scattered logs and chat messages put in order, with gaps and durations marked.
+      contains: A table with time, event, source and gap columns. Your scattered logs and chat messages are put in order, with long gaps marked.
     - name: Post-incident review
       contains: A blame-free write-up with root cause methods such as 5 Whys and Fishbone.
     - name: Follow-up actions
       contains: A list of fixes to make so the same outage does not happen again.
+next: [incident-runbook-writer, incident-postmortem-writer]

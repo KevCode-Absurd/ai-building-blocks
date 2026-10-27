@@ -9,6 +9,26 @@ Turn your draft comments into feedback students can act on. Get a clear rubric, 
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass the next step what it needs. The teacher stays the author of the feedback. Nothing goes to a student until the teacher has read it.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your notes, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file support:** They can read pasted work and your rubric. Check your school's rules before pasting student work.
+<!-- /needs -->
+
 ## What you need
 
 - **The task and what it teaches** (required).
@@ -56,6 +76,14 @@ Confirm before work goes back: item
 HAND-BACK SUMMARY
 Files | MISSING | CHECKS MISSED | one next step
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Student work criteria reviewer](https://useaiblocks.com/skills/student-work-gap-finder). It takes the document.
+- The [Assessment fit and fairness checker](https://useaiblocks.com/skills/assessment-fairness-check). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

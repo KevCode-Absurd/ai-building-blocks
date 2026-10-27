@@ -19,6 +19,8 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
+The files `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this folder. Without them, follow the two rules above, say which Indian conventions you assumed, and name anything you could not check.
+
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
 
@@ -60,7 +62,7 @@ never substitute a proxy and present it as the real thing.
 
 ### Step 3: Sources & Uses
 
-| Sources | $ | Uses | $ |
+| Sources | ₹ Cr | Uses | ₹ Cr |
 |---------|---|------|---|
 | New debt | | Equity purchase price | |
 | Cash on hand | | Refinance target debt | |
@@ -87,9 +89,9 @@ Calculate year-by-year (Year 1-3):
 
 ### Step 5: Sensitivity Analysis
 
-**Accretion/Dilution vs. Synergies and Offer Premium:**
+**Accretion/Dilution vs. Synergies and Offer Premium** (change the steps to fit the deal size):
 
-| | $0M syn | $25M syn | $50M syn | $75M syn | $100M syn |
+| | ₹0 Cr syn | ₹25 Cr syn | ₹50 Cr syn | ₹75 Cr syn | ₹100 Cr syn |
 |---|---------|----------|----------|----------|-----------|
 | 15% premium | | | | | |
 | 20% premium | | | | | |
@@ -106,6 +108,8 @@ Calculate year-by-year (Year 1-3):
 ### Step 6: Breakeven Synergies
 
 Calculate the minimum synergies needed for the deal to be EPS-neutral in Year 1.
+
+Breakeven pre-tax synergies = (standalone EPS × pro forma shares − pro forma net income before synergies) ÷ (1 − tax rate). Show the result in ₹ Cr. Put it in the synergies row of the Year 1 column, then check that Year 1 pro forma EPS equals standalone EPS.
 
 ### Step 7: Output
 

@@ -13,9 +13,11 @@ not_for:
 how_to_use:
   - Open your AI tool and paste in the skill instructions. To save files, use an AI that can work with files.
   - Say which review type you need, who it is about and the review period.
-  - If you have WorkIQ and a Microsoft 365 account, let your AI use it. If not, type 3 to 5 bullet points of your work.
+  - If you have WorkIQ and a Microsoft 365 account, let your AI use it. Check that your company allows this. For a peer or manager review, only use messages about work. If not, type 3 to 5 bullet points of your work.
+  - Use an AI that can read files if you want it to read your notes. Your review form questions are the same ones the skill asks in its first step.
   - Read the draft and fill in every section marked NEEDS DETAIL with real facts.
   - Ask for edits to fit your tone or your form's word limits.
+  - Check every figure against a real record. Cut any result you cannot back up.
   - Copy the final text into your company's review system and submit it yourself.
 output_sample:
   input:

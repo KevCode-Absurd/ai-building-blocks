@@ -14,6 +14,7 @@ inputs:
 outputs:
   - type: audit_report
 uses: []
+next: [split-run-result-reader, ad-test-brief-writer]
 origin: own
 version: 1.0.0
 example_pending: true

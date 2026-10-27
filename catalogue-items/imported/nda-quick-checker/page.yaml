@@ -19,6 +19,7 @@ not_for:
   - "The NDA is part of a larger contract: send the whole contract to a lawyer."
   - "You need a signed legal opinion: ask a lawyer, because this tool only screens."
   - "You need the NDA redrafted or negotiated: ask a lawyer to mark it up."
+  - "You want odd clauses quoted with their plain meaning and changes to ask for: use the NDA traffic-light checker."
 you_give:
   - The NDA as a file, link or pasted text
   - Your own NDA rules (optional)
@@ -29,8 +30,8 @@ you_get:
   - Gaps against the standard checklist
   - A suggested next step
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
-  - Paste the NDA text, or upload the file. A link only works if your AI can open it.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Skip the CONNECTORS.md and legal.local.md notes in it. You do not need them.
+  - Paste the NDA text after the skill, or upload the file. A link only works if your AI can open it. (The "@$1" in the skill is a Claude Code shortcut. In a chat, ignore it.)
   - Add your own NDA rules and say which side you are on (optional). Without rules, it uses common market defaults and tells you so.
   - Read the rating first, then the issues list.
   - Green means standard terms. For yellow or red, send the NDA and the report to a lawyer.

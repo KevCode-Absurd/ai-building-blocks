@@ -21,7 +21,7 @@ not_for:
   - "You need to move shipments to another warehouse after splitting: change the location by hand in Shopify Admin, as this skill does not do it."
 you_give:
   - Your store domain
-  - The fulfilment order ID
+  - The fulfilment order ID (or the order ID, and your AI looks up the fulfilment order ID)
   - Which items and quantities go in each shipment
   - Shopify permission to read orders and write fulfilments
 you_get:
@@ -34,7 +34,7 @@ how_to_use:
   - Paste the skill into your AI. Add your store domain, the fulfilment order ID and the items in each group.
   - Read the dry-run preview. Check every item and quantity is in the right group.
   - Tell your AI to run it for real only if the preview is right. A split cannot be undone.
-  - Check the new shipments in the order's fulfilment tab in Shopify Admin.
+  - Check the new shipments in the order's fulfilment tab in Shopify Admin. Items you did not put in a group stay in the original fulfilment order. To move a group to another warehouse, change its location by hand in Shopify Admin, or use fulfillment-location-rerouter.
 output_sample:
   input:
     - Your store domain

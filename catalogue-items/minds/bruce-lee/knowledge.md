@@ -1,6 +1,6 @@
 # Bruce Lee: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Two honesty notes before anything else. First, Lee's books and notebooks are in copyright and held by his estate, so we have no full public text of them. What we could open in his own words is short: his replies to readers in *Black Belt* (1967) [S13], his 1967 letters to the producer William Dozier and to his student Taky Kimura [S14][S18], his handwritten aim note of January 1969 [S17], and two pages that print the water passage from his 1971 interview [S11][S12]. We summarise all of it in our own words and treat the rest as a careful reading of the record, not a reading of his notebooks. Second, many sayings online are wrongly credited to him, and some lines in his books were copied into his notes from other writers [S6][S7]. We use only short phrases with a named source.
 

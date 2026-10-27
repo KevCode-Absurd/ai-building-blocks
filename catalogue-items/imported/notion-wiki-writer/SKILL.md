@@ -42,6 +42,8 @@ After successful login, the user will have to restart codex. You should finish y
 - For FAQs, phrase as Q&A with concise answers and links to deeper docs.
 
 ### 4) Create/update in Notion
+- Before you create or update anything, tell the person the target database and page (or the new page title) and ask them to confirm.
+- Fill in owner, tags, status and dates only if the notes state them. If they do not, leave the field blank or write "to confirm". Never guess them.
 - Use `Notion:notion-create-pages` with the correct `data_source_id`; set properties (title, tags, owner, status, dates, relations).
 - Use templates in `reference/` to structure content (section headers, checklists).
 - If updating an existing page, fetch then edit via `Notion:notion-update-page`.

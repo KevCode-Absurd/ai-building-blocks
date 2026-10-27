@@ -51,7 +51,7 @@ If the project is already linked (`.vercel/project.json` or `.vercel/repo.json` 
 
 Either file means the project is linked. Check for both.
 
-**Do NOT** use `vercel project inspect`, `vercel ls`, or `vercel link` to detect state in an unlinked directory — without a `.vercel/` config, they will interactively prompt (or with `--yes`, silently link as a side-effect). Only `vercel whoami` is safe to run anywhere.
+**Do NOT** use `vercel project inspect`, `vercel ls`, or `vercel link` to detect state in an unlinked directory — without a `.vercel/` config, they will interactively prompt (or with `--yes`, silently link as a side-effect). Only `vercel whoami` and `vercel teams list` (account-level commands that do not touch a project) are safe to run anywhere.
 
 ## Step 2: Choose a Deploy Method
 
@@ -67,9 +67,11 @@ This is the ideal state. The project is linked and has git integration.
    deployment. I can commit and push to trigger it. Want me to proceed?
    ```
 
-   **Commit and push only after target verification and push approval:**
+   **Before you stage anything:** run `git status --short` and list the files that will be committed. Check the list for `.env` files, keys, tokens and other secrets, and leave those out. Show the user the list and wait for a yes. Stage only the named files, not everything.
+
+   **Commit and push only after target verification, push approval and the file list is confirmed:**
    ```bash
-   git add .
+   git add <the confirmed files>
    git commit -m "deploy: <description of changes>"
    git push
    ```
@@ -168,6 +170,8 @@ The Vercel CLI isn't set up at all.
 
 **When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
 
+**Warn the user before you run it:** the project files are uploaded to Vercel, and the preview link is public until the user claims it. `node_modules`, `.git` and `.env` are left out, but every other file in the folder is uploaded, so check for secrets first and wait for a yes.
+
 ```bash
 bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
 ```
@@ -196,6 +200,8 @@ The script auto-detects the framework from `package.json`, packages the project 
 ### No-Auth Fallback — Codex sandbox
 
 **When to use:** In the Codex sandbox where the CLI may not be authenticated. Codex runs in a sandboxed environment by default — try the CLI first, and fall back to the deploy script if auth fails.
+
+**Warn the user before you run the script:** the project files are uploaded to Vercel, and the preview link is public until the user claims it. Check for secrets first and wait for a yes.
 
 1. **Check whether the Vercel CLI is installed** (no escalation needed for this check):
    ```bash

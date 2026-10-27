@@ -34,8 +34,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
   - Answer the questions about your products, shelf life, temperatures, sales channels and rules. Skip what you do not know.
-  - Read the plan. Check each limit and shelf-life figure against FDA, FSMA, GFSI or your retailer's own specification.
+  - Read the plan. Check each limit and shelf-life figure against FDA, FSMA, GFSI or your retailer's own specification. The percentages and temperatures in the skill are typical figures, not your rules.
+  - You can ignore the Python blocks in the skill. They are reference code and are not needed in a chat.
   - Start with the top items on the ranked change list.
+  - Take the top three changes to your weekly stock and cold-chain review. Plan promotion stock with the promotion and stock planner, and use the expiry date stock manager for markdown timing.
   - Have a certified food safety consultant or your regulator review the plan before you rely on it for compliance.
 output_sample:
   input:
@@ -56,3 +58,4 @@ output_sample:
       contains: Promotions by month with forecast accuracy, stockouts and excess stock.
     - name: Action Items
       contains: A ranked list of changes to make first, such as cutting waste or fixing cold chain gaps.
+next: [expiry-date-stock-manager, promotion-and-stock-planner]

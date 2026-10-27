@@ -31,11 +31,11 @@ you_get:
   - Epics and stories with acceptance criteria
   - A build protocol for AI agents
 how_to_use:
-  - Open an AI that can search the web and save files, such as Claude Code or Codex. Set it to its highest thinking setting.
+  - Open an AI that can search the web and save files, such as Claude Code or Codex. Set it to its highest thinking setting. A full run takes 20 to 60 searches, so a paid plan may be needed.
   - Add this skill's instructions to your AI, or upload the skill folder.
   - Tell your AI your product idea in a few lines. Add your budget, platform, deadline and known competitors if you have them.
   - Answer the intake questions. Then check the decision brief and approve it or ask for changes.
-  - Read the finished blueprint. Fix anything that is wrong for your product.
+  - Read the finished blueprint. Open the Sources list and check every claim tagged VERIFIED before you trust a competitor or market figure. Fix anything that is wrong for your product.
   - Start a fresh session for each epic and tell your AI to build the next one.
 output_sample:
   input:

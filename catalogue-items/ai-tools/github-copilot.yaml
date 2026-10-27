@@ -50,6 +50,7 @@ first_result:
   - "For suggestions as you type, install Copilot in your editor (VS Code, Visual Studio, JetBrains, Eclipse or Xcode) with GitHub's quickstart for IDEs. We did not check those steps."
   - "For a background task, move to a paid plan, turn on the cloud agent in a repository where you have write access, and assign it one small task."
   - "Read the pull request it opens line by line before you merge, as you would from a new teammate."
+  - "You end with a pull request and a list of changes to review, or an answer in chat. Next: write instructions for the agent with the Agent context setter, then check them with the Agent instructions auditor."
 needs:
   - "A GitHub account."
   - "A plan: Free for individuals, Pro, Pro+ or Max, or Business or Enterprise through your organization."

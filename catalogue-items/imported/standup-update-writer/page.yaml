@@ -33,7 +33,7 @@ how_to_use:
   - "Type your rough notes, for example: worked on the auth migration, reviewed 3 PRs, blocked on API rate limits."
   - Or connect your code host and ticket tool first, if your AI supports it, and ask for your standup.
   - Ask for one part only, such as blockers, if that is all you need.
-  - Check the update for anything missing, add detail on blockers, then paste it where your team reads it.
+  - Check the update for anything missing, add detail on blockers, then paste it into Slack, email or your standup tool where your team reads it.
 output_sample:
   input:
     - Rough notes on what you worked on (optional)

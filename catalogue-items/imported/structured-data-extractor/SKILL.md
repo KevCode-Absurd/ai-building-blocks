@@ -1,6 +1,6 @@
 ---
 name: instructor
-description: Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library
+description: Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - a structured output library
 version: 1.0.0
 author: Orchestra Research
 license: MIT
@@ -20,7 +20,7 @@ Use Instructor when you need to:
 - **Stream partial results** for real-time processing
 - **Support multiple LLM providers** with consistent API
 
-**GitHub Stars**: 15,000+ | **Battle-tested**: 100,000+ developers
+Instructor is an open-source Python library that works with many AI providers.
 
 ## Installation
 

@@ -9,13 +9,14 @@ subhead: Give it your values with their current units or frame, the target units
 explain: |
   Values move correctly between units, time systems and coordinate frames, with MATLAB code you can run again. That avoids the slip-ups that come from mixing frames in flight or space work.
 
-  The skill covers unit changes, time systems such as UTC and sidereal time, and positions in latitude, longitude and altitude, Earth-fixed and Earth-inertial frames. It also converts orbit elements to position and velocity, and moves between Euler angles, rotation matrices and quaternions. Time-dependent conversions use the right date. It shows the standard patterns and picks the right function for each case. It stays inside basic aerospace maths, so check the toolbox notes for harder dynamics. It needs MATLAB with the Aerospace Toolbox.
+  The skill covers unit changes, time systems such as UTC and sidereal time, and positions in latitude, longitude and altitude, Earth-fixed and Earth-inertial frames. It also converts orbit elements to position and velocity, and moves between Euler angles, rotation matrices and quaternions. Time-dependent conversions use the right date. It shows the standard patterns and picks the right function for each case. It stays inside basic aerospace maths, so check the toolbox notes for harder dynamics. This is for aerospace and flight-data engineers who already work in MATLAB. MATLAB and the Aerospace Toolbox are paid products from MathWorks, and you must already hold a licence for both.
 when:
   - You have data in feet and knots and need metres and metres per second.
   - You need to turn GPS positions into Earth-fixed coordinates.
   - You must convert orbit elements to position and velocity.
   - Your attitude data is in Euler angles and you need quaternions.
 not_for:
+  - "You do not use MATLAB or have no licence for it and the Aerospace Toolbox: this is a paid-software skill, so use a free unit converter for plain unit changes."
   - "You need air density or pressure at altitude: use the MATLAB aerospace environment skill, which covers atmosphere models."
   - "You need to predict an orbit or plan a satellite move: use the Aerospace Toolbox, Aerospace Blockset or Satellite Communications Toolbox."
   - "You need local east, north, up positions from GPS points: use the Navigation Toolbox, which has those functions."
@@ -35,6 +36,7 @@ how_to_use:
   - Ask your AI to name the frame and time system it assumes before it converts.
   - Run the MATLAB code and check the round-trip result matches your starting values.
   - Compare a few converted values with a source table before you use them in a simulation.
+  - Next, feed the converted values into your simulation or analysis. For air density or pressure inputs, pair it with the MATLAB aerospace environment skill.
 output_sample:
   input:
     - Your values, with their current units or frame

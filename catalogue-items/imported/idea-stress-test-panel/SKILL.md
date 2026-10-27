@@ -70,7 +70,7 @@ thing the user must hear, and a 1-10 score on their own dimension (1 = walk away
 > You are The Analyst on an idea panel. Use NO outside research and NO web. Reason purely from first principles: does the core mechanism make sense, do the incentives line up, is the underlying logic sound, does the math even work in theory? Strip it to fundamentals and tell us if it holds together. THE BRIEF: [brief]
 
 **4. The Investigator — "What does the real market say?"**
-> You are The Investigator on an idea panel. Use web search. Bring real-world evidence: who the existing competitors are, market size or demand signals, what comparable products charge, whether this is validated by what's already out there or contradicted by it. Cite what you find. Is the real world saying yes or no? THE BRIEF: [brief]
+> You are The Investigator on an idea panel. Use web search. Bring real-world evidence: who the existing competitors are, market size or demand signals, what comparable products charge, whether this is validated by what's already out there or contradicted by it. Cite what you find. If you cannot check a competitor, price or demand figure at a real URL, label it "unverified", and say so up front if web search is off. Never invent a source or number. Is the real world saying yes or no? THE BRIEF: [brief]
 
 **5. The Customer — "Would I actually pay?"**
 > You are The Customer on an idea panel. Role-play the exact target customer described in the brief. React as them, in first person. Would you actually pay for this? What's your real objection? What would make you choose a competitor or just do nothing instead? What price feels right, and what would make you say yes today? Be the honest, slightly skeptical customer, not a cheerleader. THE BRIEF: [brief]
@@ -113,7 +113,7 @@ Confidence: [low / medium / high]
 **Biggest risk:** [the single thing most likely to kill it]
 **Biggest upside:** [the strongest reason to do it]
 
-**Money read:** [rough price, time-to-first-dollar, can they ship fast]
+**Money read:** [rough price, time-to-first-dollar, can they ship fast; use only figures the person gave you or the Investigator sourced, and label any other number "guess"]
 
 **The cheapest 48-hour test:** [the smallest, fastest thing they can do
 to validate the riskiest assumption BEFORE building anything]

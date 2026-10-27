@@ -19,6 +19,7 @@ not_for:
   - "You want a MEX file or desktop library: use the standard MATLAB codegen steps, not this skill."
   - "You build in Simulink: use Simulink Coder and Embedded Coder directly."
   - "You need code for an Nvidia GPU: use GPU Coder, which is a separate MathWorks product."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The MATLAB function to deploy
   - The target board or processor
@@ -34,7 +35,8 @@ how_to_use:
   - Tell it any memory limits, such as no heap use or a stack size.
   - Run the settings it gives you. Test on your computer first (SIL), then on the board (PIL).
   - Check the test results match MATLAB before you flash the code.
-  - For a Raspberry Pi, keep the password out of the script. Type it in when asked.
+  - For a Raspberry Pi, keep the password out of the script. Store it once in the MATLAB Vault with setSecret (see the MATLAB secret keeper) and read it with getSecret.
+  - You get a build script, a folder of generated C or C++ files, and a pass or fail comparison of the SIL and PIL results against MATLAB. When PIL matches, flash the board. For other targets use the MATLAB to C converter. For AI models use the AI model code generator.
 output_sample:
   input:
     - The MATLAB function you want to run on the chip
@@ -46,6 +48,7 @@ output_sample:
     - MATLAB Coder and Embedded Coder, which are paid MathWorks products with separate licences
     - A hardware support package for your board, if one exists
     - Your board connected by serial cable or network
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Code generation configuration
       contains: A MATLAB script that sets up an Embedded Coder library build with no operating system needed.

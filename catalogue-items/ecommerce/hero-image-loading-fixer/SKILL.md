@@ -47,7 +47,7 @@ Tell the owner to duplicate the theme first (Online Store, Themes, the three dot
 5. **Remove effects.** Take out fade-in, slide-in and placeholder loaders on that image. Effects make the browser load an effects library first and delay the picture.
 6. **Add a preload link.** Put a preload link in the head for the first-screen image, written with Liquid so it picks the right image per product or page (for example from the product's featured image on a product template, and from the section setting on the homepage). Give one preload per template.
 7. **Check the gallery.** A gallery plugin that needs JavaScript before it shows the first image causes a late LCP even when the file has downloaded. Render the first image in plain HTML and let the plugin start after.
-8. **Set the size targets.** Resize the hero to 2,000 px wide at most. Use JPEG at about 70% quality or WebP. Aim near 200 KB and below 250 KB for the hero, and about 100 KB for product images. One test took an 8 MB hero to 234 KB with no visible change; check by eye. Use the same numbers as the store image prep checker.
+8. **Set the size targets.** Resize the hero to 2,000 px wide at most. Use JPEG at about 70% quality or WebP. Aim near 200 KB and below 250 KB for the hero, and about 100 KB for product images. These are default targets from a credited speed guide. Check them against the owner's theme and the numbers in the store image prep checker, and judge by eye that the picture still looks sharp.
 9. **Serve sizes that fit.** Use the theme's image filters with width values or a srcset, not the master file.
 10. **Write the tests.** Test on slow 3G and slow 4G with the cache disabled in the browser. Then run PageSpeed three times and average. Check that images below the fold still load lazily, and that checkout and the gallery still work.
 
@@ -89,7 +89,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Checks
 - Nothing in the first screen is lazy loaded.
-- Only one image has high priority.
+- Only one image per page has high priority: the single hero (or first product) image. The loop makes only its first item eager, and the preload points to that same image.
 - Loop code makes only the first item eager.
 - No fade-in or placeholder on the LCP image.
 - Preload uses Liquid for each template.

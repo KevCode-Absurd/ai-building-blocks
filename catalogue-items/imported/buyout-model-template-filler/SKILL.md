@@ -16,6 +16,8 @@ You need:
 
 Ask once for anything missing. Never invent a deal fact. Mark any input you had to assume as `ASSUMED` in a note cell and list it in your report.
 
+**Setup.** Install the `officecli` tool first (follow the officecli project's own install page) and check that `officecli --help` runs before you start. If it is missing, use the fallback below.
+
 **Tools.** This skill builds the workbook with the `officecli` command line tool, so it needs an AI that can run commands and write files. If you cannot run it, say so. Fall back to giving the user the model as a cell-by-cell table (cell, label, formula) for them to type into their template. Do not claim a checked file exists when you could not build one.
 
 **Not covered.** A full three-statement build or a non-LBO deal. Say so and stop.
@@ -48,7 +50,7 @@ Before starting any LBO model:
 
 ### Environment: one path — officecli
 
-**Load `xlsx-author` for the build loop and `officecli-xlsx` for the element vocabulary.**
+**The `xlsx-author` and `officecli-xlsx` companion skills are not in this folder. Do not say you loaded them. Use the officecli commands shown below, and run `officecli --help` to check any option you are unsure of.**
 - Build every workbook with the `officecli` CLI
 - Write formulas via `--prop formula="B5*B6"` (no leading `=`) — officecli evaluates them on read
 - The same formulas-over-hardcodes rule applies: set `range.formulas`, never `range.values` for anything that should be a calculation
@@ -60,7 +62,7 @@ Before starting any LBO model:
 - Same path in every environment: `officecli add out/model.xlsx /DCF!D20 --type cell --prop formula="B5*B6"`
 - **No `recalc.py` step** — officecli evaluates formulas on read, so build → `officecli get` → `close` is the whole lifecycle
 
-The examples below use officecli syntax; see `xlsx-author` for the full build loop.
+The examples below use officecli syntax.
 
 ### Core Principles
 * **Every calculation must be an Excel formula** - NEVER pre-compute a value and write it into a cell. Write `--prop formula="B5*B6"`, NOT `--prop value=1250`. The model must be dynamic and update when inputs change.

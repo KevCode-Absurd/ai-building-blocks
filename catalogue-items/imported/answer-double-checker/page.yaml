@@ -17,6 +17,7 @@ when:
   - A draft plan looks tidy and you want to find its weak spot.
 not_for:
   - "You want the AI to check your own draft or reasoning: ask it to review the work directly, and it will do the checking in its reply."
+  - "You want each claim checked against real sources: use the AI answer fact checker instead."
   - "You want sources for each claim: ask your AI to cite its sources in the answer. The questions here do not add sources."
   - "You want code, poems, small talk or a quick lookup: skip it. It stays quiet for those anyway."
 you_give:
@@ -28,11 +29,13 @@ you_get:
   - Each tied to a claim in the answer
   - A prompt to check facts, logic and missing context
 how_to_use:
+  - This is a reusable instruction file, not a separate app. It works in any chat AI, with no account, paid plan, API key or web scraping needed.
   - Open your AI chat. Copy the full text of the skill file.
   - Paste it into your chat's custom instructions, or into your first message.
   - Ask your question as normal. Ask for advice, a plan, an estimate or a draft.
   - Read the full answer first. Then read the two or three questions at the end.
   - Pick the one that matters most, such as the key figure, and check it before you act. You can also send a question back to your AI.
+  - Then ask your AI to redo the answer with the figure or context you checked.
   - The questions appear once per chat. They stay out of simple lookups, casual chat and code.
 output_sample:
   input:
@@ -52,3 +55,4 @@ output_sample:
       contains: One question about a step or assumption in the answer, asking the AI to justify it.
     - name: Missing context question
       contains: One question about something the AI had to guess about you, such as your budget or location.
+next: [ai-answer-fact-checker, ai-answer-doubt-check]

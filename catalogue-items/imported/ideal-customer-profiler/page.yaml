@@ -34,7 +34,7 @@ how_to_use:
   - Add your best and worst customers and any win and loss notes, if you have them.
   - Ask your AI to build the ideal customer profile from your data.
   - Check the profile against what you know. Ask your AI to fix anything that does not match your best customers.
-  - Use the disqualification list to score new leads.
+  - Test the disqualification list against a recent set of won and lost deals. Then use it to score your next batch of leads.
 output_sample:
   input:
     - Your survey answers, interview notes or customer data

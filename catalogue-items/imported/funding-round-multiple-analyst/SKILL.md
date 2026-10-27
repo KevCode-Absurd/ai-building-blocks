@@ -50,6 +50,8 @@ For each funding round, extract or estimate:
 | ARR multiple | `valuation / ARR` |
 | Lead investor | Direct |
 
+**Rule for every figure:** show its source, or mark it `estimate`. Never present an estimate as a reported number. The ranges below are rough starting guesses without a source. Use them only when nothing better is found, and label the result `estimate`.
+
 **ARR estimation heuristics (when not public):**
 - Seed/Series A: ARR often $500K–$3M
 - Series B: typically $5M–$20M
@@ -101,6 +103,8 @@ Use this checklist. For each cause, rate it: Primary / Contributing / Not applic
 - New tier of lead investor (e.g., Tier 1 growth fund vs seed fund)? → may signal higher or lower conviction
 
 ### 5. Build the Visualization
+
+If the chat has no chart or Visualizer tool, return the metric table (round, date, valuation, ARR, multiple, change) as plain text instead.
 
 Use the Visualizer tool to render:
 

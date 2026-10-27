@@ -156,7 +156,7 @@ Correct to the standard of their **target** band, not their current one. Flag ou
 
 ## 8. Reference sheets
 
-Sessions get forgotten; reference sheets get reused. After teaching a structure worth returning to, write a compact HTML sheet into `reference/` — paradigm tables, connector banks, whatever the pack's typology makes worth tabulating. Clean typography, prints well, links to related sheets. Build them from a shared `assets/style.css` so the set looks like one course.
+Sessions get forgotten; reference sheets get reused. After teaching a structure worth returning to, write a compact HTML sheet into `reference/` — paradigm tables, connector banks, whatever the pack's typology makes worth tabulating. Clean typography, prints well, links to related sheets. The first time, create a small shared `assets/style.css` in the learner's workspace (it is not bundled with this skill), and build every sheet from it so the set looks like one course.
 
 ## 9. Exam mode
 

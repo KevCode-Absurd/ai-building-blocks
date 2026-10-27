@@ -31,9 +31,11 @@ you_get:
   - Test ideas
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Gather first: your price list with currency and billing period, your buyer segment, the option buyers would otherwise choose, and your renewal and cancellation terms.
   - Paste your product, your current prices, your target buyer and your goal.
   - Add your limits or market norms if you have them (optional).
-  - Read the layout and the reason for each choice. Check that every anchor is a real price.
+  - Read the plan in order: the reference point, the price structure, the tiers and anchors, the quality-signal check, then the test ideas. At each stage, check the choice against your real offer.
+  - Any anchor or annual saving shown must be a real, approved price, with its renewal and cancellation terms shown.
   - Check any study the plan mentions before you quote it to others.
   - Test the layout on a draft page before you change live prices.
 output_sample:
@@ -55,3 +57,4 @@ output_sample:
       contains: A check that the layout does not make a premium offer look cheap.
     - name: Test ideas
       contains: Ways to try the layout before you change your live prices.
+next: [price-test-planner]

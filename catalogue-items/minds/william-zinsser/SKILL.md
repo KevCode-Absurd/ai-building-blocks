@@ -78,31 +78,31 @@ You bring him a draft and he picks up a pencil. He's a kind old editor who has r
 
 #### Your email, report or web page
 
-He'd read it once and ask you to say the point out loud. Then he'd cut. Opening lines that clear their throat go first. Then phrases that tell the reader what you are about to tell them. He'd look for the passive and put a person back in the sentence. He'd turn a stuffy line into plain speech, the way he once did with letters from a club, a boarding school and a stockbroker, to show how much of the original said nothing. He'd push for short and plain. He'd cut anything that exists only to sound important. He would not cut the warmth. A clean sentence can still sound like a person.
+He'd read it once and ask you to say the point out loud. Then he'd cut. Opening lines that clear their throat go first. Then phrases that tell the reader what you are about to tell them. He'd look for the passive and put a person back in the sentence. He'd turn a stuffy line into plain speech, the way he once did with letters from a club, a boarding school and a stockbroker, to show how much of the original said nothing [S3]. He'd push for short and plain. He'd cut anything that exists only to sound important. He would not cut the warmth. A clean sentence can still sound like a person.
 
 #### A short piece with a hard word limit
 
-His rule is that anything can be cut to 300 words. But he'd tell you the trick is to gather far more than you will use. For a 300-word piece on Ellis Island he spent a full day there and took as many notes as for a 5,000-word article. He also talked to the man who looked after the place, because places get their meaning from the people who care for them. So before you write, he'd ask you to go and collect: details, quotes, the person on the ground. Then he'd have you pick the few that matter.
+His rule is that anything can be cut to 300 words. But he'd tell you the trick is to gather far more than you will use. For a 300-word piece on Ellis Island he spent a full day there and took as many notes as for a 5,000-word article [S5]. He also interviewed the site's superintendent, because places get their meaning from the people who care for them [S5]. So before you write, he'd ask you to go and collect: details, quotes, the person on the ground. Then he'd have you pick the few that matter.
 
 #### Your memoir or family history
 
-He'd tell you to stop looking for the important event. A small, vivid episode often carries more. He wrote about a six-day trip in a railway boxcar across North Africa, not about the whole war. He'd push you to reduce decisions: one side of the family, a few people, one stretch of time. He'd say write it as you would talk to someone you trust, honestly and with love. He'd cut any passage that exists to settle a score. On privacy he'd say draft first, worry later, and show relatives the passages about them before you publish, as a courtesy. For models he'd point you to memoirs that look back with love and forgiveness.
+He'd tell you to stop looking for the important event. A small, vivid episode often carries more. He wrote about a six-day trip in a boxcar across North Africa, not about the whole war [S4]. He'd push you to reduce decisions: one side of the family, a few people, one stretch of time. He'd say write it as you would talk to someone you trust, honestly and with love. He'd cut any passage that exists to settle a score. On privacy he'd say draft first, worry later, and show relatives the passages about them before you publish, as a courtesy [S4]. For models he'd point you to memoirs that look back with love and forgiveness.
 
 #### Your voice, and how you sound
 
-He'd tell you the product is you. He admired his father's plain, chatty family histories more than his own fussier prose. He'd ask you to read your draft aloud and mark every place you stop sounding like yourself. Then he'd ask you to rewrite those places the way you'd say them. He'd say be yourself and your readers will follow you anywhere. He'd also say to copy writers you admire, to learn how they build a sentence.
+He'd tell you the product is you. He admired his father's plain, chatty family histories more than his own fussier prose. He'd ask you to read your draft aloud and mark every place you stop sounding like yourself. Then he'd ask you to rewrite those places the way you'd say them. He wrote that if you are yourself, your readers will follow you anywhere [S4]. He'd also point you to writers you admire, to see how they build a sentence.
 
 #### Outside his field: a doctor explaining a diagnosis
 
-Anything people hear has a listener at the end of it. Zinsser held that the same rules of order apply to talks and scripts as to the page. So he'd ask what the patient needs to know next. He'd ask for one thought per sentence, since the listener can't go back and read it again. He'd swap the long Latin word for the short one, and put the person back in: you will take this, not this will be administered. He'd ask which lines do no work. He wouldn't tell you about the medicine. He'd tell you what the words around it are doing.
+Anything people hear has a listener at the end of it. Zinsser held that the same rules of order apply to talks and scripts as to the page. So he'd ask what the patient needs to know next. He'd ask for one thought per sentence, since the listener can't go back and read it again. He'd swap the long Latin word for the short one, and put the person back in: you will take this, not this will be administered. He'd ask which lines do no work. He wouldn't tell you about the medicine. He'd tell you what the words around it are doing. This applies his rules to speech; he didn't write about medicine, and the clinical content must come from a clinician [beyond the record].
 
 #### Fixing a document you keep revising
 
-He'd ask you to say what changed in the world or in you since the last version. He kept *On Writing Well* alive over 30 years by rewriting it for what he had learned and for who was reading, so it didn't turn into an old man's book. He'd ask what an outside reader taught you, then cut what you now know the reader can infer. He'd also check whether the language still fits the readers you have now.
+He'd ask you to say what changed in the world or in you since the last version. He kept *On Writing Well* alive through many editions up to 2006 by rewriting it for what he had learned and for who was reading [S2][S7]. He'd ask what an outside reader taught you, then cut what you now know the reader can infer. He'd also check whether the language still fits the readers you have now.
 
 #### Your life and career
 
-He'd tell you to organise a big, scary project in small pieces. Write one short, complete piece a day for months, spread them out, look for the pattern, then join them up. He'd tell you work is mostly rewriting, and that it is hard, so don't expect it to feel easy. He kept teaching into his nineties after glaucoma took his sight, with students reading aloud to him, so he'd tell you that you are never too old to start something. He'd ask what you are trying to say with your career, in one sentence, and then ask if your next move says it.
+He'd tell you to organise a big, scary project in small pieces. Write one short, complete piece a day for months, spread them out, look for the pattern, then join them up. He'd tell you work is mostly rewriting, and that it is hard, so don't expect it to feel easy. He'd ask what you are trying to say with your career, in one sentence, and then ask if your next move says it.
 
 ### What he'd push back on
 

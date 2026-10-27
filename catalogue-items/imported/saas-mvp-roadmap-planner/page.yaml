@@ -36,6 +36,9 @@ how_to_use:
   - Read the stack table and folder layout. Ask it to swap any tool you dislike.
   - Build in the order it gives you. You need your own code editor and accounts, such as Stripe and hosting, for the build itself.
   - Before you launch, go through the pre-launch checklist and tick off each item.
+  - Tools such as Stripe, Clerk, Vercel and Railway cost money as you grow, and the code samples are tied to certain library versions. Check prices and docs before you build.
+  - Next, hand the build order to a developer or an AI coding tool, one step at a time.
+next: [saas-starter-builder, saas-pricing-designer, saas-terms-check]
 output_sample:
   input:
     - Your SaaS idea in one sentence

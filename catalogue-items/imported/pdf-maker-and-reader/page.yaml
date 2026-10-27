@@ -17,16 +17,16 @@ when:
   - A PDF output keeps shifting and you need a render-and-fix loop.
 not_for:
   - "You need to edit a PDF in place, such as changing a line in a signed contract: use the original file or a PDF editor."
-  - "Your PDF is a scan or a photo of paper: use an OCR tool first, because this skill reads real text only."
+  - "Your PDF is a scan or a photo of paper: use the Scanned PDF text reader first, because this skill reads real text only."
   - "You need a Word or slide file: ask your AI for that format instead, or export from your own app."
 you_give:
   - A PDF to read, or a brief for a new one
   - Content and layout wishes for a new file
   - Output file name (optional)
 you_get:
-  - The text pulled out of your PDF.
-  - A PNG image of each page, so you can see the layout.
-  - A new PDF saved in output/pdf/, if you asked for one.
+  - "The text pulled out of your PDF, as plain text, one block per page."
+  - "A PNG image of each page, named by page number, so you can see the layout."
+  - "A new PDF saved in output/pdf/ with a stable file name, if you asked for one."
   - A layout check after each change, with any problems named.
 how_to_use:
   - Open an AI that can run code, such as Claude with code tools. Paste in the skill text.
@@ -34,7 +34,8 @@ how_to_use:
   - Let your AI install the tools it needs. If it can't, it will tell you what is missing.
   - Ask it to render each page to an image and check it.
   - Read the page images and the check notes. Ask for fixes until no page has a defect.
-  - Take the final file from output/pdf/.
+  - Take the final file from output/pdf/. Before you send it to a client or a printer, open it yourself and check the page count, the page order, the numbers and any names.
+  - If you need to merge, split or fill in forms, use the PDF toolkit.
 output_sample:
   input:
     - A PDF to read, or a short brief for a new PDF
@@ -44,6 +45,7 @@ output_sample:
     - An AI that can run code and use files
     - Python packages reportlab, pdfplumber and pypdf
     - Poppler, a free tool that turns PDF pages into images
+    - A code-running AI such as Claude Code, and permission to install the packages above
   output:
     - name: Extracted text
       contains: The text pulled from your PDF with pdfplumber or pypdf, for quick checks only.
@@ -53,3 +55,4 @@ output_sample:
       contains: A PDF made with reportlab, saved in output/pdf/ with a stable, clear file name.
     - name: Layout check
       contains: A look at each re-rendered page for clipped text, overlaps, broken tables and hard-to-read type.
+next: [pdf-toolkit, scanned-pdf-text-reader]

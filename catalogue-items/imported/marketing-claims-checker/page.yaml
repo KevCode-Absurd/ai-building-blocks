@@ -31,11 +31,13 @@ you_get:
   - Safer rewrites
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - The skill mentions a plugin config file, saved standards and a legal research tool. You do not need them in a chat. Paste your own claims standards instead. A legal research tool such as Westlaw is a paid service and is optional.
   - Paste your ad or page copy. Say where it will run.
   - Add any proof you hold and your company claims standards, if you have them (optional).
   - Turn on web search if your AI has it, so it can check current ad rules. This is optional.
   - Read the claim table. Fix or cut every claim marked needs proof or cut.
   - Send anything high-stakes to a lawyer. This is a risk check, not legal advice.
+  - Treat every rule or case your AI names as unverified until you check it at the source. Section numbers are the most likely to be wrong.
 output_sample:
   input:
     - Your ad or page copy

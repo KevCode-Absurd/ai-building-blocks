@@ -1,6 +1,6 @@
 # Jane Austen: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Austen wrote no essays on her craft, but her surviving letters include frank comments on her own books and detailed advice to her niece Anna, who was writing a novel [S4]. Many of her letters were destroyed after her death, and the selection used here is a 19th-century edition [S4]. We read her methods from three novels [S1][S2][S3] and from those letters, and take facts about her life from reference pages [S5][S6]. When a line is spoken by a character, it is the character's view, not hers. All her works are in the public domain, so we quote a few short lines. In this pass we checked the letters to Anna and to her sister against the full Gutenberg text, and re-read the openings and key scenes of Pride and Prejudice and Emma. Northanger Abbey is cited from its public-domain text and was not re-read. For the 2026-10-21 pass we added her short satire Plan of a Novel (c. 1816) [S8], the teenage satire Love and Freindship [S9], and a page of her letters on craft to Anna, to the Prince Regent's librarian J. S. Clarke and to a nephew [S7]. The Pemberley page gives excerpts of those letters, not the full letters, and we did not check the wording against the letter editions.
 

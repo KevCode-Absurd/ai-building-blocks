@@ -40,6 +40,8 @@ how_to_use:
   - Read the coverage table. Fix any row that is wrong. Rows with no named successor are the gaps to act on.
   - Use the 9-box and the questions in your talent review meeting. Make the readiness calls yourself.
   - Send the board summary only after your leaders agree with the table.
+  - After sign-off, feed the gap rows into development plans for the people involved, or into a hiring brief for roles with no successor. Use the hiring search brief writer for outside hires, and the structured interview guide to judge candidates fairly. Review the plan once a year, or after a key person leaves.
+next: [hiring-search-brief-writer, structured-interview-guide]
 output_sample:
   input:
     - Your key roles and who holds each one

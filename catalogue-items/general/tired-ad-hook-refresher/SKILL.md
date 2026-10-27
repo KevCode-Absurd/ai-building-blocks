@@ -59,11 +59,11 @@ CHECK WITH A QUALIFIED PERSON: <any health, weight or money claim>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- The [Fatigued ad reviver](https://useaiblocks.com/skills/fatigued-ad-reviver). It takes the hooks.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Fading ad refresh planner](https://useaiblocks.com/skills/fatigued-ad-reviver). It takes the hooks.
+- **Read your ad results** with the [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the plan.
+- **Write the ad copy** with the [Ad hook writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer). It takes the ad copy.
 - **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
+- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan and ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

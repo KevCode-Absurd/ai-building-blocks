@@ -30,12 +30,13 @@ you_get:
   - Questions to ask each candidate
   - A plan to manage the relationship
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text (the full skill file at the bottom of this page). The Python code in it is optional. Without code skills, ask your AI for plain-language answers.
   - Tell your AI what you need made or packed and why you need a co-packer.
   - Add your product details, rules, volumes, peaks and minimum orders.
   - Add your current co-packers and problems, if you have any.
   - Read the make-or-buy view first. Then check the scorecard and the questions for each candidate.
   - Fix any gaps with your AI before you share the plan. Mark anything you do not know as missing.
+  - Next, take the scorecard to each shortlisted co-packer. Audit the plant and run a small pilot batch before you sign.
 output_sample:
   input:
     - What you need made or packed, and why you need a co-packer

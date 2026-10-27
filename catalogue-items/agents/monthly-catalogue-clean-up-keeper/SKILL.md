@@ -22,7 +22,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **A store connection** (required): read access to products, variants, stock, collections and sales channels, through the Shopify tools the skills below use. Without it, ask for a product export with SKU, barcode, cost, stock, collections and channels.
+- **A store connection** (required): read access to products, variants, stock, collections and sales channels, through the Shopify tools the skills below use. Your store admin has to grant this access, for example through an app or connector with read permission. Your Shopify plan or the connector may limit or charge for it, so check first. Without a connection, ask for a product export with SKU, barcode, cost, stock, collections and channels.
 - **Channels you sell on** (required the first time): the names every live product should appear on. Saved after the first run.
 - **Required fields** (optional): any custom field every product must have, such as material.
 - **A naming map** (optional): the standard names for sizes and colours, such as S, M, L.

@@ -17,7 +17,7 @@ uses: [thumbnail-and-title-planner, headline-cover-test-ranker, youtube-transcri
 steps:
   - {uses: thumbnail-and-title-planner, note: "Starts from your video idea and channel and makes the pairs to choose from."}
   - {uses: headline-cover-test-ranker, note: "Reads the titles from the step before and cuts them to three that are different enough to test. You publish the top pair."}
-  - {uses: youtube-transcript-reader, note: "Uses the link to the video you published with step 2's top pair, not step 2's output. Gets the words of the live video so the drop-off points can be matched to what you said. You can paste the captions instead."}
+  - {uses: youtube-transcript-reader, note: "Uses the link to the video you published with step 2's top pair, not step 2's output. Gets the words of the live video so the drop-off points can be matched to what you said. The free default is to paste the captions from YouTube Studio. Fetching them uses a paid service (TranscriptAPI) with your own key."}
   - {uses: youtube-retention-reader, note: "Reads the transcript from the step before, so each drop shows what you were saying then."}
 origin: rebuilt
 version: 1.0.0

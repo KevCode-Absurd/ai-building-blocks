@@ -29,10 +29,12 @@ you_get:
   - A negotiation plan with fallbacks
   - Scripts for the offer call and closing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - "Paste what you know: the role and pay range, your budget limits, what the candidate asked for and any rival offers."
+  - Ask for the offer package first. Check each part against your real budget.
+  - Ask for the negotiation plan and the call scripts. Change anything you would not say out loud.
+  - Use only figures you can source when you talk to the candidate. Do not quote statistics you cannot check.
+  - Once the package is agreed, use the Offer letter drafter to write the letter.
 not_for:
   - "You only need the letter itself. Use the Offer letter drafter."
   - "You already have a letter and want its legal terms checked. Use the Offer letter and non-compete checker."

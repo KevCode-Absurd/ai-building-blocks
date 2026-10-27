@@ -10,6 +10,8 @@ explain: |
   A round of ads ends and the numbers are muddy. One ad has a good return on a few sales, another spent a lot and did little, and you cannot say whether the idea or the execution failed. Often the round tested one idea ten times, so there was never a real comparison.
 
   The first step splits every ad into its message and its look, and writes the one idea behind each. The second counts distinct ideas, not ads, and shows how many were repeats. The third reads the results by ad set and by concept, flags false winners and writes the brief for the next round. The fourth turns that brief into a Meta test layout with a minimum spend. The fifth ranks channels by new-customer revenue per extra dollar. It needs real spend and results per ad. With only a handful of sales in total, the reads are too thin to act on.
+
+  This is not the Ad test brief writer, which turns brand facts into designer briefs, or the Ad recall and pull calculator, which reads a survey on whether people remember an ad. This one reads the spend and results of a finished test, then plans the next test and the budget.
 when:
   - A round of ads finished and you cannot tell what won, what to cut or what to make next.
   - Your best ad has stopped working and you are not sure whether to make more like it or something new.
@@ -17,13 +19,13 @@ when:
 not_for:
   - "You have one ad with no spend data: use the Ad recall and pull calculator first, then come back."
   - "Your test has only a handful of sales in total: wait for more results, as the reads are too thin to act on."
-  - "You only want a Meta test layout from a brief you already have: use the Ad test brief writer or the Ad test budget setter."
+  - "You only want a Meta test layout from a brief you already have: use the Ad test brief writer or the Ad test budget calculator."
 you_give:
-  - The ads you ran (images, videos and their copy, or a description of each)
+  - The ads you ran (required): images, videos and their copy, or a description of each, with which ones won or lost
   - Results per ad and ad set, with spend, purchases, return, clicks and frequency
   - Your target return or cost per sale
   - Spend and results by channel (optional, but step 5 needs it)
-  - Rival or reference ads you want compared (optional)
+  - Rival ads you want compared (optional)
 you_get:
   - A breakdown of every ad by message and look, with the one idea behind each and the patterns across winners
   - A sameness score out of 100, the number of distinct ideas, and which ads to keep and replace
@@ -31,7 +33,7 @@ you_get:
   - A Meta test layout for the next round, with a pack plan, minimum spend, naming and scaling rules
   - A ranking of channels by the next $10,000, with a stop point for each and a test that could change the ranking
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach the ads themselves where you can, as images or video stills, and paste the results export beside them.
   - Say your target return or cost per sale, so each verdict is against your goal and not a general one.
@@ -43,7 +45,7 @@ output_sample:
     - Your target return or cost per sale
     - Spend and results by channel (optional)
   prerequisites:
-    - Paste the results export into the chat, or give ad IDs from your own ad account connector
+    - Paste the results export into the chat, or give ad IDs from your own ad account connector if you have one
     - An AI that can read images or files, if you attach the ads themselves
   output:
     - name: "Step 1: Ad breakdowns"

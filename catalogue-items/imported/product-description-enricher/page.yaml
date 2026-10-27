@@ -7,7 +7,7 @@ job: build-websites
 headline: Product description enricher
 subhead: Give it your Shopify store and a length rule for thin descriptions. It rewrites each short description with real facts from the product's own data. You approve the rewrites before anything goes live.
 explain: |
-  Thin product descriptions turned into copy with real facts in it. An AI shopping tool quotes your description to explain why a product fits. A one-liner gives it nothing to quote, so it moves on.
+  Thin product descriptions turned into copy with real facts in it. An AI shopping tool may quote your description to explain why a product fits. A one-liner gives it little to quote.
 
   Claude finds products whose descriptions fall under a length threshold or lack key details. It rewrites each with a benefit-led opening line, then concrete facts: material, fit, size, uses and care, pulled from the product's own fields, options and type. It also works in the words shoppers actually type. You review the rewrites first. They update live product pages, so you need an authenticated Shopify CLI session with write access.
 when:

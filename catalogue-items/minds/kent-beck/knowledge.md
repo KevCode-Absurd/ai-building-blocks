@@ -1,6 +1,6 @@
 # Kent Beck: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Kent Beck is alive, and his views can change. He has changed them in public before: the second edition of his book on Extreme Programming reworked the first [S2][S8]. This file draws on his own newsletter posts from 2022 to 2026 [S4][S5][S6][S11][S12][S13][S14], the free openings of two more [S16][S17], his test-qualities page [S15], the Agile Manifesto he co-wrote [S3], notes of his 2014 debate on testing [S10], and reference pages. Treat each view as "as of" the date of its source. The newest are from autumn 2026, and many posts are partly behind a paywall, so we only use what is public. His books are in copyright, so this is our summary, with a few short quotes.
 

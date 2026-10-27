@@ -1,0 +1,130 @@
+new_slug: apology-email-writer
+name: Apology email writer
+summary: Say what went wrong and what you will do. Get a short apology email that owns the mistake and states the fix.
+job: help-customers
+thinking: low
+thinking_why: It writes a short email from facts you give, with little judgement needed.
+headline: Apology email writer
+subhead: Tell it what went wrong, who it affected and what you can do about it. It writes a short apology email that says what happened, takes responsibility, states the fix and the date, and says how you'll stop it happening again. It leaves out excuses and promises you can't keep.
+explain: |
+  A bad apology makes things worse. It opens with excuses, says "if anyone was offended", or buries the fix at the bottom. The customer reads it and feels more annoyed, not less.
+
+  A good apology is short and has four parts. It says what went wrong, in plain words. It takes responsibility without hedging. It says what you are doing to put it right, with a date. And it says what you'll change so it doesn't happen again. This skill writes that email from the facts you give. It uses only fixes you can really offer, never invents causes, and never promises what you haven't confirmed. If someone may have a legal claim, it points you to get advice first.
+when:
+  - You made a mistake that affected a customer, such as a late or wrong order.
+  - A customer complained and was right, and you want to reply well.
+  - An outage, delay or error affected many customers at once.
+not_for:
+  - "The customer is wrong and you want to say no politely: use the Customer email reply drafter."
+  - "A serious harm, injury or legal claim is involved: get legal advice before you write."
+  - "You are replying to a public review: use the Customer review reply writer."
+you_give:
+  - What went wrong, in plain facts
+  - Who it affected, and how
+  - What you can do to fix it, and by when
+  - What you'll change so it doesn't happen again (optional)
+  - Your relationship with the customer and your usual tone (optional)
+you_get:
+  - A short apology email, with a subject line
+  - A version for one customer and a version for many
+  - A check that it has no excuses or promises you can't keep
+  - Questions to answer first if a fact is missing
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - State what happened, who it affected, and what you can really do to fix it.
+  - Say if this is for one customer or a list.
+  - Check every date and offer against what you can actually do.
+  - Send it quickly. A prompt apology matters more than a perfect one.
+output_sample:
+  input:
+    - What went wrong, who it affected, and how
+    - What you can do to fix it, and by when
+    - What you'll change so it doesn't happen again (optional)
+  output:
+    - name: Subject
+      contains: A subject line that says what the email is about.
+    - name: Email
+      contains: What went wrong, a clear statement of responsibility, the fix with its date, and what will change.
+    - name: For many customers
+      contains: A shorter version for a list.
+    - name: Questions to answer first
+      contains: Facts you did not give that the email needs.
+    - name: Missing
+      contains: Anything you did not tell it, such as a date for the fix.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Gets the facts straight
+    text: Separates what happened from what you think caused it.
+  - title: Writes the opening
+    text: States what went wrong in the first lines, in plain words.
+  - title: Takes responsibility
+    text: Owns the mistake in one clear sentence, with no "if" or "but".
+  - title: States the fix
+    text: Says what you are doing and by when, using only what you said you can do.
+  - title: Says what changes
+    text: States what you'll change, if you gave one.
+  - title: Closes simply
+    text: Ends with how to reach you, and no begging or flattery.
+  - title: Checks for excuses
+    text: Removes excuses, blame and promises you didn't confirm.
+output_shape: |
+  SUBJECT
+  <subject that says what it's about>
+
+  EMAIL
+  <what went wrong>
+  <we got it wrong / I got it wrong>
+  <what we're doing to fix it, and by when>
+  <what we'll change>
+  <how to reach me>
+
+  FOR MANY CUSTOMERS
+  <short version for a list>
+
+  QUESTIONS TO ANSWER FIRST
+  - <fact you didn't give>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: The facts
+    how: Say what happened without explaining why. The skill only uses causes you are sure of.
+  - what: The fix
+    how: Offer only what you can do. A smaller promise you keep beats a bigger one you don't.
+  - what: Your tone
+    how: Say if you're formal or friendly. The email should sound like you.
+  - what: One or many
+    how: Say if it goes to one person or a list. A list needs a shorter email.
+judge:
+  - The first lines say what went wrong.
+  - Responsibility is stated without "if" or "but".
+  - The fix has a date or a clear next step.
+  - No excuse, blame or promise you didn't confirm appears.
+  - It is short enough to read in under a minute.
+test:
+  - Read it as the customer. Would it make you feel heard? Fix any line that wouldn't.
+  - Add an excuse to your facts. The skill should leave it out and say why.
+  - Leave out the fix date. It should ask for one and not make one up.
+improve:
+  - Add your usual sign-off and how customers reach you to the skill file.
+  - Keep past apologies that worked, and use them as examples.
+  - After each one, note what the customer said and whether they stayed.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Short, plain emails from a few facts work well in any strong chat AI.
+    - name: Your help desk or email tool
+      why: Send quickly and log the reply, so you see if the customer stays.
+  inputs:
+    - The customer's original message
+    - A timeline of what went wrong
+    - What you can offer, such as a refund, a redo or a credit
+terms:
+  - term: Responsibility
+    meaning: Saying clearly that the mistake was yours, without blaming others or hedging.
+  - term: Fix
+    meaning: What you are doing to put it right, and when.

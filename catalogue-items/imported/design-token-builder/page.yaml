@@ -32,11 +32,11 @@ you_get:
   - A developer handoff note
 how_to_use:
   - Use an AI that can run Python code, or install Python 3 on your computer. Add the skill's generator script to your chat or folder.
-  - "Tell your AI your brand colour as a hex code, your style (modern, classic or playful) and the format you want: CSS, SCSS or JSON."
+  - "Tell your AI your brand colour as a hex code, your style (modern, classic or playful) and the format you want: CSS, SCSS or JSON. If you do not pick, you get JSON."
   - "Ask it to run the generator with your colour, for example with #0066CC and modern, then save the CSS or JSON result."
   - Check the palette for contrast. Text should pass WCAG AA, which means 4.5 to 1 for normal text and 3 to 1 for large text.
-  - Ask for the component map, the breakpoints and the handoff note. Send the files and the note to your developer.
-  - To sync with Figma, the skill suggests the Tokens Studio plugin. Check its current pricing yourself, as this skill does not say.
+  - Ask for the component map, the breakpoints and the handoff note. Send the files and the note to your developer. Small buttons (32px high) are below the 44px touch size, so ask them to enlarge the tap area or drop that size.
+  - To sync with Figma, the skill suggests the Tokens Studio plugin, which has a paid tier. Check its current pricing, and test the sync on one token first.
 output_sample:
   input:
     - Your main brand colour as a hex code

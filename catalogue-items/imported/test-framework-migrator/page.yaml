@@ -5,7 +5,7 @@ name: Test framework migrator
 summary: Convert Selenium, Playwright, Puppeteer or Cypress tests to another framework. Get the new files and a list of what needs a manual check.
 job: test-and-fix-code
 headline: Test framework migrator
-subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose. Bring the existing test files. Use the result to plan your next step.
+subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose, with a list of anything that needs a manual check.
 explain: |
   Your browser tests converted from one framework to another, Selenium, Playwright, Puppeteer or Cypress, so you can switch tools without rewriting every test by hand.
 
@@ -35,7 +35,7 @@ how_to_use:
   - Paste or attach the test files you want to convert.
   - Say which framework you use now and which one you want. Add your language if it matters.
   - Check the list of items for manual review first. Then run the converted tests in your own project.
-  - Note that the per-pair guide files come from the source repo. Your AI needs web access or a copy of them.
+  - The per-pair guide files live in the source repo, not in this folder. Your AI needs web access to read them. If it has none, open the guide for your pair on GitHub and paste it in. Without a guide, treat every conversion as a draft.
 output_sample:
   input:
     - Your existing test files
@@ -51,6 +51,6 @@ output_sample:
     - name: Changed patterns
       contains: A list of the old calls that were swapped and what they became.
     - name: Manual review list
-      contains: Features with no direct match in the target, so you can decide what to do.
+      contains: A table with columns for the old pattern, the new pattern, the reason and the risk level, for features with no direct match in the target.
     - name: Setup and lifecycle notes
       contains: How start-up and clean-up differ in the target, such as driver versus page.

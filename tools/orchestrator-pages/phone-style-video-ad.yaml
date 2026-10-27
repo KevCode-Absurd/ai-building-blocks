@@ -59,7 +59,7 @@ output_sample:
     - name: Read-aloud fixes and final script
       contains: Lines that sound written are reworded, with no claim changed, and the full final script follows.
     - name: Filming brief
-      contains: The idea in a few sentences, the shots in run order, and a must-have and maybe list.
+      contains: The idea in a few sentences, the shots in run order, a must-have and maybe list, and a line on whether the speaker is paid, gifted or affiliated.
     - name: Cut list
       contains: Timed cuts sorted by job, caption windows, a sound plan and export settings.
     - name: Hand-back summary
@@ -95,6 +95,7 @@ output_shape: |
   FILMING BRIEF
   The idea: <two or three sentences>
   Run order: <shots in order>   Must: <list>   Maybe: <list>
+  Disclosure: <speaker is paid, gifted, affiliated or none; do not present a paid endorsement as a personal experience>
 
   (pause for the footage)
 

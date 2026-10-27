@@ -102,6 +102,8 @@ Use stronger LLMs to evaluate weaker model outputs.
 
 ## Quick Start
 
+> **AI Blocks note:** the code in this file is a pattern to adapt, not code that runs as written. Names such as `llm_eval`, `check_groundedness` and `call_judge_model` are placeholders that you or a developer must write. In a plain chat, the output is a plan and needs no code.
+
 ```python
 from llm_eval import EvaluationSuite, Metric
 

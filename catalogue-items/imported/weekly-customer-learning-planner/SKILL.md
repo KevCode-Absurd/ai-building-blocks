@@ -195,8 +195,8 @@ See [references/case-studies.md](references/case-studies.md) when adapting the h
 
 Based on the continuous discovery framework developed by Teresa Torres:
 
-- [*"Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value"*](https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309?tag=wondelai00-20) by Teresa Torres
+- [*"Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value"*](https://www.amazon.com/Continuous-Discovery-Habits-Discover-Products/dp/1736633309?tag=wondelai00-20) by Teresa Torres (affiliate link: the original skill author may earn a commission)
 
 ## About the Author
 
-**Teresa Torres** is an author, speaker, and coach who has helped hundreds of product teams — from startups to Capital One and Calendly — adopt continuous discovery. She created the Opportunity Solution Tree, writes the widely read Product Talk blog, and distilled her coaching practice into *Continuous Discovery Habits*.
+**Teresa Torres** (this bio is the original skill author's own text, not checked here) is an author, speaker, and coach who has helped hundreds of product teams — from startups to Capital One and Calendly — adopt continuous discovery. She created the Opportunity Solution Tree, writes the widely read Product Talk blog, and distilled her coaching practice into *Continuous Discovery Habits*.

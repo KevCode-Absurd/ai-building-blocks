@@ -13,17 +13,21 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Video clips** (yours): the clips you want to edit.
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **A shot list**, made by the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker): the video broken into shots, with timing and on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
 3. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-4. This one.
+4. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+5. **A shot list** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It uses your brand brain and a video ad script and a character sheet.
+6. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
@@ -98,10 +102,9 @@ CHECKS MISSED  <one line per check still missed, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the video ads.
-- **Make video ads** with the [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads.
-- The [Google Demand Gen campaign planner](https://useaiblocks.com/skills/demand-gen-cold-campaign-builder). It takes the video ads.
-- The [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder). It takes the video ads.
+- The [Video caption maker in your brand font](https://useaiblocks.com/skills/branded-video-captions). It takes the video ads and edit plan.
+- The [Short video editing coach agent](https://useaiblocks.com/skills/agency-marketing-short-video-editing-coach).
+- The [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

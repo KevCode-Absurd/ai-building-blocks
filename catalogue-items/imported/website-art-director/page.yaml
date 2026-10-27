@@ -30,12 +30,13 @@ you_get:
   - Screenshots at three widths
   - A fix list after review
 how_to_use:
-  - Use an AI that can run code and open a browser, such as Claude Code. A chat-only AI can plan but cannot check the page.
+  - Use an AI that can run code and open a browser, such as Claude Code. A chat-only AI can plan but cannot check the page. You need Node 22 or newer, an installed Chrome, Edge or Chromium, and an internet connection for the picture search.
   - Download the skill folder and add it to your AI tool, or paste in the SKILL.md text.
   - Tell your AI what the site or screen is for, who it is for and how it should feel. Add your stack and any brand files.
   - Ask your AI to build it with this skill. It deals three directions and you pick one.
   - Review the screenshots and the fix list. Ask for more rounds if a score falls short.
-  - Swap any sample content and add picture credits before you launch.
+  - Swap any sample content and add picture credits before you launch. Sample dish names, rates and project titles are marked as placeholders on the page.
+  - Next, check the inspector results and run accessibility checks before you launch. Use wcag-accessibility-fixer for that.
 output_sample:
   input:
     - What the site or screen is for
@@ -60,3 +61,4 @@ output_sample:
       contains: Screenshots at three widths, scored against a rubric, with the fixes made after each round.
     - name: Credits and handover notes
       contains: Credits for any found pictures, what stands in for photos, and sample content to swap before launch.
+next: [wcag-accessibility-fixer, web-page-speed-tuner]

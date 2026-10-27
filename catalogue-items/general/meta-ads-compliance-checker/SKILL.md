@@ -13,13 +13,14 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **Your image ads** (yours): the image ads, attached as pictures.
+- **Image prompt** (yours): a render-ready image prompt plus the reference roles it uses.
 - **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+1. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
 3. This one.
 
 How to start:
@@ -115,11 +116,10 @@ Check the live policy page.>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign performance reviewer](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- **Make video ads** with the [Claim demonstration planner](https://useaiblocks.com/skills/claim-demonstration-planner). It takes the audit report.
+- The [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the script and ad copy and audit report.
+- The [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker). It takes the ad copy.
+- The [Ad draft repair reviewer](https://useaiblocks.com/skills/pre-launch-ad-check-and-fix-loop). It takes the ad copy and script.
+- **Make video ads** with the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

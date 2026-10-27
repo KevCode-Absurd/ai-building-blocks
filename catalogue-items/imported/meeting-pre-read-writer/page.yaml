@@ -43,7 +43,7 @@ output_sample:
     - Pages in your Notion workspace to draw from (optional)
   prerequisites:
     - An AI that can connect to Notion (the skill uses Codex CLI with the Notion connection)
-    - A Notion workspace you can sign in to
+    - A Notion workspace you can sign in to. Codex CLI and Notion may each need a paid account or plan, so check yours first
   output:
     - name: Meeting page in Notion
       contains: The agenda and pre-read, built from the template that fits your meeting type.

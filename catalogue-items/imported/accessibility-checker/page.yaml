@@ -33,9 +33,10 @@ how_to_use:
   - Open your AI in a chat that can run code or use a browser. Paste this skill into the chat.
   - Give it a page address or a code folder. Say if you want a report only, or a report and fixes.
   - Start with a small scope, such as one page or one folder. Whole-site checks are rarely useful.
-  - Only use a signed-in session for accounts and data you are allowed to share with your AI tool.
+  - Only use a signed-in session for accounts and data you are allowed to share with your AI tool. Stay out of customer records, personal data and payment pages. Use a test account if you can.
   - Read the critical and serious problems first. Check any fixes before you publish.
   - Test by hand with a screen reader and the Tab key, since automated checks miss things.
+  - Save the ranked list as a file and hand it to your developers as their fix list.
 output_sample:
   input:
     - A page address or a code folder
@@ -45,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run an accessibility checking tool, or open a browser, for a live page check
     - A browser you are allowed to use, if the page needs a sign-in
+    - "Optional: the AccessLint checking tool and a browser tool connected to your AI, for live page checks. Check on their own sites whether each is free or needs a paid plan or key. Without them it reviews the code only and says live coverage is limited"
   output:
     - name: Summary
       contains: Counts of critical, serious, moderate and minor problems, and the top patterns behind them.

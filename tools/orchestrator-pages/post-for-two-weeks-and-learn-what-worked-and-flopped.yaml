@@ -64,7 +64,7 @@ how_it_works:
   - title: Post and export (you)
     text: You post for two weeks, then export reach, likes, comments, shares and clicks for each post.
   - title: Read the numbers
-    text: Works out the engagement rate per post, compares each platform with typical ranges, ranks the posts and says what to post next.
+    text: Works out the engagement rate per post, compares each platform with your own past posts, ranks the posts and says what to post next. It uses a benchmark only if you give a source and date for it.
   - title: Diagnose the flop
     text: Takes the worst post and tells apart three causes. Few people saw it, they skipped it, or they saw it and did not care. Then it gives the one change.
 output_shape: |-

@@ -34,6 +34,7 @@ how_to_use:
   - Choose a speech-to-text tool such as Whisper or Deepgram. Whisper can run on your own computer. Deepgram is a paid service and needs an API key.
   - Upload your recording. Add speaker names, the main language and the format you want.
   - Ask your AI to make the meeting notes from the recording.
+  - Check speaker names, numbers and deadlines against the recording before you send the action items on.
   - Read the transcript marks for unclear parts, and fix names and tasks that look wrong.
   - Copy the action items into your task tracker or send them to the team.
 output_sample:

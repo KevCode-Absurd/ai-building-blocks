@@ -32,10 +32,16 @@ you_get:
 how_to_use:
   - Open your AI tool (Claude, ChatGPT or Gemini) and paste in the skill text.
   - Describe your product or idea, your target customers, your region and your price.
+  - "Ask your AI to work in this order: define the market, gather data, work out TAM, then SAM, then SOM, then cross-check the three methods and list your assumptions."
   - Paste any industry reports you have (optional). If your AI can search the web, ask it to find current market data.
   - Read the three estimates and the cross-check. If they are far apart, ask your AI why.
   - Check each source and date. Treat the share rates as assumptions, and ask for a cited reason behind each one.
   - Some data providers charge for reports. Do not buy a report or share customer data unless you are allowed to.
+  - The 2 to 5 percent share and 10 to 30 percent willingness to pay in the skill are starting guesses to test, not industry benchmarks. Replace them with figures you can source.
+  - If your AI cannot search the web, ask it to mark every figure unverified and list the sources you must check and date yourself before you quote the numbers.
+next:
+  - market-research-report-writer
+  - pricing-strategist
 output_sample:
   input:
     - Your product or idea

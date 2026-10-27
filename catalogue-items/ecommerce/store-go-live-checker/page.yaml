@@ -155,3 +155,4 @@ terms:
     meaning: Packing and sending an order, and telling the buyer.
   - term: Blocker
     meaning: A problem that stops you taking money, shipping orders or showing the policies you need.
+next: [store-tax-setup-planner, payments-and-checkout-settings-checker]

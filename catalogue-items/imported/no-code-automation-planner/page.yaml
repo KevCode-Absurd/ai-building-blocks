@@ -30,9 +30,9 @@ you_get:
   - Test and naming tips
   - A sign for when to switch to code
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running, files or web access is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code running, files or web access is needed.
   - Describe the task in plain words. Name the apps, how often it runs and how much data moves.
-  - Add your budget if you have one (optional).
+  - Add your budget if you have one (optional). Check current prices on the Zapier or Make pricing page before you decide. They change.
   - Read the tool choice and the trigger, filter and action layout.
   - Build the flow in Zapier or Make. Test it on real sample data before you turn it on.
   - If the first test passes, watch the first few real runs. If it grows or slows, run the switch-to-code check again.

@@ -9,7 +9,9 @@ subhead: A plan for getting more reviews and replying to bad ones in a way that 
 explain: |
   A plan for getting more reviews and replying to bad ones in a way that wins over everyone watching. It rests on a few findings that go against common habit.
 
-  Ask 9 to 13 days after delivery, not at 24 hours, which cut reviews. Open with a friendly question like what did you enjoy most, before asking for a rating. Send the same request to every customer, because sending only happy ones to the public page is judged deceptive by regulators. Early at launch, ask all early buyers quickly. Keep a rating below 5.0, since it sells better. Replies to public complaints are written for the onlookers, not the angry writer.
+  Ask 9 to 13 days after delivery, not at 24 hours, which cut reviews. Open with a friendly question like what did you enjoy most, before asking for a rating. Send the same request to every customer, because sending only happy ones to the public page is judged deceptive by regulators. Early at launch, ask all early buyers quickly. Do not chase a perfect score: an average of 4.0 to 4.5 sells better than 4.5 to 5.0. Replies to public complaints are written for the onlookers, not the angry writer.
+
+  The numbers in the advice, such as 131% more spent, 0.29 stars and 18.3% more likely to buy, come from the studies listed in the skill's reference file. A few tips are marked as practitioner tips with no study behind them. Treat those as ideas to test.
 when:
   - You are not sure when to send the review request email.
   - You got a harsh 1-star review and wonder whether to try to remove it.
@@ -30,8 +32,11 @@ you_get:
   - A reply to a bad review
   - Advice on handling ratings and complaints
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell it your product and how long buyers need to judge it, when your review request goes out now and what it says, and your average rating.
+  - Paste a review or complaint you want to answer, if you have one.
+  - Read the plan. Send the new request timing to one batch of customers first and compare review counts with your last batch.
+  - After 30 to 60 days, check your review count and average rating. Keep what raised them.
 output_sample:
   input:
     - Your product and how long it takes to judge

@@ -6,7 +6,7 @@ argument-hint: "<question>"
 
 # /analyze - Answer Data Questions
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> If you have no data warehouse connected, work from the file or pasted rows the person gives you, and say so. Do not guess at tables or numbers.
 
 Answer a data question, from a quick lookup to a full analysis to a formal report.
 
@@ -45,7 +45,7 @@ Parse the user's question and determine:
    - Paste query results directly
    - Upload a CSV or Excel file
    - Describe the schema so you can write queries for them to run
-2. If writing queries for manual execution, use the `sql-queries` skill for dialect-specific best practices
+2. If writing queries for manual execution, write the query for the person's SQL dialect (ask which one if you are unsure). If a separate SQL-queries skill is installed you may use it, but you do not need it
 3. Once data is provided, proceed with analysis
 
 ### 3. Analyze
@@ -90,7 +90,7 @@ If any check raises concerns, investigate and note caveats.
 
 When a chart would communicate results more effectively than a table:
 
-- Use the `data-visualization` skill to select the right chart type
+- Choose the chart type that fits the data (a separate data-visualization skill may help if it is installed, but is not needed)
 - Generate a Python visualization or build it into an HTML dashboard
 - Follow visualization best practices for clarity and accuracy
 
@@ -115,5 +115,5 @@ When a chart would communicate results more effectively than a table:
 
 - Be specific about time ranges, segments, or metrics when possible
 - If you know the table names, mention them to speed up the process
-- For complex questions, Claude may break them into multiple queries
-- Results are always validated before presentation -- if something looks off, Claude will flag it
+- For complex questions, your AI may break them into multiple queries
+- Results are always validated before presentation -- if something looks off, your AI will flag it

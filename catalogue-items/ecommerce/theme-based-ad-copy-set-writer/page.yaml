@@ -5,17 +5,19 @@ job: write-ad-copy
 headline: Theme-based ad copy set writer
 subhead: Share product, theme, buyer stage, brand voice and approved claims. Get three to five headline, body and cta sets with test picks.
 explain: |-
-  Turn one product theme into three to five full ad copy sets. Check claims, brand voice and which pair to test.
+  One theme, such as urgency or social proof, can sell a product in several ways. This skill turns your theme into three to five full ad copy sets. Each set uses a different angle and framework.
 
-  Share product, theme, buyer stage, brand voice and approved claims. Get three to five headline, body and cta sets with test picks.
+  It checks each set against a quality list, then picks the two sets to test first. It uses only the facts and claims you give it, and marks anything missing.
 when:
-  - You need three to five headline, body and CTA sets with test picks.
-  - You need theme-based ad copy set writer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have a product, a theme and a buyer stage, and need three to five paid ad copy sets.
+  - You want each set to take a different angle so a test teaches you something.
+  - You want to know which two sets to test first.
 not_for:
   - "You want organic social posts: write those by hand or ask your AI for a plain post draft, since this builds paid ad copy only."
   - "You have no approved claims for the product: gather them first, or the copy will have gaps marked as missing."
   - "You need a full landing page: ask a copywriter or your AI for a page draft, since this only writes ad text."
+  - "You want a single headline set to pick from: use the Ad headline writer."
+  - "Your ad needs a policy check before it runs: use the Ad and page policy checker."
 you_give:
   - Product
   - Theme
@@ -52,18 +54,14 @@ output_sample:
 how_it_works:
   - title: Check the inputs
     text: Confirm product, theme, buyer stage, brand voice and approved claims. Mark facts that are missing.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Copy Components
-    text: Follow the copy components section in the full method and keep its required fields and decision rules.
-  - title: Theme-Specific Frameworks
-    text: Follow the theme-specific frameworks section in the full method and keep its required fields and decision rules.
-  - title: Generate 3-5 Copy Sets
-    text: Follow the generate 3-5 copy sets section in the full method and keep its required fields and decision rules.
-  - title: Quality Gate
-    text: Follow the quality gate section in the full method and keep its required fields and decision rules.
-  - title: A/B Test Recommendation
-    text: Follow the a/b test recommendation section in the full method and keep its required fields and decision rules.
+  - title: Pick the framework for your theme
+    text: Each theme has its own pattern. Urgency uses a deadline, social proof uses a real customer result, and so on.
+  - title: Write three to five sets
+    text: Each set has a headline of 4 to 6 words under 40 characters, an optional subheadline and body, and a 2 to 4 word call to action.
+  - title: Run the quality gate
+    text: Checks headline length, a call to action, banned phrases, no em dashes and at least three different frameworks.
+  - title: Pick the test
+    text: Names the two sets to test first, the one thing the test changes, and the number to measure.
   - title: Review the result
     text: Return three to five headline, body and cta sets with test picks. Check facts, math and the decisions before any action.
 thinking: medium

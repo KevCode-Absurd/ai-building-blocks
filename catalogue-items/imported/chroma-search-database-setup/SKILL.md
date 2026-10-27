@@ -17,16 +17,16 @@ The AI-native database for building LLM applications with memory.
 **Use Chroma when:**
 - Building RAG (retrieval-augmented generation) applications
 - Need local/self-hosted vector database
-- Want open-source solution (Apache 2.0)
+- Want open-source solution (Chroma itself is Apache 2.0; this skill file is MIT)
 - Prototyping in notebooks
 - Semantic search over documents
 - Storing embeddings with metadata
 
-**Metrics**:
+**Metrics** (the skill author's figures from when it was written; check the GitHub page for today's numbers):
 - **24,300+ GitHub stars**
 - **1,900+ forks**
 - **v1.3.3** (stable, weekly releases)
-- **Apache 2.0 license**
+- **Chroma is Apache 2.0 licensed**
 
 **Use alternatives instead**:
 - **Pinecone**: Managed cloud, auto-scaling
@@ -389,6 +389,8 @@ collection = client.get_or_create_collection("my_docs")
 
 ## Performance
 
+These are rough figures from the skill's author, not measured here. Time it on your own data before you rely on it.
+
 | Operation | Latency | Notes |
 |-----------|---------|-------|
 | Add 100 docs | ~1-3s | With embedding |
@@ -401,6 +403,6 @@ collection = client.get_or_create_collection("my_docs")
 - **Docs**: https://docs.trychroma.com
 - **Discord**: https://discord.gg/MMeYNTmh3x
 - **Version**: 1.3.3+
-- **License**: Apache 2.0
+- **License**: Apache 2.0 (Chroma itself)
 
 

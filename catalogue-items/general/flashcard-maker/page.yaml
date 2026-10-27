@@ -1,0 +1,125 @@
+new_slug: flashcard-maker
+name: Flashcard maker
+summary: Paste your notes or a chapter. Get flashcards with one question and one short answer each, grouped by topic.
+job: study-and-practice
+thinking: low
+thinking_why: It condenses text into a fixed card format with little judgement needed.
+headline: Flashcard maker
+subhead: Paste your notes, a chapter or a transcript, and say how many cards you want. It makes flashcards with one clear question and one short answer each, grouped by topic. It skips filler, asks things in more than one way where it helps, and gives you a format that most study apps can import.
+explain: |
+  Good flashcards are small. One question, one answer, and the answer short enough to check at a glance. Most cards made in a hurry copy a paragraph onto the back, which doesn't test anything.
+
+  This skill makes cards from your own notes. It reads the text, picks the facts and ideas worth remembering, and turns each into a question with a short answer. It groups them by topic, writes tricky ideas as a question that asks why or how, and leaves out filler. It uses only what is in your text. It will not add facts from outside, because a wrong card is worse than none. Cards come out in a plain format you can paste into most study apps.
+when:
+  - You have notes or a chapter to learn for an exam or a course.
+  - You want cards from a talk, a book or a training document.
+  - Your own cards are long and don't test you.
+not_for:
+  - "You need a study plan with dates: use the Study session planner and reviewer."
+  - "You want to check what you understood: use the Study understanding checker."
+  - "You want facts added from outside your notes: ask your AI a separate question, and check it."
+you_give:
+  - Your notes, a chapter or a transcript, pasted as text
+  - How many cards you want, or the topics to cover
+  - The app you'll use, so the format fits (optional)
+  - Your level and what you will be tested on (optional)
+you_get:
+  - Flashcards with one question and one short answer each
+  - Cards grouped by topic
+  - A plain format you can paste or import into a study app
+  - A list of topics in your text it left out, and why
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your notes or chapter, and say how many cards you want.
+  - Say which app you'll use, so the format fits.
+  - Read through the cards and delete any that test something you don't need.
+  - Import them into your app and review a few each day.
+output_sample:
+  input:
+    - Your notes, a chapter or a transcript, pasted as text
+    - How many cards you want, or the topics to cover
+    - The app you will use (optional)
+  output:
+    - name: Cards by topic
+      contains: For each topic, cards with one clear question and one short answer.
+    - name: Import format
+      contains: The same cards, one per line, in a plain format for most study apps.
+    - name: Left out
+      contains: Topics in your text that did not become cards, with the reason.
+    - name: Missing
+      contains: Anything you did not tell it, such as how many cards you want.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads your text
+    text: Finds the facts, terms and ideas worth remembering.
+  - title: Groups by topic
+    text: Sorts them into topics in the order they appear.
+  - title: Writes the questions
+    text: Turns each into one question with one clear answer.
+  - title: Shortens the answers
+    text: Keeps each answer short enough to check at a glance.
+  - title: Asks hard ideas differently
+    text: Writes harder ideas as why or how questions.
+  - title: Formats the cards
+    text: Puts them in a plain format for import.
+  - title: Lists what it left out
+    text: Names topics in your text it didn't turn into cards.
+output_shape: |
+  TOPIC: <topic>
+  Q: <one clear question>
+  A: <one short answer>
+
+  TOPIC: <topic>
+  Q: ...
+  A: ...
+
+  IMPORT FORMAT
+  <question> | <answer>   (one card per line)
+
+  LEFT OUT
+  <topic> | Why: <reason>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Number of cards
+    how: Give a number or a topic list. Without one, the skill picks the most testable facts.
+  - what: Your level
+    how: Say if you are a beginner or revising. It changes how basic the questions are.
+  - what: What you're tested on
+    how: Say if it is definitions, dates or reasoning. The questions follow that.
+  - what: Your app
+    how: Name it. Some apps need a certain separator or a cloze format.
+judge:
+  - Each card has one question and one short answer.
+  - Every answer can be found in your text.
+  - No fact appears that is not in your notes.
+  - Cards are grouped by topic.
+  - The import format is one card per line.
+test:
+  - Pick five cards and find each answer in your notes. They should all be there.
+  - Try the cards on a friend. Note which questions were unclear and reword them.
+  - Paste a short text with only two ideas. You should get only a few cards, not a padded set.
+improve:
+  - Add your own habits to the skill file, such as always including an example on the back.
+  - Keep cards that you got wrong in a separate deck and review them more.
+  - Pair it with a review scheduler so you see cards at the right gaps.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Condensing text into question and answer pairs works well in any strong chat AI.
+    - name: A study app
+      why: Apps like Anki or Quizlet import cards and schedule your reviews.
+  inputs:
+    - The syllabus or list of topics you'll be tested on
+    - Past exam questions
+    - Your lecture notes, not just the textbook
+terms:
+  - term: Flashcard
+    meaning: A card with a question on one side and the answer on the other, used to test your memory.
+  - term: Cloze card
+    meaning: A card where a word is blanked out of a sentence and you fill it in.

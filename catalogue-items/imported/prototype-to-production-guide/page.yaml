@@ -2,7 +2,7 @@ thinking: high
 thinking_why: It chains several code methods and changes a lot of code.
 new_slug: prototype-to-production-guide
 name: Prototype to production guide
-summary: Turn a working prototype into code you can trust. Get tests, a tech debt list and a plan to take your prototype to production, one phase at a time.
+summary: Give it a working prototype. Get tests, a tech debt list and a plan for real users.
 job: test-and-fix-code
 headline: Prototype to production guide
 subhead: A step-by-step path from a prototype that works but scares you to a product you can ship. It starts with a safety net of tests, so each later change is safe to make.
@@ -21,8 +21,9 @@ not_for:
   - "You want a product or screen design review: use improve-app, or ask a designer."
 you_give:
   - Access to your prototype code
-  - Who will use it and how soon
-  - Your biggest worries about it
+  - Your stack (framework, database tool and database)
+  - Who will use it, how many users you have now and soon, and your biggest worries
+  - Outside services it calls, such as payments or email
   - Time you can spend each week (optional)
 you_get:
   - Tests around the key behaviour
@@ -31,8 +32,8 @@ you_get:
   - Production readiness plan saved in your docs folder
 how_to_use:
   - Open your AI tool in your project so it can read and edit your files. Claude Code or a similar coding tool works best.
-  - Paste the skill text, or add the skill file to your project.
-  - Tell your AI who will use the app, how soon, and what worries you most.
+  - Paste the skill text, or add the skill file to your project. The guide names nine companion skills, one per phase. They are not in our library, so it runs each phase from its short built-in brief (fallback mode) and says which mode it is in. You can install them from the author's skills repo if you want the fuller versions.
+  - Tell your AI who will use the app, how soon, how many users you have, what services it calls and what worries you most.
   - Run your existing tests first, or say you have none. Phase 1 then adds tests before anything else changes.
   - Answer the questions at each phase. Check that the tests pass before you move on.
   - Stop whenever you like. Next session, ask your AI to read the plan file in docs and continue.
@@ -58,3 +59,4 @@ output_sample:
       contains: A clear line between your business rules and the tools around them, such as data and screens.
     - name: Production readiness notes
       contains: Plans for handling failures, real load and data, based on how many users you expect.
+next: [code-refactor-planner, tech-debt-tracker]

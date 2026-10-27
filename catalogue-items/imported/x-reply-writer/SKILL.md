@@ -32,6 +32,10 @@ conversation, which is fine, but it is not distribution.
 - Use when someone says their replies go nowhere.
 - Do not use it to write flattery or a reply that is a disguised advert, and do not promise the reply will be seen.
 
+## What to gather first
+
+The tweet text, how old it is, and your own view or a short story from your work (optional). If the tweet text is missing, ask for it before you do anything else.
+
 ## Step 1: decide whether to reply at all
 
 You need something to add. If you do not have it, the correct output is skip.

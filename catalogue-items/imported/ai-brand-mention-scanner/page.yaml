@@ -35,6 +35,7 @@ you_get:
 how_to_use:
   - Open an AI that can search the web, such as Claude, ChatGPT or Gemini. Add the whole skill folder. It has a second file with the scoring tables, so if your AI takes only pasted text, paste both files.
   - Give your brand name, website, founder name, top products and rivals. The scan reads public pages only. Keep it to a few searches per site, and stop if a site blocks your AI.
+  - "The scan runs in five steps: note your brand facts, search each site, judge the mood of Reddit and other talk, compare any rivals, then add up the weighted score and write the report. The full procedure is in the second file."
   - If your AI cannot browse, search each site yourself, for example your brand name plus site:reddit.com, and paste what you find. Sites it could not check are marked "not checked".
   - Read the score table. Check that the status for each site matches what you know, such as having a YouTube channel.
   - Open one or two of the mentions it quotes and judge whether the mood call is fair.

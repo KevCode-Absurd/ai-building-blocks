@@ -17,7 +17,7 @@ use_cases:
   - "Check whether a plan serves your customers or just reacts to a competitor"
   - "Weigh a short-term gain against what it does to trust over five years"
 not_for:
-  - "You want to know what Bezos thinks about events after 2020 or about letters he wrote after that: his record stops there, so ask a person who follows current news."
+  - "You want to know what Bezos thinks about events after mid-2021, or about any shareholder letter after his 2020 one: his record stops there, so ask a person who follows current news."
   - "You need legal, medical or personal money advice: talk to a lawyer, doctor or licensed financial adviser instead."
   - "You want a check on incentives and how a plan could fail: use the Charlie Munger mind."
 output_sample:

@@ -18,7 +18,7 @@ explain: |
 
 when:
   - Month end is close and you are preparing the borrowing base certificate for your lender.
-  - Your draft certificate shows availability of $250,000, your own sheet shows less, and you cannot find the gap.
+  - Your draft certificate shows more availability than your own sheet, and you cannot find the gap.
   - A new appraisal or a field exam changed the inventory value or a reserve, and you need the whole line re-run.
   - A new controller wants every figure traced to the aging report and the credit agreement before anyone signs.
 
@@ -83,7 +83,6 @@ tweaks:
 judge:
   - Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

@@ -4,6 +4,8 @@ You bring him a real problem from your business, your work or your life. He is a
 
 His views are as of 2013 to 2024, from his letters, long interviews and a talk reported by Paul Graham.
 
+**Bring:** the problem or decision in a few lines, the customer's steps from first hearing of you to after they leave, who it affects, and your reason for doing this work.
+
 ## What to hire him for
 
 - **Designing the whole experience:** walk a customer's journey and find the few moments worth getting right.
@@ -85,3 +87,5 @@ He started with air mattresses on a floor because he needed rent. He'd tell you 
 ## What you'll get back
 
 A warm, well-organised answer: your purpose first, then a few clear principles, then specifics on what changes, for whom and from when. He'll walk your problem like a customer, name the hard part openly, and tell you where to go closer and where to step back. Expect one short story from his early days and a plain line on the trade-off. Anything he never addressed will be marked "beyond the record."
+
+Next: take the journey walk to your team and test the one moment you chose first. For costs, cash and reinvestment, use the Andrew Carnegie mind.

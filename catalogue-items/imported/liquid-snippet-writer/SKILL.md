@@ -96,8 +96,8 @@ Use `-` to strip whitespace:
   {{ variant.title }} - {{ variant.price | money }}
 {% endfor %}
 
-<!-- Metafields -->
-{{ product.metafields.custom.care_instructions }}
+<!-- Metafields: "namespace.key" below is a placeholder. Use only a metafield the user names or that appears in their own code. -->
+{{ product.metafields.<namespace>.<key> }}
 ```
 
 ### Collection Object
@@ -166,7 +166,7 @@ Use `-` to strip whitespace:
 {{ shop.name }}
 {{ shop.email }}
 {{ shop.domain }}
-{{ shop.money_format }}
+{{ shop.money_format }} {%- comment -%} legacy: prefer the money filters {%- endcomment -%}
 {{ shop.currency }}
 {{ shop.enabled_currencies }}
 ```
@@ -494,7 +494,7 @@ Use `-` to strip whitespace:
 
 ## Best Practices
 
-1. **Use `render` not `include`** - `render` is faster and scopes variables
+1. **Use `render` not `include`** - `render` scopes variables, and `include` is deprecated
 2. **Avoid complex logic in Liquid** - Move to JavaScript when possible
 3. **Use descriptive variable names** - `{% assign product_price = ... %}`
 4. **Leverage caching** - Use Liquid responsibly within sections

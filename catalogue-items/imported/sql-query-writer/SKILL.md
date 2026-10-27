@@ -97,7 +97,7 @@ LEFT JOIN top_categories tc ON cp.customer_id = tc.customer_id
 ORDER BY cp.total_spent DESC
 LIMIT 5;
 
--- Expected output:
+-- Expected output (invented sample rows for illustration, not real results):
 -- customer_name | total_spent | order_count | favorite_category | prev_total_spent | spending_change_pct
 -- Acme Corp     | 284,500.00  | 47          | Electronics       | 198,200.00       | 43.5
 -- GlobalTech    | 231,800.00  | 38          | Software          | 245,100.00       | -5.4
@@ -105,6 +105,8 @@ LIMIT 5;
 ```
 
 ### Example 2: Optimizing a slow query with EXPLAIN analysis
+
+The examples use PostgreSQL syntax (such as DISTINCT ON and INTERVAL). Other databases need small changes. The timings and plan lines are illustrations, not measured results.
 
 **Original slow query** (takes 12.4 seconds on 5M rows):
 
@@ -141,7 +143,7 @@ Sort  (cost=312456.00..312460.00 rows=8500)
 CREATE INDEX idx_orders_date ON orders (order_date)
     INCLUDE (order_id);
 
--- Step 2: Rewrite with explicit joins and date index hint
+-- Step 2: Rewrite with explicit joins (the index from step 1 supports the date filter)
 SELECT
     p.product_name,
     SUM(oi.quantity * oi.unit_price) AS revenue
@@ -152,7 +154,8 @@ WHERE o.order_date BETWEEN '2024-01-01' AND '2024-12-31'
 GROUP BY p.product_name
 ORDER BY revenue DESC;
 
--- After optimization: 0.34 seconds (36x faster)
+-- After optimization (illustrative figures, not measured results; yours will differ):
+-- 0.34 seconds (36x faster)
 -- EXPLAIN now shows:
 -- Index Scan on idx_orders_date (rows=1245000, actual=1243892)
 -- Merge Join (cost reduced by 85%)

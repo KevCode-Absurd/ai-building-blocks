@@ -31,9 +31,12 @@ you_get:
   - Notes on partitioning and safe migration
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code running or paid tool is needed.
+  - Have ready the Postgres version you run, since some advice differs for version 15 and above and 18 and above.
   - Describe your data, how you will read it, and your expected rows and traffic. Paste your current schema if you have one (optional).
   - Read the table SQL and the index plan. Check that each rule matches how your business works.
   - Run the SQL in a staging database first. Use EXPLAIN on your main queries to confirm the indexes help.
+  - Row-level rules need a function that returns the signed-in user. Postgres has none built in, so define one or swap in your app's own method.
+  - Check the first result against your real queries, then apply it with your existing migration tool.
   - If the schema must change later, write a migration, test it in staging and take a backup before you touch live data.
 output_sample:
   input:

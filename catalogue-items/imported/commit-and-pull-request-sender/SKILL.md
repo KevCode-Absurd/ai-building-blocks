@@ -41,7 +41,7 @@ If multiple template files are found, stop before PR creation and ask which temp
 - Otherwise stay on the current branch.
 - Confirm status, then stage everything: `git status -sb` then `git add -A`.
 - Commit tersely with the description: `git commit -m "{description}"`
-- Run checks if not already. If checks fail due to missing deps/tools, install dependencies and rerun once.
+- Run the project's own check commands if they have not run yet, such as the test and lint commands named in package.json, a Makefile or the README. Ask the user before you install any dependencies. If a check fails, stop and report it.
 - Push with tracking: `git push -u origin $(git branch --show-current)`
 - If git push fails due to workflow auth errors, pull from master and retry the push.
 - Discover and read the repository PR template, if any.

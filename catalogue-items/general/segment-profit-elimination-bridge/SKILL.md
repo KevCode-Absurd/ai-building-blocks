@@ -29,8 +29,8 @@ How to start:
 ## What you need
 
 - **Segment profits** (required): one line per segment, with the measure the company uses (operating profit, adjusted EBIT, EBITDA).
-- **Eliminations** (required): intersegment profit eliminations, with signs.
-- **Corporate costs** (required): head office or unallocated costs, with signs.
+- **Eliminations** (required): intersegment profit eliminations. In the chat bridge, show each with its sign (a deduction is negative).
+- **Corporate costs** (required): head office or unallocated costs. In the chat bridge, show each with its sign (a cost is negative).
 - **Reported group operating profit** (required): for the same period and the same scope as the segments.
 - **Other adjustments** (optional): any reconciling items the note lists.
 - **Period, currency and scale** (required): for example USD millions, year to 31 December.
@@ -79,7 +79,7 @@ Illustrative figures only, in USD millions, not a real company.
 
 In the second column the bridge does not tie. The 5 stays open as a source gap. It is not moved into another line.
 
-To repeat the baseline as a second check, run `node scripts/run-model.mjs references/model.json`. For real figures, make an inputs file shaped like `examples/inputs.json` and run `node scripts/run-model.mjs references/model.json inputs.json`. The practice model has two segments, one elimination and one corporate cost line, and its eliminations and costs are entered as positive numbers that it subtracts. Real notes may need more lines. The script only does arithmetic and rejects missing or invalid inputs. `examples/model.xlsx` holds the same practice figures.
+To repeat the baseline as a second check, run `node scripts/run-model.mjs references/model.json`. For real figures, make an inputs file shaped like `examples/inputs.json` and run `node scripts/run-model.mjs references/model.json inputs.json`. The practice model has two segments, one elimination and one corporate cost line, and its eliminations and costs are entered as positive numbers that it subtracts, so a -10 elimination in the table above is entered as 10 in the inputs file. Do not enter a negative there, or the script adds it back. Real notes may need more lines. The script only does arithmetic and rejects missing or invalid inputs. `examples/model.xlsx` holds the same practice figures.
 
 ## Check before you hand it back
 

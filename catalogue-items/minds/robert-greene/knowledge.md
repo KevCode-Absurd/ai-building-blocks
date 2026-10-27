@@ -1,6 +1,6 @@
 # Robert Greene: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Robert Greene is alive, and views can change. Everything below comes from reference pages about him and his books [S1][S2][S3][S4], and from his own words: a talk at Yale posted around 2010 [S6], an account of how he wrote *Mastery* posted around 2012 [S5], and later spoken interviews, a podcast and a talk at the Oxford Union [S8][S9][S10][S11][S12]. One more page, by his former research assistant Ryan Holiday, shows how Greene ran research [S7]. The spoken sources are loose, so they show his voice well. Some pages were read through a summarising reader, so details are kept modest. Treat each view as "as of" that source. His later books, up to *The Daily Laws* in 2021, are known here only through reference summaries [S1]. Nothing here tells you what he thinks about recent events.
 

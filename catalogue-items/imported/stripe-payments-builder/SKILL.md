@@ -141,7 +141,7 @@ export async function POST(req: Request) {
       email: user.email,
       name: user.name ?? undefined,
       metadata: { userId: user.id },
-    })
+    }, { idempotencyKey: `create-customer-${user.id}` }) // a retry cannot create a second customer
     stripeCustomerId = customer.id
     await db.user.update({ where: { id: user.id }, data: { stripeCustomerId } })
   }
@@ -364,10 +364,12 @@ async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
   })
 
   // sendDunningEmail is yours to write: it sends the "your payment failed" email
+  // customer_email can be empty, so check it before you send
+  if (!invoice.customer_email) return
   if (attemptCount >= 3) {
-    await sendDunningEmail(invoice.customer_email!, "final")
+    await sendDunningEmail(invoice.customer_email, "final")
   } else {
-    await sendDunningEmail(invoice.customer_email!, "retry")
+    await sendDunningEmail(invoice.customer_email, "retry")
   }
 }
 
@@ -388,8 +390,10 @@ async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
 
 ## Usage-Based Billing
 
+> Outdated call: `createUsageRecord` is the older way to report usage. Newer Stripe API versions use Billing Meters instead (`stripe.billing.meterEvents.create`). Check the Stripe docs for your API version before you ship this code.
+
 ```typescript
-// Report usage for metered subscriptions
+// Report usage for metered subscriptions (older API: see the note above)
 export async function reportUsage(subscriptionItemId: string, quantity: number) {
   await stripe.subscriptionItems.createUsageRecord(subscriptionItemId, {
     quantity,

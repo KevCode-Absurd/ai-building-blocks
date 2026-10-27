@@ -36,6 +36,7 @@ how_to_use:
   - Paste your voice notes or design language if you have them (optional). Without them, the skill uses a casual but polite voice.
   - Read each line. Check that every button says what will happen and every error says what to do next.
   - Use the same word for the same idea across your screens. Fix any line that blames the user.
+  - Next, save the approved term list in your design notes so new screens reuse the same words.
 output_sample:
   input:
     - The screen or flow and what it does

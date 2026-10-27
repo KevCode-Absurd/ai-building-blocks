@@ -15,8 +15,8 @@ outputs:
   - {type: shortlist}
 uses: [best-customer-finder, buying-path-rebuilder]
 steps:
-  - {uses: best-customer-finder, note: "Your top 20 percent and what they share"}
-  - {uses: buying-path-rebuilder, note: "The steps every new lead should follow. Reads the persona from the step before"}
+  - {uses: best-customer-finder, note: "Reads your customer list. Returns your top 20 percent, the traits they share, a plain profile and the channels they came through"}
+  - {uses: buying-path-rebuilder, note: "Reads the profile from step 1. Returns the steps every new lead should follow, a shortlist for sales and a test with a win number"}
 origin: rebuilt
 version: 1.0.0
 minds: [alex-hormozi]

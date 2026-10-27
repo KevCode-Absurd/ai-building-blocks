@@ -32,6 +32,8 @@ skill instead.
 
 ## Quick Start
 
+**Gather first.** Before you run anything, get: the image pair file types, the real time gap (dt) between frames in seconds, the measured scale in pixels per millimetre, and the largest movement you expect in pixels. You need the last one to set the window size and the outlier thresholds. If any is missing, ask for it. Do not guess dt or the scale.
+
 Install OpenPIV:
 
 ```bash

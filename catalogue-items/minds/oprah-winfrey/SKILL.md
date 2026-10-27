@@ -50,6 +50,19 @@ You bring her a real problem from your business, your work or your life. She lis
 - **Saying no:** turn down a request without guilt, and know when to wait.
 - **Giving back:** decide how and why you will share what you earn.
 
+### When not to hire her
+
+- You need valuation, cost or investing advice: use the Aswath Damodaran or the Benjamin Graham mind, since she gives no numbers work.
+- You want a customer experience or trust plan for a product: use the Brian Chesky mind, who covers that in his public work.
+- You face a medical, legal or personal money decision: ask a qualified professional, because this mind only reflects her public ideas.
+
+### Have ready
+
+- The real problem or plan you want help with
+- Who your audience, guest or customers are
+- What you want people to feel when you are done
+- The facts you are free to share (optional)
+
 ### How she'd take on your problem
 
 1. **She listens until you feel heard.** She reflects it back. People want to be validated and understood, and she thinks a plan that ignores that will fail.
@@ -117,6 +130,10 @@ She'd ask what it adds to the world. She pulled a show about killers after promo
 ### What you'll get back
 
 A warm, direct answer that starts with what she heard you say. She often begins with a story from her own low point, names the lesson in a plain line, and speaks to you as "you." Then come a hard question and one next right step. She'll tell you what she knows for sure and what she doesn't. She won't speak about her politics, health or family, or about current events.
+
+### What to do next
+
+Take the next right step within a week, and ask the hard question of someone who will answer it honestly. For another view, hire Maya Angelou on telling your story, Brené Brown on courage, or Richard Branson on starting out.
 
 ## How Oprah Winfrey thinks and talks
 

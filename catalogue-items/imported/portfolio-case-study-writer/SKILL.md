@@ -32,6 +32,10 @@ Use this skill when the user:
 - Differentiate you from other candidates
 - Required for many PM, UX, and creative roles
 
+## Use only the user's facts
+
+Every name, number and result in the examples below is made up, only to show the shape. Never copy them into a real case study. Use only facts the user gave you. Where a fact, number or result is missing, write [MISSING: what is needed] and ask for it. Never fill a gap with an estimate.
+
 ## The Case Study Structure
 
 ### Standard Structure
@@ -367,3 +371,8 @@ When creating a case study:
 - ✅ Appropriate length (3-10 min read)
 - ✅ Proofread and polished
 - ✅ Can discuss in detail in interview
+- ✅ No number or claim that the user did not supply
+
+## What to do next
+
+Tailor the case study to the target role (see "Case Study Types by Role"). Then prepare a 2-minute spoken walkthrough for interviews. To turn the same project into a resume line, use the product-manager-resume-reviewer or resume-job-application-builder skill.

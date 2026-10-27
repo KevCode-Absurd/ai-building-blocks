@@ -34,12 +34,12 @@ you_get:
   - A two-week posting and reply routine
   - The numbers to check after two weeks
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. A web search tool helps but is not needed.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. A web search tool helps with the niche study. Without one, you paste the posts yourself. The Python scripts in the skill are optional.
   - Paste your niche, your handle and 10 past posts, and say your goal. Add the accounts you admire, or paste 5 to 10 of their posts if your AI cannot search the web.
   - Read the profile audit first. Fix your bio and pinned post before you post anything new.
   - Edit the drafts so they sound like you. Put links in a reply, not in the main post.
   - Follow the routine for two weeks, including the replies. You publish; the skill never posts for you.
-  - Check the numbers it names. Ask your AI to adjust the next two weeks from what you see.
+  - Check the numbers it names. Ask your AI to adjust the next two weeks from what you see. To reuse a thread on LinkedIn, use a LinkedIn post writer.
 how_it_works:
   - title: Audit your profile
     text: It checks your bio, pinned post and recent activity against a short checklist and gives a fix for each gap.

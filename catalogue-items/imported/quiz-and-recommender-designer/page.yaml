@@ -21,16 +21,21 @@ not_for:
   - "You want a long survey to study your market: use a survey tool, since this skill keeps quizzes short."
 you_give:
   - Who you want to sort and why
-  - Your products or offers
-  - Current quiz, if any (optional)
+  - Your products or offers, with prices
+  - The main decision your buyer is making
+  - Current quiz answers or lead data, if any (optional)
 you_get:
   - Question set
   - Scoring method
   - Result groups with matched recommendations
   - Email capture placement
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - List your products or offers with prices, and say who you want to sort into groups.
+  - Say what main decision your buyer is making, and paste any quiz answers or lead data you already have.
+  - Let it check that a quiz fits your audience, then pick the scoring method it suggests.
+  - Read the questions, result groups and recommendations. Check that each group leads to a different product or next step.
+  - Build the quiz in your quiz tool or form builder. Load each result group into its own follow-up email, or point it at a matching product page. After a few weeks, check how many finishers left an email and how many bought.
 output_sample:
   input:
     - Who you want to sort and why
@@ -49,3 +54,4 @@ output_sample:
       contains: One next step for each group, so no two groups get the same advice.
     - name: Email capture placement
       contains: Where to ask for the email and why that spot suits your audience.
+next: [email-sequence-writer, conversion-landing-page-designer]

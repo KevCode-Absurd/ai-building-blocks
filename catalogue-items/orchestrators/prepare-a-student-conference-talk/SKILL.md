@@ -31,7 +31,7 @@ Read each component skill in full before you use it: `presentation-builder`, `pr
 
 ## Steps
 
-1. **Presentation builder** (`presentation-builder`). Write a short brief: minutes, questions time, audience and rules. Then build the outline as a table of slides, each with a title that states its point, what goes on it and its minutes. Write speaker notes for each slide: what to say and what to point at. Add a rehearsal checklist with time marks. Use only the project. Save `outputs/step-01-presentation-builder.md`. **Hands step 2:** the outline, notes and checklist. **Gate:** the slide times add up to the slot, and every slide's point traces to the project.
+1. **Presentation builder** (`presentation-builder`). First check the project has at least one finding. If it has none, stop and say the talk needs results first. Then write a short brief: minutes, questions time, audience and rules. Then build the outline as a table of slides, each with a title that states its point, what goes on it and its minutes. Write speaker notes for each slide: what to say and what to point at. Add a rehearsal checklist with time marks. Use only the project. Save `outputs/step-01-presentation-builder.md`. **Hands step 2:** the outline, notes and checklist. **Gate:** the slide times add up to the slot, and every slide's point traces to the project.
 
 2. **Proofreader** (`proofreader`). Check the outline and notes against the project for exact names, numbers, spelling and plain wording. List each change with its reason. Keep the student's voice. If a number in the notes does not match the project, flag it, do not guess which is right. Save `outputs/step-02-proofreader.md`.
 

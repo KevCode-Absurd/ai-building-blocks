@@ -36,7 +36,7 @@ you_get:
   - Ranked findings, each with its caveat
   - Outliers and data problems, and what to do next
 how_to_use:
-  - Add this skill to your AI, or paste SKILL.md into a new chat. Use an AI that can open files and run Python, such as Claude with code running or ChatGPT with data analysis.
+  - Add this skill to your AI, or paste SKILL.md into a new chat. Use an AI that can open files and run Python, such as Claude with code running or ChatGPT with data analysis. These features can need a paid plan or a settings switch, and the skill does not work without them.
   - Attach your data file and ask one question in plain words. Add the columns that matter if you know them.
   - Check the first section of the answer. It should show the right row count and the columns you expected. If not, fix the file before you read on.
   - Read the answer line and the ranked findings. Ask "what would change this answer?" for the top finding.

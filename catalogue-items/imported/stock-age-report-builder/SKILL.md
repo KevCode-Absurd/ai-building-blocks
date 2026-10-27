@@ -25,7 +25,7 @@ Categorizes all inventory into aging buckets based on how long items have been s
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain |
 | buckets | string | no | 0-30,31-60,61-90,91-180,181+ | Comma-separated aging buckets in days |
-| carrying_cost_pct | float | no | 25 | Annual carrying cost as % of inventory value (industry avg 20-30%) |
+| carrying_cost_pct | float | no | 25 | Annual carrying cost as % of inventory value (25 is a common rule of thumb; use your own rate if you know it) |
 | vendor_filter | string | no | — | Scope to specific vendor |
 | format | string | no | human | Output format: `human` or `json` |
 
@@ -47,7 +47,7 @@ Categorizes all inventory into aging buckets based on how long items have been s
 
 4. For each stocked variant, determine aging:
    - Find most recent order containing this variant → last_sold_date
-   - If never sold, use product creation date as proxy
+   - If there is no order for this variant in the 365-day window (or it never sold), use the product creation date as the start, and label the row "no sale in 365 days" in the CSV and the summary
    - **Age** = today - last_sold_date
    - Assign to aging bucket
 

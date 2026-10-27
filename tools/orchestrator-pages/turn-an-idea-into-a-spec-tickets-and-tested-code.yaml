@@ -21,7 +21,7 @@ not_for:
 you_give:
   - A feature idea, in a few sentences, and who it is for
   - Access to your project code
-  - Your issue tracker, if you use one (the spec and tickets are posted there)
+  - Your issue tracker, if you use one (the spec and tickets go there only after you say yes)
   - Your written coding standards (optional)
 you_get:
   - A spec with the problem, user stories and the decisions made
@@ -30,7 +30,7 @@ you_get:
   - A list of new behaviours with no test, and the tests to add
   - A pull request with a short summary and proof
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 5 skill files in the order they run: Spec writer, Ticket planner, Spec builder, Test gap finder and Pull request writer."
   - Open your project in Claude Code, give it the folder and say "Follow HANDOFF.md".
   - Describe the feature, then answer its questions about the tests and the ticket sizes.
   - After the missing-test step, add the tests it proposes and run your suite before you go on.
@@ -59,7 +59,7 @@ output_sample:
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the spec
-    text: Turns your idea into a spec with the problem, user stories, what to build and how it will be tested, then posts it to your tracker.
+    text: Turns your idea into a spec with the problem, user stories, what to build and how it will be tested, then saves it as a file. It posts it to your tracker only if you say yes.
   - title: Split the spec into tickets
     text: Cuts the spec into thin slices that each work from end to end, with the tickets that must come first marked.
   - title: Build the tickets

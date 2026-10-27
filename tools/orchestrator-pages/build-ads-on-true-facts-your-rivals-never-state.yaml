@@ -7,9 +7,9 @@ thinking_why: The steps are clear and short. Give it a stronger model if your no
 headline: Ads built on true facts your rivals never mention
 subhead: Give it your notes on how the product is made, sourced and tested. It finds the facts buyers have never heard, turns them into claims with a number or a picture, writes headlines from them, picks the three best, and plans an image ad around your strongest fact.
 explain: |
-  Most ads in a category say the same things: quality, care, the best ingredients. The real work behind your product, the checks, the steps, the standards, is usually left out because it feels too ordinary to mention. To buyers it is news.
+  Ads in a category often say the same things: quality, care, the best ingredients. The work behind your product, such as the checks, the steps and the standards, tends to be left out because it feels too ordinary to mention. To a buyer it can be news.
 
-  The steps find that material. First it reads your notes and keeps the facts a buyer would not know and would find surprising, then marks which are backed and which rivals already say. Next it writes headlines from those claims, sorted by type. A cover test reads each headline alone and keeps the three best. Last it plans an image ad around your anchor fact. You give it the notes. It will not invent a fact to fill a gap.
+  The steps find that material. First it reads your notes and keeps the facts a buyer would not know and would find surprising, then marks which are backed. If you paste rival ads, it also marks which rivals already say. Next it writes headlines from those claims, sorted by type. A cover test reads each headline alone and keeps the three best. Last it plans an image ad around your anchor fact. You give it the notes. It will not invent a fact to fill a gap.
 when:
   - You make, source or test something with care, but your ads sound like everyone else's.
   - You have notes from a maker visit, a supplier call or a test, and you have not used them.
@@ -21,7 +21,7 @@ not_for:
 you_give:
   - Notes on how it is made, sourced and tested (the full text, not a summary)
   - Your product facts, such as price and what it is
-  - Rival ads or claims (optional)
+  - Rival ads or claims (optional, and without them rivals are not checked)
   - Your offer (optional)
   - Your buyer and their words (optional)
   - Product photos (optional)
@@ -36,7 +36,8 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your maker, supplier or test notes in full. Short notes give short results.
   - Check every claim marked unproven before you run it.
-  - When step 3 is done, paste the top headline into step 4 so the image ad keeps it.
+  - Paste two or three rival ads if you have them. Without them, step 1 marks each claim "rivals not checked".
+  - The top headline from step 3 goes into step 4 as the line on the image.
 output_sample:
   input:
     - Your notes on how the product is made, sourced and tested, in full
@@ -104,4 +105,4 @@ test:
 improve:
   - Use the questions from step 1 on your next call with the maker, then run the notes again.
   - Run the three headlines as a small test and keep the winner.
-  - Save the claims in your brand file so every ad draws from them.
+  - Save the claims in your brand file so your next ads can draw from them.

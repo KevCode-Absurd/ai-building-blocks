@@ -33,5 +33,22 @@ blocks:
   - marketing-video-producer
 alternatives: [kling, runway, luma, veo]
 last_checked: 2026-10-21
+first_result:
+  - "Go to pika.art and sign up. The free plan has no monthly credits, so you buy top-ups."
+  - "Check the licence. Starter has no commercial licence. Creator adds one."
+  - "Upload a still image, or type a short description."
+  - "Make a clip, watch it, then make a second version."
+  - "Keep the better one."
+  - "You end with a short video clip."
+  - "Next: plan more shots with the Marketing video producer, or compare Kling."
+needs:
+  - "A Pika account."
+  - "A still image or a short description."
+  - "Credits. Buy a small pack to try it."
+  - "A Creator plan, if the clip is for ads or sale."
+not_verified:
+  - "How many credits one clip uses."
+  - "How long a clip can be."
+  - "Where each tool sits in the app."
 sources:
   - https://pika.art/pricing

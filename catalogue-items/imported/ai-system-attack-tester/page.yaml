@@ -9,7 +9,7 @@ subhead: Give it test prompts and a short description of your AI app. It checks 
 explain: |
   A ranked list of the ways someone could abuse your AI app, each tied to a known attack type. Test it before real users or attackers do.
 
-  A scanner script runs prompts against your system, looking for prompt injection patterns and jailbreak openings. It also scores the risk that private training data can be extracted, the risk that bad data was slipped into training, and the damage a tool-using agent could do if tricked into misusing its tools. Findings are mapped to the MITRE ATLAS list of attacks on AI. The skill also suggests guardrail designs. Testing deeper than black box needs written permission. It needs Python.
+  A scanner script reads the prompt text you give it and matches it against known prompt injection patterns and jailbreak openings. It does not call or test your live app. It also scores three risks from fixed tables: private training data being pulled out, bad data slipped into training, and the damage a tool-using agent could do if tricked into misusing its tools. A clean scan does not prove your app is safe. Findings are mapped to the MITRE ATLAS list of attacks on AI. The skill also suggests guardrail designs. Testing deeper than black box needs written permission. It needs Python.
 when:
   - You are about to launch a chatbot or agent that touches customer data.
   - Your AI can send emails or run tools and you worry it could be tricked.
@@ -36,7 +36,7 @@ how_to_use:
   - Say what your app can reach, which tools it can call, and which model type it uses.
   - Ask for a scan. Gray-box or white-box testing needs your written permission first.
   - Check that the coverage list includes injection and jailbreak, then read the findings from top severity down.
-  - Add the suggested guardrails, then scan again before each release.
+  - Fix the critical findings first, then the high ones. Scan again after each change and before each release.
 output_sample:
   input:
     - Test prompts as a JSON file, or built-in seed prompts
@@ -59,3 +59,4 @@ output_sample:
       contains: A suggested control for each finding, such as input checks or output filters.
     - name: test_coverage
       contains: A check that shows which threat types your prompts covered.
+next: [ai-workflow-security-checker, skill-safety-auditor, ai-impact-assessment-writer]

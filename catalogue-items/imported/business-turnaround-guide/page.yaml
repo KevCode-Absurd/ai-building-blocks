@@ -30,12 +30,12 @@ you_get:
   - A weekly operating rhythm
   - Repriced offers tied to real value
 how_to_use:
-  - Check that your AI can read and write files, and that the eight linked skills are installed or can run from their briefs.
+  - Check that your AI can read and write files. The skill uses eight linked skills: Real strategy checker, traction-eos (not in this library yet), Manager output coach, Team layout planner, Motivation designer, Startup metrics picker, Negotiation prep coach and Willingness to pay pricing planner. If one is not installed, the skill runs that phase from its own brief, and says so.
   - Paste the skill into a chat, or load it in your AI tool.
   - Describe your business, your customers, your team and your numbers when it asks.
   - Answer each question and confirm the diagnosis in phase 1 before it moves on.
   - Stop any time. Your choices are saved in the docs folder, so you can pick up in a later session.
-  - Share the strategy note with your team when the plan is done.
+  - Share the strategy note with your team when the plan is done. Set a review date about 90 days out, and start that review from the weekly operating rhythm.
 output_sample:
   input:
     - A description of your business, your customers and your revenue

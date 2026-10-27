@@ -21,7 +21,7 @@ not_for:
   - "You have no facts yet, only a guess at what broke: gather the chat logs and alert times first, or ask the people who were on call."
 you_give:
   - Incident notes, chat logs or alerts
-  - Times of detection, response and fix
+  - At least the start and end times, the first alert and the fix applied
   - Impact figures such as users, money and time (optional)
   - Who was involved (optional)
 you_get:
@@ -37,6 +37,7 @@ how_to_use:
   - Ask for the causes and the action items. Make sure each action has one owner and a due date.
   - Replace any example name, number or ticket ID with your own. The templates use invented figures for illustration.
   - Share the draft before the review meeting. Use the meeting plan to run it.
+  - After the review, track each action item in your ticket system and check it is closed by its due date.
 output_sample:
   input:
     - Incident notes, chat logs or alerts

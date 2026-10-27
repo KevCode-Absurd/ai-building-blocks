@@ -44,7 +44,6 @@ For a requested workbook, use the spreadsheet tool you have and any template sup
 
 - Each test keeps its own numerator and denominator. Shared debt service ties across the tables. Ratios and cash definitions are never swapped between tests. No breach, waiver or cure is stated.
 - Each material input traces to its source, date, currency, scale, sign and period. Unresolved items stay as MISSING: lines.
-- Opening balances, additions, deductions and closing balances reconcile. Cash flows are matched to the right discount rate where one is used.
 - Real zeros, unavailable evidence and inapplicable ratios are told apart. No statement is forced to tie with an unexplained plug.
 - Original source locations, assumptions, formula conventions, failed checks and actual verification results are saved. End with CHECKS MISSED: none, or the exact outstanding checks.
 

@@ -22,7 +22,7 @@ not_for:
   - "You pay creators, not staff: use the Creator pay planner."
 output_sample:
   input:
-    - Your roles, with the level and place of each
+    - Your roles, with the level, place and headcount of each
     - What you pay now in those roles (optional)
     - Your total budget or a limit per role
     - Any market pay data you already hold, with its source (optional)
@@ -42,7 +42,7 @@ output_sample:
       contains: Each step's file and every MISSING line in one list.
 
 you_give:
-  - The roles, levels and place for each
+  - The roles, levels and place for each, and how many people are in each
   - What you pay now, if you have people in those roles (optional)
   - Your total budget or a limit per role
   - Any market pay data you already have (optional)
@@ -52,7 +52,7 @@ you_get:
   - A pay philosophy, a bonus plan and a benefits list that fit your budget
   - Equity grant models if you offer equity
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It is a zip with HANDOFF.md and the 3 skill files in the order they run: Pay benchmark and equity modeler, Pay band builder and Pay and benefits plan builder."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List each role with its level and place. Add what you pay now if you can.
   - Check the market ranges against one source you trust before the bands are set.

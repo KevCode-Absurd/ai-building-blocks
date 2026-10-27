@@ -1,0 +1,135 @@
+new_slug: beginner-workout-planner
+name: Beginner workout planner
+summary: Share your goal, days and kit. Get a four-week beginner workout plan with warm-ups, rest days and a gentle step up.
+job: health-and-fitness
+thinking: medium
+thinking_why: It has to fit a plan to your days and kit and keep the build-up gentle.
+headline: Beginner workout planner
+subhead: Tell it what you want from exercise, how many days you can train, how long each session can be, and what kit you have. It builds a four-week beginner plan with warm-ups, a few moves per session, a simple way to build up, rest days and a way to track it.
+explain: |
+  Most beginners start too hard, or with no plan, and stop within a few weeks. A plan that fits your days and kit, and that builds up slowly, is easier to keep than one that looks impressive.
+
+  This skill asks about your goal, your days, the time you have and what you own, and whether anything limits you. It then builds a four-week plan: a short warm-up, a few simple moves per session, a small step up each week, rest days, and one line to track. It uses plain move names and a way to tell how hard to work without needing numbers. It is general guidance. It does not replace a doctor or a qualified trainer, and it asks you to check with one first if you have a health condition, an injury, or are pregnant.
+when:
+  - You are starting to exercise and don't know where to begin.
+  - You tried before, stopped, and want a plan that fits your week.
+  - You have little time or kit, and want a plan that works with that.
+not_for:
+  - "You have a health condition, an injury or are pregnant: ask your doctor or a physiotherapist first, then use a plan they approve."
+  - "You want a plan for a sport, a race or serious strength goals: work with a qualified coach."
+  - "You want a diet plan: ask a registered dietitian."
+you_give:
+  - Your goal, such as feeling fitter or building strength
+  - The days you can train and how long each session can be
+  - What kit you have, if any, and where you will train
+  - Any injury, health condition or pregnancy, and whether a doctor has cleared you
+  - Moves you dislike or can't do (optional)
+you_get:
+  - A four-week plan with the same simple layout each week
+  - A warm-up and a few plain-named moves for each session
+  - A small step up each week, and rest days
+  - A way to track it and a note on when to stop and ask a professional
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say your goal, your days, your time and your kit. Be honest about injuries and health.
+  - If you have a condition, an injury or are pregnant, show the plan to your doctor before you start.
+  - Do week one at an easy effort. Write down how each session felt.
+  - At the end of week four, paste your notes back and ask for the next four weeks.
+output_sample:
+  input:
+    - Your goal, the days you can train and the time per session
+    - Your kit and where you will train
+    - Any injury, health condition or pregnancy, and doctor clearance
+  output:
+    - name: Your plan
+      contains: Your goal, days, session length and kit, as you gave them.
+    - name: Before you start
+      contains: Flags that mean you should ask a doctor or professional first.
+    - name: Each week
+      contains: "For each training day: a warm-up, a few plain-named moves with sets, reps and effort, and a cool-down."
+    - name: Step up
+      contains: A small change each week, kept gentle for a beginner.
+    - name: Stop and ask if
+      contains: Signs to stop and see a professional.
+    - name: Track it
+      contains: One line to write after each session.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Asks about you
+    text: Checks your goal, days, time, kit and any limits before it writes anything.
+  - title: Checks for flags
+    text: If you name an injury, a condition or pregnancy, it tells you to ask a professional first.
+  - title: Builds the week
+    text: Spreads sessions across your days with rest days between.
+  - title: Writes each session
+    text: Gives a short warm-up, a few moves with sets and reps in simple terms, and a cool-down.
+  - title: Adds a gentle step up
+    text: Raises the work a little each week, and says how to know it is too much.
+  - title: Adds tracking
+    text: Gives one line to write down after each session.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  YOUR PLAN
+  Goal <yours> | Days <yours> | Time per session <yours> | Kit <yours>
+
+  BEFORE YOU START
+  <flags: ask a doctor first if...>
+
+  EACH WEEK
+  Day <n>: Warm-up <moves> | Moves <name, sets, reps, effort> | Cool-down <moves>
+  Rest days: <days>
+
+  STEP UP
+  Week 1 <effort> | Week 2 <small change> | Week 3 <small change> | Week 4 <small change>
+
+  STOP AND ASK IF
+  <signs to stop and see a professional>
+
+  TRACK IT
+  <one line to write after each session>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Days and time
+    how: Give the real number. Three short sessions you keep beat five you skip.
+  - what: Your kit
+    how: Say none if you have none. The plan then uses body weight and household items.
+  - what: Your limits
+    how: Name anything that hurts or worries you. The plan swaps those moves out.
+  - what: Your goal
+    how: Pick one, such as feeling fitter or getting stronger. A plan for everything does none of it well.
+judge:
+  - The plan fits the days and time you gave.
+  - Week one is easy enough to finish and still want to do week two.
+  - Every move has a plain name, and the effort is described without special gear.
+  - It tells you to ask a doctor first if you named a condition, injury or pregnancy.
+  - It makes no promise about weight, looks or results.
+test:
+  - Do the first session and note whether you could talk throughout. If not, ask for a lower effort.
+  - After week one, tell it how you felt. The week two step up should change to fit.
+  - Name an injury and run it again. The moves that load that part should go, and a note should say to ask a professional.
+improve:
+  - Add moves you enjoy to the skill file, so the plan uses them more.
+  - Save your tracking lines and paste them in at the end of each four weeks.
+  - Pair it with the Habit plan builder if getting started is the hard part.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Fitting a simple plan to your week is a good fit for any strong chat AI.
+    - name: A doctor, physiotherapist or qualified trainer
+      why: They can check a plan against your health and show you how to do the moves.
+  inputs:
+    - A note from your doctor if you have a condition
+    - Your usual week, with fixed commitments
+    - A list of moves you enjoy or can't do
+terms:
+  - term: Set and rep
+    meaning: A rep is one go at a move. A set is a group of reps done together.
+  - term: Effort
+    meaning: How hard a session feels. A simple test is whether you can talk while you do it.

@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [dale-carnegie, joe-girard]
 credits:
-  - {title: "How to Win Friends and Influence People (1981 revised edition)", by: "Dale Carnegie", used: "The order of the steps: learn what they care about, plan how to get them talking, write the memory card, write the thank-you note"}
+  - {title: "How to Win Friends and Influence People (1981 revised edition)", by: "Dale Carnegie", used: "Ideas on learning what people care about, getting them talking, remembering them and thanking them honestly. The steps and their order are ours"}
 generated_from: intake/win-friends-new-relationship/skeleton.yaml

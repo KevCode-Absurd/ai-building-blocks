@@ -19,6 +19,7 @@ not_for:
   - "You need legal or regulatory sign-off on financial, health or claims-heavy copy: send it to your compliance or legal team."
   - "You have no brand voice yet and want to write one: ask your AI to help you document your brand voice first, then come back."
   - "You want a fresh draft written from scratch: ask your AI to write it, then check it here."
+  - "You need to know the claims are true: this check looks at voice and style, and flags risky claims, but it does not verify facts or sources. A clean result does not mean the claims are accurate."
 you_give:
   - The draft, file or link to review
   - Your brand voice or style guide
@@ -31,7 +32,7 @@ you_get:
   - A separate list of legal and compliance flags
   - A short overall verdict
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. Pasting text always works. Files and links work only if your chat tool can open them.
   - Paste your brand voice or style guide first. If you skip it, your AI will ask for one, or give a general review for clarity and consistency.
   - Paste the draft next. You can also share a file or a link, or send several pieces at once.
   - Read the Summary, then the findings table. Fix the High items first.

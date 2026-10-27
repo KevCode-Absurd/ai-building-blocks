@@ -32,9 +32,9 @@ steps:
   - uses: powerpoint-template-populator
     note: Fills your supplied template with the checked monthly results. Keeps charts and tables editable. Hands the deck and a source map to the number checker.
   - uses: excel-powerpoint-number-checker
-    note: Matches every number on the slides to the workbook. Fails stale periods, swapped categories and mixed units. Hands a clean deck to the notes step.
+    note: Matches every number on the slides to the workbook. Fails stale periods, swapped categories and mixed units. Hands its list of matched and failed numbers to the notes step; you fix any failed number in the deck first.
   - uses: powerpoint-speaker-note-builder
-    note: Adds speaker notes linked to their sources, with a time budget. It does not change a checked figure. Reads the checked deck from step 2 and the number review from step 3, plus your talk length. Hands you the deck with notes and the timing sheet.
+    note: Adds speaker notes linked to their sources, with a time budget. It does not change a checked figure. After a pause to fix any number step 3 failed, reads the deck from step 2 and the number review from step 3, plus your talk length. Hands you the deck with notes and the timing sheet.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

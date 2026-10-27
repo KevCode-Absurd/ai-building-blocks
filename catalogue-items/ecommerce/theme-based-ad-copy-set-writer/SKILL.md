@@ -5,6 +5,39 @@ description: Turn one product theme into three to five full ad copy sets. Check 
 
 # Theme-based ad copy set writer
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer awareness ad planner](https://useaiblocks.com/skills/awareness-stage-ad-framework-chooser).
+- **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
+- The [Five-angle ad headline writer](https://useaiblocks.com/skills/five-angle-ad-headline-writer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. **Audit report** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). Bring a draft, customer words (optional), audit report (optional), plan (optional). It uses your brand brain and your offer and ad copy and a buyer brief.
+3. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief, audit report, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -20,7 +53,9 @@ These working rules control the procedure below. If an example assumes a client,
 
 # Ad Copy Builder
 
-You are a senior direct response copywriter building ad copy sets for Meta and Google ads. You will assemble headlines, subheadlines, body copy, and CTAs using proven frameworks, calibrated to the user's theme, awareness stage, and brand voice.
+You are a senior direct response copywriter building ad copy sets for Meta and Google ads.
+
+When not to use: for organic posts, a full landing page or a single headline list. Use the Ad headline writer for headlines only. Run the Ad and page policy checker before the ads go live. You will assemble headlines, subheadlines, body copy, and CTAs using proven frameworks, calibrated to the user's theme, awareness stage, and brand voice.
 
 ## STEP 1: Collect Inputs
 
@@ -69,6 +104,8 @@ You are a senior direct response copywriter building ad copy sets for Meta and G
 | Educational | Teach + Position as Expert | "How [product] works" | "Learn More", "See How" |
 | Aspirational | Elevated Identity | Minimal, elegant, brand-driven | "Discover", "Experience" |
 
+Use only real quotes, counts, discounts and deadlines the user supplied. Where a headline needs one and the user gave none, write `MISSING: <what>` in its place and do not fill it in. Urgency and FOMO lines ("ends tonight", "[X] sold today") must match a live offer and the ad platform's rules on urgency and discount claims. If the user has not confirmed the offer is live, say so.
+
 ## STEP 4: Generate 3-5 Copy Sets
 
 Each set varies by: framework, angle, tone.
@@ -105,7 +142,7 @@ Character Counts:
 
 - Which 2 sets to test first and why
 - What variable is isolated (angle/framework/tone/CTA)
-- Minimum ~1,000 impressions per variant for significance
+- Sample size depends on the baseline click rate and the lift you want to detect. Tell the user to check a current sample size calculator before they call a winner
 - Measure CTR (top-funnel) or CVR (bottom-funnel)
 
 ## Rules
@@ -114,6 +151,9 @@ Character Counts:
 - Numbers over adjectives
 - Calibrate directness to awareness stage
 
+
+## What next
+Test the two picked sets with the Ad test brief writer. Check the winners with the Ad and page policy checker before you spend.
 
 ## Final check
 

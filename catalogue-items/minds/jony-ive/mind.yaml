@@ -36,7 +36,7 @@ output_sample:
     - name: One-week test plan
       contains: A plain plan to use the product for a week, fix use first, then the details.
     - name: Limits note
-      contains: One line saying when your question goes beyond his recorded views, and that his views are dated to 2019.
+      contains: One line saying when your question goes beyond his recorded views, and that his views are dated, mostly 2003 to 2019 with a few remarks from 2021 and 2025.
 seats:
   - {seat: "Industrial design and care", asks: "Where have we stopped caring, in the places nobody will look?"}
   - {seat: "Simplicity", asks: "What would we have to give up to make this genuinely simpler to use?"}

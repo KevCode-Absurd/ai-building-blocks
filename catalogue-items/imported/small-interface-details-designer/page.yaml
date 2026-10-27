@@ -23,6 +23,7 @@ you_give:
   - The screen or feature to review
   - What the user is trying to do
   - A screenshot or description of the current design (optional)
+  - Your current screen text, such as button labels and messages (optional)
 you_get:
   - Trigger, rules, feedback and loop notes for each moment
   - A score out of ten against eight checks
@@ -34,6 +35,7 @@ how_to_use:
   - Add a screenshot or a short description of the current design if you have one (optional).
   - Ask your AI to review each small moment and give the score and fixes.
   - Check the failed rows first. Fix the top item, then run it again to see the score change.
+  - Then give the list to your developer or motion designer. For a full screen look, use interface-polish-reviewer.
 output_sample:
   input:
     - The screen or feature to review

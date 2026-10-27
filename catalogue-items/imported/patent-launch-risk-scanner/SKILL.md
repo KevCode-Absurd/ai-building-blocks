@@ -23,6 +23,11 @@ not mean the product is clear.
 
 1. Read `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it
    contains `[PLACEHOLDER]`, stop and direct to `/ip-legal:cold-start-interview`.
+   If the file does not exist (you are not using the Claude for Legal plugin),
+   do not stop. Ask the user in chat for the same items (their role, where
+   they will sell, whether a lawyer is involved) and use `setup-interview/SKILL.md`
+   if they want the full interview. The `/ip-legal` commands in this file only
+   work inside that plugin.
 2. Follow the workflow below.
 3. Run intake (product/process, technical detail, jurisdictions, known patents,
    timing).

@@ -110,7 +110,7 @@ tempMap = roadrunnerHDMap;
 read(tempMap, destFile);
 
 % Conditional: asphalt surfaces
-hasClosedLoops = false;  % Detect from lane topology (any lane chain forming a cycle)
+hasClosedLoops = laneCycleExists(tempMap);  % real check, defined below; never leave this hardcoded to false
 if hasClosedLoops
     buildOpts.DetectAsphaltSurfaces = false;
 else
@@ -134,6 +134,28 @@ buildOpts.AutoDetectBridgesOptions = bridgeOpts;
 
 importOpts.BuildOptions = buildOpts;
 importScene(rrApp, destFile, "RoadRunner HD Map", importOpts);
+
+% Local function (put it at the end of the script): true if any lane chain loops back on itself
+function tf = laneCycleExists(map)
+    lanes = map.Lanes; n = numel(lanes);
+    ids = strings(1, n);
+    for k = 1:n, ids(k) = string(lanes(k).ID); end
+    tf = false;
+    for s = 1:n
+        seen = false(1, n); queue = s;
+        while ~isempty(queue) && ~tf
+            ci = queue(1); queue(1) = [];
+            succs = lanes(ci).Successors;
+            for j = 1:numel(succs)
+                ni = find(ids == string(succs(j).Reference.ID), 1);
+                if isempty(ni), continue; end
+                if ni == s, tf = true; break; end
+                if ~seen(ni), seen(ni) = true; queue(end+1) = ni; end
+            end
+        end
+        if tf, return; end
+    end
+end
 ```
 
 #### OpenDRIVE (.xodr)
@@ -211,7 +233,7 @@ saveScene(rrApp, sceneName);
 When the user asks to "import a map" or "load into RoadRunner":
 1. Ensure `rrApp` exists (invoke `roadrunner-core` if not)
 2. Create a new scene (clean slate)
-3. Copy file to project Assets folder
+3. Copy file to the project folder (the folder that `status(rrApp).Project.Filename` points to), as in Step 2
 4. Import with **Load only** (`ImportStep="Load"`) so user can verify RRHD view
 5. Save the scene with the filename as scene name
 
@@ -236,6 +258,11 @@ When building, **always inspect the RRHD content first** and apply the condition
 ## Enforcement Gate (MANDATORY — run before import)
 
 You MUST execute these checks before calling `importScene`. Do NOT skip.
+
+Set these first, so the checks test something real:
+- `formatName` is the exact format string you will pass to `importScene` (`"RoadRunner HD Map"` or `"OpenDRIVE"`).
+- `destFile` is the full path of the copied file in the project folder.
+- For a build import, `buildOpts` and `overlapOpts` are created as in the conditional example above. For a load-only import there are no build options, so skip the build-options check.
 
 ```matlab
 %% --- ENFORCEMENT: RoadRunner is connected ---

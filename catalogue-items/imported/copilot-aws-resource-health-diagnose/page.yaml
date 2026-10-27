@@ -16,7 +16,8 @@ how_to_use:
   - Paste the skill, then give the resource name, type, region and symptoms.
   - Let it run the read-only checks and read the summary report.
   - Read every fix before you approve it. Rebooting a database or changing Lambda concurrency can cause downtime or throttling.
-  - Approve the fixes one at a time, then run the validation checklist.
+  - Approve the fixes one at a time, then run the validation checklist. No command that changes anything runs without your yes.
+  - Next, set up the CloudWatch alarms it suggests, and run the check again after each fix.
 output_sample:
   input:
     - The name and type of your AWS resource, such as a Lambda function or database

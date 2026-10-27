@@ -21,7 +21,7 @@ steps:
   - { uses: orphan-product-finder, note: "Every month: products in no collection, which shoppers cannot browse to." }
   - { uses: variant-name-tidier, note: "Only when the owner gives a naming map and says yes: mixed size or colour names fixed to one standard." }
   - { uses: unused-store-file-finder, note: "Every third month: files no product or page uses." }
-schedule: "On the 1st of each month"
+schedule: "On the 1st of each month. Run it by hand, or set up a scheduled task yourself in Claude Code (a paid tool). Installing it creates no schedule"
 asks_before: [ editing any product, variant, SKU, cost, stock count or collection, publishing or unpublishing a product, deleting any file ]
 origin: own
 version: 1.0.1

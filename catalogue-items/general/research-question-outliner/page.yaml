@@ -78,6 +78,8 @@ output_shape: |
   <trap>
   MISSING
   <lines>
+  CHECKS MISSED
+  <one line per check missed, or none>
 
 tweaks:
   - what: "Purpose"
@@ -103,6 +105,8 @@ improve:
   - "Add a rule for source age, such as the last five years."
   - "Pair it with a research tool and give it the plan."
 
+before: []
+next: [scholarly-database-searcher, cited-research-report-writer]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Plans in one message. Use a research mode afterwards to run the plan."}

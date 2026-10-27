@@ -30,12 +30,12 @@ you_get:
   - A count of who qualified
   - A preview of changes when dry run is on
 how_to_use:
-  - Open an AI that can run commands on your computer, such as Claude Code, and sign in to the Shopify CLI for your store.
+  - Open an AI that can run commands on your computer, such as Claude Code, and sign in to the Shopify CLI for your store. Your login needs permission to read and change customers.
   - Give it this skill and your store domain.
   - Set your minimum orders and minimum spend. Turn dry run on first.
   - Check the count and the list. Change the numbers if the group looks too big or too small.
   - Run it again with dry run off to add the tag to live customer records.
-  - Import the CSV into your email tool or loyalty app.
+  - Import the CSV into your email tool or loyalty app. The file holds customer names and emails, so store and share it under your own privacy rules and consent terms.
 output_sample:
   input:
     - Your store domain

@@ -26,6 +26,7 @@ how_to_use:
   - Add rules if you need them, such as fields to ignore, fields that are required, or whether nesting is allowed.
   - Read the validation notes first. If a check fails, fix the data and run it again.
   - Before you use the result, compare the record count and keys against your original.
+  - Save the shuffled array as a new file and keep the original. An AI that rewrites a long array can drop or change records, so for more than a few hundred records, check the count with a script or spreadsheet before you import it anywhere.
 output_sample:
   input:
     - Your JSON file or pasted array of flat records

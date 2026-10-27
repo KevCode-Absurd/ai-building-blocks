@@ -7,8 +7,7 @@ summary: Name a nearby garden, pond or hedge. Get a unit that teaches your
 job: teach-and-train
 headline: Local nature inquiry unit planner
 subhead: Name a nearby garden, pond or hedge. Get a unit that teaches your
-  science or geography goals through it. Bring the local place or living system.
-  Use the result to plan your next step.
+  science or geography goals through it.
 explain: |
   A science or geography unit built around one living place near your school, such as a garden, a pond, a hedgerow or a patch of waste ground. Pupils study the real thing, and your curriculum goals get covered along the way.
 
@@ -25,16 +24,20 @@ you_give:
   - Year group (optional)
   - Time frame (optional)
   - Outdoor space and local experts available (optional)
+  - Gather first the goal wording from your curriculum, the outdoor space you have and a rough time frame
 you_get:
   - A central inquiry question
   - Investigations tied to each goal
   - A timeline for your chosen length
   - Ideas for local experts and visits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder.
+  - Give it the local place, the curriculum goals and the year group. Add the time frame and any outdoor space or local experts.
+  - Ask for the unit in four phases. They are meeting the place, investigating, understanding and stewardship.
+  - Read the central question first, then check each investigation against your goals.
+  - Adjust the timeline to your term. Next, plan the longer cycle with the local nature inquiry cycle planner.
+next:
+  - nature-inquiry-cycle
 not_for:
   - "You want a term-long cycle for children aged 5 to 12 with set stages. Use the Local nature inquiry cycle planner."
   - "Your goal is a calmer classroom with plants and light. Use the Classroom nature layout planner."

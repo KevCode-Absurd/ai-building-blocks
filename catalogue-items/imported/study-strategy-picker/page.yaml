@@ -36,7 +36,9 @@ how_to_use:
   - Fill in the learning task, the student's year and habits, and the material type. Add time left and test type if you know them.
   - "Ask for the four sections: strategies to stop, recommended strategies, study plan and student guide."
   - Check that the plan fits the days you really have. Ask your AI to change it if not.
-  - Give the student guide to the student, or use it yourself.
+  - Give the student guide to the student, or use it yourself. Treat any percentage in the reasons as the research's rough finding, not a promise for your own results.
+  - Next, make practice questions with the retrieval quiz writer, and set your review dates with the study review scheduler.
+next: [retrieval-quiz-writer, study-review-scheduler]
 output_sample:
   input:
     - The study task or exam

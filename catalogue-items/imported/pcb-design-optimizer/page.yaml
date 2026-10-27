@@ -5,9 +5,9 @@ name: PCB design optimizer
 summary: Tune your RF PCB filter or coupler in MATLAB for wider bandwidth, better return loss or smaller area, within the size limits you set.
 job: build-software
 headline: PCB design optimizer
-subhead: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned by search to meet it. Bring starting PCB design in MATLAB. Use the result to plan your next step.
+subhead: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned by search to meet it. Check the result with a full EM analysis before you build it.
 explain: |
-  PCB dimensions tuned automatically to hit a goal such as wider bandwidth, better return loss or smaller area. It runs in MATLAB.
+  PCB dimensions tuned automatically to hit a goal such as wider bandwidth, better return loss or smaller area. It runs in MATLAB. Return loss is how much signal bounces back instead of passing through, so a bigger number is better. An EM analysis is a full electromagnetic simulation of the board.
 
   It always starts with the toolbox's built-in optimize function rather than a hand-made loop. You set the objective, upper and lower bounds on each size and any constraints. It can run search methods such as SADEA, pattern search or surrogate optimisation, and it can use a custom objective built from the response curves. Afterwards it recommends checking the result with an EM analysis. It needs an existing design to start from, plus MATLAB with RF PCB Toolbox.
 when:
@@ -16,8 +16,8 @@ when:
   - Return loss is too weak at the band edge.
   - You need a custom goal, not a standard one.
 not_for:
-  - "You have no starting design yet: build one first with the matlab-design-pcb skill for your part, such as the filter or coupler skill, then come back."
-  - "You only want to check how a design performs: use the matlab-analyze-em skill, which runs EM analysis with no search."
+  - "You have no starting design yet: build one first with the PCB RF filter designer or PCB coupler designer, then come back."
+  - "You only want to check how a design performs: use the PCB signal loss analyzer or run an EM analysis in MATLAB, with no search."
   - "You only want to try a few sizes with no goal: loop over the S-parameter calls in MATLAB yourself."
 you_give:
   - Starting PCB design in MATLAB
@@ -33,6 +33,7 @@ how_to_use:
   - Open an AI that can run MATLAB code. You need MATLAB with RF PCB Toolbox.
   - Check your extra toolboxes. Pattern search and surrogate search need Global Optimization Toolbox. The SADEA methods need Antenna Toolbox.
   - Paste this skill into your AI. Then add your starting design, your goal and the lower and upper limit for each size.
+  - Count the single numbers in each property you will vary. A property with several numbers needs one lower and one upper limit for every number.
   - Ask your AI to use the built-in optimize function first, not its own search loop.
   - Compare the before and after results. Look at return loss, bandwidth and area.
   - Check the final design with an EM analysis before you use it.
@@ -60,3 +61,4 @@ output_sample:
       contains: The response curves of the optimised design.
     - name: Validation advice
       contains: A reminder to check the final design with a full EM analysis.
+next: [pcb-signal-loss-analyzer, pcb-gerber-exporter]

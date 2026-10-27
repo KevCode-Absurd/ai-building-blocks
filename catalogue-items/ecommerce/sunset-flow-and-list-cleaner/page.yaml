@@ -11,7 +11,7 @@ subhead: Give it how you define a quiet subscriber, your email volume and a re-e
 explain: |
   Every subscriber who never opens costs you money and hurts your sender reputation. Mail providers notice when many people ignore you, and your good emails then land in spam. Many email tools bill by the number of active profiles, so a quiet list also raises the bill.
 
-  This skill defines who is unengaged in a way that avoids false alarms. It then runs them through a short sunset flow that asks if they still want your emails, makes one last offer, and tells them they will be removed unless they click. Anyone who does nothing is marked, and a monthly routine suppresses them so you stop sending to them.
+  This skill defines who is unengaged in a way that avoids false alarms. It then runs them through a short sunset flow that asks if they still want your emails, makes one last offer, and tells them they will stop getting marketing emails unless they click. Anyone who does nothing is marked, and a monthly routine suppresses them so you stop sending to them.
 
 when:
   - Your open rate is falling and your list keeps growing.
@@ -87,7 +87,7 @@ output_shape: |
   SUNSET FLOW  trigger: enters segment | exit: opens or clicks since start
   1  day 0  | <plain text: do you still want these emails? easy unsubscribe link>
   2  day 5  | <last offer> | code: <dynamic, ends on a set date>
-  3  day 10 | <reminder the code still works + "you will be removed unless you click">
+  3  day 10 | <reminder the code still works + "you will stop getting marketing emails unless you click">
   END  set unengaged = true
 
   SECOND SEGMENT  unengaged = true and can receive marketing
@@ -145,3 +145,4 @@ terms:
     meaning: How mail providers rate you, based on whether people open, ignore or report your emails.
   - term: Apple privacy opens
     meaning: Opens that Apple's mail app records automatically, so an open does not always mean a person read it.
+next: [inbox-placement-recovery-planner, win-back-flow-builder]

@@ -11,7 +11,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Generates a bulk report of orders most likely to generate "Where Is My Order?" (WISMO) support tickets — shipped orders whose tracking hasn't updated in N days, and unfulfilled orders sitting past a configurable SLA. According to industry research, WISMO accounts for ~18% of all incoming support requests, making proactive identification a direct ops capacity investment. Read-only. Replaces manual order-by-order admin scanning or helpdesk searches. The CSV output can be used to proactively contact customers before they contact you.
+Generates a bulk report of orders most likely to generate "Where Is My Order?" (WISMO) support tickets — shipped orders whose tracking hasn't updated in N days, and unfulfilled orders sitting past a configurable SLA. Finding these orders early can cut the number of tracking tickets your support team gets. Read-only. Replaces manual order-by-order admin scanning or helpdesk searches. The CSV output can be used to proactively contact customers before they contact you.
 
 ## Prerequisites
 - `shopify auth login --store <domain>`
@@ -31,19 +31,19 @@ Generates a bulk report of orders most likely to generate "Where Is My Order?" (
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query (unfulfilled at-risk)
-   **Inputs:** `first: <limit>`, `query: "fulfillment_status:unfulfilled created_at:<='<NOW minus unfulfilled_sla_days>'"`, sort by `CREATED_AT` ascending
+   **Inputs:** `first: <limit>`, `query: "fulfillment_status:unfulfilled created_at:<='<NOW minus unfulfilled_sla_days>'"`, sort by `CREATED_AT` ascending (the default `sortKey`)
    **Expected output:** Orders unfulfilled past SLA window with `name`, `createdAt`, `customer`, `displayFulfillmentStatus`; label as `UNFULFILLED_OVERDUE`
 
 2. **OPERATION:** `orders` — query (shipped but potentially stale)
-   **Inputs:** `first: <limit>`, `query: "fulfillment_status:shipped updated_at:<='<NOW minus stale_tracking_days>'"`, sort by `UPDATED_AT` ascending
+   **Inputs:** `first: <limit>`, `query: "fulfillment_status:shipped updated_at:<='<NOW minus stale_tracking_days>'"`, sort by `UPDATED_AT` ascending (pass `sortKey: UPDATED_AT` as the query variable)
    **Expected output:** Shipped orders not updated recently with `name`, `createdAt`, `fulfillments.createdAt`, `fulfillments.trackingInfo`; label as `SHIPPED_STALE_TRACKING`
 
 ## GraphQL Operations
 
 ```graphql
 # orders:query — validated against api_version 2025-01
-query WismoOrders($first: Int!, $after: String, $query: String) {
-  orders(first: $first, after: $after, query: $query, sortKey: CREATED_AT) {
+query WismoOrders($first: Int!, $after: String, $query: String, $sortKey: OrderSortKeys = CREATED_AT) {
+  orders(first: $first, after: $after, query: $query, sortKey: $sortKey) {
     edges {
       node {
         id
@@ -157,8 +157,8 @@ Two sections in the CSV (separated by `risk_type` column value): `UNFULFILLED_OV
 | Rate limit (429) | Many pages of orders | Reduce `limit` to 100 |
 
 ## Best Practices
-1. Run this report daily during your morning ops review alongside `fulfillment-status-digest` — together they cover both the ops queue and the customer-facing risk.
+1. Run this report daily during your morning ops review alongside `daily-fulfillment-digest-writer` (a separate item in this library) — together they cover both the ops queue and the customer-facing risk.
 2. Sort the CSV by `days_waiting` descending to prioritize outreach to the most overdue orders first.
-3. For `UNFULFILLED_OVERDUE` orders, forward to the `fulfillment-status-digest` skill to understand why they haven't been fulfilled and use `order-hold-and-release` if needed.
+3. For `UNFULFILLED_OVERDUE` orders, forward to the `daily-fulfillment-digest-writer` skill to understand why they haven't been fulfilled and use `order-hold-manager` if needed (both are separate items in this library).
 4. For `SHIPPED_STALE_TRACKING` orders, check if the carrier tracking URL shows movement — if it's genuinely stalled, proactive outreach reduces ticket volume significantly.
 5. Use `format: json` to pipe the output into a Slack alert or CRM automation that creates follow-up tasks for your support team.

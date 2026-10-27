@@ -12,6 +12,8 @@ explain: |
   It writes Python using the pymoo library. It sets up your goals, settings and limits, picks a method such as NSGA-II or NSGA-III, runs it and draws the curve. It also runs the same method on a known test problem first, so you can tell the setup works before you trust it on yours.
 
   You need a way to score a design, as formulas or as code. It does not guess your model. Without that, it stops and asks.
+
+  Compared with the plain pymoo skill it came from, this version checks your inputs first, runs the test-problem check, and ends with a note on which solution suits which priority.
 when:
   - You want to cut cost and raise quality at once and need to see every good option.
   - You have an engineering design with several competing targets and limits.
@@ -38,7 +40,7 @@ how_to_use:
   - Paste the formulas that score a design, or point your AI at your code. Without them it must stop and ask.
   - Ask your AI to set up pymoo and run the optimization. It saves the chart as an image file.
   - Open the table and chart. Read the note on which solution suits which priority, and pick one.
-  - Check that no solution breaks your hard limits. Then test your pick in your normal tools before you use it.
+  - Check that no solution breaks your hard limits. Rerun with other random seeds to see the front hold. Then pass your pick to the engineering or costing review that owns the limits, and test it in your normal tools before you use it.
 output_sample:
   input:
     - Your goals, each marked lower or higher is better

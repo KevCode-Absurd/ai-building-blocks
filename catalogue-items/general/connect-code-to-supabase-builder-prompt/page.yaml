@@ -5,26 +5,29 @@ job: build-software
 headline: Connect Code to Supabase coding prompt
 subhead: Get a coding brief to connect your app to Supabase, with scoped access, safe secrets and a read check.
 explain: |-
-  Share your project and the required feature. Get a coding brief for connect code to supabase, with setup and test steps.
+  Before an app can save or read anything, it needs a safe link to its database. This prompt sets that up for Supabase. It writes a server-only client that reads your URL and service role key from .env.local, and a small test script that counts rows in two tables.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  You paste the prompt into Claude Code in your project. It also explains the service role key and Row Level Security in plain words. The test only reads data.
 when:
-  - You need a coding brief for connect code to supabase.
-  - You need connect code to supabase prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are building an app with a Next.js or Node server and want it to talk to Supabase.
+  - You want a first read test that proves the link works.
+  - You are new to coding and want each part explained simply.
 not_for:
   - "You are building browser code or a client-side app: this prompt makes a server-only client, so use the Supabase docs for your framework."
   - "You use a framework other than Next.js or Node: follow the Supabase docs for that framework instead."
   - "You have not made the agent_jobs and agent_activity_log tables yet: create them in Supabase first, or the test will fail."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - Your code project, open in Claude Code
+  - Your Supabase URL and service role key, saved in .env.local
+  - The agent_jobs and agent_activity_log tables in your Supabase project
 you_get:
-  - A coding brief for connect code to supabase
-  - Required files, setup gaps and test cases
+  - A server-only Supabase client file (lib/supabase/admin.ts)
+  - A test script (scripts/test-db-connection.ts)
+  - A plain explanation of the service role key, and what the test should print
 how_to_use:
   - Open your project in Claude Code. This prompt creates files, so it needs an AI that can write to your project.
-  - Save your Supabase URL and service role key in .env.local.
+  - Install the two packages it needs: npm install @supabase/supabase-js and npm install -D tsx. The prompt asks before it installs them.
+  - Save your Supabase URL and service role key in .env.local. Keep that file out of git, because the service role key skips Row Level Security.
   - Paste the prompt from the download and let it create the two files.
   - Run npx tsx scripts/test-db-connection.ts in your terminal.
   - Check that you see the two lines about agent_jobs and the activity log. Zero rows is fine on new tables.
@@ -49,11 +52,13 @@ output_sample:
     - name: Test result
       contains: The lines you should see when you run the script, where zero rows is fine on new tables.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Check what you have
+    text: Your coding AI looks for your project, .env.local and the two packages.
+  - title: Write the client
+    text: It writes lib/supabase/admin.ts, which reads the URL and the service role key and stops with a clear message if one is missing.
+  - title: Write the test
+    text: It writes a script that reads up to 5 rows from agent_jobs and counts the rows in agent_activity_log.
+  - title: Explain and run
+    text: It explains the key in plain words. You run the test and check for the two result lines.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

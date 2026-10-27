@@ -6,6 +6,8 @@ argument-hint: "[slug] [--format=working|sof|witness-[name]]"
 
 # /chronology
 
+**Plain-chat use (AI Blocks note).** The paths below belong to a saved plugin setup. If the person has no matter folder, matter log or saved configuration, do not stop. Run in `--documents` mode on the files they upload, ask for the main issue in one or two lines, and say the result is pre-matter work. Treat the matter-file steps as skipped.
+
 1. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/matters/[slug]/matter.md` → theory, pivot fact, key facts.
 2. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/CLAUDE.md` → Document storage sources, default matter folder pattern.
 3. Follow the workflow and reference below.

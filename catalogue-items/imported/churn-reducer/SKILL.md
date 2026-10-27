@@ -52,6 +52,8 @@ Churn has two types requiring different strategies:
 
 Voluntary churn is typically 50-70% of total churn. Involuntary churn is 30-50% but is often easier to fix.
 
+The percentages and rates in this skill (churn shares, save and recovery rates, benchmarks) are the author's rules of thumb or vendor claims. They are not checked here. Use them as rough guides, compare them with the user's own numbers, and never present them as facts.
+
 This skill supports three modes:
 
 1. **Build a cancel flow** — Design from scratch with survey, save offers, and confirmation
@@ -394,6 +396,8 @@ Test one variable at a time:
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
 
 ### Retention Platforms
+
+These tools need an account and most charge a fee. Stripe Smart Retries and PostHog also need an account. The plan does not need any of them. Name a tool only where a step uses it, and tell the user to check its pricing first.
 
 | Tool | Best For | Key Feature |
 |------|----------|-------------|

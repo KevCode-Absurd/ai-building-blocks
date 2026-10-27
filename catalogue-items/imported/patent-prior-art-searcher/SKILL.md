@@ -33,7 +33,7 @@ See [`references/sub_use_case_routing.md`](references/sub_use_case_routing.md) f
 
 ## Agent Integrity Rules (Research-Pack Convention)
 
-Locked verbatim per PR #657 audit.
+These rules keep your AI from making up patents, sources or results. They were fixed word for word in the original repo's audit ("PR #657"), so do not loosen them.
 
 - **Execution discipline.** Sequential search calls only. **1 query/sec rate limit.** Confirm response received before next call.
 - **Source discipline.** Cite only patents returned by THIS session's tool calls. Training knowledge labeled `[Not from search — reference information]` and excluded from counts.

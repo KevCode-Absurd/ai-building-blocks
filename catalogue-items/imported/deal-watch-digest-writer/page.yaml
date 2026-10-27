@@ -35,7 +35,8 @@ how_to_use:
   - Connect your CRM if your AI can. If not, upload a CRM export. Add an older export so it can show what changed.
   - Add email or call notes if you can. Without them, the competitor and waiting-reply checks are skipped, and the digest says so.
   - Read the Act today list first. Check the evidence on each item before you act.
-  - Fix dates and next steps in your CRM yourself. This skill only reads and suggests.
+  - Fix dates and next steps in your CRM yourself, or use the CRM deal updater. This skill only reads and suggests. For a touch, use the Prospect outreach drafter or the Meeting scheduler.
+next: [crm-deal-updater, prospect-outreach-drafter, meeting-scheduler]
 output_sample:
   input:
     - "Your scope: your own pipeline, a tier of accounts or your team"

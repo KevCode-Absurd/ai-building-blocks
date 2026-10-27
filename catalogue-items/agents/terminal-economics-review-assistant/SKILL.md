@@ -19,7 +19,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** last review's record, and a dated source on how long the company's edge lasts.
 
-**The pieces it uses:** the [Growth and reinvestment spreadsheet modeller](https://useaiblocks.com/workflows/link-operating-growth-to-terminal-reinvestment) workflow (the governing method) and the [Economic profit value calculator](https://useaiblocks.com/skills/economic-profit-fade-schedule) (only when the edge fades early). If either is missing from the pack, use the formulas in step 4 and step 5 and say so.
+**The pieces it uses:** the [Link operating growth to terminal reinvestment](https://useaiblocks.com/workflows/link-operating-growth-to-terminal-reinvestment) workflow (the governing method) and the [Economic profit fade schedule](https://useaiblocks.com/skills/economic-profit-fade-schedule) (only when the edge fades early). If either is missing from the pack, use the formulas in step 4 and step 5 and say so.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds and reopens the workbook and can save the record file. In plain chat, return the same tables as text and the record for the user to keep.

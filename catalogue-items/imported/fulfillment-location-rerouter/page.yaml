@@ -17,7 +17,7 @@ when:
   - You want to see which orders would move before you change anything.
 not_for:
   - "You need to move stock between locations: this does not move inventory, so transfer stock in Shopify Admin first."
-  - "You want to check stock levels at the new location: use the multi-location inventory audit before you move orders."
+  - "You want to check stock levels at the new location: check them in Shopify Admin before you move orders."
   - "You need to move just one or two orders: change the location by hand in Shopify Admin."
 you_give:
   - Your store address, like mystore.myshopify.com
@@ -35,7 +35,8 @@ how_to_use:
   - Paste the skill and give your store address, the source location ID and the destination location ID. Add order numbers if you want only some orders moved.
   - Run the preview first. Check the list of orders and the destination.
   - Check that the destination has stock for every item. This skill does not check or move stock.
-  - Tell your AI to go ahead. Then open the CSV log and check for errors.
+  - Tell your AI to go ahead by typing yes. The skill must not move any order until you do. Then open the CSV log and check for errors.
+  - Before any move, transfer stock to the destination in Shopify Admin. After the move, spot-check a few orders in Shopify Admin.
 output_sample:
   input:
     - Your store address
@@ -54,3 +55,4 @@ output_sample:
       contains: Counts of orders at the source, orders moved and errors, shown on screen when the run ends.
     - name: routing_log CSV
       contains: One row per order with order name, fulfillment order ID, source, destination and status.
+next: [multi-warehouse-route-planner, revenue-by-location-reporter]

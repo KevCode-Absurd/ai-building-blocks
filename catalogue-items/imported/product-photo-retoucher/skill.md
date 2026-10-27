@@ -3,6 +3,8 @@ name: item-repair
 description: 商品精修、去褶皱。随手拍的商品图 → 可直接上架的精修图。当用户说「精修」「去褶皱」「修图」「拍得不好看」「整理一下」时使用。
 ---
 
+> **Read this first (added by AI Blocks).** This file is written in Chinese. Follow the same steps and answer the user in English. The `dlazy` commands, `scripts/gen.mjs` and the `docs/` paths are not included here. They need a paid dLazy account and a way to run commands, so treat them as optional. The free route: write the prompt, then give it and the user's photo to the image tools in ChatGPT or Gemini. Do not claim a picture was made unless an image tool made it. The dLazy route needs a dLazy account (the page lists about 60 credits per image), Node installed for `scripts/gen.mjs`, and a `--dry-run` first to check the call and cost. `--batch 2` gives two candidates to pick from. The skill it names as material-enhancement is not in this library.
+
 # item-repair — 一键提升商品图质感
 
 把**随手拍的商品图**修成**可上架的精修图**：压平褶皱、摆正对称、匀光、提纯背景。

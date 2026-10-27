@@ -30,7 +30,7 @@ credits:
   - title: postgres-readonly-queries skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/postgres-readonly-queries
-    used: Shared under the CC BY-4.0 licence. We gave it a plain name and added notes on the read-only login and missing input.
+    used: Shared under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says Apache-2.0. We gave it a plain name and added notes on the read-only login and missing input.
   - title: Original author
     by: sanjay3290
     url: https://github.com/sanjay3290

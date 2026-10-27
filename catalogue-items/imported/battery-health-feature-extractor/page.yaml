@@ -5,7 +5,7 @@ name: Battery health feature extractor
 summary: Turn battery cycling test data into health and wear features for state of health and life prediction models in MATLAB.
 job: build-software
 headline: Battery health feature extractor
-subhead: Give it battery test data. Get health and wear features ready for life prediction. Bring battery cycling or test data. Use the result to plan your next step.
+subhead: Give it battery test data. Get health and wear features ready for life prediction. It is for battery test engineers who already work in MATLAB. Bring battery cycling or test data. You then feed the features into your own life prediction model.
 explain: |
   Health and wear numbers pulled out of battery test data, ready for models that estimate state of health or predict remaining life. Give it cycling files and it produces more than 165 features, from simple statistics per charge or discharge segment to differential curves that show electrode aging.
 
@@ -45,6 +45,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB code
     - MATLAB with the Predictive Maintenance Toolbox
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Cycling feature table
       contains: More than 165 features per cycle, from simple statistics to cumulative values, ready for health or life models.

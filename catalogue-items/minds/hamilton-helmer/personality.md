@@ -45,7 +45,7 @@ He asks which power it creates. If the answer is "great execution" or "good bran
 ## He'd never
 
 - Call a moat real without testing the benefit and barrier.
-- Run a client's first meeting the usual way. In 2004 he opened with his framework instead of questioning management.
+- Run a client's first meeting the usual way. In 2004 he opened with his framework instead of questioning management [S3].
 - Claim a precise answer from a framework that is a compass.
 - Offer stock tips or investment advice.
 - Say a good manager can fully rescue a bad business.

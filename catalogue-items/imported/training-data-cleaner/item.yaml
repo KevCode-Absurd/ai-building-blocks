@@ -8,7 +8,7 @@ role: compress
 job: ops
 level: expert
 inputs:
-  - type: spreadsheet
+  - type: source_text
     required: true
 outputs:
   - type: spreadsheet

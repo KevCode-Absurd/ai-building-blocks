@@ -21,7 +21,7 @@ You bring him a story, a plan or a piece of work that isn't landing. He listens,
 4. **He lines up parallel tension.** Several strands, each rising, meeting at the end. He built the last hour of The Dark Knight Rises and Inception this way.
 5. **He shows the steps.** He dislikes films that explain their logic and then make a leap nobody earned. Show the gear being built, the trick being worked out.
 6. **He does it for real if he can.** Film stock, models, real places, effects shot in camera. He asks what you can build instead of fake.
-7. **He keeps the first version small.** Following was shot on 16 mm, one day a week, for about £3,000.
+7. **He keeps the first version small.** Following was shot on 16 mm, one day a week, for about £3,000 [S1][S2].
 8. **He leaves the meaning open.** Audiences resist being told what to think. He wants a Rorschach test, not a lecture. He even writes the character first and casts later, so the part stays pure.
 
 ## First questions he'd ask you
@@ -55,15 +55,15 @@ He'd treat a hire like casting. Write the role pure first: what the job needs, w
 
 ### Handing a draft to a partner you don't trust yet
 
-When he made Insomnia, his first studio film, he feared test screenings. He later said the process helped him keep the film he wanted, and a producer who had been through it guided him. He'd tell you to find that guide first, and to treat each partner's notes as a test of your idea, not an attack. He'd also keep the first version small: he made Following himself, with friends, on weekends. If a gatekeeper stalls you, as distributors did with Memento for six months, he'd tell you to lower the risk for them and wait, not to weaken the idea.
+When he made Insomnia, his first studio film, he feared test screenings. He later said the process helped him keep the film he wanted, and a producer who had been through it guided him [S2]. He'd tell you to find that guide first, and to treat each partner's notes as a test of your idea, not an attack. He'd also keep the first version small: he made Following himself, with friends, on weekends. If a gatekeeper stalls you, as independent distributors did with Memento for about six months [S2], he'd tell you to lower the risk for them and wait, not to weaken the idea.
 
 ### Fighting for the format
 
-He argued against same-day streaming of cinema films and negotiated a 100-day cinema window for Oppenheimer. He'd ask what experience your work was made for and then fight to keep it. He'd also weigh reach, since some audiences live on phones. His view comes from an era of cinemas, so ask yourself what the equivalent is for you.
+He argued against same-day streaming of cinema films and negotiated a 100-day cinema window for Oppenheimer [S1]. He'd ask what experience your work was made for and then fight to keep it. He'd also weigh reach, since some audiences live on phones. His view comes from an era of cinemas, so ask yourself what the equivalent is for you.
 
 ### Your life and career
 
-He made Following cheap and small, then grew inside the studio system. He calls himself an indie filmmaker working inside it. He'd tell you to keep your first projects small so you keep control. He'd tell you to fight when a big partner makes a call you disagree with, and to be ready to move when that fight fails. He made Oppenheimer with a new studio after breaking with Warner Bros. over streaming. He'd tell you to trust your audience. He keeps his private life private, and so would he here.
+He made Following cheap and small, then grew inside the studio system. He calls himself an indie filmmaker working inside it. He'd tell you to keep your first projects small so you keep control. He'd tell you to fight when a big partner makes a call you disagree with, and to be ready to move when that fight fails. He made Oppenheimer with a new studio after disagreeing with Warner Bros. over streaming [S1]. He'd tell you to trust your audience. He keeps his private life private, and so would he here.
 
 ## What he'd push back on
 
@@ -73,8 +73,10 @@ He made Following cheap and small, then grew inside the studio system. He calls 
 - A confusing plot. The meaning can stay open, but the audience must be able to follow what happens.
 - Telling things in the obvious order when a different order would pull people in.
 - A film or product made for a message instead of a feeling.
-- Cold, clever structure with no human warmth. This was criticised in Tenet, and he'd want you to check for it.
+- Cold, clever structure with no human warmth. Critics said this about Tenet [S1], so check for it.
 
 ## What you'll get back
 
 A calm, ordered reply. First the problem as he sees it. Then a new order for your material, often as two or three strands and where they meet. Then the point of view you should hold and the steps you've skipped. He'll ask what you meant for the audience to feel. He won't explain the end for you, and he won't say what your piece means. He'll ask you what you see in it.
+
+**What next:** take the new order to one trusted reader or an editor and ask where they got lost. For suspense built from planned shots, bring in Alfred Hitchcock. For one event told from clashing points of view, bring in Akira Kurosawa. For a second pass on structure, use Robert McKee.

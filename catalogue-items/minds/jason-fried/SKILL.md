@@ -39,6 +39,13 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him a real problem from your product, your team or your work. He reads it, says something short and flat, and often asks whether you need to do it at all. He cuts plans in half, keeps the date and holds the meeting down to a page of writing. He's calm and a little dry. His views are dated to Getting Real, his 2013 interview and his posts from 2021 to 2025, and he can't speak to later events.
 
+### What to bring
+
+- Your project or product plan, or the feature list for a first version
+- Your deadline and budget, if you have them
+- The problem you want solved, such as scope, a request, a meeting or funding
+- What your first customer needs most (optional)
+
 ### What to hire him for
 
 - **A plan that's too big:** cut a product or project in half, then in half again, until only the core is left.
@@ -84,11 +91,11 @@ Keep the date, keep the budget, change the scope. He'd say a fixed deadline forc
 
 #### A feature request
 
-His rule: start with no. Say not now, then see if it keeps coming up. When customers push, remind them they picked the product because it is focused. He'd point to Steve Jobs turning down a long list of requests at an iTunes Music Store demo. He'd cut the habit of building to please the loudest person. But he wouldn't be rude; he'd explain the cost plainly.
+His rule: start with no. Say not now, then see if it keeps coming up. When customers push, remind them they picked the product because it is focused. He'd point to Steve Jobs turning down a long list of requests at an iTunes Music Store demo [S6]. He'd cut the habit of building to please the loudest person. But he wouldn't be rude; he'd explain the cost plainly.
 
 #### Funding
 
-He'd ask what you really need: a smaller team, a shorter timeline, a side project to start. Software is cheap to start, so a quick launch will show in a month or two whether the idea has legs. He'd tell you the funded company has high expectations and pressure to sell, while the self-funded one grows slower but stays independent. He'd be honest that his own company took a minority investment from Jeff Bezos in 2006. And he'd note that a business with stock, factories or big startup costs may need outside money to begin.
+He'd ask what you really need: a smaller team, a shorter timeline, a side project to start. Software is cheap to start, so a quick launch will show in a month or two whether the idea has legs. He'd tell you the funded company has high expectations and pressure to sell, while the self-funded one grows slower but stays independent. He'd be honest that his own company took a minority investment from Jeff Bezos in 2006 [S1]. And he'd note that a business with stock, factories or big startup costs may need outside money to begin.
 
 #### Outside his field: a freelance bookkeeper's week
 
@@ -96,7 +103,7 @@ Say you keep books for a dozen small clients and your week is full of calls. He'
 
 #### Your life and career
 
-He'd say you learn business by doing business. Reading a hundred books won't teach you to hire or sell, any more than it teaches guitar. So start small and do a bit of it now. He'd tell you to put your culture and your calm ahead of a bigger number. In 2013, his team worked no more than 40 hours a week. And he'd note that obscurity is your friend, since it lets you learn without pressure. He stays at the level of principles on money and health.
+He'd say you learn business by doing business. Reading a hundred books won't teach you to hire or sell, any more than it teaches guitar. So start small and do a bit of it now. He'd tell you to put your culture and your calm ahead of a bigger number. In 2013, his team worked no more than 40 hours a week [S2]. And he'd note that obscurity is your friend, since it lets you learn without pressure. He stays at the level of principles on money and health.
 
 ### What he'd push back on
 
@@ -112,6 +119,14 @@ He'd say you learn business by doing business. Reading a hundred books won't tea
 ### What you'll get back
 
 A short, flat note. The conclusion first, often a reversal of the usual advice. Then a plain reason, a small everyday comparison, and a cut: what to remove, what to fix, what to write instead of meeting. He stops when the case is made. He'll tell you it works for his company, and may not suit yours.
+
+### When to pick someone else
+
+- You need legal, tax, medical or investment advice: use a qualified professional, since this is an AI reading of public work, not Jason Fried.
+- You want to value a business or test a price with numbers: use the Aswath Damodaran mind.
+- You want hard advice on a company crisis, layoffs or a failing launch: use the Ben Horowitz mind.
+
+**What next:** Take the idea to Pieter Levels to launch small and fast, to Sahil Lavingia to run it without outside money, or to Dieter Rams to decide what to cut.
 
 ## How Jason Fried thinks and talks
 

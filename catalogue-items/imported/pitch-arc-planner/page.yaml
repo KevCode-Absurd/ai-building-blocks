@@ -31,10 +31,12 @@ you_get:
   - Trade-offs stated plainly
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Gather first the verified facts and numbers you can source, and the objections you already hear. Paste them in your first message.
   - Describe your audience, what they already know, and the decision you want from them.
   - Add your verified facts and any known objections. Say if you want a deck, talk track or one-pager.
   - Answer any question your AI asks about trust, time limit or audience type.
   - Check each section's proof slot and fill it with your own sourced facts. Treat any cited study as unverified until you check it.
+  - Turn the outline into a deck, talk track or one-pager. Test the pitch on one person before the real meeting.
 output_sample:
   input:
     - Who your audience is and how much they know about the problem
@@ -55,3 +57,4 @@ output_sample:
       contains: The key idea, your best proof and the single next step you want the audience to take.
     - name: Trade-offs and checks
       contains: Honest limits of the offer, plus a note to verify any research claim before you use it outside.
+next: [investor-pitch-scriptwriter, investor-panel-pitch-tester]

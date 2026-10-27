@@ -3,29 +3,35 @@ name: 3d-explainer-video-prompts
 description: Use when what a product does happens too small or too hidden to film, and you want a short narrated 3D explainer that zooms from an everyday moment into the process and back out. It runs the full video process in six stages (script in, avatar card, reference renders, sheets and lock lines, storyboard, clips and edit), stopping for your approval after the avatar card, the sheets and the storyboard. With no script, it first tests candidate processes for honesty and offers 2 or 3 story options. The product, or its active part, is usually the avatar, and every part keeps one colour and shape. Ends with any of its checks still missed.
 ---
 
-# 3D how-it-works video clip prompt writer
+# 3D how-it-works video prompt writer
 
 You take one true process the product takes part in all the way to a finished 3D explainer, in six stages. The film starts at human size, dives down to where the process happens, walks through it one link at a time, and comes back out to the same moment. The product appears at the link where it acts, named there, and not before.
+
+Not for: a benefit you can film directly (film a simple demo), or a step you cannot source. For the script alone, use the 3D how-it-works video ad script writer.
 
 **Stop for approval after stages 1, 3 and 4.** Never skip a stage. In a live chat, wait for a yes before the next one. If the person asked for every stage in one go, or approved ahead, run them all and mark each checkpoint "(approve)".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+
+**Makes it better (optional):**
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, a video ad script. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Nano Banana:** Takes up to 14 reference images, so your parts sheet and frames keep the same colours and shapes.
@@ -77,7 +83,7 @@ One frame per shot: the surface, the deepest frame of the dive, each link, the p
 ## Stage 5: Storyboard to video
 1. **Voice first.** Record the narration in the approved voice. In the text the voice reads, spell hard words by sound; captions keep the real spelling. A person listens to the whole read and approves it before any picture is paid for. There's no lip-sync; the narrator stays off screen.
 2. **Clips.** Each approved frame starts its clip; the dive takes the surface frame as its start and the deepest frame as its end. The clip prompt describes only the motion, with the lock lines unchanged. Make 2 or 3 takes and pick one.
-3. **Edit.** Join the dive into the chain as one move; elsewhere use hard cuts or a short dissolve, so one bad clip spoils only itself. Captions word for word, with the process's key word in the brand colour the first time it's said. The offer is on-screen text over the closing shot, from current terms, never spoken. Keep words inside the app's safe zones.
+3. **Edit.** Join the dive into the chain as one move; elsewhere use hard cuts or a short dissolve, so one bad clip spoils only itself. Captions word for word, with the process's key word in the brand colour the first time it's said. The offer is on-screen text over the closing shot, from current terms, never spoken. Keep words inside the app's safe zones. Starting word budget for the voice: seconds times words per minute, divided by 60 (30 seconds at 150 words per minute is about 75 words, before pauses). Time the real audio, and mark any pronunciation guess. A caption can hold a phrase and mark the key word with colour or weight, after a contrast check. Do not claim exact sync without alignment. Log each shot: ID, script span, timing, the voice used, the product photos it follows, start and end frames, prompt, tool, output version and the next action. Do not clone an unknown artist's voice or add an unsupported claim.
 4. **Fixes.** Rerun the same prompt once. Then simplify (hold the camera, one action). Then change one instruction. A part changing colour: re-attach the parts sheet. Anatomy creeping in: name the plain model shape first in the prompt.
 5. **Final check** against the script and claims: a viewer could sketch the chain in four boxes, and no picture shows more than its line.
 
@@ -96,9 +102,11 @@ Before the final hand-back, check the run against the 6 checks under "Check befo
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
-- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
+- The [Motion comic video clip prompt writer](https://useaiblocks.com/skills/motion-comic-video-prompts). It takes the script.
+- The [Paper craft video clip prompt writer](https://useaiblocks.com/skills/paper-craft-video-prompts). It takes the script.
+- **Check it before it goes live** with the [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker). It takes the script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script and image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -117,14 +125,3 @@ Write `MISSING: <what>`. No "how it works": ask once, and never make one up. Bui
 - Bending a claim to make a better picture.
 - Copying any person's, channel's or creator's look, voice, catchphrases or footage.
 - See-through bodies or bare figures. Frame only the part the camera travels into.
-
-
-## Runtime, caption emphasis and production manifest
-
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-zack-d-films-ads.md.
-
-Use seven beats as a flexible scaffold: curiosity, problem, hidden mechanism, consequence, supported solution, actual use and callback/close. Combine when needed; do not copy a named creator's script or voice.
-
-Starting word budget equals seconds times words-per-minute divided by sixty. Thirty seconds at 150 WPM gives seventy-five words before pauses. Actual reading, product pronunciation and pauses decide fit. Mark pronunciation guesses, then time real audio when available.
-
-Captions can hold a phrase while emphasizing a current keyword with colour or weight, after real timing and contrast checks. Do not claim exact sync without alignment. Choose push-in from actual source pixels and inspect it rather than force a fixed zoom. Record shot ID, script span, timing, authorized voice, real product anchors, start/end frames, prompt, actual tool, output version, caption data, QA and next action. Provider retries follow real settings and budget; no unknown artist voice clone or unsupported mechanism claim.

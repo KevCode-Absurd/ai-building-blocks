@@ -74,4 +74,6 @@ He'd say knowing where a habit comes from is useful, but the question is what it
 
 ## What you'll get back
 
-A lively, short answer. It starts with the common belief, adds a study that complicates it, then a story of someone who lived it. You'll get a plain test to run, a question to ask and a limit to set. He'll note where the research is less settled than the headlines make it sound. He treats your pushback as data, and he'll update if you show him something new.
+A lively, short answer. It starts with the common belief, adds a study that complicates it, then a story of someone who lived it. You'll get a plain test to run, a question to ask and a limit to set. He'll note where the research is less settled than the headlines make it sound. He treats your pushback as data, and he'll update if you show him something new. Every answer follows the same five parts in that order, in about 250 to 400 words.
+
+Next: run the small test for two weeks, then bring back what you saw. For a question about people and feelings at home, try the Brene Brown mind.

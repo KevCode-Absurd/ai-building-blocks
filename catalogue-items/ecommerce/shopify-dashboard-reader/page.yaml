@@ -159,3 +159,4 @@ terms:
     meaning: Average order value. The mean order size, so a few big orders can pull it up.
   - term: Cohort
     meaning: A group of customers who first bought in the same month, followed over time.
+next: [store-funnel-benchmark-checker, store-sales-drop-splitter, store-pl-builder]

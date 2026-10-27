@@ -10,19 +10,19 @@ Julie Schwartz Gottman co-founded the Gottman Institute and helped translate res
 
 ### A conflict can reveal longing
 
-Fight Right explores how a surface disagreement can conceal needs and personal meanings. [S1]
+Their public writing on fighting says a surface disagreement can conceal needs and personal meanings. This is our paraphrase of [S1], not a quote from the Fight Right book. [S1]
 
 Original everyday application: Name companionship and freedom separately before deciding whether your household can take responsibility for a pet. A preference often carries a story. Let each person explain what they imagine gaining or losing before evaluating the proposed action. A unilateral purchase may create a second problem of disregarded influence.
 
 ### Understand before bargaining
 
-The Gottmans' public exercises seek understanding before a shared agreement. [S2]
+The Gottmans' public exercises seek understanding before a shared agreement. This is our paraphrase of [S2]. [S2]
 
 Original everyday application: Ask what a family holiday represents to each person before bargaining over travel days and relatives. Repeat the other account until its owner recognizes it. This is preparation for negotiation rather than a promise of agreement. The useful question is what the event means, not whose family is objectively more important.
 
 ### Validate without surrendering
 
-Their approach gives room for more than one account of a conflict. [S1]
+Their approach gives room for more than one account of a conflict. This is our paraphrase of [S1]. [S1]
 
 Original everyday application: Recognize that a late arrival felt lonely while explaining a delayed train, without using your explanation to erase hurt. Acknowledge emotional impact without certifying every interpretation. You can say what makes sense from the other's perspective and still correct a factual misunderstanding later. Sequence matters when someone is trying to be heard.
 
@@ -34,7 +34,7 @@ Original everyday application: If you mocked a suggestion, own the mocking and s
 
 ### Build friendship outside arguments
 
-The Love Prescription emphasizes accessible daily actions supporting connection. [S1]
+The Love Prescription emphasizes small daily actions that support connection. This is our paraphrase of [S1]. [S1]
 
 Original everyday application: Thank your partner for an invisible task and ask about their day without turning the answer into a lesson. Protect some conversation from administration. A brief interested question can coexist with sharing household work. Use appreciation to see the person clearly rather than to compensate for an unfair arrangement you refuse to change.
 
@@ -54,12 +54,12 @@ Original everyday application: Agree who notices supplies, who gets a protected 
 
 The following order is our runnable interpretation of the public work. It gives a useful default for a small daily problem, and can be adjusted when the situation or the person's own account requires it.
 
-- **Describe the conflict:** In the application to an in-laws disagreement that becomes an accusation about loyalty, this stage provides a check before the next action. Take one recent disagreement rather than the whole history of the relationship. Record the practical issue and which part of the conversation became difficult for each person to hear. [S1]
-- **Hear both meanings:** In the application to an in-laws disagreement that becomes an accusation about loyalty, this stage provides a check before the next action. Let each willing person explain the meaning underneath their preference. Reflect the account until its owner recognizes it, holding proposed solutions back until both perspectives have enough room. [S2]
-- **Validate impact:** In the application to an in-laws disagreement that becomes an accusation about loyalty, this stage provides a check before the next action. Acknowledge why the event felt the way it did from the other's account. You can recognize an impact without certifying every interpretation or surrendering your separate recollection of facts. [S1]
-- **Own your part:** In the application to an in-laws disagreement that becomes an accusation about loyalty, this stage provides a check before the next action. Name a contribution you made that is specific enough to change. Keep your apology free of the other person's offense, and arrange another conversation for a separate legitimate complaint. [S2]
-- **Find flexibility:** In the application to an in-laws disagreement that becomes an accusation about loyalty, this stage provides a check before the next action. List what is essential and what can move in each proposal. Compare practical arrangements against both concerns, including invisible work, rather than calling the first concession a complete agreement. [S1]
-- **Revisit the agreement:** In the application to an in-laws disagreement that becomes an accusation about loyalty, this stage provides a check before the next action. Decide how you will check whether the arrangement works. Revisit changed circumstances and recognize a useful repair or new understanding even when the underlying preference remains different. [S2]
+- **Describe the conflict:** Take one recent disagreement rather than the whole history of the relationship. Record the practical issue and which part of the conversation became difficult for each person to hear. [S1]
+- **Hear both meanings:** Let each willing person explain the meaning underneath their preference. Reflect the account until its owner recognizes it, holding proposed solutions back until both perspectives have enough room. [S2]
+- **Validate impact:** Acknowledge why the event felt the way it did from the other's account. You can recognize an impact without certifying every interpretation or surrendering your separate recollection of facts. [S1]
+- **Own your part:** Name a contribution you made that is specific enough to change. Keep your apology free of the other person's offense, and arrange another conversation for a separate legitimate complaint. [S2]
+- **Find flexibility:** List what is essential and what can move in each proposal. Compare practical arrangements against both concerns, including invisible work, rather than calling the first concession a complete agreement. [S1]
+- **Revisit the agreement:** Decide how you will check whether the arrangement works. Revisit changed circumstances and recognize a useful repair or new understanding even when the underlying preference remains different. [S2]
 
 ## An everyday worked application
 
@@ -69,9 +69,9 @@ Before trying the example, define what a useful result would look like for the p
 
 ## Where she stood
 
-The recurring question in this profile is how to approach an in-laws disagreement that becomes an accusation about loyalty without losing the useful distinction in a conflict can reveal longing. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
+The recurring question in this profile is how to handle a disagreement, such as an in-laws row that turns into an accusation about loyalty, without losing sight of the need under the fight. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
 
-In the original application, ask whether the proposed response preserves understand before bargaining and whether it leaves room for plan changing responsibilities. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
+In the original application, ask whether the proposed response understands the other person before bargaining and whether it leaves room for changing responsibilities. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
 
 ## Their work and record
 

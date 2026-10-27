@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [ed-catmull]
 credits:
-  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace", used: "The order of the steps: plan the prep for the review, sort the lists and numbers into themes, write an agenda that keeps blame out, turn each lesson into a rule for next time"}
+  - {title: "Creativity, Inc.", by: "Ed Catmull with Amy Wallace", used: "Inspired by its account of project reviews: prepare before the meeting, sort the lists and numbers into themes, keep blame out of the agenda, turn each lesson into a rule for next time"}
 generated_from: intake/creativity-inc-truthful-review/skeleton.yaml

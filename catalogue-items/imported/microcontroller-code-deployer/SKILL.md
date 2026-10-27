@@ -159,7 +159,7 @@ cfg.VerificationMode = "PIL";
 cfg.Hardware = coder.hardware("Raspberry Pi");
 cfg.Hardware.DeviceAddress = "192.168.1.10";
 cfg.Hardware.Username = "<your-pi-username>";
-cfg.Hardware.Password = "<your-pi-password>";
+cfg.Hardware.Password = getSecret("pi-password");  % store it once with setSecret; never type the password into the script
 cfg.Hardware.BuildDir = "/home/pi/mymodel";  % optional: defaults to /home/pi/MATLAB_ws/<release>
 ```
 

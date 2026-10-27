@@ -167,7 +167,7 @@ function nameOf(it) {
 }
 
 // ---------- the screen ----------
-const THEMES = ["vague_outcome", "no_when_not_to_use", "inputs_unclear", "steps_vague", "no_output_format", "no_example",
+const THEMES = ["vague_outcome", "no_when_not_to_use", "inputs_unclear", "steps_vague", "no_output_format",
   "no_next_steps", "boilerplate_or_duplicate", "invented_facts_risk", "broken_or_missing_instructions", "paid_service_unlabelled",
   "scraping_unlabelled", "safety_or_compliance", "too_long_or_bloated", "jargon_or_unclear_copy", "wrong_audience", "other"];
 
@@ -179,8 +179,8 @@ const SCHEMA = {
     scores: {
       type: "object",
       additionalProperties: false,
-      required: ["what_you_get", "when_to_use", "inputs", "steps", "output_format", "example", "next_steps", "distinct"],
-      properties: Object.fromEntries(["what_you_get", "when_to_use", "inputs", "steps", "output_format", "example", "next_steps", "distinct"].map((k) => [k, { type: "integer" }])),
+      required: ["what_you_get", "when_to_use", "inputs", "steps", "output_format", "next_steps", "distinct"],
+      properties: Object.fromEntries(["what_you_get", "when_to_use", "inputs", "steps", "output_format", "next_steps", "distinct"].map((k) => [k, { type: "integer" }])),
     },
     safety_issues: { type: "array", items: { type: "string" } },
     score: { type: "integer" },
@@ -198,15 +198,14 @@ Score each part 0 to 10 (10 = clearly done, 5 = partly, 0 = missing). Read each 
 - inputs: the inputs are explicit and the user is told what to gather first (files, numbers, links). For a mind: how to brief them. For an AI tool: what you need to start (account, plan, data).
 - steps: the steps are concrete and in order, so a model or person could follow them without guessing. For a mind: the playbook. For an AI tool: how to get a first result.
 - output_format: the shape of the result is defined (sections, table, fields, length).
-- example: there is a worked example or an example input.
 - next_steps: it says what to do with the result next, or what it pairs with.
 - distinct: it is its own thing, not boilerplate shared with many items or a near-copy of another item. Use the local check numbers given.
 
 Then:
 - safety_issues: real problems only: instructions that invite invented facts, numbers, reviews or quotes presented as real; broken or contradictory instructions; steps that need a paid service, an API key or scraping without saying so; health, legal, financial or ad-policy risks; claims about a real person or company that look made up. Empty when none.
-- score: 0 to 100 for overall value to the user. Roughly the average of the eight parts times 10, minus up to 30 for safety issues.
+- score: 0 to 100 for overall value to the user. Roughly the average of the seven parts times 10, minus up to 30 for safety issues.
 - verdict: "keep" (score 70+, no serious safety issue: worth showing as is), "improve" (useful but needs the fixes), "rewrite" (score under 40, broken, harmful, empty, or a near-copy that adds nothing: needs a major rewrite). Nothing is ever removed from the library; this only sets how much work it needs.
-- fixes: 1 to 3 specific edits that would most raise its value, each one sentence naming what to add or change and where (e.g. "Add a 'When not to use' line under the summary: not for B2B lists, use X instead."). No generic advice.
+- fixes: 1 to 3 specific edits that would most raise its value, each one sentence naming what to add or change and where (e.g. "Add a 'When not to use' line under the summary: not for B2B lists, use X instead."). No generic advice. Never ask for a worked example or sample input: examples are not required.
 - themes: tags for the problems you found, from the list. Empty if none.
 
 Rules: judge only what the files show. Files may be cut short for length (marked [cut]); don't mark down for the cut. Long is not better: a short item that does the job well scores high. Front matter and YAML fields count as part of the page.`;
@@ -371,7 +370,7 @@ function report() {
   });
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
   const jsonFile = path.join(ROOT, "reports", `${date}-catalogue-screen.json`);
-  save(jsonFile, { screened_at: date, model: MODEL.model, verdicts: { keep: "worth showing as is", improve: "useful, apply the fixes", rewrite: "needs a major rewrite (nothing is hidden or removed)" }, rubric: ["what_you_get", "when_to_use", "inputs", "steps", "output_format", "example", "next_steps", "distinct", "safety"], items: out });
+  save(jsonFile, { screened_at: date, model: MODEL.model, verdicts: { keep: "worth showing as is", improve: "useful, apply the fixes", rewrite: "needs a major rewrite (nothing is hidden or removed)" }, rubric: ["what_you_get", "when_to_use", "inputs", "steps", "output_format", "next_steps", "distinct", "safety"], items: out });
 
   // Run-and-judge counts.
   const tgrades = [...tgr.values()];
@@ -395,7 +394,7 @@ function report() {
   const md = [
     `# Catalogue test summary, ${date}`,
     "",
-    `Two checks. **Screen**: every item's own files read by ${MODEL.model} against a value rubric (what you get, when to use and not, inputs, steps, output format, example, next steps, distinct, safety), plus a free local near-duplicate check. **Run and judge**: skills run by claude-sonnet-5-5 (own-built on the Sprout example business; imported items on a test input claude-haiku-5-5 wrote from their own inputs, with a judge list from their own steps when they had none), graded by claude-opus-5-5, with claude-fable-5-1 grading again anything Opus failed.`,
+    `Two checks. **Screen**: every item's own files read by ${MODEL.model} against a value rubric (what you get, when to use and not, inputs, steps, output format, next steps, distinct, safety), plus a free local near-duplicate check. **Run and judge**: skills run by claude-sonnet-5-5 (own-built on the Sprout example business; imported items on a test input claude-haiku-5-5 wrote from their own inputs, with a judge list from their own steps when they had none), graded by claude-opus-5-5, with claude-fable-5-1 grading again anything Opus failed.`,
     "",
     "## Screen verdicts",
     "",

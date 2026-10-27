@@ -32,8 +32,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a mode that can run code. Add the skill folder, or paste the SKILL.md text into the chat.
   - Type the unpaid amount and the invoice date. Add the agreed payment terms and customer type if you know them.
-  - Let your AI run the script. It tries the Bank of England site for the base rate, and if that fails it uses a rate table that comes with the skill and tells you so.
-  - Check the figures, the rate note and the date assumptions. Check the base rate yourself before you send.
+  - Let your AI run the script. It tries to read the base rate from the Bank of England website, which often refuses automated requests. If that fails it uses a rate table that comes with the skill and tells you so. That table can be out of date.
+  - Check the figures, the rate note and the date assumptions. Check the base rate against the live Bank of England rate before you send.
   - Fill in every [CONFIRM] placeholder, then send email 1. Send emails 2 and 3 if the invoice stays unpaid.
   - If you add interest, send a new invoice for it, as GOV.UK advises.
 output_sample:

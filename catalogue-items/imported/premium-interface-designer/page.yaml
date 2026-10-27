@@ -30,11 +30,12 @@ you_get:
   - Motion and hover details
   - Ranked design fixes for a review
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Open Claude, ChatGPT or Gemini, or a coding AI such as Claude Code or Cursor. Paste in the text of the skill file (SKILL.md).
   - Describe your page or app. Add your brand name, tone and any fonts you can use.
   - To review a design, paste its code or describe it, and ask for the top fixes.
   - Check that your project has the fonts and icons the code names. Some fonts are paid, so ask for free ones if needed.
   - Run the code in your project and open it in a browser to see the motion. Your AI cannot show this in plain chat.
+  - Next, check the page on a phone width. Then hand the code to a developer to wire in the fonts and icons it names.
 output_sample:
   input:
     - Your page or app description

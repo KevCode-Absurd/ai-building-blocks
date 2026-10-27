@@ -19,7 +19,7 @@ not_for:
   - "You have only one supplier for the product: skip the split and use the Order quantity calculator step on its own."
   - "You want to bargain on price breaks: take your plan to the Factory price-break negotiator."
 you_give:
-  - Past sales for the product, by week or month
+  - Past sales for the product, by week or month, with the date and units sold on each row
   - Your cost to place one order, such as freight, admin and checks
   - Your cost to hold one unit for a year, or the cash and space it ties up
   - Each supplier's price, price breaks, minimum order and lead time
@@ -29,7 +29,7 @@ you_get:
   - How much to buy from each supplier, and what each choice costs in total
   - A note on the risk of relying on one supplier
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and the three skill files this workflow uses.
+  - "Download the handoff pack. It is a zip with HANDOFF.md and three skill files, in the order they run: Demand forecast planner, Order quantity calculator and Supplier order splitter."
   - Upload all of it to your AI that can read files, such as Claude Code or a Claude Project. Say "Follow HANDOFF.md".
   - Work on one product at a time. The sums change with each product's price and demand.
   - Paste your past sales and real supplier quotes when asked. Any missing cost is marked MISSING, not guessed.

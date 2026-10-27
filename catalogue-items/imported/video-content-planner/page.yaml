@@ -15,9 +15,9 @@ when:
   - You need a script for a tutorial or product video.
   - Your videos get few views and you want to fix titles and keywords.
 not_for:
-  - "You want written blog posts: use content-production, not this skill."
-  - "You want social captions with no video: use social-media-manager."
-  - "You only want to audit your site's search ranking: use seo-audit, then come back for video keywords."
+  - "You want written blog posts: use blog-post-writer, not this skill."
+  - "You want a script for one YouTube video only: use youtube-script-writer."
+  - "You only want to audit your site's search ranking: use seo-auditor, then come back for video keywords."
 you_give:
   - Your main goal, such as leads or authority
   - Your audience
@@ -35,6 +35,7 @@ how_to_use:
   - Paste your blog post, podcast notes or webinar transcript if you want clips made from it.
   - Check each hook and call to action in the result, then change anything that does not sound like you.
   - Treat the figures about views and drops in reach as rules of thumb, not proven facts.
+  - Next, take the script to youtube-title-and-tags-writer for titles, then check the thumbnail with youtube-title-thumbnail-check.
 output_sample:
   input:
     - Your main goal, such as leads, authority or product education
@@ -53,3 +54,4 @@ output_sample:
       contains: Title options to test, a description template, tags and a thumbnail brief.
     - name: Repurposing plan
       contains: A map that turns one long source into 10 or more video pieces across platforms.
+next: [youtube-script-writer, youtube-title-and-tags-writer]

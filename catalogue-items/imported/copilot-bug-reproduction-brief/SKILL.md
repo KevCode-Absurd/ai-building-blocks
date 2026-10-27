@@ -66,6 +66,8 @@ A verified reproduction is the deliverable. Do not edit implementation code whil
 - Safe next hypothesis to test:
 ```
 
+Next step: give the finished brief to the developer who will diagnose and fix the bug. This skill makes no fix.
+
 ## Safety boundaries
 
 - Do not change production data merely to reproduce a bug.
@@ -82,4 +84,4 @@ Use the Bug Reproduction Brief skill on the failing checkout test. Do not fix it
 
 ## Source and licence
 
-Adapted from the MIT-licensed workflow at https://github.com/skyestrela/ai-agent-skill-preview.
+This copy comes from github/awesome-copilot (https://github.com/github/awesome-copilot/tree/main/skills/bug-reproduction-brief), which says it was adapted from the MIT-licensed workflow at https://github.com/skyestrela/ai-agent-skill-preview.

@@ -22,6 +22,7 @@ you_give:
   - The job you repeat, what a good result looks like and when it should start
   - A sample of the job done well (optional)
   - The other skills you already have installed (optional)
+  - Where the skill will run, such as Claude, ChatGPT or Gemini (optional)
 you_get:
   - A skill folder with test prompts, ready to add to your AI
   - A score with a fix list, in order of value
@@ -29,11 +30,11 @@ you_get:
   - A risk report on code and data leaks
   - A list of what stops it loading in other tools, with fixes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md and the five skill files, in the order they run: Skill writer, Skill quality tester, Skill trigger auditor, Skill safety checker and Skill portability checker.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the job in a few lines and say when it should start.
   - When it pauses, fix the skill files using the score and the trigger grade. Then tell it to carry on.
-  - Read the risk report before you share anything.
+  - Read the risk report before you share anything. It lowers the risk and does not prove the skill is safe.
 output_sample:
   input:
     - The job you repeat
@@ -61,7 +62,7 @@ how_it_works:
   - title: Write the skill
     text: Turns your job into a skill folder with clear steps, a description that says when to use it, and a few test prompts.
   - title: Score its quality
-    text: Checks the files and sections, runs any scripts, and scores it with a list of fixes from most to least useful.
+    text: Reads every file first without running anything. Scripts run only inside limits you agree. Then it scores the skill with a list of fixes from most to least useful.
   - title: Grade when it fires
     text: Grades the name and description the way your AI reads them. Tests which skill wins for sample requests. Flags skills that block each other.
   - title: Pause, then apply the fixes

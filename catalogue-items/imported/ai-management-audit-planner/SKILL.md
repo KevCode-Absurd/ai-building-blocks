@@ -52,8 +52,8 @@ python scripts/aims_audit_scheduler.py path/to/scope.json
 - **Does the AI policy (Clause 5.2) commit to lawful use AND beneficial purpose AND human oversight AND continual improvement?** Missing any of the four = nonconformity at certification.
 - **Has the AI risk assessment (Clause 6.1.2) been re-run since the last material model change?** Concept drift is not a one-time event.
 - **Who signs the AI impact assessment for high-impact systems (Annex A.5.4)?** If no signed accountability, the control is missing.
-- **What's the internal audit cadence (Clause 9.2)?** ISO management-system standards expect ≥ once per 3-year cycle per clause; mature programs do annual.
-- **Is there a documented procedure for AI incidents (Annex A.9.3)?** Untreated post-deployment monitoring is the #1 nonconformity in early adopters.
+- **What's the internal audit cadence (Clause 9.2)?** Clause 9.2 asks for audits at planned intervals. Set the cycle in your own audit programme and check it with your certification body; many programmes cover every clause over a 3-year cycle, and mature ones audit each year.
+- **Is there a documented procedure for AI incidents (Annex A.9.3)?** Check this early: without an incident procedure, post-deployment monitoring has no owner.
 
 ## Core Responsibilities
 

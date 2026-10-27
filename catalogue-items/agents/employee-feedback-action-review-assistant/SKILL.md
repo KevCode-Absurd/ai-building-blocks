@@ -70,7 +70,7 @@ MISSING          <each gap and what it affects>
 CHECKS MISSED    <one line each, or none>
 ```
 
-Say whether this was a first baseline or a comparison. A drafted update is not sent.
+Say whether this was a first baseline or a comparison. A drafted update is not sent. Then say what comes next: who approves the update, where the approved record is filed, and when the next review is due.
 
 ## Check before you hand it back
 - No theme, count, quote or team name from a group below the minimum appears anywhere.

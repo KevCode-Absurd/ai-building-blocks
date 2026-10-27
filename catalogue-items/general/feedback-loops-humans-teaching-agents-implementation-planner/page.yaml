@@ -39,7 +39,7 @@ how_to_use:
   - Name the channels, the four emoji and the people who give and review feedback. Remove client names from any example you paste.
   - Read GAPS IN THE STARTER first. Mark each one as a problem for you or not.
   - Read LESSON RULES. Set how many matching signals it takes before a lesson is drafted, and who reviews.
-  - Run the draft code and the tests on a test channel, never your live one. This skill never runs anything.
+  - Have an engineer review the draft code, then run it and the tests yourself on a test channel, never your live one. This skill never runs anything.
   - After a week, read the first drafted lessons yourself before you approve any.
 how_it_works:
   - title: Finds the gaps in the starter

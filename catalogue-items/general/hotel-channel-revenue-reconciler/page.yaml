@@ -114,9 +114,9 @@ tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
   - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+    how: Try a different commission rate or service cost to see the effect on contribution. Keep your actual figures beside the what-if figures.
   - what: Acceptance
-    how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+    how: Before you share the result, check that each figure has a dated source, and that actual figures and what-if figures are not mixed.
 
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
@@ -130,8 +130,8 @@ test:
   - Recalculate the workbook after changing an input and inspect the saved output.
 
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Save one reconciliation your finance lead has checked and signed off, so your AI copies its layout. Add the rules they use to accept a result.
+  - When you correct a figure, note which source it came from and the date.
 
 works_best_with:
   tools:

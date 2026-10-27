@@ -28,15 +28,15 @@ you_get:
   - A full text transcript
   - Speaker labels
   - Word-level timestamps
-  - Subtitle output
-  - A cost estimate
+  - Word timing you can turn into a subtitle file
+  - A request ID to track usage
 how_to_use:
-  - Get an ElevenLabs account and an API key. Keep the key private.
-  - Open an AI that can run code, and paste in this skill.
+  - Get an ElevenLabs account and an API key. Keep the key private. If your AI runs npx @elevenlabs/cli onboard init, read the command first. It signs you in and stores a key for the project.
+  - Open an AI that can run code, and paste in this skill. If yours can't run code, ask a developer to run the steps for you.
   - Add your audio or video file. Say if you want speaker labels, word timing or a set language.
   - List any names or jargon your AI should spell right (optional).
   - Run it and read the transcript. Check names and numbers against the recording.
-  - Ask your AI to turn the word timing into a subtitle file, or to summarise the text.
+  - Ask your AI to turn the word timing into a subtitle file, or to summarise the text. ElevenLabs charges for each file, so check your plan first.
 output_sample:
   input:
     - An audio or video file

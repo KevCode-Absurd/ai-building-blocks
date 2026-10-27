@@ -5,9 +5,49 @@ description: "Share your Azure resources. Get a resource map, current price esti
 
 # Review Azure cost and resilience
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Azure service health investigator](https://useaiblocks.com/skills/copilot-azure-resource-health-diagnose).
+- The [Cloud cost analyst](https://useaiblocks.com/skills/agency-engineering-finops-engineer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Goal
 
 Share your Azure resources. Get a resource map, current price estimates and a risk-aware savings plan.
+
+## When not to use
+
+- Your setup runs on AWS: use Review AWS cost and resilience.
+- You want a new Azure design from scratch: use the Azure architecture designer.
+- A deploy is failing or an Azure service is down: use the Azure service health investigator.
+- You only want to check that a deploy will pass: use the Bicep deployment preflight checker or Check Azure access before deploy.
+
+## Gather first
+
+- The name of your Azure resource group, or a list of your resources.
+- Your Bicep, Terraform or ARM files, if you have them.
+- The services and regions you want priced.
+- Your goal and any budget limit.
+
+Steps 1 and 3 read live resources, so they need Azure command line access. Without it, work from pasted lists or files and say so. Step 2 needs internet access for current retail prices.
 
 ## Before starting
 
@@ -35,8 +75,8 @@ Save run-state.md with the input revision or date window, completed steps, resul
 
 ## Deliver
 
-Resource relationship map
-Price assumptions
-Cost and workload findings
+Resource relationship map: a diagram and a table with one row per resource (name, type, what it connects to), plus notes on weak spots.
+Price assumptions: retail price per service, size and region, with monthly and yearly lines and every assumption shown.
+Cost and workload findings: each saving tied to a named resource, with the fix, the saving, the risk and the effort, then the architecture gaps rated high, medium or low.
 
 Include source coverage, unresolved findings, missing facts and one next action.

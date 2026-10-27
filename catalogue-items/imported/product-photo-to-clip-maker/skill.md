@@ -3,6 +3,8 @@ name: main-image-video
 description: 静态主图转主图视频。一张商品图 → 3–5 秒可上架的主图短视频。当用户说「主图视频」「图转视频」「让图动起来」「加个视频」时使用。
 ---
 
+> **Read this first (added by AI Blocks).** This file is written in Chinese. Follow the same steps and answer the user in English. The `dlazy` commands, `scripts/gen.mjs` and the `docs/` paths are not included here. They need a paid dLazy account and a way to run commands, so treat them as optional. The free route: write the prompt, then give it and the user's photo to the image tools in ChatGPT or Gemini. Do not claim a picture was made unless an image tool made it. The clip step needs a paid video model API key (fal or Replicate), so run the dry run first. ffmpeg is only for captions or joining clips. The skills it names (product-video-ad, item-repair, material-enhancement, platform-compliance, batch-image) are not in this library; for photo fixes use the Product photo retoucher, and check video length, shape and file size against the store's own current rules.
+
 # main-image-video — 主图视频
 
 主图坑位旁边那个视频位，大多数店铺是空的。它不需要重新拍，

@@ -34,6 +34,22 @@ blocks:
   - marketing-image-maker
 alternatives: [ideogram, midjourney, adobe-firefly, canva]
 last_checked: 2026-10-21
+first_result:
+  - "Go to recraft.ai and sign up for the free plan. Free images are public and not licensed for commercial use."
+  - "Choose vector for an icon or logo draft, or image for a picture."
+  - "Describe the subject and the style. Set a style so a group of images matches."
+  - "Make a set. Keep the closest and edit it."
+  - "Check the text, the edges and any logo."
+  - "You end with image or vector files. Open a vector file in a design tool to resize it."
+  - "Next: for ad images use the Marketing image maker. For exact words in an image use Ideogram."
+needs:
+  - "A Recraft account."
+  - "A paid plan for anything you will sell or use in your business."
+  - "A description of the subject and the style."
+not_verified:
+  - "Plan prices. Third-party pages list them differently."
+  - "Which vector file types it exports."
+  - "Where each tool sits in the app."
 sources:
   - https://www.recraft.ai/pricing
   - https://costbench.com/software/ai-image-generators/recraft/

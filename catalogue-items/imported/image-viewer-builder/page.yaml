@@ -5,9 +5,9 @@ name: Image viewer builder
 summary: Build a MATLAB image viewer that shows masks, regions and linked views. Give it your images and labels. You get code that runs in MATLAB.
 job: build-software
 headline: Image viewer builder
-subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB. Bring your images or label data. Use the result to plan your next step.
+subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB. Bring your images or label data. To go further, ask for paintbrush labelling or a full app.
 explain: |
-  A MATLAB viewer where you can zoom into an image, draw regions on it and lay coloured masks over it, without building the plumbing yourself. It needs MATLAB with the Image Processing Toolbox.
+  A MATLAB viewer where you can zoom into an image, draw regions on it and lay coloured masks over it, without building the plumbing yourself. It needs MATLAB with the Image Processing Toolbox, both paid MathWorks products. The skill is under the BSD 2-Clause licence, which lets you use it only with MathWorks products (see LICENSE.md).
 
   The skill uses the newer viewer and display functions, not the old ones that lag on large files. Shapes are placed with the drawing tool so they carry measurements. Label maps and masks go on as overlays with a transparency setting. Two viewers can be linked so they pan and zoom together. Huge files load in blocks. It also lists old habits to avoid, like drawing on plain axes.
 when:
@@ -17,7 +17,7 @@ when:
   - You want two images side by side that zoom together.
   - You need to capture a screenshot of the viewer for a report.
 not_for:
-  - "You want a quick look at one small image: use plain imshow in MATLAB, no skill needed."
+  - "You want a quick look at one small image: use plain imshow or imageshow in MATLAB, no skill needed."
   - "You do not have the Image Processing Toolbox: use imshow, and note it is slower on large images."
   - "You need a viewer outside MATLAB: this skill does not cover other tools, so use a viewer made for that tool."
 you_give:

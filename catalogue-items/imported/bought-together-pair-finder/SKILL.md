@@ -23,7 +23,7 @@ Applies market basket analysis to your order history to surface product pairs th
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | false | Not used by this skill, which only reads data and changes nothing. Ignore it. |
 | date_range_start | string | yes | — | Start date in ISO 8601 (e.g., `2025-01-01`) |
 | date_range_end | string | yes | — | End date in ISO 8601 (e.g., `2025-03-31`) |
 | min_support | integer | no | 5 | Minimum number of orders a pair must co-appear in to be included |
@@ -58,7 +58,7 @@ query OrdersForAffinityAnalysis($first: Int!, $after: String, $query: String) {
       node {
         id
         createdAt
-        lineItems(first: 50) {
+        lineItems(first: 50) { # orders with more than 50 line items are cut off at 50; say so in the report
           edges {
             node {
               quantity

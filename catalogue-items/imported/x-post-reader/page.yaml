@@ -9,7 +9,7 @@ subhead: "Paste a link to a post on X and get its content back as clean, structu
 explain: |
   Paste a link to a post on X and get its content back as clean, structured data: the text, the author, the time and the like, reply and view counts. You can then summarise it, quote it or compare it with others.
 
-  The skill pulls the handle and post ID out of an x.com or twitter.com link. It then calls a free third-party web service with a simple curl request and reads the JSON that comes back. Because someone else runs the service, it may fail or miss posts, and the numbers are only as current as the fetch. The skill notes the retrieval time.
+  The skill pulls the handle and post ID out of an x.com or twitter.com link. It then calls a free third-party web service with a simple curl request and reads the JSON that comes back. ADHX is an unofficial third-party service, and it receives every link you give it. Check X's terms before you use it often or in bulk. Because someone else runs the service, it may fail or miss posts, and the numbers are only as current as the fetch. The skill notes the retrieval time.
 when:
   - A colleague sends an X link and you want a summary without opening the app.
   - You are collecting posts for research and need the author and counts in a table.
@@ -35,7 +35,7 @@ how_to_use:
   - Paste the link into your AI and say what you want, such as a summary or the like count.
   - Your AI fetches the post data from a free outside service called ADHX.
   - Check the fetch time and the counts. If you get an error, the post may be private, deleted or missing from the service.
-  - If the fetch fails, copy the post text from X and paste it into your AI instead.
+  - If the fetch fails, copy the post text from X and paste it into your AI instead. If it works, paste the data into a summary prompt or save the fields to a table.
 output_sample:
   input:
     - One X or Twitter post link (x.com, twitter.com or adhx.com)

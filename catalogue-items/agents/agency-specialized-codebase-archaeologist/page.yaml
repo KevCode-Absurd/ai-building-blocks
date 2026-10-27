@@ -35,7 +35,7 @@ you_get:
   - Dead code, doc-versus-code mismatches and a cleanup order
   - A list of the files it read and the ones it did not
 how_to_use:
-  - Give your AI the code. A tool that opens folders and runs git works best, such as Claude Code or Codex. In a plain chat, paste the git log, the file list and the files you suspect.
+  - Give your AI the code. A tool that opens folders and runs git works best, such as Claude Code or Codex. Both need a paid plan or account. A plain chat works without one, but you must paste the git log, the file list and the files you suspect.
   - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
   - Say where to look. For example, "Audit the orders and payments code for drift. Here is the git log." Pick one area on a large repo.
   - Read the critical findings first. For each one, open both files and check that the mismatch is real.

@@ -24,6 +24,18 @@ pricing).
 
 Critical distinction: No-code works until it doesn't. Know the limits.
 
+## How to plan (added by AI Blocks)
+
+1. Get the task in plain words: the apps, how often it runs, how much data moves, and the budget.
+2. Pick the tool. Zapier suits a simple flow and the widest list of apps. Make suits branching and lower cost per step. Say why, using the task's own details.
+3. Set the trigger: the one event that starts the flow.
+4. Add filters so unwanted runs stop early.
+5. List the actions in order, with the fields each one needs. Give every step a clear name.
+6. Say how to test on real sample data before turning it on, and what to watch in the first runs.
+7. Say when to move to code: high volume, complex logic or slow steps.
+
+App counts and pricing change over time. Tell the person to check the vendor's pricing page before they decide, and never state a price you have not been given.
+
 ## Detailed Guide
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.

@@ -19,14 +19,14 @@ A question that can be answered with a plain no often is. This skill replaces th
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
 - **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Objection answer sheet writer** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). Bring objection map (optional), customer words (optional). It uses your brand brain and buying reasons.
+1. **Objection answer sheet writer** with the [Objection answer sheet writer](https://useaiblocks.com/skills/objection-answer-sheet-writer). Bring objection map (optional), customer words (optional), your lessons (optional). It uses your brand brain and buying reasons.
 2. This one.
 
 How to start:
@@ -97,7 +97,7 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [One-ask email tightener](https://useaiblocks.com/prompts/one-ask-email-tightener). It takes the draft.
+- The [Email call to action editor](https://useaiblocks.com/prompts/one-ask-email-tightener). It takes the draft.
 - **Write the ad copy** with the [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

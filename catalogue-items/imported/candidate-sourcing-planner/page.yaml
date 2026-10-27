@@ -30,12 +30,13 @@ you_get:
   - A week-by-week action plan
   - Notes on what to do first
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. It looks for saved company notes and a role folder that a chat does not have, so paste your own company notes and candidate profile instead.
   - Paste your job description or role name. Add the location and seniority.
   - Paste your candidate profile. If you have none, build one first.
   - Add your preferred channels and company notes (optional).
   - Read the plan. Check that the top channels fit your role and location.
-  - Before you search or contact anyone, check each platform's terms and the personal-data rules where your candidates live.
+  - Before you search or contact anyone, check each platform's terms and the personal-data rules where your candidates live. Org-chart sites and X-Ray searches are fine to read by hand but not to scrape in bulk. Paid data tools need their own licence.
+  - Next, write the messages with the candidate outreach drafter once the plan is set.
 output_sample:
   input:
     - Your role name or job description

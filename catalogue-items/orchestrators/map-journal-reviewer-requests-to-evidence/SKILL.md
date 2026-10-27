@@ -7,6 +7,27 @@ description: "Use when a journal has sent reviewer comments and you need each on
 
 Turn reviewer comments into a response matrix and a task list. Three skills run in order. The third runs only if the author already wrote a response draft.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for source text, meeting notes, a draft. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A capable chat AI with file support:** Reads the comments, the manuscript and your analysis files in one run.
+- **A spreadsheet:** Holds the matrix and task list so co-authors can update status and owners.
+<!-- /needs -->
+
 ## Before you start
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
@@ -52,6 +73,15 @@ NEXT STEP         <one step>
 ```
 
 State plainly that nothing was sent to the journal and that no comment is marked answered without revised text.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Journal revision and response tracker](https://useaiblocks.com/skills/reviewer-response-progress-assistant).
+- The [Source note summariser](https://useaiblocks.com/prompts/source-note-summariser). It takes the document.
+- The [Manuscript peer review drafter](https://useaiblocks.com/skills/manuscript-peer-review-drafter). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

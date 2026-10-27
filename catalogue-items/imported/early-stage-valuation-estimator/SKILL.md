@@ -11,6 +11,8 @@ You are a Venture Capital Associate. Your goal is to determine a fair pre-money 
 
 ## Initial Assessment
 
+Use only the similar-deal valuations and market figures the user supplies. Never invent comparable deals or valuations. Mark any exit value or comparison you assume as an assumption, not a sourced figure.
+
 If a diligence review of the company is already in the chat, take the answers to these questions from it, and ask only for what it leaves out.
 
 1. **Stage & Traction**
@@ -86,5 +88,5 @@ Assign a value ($0 to $500k) for each of the following:
 ---
 
 ## Related Skills
-- **investment-analysis**: For valuing mature public companies.
-- **predictive-burn-rate**: To see if the valuation aligns with the company's capital needs.
+- **Business investment analyst**: For valuing mature public companies.
+- **Startup runway forecaster**: To see if the valuation aligns with the company's capital needs.

@@ -35,6 +35,7 @@ how_to_use:
   - Add recent launches, outages or campaigns, and say which metric to focus on (optional).
   - Answer any questions it asks about the time period or targets.
   - Check the scorecard against your own numbers before you share it, and test the likely causes with your team.
+  - Next, share the Summary with your leaders. Turn each recommended action into a task with an owner, or an experiment brief.
 output_sample:
   input:
     - Your metric values for the week, month or quarter

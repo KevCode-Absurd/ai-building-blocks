@@ -5,6 +5,12 @@ description: "This skill should be used when the user asks to create scorecard, 
 
 # Interview Kit for Recruiting
 
+## Before you start (added by AI Blocks)
+
+- The Teamtailor steps, the Teamtailor scale and the Job Match Score need a paid Teamtailor account. The scorecards work without it: use the scale in the Rating Scale section, or the user's own scale, and skip `teamtailor-setup.md`.
+- Files this skill mentions, such as `interview-plan.md`, `brief.md` and "your company culture code", may not exist. Ask the user to paste the interview stages, the must-have skills and the company values instead. If they have none, write `MISSING: <what>` and do not invent them.
+- In a plain chat, return the files as text in the chat.
+
 ## Purpose
 
 Build the evaluation toolkit interviewers need: scorecards with competency rubrics, rating scales, question banks, screening scripts, and calibration exercises. Everything structured to produce consistent, evidence-based hiring decisions.
@@ -281,7 +287,7 @@ This is the ATS translation layer. `scorecards.md` defines *what* to assess and 
 
 ## Reference Files
 
-You are **stongly encouraged** to read the reference files
+You are **strongly encouraged** to read the reference files
 
 - **`references/scorecard-templates.md`** — Complete scorecard examples by role family and interview stage, ready to customize.
 - **`references/teamtailor-setup.md`** — ATS setup patterns: Job Evaluation section, interview kits, observation prompts, kit-to-stage assignment, scoring math, and the trait-at-every-stage rule. Read this before generating any `teamtailor-setup.md` for a role.

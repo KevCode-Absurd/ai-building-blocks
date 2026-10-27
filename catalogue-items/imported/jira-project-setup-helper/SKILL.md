@@ -3,13 +3,21 @@ name: "jira-expert"
 description: Atlassian Jira expert for creating and managing projects, planning, product discovery, JQL queries, workflows, custom fields, automation, reporting, and all Jira features. Use when setting up or configuring Jira projects, writing JQL and advanced searches, creating dashboards, designing workflows, or performing technical Jira operations.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `project-management/references/atlassian-mcp-tools.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Atlassian Jira Expert
 
 Master-level expertise in Jira configuration, project management, JQL, workflows, automation, and reporting. Handles all technical and operational aspects of Jira.
 
 ## Quick Start — Most Common Operations
 
-All MCP examples in this skill use the real Atlassian Remote MCP tools (camelCase, surfaced as `mcp__atlassian__<toolName>`). The canonical tool list is `project-management/references/atlassian-mcp-tools.md` — never invent tool names; if a capability isn't listed there, it is not available via MCP.
+All MCP examples in this skill use the real Atlassian Remote MCP tools (camelCase, surfaced as `mcp__atlassian__<toolName>`). The tool list file (`project-management/references/atlassian-mcp-tools.md`) is not in this copy. Use only the tool names shown in this skill. If your connector does not list one of them, say so and give the step to do by hand in Jira. Never invent tool names.
 
 **Create an issue** (call `getAccessibleAtlassianResources` once first to obtain `cloudId`):
 ```

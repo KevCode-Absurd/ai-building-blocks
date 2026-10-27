@@ -17,8 +17,8 @@ when:
   - You are planning an offer and want to check it against known buying habits.
 not_for:
   - "You need legal or ad-rule checks on your claims: ask a lawyer or read the ad platform's own rules."
-  - "You want exact price points or a full pricing plan: use a pricing skill, since this one only shows how buyers react to price."
-  - "You want finished page copy written: use a copywriting skill, then come back to check it against these models."
+  - "You want exact price points or a full pricing plan: use the Pricing strategist, since this one only shows how buyers react to price."
+  - "You want finished page copy written: use the Page copywriter, then come back to check it against these models."
 you_give:
   - A page, offer or price you want to improve
   - Your audience and where they hesitate
@@ -30,7 +30,9 @@ you_get:
   - Guidance for using each one honestly
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Gather the page or price text, who buys, and the point where people drop off. If you use an agent tool that reads .agents/product-marketing.md, say so.
   - Paste your page text, offer or price. Say who buys and where they hesitate.
+  - Ask for four sections: models that fit, why each works, one change per model, and an honest use note.
   - Add your product context file if you have one (optional). It helps the advice fit your buyers.
   - Read the models it picks. Check that each one fits what you see in real buyers.
   - Pick one or two changes and test them on your page. Keep the honest use notes in mind.

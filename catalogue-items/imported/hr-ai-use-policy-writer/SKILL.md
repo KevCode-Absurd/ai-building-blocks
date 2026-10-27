@@ -48,8 +48,15 @@ Helps HR and compliance teams govern the responsible, compliant use of AI tools 
 1. "Write an employee-facing disclosure explaining how AI is used in the hiring process."
 2. "Draft training content for HR staff on responsible and compliant AI use."
 3. "Create talking points for a manager asked about AI use in performance reviews."
-4. "Summarize regulatory requirements for automated employment decision tools in [jurisdiction]."
+4. "Summarize regulatory requirements for automated employment decision tools in [jurisdiction]." (Replace [jurisdiction] with your country or state.)
 5. "Draft a candidate notice required before using an AI assessment tool in hiring."
+
+## How to run it
+
+1. Describe where HR uses AI today, which decisions it touches, and your country or state.
+2. Pick the prompt that matches the job: policy, risk check, or disclosure and training.
+3. Review each draft for a named human reviewer on every big decision.
+4. Ask an employment lawyer to check the final text before you use it.
 
 ## Tips
 

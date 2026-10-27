@@ -1,9 +1,10 @@
 # Help your customers: AI Blocks
 
-> 70 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 71 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker): Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
 - [Angry customer reply writer](https://useaiblocks.com/prompts/angry-customer-reply-writer): Share the angry message and your policy. Get a private reply and short public version using only fixes you can offer.
+- [Apology email writer](https://useaiblocks.com/skills/apology-email-writer): Say what went wrong and what you will do. Get a short apology email that owns the mistake and states the fix.
 - [Chargeback evidence gatherer](https://useaiblocks.com/skills/chargeback-evidence-gatherer): Get a Shopify chargeback evidence checklist for your dispute reason: what proof to collect, where to find it, and whether to accept instead.
 - [Clinic booking information reviewer](https://useaiblocks.com/workflows/check-a-clinic-service-information-page): Check a clinic booking FAQ against approved facts, flag unsupported claims and make the instructions easier to follow.
 - [Customer booking terms explainer](https://useaiblocks.com/workflows/explain-service-booking-terms-to-customers): Make booking terms easier to read. Keep the actual payment, cancellation and refund rules, and show what still needs review.

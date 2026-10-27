@@ -6,6 +6,8 @@ job: work-with-audio
 thinking: high
 thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
 explain: |-
+  Platform details on this page come from the original author and may be out of date. Check each platform's current rules before you act.
+
   Podcasting in China runs on different platforms, habits and rules from the English-language market. Xiaoyuzhou has a close-knit community with comments tied to timestamps. Ximalaya is far bigger but aimed at paid courses and audiobooks. This Chinese podcast strategist agent plans a show for that setting, so you do not copy a Spotify playbook that does not fit.
 
   It starts with focus. It rejects a vague "we talk about everything" show and asks for one clear promise to one clear listener, including where they listen, such as on a commute or before sleep. Then it plans a first season of about 12 episodes, with a guest plan, recording outlines, how to publish through one feed to the platforms that accept it, and what to upload by hand to the ones that do not. It also plans growth through listener groups and short clips, and ways to earn money, with ads labelled as ads.
@@ -26,6 +28,7 @@ you_give:
   - Your show idea or current show, with its topic and format, such as solo, interview or story
   - Who you want to reach, and when and where they listen
   - Your platforms now and the ones you want, such as Xiaoyuzhou or Ximalaya
+  - Any platforms you have already tried and what happened, so the open checks target real gaps (optional)
   - What you have, such as time per week, equipment and a guest list (optional)
   - Your goal, such as first 1,000 listeners, guests or sponsors (optional)
   - Current play and subscriber numbers (optional)
@@ -42,6 +45,7 @@ how_to_use:
   - Read the show focus first. If it sounds like any other show, ask for three sharper angles before you go on.
   - Check every platform claim on that platform's own help pages before you rely on it. Rules change.
   - Record one episode with the outline. Ask the AI to adjust the season plan after you hear it.
+  - Once episodes are published, look at plays, completion rate and subscriber growth after four weeks. Paste the numbers back and ask what to change.
 how_it_works:
   - title: Set the goal
     text: It confirms the show, the listener, the platforms and the goal, and asks once for what is missing.
@@ -122,7 +126,7 @@ tweaks:
   - what: Listener
     how: Name one real listener you know, so the plan is built for a person and not a group.
 improve:
-  - Keep useful corrections with your task notes and apply them on the next run.
+  - Keep useful corrections in your own notes. The agent keeps no memory, so paste them into the next chat.
 terms:
   - term: Xiaoyuzhou
     meaning: A Chinese podcast app with a close community, where listeners comment at exact moments in an episode.

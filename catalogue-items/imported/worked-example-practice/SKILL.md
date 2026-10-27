@@ -291,7 +291,7 @@ A survey asked students how many hours of homework they did last night:
 
 *(Different format: data given as text, not a table — student must construct the frequency table first)*
 
-**Problem 3:** The mean test score for a class of 20 students is 14.5. The frequency table below is incomplete. Find the missing frequency.
+**Problem 3:** The mean test score for a class of 20 students is 13.9. The frequency table below is incomplete. Find the missing frequency.
 
 | Score (x) | Frequency (f) |
 |:-:|:-:|

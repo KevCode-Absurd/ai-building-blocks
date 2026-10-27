@@ -21,6 +21,7 @@ not_for:
   - "Your story has no note, list or sum the narrator would write: ask your AI for a plain phone snapshot brief instead, since no sibling item covers it yet."
   - "The note would be in someone else's voice, like a doctor or a customer: use a real, agreed quote with a chat screenshot ad instead."
   - "You have no story ad yet: write the story ad first, then come back with the text."
+  - "Your story is a real customer's experience that you cannot verify: a staged note would present it as real, so use a verified note or label the picture a re-enactment."
 
 you_give:
   - Your approved story ad, with any note or list the narrator writes

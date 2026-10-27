@@ -85,7 +85,7 @@ When the user provides DNA JSON + content to design:
 2. Parse the DNA JSON and extract all tokens across three dimensions
 3. Build CSS custom properties from `design_system` values
 4. Apply `design_style` qualitative fields to guide subjective design decisions
-5. When the design needs assets or source materials, fetch them from the original source whenever possible. If the user provided a URL, retrieve the real asset from that URL instead of recreating, approximating, or substituting it.
+5. When the design needs assets or source materials, fetch them from the original source whenever possible. If the user provided a URL, retrieve the real asset from that URL instead of recreating, approximating, or substituting it. Only do this for assets the user owns or has the right to use. Never fetch or reuse another company's logos, photos, text or other assets; recreate the look from the profile instead.
 6. Implement `visual_effects` using appropriate technologies:
    - Lightweight effects → CSS animations, SVG, vanilla JS
    - Medium effects → Canvas 2D, GSAP, Lottie

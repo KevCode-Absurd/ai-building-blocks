@@ -19,6 +19,7 @@ not_for:
   - "The customer mentions injury, harm, legal action or a regulator: get advice from a lawyer or your insurer before you reply."
   - "You need to decide whether to give a refund: ask the person in your business who approves refunds, then check the reply here."
   - "You have no draft yet and want to start from nothing: write a short first draft yourself, then paste it in."
+  - "You have no draft and want a reply written for you: use the Angry customer reply writer."
 you_give:
   - The customer's message, in full
   - Your draft reply

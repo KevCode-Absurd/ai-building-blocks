@@ -31,7 +31,7 @@ you_get:
   - A health check of the whole list
   - A CSV or table export
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. Turn on web search, because the skill needs it to check official pages.
+  - Have your list of companies ready. Open Claude, ChatGPT or Gemini and paste in the skill text. Turn on web search, because the skill needs it to check official pages.
   - List each company with its type and where it is formed or registered. Add your registered agent if you have one (optional).
   - 'Say: "Build my filing tracker." Your AI makes a tracker table. Save it as a file called compliance-tracker in your own folder.'
   - Check every date. Each one needs an official source link and a date checked. If it has no checked source, it must say unknown.

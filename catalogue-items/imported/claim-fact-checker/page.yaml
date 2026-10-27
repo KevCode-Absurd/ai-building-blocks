@@ -32,8 +32,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and turn on web search. This skill needs it to look up sources.
   - Paste the skill instructions into the chat.
+  - The skill only cites sources it actually opened. If a source cannot be reached, the claim is marked Unverifiable and no link is made up. If your AI has no web search, use this only to list the claims you need to check yourself.
   - Paste the text you want checked. Add any claims to focus on, or a report format (optional).
-  - Read the verdicts and confidence scores. Open the source links for any claim you plan to rely on.
+  - Read the verdicts and confidence scores. Check that the chat lists the pages it searched, and open the source links for any claim you plan to rely on.
   - Fix or remove claims marked False, Mostly False or Unverifiable before you publish.
 output_sample:
   input:

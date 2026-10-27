@@ -46,7 +46,7 @@ how_to_use:
   - "Duplicate your theme first: Online Store, Themes, the three dots, Duplicate. Edit only the copy."
   - "Paste theme.liquid and the PageSpeed sections, and mark which apps show in the first screen."
   - "Make one change at a time on the copy. After each, refresh with the browser console open, then test the cart, variant picker, search, reviews and checkout."
-  - "If any test fails, undo that change before you go on. Run PageSpeed three times and average, then publish the copy only when everything works."
+  - "If any test fails, undo that change before you go on. Run PageSpeed three times on the copy's preview link, before and after, because the live link will not show your changes. Publish the copy only when everything works."
   - "If you don't write code, hand the find and replace blocks to a developer."
 
 how_it_works:

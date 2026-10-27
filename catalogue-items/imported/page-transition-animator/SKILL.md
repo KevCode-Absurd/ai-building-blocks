@@ -11,7 +11,12 @@ date_added: "2026-06-02"
 Animate between UI states using the browser's native `document.startViewTransition`. Declare *what* with `<ViewTransition>`, trigger *when* with `startTransition` / `useDeferredValue` / `Suspense`, control *how* with CSS classes. Unsupported browsers skip animations gracefully.
 
 ## When to Use
-- Use this skill when the task matches this description: Guide React and Next.js view transitions, shared element animations, route transitions, transition types, and reduced-motion-safe UI state animation.
+- A React or Next.js app jumps abruptly between screens and you want a smooth move, such as a thumbnail growing into its detail page.
+- You want content that loads late (Suspense) to fade or slide in instead of popping in.
+- You want a list that reorders or filters to move items to their new place.
+- You want the animation to respect users who turn on reduced motion.
+
+**Not for:** apps without React (use your framework's own transitions), or background refreshes that should stay still (this skill sets those to no animation).
 
 ## When to Animate
 

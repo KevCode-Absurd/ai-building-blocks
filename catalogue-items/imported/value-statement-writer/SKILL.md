@@ -26,6 +26,8 @@ For each statement, ensure it:
 - Highlights the key features and capabilities that make it possible
 - Uses clear, compelling language that resonates with the audience
 
+Use only the benefits, features and results the user gave you. Do not invent claims, numbers or customer quotes. The Canva framework below is an example of the pattern only; never reuse its wording, product or segments in the output. If the value proposition or segments are missing, ask once, then write `MISSING: <what>`.
+
 ## Example Framework (Canva)
 
 To illustrate the approach, here are value proposition statements for Canva:

@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It groups patterns, then writes drafts for you to review.
 new_slug: repeated-work-skill-finder
 name: Repeated work skill finder
-summary: Find the tasks you repeat in your Screenpipe screen history, and get draft skills to automate them. Your AI reviews drafts before you use any.
+summary: Find the tasks you repeat in your Screenpipe screen history, and get draft skills to automate them. You review each draft before you use any.
 job: make-skills
 headline: Repeated work skill finder
 subhead: A list of tasks you do again and again, with draft skills ready to automate them. It finds the patterns in your own screen history that you stopped noticing.
@@ -31,11 +31,11 @@ you_get:
   - Notes on which are worth automating
 how_to_use:
   - Install Screenpipe on your computer and let it run. Before it records much, set its ignored-window list so password managers and private apps are skipped.
-  - If sign-in is on, run screenpipe auth token and set the result as SCREENPIPE_TOKEN.
-  - Set up Python and choose your language model. A local one in LM Studio keeps data on your machine. A cloud one gets redacted summaries of your activity.
-  - Run the doctor check first. It tells you if Screenpipe, Python and your model are ready.
+  - Set up Python and choose your language model. A local one in LM Studio keeps data on your machine. A cloud one gets summaries of your activity with secret patterns scrubbed, but the scrub can miss things. If sign-in is on, run screenpipe auth token and set the result as SCREENPIPE_TOKEN.
+  - Run the doctor check first. It tells you if Screenpipe, Python and your model are ready. Then run with --dry-run and read plan.md. The cleanup of secrets is a pattern match and does not guarantee that private or unpublished details are removed. Window titles and app names still leave your machine if you pick a cloud model.
   - Run the skill with the time window you want, such as the last week. This needs a way to run code, so use an AI that can run commands on your computer.
   - Open report.md and the drafts. Review each draft, then keep only the ones worth using. Nothing is installed for you.
+  - Check each draft you keep, then add it to your skills folder with the promote command. The AI draft is not checked automatically, so validate it first.
 output_sample:
   input:
     - The time window of activity to look at, such as the last week
@@ -58,3 +58,4 @@ output_sample:
       contains: Ways to combine skills you already have when that fits better than a new skill.
     - name: report.md
       contains: A summary of what was found, what matched and what was drafted, to help you pick what to automate.
+next: [skill-file-validator, skill-writer]

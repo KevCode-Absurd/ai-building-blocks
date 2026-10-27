@@ -48,11 +48,11 @@ One word: "autonomous" → "AI teammate"
 
 Same product. Same capabilities. Different framing.
 
-**Result:**
+**Result (an illustrative pattern from the author, not a measured outcome):**
 
 Developers: "This helps me."
 Managers: "This makes my team more productive."
-Deal progression: Measurably faster.
+Deal progression: the author says it got faster. No data is given.
 
 **Why This Matters:**
 
@@ -126,7 +126,7 @@ Test messaging without committing product/org resources.
 - Document qualitative feedback
 
 **Go/No-Go:**
-- At least one positioning variant outperforms incumbent by 20%+ on reply rate
+- At least one positioning variant outperforms incumbent by 20%+ on reply rate (a suggested starting rule, not a benchmark. Adjust it to your volumes)
 - Existing customers don't say "wait, that's not what you do"
 - Proceed if clear winner; if tied, run longer or test new angles
 
@@ -362,11 +362,11 @@ Do we have structural advantage competitors can't copy?
 ### Should We Move from Crawl to Walk Phase?
 
 ```
-Did new positioning outperform incumbent by 20%+?
+Did new positioning outperform incumbent by 20%+? (a suggested starting rule, not a benchmark)
 ├─ Yes → Move to Walk (alignment phase)
 └─ No → Continue...
     │
-    Did we run test long enough (2+ weeks)?
+    Did we run test long enough (2+ weeks, a suggested minimum)?
     ├─ No → Run longer
     └─ Yes → Try different positioning angle or stay with incumbent
 ```

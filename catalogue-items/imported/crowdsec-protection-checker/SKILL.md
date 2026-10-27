@@ -29,6 +29,8 @@ an undo path. Save bouncer keys when created; they are shown once. Use
 `simulation: true` while tuning scenarios so detections are observed without
 enforcement, then verify allowlists before live blocking.
 
+If you cannot run commands yourself, ask the person to run each read-only `cscli` or log command and paste the output. Do not guess what a command would return.
+
 ## Choose a Deployment
 
 For Debian/Ubuntu, add the CrowdSec repository, install `crowdsec`, then install

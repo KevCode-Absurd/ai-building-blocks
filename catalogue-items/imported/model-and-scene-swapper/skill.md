@@ -3,6 +3,8 @@ name: one-shot
 description: 已有模特图换模特、换背景。一张模特图 → 多人群多场景版本，商品本身不变。当用户说「换模特」「换背景」「换人种」「一图多版」「同一件衣服换个人」时使用。
 ---
 
+**Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. If you use a photo of a real person as the model reference (such as model-face.jpg), the user must have that person's written consent. Check local ad rules for AI-made models too. The link to the material-enhancement skill points to a skill that is not in this folder. If fabric texture looks flat, rerun with `--quality high`.
+
 # one-shot — 同一商品替换模特和背景
 
 拿一张**已经拍好的模特图或人台图**，在**商品完全不动**的前提下换掉人、换掉背景，或两者都换。

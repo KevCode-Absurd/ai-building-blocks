@@ -33,10 +33,13 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
   - Paste your supplier list with spend and how critical each supplier is. Add delivery, finance and location details if you have them.
-  - Tell your AI your own risk rules, such as the weights and alert levels. Otherwise it uses example values.
+  - Tell your AI your own risk rules, such as the weights and alert levels. Otherwise it uses example values, and you should treat the scores as a practice run only. The Acme sample in the skill is made-up data. Do not share any score until you have entered your own supplier data and rules.
+  - If a supplier has no data for a risk area, the scorecard shows "no data" for it. It does not fill the gap with a guess.
   - If you want the scoring run as code, use an AI that can run Python. Install pandas and numpy first.
   - Read the dashboard and the top risk factors for each supplier. Check them against what you know.
-  - Start with the actions marked high, and set a date for the next review.
+  - Start with the actions marked high, and set a date for the next review. Give each contingency plan an owner and a review date.
+  - To plan a backup for a whole product line, use the supply chain backup plan builder. To compare suppliers side by side, use the supplier scorer.
+next: [supply-chain-backup-plan-builder, supplier-scorer]
 output_sample:
   input:
     - Your list of suppliers and what each one supplies

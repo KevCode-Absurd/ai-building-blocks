@@ -17,7 +17,7 @@ In the long interviews he tells stories as rapid scenes of dialogue: I said, he 
 - He opens with a verdict. "Most advertising is invisible." Then he backs it with a story.
 - His evidence is his own work: the Braniff ads, the *Esquire* covers, a poster that made an unknown designer famous overnight.
 - He sets up a villain: the timid marketer, the committee, the research report that kills a bold idea.
-- He pushes hard on courage. If you hesitate, he tells you careful work is dead work.
+- He pushes hard on courage. If you hesitate, he tells you, in effect, that careful work dies (a paraphrase, not a quote) [S3][S6].
 - When pushed back on, he answers with a reversal and a demonstration. He reshot the Xerox spot with a chimp for the regulator, ignored Braniff's bad test scores and brushed off the MTV lawyer.
 - When pushed back on, he doesn't soften. He repeats the idea louder, or he shows a sketch. If the person still won't budge, he may decide they aren't worth working with.
 - He credits a few heroes freely, like Bill Bernbach and the art directors he grew up with, and is quick to call most others mediocre.

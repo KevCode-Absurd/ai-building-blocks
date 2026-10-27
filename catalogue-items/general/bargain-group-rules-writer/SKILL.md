@@ -7,17 +7,21 @@ description: Use when someone has a set of stocks that passed bargain tests and 
 
 A margin of safety does not promise that any one stock works out. It promises that a group bought at real bargains is more likely to gain than lose, as an insurer cannot predict one death but can price a thousand. This skill turns that into rules: a group big enough that one failure cannot sink it, a cap on any one name, an exit set before purchase, and a scorecard that judges the method on the whole group. It is a method of analysis, not personal financial advice, and it never names a company or fund to buy.
 
+Who it suits: someone who already holds a plain fund plan, picks stocks as an extra, and can afford to lose part of this money. It is not personal financial advice. For a large or personal decision, talk to a licensed adviser.
+
+Before this, find and test the candidates with the [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with audit report. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audit report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A spreadsheet:** A group with a cost, a date and a value per name is easiest to score in a sheet.
@@ -33,12 +37,12 @@ How to start:
 ## Steps
 
 1. **Collect and mark gaps.** List each candidate with its margin of safety verdict. Keep only those with a clear margin. Mark missing items as `MISSING:`.
-2. **Size the group.** The point of a group is that one failure cannot sink it. Test: if the worst candidate went to zero, how much of the group would be lost? Aim for no more than a few percent per name. With 30 equal names, one failure costs about 3%. In the original work the cheap-asset method was run with at least 100 issues; a person cannot study that many, so the honest answer is: as many as you can follow properly, and not fewer than about 20. If fewer than 20 qualify, say the group is too thin and offer two options: wait, or hold a smaller bargain sleeve inside a plain fund plan. Never pad the group with weaker names.
+2. **Size the group.** The point of a group is that one failure cannot sink it. Test: if the worst candidate went to zero, how much of the group would be lost? Aim for no more than a few percent per name. With 30 equal names, one failure costs about 3%. A group needs many names to work, but one person can follow only so many. Use as many as you can follow properly, and not fewer than about 20. Treat 20 as a rule of thumb and the user's own assumption, not a study result. If fewer than 20 qualify, say the group is too thin and offer two options: wait, or hold a smaller bargain sleeve inside a plain fund plan. Never pad the group with weaker names.
 3. **Cap names and industries.** Cap any one name at a percent of the group, such as 5%. Cap any one industry at a share, such as a quarter. Show the sums on the person's money. Made-up example: a 40,000 group in 25 names at 1,600 each, 4% a name, with 5 in the same industry at 20%, under a quarter.
-4. **Set the exit before buying.** A gain target and a time limit. Graham's late papers suggested a profit goal and a time limit for groups of cheap stocks; pick the person's own figures, for example sell a name that has gained half its cost, or after two years if it has not. Whatever the figures, they are fixed now. Then the if-the-facts-change rule: for each name, the facts that made it a bargain (assets, earnings, a low debt). If a fact breaks, the person looks at the name again, even if the price is fine.
+4. **Set the exit before buying.** A gain target and a time limit. The credited sources describe setting a profit goal and a time limit up front for a group of cheap stocks. Pick the person's own figures, for example sell a name that has gained half its cost, or after two years if it has not. Whatever the figures, they are fixed now. Then the if-the-facts-change rule: for each name, the facts that made it a bargain (assets, earnings, a low debt). If a fact breaks, the person looks at the name again, even if the price is fine.
 5. **Add costs and tax.** Each move costs a trading fee and may cost tax on a gain. A quick-exit rule that sells many winners early in a taxable account can lose a lot to tax. Compute: gain target times (1 minus tax rate) minus trading cost. Made-up sum: a 50% gain taxed at 25% leaves 37.5% before fees, and then a fee at each end. Say that the group has to beat a plain fund after all this.
-6. **Set the scorecard before buying.** The start date, the review dates (yearly, with the first judgment after three years at least, since one or two years prove little), the comparison (a plain broad fund described by type), and the pass mark. The book says the enterprising path is not worth the effort unless it can add about five points a year before tax to the stock part; use five as the example, and let the person set their own. Success: group beats the fund by at least the pass mark per year after costs and tax. Failure: it trails, or beats by less than the pass mark. Judge by the whole group's value, not by the best or worst name.
-7. **Set the way back.** If the method fails the scorecard at the review dates, the options are: go back to the plain path (the split and list from the defensive workflows), extend by one review with a changed screen, or stop. Choose which result triggers which, now. Write: I will not change the pass mark after seeing the result.
+6. **Set the scorecard before buying.** The start date, the review dates (yearly, with the first judgment after three years at least, since one or two years prove little), the comparison (a plain broad fund described by type), and the pass mark. The credited book's idea is that the extra work is worth it only if it adds a few points a year to the stock part. Use five points as an example only, not a finding, and let the person set their own. Success: group beats the fund by at least the pass mark per year after costs and tax. Failure: it trails, or beats by less than the pass mark. Judge by the whole group's value, not by the best or worst name.
+7. **Set the way back.** If the method fails the scorecard at the review dates, the options are: go back to the plain path (a low-cost broad fund bought on a fixed schedule, split between stock and bond funds by the person's own plan), extend by one review with a changed screen, or stop. Choose which result triggers which, now. Write: I will not change the pass mark after seeing the result.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any that fail. Under CHECKS MISSED write one line for each check still missed and why, or "none".
 
 ## What you hand back
@@ -48,11 +52,7 @@ The group size and caps, the exit rules, the cost and tax sums, the scorecard, t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- The [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

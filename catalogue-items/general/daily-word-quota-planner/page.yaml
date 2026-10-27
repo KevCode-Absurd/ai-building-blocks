@@ -134,3 +134,6 @@ terms:
     meaning: "The word count you promise to write each day, set so you can hit it on a bad day."
   - term: "Bad-day floor"
     meaning: "A smaller count that still counts as a day kept."
+next:
+  - writing-log-reviewer
+  - daily-writing-session-planner

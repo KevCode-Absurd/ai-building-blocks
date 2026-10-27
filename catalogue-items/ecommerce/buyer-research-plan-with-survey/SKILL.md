@@ -9,18 +9,18 @@ You plan buyer research for a store that already has people to ask: a call plan,
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **SparkToro:** Shows where an audience spends time and which sources influence it. Use it to choose where to look next.
@@ -42,7 +42,7 @@ The general Customer discovery interview planner plans customer talks to test a 
 ## Steps
 1. **Decide who to ask.** Make two lists: recent buyers, repeat buyers, and people who left or stopped buying; and non-buyers on your list. Ask buyers who left why they left.
 2. **Size the calls.** Plan about 20 calls of 30 minutes. A guest on one podcast said a quoted study by large research firms shows 20 conversations reach about 97 percent of the sentiment in an audience. That is second-hand. Treat it as a rule of thumb and check it before quoting it. The small version: pick your top five customers, hold five calls of 30 minutes, and put the transcripts in one AI project. Ask the person to get permission before recording or transcribing.
-3. **Write the recruiting email.** Say it is to learn, not a demo or a pitch. Say how long it takes (30 minutes). Say what they get. Rewards that worked in the sources: a free item, beta access, or a donation to a charity of their choice. One researcher paid about $30 for 30 minutes for hard-to-reach people. Cost every reward.
+3. **Write the recruiting email.** Say it is to learn, not a demo or a pitch. Say how long it takes (30 minutes). Say what they get. Rewards that worked in the sources: a free item, beta access, or a donation to a charity of their choice. One researcher in the sources paid about $30 for 30 minutes for hard-to-reach people (their figure, not a rule). Cost every reward.
 4. **Write the call guide.** Open questions only. Ask why they use it, how they found it, the whole path from first hearing about it to now, and how it felt. Do not pitch, defend or solve their problems. Ask people who left why they left.
 5. **Build the survey after the calls.** Use it to confirm what the calls found at larger scale, and for easy facts such as role or household size. Write four or five open-ended, written questions, not tick boxes. Examples:
    - What was the main reason you bought this product?
@@ -51,7 +51,7 @@ The general Customer discovery interview planner plans customer talks to test a 
    For non-buyers, change the wording to: what was the main reason you did not buy?
 6. **Set a reward that makes everyone a winner.** The source's example: entry into a larger giveaway (a $1,000 gift card) plus a guaranteed small credit (about $30 off a $100 spend) for everyone who answers. That raises the response because nobody leaves with nothing. Both numbers are the source's example, so set your own to fit your margin. Prize draws have legal rules that differ by place, so check local rules before you run one.
 7. **Send buyers and non-buyers separately,** with their own wording.
-8. **Use audience tools for the rest.** To see where they spend time and who influences them, use an audience research tool such as SparkToro. For topics being talked about, use social listening (Brand24 is an example). Look for the topics and frustrations, not mentions of your brand. Tool names are examples.
+8. **Use audience tools for the rest.** To see where they spend time and who influences them, use an audience research tool such as SparkToro. For topics being talked about, use social listening (Brand24 is an example). Look for the topics and frustrations, not mentions of your brand. Tool names are examples. Both are paid services, and not needed: say the free way is to read forums, reviews and comments by hand.
 9. **Write the reading template.** Sort answers into two piles: reasons they bought, and reasons they did not (for example price, doubt it works, shipping). Group results by the job the buyer is hiring the product for, not by age or job title.
 10. **Use the answers.** For ad angles, offers and product ideas. If many people ask for the same item (the source's example is creatine gummies), consider it for a launch, and check the demand before you order stock.
 11. **Do not over-read email tests.** Offers you test by email go to people who already know you. They are not proof of how cold traffic will respond. Survey answers help shape cold-traffic tests but do not replace them.
@@ -95,11 +95,7 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
+- The [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

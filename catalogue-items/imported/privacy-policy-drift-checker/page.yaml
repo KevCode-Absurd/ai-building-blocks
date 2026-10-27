@@ -30,11 +30,11 @@ you_get:
   - Suggested replacement wording
   - Timing advice
 how_to_use:
-  - Open your AI tool and paste the skill text, or upload the skill folder if your AI can read files.
+  - Open your AI tool and paste the skill text, or upload the skill folder if your AI can read files. Direct mode needs only pasted text. Sweep mode also needs your saved reviews pasted or uploaded. The plugin config and scheduler named in the skill are not needed.
   - Paste your current privacy policy. Add the date of your last check if you have one (optional).
   - To check one new plan, describe it in a sentence, such as using a new analytics tool. To run a sweep, give your AI the saved reviews since the last check.
   - Read each gap marked required first. These are places where your policy says something untrue.
-  - Show the suggested wording to your lawyer before you change the policy.
+  - The suggested wording is a draft. Your lawyer must approve each change before you publish it.
   - If your AI cannot read saved files, paste the policy and the practice into the chat. The check still works.
 output_sample:
   input:

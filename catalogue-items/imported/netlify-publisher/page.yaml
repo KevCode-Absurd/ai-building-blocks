@@ -18,7 +18,7 @@ when:
 not_for:
   - "You need a database or a server that runs all the time: use a host built for that, such as a cloud server service."
   - "You want a free page for plain files with no build step: use GitHub Pages instead."
-  - "You want a site that stays private: Netlify preview links are not private, so add a password in your Netlify site settings first."
+  - "You want a site that stays private: Netlify preview links are not private. Site password protection may need a paid Netlify plan, so check your plan, or use a host with built-in private access."
 you_give:
   - Your web project folder
   - A Netlify account
@@ -34,8 +34,8 @@ how_to_use:
   - Paste in this skill and say which folder holds your site.
   - Choose preview or production. Start with preview to check the site first.
   - Sign in to Netlify in the browser window when asked. The deploy can take a few minutes.
-  - Open the preview link and check your site. Preview links are public, so add a password in your Netlify site settings if you need one.
-  - Ask for a production deploy when you are happy, and you get your live link.
+  - Open the preview link and check your site. Preview links are public. Netlify's site password protection may need a paid plan, so check yours before you rely on it.
+  - Ask for a production deploy when you are happy, and you get your live link. If the build fails, open the logs link first and read the first error.
 output_sample:
   input:
     - Your web project folder

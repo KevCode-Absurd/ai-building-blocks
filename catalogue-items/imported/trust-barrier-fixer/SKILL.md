@@ -126,7 +126,16 @@ Before finalizing output, the agent asks:
 
 > Calibrate the certainty, proof, and claim strength in this message for a skeptical audience.
 
-**Illustrative output:** Map a reliability concern to the available incident history and recovery procedure; disclose the observation period and avoid an uptime percentage without a measured denominator.
+**Illustrative output (landing page headline):**
+
+- Message: "Grow your list 10x with our popup tool."
+- Trust barrier: proof. A visitor in a distrusted category (growth tools that overpromise) cannot check "10x".
+- Signal: one named customer result with its real before and after numbers, placed right under the headline, before the sign-up button.
+- Claim strength: soften the headline to what you can show, such as "See how [named customer] grew their list in [timeframe]", and drop the "10x" unless you can prove it.
+
+Use only proof the user really has.
+
+**Reliability variant:** map a reliability concern to the available incident history and recovery procedure; disclose the observation period and avoid an uptime percentage without a measured denominator.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

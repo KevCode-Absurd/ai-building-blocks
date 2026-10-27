@@ -34,7 +34,7 @@ how_to_use:
   - Sign in with the store auth command. Give it your store address and the read_products and read_inventory scopes.
   - Paste this skill into your AI. Add your store address, and your bundle metafield namespace and key if you use them.
   - Add a safety stock number or active-only setting if you want one (optional).
-  - Let your AI run the checks. It only reads data and changes nothing.
+  - Let your AI run the checks. It only reads data and changes nothing. It counts on-hand stock minus your safety stock. A part that Shopify does not track is listed for review, since it could make the count too high.
   - Open the bundle_availability CSV. Fix the broken bundles first, starting with the bottleneck part.
 output_sample:
   input:

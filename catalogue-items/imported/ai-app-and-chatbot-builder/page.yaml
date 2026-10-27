@@ -47,6 +47,7 @@ output_sample:
     - Python 3.10 or newer on your computer
     - An API key from your AI provider
     - An AI that can run Python code, or a place where you can run it yourself
+    - "Optional: Pinecone and LangSmith need their own accounts and keys, and may cost money"
   output:
     - name: Installation
       contains: The pip commands to install LangChain and the add-ons for your chosen AI provider.

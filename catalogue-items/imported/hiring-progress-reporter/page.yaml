@@ -20,7 +20,8 @@ not_for:
   - "You need to find or rank candidates: ask a recruiter or search tool, as this skill only reports on numbers you already have."
   - "You want a branded PDF with your company logo: this skill needs your own brand file and a code tool, so use a design tool or add your own guide."
 you_give:
-  - Pipeline counts by stage
+  - Pipeline counts by stage, as plain text or CSV
+  - The role title and the dates the report covers
   - Outreach and reply numbers
   - Blockers and notes on top candidates
   - Who the report is for

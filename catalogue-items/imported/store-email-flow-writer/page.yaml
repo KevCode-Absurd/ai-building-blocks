@@ -32,11 +32,12 @@ you_get:
   - Eight customer segments with exact filters
   - A month-by-month campaign calendar and list growth ideas
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text. No code, files or paid tools are needed.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text. No code, files or paid tools are needed. To build the flows you need an email platform, which is usually paid.
   - "Describe your store: what you sell, your price range, your sales platform, your email tool and list size."
   - Read the overview and the first flow. Ask for changes to the voice before you go on.
   - Add your own numbers and real customer proof where the copy needs them. Do not use made-up counts or quotes.
   - Load the flows into your email tool. Test one flow first, such as the welcome series, before you turn on the rest.
+  - Next, send each flow to the right segment first, such as new subscribers for the welcome series. Then track opens, clicks and orders per flow in your email tool.
 output_sample:
   input:
     - What you sell and your price range

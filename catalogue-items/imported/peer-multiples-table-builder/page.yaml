@@ -36,8 +36,8 @@ you_get:
   - A list of gaps with no Indian equivalent
 how_to_use:
   - Choose 5 to 8 listed peers with the same business and a similar size, or let your AI suggest them. Confirm the list.
-  - Gather the latest results from each company's NSE or BSE filing, or export them from your data tool. Paid sources are better, but not needed.
-  - Open the skill, give your AI the target, the peers and the files. Use an AI that can write Excel files if you can.
+  - Gather the latest quarterly results filing for each company from NSE or BSE, plus net debt for each, or export them from your data tool. Paid sources are better, but not needed. Free sites such as Screener.in and yfinance reuse data under their own terms, so every figure from them is marked unverified.
+  - Open the skill, give your AI the target ticker, 5 to 8 peer tickers and the files. Some helper files the skill names are not in this folder, so it uses the layout and rules written in the skill. Use an AI that can write Excel files if you can.
   - Check the layout, then the inputs, then the margins, then the multiples. Your AI stops after each part for you to confirm.
   - Look at outliers outside the 25th and 75th percentiles, and every figure marked unverified. Check them against the filings.
   - Write up your valuation view yourself. The table does not give a price.

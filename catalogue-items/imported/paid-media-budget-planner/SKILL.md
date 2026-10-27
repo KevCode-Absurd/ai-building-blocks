@@ -32,7 +32,7 @@ Most paid media failures start with a vague reason for spending. A real spend hy
 
 A bad reason: "We need to scale Google Ads spend." No audience, no outcome metric, no magnitude. Nothing is falsifiable.
 
-A good hypothesis: "Top-of-funnel SaaS prospects searching for project management tools convert from a free-trial CTA at 3.2% CAC under $80. Increasing Search budget from $40K to $80K per month should hold CAC under $80 and add roughly 500 trial signups based on Q3 search volume."
+A good hypothesis (the numbers here are illustrative, not benchmarks; use your own): "Top-of-funnel SaaS prospects searching for project management tools convert from a free-trial CTA at 3.2% CAC under $80. Increasing Search budget from $40K to $80K per month should hold CAC under $80 and add roughly 500 trial signups based on Q3 search volume."
 
 That hypothesis names the audience (top-of-funnel SaaS prospects on PM-tool keywords), the offer (free trial), the channel (Google Search), the outcome metric (CAC, trial signups), and the magnitude (500 signups, CAC under $80). It is falsifiable: if CAC blows past $80 or signups come in below 250, the hypothesis is wrong and you pull back.
 

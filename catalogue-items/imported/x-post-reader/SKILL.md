@@ -83,12 +83,7 @@ curl --fail --show-error --silent --max-time 20 "https://adhx.com/api/share/twee
 ```
 
 ### Option B: Manual install
-```bash
-# AAS already includes this skill; installing a second copy is optional.
-# Review an immutable upstream revision in a private staging directory first.
-# Copy into an explicitly selected host directory only if the user requested installation.
-# Preserve an existing host skill instead of overwriting it silently.
-```
+You do not need this to read a post. This skill file already has everything the steps above use. To install a second copy, download the upstream repository at https://github.com/itsmemeworks/adhx, review it first, then copy it into your skills folder only if you asked for it. Do not overwrite a skill you already have.
 
 ## Examples
 

@@ -11,12 +11,13 @@ not_for:
   - You want your code reviewed for logic bugs or style. Ask a developer on your team for a code review.
   - You need a scan that is not code, like a check of your server or website. Use a vulnerability scanner built for that.
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page. The skill points to extra reference files, so also paste the ones you need (for example the workflow configuration and troubleshooting notes), or the AI will work from the main text only.
   - Tell your AI your repo, your languages and whether you use Actions or the command line.
   - Add your build command and any error messages if you have them.
   - Copy the workflow file into .github/workflows/codeql.yml in your repo and commit it.
   - For the command line route, run the commands yourself on a computer with the CodeQL bundle installed.
-  - Check the Security tab in your repo for the first scan results.
+  - Check the Security tab in your repo for the first scan results. A private repo may need GitHub Advanced Security before the scan runs.
+  - Next, sort the first alerts by severity and review them one by one before you fix anything.
 output_sample:
   input:
     - Your repo name and where it lives (GitHub or local)

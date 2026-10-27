@@ -27,9 +27,10 @@ Automatically classify business expenses into accounting categories, assign depa
 
 5. **Flag Tax-Deductible Items**
    Mark expenses that qualify for tax deduction based on category and business purpose. Apply IRS rules for meals (50% deductible for business meals, 100% for company events), home office, vehicle mileage, and professional development. Flag items that need substantiation — receipts, business purpose memo, or attendee lists.
+   Every tax flag is a first pass, not a ruling. Say so in the output. Tell the user to check each flag against the current rules for the tax year, and to ask an accountant about larger items such as equipment or Section 179 claims. Show "Yes (100%)" or "Section 179 eligible" as "Likely deductible (check)" or "Possible Section 179 (accountant to confirm)".
 
 6. **Generate Categorized Summary**
-   Output a categorized transaction list with totals by category, department, and tax status. Highlight any transactions that couldn't be confidently categorized (confidence < 80%) for manual review.
+   Output a categorized transaction list with totals by category, department, and tax status. Highlight any transactions that couldn't be confidently categorized (confidence < 80%) for manual review. The confidence figure is the AI's own rough estimate from how clear the merchant name and description are. It is not a measured accuracy, so tell the user to check the low-confidence list first and to spot-check some of the rest.
 
 ## Usage
 

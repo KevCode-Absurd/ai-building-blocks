@@ -70,11 +70,10 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the page.
-- **Check the landing page** with the [Landing page audit](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
-- **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
-- **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the page.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the page.
+- The [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter).
+- The [Collection page SEO builder](https://useaiblocks.com/skills/collection-page-seo-builder).
+- The [Product page editor for AI search](https://useaiblocks.com/skills/ai-ready-product-page-editor).
+- **Check the landing page** with the [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder). It takes the page.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

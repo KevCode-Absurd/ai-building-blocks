@@ -34,9 +34,9 @@ how_to_use:
   - Open your AI in a tool that can run code and read your project folder. Git must be installed.
   - "Paste the skill, or load its folder, and say: run the release preparer on this project."
   - Add --dry-run first. Read the preview of the version bump and changelog.
-  - If you use a .releaserc.yml file, read its hooks first. Hooks run commands on your computer.
+  - If you use a .releaserc.yml file, read its hooks first. Hooks run any shell command on your computer, so read or remove them before you run this on a repo you did not write. It assumes a git remote named origin and pushes the main branch. Check your branch name before you say yes to the push.
   - Run it again without --dry-run. It makes local commits before it asks you to confirm, so check each step.
-  - For a GitHub Release, sign in to the gh tool first. Add --backfill-releases to fill in old tags.
+  - For a GitHub Release, sign in to the gh tool first. Add --backfill-releases to fill in old tags. After the tag is pushed, open the GitHub Release page to check it, and run any publish_artifact hook you set up.
 output_sample:
   input:
     - Your project folder, a git repo with at least one tag

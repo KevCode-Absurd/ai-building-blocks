@@ -45,6 +45,8 @@ Perform a security audit of the Node.js Express application in /app. Focus on OW
 
 ## Examples
 
+Both examples below are made up to show the layout. The findings, names and resources (such as `prod-user-uploads`, `sg-0abc123` and `prod-db`) are not from a real audit. Never reuse them as findings; write findings only from what the user showed you.
+
 ### Example 1: Auditing a Node.js Express Application
 
 **Target**: E-commerce API built with Express.js, Sequelize ORM, and JWT authentication.

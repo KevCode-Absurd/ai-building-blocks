@@ -9,7 +9,7 @@ subhead: The same recording, spoken by a different voice, with your timing, emot
 explain: |
   The same recording, spoken by a different voice, with your timing, emotion, breaths and pauses kept. It is useful when the performance is right but the voice is not.
 
-  The skill uses the ElevenLabs voice changer, which converts speech to speech. You give an audio file and pick a target voice from your voice library. It handles the limits: five minutes and 50 MB per request, so longer files are cut into chunks and joined again. It also covers output format choices and noise handling. It does not make or clone new voices, only converts into one you already have. It needs an ElevenLabs account and API key.
+  The skill uses the ElevenLabs voice changer, which converts speech to speech. You give an audio file and pick a target voice from your voice library. It handles the limits: five minutes and 50 MB per request, so longer files are cut into chunks and joined again. It also covers output format choices and noise handling. It does not make or clone new voices, only converts into one you already have. It needs an ElevenLabs account and API key. ElevenLabs bills per minute of audio processed, so check your plan before you convert long files.
 when:
   - You recorded a scratch performance and want a character voice on top.
   - You want to dub a voice-over in a different voice without re-recording.
@@ -35,7 +35,7 @@ how_to_use:
   - Open an AI that can run code and has internet access. Paste the skill and add your audio file.
   - Tell your AI which voice from your library to use. Say if the recording is noisy or longer than 5 minutes.
   - Ask it to convert the file and save the result as a new audio file, such as converted.mp3.
-  - Play the result. Check that the pacing and feeling match your recording. If not, ask for a different voice setting.
+  - Play the result. Check that the pacing and feeling match your recording. If not, ask for a different voice setting. If the recording is noisy, clean it with a voice isolator first. To use a voice you have not made yet, clone it first (with the speaker's consent), then use its voice ID here.
 output_sample:
   input:
     - Your audio recording, under 5 minutes and 50 MB per piece

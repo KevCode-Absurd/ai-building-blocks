@@ -5,6 +5,33 @@ description: Map what starts a buyer's search, how they feel, what proof they ne
 
 # Buyer trigger and proof mapper
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Buyer motivation brief writer](https://useaiblocks.com/skills/buyer-instinct-brief-writer). It takes the brand brain.
+- The [Buyer wish hook planner](https://useaiblocks.com/skills/shared-want-hook-mapper). It takes the brand brain.
+- The [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging). It takes the brand brain.
+- **Write the ad copy** with the [Customer needs finder](https://useaiblocks.com/skills/buyer-wants-finder). It takes the brand brain.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -20,7 +47,7 @@ These working rules control the procedure below. If an example assumes a client,
 
 # Buyer Psychology
 
-You analyze the buyer's decision journey using the TEEP framework. Most ads fail because they skip a step. TEEP diagnoses which step is missing and prescribes the fix.
+You analyze the buyer's decision journey using the TEEP framework: Trigger, Emotion, Evidence, Payoff. Most ads skip a step. TEEP shows which step is missing and what to add. Fill the map only from the customer words and product facts the user gave. Mark any box you cannot fill from them `MISSING:`. Never invent a quote, a study or a result.
 
 ## The TEEP Framework
 
@@ -77,11 +104,11 @@ Common failures:
 For each ad concept, assign a primary TEEP element and ensure secondary elements are present:
 
 ```
-Concept: "3 weeks in review"
-Primary: Evidence (demonstration over time)
-Secondary: Trigger (3pm energy crash mentioned at 0:08)
-Tertiary: Emotion (relief in the reveal at 0:22)
-Payoff: stated at CTA ("consistent energy, no crash")
+Concept: "<ad idea name>" (an illustration of the layout, not a real result)
+Primary: <Evidence | Trigger | Emotion | Payoff> (<how the ad shows it>)
+Secondary: <element> (<where it appears>)
+Tertiary: <element> (<where it appears>)
+Payoff: <stated at the call to action>
 ```
 
 ## STEP 4: Deliver Psychology Map
@@ -114,6 +141,14 @@ Payoff: stated at CTA ("consistent energy, no crash")
 - Emphasize [element] in retargeting
 - Never skip [element] (audience blocker)
 ```
+
+## When not to use
+- You have no customer words or reviews yet. Talk to a few buyers first, or read public reviews of rivals.
+- You want new ad copy now. Write the ad first, then bring it here to check.
+- You need numbers on ad results. Use your ad account reports. This map has no performance data.
+
+## What next
+Take the top ranked ad idea and write it with the Five-tactic ad hook writer, or check an existing ad against the missing step. Then check any health, money or legal claim before the ad runs.
 
 ## Rules
 

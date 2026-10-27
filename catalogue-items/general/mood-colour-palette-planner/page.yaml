@@ -21,6 +21,7 @@ not_for:
   - "You already have a brand guide and only need to apply its colours: use the guide itself, or ask a designer to check the match."
   - "You only need to test text contrast for accessibility: use a free contrast checker, such as the one built into Coolors or Adobe Color."
   - "You want a logo or full design made: use the Logo strength tester to judge a logo, or hire a designer."
+  - "You need a full brand system or style guide: use the Brand style guide writer."
 
 you_give:
   - "What it is for and where people will see it"

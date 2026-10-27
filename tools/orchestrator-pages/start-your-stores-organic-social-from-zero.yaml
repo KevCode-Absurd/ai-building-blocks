@@ -9,7 +9,7 @@ subhead: Give it your social accounts and your product. It checks how the accoun
 explain: |
   A new store posts a few videos, gets almost no views and gives up. Often the cause is not the videos. The account is the wrong type, set up in the wrong country, posting about five topics, or sending people to other platforms. Then the videos are filmed without a plan for what to say in the first seconds.
 
-  These steps fix the base first. It checks your accounts against eight setup rules and orders the fixes. You fix them and decide who goes on camera. Then it picks the formats that fit your product and your people, writes an outline for each and ten hooks, and scores the hooks. You post by hand over three weeks. It reads your numbers in groups, gives each format a verdict and sets the next test.
+  These steps fix the base first. It checks your accounts against eight setup rules and orders the fixes. The rules are working assumptions from one team's tests, so treat them as things to test, not settled facts. You fix them and decide who goes on camera. Then it picks the formats that fit your product and your people, writes an outline for each and ten hooks, and scores the hooks. You post by hand over three weeks. It reads your numbers in groups, gives each format a verdict and sets the next test.
 when:
   - You are starting social for your store and want a plan before you film.
   - Your posts get almost no views and you do not know if it is the account or the videos.
@@ -24,14 +24,14 @@ you_give:
   - Your product, price and key benefit
   - Who can be on camera, and what props you have
   - Who you serve, in a line or two
-  - After posting, a list of your posts with format, hook, topic, date and views (and watch rate, shares, saves and follows if you have them)
+  - After posting, a list of your posts with format, hook, topic, date and views (and watch rate, shares, saves and follows if you have them). You bring this back for step 4.
 you_get:
   - A setup score out of 100 for your accounts, with fixes in order and the one platform to keep for six months
   - Format picks that fit your product and your people, each with a script outline
   - Ten hooks across formats, each scored out of 100, with rewrites for the weak ones
   - After posting, a keep, change or drop verdict for each format and hook type, and one test to run next
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and four skill files, in the order they run: Brand social account checker, Short video format picker, Video hook scorer and Organic format tester."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List your accounts and say how each one posts. Make the fixes, starting with the biggest, and decide who will be on camera.
   - Film the formats it picks. Post your best 10 to 15 videos by hand over three weeks, and keep posting until you have at least 20.
@@ -90,7 +90,7 @@ tweaks:
   - what: Your main market
     how: Give the country where customers live. The setup rules treat a mismatch as a fix.
   - what: How you post
-    how: Say if you post by hand or with a scheduler. One team's test says hand posting works better, so try it on one account first.
+    how: Say if you post by hand or with a scheduler. The account check flags schedulers, based on one team's tests, so try posting by hand on one account for four weeks and compare.
 judge:
   - Each of the eight rules says pass, fix or not checked, with a reason tied to your accounts.
   - The score shows its sum, and the fixes are in order of points.

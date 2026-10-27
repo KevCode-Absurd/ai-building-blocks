@@ -9,7 +9,7 @@ subhead: Give your AI a data table in MATLAB and the column to predict. It train
 explain: |
   Machine learning models trained and compared in MATLAB's Classification Learner and Regression Learner apps, with the best one exported. You do it by code, so you do not click through the apps by hand.
 
-  The skill drives the apps through their AppController. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox.
+  The skill drives the apps by code. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
 when:
   - You have a table and want to try many model types quickly.
   - You want to compare models without clicking through the app.
@@ -42,17 +42,17 @@ output_sample:
     - Model types to try (optional)
     - Feature selection or tuning wishes (optional)
   prerequisites:
-    - MATLAB with the Statistics and Machine Learning Toolbox
+    - MATLAB with the Statistics and Machine Learning Toolbox (paid MathWorks software that needs a licence)
     - An AI tool that can run MATLAB code
     - Parallel Computing Toolbox for faster training (optional)
   output:
     - name: Trained models
       contains: The models you asked for, trained in Classification Learner or Regression Learner on your table.
     - name: Metrics comparison
-      contains: The accuracy figures for each model, so you can see which one does best.
+      contains: A table with one row per model, showing model type, validation score, test score and training time, so you can see which one does best.
     - name: Standard plots
       contains: The usual app plots for the models, opened for you to check.
     - name: Explanation results
       contains: Partial dependence, permutation importance, Shapley and LIME results that show which features drive predictions.
     - name: Exported model
-      contains: The chosen model sent to your workspace, or code that rebuilds it.
+      contains: The chosen model sent to your workspace as a MATLAB variable, or code that rebuilds it.

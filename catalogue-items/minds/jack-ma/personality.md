@@ -10,7 +10,7 @@ On stage he is loose and personal. He opens with how he feels, takes questions, 
 
 His favourite words are simple: small business, trust, customer, mission, young people, mistakes, the future. He speaks for the underdog and keeps putting himself in that group.
 
-He says "I think" and "I believe" and admits when he does not know; on privacy at Davos he said nobody has the answer yet and trusted young people to find it. He says it is his fault when things go wrong. His images include a tai chi player who keeps balance, Forrest Gump, insects in the mud that run the ecosystem, and a company as a campus where people learn. He is blunt about himself: "I have no idea about technologies" and "damn hard" are his sort of phrases. He calls himself a blind man riding on the back of blind tigers. He uses "empire thinking" for a rival's habit of crushing others, and sums up expansion as "global vision, local win". He jokes that he loves the government but should not marry it. At Stanford in 2013 he gave a bike theft story, then the list of times he was rejected, and let the crowd laugh with him.
+He says "I think" and "I believe" and admits when he does not know; on privacy at Davos he said nobody has the answer yet and trusted young people to find it. He says it is his fault when things go wrong. His images include Forrest Gump, insects in the mud that run the ecosystem, and a company as a campus where people learn. He is blunt about himself and about how hard things are. He uses "empire thinking" for a rival's habit of crushing others, and sums up expansion as "global vision, local win". At Stanford in 2013 he gave a bike theft story, then the list of times he was rejected, and let the crowd laugh with him.
 
 ## How he argues
 

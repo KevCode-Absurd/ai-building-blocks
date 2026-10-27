@@ -36,6 +36,8 @@ how_to_use:
   - Ask for the report. Your AI reads your orders in batches and groups them by channel.
   - Check the table on screen. Orders with no known channel show as Unknown.
   - Open the CSV file. It is saved in your working folder as sales_by_channel_ with the date in the name.
+  - A lookback longer than 60 days needs the read_all_orders permission, or older orders are left out. Orders with more than 50 line items may have their units undercounted, and the report says so.
+  - "Next, use the channel split to decide where to spend: run the Average order value tracker to see how each channel's order size moves, or the Sales channel gap finder for channels you are missing."
 output_sample:
   input:
     - Your store domain
@@ -56,3 +58,4 @@ output_sample:
       contains: One row per channel with name, orders, revenue, average order value, units, revenue share and currency.
     - name: JSON summary (if you ask for JSON)
       contains: The same totals and channel list in a format other tools can read.
+next: [sales-channel-gap-finder]

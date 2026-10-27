@@ -55,3 +55,4 @@ output_sample:
       contains: Weak prompts for students to fix, with guidance on what a better version should include.
     - name: Prompt Principles Summary Card
       contains: A short card listing the main rules of a good prompt for students to keep.
+next: [ai-answer-critique-lesson, direct-teaching-lesson-builder]

@@ -91,6 +91,8 @@ output_sample:
       contains: A table that links every evidence file to the claims it supports.
     - name: evidence/tables/ and figures/
       contains: Results copied with exact numbers, and data points from each figure.
+    - name: rubric/requirements.md
+      contains: Only if you gave a grading rubric. Each rubric item mapped to the file that covers it.
 works_best_with:
   tools:
     - name: Claude Code or another file-capable AI
@@ -105,3 +107,4 @@ terms:
     meaning: A thing that was tried and dropped, kept so nobody repeats it.
   - term: Exploration tree
     meaning: A map of the questions asked, what was tried and what was decided.
+next: [research-paper-evidence-review, research-paper-writer]

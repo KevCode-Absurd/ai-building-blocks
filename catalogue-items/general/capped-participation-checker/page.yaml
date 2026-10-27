@@ -4,7 +4,7 @@ headline: Capped participation checker
 summary: Find what a preferred investor gets from a sale under a capped participation payout, and whether converting to common shares pays more.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The capped route and the conversion route behave differently as the price rises, so each needs its own calculation."
 subhead: Give it the sale proceeds and the terms of one preferred share class. It works out the capped payout and the payout if the investor converts to common shares. You get the larger payout and what is left for everyone else.
 explain: |-
   Some investors hold preferred shares. In a sale, an investor with capped participation gets their money back first. This is the preference. They then share in what is left, up to a cap. This capped participation checker shows what that investor is paid and what is left for the other owners.
@@ -119,8 +119,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one capped participation payout you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define cap multiple into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: Claude, ChatGPT or Gemini
@@ -148,3 +148,6 @@ terms:
     meaning: The ordinary shares held by founders, staff and others, paid after preferred shares.
   - term: Illustrative figures
     meaning: Practice numbers that show how the sums work. They are not a real deal.
+next:
+  - nonparticipating-preference-checker
+  - closing-equity-proceeds-checker

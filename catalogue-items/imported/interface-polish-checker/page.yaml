@@ -31,7 +31,7 @@ you_get:
   - Cleaner spacing and type
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running, web access or paid tool is needed.
-  - "Paste the skill text into the chat, then write: /baseline-ui followed by your file name."
+  - "Paste the skill text into the chat, then write: Apply this baseline to the file below. (The /baseline-ui slash form only works in tools that support custom commands.)"
   - Paste your page or component code below it. Add your framework and any design rules to keep.
   - Read each quoted line, the reason and the fix. Skip any fix that clashes with your existing design.
   - Apply the fixes you agree with, then paste the updated code and run the check again.

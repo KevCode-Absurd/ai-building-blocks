@@ -29,6 +29,7 @@ how_to_use:
   - Under it, paste the stage, the candidate and what you can say.
   - Send it and read the result.
   - Send within a day of your decision. Delay does the most harm.
+  - After sending, log the decision and the timeline you promised in your hiring folder. For other stages of a search, use the full Candidate message drafter.
 output_sample:
   input:
     - The stage in your process, such as after an interview
@@ -59,6 +60,9 @@ output_shape: |-
 
   MISSING
   <e.g. timeline>
+
+  CHECKS MISSED
+  <any check that failed or could not run, or none>
 tweaks:
   - what: Stage
     how: Name the stage and the length and warmth change to fit.

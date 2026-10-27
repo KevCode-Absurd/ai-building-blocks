@@ -16,7 +16,7 @@ when:
   - You want one source of truth for test results.
   - Your team needs to show every step of the maths.
 not_for:
-  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Settle that with your team first.
+  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Use experiment-designer first, then come back.
   - You want a ready-made testing tool with no SQL. Pick a testing platform instead, or ask a data person to set one up.
   - You have no data warehouse or no one who can run SQL. Use a simple spreadsheet comparison or a testing platform.
 you_give:
@@ -36,6 +36,7 @@ how_to_use:
   - "Work through the parts in order: assignment SQL, exposure log, dbt metric, then the t-test."
   - Run the SQL in your own warehouse. Your AI can write it, but it cannot query your data unless it can run code.
   - Check group sizes first, then read the results and decide to ship or stop.
+  - Write a short decision note and save it with the test results. Use a-b-test-verdict-maker to write the verdict.
 output_sample:
   input:
     - Your warehouse name, such as BigQuery or Snowflake
@@ -61,3 +62,11 @@ output_sample:
       contains: The smallest effect you can detect for your sample, or the sample you need.
     - name: Peeking and pitfall checks
       contains: Advice on sequential testing and the common mistakes that break homegrown setups.
+terms:
+  - term: t-test
+    meaning: A standard check of whether the gap between two groups is bigger than chance would explain.
+  - term: CUPED
+    meaning: A way to cut noise in the results by using what each user did before the test.
+  - term: sequential testing
+    meaning: A way to look at results while a test runs without fooling yourself. Peeking early with a plain t-test gives false wins.
+next: [a-b-test-verdict-maker, experiment-result-analyst]

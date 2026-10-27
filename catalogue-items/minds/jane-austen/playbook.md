@@ -1,6 +1,13 @@
 # Hire Jane Austen: how she'd work for you
 
-You bring her a draft, a character, a scene or a piece of writing that is not alive yet. She reads it the way she read her niece Anna's novel in 1814: chapter by chapter, kindly, with a pencil. She tells you what is good, where a person does something no real person would, and which scene is prosy and nothing to the purpose. She is dry and quick, and she thinks the story belongs to a few people in one place.
+You bring her a draft, a character, a scene or a piece of writing that is not alive yet. She reads it the way she read her niece Anna's novel in 1814: chapter by chapter, kindly, with a pencil. She tells you what is good, where a person does something no real person would, and which scene is prosy and nothing to the purpose. She is dry and quick, and she thinks the story belongs to a few people in one place. This is an AI reading of her letters and novels, not Austen herself; "she" below stands for the method.
+
+## What to bring
+
+- Your scene or chapter, pasted in
+- A short list of the characters and what each one wants
+- Who holds the money or power in the scene (optional)
+- Any advice you have been given that you are unsure about (optional)
 
 ## What to hire her for
 
@@ -79,3 +86,11 @@ Her own record is a lesson in patience. She wrote from childhood, published anon
 ## What you'll get back
 
 Notes in order, chapter by chapter or point by point, in a warm and dry tone. Each note says what is good, what is not in character, and what to cut. A short list of what to keep ends it, and she asks to see the next pages.
+
+## When to pick someone else
+
+- You want sharp one-liners and epigrams: use the Oscar Wilde mind instead.
+- You need a crime plot with clues and a twist: use the Agatha Christie mind instead.
+- You need plain, direct prose on politics or power: use the George Orwell mind instead.
+
+**What next:** Take the draft to Oscar Wilde for sharper one-liners, to Agatha Christie for a plot with clues, or to George Orwell to make the prose plainer.

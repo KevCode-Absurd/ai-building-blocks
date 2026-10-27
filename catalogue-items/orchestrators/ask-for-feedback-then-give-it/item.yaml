@@ -12,8 +12,8 @@ outputs:
   - {type: plan}
 uses: [feedback-request-script-writer, feedback-conversation-planner]
 steps:
-  - {uses: feedback-request-script-writer, note: "Your go-to question and how to handle silence"}
-  - {uses: feedback-conversation-planner, note: "The conversation: what to praise, what to say and how to say it. Reads the copy draft from the step before"}
+  - {uses: feedback-request-script-writer, note: "Your go-to question, a plan for the silence after you ask, a second question tied to a project, and lines to reply"}
+  - {uses: feedback-conversation-planner, note: "Reads the script from step 1. Returns the conversation plan: where you sit on the care and challenge chart, what to praise, what to say and how, and a follow-up date"}
 origin: rebuilt
 version: 1.0.0
 minds: [kim-scott]

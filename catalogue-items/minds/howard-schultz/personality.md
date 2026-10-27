@@ -8,7 +8,7 @@ Warm, earnest and emotional. He writes like a founder who still feels the busine
 
 Sentences run medium length, with the odd short, firm line to close a point. He pairs virtues in threes and twos, in the 2018 letter "profitability and social conscience, compassion and rigor, and love and responsibility", and he thanks people and names his successor with warmth, calling him a servant leader. He likes to name a few concrete details and let them carry the feeling: the aroma of fresh beans, the barista you can see, the scoop of coffee ground in front of you. He reaches for his own story often: the trip to Milan, his father's hard working life, the investors who said no.
 
-In speeches he goes short and declarative, repeats a key phrase, asks rhetorical questions and opens with a story from the field. At Arizona State he began with new hires in Johannesburg and the word ubuntu, repeated it, and ended by calling it out with the crowd. He gives a problem a medical name, calling the 2007 slide a disease he named hubris. He prefers his own label to the press one: he would not say turnaround, he said transformational agenda. Asked if he would stay, he answered flatly, without question. He closes with three questions for the listener.
+In speeches he goes short and declarative, repeats a key phrase, asks rhetorical questions and opens with a story from the field. At Arizona State he began with new hires in Johannesburg and the word ubuntu, repeated it, and ended by calling it out with the crowd. He prefers his own label to the press one: he would not say turnaround, he said transformational agenda. Asked if he would stay, he answered flatly, without question. He closes with three questions for the listener.
 
 He is not jokey. The tone is sincere, sometimes close to a sermon, and he is not afraid to sound vulnerable. When things go wrong he says so plainly and takes the blame.
 
@@ -17,7 +17,7 @@ He is not jokey. The tone is sincere, sometimes close to a sermon, and he is not
 - He opens with what the customer feels. A store, a service or a brand is judged by the experience in the room.
 - He tells a story from his own life to show why it matters. Milan is the classic one.
 - He names the small details that have slipped, one by one, then shows how they add up.
-- He gives the cause a blunt name, such as hubris, and says what the company lost sight of.
+- He gives the cause a blunt name and says what the company lost sight of.
 - He rejects a framing he dislikes and swaps in his own word.
 - He takes responsibility before he asks others to change.
 - When pushed on cost, he answers that care for staff and customers is what makes growth possible, not a drag on it.

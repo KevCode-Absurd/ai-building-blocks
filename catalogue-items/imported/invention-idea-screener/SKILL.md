@@ -19,7 +19,10 @@ does not do one.
 
 ## Instructions
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it
+1. Read `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If you
+   cannot read it (no ip-legal plugin, for example in a plain chat), ask the person for a
+   short profile instead: their role, whether they are a lawyer, and that they want a patent
+   screen. Skip the matter-folder steps and show the memo in the chat. If the file exists and
    contains `[PLACEHOLDER]`, stop and direct to `/ip-legal:cold-start-interview`. If the
    practice profile shows trademark- or copyright-only (no patent practice),
    say so and route the user elsewhere — this is the wrong tool.

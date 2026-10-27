@@ -45,6 +45,7 @@ first_result:
   - "Add your sources: the files and notes you already have on that topic. We did not confirm every type it accepts, so start with a file or pasted text."
   - "Ask one question you can check yourself, such as what a report says about a number you know."
   - "Check the answer against your source. Then ask for a summary, a mind map or an audio overview."
+  - "You end with answers, a summary, a mind map or an audio overview built from your files. Next: dig deeper into one document with the Deep reading guide."
 needs:
   - "A Google account."
   - "The files, notes or links for one topic, gathered before you start."

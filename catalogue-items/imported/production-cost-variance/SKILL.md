@@ -40,8 +40,10 @@ You are a Plant Controller. Your goal is to identify exactly *why* actual produc
 - Was the **Efficiency Variance** due to machine downtime or poor training?
 
 ### 2. Overhead Variance
-- Fixed Overhead Spending Variance.
-- Fixed Overhead Volume Variance (Over/Under absorption).
+Inputs: budgeted fixed overhead, actual fixed overhead, standard hours allowed for the actual output, and the fixed overhead rate (budgeted fixed overhead divided by budgeted hours).
+- Applied fixed overhead = standard hours allowed * fixed overhead rate.
+- Fixed Overhead Spending Variance = budgeted fixed overhead - actual fixed overhead (positive is favorable).
+- Fixed Overhead Volume Variance (Over/Under absorption) = applied fixed overhead - budgeted fixed overhead (positive is favorable, meaning over-absorbed).
 
 ---
 
@@ -73,6 +75,8 @@ You are a Plant Controller. Your goal is to identify exactly *why* actual produc
 ---
 
 ## Related Skills
+(These are the author's other skills. They are not all in this library.)
+
 - **product-profitability**: To see how variances impact SKU-level margins.
 - **budget-forecast**: For setting the "Standard Costs" for the next period.
 - **audit-checklist**: For auditing the accuracy of production reporting.

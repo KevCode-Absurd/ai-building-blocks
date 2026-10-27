@@ -11,27 +11,31 @@ This workflow chains two skills. Step 1 finds gaps. You pick one idea and get a 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-Use what they have attached or pasted first. The first step needs only an interest or a category and a cash limit. The second step needs a supplier quote.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**You need:**
-- **An interest, problem or Amazon category** (yours): the place to look for gaps.
-- **Whether you will make or only brand the product, and your cash for a first order** (yours): this changes which ideas rank first.
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A keyword tool export** (yours): phrases with monthly searches and how many listings carry each phrase in the title, for example from Helium 10. It has a free tier with capped lookups, so check current limits.
-- **Page 1 results** (yours): prices, ratings and review counts for each idea, pasted in.
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 
-**After the pause (needed for step 2):** one product's facts from your supplier: unit cost, size, weight and your selling price.
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they have already attached, pasted or put in their about-me note.
-2. **If something is missing, ask once.** In one short message, ask what they can make or brand and their cash limit. Say the keyword export and page 1 notes are optional. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. You cannot see Amazon yourself: use only the numbers and pages the person gives you.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your question, your brand brain, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Helium 10:** A keyword and product database with a title-competition filter. It has a free tier with capped lookups.
-- **Google Trends:** Free. Shows whether interest in a topic is rising.
-- **Seller Central fee calculator:** Amazon's own tool for current fees at your size and weight.
+- **Helium 10:** A keyword and product database with a title-competition filter and reverse ASIN lookup. It has a free tier with capped lookups, so check current limits. A paid plan is optional.
+- **Google Trends:** Free. Shows whether interest in a topic is rising before you check the same phrase on Amazon.
+- **Seller Central fee calculator:** Amazon's own tool shows current referral and fulfilment fees for your size and weight.
 <!-- /needs -->
 
 ## What you need
@@ -74,11 +78,9 @@ Say plainly that search numbers are estimates, that a gap shows searches exist a
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
-When you have handed it back, suggest one next step as a short question. It is a suggestion: if they are done, that is fine. Offer these, and say they can type their own:
-- **Got a go or test first:** work out profit per unit with the [Amazon seller profit calculator](https://useaiblocks.com/skills/amazon-seller-profit-calculator), or plan the launch with the [Launch an Amazon product with sales from day one](https://useaiblocks.com/workflows/launch-an-amazon-product-with-sales-from-day-one) workflow.
-- **Got a go:** write the page with the [Amazon listing writer](https://useaiblocks.com/skills/amazon-listing-writer).
-- **Got a no-go:** go back to step 1 with the next idea on the shortlist.
-If they pick one and it is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
 ## Check before you hand it back

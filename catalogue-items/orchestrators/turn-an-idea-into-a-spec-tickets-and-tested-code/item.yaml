@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: codebase, required: true}
 outputs:
+  - {type: code_change}
   - {type: document}
 uses: [spec-writer, ticket-planner, spec-builder, test-gap-finder, pull-request-writer]
 steps:

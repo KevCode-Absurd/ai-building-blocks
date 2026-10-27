@@ -9,7 +9,7 @@ subhead: Claude Code saves notes about your project as it works. This skill revi
 explain: |
   Claude Code keeps notes about your project as it works. This reviews those notes so the good ones become firm rules, and the stale ones get cut. You end up with a shorter, sharper memory file that Claude reads each session.
 
-  md and groups entries into those worth keeping, those that repeat, and those that are out of date. md or the rules folder, where they load every time. Recurring fixes can be turned into a standalone skill. A status view shows line counts and topic files, since only the first lines of the memory file load automatically. There are commands for review, promote, extract, status and saving a note on purpose.
+  The review reads your MEMORY.md file and sorts its entries into those worth keeping, those that repeat, and those that are out of date. Repeated lessons move into CLAUDE.md or the rules folder, where they load every time. Recurring fixes can be turned into a standalone skill. A status view shows line counts and topic files, since only the first lines of the memory file load automatically. There are commands for review, promote, extract, status and saving a note on purpose.
 when:
   - Your memory file has grown long and Claude seems to ignore the end.
   - The same lesson keeps showing up in your notes and you want it as a rule.
@@ -29,7 +29,7 @@ you_get:
   - A standalone skill built from a fix you repeat
   - A memory health summary with line counts and advice
 how_to_use:
-  - Open Claude Code in your project. Install the skill with the plugin steps in its SKILL.md.
+  - Before you start, check you have Claude Code v2.1.32 or later with auto-memory turned on. Open Claude Code in your project and run the two plugin commands in the skill's Installation section (/plugin marketplace add, then /plugin install).
   - Run /si:memory-review. Read the keep, merge and delete lists.
   - Run /si:promote on a note you want as a firm rule. Say yes before it writes anything.
   - Run /si:extract on a fix you keep repeating to turn it into a skill.

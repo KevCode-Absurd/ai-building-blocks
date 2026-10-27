@@ -18,6 +18,7 @@ not_for:
   - "You only need one hero photo: take a clear photo of the real product, or use the Product image spec writer to get the facts straight first."
   - "You have no real photos of the exact variant yet: take them first, because a different variant shown as this one would mislead."
   - "You want photos with no words for ads: use the Product image spec writer, or ask a photographer."
+  - "You only want an image-by-image plan with sourced words, not the finished files: use the Product page gallery planner."
 you_give:
   - The exact product and variant
   - Your brand facts (claims with sources, reviews, guarantee terms, offers, colours, typefaces, what you never show)
@@ -189,9 +190,9 @@ improve:
 works_best_with:
   tools:
     - name: Nano Banana
-      why: Built for brand consistency and handles words and layout well, which suits images with short lines on them.
+      why: Built for brand consistency and handles words and layout well, which suits images with short lines on them. Paid plans or credits may apply.
     - name: GPT Image
-      why: Lets you point at one word or part on an image and fix it, which suits the one-change remake rule.
+      why: Lets you point at one word or part on an image and fix it, which suits the one-change remake rule. Paid plans or credits may apply.
     - name: Shopify
       why: Lets you add alt text to each product image in the admin, so the alt lines go straight in.
   inputs:

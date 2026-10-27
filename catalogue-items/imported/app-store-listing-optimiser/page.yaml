@@ -31,7 +31,9 @@ you_get:
   - A screenshot plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a chat that can browse the web.
-  - Paste the skill text, then paste your App Store or Google Play link.
+  - Paste the skill text. Also paste or upload the five reference files in its references folder (scoring criteria, report template, Apple specs, Google Play specs and benchmarks), because the skill cites them and the audit scores worse without them.
+  - Paste your App Store or Google Play link. If your chat cannot browse, paste the listing text and a screenshot of the page instead.
+  - The public page cannot show your promotional text, keyword field or install data. Check those in App Store Connect or Google Play Console and paste them in.
   - Add competitor links, target countries or keywords if you have them (optional).
   - Read the score card and the top 3 quick wins first.
   - Check each rewritten title and subtitle against the character count before you save it in the store.
@@ -57,3 +59,4 @@ output_sample:
       contains: Specific fixes for your screenshots and preview video.
     - name: Priority action plan
       contains: Every change in order, ranked by impact and effort, with character counts for new text.
+next: [app-store-release-notes-writer, screenshot-privacy-masker, launch-checklist-runner]

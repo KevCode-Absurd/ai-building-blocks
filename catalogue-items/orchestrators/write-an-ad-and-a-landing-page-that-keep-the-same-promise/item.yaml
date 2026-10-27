@@ -20,10 +20,10 @@ outputs:
 uses: [pain-point-ad-builder, five-part-ad-checker, ad-matched-landing-page-writer, store-social-proof-placer, landing-page-30-point-checker]
 steps:
   - {uses: pain-point-ad-builder, note: "Writes the ad around the real customer problem found in your reviews. Hands step 2 the ad."}
-  - {uses: five-part-ad-checker, note: "Checks the ad has all five parts and keeps one idea, and lists the fixes for weak lines. Reads step 1's ad; you apply its fixes to that ad before step 3."}
-  - {uses: ad-matched-landing-page-writer, note: "Writes a page that repeats the ad's promise in its first screen, using step 1's ad with step 2's fixes applied, not the check report itself. Hands step 4 the page."}
-  - {uses: store-social-proof-placer, note: "Places reviews on the page where they answer the doubts its copy raises. Reads the page from step 3 and your reviews; hands step 5 a proof map that you apply to the page."}
-  - {uses: landing-page-30-point-checker, note: "Scores the finished page on 30 points before the ad and page go live together. Checks the page from step 3 with step 4's proof placements applied."}
+  - {uses: five-part-ad-checker, note: "Checks the ad has all five parts and keeps one idea, and lists the fixes for weak lines. Reads step 1's ad and hands you the fix list; you make the fixes before step 3."}
+  - {uses: ad-matched-landing-page-writer, note: "Writes a page that repeats the ad's promise in its first screen, using step 1's ad after you make step 2's fixes, not step 2's check report. Hands step 4 the page."}
+  - {uses: store-social-proof-placer, note: "Places reviews on the page where they answer the doubts its copy raises. Reads the page from step 3 and your reviews; hands you a proof map to add to the page before step 5."}
+  - {uses: landing-page-30-point-checker, note: "Scores the finished page on 30 points before the ad and page go live together. Checks step 3's page after you add step 4's proof, not step 4's map itself."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-an-ad-and-a-landing-page-that-keep-the-same-promise/skeleton.yaml

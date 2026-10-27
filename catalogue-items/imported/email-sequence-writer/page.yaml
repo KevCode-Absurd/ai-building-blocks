@@ -16,9 +16,10 @@ when:
   - You suspect your onboarding flow has gaps.
   - You want timing and copy done together.
 not_for:
-  - "You want cold outreach to people who don't know you: use cold-email, or write one short note by hand."
-  - "You want help inside your app, such as tips and tours: use onboarding, which covers in-app steps."
+  - "You want cold outreach to people who don't know you: use Cold email writer, or write one short note by hand."
+  - "You want help inside your app, such as tips and tours: use First use onboarding designer, which covers in-app steps."
   - "You want emails sent for you: this skill only writes them, so paste the copy into your email tool, such as Mailchimp."
+  - "You have one planned email and want four follow-ups with a stop rule: use the Follow-up email sequence writer."
 you_give:
   - The goal and trigger
   - Audience and offer
@@ -30,7 +31,7 @@ you_get:
   - Subject lines for each message
   - A list of missing lifecycle emails (optional)
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tool.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Writing the emails needs no code or files. Sending them needs an email tool, and some are paid (Customer.io is), so check each tool's current pricing.
   - Paste your product marketing notes, your offer and your audience. Add your current flow if you want a gap check.
   - "Answer the questions your AI asks first: the sequence type, what starts it, who it is for and your goal."
   - Read each email aloud. Check the subject lines, the one button per email and that every claim is true.

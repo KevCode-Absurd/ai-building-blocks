@@ -21,6 +21,7 @@ not_for:
   - "You want questions to ask before the talk: use the Customer interview question writer."
   - "You need a yes or no on your idea after five or so talks: use the Idea evidence review."
   - "You have one short talk and no quotes: write down what the person said and did first, then come back."
+  - "You want a quick first pass with fewer checks: use the Interview fact sorter."
 
 you_give:
   - Your notes from one or more conversations, as rough as they are

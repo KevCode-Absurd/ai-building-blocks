@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [claude-hopkins]
 credits:
-  - {title: "Scientific Advertising", by: "Claude C. Hopkins", used: "The order of the steps: free sample offer planner, small launch test planner, cost per customer calculator"}
+  - {title: "Scientific Advertising", by: "Claude C. Hopkins", used: "The ideas behind the steps: offer a free sample, test small in a few places, then judge ads by cost per customer"}
 generated_from: intake/scientific-advertising/skeleton.yaml

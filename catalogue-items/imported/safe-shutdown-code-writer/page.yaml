@@ -39,6 +39,7 @@ how_to_use:
   - Add the code to your project. Change only the lines it marks. A chat AI cannot edit your files, but Claude Code or Codex can.
   - Set the host's stop time a little above your drain time. For example, Kubernetes terminationGracePeriodSeconds should be larger than the drain limit.
   - Run the test it gives you. Send a stop signal while a slow request is running, and check the request still finishes.
+  - Once the test passes, add retries for calls to other services with the API retry handler.
 how_it_works:
   - title: Catch the stop signal
     text: It listens for SIGTERM and SIGINT at startup and ignores a second signal.
@@ -60,6 +61,7 @@ output_shape: |
   Host settings: <setting, current value, new value>
   Test: <how to send the signal and what to check>
   Not covered: <WebSocket, clustered workers, other gaps>
+next: [api-retry-handler, api-rate-limit-adder]
 output_sample:
   input:
     - Your server or worker code

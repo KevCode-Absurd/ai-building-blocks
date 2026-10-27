@@ -21,6 +21,7 @@ not_for:
   - "Your script is still being written: use the Video ad script writer from customer quotes first, then come back."
   - "You want a written script in a style you already chose: use the matching script skill named in your result, such as selfie-style-ad-script."
   - "You only need a still image ad: use single-image-ad-planner or carousel-ad-writer instead."
+  - "You want formats and hooks for short organic videos from your product: use the Short video format picker."
 
 you_give:
   - The finished script
@@ -94,6 +95,8 @@ output_shape: |
   Make it with: <video: script skill, then clips skill> or <still: image skill>, each tied to a must
 
   Length: <fits?> <best length> <where to add length>
+
+  CHECKS MISSED: <one line per check missed, or none>
 
 example:
   business: sprout

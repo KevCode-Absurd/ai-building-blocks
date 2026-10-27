@@ -143,3 +143,6 @@ works_best_with:
 terms:
   - term: Tripwire
     meaning: A number or date set in advance that, once reached, forces you to stop and rethink.
+next:
+  - decision-mistake-collector
+  - case-against-writer

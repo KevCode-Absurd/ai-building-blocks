@@ -31,6 +31,7 @@ you_get:
   - A test script and a comparison against the parent models
   - Advice on which merge method to use and how to tune it
 how_to_use:
+  - This is for ML engineers and developers. If you are not one, hand the merge to one.
   - Open Claude, ChatGPT or Gemini and paste this skill. Then list your models and the skills you want to keep.
   - Check that all your models share the same base design. Your AI will flag any that do not.
   - Ask for a merge config and the mergekit command. This step needs a computer or AI tool that can run Python code.

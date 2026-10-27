@@ -36,7 +36,7 @@ how_to_use:
   - "Gather your numbers first: planned price, launch date, weeks until launch, and whether buyers get a free sample."
   - Tell your AI what you sell and whether you are an individual or a known publisher.
   - Read each price choice and its reason. Ask your AI to explain any you doubt.
-  - Before you change your full price, test it. Compare two prices on your launch page and check which one sells more.
+  - Before you change your full price, test it. Compare two prices on your launch page for a fixed period, record sales at each, and keep the one that sold more.
 output_sample:
   input:
     - What you sell and the price you plan

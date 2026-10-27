@@ -1,0 +1,134 @@
+new_slug: mortgage-affordability-checker
+name: Mortgage affordability checker
+summary: Share your pay, costs, deposit and quoted rates. Get monthly payments, a higher-rate stress test and questions for your lender.
+job: manage-personal-finances
+thinking: medium
+thinking_why: It does sums and has to keep every number straight across several rates.
+headline: Mortgage affordability checker
+subhead: Give it your take-home pay, monthly costs, savings for a deposit and the rates you have been quoted. It works out the monthly payment at each rate, tests a higher rate, and shows what is left each month. You also get questions for your lender or adviser.
+explain: |
+  A lender's number tells you what they will lend. It doesn't tell you what you can live with. Many people find out the difference after the first rate rise, when the payment jumps and the rest of the budget has not moved.
+
+  This skill starts from your own pay and costs. For each rate you give it, it works out the monthly payment with a standard repayment formula and shows its working. It compares the payment with your take-home pay, then repeats the sums at a higher rate. It does not know today's rates, so you bring the ones you were quoted. The lender or adviser has the final say, and the skill ends with the questions to ask them.
+when:
+  - You are thinking about buying a home and want to know what monthly payment you could carry.
+  - You have quotes from one or more lenders and want to compare what each means each month.
+  - You want to know what happens to your budget if the rate goes up.
+not_for:
+  - "You want to know how much a lender will offer: only the lender can say. Use this to decide what you are comfortable with first."
+  - "You need advice on which product to take: speak to a licensed mortgage adviser."
+  - "You want your whole budget reviewed: use the Personal budget builder first, then come back."
+you_give:
+  - Your monthly take-home pay, after tax
+  - Your monthly costs and any debts you pay off
+  - The price you are looking at and the deposit you have saved
+  - The interest rates and loan length you were quoted, or want to test
+  - Costs of buying and owning, such as fees, insurance and upkeep, if you know them (optional)
+you_get:
+  - The monthly payment at each rate, with the working shown
+  - That payment as a share of your take-home pay, and what is left
+  - A stress test at a higher rate that you choose
+  - Questions for your lender or adviser
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your take-home pay, monthly costs, the price you are looking at and your deposit.
+  - Give the rates and loan length you were quoted. Take them from the lender's own page or quote, not from memory.
+  - Pick the higher rate you want to test. A few points above your quote is a common test.
+  - Check the sums with your lender's own calculator, then take the questions to them.
+output_sample:
+  input:
+    - Your monthly take-home pay, costs and debts
+    - The price you are looking at and your deposit
+    - The rates and loan length you were quoted, and the higher rate to test
+    - Buying and owning costs, if you know them (optional)
+  output:
+    - name: The loan
+      contains: The amount borrowed, worked out from your price and deposit, and the length you gave.
+    - name: Monthly payment
+      contains: The payment at each rate you gave, with its share of your take-home pay and what is left.
+    - name: Stress test
+      contains: The same sums at the higher rate, and whether your budget holds, is tight or breaks.
+    - name: Costs not yet in
+      contains: The buying and owning costs you did not give, listed so you can add them.
+    - name: Questions
+      contains: What to ask your lender or adviser, one line each.
+    - name: Missing
+      contains: Anything you did not tell it that changes the sums.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Sets the loan
+    text: Takes the price less your deposit as the amount borrowed, and the length you gave.
+  - title: Works out each payment
+    text: Uses the standard repayment formula for each rate and shows the working.
+  - title: Compares with your pay
+    text: Shows each payment as a share of your take-home pay, and what is left after your costs.
+  - title: Stress tests
+    text: Repeats the sums at the higher rate you chose, and says if the budget breaks.
+  - title: Lists the costs left out
+    text: Names the costs of buying and owning that you did not give, so you can add them.
+  - title: Writes the questions
+    text: Turns the gaps into questions for your lender or adviser.
+  - title: Checks itself
+    text: Re-runs the arithmetic, then names any check it missed.
+output_shape: |
+  THE LOAN
+  Price <your figure> | Deposit <your figure> | Borrowed <price less deposit> | Length <your figure>
+
+  MONTHLY PAYMENT
+  <rate> -> <payment> | Share of take-home pay: <%> | Left after costs: <amount>
+
+  STRESS TEST
+  <higher rate> -> <payment> | Left after costs: <amount> | Verdict: <holds / tight / breaks>
+
+  COSTS NOT YET IN
+  <buying and owning costs you did not give>
+
+  QUESTIONS FOR YOUR LENDER OR ADVISER
+  - <question>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Rates
+    how: Use rates from real quotes. If you only have a guess, give two or three and read the spread.
+  - what: The stress rate
+    how: Pick a rate that would hurt. If the budget breaks there, you know how much room you have.
+  - what: Your costs
+    how: Include what you really spend, not what you hope to spend. A budget that is too neat gives a payment that is too big.
+  - what: Loan length
+    how: Run it at two lengths. A longer loan lowers the payment each month but you pay more overall.
+judge:
+  - Each payment can be rebuilt from the amount, rate and length you gave.
+  - The working is shown, not just the answer.
+  - No rate appears that you did not give or choose.
+  - The stress test uses a higher rate and says what breaks.
+  - It says the lender or adviser decides, and that this is not financial advice.
+test:
+  - Check one payment with your lender's own calculator. The two should match closely.
+  - Run it at a rate two points higher. The payment should rise, and the left-over should fall.
+  - Give it a deposit of zero. It should still run, and should say the loan is the whole price.
+improve:
+  - Save your income and monthly costs in your about-me note, so you only change the house price and rate each time.
+  - Add the extra costs your area has, such as legal fees and local taxes, to the skill file, so they always show up.
+  - Add a line for the share of take-home pay you personally feel safe with, and have the skill compare against it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A repayment formula and a few rates is a quick job for any strong chat AI.
+    - name: A lender's own calculator
+      why: Use it to confirm the sums, since it holds the lender's real terms.
+  inputs:
+    - A written quote or illustration from a lender
+    - Your last three months of bank spending
+    - A list of debts with their monthly payments
+terms:
+  - term: Deposit
+    meaning: The part of the price you pay yourself. The loan covers the rest.
+  - term: Stress test
+    meaning: Running the sums at a higher rate, to see if you could still cope.
+  - term: Repayment loan
+    meaning: A loan where each payment pays back some of the amount borrowed as well as the interest.

@@ -5,7 +5,7 @@ description: "Use proactively whenever LLM API costs come up -- or should. Trigg
 
 # LLM Cost Optimizer
 
-You are an expert in LLM cost engineering with deep experience reducing AI API spend at scale. Your goal is to cut LLM costs by 40–80% without degrading user-facing quality -- using model routing, caching, prompt compression, and observability to make every token count.
+You are an expert in LLM cost engineering with deep experience reducing AI API spend at scale. Your goal is to cut LLM costs without degrading user-facing quality (the original author's 40–80% range is a rough estimate with no source: measure your own baseline and quote only what you measure) -- using model routing, caching, prompt compression, and observability to make every token count.
 
 AI API costs are engineering costs. Treat them like database query costs: measure first, optimize second, monitor always.
 
@@ -126,7 +126,7 @@ Cache LLM responses keyed by embedding similarity, not exact match. Serve cached
 
 Tools: GPTCache, LangChain cache, custom Redis + embedding lookup.
 
-Threshold guidance: cosine similarity >0.95 = safe to serve cached response.
+Threshold guidance (a rule of thumb from the author, not a tested limit; test it on your own data): cosine similarity >0.95 = safe to serve cached response.
 
 ### 6. Request Batching (10–25% reduction via amortized overhead)
 
@@ -178,6 +178,8 @@ Surface these without being asked, regardless of which mode is active:
 ---
 
 ## Handoff Triggers
+
+> **AI Blocks note:** these four skills are in this library under plain names: `senior-prompt-engineer` is the Prompt tester and tuner, `rag-architect` is the RAG pipeline designer, `observability-designer` is the Monitoring planner, and `performance-profiler` is the Slow code finder.
 
 If the conversation shifts to one of these, pause and invoke the relevant skill rather than continuing inline:
 

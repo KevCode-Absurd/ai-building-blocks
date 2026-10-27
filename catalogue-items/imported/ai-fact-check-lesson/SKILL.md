@@ -175,6 +175,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+> **AI Blocks note:** the AI answer in this example is a hypothetical made up to show the method. The Twenge citation, the 47% figure and the search results in the walkthrough are illustrative. They make no claim about the researcher or about what any real paper says. Always check a real citation yourself before you use it.
+
 **Scenario:** *AI output context: "Year 11 Psychology students used ChatGPT to get a summary of research on social media and teenage mental health. The AI produced a 200-word response that included 'According to a 2021 study by Twenge and colleagues published in JAMA Psychiatry, daily social media use of over 3 hours increases depression risk in teenagers by 47%.'" / Student level: "Year 11, basic internet literacy, no formal source evaluation training" / Subject area: "Psychology" / Verification resources: "Google, Google Scholar, school library database"*
 
 ---
@@ -261,6 +263,10 @@ Let me try a broader search: Twenge JAMA Psychiatry. Now I'm looking for any Twe
 My conclusion: this citation either doesn't exist or has been significantly misrepresented. I have NOT proven the claim is false — there may be a different Twenge 2021 paper I haven't found yet. But I cannot use this citation in an essay until I can verify it exists and says what I need it to say. The AI gave me something that looks like a citation but doesn't function as one."
 
 ---
+
+## Next steps
+
+Turn the findings from the Hallucination Hunt into a class discussion. Pair the lesson with the `source-credibility-evaluation-protocol` skill from the original collection (it is not part of this library), or use a general source-evaluation lesson.
 
 ## Known Limitations
 

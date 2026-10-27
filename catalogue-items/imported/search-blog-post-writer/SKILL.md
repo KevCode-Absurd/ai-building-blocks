@@ -157,7 +157,8 @@ Every blog post produced by this skill MUST contain:
 7. Insert internal links at natural transition points, including a foundational page and product CTA where appropriate
 8. Add external-source suggestions only when they are authoritative and relevant
 9. Do a final keyword placement check against the SEO Requirements checklist
-10. Do a final AEO, conversion, and claim-verification pass before outputting
+10. Do a final AEO, conversion, and claim-verification pass before outputting. The claim-verification pass means: every statistic, quote, date and external link must come from a source the user supplied. Anything else is marked `[UNVERIFIED: needs a source]`. Never present an invented figure, quote or link as real.
+11. Tell the user what to do next: check every claim and link, then run a page check before publishing.
 
 ---
 
@@ -168,6 +169,10 @@ Every blog post produced by this skill MUST contain:
 ## When to Use
 
 Use when creating or revising a long-form article intended to capture a specific search intent and guide readers toward a relevant next step.
+
+## When not to use
+
+Not for product pages or sales pages, and not for breaking news. Use a product page tool or a person for those. The External Distribution Notes only suggest ideas: check each platform's rules and set the canonical link before you post a copy anywhere.
 
 ## Limitations
 

@@ -9,7 +9,7 @@ subhead: Describe a firing you plan to do. Your AI checks it for high-risk flags
 explain: |
   A pre-decision check on a planned firing that catches the risky cases before the decision is final. You get risk flags, severance and release points, and when final pay is due, so you know whether to proceed or stop and ask for sign-off.
 
-  The skill gathers the basic facts, then walks a checklist of high-risk flags, such as recent complaints, leave, protected status, age and timing. If a flag fires, it escalates and tells you not to proceed without approval. It looks up rules for the employee's jurisdiction when you ask, with citations, and does not state the law from memory. It also covers severance, releases and final pay. A first check, not legal advice.
+  The skill gathers the basic facts, then walks a checklist of high-risk flags, such as recent complaints, leave, protected status, age and timing. If a flag fires, it escalates and tells you not to proceed without approval. It looks up rules for the employee's jurisdiction when you ask, with citations. If any rule comes from the AI's own memory, it is tagged [model knowledge - verify] and you must check it before you use it. It does not replace a lawyer. It also covers severance, releases and final pay. A first check, not legal advice.
 when:
   - You plan to let someone go and want to know the risks first.
   - The employee recently made a complaint or took leave.
@@ -31,12 +31,13 @@ you_get:
   - Final pay timing
   - Severance and release points
 how_to_use:
-  - Open your AI tool. Use one that can search the web, so it can look up current local rules.
+  - Open your AI tool. Use one that can search the web, so it can look up current local rules. Without web search, the check cannot cover your local rules.
   - Add the skill. Paste the skill text into the chat, or upload the skill folder.
-  - Set up your practice file first if you can. Use the setup-interview folder inside the skill to fill in CLAUDE.md. Without it, the skill works only from what you type.
+  - Set up your practice file first if you can. Use the setup-interview folder inside the skill to fill in CLAUDE.md. Without it, the skill works only from what you type. If the CLAUDE.md file is missing, answer the setup questions in the chat instead, or skip them and type the facts yourself.
   - Describe the firing. Give the role, the reason, the work location, and any recent complaints, leave or reviews. Add planned severance if you have it.
   - Read the flags and the Go / No-go line first. If a flag fired, do not go ahead without sign-off.
-  - Check every cite in the memo yourself, or have a lawyer check it. Final pay timing is the first thing to confirm.
+  - Check every cite in the memo yourself, or have a lawyer check it. Final pay timing is the first thing to confirm. Do not treat the memo as reliable until a lawyer has looked at any firing with a flag. For exit conversations after the decision, use the exit interview guide.
+next: [exit-interview-guide]
 output_sample:
   input:
     - A description of the planned firing and the reason

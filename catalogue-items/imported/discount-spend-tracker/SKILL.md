@@ -11,7 +11,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Tracks how much money the store gave away in discounts over time, bucketed by week, month, or quarter, and broken down by discount code and discount type (percentage / fixed amount / free shipping / automatic). Answers: "is our discount spend trending up or down, and which campaigns are driving it?" Read-only — no mutations. Complements `discount-roi-calculator` (per-discount return) with a longitudinal view of total cost.
+Tracks how much money the store gave away in discounts over time, bucketed by week, month, or quarter, and broken down by discount code and by discount type (code / automatic / manual / shipping). Answers: "is our discount spend trending up or down, and which campaigns are driving it?" Read-only — no mutations. Complements the Discount payoff calculator (per-discount return) with a longitudinal view of total cost.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
@@ -49,7 +49,7 @@ Tracks how much money the store gave away in discounts over time, bucketed by we
 4. Bucket each order into its period (week-of-year, year-month, or year-quarter) and aggregate:
    - Total discount cost per bucket
    - Per discount code per bucket
-   - Per discount type per bucket (percentage, fixed_amount, shipping, automatic)
+   - Per discount type per bucket (code, automatic, manual, shipping)
 
 5. Identify top codes by total cost across the window; aggregate the rest as `other`
 
@@ -175,13 +175,13 @@ CSV file `discount_cost_trend_<YYYY-MM-DD>.csv` with columns:
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Stacked discount codes | Multiple codes on one order | Attribute proportionally to each code by their `value` share, or label as `multi-code` if equal |
+| Stacked discount codes | Multiple codes on one order | Label the order `multi-code` and count its discount once, under that label, so code totals stay consistent |
 | Manual discount with no title | Cashier-entered with empty title | Group as `manual:untitled` |
 | Multi-currency orders | Presentment currency != shop currency | Sum on `shopMoney.amount` (shop currency) for consistency |
 
 ## Best Practices
 - Use `period: week` for promotional businesses with frequent campaigns; `period: month` for stores with steady evergreen offers; `period: quarter` for board reporting.
 - A flat or rising trend with no campaign activity often points to **automatic discount creep** — review automatic discounts that have no end date.
-- Cross-reference the latest bucket against `discount-roi-calculator` to verify the cost increase is producing matching incremental revenue.
+- Cross-reference the latest bucket against the Discount payoff calculator to verify the cost increase is producing matching incremental revenue.
 - Set `include_shipping_discounts: false` if your accounting books shipping subsidy separately from product discounts.
 - Set up monthly automation: discount spend that drifts above budget should trigger a finance review before it shows up in margin reports.

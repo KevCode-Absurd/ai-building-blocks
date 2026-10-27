@@ -1,15 +1,15 @@
 new_slug: hungriest-buyers-test
 name: Find the hungriest buyers and test a deal on them
-summary: Find the hungriest group to sell to, write a deal buyers believe, and plan a small test. Give it your groups and offer to start.
+summary: Give it the groups you could sell to. Get the hungriest group, a deal with a believable reason and a small test.
 job: make-offer
 thinking: high
 thinking_why: It ranks groups on buying proof, writes the deal and does the sums for a test. Give it your strongest model.
 headline: Sell to the people most ready to buy, with a deal they believe
 subhead: Give it the groups you could sell to, with what you know about each. It ranks them from coldest to hungriest and picks the one to test first. Then it writes your deal with a believable reason why, in three versions, and plans a small test with the numbers it has to hit.
 explain: |
-  Most small sellers pitch the biggest list or the cheapest audience, and a good offer fails there. The people on it never bought anything like it. A deal can also read as too good, so people doubt it and walk away.
+  A good offer can fail when it is pitched to the biggest list or the cheapest audience. The people on it may never have bought anything like it. A deal can also read as too good, so people doubt it and walk away.
 
-  This workflow ranks groups by proof of buying: who has bought something like your offer, how recently and how much they spent. It writes a deal with a reason why it exists that a stranger will believe, and one you can prove and will honour. Last, it does the sums before any money moves, sets a break-even line and plans a small test. The method comes from Gary Halbert's "The Boron Letters", especially his letter on lists, offers and testing.
+  This workflow ranks groups by proof of buying: who has bought something like your offer, how recently and how much they spent. It writes a deal with a reason why it exists that a stranger will believe, and one you can prove and will honour. Last, it does the sums before any money moves, sets a break-even line and plans a small test. The approach is inspired by Gary Halbert's "The Boron Letters".
 when:
   - You have an offer and several groups to sell it to, and you need to pick the first.
   - Your offers get views but no sales, and you suspect the audience or the reason to buy.
@@ -33,7 +33,7 @@ you_get:
   - The sums, each figure sourced or labelled as an assumption, and the break-even response
   - A test size, one thing to change, and rules for a second test, a rollout or a stop
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List your groups and the deal you want to run. It works step by step and saves each result.
   - Run the small test and compare it with the break-even line, not with your hopes.

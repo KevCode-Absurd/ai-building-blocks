@@ -207,7 +207,7 @@ Portfolio: yourname.com
 
 **Link to Specific Work:**
 ```
-• Redesigned checkout flow, increasing conversion by 40%
+• Redesigned checkout flow, increasing conversion by [your measured result, only if you tracked it]
   Case Study: yourname.com/checkout
 ```
 
@@ -318,6 +318,8 @@ When creating a creative resume:
 ```
 
 ## Creative Resume Checklist
+
+Run order: build both versions, check that every portfolio link opens, check readability, then send.
 
 - ✅ Have both ATS and designed versions
 - ✅ Design demonstrates relevant skills

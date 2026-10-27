@@ -5,7 +5,7 @@ name: Privacy policy drafter
 summary: Write a privacy policy draft for your business, with a checklist for your lawyer. Built from the data you collect and where your users live.
 job: check-contracts
 headline: Privacy policy drafter
-subhead: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it. Bring business and product description. Use the result to plan your next step.
+subhead: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it. Bring your business and product description.
 explain: |
   Privacy policy wording written for how your business really handles data, with a checklist for review. Have a lawyer check it before you publish.
 
@@ -16,7 +16,7 @@ when:
   - You added a new tool that collects data.
   - You want a list to hand your lawyer.
 not_for:
-  - "You need final legal wording or a guarantee of compliance: ask a lawyer, or check your regulator's own guidance."
+  - "You need final legal wording or a guarantee of compliance: ask a lawyer, or check your regulator's own guidance. Laws change, so recheck the draft against current law for your country on a set date each year."
   - "Your business handles health, school or bank records under special rules: have a privacy lawyer write and review the policy."
   - "You only need a cookie banner or consent tool: use a cookie consent tool, then bring its details here."
 you_give:
@@ -34,7 +34,8 @@ how_to_use:
   - Describe your business and what your product does.
   - List every kind of personal data you collect, and the tools that handle it, such as analytics, payments and login.
   - Say which countries your users live in, and whether children may use your product.
-  - Read the draft. Fill every gap the AI marks, and confirm each claim about your own systems is true, such as security and consent steps.
+  - Read the draft. Fill every gap the AI marks.
+  - Before you publish, list each factual claim in the draft, such as security, data sale and retention periods. Confirm each one against your own systems, not against the AI's output.
   - Send the draft and the review checklist to your lawyer before you publish. Run it again when you add a new tool that collects data.
 output_sample:
   input:

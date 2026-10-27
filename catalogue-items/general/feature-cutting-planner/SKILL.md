@@ -7,32 +7,9 @@ description: Use when a product, service or page has more parts than people can 
 
 Every feature seems small when it is added, and the sum is a product nobody can explain. This skill checks each part against one job, cuts what does not serve it, and puts what is left in an order that shows how to use the product. It works for apps, devices, services, courses and web pages.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+## When to use it
 
-**Works best with** (or they can paste their own instead):
-- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
-
-**Makes it better (optional):**
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with audit report, your question, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
-
-**Tools that do this best:**
-- **Any good chat AI:** Weighing a list of features against one job is text work any strong chat AI does well.
-- **A spreadsheet:** A part-by-part table with usage counts makes decisions easy to see.
-<!-- /needs -->
+Use it when a product has more parts than people can use. Do not use it when the product has no users yet (write down the job you expect first, or talk to a few likely users), when you need a legal or compliance review of what must stay (ask a specialist; this skill only marks those parts as fixed), or when you first want a review of how the design looks and works (run the [Design ten-principles reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer), then bring its report here).
 
 ## What you need
 
@@ -58,12 +35,10 @@ How to start:
 
 The one job and who would own the result. Part by part decisions with reasons. The order of what is left. Consistency fixes. The durability note. The plan. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+## What next
+
+When you've handed it back, ask in one short question what they want to do next. Offer this, and say they can type their own:
+- **Check the slimmer version** by running the [Design ten-principles reviewer](https://useaiblocks.com/skills/design-ten-principles-reviewer) again after the cuts are made.
 
 ## Check before you hand it back
 

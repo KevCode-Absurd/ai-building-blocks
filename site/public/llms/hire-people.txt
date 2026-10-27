@@ -1,6 +1,6 @@
 # Hire and look after your people: AI Blocks
 
-> 106 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 108 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner): Share the role, goals, team and time available. Get a new-hire plan with first-week tasks, milestones and check-ins.
 - [Annual hiring and staff-cost planner](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost): Share team numbers, hiring goals, pay and start dates. Get a hiring sequence, headcount forecast and staff-cost budget.
@@ -24,6 +24,7 @@
 - [Employee wellbeing program planner](https://useaiblocks.com/skills/employee-wellbeing-program): Plan workplace support around workload and staff needs. Compare options, manager guidance and follow-up measures, with clinical care kept separate.
 - [Exit interview and grievance planner](https://useaiblocks.com/skills/exit-interview-guide): Get exit interview questions that draw honest answers, plus a fair six-step way to handle an employee complaint. Not legal advice.
 - [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer): Compare job candidates fairly. Paste interview transcripts and your scorecard. You get scored answers, evidence gaps and bias checks.
+- [First-employee payroll set-up planner](https://useaiblocks.com/skills/first-employee-payroll-setup-planner): Say where you are and when your first hire starts. Get a dated payroll set-up plan and questions for your accountant.
 - [Handbook change and cross-reference checker](https://useaiblocks.com/skills/handbook-change-checker): Share a handbook change and current policies. Compare wording, find related sections and review effects on state supplements and promised benefits.
 - [Headcount and hiring forecast planner](https://useaiblocks.com/skills/headcount-forecast-builder): Share past team counts, exits and business goals. Plan hiring needs with clear assumptions, scenarios and a method suited to your data.
 - [Headcount scenario planner](https://useaiblocks.com/skills/headcount-scenario-planner): Share your team plan, costs and business assumptions. Compare possible hiring paths, cost changes and signs that would trigger a different plan.
@@ -87,6 +88,7 @@
 - [Plan staff coverage during a disruption](https://useaiblocks.com/workflows/plan-workforce-disruption-coverage-before-announcing): Provide essential services, staff availability and disruption facts. Get feasible coverage options, escalation roles and message drafts.
 - [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Check your product manager resume against ten rules. Get fixes from your own bullets and a draft tailored to the job you want.
 - [Reference check question writer](https://useaiblocks.com/skills/reference-check-question-writer): Write fair reference check questions for any role. Get a call script and a sheet to record answers, so every candidate gets the same questions.
+- [Remote work policy writer](https://useaiblocks.com/skills/remote-work-policy-writer): Say how your team works from home. Get a plain remote work policy and a list of choices left to make.
 - [Review cycle form builder](https://useaiblocks.com/skills/review-cycle-form-builder): Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
 - [Salary band and benefits planner](https://useaiblocks.com/workflows/set-fair-pay-bands-and-a-pay-and-benefits-plan): Share roles, location, pay data and budget. Get market comparisons, salary bands and a proposed bonus and benefits plan.
 - [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner): Plan a fair shift pattern, a weekly schedule and a rotation for nights and weekends, with a swap policy and staff notice. Not legal advice.

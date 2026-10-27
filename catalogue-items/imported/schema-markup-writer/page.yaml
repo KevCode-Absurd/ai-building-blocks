@@ -34,7 +34,7 @@ you_get:
   - Steps to paste the code and test it in Google's Rich Results Test
   - A final checklist to run before you publish
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. Add the template files from the skill folder if your AI lets you attach files.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. The template files in the skill's references folder must be pasted or attached too, because a chat cannot open the folder by itself. Without them, your AI writes the markup from its own knowledge.
   - Say what your page is, for example "a product page" or "a blog post". Paste the page link, title, description and the details that apply.
   - For products, add the real price, currency and stock status shown on the page. For FAQs, paste the exact questions and answers shown on the page.
   - Read the validation table first. Fix anything marked missing, then ask your AI to rerun the markup.

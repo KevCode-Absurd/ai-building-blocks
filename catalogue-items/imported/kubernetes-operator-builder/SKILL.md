@@ -175,7 +175,7 @@ See `references/reconcile_loop.md` for full detail. Quick rules:
 3. kubebuilder create api --group apps --version v1alpha1 --kind MyApp
 4. Run crd_validator.py on config/crd/bases/apps.example.com_myapps.yaml
    → Fix every WARN before writing controller code
-5. Implement the reconcile function (Karpathy principle 2: simplest correct version first)
+5. Implement the reconcile function (write the simplest correct version first, and add features only after it works)
 6. Run reconcile_lint.py on controllers/myapp_controller.go
 7. Run operator_capability_audit.py --operator-dir . — confirm L1
 8. Test in a kind cluster: kubectl apply -f config/samples/

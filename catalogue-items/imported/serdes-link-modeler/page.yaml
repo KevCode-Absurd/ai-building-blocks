@@ -15,10 +15,12 @@ when:
   - You have measured S-parameters for a channel and want to see the eye.
   - A partner needs an IBIS-AMI model of your transmitter or receiver.
   - You want to sweep data rates and compare eye margin.
+  - You are an engineer who knows MATLAB and signal integrity. This is not for general business use.
 not_for:
   - "You have no MATLAB or SerDes Toolbox licence: ask a signal integrity engineer, or use a free circuit simulator."
   - "You need a full board layout or 3D field solve of your channel: use a dedicated electromagnetic solver and bring the S-parameter file here."
   - "You want a quick answer on cable length or loss: check the cable or connector datasheet instead."
+  - You want to use the code outside MATLAB or other MathWorks products. The licence does not allow it.
 you_give:
   - Your target data rate and signal type, such as NRZ or PAM4
   - Your channel loss, or a Touchstone S-parameter file

@@ -229,8 +229,10 @@ npm run build
 # 3. Validate new value works
 varlock load
 
-# 4. If using GitHub Secrets, sync (values not shown)
-./scripts/update-github-secrets.sh
+# 4. If using GitHub Secrets, update them yourself. This copy has no sync script.
+#    Use the repo's Settings page, or the GitHub CLI, which asks for the value
+#    without showing it in the chat:
+gh secret set SECRET_NAME
 ```
 
 ### Pattern 3: CI/CD Integration
@@ -247,7 +249,10 @@ varlock load
 ### Pattern 4: Docker Integration
 
 ```dockerfile
-# Install Varlock in container
+# Install Varlock in container.
+# This downloads a script from the web and runs it at build time. Read it first,
+# pin a version, and check it against the checksum or release notes on varlock.dev
+# before you trust it in a shared image.
 RUN tmpdir="$(mktemp -d)" \
     && curl -sSfL https://varlock.dev/install.sh -o "$tmpdir/varlock-install.sh" \
     && cat "$tmpdir/varlock-install.sh" \
@@ -312,6 +317,8 @@ Claude should respond:
 ---
 
 ## External Secret Sources
+
+1Password and AWS Secrets Manager are paid services. The examples below need an account with that service and its command line tool (`op` or `aws`) installed first. They are optional. A plain `.env` file checked by Varlock works without them.
 
 ### 1Password Integration
 

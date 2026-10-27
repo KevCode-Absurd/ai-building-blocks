@@ -1,6 +1,6 @@
 # Set your prices: AI Blocks
 
-> 37 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 38 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Buyer pricing survey test planner](https://useaiblocks.com/workflows/set-your-price-from-what-buyers-say-then-test-it-safely): Share product facts and buyer context. Get survey questions, a price-and-tier model after real answers and a reversible price-test plan.
 - [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner): Share stock, past prices, sales, and deadlines for a discount plan with sales and revenue estimates.
@@ -13,6 +13,7 @@
 - [Free-to-paid flow designer](https://useaiblocks.com/skills/free-to-paid-flow-designer): Turn SaaS plans and free-tier limits into upgrade prompts, plan options, and win-back flow designs.
 - [Freelance website quote and proposal planner](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote): Share website scope, effort, costs and payment terms. Get a bounded proposal draft, price assumptions and contract review questions.
 - [Hotel room pricing planner](https://useaiblocks.com/skills/hotel-room-pricing-planner): Share bookings, room rates, demand and channel costs. Get proposed prices, overbooking limits and channel options based on those inputs.
+- [Hourly rate calculator](https://useaiblocks.com/skills/hourly-rate-calculator): Give it your target pay, costs and billable hours. Get an hourly rate, a day rate and a project price.
 - [Membership and subscription pricing planner](https://useaiblocks.com/skills/membership-plan-pricer): Share your tiers, billing cycle and usage. Get proposed prices, upgrade paths and membership rules, with assumptions stated.
 - [Minimum viable price calculator](https://useaiblocks.com/skills/waterfall-price-setter): Share costs, sales targets and acquisition spend. Calculate the lowest viable price or identify a product that cannot pay.
 - [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner): Use ecommerce costs and rival offers to draft product prices, price floors, and response rules.

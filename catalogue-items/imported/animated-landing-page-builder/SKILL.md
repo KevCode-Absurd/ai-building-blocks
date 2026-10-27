@@ -89,7 +89,7 @@ From Q1's elevator pitch, derive:
 - **CTA text** — action-oriented, matches tone
 - **Closing copy** — short, emotive, matches tone
 
-**Fallback when input is sparse:** invent compelling content from product-name semantics + audience register. Flag inferred content with a comment in the HTML source (`<!-- inferred: ... -->`). Don't stall waiting for more input.
+**Fallback when input is sparse:** invent compelling content from product-name semantics + audience register. Mark every invented number, quote, customer name or claim on the page itself with a visible `[CONFIRM CLAIM]` tag, and tell the user to replace each one before publishing. Never invent figures, reviews or customer names. Don't stall waiting for more input.
 
 ## Brand System Specification
 
@@ -302,7 +302,7 @@ Run `scripts/html_validator.py --file ${OUTPUT_DIR}/<slug>.html` after generatio
 
 | Situation | Behavior |
 |---|---|
-| Input is just a name with no context | Invent compelling content from name semantics + audience register; flag as `<!-- inferred -->` in HTML source |
+| Input is just a name with no context | Invent compelling content from name semantics + audience register; mark every invented claim with a visible `[CONFIRM CLAIM]` tag and tell the user to replace it before publishing |
 | Input file is large or PDF | Read fully before generating; don't truncate |
 | Brand colors insufficient (only 1 HEX provided) | Use as primary; derive secondary/accent algorithmically (lighten/darken via brand_palette_validator.py) |
 | Features count not specified | Default to 4 |

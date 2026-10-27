@@ -35,7 +35,7 @@ how_to_use:
   - Describe the personal data you hold, why you collect it, where it is stored and who receives it.
   - "Say what you need: a gap check, a legal basis, a rights request plan, a breach plan or a transfer check."
   - Read the gap table first. Fix the high priority rows first.
-  - Take the result to a Brazilian lawyer. Mark which items need their sign-off.
+  - Send your lawyer the gap table, the legal basis list and the transfer notes. Mark which items need their sign-off. First confirm each dated rule or fine on the ANPD website, because they change.
 output_sample:
   input:
     - A description of the personal data you collect and why

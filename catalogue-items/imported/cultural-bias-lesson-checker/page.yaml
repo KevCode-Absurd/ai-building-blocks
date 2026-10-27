@@ -9,7 +9,7 @@ subhead: A lesson built in one country can quietly fail in another. Paste a task
 explain: |
   A lesson built in one country can quietly fail in another. Paste a task or teaching practice and say who will use it, and you get a check for cultural bias and hidden assumptions.
 
-  It looks at what the task takes for granted: examples, values, ways of speaking up in class, views of the teacher's role and how success is judged. It compares those with the culture the task came from and the culture of your learners. Concerns you name get extra attention. You get a verdict on how well the task fits, plus changes that keep the learning goal while fitting your learners. It is guided by cross-cultural education research.
+  It looks at what the task takes for granted: examples, values, ways of speaking up in class, views of the teacher's role and how success is judged. It compares those with the culture the task came from and the culture of your learners. Concerns you name get extra attention. You get a verdict on how well the task fits, plus changes that keep the learning goal while fitting your learners. It draws on work by Henrich, Heine and Norenzayan (2010), Tobin, Wu and Davidson (1989), Alexander (2001) and Stigler and Hiebert (1999).
 when:
   - You are using a lesson from another country with your class.
   - A teaching method that worked elsewhere is not landing with your learners.
@@ -36,7 +36,9 @@ how_to_use:
   - Say who your learners are and where you teach. Add any worries you have, and where the task came from if you know.
   - Read each assumption the AI lists. Talk it over with a colleague or with your students.
   - Pick one adapted version and try it with your class. Change the whole unit only after it works.
-  - Treat the regional examples as ideas to check. Your own students may be different.
+  - Treat the regional examples as ideas to check. Your own students may be different. Cultural patterns describe tendencies across groups, not any one student.
+  - Before you quote a finding to colleagues or parents, read the original study named in the result.
+next: [overloaded-lesson-checker]
 output_sample:
   input:
     - The task, lesson or teaching practice, pasted in full

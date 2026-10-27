@@ -39,6 +39,14 @@ Queries products (or variants, or customers) matching a filter and bulk-sets or 
 
 > ⚠️ `metafieldsSet` overwrites existing metafield values — there is no merge. `metafieldsDelete` permanently removes the metafield value from the resource. Run with `dry_run: true` to confirm the affected product list and verify namespace/key are correct before committing.
 
+## Scope
+
+The workflow steps below query and update products only. The `resource_type` values `variant` and `customer` are listed, but no query steps are given for them. Use products unless the user supplies the matching queries, and test on one record first.
+
+## Undo
+
+Every run saves a CSV with the `old_value` of each field. To undo a `set`, re-run `metafieldsSet` with the `old_value` from the CSV for each row. For rows that had no old value, run `metafieldsDelete` on the field. To undo a `delete`, re-run `metafieldsSet` with the `old_value`. Keep the CSV until the storefront has been checked. Always test on a small set first.
+
 ## Workflow Steps
 
 1. **OPERATION:** `products` — query

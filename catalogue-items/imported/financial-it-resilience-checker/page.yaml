@@ -31,12 +31,14 @@ you_get:
   - A register of information outline
   - Priority actions
 how_to_use:
+  - Before you start, gather your supplier list, the contract clauses that cover each one, and the facts of any incident. Without the incident facts the skill will not classify it.
   - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check current DORA texts.
   - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.
   - "Describe your firm: its type, size and the services it runs."
   - List your IT suppliers and what each one does. Add contracts, policies and past incidents if you have them.
   - Check the source links and dates in the answer before you rely on them.
   - Share the gap list with your compliance lead or lawyer before you act on it.
+  - Then review your riskiest suppliers one by one with the vendor risk reviewer, and write an incident runbook.
 output_sample:
   input:
     - Your firm type and size
@@ -58,3 +60,4 @@ output_sample:
       contains: The fields to fill in for each ICT service arrangement, such as provider, service type and data location.
     - name: Priority actions
       contains: The gaps to fix first, in order.
+next: [vendor-risk-reviewer, incident-runbook-writer, supplier-risk-scorecard-builder]

@@ -38,6 +38,7 @@ how_to_use:
   - Say what matters most. Pick one or two of accuracy, tone, speed and safety, so the plan stays short.
   - Read the list of scores. Cut any you cannot explain to a teammate. Fewer, clearer scores beat a long list.
   - Run the plan on your own data. This skill writes the plan and sample code. It does not run tests, and the code needs changes before it works for you.
+  - Next, run the baseline before you change any prompt or model, and save the scores. Then change one thing and run the same tests again.
   - Note the costs. The AI judge and some scores need a paid API key or a large model download. Say your budget up front.
 output_sample:
   input:

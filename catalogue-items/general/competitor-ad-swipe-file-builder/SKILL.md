@@ -12,27 +12,32 @@ Only the public **Meta Ad Library** at facebook.com/ads/library, browsed by hand
 
 What the library shows (Meta Help Center, "Ad Library"): every ad that is currently active across Meta's apps, with the advertiser, the date it started running, the platforms, and a note when an ad has several versions. Spend and reach appear only for ads about social issues, elections or politics. For ordinary ads there is no spend, no results and no targeting, and they leave the library once they stop. So the board can say how long an ad has run. It can never say an ad worked.
 
+## When not to use
+- You have not collected any ads yet. Browse the Meta Ad Library by hand first and save each ad's ID, start date and a screenshot.
+- You want ideas that competitors all miss. Use the Competitor ad gap finder.
+- You want a review of your own ads. Ask a person who knows your account, or check them against your own results.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 
 **Makes it better (optional):**
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with reference ads, your brand brain, competitors. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for reference ads, your brand brain, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Ad Library:** The public source for every active ad, with its library ID and start date, browsed by hand.
@@ -113,10 +118,7 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Study competitor ads** with the [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
-- **Write the ad copy** with the [Candid line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
-- **Understand your buyers** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
-- **Make an offer people want** with the [Niche price ladder builder](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the shortlist.
+- The [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -137,12 +139,10 @@ Write `MISSING: <what>`. No start date: leave the tier blank. No screenshot: don
 - Padding a thin type.
 
 
-## Board taxonomy and near-duplicate keys
+## Clearing near-duplicates (optional)
 
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-foreplay-ad-board.md.
+Use this to tidy a big pile before you file it. It adds no new types: use the nine on the map above, and a second tag never makes an extra row.
 
-Keep the public-library access rules above. Authorized Foreplay collection belongs in the separate connector/export workflow, not an unannounced scope change here.
+Remove repeats by library ID first. For likely variants, compare the advertiser, the destination link, the opening of the caption and the picture itself. A shared link alone does not prove two ads are the same. Keep real message variants as one card, with the variants noted (step 2). Spread the board across advertisers and formats. Run time shows how long an ad has been kept, not whether it made money. Keep the library ID and your own notes, and do not copy or share a rival's pictures or films outside your own study board.
 
-Index study jobs: identity, use/demo, problem, comparison, mechanism, real customer proof, founder story, education, occasion, offer and native/editorial structure. Adjust these eleven starting buckets to the sample. Secondary tags do not create extra ad rows.
-
-Deduplicate original source IDs first. For likely variants compare advertiser, normalized destination, caption opening and available media hash. A shared URL alone does not prove identical creative. Retain legitimate message variants with links. Balance advertisers and formats; a two-per-brand shortlist rule is optional, not a corpus law. Age is longevity only, not profitability. Keep rights notes and share links or original analysis rather than redistribute raw competitor media.
+Foreplay and other ad-saving tools are paid services outside this skill. It only works from ads you collected by hand from the public Meta Ad Library.

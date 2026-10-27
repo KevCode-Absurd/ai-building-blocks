@@ -4,7 +4,7 @@ headline: Capital call allocation checker
 summary: Split one approved capital call across eligible commitments and see if one investor's share is more than they can still be called for.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "A share must be capped by what the investor can still be called for, and the shares must add back to the call."
 subhead: Give it the approved call amount, one investor's commitment and the other eligible commitments. It works out that investor's share, compares it with what can still be called and shows any shortfall.
 explain: |-
   A capital call is split by commitment. The easy slip is to divide by the total fund commitments when some investors are excused or in default. This capital call checker first confirms who is eligible, then splits the call by each eligible commitment.
@@ -51,10 +51,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Call date"
+    how: "Take the call date from the approved call and the commitment ledger. Use one currency and scale on every line."
+  - what: "The investor's remaining commitment"
+    how: "Change the the investor's remaining commitment and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Eligible commitments share the same transaction and allocation rules.
 judge:
@@ -67,8 +67,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one capital call allocation you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define eligible commitment into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -110,3 +110,6 @@ output_sample:
       contains: Each input you did not supply, left open and never replaced with zero.
     - name: CHECKS MISSED
       contains: The checks that could not run, or the word none.
+next:
+  - unfunded-commitment-checker
+  - fund-recycling-capacity-checker

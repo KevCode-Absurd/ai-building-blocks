@@ -217,6 +217,8 @@ All output follows the structured standard:
 
 ## Related Skills
 
+(These are the author's other skills. They are not all in this library. If you do not have one, ask your AI to do that step.)
+
 - **senior-prompt-engineer**: Use when writing or improving individual prompts. NOT for managing prompts in production at scale (that is this skill).
 - **llm-cost-optimizer**: Use when reducing LLM API spend. Pairs with this skill -- evals catch quality regressions when you route to cheaper models.
 - **rag-architect**: Use when designing retrieval pipelines. Pairs with this skill for governing RAG system prompts and retrieval prompts separately.

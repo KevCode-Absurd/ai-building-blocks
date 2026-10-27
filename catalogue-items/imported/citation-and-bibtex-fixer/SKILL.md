@@ -9,6 +9,29 @@ source: community
 date_added: "2026-09-04"
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `scripts/search_google_scholar.py`
+- `scripts/search_pubmed.py`
+- `scripts/extract_metadata.py`
+- `scripts/doi_to_bibtex.py`
+- `scripts/format_bibtex.py`
+- `scripts/validate_citations.py`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
+## Without the scripts
+
+The examples below call those scripts. Without them, do each job by hand:
+
+1. **DOI to BibTeX:** open the DOI at doi.org (or the publisher page) and copy its BibTeX export. Compare authors, title, journal, year and pages with the entry.
+2. **PubMed or arXiv ID:** use the PubMed or arXiv page and its "cite" or BibTeX export.
+3. **Titles:** search PubMed or the publisher site first. Google Scholar may block automated searches and its terms can forbid scraping, so look things up by hand there and never in bulk.
+4. **Duplicates and style:** sort entries by DOI or title, merge repeats, and make the key names follow one pattern.
+5. **Validate:** for each entry, check that the fields exist and match the source page. Mark any entry you could not check as unverified. Never fill in a missing field from memory.
+
 # Citation Management
 
 ## Detailed Guide

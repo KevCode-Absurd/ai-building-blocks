@@ -15,6 +15,10 @@ Take a site that already has traffic and under-monetizes it, and turn it into a 
 
 **Most traffic problems are conversion problems in costume: capture and convert the visitors you have before buying more.** This skill sequences the phases, asks the decision questions, and records every choice in `docs/`. The constituent skills carry the method — invoke them rather than improvising their frameworks. Research comes before optimization, and the offer comes before the page polish, always.
 
+## About the numbers
+
+The percentages in this guide (for example 30-50% versus 3-10% conversion, 3% of a market ready now, 7% of word-of-mouth online, retention cost and profit figures) are the author's rough rules of thumb. They have no source here. Never quote them to the person as facts or as results they will get. Use them only to explain the idea, and test the real numbers on the person's own site.
+
 ## Journey Map
 
 | Phase | Skill | Question it answers | Artifact |

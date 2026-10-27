@@ -226,7 +226,7 @@ Optimize nested properties using dot notation:
 % Optimize substrate thickness along with width
 optObj = optimize(ml, 2.4e9, 'maximizeReturnLoss', ...
     {'Width', 'Substrate.Thickness'}, ...
-    {0.001 0.5e-3; 0.01 3e-3}, 'sadea');
+    {[0.001 0.5e-3]; [0.01 3e-3]}, 'sadea');   % {[lower bounds]; [upper bounds]}, one value per scalar property
 ```
 
 ## Decision: optimize() vs Manual Loop

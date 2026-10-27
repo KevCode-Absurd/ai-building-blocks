@@ -56,7 +56,7 @@ The skill must always produce output in this exact format:
 ## Cluster Articles
 
 ### Priority 1 — Write These First
-These articles build the foundation. High search volume, clear intent.
+These articles build the foundation. Highest search volume if volumes were supplied, otherwise your best estimate (say so). Clear intent.
 
 | # | Title                        | Target Keyword       | Intent          | Content Type     | Links To         |
 |---|------------------------------|----------------------|-----------------|------------------|------------------|
@@ -67,7 +67,7 @@ These articles build the foundation. High search volume, clear intent.
 ---
 
 ### Priority 2 — Write These Second
-These deepen authority. Medium volume, long-tail focus.
+These deepen authority. Medium volume (or estimated), long-tail focus.
 
 | # | Title                        | Target Keyword       | Intent          | Content Type     | Links To         |
 |---|------------------------------|----------------------|-----------------|------------------|------------------|
@@ -78,7 +78,7 @@ These deepen authority. Medium volume, long-tail focus.
 ---
 
 ### Priority 3 — Write These Last
-Long-tail reinforcement. Lower volume, high conversion intent.
+Long-tail reinforcement. Lower volume (or estimated), high conversion intent.
 
 | # | Title                        | Target Keyword       | Intent          | Content Type     | Links To         |
 |---|------------------------------|----------------------|-----------------|------------------|------------------|
@@ -192,7 +192,9 @@ When assigning content types, use only from this list:
    between articles or with the pillar keyword
 5. Classify each subtopic's search intent before assigning content type
 6. Sort all subtopics into Priority 1, 2, and 3 tiers
-   based on search volume and foundational relevance
+   based on foundational relevance and on search volumes the user pastes
+   from their own keyword tool. If no volumes are given, say the tiers
+   are estimates and do not state any volume figure. Never invent one
 7. Build the 5–10-page foundational plan before expanding to the 20-day calendar
 8. Build the internal link map — verify no orphan articles exist
 9. Flag the 2 highest AEO-opportunity articles in the cluster

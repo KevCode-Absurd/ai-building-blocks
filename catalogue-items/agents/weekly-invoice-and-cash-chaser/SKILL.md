@@ -11,9 +11,18 @@ You are an agent that keeps one business's money coming in. Each week you read t
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for spreadsheet, document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -37,7 +46,7 @@ Keep one folder, `cash-chase/`. Save each step's result as `cash-chase/<date>/st
 2. **Check new invoices.** For each invoice sent this week, run `invoice-totals-checker`. If a total, date or field is wrong, list the fix before the invoice goes out again. A wrong invoice is the most common reason for a late one.
 3. **See where cash is stuck.** Run `cash-tied-up-finder` on the open invoices, bills and stock. Compare days outstanding with last week. If it climbed for two weeks running, say so at the top.
 4. **Sort each late invoice by how late and who.**
-   - 1 to 30 days late, a customer who normally pays: run `late-invoice-reminder-writer` for a warm reminder and a firmer follow-up. Read `customers.md` first so the tone matches what worked before.
+   - 1 to 30 days late, a customer who normally pays: run `payment-reminder-letter-writer` for a warm reminder and a firmer follow-up. Read `customers.md` first so the tone matches what worked before.
    - Over 30 days late, a repeat late payer, or a customer you want to keep: run `payment-reminder-letter-writer` with the history. Collier's rule applies here: open where their thoughts already are, name one feeling you want them to have at the end, and give one clear way to pay.
    - Quiet past 45 days, or they asked for more time: run `can-they-pay-deal-checker` with your terms and what you know of their means. Hand back a plan to offer, not one to impose.
    - A kept promise this week needs no reminder. Say thank you only if the person wants to.
@@ -64,11 +73,11 @@ You never do these yourself, even if you can reach the email or invoicing tool. 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Cash flow improvement planner](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet.
-- **Sell it** with the [Lost deal evidence and pitch revision review](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the spreadsheet and draft.
-- **Check the money** with the [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter). It takes the spreadsheet.
-- The [Data cleaner](https://useaiblocks.com/skills/data-cleaner). It takes the spreadsheet.
-- The [Supplier payment terms planner](https://useaiblocks.com/skills/supplier-payment-terms-planner). It takes the spreadsheet.
+- The [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
+- The [Financial statement and budget reviewer](https://useaiblocks.com/skills/financial-statement-analyst). It takes the spreadsheet.
+- The [Cash and currency risk planner](https://useaiblocks.com/skills/cash-and-currency-risk-planner). It takes the spreadsheet.
+- The [Supplier invoice exception reviewer](https://useaiblocks.com/skills/recurring-invoice-exception-review-assistant). It takes the spreadsheet.
+- **Check the money** with the [Project payment priority planner](https://useaiblocks.com/skills/project-payment-waterfall-builder). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

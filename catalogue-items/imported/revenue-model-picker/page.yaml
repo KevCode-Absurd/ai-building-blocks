@@ -5,9 +5,9 @@ name: Revenue model picker
 summary: Find the best revenue model for your product. Give it your product and buyers. You get 3 to 5 ways to earn, with risks and a cheap test.
 job: set-prices
 headline: Revenue model picker
-subhead: Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. You choose with evidence instead of gut feel.
+subhead: Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. The money figures are rough guesses to check against your own data.
 explain: |
-  Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. You choose with evidence instead of gut feel.
+  Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. The test results, not the AI's guesses, are what you decide on.
 
   You describe the product, who it is for, what they might pay and what the business needs most: growth, users or profit. For every model, the skill explains how it works, why it fits your audience, and a rough picture of acquisition cost, customer value and break-even time. It lists risks like churn and weak pricing, and compares how competitors charge. The last part is a low-effort experiment, such as a fake door page or pre-sale, to check demand before you build.
 when:
@@ -32,10 +32,12 @@ you_get:
   - A validation experiment for each model
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. It needs no code, files or paid tools.
+  - "Gather what you really know first: your sign-up rate, the prices people pay now, rival price pages and any churn data. Paste them in."
   - Replace $ARGUMENTS with a short description of your product.
   - Add your buyers, what they can pay and how rivals charge. Say if your priority is revenue, users or profit.
   - Read the CAC and LTV figures as rough estimates. Swap in your own numbers where you have them.
   - Pick the one or two models it recommends and run their cheap tests before you build.
+  - Next, take the top model's test into a price test with a few real customers or a simple spreadsheet forecast. Write down the results and use them to decide.
 output_sample:
   input:
     - A description of your product or feature

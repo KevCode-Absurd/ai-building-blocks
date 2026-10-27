@@ -141,8 +141,7 @@ Run tests (from rule directory): `semgrep --test --config <rule-id>.yaml <rule-i
 
 ## Quick Reference
 
-- For commands, pattern operators, and taint mode syntax, see quick-reference.md.
-- For detailed workflow and examples, you MUST see workflow.md
+- quick-reference.md and workflow.md are not included in this copy. For commands, pattern operators and taint mode syntax, use the Semgrep docs linked under Documentation below. Follow the seven-step checklist under Workflow.
 
 ## Workflow
 

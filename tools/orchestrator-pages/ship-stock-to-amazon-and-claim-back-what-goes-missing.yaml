@@ -29,7 +29,7 @@ you_get:
   - A list of claims to file for short shipments, wrong fee tiers, and damaged or lost stock
   - A score for how much of the check could be run, and a monthly routine
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It is a zip with HANDOFF.md and two skill files, in the order they run: Amazon inbound stock planner and Amazon reimbursement claim finder."
   - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md".
   - Paste your sales, lead times, case sizes and product facts. Check Amazon's current fee tables before you commit cash.
   - When it pauses, ship your stock and keep the receipts, packing list and bill of lading. Wait until the shipments close.

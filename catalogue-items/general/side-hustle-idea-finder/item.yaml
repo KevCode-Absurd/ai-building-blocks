@@ -1,0 +1,21 @@
+slug: side-hustle-idea-finder
+name: Side hustle idea finder
+summary: Share your skills, spare hours and budget. Get three to five side hustle ideas, each with a first customer and a cheap test.
+category: general
+boards: []
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - customer-interview-questions
+  - customer-interview-request
+  - niche-price-ladder-builder

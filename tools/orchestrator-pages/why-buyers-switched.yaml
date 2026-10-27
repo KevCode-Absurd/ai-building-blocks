@@ -35,11 +35,11 @@ you_get:
   - A ranked list of what holds buyers back, two fixes for each and one small test with a keep rule
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Describe what you sell and who bought lately. It writes the guide and stops.
-  - Hold five to eight interviews. Write the exact words with an ID and a date for each person.
-  - Bring the notes back and say "carry on from step 2".
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus three skill files, in the order they run: Buying story interview guide, Switch story mapper, Switch friction remover."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Describe what you sell and who bought lately. It writes the guide and stops."
+  - "Hold five to eight interviews. Write the exact words with an ID and a date for each person."
+  - "Bring the notes back and say \"carry on from step 2\"."
 output_sample:
   input:
     - What you sell and the kind of purchase you want to understand

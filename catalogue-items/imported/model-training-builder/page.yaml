@@ -24,6 +24,7 @@ you_give:
   - What you want to predict
   - Your framework and hardware
   - A score target (optional)
+  - The file type, row count, name of the column to predict and any known class imbalance, written down before you paste
 you_get:
   - Data loading and splitting code
   - A reusable preprocessing step
@@ -31,12 +32,17 @@ you_get:
   - Saved checkpoints
   - Training and test scores
 how_to_use:
+  - This needs Python and a chat that can run code, or an engineer to run it. For most business tasks, a hosted model API is the better choice.
   - Open Claude, ChatGPT or Gemini. Pick a chat that can run code, or plan to run the code yourself.
   - Paste the skill text from this page into the chat.
   - Tell your AI where your data is, what you want to predict, and which framework you use.
   - Add your hardware and a score target if you have them.
   - Read the data profile first. Check the split and the score before you trust the model.
   - Run the training script. Keep the best checkpoint and test it on fresh data you have not used.
+  - Next, hand the saved model and the score log to whoever will deploy it, or test the model on fresh data before any live use.
+next:
+  - model-settings-tuner
+  - model-launch-engineer
 output_sample:
   input:
     - Your dataset, or where it lives

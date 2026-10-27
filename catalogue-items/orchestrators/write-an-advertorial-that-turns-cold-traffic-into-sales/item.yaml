@@ -20,9 +20,9 @@ uses: [big-idea-and-mechanism-builder, store-advertorial-writer, advertorial-sto
 steps:
   - {uses: big-idea-and-mechanism-builder, note: "Builds one big idea, a root cause and a named mechanism from your product facts and reviews. Hands step 2 the big idea brief."}
   - {uses: store-advertorial-writer, note: "Writes the advertorial from the big idea brief. Hands step 3 the draft page."}
-  - {uses: advertorial-story-and-belief-checker, note: "Reads the draft page and flags where the story breaks or a belief is not yet earned. Reads step 2's page and hands step 4 each marked spot with its rewrite; you apply them to the page."}
-  - {uses: store-social-proof-placer, note: "Places reviews and proof where the checked draft raises a doubt. Reads step 2's page with step 3's rewrites applied, plus your reviews, not the check report itself. Hands step 5 a proof map that you apply to the page."}
-  - {uses: landing-page-30-point-checker, note: "Scores the finished page on 30 points before it goes live. Checks step 2's page with step 3's rewrites and step 4's proof placements applied."}
+  - {uses: advertorial-story-and-belief-checker, note: "Reads the draft page and flags where the story breaks or a belief is not yet earned. Reads step 2's page and hands you the marked spots; you make each rewrite before step 4."}
+  - {uses: store-social-proof-placer, note: "Places reviews and proof where the checked draft raises a doubt. Reads step 2's page after you make step 3's rewrites, plus your own reviews. Hands you a proof map to add to the page before step 5."}
+  - {uses: landing-page-30-point-checker, note: "Scores the finished page on 30 points before it goes live. Checks step 2's page after you add step 3's rewrites and step 4's proof, not the reports themselves."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-an-advertorial-that-turns-cold-traffic-into-sales/skeleton.yaml

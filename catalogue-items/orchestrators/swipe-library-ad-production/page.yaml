@@ -48,6 +48,7 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+  - After the review deck is approved, hand the approved exports and the revision manifest to your publishing tool. Check each size before you publish.
 how_it_works:
   - title: Choose layouts
     text: Index the references, keep user selections stable and capture per-ad direction.

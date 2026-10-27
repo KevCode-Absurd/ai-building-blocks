@@ -10,14 +10,15 @@ inputs:
   - {type: performance_sheet, required: true}
   - {type: question, required: true}
 outputs:
-  - {type: audit_report}
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
 uses: [store-test-readiness-checker, big-swing-test-picker, shopify-test-setup-picker, one-change-experiment-planner, store-test-verdict-maker]
 steps:
-  - {uses: store-test-readiness-checker, note: "Checks your traffic can prove a test at all and how long it takes. Hands the readiness report to step 2."}
+  - {uses: store-test-readiness-checker, note: "Starts from your orders, visits, conversion rate and the change you want to test. Checks your traffic can prove a test at all and how long it takes. Hands the readiness report to step 2."}
   - {uses: big-swing-test-picker, note: "Picks the tests your readiness result says you can prove. Hands the five tests to step 3 and the plan to step 4."}
   - {uses: shopify-test-setup-picker, note: "Takes the test you chose from step 2 and picks how to run it on your Shopify plan without flicker or speed cost. Hands the setup report to step 4."}
   - {uses: one-change-experiment-planner, note: "Turns the picked test into a one-change plan with dates and decision rules. Hands the plan to step 5."}
-  - {uses: store-test-verdict-maker, note: "Judges the finished test against the plan, then gives the call and a log entry."}
+  - {uses: store-test-verdict-maker, note: "Follows the second pause. Judges the finished test against the plan from step 4, using the numbers you export for each version, then gives the call and a log entry."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/run-one-store-test-and-know-whether-to-ship-the-change/skeleton.yaml

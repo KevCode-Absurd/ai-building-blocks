@@ -20,6 +20,7 @@ not_for:
   - "You want to set a bid cap or use bid-cap bidding: use the Meta bid cap launch planner."
   - "You still need the ad words written: use the Fact-based ad copy writer first. This skill plans the test, not the copy."
   - Your pixel or conversion event is not set up. Fix tracking first. The skill stops at that check.
+  - "You want packs of ads, a seven-day minimum spend and rules for adding ads: use the Meta test campaign planner."
 you_give:
   - The question you are testing, such as which opening hook gets more purchases
   - The new ads, with media, approved words, product facts, your offer and the link each ad goes to

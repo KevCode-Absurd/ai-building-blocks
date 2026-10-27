@@ -37,6 +37,7 @@ how_to_use:
   - Check that each main claim has evidence or a note that none was given.
   - For the Feynman check, close the source and explain the idea in your own words before your AI corrects you.
   - Scanned PDFs need OCR first. If your AI cannot read the source, it should stop and ask for the text.
+  - Next, save the map and the recall questions and test yourself a few days later. To find more sources to read, use the Cited research assistant. If your sources disagree, use the Research contradiction review assistant.
 output_sample:
   input:
     - An article, book, PDF, web page or a set of documents

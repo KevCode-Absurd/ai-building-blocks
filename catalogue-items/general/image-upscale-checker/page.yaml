@@ -192,8 +192,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Topaz Gigapixel", why: "Lets you choose a faithful model, including one made for text and logos, and turn face recovery down or off."}
-    - {name: "Magnific", why: "Offers a Precision upscaler with plain sharpen and grain sliders, apart from its Creative one."}
+    - {name: "Topaz Gigapixel", why: "Lets you choose a faithful model, including one made for text and logos, and turn face recovery down or off. It is paid software."}
+    - {name: "Magnific", why: "Offers a Precision upscaler with plain sharpen and grain sliders, apart from its Creative one. It is a paid service."}
     - {name: "GIMP", why: "Free editor whose Difference layer mode shows any change between the original and the result."}
   inputs:
     - "The design file the words came from, such as Figma or Canva, so you can export the words at the final size"

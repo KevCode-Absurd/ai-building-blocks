@@ -18,7 +18,7 @@ when:
 not_for:
   - You teach a single-age class. Use a normal group task or pair pupils by ability instead.
   - Your older pupils are not yet confident in the content. Teach them the topic first, then pair them.
-  - You want a simple one-to-one tutoring set-up. Use the peer-tutoring-protocol-designer, if you have it, or a short buddy routine.
+  - You want a simple one-to-one tutoring set-up. Use a short buddy routine instead.
 you_give:
   - The learning objective
   - The age groups paired

@@ -24,6 +24,7 @@ you_give:
   - What to swap, the person, the background or both
   - A description of the new model or scene
   - Access to an image tool such as ChatGPT or an API key
+  - Written consent from anyone whose face is in a model reference photo, and a check of your local ad rules for AI-made models
 you_get:
   - A ready-to-paste image prompt for each version
   - A list of what stays locked on the clothes
@@ -31,11 +32,13 @@ you_get:
   - Notes on how to check the result
 how_to_use:
   - "Pick your mode: swap the person, swap the background, or swap both."
+  - The skill file is written in Chinese. Your AI can read it, and you can ask it to reply in English.
   - Paste the skill into your AI and add your model photo. Say who or what the new look should be.
   - Your AI writes the prompt. It also writes the command for the image tool.
   - Run it in your image tool. This needs a dLazy account or API key, and it costs money for each image. Use the dry-run option first to see the cost.
   - Make 3 or 4 versions and pick the best one. Check the garment, the hands and the light.
   - If you run ads with AI models, check your local ad rules. You may need to say the models are AI-made.
+  - Next, if the fabric texture looks flat, ask for a higher quality run and compare it with the first version.
 output_sample:
   input:
     - Your model or mannequin photo

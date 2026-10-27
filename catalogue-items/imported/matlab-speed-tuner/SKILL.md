@@ -88,6 +88,8 @@ Based on profiling results, identify which patterns apply. Read `references/opti
 
 **High-impact patterns:**
 
+The speedup ranges below are typical figures from the source, not results from this skill. Report only what you measure on the user's own code.
+
 | Pattern | Typical Speedup | Look For |
 |---------|----------------|----------|
 | Vectorization | 2–200x | Loops doing element-wise math on arrays |

@@ -1,0 +1,23 @@
+slug: expense-report-builder
+name: Expense report builder
+summary: Paste receipts and notes. Get an expense report with totals by category, a reason for each line and gaps to fix.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - expense-sorter
+  - prepare-expenses-for-your-bookkeeper
+  - variance-commentary

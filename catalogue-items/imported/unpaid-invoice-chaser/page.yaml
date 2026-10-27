@@ -9,7 +9,7 @@ subhead: A reminder for every overdue invoice, written to suit the customer, and
 explain: |
   A reminder for every overdue invoice, written to suit the customer, and nothing is sent until you say so. Good payers get a gentle nudge. Repeat late payers get a firm one.
 
-  The skill pulls your overdue list from your accounting tool, such as Xero, QuickBooks, MYOB, NetSuite or Zoho Books. It checks recent payments in PayPal, Stripe or Airwallex so you do not chase someone who just paid. It scores each customer as a good payer, occasionally late or repeat late, then drafts matching emails, with a pay link where one exists. You see a summary table and the drafts, then reply to approve. It needs those tools connected, and a mail connector for drafts.
+  The skill pulls your overdue list from your accounting tool, such as Xero, QuickBooks, MYOB, NetSuite or Zoho Books. Making an Airwallex pay link is a write action. It happens inside the batch you approve, before anything is sent. It checks recent payments in PayPal, Stripe or Airwallex so you do not chase someone who just paid. It scores each customer as a good payer, occasionally late or repeat late, then drafts matching emails, with a pay link where one exists. You see a summary table and the drafts, then reply to approve. It needs those tools connected, and a mail connector for drafts.
 when:
   - You want to know who owes you money right now.
   - You dread writing the same reminder email again.
@@ -31,7 +31,7 @@ you_get:
   - Drafts queued for your approval
 how_to_use:
   - Open your AI and paste in this skill. Connect your accounting tool, or have your overdue invoice list as a CSV ready.
-  - Connect PayPal, Stripe or Airwallex if you use them. This helps it spot customers who just paid. Connect Gmail or Microsoft 365 so drafts can be queued.
+  - Connect PayPal, Stripe or Airwallex if you use them. This helps it spot customers who just paid. The paid check covers 14 days for Stripe, Square, Shopify and Airwallex, but only 7 days for PayPal, so check PayPal history by hand for older payments. Connect Gmail or Microsoft 365 so drafts can be queued.
   - "Ask: who owes me money. It pulls overdue invoices and scores each customer by payment history."
   - Read the summary table and every draft. Check any customer marked possibly paid before you chase them.
   - Reply send these to approve the batch, or ask for changes. Any change after approval starts a new round.

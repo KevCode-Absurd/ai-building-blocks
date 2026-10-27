@@ -1,40 +1,52 @@
 new_slug: turn-meetings-into-owned-actions
 name: Turn meetings into owned actions
-summary: Share meeting notes. Get a sourced action register and follow-up drafts with owners and dates made clear.
+summary: "Give it notes from one meeting or one set of threads. Get an action list with owners and dates, plus follow-up drafts you review before anything is sent."
 job: organise-work
 headline: Turn meetings into owned actions
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share meeting notes. Get a sourced action register and follow-up drafts with owners and dates made clear. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: "Give it the notes or threads from one meeting, with the date window. It builds one action list with an owner, a date and a source for each action, then drafts a follow-up for each due task. Anything it cannot confirm is marked, and nothing is sent."
 explain: |-
-  Share meeting notes. Get a sourced action register and follow-up drafts with owners and dates made clear.
+  Actions from a meeting get lost between the notes and the inbox. This workflow turns one meeting, or one set of threads, into a single action list. Each action has an owner, a date and the line in the notes it came from.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  It is for one meeting or one set of threads. For a weekly review of commitments across the week, use Prepare your weekly executive review.
+
+  Then it drafts a chase-up for each task that is due. It does not guess an owner or a date. It marks them unconfirmed. Nothing is sent and no task is changed until you say yes.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - "You have just had a meeting and need each action tied to an owner and a date."
+  - "Actions are spread across notes and email threads, and you need one list."
+  - "Some tasks are due and you want a follow-up drafted for each."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - "Meeting notes, a transcript or email threads"
+  - "The date window and your timezone"
+  - "Who attended, so owners can be matched to names (optional)"
+  - "Your current task list (optional)"
 you_get:
-  - Action register
-  - Follow-up drafts
-  - Unconfirmed owners, dates and recipients
+  - "An action list with owner, date, status and source for each action"
+  - "A list of owner and date gaps, and a draft of task changes"
+  - "One follow-up draft per due task, with what is still missing"
+  - "A note of every owner, date and recipient it could not confirm"
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - "Download the handoff pack. It's a zip with HANDOFF.md, the Executive action register keeper skill and the Due task follow up drafter skill, in that order."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Paste your notes or threads, the date window and your timezone."
+  - "Check the action list and the gaps before you read the drafts."
+  - "Send nothing until you have read each draft and said yes."
 how_it_works:
-  - title: Executive action register keeper
-    text: Share meeting notes or email threads. Get one action list with owners, deadlines, source links and unresolved commitments.
-  - title: Due task follow up drafter
-    text: Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
+  - title: "Executive action register keeper"
+    text: "Reads your notes or threads and builds one action list. Each action has an owner, a deadline and a source. Gaps go on a short list to settle."
+  - title: "Due task follow up drafter"
+    text: "Takes the action list from step 1 and the related threads. Writes one follow-up draft per due task, with the missing facts and its send status."
 output_shape: |-
-  Action register
-  Follow-up drafts
-  Unconfirmed owners, dates and recipients
+  STEP 1: ACTION LIST
+    Actions: id | task | owner | due date | timezone | status | dependency | source
+    Gaps: owner and deadline questions | overdue | due soon | blocked | undated
+    Proposed task changes (a draft, nothing applied)
+
+  STEP 2: FOLLOW-UP DRAFTS
+    Per due task: recipients | subject | body | missing facts | state
+
+  Unconfirmed owners, dates and recipients, in one list
 tweaks:
   - what: Scope
     how: Name the date window, project or business to keep the work focused.
@@ -57,6 +69,8 @@ not_for:
   - "You only need tidy minutes to circulate: use Rough notes to minutes writer."
   - "You want a short written update from one meeting: use Meeting to written update converter."
   - "You want the same action list kept up to date every week: use Weekly meeting actions keeper."
+  - "You want a weekly review of commitments and next week's priorities: use Prepare your weekly executive review."
+  - "You already have due tasks and only need follow-up drafts in your voice: use Draft your due task follow ups."
 output_sample:
   input:
     - Meeting notes, a transcript or email threads

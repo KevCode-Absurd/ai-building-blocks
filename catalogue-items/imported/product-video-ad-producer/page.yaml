@@ -16,8 +16,8 @@ when:
   - You want to approve a shot list before you pay for any video.
   - One bad shot should not mean starting the whole ad again.
 not_for:
-  - "You want a single 3 second clip for a product photo slot: use the main-image-video skill."
-  - "You want a real person talking to camera: use the ugc-testimonial skill."
+  - "You want a single 3 second clip for a product photo slot: ask your video model for one clip from your photo."
+  - "You want a real person talking to camera: use the Talking product video ad workflow."
   - "You need voice or music in the ad: add them in a video editor after this skill gives you the video."
 you_give:
   - Your product and its main selling points
@@ -32,6 +32,7 @@ you_get:
   - A list of any failed shots to redo
 how_to_use:
   - "Before you start: you need a paid video model key (fal or Replicate). Each shot you make costs money."
+  - The detailed guide in the skill file (SKILL.md) is written in Chinese. The steps above are the same in English. The scripts need the skill folder, Node and ffmpeg on your computer.
   - Open an AI that can run code and use files. Paste the skill and your selling points, audience and platform.
   - Read the shot script your AI writes. Fix it in chat before anything is made.
   - Ask for a dry run first. It shows the plan for each shot and costs nothing.

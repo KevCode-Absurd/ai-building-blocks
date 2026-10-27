@@ -148,7 +148,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Fitting a plan to your hours and tools is text work that any strong chat AI does with this skill."}
-    - {name: "A payment link tool", why: "Lets you take a card payment before the product is finished."}
+    - {name: "A payment link tool", why: "Lets you take a card payment before the product is finished. It may need an account, a plan or a fee."}
   inputs:
     - "A list of the tools you use every week"
     - "Where your buyers already gather online or in person"

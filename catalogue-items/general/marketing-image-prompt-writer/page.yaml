@@ -79,6 +79,7 @@ output_shape: |
   VARIATION A: <change>
   VARIATION B: <change>
   AVOID: <list>
+  CHECKS MISSED: <each check that failed, or none>
   Next: paste the prompt into an image maker such as ChatGPT or Gemini.
 
 tweaks:

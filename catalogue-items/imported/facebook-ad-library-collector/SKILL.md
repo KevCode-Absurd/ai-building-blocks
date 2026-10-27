@@ -10,7 +10,7 @@ date_added: "2026-10-20"
 author: harshmaur
 tags: [facebook, meta-ad-library, apify, ad-transparency, research]
 tools: [claude, cursor, gemini, codex]
-license: "MIT"
+license: "CC-BY-4.0"
 license_source: "https://github.com/harshmaur/apify-facebook-ads-library-scraper/blob/main/LICENSE.txt"
 ---
 

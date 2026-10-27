@@ -42,7 +42,7 @@ Segments your highest-value customers by order count and total lifetime spend, t
 ## GraphQL Operations
 
 ```graphql
-# customers:query — validated against api_version 2025-04
+# customers:query — written for api_version 2025-01; check it against Shopify's docs for your version
 query LoyaltyCustomers($first: Int!, $after: String, $query: String) {
   customers(first: $first, after: $after, query: $query) {
     edges {

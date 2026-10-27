@@ -233,6 +233,8 @@ variable "common_tags" {
 
 ### Example 2: Pulumi TypeScript for a Serverless API
 
+This example has not been run. Package names change between Pulumi releases, so check them against the current Pulumi docs and run `pulumi preview` before you use it.
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -263,7 +265,7 @@ const lambdaRole = new aws.iam.Role("api-lambda-role", {
 
 new aws.iam.RolePolicyAttachment("lambda-basic", {
   role: lambdaRole.name,
-  policyArn: aws.iam.ManagedPolicies.AWSLambdaBasicExecutionRole,
+  policyArn: "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
 });
 
 // Least privilege: only these actions, only on this one table.

@@ -24,7 +24,7 @@ Splits a fulfillment order containing multiple line items into two or more separ
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
-| fulfillment_order_id | string | yes | — | GID of the fulfillment order to split |
+| fulfillment_order_id | string | yes | — | GID of the fulfillment order to split (`gid://shopify/FulfillmentOrder/...`). If you only have the order, run the step 1 query with the order GID (`gid://shopify/Order/...`) and copy the fulfillment order `id` from the result. You can also find it in Shopify Admin or through the Shopify CLI. |
 | split_groups | array | yes | — | List of `{line_item_ids: [], quantities: []}` defining each shipment group |
 | dry_run | bool | no | true | Preview split without executing mutation |
 | format | string | no | human | Output format: `human` or `json` |
@@ -42,7 +42,7 @@ Splits a fulfillment order containing multiple line items into two or more separ
 2. Validate `split_groups` — confirm all line item IDs exist in the fulfillment order and quantities are ≤ remaining quantities
 
 3. **OPERATION:** `fulfillmentOrderSplit` — mutation
-   **Inputs:** `fulfillmentOrderId`, `fulfillmentOrderLineItems` array per split group
+   **Inputs:** `fulfillmentOrderId`, `fulfillmentOrderLineItems` (the items and quantities for one split group). The mutation below takes one group at a time, so run it once per split group, and show the dry-run preview as one line per call so it matches what the live run does. Check the argument shape against Shopify's current docs for `fulfillmentOrderSplit` before the first live run.
    **Expected output:** Array of new `fulfillmentOrders { id, lineItems }`, `userErrors`
 
 ## GraphQL Operations
@@ -175,4 +175,4 @@ Human-readable split summary. No CSV output — split results are viewable in Sh
 ## Best Practices
 - Use `dry_run: true` to preview the resulting shipment groups before splitting — a split cannot be reversed.
 - Ensure `split_groups` covers all line items in the fulfillment order; any unassigned items will remain in the original (residual) fulfillment order.
-- For orders with items shipping from different warehouses, use the `fulfillment-location-routing` skill to move the split groups to the correct locations after splitting.
+- For orders with items shipping from different warehouses, move the split groups to the correct locations after splitting, either by hand in Shopify Admin or with the fulfillment-location-rerouter skill on this site.

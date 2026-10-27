@@ -216,6 +216,7 @@ results = hallucination_eval.evaluate(
 from phoenix.evals import llm_classify
 
 # Define custom evaluation
+# eval_model is the judge model object created in "Built-in evaluators" above.
 def evaluate_helpfulness(input_text, output_text):
     template = """
     Evaluate if the response is helpful for the given question.
@@ -306,6 +307,7 @@ client = Client()
 def my_model(input_data):
     """Your model function."""
     question = input_data["question"]
+    # generate_answer is a placeholder: replace it with the call that runs your own app.
     return {"answer": generate_answer(question)}
 
 def accuracy_evaluator(input_data, output, expected):

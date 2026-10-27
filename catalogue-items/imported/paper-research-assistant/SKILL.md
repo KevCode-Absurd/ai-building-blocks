@@ -143,11 +143,11 @@ follow-ups.
 - The skill cannot fetch full text from paywalled publishers (Elsevier,
   Springer, Wiley, etc.). It can only read open arXiv PDFs.
 - PyMuPDF extracts embedded text only. Scanned image-PDFs return the
-  fallback message `PDF无法提取文本（可能是扫描件）`; offer the user an
+  fallback message `PDF无法提取文本（可能是扫描件）` ("cannot extract text from the PDF, it may be a scan"); offer the user an
   alternative version or note that OCR is required.
 - Semantic Scholar's anonymous tier rate-limits aggressively. The script
   retries 3× with exponential backoff; persistent 429s during heavy use
-  surface as `搜索失败: rate limit, retries exhausted`.
+  surface as `搜索失败: rate limit, retries exhausted` ("search failed").
 - This skill does not replace environment-specific validation, testing, or
   expert review. Stop and ask for clarification if required inputs are
   missing.
@@ -166,16 +166,16 @@ follow-ups.
 
 ## Common Pitfalls
 
-- **Problem:** `需要安装 arxiv: pip install arxiv` or `需要安装 PyMuPDF: pip install PyMuPDF`.
+- **Problem:** `需要安装 arxiv: pip install arxiv` or `需要安装 PyMuPDF: pip install PyMuPDF` ("you need to install arxiv" or "you need to install PyMuPDF").
   **Solution:** The script returns this friendly message instead of crashing
   when an optional dependency is missing. Offer to run the install command.
 
-- **Problem:** `搜索失败: rate limit, retries exhausted` from `search` or
+- **Problem:** `搜索失败: rate limit, retries exhausted` ("search failed") from `search` or
   `detail` or `citations`.
   **Solution:** Semantic Scholar is rate-limiting. Wait ~10 seconds and
   retry once. For repeated runs, fall back to `arxiv` for arXiv-indexed work.
 
-- **Problem:** `download` fails with `找不到 arXiv ID: …`.
+- **Problem:** `download` fails with `找不到 arXiv ID: …` ("arXiv ID not found").
   **Solution:** The user gave a non-arXiv ID (likely a DOI for a non-arXiv
   paper). Use `detail` to inspect; only papers with an `externalIds.ArXiv`
   field can be downloaded.

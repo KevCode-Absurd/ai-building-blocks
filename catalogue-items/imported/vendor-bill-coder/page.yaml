@@ -30,7 +30,7 @@ you_get:
   - Match results and duplicate flags
   - A proposed payment run for approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your accounts and files.
   - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
@@ -43,6 +43,7 @@ output_sample:
   prerequisites:
     - An AI that can read your uploaded files
     - An email or accounting connection only if you want bills pulled in or entries staged there
+    - "Optional: connectors such as Ramp, Expensify, QuickBooks, Xero or NetSuite, which usually need your own paid accounts"
   output:
     - name: Bill list
       contains: Each bill with its vendor, amount, due date and line detail, plus anything the AI could not read.

@@ -29,12 +29,12 @@ Create a Python script (e.g., `convert_format.py`) to parse the source LaTeX fil
 ### Step 3: Systematic Fixing
 Perform generic fixes on the extracted body text before writing the final file, or in subsequent calls:
 - Convert math environment cases (e.g., `\begin{theorem}` to `\begin{Theorem}`).
-- Adjust aggressive float placements (e.g., `[!t]` or `[h!]`) to template-supported options. Avoid forcing `[H]` unless the `float` package is explicitly loaded.
+- Adjust aggressive float placements (e.g., `[!t]` or `[h!]`) to template-supported options. Use `[htbp]` when the template does not load the `float` package. Use `[H]` only if the `float` package is already loaded.
 - Ensure `\includegraphics` paths are relative to the new `.tex` file location.
 - Convert `\begin{tabular}` to `\begin{tabularx}{\textwidth}` or use `\resizebox` if moving to a double-column layout.
 
 ### Step 4: Compilation & Debugging
-Run a build cycle (`pdflatex` -> `bibtex` -> `pdflatex`). Check the `.log` file using `grep` or `rg` to systematically fix any packages conflicts, undefined commands, or compilation halts.
+Run a build cycle (`pdflatex` -> `bibtex` -> `pdflatex`). Check the `.log` file using `grep` or `rg` to systematically fix any packages conflicts, undefined commands, or compilation halts. Repeat the cycle until the log shows no errors and no undefined references, then stop. If the same error comes back after three tries, stop and tell the user what is blocking it.
 
 ## Examples
 
@@ -45,7 +45,7 @@ AGENT: *Triggers latex-paper-conversion skill*
 1. Analyzes source `.tex` and target `template.tex`.
 2. Creates Python script to extract Introduction through Conclusion.
 3. Injects content into MDPI template.
-4. Updates image paths and table float parameters `[h!]` to `[H]`.
+4. Updates image paths and changes table float parameters such as `[h!]` to `[htbp]` (or `[H]` only if the template loads the `float` package).
 5. Compiles via pdflatex and bibtex to confirm zero errors.
 \```
 

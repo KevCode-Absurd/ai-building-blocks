@@ -6,7 +6,7 @@ argument-hint: "<vendor name or proposal>"
 
 # /vendor-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> The `~~knowledge base` and `~~procurement` names below stand for a document store and a purchasing system the user may have connected to their AI. If none is connected, skip the "If Connectors Available" section and work from what the user pastes or uploads. (The CONNECTORS.md file from the original project is not included here.)
 
 Evaluate a vendor with structured analysis covering cost, risk, performance, and fit.
 
@@ -88,6 +88,8 @@ When comparing vendors, produce a side-by-side matrix covering: pricing, feature
 ```
 
 ## If Connectors Available
+
+This section applies only when the user has those tools connected. Otherwise skip it.
 
 If **~~knowledge base** is connected:
 - Search for existing vendor evaluations, contracts, and performance reviews

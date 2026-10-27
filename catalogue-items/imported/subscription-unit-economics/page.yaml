@@ -12,7 +12,7 @@ subhead: A clear read on whether a recurring revenue business makes money on
 explain: |
   A clear read on whether a recurring revenue business makes money on each customer. You see how cohorts behave, what a customer is worth against what they cost, and how fast you earn it back.
 
-  Give it customer and revenue data. The skill first identifies the business model, then works out the core numbers: recurring revenue by cohort, lifetime value to acquisition cost, net revenue retention and payback period. It compares each against benchmarks for the sector, scores the quality of the revenue, and presents the result with the margin steps from revenue to profit. It is written for investors assessing a target but suits any founder.
+  Give it customer and revenue data. The skill first identifies the business model, then works out the core numbers: recurring revenue by cohort, lifetime value to acquisition cost, net revenue retention and payback period. It compares each against benchmarks for the sector, scores the quality of the revenue, and presents the result with the margin steps from revenue to profit. It is written for investors assessing a target, and it is set up for Indian markets (April to March fiscal years, lakh and crore units). Say up front if your numbers use a different year or currency.
 when:
   - You are weighing up buying or investing in a software company.
   - You want to know if your customer acquisition spend pays back.
@@ -30,12 +30,16 @@ you_get:
   - Payback period
   - A revenue quality score
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+  - The skill mentions two helper skills (india-market-conventions and india-market-data) and a NOT-ADAPTABLE.md file. They are not included here. Without them, your AI still follows the fiscal year and lakh and crore rules written at the top of the skill.
+  - The benchmark ranges in step 3 (for example LTV to CAC above 3 is good) are common rules of thumb with no source. Check them against your own sector before you quote them.
+  - Next, list the red flags as questions to send the target, using the due diligence checklist builder. To check payback alone, use the subscription payback checker.
+next: [due-diligence-checklist-builder, subscription-payback-checker]
 not_for:
-  - "You run an online store and want repeat-purchase value. Use the Store LTV and payback reader."
+  - "You run an online store and want repeat-purchase value. Use the store LTV payback reader."
   - "You want a quick health check of your own SaaS numbers. Use the SaaS metrics coach."
   - "You report in dollars on a calendar year. This skill is set up for Indian markets, with April to March years and lakh or crore units, so say so up front."
 output_sample:

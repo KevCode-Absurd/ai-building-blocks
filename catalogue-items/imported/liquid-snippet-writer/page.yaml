@@ -36,7 +36,7 @@ you_get:
   - Preview steps so you can check it before it goes live
 how_to_use:
   - Open your AI tool and paste in this skill, or add it if your tool lets you add skills.
-  - Say what the snippet should show. Paste the theme file or the lines around where it should go, if you have them.
+  - Say what the snippet should show. Give the theme file name and the exact product or cart fields you want. Paste the theme file or the lines around where it should go, if you have them. Anything you leave out is marked MISSING.
   - Read the file name and the one-line note on each filter it used.
   - In Shopify, duplicate your live theme. Then open Edit code on the copy and paste the snippet into the named file.
   - Preview the copy on a sale product, a normal product and an empty cart. Publish the copy only when all three look right.

@@ -30,7 +30,7 @@ you_get:
   - Pre-ship checklist
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
-  - Paste your page code or text, or attach a screenshot. Say which screen sizes matter most.
+  - Paste your page code, or attach a screenshot. Start with the code if you have it, since the checks are more exact. Say which screen sizes matter most.
   - Add your brand colours, fonts and spacing if you have them. If not, ask your AI to make a starter set first.
   - Read the findings. Fix the contrast and mobile problems first.
   - Ask your AI to run the pre-ship checklist before you publish.

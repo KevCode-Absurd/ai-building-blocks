@@ -5,7 +5,7 @@ name: Real-world phenomenon unit planner
 summary: Plan a phenomenon-based unit from one real event or puzzle. Get a cross-subject plan with each subject's part and an assessment.
 job: teach-and-train
 headline: Real-world phenomenon unit planner
-subhead: Name a real event or puzzle. Get a unit plan that uses several subjects to explain it. Bring a real-world phenomenon or puzzle. Use the result to plan your next step.
+subhead: Name a real event or puzzle. Get a unit plan that uses several subjects to explain it. Check every figure against a named source before students see it.
 explain: |
   A unit plan built around one real event or puzzle that no single subject can explain alone, so each subject has to contribute. It follows the phenomenon approach from the Finnish national curriculum.
 
@@ -33,11 +33,12 @@ you_get:
   - An assessment for combined understanding
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
-  - Add your event or puzzle and the subjects it draws on.
+  - Add your event or puzzle and the subjects it draws on. The skill text has fields written like {{phenomenon}}. Replace each with your own words, or let your AI fill them in from your message.
   - Add your year level, curriculum goals and unit length if you have them.
   - Read the Integration Map first. Check that each link between subjects is real and not forced.
   - Check any figures in the result against a trusted source before you give them to students.
   - Adjust the Practical Considerations to fit your timetable and team.
+  - Next, build the final student task with the Community project unit planner, or plan a local-site version with the Local place lesson planner.
 output_sample:
   input:
     - A real-world event or puzzle that needs more than one subject to explain
@@ -58,3 +59,4 @@ output_sample:
       contains: A way to test combined understanding across subjects, not each subject on its own.
     - name: Practical Considerations
       contains: Notes on timetable, team teaching and school setup that affect how you run the unit.
+next: [community-project-unit-planner, local-place-lesson-planner]

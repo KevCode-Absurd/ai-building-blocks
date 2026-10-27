@@ -20,19 +20,19 @@ python3 swipe.py collected.json --min 2.0
 
 You need at least **four videos per channel** or a median means nothing, and the tool will skip the
 channel and tell you it did. Collect them however the user prefers - `yt-dlp --flat-playlist -J`
-against a channel URL is the fastest, the public page works, a manual list works.
+against a channel URL is the fastest, the public page works, a manual list works. yt-dlp reads public listings automatically, which may breach YouTube's terms, so make a hand-made list the default and use yt-dlp only if the user accepts that risk.
 
 ```json
 [{"channel":"...","title":"...","views":412000,"url":"...","duration":613}]
 ```
 
-**Read, do not scrape.** Public listings only, never a logged-in session, never the user's own
+**Read, do not scrape.** Prefer a list the user copies by hand. Public listings only, never a logged-in session, never the user's own
 account credentials.
 
 ## Reading the output
 
 The multiple is the signal. The formula line is a judgement about the TITLE, matched against
-[the 21 formulas](../yt-script/hooks.json) - it is not a claim about why the video worked, and you
+the 21 title formulas in `hooks.json` (that file is not bundled with this item; if you do not have it, name the pattern in plain words, such as a number, a question or a before-and-after) - it is not a claim about why the video worked, and you
 should say so when you present it.
 
 What to hand back: the top five with their multiples, the formula each used, and the ONE structural

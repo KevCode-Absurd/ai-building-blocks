@@ -4,7 +4,7 @@ headline: Rights-issue EPS adjustment
 summary: Work out a rights issue's theoretical ex-rights price and restate past EPS with the bonus factor. Get a workpaper with checks and gaps listed.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The factor only applies to a pro-rata offer, so the terms must be confirmed before past EPS is restated."
 subhead: A theoretical ex-rights price and retrospective bonus-factor workpaper. Share pre-rights market price, subscription price, existing and rights shares, issue timetable and historical EPS.
 explain: |-
   A theoretical ex-rights price and retrospective bonus-factor workpaper.
@@ -18,19 +18,20 @@ not_for:
   - "Your offer is not pro-rata, so the bonus factor does not apply: ask your accountant to apply IAS 33 to the actual terms."
   - "You need the value of tradable rights, fees or tax effects: use a full valuation model built by a finance professional."
   - "You need current-period EPS with dilution from options or convertibles: use a full IAS 33 EPS model, since this covers only the rights bonus element."
+  - "You need past EPS and share counts restated after a stock split: use the Stock-split EPS restatement instead."
 you_give:
   - Pre-rights market price, subscription price, existing and rights shares, issue timetable and historical EPS.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The last day before the rights price, plus the currency and scale used for the rights issue adjustment."
+  - "Your spreadsheet tool, if you want the rights issue adjustment as a workbook."
 you_get:
   - A theoretical ex-rights price and retrospective bonus-factor workpaper.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the rights issue adjustment, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of the ex-rights price and the bonus factor, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the offer terms, the share counts and past EPS."
+  - "Tell it what you need: the theoretical ex-rights price, the bonus factor and restated past EPS."
+  - "Ask it to stop and mark MISSING if the pre-rights price or the subscription price is not in your sources."
+  - "Check that cash, old shares and new shares use the same per-share units, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Share price just before the rights trade ex-rights
@@ -71,10 +72,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Last day before the rights price"
+    how: "Take the last day before the rights price from the offer terms, the share counts and past EPS. Use one currency and scale on every line."
+  - what: "Subscription price"
+    how: "Change the subscription price and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Cash proceeds, old shares and new shares use consistent per-share units.
 judge:
@@ -87,8 +88,10 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one rights issue adjustment you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define bonus factor into SKILL.md, so every run uses your wording."
+before: []
+next: [stock-split-eps-restatement, treasury-stock-option-dilution]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

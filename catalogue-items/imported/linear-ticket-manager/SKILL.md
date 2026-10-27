@@ -47,10 +47,10 @@ Select the appropriate workflow (see Practical Workflows below) and identify the
 Execute Linear MCP tool calls in logical batches:
 - Read first (list/get/search) to build context.
 - Create or update next (issues, projects, labels, comments) with all required fields.
-- For bulk operations, explain the grouping logic before applying changes.
+- For bulk operations, explain the grouping logic and wait for the user's clear yes before you create or change anything.
 
 ### Step 4
-Summarize results, call out remaining gaps or blockers, and propose next actions (additional issues, label changes, assignments, or follow-up comments).
+Summarize results as a table of created or updated issues (ID, title, team, priority, status), then a list of blockers. Call out remaining gaps and propose next actions (additional issues, label changes, assignments, or follow-up comments).
 
 ## Available Tools
 

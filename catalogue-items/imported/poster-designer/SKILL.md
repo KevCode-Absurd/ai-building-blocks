@@ -27,9 +27,13 @@ If the topic is missing, ask for it and stop. For anything else that is missing,
 
 If the poster needs to say what it is about (an event name, a date), put those few words on it in a clear, readable way. That need comes before the idea of a hidden, subtle reference below.
 
-Complete this in two steps:
-1. Design Philosophy Creation (.md file)
-2. Express by creating it on a canvas (.pdf file or .png file)
+Complete this in order:
+1. Ask once for anything missing (see above).
+2. Write the design philosophy and save it as `philosophy.md`.
+3. Pick the one subtle reference from the topic.
+4. Set the canvas size, then draw the poster in code, using fonts from `./canvas-fonts`.
+5. Check margins, overlaps and spelling, and fix them.
+6. Save the poster as `poster.png` or `poster.pdf` and end with the short note below.
 
 First, undertake this task:
 
@@ -66,7 +70,7 @@ To capture the VISUAL essence, express how the philosophy manifests through:
 
 **CRITICAL GUIDELINES:**
 - **Avoid redundancy**: Each design aspect should be mentioned once. Avoid repeating points about color theory, spatial relationships, or typographic principles unless adding new depth.
-- **Emphasize craftsmanship REPEATEDLY**: The philosophy MUST stress multiple times that the final work should appear as though it took countless hours to create, was labored over with care, and comes from someone at the absolute top of their field. This framing is essential - repeat phrases like "meticulously crafted," "the product of deep expertise," "painstaking attention," "master-level execution."
+- **Hold the work to a clear quality bar**: The philosophy asks for careful, precise execution. Do not claim the work took countless hours or came from a named expert. Judge the finish by the checks in the final step: spacing, margins, no overlaps, one consistent font system.
 - **Leave creative space**: Remain specific about the aesthetic direction, but concise enough that the next Claude has room to make interpretive choices also at a extremely high level of craftmanship.
 
 The philosophy must guide the next version to express ideas VISUALLY, not through text. Information lives in design, not paragraphs.
@@ -101,7 +105,7 @@ Visual expression: Grid-based precision, bold photography or stark graphics, dra
 - **SPATIAL EXPRESSION**: Ideas communicate through space, form, color, composition - not paragraphs
 - **ARTISTIC FREEDOM**: The next Claude interprets the philosophy visually - provide creative room
 - **PURE DESIGN**: This is about making ART OBJECTS, not documents with decoration
-- **EXPERT CRAFTSMANSHIP**: Repeatedly emphasize the final work must look meticulously crafted, labored over with care, the product of countless hours by someone at the top of their field
+- **CAREFUL FINISH**: The final work must look precise and cared for. Check it against the quality checks in the final step
 
 **The design philosophy should be 4-6 paragraphs long.** Fill it with poetic design philosophy that brings together the core vision. Avoid repeating the same points. Keep the design philosophy generic without mentioning the intention of the art, as if it can be used wherever. Output the design philosophy as a .md file.
 
@@ -149,7 +153,13 @@ Next: ask for another round (change colours, spacing or layout), or add your log
 
 ## FINAL STEP
 
-**IMPORTANT**: The user ALREADY said "It isn't perfect enough. It must be pristine, a masterpiece if craftsmanship, as if it were about to be displayed in a museum."
+**IMPORTANT**: Refine the poster you already made. Do not start over.
+
+Quality checks before you hand it back:
+- Margins are even and nothing touches the edge.
+- Nothing overlaps. Text sits clear of every shape.
+- Fonts come from one small set, and every word is spelled as the user gave it.
+- The file opens and is the size you said.
 
 **CRITICAL**: To refine the work, avoid adding more graphics; instead refine what has been created and make it extremely crisp, respecting the design philosophy and the principles of minimalism entirely. Rather than adding a fun filter or refactoring a font, consider how to make the existing composition more cohesive with the art. If the instinct is to call a new function or draw a new shape, STOP and instead ask: "How can I make what's already here more of a piece of art?"
 

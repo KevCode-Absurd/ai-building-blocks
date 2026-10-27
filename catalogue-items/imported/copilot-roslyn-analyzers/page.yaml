@@ -35,12 +35,14 @@ you_get:
   - "The project and NuGet package layout"
   - "A review checklist for design rules, dependency limits and test coverage"
 how_to_use:
+  - This is for a C# developer who has a Roslyn-based project and can build it and run .NET tests.
   - Open an AI that can read and edit your project files. Add the skill to the chat or upload the skill folder.
   - Describe the rule in plain words. Add your target framework, test framework and diagnostic ID range.
   - Share your existing analyzer and test projects. Add two or three examples that must be flagged and some that must not.
   - Ask your AI to follow the skill. Let it check your project setup before it writes code.
   - Build the project and run the tests. Fix any failure with your AI before you merge.
   - Read the review checklist at the end and confirm each item.
+  - If a check fails, fix it and run the build and tests again. Run the full build and test pipeline before you merge. Then publish the package.
 output_sample:
   input:
     - The rule you want to catch, in plain words

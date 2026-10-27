@@ -22,6 +22,7 @@ not_for:
   - "You build a dense admin tool full of tables and filters: whitespace costs you space, so start from the Design rules file writer on your real project."
   - "You only need colour, type and spacing as code files from one brand colour: use the Design token builder."
   - "You want a vintage look: use the Retro throwback style guide writer."
+  - "You want a layout of cards in different sizes: use the Bento grid style guide writer."
 you_give:
   - A description of your product and what it does
   - Who uses it

@@ -30,11 +30,11 @@ you_get:
   - A clear offer name
   - Payment term choices
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Also give it the files in the references folder (value-equation.md, offer-anatomy.md, guarantee-design.md and bonus-stacking.md matter most). If you can only paste a little, paste the value-equation and offer-anatomy files with SKILL.md.
   - Tell your AI what you sell, who buys it, your price and what is included.
   - Add the reasons people say no. Add your costs and margin if you want a guarantee that protects your profit.
   - Read the value scores first. Fix the weakest lever before you change anything else.
-  - Pick one change, such as a bonus or guarantee. Use it for a while, then compare results before you change more.
+  - Pick one change, such as a bonus or guarantee. Treat any lift the AI predicts as a rough guess. Use the change for a while, then compare your own results before you change more.
 output_sample:
   input:
     - What you sell and who buys it

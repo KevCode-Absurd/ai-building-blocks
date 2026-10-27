@@ -9,7 +9,7 @@ subhead: Products in stock move to the top of a Shopify collection and sold-out 
 explain: |
   Products in stock move to the top of a Shopify collection and sold-out ones drop to the bottom. It changes your live store, so shoppers see what they can actually buy first.
 
-  It reads every product in a manual collection, sorts them by total inventory, and sends the new order in one update. You choose highest stock first or lowest first. A dry-run mode shows the plan without changing anything. It only works on manual collections, not smart ones driven by rules. It needs a signed-in Shopify CLI and read and write product permissions. You can undo it by running the opposite sort.
+  It reads every product in a manual collection, sorts them by total inventory, and sends the new order in one update. You choose highest stock first or lowest first. A dry-run mode shows the plan without changing anything. It only works on manual collections, not smart ones driven by rules. It needs a signed-in Shopify CLI and read and write product permissions. Running the opposite sort only flips the stock order. It cannot bring back your earlier hand-made order.
 when:
   - Sold-out items sit at the top of your best collection.
   - You want a quick reorder without clicking through the admin.
@@ -28,14 +28,15 @@ you_get:
   - A preview of the new order
   - The reordered live collection
   - A report of what moved
-  - A way to reverse it
+  - A way to flip the stock order
 how_to_use:
-  - Note or export your current product order first. The sort overwrites it and the old custom order cannot be restored.
+  - Write down or screenshot your current product order in the Shopify admin first. The skill has no export, the sort overwrites your order, and the old custom order cannot be restored.
   - Sign in to the Shopify CLI for your store. This needs an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI.
   - Give your AI the skill, your store domain and the collection ID. Ask for a preview first.
   - Check the preview order. The skill stops if the collection is not manual.
   - Ask your AI to run it for real. Then refresh your storefront, as the change can take a few seconds.
-  - To flip the order, run it again with the opposite direction.
+  - To flip the order, run it again with the opposite direction. This does not restore your old order.
+  - You need a Shopify store and permission to read and write products. For products that need restocking, use the Restock list builder next.
 output_sample:
   input:
     - Your store domain

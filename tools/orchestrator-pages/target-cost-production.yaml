@@ -11,7 +11,7 @@ subhead: "Name the price you want to sell at and give it your costs. It works ba
 explain: |
   Most businesses set a price by adding a margin to their costs. Costs then become a fixed fact, and the price follows. A lower price looks impossible because nobody asked which costs the customer is paying for and does not need.
 
-  This workflow turns it around. It sets the price first, then asks of each cost line and step whether the customer needs it, and removes or simplifies before trying to speed up. The second step lays out the work in order, so each part travels the shortest distance and each person does a few small steps. The last step walks the whole process, lists what is thrown away or left idle, and prices each as a product, a reuse or a saving. The approach comes from Henry Ford's book My Life and Work.
+  This workflow turns it around. It sets the price first, then asks of each cost line and step whether the customer needs it, and removes or simplifies before trying to speed up. The second step lays out the work in order, so each part travels the shortest distance and each person does a few small steps. The last step walks the whole process, lists what is thrown away or left idle, and prices each as a product, a reuse or a saving. The order of the steps is taken from Henry Ford's book My Life and Work.
 
 when:
   - You want to cut your price to reach more customers and need to know where the cost can come out.
@@ -20,7 +20,9 @@ when:
 
 you_give:
   - The price you want to sell at, and the customers who can pay it
-  - Your product facts, such as costs, parts, materials and steps
+  - Your product facts, such as costs, parts and materials
+  - How the work runs now: the steps in order, who does each, the space and the tools
+  - What you throw away, leave idle or redo, with amounts if you know them
   - A competitor's prices (optional)
   - A cost or process report, if you have one (optional)
   - A sheet of your costs and volumes (optional)
@@ -39,10 +41,11 @@ not_for:
 output_sample:
   input:
     - "The price you want to sell at, and who can pay it"
-    - "Your product facts, such as costs, parts, materials and steps"
+    - "Your product facts, such as costs, parts and materials"
+    - "How the work runs now: steps, space and tools"
+    - "What you throw away, leave idle or redo"
     - "Your rivals' prices (optional)"
-    - "A cost or process report (optional)"
-    - "A sheet of your costs and volumes (optional)"
+    - "A cost or process report, or a sheet of costs and volumes (optional)"
   prerequisites:
     - "An AI that can read files, to run the handoff pack"
   output:
@@ -58,7 +61,7 @@ output_sample:
       contains: "Each step's file and every MISSING line in one list."
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and three skill files, in the order they run: Price-first cost planner, Work flow layout planner and Waste and by-product finder."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Name your target price and give your product facts and costs.
   - It works step by step and saves each result. Check the cost plan before you read the layout.

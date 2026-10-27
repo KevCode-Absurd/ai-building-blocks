@@ -109,13 +109,13 @@ Append the spec to `reference/saved_reports.md` with the date it was created and
 
 If that file can't be written — the skill folder is read-only in most installed runtimes — write the definition to `report-definitions.md` in the owner's working directory instead and say where it went. A definition that silently failed to save is the same bug as never saving it.
 
-If the owner asked for a cadence, confirm it in one line: "Saved. I'll run this the first Monday of each month." Scheduling is a property of this skill — no separate command needed.
+If the owner asked for a cadence, confirm it in one line: "Saved. I can't run this on a timer by myself. Each first Monday, say 'same report as last time' and I'll rerun it, or set a calendar reminder or your AI tool's scheduler to do that for you." Do not promise an automatic run.
 
 ## After the run
 
 One line: the report ran and the definition is saved. Then the single most relevant next step, with at most two others nearby:
 
-- "The weekly pack, on schedule" runs `/report-pack` to wrap this in context on a cadence.
+- "The weekly pack, on schedule" runs `/report-pack` to wrap this in context on a cadence. This is a separate command from the author's full pack and is not in this item, so leave this offer out unless the user has it.
 - "How's the business doing?" runs `business-pulse` for the picture around these numbers.
 - "Cash forecast" runs `cash-flow-snapshot` when the report raised a cash question.
 

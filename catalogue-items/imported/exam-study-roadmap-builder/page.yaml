@@ -35,7 +35,7 @@ how_to_use:
   - Paste your syllabus, past papers or notes. If your AI can take files, upload them instead.
   - Say your subject, your course code and how many hours you have left.
   - Say if you want one question type only, such as MCQs, flashcards or a mock paper.
-  - Check that the course code is right and that every topic matches your syllabus.
+  - Check that the course code is right and that every topic matches your syllabus. The topic chances and readiness percentages are estimates from the papers you gave it, not a forecast of your exam or your mark.
   - Start with the easy topics at the top of the roadmap and work down.
 output_sample:
   input:

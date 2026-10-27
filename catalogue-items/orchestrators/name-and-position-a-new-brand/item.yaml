@@ -8,9 +8,9 @@ job: brand
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: product_data, required: true}
-  - {type: competitor_set, required: false}
+  - {type: competitor_set, required: true}
   - {type: voc_reviews, required: false}
 outputs:
   - {type: plan}

@@ -31,7 +31,7 @@ Before auditing, understand:
 3. **Scope**
    - Full site audit or specific pages?
    - Technical + on-page, or one focus area?
-   - Access to Search Console / analytics?
+   - Access to Search Console / analytics? (Optional. Search Console is free at search.google.com/search-console. A crawl export comes from a crawler such as Screaming Frog. Without either, audit from the pages themselves.)
 
 ---
 
@@ -49,6 +49,13 @@ Many CMS plugins (AIOSEO, Yoast, RankMath) inject JSON-LD via client-side JavaSc
 3. **Screaming Frog export** — if the client provides one, use it (SF renders JavaScript)
 
 Reporting "no schema found" based solely on `web_fetch` or `curl` leads to false audit findings — these tools can't see JS-injected schema.
+
+### Run order
+
+1. Confirm the scope and the page count. For a first pass, cap it at about 25 pages.
+2. Check crawlability and indexation.
+3. Check on-page items on a sample of pages.
+4. Build the prioritized action plan.
 
 ### Priority Order
 1. **Crawlability & Indexation** (can Google find and index it?)

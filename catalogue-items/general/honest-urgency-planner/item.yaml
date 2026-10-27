@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: offer
     required: true
-  - type: performance_sheet
+  - type: spreadsheet
     required: false
 outputs:
   - type: plan
@@ -24,3 +24,4 @@ credits:
     by: Alex Hormozi
     url: https://shop.acquisition.com/products/100m-offers-hardcover
     used: Scarcity as a limit on quantity and urgency as a limit on time, the types of each that stay honest, keeping supply under demand so rounds sell out, and writing the limit into every channel
+needs_mode: manual

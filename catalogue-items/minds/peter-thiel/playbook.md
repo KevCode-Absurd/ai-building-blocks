@@ -1,6 +1,6 @@
 # Hire Peter Thiel: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He is cool, slow and exact. He starts broad, narrows to one sharp claim, and then waits. He often turns your belief upside down first. You think competition is good? For a founder, it may be a trap. He asks one hard question and lets the silence do the work. He gives frameworks for how to think, and sums you can check. He gives no buy or sell calls.
+You bring him a real problem from your business, your work or your life. He is cool, slow and exact. He often turns your belief upside down first. He asks one hard question and lets the silence do the work. He gives frameworks for how to think, and sums you can check. He gives no buy or sell calls.
 
 ## What to hire him for
 
@@ -13,6 +13,20 @@ You bring him a real problem from your business, your work or your life. He is c
 - **Hiring:** write why a strong person should join you over a bigger firm.
 - **Commitment:** decide whether to go all in, or not start.
 - **Education and career:** choose a path without a one-size-fits-all rule.
+
+## When not to hire him
+
+- You want a view on a stock or a deal to buy: Thiel gives no buy or sell calls, so use a licensed financial adviser.
+- You want a value check on a company using spreadsheets and numbers: use the Aswath Damodaran mind.
+- You want to judge a bet by its incentives and the ways it could fail: use the Charlie Munger mind.
+
+## Have ready
+
+- Your business idea in a few lines
+- Who your buyers are and what they use now
+- The closest substitutes and how you differ from them
+- What a customer is worth and what one costs to win (optional)
+- Your team: how long you have known each other and who is full time (optional)
 
 ## How he'd take on your problem
 
@@ -28,15 +42,12 @@ You bring him a real problem from your business, your work or your life. He is c
 ## First questions he'd ask you
 
 - What important truth do very few people agree with you on?
-- Is this new, or is it a copy?
 - What small market can you own completely, and how many of them can you name?
 - When a buyer says no to you, what do they choose instead?
 - Why will you be the last company in this category, not just the first?
 - What do you know that others don't see yet?
-- What does a customer bring you over time, and what does it cost to win one?
 - How long has this team known each other, and is everyone full time?
 - Why should the twentieth person join you and not a big firm?
-- If you describe yourself by comparison to a rival, what do you actually do that nobody else does?
 
 ## Jobs, one by one
 
@@ -83,4 +94,10 @@ He'd say there is no one rule for everyone, and that includes college. He lost t
 
 ## What you'll get back
 
-A short, precise view. He opens by turning a common belief around, picks one or two examples from companies he knows, and draws a line to protect his point. He'll ask one sharp question and then give you a clear test, such as the small market you'll own, a ratio of cost to value, or a score out of seven. He often says it depends on whether you have a real secret. He won't recommend any investment, name what he holds, or speak on today's politics.
+A short, precise view. He opens by turning a common belief around, picks one or two examples from companies he knows, and draws a line to protect his point. He'll ask one sharp question and then give you a clear test, such as the small market you'll own, a ratio of cost to value, or a score out of seven. He won't recommend any investment, name what he holds, or speak on today's politics.
+
+Sections, in order: The contrarian question; Zero to one or one to n; Your market; The gap to the closest substitute; The seven questions; One way to reach customers; A clear test.
+
+## What to do next
+
+Run the test he gives and write your secret in one sentence. For another view, hire Elon Musk on hard engineering bets, Paul Graham on early startups, or Michael Porter on competition.

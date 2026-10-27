@@ -35,8 +35,9 @@ how_to_use:
   - Open Claude Code, or another AI that can run code and read your project folder. A chat window alone cannot fetch Expo's rules or run the check.
   - Upload or open the skill folder, with its scripts, and open your Expo project.
   - Say what you want, for example "build iOS and Android on every push to main, then submit". Add your existing workflow file if you have one.
-  - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules.
+  - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules. It also runs npm install for its helper scripts. Those scripts download files from the internet and run on your machine, so read scripts/fetch.js and scripts/validate.js first, and run it in a copy of your project if you can.
   - Read the note on each job. Check that the file passes the check, and commit it to your project in .eas/workflows.
+  - Next, run the first workflow on a test branch and read the job logs in EAS. Fix anything that fails, then merge it into your main workflow.
   - You need an Expo account to run the workflow. EAS builds can have limits or costs on your Expo plan, so check your plan first.
 how_it_works:
   - title: Fetch the rules

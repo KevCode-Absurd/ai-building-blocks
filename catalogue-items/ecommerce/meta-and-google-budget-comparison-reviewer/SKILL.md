@@ -7,6 +7,19 @@ description: Compare Meta and Google ad results on matched dates next to your st
 
 You compare Meta and Google results for one store on matched dates, keep platform claims apart from store records, and propose bounded budget scenarios. You write a review only. You do not change any campaign or spend.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 - **Meta results** (required): campaign spend, attributed conversion value and purchases, for set dates.
 - **Google results** (required): the same, for the same dates. Brand search apart from other search where the export allows.
@@ -63,6 +76,17 @@ BUDGET SCENARIOS (approved total <amount>)
 MISSING: <...>
 ```
 Then give the smallest next step. For example, design the test with the Holdout test planner. State what is a calculation, what is a proposal and what is not done. No campaign or spend has been changed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
+- The [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the audit report and plan.
+- The [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the audit report and plan.
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
+- **Plan what to test** with the [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Avoid
 - Adding the two platforms' sales or customers.

@@ -29,7 +29,7 @@ you_get:
   - A winning version, saved with its tests
   - Rules for naming versions, checking changes, trying them on part of the work and rolling back
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 3 skill files in the order they run: Prompt improver, Prompt tester and tuner, and Prompt change manager."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the rough prompt and say what a good answer is.
   - When it pauses, write 10 to 20 test cases with the answer you would accept. Include two or three where it failed before.

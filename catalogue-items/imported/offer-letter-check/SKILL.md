@@ -17,6 +17,8 @@ argument-hint: "[offer letter file, or describe the hire]"
 3. Check: jurisdiction, classification, restrictive covenants, background check compliance.
 4. Flag anything that hits the jurisdiction-specific escalation table.
 
+**No plugin config file?** If `~/.claude/plugins/config/claude-for-legal/employment-legal/CLAUDE.md` does not exist (you are not using the Claude for Legal plugin), do not stop. Ask the user in chat for what it would hold: the work state or country, the company's non-compete policy, which terms must go to a lawyer, and whether the user is a lawyer. Use `setup-interview/SKILL.md` for the full interview. Treat every answer as the config for this review.
+
 ---
 
 ## Matter context

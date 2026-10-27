@@ -137,7 +137,7 @@ Before finalizing output, the agent asks:
 
 > Build a psychographic profile for this audience before we decide positioning, copy, or funnel structure.
 
-**Illustrative output:** From three supplied interview excerpts, return observed statements, provisional motivations, unknowns and follow-up questions; do not infer health, political beliefs or hidden vulnerabilities.
+**Illustrative output:** From three supplied interview excerpts, return six sections in this order: Surface signals (what the buyer said or did), Dominant need state, Identity commitments, Fears and friction, the Psychographic profile, and Unknowns and follow-up questions. Keep observed statements apart from guesses. Do not infer health, political beliefs or hidden vulnerabilities.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

@@ -21,7 +21,7 @@ NVIDIA's toolkit for preparing high-quality training data for LLMs.
 - Filtering low-quality or toxic content
 - Scaling data processing across GPU cluster
 
-**Performance**:
+**Performance** (vendor figures from the skill's author, not tested by AI Blocks; the hardware differs from table to table, so your results will differ):
 - **16× faster** fuzzy deduplication (8TB RedPajama v2)
 - **40% lower TCO** vs CPU alternatives
 - **Near-linear scaling** across GPU nodes
@@ -171,6 +171,8 @@ high_quality = dataset.filter(lambda doc: quality_clf(doc["text"]) > 0.5)
 ## GPU acceleration
 
 ### GPU vs CPU performance
+
+Vendor figures, undated, on the hardware shown. Treat them as rough, not as a promise.
 
 | Operation | CPU (16 cores) | GPU (A100) | Speedup |
 |-----------|----------------|------------|---------|
@@ -323,6 +325,8 @@ cluster.close()
 
 ## Performance benchmarks
 
+Vendor figures from the skill's author, undated, on the hardware shown in each line. They are not tested by AI Blocks. Measure on your own data.
+
 ### Fuzzy deduplication (8TB RedPajama v2)
 
 - **CPU (256 cores)**: 120 hours
@@ -342,6 +346,8 @@ cluster.close()
 - **Speedup**: 10×
 
 ## Cost comparison
+
+Example only. These cloud prices are the author's, undated, and will have changed. Check current prices before you plan a budget, and do not quote the totals.
 
 **CPU-based curation** (AWS c5.18xlarge × 10):
 - Cost: $3.60/hour × 10 = $36/hour
@@ -376,7 +382,7 @@ cluster.close()
 
 - **GitHub**: https://github.com/NVIDIA/NeMo-Curator ⭐ 500+
 - **Docs**: https://docs.nvidia.com/nemo-framework/user-guide/latest/datacuration/
-- **Version**: 0.4.0+
+- **Version**: 0.4.0+ (the code in this file was written for the 0.4 series; check the current docs before you run it, as the API changes between versions)
 - **License**: Apache 2.0
 
 

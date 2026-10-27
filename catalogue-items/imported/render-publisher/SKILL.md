@@ -286,7 +286,7 @@ After creating `render.yaml`, always give the user a short, explicit checklist a
 1. **Authenticate (CLI)**: run `render whoami -o json` (if not logged in, run `render login` or set `RENDER_API_KEY`)
 2. **Validate (recommended)**: run `render blueprints validate`
    - If the CLI isn't installed, offer to install it and provide the command.
-3. **Commit + push**: `git add render.yaml && git commit -m "Add Render deployment configuration" && git push origin main`
+3. **Commit + push to a branch**: `git switch -c add-render-config && git add render.yaml && git commit -m "Add Render deployment configuration" && git push origin add-render-config`. Ask the user to review it, then merge it to main before opening the Dashboard link.
 4. **Open Dashboard**: Use the Blueprint deeplink and complete Git OAuth if prompted
 5. **Fill secrets**: Set env vars marked `sync: false`
 6. **Deploy**: Click "Apply" and monitor the deploy
@@ -312,13 +312,16 @@ Configuration guide: [references/configuration-guide.md](references/configuratio
 
 **IMPORTANT:** You must merge the `render.yaml` file into your repository before deploying.
 
-Ensure the `render.yaml` file is committed and pushed to your Git remote:
+Commit `render.yaml` on a new branch and push the branch to your Git remote. Do not push straight to main:
 
 ```bash
+git switch -c add-render-config
 git add render.yaml
 git commit -m "Add Render deployment configuration"
-git push origin main
+git push origin add-render-config
 ```
+
+Then have the user review the change and merge it to main (for example through a pull request) before they open the Dashboard link.
 
 If there is no Git remote yet, stop here and guide the user to create a GitHub/GitLab/Bitbucket repo, add it as `origin`, and push before continuing.
 
@@ -414,7 +417,7 @@ For simple deployments without Infrastructure-as-Code, create services directly 
 
 ```bash
 git remote -v  # Verify remote exists
-git push origin main  # Ensure code is pushed
+git push origin <your-branch>  # Ensure code is pushed (review and merge to main before deploying)
 ```
 
 Supported providers: GitHub, GitLab, Bitbucket

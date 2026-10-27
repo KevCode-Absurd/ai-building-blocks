@@ -38,6 +38,7 @@ how_to_use:
   - Check the memory estimate first. Resize the plan if it is too tight.
   - Before you train, check that the chat template step shows the right part of one batch masked.
   - Run the training, then ask for the export format your runtime needs.
+  - The result comes in the order of the six steps. A memory table comes first, then one code block for each step, then the export commands.
 output_sample:
   input:
     - Your base model
@@ -47,6 +48,7 @@ output_sample:
     - Where you will run it, like GGUF (optional)
   prerequisites:
     - An AI that can run Python code
+    - A pinned commit for the model and each dataset on the Hugging Face Hub. The code stops if you do not set one
     - A GPU that can run your chosen model
   output:
     - name: Size the run

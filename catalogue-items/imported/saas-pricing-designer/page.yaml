@@ -35,6 +35,7 @@ how_to_use:
   - For the price range, ask 10 or more real buyers the four price questions and paste their answers in. Without real answers, treat any range as a guess.
   - Read the value metric first. Check that your customers would find it easy to understand.
   - Pick one pricing test from the list. Run it for at least two billing cycles and set a stop limit before you start.
+  - Next, build your pricing page from the copy template. Check each tier price against the range your buyers gave you. The sample prices in the template are placeholders.
 output_sample:
   input:
     - What your product does and who buys it

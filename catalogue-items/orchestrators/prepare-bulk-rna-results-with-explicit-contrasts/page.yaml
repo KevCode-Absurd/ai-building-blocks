@@ -17,7 +17,7 @@ you_get:
   - Full result tables, diagnostics, figures and interpretation limits
 how_it_works:
   - title: Validate the count handoff
-    text: Confirm bulk biological replication, count provenance, reference build and quantification path. Assemble gene-level counts with the explicit conversion policy. Hand counts, metadata, QC and exclusions to statistical fitting.
+    text: "Confirm bulk biological replication, count provenance, reference build and quantification path. Assemble gene-level counts with the explicit conversion policy: raw counts from STAR or featureCounts, or Salmon output imported as length-scaled counts. TPM, FPKM and normalized values are not accepted as counts. Hand counts, metadata, QC and exclusions to statistical fitting."
   - title: Fit the stated comparison
     text: Require matching sample sets, full-rank design and residual degrees of freedom. Use explicit contrast/reference levels. Preserve complete tables, warnings, missing adjusted values and coefficient-matched shrinkage details.
   - title: Show results faithfully

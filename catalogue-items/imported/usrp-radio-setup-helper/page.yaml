@@ -30,11 +30,11 @@ you_get:
   - A test that proves the connection works
   - Fixes for the most common failures
 how_to_use:
-  - Check you have MATLAB R2026a or later with the Wireless Testbench support package. Both need a licence. This skill does not cover buying or installing them.
+  - Check you have MATLAB R2026a or later with the Wireless Testbench support package. Both need a licence. This skill does not cover buying or installing them. The licence on this copy (BSD 2-Clause, see LICENSE.md) allows use only with MathWorks products.
   - Connect and power on your USRP radio.
   - Open your AI tool and add the skill folder, or paste in the SKILL.md text.
   - Tell your AI your USRP model, how it connects, and your MATLAB release. Add any error message.
-  - Let your AI run each step and show you the results. It needs to run MATLAB and shell commands on your computer.
+  - Let your AI run each step and show you the results. It runs MATLAB and shell commands on your computer, so read each command before you approve it, especially network and firewall changes.
   - When the connection test passes, move on to the matlab-detect-capture-usrp skill to capture your first real signal.
 output_sample:
   input:

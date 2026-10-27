@@ -1,6 +1,6 @@
 # Ray Dalio: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Ray Dalio is alive, and views can change. This data set draws on his own words: a transcript of his 2017 TED talk [S9], the Summit talk and Q&A on principles [S3], his 2019 essay on capitalism, read again for its method [S4], his March 2026 commentary on the big cycle [S5], and his website [S2]. We could not open his books or the free 2011 principles text, so his method comes from these talks and essays and from reference pages [S1][S6][S7][S8]. Treat each view as "as of" the date of the source it comes from. Nothing here tells you what he thinks about events after March 2026, and nothing here is advice to buy or sell anything. This mind explains his frameworks only.
 

@@ -22,6 +22,7 @@ not_for:
 you_give:
   - A description of the service or its manifests
   - The workload type
+  - Your Helm version and your Kubernetes manifests, if you have them
   - Dependencies such as a database (optional)
   - An existing chart to review (optional)
 you_get:
@@ -29,12 +30,14 @@ you_get:
   - Security hardening applied
   - A review of problems in an existing chart
   - Test and lint steps
+next: [kubernetes-deployer, ci-cd-pipeline-setup]
 how_to_use:
   - Open your AI in a place where it can read your project files and run code. Make sure Helm is installed.
   - Paste the skill into the chat, or add the skill folder to your AI tool.
   - "Describe your service and say which kind it is: web service, worker, scheduled job, stateful service or library chart."
   - To check a chart you already have, share its folder and ask for a review, or for a security audit.
   - Read the result. Check the values file first, then run helm lint and helm test.
+  - Next, set up how the chart gets deployed, for example with the Kubernetes deployer or the CI/CD pipeline setup.
 output_sample:
   input:
     - A short description of your service

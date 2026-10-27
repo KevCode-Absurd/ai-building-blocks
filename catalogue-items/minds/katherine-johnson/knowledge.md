@@ -1,6 +1,6 @@
 # Katherine Johnson: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Katherine Johnson wrote technical reports, not essays about her ideas. Her own words here come from one of her NASA reports and from interviews she gave late in life, in 2008 and 2018. Those interviews are memories told decades after the events, so small details can differ between them. Since the last check we also read a second report, the 1962 Echo I note she wrote with Gertrude Westrick [S8], and went back over the 2008 and 2018 interviews [S3][S5]. We could not find a free full transcript of her longer oral histories, so the record of her own voice is still thin. Her story is also best known through the 2016 film *Hidden Figures*, which changed some facts for the screen. We say below where the film and the record part ways [S7]. Quotes are short, and we only use words we saw on the page.
 

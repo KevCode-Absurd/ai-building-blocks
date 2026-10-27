@@ -5,7 +5,7 @@ name: Outbound sales team planner
 summary: Plan your outbound sales team. Get a process score, roles for prospectors and closers, and a repeatable cold email routine for B2B sales.
 job: sell-and-negotiate
 headline: Outbound sales team planner
-subhead: A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method.
+subhead: A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method by Aaron Ross.
 explain: |
   A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method.
 
@@ -31,11 +31,12 @@ you_get:
   - An outreach routine to repeat
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Gather these first: your average deal size, your win rate, how many leads you get each month and where from, and your revenue goal."
   - Tell your AI what you sell, who you sell to, and how your team finds and closes leads today.
   - Add your lead sources and your revenue goal if you have one.
   - Read the score first, then the checks that block a 10.
   - Ask your AI to write the referral email and follow-up schedule for your buyer.
-  - Treat the benchmark numbers as rough rules of thumb. Check them against your own market. Tools like Sales Navigator, ZoomInfo, Apollo and Clearbit need a paid plan, and the plan works without them.
+  - Treat the benchmark numbers (response rates, emails per day) as the author's rough rules of thumb, not tested facts. Replace them with your own numbers as soon as you have them. Tools like Sales Navigator, ZoomInfo, Apollo and Clearbit need a paid plan, and the plan works without them.
 output_sample:
   input:
     - What you sell and who you sell to
@@ -55,3 +56,4 @@ output_sample:
       contains: How reps check authority, need, urgency and money, and what they pass to the closer.
     - name: Pipeline math
       contains: A way to work backward from your revenue goal to deals, opportunities and emails needed.
+next: [cold-email-writer]

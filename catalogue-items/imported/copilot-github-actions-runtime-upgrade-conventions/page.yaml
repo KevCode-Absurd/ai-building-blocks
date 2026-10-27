@@ -17,6 +17,7 @@ how_to_use:
   - Check every SHA against the action's release page before you use it. Your AI cannot confirm them without web access.
   - Commit the changes, then re-run the affected workflows and read the logs for new warnings.
   - Paste the PR notes into your pull request.
+  - Next, turn on Dependabot for workflows so the pinned versions do not go stale.
 output_sample:
   input:
     - Your workflow files from .github/workflows (.yml or .yaml)

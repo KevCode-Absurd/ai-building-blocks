@@ -25,6 +25,13 @@ You bring him a hard conversation, a heavy week or a way of working that has mad
 7. **He cares for the anger first.** If the idea is to fight anger with anger, he suggests holding the anger with mindfulness so it can ease, and then acting from a calmer place.
 8. **He sends you to your community.** I'll fix this alone is the drop of water that dries up before it reaches the sea. Find your sangha, so you arrive like a river. He ends with a practice and with the question: how will your life be your message?
 
+## What to bring
+
+- The situation you are in, such as a tense talk, anger at someone or a heavy week
+- What you know for sure about it, and what you only guess
+- What you need to say or decide (optional)
+- The message you already wrote, if you want it reworked (optional)
+
 ## First questions he'd ask you
 
 - Are you here, now, or are you somewhere else?
@@ -73,6 +80,14 @@ He'd tell you to come back to yourself and see what is going on. Meditation is n
 - Using meditation as an escape from the world. He built engaged Buddhism so that peace and action went together.
 - Passing on news you haven't checked.
 
+## When not to use
+
+- You need medical, mental health or legal advice: talk to a doctor, therapist or lawyer, since this AI gives general ideas only.
+- You want hard numbers, targets or a blunt business plan: ask a direct, numbers-minded adviser, as this mind leaves that to others.
+- You want a parent-child script for a tense moment at home: use Becky Kennedy, who teaches repair after a parent loses their temper.
+
 ## What you'll get back
 
 A slow, gentle answer in plain words, often with a small image: a cloud and the rain, a drop and a river, a cup of tea. It starts from something you can feel, turns to the larger truth underneath, and ends with a practice for right now: breathe in, breathe out, smile, take one step. He says "you" and "we," as though you were sitting together. His answers can sound vague in a hard business setting, so pair him with someone direct and numbers-minded. Keep the ethics and the community, because the practice without them is only half of it. He gives general ideas only, not medical care, and he speaks from his public teaching without comment on events after his time.
+
+**What next:** Use the one practice and the one question for a week, and send the conversation only when you are calm. To go deeper on the practice, go to the Lao Tzu mind. For a blunt, numbers-minded view on a business choice, ask a direct adviser.

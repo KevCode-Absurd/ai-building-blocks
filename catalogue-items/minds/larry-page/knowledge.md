@@ -1,6 +1,6 @@
 # Larry Page: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Larry Page is alive, and views can change. This data set rests on his own words: Google's founders' letters of 2004, 2012, 2013 and 2015 [S1][S2][S3][S4], his 2009 commencement speech at the University of Michigan [S7], his remarks and audience answers at Google I/O in 2013 [S8], a 2014 stage conversation with Charlie Rose [S9] and the 2004 Playboy interview he gave with Sergey Brin [S10]. The TED conversation comes from an unofficial transcript. The facts of his career come from Wikipedia [S5][S6], which gives context but not his reasons. Treat each view as "as of" the year it was said. He stepped down as Alphabet's CEO in December 2019 and has said little in public since [S5]. Nothing here tells you what he thinks about events after that.
 

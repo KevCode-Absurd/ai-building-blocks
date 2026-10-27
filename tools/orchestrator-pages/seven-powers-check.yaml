@@ -21,7 +21,7 @@ when:
   - You are choosing between spending on brand, scale, a community or a better model, and want to know which one your market still allows.
 not_for:
   - "You have no revenue or customer data yet: size your market first, then come back."
-  - "You only want to test one edge: use the Competitive advantage tester."
+  - "You only want to test one edge: use the Business power tester."
   - "You want a rival-proof pricing or model idea: ask a trusted adviser or accountant, as this gives no investment advice."
 
 you_give:
@@ -35,10 +35,11 @@ you_get:
   - The power to build first at your stage, a first test with a pass line, and the early choices that close the others
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Business power tester, Seven powers scorecard builder, Ten-year durability checker and Power build-order planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your business and paste any numbers on price, cost, margin and repeat rate. It works step by step and saves each result.
-  - Read the buildable list and the first test last. Run the test before you spend on the power.
+  - Check step 2 before it goes on. Each score of 2 or 3 should have a number or fact behind it. Ask for a rework if a score rests only on a good team or a big user count.
+  - Read the buildable list and the first test last. Run the test before you spend on the power. The first test has a pass line, so you know when it worked.
 output_sample:
   input:
     - What you sell, to whom, and your price, cost and margin

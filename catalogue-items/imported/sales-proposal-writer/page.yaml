@@ -31,11 +31,12 @@ you_get:
   - Case study sections
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
-  - Paste the RFP text or your notes on what the buyer needs.
+  - Paste the RFP text or your notes on what the buyer needs. Paste the facts you have about the buyer too, such as size and news. Turn on web search if your AI has it. The AI must not guess these.
   - Add your product details, prices and timelines. Add case studies you own, if you have them.
   - Say which format and tone you want, such as a Word document or a slide deck.
   - Read the draft. Check every price, date and result against your own records, then edit before you send.
   - Ask your AI to list any RFP question it left unanswered, and fix those gaps.
+  - Next, send the proposal with a short cover email. Then log whether you won or lost against your case-study library.
 output_sample:
   input:
     - The RFP text or your notes on the prospect's needs

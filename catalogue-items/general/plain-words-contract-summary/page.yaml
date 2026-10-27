@@ -68,6 +68,8 @@ output_shape: |-
   <section, quoted words, plain meaning>
   VAGUE OR MISSING
   QUESTIONS TO ASK
+  CHECKS MISSED
+  <one line per check missed, or none>
 tweaks:
   - what: Your focus
     how: Say what matters most and it goes first.
@@ -88,6 +90,8 @@ improve:
   - Add a note on your own red lines, like never more than one year.
   - Compare two versions of the same contract.
   - Use the full skill for contracts with amendments.
+before: []
+next: [contract-risk-reviewer, contract-plain-summary]
 works_best_with:
   tools:
     - name: Any good chat AI

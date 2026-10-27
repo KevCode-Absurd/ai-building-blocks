@@ -4,13 +4,13 @@ summary: Share your Foreplay ads. Get groups by ad type, notes on what they show
 job: study-competitors
 headline: Foreplay creative strategy workflow
 subhead: Study the actual ads, then plan what to test.
-explain: Works with an authorized Foreplay connection or a supplied export. Adds repeatable corpus selection, cluster sampling, media analysis records and a brief that shows what was observed and what remains a hypothesis.
+explain: Foreplay is a paid service, so you need your own account or an export from it. Without either, use the Facebook ad library collector. This works with an authorized Foreplay connection or a supplied export. Adds repeatable corpus selection, cluster sampling, media analysis records and a brief that shows what was observed and what remains a hypothesis.
 when:
   - You have Foreplay data and want a structured creative study.
   - You want adaptation briefs based on actual videos and images.
 you_give:
   - Competitor or board scope, market, dates, product and study goal.
-  - Authorized Foreplay access or an export with ad IDs and media.
+  - Authorized Foreplay access (a paid account) or an export with ad IDs and media. If you have neither, use the Facebook ad library collector instead.
   - Your product facts and past results if you want comparison with your own ads.
 you_get:
   - A de-duplicated corpus and sample ledger.
@@ -20,13 +20,20 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+  - Next, give the top ranked test ideas to the Video script writer from a competitor ad idea, then measure the results in your own ad account.
 how_it_works:
-  - title: Define a bounded corpus
-    text: Read authorized data or exports, retain live and ended status, and deduplicate before analysis.
-  - title: Inspect representative media
-    text: Cluster formats and sample across advertisers and dates; separate actual hooks from captions.
-  - title: Build a test brief
-    text: Report observations, limits and adaptations with the brand proof needed for each.
+  - title: Set the scope
+    text: List the boards, advertisers, dates, market and goal for the study. Ask once for anything missing.
+  - title: Collect a bounded corpus
+    text: Read your authorized Foreplay data or export. Keep live and ended ads, record the limits and remove duplicates before analysis.
+  - title: Group before you pick
+    text: Group the ads by format and angle. Pick a few from each group, across advertisers and dates, and write down why.
+  - title: Inspect the real media
+    text: Open each picked ad. Note the hook, the beats, the proof and the call to action. Mark what you saw apart from what you infer.
+  - title: Find the repeating formulas
+    text: For each group, write the repeating sequence, with the ad IDs behind it and how sure the sample lets you be.
+  - title: Build the test brief
+    text: Write an HTML brief with ranked test ideas. Each has the audience problem, the opening, the scenes, the proof you need and a test question.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 

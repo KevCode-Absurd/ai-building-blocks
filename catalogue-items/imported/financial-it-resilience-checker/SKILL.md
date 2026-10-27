@@ -65,6 +65,8 @@ and related regulations (NIS2, EMIR, MiCA, CRR).
 
 ## How to Respond
 
+Start with the table that matches the task below (for a gap analysis, the gap table). Keep the long article notes for when the user asks for detail.
+
 | Task | Output Format |
 |------|--------------|
 | Gap analysis | Table: DORA Article \| Obligation Summary \| Status \| Evidence Needed \| Gap Notes |
@@ -80,6 +82,8 @@ and related regulations (NIS2, EMIR, MiCA, CRR).
 ---
 
 ## Status Update — September 2026 (state where relevant)
+
+> **Unsourced and dated.** The figures and dates below came with the skill and have no source links here. They go stale quickly. Before you repeat any of them, check it against the official EU or regulator page, give the link and the date you checked, and say "as of September 2026".
 
 - **CTPP oversight is operational**: the ESAs designated the first **critical ICT third-party providers on November 18, 2025** (19 providers including the major cloud hyperscalers); 2026 is the **first full oversight cycle** — Lead Overseers and Joint Examination Teams are conducting risk assessments and initial examinations, with first recommendations possible this year.
 - **Art. 31(12) deadline approaching**: financial entities may only use a third-country-established CTPP if it has **established an EU subsidiary within 12 months of designation** — for the November 2025 cohort that lands **~November 2026**. Verify vendor subsidiary status now and prepare exit options.

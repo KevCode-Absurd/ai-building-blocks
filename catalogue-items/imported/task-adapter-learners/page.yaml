@@ -19,6 +19,7 @@ when:
 not_for:
   - "You want to find out what a student needs: ask your SENCO or a specialist, because this tool does not diagnose anyone."
   - "A student already has a support plan: start with the school's plan, then use this to shape one task."
+  - "You need a whole lesson plan adapted for English language learners: use the ELL lesson adapter."
   - "You need a task made from scratch: write the task first, or ask your AI to draft one, then bring it here."
 you_give:
   - The original task
@@ -32,11 +33,13 @@ you_get:
   - A quick check that the objective still holds
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - The pasted prompt has template slots such as {{original_task}}, {{learner_profile}} and {{learning_objective}}. Replace each one with your own text before you run it. Delete the optional ones you do not use.
   - Paste your original task and the learning objective.
   - Say what the learner needs, such as EAL, dyslexia, ADHD or anxiety. Add year group and subject if you can.
   - Read the adapted task and the list of what changed. Check the objective is still the same.
   - Edit anything that does not fit the child you know, then use the task in class.
-  - For more support steps or ways to check learning, pair it with the Scaffolded task modifier and the Formative assessment technique selector. This skill is adapted from Gareth Manning's differentiation-adapter, shared under CC BY-SA 4.0.
+  - For more language support steps, pair it with the ELL task scaffolds. To check what students learned, use the lesson understanding check. This skill is adapted from Gareth Manning's differentiation-adapter, shared under CC BY-SA 4.0.
+next: [ell-task-scaffolds, lesson-understanding-check]
 output_sample:
   input:
     - Your original task, as you planned it for the class

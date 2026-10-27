@@ -19,7 +19,7 @@ when:
   - Reviews keep mentioning the same drawback and you want to answer it in the ad.
 not_for:
   - "Your product has no real weakness buyers notice: write a plain benefit ad with the Ad first line writer and scorer instead."
-  - "You need to check claims before you publish: use the Claim and proof matcher, then the Meta ads compliance checker."
+  - "You need to check claims before you publish: use the Claim evidence checker, then the Meta ads compliance checker."
   - "The flaw is unsafe or unlawful to sell: fix the product or ask a compliance adviser. Do not put it in an ad."
 
 you_give:
@@ -137,7 +137,7 @@ improve:
   - Add a list of claims you may never make, so it keeps lines inside them.
   - Add the weakness phrases your customers use, so ads echo their words.
   - Save the line that won to your brand file as a proven turn.
-  - Pair it with "Claim and proof matcher" before you publish.
+  - Pair it with "Claim evidence checker" before you publish.
 
 works_best_with:
   tools:

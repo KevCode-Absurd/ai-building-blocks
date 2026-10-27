@@ -1,23 +1,24 @@
 new_slug: make-a-recurring-process-easier-to-hand-over
 name: Make a recurring process easier to hand over
 headline: Make a recurring process easier to hand over
-summary: Share the source files. Get an evidence-based procedure, exception guide and handover checklist.
+summary: Give it a recent real run of the process, its exceptions and who takes over. Get a procedure, an exception guide and a handover note with practice tasks.
 job: document-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An evidence-based procedure, exception guide and handover checklist. Share a recent real process run, current instructions, exceptions, tools and intended replacement owner. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share a recent real run of the process, the current instructions, the exceptions, the tools and who takes over. Your AI writes the procedure, the exception guide and a handover note with practice tasks. It marks any fact it cannot check.
 explain: |-
-  An evidence-based procedure, exception guide and handover checklist.
+  Work that lives in one person's head is hard to hand over. The new owner finds out about the exceptions only when something breaks.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A newcomer can locate inputs, do each step and know when to stop or escalate. Missing tools or evidence stay visible in the final summary.
+  Give your AI a recent real run of the process, the current instructions and the exceptions. It writes the procedure first, with who does each step and how each exception is handled. Then it writes the handover note from that procedure: what will break first, what is due, where things live and who to ask, plus practice tasks for the replacement. One practice task is to run a real exception from the recent record with the new procedure. Missing facts stay visible in the final summary.
 when:
-  - You need an evidence-based procedure, exception guide and handover checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - One person runs a recurring process from memory and someone else must take it over.
+  - The replacement will meet exceptions the old owner handled without writing them down.
+  - You want a procedure the replacement can test by running one real exception from the record.
 not_for:
   - "You only need a quick note for a holiday or leave: use the Handover note writer on its own."
   - "The process is slow or wasteful and you want to cut steps first: use the Process waste finder."
   - "Nobody has run the process lately and you have no real example: this needs a recent run, so do one first and keep the notes."
+  - "You need a reconciled grant spending table and a variance brief: use Prepare a grant spending evidence pack."
 you_give:
   - A recent real process run, current instructions, exceptions, tools and intended replacement owner.
   - The intended reader, deadline and limits on what may be changed.
@@ -50,9 +51,9 @@ output_sample:
       contains: Each saved file, checks that could not run, and one next step.
 how_it_works:
   - title: Process and SOP writer
-    text: Write the procedure with inputs, checks, exceptions and the final definition of done.
+    text: Writes the procedure from a recent real run, with who does each step, the checks, how each exception is handled and the definition of done.
   - title: Handover note writer
-    text: Prepare the current-state handover and list the practice tasks the replacement should complete.
+    text: Uses the procedure and your brain dump to write what will break first, what is due and where things live, then lists practice tasks for the replacement.
 output_shape: |-
   Scope and source coverage
   An evidence-based procedure, exception guide and handover checklist.

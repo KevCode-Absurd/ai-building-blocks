@@ -14,10 +14,10 @@ outputs:
   - {type: plan}
 uses: [urgent-versus-important-sorter, results-agreement-writer, values-to-week-planner, weekly-time-audit-planner]
 steps:
-  - {uses: urgent-versus-important-sorter, note: "Four boxes with your real time split, what to drop or hand off, and what to protect."}
-  - {uses: results-agreement-writer, note: "A one-page agreement for each job you hand off: the result, limits, help, review times and consequences."}
-  - {uses: values-to-week-planner, note: "A week built from roles and chosen results, with the important work booked first."}
-  - {uses: weekly-time-audit-planner, note: "What you chose against what took you, and one hour won back for next week."}
+  - {uses: urgent-versus-important-sorter, note: "Takes your task list and your roles or goals. Four boxes with your real time split, what to drop or hand off, and what to protect."}
+  - {uses: results-agreement-writer, note: "Reads the handoff list in the week brief from step 1. A one-page agreement for each job you hand off: the result, limits, help, review times and consequences."}
+  - {uses: values-to-week-planner, note: "Reads the week brief from step 1 and your fixed meetings. A week built from roles and chosen results, with the important work booked first."}
+  - {uses: weekly-time-audit-planner, note: "Runs after you have lived the week. Reads step 3's plan, that week's calendar and your notes. What you chose against what took you, and one hour won back for next week."}
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-covey]

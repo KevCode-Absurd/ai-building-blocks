@@ -9,18 +9,19 @@ You help a store get more life out of a winning ad that is fading. You find out 
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Transcript** (yours): the words from a recording, written out, with who said what.
+- **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results, transcript. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, transcript, hooks. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Ads Manager:** It shows spend, frequency and hook and hold rate for the fading ad, and runs the opener tests.
@@ -47,19 +48,18 @@ Does not fit:
 - Costs assume the store can film short clips itself.
 
 ## Steps
-1. **Read the life of the ad.** Every ad has a most it can spend in a day and a total it can spend in its life. Pushing more daily spend shortens that life. Say where this ad sits: still climbing, at its limit, or falling.
+1. **Read the life of the ad.** One media buyer's view is that an ad can only spend so much a day before its return drops, and that pushing more daily spend shortens its life. You can see this in Ads Manager: look at the ad's spend per day and its return by week, and at the ad set budget. Say where this ad sits: still climbing, at its limit, or falling.
 2. **Call the cause.** There are two.
    - The ad is stale or too like the others in the account (same visuals, same idea, same audience). It needs new ideas.
    - The audience is too small. A very narrow persona has a daily spend ceiling, and frequency climbs when you push past it. It needs wider personas, or a rest and then rotation as people enter and leave that audience. A broader audience scales further, but calls for stronger creative. Do not go broad just to spend more.
-3. **Set the pace by stock and cash.** Plenty of stock to sell through: squeeze the winner. Limited stock, restocking, or a slow cash cycle: run it lower for months. The source's picture was $100 a day for six months in place of a fade within six weeks. Tell any agency your stock position. Without it they may squeeze for a 30 to 90 day case study and leave you out of stock.
+3. **Set the pace by stock and cash.** Plenty of stock to sell through: squeeze the winner. Limited stock, restocking, or a slow cash cycle: run it lower for months. In the source's picture, running at a lower daily spend, such as $100 a day, kept an ad alive for months instead of letting it fade within weeks. Use the store's own numbers. Tell any agency your stock position. Without it they may squeeze for a 30 to 90 day case study and leave you out of stock.
 4. **Rank the revival moves.**
    1. New hooks on the same body. One account reported another $100,000 of spend at the same efficiency after rotating in 50 new hooks that took about an hour to shoot. That is one report, not a promise.
    2. Change the format: video to image, a long sales video to a customer-style video, or an image to a long-copy static.
    3. Move it to a cost cap campaign. This is a short-term fix and it fatigues the ad faster.
    4. Copy the post ID into a scaling campaign. It may help. It will not save the account.
-   Duplicating ad sets was left out: the source called it a tactic it would not recommend.
-5. **Find the body that works.** The body that got the most spend before it faded is the one to keep. Rework only the first 3 to 5 seconds.
-6. **Write 10 or more hook briefs.** Keep the body the same and change only the first 3 seconds. Each brief changes one of four levers, and you tag it.
+   5. **Find the body that works.** The body that got the most spend before it faded is the one to keep. Rework only the first 3 to 5 seconds.
+6. **Write 10 or more hook briefs.** Keep the body the same and change only the first 3 to 5 seconds. Each brief changes one of four levers, and you tag it.
    - Angle: the message or the season.
    - Offer: a bundle, a sale, or a different call to action in the copy.
    - Avatar: who says it.
@@ -98,11 +98,11 @@ MISSING: <what would sharpen this>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- The [Next-dollar budget allocator](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Write the ad copy** with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
+- **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- The [Fading ad opening writer](https://useaiblocks.com/prompts/tired-ad-hook-refresher). It takes the hooks.
+- **Read your ad results** with the [Channel decline checker](https://useaiblocks.com/skills/channel-decay-checker). It takes the plan.
+- **Read your ad results** with the [TikTok ad test reader](https://useaiblocks.com/skills/tiktok-ad-test-reader). It takes the plan.
+- **Read your ad results** with the [Ad testing success rate planner](https://useaiblocks.com/skills/creative-hit-rate-planner). It takes the hooks.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

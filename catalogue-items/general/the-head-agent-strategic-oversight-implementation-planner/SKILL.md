@@ -7,6 +7,34 @@ description: "Turn findings from several AI agents into one daily brief. Merge r
 
 Build the daily brief for a team of AI agents that each post findings. Group findings that describe the same issue, show where agents disagree, rank what is open, and plan each handoff with an owner and the rule that allows it. Then read a starter coordinator module, list what it leaves out, and draft the fixes. This skill does not post, assign, run code or change any account. It drafts a brief and a plan for a person to send.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
+- The [Pull request risk reviewer](https://useaiblocks.com/skills/pull-request-risk-reviewer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** Reads your coordinator code, findings table and agent list together and proposes exact edits.
+- **Any good chat AI:** Enough if you paste in a day of findings and want the brief and the plan only.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in BASIS and use a labelled placeholder. Never invent a finding, a client, an agent or a number.

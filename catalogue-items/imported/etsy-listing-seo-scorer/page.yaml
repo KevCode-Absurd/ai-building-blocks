@@ -32,10 +32,10 @@ you_get:
   - Ranked action list
 how_to_use:
   - Gather your listing title, all your tags, your description, your attributes and your photo count.
-  - Open your AI chat and paste the skill instructions. If you have Python 3, you can run the script from the skill folder instead.
+  - Open your AI chat and paste the skill instructions. If you have Python 3, you can run the script from the skill folder instead. It runs offline on the text you paste.
   - Paste your listing details. Add your product category or main keyword if you have one (optional).
   - Read the score first, then the title and tags advice.
-  - Do the HIGH priority fixes first, then rescore the listing.
+  - Do the HIGH priority fixes first, then rescore the listing. The impact figures in the plan are rough estimates from the scoring rules, not measured gains. Keep a note of each score to see your progress, because the skill does not save them.
   - Treat the keyword ideas as suggestions from the skill's own rules. Check them against real Etsy search results before you use them.
 output_sample:
   input:

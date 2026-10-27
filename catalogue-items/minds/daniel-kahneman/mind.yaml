@@ -18,7 +18,7 @@ use_cases:
   - "Plan a trip, event or product around how people will remember it, not just how it feels minute by minute"
 not_for:
   - "You need medical, legal or personal money advice: ask a doctor, lawyer or licensed adviser, as this mind does not give it."
-  - "You want to judge a bet by decision quality, not outcome: use the Annie Duke mind instead, named here as the Annie Duke page."
+  - "You want to judge a bet by decision quality, not outcome: use the Annie Duke mind instead."
   - "You face a fast, routine choice where trained instinct already works: trust your own judgement or ask a specialist in that field."
 output_sample:
   input:

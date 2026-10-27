@@ -18,9 +18,10 @@ date_added: '2026-02-27'
 
 ## Instructions
 
-- Clarify goals, constraints, and required inputs.
-- Apply relevant best practices and validate outcomes.
-- Provide actionable steps and verification.
+1. Ask once for the missing facts: country, who the users are, what data is collected and why, who receives it, how long it is kept, and a contact for data questions. Write `[MISSING: what is needed]` for anything not given. Never invent a practice.
+2. Ask the user for today's date and which document they want (privacy policy, terms or cookie notice).
+3. Draft each document to fit the laws that apply to the facts given. A pasted prompt usually cannot look up current law, so say so. Mark every clause that depends on a law you cannot check live as `[CHECK: law and date]`.
+4. List the open questions and the checklist for each law. End with the disclaimer below.
 
 Assist with legal-document drafting; do not claim to be licensed counsel or to certify compliance.
 

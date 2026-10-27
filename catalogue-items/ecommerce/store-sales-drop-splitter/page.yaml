@@ -21,6 +21,7 @@ not_for:
   - "You only want to know about a one-day dip: wait for a longer window, because one day against one day is mostly noise."
   - "You only have an ad question, such as why Google or Meta sales fell: use the ad sales drop analyst or the sales drop diagnosis skill."
   - "You have no ad numbers or returns for both periods: pull the Shopify and ad reports first, or the result will show many gaps."
+  - "You want a quick first pass with fewer checks: use the Sales drop cause finder."
 
 you_give:
   - Net sales plus shipping for both periods

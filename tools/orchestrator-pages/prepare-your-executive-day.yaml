@@ -11,12 +11,14 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You have a full day of meetings tomorrow and want a short brief for each one before it starts.
+  - Open requests are spread over notes and email threads, and you want them in one list with owners and dates.
+  - You want one daily brief for a single date: the priorities, the clashes and the work waiting on others.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The date and your calendar for that day, as an export or a pasted list
+  - Meeting notes or email threads with open requests
+  - Your goals and any limits on your time
+  - Your earlier action list (optional)
 you_get:
   - Meeting briefs
   - Action register

@@ -70,6 +70,8 @@ description: 跨境一套素材多区域本地化。一套素材 → 多语言�
 | 全球 | Temu | 方图、干净背景、主图禁促销文字 |
 | 独立站 | Shopify | 无硬性限制，2048 方图便于放大镜 |
 
+> **Check the rules before you upload.** These picture rules are the author's notes at the time this skill was imported (Oct 2026). Platforms change their rules often. Look up each platform's current seller help page before you upload, and do not treat this table as current.
+
 各区域版本出完，逐个过校验：
 
 ```bash
@@ -108,6 +110,17 @@ node scripts/gen.mjs --task cross-border-localize --brand examples/brand.yaml \
 ---
 
 ## 六、执行流程
+
+> **English version of the steps.**
+> 1. Ask which countries and platforms the user sells on. Never assume "worldwide".
+> 2. Make the text-free version first. A main image with no text is accepted by most platforms.
+> 3. Make a version per region. Where text is needed, make it separately and have a native speaker check it.
+> 4. Check each region's images against its own platform rules. Do not reuse one set of rules for all.
+> 5. Make the size table on its own, with letter sizes and centimetres.
+> 6. List the labels that region often requires (materials, origin, certifications). Say clearly that this is a hint, not legal advice, and the seller must confirm it.
+>
+> Image making and the check script need code running and an image model key. Copy and size tables work in any chat.
+
 
 1. **问清楚卖去哪些区域**，别默认「全球」。
 2. **先做无文字版本**。无文字主图能通行大多数平台，是最省事的公共底座。

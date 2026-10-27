@@ -72,7 +72,7 @@ Ask whether the friend is comfortable being drawn or photographed and how the re
 
 ### A creative practice with limited time
 
-Use ten minutes and a subject already nearby. Keep a notebook or device ready enough that beginning does not consume the whole session. Write one sentence about what the image helped you notice. This is a concrete life and career transfer into sustained observation, not a demand to leave work, acquire a studio or measure a hobby by public attention.
+Use ten minutes and a subject already nearby. Keep a notebook or device ready enough that beginning does not consume the whole session. Write one sentence about what the image helped you notice. This is a small way to keep looking in your daily life, not a demand to leave work, acquire a studio or measure a hobby by public attention.
 
 ## Their work and record
 

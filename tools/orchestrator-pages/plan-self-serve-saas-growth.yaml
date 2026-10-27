@@ -11,8 +11,9 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You run a software product people can sign up for without talking to you, and growth has stalled.
+  - You want tests tied to the metric each one should move, not a list of ideas.
+  - You need a weekly rhythm for reviewing those numbers with your team.
 not_for:
   - "You do not know yet which growth channel to try: use Find your SaaS growth channel."
   - "Your product needs a sales call to close, with large deals: use the Enterprise customer onboarding planner, or expect this to tell you self serve is a poor fit."
@@ -56,7 +57,7 @@ how_it_works:
   - title: Self serve product growth planner
     text: Share your product funnel. Get activation and expansion changes, with tests to see whether self serve growth fits.
   - title: Company meeting rhythm designer
-    text: Share your team and goals. Get meeting rhythms, metric reviews and decision rules that fit your stage, built around the tests from step 1.
+    text: Share your team and goals. It starts from that brief and takes the tests and metrics from step 1. You get meeting rhythms, metric reviews and decision rules that fit your stage.
 output_shape: |-
   Growth motion choice
   Activation and expansion tests

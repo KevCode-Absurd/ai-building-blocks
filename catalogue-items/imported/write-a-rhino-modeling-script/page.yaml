@@ -27,6 +27,7 @@ how_to_use:
   - Paste your current script if you have one.
   - Copy the code into Rhino's Script Editor and run it with the steps your AI gives you.
   - Do the listed checks in Rhino, then send any error text back to your AI to fix.
+  - Next, once it runs, save the script and ask for a toolbar button or a start-up load, using the macro in the skill.
 output_sample:
   input:
     - Your Rhino version
@@ -34,7 +35,7 @@ output_sample:
     - Your document units and the geometry it works on
     - Your existing script, if you have one (optional)
   prerequisites:
-    - Rhino 7 or later, with Rhino 8 best
+    - Rhino 7 or later, with Rhino 8 best. The skill is written for Rhino 8 (one Script Editor for Python 3, VB and C#). On Rhino 7, use the older Python and VBScript editors and expect some features to differ.
     - Rhino's Script Editor to run the result
   output:
     - name: Script choice

@@ -16,7 +16,7 @@ You bring him a belief everyone holds, a claim from a book, or a result you can'
 ## How he'd take on your problem
 
 1. **He asks if you have looked for yourself.** When he heard of a Dutch spyglass, he worked out the principle and built his own, then made a better one. His first made things look nine times larger; his best, over thirty times nearer.
-2. **He builds a tool you can check, then looks many times and writes it down.** He told readers how to test the telescope's power with two paper squares before trusting any sky report. One look misleads. In January 1610 he saw three small stars near Jupiter, watched them shift night after night, and by 13 January had four moons and a pattern.
+2. **He builds a tool you can check, then looks many times and writes it down.** He worked out how to build a better spyglass before he turned it on the sky [S2][S3]. Our rule from that: check your tool before you trust its report. One look misleads. In January 1610 he saw three small stars near Jupiter, watched them shift night after night, and by 13 January had seen four [S3].
 3. **He puts it in numbers.** Nature's book is written in mathematics. A body falling from rest covers distances that grow with the square of the time. He rolled balls down slopes to slow the motion enough to time it.
 4. **He takes the old view at its word.** Tie a light, slow stone to a heavy, fast one. The pair should fall slower, but it is also heavier, so it should fall faster. Both can't be true, so the claim is false.
 5. **He compares the size of the errors.** The new idea missed by two finger-breadths. The old one by ninety-nine cubits. Critics who fix on the small miss are ignoring the big one.
@@ -52,11 +52,11 @@ He'd ask what the expert actually observed. If the answer is a book, he'd ask fo
 
 ### Outside his field: a teacher with a restless class
 
-He'd tell you to look for yourself first. Sit at the back for a week and count: how many minutes until the first pupil drifts, in which lessons, at what time of day? He'd treat they are bored by maths as a claim and test it. Change one thing, like a shorter task or a standing start, and compare the counts side by side. He'd compare errors: a small flaw in a new method beats a big flaw in the usual routine. He'd cut any trick with no job to do. He'd ask a pupil to tell you what they saw, not what they liked.
+He'd tell you to look for yourself first. Sit at the back for a week and count: how many minutes until the first pupil drifts, in which lessons, at what time of day? He'd treat "they are bored by maths" as a claim to test. Change one thing, like a shorter task or a standing start, and compare the counts side by side. He'd compare errors: a small flaw in a new method beats a big flaw in the usual routine. He'd cut any trick with no job to do. He'd ask a pupil to tell you what they saw, not what they liked.
 
 ### Answering critics who quote the rules
 
-When Simplicio quotes Aristotle, Salviati does not mock the book. He says they are looking for the truth together, invites correction, and asks for a demonstration. He picks the test the critic would trust (a stone dropped from a mast, a cannon fired east and west) and shows what it would and would not prove. In 1612 he answered each objection to his floating-bodies work by name, and he refused to treat Copernicus as a hypothesis when asked to soften it. Bring him a rule your team quotes. He would ask what it assumes, pick a test the rule's defenders would accept and cut any step that rests on a name. He'd warn you about his own flaw too: his characters can end up jeering, and it cost him a friend in high office.
+When Simplicio quotes Aristotle, Salviati does not mock the book. He says they are looking for the truth together, invites correction, and asks for a demonstration. He picks the test the critic would trust (a stone dropped from a mast, a cannon fired east and west) and shows what it would and would not prove. In 1612 he answered the objections to his floating-bodies work one at a time [S7], and later he refused a request to treat Copernicus as a mere hypothesis [S12]. Bring him a rule your team quotes. He would ask what it assumes, pick a test the rule's defenders would accept and cut any step that rests on a name. He'd warn you about his own flaw too: his characters can end up jeering, and it cost him a friend in high office [S4].
 
 ### Showing a result to a boss or investor
 

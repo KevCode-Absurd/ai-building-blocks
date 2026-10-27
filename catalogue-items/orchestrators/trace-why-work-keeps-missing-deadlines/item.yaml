@@ -25,7 +25,7 @@ steps:
   - uses: process-bottleneck-finder
     note: "Split each stage into working and waiting time, count rework and rank the bottlenecks. Pass the ranked list and the finished jobs with estimate and real finish to step 2 as the delay map."
   - uses: outside-view-timeline-estimator
-    note: "Compare each finished job's estimate with its real time. Show the median overrun, the range and the number of jobs used, and pass them to step 3. Uses the finished jobs from step 1's delay map."
+    note: "Compare each finished job's estimate with its real time. Show the median overrun, the range and the number of jobs used, and pass them to step 3. Uses the finished jobs from your own records, as step 1's delay map lists them."
   - uses: change-rollout-planner
     note: "Plan one change aimed at the top repeated bottleneck, with an owner, a starting number, a review date and a success check. Uses step 1's top repeated bottleneck and step 2's typical overrun as its starting numbers."
 origin: rebuilt

@@ -15,7 +15,7 @@ Calculates a data completeness score (0–100) for each active product based on 
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products`
-- API scopes: `read_products`
+- API scopes: `read_products`, plus `read_inventory` for the cost check (the query reads `unitCost`). Without `read_inventory`, skip the cost check, mark the `has_cost` column `not checked`, and score the other fields out of the points left.
 
 ## Parameters
 
@@ -50,7 +50,7 @@ Calculates a data completeness score (0–100) for each active product based on 
    **Inputs:** `query: "status:<status_filter>"`, `first: 250`, select all completeness fields, pagination cursor
    **Expected output:** Products with all scored fields; paginate until `hasNextPage: false`
 
-2. Score each product per rubric; rank ascending by score
+2. Score each product per rubric; rank ascending by score. For `missing_metafields`, compare each `namespace.key` in `required_metafields` with the `namespace` and `key` pairs returned in `metafields`, and list the ones that are absent or empty. If a required metafield is not among the first 20 returned, say it could not be checked.
 
 ## GraphQL Operations
 

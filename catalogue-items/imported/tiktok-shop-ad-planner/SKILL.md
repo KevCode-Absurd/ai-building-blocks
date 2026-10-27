@@ -80,6 +80,15 @@ Optimize for maximum ROI:
 - Scale successful campaigns while maintaining profitability targets
 - Develop long-term advertising strategy based on performance insights
 
+## Order of work
+
+1. Collect the inputs: products and prices, margins, target ROAS, and daily or monthly budget. Current ad results are optional. If a figure is missing, ask once. If it stays missing, write `MISSING: <what>` and keep the bracketed placeholder. Never invent a figure.
+2. Write the plan in the output format below.
+3. List which numbers are assumptions (for example the starting budgets and the 20-30% scaling step) so the person can replace them with their own.
+4. Check point: the person compares the budget, bid and ROAS figures with their own margins before spending anything.
+5. Then they build the campaigns in TikTok Shop Ads Manager in this order: product shopping, video shopping, live shopping. Start small.
+6. Review weekly, using the Performance Tracking list.
+
 ## Output Format
 
 ```
@@ -101,14 +110,14 @@ Optimize for maximum ROI:
 **Product Shopping Ads:**
 - **Creative format:** Catalog-style product showcases
 - **Key elements:** Price, reviews, clear product shots
-- **CTA strategy:** "Shop Now" with urgency messaging
+- **CTA strategy:** "Shop Now" with urgency messaging (only true urgency, such as a real sale end date, and within TikTok ad policy)
 - **Testing plan:** A/B test 3-4 creative variations
 
 **Video Shopping Ads:**
 - **Video length:** 15-30 seconds optimal
 - **Hook strategy:** First 3 seconds grab attention
 - **Product demo:** Show product in use/benefits
-- **Social proof:** Include customer testimonials/reviews
+- **Social proof:** Include customer testimonials/reviews (real customer content only, used with permission; never write or invent them)
 
 ### Targeting Strategy
 
@@ -189,6 +198,8 @@ Optimize for maximum ROI:
 ```
 
 ## Integration with Nexscope
+
+Nexscope is an optional paid service. The plan above works without it. Mention it only if the person asks about automation.
 
 *To supercharge your TikTok Shop advertising with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
 

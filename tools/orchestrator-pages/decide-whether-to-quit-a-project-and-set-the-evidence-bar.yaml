@@ -29,7 +29,7 @@ you_get:
   - The loss you could not recover from and a way to cap it
   - How much proof is enough, the first fact to get and a date to decide
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Write the facts first, such as dates, hours, money and results. Add feelings after, and mark them as feelings.
   - Name the person who would disagree most. Step 2 writes their case.
@@ -100,3 +100,5 @@ improve:
   - Log what happened after the date, and compare with the call.
   - Save the evidence bar as a template for your next stop or go choice.
   - Add a second reviewer for step 2 who has quit something similar.
+next: [announce-a-change-of-direction-and-bring-the-team-with-you, handover-note-writer, stop-doing-list-writer]
+before: []

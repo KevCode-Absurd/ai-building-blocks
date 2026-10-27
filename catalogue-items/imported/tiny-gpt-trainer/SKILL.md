@@ -149,12 +149,15 @@ weight_decay = 1e-1
 ### Workflow 4: Custom dataset
 
 **Train on your own text**:
+
+First save your text as `data/custom/my_data.txt` inside the nanoGPT folder. Then create `data/custom/prepare.py`:
 ```python
 # data/custom/prepare.py
+import pickle
 import numpy as np
 
 # Load your data
-with open('my_data.txt', 'r') as f:
+with open('data/custom/my_data.txt', 'r') as f:
     text = f.read()
 
 # Create character mappings
@@ -173,12 +176,35 @@ val_data = data[int(n*0.9):]
 # Save
 train_data.tofile('data/custom/train.bin')
 val_data.tofile('data/custom/val.bin')
+
+# Save the character map so sample.py can turn numbers back into text
+with open('data/custom/meta.pkl', 'wb') as f:
+    pickle.dump({'vocab_size': len(chars), 'itos': itos, 'stoi': stoi}, f)
 ```
 
-**Train**:
+Then create the config `config/train_custom_char.py` (small, for a CPU; no wandb account needed):
+```python
+out_dir = 'out-custom'
+dataset = 'custom'
+wandb_log = False   # no wandb account needed
+n_layer = 6
+n_head = 6
+n_embd = 384
+block_size = 256
+batch_size = 64
+dropout = 0.2
+learning_rate = 1e-3
+max_iters = 5000
+eval_interval = 500
+device = 'cpu'      # or 'cuda'
+compile = False
+```
+
+**Train and sample**:
 ```bash
 python data/custom/prepare.py
-python train.py --dataset=custom
+python train.py config/train_custom_char.py
+python sample.py --out_dir=out-custom
 ```
 
 ## When to use vs alternatives

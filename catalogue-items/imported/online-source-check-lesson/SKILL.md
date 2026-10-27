@@ -170,6 +170,8 @@ Return your output in this exact format:
 
 ## Example Output
 
+> Added by AI Blocks: this example is hypothetical. The website, the trade body, the study and the health agency pages in it are made up for teaching. Do not repeat any of them as facts. When you run this skill for a real lesson, use a real source only if you have checked it yourself, or use a clearly fictional one.
+
 **Scenario:** *Source type: "Website" / Evaluation context: "Year 9 students are researching the health effects of energy drinks for a Science project. Several students have found websites claiming energy drinks are safe or even beneficial, and the teacher wants to teach them how to evaluate these sources before including them in their projects." / Student level: "Year 9"*
 
 ---
@@ -234,7 +236,7 @@ If the website cites numbers, studies, or expert quotes, trace them back to the 
 
 ### Teacher Modelling Script
 
-"I'm going to show you how I'd evaluate a website I found while searching for information on energy drinks. I've found a website called 'EnergyDrinkFacts.org' — it looks professional, has a clean design, and has an article titled 'The Truth About Energy Drinks and Teen Health.' Let me show you what most people do — and then what I do differently.
+"I'm going to show you how I'd evaluate a website I found while searching for information on energy drinks. I've found a website called 'ExampleDrinkFacts.example' — it looks professional, has a clean design, and has an article titled 'The Truth About Energy Drinks and Teen Health.' Let me show you what most people do — and then what I do differently.
 
 **What most people do (vertical reading — this is the WRONG approach):**
 Most people would start reading the article. They'd see the .org domain and think 'this must be legitimate.' They'd see that the article cites some studies and think 'this is evidence-based.' They'd see the professional design and think 'this looks trustworthy.' They might check the About Us page and read 'We are an independent research organisation dedicated to providing factual information about energy beverages.' Sounds good, right? This is vertical reading — staying on the website and looking for clues. And it's exactly how misinformation works. ANYONE can register a .org domain. ANYONE can make a professional-looking website. ANYONE can write a nice About Us page.
@@ -242,11 +244,11 @@ Most people would start reading the article. They'd see the .org domain and thin
 **What I do instead (lateral reading — the RIGHT approach):**
 I'm going to LEAVE this website immediately and open a new tab.
 
-[Opens new tab] I search: 'EnergyDrinkFacts.org' — and I find... interesting. The Wikipedia article says this organisation was founded and funded by the American Beverage Association — the trade body that represents energy drink manufacturers. So the 'independent research organisation' is actually funded by the companies that sell energy drinks. That's not automatically disqualifying, but it's ESSENTIAL context that I would never have found by reading the website itself.
+[Opens new tab] I search: 'ExampleDrinkFacts.example' — and I find... interesting. The Wikipedia article says this organisation was founded and funded by the Example Beverage Alliance, a made-up trade body that represents energy drink makers. So the 'independent research organisation' is actually funded by the companies that sell energy drinks. That's not automatically disqualifying, but it's ESSENTIAL context that I would never have found by reading the website itself.
 
-Now I search: 'energy drinks health effects teenagers NHS' — and the NHS page says caffeine in energy drinks can cause anxiety, sleep disruption, and heart palpitations in teenagers, and advises against regular consumption. The WHO says the same. So the claim on EnergyDrinkFacts.org that energy drinks are safe for teens CONTRADICTS what the NHS and WHO say.
+Now I search: 'energy drinks health effects teenagers NHS' — and a health agency page (made up for this example) says caffeine in energy drinks can cause anxiety, sleep disruption, and heart palpitations in teenagers, and advises against regular consumption. So the claim on ExampleDrinkFacts.example that energy drinks are safe for teens CONTRADICTS what the independent health agencies say in this example.
 
-Now I trace a specific claim. The website says 'A 2018 study found no significant health risks from moderate energy drink consumption.' I search for this study... and I find it was funded by Red Bull and published in a journal with a low impact factor. The larger, independent studies published in mainstream medical journals found the opposite.
+Now I trace a specific claim. The website says 'A 2018 study found no significant health risks from moderate energy drink consumption.' I search for this study... and I find it was funded by a made-up drinks company and published in a journal with a low impact factor. The larger, independent studies published in mainstream medical journals found the opposite.
 
 My conclusion: this website LOOKS professional and credible, but lateral reading reveals it's industry-funded and its claims contradict the independent evidence. I would NOT use this as a source in my project.
 

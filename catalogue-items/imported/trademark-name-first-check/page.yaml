@@ -31,11 +31,12 @@ you_get:
   - Recommended next steps
 how_to_use:
   - Open your AI tool and add the skill folder, or paste the skill's instructions into a chat.
-  - Type the name, what you will sell under it, and the countries. Say how the name will look, if you know.
-  - Say if your AI can search trademark registers. Some connectors, such as Solve Intelligence, Descrybe and CourtListener, may need a paid plan or an API key. The check still runs without them.
+  - Gather first: the exact spelling of the name, what you will sell under it, the classes if you know them, the countries, and how the name will look. Type these in.
+  - It covers the US, EU and UK well. For another country it will say it has no test for it and tell you to ask a local trademark specialist. It will not apply US rules there.
+  - Say if your AI can search trademark registers. Some connectors, such as Solve Intelligence, Descrybe and CourtListener, may cost money or need an API key. Without one, the check only covers the name itself and the risk factors, and skips the similar-marks search.
   - Read the flag list. Check each flag and any similar marks it found.
-  - If the skill asks you to run /ip-legal:cold-start-interview, use the setup-interview folder inside the skill.
-  - Take the memo to a trademark lawyer before you buy, print or file anything.
+  - If the skill asks you to run /ip-legal:cold-start-interview, use the setup-interview folder inside the skill. You only need it if the skill asks. You can also say "provisional" to run with US defaults.
+  - Take the memo to a trademark lawyer before you buy, print or file anything. The case names in it are from memory or search, so have the lawyer confirm each one is still good law.
 output_sample:
   input:
     - The name you want to use

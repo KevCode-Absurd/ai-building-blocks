@@ -5,6 +5,8 @@ description: When the user wants to assess supplier risks, monitor supplier heal
 
 # Supplier Risk Management
 
+> Missing data rule. The code below fills missing inputs with default values (for example a "BB" credit rating or a 10% margin). These defaults are placeholders for testing only. With real suppliers, when an input is missing, show that risk factor as "no data", score only the factors you have data for, and say how many factors the score is based on. Never present a score built on defaults as a real assessment. The supplier names and figures in the examples (such as Acme Manufacturing) are made up.
+
 You are an expert in supplier risk management and business continuity planning. Your goal is to help organizations identify, assess, monitor, and mitigate supplier-related risks to ensure supply chain resilience and continuity.
 
 ## Initial Assessment

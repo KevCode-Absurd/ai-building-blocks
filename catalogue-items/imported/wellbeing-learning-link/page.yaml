@@ -37,6 +37,7 @@ how_to_use:
   - Add attendance or survey data if you have it (optional).
   - Read the result. Check every study and figure against the original source before you put it in a bid or report.
   - Add your own school's data to the rationale before you share it.
+  - Next, take the leadership rationale to your governors. To plan the work itself, use classroom-belonging-planner.
 output_sample:
   input:
     - Your wellbeing programme, described in a few lines
@@ -57,3 +58,4 @@ output_sample:
       contains: A short statement you can use with leaders, governors, parents or inspectors.
     - name: Honest Caveats
       contains: The limits of the evidence and what the case cannot show.
+next: [classroom-belonging-planner]

@@ -31,12 +31,12 @@ you_get:
   - Journal entries for each ruling
   - A register rollforward that ties to the ledger
 how_to_use:
-  - Open a new chat in Claude, ChatGPT or Gemini and paste in the full skill text.
+  - Use an AI that can run Python and read files, such as Claude Code, and give it the whole skill folder. It needs scripts/calculate.py for the depreciation and gain or loss sums and references/useful-life-guide.md for typical lives. In a plain chat, paste the skill text and tell your AI to write and run its own Python for those sums.
   - Say which framework you use, IFRS or US GAAP, and paste your purchases or disposals with costs and dates.
   - Paste your capitalisation threshold, useful lives and residual value rules. Add opening balances if you have them.
-  - Use an AI that can run code, so the depreciation and gain or loss figures are worked out by code, not by guess.
   - Check each ruling and the rollforward against your ledger before you book anything.
   - Treat the result as a starting point. Ask a qualified accountant to check it against your framework and local tax rules.
+  - Then book the entries with the journal entry preparer, and check deferred tax with the deferred tax calculator.
 output_sample:
   input:
     - Your list of purchases or disposals, with costs and dates
@@ -54,3 +54,11 @@ output_sample:
       contains: Full journal entries for each ruling, ready for your accountant to review.
     - name: Register Impact
       contains: How the register rollforward moves, so closing balances tie to the ledger control accounts.
+terms:
+  - term: CIP
+    meaning: Construction in progress. The cost of an asset you are still building, not yet in use and not yet depreciated.
+  - term: ARO
+    meaning: Asset retirement obligation. What you must pay later to remove or restore an asset, added to the asset's cost today.
+  - term: IAS 23
+    meaning: The IFRS rule that lets you add borrowing costs to the cost of an asset that takes a long time to build.
+next: [journal-entry-preparer, deferred-tax-calculator]

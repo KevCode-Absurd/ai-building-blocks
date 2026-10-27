@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel input form builder
 subhead: Share your fields and allowed values. Get an Excel input form with dropdowns, clear entry cells and validation checks. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share your fields and allowed values. Get an Excel input form with dropdowns, clear entry cells and validation checks.
+  A sheet anyone can type into fills up with typos, blanks and duplicate IDs. This builds an Excel table that limits what can be entered and shows problems as they happen.
 
 
   It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -15,9 +15,9 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share your fields and allowed values. Get an Excel input form with dropdowns, clear entry cells and validation checks.
-  - Field names, data types, allowed values, required fields, record key and intended Excel version.
-  - You need a checked copy while keeping your original files intact.
+  - You collect records in Excel and keep getting typos, blanks or duplicate IDs.
+  - You are handing a sheet to someone else to fill in and want it to limit what they can type.
+  - You have your field list and allowed values, and want a form built from them.
 not_for:
   - "You need many people to enter data at the same time: use a shared database or an online tool such as Google Forms."
   - "You only want to clean or fix data already in a sheet: do that by hand or ask your AI for a one-off cleanup, not a new form."
@@ -112,3 +112,4 @@ tests:
     expected: Keep 0012 as text and 0 as a valid number; restrict the status list.
   - input: Two pasted records share the same required ID
     expected: Flag both as duplicate candidates; do not silently delete either.
+next: [excel-handover-guide-writer]

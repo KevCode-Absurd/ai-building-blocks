@@ -20,7 +20,7 @@ when:
 not_for:
   - Your claim is untested or not yet true. Test it first, because this only rewords a claim that is already true.
   - The best angle is an honest drawback. Use the Flaw-first ad writer instead.
-  - You need the final lines checked against proof. Use the Claim and proof matcher instead.
+  - You need the final lines checked against proof. Use the Claim evidence checker instead.
 
 you_give:
   - The ad copy or main claim you want to say better

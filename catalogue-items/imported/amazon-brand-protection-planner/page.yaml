@@ -31,10 +31,10 @@ you_get:
   - A test buy guide for evidence
 how_to_use:
   - Gather your brand name, trademark number and the listing IDs (ASINs) you want to protect. Add your minimum price and approved sellers if you have them.
-  - Note that the skill has no data feed. You bring the seller, price and review details, or use an AI that can run code and has your data files.
-  - Open the skill in an AI that can run code and fill in the settings with your details.
-  - Run detector.py. Read the risk rating for each listing. High means act within 24 hours.
-  - "Run the templates script for the letter you need: complaint, cease-desist or testbuy. It works from the same settings."
+  - Note that the skill has no data feed and does not watch your listings. You bring the seller, price and review details yourself.
+  - Open the skill in an AI that can run code. The detector script runs only on built-in sample data until your AI replaces it with your brand, listings, sellers and review text.
+  - Ask your AI to run detector.py on your details. Read the risk rating for each listing. High means act within 24 hours.
+  - "Run the templates script for the letter you need: complaint, cease-desist or testbuy. When a listing rates high, send the Brand Registry complaint first. Use the cease and desist letter only if you know who the seller is."
   - Have a lawyer check each letter before you send it. Treat the sample report as made-up example data.
 output_sample:
   input:
@@ -60,3 +60,4 @@ output_sample:
       contains: A guide and template to record evidence when you buy from a suspect seller.
     - name: DMCA takedown
       contains: A template for copyright infringement claims.
+next: [amazon-brand-registry-planner, trademark-name-first-check, amazon-monthly-account-keeper]

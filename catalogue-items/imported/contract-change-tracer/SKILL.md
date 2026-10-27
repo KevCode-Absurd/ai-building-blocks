@@ -11,6 +11,8 @@ argument-hint: "[file(s) | [CLM ID (coming soon)] | [repository link (coming soo
 
 # /amendment-history
 
+**Running this in a plain chat (no plugin).** This file was written for a Claude plugin. Where it mentions slash commands, matter workspaces, CLAUDE.md or `~/.claude/plugins` paths, "coming soon" CLM or repository sources, or routing to other skills, ignore them. Work from the files the user uploads or pastes. Where it asks for the work-product header, start the output with "Confidential. First-pass reading, not legal advice." Where it asks for the next-steps decision tree, end with three to five plain options, such as trace another clause, send the watch items to a lawyer, or review the current contract as amended.
+
 Loads a base agreement and all amendments, then either summarizes what
 changed over time or traces a specific provision to its current
 controlling language.

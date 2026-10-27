@@ -5,7 +5,7 @@ name: Critical thinking task writer
 summary: Write a critical thinking task for your class. Give a subject and a skill. You get a task, an answer guide and follow-up questions.
 job: teach-and-train
 headline: Critical thinking task writer
-subhead: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument. Bring subject and topic. Use the result to plan your next step.
+subhead: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument. You also get follow-up questions for class.
 explain: |
   A classroom task that makes students weigh evidence, spot bias or test an argument, with a guide that shows what a strong answer looks like next to a surface one. It moves lessons past recall and into judgment.
 
@@ -36,6 +36,8 @@ how_to_use:
   - Read the task and the answer guide. Check the guide matches what you want students to show.
   - Change the task wording or level if it feels too easy or too hard, then ask your AI to revise it.
   - Use the follow-up prompts in class and the assessment indicators when you mark the work.
+  - If your task uses real figures or quotes, check each one against a source before it reaches students.
+next: [socratic-questions, online-source-check-lesson]
 output_sample:
   input:
     - Your subject and topic

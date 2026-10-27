@@ -21,6 +21,8 @@ inputs:
     required: false
   - type: plan
     required: false
+  - type: brief
+    required: false
 outputs:
   - type: audit_report
     required: true

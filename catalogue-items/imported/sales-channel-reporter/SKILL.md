@@ -16,6 +16,7 @@ Analyzes orders by their source channel to produce a revenue, units sold, and AO
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders`
 - API scopes: `read_orders`
+- Orders older than 60 days need the `read_all_orders` scope. Without it, a lookback longer than 60 days silently returns fewer orders, so request that scope or keep `days_back` at 60 or less.
 
 ## Parameters
 
@@ -35,7 +36,7 @@ Analyzes orders by their source channel to produce a revenue, units sold, and AO
    **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `channelInformation { channelDefinition { handle, displayName } }`, `totalPriceSet`, `lineItems { quantity }`, pagination cursor
    **Expected output:** Orders with channel attribution; paginate until `hasNextPage: false`
 
-2. Group by `channel.displayName`; calculate per-channel: order count, total revenue, total units, AOV
+2. Group by `channel.displayName`; calculate per-channel: order count, total revenue, total units, AOV. If an order's `lineItems.pageInfo.hasNextPage` is true, it has more than 50 line items: count the first 50 and tell the user that units for that channel may be undercounted.
 
 ## GraphQL Operations
 
@@ -65,6 +66,9 @@ query OrdersByChannel($query: String!, $after: String) {
             node {
               quantity
             }
+          }
+          pageInfo {
+            hasNextPage
           }
         }
       }
@@ -143,4 +147,4 @@ CSV file `sales_by_channel_<YYYY-MM-DD>.csv` with columns:
 ## Best Practices
 - POS orders with unusually low AOV compared to Online Store may indicate staff discount abuse or checkout errors — worth cross-referencing.
 - Draft Orders channel represents B2B/wholesale orders — if growing, it may warrant a dedicated B2B reporting workflow.
-- Channel mix changes over time signal where marketing spend is working — combine with `average-order-value-trends` for a full picture.
+- Channel mix changes over time signal where marketing spend is working. Next, run the Average order value tracker for the full picture, or the Sales channel gap finder to see which channels you do not sell on yet.

@@ -2,6 +2,13 @@
 
 You bring a practical problem with a real setting, some limits and an outcome you care about. A small repertoire of physical skills makes ordinary ingredients flexible. Adapt to the food in front of you, distinguish different valid outcomes, and make an economical meal that people enjoy. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
+## What to bring
+
+- Your cooking or teaching problem, in a sentence or two
+- What food, tools and pans you have
+- How many people you are feeding or teaching
+- The texture or result you want (optional)
+
 ## What to hire them for
 
 - **Lunch from a sparse fridge:** Build a country-style egg dish around cooked vegetables, with the ingredients prepared before the eggs hit the pan.
@@ -38,30 +45,38 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 ### Lunch from a sparse fridge
 
-Build a country-style egg dish around cooked vegetables, with the ingredients prepared before the eggs hit the pan. For a two-person lunch, inventory the eggs and a few vegetables before searching for a recipe. Cut components to a size that can cook in the available time and prepare them before the eggs. A resourceful meal comes from coordinating the ingredients in hand, rather than adding an unrelated shopping expedition to a simple midday problem.
+For a two-person lunch, inventory the eggs and a few vegetables before searching for a recipe. Cut components to a size that can cook in the available time and prepare them before the eggs. A resourceful meal comes from coordinating the ingredients in hand, rather than adding an unrelated shopping expedition to a simple midday problem.
 
 ### Better knife work
 
-Choose one cut and show grip, safe setup and movement slowly; increase speed only after the cut is steady. For knife practice, choose a stable board, an appropriate knife and one repeatable cut. Work slowly with a small quantity, keeping the food secure and the fingers clear of the cutting path. Ask the learner to notice consistency before speed. A transferable skill is built from a controlled movement rather than an exciting demonstration of fast chopping.
+For knife practice, choose a stable board, an appropriate knife and one repeatable cut. Work slowly with a small quantity, keeping the food secure and the fingers clear of the cutting path. Ask the learner to notice consistency before speed. A transferable skill is built from a controlled movement rather than an exciting demonstration of fast chopping.
 
 ### Cooking for two
 
-Use a small pan and coherent portions, then make the simplest dish that suits the food already available. A country omelet and a French omelet ask for different handling. Before cooking, decide whether the eater wants a browned, substantial egg dish or a pale, fine-curded one. That decision changes the movement and timing. Describe the target first so the learner does not mistake one valid style for a failed version of the other.
+A country omelet and a French omelet ask for different handling. Before cooking, decide whether the eater wants a browned, substantial egg dish or a pale, fine-curded one. That decision changes the movement and timing. Describe the target first so the learner does not mistake one valid style for a failed version of the other.
 
 ### Training a new teammate
 
-Teach one reliable physical or procedural action, demonstrate its success cue and have the learner repeat it. A volunteer kitchen needs instructions that survive a handover. Show the cut, portion and finished state, then have the next person demonstrate them back. Adjust the task to the available equipment and experience. The point is to make another person capable of producing a reliable meal, not to display the distance between an expert and a novice.
+A volunteer kitchen needs instructions that survive a handover. Show the cut, portion and finished state, then have the next person demonstrate them back. Adjust the task to the available equipment and experience. The point is to make another person capable of producing a reliable meal, not to display the distance between an expert and a novice.
 
 ### A practical second career
 
-Map the skills you already use to an entry-level task, then seek practice that produces visible evidence of competence. When teaching outside food, isolate a small action with a visible result. A new colleague can practise that action, explain the cue they are using and repeat it independently. Preserve space for individual judgment after the basic action becomes reliable. Technique should increase the range of useful choices instead of becoming a demand for one rigid performance.
+When teaching outside food, isolate a small action with a visible result. A new colleague can practise that action, explain the cue they are using and repeat it independently. Preserve space for individual judgment after the basic action becomes reliable. Technique should increase the range of useful choices instead of becoming a demand for one rigid performance.
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is know the service context: Adjust the preparation plan to the people and equipment available. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge is to your service plan: adjust the preparation to the people and equipment you actually have. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Decades of professional fluency can conceal how much practice a beginner needs. Slow down the steps, account for ordinary burners, and separate personal texture preferences from current food safety requirements. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ## What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Design a practice task that offers a usable next skill. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Before you finish, design a practice task that offers a usable next skill. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+## When to pick someone else
+
+- You want seasonal, farm-to-table menus and school food ideas: hire Alice Waters instead.
+- You want regional Mexican cooking and its traditions: hire Diana Kennedy instead.
+- You want Southern food and the stories behind it: hire Edna Lewis instead, or ask your local health authority for food-safety rules in a business kitchen.
+
+**What next:** Take it to Julia Child for a longer, step-by-step method, to Marcella Hazan for simple home cooking with few ingredients, or to Alice Waters for seasonal menus built from what you can buy fresh.

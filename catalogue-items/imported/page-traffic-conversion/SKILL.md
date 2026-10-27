@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-traffic-by-page-report
 role: conversion-optimization
-description: "Report sessions, conversion rate, and bounce rate for every product and collection page using Shopify's analytics API — surfaces which pages earn eyeballs and which convert them."
+description: "Report sessions and conversion rate for every product and collection page using Shopify's analytics API — surfaces which pages earn eyeballs and which convert them. Bounce rate is not available from this query."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -11,12 +11,12 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level traffic data scoped to product and collection pages. Shows which pages are attracting the most traffic, how many sessions convert to orders, and where visitors are bouncing — ready input for SEO prioritisation, merchandising focus, and A/B test targeting. Read-only — no mutations are executed.
+Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level traffic data scoped to product and collection pages. Shows which pages are attracting the most traffic, and how many sessions convert to orders — ready input for SEO prioritisation, merchandising focus, and A/B test targeting. Read-only — no mutations are executed.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify auth login --store <domain>`
 - API scopes: `read_reports`
-- Shopify plan: ShopifyQL analytics is available on Basic and above; availability of `sessions` as a data source requires Shopify plan or higher
+- Shopify plan: the store's plan must include Shopify's analytics reports, and session data is not on every plan. If the query is refused for access reasons, tell the user their plan may not include it and stop. Do not guess the numbers.
 
 ## Parameters
 
@@ -28,7 +28,7 @@ Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level
 | days_back | integer | no | 30 | Lookback window in days (e.g., `30` = last 30 days) |
 | page_type | string | no | both | Filter to: `products`, `collections`, or `both` |
 | top_n | integer | no | 25 | Number of pages to show in the ranked output |
-| sort_by | string | no | sessions | Ranking metric: `sessions`, `conversion_rate`, or `bounce_rate` |
+| sort_by | string | no | sessions | Ranking metric: `sessions` or `conversion_rate` (bounce rate is not available from this query) |
 
 ## Workflow Steps
 
@@ -160,7 +160,7 @@ For `format: human`, a ranked table is printed inline truncated to `top_n`, foll
 
 ## Best Practices
 1. A `conversion_rate_pct` below 1% on a high-traffic product page is worth investigating — check whether the product is out of stock, has poor images, or lacks a clear call-to-action.
-2. Collection pages with high bounce rates often signal a poor match between the ad or search term that drove the session and the collection content — review the collection SEO title.
+2. Collection pages with many sessions but a low conversion rate often signal a poor match between the ad or search term that drove the session and the collection content — review the collection SEO title. For bounce rate, use another analytics tool: this query cannot return it.
 3. Use `page_type: products` after a new product launch to track early traction without noise from collection traffic.
 4. Combine with `top-product-performance` to correlate high-converting pages with the products generating the most actual revenue.
 5. Re-run the report weekly after making on-page changes (copy, imagery, pricing) to measure the impact — the 7-day window (`days_back: 7`) isolates post-change behaviour cleanly.

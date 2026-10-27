@@ -15,11 +15,11 @@ when:
   - Your open rates keep falling and you suspect a large, silent part of the list.
   - You send win-back emails already, but never learned what they earned.
 you_give:
-  - Your orders export, with customer, date, order value, discount and refund
-  - Your email tool's flow and campaign revenue
-  - Your discount limits and best sellers
-  - Reviews or survey comments (optional)
-  - How many days you count a subscriber as quiet, if you have a rule (optional)
+  - "Your orders export, with customer ID, date, order value, discount and refund (no names or emails)"
+  - "Your email tool's flow and campaign revenue, for the last two steps"
+  - "Your discount limits and best sellers"
+  - "Reviews or survey comments (optional)"
+  - "How many days you count a subscriber as quiet, and where your subscribers live (optional)"
 you_get:
   - First-to-second order rate, profit per customer over time and the one stage to fix first
   - A win-back flow with a trigger day, an exit rule and three to six email outlines
@@ -27,11 +27,11 @@ you_get:
   - A clean-out rule, a three-email last-chance flow and a monthly routine
   - A read of the flow results and a channel health score out of 100
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your orders export. After step 1, pick the group it says matters most (one-time buyers or lapsed regulars) and export their orders.
-  - Build the flows in your email tool and let them run for about four weeks.
-  - Export the quiet subscribers and the flow results, then paste them back to finish the last two steps.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus five skill files, in the order they run: Repeat order bottleneck finder, Win-back flow builder, Customer stage flow mapper, Sunset flow and list cleaner, Email and SMS performance reader."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Remove names and email addresses from your orders export first. Keep customer IDs, dates, order values, discounts and refunds. Then paste it. After step 1, pick the group it says matters most (one-time buyers or lapsed regulars) and export their orders."
+  - "Build the flows in your email tool and let them run for about four weeks."
+  - "Export the quiet subscribers and the flow results, then paste them back to finish the last two steps."
 how_it_works:
   - title: Repeat order bottleneck finder
     text: Measures first-to-second order rate and profit per customer, and finds the one stage where buyers stop. It ignores Shopify's returning-order share, which is not a repeat rate.

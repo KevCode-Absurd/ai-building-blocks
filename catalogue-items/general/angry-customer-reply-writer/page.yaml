@@ -20,7 +20,8 @@ when:
 not_for:
   - "The customer threatens legal action or reports an injury: pass it to a person who can handle it, such as a lawyer or your insurer."
   - "You need to settle a dispute with a business account, such as a contract or invoice fight: talk to the account owner directly."
-  - "Your reply already mentions a refund or other money: run the draft through the Customer reply promise checker before you send it."
+  - "Your reply already mentions a refund or other money: run the draft through the Complaint reply promise checker before you send it."
+  - "You already have a draft and want it checked for bad promises and tone: use the Angry customer reply checker."
 
 you_give:
   - "The customer's message as written and the channel"

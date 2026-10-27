@@ -31,4 +31,4 @@ credits:
   - title: scanpy skill
     by: K-Dense
     url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scanpy
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied as it is, under the MIT licence (LICENSE.md). The skill file itself says BSD-3-Clause. We gave it a plain name.

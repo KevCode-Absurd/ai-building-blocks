@@ -24,6 +24,7 @@ you_give:
   - Examples of good and bad answers (optional)
   - What you are comparing
   - A few human scores to check against (optional)
+  - Answers that are redacted or made up. Real customer data needs approval from its owner before it goes into an outside AI tool.
 you_get:
   - A rubric with scale and examples
   - A judge prompt for direct or pairwise grading
@@ -32,10 +33,12 @@ you_get:
 how_to_use:
   - Write down what a good answer looks like for your use. Name the two or three things that matter most.
   - Gather at least 20 answers that people have already scored. Keep some aside as a test set that you do not show the judge while you build it.
+  - Before you paste anything, remove names, customer details and private data from the answers, or use made-up answers. Only paste them into a tool your organisation allows, and get approval from whoever owns the data.
   - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your description of a good answer and your scored examples.
   - Pick direct scoring for facts and instructions, or pairwise comparison for tone and style. Ask your AI to write the rubric and the judge prompt.
   - Run the judge on your test set. Compare its scores with the human scores and fix the rubric where they differ.
   - For pairwise grading, judge each pair twice with the order swapped. Treat disagreement as a tie.
+  - Next, save the rubric, the judge prompt and the held-out test set together. Run the check again whenever the prompt or the model changes.
 output_sample:
   input:
     - What a good answer looks like for your use

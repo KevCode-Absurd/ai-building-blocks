@@ -36,6 +36,7 @@ how_to_use:
   - Upload your files (CSV, Excel, TXT or PDF). Say which instrument and whether you want JSON, CSV or both.
   - Answer any questions about unclear fields. Your AI asks instead of guessing.
   - Check the summary and validation result before you load the files into your LIMS.
+  - Next, load the checked JSON or CSV into your LIMS. Give the parser script to your data engineer so they can repeat the run on the next batch.
 output_sample:
   input:
     - Your instrument output files (CSV, Excel, TXT or PDF)

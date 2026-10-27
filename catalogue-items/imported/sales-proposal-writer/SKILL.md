@@ -15,7 +15,7 @@ Generate compelling, customized sales proposals and RFP responses from prospect 
 
 1. **Analyze Requirements or RFP** — Parse the prospect's RFP document, requirements list, or briefing notes to extract mandatory criteria, evaluation weightings, submission formatting rules, and any compliance requirements. Categorize items as must-have vs. nice-to-have and flag disqualification risks early.
 
-2. **Research the Prospect** — Gather firmographic data (revenue, headcount, industry vertical), recent news, strategic initiatives, and known technology stack. Identify the decision-making unit — economic buyer, champion, technical evaluator — and tailor messaging to each stakeholder's priorities.
+2. **Research the Prospect** — Gather firmographic data (revenue, headcount, industry vertical), recent news, strategic initiatives, and known technology stack. Identify the decision-making unit — economic buyer, champion, technical evaluator — and tailor messaging to each stakeholder's priorities. This step needs web search. Without it, ask the user to paste the facts they have about the prospect. Never guess a size, a news item or a tech stack.
 
 3. **Draft the Executive Summary** — Write a concise summary (250–400 words) that mirrors the prospect's language, restates their core challenge, positions your solution as the best fit, and previews quantified business outcomes. This section sells the rest of the proposal.
 
@@ -24,6 +24,8 @@ Generate compelling, customized sales proposals and RFP responses from prospect 
 5. **Add Case Studies and Social Proof** — Select 2–3 case studies from similar industries or company sizes. For each, include the customer's challenge, the solution deployed, and measurable results (revenue lift, cost savings, time-to-value). Append relevant logos, testimonials, or analyst quotes.
 
 6. **Format and Finalize the Deliverable** — Assemble the proposal into the required format (PDF, DOCX, slide deck). Apply brand guidelines, insert a table of contents, add appendices for technical specs or SLAs, and run a compliance checklist to ensure every RFP question is answered.
+
+7. **Next steps** — Once the user has checked the draft, suggest sending it with a short cover email, and logging the win or loss against the case-study library so the next proposal improves.
 
 ## Usage
 
@@ -34,6 +36,8 @@ Provide the prospect's requirements or RFP text, your company's solution details
 
 ## Examples
 
+Everything in these two examples is made up to show the layout: the company, the results, the certifications, the testing firm, the prices and the timeline. Never copy any of it into a real proposal. Use only facts the user gives you, and write "[needed from you]" where a fact is missing.
+
 ### Example 1: SaaS Implementation Proposal
 
 **Input:** Proposal for Acme Corp (logistics, 500 employees, $80K–$120K budget) evaluating warehouse management SaaS.
@@ -42,13 +46,13 @@ Provide the prospect's requirements or RFP text, your company's solution details
 
 **Executive Summary**
 
-Acme Corp's rapid expansion across three distribution centers has exposed visibility gaps in inventory accuracy and order fulfillment speed. Our Warehouse Management Platform delivers real-time inventory tracking, automated replenishment triggers, and native ERP integration — enabling logistics teams to reduce stockouts by 34% and cut fulfillment cycle time by 22%, based on results from comparable deployments. This proposal outlines a phased rollout that meets Acme's cloud-first mandate and delivers measurable ROI within 90 days of go-live.
+Acme Corp's rapid expansion across three distribution centers has exposed visibility gaps in inventory accuracy and order fulfillment speed. Our Warehouse Management Platform delivers real-time inventory tracking, automated replenishment triggers, and native ERP integration — enabling logistics teams to reduce stockouts by [X]% and cut fulfillment cycle time by [Y]%, based on results from comparable deployments [only with real results you can show]. This proposal outlines a phased rollout that meets Acme's cloud-first mandate and delivers measurable ROI within 90 days of go-live.
 
 **Solution Overview**
 
 | Requirement | Capability | Details |
 |---|---|---|
-| Cloud deployment | Multi-tenant AWS infrastructure | SOC 2 Type II certified, 99.95% uptime SLA |
+| Cloud deployment | Multi-tenant AWS infrastructure | [your certification, if you hold one], [your uptime SLA] |
 | Real-time inventory | IoT sensor integration + live dashboards | Sub-second updates across all warehouse zones |
 | ERP integration | Pre-built SAP and Oracle connectors | Bi-directional sync with < 5-minute latency |
 
@@ -81,7 +85,7 @@ Acme Corp's rapid expansion across three distribution centers has exposed visibi
 |---|---|---|---|
 | 4.2.1 | HIPAA BAA execution | We execute BAAs with all healthcare customers prior to data onboarding. | ✅ Full |
 | 4.2.2 | Data encryption at rest | AES-256 encryption on all data stores, key management via AWS KMS. | ✅ Full |
-| 4.2.3 | Annual penetration testing | Conducted by independent third party (NCC Group); most recent report available under NDA. | ✅ Full |
+| 4.2.3 | Annual penetration testing | Conducted by independent third party ([your testing firm]); most recent report available under NDA. | ✅ Full |
 | 4.2.4 | Data residency in US | All data stored in AWS us-east-1 and us-west-2 regions. No cross-border transfer. | ✅ Full |
 | 4.2.5 | Role-based access control | Granular RBAC with SSO (SAML 2.0/OIDC) and mandatory MFA for admin roles. | ✅ Full |
 

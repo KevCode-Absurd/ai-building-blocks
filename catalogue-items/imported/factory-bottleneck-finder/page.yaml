@@ -17,8 +17,8 @@ when:
   - Lead times grew and you cannot see which step caused it.
 not_for:
   - "You run a single machine or have no step times at all: time one run by hand first, or ask a process engineer to help."
-  - "You want to cut waste like waiting, extra motion or overstock: use lean-manufacturing instead."
-  - "You need a day-by-day job order for the shop floor: use production-scheduling instead."
+  - "You want to cut waste like waiting, extra motion or overstock: use the process waste finder instead."
+  - "You need a day-by-day job order for the shop floor: use the production schedule planner instead."
 you_give:
   - The list of steps in order
   - Time per step, or a rough guess
@@ -34,9 +34,11 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
   - List your steps in order. For each one, add the time per unit, the number of machines and people, and the shifts.
   - Add any known breakdowns, and your goal, such as more units per day (optional).
-  - Ask your AI to find the bottleneck and test fixes. If it can run Python, ask it to run the simulation too.
+  - Ask your AI to find the bottleneck and test fixes. If it can run Python, ask it to run the simulation too. It needs the packages simpy, pandas, numpy and matplotlib. Ask it to install them first.
   - Check the capacity table first. The step with the lowest capacity should be the one marked as the bottleneck.
   - Pick the top fix, then run the numbers again with your real times before you spend money.
+  - Time each step on the shop floor for two weeks and run the capacity table again with those measured times. Your guesses may name the wrong step.
+  - Then balance the line with the assembly line balancer.
 output_sample:
   input:
     - Your production steps, in order
@@ -59,3 +61,4 @@ output_sample:
       contains: Fixes in priority order, each with the output gain you can expect and the cost to do it.
     - name: Expected Benefits
       contains: A short roll-up of the gains in output, cycle time and work in progress.
+next: [production-capacity-checker, process-waste-finder]

@@ -19,7 +19,7 @@ The process: understand the company deeply, research the investor audience and c
 
 Three principles govern every output this skill produces:
 
-1. **Clarity over sophistication.** "80% accurate and 100% clear beats the reverse." If a grandmother can't understand what you do, investors won't either. Eliminate jargon, acronyms, and marketing language.
+1. **Clarity over sophistication.** "80% accurate and 100% clear beats the reverse." (a saying, not a measured figure) If a grandmother can't understand what you do, investors won't either. Eliminate jargon, acronyms, and marketing language.
 2. **Lead with what's impressive.** You earn each additional minute of investor attention. Don't bury traction after 5 sections of problem setup — put the strongest signal right after "what you do."
 3. **Make investors talk.** A pitch isn't a monologue. The more investors talk, the more they convince themselves. Structure the narrative to invite conversation, not shut it down.
 
@@ -105,7 +105,7 @@ Before moving to research, crystallize the company description into exactly 2 se
 Test: send it to a smart friend — could they paraphrase it back correctly? If not, simplify further.
 
 > **Anti-pattern:** "We leverage AI-powered machine learning to optimize cross-functional synergies in the B2B SaaS vertical."
-> **Better:** "We help sales teams find which leads will actually buy. Our tool analyzes email replies and tells reps exactly who to call next — last month one customer closed 40% more deals."
+> **Better:** "We help sales teams find which leads will actually buy. Our tool analyzes email replies and tells reps exactly who to call next — last month one customer closed [X]% more deals [placeholder: use only a real figure]."
 
 ### Output
 
@@ -274,7 +274,7 @@ Generate all requested formats. If the user didn't specify, generate all of them
 
 **`{project-name}/pitch-deck-outline.md`** — Slide-by-slide deck structure (10-12 slides):
 - Derived from `pitch-full.md`: same narrative order, translated into slides — don't invent new content here
-- For each slide: a **headline** that states the takeaway ("A $47B market growing 23% annually", never a label like "Market Size"), 3-5 body bullets under 30 words total, a visual suggestion (chart, diagram, screenshot), and speaker notes drawn from the corresponding narrative section
+- For each slide: a **headline** that states the takeaway (for example "A $[X]B market growing [Y]% annually", where [X] and [Y] are placeholders you replace with sourced figures, never a label like "Market Size"), 3-5 body bullets under 30 words total, a visual suggestion (chart, diagram, screenshot), and speaker notes drawn from the corresponding narrative section
 - One idea per slide; the headlines alone, read in sequence, must pitch the company
 - The final slide carries the ask
 

@@ -68,6 +68,8 @@ Quarterly: Review patterns across incidents
 
 ### Template 1: Standard Postmortem
 
+> All names, dates, counts, amounts and ticket numbers in these templates are placeholders. Where your records lack a number, time or link, write TBD. Do not estimate.
+
 ```markdown
 # Postmortem: [Incident Title]
 

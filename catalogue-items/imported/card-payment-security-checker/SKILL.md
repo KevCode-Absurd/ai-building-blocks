@@ -102,7 +102,7 @@ Consult `references/pci-dss-saq-guide.md` for the full SAQ selection decision tr
 
 **FAQ 1331 (updated August 31, 2026) — critical scoping rule:** SAQ eligibility criteria may **no longer be used as a guide** for determining PCI DSS requirement applicability in a **ROC** assessment "unless explicitly reviewed, discussed and agreed upon with the merchant's compliance accepting entity (e.g., payment brands and acquirers)". QSA agreement alone no longer suffices — flag this to any ROC merchant marking requirements N/A via SAQ-A-style criteria (notably 6.4.3/11.6.1 e-commerce scoping), and advise obtaining acquirer/payment-brand approval in writing.
 
-**Quick reference:**
+**Quick reference.** The control counts are approximate. FAQ 1331 and the SAQ criteria change over time, so tell the user to check the form and its count against the current documents at pcisecuritystandards.org before they rely on them.
 | SAQ | Applies To | ~Controls |
 |-----|-----------|----------|
 | **A** | Card-not-present merchants; all CHD functions fully outsourced to PCI-compliant third parties | ~22 |

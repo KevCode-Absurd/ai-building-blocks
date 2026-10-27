@@ -30,12 +30,12 @@ you_get:
   - Source of funds details
   - Empty fields where nothing was found
 how_to_use:
-  - Remove or redact any personal data you should not share, following your data-protection policy.
-  - Open your AI tool and paste in the skill instructions. If your AI can read files, upload the documents. Otherwise paste their text.
+  - Confirm your firm has approved the AI tool you plan to use for personal data. If you are not sure, ask your data-protection lead first. Then remove or redact any personal data you should not share.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. If your AI can read files, upload the documents. Otherwise paste their text.
   - Say whether the client is a person, company or trust. Add your required fields or checklist if you have them.
   - Read the document inventory first. Check it matches what you sent.
   - Check each field against the documents. Fields set to null mean nothing was found.
-  - Store the JSON record where your policy says, then pass it to your rules check.
+  - Store the JSON record where your policy says. Then pass it to the Onboarding rules checker, which is a separate step.
 output_sample:
   input:
     - The onboarding documents, such as passports, company papers, ownership charts and tax forms
@@ -58,3 +58,11 @@ output_sample:
       contains: Any field not found in the documents is set to null, never guessed.
     - name: Gap notes
       contains: Plain notes on anything missing or expired, such as an old ID, address proof over 3 months old, or no ownership chart.
+next: [onboarding-rules-checker]
+terms:
+  - term: PEP
+    meaning: A politically exposed person, such as a public official, who needs extra checks.
+  - term: UBO
+    meaning: An ultimate beneficial owner, the real person who owns or controls a company.
+  - term: KYC
+    meaning: Know your customer. The identity and background checks a firm must do on a client.

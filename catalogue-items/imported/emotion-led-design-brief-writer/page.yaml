@@ -34,8 +34,8 @@ how_to_use:
   - Say the feeling you want, such as calm, trust or urgency.
   - Describe your audience, your goal, and any brand or accessibility limits.
   - Answer any question your AI asks about culture or audience. It will ask if the feeling is unclear.
-  - Read the brief and check the contrast of your text and buttons.
-  - Test the ideas with a few real people from your audience before you rely on them.
+  - Read the brief. It has six headed sections: target emotion, colour, type, spacing, imagery and an accessibility check. Check the contrast of your text and buttons.
+  - Take the brief to your designer. Test the emotion and colour choices with 5 to 10 real people from your audience, and check text contrast before launch. Pair it with Page copywriter for the words, and Everyday usability reviewer to check the design afterwards.
 output_sample:
   input:
     - The feeling you want, such as calm, trust or urgency

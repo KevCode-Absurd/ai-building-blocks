@@ -16,9 +16,9 @@ when:
   - You want per-unit-length values to feed a circuit model.
   - You are designing a substrate-integrated waveguide line.
 not_for:
-  - "You only need S-parameters or fields from an existing part: use the skill named matlab-analyze-em, or ask an RF engineer."
+  - "You only need S-parameters or fields from an existing part: use the PCB signal loss analyzer, or ask an RF engineer."
   - "You do not have MATLAB with the RF PCB Toolbox: use your PCB tool's built-in impedance calculator, or ask your board maker for a stackup check."
-  - "You want to set up substrate or metal materials only: use the skill named matlab-manage-pcb-material."
+  - "You want to set up substrate or metal materials only: use the PCB material setup helper."
 you_give:
   - Target impedance and frequency
   - Substrate and metal
@@ -35,6 +35,7 @@ how_to_use:
   - Give your target impedance, frequency, substrate, metal and line type. Add the aggressor spacing for crosstalk.
   - Check the mesh and memory estimate before you let it run the full solve.
   - Read the width, spacing and impedance first. Then check the crosstalk figures against your limit.
+  - "Expect the result in this order: line design, impedance check, per-unit-length values, crosstalk in dB, mesh check."
 output_sample:
   input:
     - Your target impedance and frequency
@@ -58,3 +59,4 @@ output_sample:
       contains: Near-end and far-end crosstalk in dB for a differential pair with a nearby aggressor.
     - name: Mesh and memory check
       contains: An estimate of solver size, run before the full solve so it does not run out of memory.
+next: [pcb-power-network-checker]

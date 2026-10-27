@@ -35,6 +35,8 @@ how_to_use:
   - Add any sources you already have, a set size, or voices you want included (optional).
   - Read the tensions first. Check that the sources really pull against each other.
   - Check the voice audit, then swap or add a source if a key voice is missing.
+  - Look up every source it names before you use it in class. Your AI can name a document that does not exist, so check the author, date and where to find it.
+  - Next, simplify the sources for your class, then plan how to teach them.
 output_sample:
   input:
     - Your central history question
@@ -53,3 +55,4 @@ output_sample:
       contains: Why the sources come in this order, with an easier one first and harder ones later.
     - name: Representation Audit
       contains: Whose voices are in the set, whose are missing, and what that means for the lesson.
+next: [history-source-simplifier]

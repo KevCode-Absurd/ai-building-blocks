@@ -141,3 +141,4 @@ terms:
     meaning: Locking a package to one exact version so a later, changed version cannot slip in.
   - term: Look-alike package names
     meaning: Fake packages with names close to real ones, hoping someone types the wrong name.
+next: [app-script-auditor, leftover-app-code-finder, store-security-checkup]

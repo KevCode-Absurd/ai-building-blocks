@@ -20,6 +20,7 @@ not_for:
   - "You want a finished, running system: hand the plan to a developer or build it in an automation tool."
   - "You need advice on picking an AI tool or model: compare the tools on their own sites first."
 you_give:
+  - "This is an imported MIT skill from alirezarezvani/claude-skills (source link on this page). Its scripts and reference file are in the downloadable folder."
   - The job to be done
   - The steps or specialists you imagine (optional)
   - Cost and time limits
@@ -32,8 +33,9 @@ you_get:
   - Checks between steps
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or special tools are needed.
-  - Paste the skill text into the chat, then describe the job you want done.
-  - Add your cost and time limits, and any quality checks you need.
+  - "Gather first: the steps of the job, how many items it handles, and your time and cost limits."
+  - Paste the skill text into the chat, then describe the job. In a plain chat the AI writes the plan as text and does not run the scaffolding script. To use the script and the pattern reference file, give an AI that can run code the whole folder instead.
+  - Add your quality checks if you have any.
   - Read the plan. Check that the pattern is the smallest one that works. If it says one prompt is enough, stop there.
   - Hand the plan to a developer, or use it to build the workflow in an automation tool.
 output_sample:

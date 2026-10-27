@@ -34,7 +34,8 @@ how_to_use:
   - Describe your tool idea, who it is for and your topic.
   - Say what you can ask the user for, such as a name, a birthday or five answers.
   - Read the plan. Check that each result feels good to share and looks clear on a phone.
-  - Hand the plan to a developer or a coding AI to build it.
+  - Hand the plan to a developer or a coding AI to build it. For the landing page, the sharing copy and the result images, you can use other skills, such as a landing page designer and a viral hooks skill. They are optional, separate items.
+  - Any average, percentile or savings figure the tool shows must come from a source you can name. Mark sample numbers as placeholders.
 output_sample:
   input:
     - Your tool idea (quiz, name generator, calculator or avatar maker)

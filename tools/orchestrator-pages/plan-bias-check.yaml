@@ -9,7 +9,7 @@ subhead: Describe the decision and your reasons. It writes your clear case first
 explain: |
   When you are about to commit, the plan feels sensible. But several quiet pressures can push the same way at once: a reward for someone to say yes, a promise you already made, the crowd, the fear of losing what you have. Together they can turn good judgment to mush, and you won't feel it happen.
 
-  This workflow checks the decision three ways. First, it separates your clear reasons from the pressures. Second, it looks at who gains from each outcome. Third, it starts from failure: what would guarantee it, and which standard mistakes in your field your plan makes. The ideas come from Charlie Munger's talk on the psychology of human misjudgment and his other writing on incentives and avoiding failure.
+  This workflow checks the decision three ways. First, it separates your clear reasons from the pressures. Second, it looks at who gains from each outcome. Third, it starts from failure: what would guarantee it, and which standard mistakes in your field your plan makes. It draws on ideas from Charlie Munger's talk on the psychology of human misjudgment and his writing on incentives and avoiding failure. What it adds beyond running each skill alone is the order: the calmer plan from step 1 goes into the incentive check, and both results go into the failure check, which stops with a MISSING line if a step cannot run.
 when:
   - You are about to sign, hire, invest or launch and want the plan attacked before you commit.
   - A deal feels urgent, and you want to know whether the urgency is real.

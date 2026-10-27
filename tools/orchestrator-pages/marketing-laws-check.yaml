@@ -9,7 +9,7 @@ subhead: Paste your marketing plan, your brand facts and your rivals. It tests t
 explain: |
   Most plans assume the better product wins. The rules in this workflow start from how buyers think: they keep a short ranking in their heads for each kind of product, they rarely change it, and they judge new things by where they fit. A well-made, well-funded plan can push against that and still fail.
 
-  The workflow checks the plan against thirteen tests, such as being first in something, owning one word and not stretching your name. It then checks the name of any new product, lists each tactic with its effect now and in two years, and calls hot bets a fad or a trend. Last, it picks the one move that hits a rival where it is weakest, and cuts the rest. The order comes from "The 22 Immutable Laws of Marketing" by Al Ries and Jack Trout (1993). A fail is a question to answer, not a doom call, because leaders can break some of these rules.
+  The workflow checks the plan against thirteen tests, such as being first in something, owning one word and not stretching your name. It then checks the name of any new product, lists each tactic with its effect now and in two years, and calls hot bets a fad or a trend. Last, it picks the one move that hits a rival where it is weakest, and cuts the rest. The tests draw on "The 22 Immutable Laws of Marketing" by Al Ries and Jack Trout (1993). They are a selection from the 22 laws and our own reading of them, not the authors' method, and the authors do not endorse them. A fail is a question to answer, not a doom call, because leaders can break some of these rules.
 when:
   - You have a marketing plan or launch idea and want it attacked before you spend on it.
   - Your plan has many small moves and no clear lead.
@@ -20,7 +20,7 @@ not_for:
   - "You want to know if past tactics hurt you later: use the Long-run effects checker on its own."
 you_give:
   - Your marketing plan, as rough as it is
-  - Your brand facts, such as name, buyers and budget
+  - Your brand facts, such as name, buyers and budget (optional, but the verdicts are better with them)
   - Product facts for any new product in the plan
   - Your main rivals and what each is known for (optional)
 you_get:

@@ -24,7 +24,7 @@ you_give:
   - Customer locations and how much each one needs
   - Number of trucks per depot and truck capacity
   - Your goal, such as least distance or balanced loads
-  - Time windows (optional)
+  - Time windows (optional, but the sample code does not use them, so ask your AI to add them)
 you_get:
   - A depot assigned to each customer
   - A route for each truck
@@ -34,10 +34,13 @@ you_get:
 how_to_use:
   - Open an AI that can run code, such as Claude or ChatGPT with code tools on. Paste in the skill text.
   - Put your depots and customers in a table with coordinates. Add demand per customer and trucks per depot. Paste it as CSV.
+  - The sample code models distance, truck counts and capacity only. Time windows and depot fixed costs are not in it unless you ask your AI to add them.
+  - Install ortools, numpy and scikit-learn first. The solver gives a good answer within its time limit, not a proven best one.
   - "Tell your AI your goal: least distance, balanced loads or shortest longest route. Say if trucks must return to their own depot."
   - Ask it to run the solver and report the result. It may need to install OR-Tools and scikit-learn first.
   - Check the depot loads. If one depot is overloaded, ask it to re-run with balanced workload as the goal.
   - Use the routes to brief drivers. Re-run with a different depot count to compare options.
+  - Next, send the checked routes to your routing or dispatch tool, or rerun with a different number of depots to compare.
 output_sample:
   input:
     - Your depot locations, truck counts and capacities

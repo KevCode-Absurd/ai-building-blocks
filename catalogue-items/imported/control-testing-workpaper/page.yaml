@@ -33,9 +33,11 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say which control area you want to test and the period, such as a quarter or a year.
   - Paste or upload your real population list. If you have none, get it from your finance team first.
-  - Add how often the control runs and its risk level, if you know them.
+  - Add how often the control runs and its risk level, if you know them. Have your SOX 404 controls matrix to hand, and make sure the population has a date, reference, amount and owner for each item.
+  - Your AI uses only the items you give it and flags gaps. If it cannot pick a truly random sample, it should use a fixed interval and say so.
   - Check the sample, the test steps and the rating against your own control documents.
-  - Have a qualified finance or audit professional review the workpaper before it goes in any audit file.
+  - Have a qualified finance or audit professional review the workpaper, and confirm any deficiency rating, before it goes in any audit file.
+  - Next, give the signed workpaper to your internal audit team or your external auditor, and log any deficiency in your remediation tracker.
 output_sample:
   input:
     - The control area to test, such as revenue, purchase to pay, payroll or IT general controls

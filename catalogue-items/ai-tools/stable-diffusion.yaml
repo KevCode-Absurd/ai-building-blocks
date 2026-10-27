@@ -35,5 +35,21 @@ blocks:
   - marketing-image-maker
 alternatives: [flux, midjourney, leonardo, ideogram]
 last_checked: 2026-10-21
+first_result:
+  - "Choose how you will run it: through the Stability AI API, or by downloading model files to run on your own computer. The second needs technical setup."
+  - "For the API, create an account on stability.ai and make an API key. New accounts get 25 free credits."
+  - "Send one request with a written description. Look at the image that comes back."
+  - "For local use, read the licence on the model file before you use it in a business."
+  - "Check the image for odd details before you use it."
+  - "You end with image files from the API, or from your own computer."
+  - "Next: write the description with the Marketing image prompt writer. If you want a simple app with a chat box, compare Leonardo."
+needs:
+  - "For the API: an account, an API key and credits (25 free to start)."
+  - "For local use: a computer that can run the model, and someone with technical skill."
+  - "A written description of the image."
+not_verified:
+  - "Setup steps for each way to run it."
+  - "Which model licence fits business use."
+  - "What computer you need to run it locally."
 sources:
   - https://docs.stability.ai/pricing

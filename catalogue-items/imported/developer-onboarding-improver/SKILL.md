@@ -59,7 +59,7 @@ This skill covers:
 
 ## Before You Start
 
-Ask about, or review the **developer-audience-context** skill for:
+Ask the person about the points below. (A developer-audience-context skill is not part of this library. If the person has one, read it first.)
 - What's the typical technical sophistication of your developers?
 - What tools and environments do they commonly use?
 - What alternative products have they tried? What was their experience?
@@ -491,6 +491,8 @@ Perform this audit quarterly (or after any onboarding changes):
 - **k6**: Load testing of onboarding flows
 
 ## Related Skills
+
+These skills are named by the original author and are not all in this library. If one is missing, do the step in plain text or tell the person it is a next step they can ask for.
 
 - **docs-as-marketing**: Quickstart documentation
 - **sdk-dx**: SDK that reduces onboarding complexity

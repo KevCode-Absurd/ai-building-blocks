@@ -33,6 +33,7 @@ you_get:
   - A list of what stays free and what to gate
   - Upgrade prompts that warn early and give options
   - Pricing page questions to answer
+next: [copilot-gtm-technical-product-pricing, copilot-gtm-product-led-growth]
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
   - Describe the product, who uses it and how you sell. Add what a free user costs you and your paid prices.

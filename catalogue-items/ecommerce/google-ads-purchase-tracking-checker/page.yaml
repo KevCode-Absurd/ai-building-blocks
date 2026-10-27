@@ -65,7 +65,7 @@ how_it_works:
   - title: Counts primary purchases
     text: Only one purchase action may be primary. Two primary purchases double the reported revenue and ROAS.
   - title: Checks the GA4 import
-    text: A GA4 import must not be the primary purchase. It is secondary from the moment you link it.
+    text: A GA4 import must not be the primary purchase. Imported actions can arrive as primary, so switch it to secondary right after you link GA4.
   - title: Checks other actions
     text: Add to cart, begin checkout and page view must be secondary. It checks account and campaign goals.
   - title: Names the right primary

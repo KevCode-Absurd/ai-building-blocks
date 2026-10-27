@@ -32,11 +32,13 @@ you_get:
   - Drop-off measures to track
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - First write the moment a new user first sees value, in one sentence. Then list only the steps that lead to it.
   - Describe what your product does and who signs up.
   - List the steps a new user must finish before they see value.
   - Add your drop-off numbers if you have them (optional).
   - Read the wizard decision first. If it says you don't need a wizard, use the hints it suggests instead.
   - Check that each step asks for one thing, then give the step list to your designer or developer.
+  - Once it is live, track where people drop off. Then use the onboarding improver to fix the weakest step.
 output_sample:
   input:
     - What your product does
@@ -58,3 +60,4 @@ output_sample:
       contains: The events to track at each step so you can see where people leave.
     - name: Common mistakes to avoid
       contains: Warnings against cramming every feature into a long intro or letting users skip into an empty product.
+next: [first-use-onboarding-designer, onboarding-improver]

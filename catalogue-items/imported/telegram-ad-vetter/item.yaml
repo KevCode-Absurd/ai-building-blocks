@@ -14,6 +14,8 @@ outputs:
   - type: audit_report
 uses: []
 origin: imported
+warnings:
+  - scrapes
 source:
   by: sickn33
   repo: sickn33/agentic-awesome-skills

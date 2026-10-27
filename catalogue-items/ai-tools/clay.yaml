@@ -46,6 +46,7 @@ first_result:
     - "Add one enrichment column for work email. Run it on 5 rows first and look at what comes back."
     - "Add a Claygent column with a plain question, such as 'What does this company sell, and who is it for?'. Run it on the same 5 rows and check the answers against the company website."
     - "Export the rows, or sync them to your customer records if you are on Growth."
+    - "Next: put the list in order with the Who to call first ranker, or compare Apollo if you want a simpler list builder."
 needs:
   - "A list of target companies, or a clear description of them: place, size and industry."
   - "The job titles you want to reach."

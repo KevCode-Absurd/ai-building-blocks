@@ -1,6 +1,6 @@
 # Albert Einstein: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 The own-words sources here are two public-domain books in English translation: his popular account Relativity (1916; Lawson's translation, revised 1924) [S2], and the 1920 and 1921 lectures in Sidelights on Relativity [S3]. Since the last check we also read his 1933 Oxford lecture on method [S6] (from a scan of its reprint), his 1949 essay Why Socialism? [S7], his 1939 letter to Roosevelt [S8] and his 1905 paper on mass and energy [S9]. The Wikipedia pages [S1][S4][S5] and the two other pages [S10][S11] give dates and context. His later writing is still under copyright, so we paraphrase it. Many "Einstein quotes" in circulation are misattributed, and Wikipedia itself flags disputed ones [S1]. This file uses only what its sources show.
 

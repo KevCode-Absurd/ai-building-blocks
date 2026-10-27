@@ -36,7 +36,7 @@ how_to_use:
   - "Add the time period and the format you want: Markdown, HTML or PDF. PDF and HTML files need an AI that can run code."
   - Read the data gaps note first. Fill in any missing figures yourself and ask for a new version.
   - Check each number in the report against your data before you share it.
-  - Share the report with your team, or keep it as your record for the period.
+  - If the data gaps note lists missing fields, add them and run the report again. Then send it to the owners named in it, or keep it as your record for the period.
 output_sample:
   input:
     - Your data as a table, JSON, CSV or an export

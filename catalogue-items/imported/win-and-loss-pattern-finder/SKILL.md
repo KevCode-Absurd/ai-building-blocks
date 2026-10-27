@@ -43,7 +43,7 @@ schema and org context (inferred from what is connected or uploaded; if the answ
 From the CRM: closed opps in scope and period - account (industry,
 size), stage, amount, close and created dates, lead source, type,
 owner, won/lost, loss reason where recorded. Plus opportunity history
-where the CRM exposes it, to find the stage each loss died at.
+where the CRM exposes it, to find the stage each loss died at. First check that the export has the stage-history columns and the loss-reason field. If either is missing, say so, give the patterns you can still find, and ask the user for a fuller export.
 
 ## Step 3 - Quantitative patterns
 

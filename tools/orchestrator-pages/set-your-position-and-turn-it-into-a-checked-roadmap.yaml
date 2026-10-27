@@ -16,8 +16,8 @@ when:
   - You must show a board, partner or bank that the plan holds.
 not_for:
   - "You plan one campaign or one launch: use the Big problem splitter to break it into smaller parts."
-  - "You only want to know if your edge holds up against rivals: use the Competitive advantage tester."
-  - "You need a single yes or no on one choice: use the Group decision reviewer, or ask a trusted adviser."
+  - "You only want to know if your edge holds up against rivals: use the Business power tester."
+  - "You need a single yes or no on one choice: use the Case-against writer, or ask a trusted adviser."
 you_give:
   - What you offer and who you serve
   - Your main rivals (optional)
@@ -29,8 +29,8 @@ you_get:
   - The plan rebuilt from the end date, with a score out of 100
   - A list of ways it could fail and one change for each gap
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Strategy trade-off planner, Feature roadmap to outcomes rewriter, Work-backwards plan checker and Failure-first plan check."
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project, which can need a paid plan) and say "Follow HANDOFF.md".
   - State your end date and the result you want in plain numbers at the start. Step 3 needs both.
   - Tell it about any commitment you cannot drop, so the not-do list stays honest.
   - Read the failure list last and decide which changes to make before you share the roadmap.
@@ -41,7 +41,7 @@ output_sample:
     - Your main rivals (optional)
     - Your current feature or task list with dates (optional)
   prerequisites:
-    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project (these can need a paid plan; check yours first)
   output:
     - name: "Step 1 file: position"
       contains: Better versus different, the chosen position, the price stance, the not-do list and the activities that must fit.

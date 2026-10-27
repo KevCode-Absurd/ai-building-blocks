@@ -6,7 +6,7 @@ argument-hint: "<ticket or issue description>"
 
 # /ticket-triage
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Tool names written like ~~support platform are optional connections to a help desk. If none is connected, ask the user to paste the ticket and any known issues list. For the checks you cannot do, write "Not checked" in the output. Never invent related tickets, links or known issues.
 
 Categorize, prioritize, and route an incoming support ticket or customer issue. Produces a structured triage assessment with a suggested initial response.
 
@@ -72,8 +72,8 @@ Using the routing rules below, recommend which team or queue should handle this 
 - **Customer:** [Name/account if known]
 - **Impact:** [Who and what is affected]
 - **Workaround:** [Available / Not available / Unknown]
-- **Related tickets:** [Links to similar issues if found]
-- **Known issue:** [Yes — link / No / Checking]
+- **Related tickets:** [Links to similar issues if found, or "Not checked" if no help desk or list was given]
+- **Known issue:** [Yes — link / No / Not checked]
 
 ### Routing Recommendation
 **Route to:** [Team or queue]
@@ -96,7 +96,7 @@ After presenting the triage:
 - "Want me to draft a full response to the customer?"
 - "Should I search for more context on this issue?"
 - "Want me to check if this is a known bug in the tracker?"
-- "Should I escalate this? I can package it with /customer-escalation."
+- "Should I escalate this? I can write an escalation brief."
 
 ---
 
@@ -135,7 +135,7 @@ Assign every ticket a **primary category** and optionally a **secondary category
 - A security incident is in progress
 - The issue is worsening or expanding in scope
 
-**SLA expectation:** Respond within 1 hour. Continuous work until resolved or mitigated. Updates every 1-2 hours.
+**SLA expectation (default targets: replace them with your own team's):** Respond within 1 hour. Continuous work until resolved or mitigated. Updates every 1-2 hours.
 
 ### P2 — High
 **Criteria:** Major feature broken, significant workflow blocked, many users affected, no workaround.

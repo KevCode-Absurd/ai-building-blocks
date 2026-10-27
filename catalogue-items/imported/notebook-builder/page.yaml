@@ -30,7 +30,8 @@ you_get:
   - A reproducible, top to bottom flow
   - A tidied version of an old notebook (optional)
 how_to_use:
-  - Open an AI that can run code and save files, then paste in this skill.
+  - Install Python 3.12 or newer, Jupyter and uv (uv pip install jupyterlab ipykernel). Use an AI that can run code and save files.
+  - Give your AI the whole skill folder, or at least SKILL.md and the files in assets, references and scripts. It should run scripts/new_notebook.py first to make the starting notebook.
   - Say whether you want an experiment or a tutorial. Add the topic, the goal and who will read it.
   - Add your notes, scripts or old notebook if you have them (optional).
   - Let your AI build the notebook and fill in each step. Ask it to run the notebook top to bottom.

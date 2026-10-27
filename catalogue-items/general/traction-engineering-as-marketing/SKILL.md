@@ -1,9 +1,39 @@
 ---
 name: traction-engineering-as-marketing
-description: "Plan a engineering as marketing acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
+description: "Plan an engineering as marketing acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
 ---
 
 # Free tool experiment planner
+
+Not for a buyer with no repeat task a small tool could solve: use a sales-led plan or paid ads. Not for comparing many channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for building the tool for you: hire a developer or use a no-code builder, then bring the spec back.
+
+Gather first: your product link or pasted pricing text, your growth goal, the most you can spend, your hours a week, and the task your buyer repeats before buying (and, if you know one, a free tool that leads people to a paid product).
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Grow on social** with the [Niche publication experiment planner](https://useaiblocks.com/skills/traction-targeting-blogs).
+- **Plan your strategy** with the [Growth channel shortlist planner](https://useaiblocks.com/skills/traction-channel-ranker).
+- The [Paywall designer](https://useaiblocks.com/skills/paywall-designer).
+- **Plan your strategy** with the [Customer acquisition experiment reviewer](https://useaiblocks.com/skills/traction-experiment-reviewer). It takes the channel experiment.
+- The [Platform growth experiment planner](https://useaiblocks.com/skills/traction-existing-platforms).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**Makes it better (optional):**
+- **Your website** (yours): the link to your site or the page.
+- **Business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
+- **Traction shortlist** (yours): all 19 channels assessed, with up to three selected small tests and combined cash and time limits.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your website, business profile, traction shortlist. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
 
 ## Start from a product link
 
@@ -23,7 +53,7 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Can a small useful tool solve an adjacent buyer problem and naturally lead to the paid product?
 
-1. List calculators, graders, templates and small utilities the same buyer would need before buying. Choose a single task with a clear answer.
+1. Ask for the task the buyer repeats before buying, and one named free tool that leads to a paid product. List calculators, graders, templates and small utilities that task needs. Choose a single task with a clear answer.
 2. Describe the inputs, calculation or transformation, output and connection to the core product. Keep the useful result easy to reach.
 3. Bound implementation and maintenance cost, privacy requirements, error cases and distribution. A useful prototype should precede a large engineering project.
 

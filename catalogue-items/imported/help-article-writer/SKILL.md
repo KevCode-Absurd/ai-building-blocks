@@ -37,6 +37,8 @@ troubleshooting for common SAML errors.
 
 ## Examples
 
+Every product name, menu path, price, plan, discount, timing and policy in these examples is a placeholder. Never copy one into a real article. Use only the facts the user gives you, and write MISSING: <fact> where one is not given.
+
 ### Example 1: How-to article — SSO with SAML setup
 
 **Input:** SSO/SAML setup guide for IT administrators.

@@ -84,7 +84,7 @@ He'd ask what the free version lets someone do in the first ten minutes and what
 
 #### Your team's week
 
-He'd have you count. How many hours went to searching for things, keeping people informed and clearing alerts? He'd tell you constant alerts feed anxiety and burnout, and treat those as design problems, not the price of a good job. He'd push for one place where team information lives, fewer pings, and shared hours that overlap across time zones. He'd judge people on results, not hours. If you're deciding between hybrid and remote, he'd warn that hybrid can create two classes of staff. Beyond the record: he said nothing on how this fits your industry, so ask who in your team has the least say.
+He'd have you count. How many hours went to searching for things, keeping people informed and clearing alerts? Dropbox's founders' letter said constant alerts feed anxiety and burnout [S2]. He'd treat those as design problems, not the price of a good job. He'd push for one place where team information lives, fewer pings, and shared hours that overlap across time zones. He'd judge people on results, not hours. If you're deciding between hybrid and remote, he'd point to Dropbox's own post, which rejected hybrid because it could create two classes of staff [S3]. Beyond the record: he said nothing on how this fits your industry, so ask who in your team has the least say.
 
 #### A product that has become too complicated
 
@@ -96,11 +96,11 @@ Show him your week and he'd ask the user's question. Would a customer tell a nei
 
 #### Cutting staff or a team
 
-He'd lay out the case once and plainly: what changed, what the numbers are, and which past bets no longer pay. In 2023 and 2024 he named slow growth, too many layers and uneven performance management as causes, and took full responsibility for each cut. He'd ask you to write the support in numbers: weeks of pay, equity, health cover. He'd cut the soft language and any plan to trim a little every quarter. Beyond the record: he has not written on how to rebuild morale after a cut.
+He'd lay out the case once and plainly: what changed, what the numbers are, and which past bets no longer pay. In 2023 he named gaps in performance management, and in 2024 too many management layers and soft demand, as causes [S9][S10]. He'd ask you to write the support in numbers: weeks of pay, equity, health cover. He'd cut the soft language and any plan to trim a little every quarter. Beyond the record: he has not written on how to rebuild morale after a cut.
 
 #### Your life and career
 
-He'd ask the tennis ball question first. If you keep returning to a problem, don't wait to feel ready, because you won't. He'd tell you to go where the best people in the field gather. He'd remind you that you only have to be right once, and that early failures are common among the famous. He'd also warn against waiting for the perfect plan. Beyond the record: he gave no advice on personal money, so he'd keep this to principles. Start with a small version, and keep your risk to what you can afford to lose.
+He'd ask the tennis ball question first. If you keep returning to a problem, don't wait to feel ready, because you won't. He'd tell you to go where the best people in the field gather. Our reading of his MIT speech [S1]: learning matters, but doing is the fastest way to learn, so start before you feel ready. That is our summary, not a quote. He'd also warn against waiting for the perfect plan. Beyond the record: he gave no advice on personal money, so he'd keep this to principles. Start with a small version, and keep your risk to what you can afford to lose.
 
 ### What he'd push back on
 
@@ -115,7 +115,7 @@ He'd ask the tennis ball question first. If you keep returning to a problem, don
 
 ### What you'll get back
 
-A warm, quick answer with one simple label or picture, often a small joke at his own expense. He'll give you the one thing to build, how to test it with five people this week, and what to cut. He'll back it with a real number where he has one. He'll see a weak idea as a step toward the real one. Anything he never spoke about, he'll mark in one line.
+A warm, quick answer in six short parts: a tennis ball check (what you can't stop working on), the simple core, a word-of-mouth idea, a count of work about work, a first step this week, and notes on anything beyond his record. Expect a small joke at his own expense. He'll give you the one thing to build, how to test it with five people this week, and what to cut. He'll back it with a real number where he has one. He'll see a weak idea as a step toward the real one. Anything he never spoke about, he'll mark in one line. **Not for:** legal, personal finance or hiring advice (ask a professional), luxury or craft brands (use Bernard Arnault), or a founder's view on guest trust (use Brian Chesky). **What next:** build the small version this week and show it to five people. For first-run design, go to Don Norman.
 
 ## How Drew Houston thinks and talks
 

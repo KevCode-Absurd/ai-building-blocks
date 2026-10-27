@@ -45,8 +45,8 @@ Phases 1-2 seal the loop and the funnel; 3-5 steer with evidence; 6 is the instr
 
 Run only on first start (no tracker). Ask:
 
-1. What does the app do, and what core action does a retained user repeat? (defines the Hook loop and the OMTM)
-2. What are the current retention numbers — day-1/7/30 or week-4 cohorts? (sets the Rule 8 acquisition bar; feeds lean-analytics)
+1. What does the app do, and what core action does a retained user repeat? (defines the Hook loop and the OMTM, the one metric that matters most)
+2. What are the current retention numbers — day-1/7/30 or week-4 cohorts? (sets the Rule 8 acquisition bar, the retention level that must be met before paid growth; feeds lean-analytics)
 3. Where does the activation funnel leak, and what is the first-run flow? (gates improve-retention)
 4. Solo/small team or a full product trio (PM, designer, engineer)? (scales continuous-discovery and inspired-product)
 5. Is the app a network/marketplace product, and do engaged users fail to convert to revenue? (flags optional cold-start-problem / monetizing-innovation)
@@ -70,7 +70,7 @@ Done when `docs/GROW-APP-PLAN.md` exists with every phase statused and the user 
 **Decide with the user:**
 - Which internal trigger (emotion) should pull users back — confirm one.
 - Which single phase is weakest and gets the highest-leverage fix now — or defer if the loop is already forming (5%+ unprompted return).
-- Which reward type to strengthen — tribe (social), hunt (resources), or self (mastery) — rejecting any concept that fails the Manipulation Matrix.
+- Which reward type to strengthen — tribe (social), hunt (resources), or self (mastery) — rejecting any concept that fails the Manipulation Matrix (a test of whether a feature helps users or tricks them).
 
 **Artifact:** Extend docs/PRODUCT.md `## Hook Model` (trigger → action → variable reward → investment; weakest phase named). Update the tracker.
 

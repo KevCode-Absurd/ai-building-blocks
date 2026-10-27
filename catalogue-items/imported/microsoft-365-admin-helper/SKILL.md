@@ -52,10 +52,11 @@ $results | Export-Csv .\temp_passwords.csv -NoTypeInformation
 
 ```powershell
 $adminRoles = (Get-MgDirectoryRole | Where-Object { $_.DisplayName -match "Admin" }).Id
+$breakGlassIds = @("<break-glass account 1 object ID>", "<break-glass account 2 object ID>")   # ask the admin for these first
 $policy = @{
     DisplayName = "Require MFA for Admins"
     State = "enabledForReportingButNotEnforced"   # Start in report-only mode
-    Conditions = @{ Users = @{ IncludeRoles = $adminRoles } }
+    Conditions = @{ Users = @{ IncludeRoles = $adminRoles; ExcludeUsers = $breakGlassIds } }
     GrantControls = @{ Operator = "OR"; BuiltInControls = @("mfa") }
 }
 New-MgIdentityConditionalAccessPolicy -BodyParameter $policy
@@ -204,29 +205,30 @@ Get-MgSecuritySecureScoreControlProfile | Sort-Object -Property ActionType |
 
 ### Workflow 3: User Offboarding
 
-**Step 1: Block Sign-in and Revoke Sessions**
+**Step 1: Preview what will change (a list only; nothing changes)**
 
 ```powershell
 $upn = "departing.user@company.com"
 $user = Get-MgUser -Filter "userPrincipalName eq '$upn'"
 
-# Block sign-in immediately
-Update-MgUser -UserId $user.Id -AccountEnabled:$false
-
-# Revoke all active tokens
-Invoke-MgInvalidateAllUserRefreshToken -UserId $user.Id
-Write-Host "Sign-in blocked and sessions revoked for $upn"
-```
-
-**Step 2: Preview what will be removed (a list only; nothing changes)**
-
-```powershell
 # Identify assigned licenses
 $licenses = (Get-MgUserLicenseDetail -UserId $user.Id).SkuId
 
 # Preview only: this prints a list and changes nothing. It is not a real -WhatIf run.
 $licenses | ForEach-Object { Write-Host "Would remove SKU: $_" }
-# Show the list to the admin and wait for a clear yes before Step 3.
+Write-Host "Would also block sign-in, revoke sessions, convert the mailbox to shared and remove group memberships for $upn"
+# Show the list to the admin and wait for a clear yes before Step 2.
+```
+
+**Step 2: Block Sign-in and Revoke Sessions (only after the admin says yes)**
+
+```powershell
+# Block sign-in
+Update-MgUser -UserId $user.Id -AccountEnabled:$false
+
+# Revoke all active tokens
+Invoke-MgInvalidateAllUserRefreshToken -UserId $user.Id
+Write-Host "Sign-in blocked and sessions revoked for $upn"
 ```
 
 **Step 3: Execute Offboarding**
@@ -241,12 +243,15 @@ Set-Mailbox -Identity $upn -Type Shared
 
 # Remove from all groups
 Get-MgUserMemberOf -UserId $user.Id | ForEach-Object {
-    try { Remove-MgGroupMemberByRef -GroupId $_.Id -DirectoryObjectId $user.Id } catch {}
+    $groupId = $_.Id
+    try { Remove-MgGroupMemberByRef -GroupId $groupId -DirectoryObjectId $user.Id } catch { Write-Warning "Could not remove $upn from group $groupId - $($_.Exception.Message)" }
 }
 Write-Host "Offboarding complete for $upn"
 ```
 
 **Validation:** Confirm in the M365 admin portal that the account shows "Blocked," has no active licenses, and the mailbox type is "Shared."
+
+**Next step:** read any warnings from the group removal and remove those memberships by hand. Then repeat the checks above in the admin portal.
 
 ---
 

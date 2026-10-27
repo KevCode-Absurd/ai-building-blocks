@@ -205,7 +205,7 @@ Audit any microinteraction:
 
 This skill is based on Dan Saffer's definitive guide to designing with details:
 
-- [*"Microinteractions: Designing with Details"*](https://www.amazon.com/Microinteractions-Full-Color-Designing-Details/dp/1491945923?tag=wondelai00-20) by Dan Saffer
+- [*"Microinteractions: Designing with Details"*](https://www.amazon.com/Microinteractions-Full-Color-Designing-Details/dp/1491945923) by Dan Saffer
 
 ## About the Author
 

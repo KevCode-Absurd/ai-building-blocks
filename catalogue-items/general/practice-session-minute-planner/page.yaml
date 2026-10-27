@@ -9,7 +9,7 @@ headline: "Practice session minute planner"
 subhead: "Paste the skill you are teaching, who is in the room, how long you have and the mistake that matters most. The prompt breaks the skill into basics, builds 5 to 12 minute blocks with what to watch for and what to say, places the fix where it gets the most repetitions, and ends with a live run."
 
 explain: |
-  Most training sessions are a talk, a demo and some unstructured practice that runs out of time. People leave having watched more than they did. John Wooden planned every minute of practice in advance and drilled the basics before anything else, and he said in public that the planning was most of the coaching.
+  Most training sessions are a talk, a demo and some unstructured practice that runs out of time. People leave having watched more than they did. The basketball coach John Wooden is known for planning every minute of practice in advance and drilling the basics before anything else.
 
   This prompt does that planning for any skill. It sets one checkable goal, breaks the skill into three to five basics, and builds short blocks that each say the minutes, the drill, what the coach watches for and the one correction phrase. The thing to fix gets the most repetitions in the middle of the session with a before-and-after check. A live run at real speed comes near the end, then a two-minute close with one thing done well and one thing to practise. You also get a one-card version to hold.
 
@@ -132,6 +132,8 @@ improve:
   - "Keep the live-run notes and paste them in next time as the last mistakes."
   - "Pair it with the Task rubric drafter to score the live run the same way each session."
 
+before: []
+next: [mixed-practice-unit-planner, task-rubric-drafter]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}

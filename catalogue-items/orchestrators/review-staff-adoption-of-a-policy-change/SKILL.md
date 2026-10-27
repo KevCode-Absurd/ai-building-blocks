@@ -7,6 +7,25 @@ description: "Use when a new policy has taken effect and you want to know whethe
 
 Check whether staff are following a policy that has already started. Two component skills run in order: read the feedback and tag the barriers, then plan support for each barrier. The brief says what the evidence can and cannot prove. Nothing is changed in the policy or in any live process.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A chat AI that reads files:** It reads the policy and the feedback together. Nothing is sent or changed for you.
+<!-- /needs -->
+
 ## Before you start
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
@@ -62,6 +81,16 @@ CHECKS MISSED <one line each, or none>
 ```
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent and no policy or process was changed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer). It takes the plan.
+- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the plan.
+- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
+- The [Shift schedule planner](https://useaiblocks.com/skills/shift-schedule-planner). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

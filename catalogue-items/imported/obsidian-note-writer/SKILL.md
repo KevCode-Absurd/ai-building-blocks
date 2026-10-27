@@ -22,7 +22,7 @@ Create and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark an
 3. **Link related notes** using wikilinks (`[[Note]]`) for internal vault connections, or standard Markdown links for external URLs.
 4. **Embed content** from other notes, images, or PDFs using the `![[embed]]` syntax. See [EMBEDS.md](references/EMBEDS.md) for all embed types.
 5. **Add callouts** for highlighted information using `> [!type]` syntax. See [CALLOUTS.md](references/CALLOUTS.md) for all callout types.
-6. **Verify** the note renders correctly in Obsidian's reading view.
+6. **Verify** the syntax is valid, then ask the person to open the note in Obsidian's reading view to confirm it renders. You cannot see their vault, so do not claim it rendered.
 
 > When choosing between wikilinks and Markdown links: use `[[wikilinks]]` for notes within the vault (Obsidian tracks renames automatically) and plain Markdown links for external URLs only.
 

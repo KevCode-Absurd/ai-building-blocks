@@ -16,3 +16,4 @@ version: 1.0.0
 example_pending: true
 credits:
   - {title: "Optimizing Optimization (opening keynote, 2016)", by: "Peep Laja, CXL", url: "https://cxl.com/", used: "Sorting every issue into tracking, fix now, investigate or test, and ranking by likely gain and effort"}
+needs_mode: manual

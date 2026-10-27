@@ -33,7 +33,7 @@ how_to_use:
   - Use an AI tool that can run code and has the Shopify CLI, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot run it.
   - Log in to your store with the Shopify CLI. Your login needs read access to orders and products.
   - Give your AI the skill and tell it your store domain, a start date and an end date. Use at least 90 days.
-  - Add your own limits and tags to leave out if you want. Tags such as gift-wrap are removed before pairs are counted.
+  - Add your own limits and tags to leave out if you want. Tags such as gift-wrap are only removed if you list them as tags to leave out. The list is empty unless you set it.
   - Check the ranked table first. Pairs with lift above 2 suit bundles. The rest suit cross-sell offers.
   - Re-run it every quarter, as popular pairs change with the seasons.
 output_sample:

@@ -67,7 +67,7 @@ Forcing choice. "Other" requires a one-line description.
 > 4. Journalism / due diligence
 > 5. Job interview prep
 > 6. Competitive intelligence
-> 7. Personal vetting (date, hire, business partner)
+> 7. Personal vetting of a public figure (not for dating, hiring or renting decisions about a private person; use a licensed check with consent for those)
 > 8. Other (specify)
 >
 > *Why I'm asking:* The purpose dictates the angle, the depth, and the red-flag sensitivity. Sales prep needs conversation hooks. Investment diligence needs traction signals. Personal vetting needs careful sensitivity boundaries.

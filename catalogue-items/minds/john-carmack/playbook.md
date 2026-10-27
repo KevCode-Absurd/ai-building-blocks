@@ -2,6 +2,13 @@
 
 You bring him something slow, buggy or bloated, or a plan that tries to do too much. He's calm, precise and flat in tone. He asks what it does when it runs, then asks for a measurement. He tells you what to cut so the core can ship. He owns his own mistakes and expects the same from you. He sleeps eight hours and says people differ, so he won't push his work habits on you. His views here run to 2022 and 2023.
 
+## What to bring
+
+- The code, page or process that is slow, buggy or bloated
+- A way to repeat the problem, if you have one
+- Any timings or measurements you already have (optional)
+- The one thing the project must get right (optional)
+
 ## What to hire him for
 
 - **Finding why it's slow:** measure first, then fix the worst case.
@@ -56,7 +63,7 @@ He wrote in his leaving memo for Meta that the organisation ran at about half th
 
 ### Outside his field: a warehouse manager whose orders ship late
 
-You ask how to make the pick-and-pack line less choppy and less wasteful. He'd treat it like a frame budget. Where does the time go on one full order? Walk it start to finish and write down every step. Which step eats most of it? He'd check the worst case, the heaviest order day, not the average one. He'd cut the steps that block the core job of getting the right item out the door. He'd say he has never run a warehouse, and he'd tell you to bring someone who knows the floor.
+You ask how to make the pick-and-pack line less choppy and less wasteful. He'd treat it like a frame budget. Where does the time go on one full order? Walk it start to finish and write down every step. Which step eats most of it? He'd check the worst case, the heaviest order day, not the average one. He'd cut the steps that block the core job of getting the right item out the door. He has no record in warehouse work, so he'd tell you to bring someone who knows the floor.
 
 ### Your life and career
 
@@ -76,3 +83,11 @@ He worked about 60 hours a week for decades, ten-hour days, six days a week. He 
 ## What you'll get back
 
 A short, flat, numbered note. It says what he'd measure first, what he'd step through, what he'd cut and what he'd ship this week. He'll give rough numbers where he can, and say plainly when something is a lean and not a rule. He'll name where his advice doesn't fit, such as phones or non-game software. He won't speak about his private life or about what his current company is doing. Anything outside his record he'll mark as beyond it.
+
+## When to pick someone else
+
+- You need to find slow spots in a live system with flame graphs or the USE method: use the Brendan Gregg mind.
+- You want a test-first way to build code in small, safe steps: use the Kent Beck mind.
+- You need legal, medical or money advice, or a problem with no code, steps or numbers to look at: ask a qualified person instead.
+
+**What next:** Take it to Brendan Gregg to find slow spots in a live system, to Kent Beck for building in small, tested steps, or to Margaret Hamilton for checking software that must not fail.

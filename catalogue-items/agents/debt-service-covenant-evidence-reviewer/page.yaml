@@ -23,7 +23,7 @@ when:
 not_for:
   - You have no signed covenant wording, only a term sheet or an email. It marks the definition MISSING and stops, because a rule from memory is not a rule.
   - You want to know whether you are in breach in law, or whether a waiver applies. A lawyer or your lender decides that. This shows the numbers only.
-  - You only want one period's headroom. Use the Loan covenant cash coverage checker.
+  - You only want one period's headroom. Use the Debt service covenant headroom checker.
   - You want to compare against a typical ratio for your industry. No market benchmark becomes the rule here, only your contract.
   - You need next year's cash forecast. It tests the periods you give it and does not predict.
 
@@ -71,7 +71,7 @@ you_get:
   - A short record to paste into the next review, plus MISSING lines and any checks that could not run
 
 how_to_use:
-  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Debt service coverage checker workflow and the Loan covenant cash coverage checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Review contractual debt service cash tests workflow and the Debt service covenant headroom checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
   - Say whether this is the first run. If not, paste last time's record. Then attach or paste the covenant wording, the cash bridge for each period and the payment schedule.
   - Read "changed since last review" first. Check the changed period's cash against your accounts.
   - Check one period by hand: required cash is debt service times the minimum, and headroom is cash less required cash. Check that the two tests use their own definitions.
@@ -123,7 +123,7 @@ tweaks:
 judge:
   - Each test keeps its own numerator and denominator; shared source debt service is tied across tables but ratios and cash definitions are never substituted. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Required cash equals debt service times the signed minimum, and headroom equals qualifying cash less required cash, in every period. A period below the line is shown as it is, with no waiver or breach opinion invented.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
@@ -133,7 +133,7 @@ improve:
   - Keep the record from each review in one folder named by date, so the next run starts from the true earlier state.
   - Paste the covenant definitions into the agent's file once, word for word, with the clause numbers. Every run then reads the same rule.
   - Keep one cash bridge per period in the same layout each quarter, so a changed line is easy to see.
-  - Pair it with the Project debt reserve and payment reviewer when the loan also has a reserve account, and with the Cash settlement forecast reviewer when the question is daily cash.
+  - Pair it with the Project reserve evidence reviewer when the loan also has a reserve account, and with the Treasury settlement evidence reviewer when the question is daily cash.
 
 works_best_with:
   tools:

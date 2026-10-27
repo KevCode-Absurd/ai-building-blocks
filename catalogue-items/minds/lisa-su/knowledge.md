@@ -1,6 +1,6 @@
 # Lisa Su: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Lisa Su is alive, and views can change. This data set comes from her own words in five places: her first interview as CEO (VentureBeat, October 2014) [S6], a 2020 leadership webinar [S8], a long Stratechery interview from June 2024 [S7], a 2025 Stanford interview with a published transcript [S3] and her 2026 MIT commencement address [S2]. It also uses two long magazine profiles based on interviews in 2024 [S4][S5] and a reference page on her career [S1]. Some of her words reach us through a page summary, so the exact short phrases are few. Treat each view as "as of" the year of its source, from 2024 to 2026. The Stanford transcript was machine-made and lightly edited, so small wording errors are possible. Nothing here covers her private life or her future plans.
 

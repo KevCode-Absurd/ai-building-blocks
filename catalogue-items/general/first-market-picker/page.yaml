@@ -21,6 +21,7 @@ not_for:
   - "Your product already sells well to a proven group: use the Market boundary checker to test where that market ends."
   - "You already know your first group and want to talk to buyers: write a short request and ask five people for a call."
   - "You want the size of a whole industry: use a market report or ask a person who knows the trade."
+  - "You want a broad group sliced into people you can reach this week: use the First customer group picker."
 
 you_give:
   - "What your product does"
@@ -128,3 +129,4 @@ terms:
     meaning: "The small group of buyers you aim to win before anyone else."
   - term: "Lightly served"
     meaning: "A group that has no strong supplier today."
+next: [first-customers-by-hand-planner, customer-interview-request]

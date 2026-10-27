@@ -23,14 +23,14 @@ you_give:
   - An honest rating of your skills (strong, ok or weak) in sourcing, paid ads, site conversion, brand, email and operations
   - What you think is limiting growth
   - Traffic sources, conversion rate and monthly sessions (optional)
-  - What you can offer, such as cash per month, a share of profit or equity, or stock
+  - What you can offer, such as cash per month, a share of profit or equity, or stock (get legal and tax advice before you promise equity or stock)
 you_get:
   - The one hire to make, a check that this is a hiring problem, the size of the prize and a readiness score out of 100
   - A hire brief with the 90-day result in numbers and the pay options you can afford
-  - A one-page results agreement with five parts, ready to hand over
+  - A one-page results agreement with five parts and a say-it-back card, ready to hand over
   - A one-on-one meeting plan with how often, what they bring, the notes rules and your weekly hours
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Rate your own skills honestly. A kind rating gives you the wrong hire.
   - Say how experienced the new person will be at the exact task. It sets how often you meet.

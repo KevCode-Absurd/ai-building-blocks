@@ -31,7 +31,7 @@ you_get:
   - Year by year interest and depreciation schedule
   - Journal entries
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can run code if you can, so the schedule gets checked.
+  - Open an AI that can run code, such as Claude or ChatGPT with code tools turned on. The schedule is checked by script. If your chat cannot run code, ask your AI to say so, then check the schedule in a spreadsheet or with your accountant.
   - Paste the skill instructions into the chat.
   - "Paste your lease terms: payments, start date, length, options, discount rate and standard. Add prepaid costs and incentives if you have them."
   - "Ask: Follow this skill and write the lease accounting memo."

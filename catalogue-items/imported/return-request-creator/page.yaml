@@ -16,7 +16,7 @@ when:
   - You want the same reason on every return.
   - You want to check a return before it goes live.
 not_for:
-  - The order has not shipped yet. Cancel the order and restock the items instead.
+  - The order has not shipped yet. In Shopify admin, open the order, choose More actions, Cancel order, and tick restock.
   - You only need to pay the customer back. Issue a refund in Shopify admin once the returned item arrives.
   - You want a replacement sent. Open the return here, then make a replacement order in Shopify admin.
 you_give:
@@ -37,6 +37,7 @@ how_to_use:
   - Ask for a dry run first. Check the items and quantities in the preview.
   - Check with the customer that a return is expected. The customer gets an email unless you turn it off.
   - Tell your AI to run it for real, then check the report for errors.
+  - Once the item arrives, check it over. Then open the order in Shopify admin and use Refund to pay the customer back.
 output_sample:
   input:
     - Your order ID

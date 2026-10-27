@@ -21,7 +21,7 @@ Use this skill when editing GitHub Actions workflows to address deprecation warn
 - Upgrade one action at a time per commit (or one tightly related group) so failures are easy to isolate.
 - Keep existing workflow behavior unchanged while upgrading runtime/dependency actions.
 
-## Actions We Track in This Repo
+## Which Actions to Check First
 
 Prioritize runtime review for these groups when warnings appear:
 
@@ -33,9 +33,11 @@ Prioritize runtime review for these groups when warnings appear:
 
 ```yaml
 steps:
-  - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.3.1
-  - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.4
+  - uses: actions/checkout@<full-40-character-sha> # v<version>
+  - uses: actions/setup-node@<full-40-character-sha> # v<version>
 ```
+
+The SHAs are placeholders. Take each real SHA from the action's release page. Do not invent one, and do not reuse a SHA from memory.
 
 When recommending upgrades, identify the latest compatible release first, then use the corresponding commit SHA with an optional version comment.
 

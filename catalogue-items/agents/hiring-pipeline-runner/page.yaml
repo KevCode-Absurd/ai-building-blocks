@@ -33,7 +33,7 @@ how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the role brief.
   - Read the job post and scoring guide it makes, and change anything you disagree with before the first batch is scored.
   - Each time new resumes arrive, put them in the folder or attach them and ask it to run the new batch.
-  - Read the ranking and the drafts. Send, book or reject yourself, or say yes to one named action.
+  - Read the ranking and the drafts. Review the strong-fit invites first, then the holds, then the replies to people who missed a must-have. Send, book or reject yourself, or say yes to one named action.
   - After interviews, give it your notes and ask for the comparison. Run it again on Friday for the update.
 output_sample:
   input:

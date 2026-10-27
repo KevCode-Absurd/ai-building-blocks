@@ -1,6 +1,6 @@
 new_slug: find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site
 name: Find leaked keys, secure them and check your live site
-summary: Find leaked keys in your code and history, replace them, move secrets to safe storage and check your live site shows none to visitors.
+summary: Give it your project. Get leaked keys found, a rotation plan, secrets moved to safe storage and the live site checked.
 job: secure-code
 thinking: medium
 thinking_why: Each step is a focused scan or change. A mid-size model does it well.
@@ -28,7 +28,7 @@ you_get:
   - A plan to rotate secrets again on a schedule
   - A report on what the live site shows to a visitor, with a fix for each find
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - It never needs to print a secret. Tell it to refer to keys by name and the last four characters.
   - Do not skip your two steps, which are replacing the keys and deploying.

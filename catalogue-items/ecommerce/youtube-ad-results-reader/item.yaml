@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
   - {type: video_ads, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: audit_report}
 uses: []

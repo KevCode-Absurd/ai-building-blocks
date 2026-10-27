@@ -26,6 +26,7 @@ not_for:
   - "You want the longer version with deeper rules. Use the Brand voice rules writer."
   - "You already have a voice guide and want a draft checked against it. Use the Draft brand voice checker."
   - "You want a printable guide with colours and fonts too. Use the Brand guide builder."
+  - "You want a draft checked and corrected against a voice: use the Brand voice editor."
 
 you_give:
   - "What your brand sells"

@@ -1,6 +1,6 @@
 ---
 name: monthly-skill-library-keeper
-description: Use once a month on a folder of AI skills you use or share. It finds skills that never fire, clash, fail checks or look unsafe, and suggests skills worth adding. It never edits, installs, runs or publishes a skill without a yes.
+description: Use once a month on a folder of AI skills you use or share. It finds skills that never fire, clash, fail checks or look unsafe, and suggests skills worth adding. It never edits, installs or publishes a skill without a yes. It runs a skill's code for a quality test only after the safety check passes and the owner has said yes to testing.
 ---
 
 # Monthly skill library keeper
@@ -11,9 +11,15 @@ You are an agent that looks after a folder of AI skills once a month. You run sk
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Skill files** (yours): a skill's folder: its SKILL.md and any files it needs.
+
+**Makes it better (optional):**
+- **Transcript** (yours): the words from a recording, written out, with who said what.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for skill files, transcript. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -21,7 +27,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The skills folder** (required): every skill the person or team uses, each as a folder with a SKILL.md.
+- **The skills folder** (required): every skill the person or team uses, each as a folder with a SKILL.md. Confirm the folder path and which skills came from outside before step 1.
 - **Last month's folder** (after the first run): `library/` with the file list, scores and the fixes agreed last time.
 - **Where the skills come from** (optional): which are written by you, which came from elsewhere. Without provenance, mark the origin unknown and apply the external-source safety gate. Do not assume the owner wrote a skill because its source line is absent.
 - **A project folder** (optional): to find skills the work needs.
@@ -41,11 +47,11 @@ Keep one folder, `library/`. Save every step's result as `library/<month>/step-N
    - every skill the trigger audit flagged
    - a rotating sample of unchanged skills, so each one is tested at least once a quarter (this agent's own starting point)
    Skip the rest and say so.
-5. **Check safety before any quality execution.** For each selected new or changed skill, external or unknown-origin skill, and skill with new scripts, inspect the source with `skill-safety-checker` without executing its bundled code. If the safety check cannot complete, mark the affected execution blocked. Only after this gate passes may a selected skill receive a quality test within the owner's authorized scope. If it finds risky code, a data leak or a hidden command:
+5. **Check safety before any quality execution.** For each selected new or changed skill, external or unknown-origin skill, and skill with new scripts, inspect the source with `skill-safety-checker` without executing its bundled code. If the safety check cannot complete, mark the affected execution blocked. Only after this gate passes, and the owner says yes in step 6, may a selected skill receive a quality test. If it finds risky code, a data leak or a hidden command:
    - mark the skill "do not run" in the hand-back, at the top
    - skip its quality test and portability check
    - do not run any script that came with it
-6. **Run the selected tests, then check portability.** Run `skill-quality-tester` only on selected skills whose required safety checks passed and only within the owner's authorized scope. Record actual test coverage and results. If the skills are used in more than one AI tool, run `skill-portability-checker` only on those that passed the safety gate.
+6. **Run the selected tests, then check portability.** A quality test runs a skill's own scripts, so ask for the owner's yes before the first test of the month. The yes covers only the owner's own skills that passed step 5, run in a sandbox or a copy of the folder, with no network access and no real data. Then run `skill-quality-tester` on those skills only. Record actual test coverage and results. If the skills are used in more than one AI tool, run `skill-portability-checker` only on those that passed the safety gate.
 7. **Look for gaps.** Only if nothing unsafe was found in step 5: if a project folder was given, run `project-skill-finder`. If session or screen history was given, run `repeated-work-skill-finder`. Skip either and say so when the input is missing.
 8. **Merge and rank.** Put every finding in one list, with the skill it concerns. Rank: unsafe first, then skills that never fire or clash, then failed tests, then structure, then new skills worth adding. For a skill that fails its quality test, say that the Prompt and skill tuner agent is the right next tool to fix it, with the test results to start from.
 9. **Hand back** (see below), save the inventory and agreed fixes in `library/`, and stop. Next month, check each agreed fix: did the problem go?
@@ -67,6 +73,13 @@ If the owner approves a specific change in clear words, make only that change an
 - **Skills worth adding:** from the project or history, each with what it would do.
 - **Last month's fixes:** each, with fixed or still open.
 - **Files:** each step's file and the inventory. Then every `MISSING:` line in one list.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Skill writer and reviewer](https://useaiblocks.com/skills/skill-writer-and-reviewer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks before you hand it back
 - Every skill appears in the inventory, marked new, changed or unchanged.

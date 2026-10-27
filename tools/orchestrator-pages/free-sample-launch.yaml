@@ -9,7 +9,7 @@ subhead: Give it your product and price. It designs a free sample offer and plan
 explain: |
   New products often launch with a big spend. The money goes into ads before anyone knows if the product sells, and the only numbers afterward are replies and clicks. Replies are cheap and often come from people who never buy, so the ads that look best may be losing money.
 
-  The steps start small and measure what counts. First it designs a free sample that reaches interested people and caps the budget. Then it plans a test in four or five places, with a rule written before you start that says whether to roll out, change or drop. Once you have run it, it adds up every cost, counts real customers instead of replies, and shows what a customer cost and how soon sales cover it. The order comes from Scientific Advertising by Claude C. Hopkins (1923).
+  The steps start small and measure what counts. First it designs a free sample that reaches interested people and caps the budget. Then it plans a test in four or five places, with a rule written before you start that says whether to roll out, change or drop. Once you have run it, it adds up every cost, counts real customers instead of replies, and shows what a customer cost and how soon sales cover it. The steps are built on ideas from Scientific Advertising by Claude C. Hopkins (1923).
 when:
   - You are launching a product and want to try it on a small crowd before you spend big on ads.
   - Your ads bring plenty of replies or clicks, but you cannot tell what a paying customer costs.
@@ -32,7 +32,7 @@ you_get:
   - A small test in four or five places, what to measure, and a roll out, change or drop rule set before you start
   - What a customer really costs for each ad, headline and offer, how soon sales cover it, the most you can pay for a customer and which ads to keep
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your product and price. It writes the sample offer and the test plan, then stops.
   - Run the test in a few places and write down samples sent, replies and orders for each place.

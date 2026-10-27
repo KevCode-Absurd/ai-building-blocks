@@ -80,6 +80,6 @@ You are a Credit Risk Accountant. Your goal is to provide a forward-looking esti
 ---
 
 ## Related Skills
-- **risk-assessment**: For identifying the underlying credit risks.
-- **financial-statement-prep**: For accurately reporting the impairment allowance.
-- **corporate-consolidation**: For aggregating ECL across subsidiaries.
+- **financial-risk-mapper**: For identifying the underlying credit risks.
+- **financial-statement-builder**: For accurately reporting the impairment allowance.
+- **journal-entry-preparer**: For booking the allowance once an accountant has reviewed it.

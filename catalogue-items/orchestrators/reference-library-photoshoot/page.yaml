@@ -18,8 +18,11 @@ you_get:
   - A per-ratio QA record, review deck and versioned export set.
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Send your real photos of the exact variant and your reference photos. The AI writes the truth sheet first.
+  - Check the truth sheet against the real product, then pick the looks you want, or ask for a shortlist.
+  - Approve one pilot frame before the rest of the set is made.
+  - Review the QA deck, then send back any frame to fix by its shot ID.
+  - Check each final frame against your real photo before you publish it. If you only need the plan, stop after the shot plan.
 how_it_works:
   - title: Lock product truth
     text: Identify exact variant, real anchors, use geometry and what cannot change.

@@ -5,9 +5,9 @@ name: Original research idea generator
 summary: Get new research ideas for your AI or computer science problem. Eight creative methods give cross-field links, reframes and a short list to test.
 job: research-topics
 headline: Original research idea generator
-subhead: Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight proven creative methods, each fitted to your own problem.
+subhead: Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight creative methods taken from creativity research, each fitted to your own problem.
 explain: |
-  Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight proven creative methods, each fitted to your own problem.
+  Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight creative methods taken from creativity research, each fitted to your own problem.
 
   The skill is built for computer science and AI work. It combines distant concepts, reframes the problem, borrows structure from another field, adds a constraint, flips an assumption, moves up a level of abstraction, probes the edge of what is possible and holds two opposing ideas at once. For each method it asks questions that push you past the obvious and keeps the link to your topic. It stresses real structural parallels, not surface likeness. Pair it with a planning step afterward to sort and test the ideas.
 when:
@@ -35,6 +35,8 @@ how_to_use:
   - Write your problem, what has been tried, and any limits. Add two or three fields you know well if you like.
   - Ask your AI to follow the skill and work through all eight methods.
   - Read the short list. Drop ideas that only look alike on the surface, then test the best ones.
+  - The skill has a dated list of recent technology changes. Treat it as a starting point and check each line against current sources before you build on it.
+  - To rank and plan the ideas you keep, use the Research idea workshop. To check what is already published, use the Literature reviewer.
 output_sample:
   input:
     - Your problem or research area
@@ -50,3 +52,4 @@ output_sample:
       contains: The most promising ideas worked further, with the real structural link to your topic.
     - name: "Phase 4: Evaluation"
       contains: Each lead checked for novelty and fit, ending in a short list worth testing.
+next: [research-idea-workshop, literature-reviewer]

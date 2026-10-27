@@ -1,0 +1,23 @@
+slug: tax-set-aside-planner
+name: Tax set-aside planner
+summary: Give the tax share your accountant quotes. Get a rule for each payment, a place to keep it and dates to check.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - lean-year-cash-rules-writer
+  - cash-versus-earnings-checker
+  - retirement-savings-projector

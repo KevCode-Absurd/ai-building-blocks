@@ -36,7 +36,7 @@ how_to_use:
   - Export last week from your billing tool, or connect it read-only. Put the file in one folder, or attach it in the chat.
   - On the first run, approve the definitions of revenue, customer and churn. They are saved and never drift.
   - Add your spend and gross margin once. Update them when they change.
-  - Read the target and the one thing to fix. Run it again next Monday.
+  - Read the target and the one thing to fix. Run it again next Monday. Without file access, copy the weeks and definitions text it gives you and paste it in next time.
 output_sample:
   input:
     - Last week's billing export with plan, price, start, cancel and payments per customer

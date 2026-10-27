@@ -9,6 +9,14 @@ metadata:
   updated: 2026-03-16
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `./scripts/convert.sh`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Research Summarizer
 
 > Read less. Understand more. Cite correctly.
@@ -131,7 +139,7 @@ If the user has a document and wants structured understanding → this skill app
 
 ### Workflow 3 — Citation Extraction
 
-1. **Run the extractor** — `python3 scripts/extract_citations.py document.txt --output json` detects DOI/URL/author-year/numbered citations and deduplicates them
+1. **Run the extractor** — `python3 scripts/extract_citations.py document.txt --output json` detects DOI/URL/author-year/numbered citations and deduplicates them. If code cannot run, skip the script: read the document, list each citation by hand, and count them
 2. **Review and format** the extracted list in the requested style (APA 7 default); manually catch citations the regex missed
 3. **Classify citations** by type:
    - Primary sources (original research, data)
@@ -250,6 +258,8 @@ Flag these without being asked:
 
 ## Installation
 
+This is the author's install note. The `scripts/convert.sh` and `clawhub` commands below are not part of this library's copy, so skip them. To use the skill, paste SKILL.md into your AI chat.
+
 ### One-liner (any tool)
 ```bash
 git clone https://github.com/alirezarezvani/claude-skills.git
@@ -273,7 +283,7 @@ clawhub install cs-research-summarizer
 Before delivering any brief, check:
 
 1. Every Key Finding cites a location in the source (section, page, or quote) — no unanchored claims.
-2. `python3 scripts/extract_citations.py <file> --output json` exits 0 and its `total` matches the bibliography count in your output (investigate any gap).
+2. The citation count matches the bibliography in your output. With code, run `python3 scripts/extract_citations.py <file> --output json` and compare its `total`. Without code, count the citations by hand. Investigate any gap.
 3. Each source carries a 4-dimension quality rating (table above); weak sources are flagged, not silently included.
 4. For comparisons: the matrix has one row per dimension and one column per source — no source skipped.
 5. Nothing was invented: missing metadata is marked "not stated", never filled in.

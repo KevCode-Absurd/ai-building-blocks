@@ -144,3 +144,4 @@ terms:
     meaning: The way an offer changes what a buyer gets, such as a bundle or a gift.
   - term: Contribution margin
     meaning: What is left of an order after product cost, shipping, fulfilment and fees.
+next: [discount-impact-checker, offer-test-planner, order-threshold-planner]

@@ -15,7 +15,8 @@ how_to_use:
   - Paste the skill text, then add your agent code folder or key files.
   - Add the framework name, your tool list with what each tool may do, and any config files.
   - Ask it to check all 10 risks and write the report.
-  - Read each pass yourself. A keyword scan can miss things or be fooled, so confirm the code does what the report says.
+  - Read each pass yourself. A keyword match is only a starting point. A pass needs a person to follow the code path and confirm it works, not just find a word.
+  - The risk names and numbers are the author's list. Check them against the current OWASP material before you quote them.
   - Fix the gaps, then run the check again. Ask a human security reviewer before production.
 output_sample:
   input:

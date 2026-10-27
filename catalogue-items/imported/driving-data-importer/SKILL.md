@@ -210,6 +210,7 @@ positions = cell(N, 1);   % each cell: Mx3 [x y z] in ego frame
 
 for i = 1:N
     % Get annotations for frame i
+    % PLACEHOLDER: ask the user how their annotation file maps rows to frames. Do not guess.
     frameAnnots = <filter annotations for this frame>;
     trackIDs{i} = string({frameAnnots.track_id}');
     positions{i} = [frameAnnots.x, frameAnnots.y, frameAnnots.z];
@@ -235,6 +236,7 @@ end
 ```matlab
 % Match camera image files to timestamps
 imageFiles = dir(fullfile(camDir, '*.jpg'));
+% PLACEHOLDER: ask the user where timestamps live (file names, a CSV, metadata). Do not guess.
 camTimestamps = <parse timestamps from filenames or metadata>;
 
 cameraData = scenariobuilder.CameraData(camTimestamps, ...
@@ -248,6 +250,7 @@ cameraData = scenariobuilder.CameraData(camTimestamps, ...
 ```matlab
 % Match lidar files (.pcd, .ply, .las/.laz) to timestamps
 lidarFiles = dir(fullfile(lidarDir, '*.pcd'));
+% PLACEHOLDER: same as for the camera. Ask the user.
 lidarTimestamps = <parse timestamps from filenames or metadata>;
 
 lidarData = scenariobuilder.LidarData(lidarTimestamps, ...

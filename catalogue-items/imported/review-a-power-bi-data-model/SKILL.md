@@ -382,7 +382,7 @@ Focus Areas:
 Deliverables:
 - Performance improvement roadmap
 - Specific optimization recommendations
-- Expected performance gains quantification
+- Expected performance gains (state only if the user gave timings or sizes; otherwise write "unknown")
 - Implementation priority matrix
 - Success measurement criteria
 ```
@@ -398,7 +398,7 @@ Focus Areas:
 
 Deliverables:
 - Modernization strategy and roadmap
-- Cost-benefit analysis of improvements
+- Cost-benefit notes (use only figures the user gave; otherwise write "unknown")
 - Risk assessment and mitigation strategies
 - Implementation timeline and resource requirements
 - Change management recommendations

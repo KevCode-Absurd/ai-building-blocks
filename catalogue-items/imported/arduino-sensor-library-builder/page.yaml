@@ -5,7 +5,7 @@ name: Arduino sensor library builder
 summary: Build a custom Arduino library so MATLAB can read a sensor it doesn't support, like a DHT22. Checks for built-in support first.
 job: build-software
 headline: Arduino sensor library builder
-subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB. Bring the sensor or part name. Use the result to plan your next step.
+subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB. Bring the sensor or part name. Then connect your board and run the test calls.
 explain: |
   A custom library so MATLAB can use a sensor or part it doesn't support out of the box, such as a DHT22, an OLED screen or NeoPixels. Name the part and you get the link between MATLAB and the Arduino code.
 
@@ -21,6 +21,7 @@ not_for:
   - You want standalone Arduino code with no MATLAB link, or a Simulink deployment. Use the Arduino IDE or the Simulink Arduino workflow.
 you_give:
   - The sensor or part name
+  - How the part connects to the board, such as I2C, SPI or plain pins (GPIO), because that choice sets the library dependencies
   - Your Arduino board model
   - The existing Arduino C++ library (optional)
   - MATLAB and an Arduino to test
@@ -46,6 +47,7 @@ output_sample:
     - MATLAB with the Support Package for Arduino Hardware
     - An Arduino board you can connect to from MATLAB
     - An AI that can run MATLAB commands, or you run them yourself
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Native support check
       contains: The result of listArduinoLibraries, saying if MATLAB already supports your part. If it does, the work stops here.

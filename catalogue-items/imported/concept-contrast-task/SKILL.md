@@ -241,12 +241,12 @@ Present a set of shapes where BOTH area and perimeter vary, and students must at
 | Shape M | 12 | 14 | — | — |
 | Shape N | 8 | 18 | Smaller | Bigger |
 | Shape O | 15 | 16 | Bigger | Bigger |
-| Shape P | 20 | 14 | Bigger | Same |
+| Shape P | 10 | 14 | Smaller | Same |
 | Shape Q | 6 | 14 | Smaller | Same |
 
 Ask: "Look at Shape N compared to Shape M. The area is smaller but the perimeter is bigger. How is that possible? Can you draw Shape N?"
 
-Then: "Shape P has a much bigger area than Shape M but the SAME perimeter. Shape Q has a much smaller area but also the same perimeter. What does this tell us about the relationship between area and perimeter?"
+Then: "Shape P has a smaller area than Shape M but the SAME perimeter. Shape Q has an even smaller area but also the same perimeter. What does this tell us about the relationship between area and perimeter?"
 
 This fuses both dimensions — students must track area and perimeter independently and recognise that all combinations are possible (bigger area with smaller perimeter, same area with different perimeters, etc.).
 

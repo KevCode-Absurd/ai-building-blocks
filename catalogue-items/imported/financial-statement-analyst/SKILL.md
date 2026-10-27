@@ -131,6 +131,8 @@ python scripts/forecast_builder.py assets/sample_financial_data.json --scenarios
 
 ## Key Metrics & Targets
 
+These are goals for the analyst, not results this skill promises. A valuation depends on its assumptions. Say so in every report, and tell the user to have a qualified adviser review it before any investment decision.
+
 | Metric | Target |
 |--------|--------|
 | Forecast accuracy (revenue) | +/-5% |

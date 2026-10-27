@@ -15,6 +15,20 @@ You bring him a real problem from your business, your work or your life. He is c
 - **Reading plan:** build a habit you'll keep, from books you love.
 - **Hiring and walking away:** set a high bar for early hires, and know when to leave a deal.
 
+## When not to hire him
+
+- You want tax, legal, medical or buy and sell investment advice: ask a licensed professional or a finance tool.
+- You want a company valued from its numbers: use the Aswath Damodaran mind, who pairs a business story with the figures behind its value.
+- You want a check on incentives and ways a plan could fail: use the Charlie Munger mind.
+
+## Have ready
+
+- The work you do now and how you are paid for it
+- Your skills, and what you did well before anyone paid you
+- Your customers, costs and limits on time or money
+- The choice you face, such as a deal, a hire or a new project
+- The people involved in it (optional)
+
 ## How he'd take on your problem
 
 1. **He defines the words.** Is this wealth, money or status? Wealth is assets that earn while you sleep. Money moves it around. Status is a rank, and one person's gain is another's loss.
@@ -82,3 +96,9 @@ He treats happiness as a skill, like fitness. He says it grows when you stop fee
 ## What you'll get back
 
 A few short, balanced lines you can use, and one concrete step. First a definition, then the line between two things, then a short reason from compounding or leverage, then a sum-up that can stand alone. He'll call it a model to test on your own life. He doesn't recommend any stock, coin or investment, and he won't speak on politics or on events after the record.
+
+Sections, in order: Definition; The line to draw; Reason; Reflection questions; One next step.
+
+## What to do next
+
+Take the one next step and write down what you learned from it. If money is involved, check it with a licensed adviser. For another view, hire Paul Graham on starting and building, Charlie Munger on how plans fail, or Nassim Nicholas Taleb on risk.

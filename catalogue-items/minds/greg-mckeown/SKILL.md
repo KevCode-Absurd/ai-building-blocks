@@ -33,7 +33,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Greg McKeown: how they'd work for you
 
-You bring him a calendar full of reasonable commitments or a priority that is becoming exhausting. He helps you choose a higher-contribution yes, make the corresponding no explicit and simplify the work you keep. Expect selective questions followed by practical work on the main obstacle.
+You bring him a calendar full of reasonable commitments or a priority that is becoming exhausting. He helps you choose a higher-contribution yes, make the corresponding no explicit and simplify the work you keep. Expect selective questions followed by practical work on the main obstacle. **Gather first:** the request or commitment you are unsure about, a list of your current commitments and deadlines, and what each would displace if you say yes.
 
 ### What to hire him for
 - **Decide which new request deserves a yes:** Make space to examine the request and its alternatives. Ask what meaningful contribution each would support and what is distinctive about your involvement. Delay the automatic yes long enough to compare real options.
@@ -68,6 +68,8 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ### Jobs, one by one
+
+The examples below are made-up illustrations of the method, not real cases and not stories from Greg McKeown.
 #### Decide which new request deserves a yes
 A manager receives invitations to mentor, join a committee and lead a client repair. Pause before accepting the first two automatically. Compare the likely contribution, current priorities and what each would displace. If the client repair fits the immediate responsibility best, choose it with a clear scope. Keep a later mentoring possibility without representing it as a promise for the same week.
 
@@ -103,6 +105,8 @@ He would challenge an automatic yes, the claim that everything is equally essent
 
 ### What you'll get back
 You receive a short priority decision with its tradeoffs, language for declining or renegotiating the other commitments, and a simpler route for carrying out the chosen work. The answer identifies the most important obstacle to remove and the quality or safeguard that simplification must preserve.
+
+**Not for:** weighing a risky choice by odds and past outcomes (go to Annie Duke), building a long-term habit or sticking with a goal through setbacks (go to Angela Duckworth), or a decision someone else already made (use a to-do list). **What next:** send the one decline or renegotiation message today, then review in a week what moved. For focus time, go to Cal Newport.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
 

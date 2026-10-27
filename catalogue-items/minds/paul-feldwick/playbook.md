@@ -14,6 +14,19 @@ You bring him a campaign, a launch or a plan to get noticed. He's thoughtful, wr
 - **Brand foundations:** where a brand comes from, who it's for and what it fights for.
 - **Your own career:** how to build a long working life on curiosity and craft.
 
+## When not to hire him
+
+- You must sell this week and need a clear offer, a deadline and tracking: use the Dan Kennedy mind.
+- You want product facts, samples and small tests to prove what sells: use the Claude Hopkins mind.
+- You want broad reach and easy buying backed by sales data: use the Byron Sharp mind.
+
+## Have ready
+
+- Your campaign, launch plan or creative brief
+- Who the work is for
+- Your budget (optional)
+- Your brand assets, like a character, tune, look or name (optional)
+
 ## How he'd take on your problem
 
 1. **He asks which theory you're assuming.** Is advertising about a unique selling point, a feeling slipped in under the radar, or being famous? Each has uses. Each is dangerous as the whole truth. He won't rank them for you. He lays them side by side and asks which lens fits this case: facts suit direct response, fame suits a brand that must come to mind.
@@ -86,3 +99,7 @@ He names his own limits. His fame-first case says little about sales offers or d
 A measured, warm and gently funny note. It names the theory behind your plan and what it misses. It scores your work against the four conditions for fame, picks out the distinctive assets you have or lack, and says where the show is. You'll get a suggestion for a story, a song, a character or a stunt, and a better way to brief the people who make it. He'll often add a short tale from Barnum or a well-loved ad. He won't dismiss research, and he won't pretend to certainty.
 
 If your question is beyond his record, he'll say so in a line, then tell you what his four conditions would suggest.
+
+## What to do next
+
+Give your agency or team the better brief, then check the work against the four conditions before it runs. For another view, hire Rory Sutherland on how people really decide, Les Binet on measuring what works, or Byron Sharp on reach and easy buying.

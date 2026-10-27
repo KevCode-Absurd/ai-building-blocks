@@ -50,7 +50,7 @@ The 3 tools below catch each of these.
 ## Quick start
 
 ```bash
-SKILL=engineering/slo-architect/skills/slo-architect
+SKILL=<path to this skill folder>
 
 # 1. Design an SLO
 python "$SKILL/scripts/slo_designer.py" \
@@ -99,7 +99,7 @@ Given target availability + window, computes:
 - Allowed downtime in the window
 - Multi-window burn-rate thresholds per Google SRE Workbook (Chapter 5):
   - **Fast burn** — page if 2% of monthly budget consumed in 1 hour
-  - **Slow burn** — page if 10% consumed in 6 hours, ticket if 10% in 3 days
+  - **Slow burn** — page if 5% consumed in 6 hours, ticket if 10% in 3 days
 - Recommended alerting rules (PromQL-shaped output)
 
 ```bash
@@ -140,8 +140,11 @@ See `references/sli_design.md` for examples and anti-patterns.
 
 For 99.9% SLO over 30 days:
 - Allowed unavailability: `0.1% × 30 × 24 × 60 = 43.2 minutes`
-- 1-hour fast-burn threshold (2% of monthly budget burned): `2% × 43.2 / 60 ≈ 1.44 ratio multiplier`
-- 6-hour slow-burn threshold (10% in 6h): `10% × 43.2 / 360 ≈ 0.6 ratio multiplier`
+- Burn rate = share of budget used × SLO window ÷ alert window. Here the 30-day window is 720 hours.
+- Fast burn, 2% of the budget in 1 hour: `0.02 × 720 / 1 = 14.4`
+- Slow burn, 5% in 6 hours: `0.05 × 720 / 6 = 6`
+- Ticket, 10% in 3 days (72 hours): `0.10 × 720 / 72 = 1`
+- A burn rate of 14.4 uses the whole 30-day budget in about 2 days. The script uses the same formula, so check its numbers against these.
 
 `error_budget_calculator.py` does this math for you and emits ready-to-paste alert rules.
 
@@ -155,7 +158,7 @@ This skill explicitly composes with three others:
 | `chaos-engineering` | Blast-radius calculator already takes monthly error budget as input — define it here |
 | `kubernetes-operator` | Operator capability L4 (Deep Insights) requires SLOs + Prometheus rules |
 
-The `error_budget_calculator.py` output is in the same shape `engineering/skills/chaos-engineering/scripts/blast_radius_calculator.py` expects on stdin.
+The `error_budget_calculator.py` output is in the same shape `engineering/skills/chaos-engineering/scripts/blast_radius_calculator.py` expects on stdin. That calculator is not in this folder. It belongs to the separate chaos-engineering skill.
 
 ## Workflows
 
@@ -165,9 +168,9 @@ The `error_budget_calculator.py` output is in the same shape `engineering/skills
 1. Pick the user journey to protect (e.g., "checkout completion").
 2. Choose SLI type (request-success-rate, latency, availability, freshness, correctness).
 3. Define the SLI precisely: numerator/denominator with concrete labels.
-4. Pick a target by measuring 30 days of historical SLI value:
-     target = floor(p50 of last 30 days × 100) / 100
-   This avoids targets the system has never sustained.
+4. Measure 30 days of historical SLI value. Pick a target a little below what the system
+   usually delivers, one the owner agrees to defend (for example, the level it met on
+   9 days out of 10). A target at the median is missed about half the time, so do not use it.
 5. Pick a window (28 days = 4 calendar weeks, recommended).
 6. Run slo_designer.py to render the SLO definition.
 7. Run error_budget_calculator.py to get burn-rate alerts.
@@ -225,10 +228,10 @@ The `error_budget_calculator.py` output is in the same shape `engineering/skills
 
 ## Verifiable success
 
-A team using this skill should achieve:
+Goals to aim for (not measured results). A team using this skill should work toward:
 
 - 100% of SLOs pass `slo_review.py` with 0 FAIL findings
 - Every SLO has a documented owner, error budget, burn-rate alerts, and policy
-- Burn-rate alerts fire ≤2 times/month per SLO that's hit (signal, not noise)
-- Mean time to detect SLO violation: <30 min (multi-window burn-rate alerts working)
+- Burn-rate alerts that fire rarely and mean something (goal: 2 or fewer a month per SLO)
+- Fast detection of SLO violations (goal: under 30 minutes)
 - Quarterly SLO review happens every quarter (not annually)

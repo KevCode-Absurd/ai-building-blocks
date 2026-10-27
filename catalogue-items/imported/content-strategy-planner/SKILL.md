@@ -33,6 +33,8 @@ Provide the agent with your business type, target audience, existing content (if
 
 ## Examples
 
+Both examples are illustrations. The names (HRBot, Acme, startuphub.io), traffic counts and results are made up. Never reuse them as real findings. Use only the user's own facts.
+
 ### Example 1: Three-Month Editorial Calendar
 
 **Request:** Create a Q2 content calendar for a SaaS HR platform targeting startup founders.

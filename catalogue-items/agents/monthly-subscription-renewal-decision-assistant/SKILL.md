@@ -7,6 +7,37 @@ description: "Find which business subscriptions renew soon and the last day to c
 
 Compares this month's subscription bills, contract dates and usage with last month's register, and reports only what changed. It works out each cancel-by date, sets out options and proposes owner actions. One bounded run per request. It does not cancel anything, email any vendor, or start a schedule.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker). It takes the audit report.
+- The [Vendor bill coder](https://useaiblocks.com/skills/vendor-bill-coder). It takes the document.
+- The [Revenue growth currency checker](https://useaiblocks.com/skills/constant-currency-revenue-bridge). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, spreadsheet, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file upload:** It reads bills, contract text and usage exports together and does the date sums.
+- **A spreadsheet tool such as Excel or Google Sheets:** Your register lives in a file you can sort by cancel-by date.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, name the subscription and decision it blocks, and finish the rest. Never guess a date, price or usage figure.

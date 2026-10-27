@@ -89,7 +89,7 @@ The 2026 question every founder is facing: **does this AI use case trigger high-
 
 **Run** `ai_risk_classifier.py` to classify a use case and get the required-controls list.
 
-**US state patchwork (non-exhaustive):**
+**US state patchwork (non-exhaustive).** *AI Blocks note: these entries come from the original author and were not checked against official sources or dated. Some look mislabelled. For example, the Illinois law on AI in video interviews is usually called the AI Video Interview Act, and Texas's biometric law is usually called CUBI (the Capture or Use of Biometric Identifier Act), not TCPA. Verify every law with its official text or a lawyer before you rely on it. This is not legal advice.*
 
 - NYC LL 144 — Automated Employment Decision Tools (AEDTs) require annual bias audit + candidate notice
 - Colorado AI Act / SB 21-169 — AI in consumer decisions (credit, insurance, employment, housing)
@@ -112,7 +112,7 @@ See `references/ai_risk_governance.md` for the full regulatory landscape + gover
 
 **Key components:**
 
-- **API cost** — variable, per-token. Frontier models 2026: Claude Sonnet 4.6 ~$3/$15 per M tokens (input/output), GPT-4o ~$2.50/$10, Gemini 2.5 ~$1.25/$5
+- **API cost** — variable, per-token. *(The prices below were written by the original author, with no source or date. Check each provider's current price page before you use them.)* Frontier models 2026: Claude Sonnet 4.6 ~$3/$15 per M tokens (input/output), GPT-4o ~$2.50/$10, Gemini 2.5 ~$1.25/$5
 - **Self-hosted cost** — fixed (GPU commitment) + variable (electricity). H100 spot ~$2-5/hour, A100 spot ~$1-3/hour. Llama 3.1 70B / Qwen 2.5 72B: ~$0.50-2.00 per million output tokens at 70% utilization
 - **Hidden costs of self-hosting** — ops on-call, monitoring, model updates, scaling overhead, idle time penalty
 - **Hidden costs of API** — rate limits requiring multi-vendor failover, vendor lock-in, capability drift between versions, data residency
@@ -150,6 +150,8 @@ Stage-to-role map:
 See `references/ai_team_org_evolution.md`.
 
 ## Workflows
+
+> **AI Blocks note:** the `/cs:decide`, `/cs:freeze` commands and the `cs-*-advisor` cross-checks belong to the original toolkit and are not in this library. In plain terms: write the decision down with its date and reason, hold off on signing a multi-year vendor commitment for about 60 days while you review it, and ask your finance lead, technical lead, lawyer, security lead or HR lead for their view. The scripts in `scripts/` must be attached or pasted for the AI to run them.
 
 ### Workflow 1: Model Selection Decision (1 hour)
 **Goal:** Decide whether a specific use case should use API, fine-tune, or build.

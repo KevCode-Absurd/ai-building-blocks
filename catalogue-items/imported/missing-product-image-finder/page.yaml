@@ -30,8 +30,8 @@ you_get:
   - A readable list or JSON output
   - A count of the gaps
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with a tool that can run code and use the Shopify CLI. Paste in the skill text.
-  - Sign in first with the Shopify CLI. Give it read access to products for your store.
+  - Use an AI that can run the Shopify CLI on your computer, such as Claude Code or Cursor. A plain chat window cannot read your store. Paste in the skill text.
+  - Sign in first with the Shopify CLI. Run shopify store auth --store your-store.myshopify.com --scopes read_products.
   - Tell your AI your store domain. Add your minimum images, whether to check variants, and which product status to scan.
   - Read the summary and the list of flagged products. Fix the zero-image products first.
   - Open the CSV file to see each gap by product and variant. Note that only the first 10 images and 50 variants per product are read.

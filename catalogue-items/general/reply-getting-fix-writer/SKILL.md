@@ -9,28 +9,28 @@ A fix should change what is broken and nothing else, or you cannot tell what wor
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 
 **Makes it better (optional):**
-- **Your lessons**, made by the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
-4. **Your lessons** with the [AI image and video fix rule writer](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
-5. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+4. **Your lessons** with the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
+5. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
 6. This one.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with audit report, ad copy, your lessons. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audit report, ad copy, your lessons. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Rewriting to a short list of causes is text work any strong chat AI handles with this skill.
@@ -64,11 +64,11 @@ The fixed ad in full, ready to use. The change list with each change beside its 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- **Read your ad results** with the [Recall and pull survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
-- **Understand your buyers** with the [Hard questions FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). It takes the draft.
-- **Grow on social** with the [Shareable content checker](https://useaiblocks.com/skills/shareable-content-checker). It takes the draft.
+- **Check it before it goes live** with the [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker). It takes the draft.
+- The [Sales copy reviewer](https://useaiblocks.com/skills/sales-copy-reviewer). It takes the draft.
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
+- **Check it before it goes live** with the [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher). It takes the draft.
+- The [Call-to-action writer](https://useaiblocks.com/skills/call-to-action-writer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -21,7 +21,8 @@ not_for:
 you_give:
   - Your brand file
   - Your past ads and their results (spend, sales or replies)
-  - Your budget and the number of products to test (for the layout)
+  - Your budget, your target cost per sale and the number of products to test (for the layout)
+  - How many days you will wait before reading the test (the read window)
   - After the run, the export of results for the test (you add this at the pause)
 you_get:
   - A gap map and five untried ideas, each with a test question

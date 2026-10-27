@@ -10,14 +10,16 @@ explain: |-
   Get duration, real product reference, palette and permitted transformations. Product package geometry, label, logo and material remain fixed even when its surroundings become surreal.
 when:
   - You need a timed product-only or surreal-comedy spot.
-  - You want a clear draft and checks from the material you already have.
+  - You have a product and a spot of 5 to 20 seconds in mind, and want a prompt to paste into a video tool.
 not_for:
   - "You need a spoken-script ad: write the script first, then use your AI to turn it into scenes."
   - "You only need a still product image: use a standard product photo brief with your photographer or AI image tool."
   - "You need the finished video file: this makes a prompt only, so run it in a video tool you pick."
 you_give:
-  - brief
-  - "Optional: product photos"
+  - Your product name and the spot idea
+  - The spot length in seconds, and your palette
+  - Approved label artwork or product photos
+  - Whether a person appears (for the comedy mode)
 you_get:
   - video prompt
   - shot list

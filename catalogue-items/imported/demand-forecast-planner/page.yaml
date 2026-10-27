@@ -35,7 +35,8 @@ how_to_use:
   - Tell your AI how far ahead you plan and what decisions the forecast feeds. Add promotion dates if you have them.
   - Answer any questions it asks about your sales pattern, such as seasonal or one-off spikes.
   - Check the method it picked and the error figures. Treat any target accuracy numbers as starting points to test against your own history.
-  - If you want it to test several methods on held-back data, use an AI that can run code.
+  - If you want it to test several methods on held-back data, use an AI that can run code. It uses free Python packages such as statsmodels. The skill also names paid planning software, which you do not need.
+  - Next, use the forecast in your reorder and purchasing plan. Each month, compare the forecast with what sold and track the error.
 output_sample:
   input:
     - Your past sales by product and period
@@ -48,7 +49,7 @@ output_sample:
     - name: Executive Summary
       contains: Current forecast accuracy, what changed from the last forecast, and the main assumptions and risks.
     - name: Demand Forecast by Segment
-      contains: A table by product, place and period with the statistical forecast, adjusted forecast, last actuals, error and bias.
+      contains: A table by product, place and period with the statistical forecast, adjusted forecast, last actuals, error and bias. All figures come from your data.
     - name: Forecast Assumptions
       contains: Your promotion calendar, market trends, product launches and known supply limits.
     - name: Accuracy Metrics

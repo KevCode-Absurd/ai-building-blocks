@@ -165,11 +165,11 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 
 | Vague | Specific |
 |-------|----------|
-| Save time | Save 4 hours every week |
-| Many customers | 2,847 teams |
-| Fast results | Results in 14 days |
-| Improve your workflow | Cut your reporting time in half |
-| Great support | Response within 2 hours |
+| Save time | Save [NEED: real hours per week] every week |
+| Many customers | [NEED: real customer count] teams |
+| Fast results | Results in [NEED: real timeframe] |
+| Improve your workflow | [NEED: real before and after] |
+| Great support | Response within [NEED: real response time] |
 
 **Common specificity issues:**
 - Adjectives doing the work nouns should do
@@ -180,7 +180,7 @@ For every statement, ask "Okay, so what?" If the copy doesn't answer that questi
 **Process:**
 1. Highlight vague words and phrases
 2. Ask "Can this be more specific?"
-3. Add numbers, timeframes, or examples
+3. Add numbers, timeframes, or examples only if the user supplied them. Otherwise mark the gap as `[NEED: ...]`. Never invent a figure
 4. Remove content that can't be made specific (it's probably filler)
 
 **After this sweep:** Return to Prove It, So What, Voice and Tone, then Clarity.
@@ -412,7 +412,7 @@ For a final QA pass before delivering edits, work through the full checklist in 
 
 ### Problem: No Proof
 **Symptom:** "Customers love us" with no evidence
-**Fix:** Add specific testimonials, numbers, or case references
+**Fix:** Add the user's real testimonials, numbers, or case references. If there are none, mark `[NEED: ...]`
 
 ### Problem: Generic Claims
 **Symptom:** "We help businesses grow"

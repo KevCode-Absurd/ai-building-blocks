@@ -36,6 +36,7 @@ how_to_use:
   - Ask your AI to run the steps one at a time and show how many documents each step removes.
   - Check a sample of removed and kept documents before you train. Check the personal detail redaction against your own legal duties.
   - Treat the speed and cost figures in the skill as vendor claims. Cloud machines cost money.
+  - Hand the cleaned set to your training pipeline. Run the removal report again on each new scrape before every training run.
 output_sample:
   input:
     - Your raw text, image, video or audio files, as Parquet, JSONL or CSV
@@ -60,3 +61,4 @@ output_sample:
       contains: Your cleaned files, saved as Parquet or JSONL, ready for training.
     - name: Removal report
       contains: Documents in, documents removed at each step, and counts of personal details found.
+next: [tiny-gpt-trainer]

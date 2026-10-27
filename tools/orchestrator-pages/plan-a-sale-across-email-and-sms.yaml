@@ -21,8 +21,9 @@ not_for:
 you_give:
   - Your offer, with dates and terms
   - Your product facts (optional)
-  - Past email and SMS results, such as sends, clicks, orders and unsubscribes (optional)
-  - Your brand file and customer reviews (optional)
+  - Past email and SMS results, such as sends, clicks, orders and unsubscribes
+  - Your brand file
+  - Customer reviews (optional)
   - A one-paragraph brief for the sale email, which it asks you for halfway through
   - An export of results after the sale, which it asks for at the end
 you_get:
@@ -57,7 +58,7 @@ output_sample:
     - name: "Step 4: Text check"
       contains: Characters and billed parts, cost, image break-even, rule flags, urgent or not and a score out of 100.
     - name: "Step 5: Results read"
-      contains: Ranked causes, then list growth, campaigns, flows, deliverability and texts, with a channel health score.
+      contains: "Ranked causes, then list growth, campaigns, flows, deliverability and texts, with a channel health score. This is the audit report, in the last step file: outputs/step-05-email-and-sms-performance-reader.md."
     - name: Hand-back summary
       contains: Each step's file and every MISSING line in one list.
 how_it_works:

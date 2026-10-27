@@ -22,5 +22,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [eric-ries]
 credits:
-  - {title: "The Lean Startup", by: "Eric Ries", used: "The order of the steps: mvp experiment planner, vanity metric fixer, root cause finder"}
+  - {title: "The Lean Startup", by: "Eric Ries", used: "Inspiration for testing the riskiest guess with a small test, reading per-customer numbers instead of vanity totals, and asking why until you reach a fixable cause. The three-step order is this workflow's own design."}
 generated_from: intake/the-lean-startup/skeleton.yaml

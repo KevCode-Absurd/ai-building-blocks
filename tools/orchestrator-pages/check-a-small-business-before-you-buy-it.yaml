@@ -5,7 +5,7 @@ job: money-and-investing
 thinking: high
 thinking_why: It judges a business from its books and sets a price range you will act on. Give it your strongest model.
 headline: Check a small business before you buy it
-subhead: Give it the listing, the seller's claims and the financial statements. It builds the diligence checklist, prepares your meetings with the seller, reads the statements for what they hide, works out owner earnings the way Warren Buffett defines them, and gives a value range to offer from.
+subhead: Give it the listing, the seller's claims and the financial statements. It builds the diligence checklist, prepares your meetings with the seller, reads the statements for trends, margins and gaps, works out owner earnings the way Warren Buffett defines them, and gives a value range to offer from.
 explain: |
   Small businesses are sold on a story and a spreadsheet the seller prepared. The buyer sees the revenue, hears about the loyal customers, and pays for profits that include the owner's unpaid labour and leave out the truck that needs replacing.
 
@@ -16,12 +16,13 @@ when:
   - You have bought before and found the surprises after closing.
 not_for:
   - "You are buying only the assets, like equipment or stock: ask your accountant or a valuation specialist instead."
-  - "You want to know what a business is worth without a deal in front of you: use the Business asset value estimator."
+  - "You want to know what a business is worth without a deal in front of you: use \"Value a business and the discount to ask for\"."
   - "You need a legal review of the contract or lease: hire a lawyer, since this workflow only prepares the questions."
 you_give:
   - The listing and what the seller claims
   - The financial statements, two or three years if you can
   - What you know of the industry and the location
+  - What the owner does each week and what they draw (optional)
   - After the meetings, the seller's answers (optional)
 you_get:
   - A diligence checklist for this kind of business, with red flags
@@ -68,7 +69,7 @@ how_it_works:
   - title: Work out owner earnings
     text: Works out owner earnings in Buffett's definition, with the owner's unpaid work priced at a fair wage.
   - title: Set the value range
-    text: Gives a value range with the method shown and the price past which the deal makes no sense.
+    text: Gives a value range with the method shown and the price past which the deal makes no sense. If the cash cannot be estimated with confidence, it says the business is too hard to value and gives no range.
 output_shape: |-
   STEP 1: CHECKLIST
     Ask for: <...> | Verify by: <...> | Red flag: <...> | Order: <...>
@@ -139,5 +140,7 @@ works_best_with:
 terms:
   - term: Owner earnings
     meaning: "Warren Buffett's measure: reported earnings plus non-cash charges, minus what the business must spend to stay as it is."
+  - term: Diligence
+    meaning: The checking you do on a business before you buy it.
   - term: Co-packer
     meaning: A factory that makes products for other brands under contract.

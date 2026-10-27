@@ -149,8 +149,7 @@ public double calculate(double base, int tier) {
 
 // after
 /**
- * Applies the loyalty discount. Tiers above 2 qualify for a 15% discount;
- * this threshold matches the current pricing policy, not a technical limit.
+ * Applies the loyalty discount. Tiers above 2 receive a 15% discount.
  */
 public double calculate(double base, int tier) {
     return base * (tier > 2 ? 0.85 : 1.0);

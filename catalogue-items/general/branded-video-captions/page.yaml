@@ -215,8 +215,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Adobe Premiere Pro", why: "Turns speech into timed captions you can style with any font installed on your computer, then burns them in or saves an .srt file."}
-    - {name: "DaVinci Resolve", why: "Transcribes clips into subtitles on its edit page and sets them in your own font."}
+    - {name: "Adobe Premiere Pro", why: "Turns speech into timed captions you can style with any font installed on your computer, then burns them in or saves an .srt file. It is a paid subscription."}
+    - {name: "DaVinci Resolve", why: "Transcribes clips into subtitles on its edit page and sets them in your own font. The free version works; the Studio version is paid."}
     - {name: "Claude Code", why: "Can run FFmpeg on your files to burn in captions from your font file and pull frames for checking."}
   inputs:
     - "A word-for-word transcript with times from your editor, so each caption starts on the right word"

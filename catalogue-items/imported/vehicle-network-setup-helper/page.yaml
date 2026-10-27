@@ -30,12 +30,12 @@ you_get:
   - Send and receive examples
   - Fixes for common channel errors
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions.
+  - Open Claude and paste in this skill's instructions. It is written for Claude, and its troubleshooting routing points to Claude-specific files. Other AIs can follow the setup steps but may handle the diagnostic part less well.
   - Tell your AI your CAN adapter brand and model, your bus speed, and whether you use CAN or CAN FD.
   - Add your MATLAB release and any error message you see (optional).
   - Run the code your AI gives you in MATLAB. This needs Vehicle Network Toolbox and, for real hardware, the vendor driver. No adapter? Use the virtual channel.
   - Check the health line after each send. Error counts of zero and an active bus mean the frame was accepted.
-  - Once messages flow, ask your AI to decode signals using your database file.
+  - If the error counters (TEC or REC) are above zero, stop and follow the diagnostic workflow in the skill before you retry. Once messages flow, ask your AI to decode signals using your database file. Use your vendor's database editor for any DBC changes.
 output_sample:
   input:
     - Your CAN hardware brand and model, or a virtual channel
@@ -43,7 +43,7 @@ output_sample:
     - Your MATLAB release
     - The error message you see (optional)
   prerequisites:
-    - MATLAB R2021a or later
+    - MATLAB R2021a or later (a paid licence). The licence on this copy (BSD 2-Clause, see LICENSE.md) allows use only with MathWorks products.
     - Vehicle Network Toolbox installed
     - The vendor driver for your adapter, if you use real hardware
     - An AI that can run MATLAB code

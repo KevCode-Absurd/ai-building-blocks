@@ -14,8 +14,8 @@ Produce a photo/video brief in which each shot is tied to a finding — most wit
 
 ## When not to use
 
-- Page layout, CTAs, variants, price position → `product-page`
-- Description text → `product-copy`
+- Page layout, CTAs, variants, price position → the Product page auditor (`product-page-auditor`)
+- Description text → the Product description writer (`product-description-writer`)
 
 ## Inputs
 
@@ -28,7 +28,13 @@ Collect, or state your assumption:
 
 > **Classify the product first.** *Hedonic* = bought for enjoyment, pleasure, or the experience (chocolate, fashion, decor, travel, spa, perfume). *Utilitarian* = bought to do a job, judged on function and value (detergent, appliances, insect repellent, tools, accounting software). If it's mixed, decide by what the buyer is optimizing for at the moment of purchase.
 
+## Before you start
+
+Have ready: a product photo or spec sheet, the sales channels (product page, ads, social), and the target buyer's reading direction.
+
 ## Procedure
+
+Every effect size below (for example +79%, +22%, +30%) is a result from one study, and the studies are listed in reference.md. Figures marked † have no study behind them. Treat all of them as a guide, not a promise.
 
 1. **Format.** Hedonic → video, GIF, or slideshow is required (willingness to pay 79% higher). Utilitarian → stills are enough. Premium hedonic → add a slow-motion action shot (+22% sales) †. Video should feel personal and human, not corporate. †
 2. **Gaze.** Hedonic → model looks away from the camera (sun hat: +30% sales). Informational or negative-emotion messages → model looks at the camera.
@@ -49,6 +55,8 @@ Collect, or state your assumption:
 | 2 | Hand shot | First-person hand lifting a truffle, box on the right | Touch; graspable right | +16% |
 
 Then list what *not* to do for this product (e.g. no direct gaze, no matte finish).
+
+When candidate images are supplied, score each one against the rules above and pick the one that follows the most. This gives the brief a clear next action before it goes to the photographer.
 
 ## Common mistakes
 

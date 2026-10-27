@@ -1,6 +1,6 @@
 ---
 name: treasury-forecast-backtest-checker
-description: "Use to backtest a cash forecast against actual results. Needs the frozen forecast of net cash per period, the actual net cash for the same periods and one opening cash balance. Works out the signed error and absolute error for each period, the average miss in currency and the total bias, then rebuilds forecast and actual closing cash and ties the drift to the sum of the errors. Stops if the forecast was revised after the actuals. Never turns a missing figure into zero. Ends with any checks it missed."
+description: "Use to backtest a cash forecast against actual results. Needs the frozen forecast of net cash per period, the actual net cash for the same periods and one opening cash balance. Works out the signed error and absolute error for each period, the average miss in currency and the total bias, then rebuilds forecast and actual closing cash and ties the drift to the sum of the errors. Labels a forecast revised after the actuals as a separate test and keeps the versions apart. Never turns a missing figure into zero. Ends with any checks it missed."
 ---
 
 # Treasury forecast backtest checker
@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 
-- **Frozen forecast** (required): net cash per period, as it stood before the actuals were known.
+- **Frozen forecast** (required): net cash per period, as it stood before the actuals were known. The forecast can cover any horizon you froze, such as 13 weeks or 12 months. Say which.
 - **Actual net cash per period** (required): from bank statements or the ledger, for the same periods.
 - **Opening cash** (required): one balance, used for both forecast and actual.
 - **Cutoffs** (required): the period boundaries and whether payments count when paid or when cleared.
@@ -93,6 +93,7 @@ To repeat these sums as a second check, run `node scripts/run-model.mjs referenc
 
 ## Limits
 
+- The bundled script handles three periods only. For more periods, work the same steps in chat or a workbook.
 - Three periods illustrate how the numbers reconcile. They are not a statistical test, and no future range is inferred.
 - The average miss is not a confidence interval or an accuracy percent.
 - The arithmetic does not show your source records are right.

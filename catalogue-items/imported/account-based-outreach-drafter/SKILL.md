@@ -3,6 +3,14 @@ name: compose-outreach
 description: "Generate personalized outreach messages using Common Room signals. Triggers on 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]', or any outreach drafting request."
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `references/my-company-context.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Compose Outreach
 
 Generate three personalized outreach formats — email, call script, and LinkedIn message — grounded in Common Room signals for a specific company or contact.
@@ -55,7 +63,7 @@ Use the strongest hooks to write all three formats. Each format has different co
 
 Always produce all three, clearly labeled.
 
-When the user's company context is available (see `references/my-company-context.md`), ground the value bridge and pitch in the user's specific product and positioning.
+When the user's company context is available (the `references/my-company-context.md` file is not in this copy), ground the value bridge and pitch in the user's specific product and positioning. If it is not supplied, ask the user for their offer and positioning before you write the pitch.
 
 ### Step 6: Annotate Your Choices
 

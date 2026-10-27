@@ -9,21 +9,18 @@ You plan a one-day public tasting that does two jobs: it tells you which version
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products and buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Product data** (yours): one product's facts: price, variants, ingredients or materials, how it is used, photos by job.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+**Makes it better (optional):**
+- **Persona** (yours): a buyer grounded in real review language: problem, trigger, wants, doubts, words they use.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for product data, persona. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Builds the plan, the card and the rule, and checks the cost line.
@@ -36,16 +33,18 @@ How to start:
 - **Budget and city** (required): what you can spend and where. Include permit and venue costs.
 - **How you will film** (strongly advised): who films, with what, and what you plan to do with the footage.
 
-Does not fit: products that cannot be sampled (large items, software, anything that needs weeks of use). It also does not fit a brand with no event budget. A big free event costs real money, so cost it before planning. The method comes from one founder's experience with a drinks and supplements brand. It suits food, drink and other sample-able goods. Leave it out for other products.
+When not to use: products that cannot be sampled (large items, software, anything that needs weeks of use). Use a short buyer survey instead, with the [Buyer research plan with survey](https://useaiblocks.com/skills/buyer-research-plan-with-survey). It also does not fit a brand with no event budget or no place where your buyers gather. A big free event costs real money, so cost it first. To check what people say against what they buy online, use the [Say-do gap checker](https://useaiblocks.com/skills/say-do-gap-checker). The method comes from one founder's experience with a drinks and supplements brand. It suits food, drink and other sample-able goods. Leave it out for other products.
 
 ## Steps
+The numbers in this skill (135 of 150, 90 percent, about 50 bags) are one founder's reported examples. Set your own pass rule.
+
 1. **Cost it first.** List venue, permits, product, staff, signs, camera help, insurance and clean-up. If the total is more than the decision is worth, say so and offer the small version in step 9.
 2. **Plan fewer, bigger events.** The founder runs about one big public event a quarter, free and open to everyone, instead of many small ones. A big event can bring in the people who actually buy, not only influencers.
-3. **Work backward from the content.** An event that cannot make good video is mostly useless. A so-so event with great content is still a win. Write the shot list before the setup: wide shots of the crowd and the queue, close-ups of reactions on first taste, product in hand, the sign, the people picking a favourite. Film so the footage lasts years; the founder still uses event footage from three years ago.
+3. **Work backward from the content.** An event that cannot make good video is mostly useless. A so-so event with great content is still a win. Write the shot list before the setup: wide shots of the crowd and the queue, close-ups of reactions on first taste, product in hand, the sign, the people picking a favourite. Film so the footage can be used for years.
 4. **Plan consent for filming.** Put up clear signs saying filming is happening, use a short release for anyone shown close up or who speaks on camera, and do not film children without a parent's permission. Check local rules.
 5. **Test unreleased versions on real people.** With about 10 versions, ask 100 to 150 people. The founder's example: if about 135 of 150 like one version, that is enough to act on, provided they match your buyer. That is one person's illustration, not a statistical rule.
 6. **Screen first.** Ask passers-by one question so only people who match your buyer taste. State the question and the answer that qualifies.
-7. **Trust a small real sample.** The founder says he would take about 50 real tasters over data he buys. He says paid third-party data and post-purchase surveys misled him. That is his experience. A sample of 50 is still small, so use it for a direction, not a sales forecast.
+7. **Trust a small real sample.** The founder says he would take about 50 real tasters over data he buys. He says paid third-party data and post-purchase surveys misled him. That is his reported view, not a rule. A sample of 50 is still small, so use it for a direction, not a sales forecast.
 8. **Beware the loud minority.** His story: about 50 comments a day asked for a vegan product, the brand placed a large order, and it sold about 50 bags. The commenters were a few vocal people. Check who is asking before you place a large order.
 9. **Small version and your own team.** If an event is too costly, use your own team as a test panel, but only if they match your buyer. Staff know the brand and want to please, so treat their votes as a first filter, not proof.
 10. **Write a one-line taster card.** Three items: do you like it (score), would you buy it (yes or no), and what price do you expect. Add a pick-your-favourite line across versions. Keep the card to one side of a card.
@@ -83,17 +82,6 @@ Read-out: <who counts, when>
 SAFETY AND LEGAL: <food safety, allergens, permits, consent for filming; check local rules with a qualified person>
 CHECKS MISSED: <none | list>
 ```
-
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Make video ads** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
 
 ## Checks
 - The cost covers venue, permits, product, staff, filming and clean-up, and a total.

@@ -249,6 +249,8 @@ Cannot check every box? The optimization is not done. Either revert or finish th
 
 ## Related Skills
 
+`lemmaly`, `invariant-guard` and `mathguard` below are separate skills. They are not in this library.
+
 - `lemmaly` — prevention gateway; use when writing new code instead of refactoring existing.
 - `invariant-guard` — escalation target when 3+ transformations have failed tests — the missing piece is a contract, not an optimization.
 - `mathguard` — escalation when the classical floor is reached and an approximate or math-heavy structure could win.

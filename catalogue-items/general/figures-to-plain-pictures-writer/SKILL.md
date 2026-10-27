@@ -7,21 +7,9 @@ description: "Paste it above the key figures for a talk, slide or report, to tur
 
 Turns two to five key figures into comparisons and counts of people, with the real figure kept.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+## When to use it
 
-**What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
-
-**Tools that do this best:**
-- **Any good chat AI:** Claude, ChatGPT and Gemini all handle a one-message prompt like this well.
-<!-- /needs -->
+Use it when you are presenting figures to people who do not work with them. Do not use it when you need every check shown for a high-stakes talk (use the [Number-to-picture translator](https://useaiblocks.com/skills/number-to-picture-translator)), when your rates come with no totals (get the total first, or the people count is marked MISSING), or when you need a chart or a full slide deck (build those yourself, then use this for the lines you say aloud).
 
 ## What you need
 - **The figures** (required): each with what it measures, the period and the source.
@@ -46,14 +34,9 @@ ONE IMAGE: marked as an illustration, not a fact.
 TEST QUESTION.
 MISSING: any fact you needed.
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
-- **Lead the team** with the [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- **Sell it** with the [Lost deal evidence and pitch revision review](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+## What next
+
+When you've handed it back, suggest in one short question that they shape the lines for speaking with the [Read-aloud speech shaper](https://useaiblocks.com/skills/read-aloud-speech-shaper). It takes the draft.
 
 ## Checks
 - Every comparison shows its arithmetic.

@@ -33,7 +33,7 @@ every item's "cost" is effectively zero, so price is set entirely by estimated m
 and the need to keep inventory moving. Anchor decisions to three named levers:
 
 1. **Category price bands** — a published price list or matrix by category/subcategory (e.g.,
-   men's dress shirts $4-6, women's dresses $6-12, hardback books $2, small appliances $5-15) so
+   men's dress shirts $4-6, women's dresses $6-12, hardback books $2, small appliances $5-15; these are placeholders only, so set your own bands from your sold records and nearby shop prices) so
    pricing is consistent across volunteers/staff and shifts, not improvised item-by-item.
 2. **Boutique/premium tier** — a designated higher-margin section for name-brand, vintage, or
    like-new items identified during grading, priced individually rather than by the standard band;
@@ -46,7 +46,7 @@ and the need to keep inventory moving. Anchor decisions to three named levers:
 ## Standard Terminology
 
 - **Color-tag rotation**: a system where each intake week (or day) is assigned a rotating tag color;
-  a fixed markdown schedule (e.g., 25% off after 4 weeks, 50% after 6, clearance/bag-sale after 8)
+  a fixed markdown schedule (e.g., 25% off after 4 weeks, 50% after 6, clearance/bag-sale after 8; example steps only, so set yours from how fast your stock sells)
   applies by tag color so aging is enforced mechanically, not judged case-by-case.
 - **Sell-through rate**: % of floor inventory in a category that sells within a defined window
   (commonly 30/60/90 days); the primary diagnostic for whether a category's pricing or space

@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, anne-lamott]
 credits:
-  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "The order of the steps: find the situation, set the daily word quota, pick the scene details, write the draft without an outline"}
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Ideas on starting from a situation, writing a set number of words a day with the door closed, and drafting without an outline. The steps and their order are ours"}
 generated_from: intake/on-writing-first-draft-door-closed/skeleton.yaml

@@ -34,7 +34,8 @@ how_to_use:
   - Log in to your store with the Shopify command line and allow it to read orders.
   - Open the skill and give your AI your store domain. Add the days to look back and how to group the results if you want to change the defaults.
   - Let it run. It reads your orders and never changes anything.
-  - Read the ranked list and open the CSV file. Check the products with the highest refund rates first.
+  - Read the ranked list and open the CSV file. Check the products with the highest refund rates first. What counts as a high rate depends on your category, so compare each product with your others.
+  - Next, use the return reason finder on the worst products to tell quality problems from wrong size or unmet expectations.
 output_sample:
   input:
     - Your store domain
@@ -56,3 +57,4 @@ output_sample:
       contains: Each group with units sold, units refunded and refund rate, for the grouping you chose.
     - name: refund_rate CSV file
       contains: One row per group with units sold, refunded units, refund rate, refund amount and currency.
+next: [return-reason-finder, repeat-partial-refund-spotter]

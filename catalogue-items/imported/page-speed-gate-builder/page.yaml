@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Open your AI tool in a place where it can read your project files and run code.
   - Paste this skill and tell it to add the page speed gate to your app.
-  - Give it your build and start commands, and the URLs to check if not just the home page.
+  - Give it your build and start commands. List every page you want checked, not just the home page, such as a product page and a blog post. The app must build and start with those commands before the check can run.
   - Run the check on your computer first and read the report.
-  - Commit the config and workflow file, then open a pull request to see the check run in your pipeline.
+  - Commit the config and workflow file, then open a pull request to see the check run in your pipeline. When the gate fails, open the saved report and fix the audit it flags. Do not raise the limit to make it pass.
 output_sample:
   input:
     - Your web app code

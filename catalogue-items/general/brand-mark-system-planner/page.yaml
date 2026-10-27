@@ -1,6 +1,6 @@
 new_slug: brand-mark-system-planner
 name: "Brand mark system planner"
-summary: "Plan a brand mark from your brief. Find the answer already in it, test the mark at tiny and huge sizes, and get a sketch list."
+summary: "Plan a brand mark from your brief. You get the answer already in it, a mark plan tested at tiny and huge sizes, and a sketch list. Nothing is drawn."
 job: design-work
 thinking: medium
 thinking_why: "It weighs obvious options against surprising ones, but follows a fixed order."
@@ -148,6 +148,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Reading a brief and planning a mark is text work any strong chat AI does well."}
     - {name: "Paper and a marker", why: "The plan starts with paper sketches. Software comes after."}
+    - {name: "A tool to view the mark at tiny and huge sizes", why: "Any design tool or even a phone camera, to test the sketches at thumbnail size and at wall size."}
   inputs:
     - "Your current mark and how it is used"
     - "Notes from a listening call"

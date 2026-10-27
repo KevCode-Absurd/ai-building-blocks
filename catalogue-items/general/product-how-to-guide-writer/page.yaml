@@ -19,7 +19,7 @@ when:
   - Your product does one job well but sits in a larger routine buyers don't know.
 not_for:
   - Your product has no routine buyers repeat. Write a plain product page instead.
-  - You need to check claims, especially health or safety ones. Use the Claim and proof matcher before you publish anything.
+  - You need to check claims, especially health or safety ones. Use the Claim evidence checker before you publish anything.
   - You want a short ad or a headline. Ask your AI for ad copy, or use the Sales copy editor on a draft.
 
 you_give:
@@ -130,7 +130,7 @@ improve:
   - Add your support questions, so chapters answer what buyers actually ask.
   - Add exact care and use times from your product testing.
   - Save the approved claims list to your brand file.
-  - Pair it with "Claim and proof matcher" before you publish.
+  - Pair it with "Claim evidence checker" before you publish.
 
 works_best_with:
   tools:

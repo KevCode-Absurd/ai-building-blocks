@@ -5,19 +5,27 @@ description: Use when a store owner wants a monthly profit and loss they can rea
 
 # Store P&L builder
 
-You build a store's monthly profit and loss in a fixed layout so months can be compared. You show every line in dollars, as a percent of revenue and per order, then say which line to fix first. This is a management view, not a statutory P&L; say "review with your accountant". Benchmarks come from agency portfolios of 7 to 9 figure DTC brands, not small hobby stores. With under about 100 orders a month, per-order figures swing too much to trust.
+You build a store's monthly profit and loss in a fixed layout so months can be compared. You show every line in dollars, as a percent of revenue and per order, then say which line to fix first. This is a management view, not a statutory P&L; say "review with your accountant". If the store has no P&L or accounting export, ask the bookkeeper for one first. Benchmarks come from agency portfolios of 7 to 9 figure DTC brands, not small hobby stores. With under about 100 orders a month, per-order figures swing too much to trust.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Audit report** with the [Product cost sorter](https://useaiblocks.com/skills/cogs-line-sorter). Bring spreadsheet, your question (optional).
+2. This one.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for spreadsheet, your results, audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Your accounting tool:** Source of the P&L export. Ask your bookkeeper to tag costs by bucket.
@@ -42,13 +50,13 @@ A bookkeeper able to tag costs is needed to build it fully. Moving fulfilment st
    - Layout B: one cost of delivery bucket that holds all of those.
    The sources disagree here: one keeps only product cost, inbound freight and duties in COGS; others fold fulfilment, shipping and payment fees into cost of delivery. Both work; mixing them across months does not.
 2. **Revenue bridge.** Start from gross revenue (product sales; tax collected stays out), minus discounts, refunds and chargebacks, plus shipping collected, equals net revenue. Show every step, because a revenue move can hide in refunds or discounts, not demand.
-3. **Cost of delivery.** Everything variable: product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees, and an allowance for refunds and discounts. Payment fees are not operating expenses because they move with revenue. If fulfilment staff are on payroll, move them in: daily wage over parcels per day gives a per-order cost (the source's example: 400 dollars over 100 parcels is 4 dollars).
+3. **Cost of delivery.** Everything variable: product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees, and an allowance for refunds and discounts. Payment fees are not operating expenses because they move with revenue. If fulfilment staff are on payroll, move them in: daily wage over parcels per day gives a per-order cost (one speaker's example: 400 dollars over 100 parcels is 4 dollars).
 4. **Marketing.** Paid ads, influencer fees and events. One speaker keeps this to pure variable media only; another puts content spend that flexes with the season (agencies, short-term hires) here, while a fixed in-house team goes to operating expenses. Pick one rule and hold it every month.
 5. **Operating expenses.** Everything left: people, software, office. One speaker's reference: a lean store sits at 10 to 12 percent of revenue and over 20 percent is hard to win with. Another notes that seven-figure founders let this grow faster than revenue, so profit stays flat. Label both as opinions.
 6. **Margins.** Contribution margin = revenue minus cost of delivery minus marketing. In Layout A also show gross margin and post-marketing contribution margin (contribution margin minus marketing). Operating profit = contribution margin minus operating expenses. Keep loan interest below operating profit; a buyer values profit before interest. Net profit comes after interest and tax.
-7. **Percent and per order.** Divide every line by net revenue and by orders so a shift of one or two points stands out. In the source, fulfilment moved from about 30 to 32 percent of revenue as shipping rose. Use a three-month trailing average when months bounce.
-8. **CAC.** CAC = marketing spend divided by new-customer orders only, because returning orders come from email and need no paid spend. Blended CAC is directional only. Compare marketing per new order with contribution margin per order; in the source's example the one month where marketing per new order beat contribution margin was the one month with an operating loss.
-9. **Back-solve the target.** Net profit target plus operating expenses percent gives the contribution margin to hit. Example from the source: 20 percent net plus 15 percent operating expenses needs 35 percent. That is a worked example, not a benchmark.
+7. **Percent and per order.** Divide every line by net revenue and by orders so a shift of one or two points stands out. In one speaker's example, fulfilment moved from about 30 to 32 percent of revenue as shipping rose. Use a three-month trailing average when months bounce.
+8. **CAC.** CAC = marketing spend divided by new-customer orders only, because returning orders come from email and need no paid spend. Blended CAC is directional only. Compare marketing per new order with contribution margin per order; in one speaker's example, the one month where marketing per new order beat contribution margin was the one month with an operating loss.
+9. **Back-solve the target.** Net profit target plus operating expenses percent gives the contribution margin to hit. Example from one speaker: 20 percent net plus 15 percent operating expenses needs 35 percent. That is a worked example, not a benchmark.
 10. **Troubleshoot upward.** If a line misses its target, look at the lines above it. A profit miss comes from operating expenses, marketing or delivery. A contribution miss comes from marketing or delivery. A gross margin miss comes from discounts, returns or shipping. Rank the bucket to fix first by points of revenue lost.
 11. **Compare with reference ranges, labelled as one speaker's.** Cost of delivery 30 to 40 percent of revenue, product cost 10 to 20 percent, shipping near 10 percent at most, and 15 to 20 percent net as a strong store. These are one agency leader's ranges for large DTC brands. Marketing share differs by model: around half of revenue for a low-repeat hard-goods brand, falling for a high-repeat brand.
 12. **Profit over revenue.** A 5 million dollar brand at 20 percent net (1 million profit) beats a 10 million dollar brand at 5 percent. Revenue growth does not automatically widen margin.
@@ -89,11 +97,8 @@ Not a statutory P&L. Review with your accountant.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Cash lever ranker](https://useaiblocks.com/skills/cash-lever-ranker). It takes the spreadsheet.
-- The [Supplier terms and float planner](https://useaiblocks.com/skills/supplier-payment-terms-planner). It takes the spreadsheet.
-- The [Support capacity planner](https://useaiblocks.com/skills/support-capacity-planner). It takes the spreadsheet.
-- The [Amazon reimbursement claim finder](https://useaiblocks.com/skills/amazon-reimbursement-claim-finder). It takes the spreadsheet.
-- The [Merchant Center feed health checker](https://useaiblocks.com/skills/merchant-center-feed-health-checker). It takes the spreadsheet.
+- The [Break-even ROAS and CPA calculator](https://useaiblocks.com/skills/break-even-roas-and-cpa-calculator).
+- The [Store profit per visitor calculator](https://useaiblocks.com/skills/store-profit-per-visitor-calculator).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

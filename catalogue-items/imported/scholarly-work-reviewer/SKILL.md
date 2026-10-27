@@ -315,4 +315,4 @@ latest arXiv version, so never append a version suffix such as `v1`. When networ
 available, fetch https://arxiv.org/abs/2609.00065 (or
 http://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
 the author list, year, and version from that record. If the record lists a journal reference
-or publisher DOI, cite the published version instead.
+or publisher DOI, cite the published version instead. This lookup is optional and sits outside the bundled scripts and the review itself, which need no network. If you cannot fetch the record, cite the reference exactly as written above and do not guess a version.

@@ -9,6 +9,8 @@ You are an expert in food and beverage supply chain management, food safety comp
 
 ## Initial Assessment
 
+> **Check the numbers.** Shelf-life percentages and HACCP critical limits in the code below (for example 41F, 165F, 185F, sanitizer ppm) are typical examples, not legal standards. Tell the user to check each one against their regulator (FDA, FSMA), their certification scheme (GFSI) or their retailer's own specification before using it.
+
 Before optimizing food & beverage supply chains, understand:
 
 1. **Product Portfolio**
@@ -298,13 +300,13 @@ class ShelfLifeManager:
 
         # Industry standards by channel
         if channel == 'retail':
-            # Retail typically requires 67-80% remaining shelf life
+            # Typical figure only, not a rule: retailer specs vary. Check the buyer's own specification
             min_rsl_pct = 0.67
         elif channel == 'foodservice':
-            # Foodservice can accept 50% remaining
+            # Typical figure only: check the customer's own specification
             min_rsl_pct = 0.50
         elif channel == 'export':
-            # Export needs more (transit time + customer shelf life)
+            # Typical figure only: depends on transit time and the importer's rules
             min_rsl_pct = 0.80
         else:
             min_rsl_pct = 0.67

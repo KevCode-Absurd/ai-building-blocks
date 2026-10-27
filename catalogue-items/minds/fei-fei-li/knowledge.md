@@ -1,6 +1,6 @@
 # Fei-Fei Li: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Fei-Fei Li is alive, and her views can change. Everything below comes from her 2018 testimony to the US Congress, a 2024 opinion piece, a 2025 essay, two 2026 posts on her newsletter (June and September) [S9][S10], and public reference pages. Treat each view as "as of" the source it comes from. Nothing here tells you what she thinks about events after September 2026.
 

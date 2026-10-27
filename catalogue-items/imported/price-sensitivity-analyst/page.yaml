@@ -34,7 +34,7 @@ how_to_use:
   - Sign in to your store with read access to orders and products. The skill only reads and never edits a price.
   - Paste the skill into your AI. Give it your store domain, and the number of days and grouping if you want to change them.
   - Check the group sizes in the result. Treat any group with fewer than 5 products as weak evidence.
-  - Pick one or two products to test at a new price. Change the price yourself in Shopify, then compare sales again next quarter.
+  - Pick one or two products to test at a new price. Change the price yourself in Shopify, then compare sales again next quarter. To change many prices at once, use the Bulk price changer. To check if a discount pays off, use the Discount payoff calculator.
 output_sample:
   input:
     - Your Shopify store domain
@@ -56,3 +56,4 @@ output_sample:
       contains: How many products are on sale, the average discount and how sale items sell against full-price peers.
     - name: price_elasticity CSV file
       contains: One row per product with price, sales speed, revenue per day, rank in group, a sensitivity flag and a recommendation.
+next: []

@@ -11,6 +11,8 @@ subhead: Paste one month of your profit and loss and your orders tagged first-ti
 explain: |
   A single profit and loss hides a common problem. Returning customers are cheap to serve and carry no ad cost, so they can cover for new customers who lose money. In the source's example, first-time customers went from a $20,000 profit a month to a $70,000 loss while the overall P&L still showed a profit. Returning customers covered it, and nobody noticed that winning new customers had stopped paying.
 
+  This is the monthly, full-P&L view. The new-customer profit dashboard builder is the daily, ratio-based view of the same question.
+
   This skill splits every P&L line by the first-time or returning tag on the order. It puts all ad spend on the first-time P&L, because ads buy new customers. It splits shared costs by a rule you state. The bottom line of the first-time P&L is your real acquisition result. A first-time loss that grows month on month means older customers are hiding acquisition decay. It also says how a first-time loss might be funded.
 
 when:

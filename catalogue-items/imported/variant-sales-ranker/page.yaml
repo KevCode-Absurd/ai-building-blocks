@@ -35,7 +35,7 @@ how_to_use:
   - Paste the skill into your AI. Give it your store domain and a start and end date. A 30 to 90 day range works best.
   - "Pick how to rank: revenue, units or refund rate. Set a minimum units sold, such as 5, to skip variants with very few sales."
   - Open the CSV and the two tables. Check any variant with a high refund rate before you reorder it.
-  - Pair it with the dead-stock-identifier skill for a wider look at stock health.
+  - Use the CSV to set reorder quantities for top sellers, mark down the dead weight, and look at why high-refund variants come back. Then pair it with the Dead stock finder for a wider look at stock health.
 output_sample:
   input:
     - Your store domain
@@ -52,8 +52,9 @@ output_sample:
     - name: Top performers table
       contains: The best variants by the ranking you chose, shown in the chat.
     - name: Dead weight table
-      contains: Variants with stock on hand that earn the least for each unit of stock.
+      contains: Variants with stock on hand and at least your minimum units sold that earn the least for each unit of stock, then a separate list of variants with stock and no sales.
     - name: variant_performance CSV file
       contains: One row per variant with units sold, revenue, refunds, refund rate, stock and revenue per unit of stock.
     - name: Outcome summary
       contains: Orders processed, variants analysed, date range, ranking used and error count.
+next: [dead-stock-finder, return-reason-finder]

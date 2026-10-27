@@ -65,7 +65,8 @@ fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 fig.suptitle("Q4 2024 Sales Dashboard", fontsize=16, fontweight="bold")
 
 # 1. Monthly revenue trend
-monthly = df.resample("M", on="date")["revenue"].sum()
+# "ME" means month end and needs pandas 2.2 or newer. Use "M" on older versions.
+monthly = df.resample("ME", on="date")["revenue"].sum()
 axes[0, 0].plot(monthly.index, monthly.values, marker="o", linewidth=2)
 axes[0, 0].set_title("Monthly Revenue Trend")
 axes[0, 0].set_ylabel("Revenue ($)")
@@ -120,10 +121,11 @@ fig = px.scatter(
 
 fig.update_traces(marker=dict(opacity=0.7, line=dict(width=1, color="DarkSlateGrey")))
 
-# Add a trend line annotation
+# Add a note only after you have checked the pattern in your own data.
+# The position and text here are placeholders, not a finding.
 fig.add_annotation(
     x=45000, y=320000,
-    text="Strong ROI cluster:<br>low spend, high revenue",
+    text="<your checked finding here>",
     showarrow=True, arrowhead=2,
     font=dict(size=12, color="darkblue")
 )

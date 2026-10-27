@@ -9,7 +9,7 @@ subhead: The gap between an ETF's market price and the value of the assets it ho
 explain: |
   The gap between an ETF's market price and the value of the assets it holds, shown as a percent, with a clear reason for why it exists. You see quickly whether you would be overpaying.
 
-  You give a ticker. The skill pulls price and net asset value data from Yahoo Finance, using a small Python script, and calculates the premium or discount. It can compare several funds, scan a list for the biggest gaps, or dig deeper into why a fund trades away from value. For sudden jumps it splits the move into value-driven and structural parts, such as dealer positioning or blocked arbitrage. It is for research only, not financial advice.
+  You give a ticker. The skill pulls price and net asset value data from Yahoo Finance through yfinance, an unofficial package that reads Yahoo's web pages. It may be delayed, may have gaps, can break without notice and may not suit Yahoo's terms. It uses a small Python script, and calculates the premium or discount. It can compare several funds, scan a list for the biggest gaps, or dig deeper into why a fund trades away from value. For sudden jumps it splits the move into value-driven and structural parts, such as dealer positioning or blocked arbitrage. It is for research only, not financial advice.
 when:
   - You want to know if an ETF is trading above or below what it holds.
   - You are comparing several bond or crypto funds on price gap.
@@ -34,7 +34,7 @@ how_to_use:
   - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
   - Type your ticker, for example one fund to check, several to compare, or a list to scan for the widest gaps.
   - Let your AI install the data packages if it asks. Then read the premium or discount percent and the reason given.
-  - Check the fund's bid-ask spread and the issuer's holdings page before you act. The size labels are rules of thumb, not sourced limits.
+  - Compare the result with the issuer's published NAV page and check the fund's bid-ask spread. Repeat over several days, since one day can mislead. The size labels are rules of thumb, not sourced limits. The output is research, not a trading signal.
 output_sample:
   input:
     - One or more ETF tickers

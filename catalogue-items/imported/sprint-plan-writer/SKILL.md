@@ -6,7 +6,7 @@ argument-hint: "[sprint name or date range]"
 
 # /sprint-planning
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> The original file pointed to a CONNECTORS.md that is not included here. If no tracker or calendar is connected, ask the user to paste the details instead.
 
 Plan a sprint by scoping work, estimating capacity, and setting clear goals.
 
@@ -15,6 +15,10 @@ Plan a sprint by scoping work, estimating capacity, and setting clear goals.
 ```
 /sprint-planning $ARGUMENTS
 ```
+
+The slash command works only where skills are installed. In a plain chat, paste this whole file, then write the sprint details after it.
+
+Use one unit for the whole plan. Convert estimates and capacity to either story points or hours before you fill the capacity table, and say which unit you chose.
 
 ## How It Works
 

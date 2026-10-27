@@ -9,7 +9,7 @@ subhead: "Give it an order number, email or phone. It reads your Shopify store a
 explain: |
   Everything about a customer's order on one screen: what they bought, what they paid, where it is going, tracking, refunds and history. Support agents answer in seconds without clicking through the Shopify admin.
 
-  You search by order number, email or phone. The skill makes one request to Shopify and returns up to a set number of matching orders with payment status, fulfilment status, line items, shipping address, tracking links and refund details. Output can be a readable summary or JSON for other tools. It only reads data and does not change orders. Needs a signed-in Shopify CLI session with access to orders and customers.
+  You search by order number, email or phone. The skill makes one request to Shopify and returns up to a set number of matching orders with payment status, fulfilment status, line items, shipping address, tracking links and refund details. Output can be a readable summary or JSON for other tools. It only reads data and does not change orders. Needs a signed-in Shopify CLI session with access to orders and customers. Orders older than 60 days also need the read_all_orders permission.
 when:
   - A customer writes in asking where their parcel is.
   - You need to check if a refund already went out.
@@ -33,10 +33,11 @@ you_get:
 how_to_use:
   - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
   - Install the Shopify CLI. Then run shopify auth login --store followed by your store domain.
-  - Check your login can read orders and customers in Shopify.
+  - Check your login can read orders and customers in Shopify. For orders older than 60 days it also needs the read_all_orders permission.
   - Give your AI this skill, your store domain, how you are searching and the value to search for.
   - "Type order numbers with the # sign, like #1001. Type phone numbers with country code, like +15551234567."
-  - Read the summary. To refund or reorder, use the refund-and-reorder skill.
+  - Read the summary. It holds customer names, emails and addresses, so keep it out of public chats and files.
+  - To refund or reorder, use the Refund and reorder processor.
 output_sample:
   input:
     - Your store domain
@@ -47,7 +48,7 @@ output_sample:
   prerequisites:
     - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
     - A signed-in Shopify CLI session for your store
-    - Access to read orders and customers in Shopify
+    - Access to read orders and customers in Shopify (plus read_all_orders for orders older than 60 days)
   output:
     - name: Order header
       contains: The order number, date, payment status and fulfilment status.
@@ -63,3 +64,4 @@ output_sample:
       contains: The carrier, tracking number and tracking link for each shipment.
     - name: Refunds
       contains: The date and amount of each refund, plus any order note and tags.
+next: [refund-and-reorder-processor]

@@ -108,7 +108,7 @@ tweaks:
   - what: Show length
     how: Start with 15 minutes. A bigger show adds time at about 45 to 60 seconds per item, including bidding.
   - what: Start price
-    how: Start at what you can accept. A start of $1 only works with a full room, about 300 to 500 viewers, and is not advised for most small sellers.
+    how: Start at what you can accept. A start of $1 only works with a full room. The sources put that at about 300 to 500 viewers, a rough rule of thumb, not a measured figure. It is not advised for most small sellers.
   - what: Your following
     how: The big-show results leaned on an existing following. With none, start small and be consistent.
   - what: Prize

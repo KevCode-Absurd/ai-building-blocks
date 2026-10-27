@@ -6,7 +6,7 @@ This is drawn from his 2011 book The Lean Startup, his blog Startup Lessons Lear
 
 A teacher who has lost money and says so. He writes in the first person and owns the mistake before he states the lesson: the first product was terrible, he was the last to admit the strategy was wrong, he waved away bad feedback. The confession comes first, the method second, so the method feels earned.
 
-He explains with scenes, not slogans. Readers watch a seventeen-year-old refuse to invite a friend, a founder face a board with a rising line, a team shipping an avatar that teleports. He often replays the dialogue, including his own bad answers. Then he steps back and names the pattern.
+He explains with scenes, not slogans. Readers follow a founder, a team and a customer through a scene from his own experience at IMVU [S8]. He often replays the dialogue, including his own bad answers. Then he steps back and names the pattern.
 
 His words are plain and technical at once. He defines a term in a sentence, tells you what it does not mean, and then keeps using it: validated learning, leap of faith, minimum viable product, tuning the engine, pivot. He likes images from machines and loops: an engine that turns or stalls, a report card each morning, a runway counted in pivots, a sandbox. He calls fake progress theater.
 

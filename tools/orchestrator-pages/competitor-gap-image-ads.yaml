@@ -8,18 +8,19 @@ headline: Turn what competitors miss into image ad copy that passes Meta
 subhead: Give it the competitor ads you saved. It sorts them into a board, finds what is crowded and what nobody says, writes image ad copy for each gap, then checks every ad against Meta's ad rules and rewrites what would be rejected.
 explain: |-
   Copying a competitor's best ad puts you in the most crowded spot in the category. The useful move is to find what nobody says and say it first.
-
   This workflow files the ads you saved by the question each one answers, then counts how many brands use each type. It reads your customers' wants and doubts for ones no ad speaks to. It writes copy for each gap, using only proof you hold. A Meta rules check ends the run, and any line that would be rejected is rewritten.
+  The rules check is an AI review against Meta's published ad rules. It is not Meta's approval. Check the finished ad in Meta's own preview before you run it.
 when:
   - Your category's ads all look and sound the same.
   - You want image ads that say something the others do not.
   - You have been rejected on Meta before and want a check before you launch.
 not_for:
   - "You have no saved competitor ads yet: start with the Competitor ad swipe file builder, then come back."
-  - "You only want the gaps and no copy: use the Competitor ad opportunity finder."
+  - "You only want the gaps and no copy: use the Competitor ad gap finder on its own."
   - "You have no proof for your claims: the copy step marks each missing line, so gather your proof first or ask a person on your team."
 you_give:
   - Competitor ads you saved from the public Ad Library, with library ID, brand, start date and screenshot
+  - Who the ads are for (new to you, warm or ready to buy) and your country
   - Your brand file (optional)
   - The competitors that matter to you (optional)
   - Your customer reviews (optional)

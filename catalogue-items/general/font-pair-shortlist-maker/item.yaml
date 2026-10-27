@@ -7,7 +7,7 @@ role: make
 job: design
 level: beginner
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: design_direction}
 uses: []
@@ -16,3 +16,4 @@ credits:
   - {title: "web-typography skill", by: "Wondel.ai", url: "https://github.com/wondelai/skills/tree/main/web-typography", used: "Pairing a headline face with a body face, and readable sizes, line length and spacing, adapted under the MIT licence"}
 version: 1.0.0
 example_pending: true
+needs_mode: manual

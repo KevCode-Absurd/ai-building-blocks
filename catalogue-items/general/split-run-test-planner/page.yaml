@@ -22,10 +22,10 @@ when:
   - You have a winning ad and want to test a new version against it as a control.
 
 not_for:
-  - "You want a short one-message plan for just two versions: use the Two-version ad test planner."
   - "The versions must run in different places, such as two magazines or towns: use the Cross-over copy test planner."
   - "You only have headline ideas to rank before a test: use the Keyed headline test planner."
   - "You already have the counts and want to read them: use the Split-run result reader."
+  - "You do not know what people should reply to: use the Test reply offer planner first."
 
 you_give:
   - The two versions, in full

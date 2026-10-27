@@ -45,6 +45,7 @@ first_result:
   - "Add that app as the first step and sign in to it when asked. Add the second app, such as Slack, as the next step."
   - "Map the fields. Choose which cell goes into which part of the message."
   - "Run it once on a real row. Open the result of each step and check the message before you switch the workflow on."
+  - "You end with a workflow that runs when your trigger fires, and a log you can open for every run. Next: for your first automation compare Zapier. To keep data on your own server, use n8n."
 needs:
   - "A Make account. The free plan needs no card."
   - "A login for each app you connect, with permission to read or write what you pick."

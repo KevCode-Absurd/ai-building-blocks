@@ -19,6 +19,7 @@ not_for:
   - "You need a graded test or exam: write it yourself or with your exam board's materials, since these questions are low stakes."
   - "Your students know very little about the topic or have limited English: teach it again first with worked examples, then use this quiz."
   - "You want to teach a topic for the first time: plan the lesson yourself first, then run the quiz later."
+  - "You want a quick quiz from your own lesson notes in one message: use the Recall quiz writer."
 you_give:
   - The topic or skill
   - Year group or age
@@ -32,7 +33,8 @@ you_get:
   - When to use the quiz after teaching
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
-  - Type your topic, your year group and how many questions you want. Add how long ago you taught it and any known misconceptions if you have them.
+  - Have these ready. The topic, your year group, how many questions you want, and optionally how long ago you taught it and any misconceptions you have seen.
+  - Type those details after the skill text.
   - Send it. You get a set of questions with a type and difficulty for each, then answer notes and a short plan for running the quiz.
   - Check the questions match what you actually taught. Change or remove any that do not.
   - Run the quiz as a low-stakes starter. Do not grade it. Use the answer notes to correct mistakes as a class.

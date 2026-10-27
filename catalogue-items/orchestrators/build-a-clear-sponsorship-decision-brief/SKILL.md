@@ -7,6 +7,26 @@ description: "Use when you are offered a sponsorship to buy and need a cost comp
 
 Decide whether a sponsorship you are offered is worth buying. Three steps run in order: compare the cost, plan a small pilot, and run your own decision checklist on the plan. Each saves a file and hands the next step what it needs.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for document, a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A chat AI that reads files, such as Claude, ChatGPT or Gemini:** It reads the proposal, the price list and your checklist together. No code or paid tool is needed.
+<!-- /needs -->
+
 ## What you need
 
 - The sponsorship proposal, with what is included and the dates.
@@ -58,6 +78,15 @@ FILES SAVED       <each file and the step that made it>
 MISSING           <each gap, and what it stops>
 CHECKS MISSED     <one line each, or none>
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the plan and audit report.
+- The [Brand name fit checker](https://useaiblocks.com/skills/brand-name-stretch-checker). It takes the plan and audit report.
+- The [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand back
 

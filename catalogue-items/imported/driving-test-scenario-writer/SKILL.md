@@ -184,7 +184,7 @@ action.Direction = "left";
 validate(rrs);
 ```
 
-After validation passes, present a summary of what was created — never simulate unless explicitly asked.
+After validation passes, present a summary with these parts: scenario name, actor list with roles, phase list, validation result and open issues. Never simulate unless explicitly asked.
 
 ## Scenario Decomposition
 

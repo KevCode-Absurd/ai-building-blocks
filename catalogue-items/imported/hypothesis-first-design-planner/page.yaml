@@ -31,10 +31,10 @@ you_get:
   - A score of your current process with fixes
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
-  - Describe your design problem and who the users are. Add your current process and team size if you can.
-  - Ask your AI to list your assumptions and rank them by risk.
-  - Check the hypotheses. Make sure each one has a success rule you set before testing.
-  - Pick the cheapest experiment for each top hypothesis. Run them, then ask for a fresh score of your process.
+  - Describe your design problem and who the users are. Add your current process and team size if you can. If you want the process score, also paste a short note on how your team designs and tests today. Skip it if you only want the plan.
+  - Ask your AI to list your assumptions as a table with a risk score from 1 to 5 and an uncertainty score from 1 to 5.
+  - Check the hypotheses. Each should read "We believe ... will ... because ..." and end with a success rule you set before testing.
+  - Pick the cheapest experiment for each top hypothesis. Write down the test, who sees it, the signal and the time box. Run them, then ask for a fresh score of your process.
 output_sample:
   input:
     - The design problem or feature idea

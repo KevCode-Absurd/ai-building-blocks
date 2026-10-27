@@ -8,7 +8,8 @@ job: strategy
 level: intermediate
 inputs:
   - {type: question, required: true}
-  - {type: product_data, required: false}
+  - {type: spreadsheet, required: false}
+  - {type: feedback_notes, required: false}
 outputs:
   - {type: audit_report}
 uses: [standards-sheet-writer, operations-manual-writer, second-location-check, go-or-no-go-launch-checker]

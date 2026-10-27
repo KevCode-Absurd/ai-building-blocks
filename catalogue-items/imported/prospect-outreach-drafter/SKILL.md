@@ -41,6 +41,8 @@ Check which tools are connected (plus any org facts the user or the project inst
 competitor names (to avoid naming them unprompted) from org context
 (inferred from what is connected or uploaded; if the answer depends on a fact no one has given, ask ONE question, use the answer for this conversation and suggest adding it to the project instructions; otherwise use a clearly labeled default and continue).
 
+Ask once, in one message, for the three things you cannot read from a record: the value prop in one line, the signature, and the tone. If the user does not answer, use this default and say so: no value prop beyond what the CRM or the user's notes state, the signature `[your name]`, and a concise neutral tone. Proof points and value claims come only from facts the user stated or the CRM shows. If there are none, leave the proof point out. Never infer one.
+
 ## Step 2 - Gather context
 
 - **crm:** the contact and account - title, industry, open opps, last
@@ -62,7 +64,7 @@ Structure (body under 120 words, tunable to the org's motion):
 1. **Relevance line** - one sentence that proves homework. Specific to
    them, sourced from Step 2. Never "I came across your company."
 2. **Value bridge** - one or two sentences connecting their situation
-   to the value prop; a proof point if it fits naturally.
+   to the value prop; a proof point only if the user or the CRM supplied one (otherwise leave it out).
 3. **Soft ask** - one clear, low-friction CTA. Default: "Worth a 20-min
    call to see if this maps to what you're working on?" Adjust per
    intent (or swap for a calendar link per org preference).

@@ -12,11 +12,11 @@ Write the script first; choose the look second. Most format failures are really 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
 3. This one.
 
 How to start:
@@ -82,7 +82,7 @@ How to start:
 5. **Check the length.** No length is best. Longer ads reach buyers who need more before they're ready. The opening and the offer don't grow; extra length comes from the problem, how it works, objections and proof. If the carrying part has no room at this length, the length is wrong: how it works can't be explained in 15 seconds, though a demo can (it is opening and proof at once). Long ads repeat the cycle of problem, promise, how it works, objection and proof two or three times. Each length is its own script; cutting a long one down makes a weak short one. Use only the lengths the script or input gives. Don't split the script into seconds per line; if you must estimate a time, say "about" and mark it as an estimate.
 
 ## What you hand back
-Hand it back in exactly this layout, with these labels in this order. The six Properties lines are the six needs from step 2, in the same order. Best formats lists the surfaces you rank, with their fit scores:
+Hand it back in exactly this layout, with these labels in this order, ending with CHECKS MISSED. The six Properties lines are the six needs from step 2, in the same order. Best formats lists the surfaces you rank, with their fit scores:
 
 ```
 Part that carries it: <how it works, proof, offer or problem> (<kind of edge>)
@@ -104,16 +104,16 @@ Blend: <if needed>
 Make it with: <video: script skill, then clips skill> or <still: image skill>, each tied to a must
 
 Length: <fits?> <best length> <where to add length>
+
+CHECKS MISSED: <one line per check missed, or none>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make an offer people want** with the [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts). It takes the plan.
-- **Plan what to test** with the [Ad reach planning review](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [AI search visibility test](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
+- The [Video ad format planner](https://useaiblocks.com/skills/video-ad-script-type-picker).
+- The [Motion graphics video build planner](https://useaiblocks.com/skills/motion-graphics-build-plan).
+- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

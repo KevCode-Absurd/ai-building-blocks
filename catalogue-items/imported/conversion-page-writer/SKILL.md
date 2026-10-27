@@ -1,6 +1,6 @@
 ---
 name: landing-page-copy
-description: "Write landing page copy with attention to the hero, value proposition, social proof, objection handling, and conversion-focused CTAs. Use this skill whenever the user wants to write a landing page, sales page, hero section, or any conversion-focused web copy. Triggers on landing page, sales page, hero copy, value proposition, headline, subheadline, hero section, CTA copy, conversion copy, opt-in page, squeeze page. Also triggers when the user has a marketing campaign or product launch needing dedicated conversion copy. Use `cro-optimization` instead when the page already exists and the ask is to lift its conversion rate through testing rather than to write the copy."
+description: "Write landing page copy with attention to the hero, value proposition, social proof, objection handling, and conversion-focused CTAs. Use this skill whenever the user wants to write a landing page, sales page, hero section, or any conversion-focused web copy. Triggers on landing page, sales page, hero copy, value proposition, headline, subheadline, hero section, CTA copy, conversion copy, opt-in page, squeeze page. Also triggers when the user has a marketing campaign or product launch needing dedicated conversion copy. Use Landing page 30-point checker instead when the page already exists and the ask is to lift its conversion rate through testing rather than to write the copy."
 category: content
 catalog_summary: "Landing pages, sales pages, hero-to-CTA flow"
 display_order: 4
@@ -10,7 +10,7 @@ display_order: 4
 
 Write copy for pages with a single conversion goal: signup, purchase, demo request, download, lead capture. Stack-agnostic.
 
-This skill is narrower than `content-and-copy`. Landing pages exist to drive a specific action, not to inform broadly.
+This skill is narrower than a general writing skill. Landing pages exist to drive a specific action, not to inform broadly.
 
 ---
 
@@ -25,10 +25,10 @@ This skill is narrower than `content-and-copy`. Landing pages exist to drive a s
 
 ## When NOT to use
 
-- Long-form blog content (use `content-and-copy`)
-- Email sequences (use `email-sequences`)
-- Brand voice definition (use `brand-voice`)
-- Page design and layout decisions (use `design-standards`)
+- Long-form blog content (ask your AI to write it directly, or use On-page SEO tuner for search copy)
+- Email sequences (use Follow-up email sequence writer)
+- Brand voice definition (use Brand voice one-pager writer)
+- Page design and layout decisions (use Landing page design planner)
 
 ---
 
@@ -41,7 +41,7 @@ This skill is narrower than `content-and-copy`. Landing pages exist to drive a s
 - Existing customer language (testimonials, support tickets, sales calls)
 - Any constraints (length, format, regulatory)
 
-If audience is unclear or objections are unknown, run `brand-discovery` or pull from sales call recordings before writing.
+If audience is unclear or objections are unknown, ask the user for their buyers' main doubts, or for notes from sales calls, before writing.
 
 ---
 

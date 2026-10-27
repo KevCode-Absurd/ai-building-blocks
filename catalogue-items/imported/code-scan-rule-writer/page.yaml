@@ -9,7 +9,7 @@ subhead: Describe a bug pattern once and get a Semgrep rule that finds it everyw
 explain: |
   Describe a bug pattern once and get a Semgrep rule that finds it everywhere in your code. The rule is tested, so it catches the bad cases and leaves safe code alone.
 
-  It writes the rule, then a test file with cases that should match and cases that should not. It runs the Semgrep test command and fixes the rule until both sides pass. It uses taint mode when data must be followed from user input to a risky call, since plain pattern matching gets noisy there. It pushes back on shortcuts like "the pattern looks complete" or "one test is enough". You need Semgrep installed.
+  It writes the rule, then a test file with cases that should match and cases that should not. It runs the Semgrep test command and fixes the rule until both sides pass. It uses taint mode when data must be followed from user input to a risky call, since plain pattern matching gets noisy there. It pushes back on shortcuts like "the pattern looks complete" or "one test is enough". You need Semgrep installed. This is sickn33's Semgrep rule creator skill, shared under the CC BY-4.0 licence with a plain name and our page text.
 when:
   - You found a bug and want to find every copy of it.
   - You want to enforce a coding rule across a big codebase.
@@ -30,7 +30,7 @@ you_get:
   - Test results
   - Notes on false positives
 how_to_use:
-  - Open an AI that can run commands and read files, such as Claude Code. Check that Semgrep is installed.
+  - Open an AI that can run commands and read files, such as Claude Code. Check that the semgrep command runs on your machine. The bad and safe code samples should come from your own codebase.
   - Paste the skill into the chat and tell your AI to follow it.
   - Describe the bug. Add a sample of bad code, a sample of safe code (optional) and the language.
   - Let your AI read the Semgrep docs first. This needs web access.

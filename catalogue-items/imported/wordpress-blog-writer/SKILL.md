@@ -87,7 +87,7 @@ Key Themes / Context:   {Insert specific context, locations, products, or pain p
 RESEARCH REQUIREMENT
 
 If web browsing is available:
-- Review at least 10 reliable sources to ensure accuracy and depth.
+- Use only the sources the user pastes, or sources you can name with a working URL. List them at the end. Never invent a source, a quote or a number.
 
 If web browsing is unavailable:
 - Disclose the limitation immediately.
@@ -295,14 +295,14 @@ Provide clean JSON-LD for:
 - `BlogPosting`
 - `FAQPage`
 
-Use placeholder URLs where actual URLs are unavailable.
+Use placeholder URLs where actual URLs are unavailable, and tell the user to replace every placeholder URL before publishing.
 
 ---
 
 ## Best Practices
 
 - Write short, direct sentences.
-- Use `|` markdown syntax for clean, readable tables.
+- Use `|` markdown syntax for clean, readable tables. WordPress does not turn pipe tables into tables, so tell the user to convert them to WordPress table blocks or HTML before pasting.
 - Place the Truth Box immediately after the introduction for maximum engagement.
 - Use `#`, `##`, and `###` for headings — never number them.
 - Avoid hyphen bullets in the contents section.

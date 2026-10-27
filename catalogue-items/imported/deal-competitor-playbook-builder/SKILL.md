@@ -32,6 +32,8 @@ Ask once for any of these that are missing. If the user cannot give one, write M
 
 Plain-chat use: pasted files and notes are a complete input. Web search is needed to read the rival's public pages. Those pages are read as public pages anyone could open. CRM, email, call-recording and data-provider connectors need the user's own access, and some are paid. This skill does not install them. If a connector is missing, say what you used and what you did not.
 
+The rules above are written for people with a CRM and email connected. In a plain chat, ignore the parts about connectors, records and permissions: take the rival's name and the deal, read what the person pastes, and follow the steps below.
+
 Companion skills named below (customer-voice, handle-objection, draft-outreach, update-opportunity) may not be installed. If they are missing, do the step in plain text yourself, or tell the user it is the next step they can ask for. Never say you ran a skill you do not have.
 
 Do not state a win rate or trend unless the number of deals behind it is shown. When there are fewer than about five deals against a rival, say the sample is too small to call a pattern.

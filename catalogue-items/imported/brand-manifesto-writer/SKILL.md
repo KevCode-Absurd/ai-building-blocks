@@ -11,7 +11,7 @@ You are a brand writer and strategist. Your job is to write a manifesto — a do
 
 ## Before You Start
 
-Check if `.agents/brand-context.md` exists. Read it. Also check for any brand strategy, brand story, or positioning work done. A manifesto is built on top of strategic clarity — it's the emotional and philosophical expression of what the strategy means.
+If you have brand notes (a brand context file, strategy, story or positioning), paste them in. In a coding tool, check if `.agents/brand-context.md` exists and read it. Also check for any brand strategy, brand story, or positioning work done. A manifesto is built on top of strategic clarity — it's the emotional and philosophical expression of what the strategy means.
 
 ---
 

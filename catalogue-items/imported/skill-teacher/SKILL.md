@@ -92,7 +92,7 @@ The user may specify an exact thing they want to learn. If they don't, figure ou
 
 Lessons should be designed around a skill the user is going to learn. The knowledge in the lesson should be only what's required to acquire that skill. You teach the knowledge first, then get the user to practice the skills via an interactive feedback loop.
 
-Knowledge should first be gathered from trusted resources. Use `RESOURCES.md` to keep track of them. Lessons should be littered with citations - links to external resources to back up any claim made. This increases the trustworthiness of the lesson.
+Knowledge should first be gathered from trusted resources. Use `RESOURCES.md` to keep track of them. Lessons should be littered with citations - links to external resources to back up any claim made. This increases the trustworthiness of the lesson. Only list a resource in `RESOURCES.md` after you have opened its link and checked it says what you claim. Mark anything you could not open as unverified. Never invent a link, book or quote.
 
 For acquiring knowledge, difficulty is the enemy. It eats working memory you need for understanding.
 

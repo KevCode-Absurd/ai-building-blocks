@@ -104,7 +104,8 @@ CRITICAL PRINCIPLES:
 - **Three-phase design: preparation → encounter → reflection.** Following Mannion et al. (2015), the outdoor session is the middle of a sequence, not a standalone activity. Indoor preparation builds the knowledge and skills students need to learn effectively outdoors. The outdoor encounter is the core learning experience. Indoor follow-up consolidates, analyses, and extends what was learned outside.
 - **Active inquiry, not passive observation.** Students should DO something outdoors, not just look at things. Collect data. Measure. Sketch. Sample. Record. Compare. The outdoor environment is a laboratory, not a museum.
 - **Safety through risk-benefit analysis, not risk elimination.** Outdoor learning involves risks (weather, terrain, traffic, water). The approach is not to eliminate all risk (which would also eliminate the learning) but to assess the BENEFITS against the risks and manage the risks to an acceptable level. A child who never encounters managed risk never develops risk assessment skills.
-- **Weather is a feature, not a bug.** Rain, wind, cold, and heat are learning conditions, not cancellation conditions. "There's no such thing as bad weather, only bad clothing" (Norwegian proverb). Design the session to work in the weather that's likely, not just in ideal conditions.
+- **Never taste wild plants, berries or fungi.** Leave tasting out of every station and activity unless an expert has identified the plant and allergies are checked. Smell, touch, sound and sight are enough.
+- **Weather is a feature, not a bug.** Rain, wind, cold, and heat are learning conditions, not cancellation conditions. "There's no such thing as bad weather, only bad clothing" (a common saying among outdoor teachers). Design the session to work in the weather that's likely, not just in ideal conditions.
 
 Your task is to design an outdoor learning sequence for:
 
@@ -174,7 +175,7 @@ Return your output in this exact format:
 
 **Learning objective:** Writing descriptions that use all five senses, specific vocabulary, and figurative language
 **Outdoor space:** School conservation area — pond, trees, meadow, sensory garden
-**Why outdoors?** The classroom is a sensory desert — the same sounds (chair scraping, clock ticking), the same smells (whiteboard markers, lunch from the hall), the same textures (desk, pencil, paper). Students cannot write rich sensory descriptions if they have nothing to sense. The outdoor environment provides authentically complex sensory input: the smell of damp earth, the sound of wind through branches, the texture of bark, the sight of light on water, the taste of wild garlic (if present and safe). Students who EXPERIENCE sensory richness write more specifically than students who are told to "imagine sensory detail."
+**Why outdoors?** The classroom is a sensory desert — the same sounds (chair scraping, clock ticking), the same smells (whiteboard markers, lunch from the hall), the same textures (desk, pencil, paper). Students cannot write rich sensory descriptions if they have nothing to sense. The outdoor environment provides authentically complex sensory input: the smell of damp earth, the sound of wind through branches, the texture of bark, and the sight of light on water. Students who EXPERIENCE sensory richness write more specifically than students who are told to "imagine sensory detail."
 
 ### Phase 1 — Preparation (Indoor, 30 minutes, previous lesson)
 
@@ -199,7 +200,7 @@ Students rotate through five stations, spending 5–6 minutes at each. At each s
 | 2: The Texture Trail | Along the hedge/tree line | Touch | Touch 5 different natural surfaces (bark, leaf, soil, stone, moss). For each: write exactly what it feels like. Use a simile: "the bark felt like..." |
 | 3: The Smell Map | Sensory garden | Smell | Crush a leaf gently between your fingers. Smell the soil. Smell the air. Write: what does this place smell like? Can you describe a smell without using another smell? (This is HARD — which is the point.) |
 | 4: The Sight Snapshot | By the pond | Sight (but SPECIFIC) | Choose one small area (no bigger than your hand). Describe EXACTLY what you see — colours, shapes, movement, light. The rule: no generic words. Not "green" but WHICH green? Not "water" but what does the water look like right now? |
-| 5: The Whole Place | Meadow area | All senses combined | Stand in the meadow. Write a "panoramic description" — sweep from left to right and describe what you experience through ALL senses. This is the combination: sight + sound + smell + touch + (if applicable) taste. |
+| 5: The Whole Place | Meadow area | All senses combined | Stand in the meadow. Write a "panoramic description" — sweep from left to right and describe what you experience through ALL senses. This is the combination: sight + sound + smell + touch. |
 
 **Activity 2 — Figurative language hunt (15 minutes):**
 After the stations, gather the class: "Now find ONE thing in this environment that reminds you of something completely different. The pond that looks like a mirror. The branches that reach like fingers. The wind that whispers. Find YOUR comparison and write it down with the REASON — why does it remind you of that?"

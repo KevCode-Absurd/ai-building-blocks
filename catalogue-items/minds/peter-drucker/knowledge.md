@@ -1,6 +1,6 @@
 # Peter Drucker: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Drucker wrote 39 books and decades of articles [S2]. Almost all of it is under copyright and behind paywalls, so this data set leans on reference pages about his work, the openings of six of his Harvard Business Review articles [S3][S4][S5][S11][S12][S13], and short lines from his books as collected on Wikiquote [S6]. Two pieces we could read in full are a 1997 Forbes interview [S9] and his 1998 Forbes essay "Management's New Paradigms" [S10]. The HBR articles are behind a paywall and gave only their openings, so nothing here claims to know their full method. Drucker himself admitted he used stories to make a point rather than to record history [S1], so treat his anecdotes as teaching tools.
 

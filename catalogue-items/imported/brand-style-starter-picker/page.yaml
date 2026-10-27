@@ -30,11 +30,11 @@ you_get:
   - Image direction notes
   - A list of what was adapted from the default
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text. It needs no code, files or paid tools.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text, and attach the skill's references folder (the core-archetypes and by-vertical files). Without those files the AI may invent palettes and fonts. Have ready your business type, who it serves, your price level, and two or three brands you admire.
   - Describe your business and who it serves in a few lines.
   - Add a brand you admire, or colours and fonts you must keep (optional).
   - Your AI picks the closest style family, or blends two, and adapts the defaults to your brief.
-  - Check the list of changes. Ask for another family if the look feels wrong.
+  - Check the list of changes. Ask for another family if the look feels wrong. This is a starting point, so check colour contrast, font licences and any trademark or name clashes before you use it.
   - Next, refine the result with brand-identity, then write down the voice with brand-voice and the rules with brand-style-guide.
 output_sample:
   input:

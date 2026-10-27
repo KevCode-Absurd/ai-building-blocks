@@ -54,3 +54,4 @@ output_sample:
       contains: How many rows were added to each table after the run.
     - name: Link check result
       contains: Whether every foreign key points to a row that exists.
+next: [browser-test-writer, failing-test-fixer]

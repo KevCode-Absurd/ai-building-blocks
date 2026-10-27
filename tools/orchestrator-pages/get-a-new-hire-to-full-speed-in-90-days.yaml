@@ -1,15 +1,15 @@
 new_slug: get-a-new-hire-to-full-speed-in-90-days
 name: Get a new hire to full speed in 90 days
-summary: Plan a new hire's first 90 days before day one. Give it the role and start date. You get a first-week plan, 30-60-90 goals and one-on-ones.
+summary: Give it the role and start date. Get a first-week plan, 90-day goals, one-on-ones and a look back.
 job: hire-people
 thinking: high
 thinking_why: It turns a role into goals and meetings a new person can follow. Give it your strongest model.
 headline: Get a new hire to full speed in 90 days
-subhead: Give it the role, the team and the start date. It writes down what the job involves, plans the first week and the 30, 60 and 90 day goals, sets up one-on-ones the way Andy Grove ran them, and looks back after the first month to improve the next start.
+subhead: Give it the role, the team and the start date. It writes down what the job involves, plans the first week and the 30, 60 and 90 day goals, sets up one-on-ones inspired by Andy Grove, and looks back after the first month to improve the next start.
 explain: |
-  A new hire's first weeks decide whether they stay. Most start with a laptop that is not ready, a manager in meetings and a vague "settle in". By week six nobody has said what good looks like, so the new person guesses, and the first review is a surprise for both sides.
+  A new hire's first weeks set the tone. Without a plan, a start can mean a laptop that is not ready, a manager in meetings and a vague "settle in". If nobody says what good looks like, the new person guesses, and the first review is a surprise for both sides.
 
-  This workflow plans those weeks before day one. It writes down the job's real duties and level, so the goals match the role. It builds the pre-start checklist and the first week. It sets 30, 60 and 90 day goals a person can tick off, and plans the one-on-ones around them, following Andy Grove's rule that the report sets the agenda and the manager asks and listens. After the first month you run a short look back, so the next hire starts better still.
+  This workflow plans those weeks before day one. It writes down the job's real duties and level, so the goals match the role. It builds the pre-start checklist and the first week. It sets 30, 60 and 90 day goals a person can tick off, and plans the one-on-ones around them, inspired by Andy Grove's idea that the report sets the agenda and the manager asks and listens. After the first month you run a short look back, so the next hire starts better still.
 when:
   - Someone starts in two weeks and you have not written down what their first month looks like.
   - Your last new hire left inside six months and said they never knew what was expected.
@@ -29,7 +29,7 @@ you_get:
   - 30, 60 and 90 day goals, and a one-on-one routine with the agenda set by the new hire
   - A look back after month one, with fixes for the next hire
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the role, the team and the start date. It writes the duties sheet, the first-week plan and the 90-day goals.
   - Hold the one-on-ones as planned and keep short notes.
@@ -90,7 +90,7 @@ output_shape: |-
     Survey: <new hire> | <manager> | What worked: <...> | Fix next time: <...>
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file> | MISSING: <every line, in one list> | CHECKS MISSED: <the checks that failed, or none>
 example:
   business: sprout
   input: |
@@ -140,3 +140,5 @@ works_best_with:
 terms:
   - term: One-on-one
     meaning: A regular private meeting between a manager and one report, with the report's topics first.
+next: [team-goals-one-on-ones]
+before: []

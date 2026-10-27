@@ -92,6 +92,8 @@ Security and database first because they produce the most critical findings.
 For each category, run every auto-scannable check from
 `references/checks.md` using the patterns in `references/patterns.md`.
 
+Checks marked `tool` (such as DEP-04) need `npm audit` for JavaScript projects or `pip-audit` for Python projects to be installed. If the tool is missing, mark the check MANUAL and say which tool to install. Do not guess a result. The bundled scanner (`scripts/ship_gate_scanner.py`) needs Python and only reads files in the project folder on your computer.
+
 Report progress after each category completes:
 ```
 [1/8] Security: 3 FAIL, 12 PASS, 3 SKIP

@@ -30,6 +30,7 @@ you_get:
   - Results of each pass
   - Only the changed lines for a small edit
 how_to_use:
+  - Before you paste, gather the goal of the copy and any real proof you have, such as numbers and customer quotes. A saved brand-context file is optional.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
   - Paste the copy you want edited.
   - Say the goal of the copy, such as a landing page or a sales email.

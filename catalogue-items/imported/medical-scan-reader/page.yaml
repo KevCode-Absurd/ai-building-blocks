@@ -14,11 +14,12 @@ when:
   - You have a folder of CT or MR slices and need one 3D array in MATLAB.
   - You need to list the series inside a DICOM study.
   - You want a slice in a set orientation, such as coronal.
-  - You must remove patient details from DICOM files before sharing.
+  - You want to remove common patient details from DICOM files before sharing.
 not_for:
-  - "You want to view or display a 3D volume: use the matlab-display-volume skill, as this one only reads and writes the data."
-  - "You want to show a 2D medical image with notes on it: use the matlab-display-image skill."
+  - "You want to view or display a 3D volume: use the matlab-display-volume skill, which is not yet in this library. This one only reads and writes the data."
+  - "You want to show a 2D medical image with notes on it: use the matlab-display-image skill, which is not yet in this library."
   - "You have normal photos or graphics such as PNG, TIFF or JPEG: use imread in MATLAB. This skill is also not a stand-in for a clinician reviewing the scans."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Paths to your DICOM, NIfTI or NRRD files
   - The MATLAB toolboxes you have installed (optional)
@@ -27,14 +28,15 @@ you_get:
   - MATLAB code that reads your scans
   - Voxel data with spacing and orientation
   - A list of DICOM series
-  - Anonymised DICOM files when asked
+  - DICOM copies with common patient details removed, when asked
 how_to_use:
   - Check that you have MATLAB and which toolboxes are installed. Type ver in MATLAB to see the list.
   - Know that the Medical Imaging Toolbox is a paid MathWorks add-on. NRRD reading, extractSlice and updateOrientation need it. Without it you can only read DICOM and NIfTI.
   - Paste this skill into Claude, ChatGPT or Gemini, or load it in an AI tool that can run MATLAB.
   - Give your AI the file path, your toolbox list and what you want out, such as a volume, a slice or contours.
   - Run the MATLAB code it writes. Check the size, spacing and orientation it prints against what you expect.
-  - If you share DICOM files, ask for anonymising and open a copy to confirm patient details are gone.
+  - If you share DICOM files, ask for anonymising. It removes common patient details but may miss some, so open the copy and check it before you share.
+  - You get a block of MATLAB code, then a printout of the voxel size and orientation. To view the volume, use a MATLAB viewer skill, once the library has one.
 output_sample:
   input:
     - The path to your DICOM folder, NIfTI file or NRRD file
@@ -45,6 +47,7 @@ output_sample:
     - MATLAB with the Image Processing Toolbox
     - The Medical Imaging Toolbox, a paid MathWorks add-on, for NRRD reading, extractSlice and updateOrientation
     - An AI that can run MATLAB, or you run the code it writes
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Volume read code
       contains: MATLAB code that loads your folder or file with medicalVolume, or with dicomreadVolume or niftiread if you lack the add-on.

@@ -24,9 +24,9 @@ too high," "train new intake volunteers on grading," "set up an at-donation rece
 at-donation receipt (a dated acknowledgment of items received, no value stated). It does not handle
 donor-side tax valuation or receipting beyond that basic receipt — IRS Form 8283, the $500/$5,000
 appraisal thresholds, qualified appraisals, and gift acceptance policy for high-value or unusual
-in-kind gifts live in `nonprofit-in-kind-gift-acceptance`. Once an item is graded and released to the
-floor, its price and merchandising treatment is `nonprofit-retail-pricing-merchandising`; if it's
-routed to online sale instead of the floor, handoff to `nonprofit-online-resale`.
+in-kind gifts live in your tax adviser (a gift acceptance skill is not in this library yet). Once an item is graded and released to the
+floor, its price and merchandising treatment is a retail pricing guide (not in this library yet); if it's
+routed to online sale instead of the floor, handoff to the Donated goods online resale planner.
 
 ## Core Framework: The Intake Funnel
 
@@ -39,7 +39,7 @@ pile":
    hazardous/recall) and by initial condition.
 3. **Grade** — apply a consistent quality standard within each category.
 4. **Triage** — route each graded item to one of four lanes: **Sell-floor**, **Sell-online** (high
-   value, handoff to `nonprofit-online-resale`), **Salvage/recycle/textile-recycler or auction-bin
+   value, handoff to the Donated goods online resale planner), **Salvage/recycle/textile-recycler or auction-bin
    liquidator**, or **Discard** (landfill, last resort).
 5. **Receipt** — issue the donor's at-donation receipt before or at drop-off, regardless of which
    lane the item is later routed to.
@@ -64,7 +64,7 @@ not a grading problem.
 - **Bailment period**: the short window (commonly 24-72 hours) between drop-off and formal
   acceptance during which title has not yet transferred, used in some donation agreements to allow a
   final accept/decline decision after inspection — check state law and the org's own gift acceptance
-  policy before relying on a bailment clause.
+  policy before relying on a bailment clause. Skip this if you have no donation agreement.
 
 ## Step-by-Step: Building or Fixing an Intake Operation
 
@@ -84,8 +84,8 @@ not a grading problem.
 5. **Test electronics and anything with a plug or battery** before grading it sellable; never place
    untested electrical items on the floor — this is both a safety and a return-rate issue.
 6. **Route high-value or collectible-looking items to a designated reviewer** (not the general sort
-   line) for a decision between sell-floor, online listing (`nonprofit-online-resale`), or referral
-   to `nonprofit-in-kind-gift-acceptance` if the item may need formal tax documentation.
+   line) for a decision between sell-floor, online listing (the Donated goods online resale planner), or referral
+   to your tax adviser (a gift acceptance skill is not in this library yet) if the item may need formal tax documentation.
 7. **Issue the at-donation receipt at the point of drop-off**: dated, lists the organization's name
    and EIN, a general description of item categories (not a per-item value — the donor is
    responsible for valuing their own non-cash gift for tax purposes), and a standard statement that

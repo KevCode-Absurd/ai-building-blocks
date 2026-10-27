@@ -5,7 +5,7 @@ name: Revenue recognition checker
 summary: Check a customer contract for revenue recognition under IFRS 15 or ASC 606. Get its promises, price split and when to book revenue.
 job: money-and-investing
 headline: Revenue recognition checker
-subhead: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606. Bring the customer contract or its key terms. Use the result to plan your next step.
+subhead: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606. Bring the customer contract or its key terms. Send the memo to your accountant to review.
 explain: |
   A memo showing what a customer contract promises, how the price is split between those promises, and when you can count each part as revenue. It follows the IFRS 15 and ASC 606 five-step model.
 
@@ -36,6 +36,7 @@ how_to_use:
   - Add the price of each item sold alone if you have it. If not, say so, and your AI will flag it as a judgment call.
   - Read the memo. Check the list of promises and the price split against your contract.
   - Have a qualified accountant review the memo before it goes to an auditor. Price estimates for each item need their sign-off.
+  - Next, send the memo and the allocation table to your accountant. Once they agree the entries, use the financial statement preparer to show the revenue and deferred revenue in your reports.
 output_sample:
   input:
     - Your customer contract or its key terms

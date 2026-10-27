@@ -5,11 +5,11 @@ name: AI cost cutter
 summary: Find where your AI app's tokens go and get ranked changes that cut your AI API costs without hurting answer quality.
 job: build-software
 headline: AI cost cutter
-subhead: A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The aim is often 40 to 80 percent less, and you measure first so you know which change worked.
+subhead: A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The original author's aim is 40 to 80 percent less, which is a rough estimate. You measure first so you know which change worked.
 explain: |
-  A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The aim is often 40 to 80 percent less, and you measure first so you know which change worked.
+  A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The original author's aim is 40 to 80 percent less, which is a rough estimate with no source. You measure first so you know which change worked.
 
-  Changes come in order of payoff. Routing sends easy tasks like tagging and short answers to a small cheap model and keeps big models for hard reasoning. Caching reuses the repeated parts of prompts, such as system text and examples; aim for a hit rate above 40 or 60 percent depending on the app. Prompts are trimmed. Logging per request shows which features cost most. You set a quality floor and check after each step that it still holds.
+  Changes come in order of payoff. Routing sends easy tasks like tagging and short answers to a small cheap model and keeps big models for hard reasoning. Caching reuses the repeated parts of prompts, such as system text and examples; the author's hit-rate targets (40 to 60 percent) are rules of thumb, so check them against your own baseline. Prompts are trimmed. Logging per request shows which features cost most. You set a quality floor and check after each step that it still holds.
 when:
   - Your AI bill went up and you do not know which feature caused it.
   - Most of your requests are simple, but all of them go to the biggest model.
@@ -35,6 +35,7 @@ how_to_use:
   - Tell it which models you use, your monthly spend and which features cost most.
   - Paste a few sample prompts with rough token counts. If you have no logs, say so. You will get a logging plan first.
   - Set your quality floor, such as answers that must stay as good as today.
+  - "Next steps: for prompt wording, use the Prompt tester and tuner. For document retrieval, use the RAG pipeline designer. For wider monitoring, use the Monitoring planner. For slow responses, use the Slow code finder."
   - Read the ranked list and try one change at a time. Measure your own baseline first, then check cost and quality after each change.
   - Savings ranges in the skill are rough industry figures, not promises. Quote only what you measure yourself. No code is needed to run it, but your own logs make the result better.
 output_sample:

@@ -35,7 +35,7 @@ how_to_use:
   - "Answer each one: product and pitch, your audience, brand colours, and tone. Say so if you have no brand colours."
   - Open the page in your browser, or in the preview. Check the look and the motion.
   - Before you publish, replace any copy your AI guessed with real claims. Check every number and quote.
-  - Save the file and host it on any web host that takes a single HTML file. The page needs an internet connection to load fonts and animation.
+  - Replace every [CONFIRM CLAIM] tag, then open the file on your phone to check it. Next, save the file and host it on any web host that takes a single HTML file. The page needs an internet connection to load fonts and animation.
 output_sample:
   input:
     - Your product name and a one or two sentence pitch
@@ -56,3 +56,4 @@ output_sample:
       contains: Colour settings near the top of the file that you can swap in a few lines.
     - name: Product HTML file
       contains: One file with all styles and scripts inside, named after your product. It loads fonts and the GSAP animation library online.
+next: [landing-page-30-point-checker, ad-matched-landing-page-writer]

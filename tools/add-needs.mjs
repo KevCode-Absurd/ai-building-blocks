@@ -3,7 +3,9 @@
 //     which brand brain files to read, how to check for each thing, and the tools that do the job best.
 //   "## After this" (after "## What you hand back"): the AI asks what's next and offers the paths from here.
 // Run after `npm --prefix site run index` (it reads site/public/data/blocks.json). Running it again changes nothing.
-// Usage: node tools/add-needs.mjs [--check]   (--check: exit 1 if any file would change)
+// Usage: node tools/add-needs.mjs [--check] [--dry] [--out <file>] [--only <slug,slug>]
+//   --check: exit 1 if any file would change. --dry: write nothing, just count.
+//   --out: write nothing; save the old and new sections of each page that would change to <file> (Markdown).
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,6 +19,10 @@ const CHECK = process.argv.includes("--check");
 const onlyAt = process.argv.indexOf("--only");
 const ONLY = onlyAt >= 0 ? new Set((process.argv[onlyAt + 1] ?? "").split(",").filter(Boolean)) : null;
 if (ONLY && !ONLY.size) throw new Error("--only needs one or more catalogue slugs.");
+const outAt = process.argv.indexOf("--out");
+const OUT = outAt >= 0 ? process.argv[outAt + 1] : null;
+if (outAt >= 0 && !OUT) throw new Error("--out needs a file path.");
+const DRY = CHECK || !!OUT || process.argv.includes("--dry");
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "site/public/data/blocks.json"), "utf8"));
 const all = data.blocks;
@@ -27,6 +33,8 @@ const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops",
 for (const b of all) {
   for (const [k, d] of Object.entries(DEFAULTS)) b[k] ??= d;
   b.inputs = (b.inputs ?? []).map(port); b.outputs = (b.outputs ?? []).map(port);
+  // Steps come as "slug" or [slug, note]; lib/needs.mjs reads { uses }, as build-index.mjs passes them.
+  b.steps = (b.steps ?? []).map((s) => (typeof s === "string" ? { uses: s } : Array.isArray(s) ? { uses: s[0], note: s[1] } : s));
   if (b.tested === 1) b.tested = { result: "pass" };
   if (typeof b.usedIn === "number") b.usedIn = Array(b.usedIn).fill("");
 }
@@ -91,6 +99,12 @@ function insertAfter(text, nl, block, heading) {
   return lines.join(nl);
 }
 
+/** The marked section in `text` (for --out), or "(none)". */
+const section = (text, [start, end]) => {
+  const i = text.indexOf(start.slice(0, 12));
+  return i < 0 ? "(none)" : text.slice(text.indexOf("\n", i) + 1, text.indexOf(end, i)).replace(/\r/g, "").trim();
+};
+const preview = [];
 let changed = 0, withBefore = 0, withAfter = 0;
 for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
   const dir = path.join(ROOT, "catalogue-items", category);
@@ -112,9 +126,11 @@ for (const category of ["general", "ecommerce", "orchestrators", "agents"]) {
     if (after) { text = insertAfter(text, nl, [MARK.after[0], after, MARK.after[1]].join(nl), "## What you hand back"); withAfter++; }
     if (text !== old) {
       changed++;
-      if (!CHECK) fs.writeFileSync(file, text);
+      if (OUT) preview.push(`## ${category}/${slug}`, "", ...[MARK.before, MARK.after].flatMap((m) => [`### ${m === MARK.before ? "Before you start" : "After this"}: now`, "```md", section(old, m), "```", "### New", "```md", section(text, m), "```", ""]));
+      if (!DRY) fs.writeFileSync(file, text);
     }
   }
 }
-console.log(`needs: ${withBefore} with "Before you start", ${withAfter} with "After this", ${changed} files ${CHECK ? "would change" : "changed"}`);
+if (OUT) fs.writeFileSync(OUT, [`# Needs preview: ${changed} pages would change`, "", ...preview].join("\n"));
+console.log(`needs: ${withBefore} with "Before you start", ${withAfter} with "After this", ${changed} files ${DRY ? "would change" : "changed"}`);
 if (CHECK && changed) process.exit(1);

@@ -10,6 +10,21 @@ metadata:
   version: "1.1"
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../roadrunner-rrhd-authoring/references/splitClosedGeometry.md`
+- `../roadrunner-rrhd-authoring/references/synthesizeCenterLine.md`
+- `../roadrunner-rrhd-authoring/references/alignmentRules.md`
+- `roadrunner-rrhd-authoring/references/orthogonalSplit.md`
+- `../roadrunner-rrhd-authoring/references/apiReference.md`
+- `../roadrunner-rrhd-authoring/scripts/snapConnectedEndpoints.m`
+- `../roadrunner-rrhd-authoring/scripts/resolveHeightConflicts.m`
+- `../roadrunner-rrhd-authoring/references/deduplicateBoundaries.md`
+
+Do not say you read or ran them. The steps that depend on them are center line synthesis, closed-road splitting, endpoint snapping, height conflicts, boundary alignment and boundary deduplication. Do not guess this geometry. Stop before those steps, name which ones cannot run, and ask the user to supply the files from the original roadrunner-rrhd-authoring skill. Only then continue the conversion.
+
 # Lanelet2 to RRHD Converter
 
 Converts Lanelet2 `.osm` files to RoadRunner HD Map `.rrhd` format.

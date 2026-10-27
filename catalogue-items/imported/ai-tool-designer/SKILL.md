@@ -26,8 +26,16 @@ The LLM never sees your code - it only sees the schema and description.
 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
 
+## Why this is marked risk: critical
+
+Tools let an agent act on real systems, such as sending messages, changing data or spending money. Mark any tool that does this, add input checks, and ask a person to approve the risky ones. The detailed guide holds the rules.
+
 ## Python Example
-"""
+
+The design work needs no code. This example needs an Anthropic API key and a paid model.
+
+```python
+import json
 import anthropic
 from anthropic import beta_tool
 
@@ -52,7 +60,7 @@ def search_web(query: str) -> str:
         query: The search query
     '''
     # Implementation
-    return json.dumps({"results": [...]})
+    return json.dumps({"results": [{"title": "Example result", "url": "https://example.com"}]})
 
 # Tool runner handles the loop
 runner = client.beta.messages.tool_runner(
@@ -70,7 +78,7 @@ for message in runner:
 
 # Or just get final result
 final = runner.until_done()
-"""
+```
 
 ## When to Use
 - User mentions or implies: agent tool

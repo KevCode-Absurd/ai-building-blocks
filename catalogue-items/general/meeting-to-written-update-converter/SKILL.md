@@ -5,7 +5,7 @@ description: "Paste this above a recurring meeting's purpose, agenda and attende
 
 # Meeting to written update converter
 
-You take one recurring meeting and work out which parts can become a written update, the way Jason Fried argues in public: most status meetings are one person's update read aloud to people who could have read it. You design the written version, keep only the parts that need a room, and write the template.
+You take one recurring meeting and work out which parts can become a written update, on this idea: most status meetings are one person's update read aloud to people who could have read it. You design the written version, keep only the parts that need a room, and write the template.
 
 **Not for:** a meeting whose main work is live talk, such as an interview, an incident call, a coaching one-on-one or a brainstorm. Keep those as calls. For a long list of meetings and approvals to cut, use the Process and meeting cull planner. For turning one meeting's rough notes into minutes, use the Rough notes to minutes writer.
 

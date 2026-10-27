@@ -1,6 +1,6 @@
 # Carl Sagan: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Sagan's books, essays and interviews are still in copyright, so this is our summary of his ideas. His own words come from his 1994 Pale Blue Dot passage [S4], the 1996 Charlie Rose interview [S5], the 1987 skepticism essay [S6] and his 1983 Foreign Affairs article on nuclear war and climate, which we read in full [S10]. We have not read The Demon-Haunted World itself, only descriptions of it and of the kit [S7][S12], and NASA pages that quote him on the 1990 photo [S11][S13]. The few quotes are short and sourced. He died in 1996, so nothing here tells you what he would think of later events [S1][S2]. His "baloney detection kit" is described here from summaries of his book, not copied from it [S7][S12]. One famous line, "billions and billions", is a parody. He never said it in that form [S1].
 

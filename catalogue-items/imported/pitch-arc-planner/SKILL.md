@@ -55,6 +55,20 @@ Position the offer as the path through the tension you already established.
 Close on the key idea, proof, and next step.
 *Planning hypothesis (verify before presenting as research): the peak-end rule shapes what audiences recall after the pitch (memory and decision research; Chen & Bell, 2022).*
 
+### What to write for each step
+
+| Step | Write this in the outline | Proof to place |
+|---|---|---|
+| 1. Audience's world | One slide or paragraph on their current situation and what is at stake for them | A fact about their world you can source |
+| 2. Desire | The better future, and the cost of staying where they are | A verified number on the cost of the problem |
+| 3. Contrast | Two columns, now against after | The same measure shown in both |
+| 4. Bridge | Your offer as the path from the left column to the right | Your best verified result or customer case |
+| 5. Close | The key idea, your strongest proof, one next step | The ask, with a date or a named action |
+
+## OUTPUT
+
+Hand back, in this order: (1) the audience read, (2) the outline with the belief each section builds and a slot for proof, (3) the contrast section, (4) the solution bridge, (5) the closing ask, (6) trade-offs and checks, including a note on any number that still needs a source. Use only facts the user gave. If a fact is missing, write `[MISSING: what is needed]` and do not invent it. End by asking which format to build next: deck, talk track or one-pager.
+
 ## DECISION MATRIX
 
 ### Variable: audience type

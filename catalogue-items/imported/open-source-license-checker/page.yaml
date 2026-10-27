@@ -35,6 +35,7 @@ how_to_use:
   - "Say what license your project uses and how you share it: as a service, a download, a library or an internal tool."
   - Read the risk flags first. Treat clashes as likely problems and check them with a lawyer before you act.
   - If your AI cannot read your whole project, paste the lock file too so it can see packages underneath.
+  - Send the report to a qualified lawyer before you ship. For known security holes in the same packages, use the Dependency risk scanner.
 output_sample:
   input:
     - Your dependency file, such as package.json, requirements.txt or go.mod

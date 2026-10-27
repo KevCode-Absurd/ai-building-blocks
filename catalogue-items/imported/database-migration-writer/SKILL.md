@@ -167,8 +167,8 @@ ALTER TABLE "Review" ADD CONSTRAINT "Review_productId_fkey"
 
 ## Edge Cases
 
-- **Large table migrations:** Adding a NOT NULL column with a default to a table with millions of rows can lock the table for minutes in older PostgreSQL versions. Use `ADD COLUMN ... DEFAULT ... NOT NULL` (lock-free in PostgreSQL 11+) or add as nullable, backfill in batches, then set NOT NULL.
+- **Large table migrations:** Adding a NOT NULL column with a default to a table with millions of rows can lock the table for minutes in older PostgreSQL versions. From PostgreSQL 11, `ADD COLUMN ... DEFAULT ... NOT NULL` with a constant default does not rewrite the table. A volatile default (such as `random()` or `clock_timestamp()`) still rewrites the table and can lock it, so for those add the column as nullable, backfill in batches, then set NOT NULL.
 - **Renaming columns:** Most migration tools treat renames as a drop + add, which causes data loss. Use `op.alter_column()` in Alembic or raw `ALTER TABLE ... RENAME COLUMN` to perform a true rename. Verify the generated migration before applying.
-- **Concurrent migrations:** In multi-instance deployments, ensure only one instance runs migrations. Use advisory locks (Flyway and Alembic support this) or a deployment pipeline that runs migrations as a dedicated step before rolling out application instances.
+- **Concurrent migrations:** In multi-instance deployments, ensure only one instance runs migrations. The safest default is a deployment pipeline that runs migrations as a dedicated step before rolling out application instances. Some tools take a lock on their own (Flyway locks its schema history table). Check your tool's documentation before you rely on it.
 - **Enum type changes:** Adding values to a PostgreSQL enum is non-transactional. Create a new enum type, migrate the column, then drop the old type. Alternatively, use a VARCHAR with a CHECK constraint for easier modification.
 - **Data-only migrations:** When you need to transform data without changing the schema (e.g., encrypting a column's values), still use a migration file to keep it versioned and reproducible across environments.

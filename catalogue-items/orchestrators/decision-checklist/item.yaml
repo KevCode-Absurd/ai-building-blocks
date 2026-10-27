@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger]
 credits:
-  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The order of the steps: log your mistakes and other people's, build the checklist, run it on a live decision, keep the checklist sharp"}
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "Inspired by its idea of learning from your own mistakes and other people's, then using a checklist on a live decision and keeping it sharp"}
 generated_from: intake/munger-models-personal-checklist/skeleton.yaml

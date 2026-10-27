@@ -1,0 +1,120 @@
+new_slug: side-hustle-idea-finder
+name: Side hustle idea finder
+summary: Share your skills, spare hours and budget. Get three to five side hustle ideas, each with a first customer and a cheap test.
+job: plan-strategy
+thinking: medium
+thinking_why: It has to match ideas to your skills and limits, and judge which are worth testing.
+headline: Side hustle idea finder
+subhead: Tell it what you're good at, how many hours you have each week, how much you can spend and what you want from it. It gives you three to five side business ideas that fit. Each has a first customer, a cheap way to test it, and the main risks. It makes no income promises.
+explain: |
+  Most lists of side hustles are the same ten ideas with no link to you. They ignore your skills, your hours and your budget, and say nothing about how to find the first customer. The ideas that work are usually close to what you already do and who already knows you.
+
+  This skill works the other way round. It starts with your skills, your contacts, your spare hours and what you can spend. It then gives three to five ideas that fit, and for each names who the first customer might be, the cheapest way to test it, and what could go wrong. It ranks them by how cheap and quick they are to test, not by how much they might earn. It never promises income, because it can't know it.
+when:
+  - You want extra income and don't know where to start.
+  - You have a skill and wonder if anyone would pay for it.
+  - You have a few ideas and want help picking one to try.
+not_for:
+  - "You want an idea checked with real customers: use the Customer discovery interview planner."
+  - "You have chosen an idea and want to set up the business: use the Business structure chooser."
+  - "You want guaranteed income: no tool can promise that."
+you_give:
+  - Your skills and what you have done for work or fun
+  - Spare hours a week, and when you have them
+  - How much you can spend to start
+  - "What you want from it: extra income, learning, a path to full time"
+  - People or groups you already know (optional)
+you_get:
+  - Three to five ideas that fit your skills, hours and budget
+  - A first customer for each idea
+  - The cheapest test of each idea, and what a good result looks like
+  - The main risks, and a ranking by how easy each is to test
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your skills, spare hours, budget and what you want from a side business.
+  - Add the people and groups you already know, since the first customers often come from them.
+  - Pick the idea with the cheapest test and run the test for two weeks.
+  - Come back with what happened and ask what to try next.
+output_sample:
+  input:
+    - Your skills and what you have done for work or fun
+    - Spare hours a week and how much you can spend
+    - What you want from it
+    - People or groups you already know (optional)
+  output:
+    - name: Your starting point
+      contains: Your skills, hours, budget and goal, as you gave them.
+    - name: Ideas, easiest to test first
+      contains: Three to five ideas, each with a first customer, a cheap test, what a good result looks like and the main risks.
+    - name: My pick to test first
+      contains: The idea that is cheapest and quickest to test, and why.
+    - name: Missing
+      contains: Anything you did not tell it that would sharpen the ideas.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads your starting point
+    text: Pulls out your skills, hours, budget and goal.
+  - title: Finds the fit
+    text: Looks for ideas close to what you already do and who you already know.
+  - title: Names the first customer
+    text: Says who might buy first, and where you'd reach them.
+  - title: Designs the cheap test
+    text: Sets a small test for each idea that costs little time and money.
+  - title: Lists the risks
+    text: Names the main things that could go wrong with each.
+  - title: Ranks by test
+    text: Ranks the ideas by how easy and cheap they are to test, not by imagined earnings.
+output_shape: |
+  YOUR STARTING POINT
+  <skills, hours, budget, goal>
+
+  IDEAS, EASIEST TO TEST FIRST
+  1. <idea> | First customer: <who, where you'd reach them> | Cheap test: <what, cost, time> | Good result: <what you'd see> | Main risks: <list>
+
+  MY PICK TO TEST FIRST
+  <idea, and why>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Your skills
+    how: List work skills and hobbies. A skill you use for fun may be the one people will pay for.
+  - what: Your hours
+    how: Give the real number and the time of day. An idea that needs daytime calls won't fit evenings.
+  - what: Your budget
+    how: Say the most you could spend and lose. It decides which tests are possible.
+  - what: Who you know
+    how: Name groups or communities. The first customer is often someone who already trusts you.
+judge:
+  - Each idea uses a skill you named.
+  - Each idea names a first customer you could reach.
+  - Each test costs little and can be run in a couple of weeks.
+  - No income figure or promise of earnings appears.
+  - The risks are specific to each idea.
+test:
+  - Pick one idea and run its test. Note whether you got a real yes from a stranger.
+  - Change your budget to nothing. The ideas should change to ones that cost no money to test.
+  - Show the list to a friend who knows you. Ask which idea fits you best.
+improve:
+  - Save your skills and hours in your about-me note, so you can rerun this when they change.
+  - Add the platforms and communities you already use to the skill file.
+  - After your test, add what you learned and ask for ideas that build on it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Matching ideas to your skills and limits works well in any strong chat AI.
+    - name: Places where your first customers gather
+      why: Local groups, forums or social media show whether people ask for what you plan to offer.
+  inputs:
+    - A list of work you have been paid for, even small jobs
+    - The questions friends ask you to help with
+    - Your calendar for a normal week
+terms:
+  - term: Cheap test
+    meaning: A small, quick way to find out if someone will pay, before you spend much time or money.
+  - term: First customer
+    meaning: The first person or group who might pay, and where you'd reach them.

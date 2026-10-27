@@ -9,6 +9,7 @@ job: ads
 level: intermediate
 inputs:
   - {type: brief, required: true}
+  - {type: static_ads, required: false}
 outputs:
   - {type: brief}
 uses: []

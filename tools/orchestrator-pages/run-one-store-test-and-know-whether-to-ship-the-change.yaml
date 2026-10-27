@@ -22,6 +22,8 @@ you_give:
   - Orders per month, visits per month and conversion rate for the page
   - The change you want to test and why you think it will help
   - Your Shopify plan, and who will build the change
+  - Whether anything on the page is broken today
+  - The smallest gain that would pay for the work, and your gross profit per order (optional)
   - Where your ads send traffic
   - After the test, the numbers for each version and anything else that happened during it, such as a sale or an email send
 you_get:
@@ -31,7 +33,7 @@ you_get:
   - A one-change plan with fixed dates and what each result means
   - A ship call with a trust score out of 100, the result as a range in money and a log entry
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and five skill files, in the order they run: Store test readiness checker, Big swing test picker, Shopify test setup picker, One-change experiment planner, then Store test verdict maker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your orders, visits and the page you want to test. Say if anything on that page is broken today.
   - Choose the one test to run first. Build it, then run it to the planned sample and dates. Do not stop early.

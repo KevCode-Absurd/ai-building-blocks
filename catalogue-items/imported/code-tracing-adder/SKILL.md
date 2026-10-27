@@ -139,7 +139,7 @@ Add attributes that would help with debugging: input sizes, key parameters, outp
 
 ### Step 6: Verify
 
-Run the instrumented code via `mcp__matlab__evaluate_matlab_code` or `mcp__matlab__run_matlab_file` to confirm it executes without error.
+Run the instrumented code via `mcp__matlab__evaluate_matlab_code` or `mcp__matlab__run_matlab_file` to confirm it executes without error. If your AI has no MATLAB connection, skip this step and ask the user to run the code in MATLAB and report any error.
 
 ## Core Pattern
 

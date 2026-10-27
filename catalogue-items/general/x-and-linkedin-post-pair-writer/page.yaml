@@ -21,6 +21,7 @@ not_for:
   - "You want a full check across many platforms: use the Cross-platform post writer."
   - "You want a long article or a numbered thread: write it yourself or ask your AI for a long-form draft."
   - "You only post on one site: ask your AI to write a single post for that site."
+  - "You want one LinkedIn post, carousel script or poll checked for weak hooks: use the LinkedIn post writer."
 
 you_give:
   - "The idea in rough words"

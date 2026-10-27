@@ -101,7 +101,7 @@ This is where the skill earns its keep — and where **fabrication is forbidden*
 
 **Workflow:**
 
-1. **Inventory the workspace** — Glob for filename patterns matching dump keywords, Grep for content matches, read the top-level directory structure. Use `scripts/workspace_inventory.py` to do this deterministically.
+1. **Inventory the workspace** — search the files you can see for names and text that match the dump's keywords (Glob and Grep in a coding tool), and read the top-level folder structure. Use `scripts/workspace_inventory.py` to do this deterministically.
 2. **Match dump items to existing content** — files / folders relating to dumped items, prior thinking in documents, in-progress projects with overlap.
 3. **Surface dependencies within the dump** — items that affect each other, themes, ordering implications.
 4. **Be honest about inaccessibility** — if you can't inspect the workspace (no filesystem available, MCP not connected), say so explicitly. Do NOT make up plausible-sounding connections.

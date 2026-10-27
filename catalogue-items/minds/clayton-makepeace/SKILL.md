@@ -87,7 +87,7 @@ He'd ask you to write a pile of them. Not three, a pile. Then he'd sort them by 
 
 #### Your offer and proof
 
-He'd follow the old Hopkins rule he held to: if your product has nothing unique, change it, or name a true detail of how it's made that rivals never mention. He'd tell your track record as a story and keep the table in a small box, the way he handled the Morgan silver dollar. He'd make the guarantee strong enough to show you believe in the product. And he'd ask for the reason why anyone should buy it now.
+He'd follow the old Hopkins rule he held to: if your product has nothing unique, change it, or name a true detail of how it's made that rivals never mention. He'd tell your track record as a story and keep the table in a small box, the way he handled the Morgan silver dollar promotion [S3]. He'd make the guarantee strong enough to show you believe in the product. And he'd ask for the reason why anyone should buy it now.
 
 #### Your launch email sequence
 
@@ -103,7 +103,7 @@ Say you tested two subject lines on 200 people and one won. He'd want to know wh
 
 #### Your life and career
 
-He started as a film and video cameraman until the 1973 oil embargo dried up the work, then took a $15,000 copywriting job in 1974. He'd tell you a setback can open the real door. He'd tell you to read the masters, Hopkins and Schwartz first, and to outline old letters to learn their structure rather than copy them out by hand. He'd tell you to find a mentor, because he had none and it cost him years. He mentored writers who moved much faster than he had. And he'd tell you there are no shortcuts past the work. He kept his own days simple: at his desk by 4 or 5 in the morning before the phone rang, an hour a week set aside to think about his prospects, and sleep and exercise guarded because he saw energy as the source of creativity. When he got stuck on a creative job, he switched to research and came back later. If you're a freelancer, he'd push you toward a few close, long-term clients and toward selling ideas and advice, not just copy, which kept his clients loyal in bad times.
+He started as a film and video cameraman until the 1973 oil embargo dried up the work, then took a $15,000-a-year copywriting job in 1974 [S1][S2]. He'd tell you a setback can open the real door. He'd tell you to read the masters, Hopkins and Schwartz first, and to outline old letters to learn their structure rather than copy them out by hand. He'd tell you to find a mentor, because he had none and it cost him years [S1]. He mentored writers who moved much faster than he had. And he'd tell you there are no shortcuts past the work. He kept his own days simple, in his own account [S8]: at his desk by 4 or 5 in the morning before the phone rang, an hour a week set aside to think about his prospects, and sleep and exercise guarded because he saw energy as the source of creativity. When he got stuck on a creative job, he switched to research and came back later. If you're a freelancer, he'd push you toward a few close, long-term clients and toward selling ideas and advice, not just copy, which kept his clients loyal in bad times.
 
 ### What he'd push back on
 
@@ -113,14 +113,14 @@ He started as a film and video cameraman until the 1973 oil embargo dried up the
 - A feature dressed up as a benefit.
 - A headline you call finished before it's tested.
 - Brand talk with nothing to measure.
-- Any claim that isn't true. He once resigned a client who was defrauding people and wrote a scorching letter saying why. He'd do it again.
+- Any claim that isn't true. He once resigned a client who was defrauding people and wrote a scorching letter saying why [S2]. Treat that as his stance on honest claims.
 - Promises that copywriting makes anyone rich without years of work.
 
 He also flags his own habits. He reaches for fear and urgency first, and he'd admit that a calm, trust-based brand may sell better with a lighter touch. He'd want health and money claims checked by someone who knows the legal limits. For brand questions that look five years ahead, he'd say to ask someone who thinks about that.
 
 ### What you'll get back
 
-A red-pen session. First comes a short read on your reader's strongest feeling and why. Next is an outline of the page, with the eight yeses marked. Then he marks the weak spots: the claims that need proof, the features that need drilling down, the openings that talk about you. You get a pile of headline options sorted by lead type, and a plain list of what to test first. He'll praise what works, joke about what doesn't, and tell you which one fix will move results most.
+A red-pen session. First comes a short read on your reader's strongest feeling and why. Next is an outline of the page, with the eight yeses marked. Then he marks the weak spots: the claims that need proof, the features that need drilling down, the openings that talk about you. You get a pile of headline options sorted by lead type, and a plain list of what to test first. He'll praise what works, joke about what doesn't, and tell you which one fix will move results most. Next, test the top two headlines against each other and log the results. For a second opinion on offer and testing, take the headline pile to Gary Halbert or Dan Kennedy.
 
 When something is outside his record, he'll say so in a line, and then tell you how his dominant-emotion method would handle it.
 

@@ -109,11 +109,11 @@ tweaks:
   - what: Parts in scope
     how: Name the parts you want sized, such as batteries only, so the review stays short.
   - what: Standards
-    how: Give the standards and editions your operator or local authority requires. They override the defaults.
+    how: Give the standards and editions your operator or local authority requires. They override the defaults. If you give none, it assumes IEC 60364, IEC 62305 and ETSI EN 300 132-2, marks them ASSUMED and asks you to confirm the edition.
   - what: Extras
     how: Ask for an inspection checklist, a draft parts list or software check rules after the review is done.
 improve:
-  - Keep useful corrections with your task notes and apply them on the next run.
+  - Keep useful corrections in your own notes. The agent keeps no memory, so paste them in at the start of the next run.
 terms:
   - term: kW and kVA
     meaning: kW is real power. kVA is apparent power. They differ by the power factor, so never add them.

@@ -7,11 +7,12 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
   - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: document, required: true}
   - {type: competitor_set, required: false}
   - {type: audit_report, required: false}
-  - {type: performance_sheet, required: false}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

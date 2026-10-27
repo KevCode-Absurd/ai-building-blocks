@@ -35,6 +35,7 @@ how_to_use:
   - After each answer, check that the file now holds what you said. Ask for a fix if it does not.
   - If you list items, say which one is first. The AI will not guess the order.
   - When the file is full, read it once through and fix any line that does not sound like you.
+  - Save the file. Read it again at your next quarterly review, and update it by changing only the sections that moved.
 output_sample:
   input:
     - The name or topic of the document, such as principles or priorities

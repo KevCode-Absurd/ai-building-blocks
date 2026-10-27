@@ -30,7 +30,7 @@ you_get:
   - A script table matching every spoken line to a picture that shows it
   - A playback count, what stole the rest, and what to cut
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 5 skill files in the order they run: Product differentiation checker, Selling proposition finder, USP claim checker, Claim demonstration planner and Ad distraction checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your product facts and any rival ads. Ask it to run the first four steps.
   - Show the script or a rough cut to ten people who have not seen it. Ask only what it said, and write their words down.

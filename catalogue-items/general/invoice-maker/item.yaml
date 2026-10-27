@@ -1,0 +1,20 @@
+slug: invoice-maker
+name: Invoice maker
+summary: Give it your details, your client and your work. Get an invoice with the totals added up and checked.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - invoice-checker
+  - doc-typo-and-term-checker

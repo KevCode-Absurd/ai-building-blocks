@@ -73,7 +73,7 @@ how_it_works:
   - title: Dates the hires
     text: Agents needed from forecast tickets, counted back from your peak by your training time. The goal is a flat cost per ticket.
   - title: Suggests a team mix
-    text: Simple tickets to offshore agents, complex ones to local agents. Efficiency depends on training.
+    text: Simple tickets to offshore agents, complex ones to local agents. Efficiency depends on training. This is one speaker's view, so compare resolution time for each group in your own data.
   - title: Fixes the causes
     text: Tags ticket reasons and lists the page, packaging or shipping changes that remove the top ones.
   - title: Reviews monthly
@@ -133,8 +133,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Gorgias", why: "A helpdesk built for online stores that tracks email and tickets and exports reasons and times."}
-    - {name: "Zendesk", why: "A general helpdesk with ticket tags and reports."}
+    - {name: "Gorgias", why: "A helpdesk built for online stores that tracks email and tickets and exports reasons and times. It is a paid help desk."}
+    - {name: "Zendesk", why: "A general helpdesk with ticket tags and reports. It is a paid help desk."}
   inputs:
     - "Last year's tickets by month with orders for the same months"
     - "Your top ticket reasons with counts"

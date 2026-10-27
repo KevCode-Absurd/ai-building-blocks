@@ -5,7 +5,7 @@ name: Expected credit loss calculator
 summary: Work out expected credit losses under IFRS 9 or CECL from your loan or receivable list. You get the allowance, stages and journal entry.
 job: money-and-investing
 headline: Expected credit loss calculator
-subhead: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL. Bring loan or receivable list with balances. Use the result to plan your next step.
+subhead: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL. Have your loan or receivable list ready, with a balance and days past due for each line.
 explain: |
   Expected credit losses for your loans or receivables, worked out the way IFRS 9 or CECL requires, with the number you need for the loss allowance.
 
@@ -20,8 +20,8 @@ not_for:
   - "You want to post the journal entry without review: have a qualified accountant check the numbers first."
   - "You only want a quick look at which credit risks exist: list them with a person who knows your lenders or customers first."
 you_give:
-  - Loan or receivable list with balances
-  - Default history or ratings
+  - Loan or receivable list, one row per item: balance, days past due, asset type, start date and a default flag or rating
+  - Past losses or default history, if you have it
   - Asset type and accounting standard
   - Economic scenarios and weights (optional)
 you_get:
@@ -31,9 +31,12 @@ you_get:
   - Journal entry for the allowance
   - Notes on method for audit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can run code and read your files.
+  - Use an AI that can run code and read files, such as Claude Code. A chat window can do a small case by hand, but cannot run the calculation script.
+  - Download the skill folder, with its scripts folder, and open it in your AI.
+  - Save your list as a CSV file with one row per loan or receivable. Include balance, days past due, asset type, start date and a default flag or rating.
+  - Tell your AI the standard (IFRS 9 or CECL), the reporting date, and your base, upside and downside scenarios with their weights.
+  - Ask it to follow the skill and run scripts/calculate.py for every figure. Do not let it work out the sums in text.
+  - Check the allowance, the stage for each group and the journal entry. Send them to your accountant or auditor before you book anything.
 output_sample:
   input:
     - Your loan or receivable list with balances
@@ -51,3 +54,4 @@ output_sample:
       contains: How the loss changes if the chance of the downside economic scenario goes up by 10%.
     - name: Journal entry
       contains: The entry that books the loss allowance.
+next: [financial-statement-builder, journal-entry-preparer, financial-risk-mapper]

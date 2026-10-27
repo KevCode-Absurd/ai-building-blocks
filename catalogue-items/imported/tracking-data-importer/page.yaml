@@ -5,7 +5,7 @@ name: Tracking data importer
 summary: Turn a CSV or Excel file of tracks or detections into data MATLAB tracking tools can read. Get a confirmed column map, code and a plot.
 job: build-software
 headline: Tracking data importer
-subhead: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools. Bring a CSV, Excel or text file of tracks or detections. Use the result to plan your next step.
+subhead: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools. Then pass it to multiSensorTargetTracker or trackingFilterTuner.
 explain: |
   Raw track logs from GPS, flight recorders, radar or cameras rarely load straight into MATLAB's tracking tools. This skill turns your CSV, Excel or text file into the exact format those tools expect, so you can replay trajectories, tune filters or feed a tracker.
 
@@ -35,7 +35,7 @@ how_to_use:
   - Say if the file holds truth paths or sensor measurements. Add units and sensor type if you know them.
   - Check the column mapping table your AI shows. Fix any wrong row and confirm.
   - Run the code, then look at the plot to check the result.
-  - This skill is a copy of the MathWorks source, shared under its BSD-2 licence. The toolbox is a separate MathWorks product.
+  - This skill is a copy of the MathWorks source, shared under its BSD-2 licence, which allows use only with MathWorks products (see LICENSE.md). The toolbox is a separate, paid MathWorks product.
 output_sample:
   input:
     - Your CSV, Excel or text file of tracks or detections

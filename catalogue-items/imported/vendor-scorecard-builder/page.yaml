@@ -32,7 +32,8 @@ you_get:
   - A keep, review or replace recommendation
 how_to_use:
   - Use an AI that can run Python and read files, such as Claude with file tools. A plain chat can follow the steps but cannot run the scripts.
-  - Put your vendors in a spreadsheet with one row each. Ask your AI to turn it into the JSON catalog the skill needs.
+  - Put your vendors in a spreadsheet with one row each. Ask your AI to turn it into the JSON catalog the skill needs. Each vendor needs: name, category, annual_spend, contract_end_date, criticality (tier-1, tier-2 or tier-3), uptime_pct, support_response_hours_p90, incident_count_last_12m, security_certs and renewal_terms. Leave out any you do not have and your AI marks it missing.
+  - The scoring script (vendor_scorer.py) is not in the skill folder. If your AI cannot find it, it works out the scores by hand from the weights in the skill and shows its maths.
   - Upload the skill folder and the catalog. Tell your AI your industry and ask it to follow the skill.
   - Add your SLA records if you have them, so it can flag credits you can claim.
   - Check the scorecard, SLA report and risk matrix. Pick your top replace and review vendors before renewal.
@@ -56,3 +57,4 @@ output_sample:
       contains: A Critical, High, Medium or Low rating for each vendor across four risk types, with a fix for each.
     - name: Final digest
       contains: Top 3 keep wins, top 3 review talks, top 3 replace picks, claimable credits and critical-risk vendors with no fix.
+next: [vendor-comparison-writer]

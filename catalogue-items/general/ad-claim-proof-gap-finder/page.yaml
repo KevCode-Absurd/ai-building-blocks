@@ -15,9 +15,10 @@ when:
   - A platform has flagged an ad for a claim.
   - You want to know which claims need more proof before you scale.
 not_for:
-  - "You want the full check with every test: use the Claim and proof matcher."
+  - "You want the full check with every test: use the Claim evidence checker."
   - "Your ad makes no claims yet: write the draft first, then run this check."
   - "You need legal or medical sign-off: ask a qualified person and check your platform's ad rules."
+  - "You want each claim sorted as fine, needs proof or cut, with safer wording: use the Ad claim sorter."
 you_give:
   - Your ad or page copy
   - Your proof, with sources

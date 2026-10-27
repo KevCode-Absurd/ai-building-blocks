@@ -30,10 +30,10 @@ you_get:
   - Reason notes logged on each card
   - A summary of what was issued
 how_to_use:
-  - Open an AI that can run Shopify commands and is signed in to your store. Check that gift cards are on in your settings.
+  - Open an AI that can run commands on your computer, with the Shopify CLI installed and signed in to your store (shopify auth login). Check that gift cards are on in your settings.
   - Paste the skill into the chat. Add your store domain, the customer email or ID, and the amount.
   - Add a reason, an expiry date and a customer tag if you want them (optional).
-  - Ask for a dry run first. The skill does not default to one, so say so. Check the customer, amount and expiry.
+  - Ask for a dry run first. The skill does not default to one, so say so. Check the customer, amount and expiry. Do not let it issue anything live until you say so.
   - For a list of customers, check the full list before you run it. Then run it for real and copy each code from the summary.
   - Send each code to its customer. Cards cannot be deleted, only disabled, so check amounts with care.
 output_sample:
@@ -55,3 +55,4 @@ output_sample:
       contains: The gift card made for that customer, or a dry run note if nothing was created.
     - name: Outcome summary
       contains: Customer, gift card code, amount, expiry date and error count, to copy and send to the customer.
+next: [gift-card-liability-calculator, loyalty-customer-list-builder]

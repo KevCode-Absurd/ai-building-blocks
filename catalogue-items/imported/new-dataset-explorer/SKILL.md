@@ -40,6 +40,8 @@ Provide the agent with the dataset file path. Optionally specify target columns 
 
 ### Example 1: Full EDA on a dataset
 
+> Added by AI Blocks: the numbers in the comments below (shape, duplicates, outliers, correlations) are illustrative values for a sample file that is not included. They are not results from your data. Report only what your own file shows.
+
 ```python
 import pandas as pd
 import seaborn as sns

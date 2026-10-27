@@ -58,6 +58,8 @@ Before designing the calculator, decide whether a calculator is the right tool f
 
 The decision is not "should we have a calculator"; it is "is the calculator the right next investment for this specific audience and goal."
 
+> Added by AI Blocks, a quick test: list the three decisions the visitor makes after seeing the result. If you cannot name three, or the result changes none of them, the calculator does not earn its build. Pick a checklist or a short guide instead.
+
 Detail in [`references/calculator-investment-criteria.md`](references/calculator-investment-criteria.md).
 
 ---

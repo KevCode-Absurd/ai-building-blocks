@@ -240,4 +240,4 @@ latest arXiv version, so never append a version suffix such as `v1`. When networ
 available, fetch https://arxiv.org/abs/2609.00065 (or
 http://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
 the author list, year, and version from that record. If the record lists a journal reference
-or publisher DOI, cite the published version instead.
+or publisher DOI, cite the published version instead. This lookup is the only network use, and it is done by you or your AI, never by the conversion scripts.

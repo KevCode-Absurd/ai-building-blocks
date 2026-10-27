@@ -31,7 +31,7 @@ you_get:
   - A gap list with fix, build or influence on each item, quick wins first, and a topic coverage score out of 100
   - Rewritten product pages with a plain first screen, spec table, short FAQ, title and a markup checklist
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It is a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - Give it your products with prices. Add reviews or customer emails if you have them, because real customer words make better questions.
   - Run the questions it writes in each AI assistant you can use, then paste the answers back. The workflow only records and scores them. It cannot run them for you.

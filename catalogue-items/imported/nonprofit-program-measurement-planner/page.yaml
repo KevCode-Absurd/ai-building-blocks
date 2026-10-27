@@ -12,9 +12,9 @@ when:
   - You need a calendar for who collects which data and when.
   - You must write the results section of a funder or annual report.
 not_for:
-  - "You have no outcomes yet and need a logic model: use nonprofit-program-design first, then come back here."
-  - "You are deciding whether a community needs a program at all: use nonprofit-needs-assessment, which covers research before you start."
-  - "You want the outcomes written into a grant proposal story: use nonprofit-grant-writing, and bring this plan's results to it."
+  - "You have no outcomes yet and need a logic model: use the Nonprofit program outcome planner first, then come back here."
+  - "You are deciding whether a community needs a program at all: ask a local needs study or survey first, since this library has no needs-assessment skill yet."
+  - "You want the outcomes written into a grant proposal story: use the Nonprofit grant proposal writer, and bring this plan's results to it."
 you_give:
   - Your program's outcome list or logic model.
   - The records you can collect, such as attendance, enrollment and case notes.
@@ -43,11 +43,12 @@ works_best_with:
     - Reported outcomes go to funders and the board as fact.
 how_to_use:
   - Gather your outcome list, your record sources and any baseline numbers before you start.
-  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste your outcomes and details. No code or paid tool is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Then add your outcomes and details. No code or paid tool is needed.
+  - Before you paste case notes or enrollment records, remove client names and other identifiers. Check your privacy policy and consent terms first.
   - If you use a validated scale, check whether it needs permission first.
   - Read the indicator table and fix any target your leaders do not agree with.
   - Check the response-rate floor and how each rate is counted before you share any results.
-  - Have a person review the report before it goes to funders or the board.
+  - "Check before sharing: reported outcomes go to funders and the board as fact. Have a person review the report first."
 output_sample:
   input:
     - Your program's intended outcomes, or a rough logic model
@@ -73,3 +74,4 @@ output_sample:
       contains: A one-page view of each indicator with target, actual and trend.
     - name: Funder results narrative
       contains: Results with design, sample size, response rate, how each rate is counted, and limitations.
+next: [nonprofit-grant-proposal-writer, nonprofit-program-outcome-planner]

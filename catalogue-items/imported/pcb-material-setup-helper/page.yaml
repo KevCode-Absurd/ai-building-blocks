@@ -16,8 +16,8 @@ when:
   - You want a multi-layer stack for a stripline or embedded design.
   - Results need to stay accurate across a wide frequency band.
 not_for:
-  - "You need to build the board layers themselves: use the matlab-assemble-pcb-layout skill, which is not listed here yet."
-  - "You want to design a transmission line or filter: a design skill for that comes next, after materials are set."
+  - "You need to build the board layout itself: use the PCB circuit combiner, after the materials are set."
+  - "You want to design a transmission line or filter: use the PCB trace designer or the PCB RF filter designer, after the materials are set."
   - "You have no MATLAB or RF PCB Toolbox: ask a board designer for the material values, or use a free field solver."
 you_give:
   - Your material name or its datasheet values
@@ -34,6 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
   - "Send a clear request, for example: FR4, 1.6 mm thick, copper conductor, 1 to 10 GHz."
   - Read the MATLAB code it returns. Check that thickness is in meters and the loss model fits your range.
+  - Check the permittivity, loss tangent and thickness it used against your material's datasheet before you run the code in a design.
   - Copy the code into MATLAB and run it. Then pass the substrate and conductor to your next design.
 output_sample:
   input:
@@ -46,7 +47,7 @@ output_sample:
     - An AI that can write MATLAB code
   output:
     - name: Dielectric (substrate)
-      contains: MATLAB code that makes your substrate from the catalog or from your own permittivity, loss tangent and thickness.
+      contains: One MATLAB script for the whole setup, in SI units (meters). It makes your substrate from the catalog or from your own permittivity, loss tangent and thickness. Each object is named and commented.
     - name: Metal (conductor)
       contains: MATLAB code for a conductor such as copper or gold, with real conductivity and thickness.
     - name: Multi-layer stack
@@ -55,3 +56,4 @@ output_sample:
       contains: Code that sets a reference frequency so loss stays accurate across a wide band.
     - name: Property check
       contains: Code that reads permittivity and loss tangent at your chosen frequencies, and plots them.
+next: [pcb-trace-designer, pcb-rf-filter-designer]

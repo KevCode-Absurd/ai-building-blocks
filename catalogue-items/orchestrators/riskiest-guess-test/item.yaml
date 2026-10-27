@@ -7,15 +7,15 @@ role: orchestrate
 job: research
 level: intermediate
 inputs:
-  - {type: brief, required: true}
-  - {type: question, required: true}
+  - {type: document, required: true}
+  - {type: question, required: false}
 outputs:
   - {type: plan}
 uses: [leap-of-faith-assumption-finder, smallest-test-picker, mvp-experiment-planner]
 steps:
   - {uses: leap-of-faith-assumption-finder, note: "The few guesses the plan stands on, each with a predicted number, the riskiest first."}
-  - {uses: smallest-test-picker, note: "The cheapest form of test for the top guess, and the list of things to leave out. Reads the guesses from the step before."}
-  - {uses: mvp-experiment-planner, note: "Pass lines set before the run, the run plan and a pivot or persevere rule. Reads the test from the step before."}
+  - {uses: smallest-test-picker, note: "The cheapest form of test for the top guess, and the list of things to leave out. Reads the guesses from the step before and starts from the top one."}
+  - {uses: mvp-experiment-planner, note: "Pass lines set before the run, the run plan and a pivot or persevere rule. Reads the test from the step before and starts from its top guess and test form, not a new pick."}
 origin: rebuilt
 version: 1.0.0
 minds: [eric-ries, steve-blank]

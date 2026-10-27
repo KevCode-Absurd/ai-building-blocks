@@ -6,8 +6,6 @@ argument-hint: "<content type and topic>"
 
 # Draft Content
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate marketing content drafts tailored to a specific content type, audience, and brand voice.
 
 ## Trigger
@@ -38,7 +36,7 @@ Gather the following from the user. If not provided, ask before proceeding:
 
 ## Brand Voice
 
-- If the user has a brand voice configured in their local settings file, apply it automatically. Inform the user that brand voice settings are being applied.
+- If the user has pasted brand voice notes, or has a brand voice configured in a local settings file, apply it automatically. Inform the user that brand voice settings are being applied.
 - If no brand voice is configured, ask: "Do you have brand voice guidelines you'd like me to follow? If not, I'll use a neutral professional tone."
 - Apply the specified or default tone consistently throughout the draft.
 

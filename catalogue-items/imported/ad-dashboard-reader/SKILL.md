@@ -20,7 +20,7 @@ When to use this skill: any time you are about to scale, kill, or rebudget a cam
 
 ## What this skill is for
 
-This skill spans paid media result interpretation. It does not cover paid media strategy (use `paid-media-strategy`), creative production (use `ads-creative-development`), or platform-specific tooling (covered in the integrations microsites). Pair this skill with the relevant integrations microsite for platform-specific MCP commands and example prompts.
+This skill spans paid media result interpretation. It does not cover paid media strategy (use your own media plan), creative production (use the Ad creative variation planner in this library), or platform-specific tooling (use each platform's own help pages).
 
 The audience is a marketer, growth analyst, agency analyst, or founder evaluating paid media reports. The voice is patient and clinical. There is no "trust the platform's number" or "ignore the platform entirely." Both are wrong. The discipline is knowing which numbers from which platform mean what, and what to reconcile against to make the actual decision.
 
@@ -111,7 +111,7 @@ The board-deck pattern. Report warehouse-attributed conversion counts, never pla
 
 ROAS is short-term. Revenue from purchases attributed to a campaign in a fixed window, often 7 to 30 days. LTV is long-term. Total customer lifetime revenue.
 
-Decisions made on ROAS can be wrong if LTV varies by channel. A worked example.
+Decisions made on ROAS can be wrong if LTV varies by channel. A worked example (illustrative numbers, not real results).
 
 Meta drives 2.5x ROAS at $40 CAC with $80 LTV. That is 2.0x payback over the customer lifetime.
 
@@ -143,6 +143,8 @@ The signal to act on. Declining cohort LTV over two consecutive months is the al
 
 ## Statistical noise in performance metrics
 
+> **AI Blocks note:** the percentage ranges in this section and the next are the original author's rules of thumb, not measured benchmarks, and no source is named. Say so when you use them, and tell the user to check their own holdout or test results.
+
 Most "the campaign improved 15% week over week" stories are noise. Real performance changes are 30% or more in metrics that vary 10 to 20% naturally. Below that threshold, you are looking at variance and calling it signal.
 
 Sources of noise in paid media metrics.
@@ -168,7 +170,7 @@ Four methods.
 
 **Geo holdout.** Hold one region out from the campaign. Measure the difference in conversions between the holdout region and the matched test region. The cleanest causal test for paid media at scale.
 
-**Conversion Lift and Experiments (Google).** "Ghost bidding" is a term from the incrementality-testing literature, not a Google Ads feature you can switch on. Google's real surfaces are Conversion Lift studies, which a Google rep enables, and geo or holdback Experiments you configure yourself.
+**Google's incrementality tools: Conversion Lift studies and Experiments.** "Ghost bidding" is a term from the incrementality-testing literature, not a Google Ads feature you can switch on. Google's real surfaces are Conversion Lift studies, which a Google rep enables, and geo or holdback Experiments you configure yourself.
 
 **Conversion lift studies (Meta).** Splits audiences into test and control. Test sees the ad; control does not. Reports incremental lift. The cleanest within-Meta test.
 
@@ -208,7 +210,7 @@ Detection patterns. When platform-reported conversions exceed warehouse-attribut
 
 The fix. Warehouse as canonical for board reporting. Platform reporting as in-flight signal only. Incrementality tests at least quarterly to keep the channel-attribution honest.
 
-A worked example. A retargeting campaign in Meta showed 3.5x ROAS for six months. The team scaled spend from $20K to $80K per month. A geo holdout test revealed that 65% of the "conversions" would have happened anyway from organic. Real ROAS adjusted for incrementality was 1.2x, not 3.5x. The campaign got cut and warehouse-attributed CAC dropped 18% in the next quarter.
+A worked example (illustrative numbers, not a real account). A retargeting campaign in Meta showed 3.5x ROAS for six months. The team scaled spend from $20K to $80K per month. A geo holdout test revealed that 65% of the "conversions" would have happened anyway from organic. Real ROAS adjusted for incrementality was 1.2x, not 3.5x. The campaign got cut and warehouse-attributed CAC dropped 18% in the next quarter.
 
 ---
 

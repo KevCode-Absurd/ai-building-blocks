@@ -16,7 +16,7 @@ when:
   - You are adding a truck or a driver and must re-cut the routes.
   - You want to know the cost per delivery before and after a change.
 not_for:
-  - "You ship parcels to homes or run last-mile courier rounds: use a last-mile delivery or vehicle routing tool, as the library has no sibling item for this yet."
+  - "You ship parcels to homes or run last-mile courier rounds: use the last-mile delivery planner, or a vehicle routing tool for large fleets."
   - "You move full loads from a warehouse to a few depots: ask your carrier or a freight planner, because stop-by-stop store routing adds nothing."
   - "You need live routing with traffic and drivers on the road today: use a routing app built for dispatch."
 you_give:
@@ -37,7 +37,9 @@ how_to_use:
   - Add your trucks and driver rules. Give each truck's capacity, whether it needs refrigeration, and shift length and overtime limits.
   - Say which stops you must serve and which are optional. Say how often each store needs a visit.
   - Run it. If your AI can run code, it can test more route options. Otherwise it plans by reasoning, so check the times yourself.
-  - Read the result. Check each route against store windows and shift limits before you give it to drivers.
+  - Read the result. Check each route against store windows and shift limits before you give it to drivers. Distances are straight-line estimates, so check real drive times in a map app first.
+  - Next, run it again after a week with your real miles and late drops. To check one driver's long route stop by stop, use the multi-stop route planner.
+next: [multi-stop-route-planner, last-mile-delivery-planner]
 output_sample:
   input:
     - Your store list with addresses and order sizes

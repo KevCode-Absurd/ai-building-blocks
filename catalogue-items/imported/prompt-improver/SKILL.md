@@ -78,7 +78,7 @@ Step 2 (triggered — task type ambiguous):
 1. What do you want to do with AI — build something, learn about it, or use an AI tool for a task?"
 ```
 
-**Critical Rule:** When in doubt, skip clarification and generate the best prompt with available context. Over-asking breaks the "magic mode" experience.
+**Critical Rule:** Ask only when a Trigger Condition above is met. Otherwise skip clarification and generate the best prompt with available context. Over-asking breaks the "magic mode" experience.
 
 
 ### Step 3: Select Framework(s)
@@ -153,7 +153,7 @@ Before finalizing, verify:
 
 ### **NEVER:**
 
-- ❌ Assume information that wasn't provided - ALWAYS ask if critical details are missing
+- ❌ Assume information that wasn't provided. If a critical detail is missing, ask under the Step 2 rules (at most 3 questions). If it is not critical, make the best prompt you can and leave a [fill in] placeholder
 - ❌ Explain which framework was selected or why (magic mode - keep it invisible)
 - ❌ Generate generic, one-size-fits-all prompts - always customize to context
 - ❌ Use technical jargon in the final prompt (unless user's domain is technical)
@@ -165,7 +165,7 @@ Before finalizing, verify:
 ### **ALWAYS:**
 
 - ✅ Analyze intent before generating (Step 1 is mandatory)
-- ✅ Ask clarifying questions if critical information is ambiguous (Step 2 conditional)
+- ✅ Ask clarifying questions only if critical information is ambiguous (Step 2 conditional)
 - ✅ Select framework(s) based on task type and complexity (Step 3 mapping)
 - ✅ Blend multiple frameworks when it improves prompt quality
 - ✅ Adapt prompt length to original input complexity (simple → short, complex → detailed)
@@ -180,13 +180,8 @@ Before finalizing, verify:
 
 **User Input:**
 ```
-copilot> create prompt for: I need to build a product recommendation system considering purchase history, user preferences, and market trends
+Create a prompt for: I need to build a product recommendation system considering purchase history, user preferences, and market trends
 ```
-
-**Skill Internal Process:**
-1. **Analyze:** Clear intent, complex task (ML system design), technical domain
-2. **Clarify:** Skip (sufficient information)
-3. **Select:** RODES (complex design) + Chain of Thought (reasoning needed)
 
 **Skill Output:**
 
@@ -226,13 +221,8 @@ Output format: Technical design document with architecture diagrams, algorithm j
 
 **User Input:**
 ```
-copilot> optimize prompt: my Python code isn't working, needs debugging
+Improve this prompt: my Python code isn't working, needs debugging
 ```
-
-**Skill Internal Process:**
-1. **Analyze:** Debugging task, needs step-by-step reasoning
-2. **Clarify:** Skip (user will provide code context later)
-3. **Select:** Chain of Thought
 
 **Skill Output:**
 
@@ -268,7 +258,7 @@ Include a working example to verify the fix.
 
 ## Notes
 
-This skill is **platform-agnostic** and works in any terminal context where GitHub Copilot CLI is available. It does not depend on:
+This skill is **platform-agnostic** and works in any chat, such as Claude, ChatGPT or Gemini. It does not depend on:
 - Obsidian vault structure
 - Specific project configurations
 - External files or templates

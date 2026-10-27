@@ -9,7 +9,7 @@ subhead: Give it your website code. It finds accessibility problems against WCAG
 explain: |
   A website with its accessibility problems found, fixed and checked again, against WCAG 2.2 levels A and AA. That makes it usable for people with screen readers, keyboards or low vision, and lowers your legal risk.
 
-  The skill reads your code and spots your framework, such as React, Vue or plain HTML. It lists each issue as critical, major or minor, and gives a before and after code fix. It checks colour contrast pairs, keyboard order and focus, form labels, image text and headings. After the fixes it scans again to make sure nothing broke. It also writes a report for non-developers and a pipeline config to catch new issues.
+  The skill reads your code and spots your framework, such as React, Vue, Angular, Next.js, Svelte or plain HTML. It lists each issue as critical, major or minor, and gives a before and after code fix. It checks colour contrast pairs, keyboard order and focus, form labels, image text and headings. After the fixes it scans again to make sure nothing broke. It also writes a report for non-developers and a pipeline config to catch new issues.
 when:
   - A customer or lawyer asked if your site meets WCAG.
   - You want to fix accessibility issues before launch.
@@ -60,3 +60,4 @@ output_sample:
       contains: A plain pass and fail summary that managers and compliance staff can read without code.
     - name: Pipeline config
       contains: Settings for GitHub Actions, GitLab CI or Azure DevOps that flag new accessibility problems on each release.
+next: [accessibility-checker]

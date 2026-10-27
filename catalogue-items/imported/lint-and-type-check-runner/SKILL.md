@@ -14,7 +14,7 @@ Use after behavior or configuration changes when a repository has relevant lint 
 
 ## Procedure
 
-1. Identify the changed languages, configured commands, and installed tools. Inspect package scripts before executing them: a script named `lint` can modify files or run arbitrary project code.
+1. Identify the changed languages, configured commands, and installed tools. Inspect package scripts before executing them: a script named `lint` can modify files or run arbitrary project code. Show the user what the scripts do and get their approval before you run any command that could change files or use the network.
 2. Run the project's read-only lint/type-check commands. For Node projects, prefer declared scripts such as `npm run lint` and `npm run typecheck`. Do not use `npx` to silently fetch an absent checker.
 3. For Python, use configured, already installed tools such as `ruff check .` or `mypy .`. Do not assume every `pyproject.toml` configures both. Never add `--fix` without inspecting the proposed changes and the task's authorization.
 4. Fix relevant failures without deleting user work, weakening rules, or raising timeouts just to pass. If a required tool is unavailable, report the exact check that did not run.

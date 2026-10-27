@@ -18,7 +18,7 @@ steps:
   - {uses: factory-shortlist-vetter, note: "Uses the tech pack from step 1 and the factory answers you collect. Judges factories by how they answer it, and hands you the pick to quote."}
   - {uses: landed-cost-calculator, note: "Uses the tech pack from step 1 and the quotes you collected from the factories, not step 2's scores. Prices them down to cost per sellable unit and margin."}
   - {uses: sample-approval-gatekeeper, note: "Uses the tech pack from step 1 and photos and measures of the samples you ordered, not step 3's costs. Judges the samples line by line and tells you which one to approve."}
-  - {uses: pre-shipment-inspection-brief-writer, note: "Uses the tech pack from step 1, your order sheet and the sample you approved after step 4. Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result."}
+  - {uses: pre-shipment-inspection-brief-writer, note: "Uses the tech pack from step 1, your own order sheet and the sample you approved after step 4, not step 4's review itself. Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/get-a-product-made-right-from-tech-pack-to-inspected-shipment/skeleton.yaml

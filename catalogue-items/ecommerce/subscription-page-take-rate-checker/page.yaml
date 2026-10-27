@@ -65,7 +65,7 @@ output_sample:
 
 how_it_works:
   - title: Looks at the default
-    text: Checks which option is selected when the page loads, on phone and desktop. One-time pre-selected is the first red flag.
+    text: Checks which option is selected when the page loads, on phone and desktop. One-time pre-selected is the first red flag. Full points need subscription selected, a clear repeat-order label and an easy switch to one-time.
   - title: Finds where the discount sits
     text: Checks that the best discount is on subscription only. Equal discounts on both score zero for this rule.
   - title: Counts the choices

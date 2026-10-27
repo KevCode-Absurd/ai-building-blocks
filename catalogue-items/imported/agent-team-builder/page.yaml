@@ -29,12 +29,14 @@ you_get:
   - Task definitions and handoffs
   - A run set-up in code
   - Memory settings for the team
+  - "What to do with the result: check each task's output against your brief before you share it. If an agent fails, rerun the task it owns, or the step before it."
 how_to_use:
   - Pick an AI that can run Python code, such as Claude with code tools. Install CrewAI with pip install crewai first.
   - Paste this skill into your AI. Then list the jobs your team must do and the roles you picture.
   - Add your AI model key as a setting on your computer. Never paste keys into the chat.
   - Say if you want a fixed order or a manager agent. Say which tools the agents may use.
   - Check the agents.yaml and tasks.yaml files before you run. Make sure each role is distinct and each task hands work on.
+  - This is an imported, MIT-licensed copy of the upstream crewai-multi-agent skill. Its full reference notes are in the references folder.
   - Run the team with crewai run. Watch the cost of model calls, and set limits on steps and requests per minute.
 output_sample:
   input:

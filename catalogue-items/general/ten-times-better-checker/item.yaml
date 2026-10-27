@@ -11,6 +11,7 @@ inputs:
   - {type: audit_report, required: false}
 outputs:
   - {type: audit_report, required: true}
+next: [seven-question-startup-scorer, strategy-trade-off-planner]
 origin: rebuilt
 version: 1.0.0
 minds: [peter-thiel]

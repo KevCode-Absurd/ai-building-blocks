@@ -255,7 +255,7 @@ func TestTool1Handler(t *testing.T) {
 
 ## README.md Template
 
-```markdown
+````markdown
 # {{PROJECT_NAME}}
 
 A Model Context Protocol (MCP) server built with Go.
@@ -266,18 +266,18 @@ A Model Context Protocol (MCP) server built with Go.
 
 ## Installation
 
-\`\`\`bash
+```bash
 go mod download
 go build -o {{PROJECT_NAME}}
-\`\`\`
+```
 
 ## Usage
 
 Run the server with stdio transport:
 
-\`\`\`bash
+```bash
 ./{{PROJECT_NAME}}
-\`\`\`
+```
 
 ## Configuration
 
@@ -304,20 +304,20 @@ Configure via environment variables:
 
 Run tests:
 
-\`\`\`bash
+```bash
 go test ./...
-\`\`\`
+```
 
 Build:
 
-\`\`\`bash
+```bash
 go build -o {{PROJECT_NAME}}
-\`\`\`
+```
 
 ## License
 
 MIT
-```
+````
 
 ## Generation Instructions
 

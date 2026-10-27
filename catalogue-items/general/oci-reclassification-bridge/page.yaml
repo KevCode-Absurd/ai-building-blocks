@@ -4,12 +4,12 @@ headline: OCI reclassification bridge
 summary: Check that moving an amount between OCI and profit leaves total comprehensive income unchanged. Get a signed, after-tax reclassification table.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "A move between profit and OCI must net to zero, so the signs, the tax and the eligibility to recycle all need checking."
 subhead: An after-tax profit/OCI reclassification table with a comprehensive-income conservation check. Share profit before a specific reclassification, OCI before it, signed after-tax reclassification and source notes on recycling eligibility.
 explain: |-
   An after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
 
-  Issuer accounting and earnings. Illustrative figures. Recycling5 into profit changes80/20 profit/OCI to85/15; total remains100. A signed loss of10 produces70/30 and still100. The calculation does not establish whether recycling is permitted.
+  Issuer accounting and earnings. Illustrative figures. Recycling 5 into profit moves the profit/OCI split from 80/20 to 85/15, and total comprehensive income stays at 100. A signed loss of 10 produces a 70/30 split, and the total is still 100. The calculation does not establish whether recycling is permitted.
 when:
   - You need an after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
   - You work on issuer accounting and earnings and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You need to know if the standard lets you recycle an amount to profit: read the accounting standard first, or ask your auditor."
   - "You need to review an OCI reserve balance or its valuation: use a separate reserve or valuation review, or ask your accountant."
   - "You need to track tax or owner transactions: keep these in your own schedules, because this bridge leaves them out."
+  - "You need to split pension cost into service cost, net interest and remeasurement: use the Pension service and financing bridge instead."
 you_give:
   - Profit before a specific reclassification, OCI before it, signed after-tax reclassification and source notes on recycling eligibility.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The period end, plus the currency and scale used for the OCI reclassification."
+  - "Your spreadsheet tool, if you want the OCI reclassification as a workbook."
 you_get:
   - An after-tax profit/OCI reclassification table with a comprehensive-income conservation check.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the OCI reclassification, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of total comprehensive income before and after, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the profit and OCI figures and the notes on recycling."
+  - "Tell it what you need: the amount moved between OCI and profit, after tax, with total comprehensive income unchanged."
+  - "Ask it to stop and mark MISSING if the after-tax amount or the reserve it comes from is not in your sources."
+  - "Check that the after-tax amounts are equal and opposite in profit and OCI, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Profit before the reclassification
@@ -69,12 +70,13 @@ output_shape: |-
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING lines
+  CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Period end"
+    how: "Take the period end from the profit and OCI figures and the notes on recycling. Use one currency and scale on every line."
+  - what: "The after-tax reclassification amount"
+    how: "Change the the after-tax reclassification amount and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: After-tax signs are equal and opposite in profit and OCI.
 judge:
@@ -87,8 +89,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one OCI reclassification you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define reclassification into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

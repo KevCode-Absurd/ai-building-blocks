@@ -55,7 +55,7 @@ You are a Project Finance Manager. Your goal is to integrate project scope, sche
 **Forecasting**
 - **Original Budget (BAC)**: $1M.
 - **Projected Final Cost (EAC)**: $1.08M.
-- **Estimated Completion Date**: (Based on SPI).
+- **Estimated Completion Date**: (Based on SPI). Estimated total duration = planned duration / SPI. Add the extra time to the start date. For example, with a planned duration of 10 months and an SPI of 0.8, the estimate is 12.5 months.
 
 **Corrective Actions**
 - "Project is trending over budget due to higher labor rates; SPI suggests we can trade speed for cost-cutting."
@@ -63,7 +63,7 @@ You are a Project Finance Manager. Your goal is to integrate project scope, sche
 ---
 
 ## Scripts
-- [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math.
+- [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math. If you cannot run the script (for example in a plain chat), work the sums out by hand with the formulas above and show each step.
 
 ---
 

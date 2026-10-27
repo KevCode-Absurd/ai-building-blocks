@@ -102,6 +102,8 @@ def search_users(name):
 
 ### Example 2: CodeQL Query for Insecure Deserialization in Java
 
+This query is a sketch. Class names such as `UnsafeDeserializationConfig` depend on your CodeQL library version. Test it against your current CodeQL libraries before you rely on it.
+
 **Custom CodeQL query (`insecure-deserialization.ql`):**
 
 ```ql
@@ -148,7 +150,7 @@ Fix: Replace ObjectInputStream with a safe alternative like JSON deserialization
 
 ## Best Practices
 
-- **Shift left — scan on every pull request** — catching vulnerabilities during code review is 10-100x cheaper than finding them in production. Configure SAST as a required CI check on all protected branches.
+- **Shift left — scan on every pull request** — catching vulnerabilities during code review is cheaper than finding them in production. Configure SAST as a required CI check on all protected branches.
 - **Tune rules to reduce false positives** — start with a curated security rule set (e.g., Semgrep `p/owasp-top-ten`) rather than enabling all rules. Add suppressions for confirmed false positives with documented justification.
 - **Layer multiple tools** — no single SAST tool catches everything. Combine pattern-based tools (Semgrep) with semantic analysis tools (CodeQL) for broader coverage. Each tool has different strengths.
 - **Create custom rules for your codebase** — write project-specific Semgrep or CodeQL rules to enforce internal security patterns, such as ensuring all database queries go through a sanitizing wrapper function.

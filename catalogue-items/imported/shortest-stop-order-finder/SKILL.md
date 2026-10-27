@@ -1,6 +1,6 @@
 ---
 name: traveling-salesman-problem
-description: When the user wants to solve the Traveling Salesman Problem (TSP), find the shortest route visiting all cities, or optimize tour sequences. Also use when the user mentions "TSP," "shortest tour," "Hamiltonian cycle," "tour optimization," "route sequencing," "optimal visit order," "traveling salesperson," or "minimum distance tour." For vehicle routing with capacities, see vehicle-routing-problem.
+description: When the user wants to solve the Traveling Salesman Problem (TSP), find the shortest route visiting all cities, or optimize tour sequences. Also use when the user mentions "TSP," "shortest tour," "Hamiltonian cycle," "tour optimization," "route sequencing," "optimal visit order," "traveling salesperson," or "minimum distance tour." For vehicle routing with capacities, use delivery-route-planner.
 ---
 
 # Traveling Salesman Problem (TSP)
@@ -15,7 +15,7 @@ Before solving TSP instances, understand:
    - How many cities/locations need to be visited?
    - Symmetric TSP (distance i→j = distance j→i) or asymmetric?
    - What metric? (Euclidean distance, travel time, cost)
-   - Any special constraints? (time windows → see vrp-time-windows)
+   - Any special constraints? (time windows → use a vehicle routing skill instead, such as delivery-time-slot-route-planner on this site)
 
 2. **Problem Scale**
    - Small (< 20 cities): Exact methods feasible
@@ -1375,9 +1375,9 @@ if __name__ == "__main__":
 - Pure TSP insufficient
 
 **Solutions:**
-- See **vrp-time-windows** for time constraints
-- See **vehicle-routing-problem** for capacities
-- See **multi-depot-vrp** for multiple depots
+- Use delivery-time-slot-route-planner for time constraints
+- Use delivery-route-planner for capacities
+- Use multi-warehouse-route-planner for multiple depots
 
 ### Challenge: Dynamic TSP
 
@@ -1442,8 +1442,9 @@ If you need more context:
 
 ## Related Skills
 
-- **vehicle-routing-problem**: For multiple vehicles with capacities
-- **vrp-time-windows**: For TSP with time constraints
+- **delivery-route-planner**: For multiple vehicles with capacities
+- **delivery-time-slot-route-planner**: For routes with time constraints
+- **multi-warehouse-route-planner**: For multiple depots (other related skills below are external and not in this library)
 - **pickup-delivery-problem**: For pickup and delivery pairs
 - **route-optimization**: For practical routing applications
 - **network-flow-optimization**: For underlying graph theory

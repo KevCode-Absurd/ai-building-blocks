@@ -32,9 +32,10 @@ you_get:
   - A week-by-week plan, with store-level changes
   - A before and after estimate of markdown cost
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text (the full skill file at the bottom of this page).
   - Paste your stock list, costs, current prices and weekly sales. A spreadsheet export works.
-  - Add your lowest acceptable margin and your deadline. Add competitor prices if you have them.
+  - Add your lowest acceptable margin and your deadline. Add competitor prices if you have them. The code sets the lowest price at cost plus 10 percent, so tell your AI your own margin limit to replace it.
+  - Each item needs at least 10 weeks of sales for the price-response model. With less, ask your AI to set the cuts by hand in steps of 10, 20 or 30 percent.
   - Use an AI that can run code, such as ChatGPT with data analysis or Claude with code tools. The price modeling needs it.
   - Check each price against your margin limit before you change anything.
   - Next, send the schedule to promotional-planning if you want to tie the cuts to a sale.

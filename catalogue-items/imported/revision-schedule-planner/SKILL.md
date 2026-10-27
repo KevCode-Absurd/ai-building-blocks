@@ -15,7 +15,7 @@ version: "1.0"
 evidence_strength: "strong"
 evidence_sources:
   - "Ebbinghaus (1885/1913) — The forgetting curve: exponential decay of memory without review"
-  - "Cepeda et al. (2006) — Meta-analysis of 254 studies on distributed practice: optimal spacing depends on retention interval"
+  - "Cepeda et al. (2006) — Review of studies on distributed practice: optimal spacing depends on retention interval"
   - "Kornell & Bjork (2008) — Spacing and interleaving effects on learning"
   - "Carpenter et al. (2012) — Using spacing to enhance diverse forms of learning"
   - "Dunlosky et al. (2013) — Distributed practice rated high-utility learning strategy"
@@ -75,7 +75,7 @@ Takes a list of topics and a teaching timeline and generates an optimised review
 
 ## Evidence Foundation
 
-Ebbinghaus (1885/1913) first demonstrated that memory follows an exponential decay curve — without review, approximately 70% of new learning is lost within 24 hours. Cepeda et al. (2006) conducted a meta-analysis of 254 studies and established that the optimal gap between study sessions depends on the desired retention interval: roughly 10–20% of the retention interval is optimal (e.g., if you need students to remember something for 30 days, space reviews approximately 3–6 days apart). Carpenter et al. (2012) extended these findings to diverse classroom learning contexts, showing that spaced practice benefits declarative knowledge, procedural skills, and problem-solving. Kornell & Bjork (2008) demonstrated that spacing feels less effective to learners — students rate massed practice as more effective even when spaced practice produces better retention. This means teachers should expect students to initially prefer (and request) the less effective approach. Dunlosky et al. (2013) rated distributed practice as one of only two "high utility" strategies in their comprehensive review.
+Ebbinghaus (1885/1913) first demonstrated that memory follows an exponential decay curve — without review, approximately 70% of new learning is lost within 24 hours. Cepeda et al. (2006) reviewed a large body of studies and found that the optimal gap between study sessions depends on the desired retention interval: roughly 10–20% of the retention interval is optimal (e.g., if you need students to remember something for 30 days, space reviews approximately 3–6 days apart). Carpenter et al. (2012) extended these findings to diverse classroom learning contexts, showing that spaced practice benefits declarative knowledge, procedural skills, and problem-solving. Kornell & Bjork (2008) demonstrated that spacing feels less effective to learners — students rate massed practice as more effective even when spaced practice produces better retention. This means teachers should expect students to initially prefer (and request) the less effective approach. Dunlosky et al. (2013) rated distributed practice as one of only two "high utility" strategies in their comprehensive review.
 
 ## Input Schema
 
@@ -175,7 +175,7 @@ For each review slot, suggest a specific brief retrieval activity (not "review T
 | 1 | 3 | Tectonic plates — convection currents | Retrieve: name 3 plate boundary types and one feature of each |
 | 1 | 4 | Earthquakes — causes and focus/epicentre | Retrieve: explain in 3 sentences how convection currents drive plate movement |
 | 1 | 5 | Earthquakes — measuring and effects | Retrieve: draw and label a diagram showing focus, epicentre, and seismic waves |
-| 2 | 1 | Earthquakes — case studies | Retrieve: **Tectonic plates** — 5 free-recall questions on plate boundaries (first spaced review, ~7 days) |
+| 2 | 1 | Earthquakes — case studies | Retrieve: **Tectonic plates** — 5 free-recall questions on plate boundaries (second spaced review, ~7 days; the first was the Week 1, lesson 2 recall, 1 day after first teaching) |
 | 2 | 2 | Volcanoes — formation and types | Retrieve: compare two earthquake case studies from memory — causes, effects, responses |
 | 2 | 3 | Volcanoes — eruption processes | Mixed retrieve: 3 Qs on **tectonic plates** + 2 Qs on **earthquake measurement** |
 | 2 | 4 | Volcanoes — case studies | Retrieve: draw a cross-section of a composite volcano from memory, label 5 features |

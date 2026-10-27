@@ -27,7 +27,7 @@ you_give:
 you_get:
   - Cost per new customer for each source
   - New-customer counts by source
-  - Sources with too few orders left out
+  - Sources with too few orders left out (organic sources show with no cost figure)
   - A readable table or JSON output
 how_to_use:
   - Open Claude Code, Cursor, Codex or Gemini CLI. This skill needs a tool that can run commands, so a plain chat window will not work.
@@ -36,6 +36,7 @@ how_to_use:
   - Use spend for the same days as the look-back window. If the windows differ, the cost figures will mislead you.
   - Check the table. Treat direct as a tracking warning, not a real source.
   - Read the costs as estimates. Views of display and video ads are often missed.
+  - Re-run it every week to catch cost drift. Next, check that low-cost sources also bring buyers who stay, with the Customer cohort reader.
 output_sample:
   input:
     - Your Shopify store domain

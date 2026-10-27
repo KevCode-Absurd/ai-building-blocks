@@ -10,14 +10,17 @@ inputs:
   - {type: source_text, required: true}
   - {type: brief, required: true}
   - {type: voc_reviews, required: false}
+  - {type: copy_draft, required: false}
   - {type: brand_brain, required: false}
 outputs:
+  - {type: brand_guide}
+  - {type: copy_draft}
   - {type: audit_report}
 uses: [brand-voice-guide-builder, brand-voice-rewriter, draft-brand-voice-checker]
 steps:
   - {uses: brand-voice-guide-builder, note: "Starts the chain: reads what you already wrote and said and makes the voice guide."}
   - {uses: brand-voice-rewriter, note: "Uses the settled guide to write a real email, post or pitch, or to redo a draft you already have."}
-  - {uses: draft-brand-voice-checker, note: "Reads the draft from the step before and ranks where it drifts from the guide."}
+  - {uses: draft-brand-voice-checker, note: "Reads the draft from the step before, or the draft you bring, and ranks where it drifts from the guide."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-voice-guide-from-your-documents-and-check-copy/skeleton.yaml

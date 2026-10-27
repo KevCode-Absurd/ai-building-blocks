@@ -1,7 +1,6 @@
 slug: prepare-private-bug-evidence-for-developers
 name: Private bug evidence assistant
-summary: Give a redacted screenshot and rough notes. Get a developer-ready draft
-  issue, privacy review checklist and evidence manifest.
+summary: Give rough bug notes and a screenshot. Get a developer-ready draft issue, a privacy review checklist and a list of safe files.
 category: agent
 type: agent
 role: orchestrate

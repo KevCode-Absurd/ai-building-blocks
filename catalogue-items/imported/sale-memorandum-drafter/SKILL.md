@@ -7,9 +7,11 @@ description: Structure and draft a Confidential Information Memorandum for sell-
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. The companion skills
+`india-market-conventions` and `india-market-data` are not included in this item,
+so the two rules below are your conventions. For market figures, use only what the
+user gives you and name the source; never fill a figure from memory. Two rules
+cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,7 +21,8 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+The original lists what has no Indian equivalent in `NOT-ADAPTABLE.md`, which is not
+included here. Where a US-style item has no Indian equivalent, name the gap —
 never substitute a proxy and present it as the real thing.
 
 ## Workflow

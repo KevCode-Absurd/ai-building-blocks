@@ -1,0 +1,133 @@
+new_slug: business-insurance-needs-checker
+name: Business insurance needs checker
+summary: Describe your business. Get its risks, the usual cover for each, what may be required where you are, and broker questions.
+job: check-contracts
+thinking: medium
+thinking_why: It has to match risks to kinds of cover and be careful about what depends on local law.
+headline: Business insurance needs checker
+subhead: Tell it what your business does, where, who works for you and what you own. It lists the risks that matter, the kinds of insurance that usually cover each one, and which may be required where you are. You get questions to ask a broker and what to compare in quotes.
+explain: |
+  Insurance feels like a form to fill in and forget. Then something goes wrong, and the policy turns out not to cover it. Most gaps come from not having listed the risks first.
+
+  This skill lists them for you. You say what your business does, where, who works for it, what you own and what you hold for clients. It names the risks that matter for that kind of business, then the usual kinds of cover for each: liability, property and equipment, lost income, professional mistakes, data loss, staff injury and vehicles. It marks what may be required by law where you are and does not say which. You get questions for a broker and what to compare between quotes. It does not recommend a policy or an insurer.
+when:
+  - You are starting a business and want to know what business insurance to ask about.
+  - Your business changed, for example you hired staff or began holding client data.
+  - You have a quote and want to know what to compare.
+not_for:
+  - "You want a policy recommended or a price: ask a broker or insurer."
+  - "You want to check a contract: use the Contract risk reviewer."
+  - "You have a claim to make: speak to your insurer and keep all your records."
+you_give:
+  - What your business does and where it works
+  - "Who works for you: employees, contractors or only you"
+  - What you own that you would need to replace, and what you hold for clients
+  - Whether customers visit you, or you visit them
+  - Any insurance you already have (optional)
+you_get:
+  - A list of risks that matter for your business
+  - The usual kinds of cover for each risk, in plain words
+  - Which kinds may be required where you are, marked to confirm
+  - Questions for a broker and what to compare in quotes
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your business, your people, what you own and what you hold for clients.
+  - Say your country or state, so it can flag what may be required.
+  - Check each flagged item with your insurer or tax office, or with a broker.
+  - Take the questions to a broker, and use the compare list when quotes arrive.
+output_sample:
+  input:
+    - What your business does and where it works
+    - Who works for you, and what you own or hold for clients
+    - Any insurance you already have (optional)
+  output:
+    - name: Your business
+      contains: A short restatement of what you do, where, who works for you and what you own.
+    - name: Risks and cover
+      contains: Each risk, the usual kind of cover, whether it may be required where you are, and whether you have it.
+    - name: Gaps
+      contains: Risks that have no cover from what you named.
+    - name: Questions for a broker
+      contains: What to ask, one line each.
+    - name: What to compare in quotes
+      contains: The points that differ most between quotes.
+    - name: Missing
+      contains: Anything you did not tell it that changes the list.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads your business
+    text: Pulls out what you do, where, who works for you and what you own.
+  - title: Lists the risks
+    text: Names the risks that matter for that kind of business.
+  - title: Matches kinds of cover
+    text: Pairs each risk with the usual kind of insurance, in plain words.
+  - title: Flags what may be required
+    text: Marks cover that may be a legal duty where you are, to confirm.
+  - title: Finds gaps
+    text: Compares your list with any insurance you already hold.
+  - title: Writes the broker questions
+    text: Turns the gaps into questions to ask.
+  - title: Lists what to compare
+    text: Names the points to compare between quotes, such as limits, excluded cases and excess.
+output_shape: |
+  YOUR BUSINESS
+  <what you do, where, who works for you, what you own and hold>
+
+  RISKS AND COVER
+  <risk> | Usual kind of cover: <name> | May be required: <to confirm / probably not> | Have it: <yes / no / unsure>
+
+  GAPS
+  <risks with no cover you named>
+
+  QUESTIONS FOR A BROKER
+  - <question>
+
+  WHAT TO COMPARE IN QUOTES
+  - <point>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: What you hold
+    how: Say if you hold client money, data or property. It adds risks people often miss.
+  - what: Your people
+    how: Say employees, contractors or just you. Duties and cover differ for each.
+  - what: Where you work
+    how: Name your country or state. Rules on required cover vary by place.
+  - what: What you have
+    how: List any insurance already in place, so the checker finds gaps and not duplicates.
+judge:
+  - Every risk is tied to something in your business.
+  - No price, insurer or policy name appears.
+  - Anything that may be a legal duty is marked to confirm, not stated.
+  - Gaps are risks with no cover you named.
+  - The broker questions are specific to your business.
+test:
+  - Add a new thing to the business, such as a vehicle. A new risk should appear.
+  - List an insurance you already hold. The matching risk should move from gap to covered.
+  - Show the list to a broker or your insurer. Ask what they would add.
+improve:
+  - Save a short description of your business in your about-me note, and rerun this each year.
+  - Add the kinds of cover your industry commonly uses to the skill file.
+  - Keep the broker's answers in a file and add them as notes for next year.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Listing risks and matching them to kinds of cover is text work any strong chat AI does well.
+    - name: An insurance broker
+      why: They know the products and the rules where you are, and can quote.
+  inputs:
+    - Your current policy documents
+    - A list of your equipment and its replacement cost
+    - Your contracts with clients that mention insurance
+terms:
+  - term: Liability
+    meaning: Your legal duty to pay for harm or loss you cause to someone else.
+  - term: Excess
+    meaning: The part of a claim you pay yourself before the insurer pays.
+  - term: Broker
+    meaning: A person who compares insurers for you and arranges the policy.

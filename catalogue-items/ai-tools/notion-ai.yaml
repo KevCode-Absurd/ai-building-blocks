@@ -43,6 +43,22 @@ blocks:
   - weekly-meeting-actions-keeper
 alternatives: [glean, guru, microsoft-copilot, claude]
 last_checked: 2026-10-21
+first_result:
+  - "Open Notion and a page where you keep notes. The AI works on the pages you keep there."
+  - "Check your plan. Free and Plus only include a trial of the AI. Business, at US$20 per member a month, includes the agent and AI meeting notes."
+  - "Open the AI chat and ask one question about your own pages. Check that the answer links to the right page."
+  - "Try one writing job. Select a page and ask it to improve or summarise the text."
+  - "To try meeting notes, record one internal meeting and tell the people first. Read the summary against what was said."
+  - "You end with an answer with links, a draft page, or a meeting summary with next steps."
+  - "Next: plan your wiki with the Company wiki planner, or sort a messy list with the Brain dump organizer."
+needs:
+  - "A Notion workspace with your notes in it."
+  - "A Business plan for the agent and AI meeting notes. Free and Plus have a trial only."
+  - "Agreement from everyone before you record a meeting."
+not_verified:
+  - "Where the AI sits in the menus."
+  - "How long the trial lasts."
+  - "How many credits a custom agent uses."
 sources:
   - https://www.notion.com/pricing
   - https://www.notion.com/product/ai

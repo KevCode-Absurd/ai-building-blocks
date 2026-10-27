@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham]
 credits:
-  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The order of the steps: find out if you are a defensive or enterprising investor, set your stock and bond split, choose the kind of bonds that fit, write your one-page investing policy"}
+  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The defensive and enterprising investor types, a plain stock and bond split with a rebalancing rule, and a one-page investing policy"}
 generated_from: intake/intelligent-investor-style-and-split/skeleton.yaml

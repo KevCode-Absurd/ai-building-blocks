@@ -9,6 +9,26 @@ Surveys tell you what people say. Watching tells you what they do. This skill pl
 
 Not for: asking why people bought or switched (use "Customer job interview planner" or "Customer interview question writer"), or sorting notes from talks you already had (use "Customer conversation notes sorter").
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Planning the sessions and sorting notes is text work any strong chat AI does well with this skill.
+- **A notebook or a shared sheet:** Easier than a laptop for writing what you see as it happens.
+<!-- /needs -->
+
 ## What you need
 
 - **Who you want to understand** (required): the type of customer and the thing you want to learn about, such as "how first-time buyers set up the product".
@@ -40,6 +60,14 @@ Use these headings, in this order, exactly as written:
 - **TESTS**: pattern and who showed it, the change to try, what you expect, and the result that would change your mind.
 - **MISSING**: `MISSING:` lines for gaps.
 - **CHECKS MISSED**: see below.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Test the idea with real people** with the [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions).
+- The [Customer job interview planner](https://useaiblocks.com/skills/customer-job-interview-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

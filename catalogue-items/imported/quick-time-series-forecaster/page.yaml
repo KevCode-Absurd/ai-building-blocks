@@ -9,7 +9,7 @@ subhead: A forecast of your numbers with ranges around it, tested against data y
 explain: |
   A forecast of your numbers with ranges around it, tested against data you held back, and no model training. You give it a CSV of past values and see how well it would have predicted what you already know.
 
-  The skill cleans the file into a regular time grid, then runs Google's TimesFM, a pre-trained forecasting model, that predicts without fitting to your data. You get a middle estimate plus low and high bands. It scores the forecast on the held-back period so you can judge trust before relying on it. It is not a tool for cause and effect. It needs Python, PyTorch and a one-time model download.
+  The skill cleans the file into a regular time grid, then runs Google's TimesFM, a pre-trained forecasting model, that predicts without fitting to your data. You get a middle estimate plus low and high bands. It scores the forecast on the held-back period so you can judge trust before relying on it. The low and high bands are nominal. They are not checked against reality until you test them on your own data. It uses the Apache-licensed TimesFM 2.5 model by default. The newer 3.0 weights are limited to non-commercial use, so check their terms before you use them for business. It is not a tool for cause and effect. It needs Python, PyTorch and a one-time model download.
 when:
   - You have monthly sales and want the next six months.
   - You need a forecast but have no time to build a model.
@@ -36,6 +36,8 @@ how_to_use:
   - "It checks your computer, downloads the model once, and runs a command like: python scripts/forecast_csv.py monthly_sales.csv --date-col date --freq MS --value-cols sales --horizon 12 --output forecasts.csv"
   - Open forecasts.csv. The columns are forecast, median, lower_80, upper_80, lower_60 and upper_60.
   - Check the held-back test and compare it with a simple baseline before you plan around the numbers. Treat the ranges as rough until checked on your own data.
+  - If the held-back error is large, fall back to the baseline, or add driver columns (such as price or promotions) and run it again.
+next: [regression-and-forecast-modeller, forecast-narrative-writer, demand-forecast-planner]
 output_sample:
   input:
     - Your CSV of past values, with a date column and one or more number columns

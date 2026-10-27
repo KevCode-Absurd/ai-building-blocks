@@ -165,7 +165,7 @@ The law applies to:
 
 ## Penalties — Decree 330/2026/ND-CP (effective August 19, 2026)
 
-**The sanctions regime is now operative.** Decree No. 330/2026/ND-CP (issued and effective **August 19, 2026**; 82 articles, 33 on personal data protection) implements the penalty framework of Law 91/2025 (Article 8) and Decree 356/2025. State this decree in every penalties answer.
+**The sanctions regime is now operative.** Decree No. 330/2026/ND-CP (issued and effective **August 19, 2026**; 82 articles, 33 on personal data protection) implements the penalty framework of Law 91/2025 (Article 8) and Decree 356/2025. State this decree in every penalties answer, and say the fine figures are not checked here against the official decree text and must be confirmed before use.
 
 | Violation | Penalty (organisations; individuals = half) |
 |---|---|
@@ -182,7 +182,7 @@ The law applies to:
 
 ## SME Exemptions
 
-Small and micro enterprises may opt out of Articles 21 (DPIA), 22 (security measures requirements), and 33(2) (certain processor obligations) for **5 years** from 1 January 2026, **unless** they process sensitive personal data or process data at large scale. Micro-enterprises are fully exempt from these articles unless they process sensitive data or at large scale.
+Small and micro enterprises are exempt from Articles 21 (DPIA), 22 (security measures requirements), and 33(2) (certain processor obligations) for **5 years** from 1 January 2026, **unless** they process sensitive personal data or process data at large scale. Whether you count as small or micro depends on the size tests in Vietnam's SME rules (headcount and revenue), so ask the user for those figures and tell them to confirm their status with Vietnamese counsel.
 
 ---
 

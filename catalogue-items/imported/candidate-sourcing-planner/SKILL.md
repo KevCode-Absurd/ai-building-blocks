@@ -19,14 +19,15 @@ If $ARGUMENTS is a file path, read the JD. If it's a role name, ask clarifying q
 - What location(s)?
 - Any specific requirements?
 
-Check `.claude/talent-sourcing.local.md` for company context, preferred channels, and existing templates.
+Check `.claude/talent-sourcing.local.md` for company context, preferred channels, and existing templates. If that file is not there, ask the user to paste their company notes and preferred channels.
 
 ### Step 2: Ensure Candidate Persona Exists
 
 A persona is required before building the sourcing plan. Check for `roles/[role-name]/persona.md`.
 
 - **If persona exists:** Read it and use it to inform channel selection, company targeting, and messaging strategy.
-- **If persona doesn't exist:** Flag this as a blocker. The main conversation should launch persona-builder before proceeding with the sourcing plan. Do not build a persona inline — the persona-builder agent has the frameworks and templates for this.
+- **If persona doesn't exist:** Flag this as a blocker. Ask the user to paste their candidate profile, or to build one first (for example with the ideal candidate profiler) before you go on. Do not build a persona inline.
+- In a plain chat there is no `roles/` folder. Ask the user to paste the persona instead.
 
 ### Step 3: Identify Sourcing Channels
 
@@ -34,12 +35,12 @@ Rank channels by expected effectiveness for this specific role:
 
 **Direct sourcing channels:**
 - LinkedIn Recruiter / Sales Navigator
-- TheOrg org charts (HIGH for sales/GTM and executive roles; public, scrapeable)
+- TheOrg org charts (HIGH for sales/GTM and executive roles; public pages. Bulk scraping may break the site's terms, so read pages by hand)
 - Xing (DACH market; requires account for deep search; HIGH for SME/Mittelstand)
 - GitHub / GitLab (for technical roles)
 - Portfolio sites (for design/creative roles)
-- Google X-Ray across platforms (LinkedIn, GitHub, Stack Overflow, TheOrg, Xing)
-- Employee directories (RocketReach, Apollo, ZoomInfo; name + title confirmation)
+- Google X-Ray across platforms (LinkedIn, GitHub, Stack Overflow, TheOrg, Xing). Search-engine searches only; do not scrape the results in bulk
+- Employee directories (RocketReach, Apollo, ZoomInfo; name + title confirmation). These are paid services and need their own licence and personal-data checks
 - Company career and team pages (leadership discovery, team sizing via open roles)
 - Press, news, company blogs (push factors: layoffs, restructuring, new hires)
 

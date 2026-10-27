@@ -110,6 +110,8 @@ cd commercial/skills/pricing-strategist && python3 scripts/pricing_model_picker.
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
+The percentages and thresholds below (for example "~20% of WTP", "60%+", "70%", "> 10x") are rules of thumb recalled from the named sources. They have not been checked here against the original pages. Do not quote them as findings. Check them against your own numbers.
+
 Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer + canon citation per question. Never bundled.
 
 1. **"Is your customer paying for outcomes, seats, or usage?"**

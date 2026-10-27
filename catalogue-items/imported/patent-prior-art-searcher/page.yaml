@@ -34,11 +34,11 @@ you_get:
   - A source link for every patent cited
 how_to_use:
   - Use an AI that can search the web and run code, such as Claude with web tools and code running turned on.
-  - Paste the skill into the chat, or upload the skill folder.
+  - Paste the skill into the chat, or upload the skill folder. The search reads public patent sites automatically, about one query a second, so it may hit rate limits and take a while.
   - Describe your invention, rival product or target patent.
   - Answer the questions one at a time. Pick one of the five goals when asked.
   - Check the ranked patents and their source links. Open the ones that matter.
-  - Take the report to a patent attorney before you file, license or buy.
+  - Take the report to a patent attorney before you file, license or buy. Send the novelty and freedom-to-operate findings first.
 output_sample:
   input:
     - A short description of your invention, rival product or target patent

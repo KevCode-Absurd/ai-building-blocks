@@ -21,6 +21,19 @@ international expansion, market entry, localization, go-to-market, GTM, regional
 
 **Decision sequence:** Market selection → Entry mode → Regulatory assessment → Localization plan → GTM strategy → Team structure → Launch.
 
+## How to run this (added by AI Blocks)
+
+1. Ask the person for the markets they are weighing, what they sell, who buys it, any demand abroad, and their budget and team size. If a market or product is missing, write MISSING: <what> and ask.
+2. Score each market 1 to 5 on every row of the Scoring Matrix. Multiply by the weight and add up the total. Give a short reason for each score. Mark scores that are your judgment, not data. Never invent market sizes, prices or statistics. If you have no figure, say so.
+3. Pick the top market. Name the next one as a back-up.
+4. Choose an entry mode from the table. Start at the lightest mode that fits the demand.
+5. List what to localise, using the Localization Checklist. Keep only the items that apply.
+6. List the legal, tax and hiring rules to confirm with a local expert. This is a list of questions, not legal advice.
+
+Hand back, in this order: a scored table with weights and totals, the one recommended market with its entry route and why, the localisation checklist, and the rules-to-confirm list.
+
+Next steps to offer: take the rules list to a local lawyer or accountant, and run a small test (remote sales, no hiring or company set-up) before you commit money.
+
 ## Market Selection Framework
 
 ### Scoring Matrix

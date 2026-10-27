@@ -170,6 +170,7 @@ Get-ChildItem C:\ -Recurse -File -EA SilentlyContinue | Sort Length -Desc | Sele
 # macOS
 memory_pressure
 top -o rsize -l 1 -n 10 -stats pid,command,rsize
+# AI Blocks: this closes Chrome helper processes. Ask the person to save their work first.
 pkill -f "Google Chrome Helper"
 
 # Linux
@@ -179,6 +180,7 @@ sudo dmesg | grep -i "oom\|out of memory"
 
 ```powershell
 Get-Process | Sort WorkingSet64 -Desc | Select -First 10 Name,@{N='MB';E={[math]::Round($_.WorkingSet64/1MB,2)}}
+# AI Blocks: this force-closes Teams. Ask the person to save their work first.
 Stop-Process -Name "Teams" -Force
 ```
 
@@ -210,6 +212,7 @@ brew bundle install --file=Brewfile
 brew bundle dump --file=~/Brewfile --force  # export current setup
 
 # FileVault
+# AI Blocks: this changes disk encryption. Get the owner's yes, and store the recovery key safely before you finish.
 sudo fdesetup status && sudo fdesetup enable  # store recovery key in 1Password
 
 # Updates
@@ -234,6 +237,7 @@ Start-Service wuauserv,cryptSvc,bits,msiserver
 
 # BitLocker
 manage-bde -status C:
+# AI Blocks: this changes disk encryption. Get the owner's yes, and save the recovery key safely first.
 Enable-BitLocker -MountPoint "C:" -EncryptionMethod XtsAes256 -UsedSpaceOnly -TpmProtector
 
 # Remote Desktop
@@ -341,7 +345,7 @@ sudo fdesetup enable
 
 ## Offboarding Checklist
 
-Run these **immediately** when someone departs. Speed matters for security. AI Blocks: confirm the person and the date with HR or the owner first. Some steps (delete AWS keys, remove from GitHub) cannot be undone.
+Run these **immediately** when someone departs. Speed matters for security. AI Blocks: confirm the person and the date with HR or the owner first. Some steps (remove from Slack, remove from GitHub, delete AWS keys) cannot be undone. Show each step and get a yes for it before you run it. Check the target name each time.
 
 ```bash
 gam update user departed@company.com suspended on             # 1. block all access

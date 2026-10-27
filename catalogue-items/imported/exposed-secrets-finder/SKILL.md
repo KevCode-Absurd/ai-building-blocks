@@ -144,10 +144,12 @@ removed (anything committed/served is already compromised).
 
 ## Examples
 
+These examples are illustrations of what a hit can look like. The results shown come from a deliberately vulnerable demo app, not from your site or any real company. Never say a named site exposes secrets unless you fetched it in this session, with permission, and saw it yourself.
+
 ### Example 1: Secrets in HTML meta and hidden elements
 
 ```bash
-BASE="https://demo-for-opensource.vercel.app"; curl -s "$BASE/" -o body.html
+BASE="https://your-site.example"; curl -s "$BASE/" -o body.html   # replace with the site you are allowed to test
 grep -inE "recaptcha-secret|data-aws-secret|data-webhook-secret|mongodb\+srv" body.html
 # -> meta recaptcha-secret=..., data-aws-access=AKIA…/data-aws-secret=…,
 #    data-webhook-secret=whsec_…, and a hidden JSON blob with a mongodb+srv URI

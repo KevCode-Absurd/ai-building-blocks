@@ -9,7 +9,7 @@ subhead: A safe MCP server that lets your AI reach the tools and data you choose
 explain: |
   A safe MCP server that lets your AI reach the tools and data you choose, with clear rules for each tool and tests to match. Say what the AI should be able to do, and get the design and code to make it so.
 
-  It starts by bounding the job: what is in scope, what is not and who is trusted. Then it designs each tool with a name, a description, input and output shapes, error shapes and notes on side effects and data type. It ends with deployment, rollback and key revocation steps,.
+  It starts by bounding the job: what is in scope, what is not and who is trusted. Then it designs each tool with a name, a description, input and output shapes, error shapes and notes on side effects and data type. It ends with deployment, rollback and key revocation steps.
 when:
   - You want your AI to read from a database or app without full access.
   - You need an MCP server where each tool has clear limits.
@@ -31,6 +31,7 @@ you_get:
   - Unit and access tests
   - Deployment and rollback steps
 how_to_use:
+  - You need a developer, or an AI that can run code and read your project. The MCP rules change, so confirm the latest MCP spec before you build.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe what your AI should be able to do, the systems it will reach, and who will use it.
   - Answer any questions about sign-in, data types and which actions can change or delete things.

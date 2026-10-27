@@ -38,7 +38,7 @@ How he applied it: he told staff to aim their work at the larger purpose, not at
 
 Both his big successes came from pivots out of failure [S2]. Flickr began as a photo feature inside the game. He said the first version was a terrible idea that impressed people but wasn't very useful, yet within about three months it was clear Flickr had legs [S2]. The team split on whether to keep the game. After a tied vote and some persuading, they dropped it and focused on Flickr [S2].
 
-How he applied it: with Glitch, 97% of people who signed up left within five minutes, despite a small, devoted fan base [S2]. After 18 months of experiments, he decided the sixteenth idea wouldn't work if the first fifteen hadn't, and shut it down while $5.5 million was still in the bank [S2].
+How he applied it: with Glitch, 97% of people who signed up left within five minutes, despite a small, devoted fan base [S2]. After 18 months of experiments, he decided the sixteenth idea wouldn't work if the first fifteen hadn't, and shut it down with about $5 million still in the bank [S2][S14].
 
 ### Build for yourself first, with no ego
 

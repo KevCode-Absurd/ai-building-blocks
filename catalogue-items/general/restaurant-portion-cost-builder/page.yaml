@@ -4,12 +4,12 @@ headline: Restaurant portion cost builder
 summary: Work out the cost per portion and contribution for one batch of one dish, from real weights, yield, cash costs and price. Built for restaurant portion costing.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Yield is measured per batch, so portion cost is only as sound as the weights and cash costs recorded for that batch."
 subhead: A batch yield, portion cost and service contribution schedule. Share purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
 explain: |-
   A batch yield, portion cost and service contribution schedule.
 
-  Food service operating finance. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+  Give it the weight you bought, the edible weight you measured, the portion weight, the batch's cash cost, the price and the portions served. It works out the yield, the cost per portion and what the batch contributed. It covers one batch of one dish. It is not a full business forecast and gives no food safety advice.
 when:
   - You need a batch yield, portion cost and service contribution schedule.
   - You work on food service operating finance and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You want a full venue profit and loss with rent and wages: use a restaurant P&L in your accounting tool or ask your accountant."
   - "You want to set menu prices that cover fixed costs: use a menu pricing sheet in Google Sheets or Excel."
   - "You need food safety, allergen or tax stock valuation advice: ask a qualified food safety or accounting professional."
+  - "You need the cost per good unit of a production batch after yield loss: use the Manufacturing yield cost bridge instead."
 you_give:
   - Purchased batch weight, observed edible yield, actual portion weight, same-batch ingredient/labor/energy cash, confirmed selling price and served demand.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The batch date, plus the currency and scale used for the portion cost."
+  - "Your spreadsheet tool, if you want the portion cost as a workbook."
 you_get:
   - A batch yield, portion cost and service contribution schedule.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the portion cost, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of batch cost, portions served and receipts, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the batch purchase, the measured yield and the portion weight."
+  - "Tell it what you need: the cost per portion and the contribution from one batch of one dish."
+  - "Ask it to stop and mark MISSING if the purchased weight or the edible yield is not in your sources."
+  - "Check that every driver traces to a dated record, and actuals stay apart from scenarios, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Purchased batch weight and the edible weight you measured after prep
@@ -69,10 +70,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Batch date"
+    how: "Take the batch date from the batch purchase, the measured yield and the portion weight. Use one currency and scale on every line."
+  - what: "Portion weight"
+    how: "Change the portion weight and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
 judge:
@@ -85,8 +86,10 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one portion cost you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define edible yield into SKILL.md, so every run uses your wording."
+before: []
+next: [manufacturing-yield-cost-bridge, service-utilization-margin-builder]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

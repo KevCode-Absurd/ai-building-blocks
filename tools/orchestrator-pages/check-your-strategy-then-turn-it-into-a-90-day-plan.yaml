@@ -30,7 +30,7 @@ you_get:
   - A marketing plan by stage with a 90-day roadmap and a 12-month outlook
   - A 90-day plan with workstreams, owners, weekly milestones, check-ins and risks
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md and the three skill files this workflow uses. Unzip it and keep them together in one folder.
   - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md". It needs a setup that can read and save files.
   - Paste your strategy as it is, even if it is messy. Do not tidy it first.
   - "At the pause, fix the parts the check called hollow. Then write a half-page brief: the problem, your policy, who you sell to and your budget."

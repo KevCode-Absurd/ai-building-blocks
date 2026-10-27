@@ -440,7 +440,7 @@ def optimize_channel_mix(channels, demand_by_channel, commission_rates,
 
     # Strategic constraints
     # Maintain minimum direct bookings (brand.com)
-    prob += allocation.get('Direct', 0) >= total_rooms * 0.25  # At least 25% direct
+    prob += allocation.get('Direct', 0) >= total_rooms * 0.25  # placeholder floor (25% direct): set your own target
 
     # Solve
     prob.solve(PULP_CBC_CMD(msg=0))

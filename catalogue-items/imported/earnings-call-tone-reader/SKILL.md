@@ -53,7 +53,7 @@ Generic sentiment libraries (like VADER) often fail in finance because words lik
 ## Technical NLP Steps
 
 ### 1. Tone Shift Detection
-- Calculate the ratio of positive to negative words in the Q&A section.
+- Calculate the ratio of positive to negative words in the Q&A section. In a chat with no code, list each positive and negative phrase you found with its quote, give the tally, and mark every count as approximate.
 - Compare this ratio to the historical average for this management team, using the prior transcripts the user gave you.
 
 ### 2. Uncertainty Mapping
@@ -71,7 +71,7 @@ Generic sentiment libraries (like VADER) often fail in finance because words lik
 ### Sentiment Analysis Report Structure
 
 **Sentiment Scorecard**
-- **Overall Score**: a number from -1 (very negative) to +1 (very positive), with a one-word label, and how you got it (model, or your reading).
+- **Overall Score**: a number from -1 (very negative) to +1 (very positive), with a one-word label. State whether it came from a model run or from your reading of the text, and give the quoted lines behind it. A score from your reading is approximate.
 - **Tone Shift**: the change against the prior quarters, in percent, or `n/a, no prior transcripts given`.
 
 **Key Findings**
@@ -80,7 +80,7 @@ Generic sentiment libraries (like VADER) often fail in finance because words lik
 - Hedging and uncertainty words counted per 100 words, against prior quarters if you have them.
 
 **Quantitative Overlay** (only if a price series was given)
-- Correlation between sentiment shifts and stock price movement in previous quarters. Report it as correlation, not cause. If there is no price data, write `skipped, no price series given`.
+- Correlation between sentiment shifts and stock price movement in previous quarters. Report it only when the user pasted a price series with dates, and never estimate it from memory. Report it as correlation, not cause. If there is no price data, write `skipped, no price series given`.
 
 **Check against the numbers**
 - Where tone and the reported figures disagree (for example a positive tone while receivables grow faster than revenue), name the gap. A gap between tone and numbers is often the most useful finding.

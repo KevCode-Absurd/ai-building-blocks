@@ -214,7 +214,7 @@ See [references/fault-tolerance.md](references/fault-tolerance.md) when tuning t
 
 For the complete treatment with detailed diagrams and research references:
 
-- [*"Designing Data-Intensive Applications"*](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321?tag=wondelai00-20) by Martin Kleppmann
+- [*"Designing Data-Intensive Applications"*](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) by Martin Kleppmann
 
 ## About the Author
 

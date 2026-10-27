@@ -7,12 +7,13 @@ role: check
 job: analysis
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: codebase, required: true}
 outputs:
   - {type: feedback_notes}
 uses: []
-origin: own
+origin: rebuilt
 credits:
   - {title: "vibe-code-auditor skill", by: "sickn33", url: "https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/vibe-code-auditor", used: "Auditing quickly generated code for fragility and production risk, adapted under the CC BY-4.0 licence"}
 version: 1.0.0
 example_pending: true
+needs_mode: manual

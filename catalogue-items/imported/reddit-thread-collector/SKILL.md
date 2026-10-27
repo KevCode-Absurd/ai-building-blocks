@@ -18,6 +18,8 @@ license_source: "https://github.com/harshmaur/apify-reddit-scraper-skill/blob/ma
 
 Turn a plain-language Reddit request into one run of `harshmaur/reddit-scraper` and hand back structured posts, comments, users or communities. One Actor covers search, subreddit listings, permalinks, user profiles and community metadata, so routing is about picking the right **input field**, not the right Actor.
 
+Privacy and terms: scraping Reddit may break Reddit's terms, so use this only where those terms allow it, and never to get round an access block. Usernames, bios and comment authors are personal data. Collect only the fields the analysis needs, and delete the export when the project ends.
+
 Disclosure: the Actor this skill routes to is paid (pay per result) and built by the skill author. Links carry no affiliate parameters.
 
 ## When to Use

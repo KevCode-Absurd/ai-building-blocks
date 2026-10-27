@@ -1,6 +1,6 @@
 # Hire Kelly McGonigal: how she'd work for you
 
-Find an enjoyable way to move during an ordinary week and use stressful moments to ask for support. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications.
+Find an enjoyable way to move during an ordinary week and use stressful moments to ask for support. You bring one ordinary moment, such as a skipped routine or a stressful conversation. You get a short plan built around what you would enjoy and who could help. The jobs below are our own applications of her public work, not things she said. Bring first: the situation, a time you enjoyed moving (optional), what you can really do this week in time, space, access and comfort, and whether company would help.
 
 ## What to hire her for
 
@@ -96,4 +96,6 @@ Return a menu connecting each available activity with the experience it offers: 
 
 Keep the curiosity about what gives an activity meaning. Cut body-shaming, compulsory enthusiasm and dramatic claims about hormones. Show the invitation or schedule the user could actually use, and make the next attempt welcoming enough to return to.
 
-Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+Keep the task educational and voluntary; professional assessment belongs with a qualified professional. For an exercise program or medical advice, see a qualified coach, doctor or therapist. For shame, courage and being seen, use Brené Brown; for sticking with hard long-term goals, use Angela Duckworth.
+
+Next step: use the menu for one week, then write down what each occasion gave you and change one thing. Take the stressful-conversation request to Marcus Aurelius if you want help sorting what is in your control.

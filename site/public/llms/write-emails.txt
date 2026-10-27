@@ -1,6 +1,6 @@
 # Write emails that get read: AI Blocks
 
-> 66 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 68 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Draft account-based outreach for one named company or contact. Get an email, call script and LinkedIn note built on real signals.
 - [Browse abandonment email flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines.
@@ -56,6 +56,7 @@
 - [Personal story email writer and reviewer](https://useaiblocks.com/workflows/write-a-personal-story-email-and-read-how-it-did): Share a true story, brand guidance and later campaign data. Get email drafts, editing checks and a review against comparable sends.
 - [Post-purchase flow builder](https://useaiblocks.com/skills/post-purchase-flow-builder): Plan the six emails sent after an order. Get the trigger, an order-count split, outlines and subject ideas for each email.
 - [Reorder and second-order planner](https://useaiblocks.com/skills/reorder-and-second-order-planner): Plan reorder and second-order emails from how long each product lasts. You get refill timing, message goals and an offer cap for each message.
+- [Resignation letter writer](https://useaiblocks.com/skills/resignation-letter-writer): Share your role, last day and tone. Get a short resignation letter, what to say first and a handover list.
 - [Sale email and text campaign planner](https://useaiblocks.com/workflows/plan-a-sale-across-email-and-sms): Share offer terms, audience and brand facts. Get coordinated email/text timing, message drafts, checks and a later results review.
 - [Signup popup builder](https://useaiblocks.com/skills/signup-popup-builder): Build a signup popup that wins email subscribers. Give it your offer and order value. You get desktop and mobile specs, copy and a test plan.
 - [Slack message writer](https://useaiblocks.com/skills/slack-message-writer): Share your point and audience. Get a concise Slack message, thread reply or canvas draft that leads with the news.
@@ -65,6 +66,7 @@
 - [Task follow-up and voice editor](https://useaiblocks.com/workflows/draft-your-due-task-followups): Match due tasks to real threads and recipients, draft the needed follow-ups and edit wording using your supplied voice rules.
 - [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts): Share dated tasks and their message threads. Get recipient-specific follow-up drafts, missing facts and a clear draft/sent status.
 - [Tense email softener](https://useaiblocks.com/prompts/tense-email-softener): Share a tense email and the fix you need. Get a calmer version that preserves the facts, one clear request and a firmer follow-up.
+- [Testimonial request writer](https://useaiblocks.com/skills/testimonial-request-writer): Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.
 - [Text message campaign writer](https://useaiblocks.com/skills/text-message-campaign-writer): Share your audience, goal, and opt-in process. Get SMS or WhatsApp drafts with timing.
 - [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder): Build a welcome email flow for new subscribers. Give it your offer and best sellers. Get timing, filters, email outlines, SMS and tests.
 - [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder): Share your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder.

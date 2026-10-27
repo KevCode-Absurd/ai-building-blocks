@@ -48,10 +48,10 @@ Accepts SQL DDL or JSON schema (`assets/sample_schema.sql` / `sample_schema.json
 ### 2. Optimize indexes against real query patterns
 
 ```bash
-python3 index_optimizer.py --schema assets/sample_schema.json --queries assets/sample_query_patterns.json --analyze-existing --format json -o indexes.json
+python3 index_optimizer.py --schema my_schema.json --queries my_query_patterns.json --analyze-existing --format json -o indexes.json
 ```
 
-Write the user's hot queries into a query-patterns JSON first (copy `assets/sample_query_patterns.json`). Output is a priority-ordered list of CREATE INDEX recommendations plus redundant-index removals.
+Run it on the user's own schema (`my_schema.json`, in the same JSON format as `assets/sample_schema.json`; if the user only has schema.sql, write the JSON form of it first). Write the user's hot queries into `my_query_patterns.json` first by copying `assets/sample_query_patterns.json` and replacing its queries. Output is a priority-ordered list of CREATE INDEX recommendations plus redundant-index removals.
 
 ### 3. Generate the migration
 
@@ -59,7 +59,7 @@ Write the user's hot queries into a query-patterns JSON first (copy `assets/samp
 python3 migration_generator.py --current current_schema.json --target target_schema.json --zero-downtime --format sql -o migration.sql
 ```
 
-`--zero-downtime` emits an expand-contract plan; `--validate-only` checks feasibility without generating SQL.
+`current_schema.json` is the user's existing schema and `target_schema.json` is a copy with the planned changes, both in the format of `assets/sample_schema.json`. `--zero-downtime` emits an expand-contract plan; `--validate-only` checks feasibility without generating SQL.
 
 ### 4. Verification loop
 

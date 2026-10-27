@@ -40,29 +40,34 @@ If the entry or exit emotion is unclear, ask before proceeding.
 ## PSYCHOLOGICAL FRAMEWORK: EMOTIONAL ARC SEQUENCING
 
 ### Mechanism
-Emotion and reasoning can both influence decisions; their contribution varies by person and task. Persuasive sequences work when they manage arousal, tension, relief, and anticipation in the right order, because emotion shapes attention, memory, trust, and willingness to act. Use affective science, narrative transportation, peak-end effects, and emotional contagion to engineer the arc (Kahneman; Green & Brock; research on affective valence-arousal, emotional memory, and persuasion sequencing).
+Emotion and reasoning can both influence decisions; their contribution varies by person and task. Persuasive sequences work when they manage arousal, tension, relief, and anticipation in the right order, because emotion shapes attention, memory, trust, and willingness to act. Use affective science, narrative transportation, peak-end effects, and emotional contagion to engineer the arc (these names are the original author's reading list, with no full references, so treat them as unchecked: Kahneman; Green & Brock; research on affective valence-arousal, emotional memory, and persuasion sequencing).
 
 ### Execution Steps
 
 **Step 1 - Diagnose the entry emotion**
 Identify what the customer feels on arrival: skeptical, overwhelmed, curious, hopeful, defensive, anxious, or ready.
 *Planning hypothesis (verify before presenting as research): initial affect changes what information is noticed, trusted, and remembered.*
+Write down: the entry feeling, and the evidence you have for it.
 
 **Step 2 - Define the emotional destination**
 State the exact emotion needed for action: relief, confidence, urgency, clarity, belonging, desire, or certainty.
 *Planning hypothesis (verify before presenting as research): behavior changes when the target state is emotionally legible and achievable.*
+Write down: the destination feeling and the action it should lead to.
 
 **Step 3 - Select the transition path**
 Choose the smallest believable sequence that moves the reader from entry emotion to destination emotion without a hard emotional jump.
 *Planning hypothesis (verify before presenting as research): abrupt emotional shifts raise skepticism and reduce narrative transportation.*
+Write down: a table with columns stage, entry feeling, target feeling, and the matching section of the content.
 
 **Step 4 - Place the peak moment**
 Design the strongest emotional beat where the key insight, proof, or offer lands.
 *Planning hypothesis (verify before presenting as research): peak-end effects show memory is disproportionately shaped by peak intensity and the ending.*
+Write down: which section holds the peak, and what lands there.
 
 **Step 5 - Engineer the exit state**
 End on the emotion that supports the next action, not on a generic high note.
 *Planning hypothesis (verify before presenting as research): the final emotional state influences follow-through, recall, and next-step commitment.*
+Write down: the closing feeling and the call to action that follows it.
 
 ## DECISION MATRIX
 

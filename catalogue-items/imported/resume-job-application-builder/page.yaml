@@ -16,6 +16,7 @@ when:
   - You are applying for a job or internship using your own experience.
 not_for:
   - "You have no real work, study or project history yet: write down what you have done first with a friend or a career advisor, then come back."
+  - "You only need a cover letter: ask for cover letter mode only, and give it your resume and the job description."
   - "You only want your LinkedIn page improved: this skill can do it, but you do not need a resume. Ask for LinkedIn mode only."
   - "You want a made-up or inflated resume: this skill refuses to invent employers, dates, titles or numbers."
 you_give:
@@ -31,8 +32,10 @@ you_get:
   - "A truthfulness check against your source"
   - "A cover letter or LinkedIn advice, when you ask"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your current resume or a plain list of your jobs, study and projects. Add the job description and any real numbers from your work.
+  - Ask for a resume, a cover letter or LinkedIn mode. Read the truthfulness check line by line against your own records before you send anything.
+  - Keep the master profile it builds, and update it after each new job or project, so the next application starts from it.
   - It works best when your AI can run Python with the listed packages to render files, or return a text draft when that is unavailable.
 output_sample:
   input:
@@ -57,3 +60,4 @@ output_sample:
       contains: A tailored cover letter for the job, written when you ask for one.
     - name: LinkedIn recommendations
       contains: Advice for your headline, About, experience and skills, when you ask for LinkedIn mode.
+next: [linkedin-profile-rewriter]

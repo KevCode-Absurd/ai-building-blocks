@@ -23,7 +23,7 @@ not_for:
   - "You want a cartoon, clay or anime look: use the Animated film video ad script writer or the Claymation video ad script writer."
 
 you_give:
-  - Your product facts, with the claims you may make
+  - Your product facts, with the claims you may make, by claim ID if your brand file has them
   - Your brand file and who the ad is for
   - Your customer reviews (optional)
   - Your target countries, for the ad rules check (optional)
@@ -35,7 +35,7 @@ you_get:
   - An ad rules check on the script and its claims
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and five skill files, in the order they run: Ad angle planner, Talking object video ad script writer, Video ad script line checker, Talking object video clip prompt writer and Meta ads compliance checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Your product facts, your brand file, and a line on who the ad is for.
   - Check the script before you generate anything. Fix any line the ad rules check marks "Fix first".

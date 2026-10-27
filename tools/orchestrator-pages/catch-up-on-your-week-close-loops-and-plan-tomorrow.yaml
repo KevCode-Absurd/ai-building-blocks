@@ -9,14 +9,14 @@ subhead: It scans your connected chat, email, tasks and files, writes a digest o
 explain: |
   After a busy week or time away, you open everything and cannot tell what matters. Mentions pile up, decisions hide in threads and half-finished jobs sit in your head. You answer what is loudest, not what is most important.
 
-  The workflow starts with a digest from your connected tools: mentions, action items and decisions grouped by topic. The weekly review then uses that digest to sort every open loop into a next action, a waiting-for, a someday or the bin, and checks for stalled projects. Last, it builds one day around that list: deep tasks in the earliest long blocks, shallow work batched and a cap on deep hours. It needs at least one tool connected, such as chat or email. Without one, skip the first step.
+  The workflow starts with a digest from your connected tools: mentions, action items and decisions grouped by topic. The weekly review then uses that digest to sort every open loop into a next action, a waiting-for, a someday or the bin, and checks for stalled projects. Last, it builds one day around that list: deep tasks in the earliest long blocks, shallow work batched and a cap on deep hours. It needs at least one tool connected, such as chat or email. With none connected, the run skips step 1 and the weekly review works from a list you paste in.
 when:
   - You were away or heads-down and need to see what you missed.
   - It is Friday or Monday and your task list is a mess.
   - You want tomorrow planned around your most important work.
 not_for:
   - "You have one urgent task and no backlog: just do the task, or plan the day on its own with the Deep work day planner."
-  - "None of your tools can be connected: skip the digest and run the Weekly review guide alone on a list you paste in."
+  - "You only want tomorrow planned: use the Deep work day planner on its own."
   - "You are starting fresh with nothing open: there is nothing to close, so write a simple to-do list for tomorrow."
 you_give:
   - At least one connected tool, such as chat, email, tasks or files
@@ -92,4 +92,4 @@ test:
 improve:
   - Run it on the same day each week so loops do not pile up.
   - Keep a short list of recurring tasks to batch into the shallow windows.
-  - Skip the digest when you have nothing connected. Start with the weekly review.
+  - Add a step that drafts replies to the messages that need one.

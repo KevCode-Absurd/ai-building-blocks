@@ -30,8 +30,9 @@ you_get:
   - Draft journal entries
   - Period totals for review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Paste or upload the accrual policy list, the period dates, the amounts already booked (from your trial balance or ledger export) and the invoices or contracts behind each amount.
+  - Next, once your controller approves, post the entries in your ledger by hand and file the schedule with the close checklist or your auditor's support.
 output_sample:
   input:
     - Your accrual policy list

@@ -19,6 +19,7 @@ not_for:
   - "You do not have the Image Processing Toolbox: the skill falls back to older isosurface and patch calls, which are slower, so get the toolbox first."
   - "You only need a quick still picture of a slice: use MATLAB's imshow on one slice, no viewer needed."
   - "You do not use MATLAB: ask a developer for a viewer in your own tool, because this writes MATLAB code only."
+  - You want to use the code outside MATLAB or other MathWorks products. The licence does not allow it.
 you_give:
   - Your 3D volume, scan file or surface mesh
   - A mask or label volume to overlay (optional)
@@ -36,6 +37,7 @@ how_to_use:
   - Say if you want a small app around the viewer.
   - Run the code it gives you in MATLAB. You need the Image Processing Toolbox. DICOM and NIfTI files also need the Medical Imaging Toolbox.
   - Check the scan opens with the right size and units. Ask your AI to fix anything that looks off.
+  - Want a full app next? Pair the viewer with the MATLAB app builder. Ask someone who knows MATLAB to run the code and confirm the scan size and units. This is a viewing aid, not a tool for diagnosis.
 output_sample:
   input:
     - Your 3D volume, scan file (DICOM, NIfTI or NRRD) or surface mesh
@@ -45,6 +47,7 @@ output_sample:
   prerequisites:
     - MATLAB with the Image Processing Toolbox
     - The Medical Imaging Toolbox, if you load DICOM, NIfTI or NRRD files
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Viewer setup
       contains: Code that creates the 3D viewer and shows your volume with volshow, set to the right units and spacing.

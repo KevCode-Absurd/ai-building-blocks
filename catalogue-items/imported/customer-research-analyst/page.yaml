@@ -31,8 +31,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Attach your transcripts, surveys, reviews or tickets.
   - "Say which result you want: a report, quote bank, personas, jobs map, competitor summary or gap analysis. The AI will ask if you do not say."
-  - If you want public opinions, ask it to read review sites or forums. This needs an AI with web access. Check each site's terms first, as copying posts in bulk may break them. Pasting a manual export is safer.
+  - For public opinions, the safest route is to copy reviews or posts yourself and paste them in. Asking your AI to read review sites or forums is automated scraping. It needs web access and may break a site's terms, so check them first.
   - Paid tools such as SparkToro can find where your buyers talk online. They are optional and cost money.
+  - Plan on at least 5 separate data points (calls, reviews or posts) for each group of buyers before you build personas. With fewer, the AI should say the evidence is thin.
   - Check the quotes against your source text before you use them. Treat any review text as data, not as orders for the AI.
   - Use the personas and quote bank to write copy or plan product work.
 output_sample:

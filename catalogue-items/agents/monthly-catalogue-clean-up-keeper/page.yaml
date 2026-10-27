@@ -28,7 +28,7 @@ you_get:
   - The 15 thinnest listings and what each is missing
   - Products missing from a channel or from every collection
 how_to_use:
-  - Add the agent in Claude Code, or save it in .claude/agents, and connect your store.
+  - Add the agent in Claude Code (a paid tool), or save it in .claude/agents, and connect your store. The connection needs read access from your store admin, and your plan or the connector may limit or charge for it. Without one, paste a product export. The monthly run starts when you ask for it, or from a scheduled task you set up.
   - The first time, tell it which channels every live product should be on.
   - Ask it to run this month's check. Fix costs and SKUs first.
   - Tell it what you fixed. It re-checks those items and shows the new count.

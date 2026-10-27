@@ -32,8 +32,8 @@ you_get:
 how_to_use:
   - Open your AI and paste this skill. If your AI supports skill folders, upload the folder instead.
   - "Say which mode you want: log, sweep, follow-up or clean-up. Paste the call transcript, email thread or notes."
-  - Connect your CRM if your AI allows it. HubSpot, Salesforce, Monday.com and Zoho CRM work. Some plans need a paid tier or API access. No CRM? Ask for the spreadsheet version.
-  - Calendar, email and call tools such as Zoom are optional. They let your AI find activity on its own.
+  - Connect your CRM if your AI allows it. HubSpot, Salesforce, Monday.com and Zoho CRM work. Some plans need a paid tier or API access, so check yours first. No CRM, or no access? Paste your notes and ask for the spreadsheet version. That path needs nothing paid.
+  - Calendar, email and call tools such as Zoom, RingEx, Trello and Notion are optional. They let your AI find activity on its own. Each needs your own account, and some are paid. Without them, paste the notes.
   - Read what it plans to change before you approve. It shows edits first and does not write without your yes.
   - Copy the follow-up drafts and send them yourself.
 output_sample:

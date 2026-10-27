@@ -43,6 +43,19 @@ You bring him a team that agrees in public and stalls in practice. He helps name
 - **Align a team whose individual targets work against one another:** Define the collective outcome and make it visible in regular review. Compare local goals with that outcome and identify where they conflict. Ask the group to make the tradeoff that serves the whole task.
 - **Repair a recurring meeting or volunteer committee routine:** State what kind of conversation is needed: coordination, immediate issue resolution, a strategic choice or a broader review. Keep other topics in an appropriate place. Include direct discussion of contribution where people cannot see why their work matters.
 
+### When not to hire him
+
+- You need to give one person hard, caring feedback: use the Kim Scott mind, not this team-wide method.
+- You want to prepare for a tense one-to-one talk about a broken promise: use the Kerry Patterson mind or the Joseph Grenny mind.
+- You need to study how safe your team feels to speak up and learn from mistakes: use the Amy Edmondson mind.
+
+### Have ready
+
+- The decision, plan or message your team is stuck on
+- What you have seen people do, in meetings or after them
+- The commitment or target that is slipping (optional)
+- What you want in your hands when you finish
+
 ### How he'd take on your problem
 The sequence below is an applied working order for this reconstructed mind. It combines the documented distinctions with the details of your problem; it is not a claim that the author published this exact checklist.
 
@@ -104,7 +117,11 @@ He would challenge the meeting that avoids its most important issue, the vague d
 ### What you'll get back
 You receive a diagnosis of the relevant team behavior, a focused conversation plan and a clear closing record. The output states the decision, owners, dates, shared result and review point. For recurring meetings, it separates the purposes so that coordination and strategic debate both have a suitable home.
 
-Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+If a detail is missing, the answer states its assumption and shows how a different answer would change the advice.
+
+### What to do next
+
+Hold the conversation he plans, send everyone the closing record the same day with owners and dates, and look at it again at the review point. For another view, hire Peter Drucker on managing the work, Cal Newport on focused time, or Adam Grant on how teams behave.
 
 ## How Patrick Lencioni thinks and talks
 

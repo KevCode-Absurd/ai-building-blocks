@@ -9,12 +9,14 @@ explain: >-
   Find weak geography, economy and period assumptions in a fictional setting before drafting scenes.
 
 
-  A bounded one-pass review of a supplied setting sheet is suited to a pasteable prompt. Three source profiles contribute complementary checks to one outcome; three separate clones or a long staged workflow would add friction.
+  This is one pass over the setting sheet you paste in. It looks at your world through three lenses: land and resources, daily life and institutions, and technology and history. One prompt does all three, so you do not need three separate tools.
 
 
   This task uses selected methods from Anthropologist, Geographer, Historian. It is a focused adaptation. The original agents remain available: [Anthropologist agent](https://useaiblocks.com/agents/agency-academic-anthropologist), [Geographer agent](https://useaiblocks.com/agents/agency-academic-geographer), [Historian agent](https://useaiblocks.com/agents/agency-academic-historian).
 when:
-  - You need a short, prioritized list of plausibility questions with quoted setting details.
+  - You have a map, a setting sheet or world notes and want to catch weak links before you write scenes.
+  - A reader or editor said something in your world does not add up, such as where the food or trade comes from.
+  - You want questions and small fixes, with your own words quoted, not a grade.
 not_for:
   - "You want to check new scenes against an older canon document: use the world-detail consistency checker."
   - "You want real history or culture fact-checked: ask a historian or read your own sources, since this check needs supplied references."
@@ -30,6 +32,7 @@ how_to_use:
   - Copy the prompt into a new chat.
   - Replace the input lines with your setting, rules and supplied references.
   - Review the quoted evidence and suggested changes.
+  - Apply the fixes you accept to your setting sheet, then run the check again on the revised sheet. To check new scenes against an older canon document, use the World detail consistency checker.
 output_sample:
   input:
     - Your setting sheet or map description

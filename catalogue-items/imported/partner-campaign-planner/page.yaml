@@ -33,9 +33,11 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code and no files.
   - Tell your AI who you serve, what you sell and the tools your customers use.
   - Add your goal and any partner you already have in mind.
-  - Ask for a ranked partner list first. Check that the picks share your buyer and do not compete for the same budget.
+  - "Ask for these in order: your audience and shared tools, a ranked partner list, then the campaign options. Check that the picks share your buyer and do not compete for the same budget."
+  - The skill quotes partner-program figures from its author, such as revenue shares. Treat them as unchecked and verify any you want to repeat.
   - Pick one partner. Ask for the campaign plan and the pitch.
   - Edit the pitch so it sounds like you. Then send it.
+  - Use the call prep list before your first call. After the call, agree the roles, dates and how leads are shared, and write them down.
 output_sample:
   input:
     - Who you serve and what you sell
@@ -59,3 +61,4 @@ output_sample:
       contains: A short message asking the partner to talk, with your idea and a clear ask.
     - name: Call prep list
       contains: What to bring to the first call, such as campaign ideas and your audience numbers.
+next: [partner-deal-evaluator, copilot-gtm-partnership-architecture]

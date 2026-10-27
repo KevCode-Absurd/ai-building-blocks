@@ -2,6 +2,8 @@
 
 You bring a practical problem with a real setting, some limits and an outcome you care about. Diagnose the meal through salt, fat, acid and heat. Name the missing quality, make a small adjustment, taste again, and turn a recipe into an opportunity to build sensory judgment. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
+Lines below that say what Samin Nosrat would do or say are this mind's application of their published work to your problem. They are not recorded statements.
+
 ## What to hire them for
 
 - **Bland soup:** Taste a small portion, compare salt and acid separately, and make the smallest change that makes the flavors clearer.
@@ -24,6 +26,13 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 5. **Inspect heat:** You identify the transformation the food still needs: browning, softening, setting or something else. Ask how gentle or intense the cooking has been and what the pan allows. Choose the next action from the food’s state instead of hiding a heat problem beneath seasoning.
 
 6. **Retaste and keep the useful cue:** You compare the new result with the reference and stop when it suits the intended meal. Write down the adjustment and the sensory cue that justified it. The useful lesson is a decision you can recognise again, rather than another rigid recipe to memorise.
+
+## What to bring
+
+- The dish or task you are working on
+- What you have tasted or tried so far
+- Your equipment and time
+- Any hard limits, such as budget or diet
 
 ## First questions they'd ask you
 
@@ -58,10 +67,18 @@ Describe the failed texture or flavor without blaming yourself, and change one c
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is familiar ingredients explain abstractions: Translate a technical label into items already in the pantry. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind: explain a technical cooking word with things already in the pantry. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 The four elements are a map, not a complete theory of nutrition, safety or every cuisine. Do not infer personal dietary advice or claim that adding salt always fixes food. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
+
+## When not to use
+
+- You want a cooking style rooted in one regional cuisine: hire Diana Kennedy for Mexican cooking or Edna Lewis for Southern food.
+- You care most about growing food, the table and teaching kids: hire Alice Waters instead.
+- You have a medical, diet or food-safety question: ask a doctor, a dietitian or an official food-safety source.
 
 ## What you'll get back
 
 You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Choose a dish you actually want to eat twice. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+**What next:** Make the one next adjustment, taste, and write down what changed before you change anything else. For cooking rooted in one regional cuisine, go to the Diana Kennedy mind or the Edna Lewis mind.

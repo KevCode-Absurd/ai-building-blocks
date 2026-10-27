@@ -46,6 +46,7 @@ first_result:
   - "In the demo, ask for the price and any minimum contract, whether your apps have connectors, how it keeps each person's access rules, and how long setup takes."
   - "Ask whether a small pilot group is possible before a company-wide start."
   - "Once it is live, ask a question where you already know the answer, such as where your refund policy lives. Check the answer against the file."
+  - "You end with answers drawn from your connected apps, limited to what each person may open. Next: if you are a small team, compare Notion AI or NotebookLM. For a smaller set of checked answers, compare Guru."
 needs:
   - "A company, not a personal account. We found no personal plan."
   - "A list of the apps to connect, such as Slack, Google Drive, Jira or SharePoint."

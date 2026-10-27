@@ -25,16 +25,16 @@ you_give:
   - Current homepage or pitch copy (optional)
   - Your proof, such as results or testimonials (optional)
 you_get:
+  - A score of your current copy out of 10, with fixes
   - A brand script in seven parts
-  - A one-liner and elevator pitch
+  - A one-liner first, then an elevator pitch
   - Homepage and landing page copy
-  - A score of your current copy with fixes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the SKILL.md text. No code or paid tools are needed.
   - Tell your AI what you sell, who buys it and the problem your customer faces.
   - Add your current homepage or pitch copy and your proof if you have them. Say if you have none.
   - Read the score, then the brand script. Check that the customer is the hero and you are the guide.
-  - Replace any placeholder such as [your real figure] with a true fact. Do not publish proof you cannot verify.
+  - Replace any placeholder such as [your real figure] with a true fact. Do not publish proof you cannot verify. If you have no proof, leave the proof line out and show a plain process instead.
   - Use the one-liner, pitch and website copy once you are happy with the script.
 output_sample:
   input:

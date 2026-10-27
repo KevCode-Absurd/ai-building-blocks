@@ -151,3 +151,4 @@ terms:
     meaning: Sending tracking data from your own server, not from the visitor's browser. It is steadier but needs a developer.
   - term: Secondary action
     meaning: A conversion Google tracks but does not bid on.
+next: [google-ads-purchase-tracking-checker, google-remarketing-campaign-builder]

@@ -9,7 +9,7 @@ headline: "Problem-first job description writer"
 subhead: "Paste the problem the new hire must solve, what done looks like in six months and how the work happens. The prompt writes the job description with the problem first, a checkable six-month picture, the past situations that prepare someone for it, and only the skills the problem needs."
 
 explain: |
-  Most job descriptions are a wish list of skills copied from the last one. The people who could solve your problem skim past them, and the people who apply match the keywords. Patty McCord has said in public that the better question is what problem this person will solve, and what will be true if they solve it.
+  Most job descriptions are a wish list of skills copied from the last one. The people who could solve your problem skim past them, and the people who apply match the keywords. The better question is what problem this person will solve, and what will be true if they solve it.
 
   This prompt puts that problem in the first paragraph, with the evidence you gave. It writes three to five lines you could check in six months, describes the right person by what they have done before rather than years or degrees, and lists only the skills the problem needs, each marked must or helps. It adds how the work happens, from pay to tools, and asks applicants for one short note on a similar problem they fixed instead of a cover letter.
 
@@ -135,6 +135,8 @@ improve:
   - "Add the legal lines your location requires, so they are never forgotten."
   - "Pair it with the Interview question set maker, using the six-month lines as the source."
 
+before: []
+next: [applicant-shortlist-builder, interview-question-set-maker]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message document works in any strong chat AI."}

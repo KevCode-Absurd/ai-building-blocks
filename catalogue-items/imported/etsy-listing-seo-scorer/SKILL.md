@@ -137,7 +137,7 @@ Suggested Tags:
 
 📋 ACTION PLAN
 
-Priority | Action                      | Impact
+Priority | Action                      | Impact (rough estimate from the scoring rules, not a measured gain)
 ──────────────────────────────────────────────
 HIGH     | Rewrite title with keywords | +15 score
 HIGH     | Add 5 more tags             | +10 score
@@ -147,11 +147,7 @@ LOW      | Add more product photos     | +5 score
 
 ## Keyword Research
 
-The tool suggests keywords based on:
-- Category trends
-- Competitor analysis
-- Search volume indicators
-- Long-tail variations
+The tool suggests keywords from fixed category rules and long-tail variations. It does not use live competitor data or real search volume. Check any suggestion against real Etsy search results before you use it.
 
 ## Optimization Workflow
 
@@ -166,7 +162,7 @@ Generate suggestions
       ↓
 Prioritize actions
       ↓
-Track improvements
+Track improvements (log your own scores each time; the tool does not store them)
 ```
 
 ---

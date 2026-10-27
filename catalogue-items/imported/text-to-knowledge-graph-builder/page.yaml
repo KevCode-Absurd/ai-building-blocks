@@ -34,9 +34,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and start a new chat.
   - Paste the skill instructions first. Then paste your text under them.
   - "Say which format you want: Cypher, JSON-LD, CSV or Mermaid. You can also name the entity types to keep."
-  - For a long document, share it in parts. Your AI merges the parts and warns you if the graph gets too big to read.
+  - For a long document, share it in parts of a few thousand words each. Your AI merges the parts and warns you if the graph gets too big to read (around 50 nodes).
   - Read the review notes. Fix wrong links, then ask your AI to expand any part you want.
   - To save Cypher, JSON-LD or CSV as files, use an AI that can run code. Otherwise copy the text from the chat.
+  - Use the result. Load the Cypher into a Neo4j database, or paste the Mermaid block into a document tool that draws it.
 output_sample:
   input:
     - Your text or documents
@@ -45,6 +46,7 @@ output_sample:
     - A size limit for the graph (optional)
   prerequisites:
     - An AI that can run code and save files, only if you want the graph data saved as files
+    - A running Neo4j database, only if you want to load the Cypher. The chat route (table, Mermaid diagram) needs none
   output:
     - name: Entities
       contains: A table of each entity with its type and any notable details found in the text.
@@ -58,3 +60,4 @@ output_sample:
       contains: A diagram you can paste into a document, showing the main nodes and links.
     - name: Review notes
       contains: Orphan entities, vague link names, contradictions and links the AI inferred rather than read.
+next: [diagram-maker, executive-summary-writer]

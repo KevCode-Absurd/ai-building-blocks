@@ -5,7 +5,7 @@ name: Team AI use policy drafter
 summary: Draft a team AI use policy from public model policies. Tell it how your team uses AI and get a first draft ready for a lawyer to review.
 job: check-contracts
 headline: Team AI use policy drafter
-subhead: Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it. Bring how your team uses AI today. Use the result to plan your next step.
+subhead: Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it before anyone adopts it.
 explain: |
   A first draft of your team's AI use policy, built from published model policies and current guidance, ready to take to the person who decides.
 
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Use an AI that can search the web. The skill needs it to find current public AI policies.
   - Open the skill folder and paste the skill text into a new chat, or upload the folder if your AI takes files.
-  - Set up your practice profile first. If it is missing, the skill stops and runs the setup interview in the setup-interview folder.
+  - Paste a short company profile: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. Or answer the setup interview in the setup-interview folder.
   - "Answer the short interview: which sections you need, who reads the policy, and where your team uses AI."
   - Read the draft and check every review flag. Answer the open questions at the end of each section.
   - Send the draft and the sources list to your lawyer before anyone adopts it.
@@ -46,7 +46,7 @@ output_sample:
     - Your current policy (optional)
   prerequisites:
     - An AI that can search the web for current public policies
-    - Your practice profile file, which the setup interview creates if it is missing
+    - A short company profile that you paste in or build with the setup interview
   output:
     - name: Draft header
       contains: A line stating the draft is for internal legal review and not for distribution.

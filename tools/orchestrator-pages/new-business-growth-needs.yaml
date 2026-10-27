@@ -9,7 +9,7 @@ subhead: Name a business and the size you want it to reach. It settles the big c
 explain: |
   A huge target looks impossible until it is broken apart. Most of the big choices follow from the goal, and the target turns into a short sum you can test. This workflow starts there, then asks how the product becomes a habit, who you depend on and what would guarantee failure.
 
-  It runs five steps in order. It settles the big, obvious choices that the goal already forces. It works back from the target to yearly earnings and splits them into buyers, purchases, share and profit per sale, marking each figure as checked, estimated or a guess. It designs the stack of forces that makes buying repeat. It checks how your partners are paid. Last it asks what you must avoid, by thinking in reverse. The method comes from Charlie Munger's talk on turning a small start into a huge business, in Poor Charlie's Almanack. It is a planning aid, not a valuation of any company and not investment advice.
+  It runs five steps in order. It settles the big, obvious choices that the goal already forces. It works back from the target to yearly earnings and splits them into buyers, purchases, share and profit per sale, marking each figure as checked, estimated or a guess. It designs the stack of forces that makes buying repeat. It checks how your partners are paid. Last it asks what you must avoid, by thinking in reverse. It draws on ideas from Charlie Munger's talks in Poor Charlie's Almanack. The five-step order is this workflow's own design. It is a planning aid, not a valuation of any company and not investment advice.
 when:
   - You are shaping a business from scratch and want its plan tested against a big target.
   - A pitch says a huge market means a huge result, and you want to test it.
@@ -20,6 +20,7 @@ not_for:
   - "You want to test how strong your edge is: use the Business power tester."
 you_give:
   - The business, what it sells and to whom
+  - The exact group of buyers
   - The size you want it to reach and by what year
   - Your open questions and the limits you cannot change (optional)
   - Market size, purchase counts and prices you can source (optional)
@@ -32,7 +33,7 @@ you_get:
   - A check of your partners' pay, and a list of what to avoid
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". The five skill files are in the pack.
   - Give your business, the target size and the year. Paste every open question you have, even small ones.
   - It works step by step and saves each result. Go and find real facts for the figure the plan leans on.
 output_sample:

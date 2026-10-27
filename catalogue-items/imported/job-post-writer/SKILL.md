@@ -21,7 +21,7 @@ This skill works from multiple starting points:
 | Role title only | Ask focused questions: level, scope, team, impact, key requirements |
 | `talent-sourcing.local.md` | Pull company name, EVP, culture signals, comp philosophy |
 
-Always check `talent-sourcing.local.md` for company context before drafting.
+Check `talent-sourcing.local.md` for company context before drafting. If you cannot read it, ask the person for their company story, pay approach and values, and never use another company's details.
 
 ## Writing Process
 
@@ -153,7 +153,7 @@ Most candidates — especially passive ones — skim-read. Research (LinkedIn he
 **Hook techniques that work:**
 
 - **Frustration hook** — Name what's wrong with their current situation: "If you're tired of being the 'doer' in a rigid marketing machine, this is your chance to be the architect."
-- **Scale/problem hook** — Show the challenge: "Our payments infrastructure processes $2B daily across 40 countries. You'll own the reliability layer."
+- **Scale/problem hook** — Show the challenge: "Our payments infrastructure processes $[X] daily across [N] countries. You'll own the reliability layer." (use your own real figures; never copy placeholders into a live post)
 - **Honest-gap hook** — Admit what's broken: "Our CFO has been building models in spreadsheets between board meetings. You'll build FP&A from scratch."
 - **Ownership hook** — Lead with autonomy: "You'll decide what we charge, how we charge it, and build the systems behind it."
 
@@ -171,7 +171,7 @@ Most candidates — especially passive ones — skim-read. Research (LinkedIn he
 
 ### 3. AI-First in [Function]
 
-**Required for every JD.** QuoIntelligence is AI-native. Every role should signal how AI shapes the work in that function.
+**Required only if the company really is AI-native.** [Company] is AI-native. Fill this in from your own company notes. If your company is not AI-native, skip this section.
 
 Title the section "AI-First in [Function]" (e.g., "AI-First in Marketing", "AI-First in Engineering"). Open with a one-line framing: AI is an operating principle here.
 

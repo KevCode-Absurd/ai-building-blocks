@@ -9,6 +9,8 @@ description: "Write high-converting Meta (Facebook + Instagram) ad copy — prim
 
 # Meta Ad Copy Skill
 
+**Real facts only (added by AI Blocks).** Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as "47,312 women" or "lost 23 lbs", show the style only. Write them as [X customers], [name], [result] and [source], and never invent proof. Meta restricts health, weight-loss and before-and-after claims. Ask the user to check Meta's current ad policy before launch.
+
 This skill writes high-converting ad copy for Meta platforms (Facebook + Instagram) — primary text, headlines, descriptions, and UGC/video ad scripts. It draws on proven direct response frameworks from Schwartz, Halbert, Makepeace, Georgi, Sultanic, and others.
 
 The ad's ONLY job is to get the click. Not close the sale. Not educate fully. Get the click.
@@ -129,10 +131,10 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 |------|---------|-------------|
 | **Curiosity** | "There's a reason your doctor won't tell you about this..." | Cold traffic, unaware |
 | **Contrarian** | "Everything you've been told about _____ is wrong." | Problem-aware, skeptical |
-| **Social proof** | "Over 47,000 women have tried this 30-second trick..." | Solution-aware+ |
+| **Social proof** | "Over [X] [customers] have tried this 30-second trick..." | Solution-aware+ |
 | **Story** | "Last March I was 40lbs overweight and my doctor said..." | Cold, emotional markets |
 | **Demographic callout** | "Attention men over 50 who..." | Cold, specific targeting |
-| **Result** | "I lost 23 lbs in 8 weeks without giving up pizza." | Warm/retargeting |
+| **Result** | "I [real result] in [real time] without giving up [real thing]." | Warm/retargeting |
 | **Pattern interrupt** | "Stop scrolling. This actually matters." | Cold, saturated markets |
 | **Fascinating fact** | "Your liver processes 500+ chemicals before breakfast." | Unaware, education-first |
 
@@ -140,7 +142,7 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 
 - First 3 seconds of video / first line of text must arrest attention
 - Use fragmented, open-ended curiosity — NOT complete fascinations that close the loop
-- Be specific: "47,312 women" not "thousands of women"
+- Be specific: use the exact count from the user's own records ("[X] women") not "thousands of women"
 - Deploy tangible curiosity: hint at what they'll discover without revealing it
 - Tell them what it's NOT to intensify what it IS: "It's not a diet... not a pill... not exercise..."
 - A single winning hook can run for months. Test constantly.
@@ -185,15 +187,14 @@ These techniques make any ad more compelling:
 **Drop specific hints:**
 > "It's 150 million years old"
 > "It's smaller than a nickel"
-> "Harvard announced it only last week"
+> "[Real institution] announced it only last week" (only if true)
 > "It grows only above 12,000 feet in the Andes"
 
 **Authority anchors:**
 > "Experts call it..."
 > "A study from [institution] proved..."
 > "Researchers found..."
-> "Over 100 medical reports now show..."
-> "3 out of 4 scientists now say..."
+> "[Number] studies now show..." (only with real, cited studies)
 
 ## Making the Mechanism Appealing
 
@@ -212,8 +213,8 @@ The mechanism is what makes your solution different from everything else they've
 
 Every claim needs support. In short-form ads, proof must be compressed:
 
-- **Specific numbers**: "47,312 customers" not "thousands of customers"
-- **Named results**: "Sarah lost 23 lbs" not "our customers love it"
+- **Specific numbers**: the exact count from the user's own records ("[X] customers") not "thousands of customers"
+- **Named results**: a real, consented customer result ("[Name] [real result]") not "our customers love it"
 - **Timeframes**: "in 8 weeks" not "fast results"
 - **Authority mentions**: Publications, institutions, studies
 - **Visual proof**: Before/after, screenshots, product demos
@@ -330,7 +331,7 @@ Personal narrative arc. Most effective for emotional markets.
   "Then my sister sent me this weird article about..."
 
 [TRANSFORMATION — 40-60s] Specific results with numbers and timelines
-  "In 8 weeks, I dropped 23 lbs. My husband noticed in the first 2 weeks."
+  "In [real time], I [real result]. My husband noticed in the first 2 weeks."
 
 [CTA — 60-90s] Natural recommendation, not a pitch
   "I just wanted to share what actually worked for me. Link's below."

@@ -11,9 +11,15 @@ You are an agent that looks after a store's open orders each morning. You run sk
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
+**What you need** (use your own material or the linked skill):
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** Use the tools listed below when the task needs them. If a tool is unavailable, say what you can do with the details provided. Do not claim you used it.
+2. **Check what's missing.** Look for tool connection, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -22,7 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **A store connection** (required): read access to orders and fulfilments, through the Shopify tools the skills below use. Without it, ask for an export of open orders with order date, status, carrier, tracking and risk rating.
+- **A store connection** (required): read access to orders and fulfilments, through the Shopify tools the skills below use. Your store admin has to grant this access, for example through an app or connector with read permission, and your Shopify plan or the connector may limit or charge for it, so check first. Claude Code is a paid tool and is needed only if you want the scheduled run. Without a connection, ask for an export of open orders with order date, status, carrier, tracking and risk rating.
 - **Your limits** (optional): how many days an order may wait before it ships, and how many days tracking may sit still. If not given, use the defaults in the skills (3 days and 5 days) and say so.
 - **Corrected tracking numbers** (optional): only if a carrier or 3PL sent new ones.
 
@@ -59,6 +65,13 @@ If the owner approves a change in clear words, make only that change and write w
 - **Carrier note:** only if the comparer ran: the carrier, its transit days against the others, and a keep or review call.
 - **Customers to warn:** orders likely to arrive late, so the owner can send a short note. You write no message unless asked.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Checks before you hand it back
 - Every order on the list is compared with yesterday, or the first run is stated.

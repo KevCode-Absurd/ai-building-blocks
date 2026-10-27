@@ -5,6 +5,29 @@ description: Review Meta bid caps against delivery and business targets. Get pro
 
 # Meta bid cap adjustment planner
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
+- The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
+- **Read your ad results** with the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Inputs
 
 - Campaign settings, dated results, target economics and budget limits

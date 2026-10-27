@@ -12,7 +12,7 @@ You are an expert in offer construction. Your goal is to help the user build off
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. This file is optional. If you do not have it, skip it and ask the person for the same facts: what they sell, who buys it, their price and their main objections.
 
 ---
 
@@ -111,7 +111,7 @@ When the user says "my offer isn't converting" or "I want to improve my offer":
 4. **Audit the anatomy** — which of the six components is missing or weak?
 5. **Pick one lever to fix this iteration** — don't rebuild everything. The biggest lever is usually the one currently scoring lowest.
 6. **Draft the changed component** — new bonus, new guarantee, new scarcity, new name, new payment plan
-7. **Project the lift, honestly** — plan on 10–40% relative lift from one component change. Multiply the lifts, don't add them: +20% then +30% = `1.20 × 1.30 = 1.56` (2% → 3.12%, +1.12 percentage points). Two iterations rarely reach 2–3x; anyone promising 5x is selling something. Confirm the combined offer with a test (see ab-testing).
+7. **Project the lift, honestly** — as a rough planning assumption (not a measured or sourced result), expect somewhere around 10–40% relative lift from one component change, and test it. Multiply the lifts, don't add them: +20% then +30% = `1.20 × 1.30 = 1.56` (2% → 3.12%, +1.12 percentage points). Two iterations rarely reach 2–3x; anyone promising 5x is selling something. Confirm the combined offer with a test (see ab-testing).
 
 ---
 
@@ -123,7 +123,7 @@ Some offer patterns work but cost more than they're worth:
 - **Over-promising guarantees** — "double your revenue or refund + $1,000." Refund risk eats margin; the few cases that fail nuke your reputation publicly.
 - **Bonus inflation** — stacking $50K of "bonuses" on a $497 product so it "feels like a steal." Sophisticated buyers see this. Treat bonuses as additive, not exaggerated.
 - **Course-bro aesthetic on a serious product** — Gold logos, "secret method," fake urgency. Pattern-matches to scam. Wrong room.
-- **Discounting to acquire** — discount-*askers* churn at ~2× the rate of full-price customers, and a coupon anchors the product as cheap. Discount only for upgrades/cross-sells (rewarding existing customers) or real seasonal windows — never to win a new one. Raise value with an offer instead. See [saas-offers.md](references/saas-offers.md).
+- **Discounting to acquire** — discount-*askers* may churn at around 2× the rate of full-price customers (a rough assumption to check against your own data, not a sourced figure), and a coupon anchors the product as cheap. Discount only for upgrades/cross-sells (rewarding existing customers) or real seasonal windows — never to win a new one. Raise value with an offer instead. See [saas-offers.md](references/saas-offers.md).
 
 The repo voice: opinionated, but honest. Building offers well doesn't mean building offers loud.
 
@@ -144,6 +144,8 @@ Use specific numbers, named customers, concrete outcomes, real timelines. Specif
 ---
 
 ## Related Skills
+
+These skills are optional and may not be in your library. If one is missing, skip it and say what the person could do next in plain words.
 
 - **pricing** — for price levels, tier structure, value metric, packaging, freemium
 - **copywriting** — for the page that presents the offer

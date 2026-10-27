@@ -30,12 +30,13 @@ you_get:
   - Corruption checks on loaded data
   - Explanation of any error
 how_to_use:
-  - Check your MATLAB release. Some functions need R2019a or later.
+  - Check your MATLAB release and have the number ready. Some functions need R2019a or later.
   - Open your AI and paste this skill's instructions.
-  - Add your file path or web address, and say whether you want to read or save.
+  - Add your file path or web address, and say whether you want to read or save. For a web address that needs a sign-in, you will need a bearer token (an access key) from the service that hosts the file. Keep it out of the chat and out of saved code.
   - Paste the error message and any locale details if you have them.
   - Run the code in MATLAB, or let your AI run it if it can.
   - Read the corruption checks before you trust the numbers. If your AI uses the Parquet datastore workaround, nulls become 0, so confirm that is fine for your data.
+next: [big-data-tool-chooser, matlab-database-helper]
 output_sample:
   input:
     - The file path or web address of your data file

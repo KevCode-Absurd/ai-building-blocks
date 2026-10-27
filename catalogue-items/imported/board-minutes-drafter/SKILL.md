@@ -30,6 +30,7 @@ Board minutes are a legal record. They need to be accurate, complete, and in a f
   - Board composition and committees
   - Written consents — what they're used for and any limits
 - If `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` has no minutes format: run cold-start first. Do not proceed with a generic format.
+- In a plain chat with no plugin config file: use the minutes format, board members and committees the user pastes in. Ask for two or three past minutes if none are given. Where this skill says to read a setting from the config file, ask the user for it instead. If the user cannot say whether they are a lawyer, treat them as a non-lawyer.
 
 ---
 
@@ -205,13 +206,13 @@ Do not produce the final adoption-ready version past this gate without an explic
 Produce the full draft. The minutes themselves are a corporate record, not privileged; do not apply the work-product header to the minutes as circulated. The drafting notes, placeholder flags, and review checklist below are work product — prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` `## Outputs` (it differs by user role — see `## Who's using this`):
 
 ```
-[WORK-PRODUCT HEADER — per plugin config ## Outputs — differs by role; see `## Who's using this`]
+[WORK-PRODUCT HEADER — per plugin config ## Outputs — differs by role; see `## Who's using this`. With no plugin config, use: DRAFT FOR ATTORNEY REVIEW. Privileged and confidential where applicable.]
 ```
 
 After the draft, add a review checklist:
 
 ```
-[WORK-PRODUCT HEADER — per plugin config ## Outputs — differs by role; see `## Who's using this`]
+[WORK-PRODUCT HEADER — as above]
 
 REVIEW CHECKLIST — please verify before circulating:
 

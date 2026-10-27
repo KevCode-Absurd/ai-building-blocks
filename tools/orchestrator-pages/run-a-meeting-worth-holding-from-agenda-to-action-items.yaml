@@ -20,6 +20,7 @@ not_for:
   - "You already have a recording and only want notes: give it to a plain notes step in your AI, without the agenda and cost check."
 you_give:
   - The meeting idea, with the decision needed, who attends and how long
+  - The average hourly pay rate of the attendees, so it can price the meeting (optional)
   - Background you want in the pre-read (optional)
   - Your Notion pages, if connected (optional)
   - The meeting recording, after it is held
@@ -29,7 +30,7 @@ you_get:
   - A pre-read to send before the meeting
   - A summary, the decisions and action items with owners and dates
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and three skill files, in the order they run: Meeting agenda and cost planner, Meeting pre-read writer, then Meeting notes maker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Tell it the decision the meeting must make, who comes and for how long.
   - Send the pre-read, hold the meeting and record it. Make sure everyone knows it is recorded.
@@ -82,7 +83,7 @@ tweaks:
   - what: Meeting type
     how: Say if it is a status update, a decision, planning or a retro. The agenda and pre-read change with the type.
   - what: Pay rates
-    how: Give an average hourly cost for attendees, or a range. Without it the price is a rough guess.
+    how: Give an average hourly cost for attendees, or a range. Without it the step cannot price the meeting in dollars and says so.
   - what: Recording quality
     how: A clear recording with one person speaking at a time gives much better notes.
   - what: No Notion

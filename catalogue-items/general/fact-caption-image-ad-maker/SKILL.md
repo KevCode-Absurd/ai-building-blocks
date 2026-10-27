@@ -11,7 +11,7 @@ It looks like a captioned photo, never a news report. No outlet's name, no "brea
 
 **Good for:** a story whose turn rests on one fact: about the problem, about the kind of product, or a tested result the brand can show.
 
-**Not for:** a fact with no source on file. Nothing makes it safe.
+**Not for:** a fact with no source on file. Nothing makes it safe: use the [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker) instead. For a story that warns people off a kind of product, use the [Dont buy warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). If the fact is a health or nutrition claim, also check its wording against the ad rules for your market and platform before it runs.
 
 ## House rules for post-like pictures
 - Square 1:1, or 4:5 if it runs only in the Feed. It looks captured on a phone by a person: everyday light, the room's normal mess, nothing retouched.
@@ -31,7 +31,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
+3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
 4. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
@@ -95,8 +95,11 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker).
+- The [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker).
+- The [Empty-room photo ad brief writer](https://useaiblocks.com/skills/empty-room-image-ad-maker).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

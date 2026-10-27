@@ -5,6 +5,8 @@ description: Optimizes agent context setup. Use when starting a new session, whe
 
 # Context Engineering
 
+> **AI Blocks note:** the rules file and the per-task file list are the core of this skill. The MCP table, the restartable session harness and the context budget sections are optional extras. Skip them if you are new to this.
+
 ## Overview
 
 Feed agents the right information at the right time. Context is the single biggest lever for agent output quality — too little and the agent hallucinates, too much and it loses focus. Context engineering is the practice of deliberately curating what the agent sees, when it sees it, and how it's structured.
@@ -351,3 +353,5 @@ After setting up context, confirm:
 - [ ] Context is refreshed when switching between major tasks
 - [ ] During long sessions, context is actively managed: failed attempts and replaced drafts removed, live error and task definition protected
 - [ ] Task-critical content (current error, active constraint) is positioned last in context, not buried under background material
+
+**If a check fails:** trim the session, start a fresh one that begins with the rules file, and paste the exact error again instead of describing it. Then run the checks once more.

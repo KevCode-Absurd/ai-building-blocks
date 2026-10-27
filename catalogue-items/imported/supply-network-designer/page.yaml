@@ -31,7 +31,7 @@ you_get:
   - Trade-off comparison
   - The model code
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with a mode that can run Python code. This skill needs code running.
+  - Open Claude, ChatGPT or Gemini with a mode that can run Python code. This skill needs code running with PuLP and its free CBC solver installed. No paid tool is needed. The commercial tools it lists are optional.
   - Paste the skill text into the chat.
   - Add your sites, customer demand, costs and service targets. Say if any site must stay open.
   - Answer the questions your AI asks about goals, budget and limits.

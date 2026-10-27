@@ -25,7 +25,9 @@ allowed-tools:
 
 ## Core Insight
 
-Brand mentions correlate approximately 3x more strongly with AI visibility than traditional backlinks. An Ahrefs study published in December 2025, analyzing 75,000 brands across AI search platforms, found that **unlinked brand mentions** -- references to a brand name without a hyperlink -- are a stronger predictor of whether AI systems cite and recommend a brand than Domain Rating or backlink count.
+> **Unchecked claims:** the 3x figure and the Ahrefs study below are the original author's claims. AI Blocks has not checked them. See "What the score means" for the same caveat.
+
+Brand mentions correlate approximately 3x more strongly with AI visibility than traditional backlinks, according to the author. An Ahrefs study published in December 2025, analyzing 75,000 brands across AI search platforms, found that **unlinked brand mentions** -- references to a brand name without a hyperlink -- are a stronger predictor of whether AI systems cite and recommend a brand than Domain Rating or backlink count.
 
 The critical finding: **the platform where the mention appears matters enormously.** Not all mentions are equal. A mention on YouTube or Reddit carries far more weight for AI citation than a mention on a low-authority blog, because AI training data and retrieval systems disproportionately index high-engagement platforms.
 

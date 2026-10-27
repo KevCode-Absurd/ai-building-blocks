@@ -10,7 +10,7 @@ not_for:
   - "You want the full code written for you: ask your AI to write it directly, since this coach only gives hints and feedback."
   - "You are stuck on one bug and have no project: paste the error and the code into a chat and ask your AI to help you find the cause."
   - "You need a concept explained before you can start: ask your AI to teach the idea first, then come back to build."
-explain: Describe the project you want to learn by building, your level and your tools. It breaks the work into small milestones and explains the choices. You write the code, get hints and feedback, and pass each check before moving on.
+explain: Most people learn to code faster by building a real project than by reading about one. This coach keeps the typing yours. It explains why each design choice is made, gives hints instead of answers, and lets you move on only when a milestone's check passes. Feedback comes as what went well, what to fix and what to try next.
 you_give:
   - Your project goal, technical tools and current level.
   - The existing code and your time or resource limits.
@@ -31,6 +31,7 @@ how_to_use:
   - Agree on the milestones, then build the first one yourself. Paste your code back when you think it passes the check.
   - Read the feedback and fix what it points out. Ask for a hint if you are stuck, not for the full answer.
   - Move on only when the check passes. If you hit a bug, share the error and what you tried, and the coach will guide you to the cause.
+  - After the last milestone passes, ask for a final review of the finished project and a short README.
 output_sample:
   input:
     - Your project goal in one sentence

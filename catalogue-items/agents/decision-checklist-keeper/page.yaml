@@ -68,7 +68,7 @@ how_it_works:
   - title: Choose the checks
     text: An easy-to-undo choice gets a light check. A hard-to-undo one gets the pressure check and the best case against it. If money, time or your name is at stake, it also tests what could ruin you.
   - title: Run your checklist
-    text: Answers each item with evidence. If a stop item fails, or several are unknown, it asks for facts and runs again, at most twice.
+    text: Answers each item with evidence. If a stop item fails, or three or more items are unknown, it asks for facts and runs again, at most twice.
   - title: Record the call
     text: Saves the call, the reasons, what would prove it wrong and a review date. You make the decision.
   - title: Review and learn

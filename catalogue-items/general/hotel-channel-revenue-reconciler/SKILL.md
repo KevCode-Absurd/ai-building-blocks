@@ -9,6 +9,26 @@ This skill checks one property's room nights, then builds room revenue by channe
 
 Not for: a full hotel profit and loss, setting room prices, deciding how many rooms to overbook, or booking revenue under accounting rules.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Makes it better (optional):**
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for spreadsheet, document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
+- **Node.js 20 or later:** Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
+<!-- /needs -->
+
 ## What you need
 
 - **Available room nights** (required): for one property and one stay period, from the property system (PMS) or night audit.
@@ -67,7 +87,19 @@ Begin with one line: "Have a finance lead check the sources before this goes to 
 
 - **SCOPE AND SOURCES**: each figure with source, date, currency, scale and stay period.
 - **INPUTS AND ASSUMPTIONS**: the nights, rates, commission rate and service cost you were given.
-- **CHANNEL BRIDGE**: sold nights and occupancy, gross room revenue, commission, net channel revenue, contribution and net revenue per available night.
+- **CHANNEL BRIDGE**: sold nights and occupancy, gross room revenue, commission, net channel revenue, contribution and net revenue per available night. If the person gave an actual settlement figure for commission, add a Settlement difference line: the settlement figure, the calculated commission and the gap between them.
 - **CHECKS RUN**: each tie-out and its result, and whether the script or a workbook was used.
 - **MISSING**: `MISSING:` lines with the result each one blocked.
 - **CHECKS MISSED**: each check that failed or could not run, or "none".
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Weekly numbers sheet designer](https://useaiblocks.com/prompts/weekly-numbers-sheet-designer).
+- The [Business results drop investigator](https://useaiblocks.com/prompts/numbers-drop-explainer).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## What next
+
+To keep these numbers in view every week, design a one-page sheet with the [Weekly numbers sheet designer](https://useaiblocks.com/prompts/weekly-numbers-sheet-designer). When a number drops, find out why with the [Numbers drop explainer](https://useaiblocks.com/prompts/numbers-drop-explainer). Bring the before and after figures.

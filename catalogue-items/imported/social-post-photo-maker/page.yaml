@@ -11,7 +11,7 @@ explain: |
 
   You give the outfit photo and, if you like, a reference picture for the scene and pose. The skill writes a detailed picture prompt that locks the clothes and bags and describes the new person, place, light and angle. Then it sends the prompt to an image model, which draws the result. Claude does not draw the picture itself, so you need an image tool. The style leans to content that feels candid, with warm light and street or cafe scenes, not studio product shots.
 when:
-  - You have a product photo and need fresh images for social posts.
+  - You have a product photo, a dLazy account (paid, per image) and need fresh images for social posts.
   - You want the same outfit shown on a different model.
   - You need a cafe or street scene without a real shoot.
   - Your catalogue photos look too stiff for social media.
@@ -23,7 +23,7 @@ you_give:
   - Your outfit photo, full or nearly full body, with one person and every item clear
   - A scene or pose reference photo (optional)
   - The mood or setting you want, such as a cafe or a street at golden hour
-  - An image tool or a key for one
+  - A dLazy account and API key. It is a paid service, charged per image. Run a dry run first to see the cost
 you_get:
   - A detailed image prompt that keeps the outfit unchanged
   - Lifestyle images with a new model and scene
@@ -52,7 +52,7 @@ output_sample:
     - name: Picture prompt
       contains: A prompt that locks the outfit, then sets the new model, scene, pose, light and camera style.
     - name: Lifestyle images
-      contains: Three or four tall images per scene, so you can pick the most natural pose.
+      contains: Three or four tall images per scene (1024 by 1536, jpeg, saved as output-<scene>.jpg), so you can pick the most natural pose. Post the best one to your social account.
     - name: Scene versions
       contains: The same outfit in several scenes, such as street, cafe, home, travel and commute.
     - name: Quality check

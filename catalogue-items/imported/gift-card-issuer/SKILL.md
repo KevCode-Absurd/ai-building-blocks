@@ -38,6 +38,8 @@ Issues Shopify native gift cards to customers programmatically — as goodwill f
 ## Safety
 
 > ⚠️ Step 2 executes `giftCardCreate` which issues real monetary value against your store. Gift cards cannot be deleted once created — they can only be disabled. Run with `dry_run: true` to confirm the customer, amount, and expiry before committing. Verify the amount carefully — issued value is immediately redeemable at checkout.
+>
+> `dry_run` defaults to false, so always run a `dry_run: true` pass first, show the user the customer, amount and expiry, and issue live cards only after the user says to go ahead.
 
 ## Workflow Steps
 

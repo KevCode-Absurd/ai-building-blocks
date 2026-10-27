@@ -12,6 +12,8 @@ explain: |
   This skill picks one unit a customer can count, such as API calls, storage or bandwidth. It rejects made-up units like "compute credits" that nobody can estimate. Then it adds a free allowance, price steps for bigger use, and a spend cap with alerts so a bug cannot run up a huge bill.
 
   It writes the pricing page and works three example months, a small, a typical and a heavy customer, line by line. Prices are drafts. You check them against your own costs and real usage before you launch.
+
+  On this site the skill comes with plain how-to steps, a list of what it needs, and a sample of the result.
 when:
   - You are launching an API or a tool and must decide what to charge per unit.
   - Customers say their bill was higher than they expected.
@@ -40,6 +42,7 @@ how_to_use:
   - Describe your product, your cost per unit and your customers. Add competitor prices only if you checked them yourself.
   - If it asks for a number you do not have, say so. It will mark the gap instead of guessing.
   - Check the metric first. Ask yourself if a customer could count it without help. If not, ask for the backup.
+  - Provider examples in the skill (such as Stripe, Twilio, Vercel and DigitalOcean) show how prices are laid out. They are not current prices. Check each provider's own site before you quote any number.
   - Run the three example bills past a real customer or two. Test the prices with real usage data before you launch.
 how_it_works:
   - title: Collect your inputs
@@ -103,3 +106,4 @@ terms:
     meaning: A limit that stops or flags charges once a customer reaches a set amount.
   - term: Metered billing
     meaning: Counting use as it happens and billing for it at the end of the month.
+next: [pricing-model-designer]

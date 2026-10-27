@@ -9,8 +9,7 @@ job: analysis
 level: beginner
 inputs:
   - {type: plan, required: true}
-  - {type: lessons_register, required: false}
-  - {type: audit_report, required: false}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
 uses: []

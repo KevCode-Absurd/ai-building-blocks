@@ -13,8 +13,8 @@ outputs:
 uses: [fear-setting-planner, not-to-do-list-builder, weekly-big-task-sorter]
 steps:
   - {uses: fear-setting-planner, note: "The worst case, how to repair it and what waiting costs"}
-  - {uses: not-to-do-list-builder, note: "A list of what to stop, with a rule and a swap for each. Reads the plan from the step before"}
-  - {uses: weekly-big-task-sorter, note: "The few big tasks that matter, the small ones to batch or drop, and a week plan. Reads the plan from the step before"}
+  - {uses: not-to-do-list-builder, note: "Reads the decision plan from step 1. Returns where your time went and a list of what to stop, with a number rule and a swap for each"}
+  - {uses: weekly-big-task-sorter, note: "Reads the stop list from step 2. Returns the few big tasks that matter, the small ones to batch or drop, three priorities and tomorrow's list"}
 origin: rebuilt
 version: 1.0.0
 minds: [tim-ferriss]

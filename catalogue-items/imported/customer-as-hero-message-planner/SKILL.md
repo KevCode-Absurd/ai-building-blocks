@@ -21,6 +21,8 @@ Clarify your message so customers will listen. Customers don't buy the best prod
 
 ## The SB7 Framework
 
+Every number and testimonial in the examples below is a placeholder. Use only figures you can prove, and leave the proof line out if you have none.
+
 Every compelling story follows the same pattern. Use this structure for all messaging:
 
 ### 1. A Character (The Hero)
@@ -88,8 +90,8 @@ See: [references/brand-script.md](references/brand-script.md) — fill out the B
 
 | Context | Application | Example |
 |---------|-------------|---------|
-| About page | Empathy first, then credentials | "We know what it's like to feel lost in financial jargon. That's why 10,000 families trust us." |
-| Homepage social proof | Empathy headline + authority logos | "You're not alone. Join 5,000+ teams who found clarity." + client logos |
+| About page | Empathy first, then credentials | "We know what it's like to feel lost in financial jargon. That's why [your real number] families trust us." |
+| Homepage social proof | Empathy headline + authority logos | "You're not alone. Join [your real number] teams who found clarity." + client logos |
 | Sales call | Open with empathy, close with authority | "I hear you — that sounds frustrating. Here's what we've seen work for teams like yours." |
 
 **Copy patterns:**
@@ -191,7 +193,7 @@ See: [references/website-wireframe.md](references/website-wireframe.md) — open
 | Context | Application | Example |
 |---------|-------------|---------|
 | Homepage success section | Specific after picture | "Imagine opening your inbox to qualified leads every morning — no cold outreach required." |
-| Case study | Before/after with numbers | "Before: 2% conversion rate. After: 11% in 90 days." |
+| Case study | Before/after with numbers | "Before: [your measured rate]. After: [your measured rate] in [your real time frame]." |
 | Testimonials | Customers describe their success | "I finally feel like I know where every dollar is going." |
 
 **Copy patterns:**
@@ -256,4 +258,4 @@ For the complete methodology and worksheets:
 
 ## About the Author
 
-Donald Miller is the CEO of StoryBrand, which has helped over 10,000 businesses clarify their messaging. A New York Times bestselling author of *Building a StoryBrand*, *Marketing Made Simple*, and *Business Made Simple*, he distilled decades of narrative theory into the practical seven-part SB7 framework.
+Donald Miller is the CEO of StoryBrand, which says it has helped over 10,000 businesses clarify their messaging (its own figure, not checked here). A New York Times bestselling author of *Building a StoryBrand*, *Marketing Made Simple*, and *Business Made Simple*, he distilled decades of narrative theory into the practical seven-part SB7 framework.

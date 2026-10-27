@@ -1,13 +1,13 @@
 new_slug: image-ad-test-plan
 name: Plan image ad tests from the ads you already run
-summary: Plan image ad tests from the ads you already run. Get a gap grid, a test brief, ad copy and opening lines scored out of 4.
+summary: Give it your running image ads. Get the gaps in them, a test brief, image ad copy and scored opening lines.
 job: plan-ad-tests
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
 headline: Know which image ads to test next, with the copy ready
 subhead: Give it the image ads you already run. It maps what they cover and what they miss, writes a test brief with three ideas and three versions each, writes the ad copy, and scores opening lines so you start with the strongest.
 explain: |-
-  Most image ad tests change a colour or a font and learn nothing. The test that teaches you something changes the question the ad answers.
+  A test that only changes a colour or a font often teaches little. A test that changes the question the ad answers teaches you something.
 
   This workflow sorts your running ads by type and style and finds the question your buyers still have that no ad answers. It picks up to three new tests, each in a different type. It briefs three ideas with three versions each, writes the copy and scores the opening lines.
 when:
@@ -30,7 +30,7 @@ you_get:
   - Image ad copy for every version
   - Opening lines with a score out of 4 and a fix for weak ones
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Download the handoff pack. It is a zip with HANDOFF.md plus one skill file for each step.
   - Open Claude Code, or a Claude Project where you can add files. Add the unzipped folder.
   - Add your image ads as pictures, and your brand file. Add results and reviews if you have them.
   - Say "Follow HANDOFF.md". It runs four steps in order and saves each result as a file.

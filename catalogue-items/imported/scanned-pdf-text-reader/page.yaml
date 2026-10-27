@@ -7,7 +7,7 @@ job: work-with-files
 headline: Scanned PDF text reader
 subhead: Give it PDFs, Office files or scanned images. It reads the text and keeps the position of each line on the page. Files stay on your computer unless you set up an HTTP OCR server. The first time you use a language, its OCR files download from GitHub.
 explain: |
-  Text out of PDFs, Office files and scanned images, with the position of every line on the page, all processed on your own computer. Nothing goes to a cloud service.
+  Text out of PDFs, Office files and scanned images, with the position of every line on the page, processed on your own computer. The first time you use a language, its OCR files download from GitHub. If you set up an HTTP OCR server, it receives your page images.
 
   A tool called LiteParse reads the file and returns layout-aware text, structured JSON or rough markdown. For scans it runs OCR with a bundled engine, so pages with no real text still come out. Each piece of text carries a bounding box, so you can cite exactly where something was found. It can also save page images so another model can look at charts or handwriting, and it runs on whole folders. You need Python, and LibreOffice for Office formats.
 when:
@@ -38,6 +38,7 @@ how_to_use:
   - For a scan in another language, add --ocr-language with the language code, such as fra.
   - Ask it to check the total page count and any page errors, so you know no pages were skipped.
   - Compare one page image with the text to check columns and tables.
+  - Next, pass the JSON to a chunking or search tool. If figures or handwriting matter, keep the page images beside it.
 output_sample:
   input:
     - Your PDF, Office file or image, or a folder of them

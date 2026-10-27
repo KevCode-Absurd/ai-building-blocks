@@ -31,12 +31,12 @@ you_get:
   - A plain reading of the motion
   - Notes on what the run cannot show
 how_to_use:
-  - Check you have Python 3.11 or newer with OpenMM and MDAnalysis installed. A GPU is optional.
+  - Check you have Python 3.11 or newer with OpenMM and MDAnalysis installed. The skill's setup step makes a Python 3.12 environment with uv. A GPU is optional.
   - Clean your structure file first. PDBFixer can fix a raw PDB file.
   - Paste the skill into your AI, or upload the skill folder. Use an AI that can run Python code.
   - Add your structure file and say what you want to learn, such as stability or binding.
   - Check the RMSD plot first. If it keeps drifting, the run may need more time.
-  - Read the notes on what the run cannot show before you use the result.
+  - Read the notes on what the run cannot show before you use the result. Then ask a structural biologist to review it. Use a free-energy method or lab data before you claim anything about binding.
 output_sample:
   input:
     - Your protein or molecule structure file, cleaned of errors
@@ -60,7 +60,7 @@ output_sample:
     - name: RMSD analysis
       contains: A plot of how far the structure drifts from its starting shape over time.
     - name: RMSF analysis
-      contains: A per-residue plot showing which parts of the protein move the most.
+      contains: A per-residue plot and a table (residue number, chain, RMSF in angstroms) showing which parts of the protein move the most.
     - name: Protein-ligand contacts
       contains: Which residues touch the ligand during the run, when you have a ligand.
     - name: Validation and provenance

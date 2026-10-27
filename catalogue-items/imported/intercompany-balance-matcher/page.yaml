@@ -31,11 +31,12 @@ you_get:
   - Draft elimination entries
   - Notes on pricing and agreements
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder, with the scripts and the reference guide. If you can only paste text, the AI works the matching by hand and should say so.
   - Paste each entity's internal balances, your entity map and the exchange rates used. Add your tolerance policy if you have one.
   - Ask your AI to match the balances and list every difference with its likely cause.
   - Check the Difference Resolution Log. Small differences below your tolerance are written off to the buyer's profit and loss, so make sure each is listed and approved by a named owner before posting.
-  - Review the draft elimination entries with your accountant. Have a local tax adviser check any tax rules and rates.
+  - Review the draft elimination entries with your accountant. The transfer pricing and thin-cap examples in the skill are for Nigerian entities. Other groups should name their own local rules. Have a local tax adviser check any tax rules and rates.
+  - Key terms. Arm's length means priced as between unrelated parties. Thin-cap limits interest deductions on debt. CTA is the currency translation adjustment. WHT is withholding tax. In-transit means sent by one entity but not yet booked by the other.
   - The matching grid is best run with code. If your AI cannot run code, it will work the numbers by hand, so check the totals.
 output_sample:
   input:

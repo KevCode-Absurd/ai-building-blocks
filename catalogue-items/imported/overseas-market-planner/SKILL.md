@@ -13,6 +13,8 @@ Your strategic advisor for international e-commerce expansion. This skill scores
 
 This is the international expansion layer. It tells you **where to expand, how to get there, and what it will cost**, then connects you to specialized skills for execution in each market.
 
+Optional: the wider growth skill that sits above this one. This is a different skill from the one below, which installs this one.
+
 ```bash
 npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-growth-strategy -g
 ```
@@ -179,7 +181,7 @@ Score each target market on 8 dimensions (1-10 scale):
 
 **Composite Score** = Sum of (Dimension Score x Weight) for each market. Rank markets by composite score. Recommend top 2-3.
 
-#### Ecommerce Market Size by Country *(eMarketer, Statista 2025)*
+#### Ecommerce Market Size by Country *(eMarketer, Statista 2025; approximate, verify before use)*
 
 | Market | Ecom Revenue (2025) | Ecom Penetration | YoY Growth | Key Platform |
 |--------|:-------------------:|:----------------:|:----------:|:------------:|
@@ -249,6 +251,8 @@ Choose the right fulfillment model based on order volume, product characteristic
 
 ### Pillar 3: Tax, Duty & Customs Compliance
 
+> **Check before you act.** The rates, thresholds and rules below were written by the original author and are not dated or sourced here. De minimis limits (the value under which imports skip duty) and EU duty rules have changed recently and may change again. Check each figure on the official customs or tax office site before you act, and tell the user which figures you could not check.
+
 This is where most sellers get stuck. Country-by-country breakdown:
 
 #### European Union (27 countries)
@@ -308,7 +312,7 @@ For each target market:
 
 ### Pillar 4: Payment & Currency
 
-99% of cross-border shoppers expect to pay with their preferred local method *(PYMNTS 2025)*. Offering the wrong payment options = abandoned carts.
+The original author cites a PYMNTS 2025 figure that 99% of cross-border shoppers expect to pay with their preferred local method (approximate; verify before you quote it). Offering the wrong payment options = abandoned carts.
 
 #### Payment Preferences by Market
 

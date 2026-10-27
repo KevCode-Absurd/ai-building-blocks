@@ -111,6 +111,8 @@ For each entry, walk through: **What** (the deliverable) → **Why** (who benefi
 
 ## Backfill Workflow
 
+The numbers and PR numbers in the examples below (such as 12% of API calls, PR #247 and 107 tests) are illustrations only. Replace them with the user's real data. Never reuse them. The commands below need an AI that can run shell commands, and the gh CLI for pull requests. If yours cannot, use the interview instead and ask the user to paste their commit and PR lists.
+
 When the user asks "what did I do last week" or "backfill my history":
 
 **Follow these steps in order. Do not draft entries until scanning is complete.**

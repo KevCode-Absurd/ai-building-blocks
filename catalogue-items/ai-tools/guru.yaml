@@ -46,6 +46,7 @@ first_result:
   - "Agree with Guru which apps to connect first. Start with one team and one set of questions."
   - "Name an expert for each topic. They check the content the AI draws on."
   - "Ask five real questions your staff ask often. Compare each answer with what the expert would say."
+  - "You end with answers staff can ask for in Slack or Teams, backed by content a named expert has checked. Next: if you have many apps to search, compare Glean. For customer-facing chat, compare Intercom Fin."
 needs:
   - "A company plan agreed with Guru's sales team."
   - "Admin access to the apps you connect, such as Slack, SharePoint or Confluence."

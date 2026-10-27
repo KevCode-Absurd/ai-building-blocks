@@ -20,10 +20,10 @@ Extract structured data from invoices, validate fields against purchase orders a
    Parse each line item for description, quantity, unit price, extended amount, and tax. Validate that line item totals sum to the stated subtotal. Extract tax amounts, shipping charges, discounts, and the grand total. Flag any arithmetic inconsistencies between line items and totals.
 
 3. **Validate Against Purchase Order**
-   Match the invoice to its corresponding PO by PO number, vendor, or line item descriptions. Compare quantities and unit prices. Compute a three-way match score across PO, goods receipt, and invoice. Flag invoices where price variance exceeds a configurable threshold (default: 2%) or quantities don't match.
+   Match the invoice to its corresponding PO by PO number, vendor, or line item descriptions. Compare quantities and unit prices. Compute a three-way match score across PO, goods receipt, and invoice. If no goods receipt data was given, skip the three-way match and say so. Flag invoices where price variance exceeds a configurable threshold (default: 2%) or quantities don't match.
 
 4. **Categorize by GL Code**
-   Assign each line item to the appropriate general ledger account based on item description, vendor category, and historical patterns. Common mappings include office supplies → 6200, software subscriptions → 6500, professional services → 6300, raw materials → 5100. Apply department cost center codes where applicable.
+   Assign each line item to the appropriate general ledger account based on item description, vendor category, and historical patterns. Use the person's own chart of accounts for the codes. Example mappings only (placeholders, replace with your own): office supplies → 6200, software subscriptions → 6500, professional services → 6300, raw materials → 5100. If no code list was given, label every code and cost center "suggested, confirm". Apply department cost center codes where applicable.
 
 5. **Flag Discrepancies and Generate Output**
    Produce a structured record for each invoice with all extracted fields, validation status, GL assignments, and any flags. Group flags by severity: blocking errors (missing PO, total mismatch > 5%), warnings (minor price variance, missing fields), and informational (new vendor, first invoice from vendor).
@@ -117,7 +117,7 @@ Total: $4,231.50
 - **Passed:** 1 (25%) — $4,231.50
 - **Warnings:** 1 (25%) — $892.40
 - **Blocked:** 2 (50%) — $20,095.00
-- **Total Value:** $25,168.90
+- **Total Value:** $25,218.90
 - **Action Required:** 2 invoices require manual review before payment authorization.
 
 ## Best Practices

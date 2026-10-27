@@ -10,7 +10,7 @@ inputs:
   - {type: product_data, required: true}
   - {type: voc_reviews, required: true}
   - {type: brand_brain, required: true}
-  - {type: approved_image, required: true}
+  - {type: approved_image, required: false}
   - {type: competitor_set, required: false}
   - {type: product_photos, required: false}
   - {type: lessons_register, required: false}
@@ -22,7 +22,7 @@ steps:
   - {uses: 3d-cutaway-image-ad-maker, note: "Takes the mechanism from the brief and draws it as one frozen moment. Hands the image prompt and the ad words to step 3."}
   - {uses: accurate-product-image-ad-maker, note: "Reads the brief and the ad words from the step before and rewrites the prompt so the product looks like yours. Hands the new prompt to step 4."}
   - {uses: pre-launch-ad-checker, note: "Reads the words and the prompt together and flags any claim that shows more than your proof. Hands a fix list; fix it before you make the image."}
-  - {uses: image-upscale-checker, note: "Uses the image you made and approved after the pause, not step 4's report. Hands back the enlarged image with a fidelity check."}
+  - {uses: image-upscale-checker, note: "Uses the image you make and approve at the pause after step 4, not step 4's report. This image is made during the run, so you do not bring it. Hands back the enlarged image with a fidelity check."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/make-a-cutaway-ad-that-shows-how-your-product-works/skeleton.yaml

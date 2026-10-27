@@ -54,3 +54,4 @@ output_sample:
       contains: The reason behind each change you were given.
     - name: Implementation Notes
       contains: Tips for when the feedback should appear and what tone to use.
+next: [written-feedback-checker, self-explanation-question-writer]

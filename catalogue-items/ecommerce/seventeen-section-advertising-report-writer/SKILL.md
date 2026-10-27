@@ -5,6 +5,31 @@ description: Build a seventeen-section ad report from dated results. Explain cha
 
 # Seventeen-section advertising report writer
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator).
+- **Plan what to test** with the [Ad test budget calculator](https://useaiblocks.com/skills/ad-test-budget-calculator).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -88,7 +113,7 @@ YoY Change = (Current - SameMonthLastYear) / SameMonthLastYear x 100
 8. **Key Wins (Top 4)**: each with metric proof
 9. **Areas to Optimize (Top 4)**: each with severity
 10. **Strategy & Priority Actions**: 3-5 strategic priorities
-11. **Targets for Next Month**: revenue, spend, ROAS goals
+11. **Targets for Next Month**: revenue, spend, ROAS goals. Use only targets the user supplied. If none, write "not supplied" and show last month's figures as the reference
 12. **Executive Summary**: The Good / The Watch / The Path
 13. **Next Steps**: this week / this month / this quarter
 14. **KPI Grids**: detailed per-platform tables
@@ -112,8 +137,8 @@ YoY Change = (Current - SameMonthLastYear) / SameMonthLastYear x 100
 3. Explain business impact
 4. End with actionable implication
 
-### Example:
-"Revenue grew 18% MoM to $142K, driven primarily by the new Lifestyle campaign series which delivered 4.8x ROAS on $8.2K spend. This validates the creative direction shift toward aspirational content for TOF audiences. Recommend scaling this campaign 20% next week while the creative is fresh."
+### Example (format only, the numbers are placeholders):
+"Revenue grew [revenue change %] MoM to [revenue], driven primarily by [campaign], which delivered [ROAS] ROAS on [spend] spend. This supports [creative direction] for [audience]. Recommend [action and size] next week."
 
 ---
 
@@ -160,8 +185,13 @@ THIS QUARTER
 2. Wins must be specific. "Good month" fails. "Revenue +18% MoM to $142K" passes.
 3. Areas to Optimize must be specific and severity-tagged.
 4. Strategy section must be ranked by impact, not length.
-5. Executive Summary is 9 bullets total. Never more, never fewer.
+5. Executive Summary is 9 bullets total. Never more, never fewer. If the data supports fewer than three real items in a group, write "not enough data" in that bullet.
 6. No em dashes.
+7. If the prior-month file, the year-ago data, a target or a metric is missing, write "not supplied" in that cell. Never estimate it.
+8. The four wins and four fixes are a maximum. List only as many as the data supports and say so.
+9. Check every figure against the source export before you write it.
+
+When not to use: for a quick check on one campaign, ask for a simple pacing check. To plan next month's ad tests, use the Ad test budget calculator after you read the report.
 
 
 ## Final check

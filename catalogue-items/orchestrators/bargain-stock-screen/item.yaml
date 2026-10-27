@@ -7,15 +7,16 @@ role: orchestrate
 job: analysis
 level: advanced
 inputs:
-  - {type: source_text, required: true}
+  - {type: spreadsheet, required: true}
+  - {type: source_text, required: false}
 outputs:
   - {type: plan}
 uses: [enterprising-bargain-screener, asset-floor-estimator, price-versus-value-gap-judge, bargain-group-rules-writer]
 steps:
-  - {uses: enterprising-bargain-screener, note: "A short list from a long table, with the failed test beside each cut."}
-  - {uses: asset-floor-estimator, note: "What each company would fetch if it stopped, set beside the price."}
-  - {uses: price-versus-value-gap-judge, note: "A margin of safety verdict for each survivor."}
-  - {uses: bargain-group-rules-writer, note: "A group plan with size limits, an exit rule and a scorecard to judge the method."}
+  - {uses: enterprising-bargain-screener, note: "Reads your table of companies. Returns a short list from it, with the failed test beside each cut."}
+  - {uses: asset-floor-estimator, note: "Reads the survivors from step 1 and their balance sheets. Returns what each company would fetch if it stopped, set beside the price."}
+  - {uses: price-versus-value-gap-judge, note: "Reads the asset floor from step 2. Returns a margin of safety verdict for each survivor."}
+  - {uses: bargain-group-rules-writer, note: "Reads the verdicts from step 3. Returns a group plan with size limits, an exit rule and a scorecard to judge the method."}
 origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham]

@@ -45,4 +45,4 @@ Produce one JSON record. Use `null` for any field not found — do not guess.
 
 ## Step 3: Flag obvious gaps
 
-Before handing to `kyc-rules`, note anything plainly missing or expired (ID past expiry, address proof older than 3 months, UBO chart absent for an entity). These are inventory gaps, not rules-engine outcomes.
+Before handing to `kyc-rules` (in this library, the Onboarding rules checker, a separate step), note anything plainly missing or expired (ID past expiry, address proof older than 3 months, UBO chart absent for an entity). These are inventory gaps, not rules-engine outcomes.

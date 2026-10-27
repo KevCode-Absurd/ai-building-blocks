@@ -36,6 +36,7 @@ how_to_use:
   - Ask for the CloudFormation template. Read it, and have someone who knows AWS review it before you deploy.
   - Deploying creates AWS resources that cost money. Set a budget alarm and try it in a test account first.
   - The cost figures in the examples are only illustrations. Your real costs depend on your usage, so check the AWS pricing pages.
+  - Next, run the cost analysis and share the result with whoever approves the budget. Deploy to a test account first.
 output_sample:
   input:
     - Your app type, such as web app, mobile backend, data pipeline or SaaS
@@ -57,3 +58,4 @@ output_sample:
       contains: Your spend by service, right-sizing ideas, savings plan options and storage moves, ranked high, medium or low.
     - name: Deploy and check steps
       contains: Commands to create the stack, check its status, and fix a failed deploy.
+next: [cloud-bill-waste-finder, cloud-misconfiguration-finder, copilot-aws-cost-optimize]

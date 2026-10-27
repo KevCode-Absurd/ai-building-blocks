@@ -8,7 +8,7 @@ thinking_why: The task compares evidence and alternatives. Its output still need
 explain: |-
   Review a human-centred AI image or motion brief and produce evidence-linked representation fixes and a generation QA brief.
 
-  This is one repeatable multimodal review task needing a brief, reference context and sometimes an actual asset; an installable skill can retain the review checklist without creating three duplicate listings.
+  It works from your brief and, when you have one, your image or clip. It reviews only what you give it, so with no image it checks the brief and marks every picture check as not run.
 
   This task uses selected methods from Inclusive Visuals Specialist. It is a focused adaptation. The original agents remain available: [Inclusive Visuals Specialist agent](https://useaiblocks.com/agents/agency-design-inclusive-visuals-specialist).
 when:
@@ -59,12 +59,14 @@ output_sample:
     - name: NOT_RUN checks
       contains: Image, frame or motion checks that could not be done because no asset was given.
 how_it_works:
-  - title: 1. An evidence-linked review of representation, context, anatomy and motion
-    text: Every visual finding has visible evidence or is labelled uncertain.
-  - title: 2. Corrective prompt clauses tied to the observed issues
-    text: Absent assets and unavailable frame/motion checks remain NOT_RUN.
-  - title: 3. Questions for a relevant human reviewer and checks still needing an actual asset
-    text: No demographic trait, community endorsement or cultural authenticity is inferred.
+  - title: Scopes the review
+    text: It notes whether you gave a brief, an image, a clip or several versions, and keeps the identities, setting, text and audience you asked for.
+  - title: Checks what it can see
+    text: It checks faces, hands, movement, clothing, setting and required text, and ties each finding to a spot, frame or phrase. If it cannot tell, it says so.
+  - title: Writes the fixes
+    text: It gives a table of findings with a repair for each, and prompt lines built only from those findings. If two fixes clash, it tells you which it chose.
+  - title: Leaves checks open
+    text: Questions for a person who knows the community or context stay open, and any check with no image or clip behind it is marked NOT_RUN.
 judge:
   - Every visual finding has visible evidence or is labelled uncertain.
   - Absent assets and unavailable frame/motion checks remain NOT_RUN.
@@ -75,7 +77,7 @@ test:
   - Omit one required fact and check that the affected work stays unresolved.
 tweaks:
   - what: Task scope
-    how: State the intended result, available evidence and actual tools before starting.
+    how: Say where the image will be used, paste the exact text it must show and name any detail you must keep, such as an assistive device or a type of clothing.
 improve:
-  - Keep useful corrections with the task evidence for the next run.
+  - Keep the prompt lines that fixed a problem, with the image they fixed, so the next brief starts from them.
 terms: []

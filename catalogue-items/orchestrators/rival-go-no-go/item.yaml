@@ -14,8 +14,8 @@ outputs:
   - {type: audit_report}
 uses: [rival-matchup-scorer, go-or-no-go-launch-checker]
 steps:
-  - {uses: rival-matchup-scorer, note: "A side-by-side on the five factors, with where to fight and where to avoid"}
-  - {uses: go-or-no-go-launch-checker, note: "A go or no-go against the book's six faults and three halfway checks. Reads the audit report from the step before"}
+  - {uses: rival-matchup-scorer, note: "Takes your question: you, the rival, what you compete for and what you know about each side. A side-by-side on the five factors, with where to fight and where to avoid"}
+  - {uses: go-or-no-go-launch-checker, note: "A go, wait or no-go against the book's six faults and three halfway checks. Reads the matchup in the audit report from the step before, and your plan"}
 origin: rebuilt
 version: 1.0.0
 minds: [sun-tzu]

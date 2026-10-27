@@ -31,9 +31,12 @@ you_get:
   - Order values and dates
   - Readable or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run commands, such as Claude Code, with the Shopify command line tool installed.
+  - Sign in to your store with read access to orders. The command is: shopify store auth --store your-store.myshopify.com --scopes read_orders
+  - Paste the skill into your AI and give it your store address. Say how many days to look back. The minimum risk level is high unless you say otherwise.
+  - Open the ranked list each morning. Check the flagged orders by hand in your Shopify admin before you cancel or hold anything.
+  - Orders from repeat customers can be false alarms, so look at their history first. Treat the $50 minimum as a starting point to test on your own orders.
+  - To set up automatic rules, use the fraud rules setter. To follow up on lost disputes, use the chargeback customer tagger.
 output_sample:
   input:
     - Your store address
@@ -55,3 +58,4 @@ output_sample:
       contains: One row per order with risk level, price, customer, warning signs, payment status and fulfillment status.
     - name: JSON summary (optional)
       contains: The same counts in JSON, with the name of the CSV file.
+next: [fraud-rules-setter, chargeback-customer-tagger]

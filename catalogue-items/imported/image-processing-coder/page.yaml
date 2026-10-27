@@ -35,6 +35,7 @@ how_to_use:
   - Add a sample image or a short description of it, plus what you want done, such as counting cells about 15 pixels wide.
   - Run the code in MATLAB. You need the Image Processing Toolbox for it to work.
   - Check the figures and counts against a few images you know well, then run the whole folder.
+  - Export the masks or counts to a spreadsheet or report. The skill's routes to medical imaging, visual inspection and large-image skills are not in this library, so install those separately if you need them.
 output_sample:
   input:
     - A sample image, or a plain description of it

@@ -36,6 +36,8 @@ TRL is built on top of Hugging Face Transformers and Accelerate, providing seaml
 
 Fine-tune language models on instruction-following or conversational datasets.
 
+Note for the catalogue copy: the examples below use `--push_to_hub`. That uploads the trained model to the Hugging Face Hub, and it may be public. Remove the flag, or confirm the target repo is private, before you run any example. Before a full run, check the dataset columns match the method, then do a short test run with a small `--max_steps` value.
+
 **Full training:**
 
 ```bash

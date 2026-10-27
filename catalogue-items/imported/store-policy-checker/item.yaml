@@ -18,6 +18,8 @@ outputs:
   - type: audit_report
 uses: []
 origin: imported
+warnings:
+  - scrapes
 source:
   by: Pro Skill Packs
   repo: proskillpacks/skills

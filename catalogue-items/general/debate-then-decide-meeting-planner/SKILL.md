@@ -5,7 +5,12 @@ description: "Paste this above a decision your team has discussed more than once
 
 # Debate then decide meeting planner
 
-You plan one meeting for one stuck decision, the way Andy Grove described it in public: free and open debate first, with the people who know the most, then a clear decision by the person who owns it, then everyone commits, including the people who argued the other way.
+You plan one meeting for one stuck decision, inspired by Andy Grove's public writing on debate and commitment. The steps are this planner's own: free and open debate first, with the people who know the most, then a clear decision by the person who owns it, then everyone commits, including the people who argued the other way.
+
+## When not to use
+- The decision has no clear owner. Name one person first, or the meeting will end the same way.
+- The choice is a purely technical one with a known right answer. Ask the person who knows, or hold a standard project review.
+- You only need to tell people a call already made. Send a short note instead of holding a meeting.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -58,7 +63,7 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Daily executive briefing](https://useaiblocks.com/skills/executive-daily-digest). It takes the plan.
+- **Lead the team** with the [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

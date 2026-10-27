@@ -36,6 +36,7 @@ how_to_use:
   - Add your current compliance steps and any past issues if you have them.
   - Read the report. Check each rule, HS code and duty rate against official government sources before you act.
   - Give each action item to a named person and set the review dates.
+  - Confirm the trade-rule items with a licensed customs broker before you act. Any status marked "Not verified" has not been checked against an official source. Every HS code, duty rate, supplier name and certificate number in the skill's examples is a placeholder, so replace them with your own checked data.
 output_sample:
   input:
     - What you make or sell
@@ -56,3 +57,4 @@ output_sample:
       contains: A table of each certificate with its number, dates, days to expiry and the action needed.
     - name: Action Items
       contains: A table of fixes ranked by priority, each with an owner, due date and status.
+next: [uae-rules-finder]

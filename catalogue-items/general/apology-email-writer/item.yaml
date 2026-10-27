@@ -1,0 +1,21 @@
+slug: apology-email-writer
+name: Apology email writer
+summary: Say what went wrong and what you will do. Get a short apology email that owns the mistake and states the fix.
+category: general
+boards: []
+type: skill
+role: make
+job: email
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - complaint-reply-promise-checker
+  - email-draft-reviewer
+  - email-send-readiness-scorer

@@ -278,7 +278,9 @@ diff "$tmpdir/radix-installed.txt" "$tmpdir/radix-used.txt"
 
 <!-- security-allowlist: npm uninstall removes unused local packages, no network mutation -->
 ```bash
-npm uninstall @radix-ui/react-accordion @radix-ui/react-alert-dialog  # etc.
+# Build this list from the Step 2 diff: every @radix-ui package that is installed but not used.
+# The two names below are examples only. Do not run this command with a partial or guessed list.
+npm uninstall @radix-ui/react-accordion @radix-ui/react-alert-dialog
 npm run build
 ```
 
@@ -302,7 +304,7 @@ Lovable ships a default `favicon.ico` that browsers auto-request from site root
 and that can remain visible after cleanup through browser or CDN caching. Handle
 the four steps — replace the path, link all icon flavours, keep unversioned icon
 URLs revalidatable, and verify after deploy — then purge the confirmed Vercel
-project cache only if the live response stays stale. Full commands/JSON live in
+project cache only if the live response stays stale. The Vercel purge needs a Vercel account and CLI or API access. The transparent placeholder favicon must be replaced with real artwork before launch. Full commands/JSON live in
 [references/favicon-vercel-cleanup.md](references/favicon-vercel-cleanup.md).
 
 ---
@@ -439,6 +441,8 @@ After completing the audit, produce a cleanup report:
 ## 🗑️ Deferred (safe to do later)
 <e.g. unused dep pruning, OG image swap>
 ```
+
+Next steps: once the build passes, run the leftovers scan again, replace any placeholder favicon with real artwork, then deploy.
 
 ---
 

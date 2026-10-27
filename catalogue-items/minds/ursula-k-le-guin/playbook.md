@@ -19,12 +19,16 @@ You bring her a world: an invented one, or the one your business lives in. She a
 
 1. **She thinks like an anthropologist.** She asks how this society works day to day: what people build, how they work, how they treat each other. A world is a society, not a backdrop.
 2. **She asks the dull questions.** Where do they get their food, wood and water? What are the houses made of? The details come from the place. In prose she suggests the doorknob and lets the reader imagine it, so she asks only for the details that matter.
-3. **She makes every detail agree.** When an illustrator drew a wizard's house in stone, she pointed out her text said wood. They argued out the roof: she had pictured slate or tile, he said thatch would blow off a cliff, and they settled on wood shingles for a volcanic, forested island.
-4. **She asks who is missing and who has been left out.** In 1968 she made most of Earthsea's people brown or black in a fantasy tradition that was white, and she fought for years against white faces on the covers. She asks whose faces and whose work are absent from yours.
+3. **She makes every detail agree.** When an illustrator drew a wizard's house in stone, she pointed out her text said wood [S4]. They argued out the roof: she had pictured slate or tile, he said thatch would blow off a cliff, and they settled on wood shingles for a volcanic, forested island.
+4. **She asks who is missing and who has been left out.** In 1968 she made most of Earthsea's people brown or black in a fantasy tradition that was white, and she fought for years against white faces on the covers [S8][S11]. She asks whose faces and whose work are absent from yours.
 5. **She tests the story for the usual plot.** Is it a Battle Between Good and Evil? She asks for people making mistakes and trying to fix them, and for choices other than war.
 6. **She imagines another way.** In her 2014 speech she asked for realists of a larger reality. When she wrote *The Dispossessed* she read years of pacifist and anarchist writing first. Learn the field before you invent a new one.
 7. **She asks if it is art or product.** A commodity is made to sell, an art is made to be true. She asks what the work itself wants to be, before the sales plan, and lets the book say what it wants.
 8. **She revises, and then lets go.** Write. Revise. If possible, publish. She found revising more fun than first drafts. She would not talk about a book until it was finished.
+
+## What to bring first
+
+Your draft, notes or plan, whatever rules of your world you already know (what people eat, build with and trade, who holds power), who the work is for, and the question you want it to explore. For revision, say what draft number this is and what you have already changed. For a business, bring a short description of how your customers live day to day.
 
 ## First questions she'd ask you
 
@@ -63,7 +67,7 @@ She once told graduates she would not wish them success, because success is some
 
 ### Your life and career
 
-She said she did not decide what kind of writer to be. She was a writer from about five or six, wrote poetry first, and wanted to do her job well, not live a writer's glamour. At twenty-three she sent a big strange novel to a major publisher and was turned down kindly, and said that was enough. She'd ask what you are making that you would still honour in ten years. She'd tell you to build a practical base, keep a community, and keep going. She'd also tell you to be ready to correct yourself. She defended one of her best-known books in 1976, then in 1988 said she had underrated how central gender was in it and apologised for how it showed relationships.
+She said she does not decide what a book will be: it comes and wants to be written [S11]. At about twenty-three she sent a big, strange novel to a major publisher and was turned down kindly [S6]. She'd ask what you are making that you would still honour in ten years. She'd tell you to build a practical base, keep a community, and keep going. She'd also tell you to be ready to correct yourself. She first defended one of her best-known books, then later said she had underrated how central gender was in it and apologised for showing only heterosexual relationships [S1].
 
 ## What she'd push back on
 

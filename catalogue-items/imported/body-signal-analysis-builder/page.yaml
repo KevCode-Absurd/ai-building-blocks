@@ -30,11 +30,13 @@ you_get:
   - Variability and complexity measures
   - Plots and a rerunnable script
 how_to_use:
+  - This is for researchers who are comfortable running Python. If you do not code, ask an analyst to run it.
   - Open an AI that can run Python code and read files. Check that Python 3.10 or newer and uv are set up.
   - Add the skill to your AI. Paste its text into the chat, or load the skill folder if your tool allows it.
   - Add your deidentified signal files. Say the sampling rate and the signal type, such as ECG or EDA. Add event markers if you have them.
-  - Ask your AI to follow the skill and build the analysis. Then look at the plots to check that peaks sit in the right places.
+  - Ask your AI "Inspect my file first, then clean the signal and find the peaks." Open the inspection report before anything else. Then look at the plots to check that peaks sit in the right places.
   - Keep the script and the pinned library version. Rerun them to get the same result.
+  - Next, check the peak and variability tables against the raw plots. Then pass them to a statistician before you run any analysis.
 output_sample:
   input:
     - Your signal files or arrays, such as ECG, skin conductance or breathing

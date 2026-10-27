@@ -1,6 +1,6 @@
 ---
 name: brand-voice
-description: "Develop or document a complete brand voice and tone system covering voice attributes, tone shifts by context, vocabulary preferences, grammar rules, and copy examples. Use this skill whenever the user wants to define how a brand sounds, write a voice and tone document, audit existing copy for voice consistency, train a team or AI assistant on brand voice, or refine the personality of brand writing. Triggers on brand voice, voice and tone, tone of voice, writing voice, brand personality, copy voice, voice document, voice guidelines, how should we write, voice training, voice audit. Also triggers when the user has copy that 'feels off' and the underlying issue is voice, even if not stated explicitly. On a voice consistency check, this skill owns defining and documenting the voice system; use `editorial-qa` when a specific draft needs checking against an existing system before it publishes."
+description: "Develop or document a complete brand voice and tone system covering voice attributes, tone shifts by context, vocabulary preferences, grammar rules, and copy examples. Use this skill whenever the user wants to define how a brand sounds, write a voice and tone document, audit existing copy for voice consistency, train a team or AI assistant on brand voice, or refine the personality of brand writing. Triggers on brand voice, voice and tone, tone of voice, writing voice, brand personality, copy voice, voice document, voice guidelines, how should we write, voice training, voice audit. Also triggers when the user has copy that 'feels off' and the underlying issue is voice, even if not stated explicitly. On a voice consistency check, this skill owns defining and documenting the voice system; use `draft-brand-voice-checker` when a specific draft needs checking against an existing system before it publishes."
 category: brand
 catalog_summary: "Voice attributes, tone shifts, vocabulary, paired-example library"
 display_order: 4
@@ -24,10 +24,10 @@ This skill produces a standalone voice document that can either live in the bran
 
 ## When NOT to use
 
-- Writing specific copy (use `content-and-copy`)
-- Brand visual identity work (use `brand-identity`)
-- Documenting a complete brand system (use `brand-style-guide`, which incorporates voice)
-- Initial brand exploration (use `brand-ideation`)
+- Writing specific copy (use `copywriting-framework-writer` or `direct-response-copywriter` from this library)
+- Brand visual identity work (not covered here; use a design skill)
+- Documenting a complete brand system (use `brand-guide-builder` from this library, which incorporates voice)
+- Initial brand exploration (not covered here; start with `brand-guide-builder`)
 
 ---
 
@@ -170,7 +170,7 @@ Default output is a markdown document at `voice.md` in the brand folder. Section
 6. Anti-patterns (specific phrases or constructions to avoid)
 7. References (the brands and writers we are inspired by)
 
-This doc can stand alone or feed into `brand-style-guide`.
+This doc can stand alone or feed into `brand-guide-builder`.
 
 ---
 

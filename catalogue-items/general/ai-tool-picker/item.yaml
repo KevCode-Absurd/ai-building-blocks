@@ -1,0 +1,23 @@
+slug: ai-tool-picker
+name: AI tool picker
+summary: Describe the job you want done. Get the kind of AI tool that fits, tools to try first and a backup.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+  - type: question
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - repeat-chore-automation-planner
+  - role-task-breakdown-for-ai-help
+  - ai-fit-problem-checker

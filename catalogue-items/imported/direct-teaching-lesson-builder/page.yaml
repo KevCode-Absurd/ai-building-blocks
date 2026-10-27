@@ -32,11 +32,11 @@ you_get:
   - Quick checks for understanding
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill instructions from the SKILL.md file into the chat.
+  - Paste the skill instructions from the SKILL.md file into the chat. The skill is Gareth Manning's work under CC BY-SA-4.0, so anything you build from it must keep that licence.
   - Add the skill to teach, your learners' age and what they know, and the lesson length in minutes.
   - Add common mistakes and your success measure if you have them.
   - Read the plan. Check that the stage times add up to your lesson length and that the think-aloud sounds like you.
-  - Fix any task that is too easy or too hard, then use the plan.
+  - Fix any task that is too easy or too hard, then use the plan. To go further, pair it with Think-aloud script writer, Understanding check picker or Worked example to practice sequence builder.
 output_sample:
   input:
     - The skill you want to teach

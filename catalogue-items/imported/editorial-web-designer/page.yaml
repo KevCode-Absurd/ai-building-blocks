@@ -37,6 +37,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill.
   - Describe the screen and who uses it. Paste your real text. If you want a review, paste the code or attach a screenshot.
   - Name your framework. If you do not, your AI should use plain HTML and CSS.
+  - The rulebook bans gradients, though some of its own sections suggest them. It follows the ban and uses flat tints, faint photos or line patterns. Its default serif is a free one, Newsreader or Instrument Serif. Lyon Text is paid and needs a licence.
+  - Hand the design direction to your developer or designer with your real text, so they build from the same page.
   - Check the design direction first, before you read the code. Ask for changes there, then ask for the code again.
   - Copy the code into your project. Test contrast, keyboard use and a phone screen with your real content.
 output_sample:

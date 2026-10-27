@@ -31,11 +31,12 @@ you_get:
   - An opening call script, line-by-line asks for price breaks, what you give back and a fallback with a second factory
   - A grade for each product from A to D, a test of your growth plan against cash, and a score out of 100 for growth cash safety
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach a photo or spec sheet of the product, along with the quote and your yearly volume.
   - When it pauses, run the talks with the factory and write down the new prices, price breaks and payment terms they agree to.
-  - Bring those figures back for the final cash check. Ask whoever handles your finances for stock and debt numbers if you do not have them.
+  - Bring those figures back as a table: unit price, each price break, deposit, balance, net days and lead time. The final cash check starts from it.
+  - Ask whoever handles your finances for stock and debt numbers if you do not have them.
 output_sample:
   input:
     - Your product, with a photo or spec sheet
@@ -57,7 +58,7 @@ output_sample:
     - name: "Step 4: Cash limit"
       contains: Your cash cycle, a grade per product, a stockout test, your growth plan against cash and debt, and a score out of 100.
     - name: Hand-back summary
-      contains: Each step's file, any step not run and why, and every missing item in one list.
+      contains: Each step's file, a table of the agreed prices, price breaks and payment terms, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Break down the quote
     text: Builds the cost sheet with one row per part, labour, overhead, factory margin and extras. Writes price-break questions for each row.
@@ -81,7 +82,9 @@ output_shape: |-
     Cash cycle | grade per product | stockout test | growth plan vs cash and debt | slow stock plan | score out of 100
 
   HAND-BACK SUMMARY
-    Files: <each step's file> | MISSING: <every line, in one list>
+    Files: <each step's file>
+    Agreed terms: <item> | <old> | <agreed> | <notes>
+    MISSING: <every line, in one list>
 tweaks:
   - what: Your yearly volume
     how: Factories give price breaks for units. A firmer yearly number gives you something to trade.

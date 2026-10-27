@@ -3,6 +3,17 @@ name: "iso27001-audit-prep"
 description: "/cs:iso27001-audit-prep <scope> — ISO 27001 ISMS audit readiness 6-question forcing interrogation. Use before annual Clause 9.2 internal audit, surveillance audit prep, or stage 1 certification readiness."
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `ra-qm-team/skills/isms-audit-expert/scripts/isms_audit_scheduler.py`
+- `../../skills/compliance-os/scripts/audit_simulator.py`
+- `../../skills/compliance-os/scripts/cross_framework_mapper.py`
+- `../../../ra-qm-team/skills/isms-audit-expert/references/iso27001_audit_playbook.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # /cs:iso27001-audit-prep — ISO 27001 ISMS Audit Forcing Questions
 
 **Command:** `/cs:iso27001-audit-prep <scope>`
@@ -34,14 +45,14 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 - Review against `iso27001_audit_playbook.md` for stage 1 expectations
 
 ### 3. Show me the access review records — quarterly cadence, the last 4 quarters.
-**Most-cited finding area.**
+**A common finding area (the original author's view; no source is given).**
 - Annex A.5.15 + A.8.2 + A.8.3 access controls
 - Sample real records pulled from Okta / IAM, not curated audit-prep packs
 - For each terminated employee in last 90 days: deprovisioning evidence within 24-hour SLA
 - Privileged access reviewed at finer granularity
 
 ### 4. What's the supplier inventory + last review evidence?
-**Second-most-cited finding area.**
+**Another common finding area (the original author's view; no source is given).**
 - Annex A.5.19-A.5.21 supplier management
 - Critical SaaS suppliers reviewed at least annually
 - DPAs signed for personal-data sub-processors (cross-check with cs-dpo-gdpr)
@@ -63,6 +74,8 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 
 ## Workflow
 
+**The three scripts and the playbook named in this skill are not in this copy, so do not run them or say you did.** Do the three steps by hand in the chat: (1) plan the audit scope and dates from what the user tells you, (2) walk the six questions as a mock audit, (3) list which SOC 2 and ISO 42001 controls the same evidence could cover. Say these checks were done by reading what the user pasted.
+
 ```bash
 # 1. Audit programme planning
 python ra-qm-team/skills/isms-audit-expert/scripts/isms_audit_scheduler.py audit_scope.json
@@ -70,7 +83,7 @@ python ra-qm-team/skills/isms-audit-expert/scripts/isms_audit_scheduler.py audit
 # 2. Mock audit for readiness check
 python ../../skills/compliance-os/scripts/audit_simulator.py iso27001_scope.json
 
-# 3. Cross-framework reuse (SOC 2 = 75% overlap; ISO 42001 = 60% reuse)
+# 3. Cross-framework reuse (the overlap with SOC 2 and ISO 42001 is large but partial; the exact share depends on scope and is not given here)
 python ../../skills/compliance-os/scripts/cross_framework_mapper.py program.json
 ```
 
@@ -111,7 +124,7 @@ python ../../skills/compliance-os/scripts/cross_framework_mapper.py program.json
 - GDPR Article 32 controls affected: <list>
 
 ## Verdict
-🟢 READY | 🟡 CLOSE-CRITICALS-FIRST | 🔴 NOT-READY
+🟢 READY (no gaps that would block certification) | 🟡 CLOSE-CRITICALS-FIRST (critical gaps that can be closed before the audit) | 🔴 NOT-READY (critical gaps that cannot be closed in time, or missing core evidence). Say which questions drove the verdict.
 
 ## Top 3 Actions
 [3 concrete next steps with owner + corrective-action timeline]
@@ -120,7 +133,7 @@ python ../../skills/compliance-os/scripts/cross_framework_mapper.py program.json
 ## Routing
 
 - `/cs:compliance-readiness` — for multi-framework view
-- `/cs:soc2-audit-prep` — for SOC 2 cross-walk pair (75% overlap)
+- `/cs:soc2-audit-prep` — for SOC 2 cross-walk pair (large overlap)
 - `/cs:aims-audit` — for ISO 42001 AIMS cross-walk
 - `/cs:gdpr-audit-prep` — for Article 32 organizational measures overlap
 - `/cs:ciso-review` — for executive cybersecurity strategy

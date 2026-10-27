@@ -28,10 +28,9 @@ you_get:
   - A list of open gaps with owners.
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text, or upload the skill folder if your AI accepts files.
-  - Describe your system, data sources, the decision, the owner and the risk level.
-  - Say which actions, if any, the twin may take. If you do not know, say so.
+  - Describe, in this order, the system, its data sources, the decision the twin should help with, the owner, the risk level and the actions it may take. If you do not know one, say so.
   - Ask for the classification first, then the plan and the release checklist.
-  - Read the open gaps and fill them in before you trust the plan.
+  - Read the open gaps and fill them in before you trust the plan. Then ask the named owner to approve, hold or block the release, and act on that decision: approve means proceed, hold means fill the gaps, block means stop.
   - No code or paid tool is needed. The plan is a document, not a running twin.
 output_sample:
   input:
@@ -53,6 +52,17 @@ output_sample:
       contains: Lists the proof needed before the twin may do more than watch, with a decision of approve, hold or block.
     - name: Open gaps
       contains: Lists unresolved questions, each with an owner or a way to escalate.
+terms:
+  - term: Model
+    meaning: A stand-in for a real system that does not update from it.
+  - term: Digital shadow
+    meaning: A copy that is fed by the real system but cannot send anything back.
+  - term: Digital twin
+    meaning: A copy kept in step with the real system that can help decide or trigger actions, under set rules.
+  - term: Digital thread
+    meaning: The linked record that ties data, models and decisions together over time.
+  - term: VVUQ
+    meaning: Checks that the model is built right, matches reality, and shows how sure it is.
 how_it_works:
   - title: Frame and classify
     text: Identify the original, useful decision, simpler alternatives and whether this is a model, shadow or twin.

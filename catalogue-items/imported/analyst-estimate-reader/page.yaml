@@ -20,7 +20,7 @@ not_for:
   - "You want a private company or a stock listed outside the US: check the company's own reports or ask a paid data provider, since coverage may be thin or missing."
   - "You want advice on whether to buy or sell: talk to a licensed financial adviser, because this is research only."
 you_give:
-  - A stock ticker
+  - A US-listed stock ticker
   - The periods you care about (optional)
   - A peer or sector to compare against (optional)
 you_get:
@@ -35,6 +35,7 @@ how_to_use:
   - Type your ticker. Add the periods or a peer to compare against if you want them.
   - Let your AI install yfinance when it asks. Then wait for the tables.
   - Read the lead insight first. Then check key numbers on Yahoo Finance before you act on them.
+  - Then check the price move against the revision trend, or pair this with a company earnings review. This is research, not advice.
 output_sample:
   input:
     - A stock ticker
@@ -42,7 +43,7 @@ output_sample:
     - A peer or sector to compare against (optional)
   prerequisites:
     - An AI that can run Python code and reach the web, so it can install and use the yfinance library
-    - Data comes from Yahoo Finance, which yfinance is not affiliated with. It may change or limit access, so check key numbers before you rely on them.
+    - Data comes from Yahoo Finance through yfinance, an unofficial way to read it that is not backed by Yahoo. It can stop working without notice. Check key numbers before you rely on them
   output:
     - name: Estimate overview
       contains: Consensus, low, high, range width, analyst count and growth for each period, with flags for wide ranges and thin coverage.

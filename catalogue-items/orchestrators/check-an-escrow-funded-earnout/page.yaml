@@ -52,24 +52,27 @@ output_shape: |-
   MISSING                 <each gap and what it stops>
   CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Use this path only when the contract funds the earnout from this escrow; other indemnity or working-capital escrows remain separate.
+  - what: Agreed result
+    how: Change the result. The payout moves along the straight line between the threshold and the cap.
+  - what: Disputed result
+    how: Give both sides' figures. Each is run as its own payout line and the cash difference is shown.
+  - what: Pending reserve
+    how: Add a claim the contract approves. It is held back from the release, and any amount above the balance shows as uncovered.
+  - what: Workbook
+    how: Say you want a spreadsheet. Inputs, formulas and checks sit on separate sheets.
 judge:
   - Use this path only when the contract funds the earnout from this escrow; other indemnity or working-capital escrows remain separate.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Reconcile opening balances, additions, deductions and closing balances.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the clause on one line (metric, period, threshold, cap, maximum payout) and paste it in each run.
+  - Save the escrow agent's statement beside step 2, so the balance can be traced.
+  - Run the Reconcile seller closing cash workflow next, to see how the payout fits the seller's bridge.
 works_best_with:
   tools:
     - name: A spreadsheet tool and an AI that reads files

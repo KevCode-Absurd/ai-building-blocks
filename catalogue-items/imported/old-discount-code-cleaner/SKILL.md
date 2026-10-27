@@ -41,8 +41,10 @@ Audits the discount catalog for expired codes, codes with zero redemptions, and 
 
 2. Flag discounts matching: `flag_expired` (status = EXPIRED) and/or `flag_zero_usage` (asyncUsageCount == 0 AND created > `zero_usage_min_age_days` ago)
 
+2b. **STOP AND CONFIRM.** Show the flagged list (title, status, usage count, end date) and the CSV. Do not call `discountCodeDelete` until the person says yes to this exact list in this chat. If `dry_run` is true, stop here. Delete only the codes the person approved. Never delete a code that is not on the approved list.
+
 3. **OPERATION:** `discountCodeDelete` — mutation
-   **Inputs:** `id: <discount_node_id>`
+   **Inputs:** `id: <discount_node_id>` — the `id` of the discount node returned by `discountNodes` (the `gid://shopify/DiscountCodeNode/...` value in the `discount_id` column of the CSV). Do not pass a code string. Check that each id matches a row the person approved.
    **Expected output:** `deletedCodeDiscountId`, `userErrors`
 
 ## GraphQL Operations
@@ -166,6 +168,10 @@ For `format: json`, emit:
   }
 }
 ```
+
+## Next steps
+
+After the CSV: check scheduled email campaigns, turn codes off by hand if you want a softer step before deleting, and run this again each quarter.
 
 ## Output Format
 CSV file `discount_cleanup_<YYYY-MM-DD>.csv` with columns:

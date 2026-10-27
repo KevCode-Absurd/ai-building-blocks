@@ -35,8 +35,9 @@ how_to_use:
   - Set up the AWS command line and sign in. Check it works by running aws sts get-caller-identity.
   - Connect your AI to GitHub, and tell it which repository should get the issues.
   - Put your Terraform, CloudFormation or CDK files where your AI can read them. The skill stops if it finds none.
-  - Ask your AI to follow this skill. Read the cost summary it shows you, then say yes to post the issues.
+  - Ask your AI to follow this skill. Read the cost summary it shows you, then say yes to post the issues. The usage commands use Linux date syntax, so on a Mac ask your AI for the macOS version.
   - Check the savings numbers. If usage or billing data could not be fetched, treat the savings as unverified estimates. Cost Explorer may charge a small fee per request.
+  - Next, work through the tracking issue from the top of the ranked list, and re-run the review after the first fixes to confirm the saving.
 output_sample:
   input:
     - Your AWS account, signed in through the AWS command line

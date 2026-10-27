@@ -19,8 +19,10 @@ Check if `.agents/brand-context.md` exists. Read it. WhatsApp marketing must mat
 
 WhatsApp has **2.5 billion active users** globally. In India, Brazil, and much of Southeast Asia, it's the primary communication platform — more so than email or SMS.
 
-**Open rates**: 90%+ (vs. 20–30% for email)
-**Response rates**: 40–50% (vs. 2–5% for email)
+*The figures in this file (open, response and conversion rates, user counts) are rough estimates from the original author. They are not verified. Do not present them as data, and give no benchmark unless the user supplies a source.*
+
+**Open rates**: often quoted as very high (unverified; vs. much lower for email)
+**Response rates**: often quoted as much higher than email (unverified)
 **Why it works**: Users chose to opt in and treat WhatsApp as personal — messages from brands they trust get opened first
 
 **The risk**: It's the most personal channel. Spam or off-brand tone gets immediate blocks.
@@ -73,7 +75,7 @@ Best for: Medium to large businesses, automation, scale
 - Website and email linked
 - Business hours set correctly
 
-**Opt-in requirements (critical — non-compliance = ban):**
+**Opt-in requirements (critical — non-compliance = ban). This is general guidance, not legal advice. Check WhatsApp's current policy and your local rules on opt-in wording and review requests before you send:**
 WhatsApp requires explicit opt-in before messaging any customer.
 
 **Opt-in collection methods:**
@@ -127,7 +129,7 @@ WhatsApp requires pre-approved templates for outbound messages. Template categor
 |----------|---------|-------------|
 | Product launch | New product live | Marketing template |
 | Flash sale | Sale start | Marketing template |
-| Abandoned cart | 1–2 hrs after cart abandonment | Utility template |
+| Abandoned cart | 1–2 hrs after cart abandonment | Marketing template (a sales reminder is promotional; confirm the category with your business service provider before sending) |
 | Back in stock | Product restocked | Marketing template |
 | Seasonal offer | Festival / holiday | Marketing template |
 | Loyalty reward | Customer milestone | Marketing template |
@@ -210,6 +212,8 @@ WhatsApp content is different from email or social. Rules:
 ---
 
 ### 06 — WHATSAPP METRICS
+
+*These benchmarks are rough estimates, not verified data. Use them as starting guesses and replace them with the user's own results.*
 
 | Metric | Benchmark | What it shows |
 |--------|-----------|--------------|

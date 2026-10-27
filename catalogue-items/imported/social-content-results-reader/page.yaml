@@ -16,6 +16,7 @@ when:
   - You need to track a competitor's follower growth.
   - You want a hashtag's performance in a spreadsheet.
 not_for:
+  - "You have not checked each platform's terms of service: scraping may break them, so read the terms before you run it."
   - "You want numbers for your own private account: use the insights tab inside Instagram, Facebook, YouTube or TikTok."
   - "You only have a few posts to compare: copy the figures by hand into a spreadsheet."
   - "You can't run code or pay for Apify: ask a person to pull the numbers for you."

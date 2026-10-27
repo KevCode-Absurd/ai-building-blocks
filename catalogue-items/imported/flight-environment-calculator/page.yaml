@@ -36,6 +36,7 @@ how_to_use:
   - Add a planet or model if you have a preference.
   - Run the code and read the results table. Check each unit and the sanity notes.
   - For planet positions, download the aeroDataPackage first. For space weather, add a CelesTrak CSV.
+  - Next, feed the values into your vehicle or trajectory model, or compare the magnetic declination with a compass reading. This is made for people with a MATLAB and aerospace background.
 output_sample:
   input:
     - Latitude, longitude and altitude

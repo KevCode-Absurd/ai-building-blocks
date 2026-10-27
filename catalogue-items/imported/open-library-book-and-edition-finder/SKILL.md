@@ -19,6 +19,8 @@ metadata:
 
 # openlibrary — Book Metadata from Open Library
 
+> In plain words (added by AI Blocks): this skill looks up books, editions, authors and covers in the free Open Library catalog. An OL key ending in M is an edition, W is a work (the book as an idea) and A is an author. A 302 is a redirect that the tool follows for you. Report only what the catalog returned, and say so when a record is missing.
+
 Query Open Library's 50M+ record catalog over its public HTTP API: search works
 and authors, walk the edition/work/author graph by ISBN or OLID, enumerate
 editions, and read community ratings. No API key exists; everything here is a

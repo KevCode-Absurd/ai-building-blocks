@@ -62,7 +62,7 @@ When a deal is dying, you're doing all the work. They're "too busy." They'll "ge
 
 **The 3-Week Rule:**
 
-If your MAP hasn't been updated in 3 weeks, the deal is dead — you just don't know it yet. **I've never seen a deal close with a stale MAP. Not once in 11 years.**
+If your MAP hasn't been updated in 3 weeks, the deal is probably dead — you just don't know it yet. **The author says they have never seen a deal close with a stale MAP in 11 years.** This is one practitioner's rule of thumb, not a proven fact. Treat a stale MAP as a strong warning and check with the buyer. Do not call a deal dead from this rule alone.
 
 **What to Do:**
 

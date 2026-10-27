@@ -21,6 +21,7 @@ not_for:
   - "You have no subscribers or under three months of cohort data: work out the first-order loss from your CAC and margin by hand, then wait for real cohorts."
   - "You want to cut cancellations in an existing base: use a cancel-flow step instead, since this checks the cost of winning new subscribers."
   - "You need a full tax or legal check on how you show the charge: ask a qualified person, because this only flags the risk."
+  - "You do not sell subscriptions and want profit to CAC ratios over 30, 90 and 180 days: use the CAC payback checker."
 
 you_give:
   - Value of subscribers and non-subscribers at month 3 and 6
@@ -153,3 +154,4 @@ terms:
     meaning: A group of customers who first bought in the same month.
   - term: Prepay plan
     meaning: A plan where the customer pays for several months in one go.
+next: [subscription-offer-designer, subscription-churn-audit]

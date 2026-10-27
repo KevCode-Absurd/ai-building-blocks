@@ -30,12 +30,12 @@ you_get:
   - Outlier handling
   - Labelled, split data for training
 how_to_use:
-  - Check that MATLAB and Signal Processing Toolbox are installed. Your AI must be able to run MATLAB code, or you run the script yourself.
+  - "This suits people who already work in MATLAB. If you do not use MATLAB, do not start here. MATLAB and the Signal Processing Toolbox are paid products, so check you have both. Your AI must be able to run MATLAB code, or you run the script yourself."
   - Paste the skill into your AI. Add its reference files, since the steps depend on them.
   - Share your data, the sample rate and the file format. Say which problem to fix first.
   - Ask for a runnable .m script with one section per step.
   - Run the script. Check a plot of the signal before and after each step.
-  - Fix the order of steps if a later step looks worse. Spikes go first, then drift, then smoothing.
+  - "Keep this order, and fix it if a later step looks worse: fill gaps (fillmissing, or fillgaps for long gaps in a wave-like signal), then remove spikes (filloutliers or hampel), then remove drift (detrend), then smooth (smoothdata)."
 output_sample:
   input:
     - Your signal data, or a folder of signal files

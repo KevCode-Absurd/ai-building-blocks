@@ -12,7 +12,7 @@ argument-hint: "[paste the request, or describe it]"
 
 # /dsar-response
 
-1. Load `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → DSAR process (systems list, verification method, SLA).
+1. Load `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → DSAR process (systems list, verification method, SLA). If that file is missing (it is for most chat users), ask the person to paste their systems list, deadline and identity method. Do not assume them.
 2. Run the workflow below.
 3. Classify request type. Check escalation triggers — if any fire, route before proceeding.
 4. Walk through: verify identity → walk systems list → exemption analysis → draft.

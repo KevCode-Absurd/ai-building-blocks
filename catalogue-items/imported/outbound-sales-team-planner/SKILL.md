@@ -9,7 +9,7 @@ metadata:
 
 # Predictable Revenue Framework
 
-A systematic approach to building a scalable, predictable B2B sales machine — the outbound prospecting system that helped Salesforce add $100M in recurring revenue.
+A systematic approach to building a scalable, predictable B2B sales machine — the outbound prospecting system that, by the author's account, helped Salesforce add $100M in recurring revenue (a claim from the author, not checked here).
 
 ## Core Principle
 
@@ -119,6 +119,8 @@ Prospects Needed ÷ Response Rate = Emails Needed
 ```
 
 **Example:** $1M ARR ÷ $20K deals = 50 deals; ÷ 25% win rate = 200 opportunities; at 10% response rate and 10% response-to-qualified conversion = 20,000 emails ≈ 2-3 SDRs (each sends 300-500/month).
+
+These benchmarks and the response rates above are the author's rules of thumb. They are not tested here and depend on your market. Use them as a starting guess and replace them with your own numbers as soon as you have them.
 
 | Metric | Benchmark |
 |--------|-----------|

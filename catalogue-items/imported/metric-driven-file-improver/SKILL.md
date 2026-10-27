@@ -9,6 +9,14 @@ metadata:
   updated: 2026-03-13
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `./scripts/convert.sh`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Autoresearch Agent
 
 > You sleep. The agent experiments. You wake up to results.
@@ -144,7 +152,7 @@ You are the loop. The scripts handle setup and evaluation — you handle the cre
 - Running the eval command with timeout
 - Parsing the metric from eval output
 - Comparing to previous best
-- Reverting the commit on failure (`git reset --hard HEAD~1`)
+- Reverting the commit on failure (`git reset --hard HEAD~1`). This throws away uncommitted changes, so commit or stash everything first and run only on a dedicated experiment branch
 - Logging the result to results.tsv
 
 ### Starting an Experiment
@@ -210,10 +218,7 @@ Ready-to-use evaluation scripts. Copied into the experiment directory during set
 
 LLM judges call the CLI tool the user is already running (Claude, Codex, Gemini). The evaluation prompt is locked inside `evaluate.py` — the agent cannot modify it. This prevents the agent from gaming its own evaluator.
 
-The user's existing subscription covers the cost:
-- Claude Code Max → unlimited Claude calls for evaluation
-- Codex CLI (ChatGPT Pro) → unlimited Codex calls
-- Gemini CLI (free tier) → free evaluation calls
+Each score uses the user's own plan, and plans have usage limits. Check the limits for Claude Code, Codex CLI or Gemini CLI before a long loop, and set a top limit on the number of tries. Do not assume calls are free or unlimited.
 
 ### Custom Evaluators
 
@@ -289,6 +294,7 @@ cp -r claude-skills/engineering/autoresearch-agent ~/.claude/skills/
 ```
 
 ### Multi-tool install
+The convert.sh script is not in this catalogue copy. Use the one-liner above, or get the script from the source repo.
 ```bash
 ./scripts/convert.sh --skill autoresearch-agent --tool codex|gemini|cursor|windsurf|openclaw
 ```

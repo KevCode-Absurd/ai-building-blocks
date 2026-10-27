@@ -7,6 +7,26 @@ description: "Use when two people at work are in conflict and you will lead a ta
 
 Prepare a leader for a talk between two people in conflict. Three component skills run in order: a neutral issue map, a discussion guide, then draft agreements with a minutes template. Accounts stay separate and named. Nothing is agreed until both people accept it in the room.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Transcript** (yours): the words from a recording, written out, with who said what.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your question, transcript. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A chat AI that reads files:** It reads both accounts and the pack together. Nothing is sent or filed for you.
+<!-- /needs -->
+
 ## Stop first
 
 Read the accounts before any step. If any account describes harassment, discrimination, violence, a threat, a safety breach or a possible crime, stop. Say this needs a formal process with HR or an employment adviser, not a mediation talk. List which lines triggered it. Do not run steps 2 and 3. You may still return the step 1 issue map, marked `FOR THE FORMAL PROCESS`, if the user's reviewer wants it.
@@ -71,6 +91,16 @@ CHECKS MISSED <one line each, or none>
 ```
 
 Add a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and the sources used. State that nothing was sent, agreed or filed.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Listening conversation planner](https://useaiblocks.com/skills/listen-first-talk-planner). It takes the plan.
+- The [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer). It takes the plan.
+- The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the meeting notes and plan.
+- The [Candidate comparison table builder](https://useaiblocks.com/prompts/candidate-comparison-table-builder). It takes the meeting notes.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

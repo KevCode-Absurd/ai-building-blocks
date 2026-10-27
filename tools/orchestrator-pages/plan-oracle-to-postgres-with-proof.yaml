@@ -11,8 +11,9 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You are moving a .NET app from Oracle to PostgreSQL and want to know what to test before you change any code.
+  - You need baseline tests that record how the Oracle code behaves today, so differences show up after the move.
+  - You want a review of behavior risks before release, not after.
 not_for:
   - "You are ready to change the code: use the Oracle to Npgsql code migrator or the Oracle stored procedure migrator."
   - "You only want to review code you already moved: use the Oracle migration risk reviewer on its own."

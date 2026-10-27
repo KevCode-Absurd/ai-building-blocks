@@ -46,7 +46,11 @@ Audits all staff member accounts on the store to surface security and access-hyg
 
 5. Cross-tabulate: produce per-account record with all flags joined (`stale`, `inactive`, `high_privilege`).
 
+6. Write the CSV file `staff_audit_<YYYY-MM-DD>.csv` with the columns listed under Output Format, one row per account, then print the summary.
+
 ## GraphQL Operations
+
+The query asks only for the fields the audit needs. It leaves out phone, avatar and account settings links on purpose, because an access review does not need that personal data. `lastSeen` must exist on `StaffMember` in api_version 2025-01. Check this against Shopify's current docs before the first run. If the field is not available, say so: the stale-login check cannot run, and you must report only the inactive and high-privilege flags.
 
 ```graphql
 # staffMembers:query — validated against api_version 2025-01
@@ -62,12 +66,8 @@ query StaffAccountAudit($after: String) {
         accountType
         locale
         exists
-        phone
-        avatar {
-          url
-        }
+        lastSeen
         privateData {
-          accountSettingsUrl
           createdAt
         }
       }
@@ -134,6 +134,8 @@ For `format: json`, emit:
 ```
 
 ## Output Format
+The file holds staff names and email addresses. Keep it in a private place and share it only with the people running the review.
+
 CSV file `staff_audit_<YYYY-MM-DD>.csv` with columns:
 `staff_id`, `name`, `email`, `account_type`, `is_shop_owner`, `active`, `last_seen`, `days_since_last_seen`, `is_stale`, `is_inactive`, `is_high_privilege`, `flags`
 

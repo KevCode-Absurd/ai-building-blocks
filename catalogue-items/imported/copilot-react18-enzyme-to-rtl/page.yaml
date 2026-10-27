@@ -9,13 +9,16 @@ subhead: Paste your Enzyme tests into your AI. It rewrites them with React Testi
 not_for:
   - "You want to keep Enzyme on React 18: this is not possible, as Enzyme has no React 18 adapter. Plan to rewrite the tests with this skill."
   - "Your tests already use React Testing Library: keep them, or ask a teammate to review them for the React 18 upgrade."
+  - "Your tests are not for a React app: this skill only covers Enzyme tests on React components."
   - "You need to fix the app code, not the tests: use your own developer or a code review step, as this skill only rewrites test files."
 how_to_use:
+  - Before you start, gather your Enzyme test files, your React version, the React Testing Library version you have installed, and any provider setup.
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
-  - Paste your Enzyme test file. Add your React version and any provider setup or customRender helper.
+  - Paste your Enzyme test file. Add your React version, your React Testing Library version and any provider setup or customRender helper.
   - Ask your AI to rewrite the tests and list any it could not translate.
   - Run the new tests in your project. This step needs your own machine, not the chat.
   - Review each dropped state or instance check before you merge into your React 18 branch.
+  - Next, run the full test suite on React 18. Check that the behavior covered by each dropped state check is still tested, then merge.
 output_sample:
   input:
     - Your Enzyme test files

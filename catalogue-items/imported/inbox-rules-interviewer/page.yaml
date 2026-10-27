@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini. Paste the full text of the skill file into it.
   - 'Say: "Set up my inbox." Your AI asks one question at a time and tells you why it asks.'
-  - Answer each question. Pick from the choices where they are given. Paste a few real emails and replies when asked.
+  - Answer each question. Pick from the choices where they are given. Before you paste real emails and replies, remove names, account numbers and client details. Never paste passwords or access codes.
   - After each section, your AI saves that file to an Email folder in your workspace. If it cannot save files, ask it to show the text so you can copy it.
-  - Check the reply voice file and fix anything that does not sound like you.
+  - Check the reply voice file and fix anything that does not sound like you. The checker and analyzer scripts in the skill need a tool with file access and code running, such as Claude Code. In a plain chat, skip them and check the seven files by hand.
   - Run this again when your work or priorities change. Then use the inbox triage skill to sort your mail.
 output_sample:
   input:

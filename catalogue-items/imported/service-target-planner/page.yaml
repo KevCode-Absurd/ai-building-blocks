@@ -31,10 +31,12 @@ you_get:
   - An error budget policy
   - A review of common target mistakes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste
     the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Tell your AI the service, who uses it and what a good request looks like for them. Add 30 days of traffic and error numbers if you have them.
+  - Check the measure it picks. It should be something users feel, such as the share of requests that succeed. Then check the target. It should sit a little below what the service usually delivers.
+  - Check the alert thresholds with the burn-rate formula in the skill. Agree the error budget policy with the service owner.
+  - Next, turn the alert rules into real rules in your monitoring tool. The Reliability target setter can do that.
 not_for:
   - "You want Prometheus rules and a dashboard layout as well. Use the Reliability target setter."
   - "You want a full plan for metrics, logs and traces. Use the Monitoring system planner."

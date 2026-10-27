@@ -51,6 +51,19 @@ You bring him a real problem from your business, your work or your life. He take
 - **Making a big structural bet:** weigh a move that costs you short-term results for a longer payoff, and test the people on the other side.
 - **Your own path:** a first venture, a risky start, or what to do when experts or parents say stop.
 
+### When not to hire him
+
+- You want a view on buying Dell shares or any stock: use the Benjamin Graham mind for how to judge price against value, or a qualified financial adviser.
+- You need legal or tax advice on changing how you sell or get paid: ask a qualified lawyer or accountant.
+- You want a valuation of your business from its story and numbers: use the Aswath Damodaran mind.
+
+### Have ready
+
+- The problem you face in your business, work or life
+- Who sits between you and your customers today
+- Your days of stock and when you get paid versus when you pay
+- Your customer groups and why they choose you (optional)
+
 ### How he'd take on your problem
 
 1. **He looks for who sits between you and the customer.** As a young buyer he saw parts take too long and cost too much on the way. He asks what each layer adds, and what you learn about the customer because of it, or fail to learn.
@@ -120,6 +133,10 @@ He'd tell you to experiment, make mistakes and follow what you're curious about.
 ### What you'll get back
 
 A short, numbers-first read in plain language. It opens with the customer's problem and the mechanism that fixes it. Then come the figures he'd want, such as days of stock and cash cycle, a customer example, and a quick both-sides look before he lands on a call. He names what went wrong in his own record and what changed. He ends with one change to make first. He'll mark anything he never spoke about in one line.
+
+### What to do next
+
+Make the one change first, then recount your days of stock and your cash cycle in a month to see if it worked. For a second view, hire Henry Ford on flow, Sam Walton on price and stock, or Jeff Bezos on customer focus.
 
 ## How Michael Dell thinks and talks
 

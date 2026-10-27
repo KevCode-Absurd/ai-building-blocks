@@ -35,6 +35,7 @@ how_to_use:
   - Read the starting beat options. Pick one, and the AI writes only that beat.
   - Pick the next beat from the new options. Repeat until the article ends.
   - Edit any beat you like. The AI re-reads the file each time and keeps your edits.
+  - When the article ends, run an editing pass on the whole draft, then format it for where it will be published.
 output_sample:
   input:
     - A markdown file of your raw notes
@@ -53,3 +54,4 @@ output_sample:
       contains: Two or three directions after re-reading the file, each using only ideas already explained.
     - name: Finished article
       contains: Your article file, built beat by beat until the story reaches a natural end.
+next: [article-shaper, article-formatter]

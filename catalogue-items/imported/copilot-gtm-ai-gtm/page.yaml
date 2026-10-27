@@ -16,6 +16,8 @@ how_to_use:
   - Add your pricing options and any security or operations notes if you have them.
   - Ask your AI to follow the skill and give you positioning, trust questions and a plan.
   - Read the result as one author's experience, not fact. Check each point against what your own buyers tell you.
+  - Next, test the positioning with 3 to 5 real buyers and run the skill again with their answers.
+  - Send the answers on who monitors, fixes and owns problems to your support and operations leads. Send the pricing model to your finance lead and the demo plan to sales.
 output_sample:
   input:
     - Your product description, in a few lines

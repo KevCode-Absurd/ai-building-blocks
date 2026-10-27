@@ -9,7 +9,7 @@ subhead: Two or more 3D scans lined up into one, with the best method chosen and
 explain: |
   Two or more 3D scans lined up into one, with the best method chosen and tuned for your data. It is useful for building a map from lidar scans or merging overlapping captures.
 
-  The skill starts with plane-to-plane iterative closest point, measures the fit with RMSE, and applies the result with the align tool. For scans far apart it points to global methods that estimate an initial transform. It also guides cleaning before alignment and merging after. It steers away from older transform types. It works on 3D clouds only and needs MATLAB with the Computer Vision and Lidar Toolboxes.
+  The skill starts with plane-to-plane iterative closest point (ICP), a method that nudges one scan until it sits on the other. It measures the fit with RMSE, the average gap in the same units as your scan, and applies the result with the align tool. For scans far apart it points to global methods that estimate an initial transform. It also guides cleaning before alignment and merging after. It steers away from older transform types. It works on 3D clouds only and needs MATLAB with the Computer Vision and Lidar Toolboxes. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
 when:
   - Two lidar scans overlap slightly and need joining.
   - You are building a map from a long run of scans.
@@ -29,8 +29,8 @@ you_get:
   - An RMSE accuracy figure
   - Preprocessing steps used
 how_to_use:
-  - Open an AI chat and paste in the skill instructions from this page.
-  - Add your point clouds, or say where the files are. Say if they have color or a rough starting alignment.
+  - Open an AI chat and paste in the full text of the skill's SKILL.md file. This page only summarises it.
+  - Have your scans ready before you start. Add your point clouds, or say where the files are. They should be .pcd or other files MATLAB can load as pointCloud objects. Say if they have color or a rough starting alignment.
   - Make sure your AI can run MATLAB with the Computer Vision and Lidar Toolboxes. If not, run the code it writes yourself.
   - Check the RMSE value. If it is high, ask for another method or a cleaner input.
   - Use the merge step to join the aligned scans into one cloud or a map.

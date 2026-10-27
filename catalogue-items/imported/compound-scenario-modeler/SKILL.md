@@ -74,6 +74,8 @@ For each variable, each relevant role models impact:
 
 ### Step 3: Cascade Effect Mapping
 
+The numbers in this skill's examples ($560K ARR, a $500K credit line, a $90K bonus) are illustrations only. Use the user's own numbers, and mark any figure the user did not give you as "unknown".
+
 This is the core. Show how Variable A triggers consequences in domains that trigger Variable B's effects:
 
 ```

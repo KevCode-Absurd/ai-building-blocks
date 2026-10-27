@@ -59,3 +59,4 @@ output_sample:
       contains: Each first product with the number of buyers and the share who came back.
     - name: repeat_purchase_<date>.csv
       contains: One row per customer with first order date, first product, total orders, repeat flag, days to repeat and total spent.
+next: [retention-cohort-analyst, loyalty-customer-list-builder]

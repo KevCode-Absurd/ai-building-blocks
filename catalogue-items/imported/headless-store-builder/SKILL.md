@@ -90,6 +90,8 @@ npm run dev
 
 ### Routes and Data Loading
 
+> Note: newer Hydrogen projects import from `react-router` where these examples import from `@remix-run/react` or `@remix-run/cloudflare`. Check your project's package.json and match the imports to what it uses.
+
 ```tsx
 // app/routes/products.$handle.tsx
 import { useLoaderData, type LoaderFunctionArgs } from "@remix-run/react";

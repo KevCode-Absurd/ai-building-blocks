@@ -8,11 +8,11 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
 outputs:
-  - type: code_change
-  - type: test_report
+  - type: spreadsheet
+  - type: document
 uses: []
 origin: imported
 source:

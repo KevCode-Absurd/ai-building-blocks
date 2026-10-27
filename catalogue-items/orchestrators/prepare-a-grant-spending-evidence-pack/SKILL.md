@@ -7,6 +7,8 @@ description: "Use when you need to prepare a grant spending evidence pack. A rec
 
 A reconciled grant spending table, variance brief and evidence gaps.
 
+When not to use: you want to hand over a recurring process, not report on grant spending (use Make a recurring process easier to hand over). You need an audit opinion or the funder's sign-off (ask your auditor or grant officer, because this prepares the table and marks the gaps). You have no transaction records for the reporting period (pull them from your accounts first, because the table cannot be reconciled without them).
+
 ## What you need
 
 - The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts.
@@ -25,17 +27,20 @@ Create a short brief for each step: the requested result, original source refere
 
 ## Steps
 
-1. **Spreadsheet checker.** Use `spreadsheet-checker`. Reconcile transactions and receipts to the grant period, budget categories and restricted fund ledger without changing source records. Run the component checks and save `outputs/step-01-spreadsheet-checker.md` before continuing.
+1. **Spreadsheet checker.** Use `spreadsheet-checker`. Reconcile transactions and receipts to the grant period, budget categories and restricted fund ledger without changing source records. Check that the transaction totals match the receipts for the reporting period, that every transaction sits in one budget category and that the category totals tie to the restricted fund ledger. Mark any transaction that falls outside the grant period or the fund restrictions. Save `outputs/step-01-spreadsheet-checker.md` before continuing.
 
-2. **Budget variance explainer.** Use `budget-variance-explainer`. Bridge the actual grant spending to the approved phased budget, keeping timing differences and unapproved reallocations explicit. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Run the component checks and save `outputs/step-02-budget-variance-explainer.md` before continuing.
+2. **Budget variance explainer.** Use `budget-variance-explainer`. Bridge the actual grant spending to the approved phased budget, keeping timing differences and unapproved reallocations explicit. Give it the step 1 file and the approved phased budget. Check that the variance lines add up to the gap between actual spending and the approved phased budget, with timing differences and unapproved reallocations on their own lines. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Save `outputs/step-02-budget-variance-explainer.md` before continuing.
 
-3. **Stakeholder update writer.** Use `stakeholder-update-writer`. Draft the fund owner update with source totals, unresolved eligibility questions and requested decisions, without submitting a funder return. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Run the component checks and save `outputs/step-03-stakeholder-update-writer.md` before continuing.
+3. **Stakeholder update writer.** Use `stakeholder-update-writer`. Draft the fund owner update with source totals, unresolved eligibility questions and requested decisions, without submitting a funder return. Give it the step 1 and step 2 files. Check that every total in the update matches the step 1 table and that each unresolved eligibility question names the award rule or record it depends on. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Save `outputs/step-03-stakeholder-update-writer.md` before continuing.
 
 4. **Check and hand back.** Check the combined result against the acceptance rules below. Hand back the files, source coverage and one proposed next step.
 
 ## What you hand back
 
 A reconciled grant spending table, variance brief and evidence gaps.
+- Reconciled table (step 1 file): one row per transaction with date, description, amount, receipt reference, budget category, restricted fund ledger line and a status (matched, unmatched or eligibility question).
+- Variance brief (step 2 file): one row per budget category with the approved phased budget, actual spending, variance and its cause (timing difference, unapproved reallocation or other), each with a source reference.
+- Evidence gaps and the fund owner update (step 3 file): source totals, each unresolved eligibility question and the decisions you ask for.
 
 Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, all MISSING: lines and CHECKS MISSED. If a tool created a native file, include that file and its actual verification result. An outline is not a finished document, a render is not a verified render, and a plan is not a completed external action.
 
@@ -57,7 +62,7 @@ Write MISSING: <what> next to the affected result. Continue independent work tha
 
 ## After this
 
-Offer one next step based on the result and the user's goal. When that step changes something outside the working files, state the concrete action and use only the authorization already given for it.
+If an eligibility question is unresolved, offer this next step: a draft message to the fund owner that asks the question, quotes the award clause and lists the transactions it affects. Leave it as a draft for the user to send. If none is unresolved, offer one next step based on the result and the user's goal. When that step changes something outside the working files, state the concrete action and use only the authorization already given for it.
 
 ## Avoid
 

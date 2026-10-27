@@ -19,6 +19,7 @@ not_for:
   - "Your code is slow, not short on memory: use the MATLAB performance skill, or profile run time first."
   - "The memory is used by compiled C or MEX code you cannot change: ask the person who wrote that code."
   - "The memory goes to file buffers or database connections: change how you read the data, not the MATLAB code."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The MATLAB code that uses too much memory
   - Typical size of your data
@@ -37,6 +38,7 @@ how_to_use:
   - Ask your AI to follow the skill and measure before it changes anything.
   - Read the report. Check that the results match and the memory saved is enough.
   - Run the optimized code on your real data before you rely on it.
+  - If the saving is too small, ask for the MATLAB performance skill, or profile run time. Keep the report next to the code so the next person sees what changed and why.
 output_sample:
   input:
     - The MATLAB code that runs out of memory
@@ -44,7 +46,8 @@ output_sample:
     - Your operating system (Windows, Mac or Linux)
     - The command you use to run it
   prerequisites:
-    - An AI that can run MATLAB code, with MATLAB installed on your computer
+    - An AI that can run MATLAB code, with MATLAB installed on your computer. MATLAB is paid software
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Baseline
       contains: How much memory your code uses before any change, measured with the same method used later.

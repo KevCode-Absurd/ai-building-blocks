@@ -35,6 +35,7 @@ how_to_use:
   - Ask for the call script, then the answer recording sheet.
   - Read the guide for guarded references before you call.
   - Check your local rules on what you may ask or share before the first call.
+  - After the calls, line up every reference's answers side by side and weigh them against your interview results before you decide.
 output_sample:
   input:
     - The role and level you are hiring for
@@ -42,14 +43,15 @@ output_sample:
     - Your country or region (optional)
   output:
     - name: Reference question set
-      contains: Questions on performance, teamwork and areas to develop, written for the role and level.
+      contains: Open questions in three groups, performance, teamwork and areas to develop, written for the role and level and asked the same way of every reference.
     - name: Which references to ask for
       contains: Advice on who to request, such as a manager, a peer and someone who reported to them.
     - name: Candidate preparation note
       contains: A short note that tells the candidate how your reference process works.
     - name: Call script
-      contains: An opening and closing to use on the call, with follow-up questions for vague answers.
+      contains: Three parts, an opening, the questions in order and a closing, with follow-up questions for vague answers.
     - name: Answer recording sheet
-      contains: A simple template to note each answer the same way for every reference.
+      contains: A simple table with one row per question. Columns are the question, the reference's answer in their own words, and your notes. Each reference's name and relationship go at the top.
     - name: Guarded reference guide
       contains: Ways to get useful signal from references who only confirm dates or sound lukewarm.
+next: [fair-candidate-comparer, candidate-comparison-table-builder]

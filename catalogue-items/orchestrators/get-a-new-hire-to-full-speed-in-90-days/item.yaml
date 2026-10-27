@@ -1,6 +1,6 @@
 slug: get-a-new-hire-to-full-speed-in-90-days
 name: "Get a new hire to full speed in 90 days"
-summary: "Give it the role and start date. Get a day-one plan, 90-day goals, one-on-ones and a look back."
+summary: "Give it the role and start date. Get a first-week plan, 90-day goals, one-on-ones and a look back."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -18,7 +18,7 @@ steps:
   - {uses: job-duties-and-level-analyst, note: "The duties, the time split, the skills needed and a fair level, so every goal that follows matches the role."}
   - {uses: new-hire-plan-builder, note: "A pre-start checklist (accounts, kit, who they meet), a first-week plan and the first version of the 30, 60 and 90 day goals."}
   - {uses: 30-60-90-day-onboarding-planner, note: "The goals for each month, who helps with each, and the check-in dates, written so the new person can tick them off."}
-  - {uses: one-on-one-meeting-planner, note: "A weekly one-on-one routine, run the way Andy Grove ran them: the new hire sets the agenda, you ask and listen, and the goals are checked against the plan."}
+  - {uses: one-on-one-meeting-planner, note: "A weekly one-on-one routine, inspired by Andy Grove: the new hire sets the agenda, you ask and listen, and the goals are checked against the plan."}
   - {uses: hiring-quality-reviewer, note: "A short survey for the new hire and the manager, what worked and what did not in the search and the start, and a start-day checklist fixed for the next hire."}
 origin: own
 version: 1.0.0

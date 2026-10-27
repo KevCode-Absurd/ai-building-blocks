@@ -14,11 +14,11 @@ when:
   - Your reach dropped and you want to know why.
   - You wonder if carousels work better for you.
   - One post did well and you want to know if it was luck.
-  - You want to decide what to post next based on your data.
+  - You want one test to run next, based on your data.
 not_for:
   - "You have fewer than 10 posts: it will only describe what happened. Keep posting and come back later."
   - "You want to compare your numbers with other people's: it does not do that, and those numbers rarely match yours. Track your own results over time."
-  - "You want to decide what to post next: use a LinkedIn strategy item instead. This one only says what happened."
+  - "You want a plan for what to post: use the LinkedIn content strategy planner instead. This one says what happened and suggests one test."
 you_give:
   - Post data you copied from LinkedIn
   - The dates and formats of posts
@@ -30,11 +30,12 @@ you_get:
   - A confidence label on each claim
   - One test to run next
 how_to_use:
-  - Export your post data from LinkedIn Analytics, or ask for a copy of your data in Settings.
-  - Open an AI that can run code and paste in this skill, then upload your export file.
+  - Export your post data from LinkedIn Analytics, or ask for a copy of your data in Settings. The file must come from LinkedIn.
+  - Open an AI that can run code and paste in this skill, then upload the CSV or JSON export.
   - "Ask: Why did my reach change, and what is working? Add your own question if you have one."
   - Check the summary first. If you have under 10 posts, expect a description only, with no conclusions.
   - Read each pattern as an idea to test, not a fact. Then run the one test it suggests.
+  - Some terms in the result are plain maths. The median is the middle post. A breakout is a post far above your usual. A permutation test shuffles your labels many times to see if a pattern could be luck. If a term is unclear, ask your AI to explain it in one sentence.
 output_sample:
   input:
     - Your LinkedIn post export, as a CSV or JSON file

@@ -11,14 +11,16 @@ inputs:
   - {type: performance_sheet, required: true}
   - {type: offer, required: false}
   - {type: brand_brain, required: false}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
+  - {type: email_flow}
 uses: [reorder-and-second-order-planner, customer-stage-flow-mapper, dynamic-email-block-planner, email-and-sms-performance-reader]
 steps:
-  - {uses: reorder-and-second-order-planner, note: "Starts from your products and how long they last and writes the timed reorder messages."}
+  - {uses: reorder-and-second-order-planner, note: "Starts from your products and how long they last and writes the timed reorder messages, with the run-out day and refill nudge day for each product."}
   - {uses: customer-stage-flow-mapper, note: "Takes the reorder messages and gives new, returning and loyal buyers their own paths."}
   - {uses: dynamic-email-block-planner, note: "Reads the staged flow and turns the splits into show and hide rules and product blocks."}
-  - {uses: email-and-sms-performance-reader, note: "Reads the results next to the flow you built, so you see which branch earned and which to fix."}
+  - {uses: email-and-sms-performance-reader, note: "Follows the pause, when you build the flows, run them for 30 days and export the numbers. Reads the results next to the flow you built, so you see which branch earned and which to fix."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/send-reorder-emails-that-fit-each-buyer-then-read-results/skeleton.yaml

@@ -6,11 +6,11 @@ This is drawn from his 1993 lecture to a publishing company, with the staff's qu
 
 Warm, quick and a little theatrical. He talks like a showman who is also a tradesman. He opens by saying he wants to make himself "transparent": he will answer anything and hide nothing, and he compares himself to a computer that can show every step of its reasoning. Then he gets practical at once, with a timer on the desk.
 
-His sentences run short. He repeats for emphasis: "Prepare, prepare, prepare." "You, you, you." "Work, work, work." He asks a question and answers it himself. He says "Okay" to move on and "Let me explain that."
+His sentences run short. He repeats for emphasis: In the 1993 lecture [S11] he says "Prepare, prepare, prepare." "You, you, you." "Work, work, work." These are habits of his speech, not lines to quote back. He asks a question and answers it himself. He says "Okay" to move on and "Let me explain that."
 
-His images come from ordinary life and from sport. Football is his favourite: a touchdown pass, a Super Bowl of copy, a coach's line about preparation. He also reaches for a posse chasing a horse thief in Butte, Montana, a shop window on Fifth Avenue, an atomic scientist, a boat on a stream, Mozart at a billiard table, a branch with leaves. He keeps the small-town man in him and says so.
+His images come from ordinary life and from sport. Football is his favourite: a touchdown pass, a Super Bowl of copy, a coach's line about preparation. He also reaches for a posse chasing a horse thief in Butte, Montana, a shop window on Fifth Avenue, an atomic scientist, a boat on a stream, Mozart at a billiard table, a branch with leaves. These images come from the 1993 lecture [S11]. He keeps the small-town man in him and says so.
 
-His words: demand, market, channel, "does," work, test, pull, control, mechanism, proof, gut, "you." He prefers short words. He calls everything an ad because he likes short words. He jokes about himself, "the lousiest layout man in the world," and says a failure hurts but is the only way to home runs.
+His words: demand, market, channel, "does," work, test, pull, control, mechanism, proof, gut, "you." He prefers short words. He calls everything an ad because he likes short words. He jokes about himself, "the lousiest layout man in the world" [S11], and says a failure hurts but is the only way to home runs.
 
 ## How he argues
 

@@ -35,6 +35,7 @@ how_to_use:
   - If it finds more than one local site, pick the one to use.
   - Watch the browser window while the script runs. Then read the results and open the screenshots.
   - Change the web address at the top of the script if you want to run it on another page.
+  - Check the screenshots by hand before you share them. Pass any failing step to your developer or web host to fix.
 output_sample:
   input:
     - What you want done in the browser, in plain words
@@ -49,6 +50,6 @@ output_sample:
     - name: Visible browser run
       contains: The script runs in a browser window you can watch.
     - name: Results report
-      contains: What happened during the run, including any errors your AI saw.
+      contains: A list of steps with pass or fail, any error messages your AI saw, and the screenshot file names.
     - name: Screenshots
       contains: Images of the page saved during the run, such as at different screen sizes.

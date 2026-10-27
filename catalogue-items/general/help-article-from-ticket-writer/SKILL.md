@@ -59,11 +59,9 @@ CHECKS MISSED    <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Customer inbox priorities and reply drafts](https://useaiblocks.com/skills/customer-inbox-triage-and-reply-drafter). It takes the document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
-- The [Plain-words contract summary](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
-- The [AI store facts checker](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
-- The [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter). It takes the document.
+- The [Support ticket help article writer](https://useaiblocks.com/skills/solved-ticket-help-page-writer).
+- The [Customer support response writer](https://useaiblocks.com/skills/agency-support-support-responder).
+- The [Support chatbot conversation reviewer](https://useaiblocks.com/skills/support-chatbot-conversation-review).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -21,7 +21,7 @@ best_for:
   - Teams that want one tone across support, sales and marketing.
   - Non-native English writers who want a second pair of eyes.
 not_for:
-  - Writing a long piece from a blank page. A chat assistant does that better.
+  - Writing a long piece from a blank page. A chat assistant such as ChatGPT or Claude does that better.
   - Checking languages other than English in depth.
 pricing:
   model: freemium
@@ -35,6 +35,22 @@ runs_in: [web, desktop, mobile, browser-extension]
 blocks: []
 alternatives: [jasper, copy-ai, chatgpt, claude]
 last_checked: 2026-10-21
+first_result:
+  - "Go to grammarly.com and sign up for the free plan."
+  - "Add the browser extension or the desktop app, so it checks where you already write. We did not check the install steps."
+  - "Paste a draft, such as a customer email, into the editor. Accept or reject each suggestion one by one."
+  - "Pick a tone for the message, such as friendly or confident, and read the rewrite."
+  - "Read the final text aloud once. Grammarly checks spelling and style. It does not check whether your facts are true."
+  - "You end with a corrected draft that you have approved line by line."
+  - "Next: for a first draft from nothing, write it in ChatGPT or Claude, then polish it here."
+needs:
+  - "A draft to check. English works best."
+  - "A free account."
+  - "The browser extension or app, if you want it in Google Docs or Microsoft Office."
+not_verified:
+  - "Paid plan prices in US dollars."
+  - "Which AI features the free plan includes beyond 100 prompts a month."
+  - "How the AI-written text flag works, and how accurate it is."
 sources:
   - https://www.grammarly.com
   - https://www.grammarly.com/plans

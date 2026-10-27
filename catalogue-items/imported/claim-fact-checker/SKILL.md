@@ -19,7 +19,7 @@ This skill enables an AI agent to systematically verify claims and statements. R
 
 3. **Identify Authoritative Sources:** For each claim, determine the most appropriate verification sources. Use primary sources whenever possible: official datasets for statistics, peer-reviewed papers for scientific claims, archived transcripts for quotations, and government records for legal or policy assertions. Supplement with reputable secondary sources like established fact-checking organizations (Snopes, PolitiFact, Full Fact).
 
-4. **Cross-Reference and Evaluate Evidence:** Check each claim against at least two independent sources. Note whether sources corroborate, partially support, or contradict the claim. Assess source credibility by considering authority, recency, methodology, and potential bias.
+4. **Cross-Reference and Evaluate Evidence:** Check each claim against at least two independent sources. Note whether sources corroborate, partially support, or contradict the claim. Assess source credibility by considering authority, recency, methodology, and potential bias. Only cite sources you actually opened. If a source cannot be reached or confirmed, mark the claim Unverifiable and say so. Never invent a URL, figure or quote.
 
 5. **Assign Verdicts and Confidence Scores:** For each claim, assign a verdict from the scale: **True**, **Mostly True**, **Half True**, **Mostly False**, **False**, or **Unverifiable**. Accompany each verdict with a confidence score (0.0-1.0) reflecting the strength and consistency of available evidence, and a brief justification.
 
@@ -36,6 +36,8 @@ and it was created by James Gosling at Sun Microsystems in 1991."
 ```
 
 ## Examples
+
+The claims, figures and sources in these examples only show the format. They were not checked for this page, so do not read them as real findings.
 
 ### Example 1: Fact-Checking a Technical Blog Post
 

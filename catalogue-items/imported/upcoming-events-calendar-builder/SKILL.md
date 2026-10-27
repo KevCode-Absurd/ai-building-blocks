@@ -7,8 +7,7 @@ description: Build and maintain a calendar of upcoming catalysts across a covera
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The helper files `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this copy. Do not say you read them. The key rules are written out here. For sources, use each company's investor relations page and the NSE and BSE announcement pages. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -19,8 +18,10 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+Some US items have no Indian equivalent, such as the Fed or US pre-market earnings timing. Name the gap —
 never substitute a proxy and present it as the real thing.
+
+**No web access?** Do not fill in earnings or event dates from memory. Mark every date "unverified" and list the exact investor relations page or NSE/BSE notice the user should check for each one.
 
 ## Workflow
 
@@ -57,9 +58,8 @@ For each company, identify upcoming events:
 - Industry data releases (monthly sales, traffic, etc.)
 
 **Macro Events**
-- Fed meetings (FOMC dates)
-- Jobs report, CPI, GDP releases
-- Central bank decisions (ECB, BOJ, etc.)
+- RBI monetary policy committee dates, India CPI, GDP and other releases
+- Global central bank decisions that move Indian markets (US Fed, ECB, BOJ)
 - Geopolitical events with market impact
 
 ### Step 3: Calendar View
@@ -73,7 +73,7 @@ For each company, identify upcoming events:
 Each week, generate a forward-looking summary:
 
 **This Week's Key Events:**
-1. [Day]: [Company] Q[X] earnings — consensus [$X EPS], our estimate [$X], key focus: [metric]
+1. [Day]: [Company] Q[X] earnings — consensus [₹X EPS], our estimate [₹X], quarter [Q3 FY26 (Oct–Dec 25)], key focus: [metric]
 2. [Day]: [Event] — why it matters for [stocks]
 3. [Day]: [Macro release] — expectations and positioning
 
@@ -93,7 +93,7 @@ Each week, generate a forward-looking summary:
 
 ## Important Notes
 
-- Earnings dates shift — verify against company IR pages and Bloomberg/FactSet closer to the date
+- Earnings dates shift — verify against company IR pages and NSE/BSE notices (Bloomberg or FactSet are paid options) closer to the date
 - Pre-announce risk: track companies with a history of pre-announcing (positive or negative)
 - Conference attendance lists are valuable — which companies are presenting and which are conspicuously absent?
 - Some catalysts are recurring (monthly industry data) — build a template and auto-populate

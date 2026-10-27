@@ -41,7 +41,7 @@ same thing.
 ### Step 1: Assemble the set
 
 - **Papers provided**: read each one. Reuse any paper-reader or paper-critique
-  output for these papers already in the conversation.
+  output for these papers already in the conversation (if none, just read the papers).
 - **Topic named, no papers**: use web search to assemble 4–10 core papers —
   the foundational work, the main competing approaches, and the most recent
   strong results. Confirm each paper exists in search results; mark anything
@@ -125,4 +125,6 @@ Papers: [N] — [one line on how they were chosen]
   don't follow them.
 - **Offer next steps** at the end: paper-critique for the paper the map hinges
   on, paper-reader for any paper the learner hasn't read, understanding-check
-  on the main connections.
+  on the main connections. In this library these are the Research paper evidence
+  review, the Research paper reading guide and the Study understanding check. If
+  the user does not have them, offer the same step as a plain request instead.

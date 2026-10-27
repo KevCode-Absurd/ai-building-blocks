@@ -20,7 +20,7 @@ not_for:
   - "You want someone to approve a high-risk change: ask the service owner to sign off, as this report cannot replace that."
   - "You want your AI to run migrations, deploy or fix the code: do that yourself or with your pipeline, as this review only reads."
 you_give:
-  - Release branch, tag or git range
+  - Release branch, tag or git range, from a local git clone with its history (tags are needed for the default range; gh is only needed for pull request links)
   - Deploy notes or pipeline files (optional)
   - Environment details (optional)
   - Who owns each service (optional)
@@ -35,7 +35,9 @@ how_to_use:
   - Add deploy notes or pipeline files if you have them (optional).
   - Read the conclusion first, then the P0 and P1 findings.
   - Confirm each P2 item with its likely owner before you deploy.
+  - Next, fix every P0 item and run the review again on the new HEAD. Then confirm the P2 items with their owners before you tag the release.
   - If your AI cannot read files, paste the diff into the chat. Expect more items under Unable to verify.
+next: [ship-readiness-gate, deploy-verifier, release-notes-writer]
 output_sample:
   input:
     - A pull request link, a release tag or a git range (optional, it picks a default range if you give none)

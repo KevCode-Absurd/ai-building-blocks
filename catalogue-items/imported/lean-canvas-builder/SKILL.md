@@ -20,6 +20,7 @@ Your task is to create a comprehensive Lean Canvas that outlines the business hy
 - Target customer segment(s)
 - Market context and problem space
 - Any available metrics or business constraints
+- Gather first: notes from customer talks, and any real sales or cost figures. If the person has none, say so. Never invent a market size, customer lifetime value or acquisition cost. Mark each such number `guess` until it is checked with real data.
 
 ## Lean Canvas Template
 

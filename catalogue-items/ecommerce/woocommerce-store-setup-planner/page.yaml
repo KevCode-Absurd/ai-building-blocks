@@ -68,7 +68,7 @@ output_sample:
 
 how_it_works:
   - title: Plans hosting and domain
-    text: Starts with hosting for at least 12 months (one creator's advice) and a domain. Reminds you that a new domain can take up to 24 hours to work and that unverified emails can get the account closed.
+    text: Starts with hosting for at least 12 months (one creator's advice) and a domain. Reminds you that a new domain can take up to 24 hours to work and that one creator warns an unverified account can be closed, so check your host's terms.
   - title: Writes the cleanup list
     text: Lists the spare plugins to remove (keeping the cache plugin), what to turn off, and how to stop comment spam.
   - title: Picks theme and builder
@@ -76,7 +76,7 @@ how_it_works:
   - title: Sets store settings first
     text: Writes the settings sheet before products. It covers address, countries, currency, units, taxes, coupons, accounts, guest checkout, placeholder image and permalinks.
   - title: Plans emails and the policy page
-    text: Lists which order emails to enable, adds an SMTP plugin step and a test email, and points the policy field at your return text.
+    text: Lists which order emails to enable, adds an SMTP plugin step and a test email, and points the policy field at your return text. An SMTP plugin may have paid tiers and needs a mail-service account, so check the price.
   - title: Plans phones and the coupon
     text: Edit each device view, hide sections per device, and set a one-use welcome coupon that cannot stack.
   - title: Writes the test order
@@ -136,7 +136,7 @@ improve:
 works_best_with:
   tools:
     - {name: "WooCommerce on WordPress", why: "This plan is written for it. Screens for themes and builders change quickly, so check the current ones."}
-    - {name: "Stripe", why: "Its test mode and test cards are used in the test-order script."}
+    - {name: "Stripe", why: "Its test mode and test cards are used in the test-order script. It is free to set up and takes a fee on live payments."}
     - {name: "Any good chat AI", why: "Any current chat AI can write the plan from your facts."}
   inputs:
     - "A list of your products with prices and variants"

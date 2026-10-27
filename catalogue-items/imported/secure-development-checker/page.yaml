@@ -9,10 +9,10 @@ subhead: A security scan of your project that finds code flaws, risky packages a
 explain: |
   A security scan of your project that finds code flaws, risky packages and exposed secrets, with fixes ranked by severity. Three bundled Python tools do the work and can export JSON for your build pipeline.
 
-  The code scanner looks for hardcoded keys, SQL injection, cross-site scripting, command injection and unsafe file paths. The package scanner reads npm, Python and Go dependency files and reports known CVEs, affected versions, fixed versions and an overall risk score from 0 to 100. A compliance checker tests the project against SOC 2, PCI-DSS, HIPAA and GDPR. Use it before a release or when a client asks for proof of secure practice.
+  The code scanner looks for hardcoded keys, SQL injection, cross-site scripting, command injection and unsafe file paths. The package scanner reads npm, Python and Go dependency files and reports known CVEs, affected versions, fixed versions and an overall risk score from 0 to 100. A compliance checker tests the project against SOC 2, PCI-DSS, HIPAA and GDPR. Use it before a release, or as a pre-check before an audit. Its compliance report is not evidence for a client or an auditor.
 when:
   - You are about to release and want a security check on the code.
-  - A client asks whether you meet SOC 2 or GDPR basics.
+  - A client asks whether you meet SOC 2 or GDPR basics, and you want a pre-check before a real audit.
   - You want to know which outdated packages carry known vulnerabilities.
   - You need a severity-sorted list to hand to a developer.
 not_for:
@@ -30,6 +30,7 @@ you_get:
   - A risk score from 0 to 100
   - A compliance gap report
   - JSON output for builds
+  - "A pattern-based result: scans can miss flaws or flag things that are fine, so a developer must review each finding"
 how_to_use:
   - Use an AI that can run code and read files, such as Claude with code tools. Check that Python is installed.
   - Add the skill to your AI, or paste its text into the chat.

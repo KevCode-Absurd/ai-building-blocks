@@ -32,8 +32,8 @@ you_get:
 how_to_use:
   - Save your table definitions as a schema.sql file. Use an AI that can run Python code and read files, or run the scripts yourself with Python 3.
   - Open the skill folder and run the first command in the skill on schema.sql. Look at the issues list and the table diagram.
-  - If you have common queries, copy assets/sample_query_patterns.json and list your own queries in it. Then run the index step.
-  - Write your target schema, then run the migration step with the zero downtime option. Check it with the validate option first.
+  - If you have common queries, copy assets/sample_query_patterns.json to your own file and list your queries in it. Then run the index step on your own schema, not the sample one.
+  - The migration step needs two files: current_schema.json (your schema now) and target_schema.json (a copy with your changes), both in the format of assets/sample_schema.json. If you only have schema.sql, ask your AI to write the JSON form first. Run the validate option, then the zero downtime option.
   - Test the undo steps on a copy of your data before you run anything on your live database. Take a backup first.
 output_sample:
   input:

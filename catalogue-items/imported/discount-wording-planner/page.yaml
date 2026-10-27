@@ -16,8 +16,8 @@ when:
   - You are unsure if a deep discount will hurt how your product looks.
   - You want to know whether to add a time limit.
 not_for:
-  - "You need to set the full price itself, such as its digits or ending: use the pricing skill."
-  - "You want a deal that is not a price cut, such as a gift, bundle or pre-order: use the promotions skill."
+  - "You need to set the full price itself, such as its digits or ending: use Price digits and placement planner."
+  - "You want a deal that is not a price cut, such as a gift, bundle or pre-order: use Offer designer."
   - "You plan to show a was price that you never really charged: fix the price first, or skip the discount framing."
 you_give:
   - Full price and sale price, or the discount amount
@@ -37,7 +37,7 @@ how_to_use:
   - Add your currency, whether the sale is for one product or the whole store, and where it will show.
   - Add the reason for the sale if you have one.
   - Read the warnings first. Then check that your full price was a real recent selling price before you publish.
-  - Check the local rule on was prices for your country. Use the pricing and promotions skills for the next steps.
+  - Check the local rule on was prices for your country. The skill cannot check that your full price was really charged, so confirm it from your own sales history. Then use Price digits and placement planner or Offer designer for the next steps.
 output_sample:
   input:
     - Your full price and your sale price, or the amount off

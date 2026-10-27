@@ -34,6 +34,7 @@ how_to_use:
   - Mask the image. Run privacy-mask mask your-file.png. It saves a new file named your-file_masked.png and keeps the original.
   - Open the masked copy and check it by eye. The tool reads text with OCR and can miss some. Fix any gap by hand.
   - Share the masked file or paste it into your chat. Never share the original.
+  - Next time, run the test (--dry-run) on any new screenshot before you share it.
 output_sample:
   input:
     - Your screenshot or image file (.png, .jpg, .jpeg, .bmp or .tiff)

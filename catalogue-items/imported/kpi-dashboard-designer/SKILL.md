@@ -10,6 +10,20 @@ date_added: "2026-02-27"
 
 Comprehensive patterns for designing effective Key Performance Indicator (KPI) dashboards that drive business decisions.
 
+## How to run this skill
+
+AI Blocks added this note. The rest of the skill below is the original. Where this note disagrees with it, follow the note.
+
+1. Ask who reads the dashboard and what decisions they make from it. If you don't know, write `MISSING: <what>` and stop.
+2. List the metrics that would help those decisions. Use the person's own data sources and metric list.
+3. Test each metric against the SMART checks. Cut any that lead to no decision.
+4. Give each metric a level (strategic, tactical or operational), a refresh pace, an owner and a clear definition.
+5. Draw the summary page and the department views.
+
+Hand back: the KPI list with definitions, the summary page layout, the department views, and a table of metric rules (owner, how it is worked out, when an alert fires).
+
+Every number in the layouts and code below (for example $2.4M, NPS 72, churn 4.2%) is a placeholder to show the shape. Never present it as a benchmark. Replace it with the person's own data.
+
 ## Do not use this skill when
 
 - The task is unrelated to kpi dashboard design

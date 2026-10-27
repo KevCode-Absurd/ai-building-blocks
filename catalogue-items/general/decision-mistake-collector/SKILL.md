@@ -7,17 +7,30 @@ description: Use when you repeat the same kind of decision and want to learn wha
 
 You can learn from your own mistakes or from other people's, and the second is cheaper. This skill builds a log of both for one kind of decision. It judges each case by how well it was decided and not only by how it turned out, names the cause of each real mistake, and counts which causes repeat. The log feeds "Decision checklist builder".
 
+## When not to use
+
+- You face a one-off choice with no pattern. Use a simple pros and cons list, or ask a trusted person.
+- You want to review one single event in detail. Use a post-mortem with your team, written for that event alone.
+- You already have your log and want a list of checks. Use the Decision checklist builder.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
+**Makes it better (optional):**
+- **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Your lessons** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). Bring your question, plan (optional), audit report (optional), your lessons (optional).
+2. This one.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, your lessons. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** This is text reasoning that any strong chat AI handles with the skill.
@@ -35,7 +48,7 @@ How to start:
 
 1. **Name the decision.** Write the decision type in one line, how often it comes up, what is usually at stake, and what a good result would be. Keep it narrow: "hiring a first sales person" is better than "people decisions".
 2. **Collect your cases.** List at least three of the person's past decisions of this type. For each: date, what was chosen, what was known at the time, who gave advice, what happened and what it cost. Ask for more if they give fewer than three. Write `MISSING:` for any detail they cannot recall.
-3. **Add cases from others.** Add three to five cases from other people: a colleague, a competitor, a news story, a book. Use only cases the person supplies or that are widely known; if you are unsure of a fact, say so. Other people's mistakes cost nothing to learn from.
+3. **Add cases from others.** Add three to five cases from other people: a colleague, a competitor, a news story, a book. Use only cases the person supplies, or cases with a named source the person can check, such as a book, an article or a company filing. Write the source next to each case. Mark any case without a checkable source `UNVERIFIED` and keep it out of the counts. Do not recall cases from memory about real people or companies. Other people's mistakes cost nothing to learn from.
 4. **Judge process, not result.** Sort every case into one box. Good process, bad outcome: bad luck. Bad process, good outcome: lucky. Bad process, bad outcome: a mistake. Good process, good outcome: a good call. A process is bad if a known fact was ignored, a check was skipped, the choice was rushed, or the advice came from someone paid on the answer. Keep only the lucky and mistake cases for the log.
 5. **Name the cause.** For each logged case pick the main cause, and a second if needed, from this list: reward bent the advice, wishful thinking, stuck with an earlier choice, followed the crowd, fear of loss, liked or disliked a person too much, envy, trusted an expert too far, too sure of own skill, missed the second effect, trusted a neat forecast, rushed, outside own knowledge, one tool only. Quote the fact from the case that shows it.
 6. **Count the repeats.** Count cases by cause. A cause that appears in two or more cases is a repeat offender. List them in order, with the case numbers. Note any cause that links to the person's own habits and not to the field.
@@ -50,11 +63,8 @@ The decision type. The four-box sort of every case. The log: case, what happened
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
-- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the lessons.
-- **Plan your strategy** with the [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the lessons.
-- **Lead the team** with the [Sales hiring scorecard builder](https://useaiblocks.com/skills/sales-hiring-scorecard-builder). It takes the lessons.
-- **Grow on social** with the [Thumbnail and title planner](https://useaiblocks.com/skills/thumbnail-and-title-planner). It takes the lessons.
+- The [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder). It takes the lessons.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the lessons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -63,7 +73,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every case is in one box, with the reason for the box.
 - Each logged mistake has a cause tied to a fact in the case.
 - Each logged mistake has a specific yes/no catching question.
-- At least three cases are from the person and at least one is from someone else, or the gap is marked.
+- At least three cases are from the person and at least one is from someone else with a named source, or the gap is marked.
 - Bad luck cases are kept out of the log.
 
 ## If something is missing

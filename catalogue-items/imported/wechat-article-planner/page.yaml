@@ -16,7 +16,7 @@ when:
   - You want readers to move from articles into a mini-program or private group.
   - You are entering the Chinese market and do not know the platform's rules.
 not_for:
-  - "You want short visual posts for Xiaohongshu: use the xiaohongshu-content-strategist skill, which is not in this library yet."
+  - "You want short visual posts for Xiaohongshu: use xiaohongshu-post-planner."
   - "You have no WeChat Official Account yet: set one up with WeChat first, then come back for a plan."
   - "You need the finished article, design or layout: this gives a plan and copy, so use a writer or your own design tool."
 you_give:
@@ -36,7 +36,8 @@ how_to_use:
   - Tell your AI your topic, account type, target readers and goal. Add brand voice notes if you have them.
   - "Ask for the plan: title options, article layout, sharing hooks and a call to action."
   - Check the plan. Add your own facts, data and customer quotes, because the AI will not know them.
-  - If you post about beauty, health or money, have the claims reviewed before you publish.
+  - If you post about beauty, health or money, avoid claims you cannot source, and have the copy checked against Chinese advertising law before you publish.
+  - Next, give the chosen title and outline to your writer, test two titles in the WeChat backend, and track open and read-to-end rates for your next post.
 output_sample:
   input:
     - Your topic
@@ -57,3 +58,4 @@ output_sample:
       contains: One low-effort next step, such as following, sharing or tapping through to your mini-program.
     - name: Posting time tips
       contains: Suggested peak reading times in China time.
+next: [content-calendar-builder, xiaohongshu-post-planner]

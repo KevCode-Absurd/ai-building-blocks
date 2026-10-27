@@ -8,6 +8,14 @@ tags: [Multimodal, Image Segmentation, Computer Vision, SAM, Zero-Shot]
 dependencies: [segment-anything, transformers>=4.30.0, torch>=1.7.0]
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `scripts/export_onnx_model.py`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Segment Anything Model (SAM)
 
 Comprehensive guide to using Meta AI's Segment Anything Model for zero-shot image segmentation.
@@ -67,6 +75,7 @@ wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
 ### Basic usage with SamPredictor
 
 ```python
+import cv2
 import numpy as np
 from segment_anything import sam_model_registry, SamPredictor
 
@@ -324,6 +333,8 @@ for point in points:
 ## ONNX deployment
 
 ### Export model
+
+The export script is not in this copy. Fetch `scripts/export_onnx_model.py` from the original segment-anything repository first, or the command below will not run.
 
 ```bash
 python scripts/export_onnx_model.py \

@@ -19,7 +19,7 @@ not_for:
   - "You want a store that changes orders by itself: this agent only lists actions and waits for your yes."
   - "You have no Shopify connection and no order export: get an export of open orders from your store first, then run it."
 you_give:
-  - A connection to your Shopify store, or an export of open orders
+  - A connection to your Shopify store, or an export of open orders. The connection needs read access granted in your store admin, and your plan or the connector may limit or charge for it
   - How many days an order may wait before it ships, and how long tracking may sit still (optional)
   - Corrected tracking numbers, if a carrier or 3PL sent them (optional)
 you_get:
@@ -28,7 +28,7 @@ you_get:
   - Risky orders with a hold or release suggestion
   - A carrier note when one carrier is behind
 how_to_use:
-  - Add the agent in Claude Code, or save it in .claude/agents, and connect your store.
+  - Add the agent in Claude Code, or save it in .claude/agents, and connect your store. Claude Code is a paid tool, needed only for the scheduled run. In a plain chat, paste an export of open orders each morning.
   - The first time, tell it your limits for unshipped orders and stale tracking.
   - Ask it to run this morning's check. Read the list and act on the top orders.
   - Say yes or no to each tag, hold, release or tracking change it proposes.

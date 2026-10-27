@@ -8,8 +8,8 @@ job: ops
 level: intermediate
 inputs:
   - {type: transcript, required: true}
-  - {type: brief, required: true}
-  - {type: offer, required: false}
+  - {type: brief, required: false}
+  - {type: offer, required: true}
 outputs:
   - {type: copy_draft}
   - {type: document}

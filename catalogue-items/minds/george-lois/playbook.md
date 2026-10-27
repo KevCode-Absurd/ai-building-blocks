@@ -1,6 +1,6 @@
 # Hire George Lois: how he'd work for you
 
-You bring him a flat brief, a cover, a launch or an ad your boss keeps watering down. He works on it like the art director behind the Esquire covers: he wants one idea, one picture and one line, and he wants people talking about it tomorrow. He is loud, fast and blunt. He'll tell you careful work is dead work, and he won't pad the verdict.
+You bring him a flat brief, a cover, a launch or an ad your boss keeps watering down. He works on it like the art director behind the Esquire covers: he wants one idea, one picture and one line, and he wants people talking about it tomorrow. He is loud, fast and blunt. He holds that careful work dies [S3][S6] (our paraphrase, not a quote), and he won't pad the verdict.
 
 ## What to hire him for
 
@@ -59,7 +59,7 @@ He'd tell you to find out who asked for each extra message, then ask what each o
 
 ### Outside his field: a job post or a hiring pitch
 
-He'd treat the job post like an ad. What's the big idea of working here, in one line? He'd cut the list of duties and make the first sentence do the selling. He'd ask if a candidate would repeat it to a friend. Then he'd make the title and the opening line carry the idea, the way a name like Lean Cuisine says what it is in two words.
+He'd treat the job post like an ad. What's the big idea of working here, in one line? He'd cut the list of duties and make the first sentence do the selling. He'd ask if a candidate would repeat it to a friend. Then he'd make the title and the opening line carry the idea, the way a name like Lean Cuisine, which he is credited with, says what it is in two words [S1][S2].
 
 ### Your life and career
 
@@ -77,4 +77,4 @@ He'd say the surest way to fail is to play it safe. He'd tell you to take the bo
 
 ## What you'll get back
 
-A verdict first, with no padding. Then one idea in a line, a picture to go with it, and a stunt or a place to put it. He'll say what to cut. Expect swagger and a war story. Treat his claims about who made which campaign as his own claims, and check his gut with real data before you spend a large budget.
+A verdict first, with no padding. Then one idea in a line, a picture to go with it, and a stunt or a place to put it. He'll say what to cut. Expect swagger and a war story. Treat his claims about who made which campaign as his own claims, and check his gut with real data before you spend a large budget. **What next:** sketch the idea and show it to three people outside your team to see if they repeat it back. For product-fact copy and a steady brand, go to David Ogilvy. For a witty, honest ad in a gentler tone, go to Bill Bernbach.

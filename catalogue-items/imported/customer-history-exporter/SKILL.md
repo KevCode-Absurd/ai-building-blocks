@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-customer-timeline-export
 role: customer-support
-description: "Read-only: exports a complete chronological history for a single customer — orders, refunds, returns, addresses, notes, tags, marketing consent, and lifetime spend — as one consolidated CSV."
+description: "Read-only: exports a complete chronological history for a single customer — orders, refunds, addresses, notes, tags, marketing consent, and lifetime spend — as one consolidated CSV."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Produces a complete, chronological dossier for a single customer. Pulls the customer record (identity, marketing consent, lifetime totals, tags, notes, addresses) and every order they've placed (with line items, fulfillments, refunds, and returns) and emits one merged CSV plus a human-readable timeline. Used by support agents handling escalations, by data export requests, and as the source-of-truth dump before an account merge or deletion. Read-only — no mutations.
+Produces a complete, chronological dossier for a single customer. Pulls the customer record (identity, marketing consent, lifetime totals, tags, notes, addresses) and every order they've placed (with line items, fulfillments and refunds; returns are not pulled) and emits one merged CSV plus a human-readable timeline. Used by support agents handling escalations, by data export requests, and as the source-of-truth dump before an account merge or deletion. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers,read_orders`
@@ -26,7 +26,7 @@ Produces a complete, chronological dossier for a single customer. Pulls the cust
 | format | string | no | human | Output format: `human` or `json` |
 | customer_id | string | yes | — | GID of the customer (e.g., `gid://shopify/Customer/12345`) |
 | include_line_items | bool | no | true | Include per-line-item rows in the CSV (one row per line item) |
-| include_refunds | bool | no | true | Include refunds and returns as separate rows in the timeline |
+| include_refunds | bool | no | true | Include refunds as separate rows in the timeline |
 | max_orders | integer | no | 250 | Cap on orders fetched (most recent first); 0 = no cap |
 
 ## Safety
@@ -40,10 +40,10 @@ Produces a complete, chronological dossier for a single customer. Pulls the cust
    **Expected output:** Customer header record; abort with a clear error if `null`
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "customer_id:<numeric_id>"`, `first: 250`, `sortKey: CREATED_AT`, `reverse: true`, select `id`, `name`, `createdAt`, `processedAt`, `displayFinancialStatus`, `displayFulfillmentStatus`, `totalPriceSet`, `totalShippingPriceSet`, `totalDiscountsSet`, `lineItems(first: 50) { node { id title quantity sku discountedTotalSet variant { sku } } }`, `fulfillments { id status deliveredAt trackingInfo { number url } }`, `refunds { id createdAt totalRefundedSet refundLineItems(first: 50) { node { lineItem { id title } quantity subtotalSet } } }`, pagination cursor (stop at `max_orders` if set)
-   **Expected output:** Full chronological order list with embedded refunds and fulfillments
+   **Inputs:** `query: "customer_id:<numeric_id>"` (<numeric_id> is the number at the end of the customer GID), `first: 250`, `sortKey: CREATED_AT`, `reverse: true`, select `id`, `name`, `createdAt`, `processedAt`, `displayFinancialStatus`, `displayFulfillmentStatus`, `totalPriceSet`, `totalShippingPriceSet`, `totalDiscountsSet`, `lineItems(first: 50) { node { id title quantity sku discountedTotalSet variant { sku } } }`, `fulfillments { id status deliveredAt trackingInfo { number url } }`, `refunds { id createdAt totalRefundedSet refundLineItems(first: 50) { node { lineItem { id title } quantity subtotalSet } } }`, pagination cursor (stop at `max_orders` if set)
+   **Expected output:** Full chronological order list with embedded refunds and fulfillments. Keep paging until `hasNextPage` is false or `max_orders` orders are collected (0 means no cap), then stop and set `truncated: true` if more remained.
 
-3. Build the merged timeline events: customer creation → each order → each refund/return per order. Sort all events by datetime ascending for the human-readable summary; the CSV is also sorted ascending.
+3. Build the merged timeline events: customer creation → each order → each refund per order. Sort all events by datetime ascending for the human-readable summary; the CSV is also sorted ascending.
 
 ## GraphQL Operations
 
@@ -155,7 +155,6 @@ CUSTOMER TIMELINE
   Recent timeline (most recent first):
     <date>  ORDER   <name>  $<amount>  <financial> / <fulfillment>
     <date>  REFUND  <id>    $<amount>
-    <date>  RETURN  <id>    items: <n>
     ...
   Output: customer_timeline_<customer_id>_<date>.csv
 ══════════════════════════════════════════════
@@ -182,13 +181,13 @@ For `format: json`, emit:
 CSV file `customer_timeline_<customer_id>_<YYYY-MM-DD>.csv` with columns:
 `event_datetime`, `event_type`, `event_id`, `order_name`, `line_item_title`, `sku`, `quantity`, `amount`, `currency`, `financial_status`, `fulfillment_status`, `tracking_number`, `notes`
 
-Event types include: `customer_created`, `order_placed`, `order_fulfilled`, `order_delivered`, `order_cancelled`, `refund_issued`, `return_initiated`.
+Event types include: `customer_created`, `order_placed`, `order_fulfilled`, `order_delivered`, `order_cancelled`, `refund_issued`.
 
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Customer not found | Wrong GID | Use `order-lookup-and-summary` to find a recent order, then read `customer.id` |
+| Customer not found | Wrong GID | Find the customer by email in the Shopify admin and copy the ID from the page link, or read `customer.id` from one of their orders |
 | 0 orders | New account or guest-only | Emit header-only timeline |
 | Order anonymized | GDPR data wipe | Skip line items; emit placeholder row |
 | Pagination beyond `max_orders` | Cap reached | Stop, set `truncated: true` |
@@ -197,4 +196,4 @@ Event types include: `customer_created`, `order_placed`, `order_fulfilled`, `ord
 - Run before any merge, deletion, or escalation — pre-state is unreconstructable once a merge commits.
 - For high-volume customers set `max_orders: 50`; full lifetime is rarely needed for one support case.
 - CSV is event-sorted so downstream pivoting works without reshaping.
-- Pair with `customer-merge`: run on both winner and loser before merging for a permanent pre-merge record.
+- Before you merge two customers in the Shopify admin, run this on both so you keep a record of each as it was.

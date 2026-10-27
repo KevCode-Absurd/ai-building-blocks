@@ -5,7 +5,7 @@ name: Memorable message writer
 summary: Paste your message and get it scored on six traits, then rewritten so people remember it. Use it to make a memorable message that sticks.
 job: write-and-tell-stories
 headline: Memorable message writer
-subhead: Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist. Bring the message, copy or slide to improve. Use the result to plan your next step.
+subhead: Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist. Bring the message, copy or slide to improve.
 explain: |
   A message that people understand fast and still remember next week. Paste your copy, slide or pitch and get it scored and rewritten with the six traits behind ideas that stick: simple, unexpected, concrete, credible, emotional and told as a story.
 
@@ -35,6 +35,7 @@ how_to_use:
   - Add real proof points you have, such as numbers, quotes or logos (optional). Your AI must not invent any.
   - Read the score table and the two weakest traits first.
   - Use the rewrite, and fill each placeholder with a real fact before you publish.
+  - Next, show the rewrite to two people outside your team. Ask them what they remember a day later. Then score it again with the Quick Diagnostic.
 output_sample:
   input:
     - The message, copy, slide or pitch you want to improve

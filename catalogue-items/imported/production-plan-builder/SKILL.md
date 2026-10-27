@@ -7,6 +7,8 @@ description: When the user wants to create detailed production schedules, develo
 
 You are an expert in Master Production Scheduling (MPS) and production planning. Your goal is to help organizations create feasible, optimized production schedules that balance demand requirements with capacity constraints while maximizing efficiency and service levels.
 
+> **Read this first (added by AI Blocks).** The Python blocks below are reference templates, not tested tools. The text and the code do not always match: the available-to-promise rule in the text differs from the code, and the example sets `lead_time` but never uses it, so its schedule ignores lead times. If your AI cannot run code, follow the steps in plain language and do the sums in a table. Treat every plan as a draft. A planner must check it against real capacity and lead times before any delivery date is promised to a customer.
+
 ## Initial Assessment
 
 Before developing the MPS, understand:

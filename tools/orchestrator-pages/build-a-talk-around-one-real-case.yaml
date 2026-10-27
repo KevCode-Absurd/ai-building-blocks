@@ -7,7 +7,7 @@ thinking_why: Three text skills in a row. A mid-size model works. Use your stron
 headline: Build a talk or pitch around one real case, with the stakes up front
 subhead: Give it a topic and your notes. It finds the one person or event that holds your idea, writes a short story and a picture of life after the change, then reorders it so the room knows what is at stake in the first minute.
 explain: |
-  Most talks start with background. You have notes and facts but no way in, so you explain first and hope the room cares later. The room checks out before you reach the point.
+  Many talks open with background. If you have notes and facts but no way in, you explain first and hope the room cares later. By then the room may have checked out.
 
   The steps give you a way in and then move it to the front. First it picks the one case that holds your idea, tests what everyone assumes and finds a case that cuts the other way. Next it builds a pitch around that case: how each person in the room will react, a story under two minutes and a picture of ordinary life after the change. Last it finds the news the room will care about most, puts it in the opening with one true clock, and marks the slides that only explain.
 when:
@@ -91,4 +91,5 @@ test:
 improve:
   - Record the talk and note where the room leaned in. Move more of that up front next time.
   - Keep your best cases in one file for later talks.
-  - If the twist did not land, check if it was really a surprise.
+  - If the twist did not land, ask whether it was a real surprise or only a late fact.
+  - Check that every fact in the story is in your notes. Cut the ones that are not.

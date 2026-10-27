@@ -398,7 +398,8 @@ class ManufacturingProcess:
         - interval: monitoring frequency (minutes)
         """
 
-        while True:
+        # Stop once every job has finished, so the run always ends
+        while self.stats['completed_jobs'] < self.stats.get('target_jobs', float('inf')):
             for step_name, machine in self.machines.items():
                 queue_length = len(machine.queue)
                 self.stats['queue_lengths'][step_name].append({
@@ -453,6 +454,7 @@ def run_simulation(process_config, interarrival_time=5.0, num_jobs=100, sim_time
 
     # Create manufacturing process
     process = ManufacturingProcess(env, process_config)
+    process.stats['target_jobs'] = num_jobs
 
     # Start job generator
     env.process(process.job_generator(interarrival_time, num_jobs))

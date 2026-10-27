@@ -68,7 +68,7 @@ how_it_works:
   - title: Sets the team
     text: Scouts who look like your buyer, relationship managers, and one lead who can come from the scouts. A solo owner gets a one-scout version.
   - title: Breaks the feed
-    text: Scouts browse from different regions and fresh sessions so they see varied creators, not one city's feed. They only browse, never post or like from those sessions.
+    text: Scouts search the app by hashtag, keyword and location, and go through the follow lists of creators your buyer follows, from their own accounts. No VPNs, extra accounts or other tricks.
   - title: Starts with the buyer's follows
     text: Find the creators your buyer already follows in one niche, then widen once you win that niche.
   - title: Mixes creator sizes
@@ -89,7 +89,7 @@ output_shape: |
   Lead: <name or role>
 
   SCOUTING METHOD
-  <how scouts vary location and reset feeds, browse only>
+  <in-app search terms, hashtags and follow lists the scouts use, from their own accounts>
   Start niche: <creators the buyer follows>   Widen when: <rule>
   Sizes: <mix>   Weekly list: <n creators>
 

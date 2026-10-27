@@ -1,6 +1,6 @@
 # Run meetings, notes and plans: AI Blocks
 
-> 122 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 121 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Action item tracker](https://useaiblocks.com/skills/executive-action-register): Share meeting notes or email threads. Get action items with owners, deadlines and unresolved commitments.
 - [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer): Catch up on what you missed with a daily or weekly activity digest. Get your action items, decisions and mentions, grouped by project.
@@ -67,7 +67,7 @@
 - [Note organizer](https://useaiblocks.com/skills/note-organizer): Turn rough meeting notes and ideas into tidy, tagged note files you can find later. Give it your notes. You get Markdown files with action items.
 - [Notes wiki builder](https://useaiblocks.com/skills/notes-wiki-builder): Share lasting lessons and their sources. Build linked Markdown notes and a short index for later searches.
 - [Notion research writer](https://useaiblocks.com/skills/notion-research-writer): Ask a question and connect Notion. Read relevant pages and draft a linked brief or comparison with evidence gaps.
-- [Notion wiki writer](https://useaiblocks.com/skills/notion-wiki-writer): Turn a chat thread or meeting notes into a linked Notion wiki page for a decision, how-to or FAQ. Your AI fills in owner, tags and status.
+- [Notion wiki writer](https://useaiblocks.com/skills/notion-wiki-writer): Turn a chat or meeting notes into a Notion wiki page. Owner, tags and status are filled in only if your notes state them.
 - [Obsidian canvas maker](https://useaiblocks.com/skills/obsidian-canvas-maker): Make an Obsidian canvas file from a plain description. Get boxes, arrows and groups placed and ready to open as a mind map or flowchart.
 - [Obsidian database view builder](https://useaiblocks.com/skills/obsidian-database-view-builder): Describe how to filter and display your notes. Build an Obsidian Base file with views, formulas and summaries.
 - [Obsidian knowledge base organizer](https://useaiblocks.com/skills/personal-wiki-keeper): Build a personal wiki in Obsidian that grows with every source. Your AI files notes, links ideas and flags where sources disagree.
@@ -80,7 +80,6 @@
 - [Personal performance review drafter](https://useaiblocks.com/skills/copilot-performance-review-writer): Draft a self review, peer review or feedback for your manager from your real work. Give it your period and a few notes. Get a draft built on evidence.
 - [Personal trip guide builder](https://useaiblocks.com/skills/personal-trip-guide-builder): Build a personal trip guide from your dates, group, budget and needs. You get a sourced day-by-day plan with breaks and backup options.
 - [Process bottleneck finder](https://useaiblocks.com/skills/process-bottleneck-finder): Describe the process and any timing data. Get a swim-lane map, cycle-time estimates and likely bottlenecks ranked.
-- [Process delay and rework checker](https://useaiblocks.com/prompts/process-waste-walk-planner): Share a step-by-step process and times. Get waiting, repeat work and extra steps flagged, with one change to test first.
 - [Production shift staffing reviewer](https://useaiblocks.com/workflows/check-production-shift-staffing-commitments): Compare qualified staff time with committed shift work. Keep setup and maintenance limits visible and prepare options for the shift lead.
 - [Property maintenance handover and action tracker](https://useaiblocks.com/workflows/prepare-a-property-maintenance-handover): Share open repair tickets, access rules and appointments. Get a team handover, confirmed actions and overdue decisions.
 - [Property repair and access reviewer](https://useaiblocks.com/agents/property-maintenance-evidence-review-assistant): Review open property repairs and planned visits. Get a handover with access gaps, late decisions and work still to verify.

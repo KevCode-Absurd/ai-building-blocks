@@ -35,6 +35,8 @@ how_to_use:
   - Paste the numbers each tool reports for the same dates, such as Google Analytics and your ad platforms.
   - Read the readout. Check the source of truth and the gaps before you move any budget.
   - Ask for the first-party tracking plan only if you control your site and have an analytics account and webhook access. Skip it otherwise.
+  - That part names tools such as PostHog and a booking tool such as SavvyCal or Calendly. Each may need a paid plan, so check their pricing. It also needs a developer to set up the tracking.
+  - Before you move any budget, run a holdout test on your biggest channel to check what the model says.
 output_sample:
   input:
     - Your channels and monthly spend
@@ -56,3 +58,4 @@ output_sample:
       contains: How sure the answer is, plus blind spots like dark social and direct traffic.
     - name: Recommendation
       contains: The attribution model to use, with reasons, and the next steps to take.
+next: [incrementality-test-planner]

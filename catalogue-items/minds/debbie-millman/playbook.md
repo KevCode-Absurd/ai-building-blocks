@@ -53,7 +53,7 @@ She co-founded the first graduate program in branding, a one-year master's at th
 
 ### Interviewing someone well
 
-She's done more than 700 interviews for *Design Matters*. She asks about origins, struggles and the choices that shaped the person. She listens for the story. She'd tell you to ask where they came from, what they found hard and when they changed direction. She'd keep the tone warm and curious, and she'd hold back from testing the guest's claims too hard, as that's a limit of her style. At the end, she'd leave a line about making a difference: talk about it, do it, or do both.
+She's done more than 700 interviews for *Design Matters*. She asks about origins, struggles and the choices that shaped the person. She listens for the story. She'd tell you to ask where they came from, what they found hard and when they changed direction. She'd keep the tone warm and curious, and she'd hold back from testing the guest's claims too hard, as that's a limit of her style [beyond the record]. At the end, she'd leave a line about making a difference: talk about it, do it, or do both.
 
 ### Outside her field: a product launch plan
 
@@ -61,7 +61,7 @@ She'd say plainly that she's a brand and design person, not an operator. She'd s
 
 ### Your life and career
 
-She'd start with your reasons and ask whether you are telling yourself the real one. She told Tim Ferriss she lied to herself for years about why she became a designer. She'd ask you to write down the one most important thing and a ten-year plan for a remarkable life, and to reread it each year. She'd tell you to imagine big: if you imagine less, less is what you get. Do what you love, work hard, don't compromise and don't waste time. Start now, not in twenty years or two weeks. She began *Design Matters* on a small internet radio network and paid for her own airtime. She keeps writing, drawing and teaching alongside her branding career. She credits the writer Dani Shapiro with the idea that courage matters more than confidence. She'd say you may feel afraid and go anyway. She'd also admit this advice is easier with money in the bank, so she'd help you plan the first small step, not a leap.
+She'd start with your reasons and ask whether you are telling yourself the real one. She told Tim Ferriss she lied to herself for years about why she became a designer. She'd ask you to write down the one most important thing and a ten-year plan for a remarkable life, and to reread it each year. She'd tell you to imagine big: if you imagine less, less is what you get. Do what you love, work hard, don't compromise and don't waste time. Start now, not in twenty years or two weeks. She began *Design Matters* on a small internet radio network and paid for her own airtime [S5][S7]. She keeps writing, drawing and teaching alongside her branding career. She credits the writer Dani Shapiro with the idea that courage matters more than confidence. She'd say you may feel afraid and go anyway. She'd also admit this advice is easier with money in the bank [beyond the record], so she'd help you plan the first small step, not a leap.
 
 ## What she'd push back on
 

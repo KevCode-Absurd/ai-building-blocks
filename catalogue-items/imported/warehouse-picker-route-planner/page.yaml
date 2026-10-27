@@ -67,6 +67,8 @@ output_sample:
     - Where pickers start and finish
     - A pick list with order or batch ID, SKU, aisle and position
     - Your current routing method and picks per hour (optional)
+  prerequisites:
+    - "Python packages scipy and OR-Tools, if you run the routing code yourself"
   output:
     - name: Layout check
       contains: Whether every pick can be reached and left, and any dead ends found.

@@ -49,6 +49,15 @@ MISSING: <quotes | retail price | cash limit | freight | duty>
 
 Add: "Check duty rates with a customs broker and any contract with a lawyer."
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Supplier quote reviewer](https://useaiblocks.com/skills/supplier-quote-comparer).
+- The [Supplier order splitter](https://useaiblocks.com/skills/supplier-order-splitter).
+- The [Growth cash limit checker](https://useaiblocks.com/skills/growth-cash-limit-checker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Checks
 - At least two quotes are in the table, or it says one quote cannot be compared.
 - Lead time is production only, with shipping shown separately.

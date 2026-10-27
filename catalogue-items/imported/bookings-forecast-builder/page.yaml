@@ -35,7 +35,7 @@ how_to_use:
   - Ask your AI to run the bookings forecaster, then the cohort projector, then the funnel confidence scorer on your intake file.
   - To see the format first, ask your AI to run each script with the sample option.
   - Check the assumptions block and any leaky-cohort flag before you share the numbers.
-  - Put the assumptions on the same slide as the forecast number.
+  - Put the assumptions on the same slide as the forecast number. The 70/30 weighting and the confidence bands are the skill's own starting defaults. Check them against your own history, and expect low confidence if you have under 12 quarters of data.
 output_sample:
   input:
     - Your open deals, with stage, amount, close date, age and last activity

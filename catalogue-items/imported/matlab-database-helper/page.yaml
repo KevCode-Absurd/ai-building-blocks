@@ -7,7 +7,7 @@ job: build-software
 headline: MATLAB database helper
 subhead: Working MATLAB code that reads from and writes to your database, with safe habits built in. Tell it the database and table, and it writes the connection, the queries and the updates.
 explain: |
-  Working MATLAB code that reads from and writes to your database, with safe habits built in. Tell it the database and table, and it writes the connection, the queries and the updates.
+  Database code in MATLAB is easy to get wrong. A password typed into a connection line can leak, and a query that pulls a whole table can fill your memory.
 
   Three rules shape everything it writes. Filters are sent to the database, so you never pull a whole table into memory just to cut it down. Passwords are saved as secrets and never typed into code. And anything that deletes or overwrites data waits for your clear yes first. It covers connecting through ODBC and saved data sources, reading rows with filters, importing with set options, and adding or changing rows. DuckDB and MongoDB have other routes. You need MATLAB with Database Toolbox, release 2021a or later.
 when:
@@ -19,6 +19,7 @@ not_for:
   - "You work with DuckDB: use the matlab-use-duckdb skill, which is built for it."
   - "You use MongoDB, Cassandra or Neo4j: they are not relational databases, so use each tool's own MATLAB support."
   - "You only read a CSV or Excel file: use readtable or a datastore in MATLAB, no database needed."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Database type and connection details
   - Table and column names
@@ -36,6 +37,7 @@ how_to_use:
   - Read the code it gives you. Check that passwords use secrets and filters run in the database.
   - Run it in MATLAB with Database Toolbox. Your AI can only test it if it can run MATLAB.
   - If it shows a delete or drop statement, check it carefully before you say yes.
+  - Test the code on a copy of the table first. Once it works, use it on the real table. For Databricks, use the MATLAB Databricks connection skill if your library has it.
 output_sample:
   input:
     - Your database type, such as PostgreSQL, MySQL, SQLite, SQL Server or Oracle
@@ -48,6 +50,7 @@ output_sample:
     - An AI that can run MATLAB (optional, to test the code)
     - MATLAB R2023b or later, only if you want ORM
     - MATLAB R2026a and Parallel Computing Toolbox, only for multithreaded reads and writes
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Connection code
       contains: Code that connects with a saved data source or a connection string, with passwords kept as secrets.

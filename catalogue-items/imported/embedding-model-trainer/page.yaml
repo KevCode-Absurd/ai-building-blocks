@@ -34,13 +34,13 @@ you_get:
   - The model type that fits your job and why
   - A training script copied from a tested template
   - A before and after score on your data
-  - A one-line verdict: WIN, MARGINAL or REGRESSION
+  - "A one-line verdict: WIN, MARGINAL or REGRESSION"
   - A trained model saved on your computer
 how_to_use:
   - Open an AI that can run Python code, such as Claude Code, and paste in this skill. The skill folder holds the templates and notes, so add the whole folder.
-  - Say what your search must do and show your data. Answer its question if the model type is unclear.
-  - Check the model type it picks. Ask it to run a one-step smoke test on a tiny slice of your data first.
-  - Run the full training. A GPU is strongly advised. Renting one from Hugging Face Jobs costs money, so check the current price before you start.
+  - Say what your search must do and show your data. Your data should be pairs of related texts (such as a question and its answer) or texts with labels, in two or more columns. The skill's dataset_formats.md note lists the exact column layouts. Answer its question if the model type is unclear.
+  - Check the model type it picks. The templates sit in the scripts folder. For a bi-encoder it starts from train_sentence_transformer_example.py, for a cross-encoder from train_cross_encoder_example.py. Ask it to run a one-step smoke test on a tiny slice of your data first.
+  - Run the full training. A GPU is strongly advised. How much GPU memory you need depends on the model, so read the hardware_guide.md note in the folder before you start. Renting one from Hugging Face Jobs costs money, so check the current price before you start.
   - Read the verdict line and the before and after scores. Keep the model only if it beat the start. Say so if you want it pushed to the Hugging Face Hub. It stays on your computer unless you do.
 how_it_works:
   - title: Picks the model type

@@ -301,6 +301,8 @@ The source ledger is dated. Recheck live primary sources and the target venue po
 
 ## Citing Scientific Agent Skills
 
+AI Blocks note: this section is about citing the skill itself. It is not part of the review. Never add this citation to the review text that goes to authors or editors. Skip the arXiv fetch below when the session is offline or a confidential manuscript is loaded, and cite from the details given here.
+
 This skill is part of Scientific Agent Skills by K-Dense. If it materially contributed to a
 manuscript, report, presentation, or code release, add the paper to the references or
 software section and tell the user you did so:

@@ -72,6 +72,7 @@ output_sample:
     - An AI that can write files, or a way to copy each file out of the chat
     - Terraform, Pulumi or your chosen tool installed, to run the preview
     - A cloud login on your own machine, kept out of the chat
+    - "Optional: of the CI tools it names, Atlantis is free and Spacelift is a paid service"
   output:
     - name: Tool choice
       contains: The tool picked for your team and cloud, with a short reason.

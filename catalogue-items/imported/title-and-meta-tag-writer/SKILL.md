@@ -58,7 +58,7 @@ must be built on these CTR mechanics:
 
 ### Power Word Bank
 
-Use 1–2 of these per meta description — never more:
+Use 1–2 of these per meta description — never more. Words like "Proven", "Guaranteed", "#1", "Most Trusted" and any stat are claims: use them only if the user gives a verifiable source for them. Never invent a number, ranking or result:
 
 **Curiosity:** Discover, Uncover, Exactly, The Truth About,
                What Nobody Tells You
@@ -189,7 +189,7 @@ CTA intent: [intent]
 
 **V3 — Social Proof / Specificity**
 [Description leading with a number, stat, or 
-specific claim that signals authority. 
+specific claim that signals authority. Use only a number or claim the user supplied and can back up. If there is none, lead with a concrete detail from the page. Never invent a stat.
 Primary keyword present. Ends with CTA. 140–155 chars.]
 
 Character count: [n]

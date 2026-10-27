@@ -9,7 +9,7 @@ subhead: Give it this month's PageSpeed results and your app list. It compares t
 explain: |
   A store gets slower a little at a time. An app is added for a sale, a banner goes in, a slider comes back, and nobody tests again until sales fall. One fix day does not stop this. The same check every month does.
 
-  This agent keeps that check for you. It reads your speed reports and judges pass or fail on real-user data. It compares with last month, page by page, and lists every app that is new or gone. If nothing got worse and everything passes, it tells you there is no work this month and stops. If an app is new or the score fell, it checks the apps first, since they are the most common cause. Then it runs only the fixes that match what failed: the hero image, page jumping, blocking scripts, heavy features, leftover code. It prices the fixes in orders and ranks them. It never edits your theme or removes an app.
+  This agent keeps that check for you. Field data is what real visitors experienced over the last 28 days. LCP is how fast the main content shows. INP is how fast the page reacts to a tap. CLS is how much the page jumps while loading. It reads your speed reports and judges pass or fail on real-user data. It compares with last month, page by page, and lists every app that is new or gone. If nothing got worse and everything passes, it tells you there is no work this month and stops. If an app is new or the score fell, it checks the apps first, since they are the most common cause. Then it runs only the fixes that match what failed: the hero image, page jumping, blocking scripts, heavy features, leftover code. It prices the fixes in orders and ranks them. It never edits your theme or removes an app.
 when:
   - You want your store's speed checked the same way every month.
   - You add apps often and want to know which ones cost you speed.
@@ -19,8 +19,8 @@ not_for:
   - "Your store already passes everywhere and rarely changes: run this every second or third month instead."
   - "You need someone to edit your live theme or remove an app: ask a developer, because this agent only writes code for a copy of your theme."
 you_give:
-  - PageSpeed results for the homepage, a collection page and a product page, mobile and desktop
-  - Your installed apps and theme app embeds, as a screenshot or list
+  - PageSpeed results for the homepage, a collection page and a product page, mobile and desktop. Include the real-user (field) score, the LCP, INP and CLS bands, the lab score and its main findings
+  - Your installed apps and theme app embeds, as a screenshot or a pasted list with one name per line
   - Monthly sessions by page type, conversion rate and average order value
   - Theme files, if you want code fixes (optional)
   - What changed this month, and any sale date (optional)
@@ -71,7 +71,7 @@ how_it_works:
   - title: Run the fixes that match
     text: Leftover code after a removal, heavy features, the hero image, page jumping or blocking scripts. Only the ones that apply.
   - title: Rank by money
-    text: Prices each fix in orders a month as a range, and ranks by gain per hour.
+    text: Prices each fix in orders a month as a range, and ranks by gain per hour. The range is your sessions times your conversion rate times a lift taken from third-party studies. It is a rough estimate, not a promise.
   - title: Check for a sale
     text: If a sale is within 30 days, it adds a speed budget and a checklist.
   - title: Save the baseline

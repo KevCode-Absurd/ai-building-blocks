@@ -119,7 +119,7 @@ Apply these evidence-based principles:
    - **Criteria:** What counts as success. Ranges from "use this rubric" to "co-construct the criteria."
    - **Timeline:** When to complete each stage. Ranges from "do this in 20 minutes" to "manage your own deadlines."
 
-2. **Progressive release across 4 levels (Zimmerman, 2002):**
+2. **Progressive release across 4 levels (this four-level model is the skill author's adaptation of Zimmerman, 2002, not a finding stated in that paper):**
    - **Level 1 — Directed:** Teacher makes all decisions. Students follow instructions. (Appropriate when the skill or content is new.)
    - **Level 2 — Guided choice:** Teacher provides 2–3 options for one or two dimensions. Students choose within the structure. ("Choose which cause of WW1 to focus your essay on.")
    - **Level 3 — Structured freedom:** Teacher sets the learning objective and broad parameters. Students decide process, product, or both. ("Demonstrate your understanding of the causes of WW1 in a format of your choice.")

@@ -37,7 +37,7 @@ Analyzes order history to discover which products are frequently purchased toget
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { product { id, title } }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { product { id, title } }`, pagination cursor. If `hasNextPage` is true, repeat with `after: endCursor` until all orders are read. A store with more than 250 orders in the window needs several passes.
    **Expected output:** All orders with product-level line items
 
 2. For each order with 2+ distinct products, generate all product pair combinations
@@ -56,7 +56,7 @@ Analyzes order history to discover which products are frequently purchased toget
 ## GraphQL Operations
 
 ```graphql
-# orders:query — validated against api_version 2025-01
+# orders:query — written for api_version 2025-01; check Shopify's current docs
 query OrderLineItems($query: String!, $after: String) {
   orders(first: 250, after: $after, query: $query) {
     edges {
@@ -78,7 +78,7 @@ query OrderLineItems($query: String!, $after: String) {
 ```
 
 ```graphql
-# products:query — validated against api_version 2025-01
+# products:query — written for api_version 2025-01; check Shopify's current docs
 query ProductDetails($ids: [ID!]!) {
   nodes(ids: $ids) {
     ... on Product {
@@ -134,7 +134,7 @@ FREQUENTLY BOUGHT TOGETHER  (<days_back> days, <n> orders analyzed)
       Support: <n> orders  Lift: <n>x  Confidence: <pct>%
 
   BUNDLE CANDIDATES (high support + high lift):
-    "<product A>" + "<product B>"  →  Suggested bundle price: $<n>
+    "<product A>" + "<product B>"  →  Combined price today: $<sum of both current prices> (set your own bundle discount; none is assumed)
 
   Output: fbt_pairs_<date>.csv
 ══════════════════════════════════════════════
@@ -155,5 +155,5 @@ CSV file `fbt_pairs_<YYYY-MM-DD>.csv` with columns:
 - Use `days_back: 180` or `365` for sufficient sample size.
 - Pairs with lift > 2.0 are strong bundle candidates.
 - Use results to create manual product bundles or configure upsell apps.
-- Cross-reference with `top-product-performance` to ensure paired items are high-performing.
+- Cross-reference with the Top product ranker to ensure paired items are high-performing.
 - Products with high confidence A→B but low confidence B→A suggest directional upsells (show B when A is in cart).

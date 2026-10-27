@@ -9,7 +9,7 @@ subhead: A growth plan for a site that already has visitors but turns too few in
 explain: |
   A growth plan for a site that already has visitors but turns too few into leads and sales. The thinking is that most traffic problems are really conversion problems, so you fix those before paying for more traffic.
 
-  The skill runs a guided eight-phase process and saves a tracker so you can pick up later. It begins with research on why visitors leave. Then it sets up a way to keep the 97 percent who are not ready to buy, such as a quiz or scorecard. Next it clarifies the message, adds proof and urgency, reworks the offer, builds in sharing and links the wins into one marketing plan. Each phase ends with a document.
+  The skill runs a guided eight-phase process and saves a tracker so you can pick up later. It begins with research on why visitors leave. Then it sets up a way to keep the visitors who are not ready to buy yet (most of them, by the author's rough rule of thumb), such as a quiz or scorecard. Next it clarifies the message, adds proof and urgency, reworks the offer, builds in sharing and links the wins into one marketing plan. Each phase ends with a document. Plan on several working sessions, one phase at a time. The figures in the guide are rough rules of thumb to test, not promises. This guide runs eight other skills, and any that are not yet in this library you will need to add from their source.
 when:
   - You have traffic but it does not turn into leads.
   - Your offer is not landing and you need to rework it.
@@ -30,7 +30,7 @@ you_get:
   - A clearer message and offer
   - A tracker file to resume later
 how_to_use:
-  - Install the eight skills this guide runs, in your AI tool. The names are listed under what you need first on this page.
+  - Install the eight skills this guide runs, in your AI tool. The names are in the Before you start list on this page.
   - Start a new chat in a project where your AI can save files. Paste in this skill.
   - "Say: I want to grow my website. Then answer its questions about your site, traffic, offer and audience."
   - Work one phase at a time. At each choice, your AI asks you before it decides.

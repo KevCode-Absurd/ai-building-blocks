@@ -231,8 +231,8 @@ All cold calls follow the pattern: ask the question → give thinking time → T
 **Q2:** "The area of a circle is 50 cm². Is the radius bigger or smaller than 5 cm? Think for 10 seconds... [pause]... Jayden, what's your answer?"
 *(Tests: reasoning backward from the formula. If r = 5, area = 78.5, which is bigger than 50. So r must be smaller than 5. This requires understanding, not just procedure.)*
 
-**Q3:** "I calculated the area of a circle with diameter 8 cm. I got 200.96 cm². My friend says I'm wrong. Without recalculating, can you tell me what mistake I might have made? Think for 10 seconds... [pause]... Sophie, what do you think?"
-*(Tests: error detection. 200.96 = π × 8² = π × 64. The error is using diameter instead of radius. With r = 4, area = π × 16 = 50.27.)*
+**Q3:** "I calculated the area of a circle with diameter 8 cm. I got 200.96 cm² (using π ≈ 3.14). My friend says I'm wrong. Without recalculating, can you tell me what mistake I might have made? Think for 10 seconds... [pause]... Sophie, what do you think?"
+*(Tests: error detection. 200.96 = 3.14 × 8² = 3.14 × 64. The error is using diameter instead of radius. With r = 4, area = 3.14 × 16 = 50.24 (50.27 with the exact value of π).)*
 
 **Q4:** "Can you have a circle with an area of exactly 100 cm²? Think for 15 seconds — this is a hard one... [pause]... Kian, what do you think?"
 *(Tests: deeper understanding. Yes — r = √(100/π) ≈ 5.64 cm. If students struggle, this reveals whether they can manipulate the formula or only apply it forward.)*

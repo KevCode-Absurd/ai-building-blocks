@@ -64,3 +64,4 @@ output_sample:
       contains: The requests that fetch your products and collections from Shopify.
     - name: Oxygen deploy steps
       contains: The commands to link your store and deploy, plus where to set environment variables.
+next: [site-go-live-runbook-writer, speed-budget-and-sale-check]

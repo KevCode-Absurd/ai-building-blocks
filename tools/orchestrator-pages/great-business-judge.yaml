@@ -7,9 +7,9 @@ thinking_why: It carries findings through five checks and runs sums on your figu
 headline: Find out if a business is great enough to hold for years
 subhead: Describe a business and what you know about it. It tests the edge and the wall around it, checks you can truly judge it, asks who keeps any gain, rates the managers and runs the long sums. You get a keep, wait or pass call. It is a method of analysis, not personal financial advice.
 explain: |
-  Most people look at the price first. This workflow looks at the business first, because over many years the owner's return follows what the business itself earns. A great business at a fair price usually beats a poor one at a bargain.
+  This workflow looks at the business before the price. Over many years, the owner's return follows what the business itself earns.
 
-  It runs five checks in order. It tests the edge and the barrier that protects it, then asks if this is a business you can truly judge. Next it asks who keeps any gain: owners, or customers and rivals. It rates how able, honest and owner-minded the managers are from what they did with cash. Last it runs the long-hold sums with your figures and compares them with your next best choice. The ideas come from Charlie Munger's talks and the Berkshire and Wesco meeting remarks in Poor Charlie's Almanack. It gives no buy or sell calls on any named security.
+  It runs five checks in order. It tests the edge and the barrier that protects it, then asks if this is a business you can truly judge. Next it asks who keeps any gain: owners, or customers and rivals. It rates how able, honest and owner-minded the managers are from what they did with cash. Last it runs the long-hold sums with your figures and compares them with your next best choice. The approach is inspired by Charlie Munger's talks in Poor Charlie's Almanack. It gives no buy or sell calls on any named security.
 when:
   - You are studying a business to own for years and want to know if it is a great one before you look at price.
   - A business looks cheap, and you want to know if it is cheap for a good reason.
@@ -30,9 +30,9 @@ you_get:
   - Ratings for able, honest and owner-minded managers, each with its evidence
   - The long-hold sums and a keep, wait or pass call with the figures that would change it
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Open Claude Code, or a Claude Project where you can add files. Give it the folder and say "Follow HANDOFF.md".
-  - Describe the business and what you know. Say plainly what you have done in the field. Add five years of returns if you have them.
+  - Gather the business facts, at least five years of return on invested money, what managers did with cash, your tax rate and your next best choice. Say plainly what you have done in the field.
   - Let it run one step at a time. It saves each result as a file before the next step starts.
   - Read the circle of competence result before the final call. If it says too tough, treat the call with care.
   - Check the HAND-BACK SUMMARY for MISSING lines. Fill those gaps and rerun the steps that need them.
@@ -119,3 +119,5 @@ improve:
   - Add the typical mistakes in your field to step 3.
   - Rerun it once a year on each business you hold, since edges and managers change.
   - Run the "Mispriced bet tester" after a keep, to test the price.
+next: [mispriced-bet-tester]
+before: []

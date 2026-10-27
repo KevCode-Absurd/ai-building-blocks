@@ -15,21 +15,22 @@ when:
   - A share price looks cheap, or very high, and you want to know how much rests on hope.
   - You want to write down your reasons before you commit money.
 not_for:
-  - "You only want the asset side of the picture: use the Business asset value estimator."
-  - "You want to know if debt and preferred dividends are covered by earnings: use the Debt and preferred dividend coverage checker."
+  - "You only want the asset side of the picture: use the Asset floor estimator."
+  - "You want to know if debt and preferred dividends are covered by earnings: use the Average earnings coverage tester."
   - "The company has no audited accounts or a balance sheet you can trust: ask an accountant to check the numbers first."
 you_give:
   - The purchase and the price, in a sentence or two
   - Normal earnings per share as a range (the result of "Find a company's real earning power and its tricks")
   - The latest balance sheet with the notes
-  - The share count, and the bond yield today (optional)
+  - The share count
+  - Today's bond yield (optional)
 you_get:
   - A first label of investment or speculation
   - A low, middle and high value from earnings, and how much of the price is hope
   - An asset floor of book value, net current assets and sale values, with a cash strength rating
   - A verdict of margin of safety present, no clear margin, or price above value
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and four skill files, in the order they run: Investment or speculation sorter, Earnings value range builder, Asset floor estimator and Price versus value gap judge."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the earnings range, the balance sheet and the price. It works step by step and saves each result.
   - Read the verdict first, then the range and the floor behind it.

@@ -213,9 +213,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
-    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips."}
-    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
+    - {name: "Nano Banana", why: "Takes many reference images and keeps characters the same, so your sheets and frames match. Limits change, so check its current docs."}
+    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in short clips. Clip length changes, so check its current docs."}
+    - {name: "Kling", why: "Takes several reference images in one video job, so figures and product stay the same from shot to shot. Limits change, so check its current docs."}
     - {name: "ElevenLabs", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
   inputs:
     - "A scan of a real watercolor you like, attached as a style reference, so edges and paper look painted"

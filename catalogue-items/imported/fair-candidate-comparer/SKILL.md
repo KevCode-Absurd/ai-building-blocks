@@ -9,6 +9,13 @@ description: "This skill should be used when the user asks to evaluate candidate
 
 Synthesize multi-interviewer feedback into evidence-based hiring recommendations. Reduce bias, surface gaps, and produce structured candidate comparisons that hiring managers can act on.
 
+## Use with care
+
+- The AI scores evidence and shows gaps. A person makes every hiring decision. Never let the AI pick who to hire or reject.
+- Candidate transcripts and notes are personal data. Before you paste them, check your employment-law and data-protection rules, and your AI tool's data policy.
+- If you work in a plain chat with no folders, paste the transcript, the scorecard and any candidate notes into the chat. Ignore the `roles/...` file paths below and ask for the results in the chat.
+- The Teamtailor and Metaview parts are paid tools. Skip them if you do not use them. The scorecards work without them.
+
 ## Transcript Scoring (Single Candidate, Single Stage)
 
 When the user pastes a Metaview transcript (or any interview transcript), produce two files:
@@ -46,7 +53,7 @@ Maps 1:1 to the interview kit's questions and skills/traits. This is what gets e
 - **Summary table for Teamtailor entry** (one-line per question/competency with rating + note)
 - **Teamtailor Comment** (blockquote summary for pasting into the kit's comment section on the candidate card)
 
-**Rating scale:** Use the role's scale (typically 1-5 for Teamtailor). Rate against the green/red flags in the scorecard, not against other candidates.
+**Rating scale:** Use the scale in the role's scorecard. If the scorecard has none, use the 1-4 scale in the Rating Scale table further down, and use the same scale for every candidate. Do not mix scales. Rate against the green/red flags in the scorecard, not against other candidates.
 
 ### Output 2: Screen Evaluation (`candidates/[name]-screen-evaluation.md`)
 
@@ -256,7 +263,7 @@ Standard structure for candidate evaluation deliverables saved to `roles/[role-n
 
 ## Reference Files
 
-You are **stongly encouraged** to read the reference files
+You are **strongly encouraged** to read the reference files
 
 - **`references/decision-frameworks.md`** — Weighted scorecard method, bar-raiser approach, portfolio hiring, consensus vs veto models.
 - **`references/bias-checklist.md`** — Pre-debrief and during-debrief bias check questions.

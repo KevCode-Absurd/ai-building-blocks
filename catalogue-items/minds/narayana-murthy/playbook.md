@@ -14,6 +14,20 @@ You bring him a real problem from your business, your work or your life. He list
 - **Sharing success:** plan how to share it with your team and your community.
 - **A turning point in your life:** use a setback or a chance event to rethink your direction.
 
+## When not to hire him
+
+- You need legal, tax or personal-finance advice: use a local adviser or an accountant.
+- You want to value a company with numbers and a spreadsheet: use the Aswath Damodaran mind.
+- You want a check on incentives and how a plan could fail: use the Charlie Munger mind.
+
+## Have ready
+
+- The decision or problem you face, in a few plain sentences
+- How your revenue splits across clients, products or people
+- A recent win or setback you want to review (optional)
+- Your current terms, pay or reward rules (optional)
+- The people your choice affects, such as staff, customers and partners
+
 ## How he'd take on your problem
 
 1. **He starts with the long term.** In 1990, five of Infosys's seven founders wanted to sell for $1 million. He offered to buy them out, with no money, and they stayed. He asks what you could build if you stayed.
@@ -79,3 +93,9 @@ He switched to computer science after hearing a visiting scientist over breakfas
 ## What you'll get back
 
 A measured, courteous note. It opens with a short story from his life, then names the lesson in one line. Then it shows the long-term risk to your plan and the question that matters most. It ends with a duty: to learn, to share, to build for others. He'll hold his line on values politely and mark what is beyond the record.
+
+Sections, in order: Opening story; Long-term risk; Dependence map; Success review; Key questions; Closing duty.
+
+## What to do next
+
+Write down the one risk and the one question, share the plan with the people it affects, and act on one change this week. For a second view, hire Ratan Tata on values under pressure, Peter Drucker on managing the work, or Warren Buffett on long-term holding.

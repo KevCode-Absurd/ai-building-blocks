@@ -4,12 +4,12 @@ headline: Project cash available bridge
 summary: Build a project cash available bridge (CFADS) that states its accrual or cash basis and never counts working-capital movements twice.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Accrual and cash figures treat working capital differently, so the basis must be declared before any line is added or removed."
 subhead: A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements. Share financing cash definition; accrual operating revenue and operating costs excluding depreciation/noncash costs before working-capital cash movements; contract exclusions, cash taxes, maintenance capital and signed working-capital investment. Identify whether source data instead already represents actual cash receipts/payments.
 explain: |-
   A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
 
-  Project finance cash definitions. Illustrative figures only in USD for one period. This fixture is an accrual-to-cash bridge: operating revenue1000 less operating cost proxy400 excluding depreciation/noncash expenses gives600 before working-capital movements. Contract exclusions100, cash taxes50, maintenance capital100 and working-capital investment50 leave CFADS300. An actual receipts/payments source already embeds working-capital settlement and must not deduct that50 again. A verified cash-basis route explicitly omits the extra working-capital adjustment; unknown data never becomes zero.
+  Project finance cash definitions. Illustrative figures only in USD for one period. This fixture is an accrual-to-cash bridge: operating revenue 1,000 less operating cost proxy 400 (excluding depreciation and non-cash expenses) gives 600 before working-capital movements. Contract exclusions 100, cash taxes 50, maintenance capital 100 and working-capital investment 50 leave CFADS 300. An actual receipts/payments source already embeds working-capital settlement and must not deduct that 50 again. A verified cash-basis route explicitly omits the extra working-capital adjustment; unknown data never becomes zero.
 when:
   - You need a contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
   - You work on project finance cash definitions and need traceable calculations.
@@ -18,20 +18,21 @@ not_for:
   - "You only need a plain profit forecast: use a simple income forecast in your own spreadsheet instead."
   - "You are sizing debt or setting loan terms: ask your lender or financial adviser, because this bridge does not do that."
   - "Your data is actual cash receipts and payments, and you have not checked how it treats working capital: confirm that first, or ask your accountant."
+  - "You need to split project cash across senior debt, reserve top-up and junior debt: use the Project payment waterfall builder instead."
 you_give:
   - Financing cash definition; accrual operating revenue and operating costs excluding depreciation/noncash costs before working-capital cash movements; contract exclusions, cash taxes, maintenance capital and signed working-capital investment. Identify whether source data instead already represents actual cash receipts/payments.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The period end, plus the currency and scale used for the cash available for debt service."
+  - "Your spreadsheet tool, if you want the cash available for debt service as a workbook."
 you_get:
   - An editable workbook with the cash available bridge, built on your stated basis.
   - A source index showing where each input came from and its date.
   - A reconciliation table that ties the bridge to source cash and the contract definition.
   - A list of missing inputs and a CHECKS MISSED list.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the financing agreement's cash definition and the operating figures."
+  - "Tell it what you need: the cash available bridge on a stated accrual or cash basis."
+  - "Ask it to stop and mark MISSING if the financing cash definition or the basis of the source data is not in your sources."
+  - "Check that working capital movements are counted once, on one stated basis, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Your financing cash definition from the contract
@@ -69,10 +70,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Period end"
+    how: "Take the period end from the financing agreement's cash definition and the operating figures. Use one currency and scale on every line."
+  - what: "Working capital investment"
+    how: "Change the working capital investment and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: The source map identifies accrual-before-working-capital or actual-cash basis for every operating line; mixed bases stop the affected bridge.
 judge:
@@ -85,8 +86,10 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one cash available for debt service you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define cash available for debt service into SKILL.md, so every run uses your wording."
+before: []
+next: [project-payment-waterfall-builder, debt-service-covenant-headroom-checker]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

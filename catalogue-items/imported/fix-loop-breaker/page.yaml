@@ -29,14 +29,16 @@ you_get:
   - Log of up to three attempts with evidence
   - Check that fails on bad state and passes on the fix
   - Tested rollback
-  - "Plain verdict: fixed, not fixed or inconclusive"
+  - "Final status: PROVEN, INCONCLUSIVE or BLOCKED"
 how_to_use:
   - Open your AI in a tool that can run code and read your project files, such as Claude Code, Codex CLI, Cursor or Gemini CLI.
   - Paste the skill into the chat, or add its folder to your project.
   - Describe the bug and paste the command or steps that show the failure.
-  - Tell your AI to follow the skill and stop after three attempts.
-  - Check the final status. Only trust the fix if it says proven and lists the checks it ran.
+  - Tell your AI to follow the skill and stop after three attempts. The skill's scripts/fingerprint.py helper is optional.
+  - Check the final status. Only trust the fix if it says PROVEN and lists the checks it ran. INCONCLUSIVE means a decisive check is missing. BLOCKED means the three tries are used up.
   - Confirm before it changes anything in a live or production setup.
+  - After PROVEN, keep the cleaned evidence records and the tested undo command with the change. After BLOCKED, get the missing observation, such as a log or steps that show the failure, then start again.
+  - To find the cause first, use the bug root cause finder.
 output_sample:
   input:
     - A short description of the bug
@@ -61,3 +63,4 @@ output_sample:
       contains: Proof the undo steps restore the old behavior on a separate copy.
     - name: Final status
       contains: "One verdict: proven, inconclusive or blocked, with commands, results and gaps left."
+next: [bug-root-cause-finder, release-day-rollback-planner]

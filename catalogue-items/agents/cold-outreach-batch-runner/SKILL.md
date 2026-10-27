@@ -15,6 +15,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
@@ -24,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your offer. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, your offer, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -53,7 +58,7 @@ Keep one folder, `outreach/`. It holds `offer.md` (who, offer, proof, sender det
    - **Replies fine but few are positive:** the list or the offer is the problem. Tighten the list in step 3 and keep the email.
    - **Replies and positive replies both fine:** keep the angle. Grow the batch by no more than a third.
 3. **Fill the list.** If fewer unsent prospects remain than the batch needs, or the path said to tighten, run `prospect-list-builder`. Keep only prospects with a stated reason and a source. Remove anyone in `do-not-contact.md` or already in `log.md`.
-4. **Write the first emails.** If `voice.md` exists or the owner gave sent emails, run `own-voice-outreach-writer`. Otherwise run `cold-email-writer`. Each email must use a fact about that prospect that is in your list. If there is no fact, write a shorter email and mark it as cold.
+4. **Write the first emails.** If `voice.md` exists or the owner gave sent emails, run `own-voice-outreach-writer`. Otherwise run `cold-email-writer`. Each email must use a fact about that prospect that is in your list. If one prospect has no fact, write a short plain email for that prospect, mark it "no fact", and let it make no claim about them. If no prospect in the batch has a fact, do not write the batch: stop and ask for facts (see "If something is missing").
 5. **Write the follow-ups.** For prospects who got a first email and did not reply, run `outbound-email-sequence-writer`. Cap at four touches in all (this agent's own limit).
 6. **Check every email, and loop.** Run `cold-email-pre-send-checker` on each first email with the text you have about the prospect. If the verdict is "do not send", or a claim about the prospect is unsupported, fix it and check again. Stop at three rounds. If an email still fails, drop that prospect from this batch and write the reason in the log. Never invent a fact to make a claim pass.
 7. **Sort replies.** For replies pasted in, sort them: positive, not now, not for me, unsubscribe, hostile. Add every unsubscribe to `do-not-contact.md` at once. Draft an answer only for positive and not now (use `cold-email-writer`). Do not answer hostile ones.
@@ -82,11 +87,9 @@ Rules for commercial email differ by country. Ask a qualified person to check yo
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Email permission and message review](https://useaiblocks.com/skills/permission-email-audit). It takes the email flow.
-- The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts). It takes the plan.
-- **Make an offer people want** with the [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Plan what to test** with the [Ad reach planning review](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
+- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker).
+- The [Follow-up email sequence writer](https://useaiblocks.com/prompts/follow-up-email-sequence-writer).
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the email flow.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -100,7 +103,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - CHECKS MISSED: name any check that failed, or write "none".
 
 ## If something is missing
-Write `MISSING: <what>` where it belongs and carry on. Without last batch's numbers, say the path was not chosen on data and keep the angle. Without prospect facts, stop and ask for them, because the checks cannot pass without them. Without sender details, mark the emails not ready to send.
+Write `MISSING: <what>` where it belongs and carry on. Without last batch's numbers, say the path was not chosen on data and keep the angle. If no prospect has a fact, stop and ask for them, because the checks cannot pass without them. If only a few lack one, they get the short "no fact" email from step 4. Without sender details, mark the emails not ready to send.
 
 ## Avoid
 - Sending, even when a mailbox is connected.

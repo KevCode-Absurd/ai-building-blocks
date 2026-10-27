@@ -30,12 +30,14 @@ you_get:
   - Which policies need editing
   - A clear warning if scope was limited
 how_to_use:
+  - Before you start: the skill reads your policy list from a folder the full Claude plugin sets up. Without that plugin, paste your policy list into the chat, with the owner of each policy.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It works best where your AI can read files.
   - Paste the rule name, text or a summary. If you only have part of the rule, the AI will ask before it looks anything up.
   - Add your list of policies, with the owner of each. Say if any section should be left out (optional).
   - Read the rule status line first. If the AI could not check the rule is in force, confirm that yourself before you trust any date.
   - Review each gap with the policy owner, then have a lawyer check the result before you change anything.
-  - Where the skill mentions /regulatory-legal:cold-start-interview, use the setup-interview folder inside it to save your policy list.
+  - Where the skill mentions /regulatory-legal:cold-start-interview, that command exists only in the full Claude plugin. Without it, paste your policy list each time, or use the setup-interview folder to write it down once.
+  - Without web or research access, the rule's status stays unverified. Check the Federal Register or ask counsel before you trust any due date.
 output_sample:
   input:
     - The rule name, text or a summary

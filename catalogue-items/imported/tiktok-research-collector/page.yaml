@@ -31,6 +31,7 @@ you_get:
   - A cost estimate before the run and a result count after
   - "Next steps: turn the top-video table into a content plan, or export comments to a sheet to sort and code them"
 how_to_use:
+  - Check TikTok's terms and your local privacy rules before you collect comments or follower lists. Do not publish personal details from them.
   - Open an AI that can run code and connect to Apify, and paste the skill. Add your Apify token in its settings or environment.
   - Tell it your hashtag, account, keyword or video link. Add dates, minimum likes and how many videos you want.
   - Read the cost estimate. Any run over $2 needs your yes before it starts. Say yes only if the cost is fine.

@@ -417,4 +417,4 @@ Daily: Slack wins/customer-voice → Weekly: CEO email + function updates → Mo
 
 ---
 
-*Based on operating cadence design across companies scaling from 20 to 1,000+ employees, including the five-level meeting architecture that survived 3x headcount growth, the weekly reporting format that caught pipeline problems 3 weeks earlier than monthly reviews, and the CEO weekly update format refined across multiple companies. Not theory — patterns from building operating systems through hypergrowth and teaching them to the next team.*
+*The author's own account (not checked here): operating cadence design across companies scaling from 20 to 1,000+ employees, including the five-level meeting architecture that survived 3x headcount growth, the weekly reporting format that caught pipeline problems 3 weeks earlier than monthly reviews, and the CEO weekly update format refined across multiple companies. Not theory — patterns from building operating systems through hypergrowth and teaching them to the next team. These are one author's experience. The results quoted here are not measured or sourced.*

@@ -83,7 +83,7 @@ echo '{"event_type": "ransomware", "host": "prod-db-01", "raw_payload": {}}' | \
 | Code | Meaning | Required Response |
 |------|---------|-------------------|
 | 0 | SEV3/SEV4 or clean | Standard ticket-based handling |
-| 1 | SEV2 — elevated | 1-hour bridge call, async coordination |
+| 1 | SEV2 — elevated | SOC Lead contacted within 30 minutes (async); bridge call within 1 hour |
 | 2 | SEV1 — critical | Immediate 15-minute war room, all-hands |
 
 ---
@@ -151,10 +151,10 @@ The triage tool applies five filters before escalating to prevent false positive
 | CI/CD agent activity | Known build/deploy agents flagged as anomalies | jenkins, github-actions, circleci, gitlab-runner |
 | Test environment tagging | Assets tagged as non-production | test-, staging-, dev-, sandbox- |
 | Scheduled job patterns | Expected batch processes triggering alerts | cron, scheduled_task, batch_job, backup_ |
-| Whitelisted identities | Explicitly approved service accounts | svc_monitoring, svc_backup, datadog-agent |
+| Whitelisted identities | Explicitly approved service accounts, only when the source also matches (see rule below) | svc_monitoring, svc_backup, datadog-agent |
 | Scanner activity | Known security scanners and vulnerability tools | nessus, qualys, rapid7, aws_inspector |
 
-A confirmed false positive suppresses escalation and logs the suppression reason for audit purposes. Recurring false positives from the same source should be tuned out at the detection layer, not filtered repeatedly at triage.
+Never suppress an alert on an account or service name alone, because attackers can reuse or copy those names. Require a matching source host, IP range or verified asset tag as well. Log every suppression with its reason, so a person can review it later. A confirmed false positive suppresses escalation and logs the suppression reason for audit purposes. Recurring false positives from the same source should be tuned out at the detection layer, not filtered repeatedly at triage.
 
 ---
 
@@ -219,6 +219,8 @@ Every evidence item must be recorded with:
 
 The notification clock starts at incident declaration, not at investigation completion.
 
+This table is a quick reference only. Deadlines and penalties change, so confirm each one with legal counsel before you act on it.
+
 | Framework | Incident Type | Deadline | Penalty |
 |-----------|--------------|----------|---------|
 | GDPR (EU 2016/679) | Personal data breach | 72 hours after discovery | Up to 4% global revenue |
@@ -251,7 +253,7 @@ python3 scripts/incident_triage.py --input alert.json \
 # 4. If false_positive_flag = true, document and close
 ```
 
-**Decision**: Exit code 2 = SEV1 war room now. Exit code 1 = SEV2 bridge call within 30 minutes.
+**Decision**: Exit code 2 = SEV1 war room now. Exit code 1 = SEV2: contact the SOC Lead within 30 minutes and start the bridge call within 1 hour.
 
 ### Workflow 2: Full Incident Response (SEV1)
 

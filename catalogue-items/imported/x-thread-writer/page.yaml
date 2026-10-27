@@ -35,7 +35,7 @@ how_to_use:
   - Add a few past posts if you want your own voice (optional).
   - Check the skeleton first. Fix the order or cut beats before you accept the thread.
   - Read each post on its own. Any post that only makes sense after the last one needs a rewrite.
-  - Copy the thread and post it by hand. Posts are split by three dashes, so each block is one post.
+  - Copy the thread and post it by hand. Posts are split by three dashes, so each block is one post. Then read each post once more on its own, and test the thread with your own audience. If you use the optional VoiceMoat connector, its publish and schedule tools post to your live account. Read the preview and say yes before you give it the one-time code.
 output_sample:
   input:
     - Your idea, article, transcript or rough draft

@@ -34,6 +34,7 @@ how_to_use:
   - Add your plan, change or claim, and what it must achieve. Add limits you already know (optional).
   - Ask your AI to follow the skill. It writes down your claim, picks the smallest piece to review, and sends it to the fresh reviewer.
   - Read the objections. Mark each one fix or dismiss, and give a reason.
+  - The step that asks another AI tool for a view is optional. It may need a paid account or API key, and it sends your work to that tool's service. Only use it with material you may share.
   - Use the revised decision. The skill stops after a set number of rounds, so it does not loop forever.
 output_sample:
   input:

@@ -9,7 +9,7 @@ subhead: A runbook that a tired person can follow at 3am without asking anyone. 
 explain: |
   A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
 
-  A good runbook answers a few things quickly: what this service does, how to tell it is broken, how to fix the common failures, and who to call when the fix does not work. The skill writes each step so it can be done in order, with the exact command or screen and what a good result looks like. It adds troubleshooting trees for known problems, recovery steps, and rollback. It uses checklists and advice only, with no special access needed.
+  A good runbook answers a few things quickly: what this service does, how to tell it is broken, how to fix the common failures, and who to call when the fix does not work. The skill writes each step so it can be done in order, with the exact command or screen and what a good result looks like. It adds troubleshooting trees for known problems, recovery steps, and rollback. The AI only writes the document. It does not touch your systems, but the commands in the runbook need access such as kubectl, a cloud command line or database rights. Examples in the skill use placeholder host names. Some sample steps are destructive, so test them in staging with a second person.
 when:
   - Only one person knows how to restart your main service.
   - An incident exposed that your recovery steps live in someone's head.

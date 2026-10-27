@@ -9,7 +9,7 @@ headline: "How-question counter writer"
 subhead: "Paste the offer or demand you cannot accept, the real reason you cannot, and what you could live with. The prompt names their need, writes a label and five how-or-what questions in the order to use them, a holding line for 'answer now', and the shape of a yes."
 
 explain: |
-  When someone makes you a bad offer, "no" starts a fight and "yes" costs you. The third option, which Chris Voss explains in public, is to ask them how. "How am I supposed to deliver that in two weeks with the team I have?" puts your problem on their desk, and people work on problems they are asked to solve.
+  When someone makes you a bad offer, "no" starts a fight and "yes" costs you. The third option, which Chris Voss teaches in his book Never Split the Difference, is to ask them how. "How am I supposed to deliver that in two weeks with the team I have?" puts your problem on their desk, and people work on problems they are asked to solve.
 
   This prompt reads the demand and guesses what the other side really needs. It writes a label that names their pressure without agreeing to anything, then five questions that start with how or what and rest on your real constraint. No whys, no yes-or-no questions, no bluffs. It orders them from softest to the one you keep for "take it or leave it", writes the line to hold when they press for an answer now, and gives you the sentence to say when a question opens a door toward a deal you could accept.
 
@@ -137,3 +137,4 @@ works_best_with:
   inputs:
     - "The other side's past emails, for their words and their pressures"
     - "Your cash and capacity numbers, so the constraint is exact"
+next: [negotiation-call-prep-planner]

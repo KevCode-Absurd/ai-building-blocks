@@ -34,7 +34,8 @@ how_to_use:
   - Add your topic, exact keyword, audience, tone and word count. Add other keywords and page titles to link to if you have them.
   - Ask your AI to write the post.
   - Check the answer box, the five FAQs and the link spots. Your AI cannot check live search results, so rankings are not promised.
-  - Replace every suggested external link or statistic with a real source you have checked yourself.
+  - Replace every suggested external link or statistic with a real source you have checked yourself. Anything marked UNVERIFIED must be sourced or cut.
+  - Next, run the draft through the Page SEO optimizer and map its internal links with the Internal link mapper. Check every claim before you publish.
 output_sample:
   input:
     - Your topic and the exact keyword you want to rank for
@@ -63,3 +64,4 @@ output_sample:
       contains: Restates the answer in new words and ends with one call to action.
     - name: Internal links, external links and product CTA
       contains: Link spots for your pages, a suggested source to check, and a product next step when it fits.
+next: [internal-link-mapper]

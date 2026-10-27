@@ -1,14 +1,14 @@
 ---
 name: workthrough
-description: Automatically document all development work and code modifications in a structured workthrough format. Use this skill after completing any development task, bug fix, feature implementation, or code refactoring to create comprehensive documentation.
+description: Document development work and code modifications in a structured workthrough format. Use this skill when the user asks for a report after a development task, bug fix, feature implementation, or code refactoring.
 license: MIT
 ---
 
-This skill automatically generates detailed workthrough documentation for all development work, capturing the context, changes made, and verification results in a clear, structured format.
+This skill generates detailed workthrough documentation for development work the user asks to have written up, capturing the context, changes made, and verification results in a clear, structured format.
 
 ## When to Use This Skill
 
-Use this skill automatically after:
+Use this skill when the user asks for a report, after:
 - Implementing new features or functionality
 - Fixing bugs or errors
 - Refactoring code
@@ -122,16 +122,16 @@ const example = () => {
 
 ### Build Verification
 ```bash
-> build command output
-✓ Compiled successfully
-Exit code: 0
+> [paste the real build command and its output here]
+[exit code from your run]
 ```
 
 ### Test Results
 ```bash
-> test command output
-All tests passed
+> [paste the real test command and its output here]
 ```
+
+Never write build output, test results or exit codes that the user did not show you. If a check was not run, write "not run".
 
 ## Next Steps
 - Any follow-up tasks needed
@@ -140,7 +140,7 @@ All tests passed
 
 ## Automation Instructions
 
-After completing ANY development work:
+When the user asks for a report on finished development work:
 
 1. **Gather Information**
    - Review all files modified during the session
@@ -190,7 +190,7 @@ Create the `workthrough/` directory if it doesn't exist.
 
 ## Integration with Workflow
 
-This skill should be triggered automatically at the end of development sessions. The documentation serves as:
+Run this skill only when the user asks for it, usually at the end of a development session. The documentation serves as:
 - A development log/journal
 - Knowledge base for the project
 - Onboarding material for new developers

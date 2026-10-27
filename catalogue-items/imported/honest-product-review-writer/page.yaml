@@ -34,7 +34,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill. Use an AI that can browse the web, or paste the evidence in yourself.
   - Paste your product list and sources. Say clearly whether any hands-on testing happened.
   - Check the criteria and the methodology block first. Each tier named must match work that was really done.
+  - Collect owner reviews by manual export, licensed data or a site's permitted tools, and follow each site's terms. Do not scrape against them.
   - Fix any flagged gaps, add your affiliate disclosure near the picks, then publish and date your updates.
+  - Later, re-run the evidence check at each dated update, and upgrade the piece when hands-on testing really happens.
 output_sample:
   input:
     - The product category and the pieces you plan (reviews, buying guides, or both)

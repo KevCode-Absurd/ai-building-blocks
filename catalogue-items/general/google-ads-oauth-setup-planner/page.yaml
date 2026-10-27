@@ -74,3 +74,4 @@ output_sample:
       contains: What is left before a refresh token, to hand to the next planner.
     - name: Evidence and gaps
       contains: The sources used, open questions and the checks that did not run.
+next: [google-ads-developer-access-setup-planner]

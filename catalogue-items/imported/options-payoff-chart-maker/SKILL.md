@@ -41,9 +41,11 @@ When the user provides a screenshot or text, extract:
 | IV | Shown in greeks panel, or estimate from vega | 20% |
 | Risk-free rate | — | 4.3% |
 
+**Ask before you guess.** If the premium or quantity is missing, ask the user for the real number first. Use a default only if they cannot give one, and then show a visible "DEFAULTS USED" banner on the chart that lists each guessed value (premium, IV, spot, days to expiry). Never present a defaulted number as the user's real figure.
+
 **Spot for screenshots**: spot is the underlying's current price, and broker screenshots often omit it or show it far from the strikes — don't read it off the strike labels. Use the price shown, else a live quote (the SPX probe below, or yfinance for other underlyings). Fall back to the middle strike only when no quote is available, and tell the user you did.
 
-**Current SPX reference price:**
+**Current SPX reference price** (optional; this needs Python with yfinance, which reads an unofficial Yahoo data feed that may change or block requests. If it fails, ask the user for the spot price):
 ```
 !`python3 -c "exec('try:\n import yfinance as yf\n p=yf.Ticker(\'^GSPC\').fast_info[\'lastPrice\']\n print(f\'SPX ≈ {p:.0f}\')\nexcept Exception:\n print(\'SPX price unavailable — check market data\')')"`
 ```

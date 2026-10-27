@@ -5,7 +5,7 @@ category: general
 boards: []
 type: skill
 role: make
-job: ops
+job: ship-and-host
 level: advanced
 inputs:
   - type: brief

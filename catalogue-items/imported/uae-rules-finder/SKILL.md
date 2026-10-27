@@ -45,6 +45,8 @@ Establish (ask if not stated; state assumptions if you must proceed):
 | **Dubai ISR (v3)** / **ADHICS** / **ADDA standard** | DESC / DoH / ADDA | Dubai government entities / Abu Dhabi DoH-regulated healthcare / Abu Dhabi government |
 | **DHCC Health Data Protection Regulation (2013)** | CPQ | Dubai Healthcare City licensees' patient data |
 
+Fine amounts, deadlines and regulation status in this table come from the instruments named in each row, as the author checked them on 2026-08-15. Confirm each figure and date in the official text before you quote it or act on it.
+
 **Routing rules that decide cases:**
 - **DIFC/ADGM displace the federal PDPL** for privacy within their zones — but sector overlays still reach in (a DIFC clinic's patient data hits the ICT Health Law; a DIFC bank branch regulated by CBUAE hits CBUAE data rules).
 - **Health data is jurisdiction-proof**: the ICT Health Law's localization applies wherever the provider sits.

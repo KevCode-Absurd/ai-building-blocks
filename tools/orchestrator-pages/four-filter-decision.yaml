@@ -7,7 +7,7 @@ thinking_why: It judges four separate questions and weighs them together. Give i
 headline: Test a deal, hire or purchase on four questions before you say yes
 subhead: Describe what you are about to commit to. It asks whether you understand it, whether it will last, whether you can trust the people and whether the price is right. It then turns the plan upside down and ends with a yes, no or too-hard call and how big to go.
 explain: |
-  Most bad commitments fail one of four ways. You did not really understand the thing, it did not last, the people were not who they seemed, or you paid too much. Charlie Munger and Warren Buffett ran their choices through a sequence like this and said no or "too hard" to most of what came by. The few that passed, they backed heavily.
+  A bad commitment often fails one of four ways. You did not really understand the thing, it did not last, the people were not who they seemed, or you paid too much. This sequence is inspired by Charlie Munger's Poor Charlie's Almanack.
 
   This workflow puts any deal, hire or purchase through that sequence. Each filter is a separate skill with its own tests and facts. A fail at any point is a real answer, not something to argue away. It then flips the plan to find how it could fail, compares it with the best chances you saw lately, and writes the call. The price step is a method of analysis. It is not personal financial advice.
 when:
@@ -31,9 +31,10 @@ you_get:
   - A value range, a walk-away price and the alternative to beat
   - A yes, no or too-hard call, the size of the commitment and what would change it
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Answer the first step honestly. If it says pass, read the reason before you ask it to carry on.
+  - Gather the deal details, the years that matter, your track record in the field, how the people are paid and the cost figures before you start.
   - Bring the best chances you saw in the last year to the last step, so the call has something to compare with.
 output_sample:
   input:
@@ -44,7 +45,7 @@ output_sample:
     - Your best alternative use of the same money or time (optional)
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - The handoff pack zip for this workflow
+    - The handoff pack for this workflow: HANDOFF.md plus one skill file for each step
   output:
     - name: step-01-circle-of-competence-mapper.md
       contains: The parts of the deal rated known, partly known or not known, your edge, and a basket of in, learn first or pass.
@@ -116,3 +117,5 @@ improve:
   - Keep your list of best chances up to date and bring it to the last step each time.
   - Save every call with its reasons, and compare with what happened.
   - Add your field's usual traps to the upside-down step.
+next: []
+before: []

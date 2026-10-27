@@ -45,6 +45,8 @@ first_result:
     - "Create an account on the DeepSeek platform and apply for an API key (checked 26 Oct 2026). Top up a small balance."
     - "Point an OpenAI-style client at https://api.deepseek.com with your key and set the model to deepseek-flash (checked 26 Oct 2026)."
     - "Send one short test prompt, then read the token counts in the reply and work out the cost from the table above."
+    - "Run the same prompt in the model you use now. Compare the answers and the cost side by side before you switch anything."
+    - "You end with the reply text and the token counts that set your cost. Next: check its answers with the Claim stress tester."
 needs:
   - "Chat: nothing we could confirm. Check the sign-in rules on the vendor's site."
   - "API: a platform account, an API key and a balance. Fees come out of the balance, and the granted balance is used first (checked 26 Oct 2026)."

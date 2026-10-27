@@ -154,7 +154,7 @@ index_gpu = faiss.index_cpu_to_gpu(res, 0, index_cpu)  # GPU 0
 # Multi-GPU
 index_gpu = faiss.index_cpu_to_all_gpus(index_cpu)
 
-# 10-100× faster than CPU
+# Often much faster than CPU (typical, not measured)
 ```
 
 ## LangChain integration
@@ -197,13 +197,15 @@ vector_store = FaissVectorStore(faiss_index=faiss_index)
 
 1. **Choose right index type** - Flat for <10K, IVF for 10K-1M, HNSW for quality
 2. **Normalize for cosine** - Use IndexFlatIP with normalized vectors
-3. **Use GPU for large datasets** - 10-100× faster
+3. **Use GPU for large datasets** - often much faster (a typical figure, not measured here)
 4. **Save trained indices** - Training is expensive
 5. **Tune nprobe/ef_search** - Balance speed/accuracy
 6. **Monitor memory** - PQ for large datasets
 7. **Batch queries** - Better GPU utilization
 
 ## Performance
+
+These are typical values, not measured results. Speed and recall change with your data, so test on your own vectors.
 
 | Index Type | Build Time | Search Time | Memory | Accuracy |
 |------------|------------|-------------|--------|----------|

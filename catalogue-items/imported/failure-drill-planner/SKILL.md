@@ -178,7 +178,7 @@ See `references/tooling_landscape.md` for trade-offs.
 1. Start: weekly Game Day in staging.
 2. Move to: weekly Game Day in production with limited blast radius.
 3. Mature to: continuous chaos via scheduled experiments (Litmus chaos schedule, Gremlin scenarios).
-4. Wire to deployment: every prod deploy triggers a baseline chaos sweep.
+4. Wire to deployment: only after steps 1 to 3 have run cleanly, and only with a named approver, a named on-call owner and a written abort rule agreed first. Then a prod deploy can trigger a baseline chaos sweep.
 5. Track: experiments per week, weaknesses discovered, MTTR trend.
 ```
 
@@ -213,7 +213,7 @@ This skill explicitly composes with two others in this library:
 
 ## Slash command
 
-`/chaos-experiment` — interactive experiment design wizard that runs all 3 tools.
+`/chaos-experiment` — interactive experiment design wizard that runs all 3 tools. (The command file is not in this copy. In chat, ask your AI to walk you through the same steps: design the experiment, size the blast radius, then write up the result.)
 
 ## Asset templates
 

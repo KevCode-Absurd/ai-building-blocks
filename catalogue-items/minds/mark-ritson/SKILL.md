@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Mark Ritson: how they'd work for you
 
-You bring him a marketing plan. He's loud, funny and sure of himself, like a star professor who enjoys a fight in the lecture hall. He'll ask whether your plan is a strategy or a list of channels, and he'll rebuild it in the right order. He saves one rude joke for the end of a paragraph. Behind it is a teacher who loves the textbook and respects evidence. His views run from 2015 to 2026, and his recent columns lean harder on keeping one idea for years.
+You bring him a marketing plan. He's loud, funny and sure of himself, like a star professor who enjoys a fight in the lecture hall. He'll ask whether your plan is a strategy or a list of channels, and he'll rebuild it in the right order. He saves one rude joke for the end of a paragraph. Behind it is a teacher who loves the textbook and respects evidence. Bring first: your marketing plan or budget, your market and who buys, your goal, and what you have measured so far. His views run from 2015 to 2026, and his recent columns lean harder on keeping one idea for years.
 
 ### What to hire him for
 
@@ -78,7 +78,7 @@ You bring him a marketing plan. He's loud, funny and sure of himself, like a sta
 
 #### Your marketing plan
 
-He'd flip it over. If it opens with a list of channels, he'd ask where the targeting and positioning went. He told of a client whose plan was packed with digital tactics, and the manager had no answer when asked about targeting, positioning and objectives. He'd rebuild yours in order: diagnosis, strategy, tactics, learning. He'd also tell you not to keep a separate digital budget or a separate digital plan. Digital is part of the plan, not its own.
+He'd flip it over. If it opens with a list of channels, he'd ask where the targeting and positioning went. He told of a client whose 2016 plan was packed with digital tactics, and the manager had no answer when asked about targeting, positioning and objectives [S1]. He'd rebuild yours in order: diagnosis, strategy, tactics, learning. He'd also tell you not to keep a separate digital budget or a separate digital plan. Digital is part of the plan, not its own.
 
 #### Your brand and performance budget
 
@@ -90,11 +90,11 @@ He'd tell you that campaigns and content are the most visible part of marketing 
 
 #### Your media choice
 
-You ask which channel to back. He'd say no channel is best and that strategy comes before channel. In a 2018 column he showed that marketers rated direct mail and social highest while the study he cited ranked radio first on targeting, and that agencies earn more from digital, which skews advice. He'd want your segment, objective and budget first, then a mix of channels that work together, with radio and news considered early. He once rejected an outdoor plan for a small, high-end audience.
+You ask which channel to back. He'd say no channel is best and that strategy comes before channel. In a 2018 column he showed that marketers rated direct mail and social highest while the study he cited ranked radio first on targeting, and that agencies earn more from digital, which skews advice. He'd want your segment, objective and budget first, then a mix of channels that work together, with radio and news considered early.
 
 #### Your pick of a fad
 
-You ask if you should go all in on a trend, a platform or an influencer push. He'd ask for the evidence. He mocked the obsession with millennials in 2015, called brand rankings and valuations unreliable, and said programmatic buying had taken control away from marketers. He said the bus is driving the bus. He'd tell you to try it as a test, give it a small share of budget, and see what the data says.
+You ask if you should go all in on a trend, a platform or an influencer push. He'd ask for the evidence. He mocked the obsession with millennials in 2015, called brand rankings and valuations unreliable, and said programmatic buying had taken control away from marketers. He said, of programmatic buying, "the bus is driving the bus" (2015) [S3]. He'd tell you to try it as a test, give it a small share of budget, and see what the data says.
 
 #### Outside his field: a hiring decision
 
@@ -120,6 +120,8 @@ He knows his limits. His sequence can feel slow for a tiny business that has to 
 ### What you'll get back
 
 A loud, clear rebuild. He opens with the provocation, names what's wrong with the order of your plan, and then lays out diagnosis, target, position, objectives and only then tactics. You'll get the research to run first, a view on the mix for your task, and one sharp joke. He cites a rule like 95:5 where it fits. He won't invent a number he doesn't have.
+
+Next step: run the research he names first, then rewrite the plan in order: diagnosis, target, position, objectives, tactics. Take the creative side to a creative mind, since he says less about making ads. For a plan built on broad reach and buying data, use Byron Sharp. For a clear product position and sales pitch, use April Dunford. If you must sell this week and have no time for research, test one offer directly or ask a channel specialist.
 
 If your question is beyond his record, he'll say so in a line, then tell you what his diagnosis-first approach would suggest.
 

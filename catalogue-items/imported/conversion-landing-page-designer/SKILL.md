@@ -300,6 +300,8 @@ For JavaScript driven reveals use `IntersectionObserver` or Framer Motion's `whi
 
 Never ship filler. These are the tells that a page was generated rather than made.
 
+Safety rule: the made-up names, numbers and avatars below are for design drafts only. Before the page goes live, swap every one for the real brand name, real reviews, real customers and verified figures. Never invent proof (reviews, statistics, customer names or results) on a live page. It can mislead buyers and break ad rules. If the real fact is missing, mark it "NEEDED" instead of making it up.
+
 - **No Lorem Ipsum.** Write real draft copy.
 - **No "John Doe".** Use diverse, realistic names.
 - **No placeholder brands** like "Acme Corp", "Nexus", or "SmartFlow". Invent contextual, believable names.
@@ -354,7 +356,7 @@ Every landing page includes one large type section stating the core benefit or t
 - Text starts in a subtle, muted tone, roughly 25 to 35% opacity of the theme's base text color.
 - As the section scrolls into view, each word transitions individually from that muted tone to the full text color, in reading order.
 - Words activate one at a time as they cross a trigger line, not the entire block flipping at once. The transition uses the custom easing curve from B7, never a linear fade.
-- Implement with `IntersectionObserver` per word, or a single scroll listener throttled through `requestAnimationFrame`. Never an unthrottled `window.addEventListener('scroll')`, per B7.
+- Implement with `IntersectionObserver` per word. Never use a `window.addEventListener('scroll')` listener, per B7.
 
 ---
 
@@ -371,6 +373,8 @@ When generating a landing page from scratch, return these in order before writin
 7. **Layout recommendation** — A, B, C, or D, and why
 
 Then build section by section per A6.
+
+Next steps: check every figure and claim against real data, hand the layout and copy to a designer or developer, and test the hero with real visitors before you send ad traffic.
 
 ---
 

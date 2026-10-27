@@ -11,7 +11,7 @@ subhead: Tell it who is stuck, who holds them and where. It seals the setting, g
 explain: |
   Stories about being trapped fail in four ways. The reader finds a way out the character missed. The captor is the same in every scene. The tries all cost the same. The escape arrives by luck.
 
-  This workflow fixes them in order. It first seals the place so every exit is shut for a reason a reader accepts. It then gives the person in power a mood scale, with a small warning sign for each mood, so even a calm scene carries a threat. It builds a ladder where each attempt costs more than the one before and leaves something lost, with a clock over it all. It then tests every escape for fairness, and last checks that every scene turns. The method comes from the craft shown in Stephen King's novel Misery.
+  This workflow fixes them in order. It first seals the place so every exit is shut for a reason a reader accepts. It then gives the person in power a mood scale, with a small warning sign for each mood, so even a calm scene carries a threat. It builds a ladder where each attempt costs more than the one before and leaves something lost, with a clock over it all. It then tests every escape for fairness, and last checks that every scene turns. The order is inspired by the craft in Stephen King's novel Misery.
 
 when:
   - You are writing a story about someone trapped, watched or cornered, in a house, a job, a family or a town.
@@ -26,7 +26,7 @@ you_give:
   - Who is stuck, who or what holds them, and where, in a few sentences
   - How the person in power talks and what they want
   - What your character would hate to lose
-  - Your scene list, for the last step
+  - Your scene list, for the last step (if you have none yet, steps 1 to 4 still run, and step 5 waits until you write one)
 
 you_get:
   - A sealed setting with every exit shut for a reason, and a watch list of ordinary objects
@@ -36,7 +36,7 @@ you_get:
   - Each scene marked for what changes in it
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 5 skill files in the order they run: Closed setting planner, Volatile antagonist mood mapper, Rising cost ladder builder, Fair escape checker and Scene turn checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe who is trapped, who holds them and where. It works step by step and saves each result.
   - Answer its questions about the person in power and what your character would hate to lose.

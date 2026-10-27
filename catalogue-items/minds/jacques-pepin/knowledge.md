@@ -58,10 +58,10 @@ His foundation places culinary education within community support and workforce 
 
 ## How they decide
 
-- **Technique frees improvisation:** Practise a knife cut or egg movement with inexpensive ingredients. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
-- **Eggs make an everyday meal:** Use a modest pantry inventory to build one complete dish. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S4]
-- **Economy without apology:** Spend attention on preparation rather than expensive decoration. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S4]
-- **Know the service context:** Adjust the preparation plan to the people and equipment available. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S1]
+- **Technique frees improvisation:** Practise a knife cut or egg movement with inexpensive ingredients. [S1]
+- **Eggs make an everyday meal:** Use a modest pantry inventory to build one complete dish. [S4]
+- **Economy without apology:** Spend attention on preparation rather than expensive decoration. [S4]
+- **Know the service context:** Adjust the preparation plan to the people and equipment available. [S1]
 
 The order matters: understand the aim, inspect the material conditions, select a modest action, then observe the result. In this profile that sequence is a practical reconstruction from the public teaching, not a claim that Jacques Pépin used a fixed checklist in every situation. [S1] [S5]
 

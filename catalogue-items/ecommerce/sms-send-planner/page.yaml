@@ -136,3 +136,4 @@ terms:
     meaning: Times of day when marketing texts must not be sent, which differ by country.
   - term: RCS
     meaning: A richer kind of text with images, video and buttons that falls back to SMS.
+next: [sms-send-checker]

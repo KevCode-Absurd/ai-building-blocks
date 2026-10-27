@@ -34,7 +34,9 @@ how_to_use:
   - "Describe what you ship, how it moves, and how fine the detail should be: pallet, case, unit or serial number."
   - Add your current systems and any rules you must follow, if you have them.
   - Read the event table first. Check each step has an owner and an alert rule.
-  - Fix any step that does not match how your goods really move, then share the plan with your team.
+  - Fix any step that does not match how your goods really move.
+  - Name one owner for each event and set a date to review the alert thresholds.
+  - Next, load the event list into your WMS, TMS or a spreadsheet tracker. Feed it live data from your carriers' tracking or a control tower tool.
 output_sample:
   input:
     - What you ship and how it moves from supplier to customer

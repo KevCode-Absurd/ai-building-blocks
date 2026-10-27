@@ -1,6 +1,6 @@
 # April Greiman: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 April Greiman is alive, and views can change. Everything below comes from a long interview she gave in 2019 [S2] and her own account of making *Does It Make Sense?* in 1986 [S3], both re-read in full for this version, plus a museum post from 2025 that describes her method and quotes her [S4], an overview article [S5] and a reference page [S1]. Treat each view as "as of" its source. Nothing here tells you what she thinks about tools or events after 2025. The public record of her own voice is thin: one interview and one account of one project.
 

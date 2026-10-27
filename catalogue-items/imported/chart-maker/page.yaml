@@ -34,6 +34,7 @@ how_to_use:
   - Paste in the chart maker instructions, or upload the skill file.
   - Upload your data file and say what question the chart should answer. Add chart type, colours or size if you care.
   - Check the chart. Look at the title, the axis labels and whether the chart type fits your question. Ask for changes in plain words.
+  - Check the chart's numbers against your source spreadsheet before you share it.
   - Download the PNG, SVG or HTML file. Paste the picture into your slide deck, or ask your AI to write a short caption for it.
 output_sample:
   input:

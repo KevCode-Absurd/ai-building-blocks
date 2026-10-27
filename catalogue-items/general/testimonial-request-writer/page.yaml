@@ -1,0 +1,136 @@
+new_slug: testimonial-request-writer
+name: Testimonial request writer
+summary: Share who you served and what you did. Get a short testimonial request with three easy questions and a follow-up.
+job: write-emails
+thinking: low
+thinking_why: It writes short messages from a few facts, with little judgement needed.
+headline: Testimonial request writer
+subhead: Tell it who you worked with, what you did for them and how you'll use their words. It writes a short, friendly request with three questions that are easy to answer, a follow-up, and a thank-you. It makes it simple to say yes, and fair to say no.
+explain: |
+  A request for a testimonial that says "could you write a few words?" gets put off. A blank page is hard. The customer isn't sure what to say, so they say nothing.
+
+  This skill makes it easy to say yes. It writes a short, warm message that names what you did together and asks three small questions: what was the problem, what changed, and what they would tell someone else. Answers to these make a good testimonial without a blank page. It adds a follow-up for those who don't reply and a thank-you. It asks for their permission to use their words and name, never suggests what the answer should be, and never asks only happy customers where a review site's rules say to ask everyone.
+when:
+  - You finished a project or sale and want a testimonial for your site.
+  - You have happy clients and have never asked them.
+  - You asked before and got no reply.
+not_for:
+  - "You need reviews on a public site such as Google: use the Review request and reply planner, which follows the sites' rules."
+  - "You want to reply to a review someone left: use the Customer review reply writer."
+  - "You want to write a testimonial yourself and post it as theirs: don't. Testimonials must be real words from a real customer."
+you_give:
+  - Who you worked with and what you did for them
+  - "How you'll use their words: your site, proposals, social media"
+  - "How you usually talk to them: formal, friendly, brief"
+  - Whether you'll offer to draft it for them to edit and approve (optional)
+you_get:
+  - A short request message, ready to send
+  - Three easy questions that make a good testimonial
+  - A follow-up for people who haven't replied
+  - A thank-you, and a permission line for using their name
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say who you worked with, what you did and where their words will appear.
+  - Send the request while the work is fresh, within a week or two of finishing.
+  - If they reply with short answers, ask the skill to turn them into a short testimonial. Send it back to them to edit and approve.
+  - Only publish what they approve, with the name and details they allowed.
+output_sample:
+  input:
+    - Who you worked with and what you did for them
+    - Where their words will appear
+    - How you usually talk to them
+  output:
+    - name: Request
+      contains: A short message that names the work, says how their words will be used, and asks.
+    - name: Three easy questions
+      contains: Questions about the problem, what changed and what they would tell others.
+    - name: Permission line
+      contains: A line asking if you may use their words and name.
+    - name: Follow-up
+      contains: A short, kind note for a week later.
+    - name: Thank-you
+      contains: A note to send when they reply.
+    - name: If they send short answers
+      contains: How to turn them into a short testimonial that they approve.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads the relationship
+    text: Takes what you did together and how you usually talk.
+  - title: Writes the request
+    text: A short message that names the work, says how the words will be used, and asks.
+  - title: Writes three questions
+    text: Easy questions about the problem, what changed, and what they'd tell others.
+  - title: Adds the permission line
+    text: Asks for their okay to use their words and name.
+  - title: Writes the follow-up
+    text: A short, kind note for those who haven't replied.
+  - title: Writes the thank-you
+    text: A thank-you to send when they reply.
+  - title: Offers a draft route
+    text: Offers to turn their answers into a short testimonial for them to approve.
+output_shape: |
+  REQUEST
+  Subject: <subject>
+  <message that names the work, says how their words will be used, and asks>
+
+  THREE EASY QUESTIONS
+  1. <the problem before>
+  2. <what changed>
+  3. <what they'd tell someone else>
+
+  PERMISSION LINE
+  <ask for okay to use their words and name>
+
+  FOLLOW-UP (after about a week)
+  <short note>
+
+  THANK-YOU
+  <short note>
+
+  IF THEY SEND SHORT ANSWERS
+  <how to turn them into a testimonial they approve>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Timing
+    how: Ask soon after a good moment, such as delivery or a result. Waiting makes it harder.
+  - what: The questions
+    how: Add one about a specific result if you have one they can confirm.
+  - what: How you use it
+    how: Say where their words will appear. People say yes more readily when they know.
+  - what: Your tone
+    how: Say if you are formal or friendly. The message should sound like your emails.
+judge:
+  - The request can be read in under a minute.
+  - The questions are easy to answer in a line or two.
+  - Nothing in the request suggests what the answer should be.
+  - It asks permission to use their words and name.
+  - It never writes the testimonial as if it came from them without their approval.
+test:
+  - Send the request to three clients and note how many reply. Compare with your last way of asking.
+  - Ask one client which question was hardest to answer. Reword it.
+  - Turn one set of answers into a testimonial and send it back. Check they would approve it.
+improve:
+  - Add your usual way of thanking clients to the skill file.
+  - Save the testimonials you get with the permission wording, so you can show where each came from.
+  - Pair it with the Customer evidence placement planner to decide where to show each one.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Short, friendly messages and questions work well in any strong chat AI.
+    - name: A simple form tool
+      why: A form with three questions makes it quicker for clients to reply.
+  inputs:
+    - A short note on the result you delivered for them
+    - Past emails showing how you talk to the client
+    - The page on your site where the testimonial will go
+terms:
+  - term: Testimonial
+    meaning: A short statement from a real customer about what it was like to work with you, in their words.
+  - term: Permission line
+    meaning: A sentence that asks if you may use their words and name, and where.

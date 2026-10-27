@@ -27,6 +27,14 @@ A practice-driven approach to UX that replaces heavy deliverables with rapid exp
 
 Always state the current score, the diagnostic rows that failed, and the specific fix for each.
 
+## How to run it
+
+1. Ask for the design problem, the users and (optional) a short note on how the team works today.
+2. List the business and user assumptions, then rank them by risk and uncertainty.
+3. Write a hypothesis for each top assumption, with a success rule set before the test.
+4. Pick the cheapest experiment for each: the test, who sees it, the signal and a time box.
+5. Score the process with the Quick Diagnostic, name the failed rows and give a fix for each.
+
 ## Framework
 
 ### 1. Declaring Assumptions

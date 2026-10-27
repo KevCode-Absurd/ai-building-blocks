@@ -9,7 +9,7 @@ subhead: A list of the computing clusters your MATLAB can use, with each profile
 explain: |
   A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 
-  It lists saved cluster profiles, finds clusters on your network and cloud, and imports a profile file from an admin. Then it validates the profile to prove it connects, sets the default and removes profiles you no longer need. It covers local, job-scheduler and cloud cluster types. It does not submit jobs or open pools. You need MATLAB with Parallel Computing Toolbox.
+  It lists saved cluster profiles, finds clusters on your network and cloud, and imports a profile file from an admin. Then it validates the profile to prove it connects, sets the default and removes profiles you no longer need. It covers local, job-scheduler and cloud cluster types. It does not submit jobs or open pools. You need MATLAB with Parallel Computing Toolbox. The files are shared under MathWorks' own licence (see LICENSE.md in the folder), which limits use to MathWorks products.
 when:
   - You do not know what parallel resources you have.
   - An admin sent you a profile file and you need to load it.
@@ -34,7 +34,9 @@ how_to_use:
   - Ask a plain question, such as "What parallel clusters can I use?" Add your admin's profile file if you have one.
   - Read the profile table. Unreachable profiles are marked, so you can tell them apart from missing ones.
   - When you validate a profile on a shared cluster, use a small worker count, such as 2.
+  - Cloud clusters need a cloud account and may bill you. Check the cost before you validate a cloud profile.
   - Confirm before your AI deletes any profile. Deleting cannot be undone.
+  - Once the default is set and validated, run your job on it. Start a pool in MATLAB with parpool, which uses the default profile.
 output_sample:
   input:
     - MATLAB with Parallel Computing Toolbox
@@ -56,3 +58,4 @@ output_sample:
       contains: A pass or fail result for each check on a profile, so you know it connects.
     - name: Deleted profiles
       contains: A note of any profiles you chose to remove after confirming.
+next: [matlab-speed-tuner]

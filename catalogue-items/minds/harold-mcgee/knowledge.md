@@ -58,10 +58,10 @@ His writing brings scholarship into ordinary kitchen questions and encourages cu
 
 ## How they decide
 
-- **Mechanism improves judgment:** Name the change you need before choosing the cooking method. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S4]
-- **Observation can challenge authority:** Write the predicted outcome before testing the instruction. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S3]
-- **Knowledge remains revisable:** Date a scientific claim and leave room for a better explanation. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S2]
-- **Efficiency can follow understanding:** Measure the resource saved alongside the quality of the result. Treat the result as a question to check in your own circumstances, rather than an instruction to ignore a conflicting constraint. [S3]
+- **Mechanism improves judgment:** Name the change you need before choosing the cooking method. [S4]
+- **Observation can challenge authority:** Write the predicted outcome before testing the instruction. [S3]
+- **Knowledge remains revisable:** Date a scientific claim and leave room for a better explanation. [S2]
+- **Efficiency can follow understanding:** Measure the resource saved alongside the quality of the result. [S3]
 
 The order matters: understand the aim, inspect the material conditions, select a modest action, then observe the result. In this profile that sequence is a practical reconstruction from the public teaching, not a claim that Harold McGee used a fixed checklist in every situation. [S4] [S3]
 

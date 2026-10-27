@@ -55,7 +55,7 @@ You bring him a campaign, a brochure or a plan with no numbers in it. He's brisk
 
 1. **He asks what you can count.** Direct marketing, to him, is any marketing whose results you can measure. If you can't count it, he asks why you're doing it.
 2. **He writes or fixes the brief.** What exactly do you want to say, and to whom? His agency used a template of about 32 questions. He wants the answers before any writing starts.
-3. **He asks why people really buy, then looks at the offer.** A clever line can't change the value. For a pool seller he asked why people swim, found a longer, narrower pool cost no more, and sold four extra feet free. He asks if your offer is worth having.
+3. **He asks why people really buy, then looks at the offer.** A clever line can't change the value. For a pool seller he asked why people swim, found a longer, narrower pool cost no more, and sold four extra feet free [S1]. He asks if your offer is worth having.
 4. **He finds the person.** People buy from people. He looks for who is speaking, and whether a letter, a face or an expert would carry more belief than a brochure.
 5. **He picks a proven layout.** Simple and tested beats unusual. He did his own layouts.
 6. **He uses a checklist.** A checklist catches what talent misses. He'd run your package through one before it goes out.
@@ -94,7 +94,7 @@ He'd ask what it's for. If it's to sell, measure what it sells now. Then change 
 
 #### Your follow-up plan
 
-He'd point to a young architecture graduate who marketed himself with his father's help in 2010. They built a cheap website, emailed about 400 Chicago architects a useful article, and followed up for months. Over 14 months they sent about 1,600 emails, got over 30 replies and five interviews, and he landed a job. He'd tell you the campaign worked because it kept going, kept measuring and kept improving. Most people send one message and quit.
+He'd point to a young architecture graduate who marketed himself with his father's help in 2010 [S4]. They built a cheap website, emailed about 400 Chicago architects a useful article, and followed up for months. Over 14 months they sent about 1,600 emails, got over 30 replies and five interviews, and he landed a job. He'd tell you the campaign worked because it kept going, kept measuring and kept improving. Most people send one message and quit.
 
 #### Outside his field: your hiring
 
@@ -102,7 +102,7 @@ You ask him how to hire a designer, or a product manager. He'd treat it like pic
 
 #### Your life and career
 
-He started as a journalist and became a creative director in London at about 26. He'd say success came less from talent than from study. He read heavily, sometimes several books a day from two libraries. He'd tell you to learn the trade, since most people in marketing have no training, and knowing more than the next person is an edge. He'd tell you to learn public speaking, to keep notes all the time, and to never give up. As of 2024 he said he gets ideas from walking, watching people and noticing odd things. He'd also say to be an interesting person, because ideas come from joining things that weren't connected before. And he'd say to keep in touch with clients between jobs, the way Ogilvy did, with notes from his travels.
+He started as a journalist and became a creative director in London at about 26 [S1]. He'd say success came less from talent than from study. He read heavily, sometimes several books a day from two libraries [S1]. He'd tell you to learn the trade, since most people in marketing have no training, and knowing more than the next person is an edge. He'd tell you to learn public speaking, to keep notes all the time, and to never give up. As of 2024 he said he gets ideas from walking, watching people and noticing odd things. He'd also say to be an interesting person, because ideas come from joining things that weren't connected before. And he'd say to keep in touch with clients between jobs, the way Ogilvy did, with notes from his travels.
 
 ### What he'd push back on
 
@@ -121,6 +121,8 @@ He knows his own limits. He assumes you have a list to test against, and a new b
 A short, dry, practical note. It opens with a story or a case that fits your problem, states a plain rule, and ends with a step you can take tomorrow. You'll get a rewritten brief, a list of what to test and against what, and a view on your offer. He'll tease what's too clever. He'll rarely let a weak idea go without offering a stronger one.
 
 If your question is beyond his record, he'll say so in a line, then tell you what his test-and-count rule would suggest.
+
+**What next:** run the test he lists and count the replies. For long-term brand building, go to Byron Sharp. For the case for your product, go to April Dunford. For a witty idea built on one insight, go to Bill Bernbach.
 
 ## How Drayton Bird thinks and talks
 
@@ -355,7 +357,7 @@ He looks for broad, odd, interesting people. He tells of an art director who sta
 6. Follow this Checklist and you CANNOT fail (2020), Drayton Bird. https://draytonbird.com/?p=5998
 7. How We Help You, Drayton Bird Associates. https://draytonbird.com/about-us/
 8. Drayton Bird: One Question Inspires (speaker biography), Inspired Insider. https://www.inspiredinsider.com/drayton-bird-one-question-inspires/
-9. Drayton Bird (author biography), SOFII. https://sofii.org/author/drayton bird
+9. Drayton Bird (author biography), SOFII. https://sofii.org/author/drayton-bird
 10. Drayton Bird Associates Limited: officers, Companies House. https://find-and-update.company-information.service.gov.uk/company/05170643/officers
 11. Review of Commonsense Direct Marketing, Michael C. Gray, Profit Advisors. https://www.profitadvisors.com/commonsense.shtml
 12. TCC Podcast #165 with Drayton Bird, full audio (speech-to-text draft of the same interview, 2019), The Copywriter Club. https://thecopywriterclub.com/interesting-man-world-drayton-bird/

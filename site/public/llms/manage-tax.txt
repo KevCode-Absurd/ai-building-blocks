@@ -1,8 +1,10 @@
 # Prepare tax calculations and reviews: AI Blocks
 
-> 4 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 6 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Cash tax payment reconciler](https://useaiblocks.com/skills/current-tax-cash-payment-bridge): Share current tax expense and payable balances. Check cash paid against the reported payment and explain gaps.
 - [Deferred tax calculator](https://useaiblocks.com/skills/deferred-tax-calculator): Share book values, tax bases and rates. Get a deferred-tax schedule, evidence gaps and draft accounting entries for review.
+- [Self-assessment tax return checklist](https://useaiblocks.com/skills/self-assessment-tax-return-checklist): Say how you earned money. Get records to gather, totals to work out, an order of work and questions for your accountant.
+- [Tax set-aside planner](https://useaiblocks.com/skills/tax-set-aside-planner): Give the tax share your accountant quotes. Get a rule for each payment, a place to keep it and dates to check.
 - [Tax strategist agent](https://useaiblocks.com/agents/agency-finance-tax-strategist): Get a tax planning brief for one decision: your facts, the options, the questions for your tax pro and the deadlines to check. Not a tax filing.
 - [Working capital and cash tax checker](https://useaiblocks.com/workflows/reconcile-working-capital-and-tax-cash): Share balance changes, currency notes and tax schedules. Get linked checks of operating cash movements, cash taxes and unresolved differences.

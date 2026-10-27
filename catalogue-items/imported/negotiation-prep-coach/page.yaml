@@ -31,12 +31,13 @@ you_get:
   - A fallback plan
   - A prep score with gaps to fix
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the full text of this skill. No code, files or paid tools are needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Also paste references/techniques.md if you can. The skill points to it for extra tactics. No paid tools are needed.
   - Describe the deal or talk in a few lines. Say who you are talking to and what is at stake.
   - Add what you want, your limits, and your best option if no deal happens.
   - Add what you know about the other side, such as their goals, pressures and past replies (optional).
   - Read the prep sheet and check the score. Ask your AI to fill the gaps it names.
   - Rewrite the opening and questions in your own words before the talk.
+  - Rehearse the opening and your feeling labels out loud with a colleague. Write your walk-away point on paper before the talk.
 output_sample:
   input:
     - A short description of the deal or talk
@@ -58,3 +59,12 @@ output_sample:
       contains: Your best option if no deal happens, and the step-by-step plan for your offers.
     - name: Score and gaps
       contains: Your prep score out of 10 and the specific gaps to fix to reach 10.
+terms:
+  - term: accusation audit
+    meaning: Saying the worst things they may think about you before they do, so they relax.
+  - term: Black Swan
+    meaning: A hidden fact about the other side that changes what the deal is really about.
+  - term: walk-away point
+    meaning: Your best option if no deal happens. The deal must beat it, or you leave.
+  - term: Ackerman bargaining
+    meaning: A set way to raise your offer in smaller and smaller steps toward your target price.

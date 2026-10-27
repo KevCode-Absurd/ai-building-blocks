@@ -2,7 +2,7 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-tm7-threat-model
 name: Microsoft threat model file builder
-summary: Turn your system description into a Microsoft Threat Modeling Tool file (.tm7) with STRIDE threats. Opens in the tool without errors.
+summary: Turn your system description into a .tm7 file for Microsoft's Threat Modeling Tool, with STRIDE threats. Check it opens first.
 job: secure-code
 headline: Microsoft threat model file builder
 subhead: Describe your system, its data stores, outside parties and data flows. Your AI builds a threat model file for the Microsoft Threat Modeling Tool. It adds STRIDE threats for each flow.
@@ -15,8 +15,9 @@ how_to_use:
   - Describe your system in a few lines. Name each part, each data store, each outside party and each data flow.
   - Ask your AI to build the .tm7 file. Add your trust boundaries if you have them.
   - Download the file and open it in the Microsoft Threat Modeling Tool on Windows.
-  - If the tool says the file is corrupted, tell your AI the exact message and ask it to fix the file.
+  - We have not checked the file in every version of the tool. If the tool says the file is corrupted, tell your AI the exact message and ask it to fix the file.
   - Review each threat in the tool. Set its state and write a mitigation.
+  - Next, export the threat list for your security review and track each mitigation in your task tracker. The tool runs on Windows only. If you are not on Windows, ask your AI for a plain STRIDE threat table instead.
 output_sample:
   input:
     - "A list of your parts: apps, services and functions"

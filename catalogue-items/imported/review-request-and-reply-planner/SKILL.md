@@ -44,6 +44,7 @@ Collect, or state your assumption:
 1. Solicitation plan: trigger, day offset, first question, follow-ups.
 2. Rating policy: what to leave, reply wording for an irrelevant negative.
 3. Templates: public complaint reply with private handoff; rude-complaint reply with situational humor; positive-review reply.
+4. Next steps: test the new request timing on one batch of customers first. After 30 to 60 days, compare review volume and average rating with the last batch.
 
 ## Common mistakes
 

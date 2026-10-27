@@ -34,10 +34,11 @@ you_get:
   - A table of gains or losses for each rate move
   - A data notes list of everything computed or missing
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Turn on code running and web access if you have them. Paste in this skill.
+  - Open Claude, ChatGPT or Gemini. Turn on code running if you have it. Paste in this skill. Turn on web access only if you want free curve data added.
   - Paste or attach your holdings list. Make sure each bond has a price, coupon and maturity.
   - Say which currency you hold in and whether any bonds are Indian. Name a benchmark if you have one.
   - Read the data notes first. Check each figure marked computed or n/a against your broker statement.
+  - It works in this order, prices, weighted measures, cash flows, rate shocks, then data notes. A bond with no price is marked n/a and left out of the weighted figures.
   - Then read the rate shock table. Look at the top contributors and check those bonds' terms in the issuer documents.
   - Treat the result as research, not advice.
 output_sample:
@@ -47,6 +48,7 @@ output_sample:
     - A benchmark (optional)
   prerequisites:
     - An AI that can reach the web or run code, only if you want free curve and spread data added
+    - "Web prices come from Yahoo Finance through an unofficial route that can break and may go against Yahoo's terms. Pasting your own prices and curve is safer"
   output:
     - name: Portfolio summary
       contains: Market value, yield, modified duration, DV01 and average rating, against a benchmark if you gave one.

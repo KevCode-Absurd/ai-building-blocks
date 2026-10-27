@@ -54,6 +54,8 @@ make LLAMA_CUDA=1
 make LLAMA_HIP=1
 ```
 
+AI Blocks note: the `make LLAMA_...` flags above are from older llama.cpp releases. Current releases build with CMake, for example `cmake -B build -DGGML_METAL=ON` or `-DGGML_CUDA=ON`, then `cmake --build build --config Release`. Check the llama.cpp build docs for your version before you run these commands. If the build fails, report the exact error and do not guess a fix.
+
 ### Download model
 
 ```bash
@@ -206,6 +208,8 @@ cat prompts.txt | ./llama-cli \
 ```
 
 ## Performance benchmarks
+
+AI Blocks note: the speeds, speedups and prices below are the original author's example figures. The hardware and test conditions are not stated, so treat them as a rough sense of scale. Never quote them as the user's expected speed or cost.
 
 ### CPU performance (Llama 2-7B Q4_K_M)
 

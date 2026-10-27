@@ -123,3 +123,6 @@ works_best_with:
 terms:
   - term: "Walkthrough"
     meaning: "An explanation written in the order a person needs, not the order the computer runs."
+next:
+  - code-walkthrough-writer
+  - diff-security-skimmer

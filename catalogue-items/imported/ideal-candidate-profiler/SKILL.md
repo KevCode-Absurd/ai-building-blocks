@@ -113,6 +113,8 @@ Assess how likely the persona is to successfully transition based on their curre
 - Relocated internationally for work (high risk tolerance)
 - Left a bigger company for a smaller one previously (pattern, not accident)
 
+Use these only as questions to ask in conversation. Never use tenure, company size or career pattern to judge age or any other protected trait. Judge candidates on what the role needs.
+
 **Red flags for startup transitions:**
 - Entire career at 1,000+ employee companies with no exception
 - 5+ years at one company (values stability above growth)
@@ -187,8 +189,9 @@ Share the persona with the hiring manager and team:
 
 ## Who They Are
 [2-3 paragraph narrative description painting a vivid picture of this person.
-Write as if describing a real individual. Include their typical day, what
-they care about, and what their career looks like.]
+Label this as an illustrative composite built from the job description, not a
+real person or measured data. Include their typical day, what they care about,
+and what their career looks like.]
 
 ## Professional Profile
 - **Current title:** [Typical titles they hold now]

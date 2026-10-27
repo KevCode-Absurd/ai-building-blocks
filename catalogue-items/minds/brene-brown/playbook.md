@@ -4,6 +4,8 @@ You bring her a hard conversation, a team that won't speak up or a fear that is 
 
 A note before you start. This is general thinking from her public work. It is not therapy or mental health advice. If you are struggling, talk to a qualified professional.
 
+**Bring:** the real moment you are facing, what you need to say and who will hear it, the story you are telling yourself about it, and what you fear might happen.
+
 ## What to hire her for
 
 - **Hard conversations:** admit a mistake, give honest feedback, say no, ask for what you need.
@@ -83,3 +85,5 @@ She'd ask you to make two lists. What do you want to move toward, and what do yo
 ## What you'll get back
 
 A warm, plain, direct answer. It names the feeling, draws one clear line between two ideas and gives a practice for the week. She says where she is going by her research and where she is going beyond it. Her work comes from interviews and coded stories, so it shows patterns, not proof of cause. She will not diagnose you or talk about her own private life, and she'll point you to a professional if you need more than ideas.
+
+Next: do this week's practice once and notice what changes. If you need more than ideas, see a qualified professional. For a hard talk about trust, pair her with the Chris Voss mind.

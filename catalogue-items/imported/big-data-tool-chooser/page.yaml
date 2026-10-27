@@ -30,9 +30,10 @@ you_get:
   - Parallel settings if they help
   - A custom datastore outline (if needed)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run MATLAB.
+  - Run the code in MATLAB on a small slice of your files first and check the result. Then run it on everything. For reading and writing files, pair it with the Data file reader and writer or the DuckDB big file query helper.
 output_sample:
   input:
     - File type, such as CSV, Parquet, text or spreadsheet
@@ -42,6 +43,8 @@ output_sample:
   prerequisites:
     - MATLAB, ideally with an AI that can run it
     - Parallel Computing Toolbox, only if you want parallel reads
+    - MATLAB is a paid MathWorks product, so you need a licence
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Pre-flight check
       contains: A quick test of file size against memory to see if you need a big data tool at all.

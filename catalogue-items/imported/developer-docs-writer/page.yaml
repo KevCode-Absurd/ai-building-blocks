@@ -16,8 +16,8 @@ when:
   - Your team writes docs in different voices and wants one standard.
   - You want a score and a fix list for a page before you publish it.
 not_for:
-  - "You need marketing or landing-page copy: use the storybrand-messaging skill instead."
-  - "You want better code comments or variable names: use the clean-code skill instead."
+  - "You need marketing or landing-page copy: use Brand messaging builder or Page copywriter instead."
+  - "You want better code comments or variable names: use Code comment cleaner instead."
   - "You have no code or draft to work from and need the product built first: ask a developer on your team to explain how it works."
 you_give:
   - Your product, API or draft docs
@@ -30,11 +30,11 @@ you_get:
   - A score out of 10 with failed checks listed
   - Before and after rewrites of weak sentences
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions, or add the skill folder if your AI accepts files.
+  - Before you start, gather your draft docs, the code paths or endpoints they cover, and who will read them. Then open Claude, ChatGPT or Gemini and paste in the skill instructions, or add the skill folder.
   - Paste your draft docs or describe your product or API. Add the code paths or endpoints the docs cover.
-  - Say who will read the docs and how much they know. Add your own style guide if you have one.
+  - Say who will read the docs and how much they know. Add your own style guide if you have one. This skill is Wondel.ai's technical-documentation skill (MIT licence), renamed only.
   - Ask for an audit, a rewrite or a new doc. For an audit you get a score out of 10 and a fix list.
-  - Check the result against your code, then pass it to a reviewer before you publish.
+  - Check the result against your code, then pass it to a reviewer before you publish. Work through the fix list from an audit one item at a time.
 output_sample:
   input:
     - Your product, API or draft docs

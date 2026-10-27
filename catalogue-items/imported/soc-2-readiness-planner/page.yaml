@@ -34,7 +34,8 @@ how_to_use:
   - Describe your systems, the customer data you hold and the security practices you have today.
   - Say if you want a Type I or Type II report, and add your target date if you have one.
   - Ask for the control matrix, gap list and evidence checklist. The helper scripts need an AI that can run Python code.
-  - Check each control owner and evidence source, then give the gaps to your team to fix.
+  - "To run the helper scripts, save your controls as a JSON file: a list of controls, or an object with a controls list. The matrix builder can write this file for you with --format json."
+  - Check each control owner and evidence source, then give the gaps to your team to fix. Hand the control matrix and gap list to the control owners. When the gaps are closed, give them to an independent CPA firm for the audit.
   - Treat any audit cost or timeline figures as rough estimates. They vary by auditor and scope, so confirm them with your auditor.
 output_sample:
   input:

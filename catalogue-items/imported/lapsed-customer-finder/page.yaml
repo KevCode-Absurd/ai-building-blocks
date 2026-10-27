@@ -32,10 +32,10 @@ you_get:
 how_to_use:
   - Use an AI that can run code and the Shopify CLI, such as Claude Code. A plain chat window cannot do this.
   - Log in to your store first with the Shopify CLI. Your login needs permission to read and change customers.
-  - Paste the skill and give your store domain. Turn dry run on.
+  - Paste the skill and give your store domain. Turn dry run on. Use a dated tag such as win-back-2026-11, so you can tell each run apart and not tag the same people twice.
   - Check the count and the preview. Change the cutoff or minimum orders if the list looks wrong.
   - Run it again with dry run off. It tags up to 500 customers per run.
-  - Before you email the CSV, confirm each person agreed to get marketing email.
+  - The skill leaves out anyone who already has the tag or has not agreed to marketing email. If it cannot see that status, remove those people yourself before you email the CSV.
 output_sample:
   input:
     - Your store domain

@@ -34,7 +34,7 @@ how_to_use:
   - Paste your AI policy. If you have none, say so and accept provisional mode, where the check runs on common positions.
   - Ask your AI to review the terms. Read the bottom line first, then the term-by-term review.
   - Check the redlines and the policy differences. Take the summary to a lawyer before you sign anything important.
-  - If a step mentions the setup interview, use the setup-interview folder inside the skill. It is copied in so the skill works alone.
+  - The setup interview and the plugin config files named in the skill are optional. In a plain chat, paste your AI policy instead, or say "provisional". The skill then reviews against common positions and tags every finding as provisional.
 output_sample:
   input:
     - The vendor's AI addendum, main agreement or terms of service
@@ -58,3 +58,4 @@ output_sample:
       contains: What to do if the vendor refuses to change the terms.
     - name: Practical notes
       contains: Extra points to keep in mind, plus next steps after the review.
+next: [contract-risk-reviewer, ai-impact-assessment-writer, privacy-policy-drafter]

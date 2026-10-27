@@ -17,7 +17,7 @@ when:
   - You want an opt-in page with a clear headline.
 not_for:
   - "You want a long blog post: use a writer or a content skill, since this makes a page, not an article."
-  - "You want email copy or a sequence: write the emails in a separate email tool or ask your AI for an email series."
+  - "You want email copy or a sequence: use Follow-up email sequence writer."
   - "Your page is live and you want a higher sign up rate through testing: use a conversion testing step once you have traffic."
 you_give:
   - Your offer and price
@@ -32,11 +32,13 @@ you_get:
   - Final call to action
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Before you start, gather two or three real customer quotes or numbers. The proof section depends on them.
   - Paste your offer, price, audience, their main doubt and the one action you want.
   - Add real quotes, numbers or logos if you have them. If you do not, the copy marks the gap instead of making proof up.
   - Read the hero first. Ask for changes until the headline states your offer in plain words.
   - Check every section marked as missing proof, and add real proof before you publish.
-  - "Hand the copy to your page builder. Use the pre-launch checklist: test every link, check the page on a phone, and add the proof you owe. Then try the Variants for testing in an A/B test."
+  - "Hand the copy to your page builder. Run the checklist your AI lists at the end of the copy: test every link, check the page on a phone, and add the proof you owe. Then try the Variants for testing in an A/B test."
+  - Next, check the live page with Landing page 30-point checker.
 output_sample:
   input:
     - Your offer, and its price if it has one

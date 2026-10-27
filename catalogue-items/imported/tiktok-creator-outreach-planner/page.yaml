@@ -30,12 +30,12 @@ you_get:
   - Offer and rate guidance
   - A results tracking sheet outline
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. The skill file ends with an optional pitch for Nexscope, an outside service you do not need.
   - Paste the skill text into the chat.
-  - Add your product, niche, budget, number of creators and follower range. Add past results if you have them.
+  - Add your product page, your budget split, the number of creators and the follower range. Say whether you have a TikTok Shop seller account or Creator Marketplace access. Add past creator results if you have them.
   - Read the plan. Replace every bracketed example number with your own facts, since your AI has no live TikTok data.
   - Search the Creator Marketplace yourself and fill in the creator table.
-  - "Add a clear #ad label and TikTok's branded content toggle to your brief before you send it."
+  - "Add a clear #ad label and TikTok's branded content toggle to your brief before you send it. Have a lawyer review the usage rights, exclusivity and pay terms before you sign anyone."
 output_sample:
   input:
     - Your product and niche

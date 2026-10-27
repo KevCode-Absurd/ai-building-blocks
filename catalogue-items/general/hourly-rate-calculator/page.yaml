@@ -1,0 +1,132 @@
+new_slug: hourly-rate-calculator
+name: Hourly rate calculator
+summary: Give it your target pay, costs and billable hours. Get an hourly rate, a day rate and a project price.
+job: set-prices
+thinking: low
+thinking_why: It follows a fixed set of sums from numbers you give it.
+headline: Hourly rate calculator
+subhead: Tell it the take-home pay you want, your yearly costs, your days off and how many hours you can really bill. It works out the revenue you need, then your hourly rate, day rate and a price for a project of a set size. It shows how the rate moves if billable hours change.
+explain: |
+  Many freelancers set a rate by copying someone else, or by dividing a yearly salary by 2,000 hours. Both ignore the time you can't bill: finding clients, doing admin, holidays and sick days. The rate looks fine and the year still comes up short.
+
+  This skill works from your own numbers, in the right order. It starts with the take-home pay you want, adds tax set-aside, costs and a profit margin if you want one, and arrives at the revenue you need. It then counts the hours you can really bill, after time off and unbilled work, and divides. You get an hourly rate, a day rate and a price for a project of a size you give. It also shows what happens to the rate if you bill fewer hours than you hoped. You supply the tax share. It never assumes one.
+when:
+  - You are going freelance and ask "how much should I charge?"
+  - Your rate hasn't changed in a while and you aren't sure it covers your costs.
+  - A client asked you to justify your price.
+not_for:
+  - "You want a market rate for your work: look at what peers charge, then compare it with the number here."
+  - "You are pricing a product, not your time: use the Three-package pricing planner."
+  - "You want a full proposal for a client: use the Freelance website quote and proposal planner."
+you_give:
+  - The take-home pay you want for a year
+  - Your yearly business costs, such as software and insurance
+  - The weeks you want off, and the share of your week you can bill
+  - The share of income to put aside for tax, from your accountant (optional)
+  - A project size in hours or days (optional)
+you_get:
+  - The revenue you need for the year, built up step by step
+  - An hourly rate and a day rate
+  - A price for a project of the size you give
+  - A table showing how the rate changes with billable hours
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the pay you want, your yearly costs, weeks off and the hours you can bill in a week.
+  - Add the tax share your accountant gave you. If you leave it out, the skill marks the rate as before tax.
+  - Check the billable hours. Most people overestimate them, so try a lower figure too.
+  - Use the rate as a floor. Price a project above it if the work is hard or rushed.
+output_sample:
+  input:
+    - The take-home pay you want, and your yearly costs
+    - Weeks off, and the hours you can bill in a week
+    - Your tax share from your accountant (optional)
+    - A project size in hours or days (optional)
+  output:
+    - name: What you need to earn
+      contains: Take-home pay, tax set-aside, costs and margin added up to the revenue you need.
+    - name: Your billable time
+      contains: Weeks worked times billable hours a week.
+    - name: Your rates
+      contains: Hourly rate and day rate, each shown with its sum.
+    - name: A project
+      contains: The rate times the project size you gave.
+    - name: What if you bill less
+      contains: The hourly rate at fewer billable hours.
+    - name: Missing
+      contains: Anything you did not give, such as a tax share.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Starts from your pay
+    text: Takes the take-home pay you want for the year.
+  - title: Adds tax and costs
+    text: Adds your tax share, if given, and your yearly costs.
+  - title: Adds a margin
+    text: Adds a profit or buffer margin if you want one.
+  - title: Counts billable time
+    text: Takes weeks off from the year and applies your billable share of the week.
+  - title: Works out the rates
+    text: Divides the revenue by billable hours for the hourly rate, and by billable days for the day rate.
+  - title: Prices a project
+    text: Multiplies the rate by the project size you give.
+  - title: Tests the rate
+    text: Shows the rate at fewer billable hours, so you see how fragile it is.
+output_shape: |
+  WHAT YOU NEED TO EARN
+  Take-home pay <yours> + Tax set-aside <on your share> + Costs <yours> + Margin <yours> = Revenue needed <total>
+
+  YOUR BILLABLE TIME
+  Weeks worked <52 less your weeks off> x Billable hours a week <yours> = Billable hours <total>
+
+  YOUR RATES
+  Hourly <revenue / hours> | Day <revenue / days>
+
+  A PROJECT OF <size>
+  <rate x size>
+
+  WHAT IF YOU BILL LESS
+  Billable hours <lower> -> Hourly rate <new>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Billable hours
+    how: Be honest. Time finding clients, doing admin and learning is unbilled. Many people can bill well under a full week.
+  - what: Tax share
+    how: Use the one from your accountant. Without it the rate is before tax and the skill says so.
+  - what: Weeks off
+    how: Count holidays, sick days and slow weeks. A lower number of weeks worked raises the rate.
+  - what: Margin
+    how: Add a margin for slow months and growth. Zero is allowed, but the rate has no buffer.
+judge:
+  - The sums can be rebuilt by hand from your numbers.
+  - Revenue needed is take-home pay plus tax, costs and margin.
+  - The rate uses billable hours, not all hours.
+  - No tax rate appears unless you gave it.
+  - The table shows a lower rate of billing and what it does to the rate.
+test:
+  - Do the sums by hand with your numbers. The skill's rate should match.
+  - Cut billable hours by a fifth. The rate should rise by about a quarter.
+  - Compare your result with what peers charge. If you are far apart, check your costs and hours.
+improve:
+  - Save your costs and tax share in your about-me note, and rerun this each year.
+  - Add your usual project sizes to the skill file, so project prices come out ready to quote.
+  - Keep a record of the hours you really billed each month, and use it in place of your estimate.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Fixed sums from your numbers are quick for any strong chat AI.
+    - name: A spreadsheet
+      why: Copy the sums into a sheet so you can change a number and see the rate move.
+  inputs:
+    - A list of your yearly business costs
+    - A record of the hours you billed last year
+    - What peers in your field charge, from public price lists
+terms:
+  - term: Billable hours
+    meaning: Hours you can charge a client for, not including admin, finding work or time off.
+  - term: Day rate
+    meaning: What you charge for a working day, usually your hourly rate times the hours you bill in a day.

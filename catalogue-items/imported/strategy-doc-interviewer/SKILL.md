@@ -76,6 +76,8 @@ Each rank gets patched in as the user confirms it.
 
 ## Pairing with Other Skills
 
+These skills are not in this library. They are named only for contrast:
+
 - `day-plan` — different pattern (task triage), not interview-style.
 - `organize-tasks` — Todoist-specific.
 - `memory-management` — separate from this; persona/preferences go to memory.

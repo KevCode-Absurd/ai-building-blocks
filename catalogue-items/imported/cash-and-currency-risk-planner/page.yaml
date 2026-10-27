@@ -9,7 +9,7 @@ subhead: You get a plan to keep enough cash on hand, make idle money earn someth
 explain: |
   You get a plan to keep enough cash on hand, make idle money earn something, and limit damage from rate and currency swings. Share your balances, debts and foreign currency exposure, and the skill acts like a company treasurer.
 
-  It starts with where cash sits across accounts, then builds a cash ladder of expected money in and out by day, week and month to spot dry spells. For foreign currency it estimates value at risk and suggests forwards or options. It finds balances sitting in accounts that pay nothing and points to safer places within your investment policy. It ends with a treasury report. Check the plan with your bank or adviser.
+  It starts with where cash sits across accounts, then builds a cash ladder of expected money in and out by day, week and month to spot dry spells. For foreign currency it estimates value at risk and suggests forwards or options. It finds balances sitting in accounts that pay nothing and points to safer places within your investment policy. It ends with a treasury report. This is planning help, not financial advice. A licensed adviser or your bank must sign off on any hedge or investment move before you act.
 when:
   - You are paid in several currencies and exchange swings hurt your margins.
   - You have floating-rate debt and want to know your exposure.
@@ -36,6 +36,7 @@ how_to_use:
   - Tell the AI the confidence level and time horizon you want for the currency risk estimate. If you do not know, ask it to suggest one and explain why.
   - Read the 13-week forecast first and check every balance against your bank statements.
   - Take the hedge and investment ideas to your bank or adviser before you act. Running the calculation script needs an AI that can run code.
+  - Next, build a full forecast with the Cash forecast builder, or find cash stuck in customers and stock with the Cash tied up finder.
 output_sample:
   input:
     - Cash balances by account and entity

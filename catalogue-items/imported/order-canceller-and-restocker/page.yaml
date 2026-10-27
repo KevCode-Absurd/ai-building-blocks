@@ -21,9 +21,9 @@ not_for:
   - "You only want to look up an order or find its ID: search for it in your Shopify admin orders list."
 you_give:
   - Store domain
-  - Order ID
+  - "Order ID in Shopify's long form, such as gid://shopify/Order/12345 (the number is in the order page address in your admin)"
   - Cancel reason
-  - Restock, refund and email choices
+  - Restock, refund and email choices (the defaults are restock on, refund on and customer email on)
   - Internal note (optional)
 you_get:
   - A check that the order can be cancelled
@@ -31,12 +31,13 @@ you_get:
   - Stock restored and refund issued as chosen
   - A summary of what changed
 how_to_use:
-  - Open your AI tool and paste in the skill. It needs to run commands, so use one that can, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - Add the skill to your AI. It needs to run commands, so use one that can, such as Claude Code, Cursor, Codex or Gemini CLI.
   - Sign in to your store with the Shopify CLI first, using an account that can read and change orders.
   - Give your AI the store domain, the order ID, the reason and your restock, refund and email choices.
   - Ask for a dry run first. Check the order name and what would change.
-  - If it looks right, tell your AI to run it for real. Cancelling can't be undone.
+  - If it looks right, tell your AI to run it for real. It stops and asks you to confirm that exact order first. Cancelling can't be undone, and the refund and customer email default to on.
   - Read the summary at the end and check the order in your Shopify admin.
+  - If the order had already shipped in full, the cancel fails. Refund the customer in your Shopify admin instead. The refund-and-reorder skill named in the file is not in this library.
 output_sample:
   input:
     - Your store domain

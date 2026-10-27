@@ -11,7 +11,7 @@ explain: |-
 
   Step 1 applies the charter's weighted-average formula, using its own definitions of old shares, new shares and exempt issues. Step 2 works out the extra pool shares needed to reach the target percent. If your term sheet says so, it must use a share count that already counts protected shares at their new conversion ratio.
 
-  The two results stay separate. The AI will not claim a full cap table unless you give it every security, and it flags classes that interact with the others. It does the arithmetic from the definitions you give. A lawyer should confirm what the charter means.
+  The two results stay separate. The AI will not claim a full cap table unless you give it every security. It flags classes that interact with the others. It does the arithmetic from the definitions you give. A lawyer should confirm what the charter means.
 when:
   - You are raising a round below your last price, and earlier investors have anti-dilution rights.
   - A term sheet asks for a bigger option pool before the new money comes in.
@@ -36,7 +36,7 @@ you_get:
   - A list of share classes that interact and were not supplied
   - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - "Download the pack. It holds HANDOFF.md and two skill files, in the order they run: Weighted-average antidilution checker, then Option pool top-up checker. Add it to Claude, ChatGPT or Gemini, in a chat that accepts files."
   - Attach the charter pages, the term sheet and your cap table. Say which series are protected and the date of the cap table.
   - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
   - After step 1, read each definition the AI used against the charter. A wrong definition gives a wrong price.
@@ -82,7 +82,6 @@ tweaks:
 judge:
   - Separate protected-series conversion changes from reserve dilution; do not claim a complete post-round cap table without all securities.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

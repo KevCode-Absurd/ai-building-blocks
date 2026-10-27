@@ -26,7 +26,7 @@ This skill enables an AI agent to systematically proofread text, catching errors
    Enforce consistent formatting throughout the document: heading capitalization (title case vs. sentence case), number formatting (numerals vs. spelled-out), abbreviation usage (define on first use), and list punctuation. Check for passive voice overuse and recommend active alternatives where the meaning would be clearer. Ensure consistent use of terminology — if "user interface" appears in one place and "UI" elsewhere, unify them.
 
 5. **Clarity and Readability**
-   Evaluate sentence length, paragraph structure, and overall readability. Flag sentences longer than 30 words for possible splitting. Identify jargon or overly complex vocabulary that could be simplified without losing precision. Calculate a readability score (Flesch-Kincaid or equivalent) and report it. Suggest structural improvements such as adding transition sentences or breaking up dense paragraphs.
+   Evaluate sentence length, paragraph structure, and overall readability. Flag sentences longer than 30 words for possible splitting. Identify jargon or overly complex vocabulary that could be simplified without losing precision. Estimate a readability grade (Flesch-Kincaid or equivalent) and report it as an estimate, since you are judging it by reading and not calculating it. Suggest structural improvements such as adding transition sentences or breaking up dense paragraphs.
 
 6. **Tone Analysis and Final Review**
    Assess the overall tone (formal, conversational, academic, persuasive) and verify it matches the user's stated intent. Flag any jarring tonal shifts — for instance, a casual phrase in an otherwise formal report. Perform a final read-through to ensure all corrections integrate smoothly and no new errors were introduced during editing.
@@ -72,7 +72,7 @@ Example prompt: "Proofread the following research abstract for APA style. Flag a
 | 11 | "signficant" | "significant" | Spelling error |
 | 12 | "improvement, however" | "improvement; however," | Semicolon before conjunctive adverb |
 
-**Readability:** Flesch-Kincaid Grade Level 14.2 (appropriate for academic audience).
+**Readability:** Estimated Flesch-Kincaid grade level of about 14 (an estimate, not a calculated score; illustrative figure; appropriate for academic audience).
 
 ### Example 2: Proofreading Technical Documentation
 

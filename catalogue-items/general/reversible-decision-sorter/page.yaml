@@ -24,6 +24,7 @@ not_for:
   - The team keeps asking for more data. Use the Decision evidence bar setter to set how much evidence is enough.
   - The choice is already signed or legally binding. Take it to a lawyer.
   - You want a yes or no with a stop line set in advance. Use the Decision options and tripwire planner.
+  - "You want a quick first pass with fewer checks: use the One-way or two-way choice sorter."
 
 you_give:
   - The choice, in one sentence, and who it affects

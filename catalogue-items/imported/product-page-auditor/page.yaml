@@ -7,7 +7,7 @@ job: audit-landing-page
 headline: Product page auditor
 subhead: A ranked list of changes for a product page, each with the research behind it and the effect to expect. Layout, counts and choice design shape how much a product feels wanted and worth its price before anyone reads the copy.
 explain: |
-  A ranked list of changes for a product page, each with the research behind it and the effect to expect. Layout, counts and choice design shape how much a product feels wanted and worth its price before anyone reads the copy.
+  Most product pages are changed by taste. This audit checks yours against published studies and ranks each fix by the effect to expect. Every figure is a result from one study, so treat it as a guide, not a promise. The study details are in the reference.md file that comes with the skill.
 
   Claude takes your page by URL, screenshot or description. It first decides if the product is bought for pleasure or to do a job. It then checks variants and sold-out options, how views and purchase counts are shown, buttons, social proof and price placement against peer-reviewed findings. Changes are ordered by likely impact.
 when:
@@ -16,8 +16,8 @@ when:
   - You wonder whether to show how many people viewed an item.
   - You are designing a new page template.
 not_for:
-  - "You want to fix the cart or payment form: use a checkout review, since this skill leaves cart and payment steps out."
-  - "You want the product description written: ask your AI to rewrite the copy, since this skill only flags copy issues."
+  - "You want to fix the cart or payment form: use the Checkout page auditor, since this skill leaves cart and payment steps out."
+  - "You want the product description written: use the Product description writer, since this skill only flags copy issues."
   - "You want to set the price or plan a discount: work that out first, since this skill only checks where the price sits on the page."
 you_give:
   - A page link, screenshot or description
@@ -31,7 +31,7 @@ you_get:
   - Guidance on variants, price and proof
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
-  - Paste your page link, or attach a screenshot. If your AI cannot open links, describe the page one element at a time.
+  - Paste your page link, or attach a screenshot. Paste reference.md too if you want to check the source for each figure. If your AI cannot open links, describe the page one element at a time.
   - Add the product, the price, how many options you sell and how many are sold out.
   - Add your view and purchase counts if you track them. If you do not, say so and the social proof check is skipped.
   - Read the ranked table and start with the top three changes.
@@ -52,3 +52,4 @@ output_sample:
       contains: Each issue with the change to make, the measured effect from the study, and the source.
     - name: What the page already does right
       contains: A short close naming the parts of the page that already follow the research.
+next: [product-description-writer, checkout-page-auditor]

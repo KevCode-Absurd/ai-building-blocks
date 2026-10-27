@@ -18,7 +18,8 @@ when:
 not_for:
   - "You want a buy or sell call or personal investment advice: talk to a licensed financial adviser."
   - "You want to value a stock or business: use an investment analysis step, not this risk review."
-  - "You need to place hedges or trade derivatives: ask a qualified professional and check your own risk limits first."
+  - "You need to place hedges or trade derivatives: ask a qualified professional and check your own risk limits first. The hedging ideas here are questions to take to an adviser, not orders."
+  - "You want to value a business: use the valuation method comparer."
 you_give:
   - Your positions, exposures or counterparties
   - Time horizon
@@ -35,7 +36,7 @@ how_to_use:
   - "Say which risk you care about: portfolio, credit or operational. Add your time horizon."
   - Paste your positions or counterparties. Add price history or credit ratings if you have them.
   - Ask for the risk dashboard. Code running helps the VaR figures, so use a chat that can run code if you can.
-  - Check the top three risks and stress cases against what you know. Treat the hedging ideas as general information and show them to a qualified professional before you act.
+  - Check the top three risks and stress cases against what you know. Set a review date, such as every quarter, and update the register then. Treat the hedging ideas as general information and show them to a qualified professional before you act.
 output_sample:
   input:
     - Your positions, exposures or counterparties
@@ -55,3 +56,4 @@ output_sample:
       contains: Where you are too heavily invested in one area.
     - name: Mitigation Plan
       contains: Hedging ideas, diversification steps and how much cash reserve to hold.
+next: [valuation-method-comparer, vendor-risk-reviewer]

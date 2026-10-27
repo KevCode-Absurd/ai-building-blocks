@@ -21,7 +21,7 @@ steps:
   - {uses: story-rules-checker, note: "Only for a story: pass or fail on 18 plain rules and a score out of 100. Uses your draft, not step 2's report. Run at the start and after each round."}
   - {uses: hidden-theme-finder, note: "Once, only for a story: what the draft is really about, using the recurring list from step 2, so cuts and fixes serve it. Hands the theme plan to step 6."}
   - {uses: pre-publish-content-checker, note: "Only for an article, guide or post, instead of steps 2 to 4: brief, voice, facts, structure and AI-sound checks. Uses your draft and brief, not the story checks. Run at the start and after each round."}
-  - {uses: ten-percent-cutter, note: "Round 1 only, and only if the draft is puffy: cuts to 90% of its length with a log. Uses your draft, plus the theme plan from step 4 for a story. Hands the shorter draft to the fixes after it. Never run again."}
+  - {uses: ten-percent-cutter, note: "Round 1 only, and only if the draft is puffy: cuts to 90% of its length with a log. Uses your draft, plus the theme plan from step 4 for a story. Hands the shorter draft to the fixes after it. Never run again. It does not use step 5's checks; the two run side by side."}
   - {uses: scene-want-and-tactic-rewriter, note: "Only when scenes just explain: rebuilds them so each person wants something. Takes the draft from the last round. Hands the changed scenes on."}
   - {uses: show-dont-tell-scene-rewriter, note: "Only when passages name the feeling: rewrites them so things carry it. Takes the draft from the last round. Hands the changed passages on."}
   - {uses: dialogue-ear-checker, note: "Only when talk is flagged: tests each line of dialogue and fixes the worst. Takes the draft from the last round. Hands the fixed draft on."}

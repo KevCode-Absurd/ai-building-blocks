@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say what effect you want to see, such as a ripple, glow or blur.
-  - Name your engine, such as WebGL or Three.js, and list any values you want to control.
+  - Name your engine, such as WebGL or Three.js, and list any values you want to control. Say if you want a Shadertoy-style effect, which needs a full-screen quad and a resolution value from your code.
   - Copy the vertex and fragment shaders into your project and set the uniforms from your code.
   - If the screen is black, check that your uniforms are set and your UV values run from 0 to 1, then ask your AI to fix it.
   - Test the speed on the devices you care about before you publish.
@@ -53,3 +53,4 @@ output_sample:
       contains: The names of the values you can change from your app to adjust the effect.
     - name: Performance notes
       contains: Tips on keeping the shader fast, such as avoiding heavy branching, and what to check on other devices.
+next: [3d-web-scene-builder, web-animation-builder]

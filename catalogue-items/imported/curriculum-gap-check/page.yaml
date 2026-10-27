@@ -5,11 +5,11 @@ name: Curriculum requirements gap checker
 summary: "Give it your curriculum and a requirements list. You get a curriculum gap check: a table of what is covered, what is missing, and a CSV."
 job: teach-and-train
 headline: Curriculum requirements gap checker
-subhead: Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV. Bring your curriculum or framework. Use the result to plan your next step.
+subhead: Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV.
 explain: |
   Before an inspection or accreditation, you need to know which requirements your curriculum actually meets. Give it your curriculum and the requirement list, and you get a table showing what is covered, what is only partly covered and what is missing, plus a CSV.
 
-  Each requirement gets its own row. The row names the learning target or skill that covers it, the age band, and how strong the match is, using a method from alignment research that looks at topic match, depth and range. Requirements with no match are listed as gaps. You can limit the check to certain bands and name the framework and the body that sets the requirements.
+  Each requirement gets its own row. The row names the learning target or skill that covers it, the age band, and how strong the match is, using a method from alignment research that looks at topic match and range. It does not judge depth. That stays with a person. Requirements with no match are listed as gaps. You can limit the check to certain bands and name the framework and the body that sets the requirements.
 when:
   - An accreditation visit is coming and you need proof of coverage.
   - You adopted a new standards list and need to see what your plan misses.
@@ -32,10 +32,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
   - Paste your curriculum. If it is long, upload it as a file.
-  - Paste your requirements list. Give each requirement a number or label.
+  - Paste your requirements list. Give each requirement a number or label. If you leave them off, the skill numbers them R001, R002 and so on. Check those numbers against your source list.
   - Add the framework name, the requirements source and the age bands to check, if you want to.
   - Ask your AI to run the coverage audit and give you the table, the CSV and the gap summary.
   - Check the rows marked partial or indirect against your own curriculum before you act on them.
+  - Take the gap rows to your planning lead or a qualified reviewer before any accreditation submission.
+next: [course-scope-sequence, backwards-unit-planner]
 output_sample:
   input:
     - Your curriculum or framework, as text or markdown

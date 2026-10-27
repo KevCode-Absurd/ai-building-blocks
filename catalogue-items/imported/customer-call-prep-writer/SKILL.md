@@ -3,6 +3,14 @@ name: call-prep
 description: "Prepare for a customer or prospect call using Common Room signals. Triggers on 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]', or any call preparation request."
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `references/my-company-context.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Call Prep
 
 Produce a complete, scannable call prep brief by combining account research, contact research, and signal synthesis from Common Room.
@@ -21,7 +29,7 @@ If neither attendees nor a calendar match can be found, ask: "Who will be on the
 
 ### Step 2: Run Account Research
 
-Use the account-research skill process to build a full account snapshot. For call prep, prioritize:
+Use the account-research skill process to build a full account snapshot. If that skill is not in your setup, look up the account in Common Room yourself and pull: plan or tier, owner, open opportunities and renewal date, recent product activity, support tickets, and recent events. For call prep, prioritize:
 - Recent product signals (what are they doing in the product right now?)
 - Open opportunities or renewal timeline
 - Any risk signals (declining usage, support tickets, churned seats)
@@ -31,7 +39,7 @@ When reviewing activity history, prioritize Gong and call recording activities �
 
 ### Step 3: Run Contact Research for Each Attendee
 
-For each external attendee, use the contact-research skill process. For call prep, focus on:
+For each external attendee, use the contact-research skill process. If that skill is not in your setup, look the person up in Common Room yourself and pull: title, role, recent activity and any persona tag. For call prep, focus on:
 - Role and influence in the buying process
 - Their personal activity and engagement history
 - Any recent signals that suggest their current mood/priorities
@@ -131,6 +139,14 @@ Do not generate a full call prep brief from sparse data. A short honest output i
 - Flag unknowns explicitly — if attendee research is thin, say so
 - Time-box the research — don't over-research at the expense of speed
 - **Never invent deal context** — no fabricated proposals, competitor comparisons, pricing, trial terms, or objections not returned by a tool call
+
+## Personal hook
+
+Keep the personal hook to public, work-related information, such as a talk, a post or a published opinion. Leave out family, health, home and anything else private.
+
+## After the call
+
+Log the outcome and next steps in your CRM, send a follow-up note, and save what you learned for the next call.
 
 ## Reference Files
 

@@ -5,6 +5,31 @@ description: Get a coding brief for Google Ads bid and budget checks, with match
 
 # Google bid and budget coding prompt
 
+You get a coding brief for two read-only checks: a bid strategy review and a budget move proposal. The brief has typed inputs, the diagnosis and budget modules, a table of proposed moves, test cases and a list of setup gaps. It never changes anything in Google Ads.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Keyword grouping coding brief writer](https://useaiblocks.com/prompts/build-the-keyword-tier-classifier-builder-prompt).
+- The [Video ad analysis code planner](https://useaiblocks.com/prompts/build-the-video-performance-analyzer-builder-prompt).
+- The [Shopping feed audit prompt writer](https://useaiblocks.com/prompts/build-the-shopping-feed-auditor-builder-prompt).
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -37,7 +62,7 @@ Build two read-only recommendation modules: diagnoseBidStrategy and recommendBud
 
 7. Expose missing evidence, no-move cases and bounded follow-up experiments. Do not request a real-account run merely to finish the coding task; fixtures are sufficient to implement and test the contract. A schedule or Slack message requires its own authorization and actual supported infrastructure.
 
-8. Add tests for missing targets, zero conversions, partial fields, currency/units, protected campaigns, nonnegative budgets, budget-total conservation, no-move behavior and null impact without a response model. Example: move10from A60to B40 yields50/50,total100, with unknown ROAS lift. Profit cannot be inferred solely because one campaign misses an arbitrary ROAS goal.
+8. Add tests for missing targets, zero conversions, partial fields, currency/units, protected campaigns, nonnegative budgets, budget-total conservation, no-move behavior and null impact without a response model. Example: moving 10 from campaign A (budget 60) to campaign B (budget 40) gives 50 and 50, total 100, with an unknown ROAS lift. Profit cannot be inferred solely because one campaign misses an arbitrary ROAS goal.
 
 ## Final check
 

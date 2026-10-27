@@ -85,6 +85,10 @@ naming the project and offering a first draft.
 - [`assets/profile_worksheet.md`](assets/profile_worksheet.md) — fillable section-by-section worksheet
 - [`assets/example_profile.json`](assets/example_profile.json) — input shape for the auditor
 
+## If you cannot run the scripts
+
+AI Blocks note: the scripts above need an AI that can run Python. If yours cannot, do the same checks by hand in chat. Score the headline on the five dimensions, work through the profile checklist in the same order, and count the characters before the "…see more" fold yourself. Say in your reply that you scored by hand, not by script.
+
 ## Distinct from
 
 - **`linkedin-strategy`** — what to post and how often. This is who you are before you post.

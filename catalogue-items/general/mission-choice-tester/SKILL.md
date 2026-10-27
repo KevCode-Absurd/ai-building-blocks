@@ -85,8 +85,8 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the question.
-- **Decide what to do** with the [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the question.
+- The [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). It takes the question.
+- The [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer). It takes the question and audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

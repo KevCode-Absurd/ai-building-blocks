@@ -20,11 +20,12 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+  - Next, to change one ad, give your AI the replay manifest and name the ad. To find which of your ads win, use the Winning ad DNA mapper. To build ads from rivals' layouts, use the Swipe library ad builder.
 how_it_works:
   - title: Read your existing ads
     text: Sample owned ads and distinguish visual patterns from actual performance evidence.
   - title: Map style to concepts
-    text: Build a six-axis DNA file and match archetypes to appropriate rendering/compositing methods.
+    text: Write down six things about your look. Then choose a simple way to make each ad type, either an AI image or your real photos placed on a template.
   - title: Build and log
     text: Inspect a pilot, make the set and retain every prompt, anchor and revision in a replay manifest.
 thinking: high
@@ -41,7 +42,7 @@ output_sample:
     - Your brand brain files (optional)
   prerequisites:
     - An AI that can look at images
-    - An image tool for the final pictures (the plan works without one)
+    - An image tool for the final pictures (the plan works without one). It may be a paid image service, so check the cost before you make a full set.
   output:
     - name: visual-dna.md
       contains: Your ads' type, colours, layouts, photo style, copy habits and devices, each with a count and examples.

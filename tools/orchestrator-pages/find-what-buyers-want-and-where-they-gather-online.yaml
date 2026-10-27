@@ -9,7 +9,7 @@ subhead: Give it a topic or a rival. It gathers public posts and comments into a
 explain: |
   When you have no customers yet, or no reviews, you guess who buys and why. Interviews fix that but take weeks. Meanwhile thousands of people have already said what they want, in public, in their own words, with no one asking.
 
-  The steps turn those posts into a plan. First it collects posts and comments about your topic from Reddit into a table. Then it keeps every line that gives a reason, copies the phrases exactly with their source, and ranks the reasons. It writes a buyer profile from the same table, then maps the sites, shows, accounts and groups that buyer uses, with the few places to start. The first step uses an Apify account and can cost money, so it shows the settings and the cost before it runs.
+  The steps turn those posts into a plan. First it collects posts and comments about your topic from Reddit into a table. Then it keeps every line that gives a reason, copies the phrases exactly with their source, and ranks the reasons. It writes a buyer profile from the same table, then maps the sites, shows, accounts and groups that buyer uses, with the few places to start. The first step uses an Apify account and can cost money, so it shows the settings and the cost and waits for your yes before it runs.
 when:
   - You are starting out and have no customers, reviews or survey answers to read.
   - You want to learn what buyers of a rival or a category say before you write your message.
@@ -28,7 +28,7 @@ you_get:
   - A buyer profile with goals, frustrations, triggers and the words they use
   - A ranked list of places to reach them and what to share there
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give your topic. Check the search terms and the cost it shows in step 1 before it runs.
   - Look at the table. If it holds mostly off-topic posts, change the terms and run step 1 again.

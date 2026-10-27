@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
-The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`. That setup step is not part of this copy. If the user does not have it, ask which tracker they use, or save one file per ticket (the local-files option below).
+
+Plain terms: a **tracer bullet** ticket is a thin slice that works from start to finish. The **frontier** is the set of tickets with no unfinished blockers. **Expand–contract** means add the new form beside the old, move callers over, then delete the old.
 
 ## Process
 

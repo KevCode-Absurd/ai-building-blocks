@@ -31,11 +31,12 @@ you_get:
   - Saved plan files, so you can stop and pick up later
 how_to_use:
   - Check that your AI can read and write files, and that your project has a docs folder. Create one if it does not.
-  - "Install the eight companion skills this one runs: hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions and drive-motivation. Use the install steps for your AI tool."
+  - "Install the eight companion skills this one runs: hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions and drive-motivation. Each one is in the wondelai/skills collection. In Claude Code, run npx skills add wondelai/skills/<slug> --global for each name. In a chat AI, add each skill the way you added this one."
   - Open the Grow an App skill in your AI and paste in your app description and numbers.
   - Answer the questions at each of the eight phases. Your AI asks before every choice.
   - Read the saved plan files after each phase and fix anything that is wrong.
   - Come back later and ask your AI to continue from the plan file.
+  - When the plan is saved, use it to decide what to build next. If the app has broken screens or slow loads, run the App polish guide first.
 output_sample:
   input:
     - A short description of your app and who uses it
@@ -56,3 +57,10 @@ output_sample:
       contains: The one retention number your team agrees to watch, and why it was chosen.
     - name: docs/GROW-APP-PLAN.md
       contains: A progress tracker for all eight phases, so you can stop and pick up later.
+terms:
+  - term: One metric that matters (OMTM)
+    meaning: The single number your team watches most, such as week-4 retention.
+  - term: Rule 8
+    meaning: The rule in this guide that keeps paid growth locked until retention is good enough.
+  - term: Manipulation Matrix
+    meaning: A test that checks whether a habit feature helps users or tricks them.

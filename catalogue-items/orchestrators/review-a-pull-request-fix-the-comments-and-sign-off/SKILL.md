@@ -9,6 +9,24 @@ Give it a pull request. Get risks ranked, the comments fixed in code and a one-p
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+**Makes it better (optional):**
+- **Test report** (yours): what was tested, what passed, what failed and why.
+- **Security report** (yours): the risks found in the code, ranked, each with a fix.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for code change, codebase, test report. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 - **A change to the code, with what it fixes and how it was checked** (required)
 - **A project's code, in a folder or repo the AI can open** (required)
@@ -36,11 +54,9 @@ Pause here: Post the findings that matter as comments on the pull request.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
+- The [Web accessibility checker](https://useaiblocks.com/skills/accessibility-checker). It takes the audit report.
+- The [Pull request risk scorer](https://useaiblocks.com/skills/pull-request-risk-scorer).
+- The [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

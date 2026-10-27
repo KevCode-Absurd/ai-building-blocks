@@ -249,10 +249,11 @@ prs.save("talk.pptx")
 
 ### Step 3: Slide-by-Slide Generation
 ```text
-- Generate Beamer source slide by slide
+- Write slides.tex one slide at a time, in the order of the slide plan
 - Add speaker notes per slide
-- Include figures from paper (copy to slides/ directory)
-- Generate python-pptx script for PPTX version
+- Copy the figures you need from the paper into a slides/ folder
+- Write the python-pptx script that builds talk.pptx from the same slides
+- If LaTeX or python-pptx is not installed, say so, make the file that can be made, and give the plan and notes in the chat
 ```
 
 ### Step 4: Review and Polish

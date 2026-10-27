@@ -20,17 +20,18 @@ not_for:
   - "You only want a quick headline with no test: use the Website first-screen copy writer."
 you_give:
   - Your offer, with price, guarantee and delivery
-  - "Your best proof: reviews, ratings, numbers sold or press"
+  - "Your best proof: reviews, ratings, numbers sold or press (optional, but the top screen shows two kinds of real proof)"
   - The ad or link that sends traffic to the page (optional)
   - The question you want the test to answer, in plain words
-  - After the pause, visits and orders for both versions of the page
+  - After the pause, visits and orders for both versions of the page, the dates, and anything else that changed in that time, such as a sale or an email send
+  - The main number you read, such as orders per visitor, and the one you must not hurt, such as order value
 you_get:
   - Five headline options with one picked and why, plus a subhead, proof, a button and doubt-reducers
   - A test plan that changes only the top screen, with what counts as no effect
   - What each result would mean, before you run anything
   - "A call on the finished test: ship, do not ship or re-test, with the gain as a money range"
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and three skill files, in the order they run: Store hero section writer, One-change experiment planner, then Store test verdict maker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your offer, your proof and the ad that sends traffic. Leave nothing out that a visitor would ask about.
   - Put the new top screen live as one version and keep the old one as the other. Change nothing else on the page.

@@ -30,12 +30,12 @@ you_get:
   - Styled labels and legend
   - Multi-panel layout if needed
 how_to_use:
-  - Open your AI tool. Pick one that can run Python code and save files, such as Claude with code running turned on.
-  - Paste the skill text into the chat, or upload the skill folder if your tool takes files.
+  - Open your AI tool and paste the skill text, or upload the skill folder. Pick one that can run Python code and save files, such as Claude with code running turned on. If yours cannot run code, ask it for the Python script and run the script on your own computer.
   - Add your data as a CSV file or pasted table. Say which chart you want, or what question it should answer.
   - "Say which file type you want: PNG for slides, PDF or SVG for print."
   - Open the saved chart and check the labels, colours and numbers. Ask for changes until it looks right.
-  - If your AI cannot run code, ask it for the Python script. Then run the script on your own computer.
+  - If the code gives an error, paste the error message back into the chat and ask for a fix. The skill's common issues reference covers the usual ones.
+  - Put the saved chart into your report or slides, and keep the style file so later charts match.
 output_sample:
   input:
     - Your data as a CSV file, a table or pasted numbers
@@ -56,3 +56,4 @@ output_sample:
       contains: A grid of several charts in one figure, made only when you ask for more than one.
     - name: Style sheet (optional)
       contains: A reusable style file from the style helper, so later charts match.
+next: [interactive-chart-maker, editable-slide-deck-builder]

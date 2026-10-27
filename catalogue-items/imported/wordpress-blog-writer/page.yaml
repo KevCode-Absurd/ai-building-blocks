@@ -36,7 +36,8 @@ how_to_use:
   - Add your title, main keyword, search intent and niche. Say if you want Yoast fields, schema and how many images.
   - Paste any sources you want used, each with a link. Your AI should cite only those.
   - Read the post and check every fact and number against your sources.
-  - Copy the post into WordPress. Paste the Yoast fields and schema into their boxes if you asked for them.
+  - Convert the pipe tables to WordPress table blocks or HTML, then copy the post into WordPress. Replace every placeholder URL in the schema before you publish. Paste the Yoast fields and schema into their boxes if you asked for them.
+  - Next, ask for Batch 2 (Yoast fields) and Batch 3 (image SEO), and add links to your older posts on the same site. Use internal-link-mapper for that.
 output_sample:
   input:
     - Your post title
@@ -63,3 +64,4 @@ output_sample:
       contains: Focus keyphrase, SEO title, slug, meta description, and social title and description. Only if you ask.
     - name: Schema markup
       contains: JSON-LD for the blog post and the FAQ, with placeholder links. Only if you ask.
+next: [internal-link-mapper, product-image-alt-text-writer, claim-fact-checker]

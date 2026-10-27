@@ -1,6 +1,6 @@
 new_slug: write-a-narrated-video-ad-the-pictures-can-carry
 name: Write a narrated video ad the pictures can carry
-summary: Write a narrated video ad script where the pictures carry the story. Give it a brief and brand file. Get a trimmed script and clip prompts.
+summary: "Give it your brief and brand file. Get a narrated script trimmed of lines the pictures say, plus timed shots and clip prompts."
 job: make-video-ads
 thinking: high
 thinking_why: The strip test needs careful judgment on every line. Give it your strongest model.
@@ -31,11 +31,11 @@ you_get:
   - A leaner script that reads cleanly aloud
   - Timed shots with a prompt for each clip
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and the four skill files this workflow uses. Keep them together.
-  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
-  - Paste your brief and product facts, and say how long the ad should run.
-  - Read the verdict on each narration line. Say if you want to keep a line the test cut.
-  - Make the clips from the prompts. This needs a video tool, and it runs on paid credits.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus four skill files, in the order they run: Long-form video ad script writer, Voice-over stripping test, Ad script read-aloud editor, Video ad shot list maker. Keep them together."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Paste your brief and product facts, and say how long the ad should run."
+  - "Read the verdict on each narration line. Say if you want to keep a line the test cut."
+  - "Make the clips from the prompts. This needs a video tool, and it runs on paid credits."
 output_sample:
   input:
     - "Your brief: the goal, the buyer and the main point"

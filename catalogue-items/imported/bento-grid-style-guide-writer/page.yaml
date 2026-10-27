@@ -19,6 +19,7 @@ not_for:
   - "You need a guide for a text-heavy site or a single-page form: ask a designer for a simple type and spacing sheet instead."
   - "You want a guide for a page built to sell with one main button: use a conversion page style guide, not a card grid guide."
   - "You want finished page designs or code: hire a designer or developer, because this skill writes rules only."
+  - "You want a plain look with few colours and no card grid: use the Minimal style guide writer."
 you_give:
   - A description of your product and brand
   - Colours and fonts you already use (optional)
@@ -31,11 +32,11 @@ you_get:
   - Do and don't lists and quality gates
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the full skill text into a new chat.
-  - Describe your product, your brand and who uses the page.
-  - Add the colours and fonts you already use, if you have them. Say which components you need rules for.
-  - Say the accessibility level you need. The skill starts from WCAG 2.2 AA.
+  - Have ready a short description of your product, your brand colours and fonts, and the components that need rules (cards, buttons, forms). Describe your product, your brand and who uses the page.
+  - Add the colours and fonts you already use, if you have them. Say which components you need rules for, and the accessibility level. The skill starts from WCAG 2.2 AA.
+  - Ask for the grid rules too: how many columns, which tile sizes, and how tiles stack on a phone. The skill's text does not set these unless you ask.
   - Read the tokens first. Change any default, such as the Inter font or the peach and blue colours, to match your brand.
-  - Hand the finished guide to your designers and developers. Use the QA checklist in code review.
+  - Hand the finished guide to your designers and developers. Turn the tokens into a design-token file, and run the QA checklist on one existing page first.
 output_sample:
   input:
     - A short description of your product and brand

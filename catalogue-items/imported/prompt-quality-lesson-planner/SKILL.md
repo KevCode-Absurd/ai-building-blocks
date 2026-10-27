@@ -71,7 +71,7 @@ tags: ["AI-literacy", "prompt-engineering", "prompt-literacy", "specificity", "A
 
 ## What This Skill Does
 
-Generates a structured learning sequence that teaches students why prompt quality determines AI output quality — and what specific prompt moves produce more useful, accurate, and contextually appropriate responses. The sequence follows a compare-contrast structure: students run vague and refined prompts on the same question, analyse the difference in output quality, and abstract the principles. The core insight is that AI fills missing context with the most statistically common response — so a prompt with no context about audience, purpose, discipline, or constraints will receive an answer calibrated for the average case, not the student's specific situation. The Pricing Exercise (Kharbach, 2026) is included as the anchor activity: students take a context-free AI answer ("What should I charge for a service?") and iteratively add constraints (type of service, location, target market, quality level), showing in real time how specificity transforms output from generically unhelpful to genuinely useful. The sequence teaches five prompt dimensions: context (who am I, what am I doing?), task (exactly what do I want?), constraints (what limits apply?), format (how should the output be structured?), and persona (what role should the AI take?). Prompt literacy is a prerequisite for effective AI use and a direct complement to AI output evaluation skills.
+Generates a structured learning sequence that teaches students why prompt quality determines AI output quality — and what specific prompt moves produce more useful, accurate, and contextually appropriate responses. The sequence follows a compare-contrast structure: students run vague and refined prompts on the same question, analyse the difference in output quality, and abstract the principles. The core insight is that AI fills missing context with the most statistically common response — so a prompt with no context about audience, purpose, discipline, or constraints will receive an answer calibrated for the average case, not the student's specific situation. The Pricing Exercise (credited to Kharbach, 2026 in the original skill; not checked here) is included as the anchor activity: students take a context-free AI answer ("What should I charge for a service?") and iteratively add constraints (type of service, location, target market, quality level), showing in real time how specificity transforms output from generically unhelpful to genuinely useful. The sequence teaches five prompt dimensions: context (who am I, what am I doing?), task (exactly what do I want?), constraints (what limits apply?), format (how should the output be structured?), and persona (what role should the AI take?). Prompt literacy is a prerequisite for effective AI use and a direct complement to AI output evaluation skills.
 
 ## Evidence Foundation
 
@@ -181,6 +181,8 @@ Return your output in this exact format:
 ```
 
 ## Example Output
+
+*Illustrative only. This shows the shape of a result, not a tested run. Replace every detail with your own subject and students.*
 
 **Scenario:** *Subject area: "History" / Student level: "Year 11, use ChatGPT regularly for essay help but consistently receive generic outputs that don't address their specific exam requirements" / AI task type: "Writing: getting help with essay arguments and paragraph structure" / Common student prompts: "write me an essay about the causes of World War One" / "help me write a paragraph about the Treaty of Versailles"*
 

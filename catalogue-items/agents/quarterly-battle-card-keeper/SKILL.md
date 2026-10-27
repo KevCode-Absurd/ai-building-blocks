@@ -13,16 +13,25 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+**Makes it better (optional):**
+- **Competitors** (yours): the brands buyers compare you with.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Buying reasons**, made by the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder): why people buy, in their own words, ranked by how many said it.
+- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **Your lessons** (yours): what past attempts taught you: what worked, what failed and why.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
+2. **Buying reasons** with the [Customer buying reasons finder](https://useaiblocks.com/skills/customer-buying-reasons-finder). Bring customer words. It uses your brand brain.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, your results, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -71,11 +80,10 @@ You never do these yourself. You list them for approval:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the competitors.
-- **Study competitor ads** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). It takes the competitors.
+- The [Sales competitor guide writer](https://useaiblocks.com/skills/sales-battlecard-builder). It takes the competitors.
+- The [Deal health reviewer](https://useaiblocks.com/skills/deal-health-reviewer). It takes the document.
+- The [Pre-sales proof of concept planner](https://useaiblocks.com/skills/proof-of-concept-plan). It takes the document.
+- **Write the landing page** with the [Competitor comparison page writer](https://useaiblocks.com/skills/alternative-page-writer). It takes the competitors.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

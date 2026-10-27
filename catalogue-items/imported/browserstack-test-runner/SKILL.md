@@ -27,6 +27,10 @@ If not set, inform the user how to get them from [browserstack.com/accounts/sett
 > register the server in your own user/project MCP config). Setting the env vars
 > alone is not sufficient.
 
+The `integrations/browserstack-mcp` folder is not in this catalogue copy. Get it from the original plugin repo. If you do not have it, skip steps 3 and 4 below (they use the `browserstack_*` tools), run the tests as in step 2, and read the results in the terminal or your BrowserStack dashboard.
+
+The `/pw:browserstack ...` lines are names for each step. If your AI has no such command, ask for the step in plain words.
+
 ## Capabilities
 
 ### 1. Configure for BrowserStack
@@ -99,7 +103,7 @@ export default defineConfig({
 });
 ```
 
-3. Add npm script: `"test:e2e:cloud": "npx playwright test --project='chrome@*' --project='firefox@*' --project='webkit@*'"`
+3. Add npm script: `"test:e2e:cloud": "npx playwright test --project='chrome*' --project='firefox*' --project='webkit*'"`. The filters must match the project names above (`chromelatestwindows-11` and so on). If you rename the projects, change the filters to match.
 
 ### 2. Run Tests on BrowserStack
 
@@ -113,7 +117,7 @@ Steps:
    ```bash
    BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME \
    BROWSERSTACK_ACCESS_KEY=$BROWSERSTACK_ACCESS_KEY \
-   npx playwright test --project='chrome@*' --project='firefox@*'
+   npx playwright test --project='chrome*' --project='firefox*'
    ```
 3. Monitor execution
 4. Report results per browser
@@ -175,3 +179,7 @@ For testing localhost or staging behind firewall:
 - Per-browser pass/fail status
 - Links to BrowserStack dashboard for video/screenshots
 - Any browser-specific failures highlighted
+
+## What to do next
+
+Fix the failures that happen in one browser only first. Then run the same npm script again to confirm they pass.

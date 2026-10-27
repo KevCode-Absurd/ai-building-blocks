@@ -5,7 +5,7 @@ name: Bullet note maker
 summary: Turn messy notes or an article into a clean bullet note list. Nested bullets, short lines, easy to scan and revise. Pick lite, full or ultra.
 job: organise-work
 headline: Bullet note maker
-subhead: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise. Bring text, notes or an article. Use the result to plan your next step.
+subhead: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise. Then turn the bullets into a study sheet, a meeting summary or a task list.
 explain: |
   Dense text turned into clean nested bullets that you can scan in seconds and revise easily. No paragraphs, no long sentences.
 
@@ -21,7 +21,7 @@ not_for:
   - "You need a table, code or JSON: ask your AI for that format by name, as bullets will not fit."
 you_give:
   - Text, notes or an article
-  - A web page to summarise (optional)
+  - A web page to summarise, if your AI can browse (optional)
   - "A detail level: lite, full or ultra (optional)"
 you_get:
   - Nested bullet notes
@@ -29,11 +29,12 @@ you_get:
   - Short lines with no paragraphs
   - Consistent indentation
 how_to_use:
-  - Gather your source text first. This can be messy notes, an article or an old bullet list.
+  - Gather your source text first. This can be messy notes, an article or an old bullet list. If you have a web page, paste its text, unless your AI can open links.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Paste your text under them. Say lite, full or ultra if you want a set detail level. Full is the default.
   - Ask your AI to turn it into bullet notes.
   - Check that no key fact was lost, then ask for more or less detail if needed.
+  - Next, turn the bullets into a study sheet, a meeting summary or a task list.
 output_sample:
   input:
     - Your messy notes, article text or tangled bullet list

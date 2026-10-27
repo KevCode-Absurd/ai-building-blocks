@@ -127,6 +127,8 @@ A few quick questions so I can build your strategy (just reply with the letters)
 
 ## Key Benchmarks (2025-2026)
 
+*The author's figures, taken from the reports named in each table. Links and dates are not included here, so treat them as unverified starting points and mark any you use with ⚠️.*
+
 ### Channel ROI
 
 | Channel | Average ROI | Best For | Source |
@@ -215,7 +217,7 @@ Online behavior:
   What influences purchase: [price, reviews, brand, influencer recommendation]
   
 Language they use:
-  [Real phrases from reviews / social media — how they describe the problem 
+  [Phrases only if pulled from a live source in this chat or given by the user. Otherwise label them estimated ⚠️ and do not present them as real quotes. How they describe the problem 
   and solution in their own words. Use these in ad copy and content.]
   Source: [extracted from competitor reviews / user-provided / estimated ⚠️]
 ```
@@ -377,7 +379,7 @@ Define success metrics:
 | Organic traffic growth | 10-20%/month | SEO takes 3-6 months to kick in. Set 10%/mo after month 3 | Google Analytics |
 | Social engagement rate | 1-3% | Below 1% = content problem. Target 2%+ | Platform analytics |
 | Repeat purchase rate | 28% avg | New stores: 15-20%. Growing: 25%+. Established: 30%+ | Platform analytics |
-| Blended ROAS | 2.5x+ | Calculate: 1 ÷ margin × 1.5 = your minimum target ROAS | All platforms combined |
+| Blended ROAS | 2.5x+ | Calculate: 1 ÷ margin × 1.5 = your minimum target ROAS (example: a 40% margin gives 1 ÷ 0.40 × 1.5 = 3.75x) | All platforms combined |
 
 ---
 
@@ -393,19 +395,19 @@ Goal: [awareness / sales / both]
 Channels: [where you sell]
 
 ## Target Audience Persona
-[Full persona from Step A2]
+[Full persona from Step 2]
 
 ## Competitive Landscape
-[Analysis from Step A3]
+[Analysis from Step 3]
 
 ## Channel Strategy (Prioritized)
-[Full channel plan from Step A4-A5 with budget allocation]
+[Full channel plan from Steps 4 and 5 with budget allocation]
 
 ## 90-Day Action Plan
-[Weekly roadmap from Step A6]
+[Weekly roadmap from Step 6]
 
 ## KPIs & Measurement
-[Metrics table from Step A7]
+[Metrics table from Step 7]
 ```
 
 ---

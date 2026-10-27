@@ -237,8 +237,24 @@ class CalculatorTool(BaseTool):
     description: str = "Performs mathematical calculations. Input: expression"
 
     def _run(self, expression: str) -> str:
+        # AI Blocks note: the original called eval() on model output, which can run
+        # any code. Never eval text an agent supplies. This version only allows
+        # plain numbers and + - * / ** operators.
+        import ast, operator
+        ops = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
+               ast.Div: operator.truediv, ast.Pow: operator.pow, ast.USub: operator.neg}
+
+        def walk(node):
+            if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+                return node.value
+            if isinstance(node, ast.BinOp) and type(node.op) in ops:
+                return ops[type(node.op)](walk(node.left), walk(node.right))
+            if isinstance(node, ast.UnaryOp) and type(node.op) in ops:
+                return ops[type(node.op)](walk(node.operand))
+            raise ValueError("Only numbers and + - * / ** are allowed")
+
         try:
-            result = eval(expression)
+            result = walk(ast.parse(expression, mode="eval").body)
             return f"Result: {result}"
         except Exception as e:
             return f"Error: {str(e)}"

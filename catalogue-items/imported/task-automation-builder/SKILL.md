@@ -67,14 +67,15 @@ PROCESSED = Path.home() / "data" / "processed"
 ERRORS = Path.home() / "data" / "errors"
 REQUIRED_HEADERS = ["id", "name", "email", "amount"]
 
+# Create the folders first, so the log file can be opened on the very first run
+for d in [INCOMING, PROCESSED, ERRORS]:
+    d.mkdir(parents=True, exist_ok=True)
+
 logging.basicConfig(
     filename=ERRORS / "error.log",
     level=logging.ERROR,
     format="%(asctime)s - %(message)s"
 )
-
-for d in [INCOMING, PROCESSED, ERRORS]:
-    d.mkdir(parents=True, exist_ok=True)
 
 
 class CSVHandler(FileSystemEventHandler):
@@ -95,7 +96,8 @@ class CSVHandler(FileSystemEventHandler):
             with open(output, "w") as f:
                 json.dump(rows, f, indent=2)
 
-            filepath.unlink()  # Remove processed file
+            # Keep the original CSV in the processed folder instead of deleting it
+            filepath.rename(PROCESSED / filepath.name)
             print(f"Processed: {filepath.name} -> {output.name}")
         except Exception as e:
             logging.error(f"Failed to process {filepath.name}: {e}")
@@ -122,7 +124,7 @@ if __name__ == "__main__":
 
 **Implementation:**
 
-Cron entry (added via `crontab -e`):
+Save the script below as `/opt/scripts/health_check.py` (or change the path in the cron line to wherever you put it). Cron entry (added via `crontab -e`):
 ```cron
 0 */6 * * * /usr/bin/python3 /opt/scripts/health_check.py >> /var/log/health_check.log 2>&1
 ```

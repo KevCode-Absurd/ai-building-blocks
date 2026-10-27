@@ -29,8 +29,8 @@ you_get:
   - An updated index
   - Fewer duplicates
 how_to_use:
-  - "Pick where notes live: your AI's memory folder, or a shared wiki folder for your team."
-  - Paste this skill into your AI chat, or add it to your AI tool as a skill.
+  - "Gather the finding you want to keep. Pick where notes live: your AI's memory folder, or a shared wiki folder for your team. If the folder or index does not exist yet, ask your AI to create it first."
+  - Paste this skill into your AI chat, or add it to your AI tool as a skill. The skill also names the skill writer and the research skills, but you do not need them.
   - Paste what you learned, or say "save this" at the end of a task. Share your existing notes if you have them.
   - Check that your AI searched for a similar note first, and updated it instead of making a copy.
   - Read the new file and the index line. Make sure the one-line description uses words you would search for.

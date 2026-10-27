@@ -278,7 +278,7 @@
 - [Postgres performance tuner](https://useaiblocks.com/skills/postgres-performance-tuner): Review Postgres queries, tables, and settings to get ranked fixes for speed, connections, and access rules.
 - [Postgres query tuner](https://useaiblocks.com/skills/postgres-query-tuner): Share SQL, table details and query plans. Get index, type and setting changes to test, with reasons and priorities.
 - [Power Platform solution planner](https://useaiblocks.com/skills/plan-a-power-platform-solution): Share a business process and its rules. Get a plan for apps, data and workflows.
-- [Private bug evidence assistant](https://useaiblocks.com/agents/prepare-private-bug-evidence-for-developers): Turn a redacted screenshot and rough notes into a bug report draft for developers, with a privacy checklist and a list of safe files.
+- [Private bug evidence assistant](https://useaiblocks.com/agents/prepare-private-bug-evidence-for-developers): Turn rough bug notes and a screenshot into a developer-ready bug report. You get a privacy checklist and a list of files that are safe to share.
 - [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split): Split a messy change into small tidy-up steps and new-behaviour steps, so each one is easy to review and undo. Paste your diff or edit list.
 - [Project design and decision recorder](https://useaiblocks.com/skills/project-memory-keeper): Work on a codebase. Get notes on its design, decisions and coding rules for later AI work.
 - [Project glossary writer](https://useaiblocks.com/skills/project-glossary-writer): Build a project glossary by talking through your terms. Your AI flags clashing words and writes down the agreed ones, plus short decision records.

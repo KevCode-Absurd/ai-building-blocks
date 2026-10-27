@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Use an AI that can run code and read files, such as Claude with code tools. Make sure Node and Python are installed.
   - Add the skill folder to your AI, or paste the skill text into the chat.
-  - Describe the screen you want. Say if you have a project folder or need a new one.
+  - Describe the screen you want. Say if you have a project folder or need a new one. Your AI will also ask four things first. They are the main device and network, the load-time target, whether the pages must rank in search or sit behind a sign-in, and your accessibility target.
   - Let your AI build the project and the component. Run it on your computer with npm run dev.
   - Ask for the bundle check. Fix the heavy packages it lists, then run the check again.
   - Open your site in the Chrome browser and run Lighthouse to measure real load speed. The bundle check alone does not show it.

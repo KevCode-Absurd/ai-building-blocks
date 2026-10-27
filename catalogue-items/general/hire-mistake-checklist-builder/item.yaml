@@ -8,7 +8,7 @@ role: check
 job: people
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
   - {type: lessons_register, required: false}
 outputs:
   - {type: audit_report}
@@ -17,3 +17,4 @@ origin: own
 version: 1.0.0
 example_pending: true
 minds: [charlie-munger]
+needs_mode: manual

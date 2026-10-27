@@ -7,20 +7,27 @@ description: Use when a Shopify store has duplicate or thin pages wasting search
 
 You find where a Shopify store makes duplicate and thin pages and give the exact change for each, in a safe order. These edits touch theme code, so every one is tested on a copy of the theme first. Theme file names and Shopify's behaviour change over time, so confirm against current Shopify help.
 
+When not to use: for a store of about 20 products, run a plain crawl in a site crawler instead. If you cannot open or copy your theme, hand the fix list to a developer. To make one page rank higher, edit that page's title and text yourself. This only removes copies.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Theme files** (yours): shopify theme files (Liquid sections, settings) ready to upload.
 
 **Makes it better (optional):**
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Audit report** with the [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). Bring audit report.
+2. This one.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with theme files, your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for theme files, audit report, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Shopify theme editor:** Lets you duplicate the live theme and edit its code on the copy.
@@ -53,7 +60,7 @@ Make the person duplicate the live theme and work on the copy. Test each change 
 11. **Filter addresses.** Filter addresses on Shopify don't rank. If a filter term matters, it needs a real collection.
 12. **Don't noindex pages that bring organic sales.** Check Search Console clicks first.
 13. **Skip small stores' robots edits.** A store with about 20 products gains little from robots edits and risks more than it gains. Say so.
-14. **Score the leaks.** This measures how many of the usual leaks that apply to this store are closed. Score = 100 x (leaks closed) divided by (leaks that apply), where the leaks are steps 1 to 9. Show the numbers, and the score after the fixes. A leak that doesn't apply, and any step you skip (for example step 13 on a small store), leaves the denominator. A step you couldn't check is listed as not run and left out of both counts.
+14. **Score the leaks.** This measures how many of the usual leaks that apply to this store are closed (the same "leaks closed out of leaks that apply" the page shows). Score = 100 x (leaks closed) divided by (leaks that apply), where the leaks are steps 1 to 9. Show the numbers, and the score after the fixes. A leak that doesn't apply, and any step you skip (for example step 13 on a small store), leaves the denominator. A step you couldn't check is listed as not run and left out of both counts.
 
 ## What you hand back
 ```
@@ -74,11 +81,9 @@ MISSING: <anything not given>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
+- The [Search Console quick-win finder](https://useaiblocks.com/skills/search-console-quick-win-finder).
+- The [Store SEO fix prioritiser](https://useaiblocks.com/skills/store-seo-fix-prioritiser). It takes the audit report.
+- The [Store keyword map builder](https://useaiblocks.com/skills/store-keyword-map-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

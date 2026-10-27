@@ -1,6 +1,6 @@
 # Linus Torvalds: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Rebuilt from the Git README text, the 1992 history note, the 2012 emails, the 2018 email and his kernel management-style essay, all read on their archive pages [S2][S4][S5][S6][S13][S14]. Quotes are kept short.
 

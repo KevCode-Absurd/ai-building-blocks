@@ -9,6 +9,8 @@ metadata:
 
 # MMM and incrementality framing
 
+**What you need:** an AI that can run Python code, with NumPy installed (see below). A plain chat that cannot run code cannot run this skill. For a first run, give it one spreadsheet of weekly spend and outcomes for a few channels, and ask for the regression result and the status line only.
+
 Use this skill for aggregate weekly spend/outcome modeling, explicit spend scenarios,
 observational modeled-share versus CRM-share comparisons, or requests to distinguish
 attribution evidence from causal incrementality. Return the computed statuses and assumptions

@@ -31,10 +31,10 @@ you_get:
   - Target or anomaly detections
   - Spectral index maps
 how_to_use:
-  - Check you have desktop MATLAB with the Hyperspectral Imaging Library add-on. MATLAB Online will not work.
+  - "This is for people who work with remote sensing or spectral images. Check you have desktop MATLAB with the Hyperspectral Imaging Library add-on. Both are paid MathWorks products, and MATLAB Online will not work. Without the add-on, the skill falls back to multibandread and imread, with fewer features."
   - Open a chat with your AI and paste in the skill text.
   - Tell it your file type, the material or feature you want, and any reference spectra you have.
-  - "Ask for one processing step at a time: correct, then unmix, then detect."
+  - "Ask for one processing step at a time: correct, then unmix, then detect. A first run reads the file with imhypercube (you should see the cube size and wavelengths), shows it with colorize (a false-colour image), and then calculates ndvi (a map of plant cover)."
   - Run each piece of code in MATLAB and check the maps before you move on.
   - Save results with enviwrite, or feed the abundance maps into a classifier.
 output_sample:

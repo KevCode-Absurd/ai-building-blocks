@@ -14,6 +14,7 @@ allowed-tools: Bash, Read, Write, Glob, WebSearch, Task
 
 ### Step 1: Auto-locate Outline
 Find `*/outline.yaml` file in current working directory, read items list, execution config (including items_per_agent).
+The outline needs a topic, a list of items (name, category, description) and an execution block (batch_size, items_per_agent, output_dir). If a setting is missing, ask the user for it. Do not invent one.
 
 ### Step 2: Resume Check
 - Check completed JSON files in output_dir
@@ -57,6 +58,10 @@ python ~/.claude/skills/research/validate_json.py -f {fields_path} -j {output_pa
 Task is complete only after validation passes.
 """
 ```
+
+Note for the catalogue copy: validate_json.py is not in this folder, and its path above names a different skill folder. If the script is not on your machine, drop the two validation lines and check by hand that every field in fields.yaml has a value, then say you did it by hand.
+
+Before agents fetch pages, tell the user which sites will be read, and check each site's terms and robots.txt.
 
 **One-shot Example** (assuming researching GitHub Copilot):
 ```

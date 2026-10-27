@@ -16,6 +16,7 @@ origin: rebuilt
 version: 1.0.0
 minds: [susan-kare]
 credits:
-  - {title: "Making the Macintosh (oral history interview)", by: "Stanford University, with Susan Kare", used: "Working small, gathering symbol references and testing icons in the real screen"}
-  - {title: "Designboom interview, 2014", by: "Designboom", used: "Drawing several options per meaning and removing puns"}
-  - {title: "Susan Kare profile", by: "Priceonomics", used: "Fixing one grid and colour limit before drawing"}
+  - {title: "Making the Macintosh (oral history interview)", by: "Stanford University, with Susan Kare", used: "Background reading on designing icons by hand at small size and testing them on the real screen. The steps in this skill are our own"}
+  - {title: "Designboom interview, 2014", by: "Designboom", used: "Background reading on drawing several options per meaning. The steps in this skill are our own"}
+  - {title: "Susan Kare profile", by: "Priceonomics", used: "Background reading on working inside a fixed grid and colour limit. The steps in this skill are our own"}
+needs_mode: manual

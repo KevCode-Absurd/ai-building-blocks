@@ -31,7 +31,9 @@ how_to_use:
   - Paste your details. Say how confident you feel in each topic, for example from 1 (lost) to 5 (sure). This is optional.
   - Check the ranked plan. It covers five topics at most, and the weakest come first.
   - Answer each recall question in your own words. Your AI tests you before it teaches.
-  - Read the session summary and note which topics need another round. Paste it into your next session.
+  - Read the session summary and note which topics need another round. Save it in a notes file or doc. A plain chat does not keep it, so paste it into your next session.
+  - To keep a running list of repeated mistakes between sessions, use the study gap tracker.
+next: [study-gap-tracker, study-understanding-check]
 output_sample:
   input:
     - The topics you have covered

@@ -13,7 +13,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
 
 **Makes it better (optional):**
@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
 3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
 4. This one.
 
@@ -116,11 +116,11 @@ Go through "Check before you hand it back" and fix any check that fails. A locke
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Plan what to test** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). It takes the ad copy.
+- The [Handwritten warning image ad maker](https://useaiblocks.com/skills/dont-buy-warning-image-ad-maker). It takes the ad copy.
+- The [Carousel ad writer](https://useaiblocks.com/skills/carousel-ad-writer).
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

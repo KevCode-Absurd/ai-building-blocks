@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your question in plain words
   - The table and column layout
-  - Your database type (optional)
+  - Your database type, such as PostgreSQL, MySQL, SQLite, SQL Server or BigQuery (optional). The examples in the skill use PostgreSQL syntax.
   - Filters or time periods
 you_get:
   - A formatted SQL query

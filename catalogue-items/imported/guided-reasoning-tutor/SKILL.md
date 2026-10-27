@@ -16,7 +16,7 @@ Teach through strategically sequenced questions that reveal the learner's reason
 
 - Learner asks for understanding, not just output. Learner is stuck on reasoning errors. Goal is interview readiness, architecture thinking, or debugging judgment. Learner requests hints.
 - **Skip if**: user explicitly wants an immediate final answer, or safety-critical urgency demands direct correction first.
-- **Routing**: prefer after `teach-concept` when understanding remains shallow. Combine with `check-understanding` to evaluate responses.
+- **Routing**: use it when the learner's understanding is still shallow after a plain explanation. `teach-concept` and `check-understanding` are separate skills that are not in this library. To check the learner's answers, use the Study understanding check item here.
 
 # Inputs
 

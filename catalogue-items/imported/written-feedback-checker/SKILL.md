@@ -194,7 +194,7 @@ Return your output in this exact format:
 
 3. **"You need to work on your analysis — try to go deeper" is vague feed-forward.** This is the most common feedback failure in secondary education. "Go deeper" means nothing to a Year 10 student who doesn't know what deep analysis looks like. It requires Priya to already have the skill the feedback is telling her to develop.
 
-4. **"Your writing style is lovely" is self-level feedback with a gender dimension.** It compliments Priya as a writer rather than identifying specific effective writing choices. Research on gendered feedback patterns shows that girls more frequently receive praise for style/presentation while boys receive more substantive content feedback.
+4. **"Your writing style is lovely" is self-level feedback with a gender dimension.** It compliments Priya as a writer rather than identifying specific effective writing choices. Some people argue that style praise can fall unevenly across groups of students, so check your own pattern of comments (this is not tested here).
 
 5. **"6/10" is a judgment, not feedback.** Butler (1988) found that when comments are accompanied by grades, students attend to the grade and ignore the comments entirely. The score undermines any formative value the comments might have had.
 

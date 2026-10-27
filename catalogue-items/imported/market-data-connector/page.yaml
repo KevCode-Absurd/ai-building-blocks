@@ -22,6 +22,7 @@ not_for:
   - "You want prices in Excel or Yahoo Finance data: this covers four MATLAB providers only, so use the tool that provider offers."
   - "You have no Bloomberg, Haver or Datastream access: FRED needs only an API key and no data subscription, so start there."
   - "You want live streaming from Datastream: it gives history only, so ask LSEG for a live feed."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - "The provider: Bloomberg, FRED, Haver or Datastream"
   - The securities or series IDs, such as a ticker or GDP
@@ -74,6 +75,7 @@ output_sample:
     - MATLAB with the Datafeed Toolbox
     - Your own access to the provider, which may be paid
     - Your login saved in MATLAB with setSecret
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Connection section
       contains: Code that connects with the interface that fits your computer, reading login details from the secret store.

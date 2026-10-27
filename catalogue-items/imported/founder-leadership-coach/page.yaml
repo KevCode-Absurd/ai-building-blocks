@@ -35,17 +35,18 @@ you_get:
   - An energy and burnout check
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
-  - Paste the last four weeks of your calendar as text or a list of recurring meetings. Say how many people work with you.
+  - Paste the last four weeks of your calendar as text or a list of recurring meetings. Say how many people work with you. The calendar is used only in this chat. The skill does not store it or send it anywhere else. Remove names and private details first if you prefer.
   - Describe a normal week in your own words. Say what you put off and what you enjoy most.
   - Read your founder type first. Tell your AI where it is wrong, and ask it to redo the plan.
   - Pick one handoff from the delegation plan and do it this week. Review the plan again in a month.
+  - Then plan the handoff conversation with the feedback conversation planner, and set up regular one-on-ones with the one-on-one meeting planner.
 how_it_works:
   - title: Place your founder type
     text: It asks what you do with a free hour and what you put off, then names your type and blind spot.
   - title: Find why you hold on
     text: It checks the common reasons founders keep work, such as control and speed.
   - title: Sort what to hand off
-    text: It uses a skill and will check and a delegation ladder to pick the first handoffs.
+    text: It uses a delegation ladder of five levels to pick your first three handoffs, starting with low-risk tasks.
   - title: Audit your calendar
     text: It groups four weeks into strategy, people, external, execution, admin and recovery, and flags what stands out.
   - title: Check energy and growth
@@ -84,3 +85,4 @@ terms:
     meaning: Sorting your recent meetings into groups to see where your time really goes.
   - term: blind spot
     meaning: Something you do or miss that others see and you do not.
+next: [feedback-conversation-planner, one-on-one-meeting-planner]

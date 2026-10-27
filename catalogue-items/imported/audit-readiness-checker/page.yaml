@@ -7,7 +7,7 @@ job: money-and-investing
 headline: Audit readiness checker
 subhead: A list of control gaps found before an auditor finds them. Describe the audit you expect, such as a full financial audit or one cycle like order-to-cash.
 explain: |
-  A list of control gaps found before an auditor finds them. Describe the audit you expect, such as a full financial audit or one cycle like order-to-cash. Share your control documents and who owns each process.
+  A list of control gaps found before an auditor finds them. Describe the audit you expect, such as a full financial audit or one cycle like order-to-cash. Share your control documents and who owns each process. The result is a self-check, not an audit opinion.
 
   The AI tests each area against the basic claims auditors check. Did the transaction happen? Is everything recorded? Do you own the asset? Is it valued right? It walks through revenue and receivables, buying and payables, and fixed assets and inventory. It looks for missing approvals, weak separation of duties and records that don't tie out. You get a findings report that ranks each gap and says what to fix first.
 when:
@@ -31,6 +31,7 @@ you_get:
   - A fix-first action list
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
+  - Gather these first: the period-end date, your AR aging report, your fixed asset register, and your purchase orders, receiving records and invoices for the three-way match. Your risk control matrix (RCM) is a table of risks and the controls that cover them. SOX is the US law on financial controls at listed companies.
   - Tell your AI the audit you expect and the period it covers.
   - Paste your control documents and name who owns each process. Add sample records if you have them.
   - Read the findings report. Fix the highest risks first.
@@ -52,3 +53,4 @@ output_sample:
       contains: Step-by-step actions to close each gap.
     - name: "Findings Detail: Owner"
       contains: The team or department best placed to lead each fix.
+next: [internal-controls-testing, control-testing-workpaper, account-reconciler]

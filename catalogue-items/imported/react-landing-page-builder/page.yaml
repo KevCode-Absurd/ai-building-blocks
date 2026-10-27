@@ -57,3 +57,4 @@ output_sample:
       contains: Quote blocks, a closing banner with buttons, and a footer with links.
     - name: SEO meta tags and structured data
       contains: Title, description, social image details and search markup for the page.
+next: [landing-page-auditor, landing-page-30-point-checker]

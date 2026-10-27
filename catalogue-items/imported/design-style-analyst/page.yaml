@@ -30,18 +30,19 @@ you_get:
   - Structured style file
   - Design made from the profile (optional)
 how_to_use:
-  - Open your AI tool and paste the skill text from this page. Use an AI that can run code if you want exact colors.
+  - Open your AI tool and paste the skill text from this page. For screenshot files the skill measures colors exactly by default. That needs Node.js and an AI that can run code. Without them, it can only estimate colors by eye, and they can be off.
   - Add your screenshots or links. Say you want a style profile.
   - Read the profile. Fix any value that looks wrong, then ask for changes.
   - To make a page, paste your content and the profile, and ask for a design.
-  - Check that any images the AI fetched are licensed for your use before you reuse them.
+  - Only let it fetch images from a link you own or have the right to use. Check any images it fetched are licensed for your use before you reuse them.
+  - Save the Design DNA file. Next time, paste it with your content to make a new page, or give it to your designer next to your brand guide.
 output_sample:
   input:
     - Screenshots or links of designs you like
     - Your content for a new page (optional)
     - A style profile you saved before (optional)
   prerequisites:
-    - Node.js on your computer, only if you want exact color measurement from screenshot files
+    - Node.js on your computer, only if you want exact color measurement from screenshot files (the skill runs npm install for its own helper scripts)
     - An AI that can run code and read files, for the color measurement step
     - Rights to reuse any images or assets the AI fetches from a link
   output:

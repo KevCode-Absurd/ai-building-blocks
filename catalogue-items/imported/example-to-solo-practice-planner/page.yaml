@@ -17,8 +17,9 @@ when:
   - Some students feel sure they understand but fail on new problems.
 not_for:
   - Your students cannot yet follow one worked example. Teach the basic method first, then come back.
-  - You need a single worked example written out. Write that example first, or ask your AI for one, then plan the fade.
+  - You need a single worked example written out. Use the online worked example builder first, then come back to plan the fade.
   - You want to grade student work or give feedback on answers. Use your own marking, or a person who knows the class.
+  - You need hints for one problem. Use the step-by-step hint writer.
 you_give:
   - The skill you are teaching
   - What students know now and how you know it
@@ -36,7 +37,7 @@ how_to_use:
   - Type the skill you are teaching, in one clear sentence.
   - Describe where your students are now and what shows it, such as work you have seen. Add year group, time and number of problems if you know them.
   - Read the plan. Check the fading steps match how your students really work, and ask your AI to change any stage that does not.
-  - Use the plan in class. After it, plan the practice tasks and hints that go with it.
+  - Use the plan in class. Then write the hints for each stage, and build the worked examples that fade.
 output_sample:
   input:
     - The skill you are teaching
@@ -55,3 +56,9 @@ output_sample:
       contains: How hard the solo problems should be, how they build up, and what to do when a student is stuck.
     - name: Common Pitfalls
       contains: Mistakes to watch for, including students who feel sure but cannot yet solve new problems.
+terms:
+  - term: Expertise reversal effect
+    meaning: Help that works for beginners starts to slow down students who already know the method.
+  - term: Over-support
+    meaning: Giving more help than a student needs now, so they never learn to start alone.
+next: [step-by-step-hint-writer, online-worked-example-builder, worked-example-practice]

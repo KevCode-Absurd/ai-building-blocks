@@ -7,9 +7,9 @@ job: research-topics
 headline: Journal-ready figure maker
 subhead: Give it your data and say where the figure is going. It picks an honest chart type, shows uncertainty and records every change to your data. Palettes are checked for contrast and greyscale. That is not a certificate of accessibility or journal acceptance.
 explain: |
-  Charts that tell the truth and survive peer review. Give it your data and say where the figure is going. The skill records what the numbers mean, the units, how uncertainty is defined and every change made to the data, so the figure can be rebuilt later. It picks an honest chart type: bars start at zero, points show their spread, and no missing values are quietly joined up.
+  Charts with honest scales, visible uncertainty and a record of every data change. Give it your data and say where the figure is going. The skill records what the numbers mean, the units, how uncertainty is defined and every change made to the data, so the figure can be rebuilt later. It picks an honest chart type: bars start at zero, points show their spread, and no missing values are quietly joined up.
 
-  Colours are chosen to be readable by colour-blind viewers. Size and format are set for the final width. It never hides or tweaks data, and it will not claim journal compliance until the exact journal and stage are known and its live guidance is checked.
+  Palettes are chosen for colour-blind safety and checked for contrast and greyscale. This is not a certificate of accessibility. Size and format are set for the final width. It never hides or tweaks data, and it will not claim journal compliance until the exact journal and stage are known and its live guidance is checked.
 when:
   - You are preparing figures for a paper.
   - A reviewer says your chart is misleading or hard to read.
@@ -36,6 +36,7 @@ how_to_use:
   - Upload your data table. Say what each variable and unit means and how uncertainty is defined.
   - Name the journal, article type, stage and final figure width if you know them. Leave them out if you do not.
   - Check the figure and the data change record. Then read the journal's live author guidelines yourself before you submit.
+  - Keep the data change record with your source data. Paste the export plan's journal checks into your submission checklist.
 output_sample:
   input:
     - Your data table or file

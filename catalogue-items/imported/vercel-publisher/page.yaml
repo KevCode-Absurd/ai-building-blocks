@@ -17,7 +17,7 @@ when:
   - You need to ship to production after checking the preview.
 not_for:
   - Your project holds secrets, .env files or private data. Remove them first, or use the Vercel CLI with your own account.
-  - You need a site that stays private. The no-login preview link is public, so use your own Vercel account with access settings.
+  - You need a site that stays private. The no-login preview link is public, and your files go to Vercel's no-login deploy service (codex-deploy-skills.vercel.sh), so use your own Vercel account with access settings.
   - You want the AI to test the live site after it deploys. This skill only returns the link, so check the site yourself.
 you_give:
   - Your project folder, or a zipped copy of it
@@ -52,3 +52,4 @@ output_sample:
       contains: A live production release, made only when you clearly ask for it.
     - name: Network fix offer
       contains: If the deploy is blocked, a request to rerun it with wider network access.
+next: [vercel-deployer]

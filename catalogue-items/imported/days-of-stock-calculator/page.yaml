@@ -5,11 +5,11 @@ name: Days of stock calculator
 summary: Find how many days of stock you have left for each product and location. Get a flagged reorder list from your Shopify sales and stock.
 job: run-your-store
 headline: Days of stock calculator
-subhead: Get how many days each product stock will last and how fast it sells, by location. Bring your store address. Use the result to plan your next step.
+subhead: Get how many days each product stock will last and how fast it sells, by location.
 explain: |
-  Per product and per location, you see how many days of stock remain at the current selling pace, and how much of what you received has sold. That tells you what to reorder and when.
+  Per product and per location, you see how many days of stock remain at the current selling pace, and how much of your stock has sold. That tells you what to reorder and when.
 
-  The skill reads variants, orders and inventory from Shopify. It looks back over your chosen window, 30 days by default, to get a daily sales rate. Days of stock is the quantity on hand divided by that rate. Sell-through is units sold as a share of stock received. Anything under your alert level, 14 days by default, is flagged. You can narrow it to one supplier. It only reads and changes nothing. Your AI needs access to your Shopify store.
+  The skill reads variants, orders and inventory from Shopify. It looks back over your chosen window, 30 days by default, to get a daily sales rate. Days of stock is the quantity on hand divided by that rate. Sell-through is units sold as a share of units sold plus units on hand. Anything under your alert level, 14 days by default, is flagged. You can narrow it to one supplier. It only reads and changes nothing. Your AI needs access to your Shopify store.
 when:
   - You plan next week's purchase orders and need a reorder list.
   - A bestseller may run out before restock arrives.
@@ -35,7 +35,9 @@ how_to_use:
   - Paste in the skill and give your store address. Add the sales window, alert level or supplier if you want them.
   - Wait for the run. It only reads your store and changes nothing.
   - Check the critical list first. Then open the CSV and compare low items with your supplier lead times.
-  - Use a 90-day window for slow or seasonal products. The default is 30 days.
+  - Use a 90-day window for slow or seasonal products. The default is 30 days. Shopify may limit older order history, so check that orders older than the window come back before you trust a 90-day run.
+  - Take the flagged items to your supplier lead times. Use the Dead stock finder for items that did not sell.
+next: [dead-stock-finder, reorder-quantity-planner]
 output_sample:
   input:
     - Your Shopify store address

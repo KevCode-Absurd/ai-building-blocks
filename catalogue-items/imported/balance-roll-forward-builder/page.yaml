@@ -70,3 +70,4 @@ terms:
     meaning: A test that the schedule's lines add up to the ledger closing balance.
   - term: Reclass
     meaning: A move of an amount from one account to another.
+next: [month-end-close-planner, account-reconciler, accrual-schedule-drafter]

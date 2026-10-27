@@ -125,8 +125,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Send to people who did not open, schedule three sends on one day and track revenue by campaign."}
-    - {name: "Shopify", why: "Stock levels and a scheduled sale end give you a close date that is true."}
+    - {name: "Klaviyo", why: "Send to people who did not open, schedule three sends on one day and track revenue by campaign. It is a paid service."}
+    - {name: "Shopify", why: "Stock levels and a scheduled sale end give you a close date that is true. You need a paid Shopify plan."}
     - {name: "Any good chat AI", why: "Any current chat AI can build the calendar and outlines from your product facts."}
   inputs:
     - "Real reviews, marked with the doubt each one answers"

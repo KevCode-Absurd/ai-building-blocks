@@ -62,7 +62,7 @@ how_it_works:
   - title: "Lock the date and budget"
     text: "Write both at the top and say neither moves. Only scope can change."
   - title: "Name the heart"
-    text: "Write one sentence: \"It helps <who> do <what>.\" Ask me to confirm it before you cut."
+    text: "Write one sentence: \"It helps <who> do <what>.\" State it at the top of the reply and flag it for you to check before you act on the cuts."
   - title: "Cut in rounds"
     text: "Remove the half of the list that matters least to that sentence. Repeat until removing any more item would make the sentence false. Show each round."
   - title: "Rank and draw the line"

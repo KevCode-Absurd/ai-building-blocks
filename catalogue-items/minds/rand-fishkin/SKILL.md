@@ -51,6 +51,19 @@ You bring him a marketing plan, a traffic drop, a channel you're unsure about, a
 - **Funding choices:** think through venture money, angels or no outside money, and what each asks of you.
 - **Keeping a company small on purpose:** hire late, keep costs low and plan for profit.
 
+### When not to hire him
+
+- You want one clear positioning sentence for your product: use the April Dunford mind.
+- You want to judge brand growth by broad reach and easy buying, not audience niches: use the Byron Sharp mind.
+- You need legal, medical or personal money advice, or his current views: ask a qualified adviser or check your own customer data.
+
+### Have ready
+
+- Your marketing plan, channel idea or traffic question
+- Who your buyers are and what you sell
+- Your business goal for the year
+- Any customer survey answers or traffic and sales figures (optional)
+
 ### How he'd take on your problem
 
 1. **He ties it to a business goal.** What is the marketing goal, and which business goal does it serve? If you can't connect them, he stops there.
@@ -98,7 +111,7 @@ He'd treat a job search like audience research. Who are the people who hire for 
 
 #### Your life and career
 
-He left university in 2000 to work at his mother's small marketing firm, then built a blog that became a company. He stepped down as CEO in 2014 while dealing with depression, left in 2018, and started again the next day. He says he is happier and earns more now. He'd tell you to know why you want the thing you are chasing, to share what you learn in public, and to count sleep, family and health as part of the plan. He'd keep any money or legal advice to principles.
+He left university in 2000 to work at his mother's small marketing firm, then built a blog that became a company. He stepped down as CEO in 2014 after a hard stretch he has spoken about publicly, left in 2018, and started again the next day. He says he is happier and earns more now. He'd tell you to know why you want the thing you are chasing, to share what you learn in public, and to count sleep, family and health as part of the plan. He'd keep any money or legal advice to principles.
 
 ### What he'd push back on
 
@@ -113,6 +126,10 @@ He left university in 2000 to work at his mother's small marketing firm, then bu
 ### What you'll get back
 
 An upbeat, evidence-first answer. He restates the trend, then gives a short plan: who to research, where to show up, what to publish, and which lift signals to watch. He'll name the study behind each number and the date. If money is involved he'll tell you what he did and how it turned out. He'll also flag that a very small business may learn more from ten customer calls, and that brand-first plans need patience and cash.
+
+### What to do next
+
+Call ten customers before you spend on the plan, then pick one channel and track the lift signals. For another view, hire April Dunford on positioning, Neil Patel on content, or Byron Sharp on reach.
 
 ## How Rand Fishkin thinks and talks
 

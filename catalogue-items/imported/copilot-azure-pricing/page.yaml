@@ -15,7 +15,9 @@ how_to_use:
   - Paste the skill into a chat, or add it to your AI tool as a skill.
   - List the services, region, size and monthly usage. If you are unsure of a size, say so and your AI will ask.
   - Check the price table and the assumptions. Fix any wrong region or usage number and ask for a new estimate.
+  - If the live price lookup fails, your AI may fall back on a saved snapshot of Copilot Studio rates from the import date. It should say so. Confirm those rates on Microsoft's billing page before you budget.
   - For a binding quote, copy the lines into the Azure Pricing Calculator.
+  - Next, share the assumptions list with whoever owns the budget before spend is approved, and ask for a new estimate when your usage numbers change.
 output_sample:
   input:
     - The Azure services you need, such as virtual machines or storage

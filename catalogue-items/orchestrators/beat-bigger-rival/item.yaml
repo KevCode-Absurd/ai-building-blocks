@@ -15,10 +15,10 @@ outputs:
   - {type: plan}
 uses: [competitor-white-space-mapper, counter-positioning-finder, ten-year-durability-checker, power-stage-build-planner]
 steps:
-  - {uses: competitor-white-space-mapper, note: "Where nobody is strong, and where the leader's own model holds it back."}
-  - {uses: counter-positioning-finder, note: "A new model, with the sum that shows why the leader holds back."}
-  - {uses: ten-year-durability-checker, note: "How long the window stays open, and who else could use the same model."}
-  - {uses: power-stage-build-planner, note: "A second power to build with the time your new model buys."}
+  - {uses: competitor-white-space-mapper, note: "Reads your rivals. Returns where nobody is strong, and where the leader's own model holds it back."}
+  - {uses: counter-positioning-finder, note: "Reads the gaps from step 1. Returns a new model, with the sum that shows why the leader holds back."}
+  - {uses: ten-year-durability-checker, note: "Reads the model from step 2. Returns how long the window stays open, and who else could use the same model."}
+  - {uses: power-stage-build-planner, note: "Reads the ten-year check from step 3. Returns a second power to build with the time your new model buys."}
 origin: rebuilt
 version: 1.0.0
 minds: [hamilton-helmer]

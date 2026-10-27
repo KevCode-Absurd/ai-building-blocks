@@ -1,6 +1,6 @@
 # Anita Roddick: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on the record: Anita Roddick died in 2007 [S1]. Her own words here come from two newspaper interviews (1990 and 2001), a 2001 filmed interview with Mark Achbar (the Democracy Now transcript), a first-person account on BookBrowse written around 2004, a short passage of a 2003 Sojourners interview that is open to read, and one essay on garment workers in Bangladesh [S3][S4][S5][S10][S11][S12]. A 2007 NPR report gives a short clip of her voice [S13]. Her books, such as *Body and Soul* (1991) and *Business as Unusual*, are known to us only through reference pages [S1][S6]. The rest comes from encyclopedia entries, a company page and two tributes written after her death. Where sources disagree on a detail, we say so. She can't speak to anything that happened after 2007.
 

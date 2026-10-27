@@ -9,7 +9,7 @@ subhead: A ranked fix plan for your WordPress Site Health screen, with backups f
 explain: |
   A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
 
-  Paste the report from Tools, Site Health, or the debug info. The skill sorts items into critical, recommended and passed, then tiers every fix by risk. Before any edit to wp-config.php, .htaccess or a plugin, it tells you to back up that exact file outside the web root. Safe fixes can be done for you, and risky ones come with WP-CLI commands or code to run yourself. It covers speed, security and SEO issues.
+  Paste the report from Tools, Site Health, or the debug info. The skill sorts items into critical, recommended and passed, then tiers every fix by risk. Before any edit to wp-config.php, .htaccess or a plugin, it tells you to back up that exact file outside the web root. Your AI gives you commands and code to run yourself, because a chat AI cannot reach your site. Safe fixes are short and easy to undo. Risky ones are marked. It covers speed, security and SEO issues.
 when:
   - Site Health shows red and orange items you do not understand.
   - You want the site faster and safer without breaking it.
@@ -34,9 +34,11 @@ how_to_use:
   - Open Tools, then Site Health in your WordPress admin. Copy the text from the Status tab. You can also copy the Info tab.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
   - Paste your report. Say how you can reach your files (SFTP, host file manager or WP-CLI) and whether you have a full backup.
+  - Know that the commands need WP-CLI or SFTP access, and that you run them yourself. Your AI shows the rollback command before any delete or edit.
   - Make the backup your AI asks for before you change any file. Some commands, such as the UpdraftPlus backup or Redis cache steps, only work if that plugin is installed.
   - Make one change at a time. Check that your home page and wp-admin still load after each one.
   - Run Site Health again to see which warnings have cleared.
+  - If the site breaks after a change, restore the backed-up file using the rollback command, then contact your host. Tier 2 items may need your host's support.
 output_sample:
   input:
     - Your Site Health report, pasted as text or a screenshot

@@ -7,7 +7,7 @@ job: build-software
 headline: Image text reader
 subhead: The text from a sign, meter, label or receipt photo, read out in a form you can copy. Hard images get cleanup first, so a glare-covered display or a skewed label still gives usable words.
 explain: |
-  The text from a sign, meter, label or receipt photo, read out in a form you can copy. Hard images get cleanup first, so a glare-covered display or a skewed label still gives usable words. It runs in MATLAB with the Computer Vision Toolbox.
+  The text from a sign, meter, label or receipt photo, read out in a form you can copy. Hard images get cleanup first, so a glare-covered display or a skewed label still gives usable words. It runs in MATLAB with the Computer Vision Toolbox. The skill is under the BSD 2-Clause licence, which lets you use it only with MathWorks products (see LICENSE.md).
 
   The skill looks at the picture first and writes a short plan before any code runs. It then picks a text finder, cleans the image, and runs recognition. It tries at most two cleanup recipes, then stops and asks you rather than guessing. It sets the layout mode whenever you give it a box. Handwriting, fancy lettering and CAPTCHAs are named as things it cannot read.
 when:
@@ -36,6 +36,7 @@ how_to_use:
   - Read the short plan it writes first. It looks at your image before any code runs.
   - Type in what the text really says if you can. The error figures are only reliable against text you give.
   - If it is unsure, it asks you to confirm the text. Answer so it can tune the cleanup.
+  - Next, re-run the saved MATLAB file on a whole folder of images, and compare the decision log between runs.
 output_sample:
   input:
     - Your image, or a folder of images

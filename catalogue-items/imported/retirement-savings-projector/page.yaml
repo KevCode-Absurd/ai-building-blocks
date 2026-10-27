@@ -34,9 +34,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Type your age, target retirement age, savings, monthly saving and the yearly income you want.
   - Add any pension or state benefit, plus your return and inflation guesses, if you have them.
-  - Ask your AI to run the maths with the included script. This needs an AI that can run Python code.
+  - If your AI can run Python and has the skill folder, ask it to use the included calculate.py script. If not, ask it to apply the formulas in the Technical Steps section and show each step. Check the arithmetic yourself with a simple calculator.
   - Check the gap and the monthly saving first, then look at the sensitivity table.
-  - Treat the 4% rule as a rule of thumb, not a promise. Retiring early may need a lower rate.
+  - Treat the 4% rule as a rule of thumb, not a promise. It comes from US research, so change the rate and assumptions to fit your own country and account types. Retiring early may need a lower rate.
+  - Next, take the gap and the monthly saving to the personal budget builder to find the money, then ask a licensed adviser about tax wrappers.
 output_sample:
   input:
     - Your age and the age you want to retire
@@ -55,3 +56,4 @@ output_sample:
       contains: A safe yearly and monthly withdrawal amount, and when the pot runs out under different return cases.
     - name: Sensitivity Table
       contains: How the result changes if you retire 2 years earlier or later, or earn 1% more or less.
+next: [personal-budget-builder]

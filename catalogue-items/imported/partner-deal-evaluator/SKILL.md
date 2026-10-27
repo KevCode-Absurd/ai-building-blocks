@@ -53,6 +53,10 @@ sales targets).
 If the intake template can't be honestly filled out, the prospective partner has not
 demonstrated enough substance to evaluate. Stop. Go back to them.
 
+**Intake fields.** `intake.json` holds: `partner_name`, `partner_type`, `independent_demand_evidence` (`named_accounts_sourced_count`, `end_customer_relationships_pct`, `sales_team_size`), `strategic_value`, and `commitments` (`joint_marketing_spend`, `dedicated_resources`, `certification_completion`, `sales_targets`). `gtm.json` holds `partner_name`, `partner_tier`, `sales_motion`, `target_segments`, `joint_value_proposition`, `deal_avg_size_usd`, `commitment_horizon_months`. `revshare.json` holds `partner_name`, `partner_tier`, `partner_contribution`, `deal_avg_size_usd`, `our_cost_to_serve_direct_usd`, `our_cost_to_serve_via_partner_usd`. Each script also has `--sample` to show a full example. If you cannot run scripts, ask the same questions in chat, apply the same tier floors by hand, and say the result is by hand. Never fill in a value the user has not given: write "unknown".
+
+The statistics and attributions quoted from Forrester, Canalys, Jay McBain, Joe Hessling and others in this skill and its reference files are the original author's and were not checked. Present them as the author's rules of thumb, not as research results.
+
 ### Step 2 — Tier classify
 
 Run `scripts/partner_tier_classifier.py --input intake.json --profile saas --output markdown`.
@@ -162,13 +166,13 @@ canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
 1. **"Name 5 end customers this partner has already sold to in the last 12 months — at companies you would target yourself."**
    Recommended: if they cannot, they have no independent demand. Sign at REFERRAL tier only,
    if at all. Reseller/OEM/Strategic floors require demonstrated end-customer relationships.
-   Canon: Joe Hessling — partner-program failure analyses identify "no independent demand"
-   as the #1 root cause of dead partner tiers.
+   Canon (author's attribution, not verified): Joe Hessling — "no independent demand" is a
+   common root cause of dead partner tiers.
 
 2. **"Is this partner asking for preferential commercial terms, or asking how to bring you customers?"**
    Recommended: discount hunters lead with terms; real partners lead with accounts. Listen
    to the first 30 minutes of the first meeting.
-   Canon: Forrester channel research — 60%+ of "partner inquiries" at early-stage SaaS are
+   Canon (author's rule of thumb, not verified): many early-stage partner inquiries are
    discount hunting, not channel investment.
 
 3. **"What's the joint value proposition in one sentence, and who is the named end-customer it serves?"**
@@ -194,8 +198,9 @@ canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
 6. **"If this partner sells to one of YOUR direct accounts, who wins — your rep or them?"**
    Recommended: Rules of Engagement in writing, signed before kickoff. Territory by named
    account, by segment, or by geo. Conflict resolution at named human, not committee.
-   Canon: Jay McBain (Canalys) — channel conflict is the #1 partner program killer; written
-   ROE published before partner signs prevents 80% of disputes.
+   Canon (author's attribution, not verified): Jay McBain (Canalys) — channel conflict is a
+   leading cause of partner program failure; written rules of engagement signed before
+   kickoff prevent many disputes.
 
 7. **"Is this a partnership, or should this be an acquisition?"**
    Recommended: if the partner has independent moat you cannot replicate AND the

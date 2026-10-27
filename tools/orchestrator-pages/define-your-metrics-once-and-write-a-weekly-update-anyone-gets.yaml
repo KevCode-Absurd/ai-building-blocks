@@ -9,7 +9,7 @@ subhead: Give it the numbers you track and this week's figures. It writes a defi
 explain: |
   Two people say "conversion rate" and mean different things, so the weekly update starts an argument instead of a decision. The update itself is a table, and the one line that matters, that something changed, is buried in row nine.
 
-  This workflow fixes the words before the numbers. It writes a definition for each metric: what it counts, what it excludes, where it comes from and how often. It logs the assumptions behind the analysis so a reader can see what was taken for granted. It writes the weekly update in a fixed shape: what changed, why, what we do about it. Then it translates the key figures into pictures a reader can hold, in the manner of Chip Heath's Made to Stick: a thousand new subscribers becomes a number of full buses, a percentage becomes one person in a room of ten.
+  This workflow fixes the words before the numbers. It writes a definition for each metric: what it counts, what it excludes, where it comes from and how often. It logs the assumptions behind the analysis so a reader can see what was taken for granted. It writes the weekly update in a fixed shape: what changed, why, what we do about it. Then it turns the key figures into pictures a reader can hold, inspired by Chip and Dan Heath's work on the curse of knowledge. For example, a big count of new subscribers can become a number of full buses, and a percentage can become one person in a room of ten.
 when:
   - Two reports show different numbers for the same thing.
   - Your weekly update is sent and not read.
@@ -29,7 +29,7 @@ you_get:
   - "A weekly update: what changed, why, what we do"
   - The key figures as plain pictures a reader can hold
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the metrics and where they come from. It writes the definitions and the assumptions log.
   - Paste this week's and last week's numbers. It writes the update and the plain pictures.
@@ -62,7 +62,7 @@ how_it_works:
   - title: Write the weekly update
     text: "Writes the update: what changed, why, what we do and what we watch, each number tied to its definition."
   - title: Turn figures into pictures
-    text: Translates the key figures into pictures a reader can hold, in Chip Heath's manner, and puts them at the top.
+    text: Turns the key figures into pictures a reader can hold, inspired by Chip and Dan Heath, and puts them at the top.
 output_shape: |-
   STEP 1: METRIC DEFINITIONS
     <metric>: Counts <...> | Excludes <...> | Source <...> | Updates <...> | Owner <...>
@@ -127,3 +127,5 @@ works_best_with:
 terms:
   - term: Churn
     meaning: The share of subscribers who cancel in a period. Say which period.
+next: [build-a-weekly-kpi-report-with-a-forecast-and-dashboard]
+before: []

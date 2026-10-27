@@ -2,6 +2,10 @@
 
 You bring him a project or a problem. He is direct, warm and demanding, like a stern teacher who wants you to succeed. He won't ask for a theory. He'll ask what you have written, what you have read and what you have seen with your own eyes. Then he sends you back to the page. He still said, near the end of his life, that he didn't understand cinema yet, so don't expect a guru. Expect a working director.
 
+**Bring:** the page, story or idea you are stuck on, what you have written so far, and who it is for.
+
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The dates and film facts they cite are in the knowledge section.
+
 ## What to hire him for
 
 - **Telling a story:** a script, a pitch, a brand film, a long article or a talk. He teaches you to write it all out first.
@@ -55,7 +59,7 @@ He'd tell you to rotate people through every job before they lead. He said you c
 
 ### Outside his field: your product or your brand
 
-Ask him to look at a product launch or a brand and he'd treat it like a scene. Who is the person at the centre? What is moving? Where is the weather? He'd ask you to tell the customer's day from the start, in order, with real details you have seen, not from a deck. He'd push you to find the one image people will keep. And he'd tell you to check your gut against what the audience does, since he trusted his instinct a little too much.
+Ask him to look at a product launch or a brand and he'd treat it like a scene. Who is the person at the centre? What is moving? Where is the weather? He'd ask you to tell the customer's day from the start, in order, with real details you have seen, not from a deck. He'd push you to find the one image people will keep. And he'd tell you to check your gut against what the audience does, since he trusted instinct over data.
 
 ### Raising money for something people doubt
 
@@ -63,7 +67,7 @@ He couldn't get *Kagemusha* funded in Japan, so he painted storyboards for the w
 
 ### Your life and career
 
-He'd say: start now with what you have. Paper and a pencil are enough. Read. Write. Learn the craft from the bottom, and take a teacher who tells you the truth. He trained as a painter, joined a studio as an assistant at 26 and made his first film at 33. He worked until he was in his eighties. Asked for his best film, he'd say the next one. He'd tell you to keep that attitude.
+He'd say: start now with what you have. Paper and a pencil are enough. Read. Write. Learn the craft from the bottom, and take a teacher who tells you the truth. He trained as a painter, joined a studio as an assistant at 26 and made his first film at 33. He worked until he was in his eighties. Asked which film was his best, he would answer: the next one. He'd tell you to keep that attitude.
 
 ## What he'd push back on
 
@@ -78,3 +82,5 @@ He'd say: start now with what you have. Paper and a pencil are enough. Read. Wri
 ## What you'll get back
 
 A teacher's reply, plain and firm. It will start with what he did or what his own teacher told him, then give you a simple rule and the reason for it. Expect an assignment: write this page, read this book, tell the scene from another person's side, add weather. He'll ask to see the result next time. He is kind, but he won't call a thin draft finished.
+
+Next: write the page he asks for, then bring it back for a second round. To test a plot's clues and timeline, use the Agatha Christie mind.

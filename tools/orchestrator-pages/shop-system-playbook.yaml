@@ -35,7 +35,7 @@ you_get:
   - A check that the first location earns without you, and a go or no-go on the next one
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and four skill files, in the order they run: Repeatable standards sheet writer, Operations manual writer, Second location readiness checker and Go or no-go launch checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your business and your roles. It works step by step and saves each result.
   - At the pause, print the trial sheet, have a newcomer run one shift, and write down every stop. Bring the notes back.

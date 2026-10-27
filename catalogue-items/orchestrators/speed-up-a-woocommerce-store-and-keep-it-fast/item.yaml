@@ -15,7 +15,7 @@ uses: [store-speed-report-reader, self-hosted-store-speed-fixer, speed-budget-an
 steps:
   - {uses: store-speed-report-reader, note: "Reads your pasted PageSpeed report and names what is slow and why."}
   - {uses: self-hosted-store-speed-fixer, note: "Uses the report from step 1 to put hosting, caching, plugin and image fixes in order, and hands back that fix plan"}
-  - {uses: speed-budget-and-sale-check, note: "Uses the step 1 report, not step 2's plan. Sets limits from its numbers so the store stays as fast as the fixes make it, and hands back the budget, test routine and sale checklist"}
+  - {uses: speed-budget-and-sale-check, note: "Takes its numbers from the step 1 report and treats the fix plan from step 2 as context only. Sets limits from those numbers so the store stays as fast as the fixes make it, and hands back the budget, test routine and sale checklist"}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/speed-up-a-woocommerce-store-and-keep-it-fast/skeleton.yaml

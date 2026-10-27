@@ -6,7 +6,7 @@ argument-hint: "[daily | topic <query> | incident]"
 
 # /brief -- Legal Team Briefing
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> AI Blocks note: the CONNECTORS.md file named in the original is not in this folder. Where a source says "if connected", check whether your AI can read that source (email, calendar, chat, contract tool, CRM). If it cannot, say which sources you skipped and carry on with the rest. Never guess what a source would have shown.
 
 Generate contextual briefings for legal work. Supports three modes: daily brief, topic brief, and incident brief.
 

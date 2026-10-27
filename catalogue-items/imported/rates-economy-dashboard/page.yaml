@@ -34,6 +34,7 @@ how_to_use:
   - Paste the files and details into Claude, ChatGPT or Gemini, along with the skill text.
   - "Ask it to run the calculations and fill the six sections: as of, source ledger, indicators, yields, real yield, and gaps."
   - Check the source ledger first. Every number should have a source, date and unit.
+  - Before you publish a market note, compare each figure with the official RBI or MoSPI release page it came from.
 output_sample:
   input:
     - The date you want data up to
@@ -57,3 +58,10 @@ output_sample:
       contains: A real yield only where the yield and inflation figure share a horizon, otherwise n/a and the reason.
     - name: Interpretation and gaps
       contains: Careful observations, missing inputs, unsettled revisions and any cycle view held back for lack of evidence.
+terms:
+  - term: ZCYC
+    meaning: The zero coupon yield curve from CCIL. It gives the yield on government bonds for each length of time to maturity.
+  - term: Fisher relation
+    meaning: The formula that turns a yield and expected inflation into a real yield, the yield after inflation.
+  - term: percentage points and basis points
+    meaning: One percentage point is 1.00 on a rate, such as 6.20% to 7.20%. One basis point is one hundredth of that.

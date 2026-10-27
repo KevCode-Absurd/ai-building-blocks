@@ -41,8 +41,10 @@ Scans product variants for inconsistent option values (e.g., "Sm", "Small", "sma
 
 2. Match variant option values against `mapping` keys — collect variants needing update
 
+**Approval gate:** after the preview of step 2, stop. Show the list of changes and wait for the user to say yes. Run step 3 only after they confirm, and only if `dry_run` is false.
+
 3. **OPERATION:** `productVariantsBulkUpdate` — mutation
-   **Inputs:** `productId`, array of `variants { id, options: [<normalized_value>] }` for affected variants
+   **Inputs:** `productId`, array of `variants { id, optionValues: [{ optionName: <option_name>, name: <normalized_value> }] }` for affected variants. `optionName` names the option being set (for example `Size`), and `name` is the standard value. Check the field names against the Shopify Admin API docs for the `api_version` in use before you run it.
    **Expected output:** `productVariants { id, selectedOptions }`, `userErrors`
 
 ## GraphQL Operations

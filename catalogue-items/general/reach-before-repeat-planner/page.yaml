@@ -135,6 +135,8 @@ improve:
   - "Test one placement at a time."
   - "Pair it with the Campaign keep-or-change checker."
 
+before: []
+next: []
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Ranking and sums are work any strong chat AI does well with this skill."}

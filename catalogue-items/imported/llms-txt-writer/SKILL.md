@@ -36,9 +36,10 @@ AI language models face a fundamental challenge when processing websites: they m
 
 1. **Faster AI comprehension:** AI systems can understand your site's purpose and structure from a single file rather than crawling dozens of pages.
 2. **Controlled narrative:** You choose which pages and facts AI systems see first, shaping how they represent your brand.
-3. **Higher citation accuracy:** AI systems that consult llms.txt can cite the correct, authoritative page for each topic.
-4. **Reduced misrepresentation:** Key facts (pricing, features, locations) are stated explicitly, reducing AI hallucination about your business.
-5. **Early adopter advantage:** As of early 2026, fewer than 5% of websites have an llms.txt file, making it a differentiator.
+3. **A clearer page to point to:** An AI system that reads llms.txt has the right page listed for each topic.
+4. **Key facts stated outright:** Pricing, features and locations are written plainly, so a system that reads the file has less to guess.
+
+No AI tool is promised to read llms.txt or to cite it. Do not claim better citations or fewer wrong answers, and do not quote adoption figures unless you have a source.
 
 ---
 

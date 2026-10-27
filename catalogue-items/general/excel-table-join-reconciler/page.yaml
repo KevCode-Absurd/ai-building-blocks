@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel table join reconciler
 subhead: Share two Excel tables and their matching keys. Get a reconciled join with unmatched rows and duplicate keys explained. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share two Excel tables and their matching keys. Get a reconciled join with unmatched rows and duplicate keys explained.
+  A join on a key goes wrong quietly when a key repeats or is missing: totals double and rows vanish. This joins your two tables on exact keys, then lists the matched, left-only, right-only and ambiguous rows so you can see what did not line up.
 
 
   It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -15,9 +15,9 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share two Excel tables and their matching keys. Get a reconciled join with unmatched rows and duplicate keys explained.
-  - Both source tables, key definitions, expected one-to-one or one-to-many relationship, reporting period and required outputs.
-  - You need a checked copy while keeping your original files intact.
+  - Two exports from different systems should line up, but their totals do not match.
+  - You need to know which records are in one table and not the other.
+  - A join keeps adding rows and you suspect duplicate keys.
 not_for:
   - "You need fuzzy or approximate matching: use a person's review or a tool built for fuzzy matching, since this skill only joins on exact keys."
   - "The two tables share no key: add a key column first, or ask the data owner which fields identify the same record."
@@ -33,6 +33,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+  - Read join-checks.md. Fix every failed check and rerun the unmatched rows before you share or load the joined workbook.
 output_sample:
   input:
     - Your first Excel table
@@ -103,3 +104,4 @@ tests:
     expected: Allow an explicit one-to-many join; do not triple-count the order total.
   - input: A required customer key maps to two distinct customers
     expected: Stop the ambiguous match and return both source locations.
+next: [excel-monthly-rollup-builder]

@@ -47,6 +47,8 @@ npx expo install --fix
 
 3. Clear caches and reinstall
 
+Warning: this deletes `node_modules` and `.expo`. Before it, make sure the project is saved in git and `ios/`, `android/`, `patches/` and `app.json` are backed up. Get a clear yes from the user before you run it.
+
 ```bash
 npx expo export -p ios --clear
 rm -rf node_modules .expo
@@ -61,11 +63,15 @@ watchman watch-del-all
 - Test all camera, audio, and video features
 - Verify navigation still works correctly
 
+After the checklist passes: run the app's test suite, build once for each platform, and do a final check on a real device. Use a testing or build skill for that step if you have one.
+
 ## Prebuild for Native Changes
 
 **First check if `ios/` and `android/` directories exist in the project.** If neither directory exists, the project uses Continuous Native Generation (CNG) and native projects are regenerated at build time — skip this section and "Clear caches for bare workflow" entirely.
 
 If upgrading requires native changes:
+
+Warning: `prebuild --clean` deletes and regenerates `ios/` and `android/`. Any change you made by hand in those folders is lost. Back them up and get a clear yes from the user first.
 
 ```bash
 npx expo prebuild --clean
@@ -87,7 +93,7 @@ These steps only apply when `ios/` and/or `android/` directories exist in the pr
 - If using Expo SDK 54 or later, ensure react-native-worklets is installed — this is required for react-native-reanimated to work.
 - Enable React Compiler in SDK 54+ by adding `"experiments": { "reactCompiler": true }` to app.json — it's stable and recommended
 - Delete sdkVersion from `app.json` to let Expo manage it automatically
-- Remove implicit packages from `package.json`: `@babel/core`, `babel-preset-expo`, `expo-constants`.
+- Remove implicit packages from `package.json`: `@babel/core`, `babel-preset-expo`, `expo-constants`. Before you remove `expo-constants`, search the code for imports of it. If any exist, keep it.
 - If the babel.config.js only contains 'babel-preset-expo', delete the file
 - If the metro.config.js only contains expo defaults, delete the file
 

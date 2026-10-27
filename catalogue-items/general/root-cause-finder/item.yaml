@@ -10,6 +10,7 @@ inputs:
   - {type: question, required: true}
   - {type: plan, required: false}
   - {type: feedback_notes, required: false}
+  - {type: shortlist, required: false}
 outputs:
   - {type: audit_report, required: true}
 origin: rebuilt

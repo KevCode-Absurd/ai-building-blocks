@@ -17,7 +17,7 @@ when:
   - You are about to draft a contractor agreement.
 not_for:
   - The person already works for you. Talk to an employment lawyer, because this check is only for work that has not started.
-  - You need a final legal ruling or a signed opinion. Ask an employment lawyer, because this gives a first read only.
+  - You need a final legal ruling or a signed opinion. Ask an employment lawyer, because this gives a first read only. For a close call, book a single consultation.
   - You need a contract written. Ask a lawyer or use a contract template, because this does not draft agreements.
 you_give:
   - How the person will work day to day
@@ -32,11 +32,11 @@ you_get:
   - A short summary of the risk areas
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
-  - If you are not using Claude Code, ignore any setup file path. Instead, tell your AI your country or state and that the work is not started yet.
-  - Paste your answers about the work, the hours, the tools, the pay and the place.
+  - If you are not using Claude Code, tell your AI to skip the config-file loading and the attorney-only gate in the skill. Use only the intake questions and the output sections. Give your country or state, and say the work is not started yet.
+  - Start with three facts: the role and daily work, the hours and tools, and the pay and place. Then paste your answers about the rest.
   - The legal research step works best with a paid tool like Westlaw or CourtListener. Without one, your AI uses web search or memory, so check every cited law before you rely on it.
   - Read the bottom line and the flagged items first.
-  - Take the red flags to an employment lawyer before you sign anything.
+  - Take the red flags to an employment lawyer before you sign anything. For a close call, a single consultation with an employment lawyer is the cheaper next step.
 output_sample:
   input:
     - How the person will work day to day

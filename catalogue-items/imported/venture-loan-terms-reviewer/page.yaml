@@ -34,6 +34,8 @@ how_to_use:
   - "Paste your term sheet, or type its main terms: amount, rate, repayment, warrants and covenants."
   - Add your revenue, growth, margins, cash, monthly burn and share price or valuation.
   - Ask your AI to review the offer from your side as the borrower.
+  - Your AI works out warrant shares and runway months by running scripts/calculate.py if it can run code. If it cannot, ask it to show its working for each figure so you can check it.
+  - If the term sheet leaves out warrant coverage, strike price or a valuation, ask the lender to state them in writing before you run the numbers.
   - Read the covenants and risks first. Then take the questions to the lender.
   - Have a lawyer check the final term sheet before you sign.
 output_sample:

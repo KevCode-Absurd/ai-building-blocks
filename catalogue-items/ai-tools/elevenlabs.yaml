@@ -20,7 +20,7 @@ best_for:
   - Teams who add voices to AI video clips.
   - Developers building voice assistants with the API.
 not_for:
-  - Cloning someone's voice without their permission.
+  - Cloning someone's voice without their permission. Use only voices you have the right to use.
   - Long audio on a small plan, since all products share one credit pool.
 pricing:
   model: freemium
@@ -44,5 +44,22 @@ blocks:
   - voice-assistant-builder
 alternatives: [whisper, suno, heygen, descript]
 last_checked: 2026-10-21
+first_result:
+  - "Go to elevenlabs.io and sign up for the free plan, which gives 10,000 credits a month."
+  - "Open text to speech. Paste a short script of about 100 words and pick a voice."
+  - "Generate it, listen, and fix the wording. Names and numbers often need a respelling to sound right."
+  - "Standard models use about 1 credit per character, so 100 words is roughly 600 credits (our own sum)."
+  - "Download the audio. Starter includes a commercial licence, so check your plan's licence before you use the audio in an ad."
+  - "You end with an audio file of your script in the voice you chose."
+  - "Next: for other languages, use the Multilingual narrator or follow the workflow Make a voiceover and ship it in other languages."
+needs:
+  - "An ElevenLabs account."
+  - "A written script. Read it aloud first and fix awkward lines."
+  - "Permission for any voice you clone."
+  - "A plan with a commercial licence, if the audio is for ads or sale."
+not_verified:
+  - "Where each tool sits in the app."
+  - "How many credits dubbing, music and sound effects use."
+  - "Whether the free plan allows commercial use."
 sources:
   - https://elevenlabs.io/pricing

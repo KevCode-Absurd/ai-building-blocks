@@ -46,8 +46,8 @@ seats:
 pairs_with: [hayao-miyazaki, charles-and-ray-eames]
 last_checked: 2026-10-23
 sources:
-  - {n: 1, title: Theater Games for the Classroom opening chapter preview, by: Viola Spolin, url: "https://www.scribd.com/document/942402612/Theatre-Games-for-the-Classroom-Spolin", kind: own-words}
-  - {n: 2, title: Improvisation for the Theater public text preview, by: Viola Spolin, url: "https://pdfcoffee.com/improvisation-for-the-theatre-viola-spolin-pdf-free.html", kind: own-words}
+  - {n: 1, title: Theater Games for the Classroom (book, as listed on the official publications page), by: Viola Spolin, url: "https://www.violaspolin.org/publications", kind: own-words}
+  - {n: 2, title: Improvisation for the Theater (book, as listed on the official publications page), by: Viola Spolin, url: "https://www.violaspolin.org/publications", kind: own-words}
   - {n: 3, title: Gibberish Exercises by Viola Spolin excerpt from third edition, by: Viola Spolin reproduced with introduction by Ollie Rasini, url: "https://www.bridgesimpro.eu/post/gibberish-exercises-by-viola-spolin", kind: own-words}
   - {n: 4, title: Viola Spolin Biography, by: Viola Spolin official legacy website, url: "https://www.violaspolin.org/bio", kind: reference}
   - {n: 5, title: Viola Spolin Publications, by: Viola Spolin official legacy website, url: "https://www.violaspolin.org/publications", kind: reference}

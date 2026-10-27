@@ -36,7 +36,9 @@ how_to_use:
   - Open your AI tool with the skill files and code running turned on. Give it your dataset, billing project, location and dates.
   - Ask it to render all the queries first without running them. Read them and the cost estimate.
   - Approve the run. Then check the results and the note on late events, since daily tables can change for up to three days.
-  - Use the reconciliation result to explain gaps against the GA4 screen.
+  - Open the reconciliation result first. Compare its daily row counts with the same days on the GA4 screen, and note any day that is off.
+  - Check the late-event note for those days. If the gap sits in the last three days, run the query again later before you report it.
+  - Send the gap list to whoever owns your tracking, or keep it with the report so each month is counted the same way.
 output_sample:
   input:
     - Your BigQuery project and GA4 export dataset name
@@ -65,3 +67,4 @@ output_sample:
       contains: Daily row counts, missing IDs and session date spans to explain gaps against the GA4 screen.
     - name: ecommerce.sql result
       contains: Transactions, items, conflicts in the data and daily summaries for your dates.
+next: [attribution-model-chooser, conversion-funnel-analyst]

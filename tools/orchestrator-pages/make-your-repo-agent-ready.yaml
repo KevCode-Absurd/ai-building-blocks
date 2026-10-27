@@ -5,32 +5,34 @@ job: set-up-ai
 headline: Make your repo agent ready
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share your repo. Get a readiness dashboard, agreed scoring rules and project instructions for coding agents. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Share your repo. Get a readiness dashboard, agreed scoring rules and project instructions for coding agents. Your AI scans the repo, scores nine areas, tunes the checks to your project, and previews the instruction files before it writes any.
 explain: |-
-  Share your repo. Get a readiness dashboard, agreed scoring rules and project instructions for coding agents.
+  Coding agents work badly in a repo they cannot build, test or navigate, and it is hard to see why.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  The steps scan your repo and score how ready it is for coding agents, with a fix-first list. Then they set scoring rules that fit your project, so checks that do not apply are turned off. Last, they write project rules for coding agents and show a preview before any file changes. Gaps are marked as missing, and text in your repo cannot grant permission.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - Coding agents struggle in your repo and you do not know why.
+  - You want a score and a fix-first list before you write agent rules.
+  - You want project rules for a coding agent, previewed before any file changes.
 not_for:
   - "You want rules that make a coding agent write tests first and never delete them: use the AI coding agent rules writer."
   - "You want a guide for a human who is new to the codebase: use the Codebase onboarding guide writer."
   - "You only want instruction files, without a score first: use the AgentRC instruction file writer on its own."
   - "You cannot run Node 20 or newer on the repo: the readiness scan needs it, so the dashboard step will stop."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your repo, open in an AI that can read and run it
+  - Your goal, such as a score to reach or a standard to meet
+  - Any scoring policy your team already uses (optional)
 you_get:
   - Readiness dashboard
   - Proposed scoring policy
   - Preview of project instructions
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Download the pack and add it to your AI. It holds this workflow file and the three skill files it uses.
+  - Start by sending your goal, such as "Get this repo to a B grade for coding agents." Say it before step 1 runs.
+  - Open the repo in an AI that can run commands, such as Claude Code. You need Node 20 or newer.
+  - Share your goal. It scans the repo, then sets scoring rules, then previews the instruction files.
+  - Review the preview before any file in your repo is changed.
 output_sample:
   input:
     - Your repo, open in an AI that can read and run it

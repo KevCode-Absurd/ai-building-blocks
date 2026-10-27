@@ -20,7 +20,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
+2. **Your page** with the [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer). Bring customer words (optional). It uses your brand brain and your offer and ad copy.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
@@ -70,11 +71,10 @@ Then: **Top 5 fixes** (one line each), **Facts to collect before writing**, **Co
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- **Make an offer people want** with the [Offer delivery options planner](https://useaiblocks.com/skills/delivery-option-generator). It takes the objection map.
-- **Understand your buyers** with the [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
+- The [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor). It takes the objection map.
+- The [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder).
+- The [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker). It takes the objection map.
+- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the objection map.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

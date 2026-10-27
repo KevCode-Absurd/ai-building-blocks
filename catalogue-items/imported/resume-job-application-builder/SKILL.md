@@ -56,9 +56,8 @@ everything**:
    searches over the parsed database; an LLM layer may summarize and score on
    top. Humans still make the decision.
 
-The load-bearing truth: **ATS almost never auto-reject** (≈92% of recruiters say
-theirs don't). The "ATS rejects 75% of resumes" stat is a myth from a defunct
-2012 vendor. What feels like bot-rejection is human overload (hundreds to
+The load-bearing truth: **ATS almost never auto-reject** (many recruiters say
+theirs don't; no source is given for an exact share, so treat any figure as approximate). The "ATS rejects 75% of resumes" stat is widely described as a myth. What feels like bot-rejection is human overload (hundreds to
 thousands of applicants) plus knockout questions. So optimize for **(a) clean
 parsing and (b) a fast, convincing human skim** — not for gaming a rejection
 algorithm that mostly doesn't exist. Details + myths: `references/07-myths-and-truth.md`.

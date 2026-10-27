@@ -62,7 +62,7 @@ Before providing recommendations, understand:
 
 ### Time-Based
 - **Not recommended**: "Show after 5 seconds"
-- **Better**: "Show after 30-60 seconds" (proven engagement)
+- **Better**: "Show after 30-60 seconds" (a rule of thumb from the author, not a proven figure; test it on your own traffic)
 - Best for: General site visitors
 
 ### Scroll-Based
@@ -292,6 +292,7 @@ Before providing recommendations, understand:
 - Escape key
 
 ### Benchmarks
+These are the author's rough rules of thumb. No source is given and they were not tested here. Do not present them to the user as facts. Say they vary by traffic, offer and design, and tell the user to measure their own rates.
 - Email popup: 2-5% conversion typical
 - Exit intent: 3-10% conversion
 - Click-triggered: Higher (10%+, self-selected)
@@ -448,7 +449,6 @@ Ideas to A/B test with expected outcomes
 ## Related Skills
 
 - **lead-magnets**: For planning lead magnets to promote via popups
-- **cro**: For optimizing the form inside the popup
-- **cro**: For the page context around popups
+- **cro**: For optimizing the form inside the popup and the page around the popup
 - **emails**: For what happens after popup conversion
 - **ab-testing**: For testing popup variations

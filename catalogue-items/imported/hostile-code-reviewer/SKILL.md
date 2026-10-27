@@ -13,7 +13,7 @@ license: "MIT"
 
 ## Description
 
-Adversarial code review skill that forces genuine perspective shifts through three hostile reviewer personas (Saboteur, New Hire, Security Auditor). Each persona MUST find at least one issue — no "LGTM" escapes. Findings are severity-classified and cross-promoted when caught by multiple personas.
+Adversarial code review skill that forces genuine perspective shifts through three hostile reviewer personas (Saboteur, New Hire, Security Auditor). Each persona looks hard for an issue — no "LGTM" escapes — and says so plainly if it finds no real one. Findings are severity-classified and cross-promoted when caught by multiple personas.
 
 ## Features
 
@@ -43,7 +43,7 @@ Produces a structured report with findings from all three personas, deduplicated
 
 ## Problem This Solves
 
-When Claude reviews code it wrote (or code it just read), it shares the same mental model, assumptions, and blind spots as the author. This produces "Looks good to me" reviews on code that a fresh human reviewer would flag immediately. Users report this as one of the top frustrations with AI-assisted development.
+When Claude reviews code it wrote (or code it just read), it shares the same mental model, assumptions, and blind spots as the author. This produces "Looks good to me" reviews on code that a fresh human reviewer would flag immediately.
 
 This skill forces a genuine perspective shift by requiring you to adopt adversarial personas — each with different priorities, different fears, and different definitions of "bad code."
 
@@ -86,7 +86,7 @@ For every file in the diff:
 
 ### Step 3: Run All Three Personas
 
-Execute each persona sequentially. Each persona MUST produce at least one finding. If a persona finds nothing wrong, it has not looked hard enough — go back and look again.
+Execute each persona sequentially. Each persona must look hard and report at least one finding. If a persona finds nothing wrong after a real second look, it writes "No real issue found" and names what it checked. Never invent a problem to fill the gap.
 
 **IMPORTANT:** Do not soften findings. Do not hedge. Do not say "this might be fine but..." — either it's a problem or it isn't. Be direct.
 
@@ -118,7 +118,7 @@ After all three personas have reported:
 3. For each state mutation, ask: "What if this runs twice? Concurrently? Never?"
 4. For each conditional, ask: "What if neither branch is correct?"
 
-**You MUST find at least one issue. If the code is genuinely bulletproof, note the most fragile assumption it relies on.**
+**Look for at least one issue. If the code is genuinely bulletproof, write "No real issue found", name what you checked, and note the most fragile assumption it relies on.**
 
 ---
 
@@ -142,7 +142,7 @@ After all three personas have reported:
 3. Check: would a new contributor know where to add a similar feature?
 4. Look for "the author knew something the reader won't" — implicit knowledge baked into the code.
 
-**You MUST find at least one issue. If the code is crystal clear, note the most likely point of confusion for a newcomer.**
+**Look for at least one issue. If the code is crystal clear, write "No real issue found", name what you checked, and note the most likely point of confusion for a newcomer.**
 
 ---
 
@@ -168,7 +168,7 @@ After all three personas have reported:
 3. Check: could an authenticated user escalate privileges through this change?
 4. Check: does this change expose any new attack surface?
 
-**You MUST find at least one issue. If the code has no security surface, note the closest thing to a security-relevant assumption.**
+**Look for at least one issue. If the code has no security surface, write "No real issue found", name what you checked, and note the closest thing to a security-relevant assumption.**
 
 ## Severity Classification
 
@@ -214,7 +214,7 @@ Structure your review as follows:
 
 | Anti-Pattern | Why It's Wrong |
 |-------------|---------------|
-| "LGTM, no issues found" | If you found nothing, you didn't look hard enough. Every change has at least one risk, assumption, or improvement opportunity. |
+| "LGTM, no issues found" | If you found nothing, look again. Most changes have at least one risk, assumption, or improvement opportunity. If a second look still finds nothing real, say so and list what you checked. |
 | Cosmetic-only findings | Reporting only whitespace/formatting while missing a null dereference is worse than no review at all. Substance first, style second. |
 | Pulling punches | "This might possibly be a minor concern..." — No. Be direct. "This will throw a NullPointerException when `user` is undefined." |
 | Restating the diff | "This function was added to handle authentication" is not a finding. What's WRONG with how it handles authentication? |

@@ -34,7 +34,8 @@ how_to_use:
   - Paste your teaser or CIM text, or upload the file if your AI can read files.
   - Paste your fund's criteria, such as revenue range, margin, growth, sector and geography. If you skip this, your AI will ask.
   - Read the pass or fail table first. Check each figure against the document.
-  - Fix anything that looks wrong, then share the one-page memo with your partners.
+  - Fix anything that looks wrong, then share the one-page memo with your partners. Rows marked Unknown mean the document did not say, so ask the seller for the figure.
+  - If the deal passes, book a first call with the seller. If not, log the pass in your deal tracker with the reason.
 output_sample:
   input:
     - Your teaser, CIM or deal description

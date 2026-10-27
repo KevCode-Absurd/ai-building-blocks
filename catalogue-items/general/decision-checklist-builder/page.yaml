@@ -129,3 +129,6 @@ terms:
     meaning: A fact that ends the matter with a no, whatever else is true.
   - term: Pass line
     meaning: The answer that counts as good for one checklist item.
+next:
+  - decision-checklist-runner
+  - decision-tripwire-planner

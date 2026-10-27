@@ -9,9 +9,9 @@ headline: "Winning ad variant writer"
 subhead: "Paste your best ad, the customer groups that bring most of your revenue and your product facts. It writes variants of the primary text and headline in the winner's own voice, one per group, plus a launch plan with a CBO test, a zombie campaign and a weekly creative hour."
 
 explain: |
-  A winning ad fades. Many stores rest all their results on one ad, then scramble when it tires. A faster move is to multiply it. Meta reads your copy and image to decide who sees an ad, so putting a specific group or use-case word in the headline or first line, such as "for runners" or "for night-shift workers", opens a new pocket of people without rebuilding the ad.
+  A winning ad fades. Many stores rest all their results on one ad, then scramble when it tires. A faster move is to multiply it. One operator's view is that Meta reads your copy and image to help decide who sees an ad. On that view, a use-case word in the headline or first line, such as "for trail runs" or "for long flights", reaches a new pocket of people without rebuilding the ad. Treat that as an assumption to test, not a Meta promise. Triggers must name a use, never a personal trait such as health, age or family status.
 
-  This skill takes the winner and the groups that bring about 80 percent of your revenue, and writes same-voice variants for each group. You ask the AI to read the ad as its author, so a reader can't tell different writers made the versions. Only what relates to that group changes. The plan then launches the variants together, rescues good ads that got no spend and sets a weekly hour for fresh creative. The ideas come from one operator's lead-generation work, translated here to store buyers.
+  This skill takes the winner and the groups that bring most of your revenue (the 80/20 split is a rule of thumb, so use your own numbers), and writes same-voice variants for each group. You ask the AI to read the ad as its author, so a reader can't tell different writers made the versions. Only what relates to that group changes. The plan then launches the variants together, rescues good ads that got no spend and sets a weekly hour for fresh creative. The ideas come from one operator's lead-generation work, translated here to store buyers.
 
 when:
   - You have one ad that works and you want more ads like it.
@@ -68,17 +68,17 @@ how_it_works:
   - title: Picks the winner
     text: By spend and result. It keeps it running. You don't switch off the others and ride one ad.
   - title: Finds identity triggers
-    text: Groups from the 20 percent of customers who bring 80 percent of revenue, such as "for new mums".
+    text: Groups or uses that bring most of your revenue, such as "for trail runs". Triggers name a use, not a personal trait.
   - title: Writes in the author's voice
     text: The AI reads the winner as its author and writes versions so a reader could not tell different writers made them.
   - title: Changes only what fits the group
     text: Start with body copy, then headlines, then the creative.
   - title: Uses longer copy where it helps
-    text: Longer copy gives Meta more to read, so it can place the ad more precisely.
+    text: One operator finds longer copy helps Meta place the ad more precisely. Treat it as something to test.
   - title: Plans the launch
     text: Winners go together in one CBO and Meta shifts spend.
   - title: Adds a zombie campaign
-    text: Ads you rate highly that got no spend go into their own ad set so they are forced to deliver.
+    text: Ads you rate highly that got no spend go into their own ad set, so each gets its own budget for a fair read. Meta does not guarantee delivery.
   - title: Checks policy and facts
     text: Every variant is checked against ad policy and your facts. No invented customer details or results.
 
@@ -145,6 +145,6 @@ terms:
   - term: Identity trigger
     meaning: A word for a group or use case in the headline or first line, such as "for runners", that tells the right people the ad is for them.
   - term: Zombie campaign
-    meaning: A separate ad set for ads you rated highly that got no spend, so they are forced to deliver.
+    meaning: A separate ad set for ads you rated highly that got no spend, so each gets its own budget for a fair read.
   - term: CBO
     meaning: Campaign budget optimization. You set one budget and Meta divides it between ads.

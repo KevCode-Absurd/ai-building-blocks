@@ -62,7 +62,7 @@ output_sample:
 
 how_it_works:
   - title: Checks the size ceiling
-    text: No image wider than 2,000 px, and 3,000 at most. A box needs its width plus about 100 to 300 px for sharpness, not more.
+    text: No image wider than 2,000 px, or 3,000 for a zoom image with a stated reason. A box needs its width plus about 100 to 300 px for sharpness, not more.
   - title: Checks file weight
     text: Each image under 500 to 600 KB, 100 to 200 KB is better, and a whole page about 2 to 3 MB.
   - title: Picks the format
@@ -152,3 +152,4 @@ terms:
     meaning: A modern image format that is smaller than JPEG. Shopify serves it to browsers that support it.
   - term: Crop
     meaning: Cutting an image to a shape, such as square, while keeping the product in view.
+next: [product-page-image-checker]

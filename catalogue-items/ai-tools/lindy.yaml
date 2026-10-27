@@ -25,8 +25,8 @@ not_for:
   - "Anyone who needs one fixed price. Credits are shared by the team and the price rises with the credits you pick."
 pricing:
   model: subscription
-  from: US$29.99 per user per month (Team plan, 3,000 credits; checked 26 Oct 2026)
-  note: "Free plan: US$50 in free credits, no credit card, and the credits last 7 days. Team: US$29.99 a month for 3,000 credits a month, rising to US$49.99 for 5,000, US$99.99 for 15,000 and more on up to 1,750,000 credits. The page says each active user is billed, and the team shares one pool of credits. Credits that are not used in the month do not roll over. Top-ups cost US$10 per 1,000 credits. Enterprise: contact sales. All checked 26 Oct 2026 on lindy.ai/pricing. The Team price headline and the home page differ in wording, so confirm the per-user price at sign-up."
+  from: US$29.99 a month (Team plan, 3,000 credits; the per-user price is unconfirmed; checked 26 Oct 2026)
+  note: "Free plan: US$50 in free credits, no credit card, and the credits last 7 days. Team: US$29.99 a month for 3,000 credits a month, rising to US$49.99 for 5,000, US$99.99 for 15,000 and more on up to 1,750,000 credits. The page says each active user is billed and all users share one pool of credits, so your monthly cost depends on both. Credits that are not used in the month do not roll over. Top-ups cost US$10 per 1,000 credits. Enterprise: contact sales. All checked 26 Oct 2026 on lindy.ai/pricing. The Team price headline and the home page differ in wording, so confirm the per-user price at sign-up."
 works_with:
   - Slack
   - Gmail
@@ -44,6 +44,7 @@ first_result:
   - "Ask for one small, repeat job in plain words, such as a morning brief of your calendar and unread email, every weekday."
   - "Run it once and read the result. Fix any wrong detail before you let it run on a schedule."
   - "Keep any step that sends or changes something as a draft you approve, until you trust it."
+  - "You end with a scheduled message or report, and a skill your team can reuse. Next: if you want to see and control every step, compare Make or n8n."
 needs:
   - "A Lindy account. The free plan needs no card."
   - "Logins for each app you connect (Gmail, Slack, Notion, HubSpot)."

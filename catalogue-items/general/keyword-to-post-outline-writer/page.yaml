@@ -85,6 +85,7 @@ output_shape: |
   <...>
   SUCCESS: <one measure>
   MISSING: <...>
+  CHECKS MISSED: <each check that failed, or none>
 
 tweaks:
   - what: "What ranks now"

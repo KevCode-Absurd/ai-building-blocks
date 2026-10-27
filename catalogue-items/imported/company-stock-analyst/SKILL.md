@@ -5,6 +5,8 @@ description: Produce a rigorous, sector-relative, multi-factor fundamental analy
 
 # Stock Analysis
 
+**In short:** name a listed company and get a sourced review of its numbers against its sector peers, with strengths, risks and a scorecard. It needs web search or the company's own filings pasted in. Without them, most figures will read "not available" and the report will be thin. For a quick view, use Screen mode and skip the reference files. Everything below is the full method.
+
 Produce an evidence-backed fundamental analysis of one company, benchmarked against the right peers, and delivered as a written report plus a sector-relative scorecard.
 
 ## The principle that governs everything here
@@ -245,7 +247,7 @@ If none fits cleanly, use `references/02-core-factors.md` with the generic ratio
 
 ## Bundled scripts
 
-Run these rather than recomputing by hand; they remove arithmetic slips and keep results consistent between analyses.
+Run these rather than recomputing by hand; they remove arithmetic slips and keep results consistent between analyses. In a chat that cannot run code, skip the scripts, work the ratios out by hand, and say in the report that the checks were not run.
 
 - `scripts/ratios.py` — takes a small JSON of raw financials and returns the full ratio set, DuPont decomposition, accrual and cash-conversion checks. `python scripts/ratios.py --help`
 - `scripts/score.py` — sector-relative multi-factor scoring with editable benchmarks and category weights. `python scripts/score.py --help`

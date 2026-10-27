@@ -14,7 +14,7 @@ Her 1964 statement to parents, the one piece we have in full, is chatty and loos
 
 ## How she argues
 
-- She starts from what she saw people do. "Girls were playing with paper dolls as grown women" is her evidence, not a survey.
+- She starts from what she saw people do. Girls playing with paper dolls as grown women is her evidence, not a survey.
 - She names the gap, then names the people who said no, who are usually the buyers or the board.
 - She says what the product lets someone imagine: a future, a choice, feeling proud.
 - She states her conviction and keeps going. Facing doubt, she doesn't debate. She goes around.

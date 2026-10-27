@@ -20,7 +20,7 @@ not_for:
   - "You run a services business with no stock: use your normal bookkeeping or ask your accountant."
   - "You want to track stock levels day to day: use your store's stock system or a simple spreadsheet."
 you_give:
-  - Purchase records with quantities and costs
+  - Purchase records with item, date, quantity and unit cost
   - Opening stock and current counts
   - Your cost method, FIFO or weighted average (optional)
   - Selling prices and costs to sell (optional)
@@ -32,11 +32,12 @@ you_get:
   - A slow-stock provision table by age and movement
   - Adjusting journal entries
 how_to_use:
+  - Save your purchases and counts as a CSV or spreadsheet with named columns (item, date, quantity, unit cost, freight, duty, count quantity and selling price).
   - Open Claude, ChatGPT or Gemini. Pick one that can run code, so the maths is checked by script.
-  - Paste the skill text into the chat, then add your purchase records, opening stock and counts.
+  - Paste the skill text into the chat, then add your purchase records, opening stock and counts. Ask the AI to run calculate.py on them.
   - Say which cost method you use, FIFO or weighted average. If you are unsure, ask your AI to compare both.
   - Add selling prices and costs to sell if you have them, so it can test for write-downs.
-  - Check the schedule and journal entries against your own records.
+  - Check the valuation totals and the write-down flags against your own records.
   - Ask your accountant to review the result before you use it in your books.
 output_sample:
   input:

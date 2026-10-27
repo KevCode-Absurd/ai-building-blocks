@@ -9,7 +9,7 @@ subhead: A reasoned set of choices for how your app stores, copies, splits and p
 explain: |
   A reasoned set of choices for how your app stores, copies, splits and protects its data, with the trade-off behind each. It is based on the ideas in the book Designing Data-Intensive Applications.
 
-  You describe what you store, how it is read and written, and what must never go wrong. The skill covers seven areas: data models, storage engines, copies across servers, splitting data across machines, transactions and isolation, derived data such as caches and search, and failure handling. It scores your design from 1 to 10 using seven yes or no checks, shows which failed, such as unknown isolation level or an untested failover, and lists what to fix to reach 10.
+  You describe what you store, how it is read and written, and what must never go wrong. The skill covers seven areas: data models, storage engines, copies across servers, splitting data across machines, transactions and isolation, derived data such as caches and search, and failure handling. It scores your design from 0 to 10 using seven yes or no checks (each pass is worth about 1.4 points), shows which failed, such as unknown isolation level or an untested failover, and lists what to fix to reach 10.
 when:
   - You are choosing between SQL and NoSQL for a new product.
   - You worry about replication lag or hot spots in your database.
@@ -31,6 +31,7 @@ you_get:
   - Fix list to improve
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Write your brief first as a short list: the data you store, your top three read and write patterns, and the one failure that must never happen.
   - Describe what your app stores, how it is read and written, and what must never go wrong.
   - Add your current design if you have one, and your uptime needs.
   - Read the score and the failed checks first.

@@ -2,7 +2,7 @@ thinking: high
 thinking_why: Picking the pricing method needs finance knowledge.
 new_slug: financial-instrument-pricer
 name: Financial instrument pricer
-summary: Price an option, bond or swap with the right method and get MATLAB code you can rerun. Works for a financial instrument pricer in MATLAB.
+summary: Give it an option, bond or swap and its terms. You get a price, Greeks and MATLAB code to rerun.
 job: money-and-investing
 headline: Financial instrument pricer
 subhead: A price and sensitivities for an option, bond or swap, using the method that fits the instrument, with MATLAB code you can run again. It saves you from guessing which model applies.
@@ -29,12 +29,15 @@ you_get:
   - Greeks and sensitivities
   - MATLAB code to rerun
   - A comparison of methods (optional)
+  - Laid out as: a short summary with the price, a table of Greeks with units, then the commented MATLAB script
 how_to_use:
   - Open your AI tool. Paste the skill text from this page into the chat.
   - Say which instrument you want priced. Add its terms, such as dates, strike and rate.
   - "Add your market data: the rate curve and volatility. Say which Greeks you want."
   - Run the code your AI writes in MATLAB. This needs the Financial Instruments Toolbox, a paid add-on.
   - Check the price and Greeks. Ask for a second method if you want to compare.
+  - Before you use the price, check it against a second method or a market quote. Have a quant review it before any trade or risk decision.
+  - Then look at the bond portfolio reviewer, or compare pricing methods again with other inputs.
 output_sample:
   input:
     - The instrument type and its terms
@@ -53,3 +56,13 @@ output_sample:
       contains: The instrument, model and pricer objects, so you can rerun the price yourself.
     - name: Method comparison
       contains: A second method run on the same product, if you ask to compare methods.
+terms:
+  - term: Greeks
+    meaning: How much the price moves when one input moves, such as delta for the share price and vega for volatility.
+  - term: Monte Carlo
+    meaning: Pricing by simulating many random price paths and averaging the payoffs.
+  - term: Heston
+    meaning: A model where volatility itself moves randomly over time.
+  - term: FFT
+    meaning: Fast Fourier transform. A quick way to price plain options when the model has a known formula.
+next: [matlab-code-reviewer]

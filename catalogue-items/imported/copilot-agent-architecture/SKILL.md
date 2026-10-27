@@ -57,7 +57,7 @@ Complete an audit with demonstrated problems, separately identifying unknowns an
 
 ## Final artifacts
 
-When completing design, audit, or diagnosis, read [result-delivery.md](references/result-delivery.md) and create a PDF of the results with a rendered Mermaid or C4 diagram as appropriate; retain editable text and diagram source. Do this as part of completion without a separate user request to “make the PDF now.” An early sketch and intermediate answers do not require repeated export. Explicit user constraints (“chat only,” “no files/PDF”) and a request to stop all work take precedence. Creating the report does not authorize implementing or changing the reviewed agent.
+When completing design, audit, or diagnosis, read [result-delivery.md](references/result-delivery.md) and create a PDF of the results with a rendered Mermaid or C4 diagram as appropriate; retain editable text and diagram source. Do this as part of completion without a separate user request to “make the PDF now.” An early sketch and intermediate answers do not require repeated export. Explicit user constraints (“chat only,” “no files/PDF”) and a request to stop all work take precedence. Creating the report does not authorize implementing or changing the reviewed agent. If the tool cannot make a PDF or render a diagram, give the report as plain text in chat, with the Mermaid diagram source, and say that the PDF was not made.
 
 ## Package metadata
 

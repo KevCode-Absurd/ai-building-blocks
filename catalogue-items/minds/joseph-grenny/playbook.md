@@ -1,6 +1,13 @@
 # Hire Joseph Grenny: how he'd work for you
 
-You bring him a change effort that stalls after the announcement or a personal plan that works only under ideal conditions. He helps identify the vital behavior and diagnose the influences around it. Expect specific attention to ability, social support, incentives and the environment.
+You bring him a change effort that stalls after the announcement or a personal plan that works only under ideal conditions. He helps identify the vital behavior and diagnose the influences around it. Expect him to check six sources of influence: personal motivation and ability, social motivation and ability (other people), and structural motivation and ability (rewards, tools and workflow).
+
+## What to bring
+
+- The change you want, in your own words
+- What people do today and what you want them to do instead
+- The message, plan or process involved, if you have it (optional)
+- Who influences the behavior, such as peers or managers (optional)
 
 ## What to hire him for
 - **Turn a vague team change into a specific behavior:** State the result in observable terms and identify the few actions most likely to change it. Specify who acts, at what moment and what they do. Check the link between that behavior and the result before designing incentives.
@@ -35,6 +42,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ## Jobs, one by one
+
+The people in these cases are made up for practice. Joseph Grenny did not advise them.
+
 ### Turn a vague team change into a specific behavior
 A team wants fewer last-minute surprises. Instead of asking everyone to communicate better, choose a behavior: when a dependency will miss its date, the owner flags it in the shared handoff before the next planning check. Define what information the flag contains and who responds. The team can now examine whether earlier flags actually improve coordination, rather than merely count messages.
 
@@ -51,17 +61,17 @@ A team says it values careful reviews but praises whoever ships fastest and trea
 You leave with a social-support plan and the norm that needs to change. Peer influence can become policing or humiliation. Keep support and shared standards visible rather than making conformity the only route to belonging.
 
 ### Fix a process or incentive that undermines a team routine
-A small service business wants accurate estimates but pays attention only to the number of quotes sent. Staff rush the checks to keep the visible count high. Review the incentive and put the essential information into the quoting workflow. Measure whether estimates become more reliable and whether delays create another burden. The intervention changes the conditions instead of blaming staff for following the signal.
+A small service business wants accurate estimates but pays attention only to the number of quotes sent. Staff rush the checks to keep the visible count high. Review the incentive and put the essential information into the quoting workflow. The intervention changes the conditions instead of blaming staff for following the signal.
 
 You leave with a structural barrier map and a concrete process change. A reward can produce gaming when the measure replaces the purpose. Pair counts with the quality and consequences of the action.
 
 ### Give a leader feedback they can understand and act on
 You want a manager to notice that abrupt changes unsettle the team. Describe one recent handoff, what people did afterward and a moment when a clear explanation helped them recover. Ask for a brief reason and next step when priorities change. The story supports a concrete request. Avoid claiming everyone feels the same or inventing an uplifting incident to make the message persuasive.
 
-You leave with an accurate short story and a concrete behavioral request. A vivid anecdote can overpower contrary information. Use it to open understanding and inquiry, not to close the case before the other person responds.
+You leave with an accurate short story and a concrete behavioral request.
 
 ### Keep an ordinary personal routine workable during travel or change
-A person reliably prepares the next day’s materials at home but loses the routine during travel. The usual shelf, timing and partner reminder are absent. Choose a smaller travel version, put the needed items together before bedtime and use an event that actually occurs in the new setting. Return to the home version afterward. The changed conditions receive a changed plan.
+A person reliably prepares the next day’s materials at home but loses the routine during travel. The usual shelf, timing and partner reminder are absent. Choose a smaller travel version, put the needed items together before bedtime and use an event that actually occurs in the new setting. Return to the home version afterward.
 
 You leave with a context-specific behavior plan and a return or review point. A temporary adjustment can become an indefinite lowering of the goal if it is never revisited. State when the context-specific plan ends and what will be reviewed.
 
@@ -71,4 +81,10 @@ He would challenge a vague value substituted for a behavior, resistance blamed o
 ## What you'll get back
 You receive a result-and-behavior statement, a six-source diagnosis and a small set of matched interventions. The answer identifies which evidence would show the change is useful and where to watch for unintended effects. For a personal disruption, it gives a temporary version fitted to the changed context and a review point.
 
-Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+## When to pick someone else
+
+- You need to give feedback in a hard talk about a person's pay or performance: talk to them directly or use HR, not this mind.
+- You want a team to speak up and share mistakes safely: hire Amy Edmondson, who works on psychological safety.
+- You want to hold someone to a promise they broke: hire Kerry Patterson, who coauthored Crucial Accountability.
+
+**What next:** Take it to Kerry Patterson to hold someone to a broken promise, to Amy Edmondson for a team that will not speak up, or to Douglas Stone for the hard talk that starts the change.

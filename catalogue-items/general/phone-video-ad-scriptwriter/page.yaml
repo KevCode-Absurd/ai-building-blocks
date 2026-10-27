@@ -83,6 +83,7 @@ output_shape: |
   DISCLOSURE: <label if an AI presenter is used>
   BLANKS: <what only the real speaker can fill>
   TWO OTHER OPENINGS: <each from a different doubt>
+  CHECKS MISSED: <one line per check missed, or none>
 tweaks:
   - what: Who speaks
     how: A real creator gets blanks. An AI presenter gets "you" lines and quoted customers.

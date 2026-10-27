@@ -19,7 +19,7 @@ use_cases:
 not_for:
   - "You want to learn how to build and train a small AI model in code: use the Andrej Karpathy mind."
   - "You want a careful testing plan for a structured problem before real-world use: use the Demis Hassabis mind."
-  - "You need her own views on this year's AI law or her plans at AMD: read her latest public writing, because this AI has no record past late 2025."
+  - "You need her own views on this year's AI law or her plans at AMD: read her latest public writing, because this AI has no record past her September 2026 post."
 output_sample:
   input:
     - Your project, tool or plan, in a few plain sentences

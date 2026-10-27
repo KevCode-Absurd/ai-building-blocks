@@ -34,6 +34,7 @@ how_to_use:
   - Open an AI that can run code and read large files. Paste in this skill and add the folder.
   - Tell it your niche and any extra search phrases (optional), then ask it to find unmet needs.
   - Check each quote against the original export before you use it.
+  - Chat exports hold real people's words. Before you share a report, remove names, phone numbers and usernames from the quotes, and keep only quotes you are allowed to publish.
   - Next, talk to a few customers about the top needs, or write a short feature spec, before you build anything.
 output_sample:
   input:

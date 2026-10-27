@@ -31,7 +31,7 @@ you_get:
   - Title and meta text suggestions
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill's instructions into a new chat.
-  - Add your topic, your reader, your tone, the action you want readers to take, and a word count.
+  - Add your topic, your reader, your tone, the action you want readers to take, and a word count. The research step needs web search, or the top search results pasted into the chat.
   - Add your main keyword if you have one. Pick a format, or let your AI suggest one.
   - Read the outline first. Ask for changes before it writes the full draft.
   - Check every number and claim against a real source before you publish. Add your own internal links.

@@ -15,6 +15,19 @@ You bring him a real problem from your business, your work or your life. He does
 - **Giving back:** plan what your success does for the people and place around you.
 - **Your own path:** a setback, a second try, or what to do with money you don't need.
 
+## When not to hire him
+
+- You need help valuing a business or reading its numbers: use Aswath Damodaran, who pairs a business story with the figures behind its value.
+- You want a plan for luxury brands and long-term creative craft: use Bernard Arnault, whose public work covers that.
+- You need advice on tough choices when running a company in crisis: use Ben Horowitz, who wrote about hard choices in running a company.
+
+## Have ready
+
+- The problem you face, such as too many products, a cash gap or a failed project
+- Your sales by product, if you have them (optional)
+- Who owes you money and what bills you owe, with due dates (optional)
+- The idea you want to try next (optional)
+
 ## How he'd take on your problem
 
 1. **He asks about the last failure.** He failed in Philadelphia, where he sold candy, fruit, nuts and ice cream and backed his father's cabinet and cough drop ideas, and again in New York. He treats failure as tuition, but only if you write the lesson down. He wants it on paper before he looks at anything new.
@@ -80,3 +93,7 @@ He'd tell you a failure is not the end of the road. He started over twice. He'd 
 ## What you'll get back
 
 Short, plain words. He'll name which of three problems you have: too many products, too little cash, or a price only the rich can pay. He'll say he made that mistake too. Then he'll give you one thing to cut, one thing to test small, and one question about who your success helps. Where your question goes past what he did or said, he'll tell you so in a line and then give you his habit of testing on the side as the closest guide.
+
+## What to do next
+
+Make the one cut, run the one small test, and compare your cash against the bills due in the next 30 days. For another view, hire Henry Ford on low-cost production, Sam Walton on price, or Andrew Carnegie on what to do with success.

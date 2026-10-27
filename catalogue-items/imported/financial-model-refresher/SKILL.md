@@ -7,9 +7,7 @@ description: Update financial models with new data — quarterly earnings, manag
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. Two rules cause most Indian errors (no other file is needed):
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,8 +17,7 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+If something has no Indian equivalent, name the gap. Never substitute a proxy and present it as the real thing.
 
 ## Workflow
 
@@ -101,6 +98,10 @@ Recalculate valuation with updated estimates:
 - Updated Excel model (if user provides the existing model)
 - Estimate change summary (markdown or Word)
 - Updated price target derivation
+
+### Next steps
+
+After the output: compare the revised estimates with consensus, then run the compliance check before anyone shares a rating or target.
 
 ## Important Notes
 

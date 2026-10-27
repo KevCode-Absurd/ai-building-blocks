@@ -20,7 +20,8 @@ not_for:
   - "You need to write a job post or screen real candidates: do that work yourself or with a hiring tool, as this only writes rules."
   - "You want a ruling on one hiring decision: ask your HR lead or counsel, because this skill writes policy and does not judge single cases."
 you_give:
-  - How and where HR uses AI today
+  - How and where HR uses AI today, by hiring stage
+  - The decisions AI helps with, such as shortlisting or ranking
   - Your country or state
   - Tools or vendors in use (optional)
   - Existing HR policies (optional)

@@ -15,6 +15,7 @@ description: Conversion funnel analysis with drop-off investigation. Use when an
 # Process
 1. **Define funnel steps and time window** — list the ordered sequence of events or pages that constitute the funnel. Agree on how long a user has to complete the funnel (session, 24 hours, 7 days). Ambiguous definitions here will invalidate the analysis.
 2. **Build the user-level funnel dataset** — for each user who reached step 1, record which subsequent steps they completed and when, within the time window. Use `scripts/funnel_analyzer.py` to compute this from an events log.
+2b. **Sanity check** — the number of users at step 1 must match a count you can verify in the raw log. If it does not, stop and fix the log or the step names before you go on.
 3. **Calculate conversion rates** — compute step-to-step conversion (users reaching step N ÷ users reaching step N−1) and overall conversion (step 1 to last step). Record absolute drop-off counts at each step.
 4. **Analyse time-to-convert** — for users who completed each step, calculate median, P75, and P95 time between steps. Long gaps can signal friction even without high drop-off.
 5. **Segment the funnel** — run the funnel separately by channel, device type, user cohort, or other dimensions. Rank segments by overall conversion rate and identify where the worst-performing segment diverges from the best. See `references/funnel_design_guide.md`.

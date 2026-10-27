@@ -9,9 +9,9 @@ headline: "An ad that leads with a flaw and gives people a feeling to buy on"
 subhead: "Paste your product facts and, if you have them, your buyers' own words. It names the drive underneath why people buy and the feeling the ad should leave. It then writes an ad that states a real flaw first and turns it into a reason to buy, and rewrites the line so a rival couldn't use it."
 
 explain: |
-  Most ads list facts. The facts are true, but nobody feels them, and a rival can say the same things in the same way. Readers have learned to skip a line that sounds like every other ad.
+  Many ads list facts. The facts are true, but nobody feels them, and a rival can say the same things in the same way. A line that sounds like every other ad is easy to skip.
 
-  This workflow starts with the reason underneath the purchase, such as wanting to be admired or to feel safe, which buyers rarely say outright. It writes that down in a brief with the feeling the ad should leave. It then picks a true weakness a buyer already sees, and writes the ad around what that weakness shows about the product, such as care or honesty. The last step makes fresh versions of the same true claim and runs a swap test against rivals. The thinking comes from Bill Bernbach's talk Facts Are Not Enough.
+  This workflow starts with the reason underneath the purchase, such as wanting to be admired or to feel safe, which buyers rarely say outright. It writes that down in a brief with the feeling the ad should leave. It then picks a true weakness a buyer already sees, and writes the ad around what that weakness shows about the product, such as care or honesty. The last step makes fresh versions of the same true claim and runs a swap test against rivals. It is inspired by Bill Bernbach's talk Facts Are Not Enough.
 
 when:
   - Your ads state facts that are all true and still don't make anyone act.
@@ -34,11 +34,11 @@ you_get:
   - Fresh versions of the same true claim, with a pick and a swap test that shows a rival couldn't use it
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your product facts. Add reviews and rival ads if you have them.
   - It works step by step and saves each result. Read the brief first, since the ad is written from it.
-  - Check the flaw is one you are happy to say out loud before the ad goes live.
+  - Check the flaw is true and one you are happy to say out loud before the ad goes live. Skip flaws about safety, health or legal claims.
 output_sample:
   input:
     - Your product facts, including what it does and what it doesn't

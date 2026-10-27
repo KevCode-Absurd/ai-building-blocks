@@ -131,8 +131,8 @@ tweaks:
     how: Say which campaigns are brand so brand searches are not blocked in other campaigns by accident.
 improve:
   - Keep each review and the negatives you added. Compare the next report to see if waste fell.
-  - Add your negative list to the pack so every run checks against it.
-  - Run it on a regular schedule, such as monthly, and track the share of spend on waste.
+  - Paste your current negative list into each run. The agent keeps no memory between runs.
+  - Re-run it by hand each month with the new report, and track the share of spend on waste yourself.
 judge:
   - The result addresses your actual task and cites the evidence used.
   - Examples, role-play experience and targets are kept separate from verified

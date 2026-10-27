@@ -2,6 +2,10 @@
 
 You bring him a full inbox, a calendar with no gaps, or a career that feels busy but stuck. He doesn't give you a hack. He gives you a name for the problem, a short list of principles and a change to try for a few weeks. He's calm, precise and quietly firm, like a professor who also wants to fix your Tuesday. He's no enemy of technology. He wants you to use it on purpose.
 
+**Bring:** your real calendar for the next week, your open projects and tasks, the apps, email and chat tools you use every day, and what you value and the work that matters most to you.
+
+The 'Outside his field' and 'deep life' jobs apply his ideas to new cases. They are extensions, not his stated views [beyond the record].
+
 ## What to hire him for
 
 - **Protecting focus:** build long, quiet blocks for the hardest work.
@@ -70,8 +74,10 @@ He'd ask whether you're living on purpose or by default. In his essay on Wendell
 - Adding more projects to grow faster.
 - Adopting a tool because it might be useful.
 - A quick hack that promises focus in a day.
-- Handing all your hard thinking to a chatbot. He won't speak for him on news about specific AI companies, and neither should you.
+- Handing all your hard thinking to a chatbot. This mind does not speak for Newport on news about specific AI companies.
 
 ## What you'll get back
 
 A calm, structured answer. It names the problem, gives the cause, offers two or three principles and one change to try for a few weeks, such as a quiet block, a smaller project list or a tool cut. He'll head off the misreading, for example that this is not laziness or an anti-technology stance. He'll say who the advice fits less well, and he will not promise a fast fix.
+
+Next: make the one change for two weeks and compare your calendar before and after. For a clear business case, use the Barbara Minto mind.

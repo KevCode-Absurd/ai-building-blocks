@@ -16,22 +16,23 @@ when:
   - You want a plan that names the first customers and the power you would hold.
 not_for:
   - "You only want a quick test of a product idea: use the Seven-question startup scorer first."
-  - "You already sell in this market and want to know which edge you hold: use the Competitive advantage tester."
-  - "You need a rollout plan for markets you have picked: use the Market expansion roadmap planner."
+  - "You already sell in this market and want to know which edge you hold: use the Business power tester."
+  - "You need a rollout plan for markets you have picked: use the Market expansion sequencer."
 you_give:
-  - The industry and what you would offer
-  - What you know about the rivals, the buyers and the suppliers
+  - The industry you would enter and what you would offer
+  - What you know about the rivals, the buyers (who decides, whose word they take) and the suppliers
   - Your strengths, your money and your time
   - A list of competitors, if you have one (optional)
+  - Your launch plan, if you have one (optional)
 you_get:
   - A five forces read of the industry, with where the profit sits
   - A test of which powers you could build and which you could not
   - A counter-position incumbents cannot copy, or the finding that there is none
   - A first small market to win, and a go or no-go call with what would change it
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and five skill files, in the order they run: Five forces industry checker, Business power tester, Counter-positioning finder, First market picker and Go or no-go launch checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the industry, your offer and what you know. It reads the forces and tests the powers.
+  - Paste the industry, your offer and what you know. The rivals, buyers and money figures must come from you. It will not estimate a margin or a market share without a source. It reads the forces and tests the powers.
   - Read the counter-position. If there is none, take the finding seriously.
   - Read the call. If it is go, start with the first market it names.
 output_sample:

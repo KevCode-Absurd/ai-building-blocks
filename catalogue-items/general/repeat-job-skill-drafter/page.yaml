@@ -97,6 +97,8 @@ improve:
   - "Add a real example result under What you hand back."
   - "Cut any step you never use after a week."
 
+before: []
+next: [skill-file-validator, skill-trigger-auditor]
 works_best_with:
   tools:
     - {name: "Claude or ChatGPT projects", why: "Save the finished file where the AI can find it by name."}

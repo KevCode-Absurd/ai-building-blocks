@@ -29,6 +29,8 @@ For the top 3-5 matching pages, run `composio execute NOTION_GET_PAGE_MARKDOWN -
 
 ### Step 5: Present findings
 
+Draft the suggested response only from text found in the pages you read. Never invent policy, prices or steps. If the pages do not answer the question, say so.
+
 ```
 ## Knowledge Base Results for: "[query]"
 
@@ -61,3 +63,9 @@ Based on the knowledge base articles found, here's a suggested response to the c
 If no results are found, suggest:
 - Alternative search terms to try
 - Whether a new KB article should be created for this topic
+
+## After the Gaps list
+
+Ask who owns each gap or outdated article, and offer to draft a short replacement article for the first gap.
+
+Note: Composio is a separate service with its own plans and limits. Check them on Composio's site before you rely on this for live lookups.

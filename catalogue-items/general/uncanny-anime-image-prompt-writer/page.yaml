@@ -5,9 +5,9 @@ job: make-images
 headline: Uncanny anime image prompt writer
 subhead: Share a strange scene idea. Get a cinematic anime image prompt with a clear visual hook, camera and mood. Bring the brief and any files you want it to use.
 explain: |-
-  Use this when you need cinematic uncanny manga/OVA image prompts. Use the user idea immediately. Offer a small set of visual lanes only if they need direction; do not require artist selection before drafting.
+  Use this when you want one still image prompt for a strange, cinematic anime scene. You give your idea and it drafts straight away. It picks a visual lane that fits, such as dense retro cyberpunk, rough dark samurai drama or deadpan psychic comedy.
 
-  Choose a descriptive lane such as dense retro cyberpunk, technical armor/urban detail, rough dark samurai drama, extreme-perspective ensemble, or deadpan psychic comedy.
+  An uncanny hook is the one odd detail that changes what the scene means, such as a figure far too large for the room, a watcher who should not be there, or a calm person in the middle of chaos.
 when:
   - You need cinematic uncanny manga/OVA image prompts.
   - You want a clear draft and checks from the material you already have.

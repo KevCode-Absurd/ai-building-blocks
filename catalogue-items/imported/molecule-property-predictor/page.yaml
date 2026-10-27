@@ -9,7 +9,7 @@ subhead: Give it molecules as SMILES strings with measured values. It trains a m
 explain: |
   A molecule property predictor is only useful if its test score is honest. This skill builds one with DeepChem and splits your molecules by scaffold, so the test set holds shapes the model has not seen.
 
-  It starts by checking your data: SMILES strings that parse, repeated structures and repeated measurements. It fits a simple fingerprint model before any neural network. It fits scaling on the training set only, then turns results back into your original units, such as log solubility.
+  It starts by checking your data: SMILES strings that parse, repeated structures and repeated measurements. It advises fitting a simple fingerprint model before any neural network. The bundled solubility script does not run that baseline, so ask your AI to add it. It fits scaling on the training set only, then turns results back into your original units, such as log solubility.
 
   The bundled scripts print test scores and predictions for the molecules you name. They use fixed training lengths and do not tune settings or save a table of rejected rows. A good fit does not prove the model is right for new chemistry, and the skill says so.
 when:
@@ -21,6 +21,7 @@ not_for:
   - You need to claim a result for brand new chemistry. Test the predictions in the lab first. A model score is not proof.
   - Your labels are sparse across many tasks, or mix assay units. The custom scripts need one complete target in one unit, so clean the data first.
   - You cannot run Python 3.11 with RDKit on your own machine. Ask a colleague who runs chemistry data work to run it for you.
+  - You only need a quick check of a few compounds. Use an open or commercial ADMET predictor, and treat its numbers as not validated for your assay.
 you_give:
   - A CSV with a SMILES column and a column of measured values
   - The units and assay conditions for those values
@@ -39,11 +40,12 @@ how_to_use:
   - Ask it to check your data first and show the repeated structures, before it trains anything.
   - Run the model. Read the test score next to the count of test molecules. Be wary of a high score on a small test set.
   - If you need split IDs, rejected rows or a saved prediction file, ask your AI to add that code. The bundled scripts only print.
+  - If you want the baseline comparison, ask your AI to add a random forest on fingerprints and print its score beside the neural network score.
 how_it_works:
   - title: Define what is measured
     text: It pins down compound identity, units, assay conditions and missing labels, and parses every SMILES string.
   - title: Fit a simple baseline
-    text: It trains a fingerprint model first, so you can see if a graph network adds anything.
+    text: It advises a fingerprint model first, so you can see if a graph network adds anything. This is a separate step. The bundled script does not run it.
   - title: Split by scaffold
     text: Molecules are split by core shape, so the test set holds shapes the model has not seen.
   - title: Fit scaling on training only

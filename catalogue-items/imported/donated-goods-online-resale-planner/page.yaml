@@ -47,7 +47,7 @@ how_to_use:
   - Add sold prices for similar items. If your AI has web access, ask it to find them and show its sources.
   - Make sure you have a seller account on the marketplace. Check its fees and shipping charges before you list.
   - Read the listing fields and check every flaw is stated honestly. Then take the photos on the checklist.
-  - Use the monthly review plan to adjust which items you send online.
+  - Use the monthly review plan to adjust which items you send online. Run the first review after 30 days of listings. Pair this with the Donated goods intake planner, which routes items to this channel.
 output_sample:
   input:
     - The donated item and what it is (brand, type, any marks)
@@ -60,12 +60,12 @@ output_sample:
     - A chat AI. It cannot look up sold prices unless it has web access, so paste them in if it does not.
   output:
     - name: Online-eligibility criteria
-      contains: A price ceiling and list of item types that should get a second look for online sale.
+      contains: A price ceiling and list of item types that should get a second look for online sale, stated as one rule.
     - name: Listing template
-      contains: Fields for title, condition grade, flaws, measurements and format, with full condition disclosure.
+      contains: Fields in order - title, condition grade, flaws, measurements, sale format - with full condition disclosure.
     - name: Photography setup guide
       contains: The angles, background and close-ups of marks and damage each item needs.
     - name: Shipping and packing standard
       contains: Packing rules by item type, and how shipping cost is built into the price.
     - name: Monthly online-channel report
-      contains: Average sale price against floor estimate, time to sell, shipping cost share, and dispute and return rate.
+      contains: Columns - average sale price against floor estimate, time to sell, shipping cost share, and dispute and return rate.

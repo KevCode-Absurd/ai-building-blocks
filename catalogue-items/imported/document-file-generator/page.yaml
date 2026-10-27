@@ -33,9 +33,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini in a mode that can run code and save files. Paste the skill text into the chat.
   - "Say which format you want: PPTX, DOCX, XLSX or PDF. Then describe the document."
   - Paste the data or text to include, such as rows, figures or section text.
-  - Let your AI install the matching package, then write and run the script.
+  - Let your AI install the matching package, then write and run the script. The skill has no PDF code sample, so for PDF your AI should check the PDF package's own docs.
   - Open the file and check it. If it is wrong, ask your AI to change the spec and run it again.
-  - Keep the saved spec. Next time, swap in new data and run it again.
+  - Keep the saved spec. Next time, swap in new data and run it again. You can also share the file, or pair it with a reporting or slide-review skill.
 output_sample:
   input:
     - A plain description of the document and what goes in it

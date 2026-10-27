@@ -36,7 +36,7 @@ Use `preliminary`, `potential`, or `counsel review required`; do not label an or
 
 ### 1. Verify law, jurisdiction, and date
 
-Open [current-law-and-sources.md](references/current-law-and-sources.md), then check the linked EUR-Lex legislation and European Commission/AI Act Service Desk pages for changes since `2026-08-09`. Read Regulation (EU) 2024/1689 together with Regulation (EU) 2026/1744 and any later amendments or consolidated text.
+Open [current-law-and-sources.md](references/current-law-and-sources.md), then check the linked EUR-Lex legislation and European Commission/AI Act Service Desk pages for changes since `2026-08-09`. Read Regulation (EU) 2024/1689 together with Regulation (EU) 2026/1744 and any later amendments or consolidated text. The amending act number and the as-of date `2026-08-09` come from the original author and have not been checked here. Confirm the current amending act and every date on EUR-Lex before the user relies on them.
 
 Record the access date and governing language/version. Confirm whether later delegated acts, implementing acts, Commission guidelines, harmonised standards, common specifications, codes, court decisions, or national rules affect the issue. If current official sources cannot be checked, mark the legal timeline stale and stop before making a deadline or classification conclusion.
 

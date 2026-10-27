@@ -1,0 +1,57 @@
+/* Job hubs (/jobs, /jobs/<job>): plain pages drawn at build time (scripts/prerender.mjs) with the library's header,
+   search box and cards, so they look like the rest of the site without loading the app. */
+.hub-header .header-in { justify-content: space-between; }
+.hub-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 22px; font-size: 14px; }
+.hub-nav a { color: var(--muted); }
+.hub-nav a:hover { color: var(--text); }
+
+.hub { padding-bottom: clamp(48px, 8vw, 96px); }
+.hub-trail a { color: var(--muted); }
+.hub-trail a:hover { color: var(--text); }
+.hub .bp-sub, .hub-gets { max-width: 70ch; }
+.hub-gets { color: var(--muted); }
+.hub-search { margin: 22px 0 8px; max-width: 760px; }
+.hub-search button { flex: none; }
+.hub-h2 { margin: clamp(32px, 4vw, 48px) 0 16px; font: 500 clamp(20px, 2.4vw, 26px)/1.25 var(--display); letter-spacing: -0.02em; }
+
+/* /jobs: area shortcuts, then each area's jobs as cards. The job name's link covers the card; its top items sit above it. */
+.hub-areas { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 8px; }
+.hub-areas a { padding: 4px 12px; border: 1px solid var(--line-2); border-radius: 999px; font: 500 12.5px var(--mono); color: var(--muted); }
+.hub-areas a:hover { color: var(--text); border-color: var(--text); }
+.hub-area { margin-top: clamp(36px, 5vw, 56px); scroll-margin-top: 80px; }
+.hub-area .hub-h2 { margin-top: 0; }
+.hub-jobs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.card.hub-job { position: relative; min-height: 0; gap: 8px; }
+.hub-job-name { font-size: 16.5px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.35; }
+.hub-job-name::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.hub-job .count { font: 500 12px var(--mono); color: var(--faint); }
+.hub-job ul { display: grid; gap: 6px; margin: 6px 0 10px; padding: 0; list-style: none; }
+.hub-job li a { position: relative; z-index: 1; font-size: 14px; color: var(--text-2); }
+.hub-job li a::before { content: "→ "; color: var(--faint); }
+.hub-job li a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.card.hub-job:hover .view { text-decoration: underline; text-underline-offset: 3px; }
+
+/* /jobs/<job>: the best items as library cards, then every item as a compact list. */
+.card.hub-card { gap: 14px; }
+.card.hub-card > .nm, .card.hub-card > .peek { margin: 0; }
+.card.hub-card .card-footer { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+.card.hub-card .kind { font: 500 12px var(--mono); color: var(--faint); }
+.hub-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 28px 0 0; }
+.hub-links span { margin-right: 4px; font: 500 12px var(--mono); color: var(--faint); }
+.hub-links a { padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 14px; }
+.hub-links a:hover { border-color: var(--text); }
+.hub-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+.hub-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.hub-list li > a { font-weight: 500; }
+.hub-list li > a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.hub-list li > span:last-child { flex-basis: 100%; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.hub-list .from { padding: 0 7px; border: 1px solid var(--good, var(--line-2)); border-radius: 999px; font: 400 11px/1.6 var(--mono); color: var(--good, var(--muted)); }
+.hub-pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.hub-pages a, .hub-pages b { padding: 4px 12px; border: 1px solid var(--line-2); border-radius: 8px; font: 500 13px var(--mono); }
+.hub-pages a:hover { border-color: var(--text); }
+.hub-pages b { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+@media (max-width: 640px) {
+  .hub-header .header-in { flex-wrap: wrap; height: auto; padding-block: 12px; gap: 8px 16px; }
+  .hub-nav { justify-content: flex-start; gap: 2px 16px; font-size: 13.5px; }
+}

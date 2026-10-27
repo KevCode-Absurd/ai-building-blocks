@@ -30,11 +30,12 @@ you_get:
   - A trace showing which entry points have a filter
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
-  - Paste your code, or upload the files. Say which language and framework you use.
+  - Paste the code for the routes, forms and webhooks you want checked, or upload those files. Say which language and framework you use.
   - Ask your AI to list every entry point and its trust level first. Check that list for gaps.
   - Let it write the checks, then read the verification table at the end.
   - "Test it yourself: send bad input to each entry point and confirm it is rejected with a clear error."
   - Run it again each time you add a new route or webhook.
+  - Next, run the API test suite builder to turn your bad-input tests into a repeatable suite, and the Code security reviewer for a wider check.
 output_sample:
   input:
     - Your code or files to check
@@ -53,3 +54,4 @@ output_sample:
       contains: A trace of each entry point showing a filter exists and what kind it is.
     - name: Unfiltered input flag
       contains: A warning for any untrusted input that still reaches logic, storage or display without a filter.
+next: [api-test-suite-builder, code-security-reviewer]

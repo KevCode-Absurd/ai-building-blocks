@@ -21,6 +21,7 @@ not_for:
   - "Your store has too little traffic to split into four ad sets: run these ads inside your main campaign, or email people who left their cart."
   - "You have no data on why people left and want facts, not guesses: call 10 to 20 people who left at checkout first, then come back."
   - "You want to sell to people who already bought: set up a separate customer campaign in Meta Ads Manager."
+  - "You want an ordered sequence of an objection ad, a proof ad and a cross-sell: use the Retargeting ad sequence planner."
 
 you_give:
   - Your site conversion rate

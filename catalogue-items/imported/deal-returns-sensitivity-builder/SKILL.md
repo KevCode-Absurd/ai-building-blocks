@@ -7,9 +7,9 @@ description: Build quick IRR/MOIC sensitivity tables for PE deal evaluation. Mod
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. The companion files `india-market-conventions`
+and `india-market-data` are not shipped with this item. If you have them, load them. If not,
+the two rules below are what this skill relies on. They cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,8 +19,8 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+Where a US term has no Indian equivalent (`NOT-ADAPTABLE.md` lists these when you have it), name the gap.
+Never substitute a proxy and present it as the real thing.
 
 ## Workflow
 
@@ -121,7 +121,7 @@ Build 3 scenarios:
 ## Key Formulas
 
 - **MOIC** = Exit Equity Value / Equity Invested
-- **IRR** = solve for r: Equity Invested × (1 + r)^n = Exit Equity Value (adjust for interim cash flows)
+- **IRR**: set up dated cash flows: equity out at close (negative), any interim flows (dividends, fees) on their dates, and exit proceeds on the exit date (positive). Then use the spreadsheet function XIRR on those dates and amounts (or IRR if the flows are evenly spaced by year). For a single exit with no interim flows this reduces to Equity Invested × (1 + r)^n = Exit Equity Value.
 - **Returns attribution**:
   - Growth: (Exit EBITDA - Entry EBITDA) × Exit Multiple / Equity
   - Multiple: (Exit Multiple - Entry Multiple) × Entry EBITDA / Equity
@@ -133,6 +133,6 @@ Build 3 scenarios:
 - Management rollover and co-invest change the equity check — ask if relevant
 - Dividend recaps or interim distributions affect IRR significantly — include if planned
 - Don't forget transaction costs (typically 2-4% of EV) — they reduce Day 1 equity value
-- Tax considerations (asset vs. stock deal, 338(h)(10) election) can materially affect after-tax returns
+- Tax treatment (for example a share sale versus an asset or business transfer under Indian tax rules) can materially affect after-tax returns, so ask the user to confirm it with their tax adviser
 
 - **Runbook:** [`references/runbook-returns.md`](references/runbook-returns.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).

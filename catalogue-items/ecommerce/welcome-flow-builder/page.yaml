@@ -136,7 +136,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Flows, filters, dynamic coupons and revenue per recipient reports match the steps in this skill."}
+    - {name: "Klaviyo", why: "Flows, filters, dynamic coupons and revenue per recipient reports match the steps in this skill. It is a paid service."}
     - {name: "Shopify", why: "Order and customer data decide who drops out of the flow and who gets a code."}
     - {name: "Any good chat AI", why: "Any current chat AI can run the skill from the pasted facts."}
   inputs:

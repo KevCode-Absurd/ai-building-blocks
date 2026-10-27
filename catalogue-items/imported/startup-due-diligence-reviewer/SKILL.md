@@ -38,7 +38,7 @@ Before analyzing, collect as much public information as possible about the start
 | **Market** | Industry, market size estimates, tailwinds/headwinds |
 | **News** | Recent press, product launches, partnerships, layoffs, pivots |
 
-If certain data isn't publicly available (e.g., revenue for private companies), note the gap and infer what you can from indirect signals (hiring pace, customer logos, web traffic proxies, job postings).
+If certain data isn't publicly available (e.g., revenue for private companies), note the gap and infer what you can from indirect signals (hiring pace, customer logos, web traffic proxies, job postings). For every inferred figure, name its source, and mark proxy signals such as web traffic or headcount trends as low confidence unless the company confirms them. List each one under "Data gaps".
 
 ### When information is insufficient
 
@@ -129,6 +129,7 @@ After the three analyses, add a synthesis section that highlights:
 
 Write it as a scannable report titled `[Company Name] — Startup Analysis`:
 
+- **A note above the Summary:** these verdicts are research aids, not financial, legal or employment advice. Check them against filings or a professional before you decide.
 - **Summary** — a short overview that states the three verdicts up front.
 - **One section per perspective**, in the order that fits the user's situation from Step 2. Each covers the core areas from Step 3 with the evidence behind every judgment, and ends with its verdict on the scale defined there — Investment Verdict (Strong Pass / Lean Pass / Lean Invest / Strong Invest), Employment Verdict (Strong Pass / Lean Pass / Lean Join / Strong Join), or Health Grade (Critical / Struggling / Stable / Strong / Exceptional) — followed by the reasoning.
 - **Cross-perspective synthesis** — where the lenses agree, where they diverge, and the bottom line.

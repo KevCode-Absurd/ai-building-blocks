@@ -36,6 +36,7 @@ how_to_use:
   - Build the form in Google Forms, then open Extensions, then Apps Script, and paste the script your AI wrote.
   - "Add the trigger from the clock menu: pick your function, From form, On form submit. Approve access."
   - Send a test reply from a private window. Check the email or sheet row arrives once.
+  - If your script thanks the person who replied, the form needs an email question. Without one, the message goes to you.
 output_sample:
   input:
     - What your form is for
@@ -54,3 +55,4 @@ output_sample:
       contains: How to open the script editor and set the on form submit trigger, then approve access.
     - name: Test checklist
       contains: How to send a test reply and check the email or sheet row arrives once, and where to read errors.
+next: [web-form-designer, multi-step-form-designer]

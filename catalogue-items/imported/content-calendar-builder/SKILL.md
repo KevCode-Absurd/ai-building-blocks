@@ -140,6 +140,8 @@ Which mode?
 
 Extract buyer language, pain points, and use cases from customer reviews across multiple sources.
 
+The searches and page fetches below need an AI with web access. Some sites (Amazon, TikTok, Instagram) limit automated reading in their terms or block it. If a page will not load, ask the user to paste the reviews or posts instead. Do not guess what is on a page you could not read.
+
 **Review Sources to Search (in order of priority):**
 
 | Source | How to Access | Best For |
@@ -432,16 +434,15 @@ Evaluate:
 ### Current State
 | Metric | Your Brand | Competitor Avg |
 |--------|------------|----------------|
-| Posting frequency | 2x/week | 5x/week |
-| Video content % | 20% | 60% |
-| UGC/Social proof | 5% | 25% |
+| Posting frequency | [from what you saw, else "unknown"] | [from what you saw, else "unknown"] |
+| Video content % | [from what you saw, else "unknown"] | [from what you saw, else "unknown"] |
+| UGC/Social proof | [from what you saw, else "unknown"] | [from what you saw, else "unknown"] |
 
 ### Gaps & Opportunities
 | Gap | Impact | Recommendation |
 |-----|--------|----------------|
-| Low video content | High | Increase to 50% video |
-| No how-to content | High | Add 2 tutorials/week |
-| Missing TikTok | High | Launch TikTok with 3x/week |
+| [gap seen in the data above] | High / Medium / Low | [action, tied to that gap] |
+| [gap seen in the data above] | High / Medium / Low | [action, tied to that gap] |
 
 ### Action Plan
 1. [Immediate action]

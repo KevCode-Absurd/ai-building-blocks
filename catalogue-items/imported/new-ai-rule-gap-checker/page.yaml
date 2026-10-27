@@ -31,10 +31,11 @@ you_get:
   - A dated fix plan with owners and deadlines, saved as a file
 how_to_use:
   - Use an AI that can read files. Web search helps it find the rule text. Legal research tools are optional and paid.
-  - Fill in your CLAUDE.md file first. Add short sections for your places and sector, your AI uses, your public promises, your vendors and your impact check habits.
+  - Fill in the file at ~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md first (it comes with the claude-for-legal ai-governance-legal plugin). Add short sections named Regulatory footprint, Use case registry, AI policy commitments, Vendor AI governance and Impact assessment house style.
   - Open the skill in your AI. Give it the rule name, or paste the rule text.
   - Read the scope answer first. If the rule does not apply, it stops with one line.
   - Check the gap table against what you really do. Fix anything wrong.
+  - Without a legal research tool, citations come from web search or the AI's memory and carry tags like [web search - verify]. Check every tagged citation against the official source before anyone relies on it.
   - Have your lawyer check every citation, then save the dated plan and track items as they close.
 output_sample:
   input:

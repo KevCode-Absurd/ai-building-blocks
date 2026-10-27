@@ -31,10 +31,11 @@ you_get:
   - A Word document
 how_to_use:
   - Use an AI that can search the web, and has Node.js to make the Word file. Claude Code works.
-  - Paste the skill into your chat, or add the skill folder.
+  - Paste the skill into your chat, or add the skill folder. Check the terms of sites such as Glassdoor and LinkedIn first. They may block automated collection, and the skill then falls back to web search.
   - Answer the questions one at a time. Say what you expect to find. This is the key step.
   - Wait while it searches, then read the verdict and the red flags first.
   - Open the Word file. Check the sources behind any claim you plan to use.
+  - Use the conversation hooks in your meeting. If the verdict is inconclusive or the meeting date changes, run the dossier again.
 output_sample:
   input:
     - The company, person or group you want researched

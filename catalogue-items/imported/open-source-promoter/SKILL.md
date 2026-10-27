@@ -22,14 +22,14 @@ This skill helps you market open source projects without being cringe. Covers Gi
 
 ## Before You Start
 
-**Load your audience context first.** Read `.agents/developer-audience-context.md` to understand:
+**Get your audience context first.** If `.agents/developer-audience-context.md` exists, read it. If it does not, do not stop: ask the user the four questions below in chat, then carry on. Cover:
 
 - Who would use this project (role, tech stack, problem)
 - Where they discover tools (communities, social, search)
 - What alternatives exist (why would they switch?)
 - How they evaluate OSS (stars, activity, docs, community)
 
-If the context file doesn't exist, run the `developer-audience-context` skill first.
+Use the user's answers as the audience context for the rest of the plan. Never guess a project's users or numbers.
 
 ---
 
@@ -307,6 +307,18 @@ For each good first issue:
 - Offer to help in comments
 
 ---
+
+## What you hand back
+
+Return the plan in this order:
+
+1. Audience check (who uses it, where they are, what they use today)
+2. README rewrite (or a list of fixes)
+3. Repo checklist (description, topics, issue and PR templates)
+4. Good first issue ideas
+5. Launch plan: a numbered sequence with the first action named
+6. Follow-up schedule
+7. How to track results
 
 ## Launch Strategies
 

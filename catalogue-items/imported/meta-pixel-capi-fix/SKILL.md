@@ -6,13 +6,13 @@ metadata:
     emoji: "🎯"
     user-invocable: true
     requires:
-      tools: []
-      env: []
+      tools: [bash]
+      env: [META_TOKEN]
 ---
 
 # Pixel + CAPI -- Your Server-Side Signal Stack
 
-The browser pixel alone is broken. iOS 14.5 killed 30-50% of signal. Ad blockers take another 20-30%. Cookie deprecation is finishing the job.
+The browser pixel alone is broken. iOS 14.5 killed a large share of signal (rough estimates of 30-50%, with no source). Ad blockers take another 20-30% (also a rough estimate). Cookie deprecation is finishing the job.
 
 The fix is Conversions API (CAPI) -- server-side event sending that runs parallel to the browser pixel, shares event IDs for deduplication, and passes hashed user data that browsers can't block.
 
@@ -95,7 +95,7 @@ Send test events and verify receipt in Events Manager.
 Run: scripts/capi-test.sh <pixel_id> [test_event_code]
 ```
 
-Sends a test PageView and test Purchase. Use `test_event_code` to see events in Test Events tool without affecting real data.
+Sends a test PageView and test Purchase with fake customer data. Always pass the `test_event_code` shown in Events Manager > Test Events. The script tags events as tests even if you give none, but only the code from that tab makes them show up there.
 
 After running: **Check Events Manager > Data Sources > [Pixel] > Test Events** to confirm receipt.
 

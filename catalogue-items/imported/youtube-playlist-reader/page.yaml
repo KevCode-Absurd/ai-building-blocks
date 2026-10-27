@@ -9,7 +9,7 @@ subhead: Give it a playlist. Get every video listed, with transcripts for the on
 explain: |
   Give it a YouTube playlist and get back every video in it, with transcripts for the ones you pick.
 
-  It accepts a playlist link or ID, including a channel's uploads list. Results come in pages of 100 videos, and the skill follows the continuation token until the list is complete. Each page costs one credit on TranscriptAPI, which gives a small number of free credits and needs a key. From the list you choose which videos matter, and it fetches their transcripts one by one. That makes a course, a conference series or a creator's best-of list something you can read, search and quote without watching hours of video.
+  It accepts a playlist link or ID, including a channel's uploads list. Results come in pages of 100 videos, and the skill follows the continuation token until the list is complete. Each page costs one credit on TranscriptAPI, which has a free tier of 100 credits and needs a key. Listing costs one credit per page; check TranscriptAPI's price page for what each transcript costs, so the credit count makes sense. The transcripts come from YouTube through a third-party service, so check you have the right to quote or share any text. From the list you choose which videos matter, and it fetches their transcripts one by one. That makes a course, a conference series or a creator's best-of list something you can read, search and quote without watching hours of video.
 when:
   - You found a course playlist and want it as a text list.
   - You need transcripts from a conference series.
@@ -28,7 +28,7 @@ you_get:
   - Transcripts for the videos you choose
   - A count of credits used
 how_to_use:
-  - Make a free TranscriptAPI account and copy your key. It starts with sk_.
+  - Make a free TranscriptAPI account yourself and copy your key. It starts with sk_. Your AI should ask you before it signs up for anything.
   - Open an AI that can run code and reach the internet. Paste this skill into the chat.
   - Paste your playlist link or ID and your key.
   - Read the video list your AI returns, then name the videos you want transcripts for.

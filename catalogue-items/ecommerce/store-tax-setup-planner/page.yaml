@@ -151,3 +151,4 @@ terms:
     meaning: The order of tax rows. The lowest number wins when two rows could apply.
   - term: Origin-based
     meaning: Tax set by where the seller is, not where the buyer is.
+next: [store-go-live-checker]

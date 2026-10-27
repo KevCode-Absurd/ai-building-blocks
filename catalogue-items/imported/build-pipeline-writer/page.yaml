@@ -5,7 +5,7 @@ name: Build pipeline writer
 summary: Write a CI/CD pipeline file for your project. It reads your stack and builds GitHub Actions or GitLab CI with test, build and deploy stages.
 job: ship-and-host
 headline: Build pipeline writer
-subhead: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages. Bring your project folder. Use the result to plan your next step.
+subhead: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages. For protected branches and approval before production, read its deployment gates notes next.
 explain: |
   A CI/CD pipeline file written for the stack your project really uses, with test, build and deploy stages, ready to commit.
 
@@ -28,10 +28,10 @@ you_give:
 you_get:
   - A detected stack summary
   - A CI/CD pipeline file
-  - Caching and matrix settings
+  - A workflow file at .github/workflows/ci.yml or .gitlab-ci.yml, with caching and test version settings
   - A pre-merge checklist
 how_to_use:
-  - Use an AI that can run Python and open your project folder. A plain chat window cannot run the scripts.
+  - Use an AI that can run Python and a shell and open your project folder. A plain chat window cannot run the scripts. Deploy steps need secrets stored in GitHub or GitLab, never in the file.
   - Give your AI the skill folder and your project folder.
   - Ask it to detect your stack first, and read the summary to check it is right.
   - Tell it to write the pipeline for GitHub or GitLab and save it to the right path.
@@ -51,7 +51,7 @@ output_sample:
     - name: detected-stack.json
       contains: The same detection result in a form the pipeline script can read again.
     - name: CI/CD pipeline file
-      contains: A GitHub Actions or GitLab CI file with lint, test and build stages, plus deploy stages if you ask.
+      contains: A GitHub Actions file (.github/workflows/ci.yml) or GitLab CI file (.gitlab-ci.yml) with lint, test and build stages in that order, plus deploy stages if you ask.
     - name: Caching and matrix settings
       contains: Cache rules and test version lists that suit the stack found in your project.
     - name: Pre-merge checklist

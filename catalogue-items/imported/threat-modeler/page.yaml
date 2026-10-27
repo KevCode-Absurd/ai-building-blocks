@@ -30,7 +30,7 @@ you_get:
   - Suggested controls for each threat
   - A short summary for reviewers
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste this skill. It runs in a normal chat and needs no code.
+  - Open Claude, ChatGPT or Gemini and paste this skill. It runs in a normal chat and needs no code. The Threat Dragon, Docker and CI/CD parts of the skill need a terminal and are optional. Skip them in a chat.
   - Paste your system description or diagram notes. Say which parts handle data and where users log in.
   - List the kinds of data you hold, such as personal, health or payment data. List the outside services you use.
   - Ask your AI to go through each part of the system one at a time using STRIDE and fill in the worksheet.

@@ -1,12 +1,13 @@
 # Study and check your understanding: AI Blocks
 
-> 30 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 31 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Claude Code learning coach](https://useaiblocks.com/skills/claude-code-learning-coach): Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check.
 - [Claude Code quiz coach](https://useaiblocks.com/skills/claude-code-quiz-coach): Take a scored Claude Code quiz on one lesson. You get feedback on each answer and a list of what to review. Ten questions per lesson.
 - [Codebase learning planner](https://useaiblocks.com/skills/codebase-learning-map): Turn a code folder into a study map. Get ordered phases, what to know first and 2 or 3 paths that fit your goal and level.
 - [Coding project coach](https://useaiblocks.com/skills/coding-project-coach): Learn to code by building a real project. Your AI sets small milestones, gives hints and checks your code, and you write every line yourself.
 - [Debugging practice coach](https://useaiblocks.com/skills/debugging-practice-coach): Learn to debug your own code. Share the bug and what you tried, and this debugging practice coach guides you to find and prove the fix yourself.
+- [Flashcard maker](https://useaiblocks.com/skills/flashcard-maker): Paste your notes or a chapter. Get flashcards with one question and one short answer each, grouped by topic.
 - [Guided reasoning tutor](https://useaiblocks.com/skills/guided-reasoning-tutor): Bring a problem and your current thinking. Work through focused questions, hints, a clear correction and a small practice task.
 - [Learning level checker](https://useaiblocks.com/skills/learning-level-check): Find your real level in a technical topic. Answer a few short questions and get a starting level and first lesson to match.
 - [Learning mistake coach](https://useaiblocks.com/skills/learning-mistake-coach): Fix a mistake you keep making while learning. Share your wrong answer and get a clear correction, a fresh example and a check question.

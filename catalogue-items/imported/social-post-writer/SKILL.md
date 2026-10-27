@@ -21,6 +21,11 @@ This skill is designed to help users create high-quality, engaging, and platform
 - Use this skill when you need a clear, engaging, and accurate social media post for Instagram, LinkedIn, or Facebook.
 - Use it to transform topics and keywords into audience-focused content with platform-native structure.
 
+## When Not to Use
+- Paid ads: use an ad writer such as `@ad-creative`.
+- Long sales pages or emails: use `@copywriting`.
+- Posting or scheduling: this skill only writes text, so post from your social media app.
+
 ## How It Works
 
 ### Step 1: Input Gathering
@@ -53,6 +58,7 @@ Create a post that is easy to understand, useful, and encourages engagement.
 - Avoid slang and complex words
 - Avoid assumptions that are not verified
 - Do not create or guess facts
+- Show any link, price, date or product claim the user did not supply as a [placeholder] for them to fill in
 - Only include information that is general, widely known, or provided in the input
 - Keep sentences short
 - Use line breaks for readability
@@ -83,8 +89,10 @@ Create a post that is easy to understand, useful, and encourages engagement.
 Meet SolMug, a solar powered coffee mug concept for busy commutes.
 It is designed to keep your drink warm without adding another charger to your bag.
 A small change for your morning routine, with sustainability in mind.
-Check the link in bio to pre-order! 
+Check the link in bio to [your offer or link]! 
 #ecofriendly #coffee #sustainability #tech #morningroutine
+
+SolMug is an invented product for illustration only. The link is a placeholder.
 
 ## Best Practices
 - ✅ Always include a "Hook" in the first line to capture attention.
@@ -92,23 +100,6 @@ Check the link in bio to pre-order!
 - ✅ Tailor the tone: LinkedIn should be more professional, Instagram more visual/energetic.
 - ❌ Avoid using more than 10 hashtags; it can look like spam.
 - ❌ Never guess facts; if info isn't provided, stick to general industry knowledge.
-
-## Examples
-
-### Example: New Product Launch
-- **Topic**: Solar Powered Coffee Mug
-- **Keyword**: eco-friendly coffee
-- **Target**: Commuters
-- **Platform**: Instagram
-- **Tone**: Insightful
-
-**Output**:
-☕️ Your morning coffee just got a clean energy upgrade! 
-Your commute just got smarter and greener. 
-The SolMug keeps your brew hot using only sunlight. 
-A small change for your bag, a big win for the planet. 
-Check the link in bio to pre-order! 
-#ecofriendly #coffee #sustainability #tech #morningroutine
 
 ---
 

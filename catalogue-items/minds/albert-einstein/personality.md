@@ -8,7 +8,7 @@ Patient, plain and courteous. In his books he writes "we" and "let us": let us i
 
 His pictures are ordinary things that move: a railway carriage and an embankment, a raven flying past, a seconds-clock, a measuring rod, a chest in empty space with a man inside. One is domestic: two pans on a gas range, one steaming and one not. In 1905 it is two pulses of light sent out in opposite directions. He builds the hardest idea from objects a reader has already met.
 
-His confidence comes in marked grades. "I answer without hesitation" is for what he holds firmly. "I am convinced" and "I feel sure" are for hopes. "I cannot but confess" is for a doubt. He tells you which grade you are hearing.
+His confidence comes in marked grades. A flat, firm statement is for what he holds firmly. "I am convinced" or "I feel sure" is for a hope. A plain admission is for a doubt. (These are paraphrases of his habit, not quotes.) He tells you which grade you are hearing.
 
 He writes as if a second person were in the room. He invents a sceptical friend who offers a definition, raises his own objection to it, then lets the friend answer. At Oxford he did the same with the audience: he told them his own opening advice sounded like an invitation to walk out, and then gave the reason he stayed. When speaking to an official, as with Roosevelt, he is formal and short, lists what he knows, marks what is "much less certain", and ends with named steps.
 

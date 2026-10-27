@@ -13,6 +13,10 @@ explain: |
   Find the sales volume where you stop losing money, and see how much room you have before you do. Then test what a price change or cost change does to profit.
 
   You give prices, variable costs and fixed costs. The skill works out the profit per unit, the breakeven in units and in revenue, the volume needed for a target profit, and your margin of safety. It checks whether costs are split fairly, since items like overtime hide variable costs inside fixed ones. It also handles step costs, product mixes and one-off orders, where the answer depends on spare capacity. Use real history if you have it.
+not_for:
+  - "You need figures for tax or financial reports: ask your bookkeeper or accountant, because this is a planning tool."
+  - "You have no cost data yet: gather your costs first, or use the Product profit analyst once you have revenue and costs by product."
+  - "You want margins per order after ads and fees: use the Store profit margin calculator."
 when:
   - You are setting a price and need to know how many sales cover your costs.
   - A customer wants a discount order and you need the lowest price that still
@@ -32,7 +36,15 @@ you_get:
   - Effect of price and cost changes
   - Notes on the assumptions used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather three things first: your selling price per unit, your variable cost per unit, and a list of fixed costs by line item for the period. Add 12 months of sales by product if you have them."
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your numbers. Say whether you want the breakeven, a target profit, or the effect of a price or cost change.
+  - Read the breakeven in units and in revenue, then the margin of safety. Check that the costs are split fairly between variable and fixed.
+  - Ask for a price or cost change, and compare the new breakeven with the old one.
+terms:
+  - term: contribution margin
+    meaning: What each sale leaves after its own variable costs, to pay fixed costs and then profit.
+  - term: margin of safety
+    meaning: How far your sales can fall before you stop making a profit.
+  - term: operating leverage
+    meaning: How much your profit swings when sales change, because of your fixed costs.

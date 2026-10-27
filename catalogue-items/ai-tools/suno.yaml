@@ -34,5 +34,21 @@ blocks:
   - jingle-video-clip-prompt-writer
 alternatives: [udio, elevenlabs]
 last_checked: 2026-10-21
+first_result:
+  - "Go to suno.com and sign up. The free plan gives 50 credits a day, with no commercial rights."
+  - "Write a style line with the genre, mood and tempo. Add your lyrics, or let it write them."
+  - "Make a set of versions, listen to each and keep the closest."
+  - "Fix any lyric mistakes by editing the lyrics and making it again."
+  - "For an ad or anything you sell, use a paid plan from the start and read Suno's terms for songs made on the free plan."
+  - "You end with song files with vocals."
+  - "Next: write the ad script with the Jingle video ad script writer."
+needs:
+  - "A Suno account."
+  - "A style line, and your own lyrics if you have them (optional)."
+  - "A Pro plan, if the song is for business use."
+not_verified:
+  - "Where each tool sits in the app."
+  - "The file types you can download."
+  - "The exact commercial terms. Read them before you publish a song."
 sources:
   - https://suno.com/pricing

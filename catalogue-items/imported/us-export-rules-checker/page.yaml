@@ -19,8 +19,8 @@ not_for:
   - "You need a binding ruling on your product's class: ask BIS for a formal classification (CCATS) or advisory opinion. This gives guidance only."
   - "You need legal advice on a penalty, a past breach or a self-disclosure: talk to an export control lawyer."
 you_give:
-  - A description of the product, software or technology
-  - The destination country and the buyer
+  - A description of the product, software or technology. Gather any ECCN you already have, and the product spec sheet.
+  - The destination country and the buyer's full name and address
   - How the buyer will use it
   - Any earlier classification (optional)
 you_get:
@@ -34,6 +34,7 @@ how_to_use:
   - Add any earlier export class you were given (optional).
   - Read the jurisdiction and export class first. Check they match your product before you trust the rest.
   - Check the buyer against the official Consolidated Screening List yourself. Web access helps your AI do this, but confirm it.
+  - The skill includes notes on 2026 rule changes. Check each one against the Federal Register and the BIS website before you rely on it.
   - Take the result to your export counsel before you ship. This is guidance, not legal advice.
 output_sample:
   input:

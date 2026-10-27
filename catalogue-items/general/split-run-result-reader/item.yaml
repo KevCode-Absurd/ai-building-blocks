@@ -13,6 +13,7 @@ inputs:
 outputs:
   - {type: audit_report}
   - {type: lessons_register}
+next: [ad-test-brief-writer, campaign-keep-or-change-checker]
 origin: rebuilt
 version: 1.0.0
 minds: [john-caples]

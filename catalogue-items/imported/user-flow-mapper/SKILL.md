@@ -9,7 +9,7 @@ metadata:
 
 # User Flow Mapping
 
-This skill enables the agent to create detailed user flow diagrams that map every step, decision point, error state, and success path a user encounters while completing a task in a product. The agent produces three types of flows — task flows (single path, no decisions), user flows (multiple paths with decision branches), and wire flows (flows annotated with screen wireframes) — using Mermaid diagram syntax for portability. Each flow includes annotations for conversion metrics, drop-off risk points, and optimization opportunities.
+This skill enables the agent to create detailed user flow diagrams that map every step, decision point, error state, and success path a user encounters while completing a task in a product. The agent produces two types of flows — task flows (single path, no decisions) and user flows (multiple paths with decision branches) — using Mermaid diagram syntax for portability. It does not draw wireframes. Each flow includes annotations for conversion metrics, drop-off risk points, and optimization opportunities.
 
 ## Workflow
 
@@ -88,7 +88,7 @@ graph TD
     style END fill:#d1fae5,stroke:#10b981
 ```
 
-**Metric annotations**:
+**Metric annotations** (illustrative only: every percentage here is a placeholder, not a finding. Replace each with the user's own funnel data, or leave it out):
 - Cart → Shipping: ~72% proceed (28% abandon after viewing cart)
 - Shipping → Payment: ~85% proceed (address validation is low friction)
 - Payment → Confirmation: ~64% proceed (highest drop-off; consider saved payment methods)
@@ -138,11 +138,11 @@ graph TD
     style END fill:#d1fae5,stroke:#10b981
 ```
 
-**Metric annotations and optimization notes**:
+**Metric annotations and optimization notes** (illustrative only: every percentage and target here is a placeholder, not a finding. Replace each with the user's own funnel data, or leave it out):
 - Sign Up → Email Verified: ~68% verify within 1 hour. Send a reminder at 24 hours. Consider allowing limited access before verification to reduce early churn.
 - Plan Selection: ~80% choose Free initially. Offer a 14-day Pro trial without requiring billing info to increase Pro conversion.
 - Create First Project: Critical activation step. If the user does not create a project within 48 hours, trigger a guided tutorial email. Target: 60% activation within first session.
-- Invite Team: ~35% skip this step. Show the value of collaboration (e.g., "Teams complete projects 3x faster") to increase invite rates.
+- Invite Team: ~35% skip this step. Show the value of collaboration (use only a benefit you can prove; do not invent a number) to increase invite rates.
 
 ## Best Practices
 

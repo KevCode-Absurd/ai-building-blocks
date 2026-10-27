@@ -17,8 +17,8 @@ when:
   - You need to decide between tiers, freemium or one flat price.
 not_for:
   - "Your product has months of live sales data: start with that data, then come back to test a change."
-  - "You want to design a guarantee or a stronger offer: use a offers skill such as hundred-million-offers, not a pricing plan."
-  - "You want to know what customers value or why they buy: study customer jobs first with jobs-to-be-done."
+  - "You want to design a guarantee or a stronger offer: use offer-designer, not a pricing plan."
+  - "You want to know what customers value or why they buy: study customer jobs first with jobs-to-be-done-framer."
 you_give:
   - Product description
   - Target customer groups
@@ -32,7 +32,7 @@ you_get:
   - Suggested price metric
   - Pricing score with next fixes
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. The skill sends you to four reference files (wtp-conversations, four-failures, packaging-tiers and monetization-models), so paste those in too, or run it from the main file alone. No code or paid tool is needed.
   - Paste your product description and your target customer groups.
   - Add your current price, plans, competitor prices and any research you have. Skip what you lack.
   - Ask for the survey questions first, and run them with real buyers if you can.
@@ -56,3 +56,4 @@ output_sample:
       contains: The unit you charge by, chosen to track the value buyers get.
     - name: Pricing score
       contains: A 0 to 10 score for your current pricing, with the changes needed to reach 10.
+next: [pricing-strategist]

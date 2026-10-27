@@ -24,6 +24,7 @@ you_give:
   - Which party you are
   - Specific worries (optional)
   - Deal value (optional)
+  - The law that governs the contract and its start date (if the contract states them)
 you_get:
   - Key clause list
   - Duties and dates for each side

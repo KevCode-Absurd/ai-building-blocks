@@ -7,17 +7,30 @@ description: Use when a company has passed quality tests and someone wants to kn
 
 A sound company can still be a poor purchase at a high enough price. Most harm to careful buyers comes from paying a lot for a record that looks safe. This skill sets a price ceiling in three forms taken from The Intelligent Investor, shows every sum and says how far a failed price is from passing. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
 
+## When not to use
+
+- You want to know if the company itself is sound. Check its earnings and debt first, for example with the Earnings padding detector, then come back here.
+- You need a buy or sell call or personal advice. Talk to a licensed financial adviser, as this only tests price.
+- The company has under three years of earnings, or is a bank or insurer. Use a simple read of its annual report, as these ceilings fit poorly.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Makes it better (optional):**
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Audit report** with the [Reported earnings adjustment reviewer](https://useaiblocks.com/skills/earnings-padding-detector). Bring audit report, source text (optional).
+2. This one.
+
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with source text. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for audit report, source text. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A spreadsheet:** The sums are small, and a sheet with a row per company shows who passes.
@@ -41,7 +54,7 @@ How to start:
 6. **Ceiling 4, the seven-year and latest tests.** Price divided by the seven-year average should be 25 or lower, and price divided by the latest twelve months should be 20 or lower. Use them as a second view if the three-year average looks odd. Show both.
 7. **Compare the earnings yield with bonds.** Earnings yield is the three-year average earnings divided by price: 4.20 divided by 54 is 7.8%. Compare it with the yield on high-grade bonds. The author's basic rule was that a stock list, at purchase, should offer at least the bond yield in earnings. At a 7.5% bond yield that gives a top multiple of about 13.3 (one divided by 0.075). Show the maximum multiple for today's bond yield and say whether the company is under it. If no bond yield is given, mark it MISSING; do not quote one.
 8. **Say how far off.** For a company that fails, state the price at which each failed test would pass. For 3.00 average earnings at a ceiling of 15, the price would need to be 45 or lower. This turns a no into a number the person can watch, and not a signal to buy.
-9. **Explain a fail in plain words.** Popular growth names usually fail because the price has run far ahead of profit. The 1970s edition shows famous growth names losing half their price in a few months, and in some cases the earnings fell too. A fail means too much of the price depends on future growth that is not yet in the record. Say that and no more; do not predict the stock.
+9. **Explain a fail in plain words.** Popular growth names usually fail because the price has run far ahead of profit. A fail means too much of the price depends on future growth that is not yet in the record. Say that and no more; do not predict the stock.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any that fail. Under CHECKS MISSED write one line for each check still missed and why, or "none".
 
 ## What you hand back
@@ -51,10 +64,8 @@ The ceilings table, the result, how far off a failed price is, `MISSING:` lines,
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester). It takes the audit report.
-- **Plan your strategy** with the [Brand and sales budget splitter](https://useaiblocks.com/skills/brand-and-sales-budget-splitter). It takes the audit report.
-- **Decide what to do** with the [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner). It takes the audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report.
+- The [Investment margin of safety reviewer](https://useaiblocks.com/skills/price-versus-value-gap-judge). It takes the audit report.
+- The [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

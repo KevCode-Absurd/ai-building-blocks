@@ -9,7 +9,7 @@ subhead: Several RF circuit board parts joined end to end into one circuit, with
 explain: |
   Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 
-  It uses pcbcascade to chain parts like filters and couplers, and pcbElement to wrap them as circuit elements for RF Toolbox. You can load internal ports with parts such as varactors or terminators. The combined response is written out as S-parameters with rfwrite, and the data can move on to signal integrity eye diagram analysis. It expects each part to be designed and checked first. You need MATLAB with the RF PCB Toolbox.
+  It uses pcbcascade to chain parts like filters and couplers, and pcbElement to wrap them as circuit elements for RF Toolbox. You can load internal ports with parts such as varactors or terminators. The combined response is written out as S-parameters with rfwrite, and the data can move on to signal integrity eye diagram analysis. It expects each part to be designed and checked first. You need MATLAB with the RF PCB Toolbox. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
 when:
   - You must join a filter and coupler into one chain.
   - You need S-parameters in a file for another tool.

@@ -36,6 +36,8 @@ how_to_use:
   - Start with a 30 day range. Wider ranges take longer on busy stores.
   - Ask for a ranking by revenue, units or refund rate, and say how many products you want to see.
   - Check the table. Net revenue is revenue after refunds. Refund rate is the refunded amount divided by gross revenue.
+  - Orders with more than 50 lines are counted only up to 50 unless your AI pages through the rest. Ask it to say if any orders were cut off.
+  - Next, look at why your top refund-rate products come back with the Return reason finder, and see which discount codes drove your top sellers with the Discount code comparer.
 output_sample:
   input:
     - Your store address
@@ -52,3 +54,4 @@ output_sample:
       contains: Orders processed, products ranked, date range, sort measure and error count.
     - name: JSON results (optional)
       contains: The same ranked rows as data, if you ask for json format.
+next: [return-reason-finder, discount-code-comparer]

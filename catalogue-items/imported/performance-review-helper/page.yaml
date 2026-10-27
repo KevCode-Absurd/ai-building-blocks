@@ -40,6 +40,7 @@ how_to_use:
   - Read the result for any line marked MISSING and add the detail. Remove anything that is not true.
   - For a manager review, check that each rating matches the examples. Share the main points with the person before the review meeting.
   - For calibration, type in your own company's rating targets. The tool does not know them.
+  - Last, read the "check before use" list at the end of the result. Then share the main points with the person before the review meeting. To set up the whole review cycle, use the Review cycle form builder.
 output_sample:
   input:
     - "The mode: self-assessment, manager review or calibration"
@@ -93,3 +94,4 @@ terms:
     meaning: A meeting where managers compare ratings across teams so the same standard is used for everyone.
   - term: Self-assessment
     meaning: A review of your own work, written by you.
+next: [review-cycle-form-builder]

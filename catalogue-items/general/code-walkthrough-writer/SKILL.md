@@ -14,12 +14,12 @@ Code is ordered for the machine. A reader needs another order, with the main ide
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Codebase** (yours): a project's code, in a folder or repo the AI can open. A pasted script, formula set or automation also counts.
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for the code. They can attach files, paste it, or share a file path your assistant can read. If the code is missing, stop and ask for it (see "No code, no walkthrough" above). Ask about the reader and purpose only once, and carry on without them if they do not answer.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Reading code and writing an ordered explanation is text work any strong chat AI does.
@@ -50,7 +50,8 @@ What the code does and for whom. The ideas in order. The walkthrough, passage by
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Function purity refactor planner](https://useaiblocks.com/skills/function-purity-refactor-planner). It takes the draft.
+- The [Code explainer for beginners](https://useaiblocks.com/prompts/code-explainer-for-newcomers).
+- The [Coding task planner](https://useaiblocks.com/skills/coding-task-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

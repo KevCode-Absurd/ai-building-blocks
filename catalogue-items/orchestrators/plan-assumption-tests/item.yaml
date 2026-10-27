@@ -13,9 +13,9 @@ outputs:
   - {type: plan}
 uses: [business-model-guess-tester, customer-discovery-plan, mvp-experiment-planner]
 steps:
-  - {uses: business-model-guess-tester, note: "It rewritten as testable guesses on one page, with a test and a pass line for each"}
-  - {uses: customer-discovery-plan, note: "Your guesses, who to talk to and questions that test them outside the building. Reads the plan from the step before"}
-  - {uses: mvp-experiment-planner, note: "The riskiest guess, the smallest test and a pivot or persevere rule"}
+  - {uses: business-model-guess-tester, note: "Turns each box of your plan into a guess on one page, orders the guesses by risk and gives each a cheap test and a pass line."}
+  - {uses: customer-discovery-plan, note: "Reads the guesses from step 1. Lists who to talk to for each one and writes questions about what people do now."}
+  - {uses: mvp-experiment-planner, note: "Reads your notes from the talks. Picks the riskiest guess left, plans the smallest test and sets a rule to change direction or carry on."}
 origin: rebuilt
 version: 1.0.0
 minds: [steve-blank]

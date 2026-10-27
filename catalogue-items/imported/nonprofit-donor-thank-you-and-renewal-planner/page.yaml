@@ -29,8 +29,11 @@ works_best_with:
   inputs:
     - Acknowledgment processes carry tax-receipt language donors rely on.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Add a table of gifts (donor ID, gift date, amount), your current receipt and thank-you text, and your contact preferences. A CSV or spreadsheet works.
+  - Ask for the retention numbers first. Then fix receipt speed, then add the first-gift welcome, then plan the lapsed-donor outreach.
+  - Have an accountant or lawyer check the receipt wording for your country. The receipt rules in the skill follow US tax rules.
+  - Measure retention again after one full giving cycle, and report it to your board next to total dollars raised.
 not_for:
   - "You are moving new prospects toward a first gift. Use the Nonprofit donor relationship planner."
   - "You are planning a mass appeal letter and gift amounts. Use the Nonprofit annual appeal planner."
@@ -54,3 +57,4 @@ output_sample:
       contains: Asks tied to each donor's own giving dates.
     - name: Win-back plan
       contains: Separate messages for donors who lapsed recently and those who lapsed longer ago.
+next: [nonprofit-annual-appeal-planner, nonprofit-donor-relationship-planner]

@@ -1,6 +1,6 @@
 # April Dunford: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 April Dunford is alive, and views can change. Everything below comes from her own website, her newsletter posts from 2019 to 2026, a guest post, and two interviews with full transcripts: one with Experian in 2024 [S11] and one on the Lean Marketing podcast in 2024 [S15]. We could not read her books in full, so we describe them from her own pages and posts. One guest post is partly behind a paywall, and we used only the free part [S9]. The "Real decisions" section mixes choices she made in her own business, told in her interview [S15], and client cases she tells without naming the client [S12][S16]. Treat each view as "as of" the post it comes from. Nothing here covers her private life or her plans.
 

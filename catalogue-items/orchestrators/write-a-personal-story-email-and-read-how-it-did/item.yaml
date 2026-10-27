@@ -8,17 +8,17 @@ job: email
 level: beginner
 inputs:
   - {type: brand_brain, required: true}
-  - {type: performance_sheet, required: true}
   - {type: brief, required: false}
-  - {type: email_flow, required: false}
+  - {type: performance_sheet, required: false}
 outputs:
+  - {type: copy_draft}
   - {type: audit_report}
 uses: [story-email-writer, email-draft-reviewer, email-mistake-fixer, email-and-sms-performance-reader]
 steps:
   - {uses: story-email-writer, note: "Starts from your brand file and one true story and writes three drafts. Hands step 2 the three drafts; you pick one."}
   - {uses: email-draft-reviewer, note: "Reads the draft you picked from the step before and lists the cuts to make. Hands you the cuts to apply to that draft before step 3."}
-  - {uses: email-mistake-fixer, note: "Takes the draft after you apply the cuts and cleans up the small errors. Works on your draft from step 1 with step 2's cuts applied, not on the cuts list; hands you the final email to send."}
-  - {uses: email-and-sms-performance-reader, note: "Fresh start after the send: reads the numbers so you can see if the story email beat your usual ones. Uses the campaign numbers you export after the send, not step 3's draft."}
+  - {uses: email-mistake-fixer, note: "Takes your draft from step 1 after you make step 2's cuts, not step 2's review itself, and cleans up the small errors. Hands you the final email to send."}
+  - {uses: email-and-sms-performance-reader, note: "Fresh start after the send: reads the numbers so you can see if the story email beat your usual ones. Uses the campaign numbers you export after the send, with the final email from step 3 beside them."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-personal-story-email-and-read-how-it-did/skeleton.yaml

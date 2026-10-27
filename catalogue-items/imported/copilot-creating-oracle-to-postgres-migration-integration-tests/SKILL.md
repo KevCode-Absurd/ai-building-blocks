@@ -11,6 +11,7 @@ Generates integration test cases for data access artifacts in a single target pr
 
 - The test project must already exist and compile (scaffolded separately).
 - Read the existing base test class and seed manager conventions before writing tests.
+- Seed and run the tests only against a non-production copy of Oracle, never a live business database.
 
 ## Workflow
 
@@ -55,6 +56,13 @@ Scope to the target project only. List data access methods that interact with th
 **Step 5: Review determinism**
 
 Re-examine every assertion against non-null values. Confirm each is deterministic against the seeded data. Fix any assertion that depends on database state outside the test's control.
+
+## What you hand back
+
+- The seed data files, one set per scenario
+- A LookupConstants class
+- One test class per data access class, with the number of tests for each database method
+- A short note confirming that every assertion depends only on the seed data
 
 ## Key Constraints
 

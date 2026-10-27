@@ -123,7 +123,8 @@ def first_fit_decreasing(items, stock_length):
 
     Returns: cutting plan with patterns
 
-    Performance: Typically 10-30% above optimal
+    Performance: fast, but often uses more stock than the best possible plan; the gap depends on your cut list.
+    Note: this heuristic ignores saw cut width (kerf). To include it, add the kerf to every piece length before calling.
     Complexity: O(n log n + nk) where k = number of stocks used
     """
 
@@ -206,7 +207,8 @@ def best_fit_decreasing(items, stock_length):
 
     Returns: cutting plan
 
-    Performance: Typically 5-20% above optimal
+    Performance: usually closer to the best possible than first fit, but not guaranteed; the gap depends on your cut list.
+    Note: ignores saw cut width (kerf) unless you add it to every piece length first.
     """
 
     # Expand and sort pieces
@@ -411,24 +413,7 @@ class ColumnGenerationCuttingStock:
         if reduced_cost >= -1e-6:  # No profitable pattern found
             return None
 
-        # Backtrack to find pattern
-        new_pattern = [0] * self.n_items
-        w = capacity
-
-        while w > 0 and item_used[w][0] != -1:
-            item_idx = item_used[w][0]
-            # Count how many of this item in the pattern
-            temp_w = w
-            count = 0
-            while temp_w > 0 and item_used[temp_w][0] == item_idx:
-                count += 1
-                item_length = self.lengths[item_idx] + self.kerf
-                temp_w -= item_length
-
-            new_pattern[item_idx] += count
-            w = temp_w
-
-        # Alternative: use proper unbounded knapsack backtracking
+        # Backtrack with the unbounded knapsack helper below
         new_pattern = self._knapsack_backtrack(dual_values)
 
         return new_pattern
@@ -543,13 +528,20 @@ class ColumnGenerationCuttingStock:
         prob.solve(PULP_CBC_CMD(msg=0))
 
         # Extract solution
-        pattern_usage = [x[j].varValue for j in range(num_patterns)]
+        # The solver returns whole numbers as floats (for example 2.0000001). Round them.
+        pattern_usage = [int(round(x[j].varValue or 0)) for j in range(num_patterns)]
+
+        # Check every demand is met before returning the plan
+        for i in range(self.n_items):
+            made = sum(self.patterns[j][i] * pattern_usage[j] for j in range(num_patterns))
+            if made < self.demands[i]:
+                raise ValueError(f"Demand not met for item {self.item_ids[i]}: {made} of {self.demands[i]}")
 
         # Build cutting plan
         stocks = []
         for j, usage in enumerate(pattern_usage):
-            if usage and usage > 0.5:
-                for _ in range(int(usage)):
+            if usage > 0:
+                for _ in range(usage):
                     stock = {
                         'pattern_id': j,
                         'pattern': self.patterns[j],

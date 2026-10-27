@@ -219,6 +219,8 @@ connect(uaClient, "cert.der", "key.pem", "keypass");     % certificate
 
 ### 5. Verify connection
 
+> Added by AI Blocks: a good run prints the "Connected to" line below, and step 6 lists child node names. Next, read or log the variables you need and pass the values to a MATLAB analysis or dashboard. Never call a method on live equipment without the plant owner's approval.
+
 ```matlab
 if isConnected(uaClient)
     fprintf("Connected to %s\n", uaClient.EndpointUrl);

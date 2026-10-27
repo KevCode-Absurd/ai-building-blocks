@@ -16,3 +16,4 @@ origin: own
 version: 1.0.0
 example_pending: true
 minds: [jason-fried]
+needs_mode: manual

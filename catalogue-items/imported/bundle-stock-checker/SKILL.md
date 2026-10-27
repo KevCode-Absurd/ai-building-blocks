@@ -50,7 +50,7 @@ Walks every product flagged as a bundle (either via Shopify's native `requiresCo
    **Inputs:** Batched component inventory item IDs, select `tracked`, `inventoryLevels(first: 25) { quantities }`
    **Expected output:** Per-location quantity for each component
 
-5. For each bundle, compute `max_buildable_units = floor(min over components of (component_on_hand - safety_stock) / required_qty)`. Flag bundles where `max_buildable_units == 0` (broken bundle) or `< min_listed_inventory_threshold`.
+5. For each bundle, compute `max_buildable_units = floor(min over components of (component_on_hand - safety_stock) / required_qty)`. Flag bundles where `max_buildable_units == 0` (broken bundle). The quantity used is on-hand stock minus the safety stock.
 
 ## GraphQL Operations
 
@@ -214,7 +214,7 @@ CSV file `bundle_availability_<YYYY-MM-DD>.csv` with columns:
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | Metafield value is invalid JSON | Malformed configuration | Skip bundle, log warning, include in error count |
 | Component variant ID does not resolve | Component product was deleted | Mark bundle as `BROKEN_REFERENCE`, include in output |
-| Component is `tracked: false` | Untracked inventory | Treat component as infinitely available, note in output |
+| Component is `tracked: false` | Untracked inventory | Do not let it limit the count, but list the bundle under "needs review" and say the count may be too high, because Shopify does not track that part |
 
 ## Best Practices
 - Run daily for stores with many bundles; surface broken bundles before customers can buy something you cannot ship.

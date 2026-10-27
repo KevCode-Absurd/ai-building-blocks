@@ -20,16 +20,16 @@ not_for:
   - "You want to know if one test has enough traffic to trust: use the A/B test traffic checker."
 you_give:
   - Your buyer count, orders, revenue, average sale and repeat rate for a period
-  - Product facts (optional)
+  - Your cost to win a buyer (optional, but needed for a firm pick)
   - Your list of growth ideas, or let it suggest some
-  - Your goal in your own words (optional)
+  - Product facts and your goal in your own words (optional)
 you_get:
   - The three growth levers sized, the weakest steps marked and the cheapest lever picked
   - Every idea scored out of 10, with a test, a measure and a stop date for the top few
   - A chain of rates with a starting figure for each
   - Three dated milestones with your predicted figure for each
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It is a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - Paste one clean period of numbers, such as the last three months. All figures must come from the same dates. Say what the period was.
   - Add every growth idea you have heard, even odd ones. Step 2 scores them all.
@@ -92,3 +92,5 @@ improve:
   - After each milestone, feed the results back to step 2 so it re-scores the list.
   - Keep the predictions. Over time they show whether your guesses are too bold or too safe.
   - Add cohort data when you have it, so step 3 can set rates for each group of buyers.
+next: [ab-test-traffic-checker, ad-sales-drop-analyst]
+before: []

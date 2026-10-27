@@ -35,7 +35,8 @@ how_to_use:
   - Describe your team, how it works and what you want to track.
   - "Check the plan: project type, workflow, JQL table and manual steps."
   - Create the project and workflow in the Jira web screen. Your AI cannot do this.
-  - Ask your AI to create or search issues with the connector. Code running is needed for the query and workflow checks.
+  - Ask your AI to create or search issues with the connector. The query and workflow checks use Python scripts, so keep the whole skill folder together and use an AI that can run Python.
+  - Next, build the manual steps in Jira, run the JQL searches on a test project first, and write up the setup in Confluence if your team uses it.
 output_sample:
   input:
     - How your team works, such as Scrum or Kanban

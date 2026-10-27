@@ -128,6 +128,8 @@ improve:
   - "Add your own list of steps that always run long."
   - "Pair it with the Plan inversion checker before you commit to the date."
 
+before: []
+next: [go-or-no-go-launch-checker, failure-first-plan-check]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message estimate check works in any strong chat AI."}

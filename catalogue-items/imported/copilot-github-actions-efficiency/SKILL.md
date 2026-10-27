@@ -49,7 +49,7 @@ Check each proposed fix against these rules before recommending it:
 
 ### 3. Select the top 3 fixes
 
-From the six candidates below, keep only those supported by audit evidence from step 1 *and* passing all guardrails from step 2. Rank survivors by estimated daily CI minutes saved (per-run savings × runs per day). Select all candidates that meet both criteria, up to a maximum of 3.
+From the six candidates below, keep only those supported by audit evidence from step 1 *and* passing all guardrails from step 2. Rank survivors by estimated daily CI minutes saved (per-run savings × runs per day). Select all candidates that meet both criteria, up to a maximum of 3. If fewer than 3 pass, report only those that pass and say so. That is a valid result, not an incomplete one.
 
 1. Add dependency caching with lockfile-based keys
 2. Add or correct `concurrency` cancellation
@@ -60,7 +60,7 @@ From the six candidates below, keep only those supported by audit evidence from 
 
 ### 4. Verify
 
-- If `gh` CLI access is available, validate path-gating and concurrency cancellation with a live test push on a non-protected branch.
+- If `gh` CLI access is available, validate path-gating and concurrency cancellation with a live test push on a throwaway, non-protected branch. Never test on main. The test creates real workflow runs.
 - If live validation is not possible, state that explicitly in the output.
 - Treat unexpected live behavior as a real bug even when the YAML looks correct.
 

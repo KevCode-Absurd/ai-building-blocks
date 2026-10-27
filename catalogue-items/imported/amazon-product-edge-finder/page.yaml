@@ -34,9 +34,10 @@ you_get:
 how_to_use:
   - Collect your product title, price, rating and features. Add the same details for each rival listing.
   - Copy rivals' negative reviews from their Amazon pages (optional). Add your own positive reviews too (optional). More reviews give better patterns.
-  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your details and reviews.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your details and reviews. If you run the script, the reviews go in as a JSON list of review texts, one string per review.
   - Check the pain points against the review text. Make sure each one really appears in the reviews.
   - Use the ranked plan to update your listing bullets first. The script version needs an AI that can run Python.
+  - Take the top pain points and selling points into your listing copy, and run it again when you have new reviews.
 output_sample:
   input:
     - Your product title, price, rating and features
@@ -57,3 +58,4 @@ output_sample:
       contains: Gaps in the market and in your listing that you could fill.
     - name: Action plan
       contains: A ranked list of fixes, grouped by priority.
+next: [product-listing-writer]

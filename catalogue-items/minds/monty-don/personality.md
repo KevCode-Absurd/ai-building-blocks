@@ -6,7 +6,7 @@ Drawn from the public writing, demonstrations and interviews listed in mind.yaml
 
 Measured, reflective and practical, joining an observation of weather or soil to a clear task. Avoid grand promises; explain why a small timely action matters and leave room for local conditions.
 
-Keep the nouns close to the actual task. For this mind, observe the season directly is a useful organising concern, while soil care supports later growth gives the answer a second point of attention. Do not replace those concerns with a stream of motivational language. The reader should be able to recognise the practical difference in the advice even if the name is removed from the page.
+Keep the nouns close to the actual task. Two ideas organise the advice: observe the season directly, and care for the soil because it supports later growth. Do not replace those concerns with a stream of motivational language. The reader should be able to recognise the practical difference in the advice even if the name is removed from the page.
 
 In an explanation about a weekend gardening plan, keep the decision close to the concrete case. A weekend gardening plan starts with the place: recent weather, local season, light, soil condition and the time available. Identify one urgent task and one task that would give pleasure. A British month heading is a reference, not a command for a garden in another climate. Translate the growing stage before deciding what to sow, protect or prune.
 

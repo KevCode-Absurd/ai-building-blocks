@@ -10,7 +10,7 @@ subhead: Give it the signed engagement, the client's change request and your tea
 explain: |
   A client asks for "one small addition". It sounds easy. Then the signed scope, the hours your team has left, and the work already promised all pull in different directions. A yes given on a call turns into extra work nobody priced.
 
-  This client scope change review compares the new request with the signed engagement, clause by clause. It uses the Client scope change planner to summarise what the contract says about deliverables, exclusions, changes, fees and notice. It checks the request against real hours and commitments, and shows what slips if you say yes. It then drafts a decision brief for the client with options, the cost and date effects it can support, and open questions.
+  This client scope change review compares the new request with the signed engagement, clause by clause. It uses the Prepare a client scope change brief workflow to summarise what the contract says about deliverables, exclusions, changes, fees and notice. It checks the request against real hours and commitments, and shows what slips if you say yes. It then drafts a decision brief for the client with options, the cost and date effects it can support, and open questions.
 
   It keeps the original scope and the proposed change apart. A change counts as accepted only when the client's reply says so. If the answer is unknown, the old commitments stay as they are and the open decision is listed. It reviews and drafts. It gives no legal advice and sends nothing.
 
@@ -21,9 +21,9 @@ when:
   - You review a change request every few weeks and want each one compared with the last review.
 
 not_for:
-  - The work is a construction or building contract. Use the Construction change cost and approval tracker.
-  - You want a risk review of contract clauses for a lawyer. Use the Contract clause risk reviewer.
-  - You only want to reprice a client by their hours and fees. Use the Client fee and work-hour reviewer.
+  - The work is a construction or building contract. Use the Construction variation cost and approval tracker.
+  - You want a risk review of contract clauses for a lawyer. Use the Contract intake reviewer.
+  - You only want to reprice a client by their hours and fees. Use the Quarterly client rate reviewer.
   - You are writing the first change request form and nothing is in dispute. Use the Change request writer.
   - You want the AI to send the reply or decide what is in scope. It drafts, and a person decides.
 
@@ -44,7 +44,7 @@ you_get:
   - A MISSING list, CHECKS MISSED and a short record for the next review
 
 how_to_use:
-  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add the scope planner, the contract summary, the capacity planner and the update writer from the pack.
+  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Prepare a client scope change brief, Plain-words contract summary, Team capacity planner, Stakeholder update writer and Executive action register keeper. If one is missing, stop and ask for it.
   - Say if this is a first run. If not, paste your last review and its record.
   - Attach the signed engagement, the change request, your commitments and the available hours. Write your approval rules in two or three lines.
   - Read the scope comparison first. Check each clause it quotes against the contract.
@@ -61,7 +61,7 @@ how_it_works:
   - title: Draft options and a client brief
     text: Writes the options with the cost and date effects the evidence supports, plus open questions and approval status.
   - title: Record the client's decision
-    text: If the client's reply clearly accepts or declines, it records the commitment and its source with the Action item tracker. If the reply is unclear, the old commitments stay and the open decision is listed.
+    text: If the client's reply clearly accepts or declines, it records the commitment and its source with the Executive action register keeper. If the reply is unclear, the old commitments stay and the open decision is listed.
 
 output_shape: |
   REVIEW DATE <date>   CLIENT <name>   ENGAGEMENT <version, date>   LAST REVIEW <date or first run>
@@ -85,7 +85,7 @@ output_sample:
     - Your last review and the client's reply, if any (optional)
   prerequisites:
     - An AI that can read files, such as Claude, ChatGPT or Gemini
-    - The Client scope change planner and the Action item tracker in the agent pack
+    - The Prepare a client scope change brief workflow and the Executive action register keeper in the agent pack
   output:
     - name: Changed since last review
       contains: Each new request or client reply, with its source and date.

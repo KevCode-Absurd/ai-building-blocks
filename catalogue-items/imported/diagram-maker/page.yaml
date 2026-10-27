@@ -7,7 +7,7 @@ job: design-work
 headline: Diagram maker
 subhead: Describe a system, process or idea in words. Your AI picks a diagram type and draws it as one SVG file. Open it in any browser, drop it into slides or edit it later.
 explain: |
-  A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. Fonts and styles are built in, so it looks the same everywhere.
+  A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. The styles are built in. It loads the JetBrains Mono font from Google Fonts, so it needs internet access to show that font.
 
   Pick from nine types: architecture, flowchart, sequence, structure (classes, ER, org charts), mind map, timeline, illustrative, state machine and data flow. The skill uses a fixed colour system so meaning stays consistent: cyan for front-end and user-facing parts, green for back-end services, violet for storage, amber for cloud and infrastructure. Describe your system, process or idea in words, and it chooses a fitting type and lays out the boxes, arrows and labels.
 when:
@@ -34,7 +34,7 @@ how_to_use:
   - Paste the skill, or upload its folder if your AI takes files.
   - Describe your system, process or idea. List the parts to include. Name a diagram type if you have a preference.
   - 'Example: say "A shop site calls an API, which reads orders from a database and sends emails through a queue." Your AI picks an architecture diagram and saves a .svg file plus a matching @2x .png.'
-  - Open the SVG in a browser. Check that no text spills out of a box and no arrows cross labels. Ask for fixes.
+  - Open the SVG in a browser. Check that no text spills out of a box and no arrows cross labels. Ask for fixes. Then drop the SVG or PNG into a document or slide deck, or ask your AI to change labels or layout and save a new version.
   - "Know the limits: the SVG loads the JetBrains Mono font from Google Fonts, so it needs internet to show that font. The PNG step needs bun or npx installed."
 output_sample:
   input:

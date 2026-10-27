@@ -51,7 +51,7 @@ How to start:
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there. Higgsfield is a paid service that uses credits, so check its prices before you connect it.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
@@ -92,11 +92,11 @@ If an image tool is connected, offer to make the picture with it, and ask before
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Plan what to test** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). It takes the ad copy.
+- The [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
+- The [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
+- The [Comic strip image ad maker](https://useaiblocks.com/skills/comic-strip-image-ad-maker).
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy and image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -106,6 +106,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No picture claims more than the approved claims.
 - Headline 7 words or fewer, at most 3 other things to read, nothing under 30 px, every word at 4.5:1 or more.
 - No clay letters; the product's label is exactly as printed.
+- For a food, supplement or health product, the picture also passes the claim rules in step 4 before it is shown.
 
 ## If something is missing
 Write `MISSING: <what>`. No "how it works": show the routine or a plain metaphor, never an invented process. No label lines: the product turns its label away until they're given. Contents of the product not given (colour, shape, count): `MISSING: what the product looks like inside`, and keep it out of the picture. No product photo: plan the set and write the prompt from the facts, mark `MISSING: product photo`, and say to attach the photo before making the image so the product comes out exact.

@@ -324,7 +324,7 @@ global privacy regulations. For detailed mappings, read `references/regulatory-m
 
 ## Transition Status — October 2026
 
-**ISO/IEC 27701:2025** is the current standalone PIMS standard. **Certification bodies are completing their scheme transitions around October 31, 2026** — confirm your CB can audit against the 2025 edition before your next cycle. Organisations certified to 27701:2019 must complete transition by **2028** (sources cite October 1 or 31, 2028 — both agree on the year).
+**ISO/IEC 27701:2025** is the current standalone PIMS standard. **Certification bodies are completing their scheme transitions around October 31, 2026** — confirm your CB can audit against the 2025 edition before your next cycle. Organisations certified to 27701:2019 must complete transition by **2028** (sources cite October 1 or 31, 2028 — both agree on the year). These dates are not sourced in this file and may change. Tell the user to confirm them with their certification body before planning.
 
 ## Reference Files
 

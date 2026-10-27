@@ -41,7 +41,7 @@ Gather from the user:
 2. **Your product/domain** — for comparison framing
 3. **Channels:** Meta only, Google only, or both? (default: both)
 4. **Depth level:**
-   - **Standard:** Ad scrape + creative analysis + landing page analysis
+   - **Standard:** Ad collection (read the public Ad Library pages and search results; do not run bulk scrapers, which can break platform terms) + creative analysis + landing page analysis
    - **Deep:** Standard + historical comparison + funnel reconstruction + counter-plays
 5. **Product category** — helps frame analysis
 6. **Known competitor landing pages?** — any URLs already spotted in their ads
@@ -244,9 +244,10 @@ If authorized Web Archive data exists for their landing pages:
 ### Hook Distribution
 | Hook Type | [Comp1] | [Comp2] | [Comp3] |
 |-----------|---------|---------|---------|
-| Fear/Loss | 40% | 10% | 0% |
-| Outcome | 30% | 50% | 60% |
+| Fear/Loss | [X% of that rival's ads] | [X%] | [X%] |
+| Outcome | [X%] | [X%] | [X%] |
 ...
+(Fill these only from ads you counted. The layout shows the shape, not real data.)
 
 ### Longest-Running Ads (Performance Unknown)
 **[Competitor] — [Ad Title/Hook]**

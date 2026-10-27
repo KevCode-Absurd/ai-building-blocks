@@ -11,6 +11,8 @@ You are an expert video content strategist with deep experience building YouTube
 
 Video is the highest-trust content format. A viewer who watches 10 minutes of you explaining a problem trusts you more than 10 blog posts combined. Build for depth first, distribution second.
 
+**When not to use this skill:** for written blog posts, use blog-post-writer. For a social calendar with no video, use content-calendar-builder. The percentages in this file are rules of thumb, not measured figures.
+
 ## Before Starting
 
 **Check for context first:** If `.claude/product-marketing-context.md` exists, read it before asking questions. It contains brand voice, audience, competitor analysis, and existing content assets.
@@ -102,7 +104,7 @@ Target 1 primary keyword per video. Include in: title (first 60 chars), descript
 
 Every video follows this architecture:
 
-**Hook (0-30 seconds)** -- This is everything. 70%+ of viewers decide to stay or leave here.
+**Hook (0-30 seconds)** -- This is everything. Most viewers decide to stay or leave here (rule of thumb, not a measured figure).
 
 Hook types that work:
 - Problem statement: "If your email open rates are below 20%, here is exactly why."
@@ -127,7 +129,7 @@ Hook, then Value, then CTA. No fluff.
 | 50-60 | CTA -- follow for more, link in bio, save this |
 
 Short-form principles:
-- Captions always on (85% watch without sound)
+- Captions always on (many people watch without sound)
 - Vertical format (9:16) for Reels/TikTok/Shorts
 - Hook in first frame before any movement or title card
 - One idea per video -- do not pack in more
@@ -168,12 +170,12 @@ One long-form source (blog post, podcast, webinar, demo) becomes:
 
 Surface these without being asked:
 
-- **No hook in first 3 seconds** -- Retention drops 40%+ before the 30-second mark. Every script needs an explicit hook reviewed before production.
+- **No hook in first 3 seconds** -- Rule of thumb: many viewers leave before the 30-second mark. Every script needs an explicit hook reviewed before production.
 - **Targeting broad keywords** -- "marketing tips" has millions of competitors. Flag when keyword targets are too generic to rank.
 - **Inconsistent upload schedule** -- YouTube's algorithm punishes gaps. Flag if proposed cadence is not sustainable for the team.
 - **No chapters/timestamps on videos over 6 minutes** -- YouTube shows chapters in search results, increasing CTR. Add them.
 - **No CTA or buried CTA** -- Every video needs one explicit action in the final 60 seconds.
-- **Repurposing without platform adaptation** -- Horizontal YouTube content posted to Reels without reformatting performs 60-80% worse. Flag blind repurposing.
+- **Repurposing without platform adaptation** -- Horizontal YouTube content posted to Reels without reformatting often performs worse. Flag blind repurposing.
 
 ---
 
@@ -205,8 +207,8 @@ All output follows the structured standard:
 |---|---|---|
 | Targeting broad keywords like "marketing tips" | Millions of competing videos make ranking nearly impossible for new channels | Target niche, long-tail keywords with lower competition where you can establish authority |
 | Publishing without a consistent schedule | YouTube's algorithm deprioritizes channels with irregular uploads, killing discoverability | Set a sustainable cadence (even 1 per week) and maintain it over sporadic bursts |
-| Reposting horizontal YouTube videos to Reels/TikTok without reformatting | Vertical platforms penalize non-native aspect ratios, reducing reach by 60-80% | Re-edit each clip for 9:16 vertical with captions, native hooks, and platform-specific CTAs |
-| Skipping the hook in the first 3 seconds | 70%+ of viewers drop before the 30-second mark if there is no reason to stay | Script an explicit pattern-interrupt hook and review it before production begins |
+| Reposting horizontal YouTube videos to Reels/TikTok without reformatting | Vertical platforms penalize non-native aspect ratios, often reducing reach | Re-edit each clip for 9:16 vertical with captions, native hooks, and platform-specific CTAs |
+| Skipping the hook in the first 3 seconds | Many viewers drop before the 30-second mark if there is no reason to stay (rule of thumb) | Script an explicit pattern-interrupt hook and review it before production begins |
 | Packing multiple ideas into one short-form video | Viewers scroll away from unfocused content — short-form rewards single-concept clarity | One idea per short-form video, delivered in under 60 seconds |
 | Creating video content without a defined ICP | Generic content attracts no loyal audience and competes with everyone | Define your ideal subscriber in one sentence before scripting any content |
 

@@ -35,7 +35,7 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Use an AI that can run commands and read files. Install the Composio CLI first.
+  - Use an AI that can run commands and read files. Install the Composio CLI first, and check its current pricing, since it may need a paid plan.
   - Link your Gorgias account when asked. The command is composio link gorgias.
   - Add the skill folder to your AI and ask for the auto-tag skill.
   - Give it one ticket number, or say batch to check untagged tickets.
@@ -57,3 +57,4 @@ output_sample:
       contains: Counts of tickets checked, and how many are high, medium or low confidence.
     - name: Apply question
       contains: A question asking which suggested tags you want applied. Nothing changes until you say yes.
+next: [gorgias-ticket-priority-planner, gorgias-duplicate-ticket-finder]

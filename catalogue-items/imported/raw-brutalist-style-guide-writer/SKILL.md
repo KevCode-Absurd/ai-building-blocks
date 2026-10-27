@@ -30,6 +30,8 @@ a bold, "anti-design" style inspired by 1950s raw concrete architecture, priorit
 
 WCAG 2.2 AA, keyboard-first interactions, visible focus states
 
+Contrast note: the default primary #DD614C is only about 3.6 to 1 on white. That passes for large text (3 to 1) but fails AA for normal-size text (4.5 to 1). Check every text and background pair, and darken the colour if normal text sits on it.
+
 ## Writing Tone
 
 concise, confident, helpful

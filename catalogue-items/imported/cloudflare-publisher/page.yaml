@@ -7,7 +7,7 @@ job: ship-and-host
 headline: Cloudflare publisher
 subhead: Give it your project folder and say what it does. It checks your Cloudflare sign-in, picks the right product, such as Pages or Workers, and deploys it once you say yes. You get the live link, the command it ran and any errors left to fix.
 explain: |
-  Deploying to Cloudflare means choosing between Pages, Workers and a dozen add-ons, then running the right command with the right login. This skill is a Cloudflare deploy guide your AI can follow. It does the choosing and the command for you.
+  Deploying to Cloudflare means choosing between Pages, Workers and a dozen add-ons, then running the right command with the right login. This skill is a Cloudflare deploy guide your AI can follow. It does the choosing and the command for you. It is OpenAI's cloudflare-deploy skill under the Apache 2.0 licence, with the when-not-to-use, before-you-deploy and output sections added by AI Blocks.
 
   It first checks you are signed in with Wrangler, Cloudflare's command line tool. Then it asks what the project needs: run code, store data or serve a site. It picks the matching product and reads the notes for it. Before it publishes anything, it tells you the account and the public address, and waits for your yes.
 
@@ -37,7 +37,7 @@ how_to_use:
   - Make a free Cloudflare account. On your own machine, run wrangler login. Do not paste a password or token into the chat.
   - Paste the skill and point it at your project folder. Say what the project does.
   - Check the product it picks, the account name and the public address. Say yes only when all three are right.
-  - If the deploy is blocked by your AI tool's network limits, it will ask you first. Allow it only if you trust the command.
+  - If your AI tool's network limits block the deploy, the skill stops and tells you. Run the same deploy command on your own machine, or allow the network in your AI tool if you trust the command.
   - Open the link. Check the pages that matter, then set up a custom domain if you want one.
 how_it_works:
   - title: Check the sign-in

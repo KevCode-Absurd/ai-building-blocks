@@ -36,9 +36,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini with code and web tools on. Add this skill, or paste the text of SKILL.md into a new chat.
   - Give the company name and its ticker with .NS or .BO. Add your Alpha Vantage key if you have one, or say you have none.
-  - Say yes or no when it asks to install the yfinance package.
-  - Check three figures against the company's annual report: revenue, profit and debt. Check the fiscal-year labels.
+  - Say yes or no when it asks to install the yfinance package. It is an unofficial Yahoo Finance scraper, and Yahoo's terms may limit how you use it. Only approve it if you are comfortable with that.
+  - Check three figures against the company's annual report. Use revenue, profit and debt. Check the fiscal-year labels.
   - Fix every line marked MISSING or n/a, or leave it out before you share the note.
+  - The value range and the bull and bear cases are a research view, not a price target or advice. Do not trade on them alone.
 how_it_works:
   - title: Pull the estimates
     text: It gets analyst estimates for the next two fiscal years and notes how many analysts and how far apart they are.

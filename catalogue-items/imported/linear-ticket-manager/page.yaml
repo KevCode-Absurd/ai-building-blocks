@@ -31,7 +31,7 @@ you_get:
   - Setup steps for the Linear connection
 how_to_use:
   - Open your AI tool and paste in this skill. It needs a Linear account and a way to reach Linear.
-  - If Linear is not connected yet, your AI shows the setup steps. Follow them, log in once, then restart and try again.
+  - If Linear is not connected yet, your AI shows the setup steps. The commands in the skill are for the Codex command-line tool. In another AI tool, add Linear's connector in that tool's settings instead, and log in once. Then restart and try again.
   - Tell your AI the work to track. Name the team and project. Add priority, labels and due dates if you have them.
   - Your AI reads your Linear workspace first. For bulk changes, it explains how it will group them before it applies them.
   - Check the summary at the end. Ask for follow-up changes, such as more labels or comments.

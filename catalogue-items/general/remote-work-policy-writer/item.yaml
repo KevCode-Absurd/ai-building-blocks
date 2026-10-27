@@ -1,0 +1,21 @@
+slug: remote-work-policy-writer
+name: Remote work policy writer
+summary: Say how your team works from home. Get a plain remote work policy and a list of choices left to make.
+category: general
+boards: []
+type: skill
+role: make
+job: people
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - company-policy-explainer
+  - handbook-change-desk
+  - review-employee-data-access-before-a-change

@@ -97,14 +97,14 @@ lm_eval --model hf \
 **Step 3: Run evaluation**
 
 ```bash
-# Full MMLU evaluation (57 subjects)
+# Full MMLU evaluation (57 subjects), 5-shot (the standard), saving each prediction
 lm_eval --model hf \
   --model_args pretrained=meta-llama/Llama-2-7b-hf \
   --tasks mmlu \
-  --num_fewshot 5 \  # 5-shot evaluation (standard)
+  --num_fewshot 5 \
   --batch_size 8 \
   --output_path results/ \
-  --log_samples  # Save individual predictions
+  --log_samples
 
 # Multiple benchmarks at once
 lm_eval --model hf \
@@ -116,6 +116,8 @@ lm_eval --model hf \
 ```
 
 **Step 4: Analyze results**
+
+The scores in the sample JSON and tables below are illustrative. Your scores will differ by model, settings and run. Never copy them into a report as real results.
 
 Results saved to `results/llama2-7b-eval.json`:
 
@@ -169,7 +171,7 @@ STEP=$2
 lm_eval --model hf \
   --model_args pretrained=$CHECKPOINT_DIR/checkpoint-$STEP \
   --tasks gsm8k,hellaswag \
-  --num_fewshot 0 \  # 0-shot for speed
+  --num_fewshot 0 \
   --batch_size 16 \
   --output_path results/step-$STEP.json
 ```

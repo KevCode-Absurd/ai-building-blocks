@@ -15,7 +15,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ## Purpose
 Calculates two critical replenishment metrics for every stocked SKU:
 - **Days of Supply (DoS)**: how many days of stock remain at current sales velocity
-- **Sell-Through Rate**: percentage of stock sold vs. total received in the period
+- **Sell-Through Rate**: units sold as a share of units sold plus units on hand now (it does not use received quantities)
 
 Read-only — no mutations.
 
@@ -91,7 +91,7 @@ query SalesVelocityData($query: String!, $after: String) {
   orders(first: 250, after: $after, query: $query) {
     edges {
       node {
-        lineItems(first: 50) {
+        lineItems(first: 50) { # reads only the first 50 line items per order; larger orders are undercounted unless you paginate
           edges {
             node {
               quantity
@@ -193,7 +193,8 @@ CSV file `velocity_<YYYY-MM-DD>.csv` with columns:
 | Variant without inventory item | Bundle or virtual product | Skip inventory data, calculate velocity from orders only |
 
 ## Best Practices
-- `days_back: 30` works well for fast movers; use `days_back: 90` for slower-moving or seasonal products.
+- `days_back: 30` works well for fast movers; use `days_back: 90` for slower-moving or seasonal products. Shopify may limit how far back an app can read orders unless it has protected order access. Check that the store returns orders older than your window before you trust a 90-day run.
+- Only the first 50 line items per order are read. Say so in the report if any order is that large.
 - SKUs with DoS < 14 and active marketing campaigns are highest priority for reorder — cross-reference with your supplier lead times.
-- Zero-velocity SKUs are candidates for the `dead-stock-identifier` workflow — if they've had no sales for 90+ days with stock on hand, consider markdown or discontinuation.
+- Zero-velocity SKUs are candidates for the `dead-stock-finder` skill — if they've had no sales for 90+ days with stock on hand, consider markdown or discontinuation.
 - Run weekly during peak season to catch fast-depleting SKUs before they go out of stock.

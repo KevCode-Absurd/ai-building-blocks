@@ -9,7 +9,7 @@ subhead: A launch plan with dates, channels and announcement copy, so a new prod
 explain: |
   A launch plan with dates, channels and announcement copy, so a new product or feature gets noticed instead of slipping out quietly. Launches are treated as repeating events, not one big day.
 
-  Claude reads your product context file if you have one, then asks only what is missing. It builds a phased plan covering pre-launch buzz, launch day and follow-up, picks channels such as email, Product Hunt or social, and drafts announcement messages. It also covers beta launches, waitlists and a pre-launch checklist. The result is tied to your audience and goal rather than a generic template.
+  Claude uses your product context if you paste it in, then asks only what is missing. It builds a phased plan covering pre-launch buzz, launch day and follow-up, picks channels such as email, Product Hunt or social, and drafts announcement messages. It also covers beta launches, waitlists and a pre-launch checklist. The result is tied to your audience and goal rather than a generic template.
 when:
   - You are about to ship a product and need a plan.
   - A feature release deserves more than a changelog line.
@@ -30,9 +30,9 @@ you_get:
   - Announcement copy drafts
   - A pre-launch checklist
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed. The tools it names, such as Navattic, Introw, SparkToro and Listen Notes, are optional and may cost money.
   - Say what you are launching and the main benefit. Add your audience, your target date and the channels you can use.
-  - Paste your product context file too, if you have one (optional). The AI then asks only for what is missing.
+  - Paste the text of your product context file too, if you have one (optional). Your AI cannot read files on your computer. It then asks only for what is missing.
   - Answer any questions the AI asks. If you do not know something, say so and ask it to mark that part as missing.
   - Read the readiness check first. Fix any gaps before you follow the timeline or send the announcement drafts.
   - Edit the drafts so they sound like you. Check every date and claim before you publish.

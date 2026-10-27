@@ -29,11 +29,12 @@ you_get:
   - A comparison of your interviewed candidates on evidence, with a bias check
   - A list of risky terms and local rules to review in the offer letter
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It is a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it the hiring brief. Say where the person will work, because the offer check depends on it.
   - After the shortlist, interview with the questions from the packet and write notes right after each one.
   - Paste your notes for the comparison. Pick your finalist, fill in the offer template, then bring the letter back for the check.
+  - The offer check is not legal advice. Have a lawyer review the flagged terms before you send the offer.
 output_sample:
   input:
     - Your hiring brief with the role, team, pay range and place of work
@@ -41,7 +42,7 @@ output_sample:
     - Your notes from each interview, written straight after
     - The finalist's offer details, such as pay and start date
   prerequisites:
-    - An AI that can read files, to run the handoff pack
+    - An AI that can read files, to run the handoff pack: HANDOFF.md plus one skill file for each step
     - Time to interview the shortlist between steps 2 and 3
   output:
     - name: "Step 1: Hiring packet"
@@ -115,3 +116,5 @@ improve:
   - Add your must-have values to the scoring guide so every candidate is judged on them.
   - Save your interview notes in the same layout each time so the comparison reads them cleanly.
   - Pair it with a new hire plan to build the first 30, 60 and 90 days once the offer is accepted.
+next: [new-hire-first-week-planner, 30-60-90-day-onboarding-planner]
+before: []

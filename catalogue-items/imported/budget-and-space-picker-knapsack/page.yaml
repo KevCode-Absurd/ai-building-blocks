@@ -5,7 +5,7 @@ name: Budget and space picker (knapsack)
 summary: Pick the best set of items within a budget, weight or space limit. Give it a list with values and costs. You get what to take and what to skip.
 job: plan-supply-chain
 headline: Budget and space picker (knapsack)
-subhead: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit. Bring a list of items with value and cost or weight. Use the result to plan your next step.
+subhead: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit. Then check the chosen set against real limits in a spreadsheet.
 explain: |
   Out of many options, pick the set that gives the most value without going over your budget, weight, time or space limit.
 
@@ -30,11 +30,12 @@ you_get:
   - Total value against the limit
   - A note on the method used
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It is long, so ask for one method first. For a small list, ask for the greedy method or dynamic programming. A chat-only AI can run those without code. The multiple-knapsack method needs Python with the pulp package.
   - "Paste a table of your items with three columns: name, value, and cost or weight."
   - State your limit, such as a budget or a weight cap. Add must-have items or conflicts if you have them.
   - Ask for a table of items selected, items left out, and total value against the limit.
   - Check the chosen set against real limits before you commit. Large lists work best if your AI can run code.
+  - If the items must also physically fit, take the chosen set to the 2d-bin-packing skill next.
 output_sample:
   input:
     - A list of items with a value and a cost or weight for each

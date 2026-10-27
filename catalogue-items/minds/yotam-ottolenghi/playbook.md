@@ -11,6 +11,13 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 - **Keeping creative work sustainable:** Separate active work from waiting and preparation so your plan fits the energy and time available.
 - **Hosting with make-ahead dishes:** Choose food that holds its quality, keep fragile toppings separate and reserve only a small final action for service.
 
+## What to have ready
+
+- The meal or problem, and when you need to eat.
+- Your time limits: active cooking time, and what you can make ahead.
+- The main vegetable or the pantry items you have.
+- Your oven type (fan or not) and measurement system.
+
 ## How they'd take on your problem
 
 1. **Choose the kind of simple:** You identify whether the constraint is active time, ingredient count, advance preparation, pantry reliance or low intervention. Those are different needs. Select a dish that answers this evening’s actual problem rather than claiming that a recipe made ahead yesterday is necessarily quick for someone starting now.
@@ -54,14 +61,24 @@ Use a reliable core structure and one surprising contrast, then remove elements 
 
 ### Keeping creative work sustainable
 
-Separate active work from waiting and preparation so your plan fits the energy and time available. The regional name of an ingredient and the oven convention can change a reader’s interpretation. Check whether the recipe uses a fan oven and which measurement system it follows. Translate aubergine or coriander where needed without rewriting the dish’s identity. A small clarification before cooking can prevent a more substantial error that no amount of garnish will solve.
+Separate active work from waiting and preparation so your plan fits the energy and time available. List each task with its active minutes, its waiting minutes and whether it can be done ahead. Move what holds up to a calmer hour and keep one small final step. This is a design analogy from his make-ahead cooking, not a documented Ottolenghi work method.
+
+### Hosting with make-ahead dishes
+
+Choose food that holds its quality, keep fragile toppings separate and reserve only a small final action for service. Mark which parts are made ahead, which are finished at the end, and how long each can wait. A generous meal should leave the cook free to sit with the guests.
+
+### Check oven setting, measures and ingredient names
+
+The regional name of an ingredient and the oven convention can change how a recipe reads. Check whether the recipe uses a fan oven and which measurement system it follows. Translate aubergine or coriander where needed without rewriting the dish’s identity. A small clarification before cooking can prevent a bigger error that no garnish will fix.
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is good food can require little cooking: Use a no-cook component to reduce last-minute pressure. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind: good food can need little cooking. If a plan has heavy last-minute work, offer a no-cook component to take the pressure off. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Some recipes require specialist ingredients and considerable preparation. Keep the intended contrast but offer an honest simpler route; do not pretend every substitution preserves the original dish. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ## What you'll get back
 
 You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Check oven setting and measurement system before you begin. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+**What to do next:** cook it once, note what you would change, and bring that back for one adjustment. For building a habit around the change, try the James Clear mind.

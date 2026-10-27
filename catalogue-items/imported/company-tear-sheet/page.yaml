@@ -11,7 +11,7 @@ explain: |
 
   The layout changes with the reader. An equity research sheet leads with valuation and consensus. An investment banking sheet leads with comparable companies and deals. A corporate development sheet looks at fit and integration. A sales sheet looks at the company's priorities and what to say in the first meeting.
 
-  It uses free sources only, so some rows will be missing. For a US company the figures come from SEC filings. For an Indian company it uses delayed Yahoo Finance data and the company's own filings, which you can paste in. It never fills a gap from memory. The data is end of day or delayed, and the sheet is not investment advice.
+  It uses free sources only, so some rows will be missing. For a US company the figures come from SEC filings. For an Indian company it uses delayed Yahoo Finance data and the company's own filings, which you can paste in. It never fills a gap from memory. The Yahoo Finance data comes from an unofficial reader that is meant for personal use, so it may break or be wrong and is not client-grade. The data is end of day or delayed, and the sheet is not investment advice.
 when:
   - You need a one-page snapshot of a listed company for a meeting.
   - A client asked for numbers and a short business note on a company.
@@ -21,6 +21,7 @@ not_for:
   - You want a PowerPoint slide for a pitch book. Use the company strip profile slide maker.
   - You want a valuation or a fair price. Use the company fair value modeler.
   - You need live prices or a document a client will trade on. Free data is end of day or delayed, so use a licensed data terminal.
+  - The company is outside the US. Free data is thin there, so use the company's investor relations pages and paste in its annual report.
 you_give:
   - The company name or ticker
   - The reader, such as equity research, investment banking, corporate development or sales
@@ -35,7 +36,7 @@ you_get:
   - Not disclosed marks wherever data was missing
 how_to_use:
   - Use an AI that can run code and reach the web, such as Claude Code. The skill builds the Word file with a command line tool called officecli, which must be installed. In a plain chat, ask for the sheet as text and paste it into Word.
-  - Open the skill and name the company. Say who the reader is. If you skip this, it will ask.
+  - Open the skill and name the company. Say who the reader is. If you skip this, it will ask. Consensus estimates need a free Alpha Vantage key, which allows 25 requests a day. Without one, that row says Not disclosed.
   - For an Indian or private company, paste the annual report figures. Free sources have little on them.
   - Read the Not disclosed marks first. Fill them from the company's filings if you need them.
   - Check the figures and dates against the latest results. Note that the price data is delayed.

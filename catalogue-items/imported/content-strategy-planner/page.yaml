@@ -36,6 +36,7 @@ how_to_use:
   - Paste your list of current content if you have one. Skip this if your site is new.
   - Check that the calendar fits your team size. Ask your AI to cut pieces if it is too full.
   - Review the plan every month and update it when your numbers change.
+  - Next, write a Content brief writer brief for each calendar item, and send it to your writer.
 output_sample:
   input:
     - Your business type

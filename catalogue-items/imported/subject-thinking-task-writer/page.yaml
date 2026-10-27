@@ -17,7 +17,7 @@ when:
   - You need to know how to mark thinking, not only answers.
 not_for:
   - "You only want a single fact-recall lesson: write a plain recall lesson or quiz yourself, since this builds one reasoning task."
-  - "You want a general thinking skills lesson that is not tied to a subject: use a simple skills lesson plan instead."
+  - "You want a general thinking skills lesson that is not tied to a subject: use the critical thinking task writer instead."
   - "You have no subject knowledge yet to teach: teach the facts first, then come back to build the thinking task."
 you_give:
   - The topic
@@ -31,13 +31,16 @@ you_get:
   - The task itself
   - Sources and tools for students
   - Marking guidance
+next: [marking-rubric-writer, single-point-rubric-builder]
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code, files or paid tools are needed.
+  - Replace each {{placeholder}} in the pasted prompt with your own words: the curriculum topic, the learner stage and the subject. Leave the optional ones blank if you do not have them.
   - Type your topic, your subject and your students' year or age.
   - Add what students already know and the type of thinking you want. Both are optional, but they make the task fit better.
   - Read the Knowledge Prerequisite Check first. If students lack the facts, teach those before you set the task.
   - Check the task and the marking guidance against your own subject knowledge. Change anything that does not fit your class.
   - You do not need a source text. Your topic, subject and year level are the required inputs.
+  - Next, build the marking rubric from the assessment guidance with the marking rubric writer.
 output_sample:
   input:
     - Your topic, such as the causes of a historical event

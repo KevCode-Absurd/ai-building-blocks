@@ -9,7 +9,7 @@ subhead: "An 8 to 12 page note on a company's new quarter, written for readers w
 explain: |
   An 8 to 12 page note on a company's new quarter, written for readers who already know the stock. It focuses on what is new: the beat or miss, changed estimates, and whether the thesis still holds.
 
-  Target length is 3,000 to 5,000 words, with one to three summary tables and 8 to 12 charts, ready within a day or two of results. The skill follows institutional research habits and sets the text in Times New Roman unless told otherwise. This version is built for Indian markets. It labels periods by an April to March year, such as Q3 FY26, and uses crore and lakh correctly, so you avoid a 100 times unit error.
+  Target length is 3,000 to 5,000 words, with one to three summary tables and 8 to 12 charts, ready within a day or two of results. The skill follows institutional research habits and sets the text in Times New Roman unless told otherwise. This version is built for Indian markets. It labels periods by an April to March year, such as Q3 FY26, and uses crore and lakh correctly, so you avoid a 10 times unit error.
 when:
   - A covered company reported last night and clients expect a note.
   - You need a fast update on an estimate change.
@@ -35,7 +35,8 @@ how_to_use:
   - "Gather first: the exchange results filing from BSE or NSE, the investor presentation, the call transcript, and your consensus source."
   - Add your prior estimates, rating and price target. Name the company and the quarter, such as Q3 FY26.
   - Ask your AI to write the earnings update. Check the dates of the results and transcript match the latest quarter.
-  - Check every number, unit and source link before you share it. This is a draft, not investment advice. Add the disclosures your research rules require.
+  - Check every number, unit and source link before you share it. This is a draft, not investment advice.
+  - Next, send the draft to your compliance reviewer before you publish. A rating and price target are regulated in India (SEBI research analyst rules). Add the disclosure text your firm uses.
 output_sample:
   input:
     - Company name and the quarter, such as Q3 FY26
@@ -46,6 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can search the web and read files
     - An AI that can run code, to build the charts and the Word file
+    - "Optional: consensus figures from a paid source such as Bloomberg or FactSet, or numbers you paste in"
   output:
     - name: Page 1 summary
       contains: The rating, price target and key takeaways, led by whether the company beat or missed estimates.

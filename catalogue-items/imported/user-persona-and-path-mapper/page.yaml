@@ -31,10 +31,11 @@ you_get:
 how_to_use:
   - Paste the skill into Claude, ChatGPT or Gemini. Or add it as a skill so you can reuse it.
   - Put your user data in a list with one row per person, such as age, how often they use the product, features used, device and pain points. Add interview notes if you have them.
-  - Ask for personas first. Check each one against your data. Every frustration should have a count, like 14 of 20 users.
+  - Ask for personas first. Check each one against your data. Every frustration should have a count, like 14 of 20 users. That count is only an example: each figure must come from your own data.
   - Then ask for the path map and the usability test plan for the persona you care about most.
   - Show each persona to 3 to 5 real users and ask "Does this sound like you?" before your team uses it.
   - The persona script needs code running. Without it, the AI can still group your notes by hand, but with less structure.
+  - Use the persona in your design review, and take the path map and test plan to your next design or test session. Then run the User flow mapper on the task you care about most.
 not_for:
   - You have notes from fewer than 5 people. The personas will be guesses. Use the Customer interview coach to plan more interviews first.
   - You only want themes and real quotes from interviews, reviews or tickets. Use the Customer interview synthesizer or the Customer research analyst.
@@ -48,7 +49,7 @@ output_sample:
     - The goal you want the path map to follow (optional)
   prerequisites:
     - Python installed, so the persona script can run
-    - Data from at least 20 people for a firm result
+    - Data from at least 20 people for a firm result. 5 to 19 people is exploratory, and fewer than 5 is not usable
   output:
     - name: Personas
       contains: Each persona has an archetype, a quote, goals, frustrations with counts, design implications and a confidence level.
@@ -60,3 +61,4 @@ output_sample:
       contains: Coded notes grouped into themes, with how many people said each and a recommendation.
     - name: Segment sizes
       contains: How many people fall into each group, and which groups are big enough to become a main persona.
+next: [user-flow-mapper]

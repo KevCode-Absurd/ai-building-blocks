@@ -35,8 +35,10 @@ how_to_use:
   - Tell it what you sell and who buys it.
   - Add your channels, your goal and your budget. Share any legal limits, like health claims.
   - Paste your brand notes if you have them (optional).
-  - Read the plan. Check the rules for your market and each review site before you send any request.
-  - Fill in the creator brief, then send it to creators. No code or paid tool is needed.
+  - Read the plan. Check the rules for your market and each review site before you send any request. Some review sites ban rewards for reviews.
+  - Treat any price or percentage in the plan as unchecked until you have a source or a quote. Ask creators for their own prices.
+  - Tell creators to speak only about their real experience, and to disclose paid posts. Never present a paid creator as a real customer.
+  - Fill in the creator brief, then send it to creators. No code or paid tool is needed. The creator platforms it names, such as Billo and Insense, charge fees.
 output_sample:
   input:
     - What you sell and who buys it

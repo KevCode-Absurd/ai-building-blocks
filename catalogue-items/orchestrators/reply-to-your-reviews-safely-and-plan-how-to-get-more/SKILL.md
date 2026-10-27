@@ -9,6 +9,22 @@ Give it your reviews. Get themes, replies checked so they promise nothing you ca
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional)
 - **The problem, decision or piece of work you want help with, and what a good outcome looks like** (required)
@@ -36,11 +52,9 @@ Pause here: Post the checked replies, and make the decisions the checker marked 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [AI recommendation panel runner](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
+- The [Refund request reply writer](https://useaiblocks.com/prompts/refund-request-reply-writer).
+- The [Retail returns response writer](https://useaiblocks.com/skills/agency-retail-customer-returns).
+- The [Public review reply drafter](https://useaiblocks.com/skills/public-review-reply-drafter). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

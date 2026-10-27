@@ -9,7 +9,7 @@ subhead: A set of battle cards and a pricing landscape for the rivals in your ma
 explain: |
   A set of battle cards and a pricing landscape for the rivals in your market, built from three rounds of research. Sales gets a one-page answer to each competitor, and you see where each one is weak.
 
-  Claude takes a short intake first and reuses any earlier market work it finds in your folder. It then researches rivals in three waves, covering product, pricing and what customers say. It combines the findings into a feature grid and a list of strategic weak points. Each battle card then covers how to win, how to answer their strengths and what to ask a buyer. It saves progress so a long run can resume, and it takes roughly fifteen to twenty minutes.
+  Claude takes a short intake first and reuses any earlier market work it finds in your folder. It then researches rivals in three waves, covering product, pricing and what customers say. It combines the findings into a feature grid and a list of strategic weak points. Each battle card then covers how to win, how to answer their strengths and what to ask a buyer. It saves progress so a long run can resume, and it takes about 15 to 25 minutes in Claude Code and 30 to 45 minutes in a chat. Without web search the result is unverified background knowledge, not live market data.
 when:
   - You are entering a market and need to know who you face.
   - Sales keeps losing deals to one rival and has no answer.
@@ -31,10 +31,11 @@ you_get:
   - A list of rival weak points
 how_to_use:
   - Open Claude Code if you can. It runs rival research in parallel and saves files. Claude.ai also works, but it is slower.
-  - Add the skill to your AI, or paste its instructions into a new chat.
+  - Add the skill to your AI, or paste its instructions into a new chat. Turn on web search. Review and forum sites are read page by page, so check each site's terms before you collect anything in bulk.
   - Tell your AI your product, your target customers and any rivals you know. Add earlier market notes if you have them.
   - Let it run the three research rounds. Expect 15 to 25 minutes in Claude Code and 30 to 45 minutes in Claude.ai.
-  - Read competitors-report.md first. Check the data gaps section, then share the battle cards with your sales team.
+  - Read competitors-report.md first. Check the data gaps section and the quotes against the live pages, then share the battle cards with your sales team.
+  - Next, run the pricing landscape again each quarter. If you have earlier startup-design work, it feeds this run.
 output_sample:
   input:
     - Your product description

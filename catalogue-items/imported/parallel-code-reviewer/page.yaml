@@ -29,7 +29,7 @@ you_get:
   - Why it matters
   - No changes to your files
 how_to_use:
-  - Open your AI tool in the project folder, so it can read your files and run sub-agents (helpers that work at the same time).
+  - Open your AI tool in the project folder, so it can read your files and run sub-agents (helpers that work at the same time). Four reviewers use noticeably more AI usage or cost than one review, so decide before you run it on a large change.
   - Paste the skill into the chat, or load it as a skill if your tool supports that.
   - "Say what to review: file names, your current changes, or a branch or commit."
   - Add what the change should do, and any rules to follow (optional). If you skip this, your AI will guess from the code.

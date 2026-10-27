@@ -1,6 +1,6 @@
 # Plan what ads to test: AI Blocks
 
-> 50 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 48 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner): Plan a fair split-run test of two ads, emails or pages. Get one change, a key on each, the audience size and a winner rule.
 - [Ad angle writer](https://useaiblocks.com/skills/ad-angle-multiplier): Give it one core ad idea, plus product, offer and audience. Get 10 to 15 distinct angles, each with a hook.
@@ -15,7 +15,6 @@
 - [Ad response incentive planner](https://useaiblocks.com/skills/test-reply-offer-planner): Pick one reply offer for your ad test that brings enough replies from real buyers. Get the offer lines and a boost plan.
 - [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer): Share brand facts and any ad results. Get three ideas, nine distinct designer briefs and questions to fill key gaps.
 - [Ad test budget calculator](https://useaiblocks.com/skills/ad-test-budget-calculator): Share your target cost per sale and test days. Get a daily budget, spend limits and a results-review window.
-- [Ad test budget setter](https://useaiblocks.com/prompts/ad-test-budget-setter): Share your target cost per sale. Get starting test budgets, spend limits and a review window with the maths shown.
 - [Ad test planner and lessons reviewer](https://useaiblocks.com/workflows/plan-ad-tests-run-them-and-keep-what-they-teach): Share product facts, past ads and results. Get test ideas, a campaign plan and a lessons review after real results arrive.
 - [Ad testing manager](https://useaiblocks.com/agents/ad-test-sprint-runner): Plan ad test rounds, read real results and use each lesson for the next plan, stopping after three rounds without a winner.
 - [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor): Check your control ad and variants against the test you planned. Find hidden changes and get the smallest fixes before you launch an ad test.
@@ -49,6 +48,5 @@
 - [Small-budget ad test planner](https://useaiblocks.com/skills/small-budget-ad-test-planner): Plan your small-budget ad test: give your price, product and test cash. Get a staged plan with an image test, a video, then new people.
 - [Story ad test planner](https://useaiblocks.com/skills/story-ad-test-planner): Plan a story ad before you write it. Paste your facts and reviews to get a fit verdict, an honest narrator and four story tests.
 - [TikTok Shop ad planner](https://useaiblocks.com/skills/tiktok-shop-ad-planner): Plan your TikTok Shop ads: give it your products, margins and budget. You get ad types, bids, audiences and tracking in one plan.
-- [Two-version marketing test planner](https://useaiblocks.com/prompts/two-version-ad-test-planner): Share two ads, emails or pages. Get one difference to test, a matched split, tracking labels and a result rule to set first.
 - [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder): Find untried ad ideas for your brand. Paste your past ads and brand file. You get a gap map and five ad ideas, each one a clear test.
 - [Video ad hook revival planner](https://useaiblocks.com/workflows/revive-a-hero-ad-that-is-slowing-down): Share the slowing ad, script and dated results. Get possible causes, new opening hooks, scores and a later test-results review.

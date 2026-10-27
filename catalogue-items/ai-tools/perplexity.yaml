@@ -36,6 +36,22 @@ blocks:
   - reddit-answer-planner
 alternatives: [chatgpt, gemini, claude, notebooklm]
 last_checked: 2026-10-21
+first_result:
+  - "Go to perplexity.ai and sign up for the free plan."
+  - "Ask a question with a clear scope, such as the top three competitors for one product and their prices."
+  - "Open the numbered sources. Check the key facts on those pages."
+  - "Ask follow-up questions to narrow it. Use a longer research run when you want a report."
+  - "Save the work in a space for that topic."
+  - "You end with an answer with numbered sources, or a longer report to check."
+  - "Next: to see how AI search describes your brand, use the AI search platform checker."
+needs:
+  - "A Perplexity account. Free works to start."
+  - "A question with a clear scope."
+  - "Time to open the sources."
+not_verified:
+  - "Where each mode sits in the menu."
+  - "Limits on the free plan."
+  - "How current its sources are for your topic."
 sources:
   - https://www.eesel.ai/blog/perplexity-pricing
   - https://www.finout.io/blog/perplexity-pricing-in-2026

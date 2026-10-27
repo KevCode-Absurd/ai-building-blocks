@@ -33,10 +33,13 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code if you want the scenario and simulation steps.
   - Paste the skill text, or upload the skill folder if your AI takes files.
+  - "Before you paste anything, gather: your key suppliers, their lead times, what a day of downtime costs you, and how many days of safety stock you hold."
   - "Describe your supply chain: key suppliers, routes, sites and what an outage costs you."
-  - Add your own cost, chance and stock numbers. The code uses placeholder figures for cascade effects, mitigation cost and variability, so replace them with yours.
+  - Add your own cost, chance and stock numbers. Warning: the code uses placeholder figures for cascade effects (8, 20 and 25 percent), mitigation cost (10 percent) and variability. Do not show any dollar figure to management until you have replaced them with your own data.
   - Check the ranked risks and the owners in the plan. Fix anything that does not match your business.
-  - Share the plan with the people named as owners.
+  - Share the plan with the people named as owners. Name one owner for the mitigation plan, and review it every quarter or after any disruption.
+  - To score the suppliers behind it, use the supplier risk scorecard builder. To track the plan on a screen, use the supply chain dashboard designer.
+next: [supplier-risk-scorecard-builder, supply-chain-dashboard-designer]
 output_sample:
   input:
     - A description of your supply chain

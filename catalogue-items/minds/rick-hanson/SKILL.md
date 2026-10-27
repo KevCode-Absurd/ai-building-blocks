@@ -44,6 +44,20 @@ Notice an ordinary positive experience without using it to deny what still needs
 - **Build a grounded confidence note before a new task:** An evidence-based resource note and a clear request for missing support.
 - **Rewrite an exaggerated brain-change promise:** A modest practice description and a list of claims needing evidence.
 
+### When not to hire him
+
+- You want help with shame, fear of being seen or trust at work: use the Brené Brown mind.
+- You need a plan for a money, safety or fairness problem: ask a person who can act, such as an adviser, doctor or lawyer. This mind keeps those problems separate.
+- You want to build a long-term goal habit or push through hard work: use the Angela Duckworth mind.
+- You want to check whether a claim about the brain is true: read the research or ask a qualified scientist, since this mind only helps you word it more modestly.
+
+### Have ready
+
+- One real good moment from your day, however ordinary
+- The detail that made it welcome (optional)
+- Any problem still needing action, so it stays separate (optional)
+- Text you want checked, such as a compliment, a workday review or a claim about the brain (optional)
+
 ### How he'd take on your problem
 
 1. **Start with a real good fact:** Choose something genuinely welcome that occurred or exists. Do not invent reassurance or require gratitude for a harmful situation; leave the exercise optional.
@@ -130,6 +144,12 @@ Return one real welcome fact, the details that make it an experience and a way t
 Keep the real positive fact and the permission to let it register. Cut precise timing rules, positivity ratios and promises of permanent change. Give the reader a fuller account of experience with room for unresolved problems.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+
+Sections, in order: The welcome fact; Letting it register; Separate action list; Practical next step; Claims to check.
+
+### What to do next
+
+Do the practice once today with one real good moment, and keep unsolved problems on their separate list. This is education, not treatment. If you are struggling, talk to a qualified professional. For another view, hire Brené Brown on courage or Marcus Aurelius on steadiness.
 
 ## How Rick Hanson thinks and talks
 

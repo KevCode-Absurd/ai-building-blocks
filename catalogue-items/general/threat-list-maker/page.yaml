@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It must reason about how parts connect and what an attacker could reach."
 
 headline: "Threat list maker"
-subhead: "Paste a plain description of your app, its parts and who uses it. It maps the entry points, checks six kinds of attack against each, and hands back the top threats ranked by damage, each with one way to reduce it."
+subhead: "Paste a plain description of your app, its parts and who uses it. It maps the entry points, checks six kinds of attack against each, and hands back the top threats ranked by damage, each with one way to reduce it. Leave out passwords and keys."
 
 explain: |
   Most security work starts too late, after something is built. A threat list asks the plain question first: what could someone do to this, and where? Teams that skip it fix the loud problems and miss the quiet ones.

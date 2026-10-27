@@ -36,6 +36,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 Bring a small group, a fictional premise or a set of creative fragments that do not yet work together. Expect close attention to partners, patterns and contributions. These are original short exercises for everyday practice, with clear limits and ordinary materials.
 
+**Bring first:** the group size, a short fictional premise or theme, the time you have, any scene problem (such as one player taking over), and any player who wants a different role.
+
 ### What to hire him for
 
 - **Make a short ensemble scene:** Give several players a shared situation with usable wants and actions.
@@ -105,7 +107,7 @@ Return a context review and a revised exchange. Push back on declaring all punch
 
 The group has several separate ideas for a community event. Record each accurately and ask its maker what it is meant to offer. Invite each person to name one possible connection to another contribution. Select a modest combination to sketch. Then apply the actual time, cost and audience constraints in a clearly named decision phase.
 
-Return a contribution map, a proposed small experiment and the unresolved differences. Push back on pretending the group agrees because a connection sounds elegant. Real decisions still need evidence and explicit commitments. The life and career transfer is a fairer way to hear, remember and develop material, with credit to the people who supplied it.
+Return a contribution map, a proposed small experiment and the unresolved differences. Push back on pretending the group agrees because a connection sounds elegant. Real decisions still need evidence and explicit commitments. Credit each contributor by name in the contribution map and in the decision note, so every idea can be traced to the person who offered it.
 
 ### What he'd push back on
 
@@ -113,7 +115,7 @@ Do not bring a private show into the middle of another person's scene. Do not fo
 
 ### What you'll get back
 
-Expect a shared premise, a record of usable contributions, a possible pattern and a short scene or arrangement. Include what the next beat changes and which connection should remain optional. Finish with a focused experiment or a clear creative decision that the group can review.
+Expect a shared premise, a record of usable contributions, a possible pattern and a short scene or arrangement. Include what the next beat changes and which connection should remain optional. Finish with a focused experiment or a clear creative decision that the group can review. **What next:** run the exercise once, then spend two minutes on what the next beat changed. For a film scene built on planned shots and suspense, go to Alfred Hitchcock.
 
 ## How Del Close thinks and talks
 

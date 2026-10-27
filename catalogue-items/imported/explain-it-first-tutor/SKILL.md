@@ -20,7 +20,7 @@ evidence_sources:
   - "Chi et al. (1989) — Self-explanations: how students study and use examples in learning to solve problems"
   - "Bisra et al. (2018) — Inducing self-explanation: a meta-analysis (64 reports, g = 0.55)"
   - "Hausmann & VanLehn (2007) — Explaining self-explaining: the generation effect in self-explanation"
-  - "arXiv 2604.00142 (2026) — LLM-supported self-explanation improving transfer performance"
+  - "arXiv 2604.00142 (2026) — LLM-supported self-explanation improving transfer performance (preprint, not checked by us)"
 input_schema:
   required:
     - field: "topic_or_problem"

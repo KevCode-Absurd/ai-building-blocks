@@ -39,7 +39,7 @@ Analyzes price-to-velocity relationships across the product catalog to identify 
    **Expected output:** All active products with pricing data
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { variant { id, price }, quantity }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { variant { id }, originalUnitPriceSet { shopMoney { amount } }, quantity }` (use the price at the time of sale, not the current variant price, so past price changes are counted correctly), pagination cursor
    **Expected output:** Sales data per variant for velocity calculation
 
 3. For each product/variant, calculate:
@@ -52,7 +52,8 @@ Analyzes price-to-velocity relationships across the product catalog to identify 
 4. Within each group (product_type or vendor):
    - Sort by price ascending
    - Calculate velocity at each price tier
-   - Identify price-velocity correlation (negative = price-sensitive, flat = price-insensitive)
+   - Identify price-velocity correlation (negative = price-sensitive, flat = price-insensitive). Fit a straight line of daily velocity against price across the products in the group, and report the correlation value so the reader can judge how strong it is. "Velocity drops X% per $10" = slope × 10 ÷ group average velocity × 100.
+   - Groups with fewer than 5 products are listed as "too few products to compare" and are not scored
    - Compare sale items velocity vs. full-price velocity
    - Flag products where small price changes could significantly change volume
 
@@ -100,7 +101,8 @@ query SalesVelocityData($query: String!, $after: String) {
         lineItems(first: 50) {
           edges {
             node {
-              variant { id price }
+              variant { id }
+              originalUnitPriceSet { shopMoney { amount } }
               quantity
             }
           }
@@ -182,12 +184,12 @@ CSV file `price_elasticity_<YYYY-MM-DD>.csv` with columns:
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| Small groups | Only 1-2 products in a type | Skip group — insufficient data for comparison |
+| Small groups | Fewer than 5 products in a type | List the group as "too few products to compare" and do not score it |
 | No sales | Product has zero sales in window | Include at velocity=0 for comparison |
 
 ## Best Practices
 - Best results require at least 5+ products per group for meaningful comparison.
-- Price-insensitive products are candidates for price increases — test with `bulk-price-adjustment`.
-- Price-sensitive products may benefit from promotional pricing — test with `discount-ab-analysis`.
+- Price-insensitive products are candidates for price increases. Test one first, then use the Bulk price changer if it works.
+- Price-sensitive products may benefit from promotional pricing. Check the payoff first with the Discount payoff calculator.
 - Products on sale with minimal velocity lift are wasting margin — remove compare-at price.
 - Run quarterly to track how price sensitivity changes with seasons.

@@ -22,6 +22,7 @@ not_for:
   - "You want a calm, plain look for a bank or health tool: use the Minimal style guide writer."
   - "You want a two-colour print look on warm paper: use the Risograph print style guide writer."
   - "You want one vintage poster, not a rules file: use the Poster designer."
+  - "You want a leather, paper or glass look instead: use the Real-world texture style guide writer."
 you_give:
   - A description of your product and what it does
   - Who uses it

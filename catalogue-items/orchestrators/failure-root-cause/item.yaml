@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [eric-ries, taiichi-ohno]
 credits:
-  - {title: "The Lean Startup", by: "Eric Ries", used: "The order of the steps: plan the review so it stays about the process, ask why until you reach a cause you can fix, size a fix to each level"}
+  - {title: "The Lean Startup", by: "Eric Ries", used: "The idea of planning a no-blame review, asking why until you reach a cause you can fix, and sizing a fix to each level"}
 generated_from: intake/lean-startup-five-whys/skeleton.yaml

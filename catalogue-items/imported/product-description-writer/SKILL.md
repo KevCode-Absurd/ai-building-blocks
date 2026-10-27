@@ -14,8 +14,8 @@ Write product descriptions that people find persuasive, easy to grasp, and worth
 
 ## When not to use
 
-- Auditing the whole page → `product-page`; photo/video direction → `product-visuals`
-- Discount or promotion wording → `discounts` / `promotions`
+- Auditing the whole page → the Product page auditor (`product-page-auditor`); photo/video direction → ask your AI for a shot list
+- Discount or promotion wording → write the offer text on its own, apart from the product copy
 
 ## Inputs
 
@@ -30,12 +30,12 @@ Collect, or state your assumption:
 
 ## Procedure
 
-1. **Pick three claims.** Rank the benefits; keep the top three (three claims were 10.4% more persuasive than four; skepticism starts at the fourth). Move the rest to a spec table.
+1. **Pick three claims.** Rank the benefits; keep the top three (three claims were 10.4% more persuasive than four; skepticism starts at the fourth). Move the rest to a spec table. The effect sizes in this skill (10.4%, up to 40%, up to 30%) come from the studies listed in reference.md. Figures marked † are practitioner tips with no study behind them. Treat all of them as a guide, not a promise.
 2. **Best features only.** Don't pad with merely good features — the impression sinks to the weakest claim.
 3. **Units people use.** Uses or pieces (30 washes, 8 cans), not standardized measures (750 g, 96 oz). Raises product evaluations and willingness to pay.
 4. **Smaller units for precision.** Drop to the next unit down: 180 seconds, not 3 minutes; 180 minutes, not 3 hours; 32 oz, not a quarter gallon. Reads more precise and credible; strongest for time.
 5. **Evocative color names.** "Midday sky blue", not "light blue".
-6. **Feature branded components.** A branded ingredient or part (Gore-Tex, a licensed enzyme blend) goes up front; demand up to 40% higher. †
+6. **Feature branded components.** A branded ingredient or part (Gore-Tex, a licensed enzyme blend) goes up front; demand up to 40% higher. † Only name a component or make a claim such as "lab-tested" if you can document it. Remove any claim you cannot back up.
 7. **Register by product type.** Utilitarian → science and effectiveness language works. Hedonic → avoid it ("lab-formulated" on a treat: up to 30% less likely to be chosen). †
 8. **Plain language.** Unknown terms make the product seem worse and pricier; define or drop. †
 9. **Describe touch** where feel matters (textiles, skincare) — the top online clothing pain point.
@@ -54,6 +54,10 @@ Collect, or state your assumption:
 | Branded ingredient | licensed enzyme blend, first sentence |
 
 3. What was cut and where it can go.
+
+## What to do next
+
+Check every claim against the live product facts and your documents. Run the copy through the Product page auditor, or A/B test the headline, before you publish.
 
 ## Common mistakes
 

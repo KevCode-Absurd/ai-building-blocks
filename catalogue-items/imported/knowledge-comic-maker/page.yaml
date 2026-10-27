@@ -30,12 +30,13 @@ you_get:
   - Saved image prompts
   - Drawn comic pages
 how_to_use:
-  - Open an AI that can run code and use an image tool. Check that bun or npx is installed.
+  - Open an AI that can run code and use an image tool. Check that bun or npx is installed. The image tool may need a paid account or API key, and each drawn page can cost credits, so check its price first.
   - Add the skill to your AI, or paste its instructions into the chat.
   - Say what the comic is about. Paste your story or source text if you have it.
   - On first run, answer the one-time setup questions. They save your preferences.
   - Pick an art style and a tone when asked. Add a page count if you want a set length.
   - Read the script and prompt files before the pages are drawn. Ask for changes, then let it draw.
+  - Find everything in the comic/ folder under a short name for your topic. Share the merged PDF, or post the page images one by one. Redraw any weak page by asking for that page number.
 output_sample:
   input:
     - Your topic, story or source text
@@ -56,4 +57,6 @@ output_sample:
     - name: Image prompt files
       contains: One saved prompt per picture, written before drawing so you can review and reuse it.
     - name: Comic pages
-      contains: The drawn pages, one image per page, ready to share or publish.
+      contains: The drawn pages, one image per page, ready to share or publish. Pages are portrait (3:4) unless you ask for another shape.
+    - name: Merged PDF
+      contains: All pages in one PDF named after your topic, saved with the script and prompt files in comic/ under your topic name.

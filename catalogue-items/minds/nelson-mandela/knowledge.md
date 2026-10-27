@@ -1,6 +1,6 @@
 # Nelson Mandela: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Own words used: the Rivonia statement of 1964 [S3] and the 1994 inaugural address [S4], plus four more speeches and statements read from the United Nations archive on 2026-10-21: his underground statement of 1961 [S8], his court statement of 1962 [S9], his speech on release in 1990 [S7] and his address to the UN committee against apartheid in June 1990 [S10]. The autobiography itself was not read; we know it only through a reference page [S6]. His 1993 Nobel lecture could not be fetched, so it is not used.
 

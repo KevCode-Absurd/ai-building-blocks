@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [dan-kennedy, robert-collier]
 credits:
-  - {title: "The 10 Rules of Direct Response Marketing", by: "Dan Kennedy", used: "The order of the steps: information-led lead offer planner, almost-buyer follow-up writer"}
+  - {title: "The 10 Rules of Direct Response Marketing", by: "Dan Kennedy", used: "Ideas behind the information-led offer and the follow-up to almost-buyers. The step order and wording are this workflow's own."}
 generated_from: intake/dan-kennedy-direct-response/skeleton.yaml

@@ -37,6 +37,10 @@ Resolves duplicate customer records identified by `duplicate-customer-finder`. W
 
 > ⚠️ Steps 2–4 execute mutations that modify customer records. `customerMerge` is irreversible — once orders and addresses are moved to the winner, the loser record is closed and cannot be split back. Run with `dry_run: true` first to confirm winner/loser GIDs and the merge plan. The default is `dry_run: true`. Always verify both records belong to the same human (matching email, phone, name) using `duplicate-customer-finder` output before committing. Do not merge a customer with active subscriptions or unfulfilled orders without confirming downstream systems will follow the new owner GID.
 
+## Before step 2: confirm with the user
+
+Before any live merge (`dry_run: false`), show the winner and loser IDs and the preview, ask the user to restate both IDs and confirm, and wait for a clear yes. The merge cannot be undone.
+
 ## Workflow Steps
 
 1. **OPERATION:** `customer` — query (called twice: winner and loser)
@@ -178,7 +182,7 @@ No CSV output. The session summary reports the merge job ID, the resulting custo
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| `customerMerge` userError: customer has subscriptions | Active subscription on loser | Cancel subscription before merge or use fallback path |
+| `customerMerge` userError: customer has subscriptions | Active subscription on loser | Use the fallback path, then finish the merge by hand in Shopify Admin once the subscription is handled |
 | `customerMerge` userError: B2B customer | Company-affiliated record | Use fallback path; manual merge in Shopify Admin |
 | `customerMerge` userError: gift card holder | Loser owns gift card balance | Transfer gift card or use fallback path |
 | Either GID not found | Wrong ID or deleted customer | Re-run `duplicate-customer-finder` |

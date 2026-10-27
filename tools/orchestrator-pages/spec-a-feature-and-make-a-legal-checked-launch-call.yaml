@@ -28,11 +28,11 @@ you_get:
   - A legal risk memo rated by area, with what to fix and who should sign off
   - A go, wait or no-go call with the reason, based on the memo and your plan
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and three skill files, in the order they run: Feature spec writer, Launch legal reviewer and Go or no-go launch checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the feature and answer the questions it asks about users and data.
   - Stop after step 2. Fix the flagged items or take the high ones to a lawyer.
-  - Update your launch plan, then run step 3 for the call.
+  - Update your launch plan, then run step 3 for the call. A go call is not legal sign-off. A lawyer still clears every high-rated item before launch.
 output_sample:
   input:
     - Your feature idea, who it is for and the problem it solves

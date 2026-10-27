@@ -9,7 +9,7 @@ subhead: Tell it what you are making and who will see it. It writes a brief for 
 explain: |
   Work for a mixed audience usually goes wrong at one end. It is so simple the experts are bored, or so dense that newcomers give up. Aiming for the middle gives you a piece nobody remembers.
 
-  This workflow follows the method Mozart described in his Vienna letters, when he wrote piano concertos that were neither too easy nor too hard. Each one had a surface that pleased anyone and passages only connoisseurs could fully enjoy. It starts by naming both audiences and the two ways to fail. It fits the piece to the person who will deliver it, writes the draft in layers, and cuts every idea that fights the main one. It ends with a small test: one expert and one newcomer, each alone, with the pass lines fixed first. After you run the test, it sorts what they said into a ranked rewrite list.
+  This workflow is loosely inspired by Mozart's letters, where he writes about music that pleases experts and beginners alike: a surface anyone enjoys, and deeper parts for those who know more. It starts by naming both audiences and the two ways to fail. It fits the piece to the person who will deliver it, writes the draft in layers, and cuts every idea that fights the main one. It ends with a small test: one expert and one newcomer, each alone, with the pass lines fixed first. After you run the test, it sorts what they said into a ranked rewrite list.
 when:
   - You are making a talk, article, course, product page or song for people who range from beginners to experts.
   - Feedback pulls you both ways, with one person saying it is too basic and another saying it is too hard.
@@ -32,7 +32,7 @@ you_get:
   - A one-page test for one expert and one newcomer
   - After the test, a ranked rewrite list that says which group each change serves
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Say what you are making, who will see it and who will deliver it. It works step by step and saves each result.
   - Run the test with one expert and one newcomer, each alone. Bring back their answers for the last step.
@@ -118,3 +118,4 @@ improve:
   - Save the brief and the pass lines, so the next piece starts from step 2.
   - Keep the parking list from step 4. It is the start of your next piece.
   - After each test, add what the expert noticed and what the newcomer remembered to the brief for next time.
+next: []

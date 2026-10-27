@@ -9,7 +9,7 @@ subhead: Before you bring an app or AI tool into a lesson, check whether it fits
 explain: |
   Before you bring an app or AI tool into a lesson, check whether it fits what you teach and how. You name the tool, the topic and your students, and you get a plain verdict with changes to make it work.
 
-  The check looks at three things together: the technology, your teaching method and the content itself. It asks whether the tool helps students think about the topic or just makes the lesson look busy. It points out where the tool could get in the way, where it adds value and what you need to learn before using it. It considers your confidence with tech, school rules and the learning goal.
+  The check is called TPACK. It looks at three things together: the technology, your teaching method and the subject knowledge you teach. It asks whether the tool helps students think about the topic or just makes the lesson look busy. It points out where the tool could get in the way, where it adds value and what you need to learn before using it. It considers your confidence with tech, school rules and the learning goal.
 when:
   - Your school bought a new app and you must use it in maths.
   - You want to try an AI tutor but are unsure it helps learning.
@@ -33,8 +33,9 @@ you_get:
   - Skills you need to build
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text from this page into a new chat.
-  - "Fill in the four required details: your subject and topic, the tool, your students' age, and your teaching background and tech confidence."
+  - Gather the tool's name or link, your lesson or unit plan, and any school rules on devices or student data.
+  - Paste the skill text (the full skill file at the bottom of this page) into a new chat.
+  - "Type the four required details into the prompt's placeholders: your subject and topic, the tool, your students' age, and your teaching background and tech confidence."
   - Add your learning goal if you have one.
   - Read the seven sections in order, starting with the diagnosis.
   - Run the small trial plan with one class before you use the tool more widely.

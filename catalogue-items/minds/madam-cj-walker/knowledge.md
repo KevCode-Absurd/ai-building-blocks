@@ -1,6 +1,6 @@
 # Madam C.J. Walker: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on the record: Madam C.J. Walker (1867 to 1919) left speeches, letters and newspaper interviews, but no book. Her own words reach us in pieces: excerpts of her 1912 and 1913 speeches to the National Negro Business League published by the National Park Service [S4], a handful of lines from her 1914 address and a 1917 newspaper interview gathered by a quotation site [S5], and a 1917 letter to Emmett Scott held by the National Archives [S7]. Catalog records describe more letters, such as one to her general manager in 1916, but we could read only the description [S9]. So her record is thin, and this mind leans on a few well-attested speeches. Her papers are held by the Indiana Historical Society and the Madam Walker Family Archives [S6][S7]. Some well-known stories about her are disputed, including whether she was a millionaire and what part she played in hair straightening. We mark those as disputed.
 

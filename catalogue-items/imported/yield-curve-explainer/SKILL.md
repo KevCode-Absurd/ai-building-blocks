@@ -18,7 +18,7 @@ same market described two ways. Pick one, label it, and keep it.
 
 | Market and need | Example official source |
 |---|---|
-| US nominal curve, 1M–30Y, daily | US Treasury daily par yield CSV, no key — exact URL in `market-data-sources` |
+| US nominal curve, 1M–30Y, daily | US Treasury daily par yield CSV, no key — the "Daily Treasury Par Yield Curve Rates" page on home.treasury.gov (open the page and use its CSV download; do not guess a URL) |
 | US real curve (TIPS) | same feed, `type=daily_treasury_real_yield_curve` |
 | Bills / long-term average | same feed, `_bill_rates` / `_long_term` |
 | Euro curve | ECB `YC` SDMX, no key |
@@ -57,7 +57,7 @@ All free sources are EOD or delayed — not real-time. Carry source + retrieval 
 | 30Y | | | |
 
 ### Curve metrics
-| Metric | Current | 1Y ago | 3Y percentile |
+| Metric | Current | 1Y ago | 3Y percentile (where today's value ranks among the daily values of the last 3 years, from the same series) |
 |--------|---------|---------|---------------|
 | 2s10s (bp) | | | |
 | 5s30s (bp) | | | |
@@ -71,7 +71,7 @@ All free sources are EOD or delayed — not real-time. Carry source + retrieval 
 | 10Y | | | | |
 
 ### Plain-language read
-Explain what the reported slopes and available real-rate observations show. State the limits of the data and avoid a forecast or trading recommendation.
+Explain what the reported slopes and available real-rate observations show. State the limits of the data and avoid a forecast or trading recommendation. Then offer one next step: compare the same slopes on a later date, or take the figures to your adviser.
 
 ## What this skill does not do
 

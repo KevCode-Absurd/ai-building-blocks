@@ -9,7 +9,7 @@ subhead: Give your sample rates, carrier and bandwidth. Your AI asks a few quest
 explain: |
   A digital down converter that takes a radio signal to baseband, built in MATLAB and ready for FPGA or ASIC code generation. It covers both whole-number and fractional sample rate changes.
 
-  The chain is an oscillator, a mixer, a CIC decimator and a compensating FIR filter. For fractional rates it adds a Farrow stage. The skill follows firm rules, such as the exact phase increment formula for the oscillator and a single fixed-point multiply for the mixer with no conjugate. It simulates the design against a floating-point reference, then produces Verilog or VHDL. You need MATLAB with the DSP HDL Toolbox.
+  The chain is an oscillator, a mixer, a CIC decimator and a compensating FIR filter. For fractional rates it adds a Farrow stage. The skill follows firm rules, such as the exact phase increment formula for the oscillator and a single fixed-point multiply for the mixer with no conjugate. It simulates the design in fixed point and plots the I/Q signals and the spectrum for you to inspect, then produces Verilog or VHDL. You need MATLAB with the DSP HDL Toolbox and HDL Coder. These are paid MathWorks products, and the skill's licence lets you use it only with MathWorks products.
 when:
   - You are building a radio receiver front end for an FPGA.
   - Your output rate does not divide evenly into the input rate.
@@ -28,14 +28,14 @@ you_give:
 you_get:
   - MATLAB model of the converter
   - Filter and oscillator settings
-  - Simulation against a reference
+  - Simulation with plots to inspect
   - Verilog or VHDL output
   - Notes on design rules followed
 how_to_use:
-  - Open MATLAB with the DSP HDL Toolbox and HDL Coder. Your AI needs to run code there.
+  - Open MATLAB with the DSP HDL Toolbox and HDL Coder (paid MathWorks licence). Your AI needs to run code there.
   - Paste the skill into your AI chat, or add the skill folder to your AI tool.
   - Say you want a digital down converter. Your AI asks for your rates and bands, one question at a time.
-  - Check the simulation against the floating-point reference before you generate HDL.
+  - Look at the simulation plots (I/Q and spectrum) and the sample counts before you generate HDL. Compare them with your own floating-point model if you have one.
   - Run the generated Verilog or VHDL testbench in your HDL simulator to confirm the result.
 output_sample:
   input:
@@ -55,7 +55,7 @@ output_sample:
     - name: System objects
       contains: The oscillator, mixer, CIC decimator and FIR decimator set up in MATLAB, with a Farrow stage for fractional rates.
     - name: Simulation
-      contains: A streaming run of the design checked against a floating-point reference.
+      contains: A streaming run of the design with sample counts and plots of the I/Q signals and spectrum to inspect.
     - name: Design function and testbench
       contains: MATLAB files that wrap the converter and drive it with a test signal.
     - name: HDL code

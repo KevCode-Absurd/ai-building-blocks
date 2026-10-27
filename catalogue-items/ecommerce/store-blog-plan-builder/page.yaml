@@ -137,7 +137,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Search Console", why: "Free. Shows which posts are on page two or three and which collections they feed."}
-    - {name: "Semrush", why: "Finds rival versus and alternative terms with difficulty and volume."}
+    - {name: "Semrush", why: "Finds rival versus and alternative terms with difficulty and volume. It is a paid tool."}
     - {name: "Shopify", why: "Blog posts, internal links and product call-to-action blocks live in the store admin."}
     - {name: "Any good chat AI", why: "Drafts titles and posts from your voice file and your own results."}
   inputs:

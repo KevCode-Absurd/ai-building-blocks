@@ -18,7 +18,7 @@ when:
   - A retailer already asked about your product and you want a plan before the meeting.
   - You are in one retailer and want to keep your place and open another.
 not_for:
-  - "Your cash is below the cost of one purchase order: fix the cash first with the PO funding options planner and the growth cash limit checker."
+  - "Your cash is below the cost of one purchase order: fix the cash first with the inventory cash planner and the growth cash limit checker."
   - "Your goods are bulky or fresh and may not suit online sales or retail: talk to a distributor or a retail consultant before you plan a pitch."
   - "You have no online sales proof yet: build sales first, then come back to plan the buyer approach."
 
@@ -110,7 +110,7 @@ output_shape: |
 
 tweaks:
   - what: Your cash
-    how: Overproducing needs cash. With little, the skill sends you to the PO funding options planner and the growth cash limit checker first.
+    how: Overproducing needs cash. With little, the skill sends you to the inventory cash planner and the growth cash limit checker first.
   - what: Your following
     how: Say how many followers you have and if you have a distribution partner. The source brand had both, and the skill adjusts what it promises.
   - what: Product type
@@ -135,7 +135,7 @@ improve:
   - Add the retailers you know and who decides at each.
   - Add your own on-time fill rate target.
   - Add your sell-through by region, so the proof sheet names where you sell best.
-  - Pair it with the supplier terms and float planner and the growth cash limit checker for the cash side.
+  - Pair it with the supplier payment terms planner and the growth cash limit checker for the cash side.
 
 works_best_with:
   tools:

@@ -31,11 +31,11 @@ you_get:
   - Notes for adding it to your page
 how_to_use:
   - Open your AI and paste this skill, or add the skill file.
-  - Describe the motion you want and name the elements it should act on.
+  - Paste the part of your HTML you want to animate. Describe the motion in one sentence, such as "headings slide in one by one".
   - Say which Anime.js version you use, or ask your AI to check first.
   - Copy the code into your project and make sure the selectors match your HTML.
-  - Open the page in a browser and check it on a phone too.
-  - This works best when your AI can run code and open a browser. Otherwise, test it yourself.
+  - Open the page in a browser and confirm one element animates as you described. Check it on a phone too.
+  - This works best when your AI can run code and open a browser. Otherwise, test it yourself. Next, turn on reduced motion in your device settings and check the page still works, then run a landing page check before you publish.
 output_sample:
   input:
     - A description of the motion you want

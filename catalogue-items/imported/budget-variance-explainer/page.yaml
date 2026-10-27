@@ -32,11 +32,12 @@ you_get:
   - A list of gaps worth action
 how_to_use:
   - Put your numbers in one table. Use one row per line item, with columns for actual and budget. Add volume and price columns if you have them (optional).
-  - Decide what size of gap matters to you, as a dollar amount or a percent. If you skip this, the skill uses common defaults.
+  - Decide what size of gap matters to you, as a dollar amount or a percent. If you skip this, the skill flags any gap of 10% or more between actual and budget.
   - Open Claude, ChatGPT or Gemini. Paste the skill, then paste or attach your table.
   - Ask for the breakdown by cause, the notes for each large gap, and a waterfall from budget to actual.
   - Check that the drivers add up to the total gap. Then have a finance professional review it before you share it.
   - Note that the example figures inside the skill are only illustrations. Your own numbers are used for the result.
+  - Next, send the notes to your finance lead for sign-off, then update the forecast or the leadership update with them.
 output_sample:
   input:
     - Your actual and budget numbers, one row per line item

@@ -1,13 +1,13 @@
 new_slug: find-where-your-page-loses-buyers-and-prove-the-fix
 name: Find where your page loses buyers and prove the fix
-summary: Find why visitors leave your page and prove the fix. Give it heatmaps and funnel numbers. You get a ranked test list and a ship or stop call.
+summary: Give it your heatmaps and funnel numbers. Get a ranked test list and a clear verdict on the first fix.
 job: audit-landing-page
 thinking: high
 thinking_why: Five steps carry findings forward, and the last two do the sums that decide whether to ship. Give it your strongest model.
 headline: Find why visitors leave your page, then prove your fix worked
-subhead: Give it heatmaps, recordings and your funnel numbers. It lists what visitors do instead of buying, sorts the issues, ranks the tests worth running, checks you had enough traffic to trust a result, and gives a ship, stop or keep-running call.
+subhead: Give it heatmaps, recordings and your funnel numbers. It lists what visitors do instead of buying, sorts the issues, ranks the tests worth running, checks you had enough traffic to trust a result, and gives a ship, do not ship, re-test or inconclusive call.
 explain: |
-  A store with steady traffic and few orders is tempting to redesign. But changing the page on a guess often changes nothing, or hurts, and without a proper test you cannot tell which. Many teams also call a winner too early, on a handful of orders, and ship a change that only looked good by luck.
+  A store with steady traffic and few orders is tempting to redesign. But changing the page on a guess can change nothing, or hurt, and without a proper test you cannot tell which. Calling a winner too early, on a handful of orders, can also ship a change that only looked good by luck.
 
   The first step reads your heatmaps and recordings and lists the friction by money at stake. The second sorts every issue into one of four buckets: tracking faults, obvious fixes to make now, causes to investigate, and test ideas. The third ranks the tests by evidence and likely gain and picks the one or two to run. Then it pauses: you run the top test on live traffic until it has enough orders and export the results. The fourth checks whether the traffic was enough to trust. The fifth checks the split, turns the result into a money range and gives a ship, do not ship, re-test or inconclusive call. If your store gets only a few orders a week, a test will not finish in a useful time, so make the obvious fixes and watch the numbers.
 when:
@@ -30,7 +30,7 @@ you_get:
   - A test readiness score out of 100, the visitors needed and whether it can finish in about four weeks
   - A call on the finished test (ship, do not ship, re-test or inconclusive), a result as a money range and a log entry
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it the heatmaps, recording notes and funnel numbers for one key page.
   - Make the obvious fixes it lists before you test anything.

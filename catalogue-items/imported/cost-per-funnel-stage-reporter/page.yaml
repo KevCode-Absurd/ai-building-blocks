@@ -36,13 +36,16 @@ you_get:
   - The spend lines and stage values behind every number
   - A refresh plan listing the report days to replace and the next checkpoint (optional)
 how_to_use:
+  - This needs a BigQuery project and someone who is comfortable running SQL. If that is not you, use Ad spend analyst on your ad exports instead.
   - Download the skill folder from this page. Keep the references and scripts folders with SKILL.md. The three contract files in references say what each input table looks like.
   - Open the folder in an AI that can run SQL on BigQuery, such as Claude Code with the bq tool signed in. Live runs bill your own BigQuery project. The test scripts cap each job at 1 GiB.
+  - First check that the bq tool is signed in. Ask your AI to run a small test query before it loads your CRM snapshot.
   - Tell it your CRM source, stage order, time zone, report dates and as-of time. Then give it your CRM snapshot, spend table and campaign bindings.
   - Ask for the stage ledger first. Check the lead count and the unknown stages before you go on.
   - Ask for the cost report next. Read the five groups first, then the cost for each stage. Cost appears only for matched groups. Spend repeats beside each stage on purpose, so never add the stage rows together.
   - Treat the costs as a report on your own data. They show what was spent beside what was won. They do not prove the ads caused the leads.
   - Ask for the refresh plan only when you keep a stored report. It plans the change and never writes to your data.
+  - Next, share the five-group table and the cost for each stage with your sales and marketing leads, and agree what to do with the ambiguous and unmatched rows.
 how_it_works:
   - title: Set the stage truth
     text: It checks your source, stage order, time zone and snapshot are complete. It builds one ledger row per lead and stage.

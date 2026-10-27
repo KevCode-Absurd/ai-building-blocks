@@ -34,8 +34,10 @@ how_to_use:
   - Open your AI chat and paste this skill. Use an AI that can write files and code.
   - List your live prompts in a table. Add the owner and the model for each one.
   - Answer the questions your AI asks about storage, team size, tools and your biggest pain.
-  - "Pick a mode: build the registry, build the tests, or plan how changes get approved."
+  - "Work through your first week in this order: list your prompts, pick one prompt, write 10 golden pairs (an input and the answer you expect), run the test runner once, then record the pass rate."
+  - "Then pick a mode for the rest: build the registry, build the tests, or plan how changes get approved."
   - Review the plan. Fill the golden set with real inputs and have an expert check the expected answers.
+  - Next, run the tests in your build pipeline so every prompt change is checked. Then watch live prompt quality over time. The skill's Related Skills section names a pipeline builder and a monitoring designer for these. They are not in this library, so ask your AI to do these steps.
   - If you run the tests, you need an API key. Each test example calls your AI provider, so token costs apply.
 output_sample:
   input:

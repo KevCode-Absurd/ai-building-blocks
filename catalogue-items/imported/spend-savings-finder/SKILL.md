@@ -286,6 +286,8 @@ Examples:
 
 ### Automated Classification
 
+This classifier is optional. It needs your own labelled spend rows to train on. The six rows in the example below only show the shape of the data, and the accuracy they print means nothing. If you have no labelled rows, classify by hand or by rules instead.
+
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB

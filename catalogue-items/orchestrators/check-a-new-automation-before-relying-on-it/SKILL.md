@@ -7,6 +7,26 @@ description: "Use when a new automation or AI loop is built but not yet trusted:
 
 Audit an automation on paper, repair what is weak, then write the procedure people will follow. Two skills run in order. This workflow reads a description. It does not run the automation, and a pass here is not a test.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** Any of them can audit a pasted description. Use one that opens files if your automation is saved as a file.
+- **The tool the automation runs in (optional):** You run the test checklist there. This workflow does not connect to it or run anything.
+<!-- /needs -->
+
 ## Before you start
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
@@ -51,6 +71,13 @@ NEXT STEP       <one step>
 ```
 
 State plainly that nothing was run and no test has happened yet.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Site reliability engineer](https://useaiblocks.com/skills/agency-engineering-sre). It takes the document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

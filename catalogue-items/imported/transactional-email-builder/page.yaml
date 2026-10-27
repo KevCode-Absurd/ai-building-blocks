@@ -34,7 +34,7 @@ how_to_use:
   - Open your AI in a tool that can write files and run code. Paste in the skill and your list.
   - Ask for the layout and one template first. Check it, then ask for the rest.
   - Run the preview server. Check each email in light and dark mode.
-  - Send a test email to yourself. Then work through the spam checklist and test with Mail-Tester before your first real send.
+  - Replace every bracketed placeholder and sample detail (company address, trial length, seat limit) with your real ones. Send a test email to yourself and check that the unsubscribe and tracking links work. Then work through the spam checklist and test with Mail-Tester before your first real send. Keep marketing sends on a separate domain.
 output_sample:
   input:
     - The list of emails your app sends

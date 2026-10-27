@@ -152,7 +152,7 @@ CSV file `risk_report_<YYYY-MM-DD>.csv` with columns:
 | `riskLevel` null | Order too new for analysis | Exclude from report, note count |
 
 ## Best Practices
-- Do not auto-cancel high-risk orders — use `high-risk-order-tagger` to flag them for manual hold first, then review before cancelling.
-- An order from a repeat customer (`numberOfOrders > 3`) with a high risk score is usually a false positive — apply judgment before acting.
-- `min_order_value` helps focus review effort on high-value fraud risk; $50+ is a reasonable floor for most stores.
+- Do not auto-cancel high-risk orders — put them on a manual hold in the Shopify admin first, then review before cancelling.
+- An order from a repeat customer (`numberOfOrders > 3`) with a high risk score is often a false positive (a rule of thumb to test on your own orders, not a fact) — apply judgment before acting.
+- `min_order_value` helps focus review effort on high-value fraud risk; $50 is a starting point to test on your own orders, not a standard.
 - Run daily as part of a morning ops routine, especially during high-volume sale periods when fraud attempts increase.

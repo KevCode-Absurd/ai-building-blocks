@@ -41,6 +41,8 @@ Output format: [markdown / json / text]
 
 ## Examples
 
+> The examples below use made-up names, topics and figures to show the layout. They are not real output. Use only what is in the real recording.
+
 ### Example 1: Timestamped Transcript with Speaker Labels
 
 **Input:**

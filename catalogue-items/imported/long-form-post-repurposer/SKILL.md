@@ -111,7 +111,9 @@ Agent:
 - **Optional connector.** The closing section describes a hosted VoiceMoat MCP connector. Nothing above needs it. It needs a paid VoiceMoat plan (Pro or Enterprise) and the user's own sign-in (OAuth, no API keys). When its tools are called, post text and account data are read from or sent to voicemoat.com. Without it, this skill makes no network calls.
 - **Publishing.** `publish_post` and `schedule_post` post to the user's real Twitter/X or LinkedIn account. They return a preview first and only post on a second call that carries a one-time code. Make that second call only after the user has read the preview and said yes.
 
-## What changes when VoiceMoat is connected
+## What changes when VoiceMoat is connected (optional, paid)
+
+The VoiceMoat tools below are not used unless the paid connector is connected. Without it, you write the post only. Do not offer to score, publish or schedule.
 
 The risk when repurposing is that the post ends up in the register of the
 source, which is often more formal than how the person actually posts. An

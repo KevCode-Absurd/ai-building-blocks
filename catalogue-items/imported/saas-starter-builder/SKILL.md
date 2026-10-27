@@ -111,7 +111,11 @@ export const authOptions: NextAuthOptions = {
       user: {
         ...session.user,
         id: user.id,
-        subscriptionStatus: user.subscriptionStatus,
+        // The users table has no status column. Work it out from the billing period end.
+        subscriptionStatus:
+          user.stripeCurrentPeriodEnd && user.stripeCurrentPeriodEnd > new Date()
+            ? "active"
+            : "inactive",
       },
     }),
   },
@@ -146,6 +150,20 @@ export const accounts = pgTable("accounts", {
   refresh_token: text("refresh_token"),
   access_token: text("access_token"),
   expires_at: integer("expires_at"),
+})
+
+// Auth.js also needs these two tables. Check the column names against the
+// current Auth.js Drizzle adapter docs, and pass all four tables to DrizzleAdapter.
+export const sessions = pgTable("sessions", {
+  sessionToken: text("session_token").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  expires: timestamp("expires").notNull(),
+})
+
+export const verificationTokens = pgTable("verification_tokens", {
+  identifier: text("identifier").notNull(),
+  token: text("token").notNull(),
+  expires: timestamp("expires").notNull(),
 })
 ```
 
@@ -254,7 +272,7 @@ The following phases must be completed in order. **Validate at the end of each p
 🔧 **If DB connection fails:** Verify `DATABASE_URL` format includes `?sslmode=require` for NeonDB/Supabase. Check that the migration has been applied with `drizzle-kit push` (dev) or `drizzle-kit migrate` (prod).
 
 ### Phase 3 — Authentication
-- [ ] 11. Auth provider installed (NextAuth / Clerk / Supabase)
+- [ ] 11. Auth provider installed (NextAuth is fully scaffolded here. For Clerk or Supabase, the code samples do not apply and a developer must adapt them)
 - [ ] 12. OAuth provider configured (Google / GitHub)
 - [ ] 13. Auth API route created
 - [ ] 14. Session callback adds user ID and subscription status
@@ -281,6 +299,8 @@ The following phases must be completed in order. **Validate at the end of each p
 - [ ] 25. Settings page with profile update form and success states
 
 ✅ **Validate:** Run `npm run build` for a final production build check. Navigate all routes manually and confirm no broken layouts, missing session data, or hydration errors.
+
+**What to do next:** deploy to a host, set the live environment keys, then test the live Stripe webhook with a test-mode payment before you turn on real billing.
 
 ---
 

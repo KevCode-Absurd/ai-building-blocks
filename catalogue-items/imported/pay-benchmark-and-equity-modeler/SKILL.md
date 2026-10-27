@@ -46,6 +46,7 @@ Upload a CSV or paste your comp bands. I'll analyze placement, identify outliers
 - **With ~~compensation data**: Pull verified benchmarks
 - **Without**: Use web research, public salary data, and user-provided context
 - Always note data freshness and source limitations
+- Label every benchmark figure as `web-sourced` (name the source and date), `user-provided` or `no source found`. If you have no source, write "no source found" and leave the figure out. Never estimate a pay figure from memory.
 
 ## Output
 
@@ -75,7 +76,11 @@ Provide percentile bands (25th, 50th, 75th, 90th) for base, equity, and total co
 - [Retention risks if applicable]
 ```
 
+**Next step:** use the result to set an offer or plan a pay review. Check every figure against a named source before any pay decision, and have HR or a pay specialist review it.
+
 ## If Connectors Available
+
+(`~~compensation data` and `~~HRIS` are placeholders for tools the user may have connected. If none is connected, ask the user to paste the data instead.)
 
 If **~~compensation data** is connected:
 - Pull verified market benchmarks by role, level, and location

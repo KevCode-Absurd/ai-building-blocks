@@ -33,10 +33,10 @@ you_get:
   - Sending rules
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Tell your AI about your business, products, number of customers, country and goal.
+  - Have ready your customer count, your main goal, and the app or API you use now. Send these to your AI first, along with your business, products and country.
   - Add your brand voice notes and budget if you have them (optional).
   - Read the setup pick first. Check it fits your list size.
-  - Treat all benchmarks and tool prices as rough estimates. Check them with the tool maker before you buy.
+  - Treat all benchmarks and tool prices as rough estimates. Check them with the tool maker before you buy. Confirm each template category (marketing or utility) with your WhatsApp provider before you send, and check opt-in wording against WhatsApp's policy and your local law.
   - Copy the welcome flow and opt-in wording into your WhatsApp tool. No code or files are needed.
 output_sample:
   input:
@@ -60,3 +60,4 @@ output_sample:
       contains: The numbers to track each week, with rough benchmarks and what a spike in unsubscribes means.
     - name: 07 Platform recommendations by scale
       contains: Which tool suits your list size, with approximate monthly costs you should check yourself.
+next: [whatsapp-support-reply-assistant]

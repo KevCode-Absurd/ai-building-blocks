@@ -12,9 +12,10 @@ not_for:
   - "You only have a rough idea of the action and no approval record: gather the details first, or expect an INCONCLUSIVE result."
 how_to_use:
   - Gather the request, the proposed action, the approval record and the evidence behind it.
+  - Before you paste, remove secrets and personal data. Check your AI provider's data policy first, because these records can be sensitive.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions from the skill file.
   - Paste your items one by one. Say which ones you do not have. Your AI lists them as missing.
-  - Read the result first, then the control matrix. This works in a plain chat and needs no code running.
+  - Read the result first, then the control matrix. This works in a plain chat and needs no code running. A chat cannot check a digest or signature on its own, so that line stays NOT_VERIFIED unless you paste a value from your own tool.
   - Fix the step named under Required next action, then run the review again with the new details.
   - Pass the report to your human approver. They decide, and a separate system enforces it.
 output_sample:

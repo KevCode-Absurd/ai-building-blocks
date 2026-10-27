@@ -39,6 +39,8 @@ how_to_use:
   - Read the opening problem. Check that students can start it with what they know. Ask your AI to make it easier or harder if not.
   - Read the safeguards and prep notes. Adjust the timings to fit your room before you teach.
   - Run the lesson. Afterwards, tell your AI what happened and ask it to improve the plan.
+  - Keep a note of which student approaches really came up. Compare them with the method you teach in the next lesson, and use them to spot mistakes with the student mistake analyser.
+next: [student-mistake-analyser, lesson-understanding-check]
 output_sample:
   input:
     - The concept you want students to understand

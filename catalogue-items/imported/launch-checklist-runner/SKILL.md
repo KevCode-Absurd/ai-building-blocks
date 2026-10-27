@@ -3,6 +3,17 @@ name: shipping-and-launch
 description: Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../../references/definition-of-done.md`
+- `../../references/security-checklist.md`
+- `../../references/performance-checklist.md`
+- `../../references/accessibility-checklist.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Shipping and Launch
 
 ## Overview
@@ -282,12 +293,14 @@ Every deployment needs a rollback plan before it happens:
 - Redeploy previous version: < 5 minutes
 - Database rollback: < 15 minutes
 ```
+## Next steps
+
+Once the plan is agreed, hand the monitoring list and the first-hour checks to whoever watches the launch. Keep the rollback plan where the whole team can find it on launch day. After the full rollout, remove the feature flag.
+
 ## See Also
 
-- For the project-wide Definition of Done that every change must clear before this checklist, see `../../references/definition-of-done.md`
-- For security pre-launch checks, see `../../references/security-checklist.md`
-- For performance pre-launch checklist, see `../../references/performance-checklist.md`
-- For accessibility verification before launch, see `../../references/accessibility-checklist.md`
+Four longer checklists named in the original are not in this copy: definition of done, security, performance and accessibility. The short lists in the Pre-Launch Checklist above stand in for them. If the user needs deeper checks, say so and suggest a specialist review.
+
 - For the alerting rules and SLO-tied thresholds, see `observability-and-instrumentation`
 
 ## Common Rationalizations

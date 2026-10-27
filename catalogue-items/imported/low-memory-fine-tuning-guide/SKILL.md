@@ -21,7 +21,7 @@ Fine-tune LLMs by training <1% of parameters using LoRA, QLoRA, and 25+ adapter 
 - Deploying multiple fine-tuned variants from one base model
 
 **Use QLoRA (PEFT + quantization) when:**
-- Fine-tuning 70B models on single 24GB GPU
+- Fine-tuning very large models when memory is tight. A 70B model in 4-bit needs roughly 35 GB for the weights alone, so one 24 GB card is not enough. Plan a 48 GB or 80 GB card, or several cards
 - Memory is the primary constraint
 - Can accept ~5% quality trade-off vs full fine-tuning
 
@@ -81,6 +81,7 @@ def tokenize(example):
     return tokenizer(text, truncation=True, max_length=512, padding="max_length")
 
 tokenized = dataset.map(tokenize, remove_columns=dataset.column_names)
+tokenized.set_format("torch")
 
 # Training
 training_args = TrainingArguments(
@@ -100,7 +101,9 @@ trainer = Trainer(
     train_dataset=tokenized,
     data_collator=lambda data: {"input_ids": torch.stack([f["input_ids"] for f in data]),
                                  "attention_mask": torch.stack([f["attention_mask"] for f in data]),
-                                 "labels": torch.stack([f["input_ids"] for f in data])}
+                                 # padding positions are set to -100 so they are ignored by the loss
+                                 "labels": torch.stack([f["input_ids"].masked_fill(f["attention_mask"] == 0, -100) for f in data])}
+# This masks padding only. To train on the response only, also set the prompt tokens to -100.
 )
 
 trainer.train()
@@ -144,7 +147,8 @@ lora_config = LoraConfig(
 )
 
 model = get_peft_model(model, lora_config)
-# 70B model now fits on single 24GB GPU!
+# The 4-bit weights of a 70B model are about 35 GB. This needs a larger card or several cards (device_map="auto" spreads the layers). It does not fit on one 24 GB card.
+# Train it with the same TrainingArguments and Trainer as the LoRA example above. For QLoRA, use bf16=True instead of fp16=True, and optim="paged_adamw_8bit".
 ```
 
 ## LoRA parameter selection
@@ -334,6 +338,8 @@ outputs = llm.generate(
 ```
 
 ## Performance benchmarks
+
+The figures below come from the source and do not state their hardware, date or test setup. Treat them as rough guides only. Memory, speed and scores change with your hardware and settings, so measure on your own setup.
 
 ### Memory usage (Llama 3.1 8B)
 

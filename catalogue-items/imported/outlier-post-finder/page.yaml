@@ -30,11 +30,11 @@ you_get:
   - Repeatable patterns
   - Source links and a swipe file
 how_to_use:
-  - Get a ScrapeCreators API key. It is a paid service. Check each platform's terms before you collect its data.
+  - Get a ScrapeCreators API key. It is a paid service. Check each platform's terms before you collect its data. The tool pulls public posts automatically, and you are responsible for following each platform's rules.
   - Open an AI that can run code, such as Claude with code tools. Add the skill and your key.
   - List the accounts, the platform for each, and how far back to look.
-  - Ask your AI to find the outlier posts. It needs at least 10 posts per account to be sure.
-  - Read the table of outliers first. Check the links, then copy the hooks you want into your content brief.
+  - Ask your AI to find the outlier posts. It pulls about 20 posts per account when it can. With fewer than 10 posts it marks the result as low confidence.
+  - Read the table of outliers first. Check the links, then copy the hooks you want into your content brief or a shared swipe file.
 output_sample:
   input:
     - The accounts or links to check (yours, competitors or creators)

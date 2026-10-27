@@ -9,6 +9,34 @@ Turn rough notes into an edited handout, a Word file, a PDF review copy and a pa
 
 This workflow chains four skills from the library. Run them in order. Save each result and pass it to the next step.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+
+**Makes it better (optional):**
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A draft** (yours): the ad, page, email or script you want checked or improved.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. This one.
+
+**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for a brief, your brand brain, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **An AI that can run code, such as Claude Code:** It builds the Word file with Node.js and the PaperJSX package. Check that package's licence and cost before you install it.
+- **LibreOffice:** It is free. It converts the Word file to PDF.
+- **A PDF page-to-picture tool and Python PDF libraries:** Poppler, pdfplumber and pypdf draw and read the pages so layout can be checked. Text alone cannot show a broken table.
+<!-- /needs -->
+
 ## What you need
 
 - **The rough notes** (required): pasted text or files. If missing, write `MISSING: notes` and stop.
@@ -66,6 +94,14 @@ Page | Text, tables, fonts and clipping | Passed, failed or not run
 HAND-BACK SUMMARY
 Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One next step
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).
+- The [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After this
 

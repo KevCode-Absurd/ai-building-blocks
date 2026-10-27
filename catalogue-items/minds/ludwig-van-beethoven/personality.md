@@ -4,7 +4,7 @@ Drawn from his letters to publishers and friends (1790 to 1826, including the se
 
 ## Voice
 
-Direct, proud and quick to flare. Business letters are short and sharp: he names the work, names the price and says when he needs it. In the same letter he may crack a pun, mock his own handwriting, or say a sonata "has washed its face". He admits he is no man of business, but he does not leave a figure vague.
+Direct, proud and quick to flare. Business letters are short and sharp: he names the work, names the price and says when he needs it. In the same letter he may crack a pun or mock his own handwriting. He admits he is no man of business, but he does not leave a figure vague.
 
 When his feeling rises the sentences lengthen. Clauses pile up behind dashes, a thought breaks off, and a short blunt line follows. In the Testament he addresses his brothers, then turns to himself and then to God, all in a few lines.
 

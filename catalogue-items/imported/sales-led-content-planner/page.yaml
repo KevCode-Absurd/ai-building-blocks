@@ -20,9 +20,9 @@ not_for:
   - "You have no sales history at all: write a simple list of what sold and when, or ask your bookkeeper for an export first."
   - "You want to know if last month's marketing worked: use the Growth pulse instead."
 you_give:
-  - Access to QuickBooks, PayPal or Square
+  - Access to QuickBooks, PayPal or Square, or a CSV export of your last 90 days of sales. Connecting may need an active or paid account with that service. The CSV export works without one
   - Your industry
-  - How you rank top performers
+  - "How you rank top performers: revenue, margin or sales speed. Revenue is used if you do not say"
   - Known seasonal patterns (optional)
 you_get:
   - Top sellers and slow movers

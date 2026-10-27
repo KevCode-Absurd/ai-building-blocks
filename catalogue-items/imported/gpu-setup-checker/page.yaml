@@ -61,3 +61,4 @@ output_sample:
       contains: What to change next, including driver advice checked against the GPU requirements page for your MATLAB release.
     - name: Speed test tip (optional)
       contains: A suggestion to run gpuBench from the MATLAB File Exchange to measure your GPU.
+next: [matlab-speed-tuner]

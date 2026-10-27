@@ -14,7 +14,7 @@ uses: [audio-meeting-notes-writer, call-follow-up-drafter, meeting-coaching-anal
 steps:
   - {uses: audio-meeting-notes-writer, note: "Turns the recording into a transcript and notes."}
   - {uses: call-follow-up-drafter, note: "Drafts the follow-up from the transcript from step 1 and hands you the draft and meeting notes. Nothing is sent until you approve."}
-  - {uses: meeting-coaching-analyst, note: "Coaches you on how the call went. Uses the transcript from step 1, not the follow-up draft from step 2, and hands you the coaching notes."}
+  - {uses: meeting-coaching-analyst, note: "Coaches you on how the call went. Uses the transcript and meeting notes from step 1, not step 2's follow-up draft, and hands you the coaching notes."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/turn-a-recorded-call-into-notes-a-follow-up-and-coaching/skeleton.yaml

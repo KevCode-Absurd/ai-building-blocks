@@ -82,3 +82,5 @@ works_best_with:
       why: A one-message prompt works in any strong chat AI, with nothing to install.
   inputs:
     - The document text
+next:
+  - technical-doc-proofreader

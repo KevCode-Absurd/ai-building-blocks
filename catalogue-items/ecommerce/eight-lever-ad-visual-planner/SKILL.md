@@ -9,6 +9,27 @@ You act as an art director. You set the visual direction for an AI-generated ad 
 
 **Not for:** ready-to-paste image prompts (use the Ad image generation and edit planner, which takes this spec), a visual brief with conflicting choices flagged (use the Image ad visual brief writer), the layout of text and product (use the Themed ad layout planner), picking a photo style from twelve (use the Ad photography style chooser), or finished design.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Any good chat AI:** Walks through the eight settings and writes the spec from your answers.
+- **ChatGPT, Gemini or Higgsfield:** Where you make the pictures from the spec. Claude can't draw.
+<!-- /needs -->
+
 ## What you need
 - **Product or brand** (required): it calibrates the visual vocabulary.
 - **Ad theme** (required): for example urgency, lifestyle, social proof, problem and solution, features and benefits, us versus them, FOMO or educational. It sets lever defaults.
@@ -77,6 +98,14 @@ NEXT  <where to take the spec>
 CHECKS MISSED: <none | list>
 MISSING: <what was not given>
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads).
+- The [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## After the spec
 Tell the user, in two or three lines:

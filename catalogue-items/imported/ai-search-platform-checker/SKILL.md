@@ -32,11 +32,13 @@ allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
 
 Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for the same query. Each AI search platform uses different indexes, ranking logic, and source preferences. A page optimized for Google AI Overviews may be invisible to ChatGPT, and vice versa. Platform-specific optimization is not optional — it is the foundation of any serious GEO strategy.
 
+**About the figures in this skill:** the percentages here come from the original author and carry no source. Treat them as rough guides. Do not quote them to the user as fact.
+
 ## How to Use This Skill
 
 1. Collect the target URL and the site's primary topic/industry
 2. Run each platform checklist below against the site
-3. Score each platform on the 0-100 rubric
+3. Score each platform on the 0-100 rubric. Some factors (Reddit activity, backlinks, Knowledge Panel, Bing coverage, social engagement) cannot be read from the public web. Ask the user for that data, or mark the factor "unverified" and leave it out of the score. Never estimate it.
 4. Generate GEO-PLATFORM-OPTIMIZATION.md with per-platform scores, gaps, and action items
 
 ---
@@ -92,11 +94,11 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 
 ### Optimization Checklist
 
-1. **Wikipedia Presence**: Check if the brand/person/product has a Wikipedia article. If not, assess notability criteria. If notable, create a draft. If an article exists, ensure it is accurate and current.
+1. **Wikipedia Presence**: Check if the brand/person/product has a Wikipedia article. If not, assess notability criteria. If notable, suggest a draft, but only after the brand discloses its conflict of interest and follows Wikipedia's rules for people writing about themselves (use the talk page and request edits; do not write about yourself as if independent). If an article exists, ensure it is accurate and current.
 2. **Wikidata Entity**: Verify the entity exists on Wikidata (wikidata.org). If not, create a Wikidata item with key properties: instance of, official website, social media links, founding date, headquarters location.
 3. **Bing Webmaster Tools**: Verify the site is registered in Bing Webmaster Tools. Submit sitemap. Check for crawl errors.
 4. **Bing Index Coverage**: Use `site:domain.com` on Bing to verify key pages are indexed. Bing may have different indexed pages than Google.
-5. **Reddit Authority**: Check for brand mentions on Reddit. Identify relevant subreddits. Assess whether the brand participates authentically in discussions.
+5. **Reddit Authority**: Check for brand mentions on Reddit. Identify relevant subreddits. Assess whether the brand participates authentically in discussions. Any posting must say who the poster is and follow each subreddit's self-promotion rules.
 6. **YouTube Presence**: Verify YouTube channel exists with relevant content. Video descriptions should contain full URLs and entity information.
 7. **Authoritative Backlinks**: ChatGPT/Bing weight .edu, .gov, and major publication backlinks heavily. Audit backlink profile for these sources.
 8. **Entity Consistency**: Brand name, founding date, leadership, and key facts must be consistent across Wikipedia, Crunchbase, LinkedIn, and the official website.

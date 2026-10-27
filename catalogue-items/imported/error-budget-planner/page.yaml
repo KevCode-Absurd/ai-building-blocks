@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
   - Paste the skill instructions into the chat.
   - Add your service name, what it does and what users care about most.
-  - Add your current uptime and speed numbers, if you have them.
+  - Add your current uptime and speed numbers, if you have them. The budget is worked out as (1 - target) x minutes in the month, so a 99.9% target over 30 days leaves 43.2 minutes. You can check the numbers yourself.
   - Check each target against real data before you share it. Ask your team to agree on the targets.
   - Turn the alert rules into your monitoring tool's format and build the dashboard.
 output_sample:

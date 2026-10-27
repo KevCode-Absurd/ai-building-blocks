@@ -7,7 +7,7 @@ job: build-software
 headline: Radio transmit and capture helper
 subhead: A test signal sent over the air from a software defined radio, and the received IQ data captured and ready to study. You can run a loopback test, capture a band, or send for a long time.
 explain: |
-  A test signal sent over the air from a software defined radio, and the received IQ data captured and ready to study. You can run a loopback test, capture a band, or send for a long time.
+  First you choose your radio setup, the signal and the frequency. You get back a MATLAB script that sends the signal and records the IQ data the radio receives, ready for you to study.
 
   It works with NI USRP radios using MATLAB Wireless Testbench. You pick the signal: a test tone, a standard-style waveform or your own samples. The skill sets sample rate, gain and antennas, then chooses transmit once or continuous, and foreground or background capture. It also helps when samples drop or gain is wrong. You need MATLAB, the Wireless Testbench add-on and a set-up USRP radio. First-time radio setup is a separate task.
 when:
@@ -23,13 +23,15 @@ you_give:
   - Test signal or waveform
   - Radio model and antenna setup
   - Center frequency and sample rate
-  - MATLAB with Wireless Testbench
+  - MATLAB with the Wireless Testbench add-on (both are paid MathWorks products)
+  - A USRP radio already set up and saved as a radio configuration
 you_get:
   - Transmit and capture script
   - Captured IQ data
   - Gain and sample-rate settings
   - Fixes for dropped samples
 how_to_use:
+  - Set up your USRP radio first if you have not. That is a separate job, covered by the USRP radio setup helper. For capture that starts only when a signal appears, use the triggered radio capture helper instead.
   - Open your AI tool and paste in the skill text. Tell it you have a USRP radio and MATLAB with Wireless Testbench.
   - Tell it your radio model, antennas, center frequency, sample rate and the signal you want to send.
   - Check that you may transmit on that frequency and power in your country before you run any transmit step.
@@ -60,3 +62,4 @@ output_sample:
       contains: Settings to send or capture on more than one antenna.
     - name: Troubleshooting
       contains: Fixes for dropped samples and wrong gain.
+next: [triggered-radio-capture-helper, usrp-radio-setup-helper]

@@ -21,9 +21,9 @@ This skill collects public data about people who follow or comment on an account
 
 Report patterns across the group, such as common places, interests and how much of the engagement looks genuine. Never list named people or build a profile of one person in your summary. These Actors return public profile fields and comments, not verified age or gender. Label any demographic claim as inferred, and say how many records it rests on.
 
-Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never print the token. The token lives in `.env` only.
+Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never print the token. The token lives in `.env` only. The `mcpc` command passes the token in a header, which other programs on a shared machine could see in the process list, so run it on your own computer and keep its output out of shared logs.
 
-The run script is at `reference/scripts/run_actor.js` inside this skill folder. Where the commands below use `${CLAUDE_PLUGIN_ROOT}`, replace it with the path to this skill folder if that variable is not set.
+The run script is at `reference/scripts/run_actor.js` inside this skill folder. Run the commands below from that skill folder.
 
 If an input is missing (account link, platform, cap), ask once, then mark `MISSING: <what>` and stop. Never invent audience data. If you cannot run commands, say so, and offer a rough read of a sample of public comments the user pastes, marked as low confidence.
 
@@ -94,7 +94,7 @@ This returns:
 
 Before running, ask:
 1. **Output format**:
-   - **Quick answer** - Display top few results in chat (no file saved)
+   - **Quick answer** - Display the top 5 results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
 2. **Number of results**: Based on character of use case
@@ -103,14 +103,14 @@ Before running, ask:
 
 **Quick answer (display in chat, no file):**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT'
 ```
 
 **CSV:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.csv \
@@ -119,7 +119,7 @@ node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
 
 **JSON:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.json \
@@ -131,7 +131,7 @@ node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
 After completion, report:
 - Number of audience members/profiles analyzed
 - File location and name
-- Key demographic insights
+- Key demographic insights (label each one as inferred and say how many records it rests on)
 - Suggested next steps (deeper analysis, segmentation)
 
 ## Error Handling

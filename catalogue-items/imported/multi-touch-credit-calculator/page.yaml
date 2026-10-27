@@ -37,6 +37,7 @@ you_get:
   - Cost per sale by channel and day, for the rule you pick
   - A note on what the numbers can and cannot say
 how_to_use:
+  - Gather first your touches table, your sales table, the list that links touches to buyers, and your ad spend by channel and day. Run the credit ledger first and the cost report second.
   - Download the skill folder from this page. Keep the references and scripts folders with SKILL.md. The contract files in references say how each input table must look.
   - Use an AI that can run SQL on BigQuery, such as Claude Code with the bq tool signed in. Live runs use billed BigQuery jobs in your own project. The test scripts cap each job at 1 GiB. You need permission to run query jobs.
   - Tell your AI your time zone, date range, lookback days and the credit rule you want for the cost report. Add your touches, sales, spend and the buyer link list.

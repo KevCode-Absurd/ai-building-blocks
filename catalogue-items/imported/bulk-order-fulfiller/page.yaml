@@ -34,11 +34,12 @@ you_get:
   - A summary and a results file
 how_to_use:
   - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
-  - Sign in to your store with Shopify CLI. Your sign-in needs permission to read orders and write fulfilments.
+  - Install Shopify CLI (Shopify's own install guide has the steps). Then sign in to your store with it. Your sign-in needs permission to read orders and write fulfilments.
   - Give your AI the skill, your store address, your location and your tracking list. Say whether customers should get an email.
   - Ask for the preview first. Check the order numbers, tracking numbers and the count of emails.
   - If it looks right, say go ahead. Then read the results for each order and fix any errors in Shopify.
-  - Before you use it on real orders, check that the Shopify API version in the skill is still current. We have not run it on live orders.
+  - Before you use it on real orders, check the API version (2025-01) and the fulfillmentCreate name against Shopify's current docs. If they have changed, ask your AI to update them from the docs first. We have not run it on live orders.
+  - After the run, use the results file to confirm each order in Shopify. Use the Order hold manager for any orders you want to pause.
 how_it_works:
   - title: Ask for what is missing
     text: It asks once for the store, location, tracking list and email choice. It never makes up a tracking number.

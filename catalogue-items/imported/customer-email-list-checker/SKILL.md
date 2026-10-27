@@ -50,9 +50,9 @@ A customer can carry multiple flags; the most severe (`invalid_syntax` > `bounce
    **Inputs:** `first: 250`, select `id`, `defaultEmailAddress { emailAddress, marketingState }`, `numberOfOrders`, `tags`, pagination cursor. If `marketing_consent_only: true`, filter `query: "email_marketing_state:subscribed"`
    **Expected output:** All targeted customers with email; paginate until `hasNextPage: false`
 
-2. Run detection rules over each email; collect flags
+2. For each address, apply checks 1 to 6 in order and collect every flag it earns. Set `recommended_action` from the most severe flag.
 
-3. Aggregate counts per flag, build suppression list
+3. Count addresses per flag, build the suppression list from the `suppress` rows, then write the CSV and print the summary.
 
 ## GraphQL Operations
 
@@ -160,8 +160,8 @@ CSV file `deliverability_audit_<YYYY-MM-DD>.csv` with columns:
 | Unicode local parts | Internationalized email addresses | Normalize via NFC; do not flag valid IDN domains |
 
 ## Best Practices
-- Run before every large promotional send — high invalid / bounce rates above 2% put your sending domain reputation at risk.
-- Treat `role_account` flags as soft-suppression: those addresses rarely consent to marketing meaningfully and frequently mark mail as spam.
+- Run before every large promotional send — high invalid or bounce rates can put your sending domain reputation at risk. Many senders aim to keep them very low (about 2% is a common rule of thumb, not a fixed limit). Use your email platform's own bounce limits.
+- Treat `role_account` flags as soft-suppression: those addresses may not belong to a person who chose to hear from you, and can lead to spam complaints.
 - Re-audit quarterly even if the customer list is static — domain reputation lists change, and disposable-email providers add new domains.
-- Pair with `marketing-consent-report` to confirm consent state aligns with what your email service provider has on file.
+- Pair with `marketing-consent-auditor` to confirm consent state aligns with what your email service provider has on file.
 - Hand the resulting suppression CSV to your email service provider's import-suppression-list feature; do not silently delete customers from Shopify based on this audit.

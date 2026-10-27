@@ -30,11 +30,13 @@ you_get:
   - Usage examples
   - Styling that follows the rules
 how_to_use:
+  - Before you start, check that your project has a package.json and uses React (for example Next.js or Vite). Write down the screens or components you need and your package manager. Choose a registry if you have one, such as @shadcn.
   - Open your AI tool in a place where it can run commands and read your project files.
   - Paste in the skill text, or add the skill folder.
   - Tell your AI which components or screens you need, and which package manager you use.
   - Let it read your project setup, then search for ready-made components before it builds anything.
-  - Review the added files and usage code, then run your project to see the result.
+  - Review the added files and usage code, then run your project and check the result in your browser. You should see the new files, the import lines and a short usage snippet.
+  - Next, run the Design review panel or the Accessible UI builder on the new screen.
 output_sample:
   input:
     - The components or screens you need
@@ -43,7 +45,7 @@ output_sample:
     - Design preferences (optional)
   prerequisites:
     - An AI that can run commands and read your project files
-    - A JavaScript project with a package manager
+    - A JavaScript project with a package.json and a React-based framework
   output:
     - name: Project context
       contains: Your project setup and the components you already have, read before anything is added.
@@ -54,6 +56,9 @@ output_sample:
     - name: Component docs and examples
       contains: Links and notes on how each added component is used.
     - name: Usage code
-      contains: Example code that puts the components together, such as tabs plus cards plus form controls.
+      contains: The import lines and a short example that puts the components together, such as tabs plus cards plus form controls.
+    - name: List of added files
+      contains: The names and folders of every file the command added or changed in your project.
     - name: Styling check
       contains: A check that the code uses built-in variants, semantic colours, gap spacing and layout-only className.
+next: [design-review-panel, accessible-ui-builder]

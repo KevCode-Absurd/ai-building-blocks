@@ -7,9 +7,10 @@ description: Draft anonymous one-page company teasers for sell-side M&A processe
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. The two rules below are the market
+rules it needs. The longer convention and data files named in the original are
+not included here, so use only these rules and the figures the user gives you.
+Two rules cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,8 +20,8 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+If a US term or measure has no Indian equivalent, name the gap. Never
+substitute a proxy and present it as the real thing.
 
 ## Workflow
 
@@ -60,9 +61,9 @@ One page, professionally formatted:
 
 | Metric | Value |
 |--------|-------|
-| Revenue | $XXM |
+| Revenue | ₹XX Cr |
 | Revenue Growth | XX% CAGR |
-| EBITDA | $XXM |
+| EBITDA | ₹XX Cr |
 | EBITDA Margin | XX% |
 | Employees | XXX |
 

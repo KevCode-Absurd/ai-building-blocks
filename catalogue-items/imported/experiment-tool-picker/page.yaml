@@ -16,9 +16,9 @@ when:
   - Two teams run different tools and you wonder if you should merge.
   - You need rules on who can launch tests and read data.
 not_for:
-  - "You need to design a test or set sample sizes: use the experiment-design skill, not this one."
-  - "You want to read results from a test that has finished: use the experimentation-analytics skill."
-  - "You only need to run feature flags day to day: use the feature-flagging skill, or ask your engineers."
+  - "You need to design a test or set sample sizes: use the experiment designer, not this one."
+  - "You want to read results from a test that has finished: use the experiment result analyst."
+  - "You only need to run feature flags day to day: use the feature flag planner, or ask your engineers."
 you_give:
   - Team size and who runs tests
   - Monthly traffic or event volume
@@ -37,7 +37,8 @@ how_to_use:
   - Add your current tool and budget if you have them. Say so if you do not.
   - Ask your AI to pick one tool and explain why.
   - Check that the pick matches your data setup. Then ask for a migration plan or a governance setup if you need one.
-  - Check current prices on each vendor's own site before you decide.
+  - Check current prices, free-tier limits and customer lists on each vendor's own site before you decide. The skill's figures are rough and dated May 2026.
+  - Pick one tool. Run the migration or governance part only if the pick changes your current setup. Then plan your first test with the experiment designer.
 output_sample:
   input:
     - Your team size and who runs tests
@@ -60,3 +61,4 @@ output_sample:
       contains: Who can launch tests, who can read data, and how changes move between environments.
     - name: Cost reality
       contains: How each pricing shape treats your usage, and what to say to finance.
+next: [experiment-designer, feature-flag-planner, experiment-result-analyst]

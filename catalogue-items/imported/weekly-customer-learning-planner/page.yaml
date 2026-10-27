@@ -31,9 +31,9 @@ you_get:
   - Weekly customer contact routine
   - Score of your current practice
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
-  - Tell your AI the one outcome you want to move, like raising trial sign-ups that become paying customers.
-  - Add what you know about your customers, any ideas you already have, and how often you talk to customers now.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Also paste the reference files you want (the assumption and tree notes help most), or say the plan will use the core method only. No code, files or paid tools are needed.
+  - Write a short brief first. It has the one outcome you want to move (like raising trial sign-ups that become paying customers), who you talk to now, your top three customer needs, and how many interviews you can do each week.
+  - Add any ideas you already have to the brief.
   - Read the tree and check that each need is worded the way a customer would say it.
   - Pick the top assumption and run its test this week. Book the weekly customer slot in your calendar.
 output_sample:
@@ -51,3 +51,4 @@ output_sample:
       contains: A set rhythm for customer contact each week, with who takes part and what each person does.
     - name: Discovery score
       contains: A score out of 10 for your current practice, the rows that failed and a fix for each.
+next: [one-change-experiment-planner]

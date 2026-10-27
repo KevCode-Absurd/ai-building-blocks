@@ -15,8 +15,8 @@ outputs:
   - {type: test_report}
 uses: [conversion-landing-page-designer, landing-page-auditor, experiment-designer, a-b-test-verdict-maker]
 steps:
-  - {uses: conversion-landing-page-designer, note: "Starts from your offer and buyer and returns a page plan with copy and design rules."}
-  - {uses: landing-page-auditor, note: "Reads the page from the step before and ranks what to fix first. Hands the ranked fixes to the test step."}
+  - {uses: conversion-landing-page-designer, note: "Starts from your offer, price and buyer. Returns a page plan with section copy, design rules and one clear button."}
+  - {uses: landing-page-auditor, note: "Reads the page plan from step 1. Returns ranked fixes with a score, quick wins and up to three test ideas. Hands the ranked fixes to the test step."}
   - {uses: experiment-designer, note: "Designs a test for the top change from the review, sized to your traffic. Hands the test design to the verdict step."}
   - {uses: a-b-test-verdict-maker, note: "Reads the control and variant counts you export after the test, against step 3's test design."}
 origin: rebuilt

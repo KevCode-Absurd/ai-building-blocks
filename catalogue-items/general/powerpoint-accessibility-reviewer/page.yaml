@@ -15,8 +15,9 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share your deck. Get specific fixes for slide titles, reading order, alternative text and readable visual content.
-  - Actual PPTX, audience needs, intended presentation app and available source images or chart data.
+  - You are about to share a deck with the public, clients or staff and want to catch accessibility gaps first.
+  - Your slides have images or charts with no alternative text.
+  - You are unsure whether a screen reader will read your slides in the right order.
   - You need a checked copy while keeping your original files intact.
 not_for:
   - "You need a legal or compliance certificate: ask an accessibility specialist, because this review never certifies a deck."
@@ -113,3 +114,5 @@ tests:
     expected: Inspect the actual accessibility order and mark the decoration appropriately.
   - input: The chart only distinguishes series by red and green
     expected: Require an additional readable distinction such as labels or patterns.
+before: []
+next: [powerpoint-speaker-note-builder, powerpoint-audience-handout-builder]

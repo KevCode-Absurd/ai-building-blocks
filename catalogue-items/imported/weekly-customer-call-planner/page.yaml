@@ -37,6 +37,7 @@ how_to_use:
   - Check the list of calls your AI shows you. Remove cancelled calls and add any it missed.
   - Read the brief. Meetings with thin data get a short note, so check those accounts yourself before the call.
   - Share the brief with your reps or keep it as your Monday reading.
+  - After each call, update your Common Room notes, or turn the call into a written summary with meeting-notes-maker.
 output_sample:
   input:
     - Your calendar, or a list of your outside calls with company, time and attendee names
@@ -61,3 +62,4 @@ output_sample:
       contains: One or two sentences on what to get done in that meeting.
     - name: Limited Data note
       contains: "A short section for thin accounts: what Common Room returned, web findings and a nudge to check with colleagues."
+next: [customer-call-prep-writer, meeting-notes-maker]

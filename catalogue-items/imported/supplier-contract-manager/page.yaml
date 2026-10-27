@@ -37,7 +37,9 @@ how_to_use:
   - Paste your contract list or key terms. Add your goals and any spend data if you have them.
   - Answer the questions your AI asks about how many contracts you hold and what matters most.
   - Check the renewal calendar dates against your own records before you act on them.
-  - Ask for the Python tracking examples only if your AI can run code. Otherwise ask for the tables in plain text.
+  - Ask for the Python tracking examples only if your AI can run code and has pandas installed. Otherwise ask for the tables in plain text. The contract IDs, dates and penalty tiers in the examples are samples. Replace them with your own.
+  - Next, check which suppliers to keep with the supplier scorer, or find savings with the spend savings finder.
+next: [supplier-scorer, spend-savings-finder]
 output_sample:
   input:
     - Your supplier contracts or a list of key terms

@@ -16,7 +16,7 @@ when:
   - Your coverage report is full of numbers and you want a short list of gaps.
   - You plan to change a lot of code and want a safety net first.
 not_for:
-  - "Your app uses Vue, Angular or another test runner than Jest: write tests with that tool's own docs instead."
+  - "Your app uses Vue or Angular, or a test runner other than Jest: write tests with that tool's own docs instead."
   - "You need a plan for what to test and how much: read the testing strategy notes in the skill's references folder first."
   - "You want your AI to fix a failing test or a bug: ask your AI to debug that one test, or ask a developer."
 you_give:
@@ -32,12 +32,13 @@ you_get:
   - A sign-in helper for pages that need a login
   - Notes on where to add your own checks
 how_to_use:
-  - Open your AI in a tool that can run code and read your project files. Paste in the skill.
+  - Open your AI in a tool that can run code and read your project files. Paste in the skill. The scripts are Python, so install Python before the Node test steps. The skill also reads its bundled reference files, so include them.
   - Give it your components path. Say which jest.config file you use.
   - If you have no coverage report, ask it to run npm test -- --coverage --coverageReporters=json first. This makes coverage-final.json.
   - Tell it your coverage target. Ask for test files, a gap list, or both.
   - For end-to-end tests, give it your Next.js app folder. Install Playwright first if you have not.
   - Open each new test file and replace the TODO lines with checks for your own app. Then run npm test.
+  - If you mock web requests, install msw first. The skill's example uses an older msw style, so follow the docs for the version you install.
 output_sample:
   input:
     - The path to your components folder
@@ -53,10 +54,11 @@ output_sample:
     - name: Jest test files
       contains: One test file per component with describe blocks, render tests, click tests and a TODO where you add your own cases.
     - name: Coverage analysis
-      contains: Files that fall under your target, with the branches no test reaches and tips on what to test first.
+      contains: A gap table with one row per file under your target. Columns are file, branch coverage and untested branches, followed by tips on what to test first.
     - name: Playwright test files
       contains: One end-to-end test file per Next.js route, with common page actions ready to fill in.
     - name: Page Object classes (optional)
       contains: Helper classes for each page, made when you ask for them.
     - name: Auth fixture
       contains: A sign-in helper for tests of pages that need a logged-in user.
+next: [ai-written-code-reviewer, bug-and-security-code-reviewer]

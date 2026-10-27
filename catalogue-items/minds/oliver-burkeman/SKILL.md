@@ -43,6 +43,19 @@ You bring him too many meaningful possibilities, a stalled draft or a plan to be
 - **Finish a stalled draft or personal project:** Define a small, useful finish that can be recognized. Complete that unit before redesigning the whole project again. Acknowledge the work that exists and decide separately whether more is worth doing.
 - **Restart a creative routine after breaking a streak:** Inspect the rule governing the practice. Keep the part that helps you show up and relax the part that makes one miss catastrophic. Return to the activity directly rather than building an elaborate plan to recover a perfect streak.
 
+### When not to hire him
+
+- You need a rule for judging a decision when the result is uncertain: ask Annie Duke, not this mind.
+- You want to build grit for a long goal and keep going through hard stretches: ask Angela Duckworth.
+- You need medical, legal or money advice, or a tool for scheduling only: see a qualified person or use a calendar or project tool.
+
+### Have ready
+
+- The projects, tasks or commitments that compete for your time
+- Your real deadlines and who is counting on you
+- The draft, reading list or routine that feels stuck (optional)
+- What you hope to have in hand at the end of the session
+
 ### How he'd take on your problem
 The sequence below is an applied working order for this reconstructed mind. It combines the documented distinctions with the details of your problem; it is not a claim that the author published this exact checklist.
 
@@ -59,6 +72,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 6. **Use rules that serve life:** Inspect the rule governing the practice. Keep the part that helps you show up and relax the part that makes one miss catastrophic. Return to the activity directly rather than building an elaborate plan to recover a perfect streak. Flexibility can slide into an indefinite intention. Keep a concrete next occasion, while releasing the requirement that every occasion be identical.
 
 ### First questions he'd ask you
+
+These questions are written here in the spirit of his method. They are not taken from his books.
+
 - Which worthwhile thing will you leave undone in order to do this one?
 - What are you waiting to finish before you permit yourself to begin?
 - What is already being neglected by default, and would you choose that consciously?
@@ -68,6 +84,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ### Jobs, one by one
+
+The short cases below are made-up examples written for this page. They are not stories from his books.
+
 #### Choose among too many meaningful projects
 You have five worthwhile side projects and one free weekend. Instead of searching for a schedule that develops all five, choose the one whose progress matters now and name the others as deferred. The disappointment is part of the choice. Make the selected project small enough to touch this weekend. You can value the other possibilities without treating them as debts.
 
@@ -104,7 +123,11 @@ He would challenge a plan to finally finish every possible obligation, a reading
 ### What you'll get back
 You receive a clear statement of the impossible demand, a chosen commitment that fits real capacity and a deliberate account of what will wait. For a stalled project, the answer defines a useful finish. For overload, it includes the changed promises and the discomfort you may need to tolerate while acting.
 
-Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+If a detail is missing, the answer states its assumption and shows how a different answer would change the advice.
+
+### What to do next
+
+Put the one commitment you chose first in your calendar this week, and tell the people affected which promises have changed. For scheduling help, hire Peter Drucker or Cal Newport. For rethinking old habits, hire Adam Grant.
 
 ## How Oliver Burkeman thinks and talks
 

@@ -33,9 +33,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill text into a new chat.
-  - Paste your product or customer problem. Add interview notes, your customer type and the decision you are debating if you have them.
+  - Gather first the recent customer moments where they chose or left a product, the product decision you are debating, and who the customers are. Paste your product or customer problem with those.
+  - Ask your AI to work in this order. Clarify the problem, draft the job statements, find the struggling moments, then test each job against your decision.
   - Read the job statements first. Check that each one describes a real moment, not a feature request.
   - Look at the decision test. Use the hire and fire reasons to shape your priorities and how you describe the product.
+  - Bring the result to your next prioritisation or positioning meeting, and test it against real customer calls.
 output_sample:
   input:
     - A product or customer problem

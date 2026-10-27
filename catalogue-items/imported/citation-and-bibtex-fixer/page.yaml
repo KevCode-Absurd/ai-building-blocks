@@ -9,7 +9,7 @@ subhead: A clean bibliography with every entry checked against the real paper. G
 explain: |
   A clean bibliography with every entry checked against the real paper. Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and get back tidy entries with duplicates removed.
 
-  It looks papers up in Google Scholar or PubMed and pulls the full details: authors, title, journal, year and pages. It turns IDs into correctly formatted BibTeX. For an existing file, it compares each entry with the actual publication, flags mismatches and missing fields, merges duplicates and makes the key names and style consistent. It can also find highly cited papers in a field. Scripts are included, so Python and web access are needed. Always skim the final list before you submit your paper.
+  It looks papers up in PubMed or on the publisher's page and pulls the full details: authors, title, journal, year and pages. Google Scholar can be used by hand, but it may block automated lookups. It turns IDs into correctly formatted BibTeX. For an existing file, it compares each entry with the actual publication, flags mismatches and missing fields, merges duplicates and makes the key names and style consistent. It can also find highly cited papers in a field. The original scripts are not in this copy, so your AI checks each entry by hand against the source page. Web access is needed. Always skim the final list before you submit your paper.
 when:
   - You have a pile of DOIs and need BibTeX entries for your thesis.
   - Your bibliography has duplicates and odd formatting.
@@ -30,11 +30,11 @@ you_get:
   - Flagged entries that do not match the source
   - Consistent key names
 how_to_use:
-  - Use an AI that can run Python and reach the web. Without code running, it can only do a lighter check by hand.
+  - Use an AI that can reach the web. The skill's scripts are not included, so the AI does the lookups and checks by hand, one entry at a time.
   - Paste your DOIs, titles or BibTeX file into the chat. Add a topic and year range if you want it to search.
   - Ask your AI to follow the Citation management skill and show each step it runs.
   - Read the validation report. Check every auto-fixed entry against the publisher page.
-  - Expect Google Scholar lookups to slow down or fail at times. Try again later or use PubMed.
+  - Expect Google Scholar lookups to slow down or fail, and its terms may not allow automated searches. PubMed or the publisher's export is the safer route.
   - Skim the final list before you submit your paper.
 output_sample:
   input:

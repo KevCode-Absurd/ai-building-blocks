@@ -18,7 +18,7 @@ when:
   - A list, inbox or dashboard is blank on day one and new users do not know what to do first.
   - A developer asks you for the exact text for every failed state.
 not_for:
-  - "You only have a list of error messages and want better wording: use the Plain error message writer."
+  - "You only have a list of error messages and want better wording: use the Error message rewriter."
   - "You want a score and full review of one form or screen: use the Error message rewriter or the Plain words interface rewriter."
   - "Your product has no recovery steps yet, such as retry or undo: decide those first, then run this."
   - "The text has fixed legal or payment provider wording: check with the provider before you change it."
@@ -43,7 +43,7 @@ how_to_use:
 how_it_works:
   - title: Screen states designer
     text: Lists the states on each screen you gave it, such as empty, loading, offline, blocked and failed, with what the person can do in each. Hands step 2 every failure and empty state with its cause and recovery options.
-  - title: Plain error message writer
+  - title: Error message rewriter
     text: Writes one message per failure in the person's words, with no blame and one next step your product supports. Ranks them by cost, so lost money and lost data come first. Hands step 3 the final text.
   - title: Small interface details designer
     text: Turns each message into build notes. It names where focus goes, what the button says and how the message appears and clears. Check before moving on, each note matches its message text.

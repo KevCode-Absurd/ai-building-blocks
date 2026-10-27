@@ -1,0 +1,128 @@
+new_slug: expense-report-builder
+name: Expense report builder
+summary: Paste receipts and notes. Get an expense report with totals by category, a reason for each line and gaps to fix.
+job: track-numbers
+thinking: low
+thinking_why: It sorts and adds up lines you give it, with few judgement calls.
+headline: Expense report builder
+subhead: Paste your receipts, card lines or notes. It builds an expense report with date, vendor, category, amount, currency and the business reason for each line. It adds totals by category, flags missing receipts and unclear items, and re-adds everything to check the total.
+explain: |
+  Expense reports are small and slow. You have a pile of receipts and card lines, each missing something: the reason, the category or the receipt itself. Then someone asks you to resubmit.
+
+  This skill turns the pile into a report. You paste what you have, in any order and any mess. It puts every line in the same shape: date, vendor, category, amount, currency, business reason and whether you have a receipt. It adds the totals by category and in all, then re-adds each one to check. It flags lines that are missing a reason or a receipt, look like duplicates, or look personal. It uses your employer's categories and rules if you paste them. It never makes up an amount, a date or a reason.
+when:
+  - You came back from a trip and need to claim your costs.
+  - You do a monthly expense claim and the lines are a mess.
+  - You want your costs sorted for a bookkeeper or for your own records.
+not_for:
+  - "You want a year of transactions sorted for tax: use the Expense sorter."
+  - "You want to check a supplier's invoice: use the Invoice checker."
+  - "You want to know what you may claim: check your employer's policy, or ask a tax adviser."
+you_give:
+  - Receipts, card lines or notes, pasted as text
+  - The trip or period the report covers
+  - Your employer's or your own categories and rules (optional)
+  - The business reason for each item, if you remember (optional)
+you_get:
+  - A table with date, vendor, category, amount, currency, reason and receipt status
+  - Totals by category and in all, re-added
+  - "A list of lines to fix: missing reason, missing receipt, possible duplicate, possibly personal"
+  - A short covering note to send with the report
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your receipts and card lines. Say the trip or period, and which currency each is in.
+  - Paste your employer's expense categories and rules, if you have them.
+  - Answer the questions on flagged lines, then ask it to update the report.
+  - Check the total against your own sums, then attach your receipts and submit.
+output_sample:
+  input:
+    - Receipts, card lines or notes, pasted as text
+    - The trip or period, and the currency of each item
+    - Your employer's categories and rules (optional)
+  output:
+    - name: Expense report
+      contains: "Every line in one shape: date, vendor, category, amount, currency, reason and receipt."
+    - name: Totals by category
+      contains: Each category's total, one per currency.
+    - name: Total
+      contains: The overall total, re-added, one per currency.
+    - name: To fix
+      contains: Lines missing a reason or a receipt, possible duplicates and possibly personal items.
+    - name: Cover note
+      contains: A short note to send with the report.
+    - name: Missing
+      contains: Anything you did not tell it, such as a currency rate.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Puts lines in one shape
+    text: Turns each receipt or note into the same fields.
+  - title: Applies categories
+    text: Uses your employer's categories if you gave them, or common ones if not, and says which.
+  - title: Keeps currencies apart
+    text: Never converts currency unless you give a rate. Totals are per currency.
+  - title: Adds up
+    text: Adds by category and in all, and re-adds to check.
+  - title: Flags problems
+    text: Lists lines missing a reason or receipt, possible duplicates and possibly personal items.
+  - title: Writes the cover note
+    text: A short note to send with the report.
+output_shape: |
+  EXPENSE REPORT <trip or period>
+  Date | Vendor | Category | Amount | Currency | Business reason | Receipt
+
+  TOTALS BY CATEGORY
+  <category> | <currency> <amount>
+
+  TOTAL
+  <currency> <amount>
+
+  TO FIX
+  - Line <n>: <missing reason / missing receipt / possible duplicate / possibly personal>
+
+  COVER NOTE
+  <short note>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Categories
+    how: Paste your employer's list. Without it, the skill uses common categories and says so.
+  - what: Currencies
+    how: Give a rate only if you want conversion. Otherwise totals stay separate by currency.
+  - what: Business reason
+    how: Add it as you go, such as "client lunch". Reasons are the thing most reports lack.
+  - what: Policy limits
+    how: Paste any limit, such as a daily meal cap. The skill flags lines that go over.
+judge:
+  - Every line is in the same shape.
+  - The totals can be rebuilt by adding the lines.
+  - No amount, date or reason appears that you did not give.
+  - Lines missing a reason or receipt are flagged.
+  - Currencies are not mixed unless you gave a rate.
+test:
+  - Add the lines up by hand. The total should match.
+  - Paste the same item twice. It should be flagged as a possible duplicate.
+  - Leave out one reason. The line should appear under TO FIX, not get a made-up reason.
+improve:
+  - Save your employer's categories and limits in the skill file.
+  - Keep your receipts in one folder named by month, so the receipt column is always true.
+  - Pair it with the Expense sorter at year end to total your costs for tax.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Putting lines into one shape and adding them is quick work for any strong chat AI.
+    - name: A spreadsheet
+      why: Paste the table into a sheet to sort, filter and attach receipts.
+  inputs:
+    - Photos or PDFs of receipts, attached
+    - Your employer's expense policy
+    - A card or bank statement export for the period
+terms:
+  - term: Business reason
+    meaning: One line on why the cost was needed for work, such as who you met.
+  - term: Possible duplicate
+    meaning: A line that looks like another, with the same date, vendor and amount.

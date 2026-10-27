@@ -15,7 +15,7 @@ outputs:
 uses: [hero-story-mapper, story-shape-mapper, ten-percent-cutter, plain-english-editor]
 steps:
   - {uses: hero-story-mapper, note: "Maps your facts to the stages of the story and drafts it without inventing anything. Hands step 2 the story draft and keeps the plan for step 3."}
-  - {uses: story-shape-mapper, note: "Reads the draft from the step before and shows where the story goes flat. Hands you the shape and the flat spots; you fix them in the pause."}
+  - {uses: story-shape-mapper, note: "Reads the draft from the step before and shows where the story goes flat. Hands you the shape and the draft with the flat spots marked; you fix them in the pause."}
   - {uses: ten-percent-cutter, note: "Cuts your reworked draft by a tenth and keeps a log of what went. Uses your reworked draft (step 1's story with the step 2 fixes made by you), not step 2's report, and step 1's plan to protect what matters. Hands step 4 the shorter draft."}
   - {uses: plain-english-editor, note: "Takes the cut draft and puts it in words you would say out loud. Reads the cut draft from step 3 and hands back the final story."}
 origin: rebuilt

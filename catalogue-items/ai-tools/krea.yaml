@@ -21,11 +21,11 @@ best_for:
   - Anyone who wants image and video in one account.
 not_for:
   - "Saving up free units. They refill every day and do not carry over."
-  - "Client or ad work on the free plan. The commercial licence is listed for paid plans only, so check the terms."
+  - "Client or ad work on the free plan. The free plan lists no commercial licence, so use a paid plan for that work and check the terms."
 pricing:
   model: freemium
   from: "Free, then US$9 per month (US$5 a month billed yearly)"
-  note: "Checked 26 Oct 2026. Free: 100 compute units a day. Basic: US$9 a month, or US$5 a month billed yearly, with 5,000 units a month. Pro: US$35 a month, or US$21 billed yearly, with 20,000 units. Max: US$105 a month, or US$63 billed yearly, with 60,000 units. Business: US$200 a month, or US$160 billed yearly, with 80,000 units. Paid plans include a commercial licence, and the free plan is not listed as including one. Some models need a paid plan, such as Seedance."
+  note: "Checked 26 Oct 2026. Compute units are Krea's credits. Each image or video run spends some, and the amount varies by model, so check the cost in the app before you run. Free: 100 compute units a day. Basic: US$9 a month, or US$5 a month billed yearly, with 5,000 units a month. Pro: US$35 a month, or US$21 billed yearly, with 20,000 units. Max: US$105 a month, or US$63 billed yearly, with 60,000 units. Business: US$200 a month, or US$160 billed yearly, with 80,000 units. Paid plans include a commercial licence, and the free plan is not listed as including one. Some models need a paid plan, such as Seedance."
 works_with:
   - flux
   - kling
@@ -41,6 +41,7 @@ first_result:
   - "Type a short prompt with the subject, the setting and the look, then generate."
   - "Run the same prompt in a second model and compare the two."
   - "Upscale the one you like, then download it. Check the plan terms before you use it in an ad."
+  - "What you get: images from the model you picked. The page does not say how many come back per run or which file types you can download, so check in the app."
 needs:
   - "A free account. No card is needed to start."
   - "A short prompt, and a reference image if you want a set look (optional)."
@@ -52,9 +53,7 @@ example:
 not_verified:
   - "The units each model costs per image or per second of video. The pricing page does not give a table."
   - "Any plan-specific upscale limit. The page names image and video size limits but ties none to a plan."
-  - "Max plan size. The visible page says 60,000 units at US$105, while a hidden data block says 40,000 at US$70."
-  - "That the free plan allows commercial use. An earlier note said so, but the page only lists a licence for paid plans."
-  - "Free plan upscale size. An earlier note said up to 2K, which we could not confirm."
+  - "Free plan upscale size."
 sources:
   - https://www.krea.ai/pricing
   - https://www.krea.ai

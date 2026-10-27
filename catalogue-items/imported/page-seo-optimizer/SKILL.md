@@ -11,13 +11,17 @@ metadata:
 
 This skill enables an AI agent to perform comprehensive search engine optimization on any webpage or website. The agent audits on-page factors (title tags, meta descriptions, headings, internal links), evaluates technical SEO health (Core Web Vitals, mobile-first indexing, crawlability), and implements structured data markup. The goal is to produce actionable recommendations that improve organic search rankings and click-through rates.
 
+## Rules for numbers
+
+Never estimate or invent a measurement. If you cannot open the page, or cannot measure speed, Core Web Vitals, render-blocking files or competitor content, ask the user to paste the page text and a PageSpeed Insights report, and mark each missing figure `MISSING:`. Give competitor comparisons only when the user supplies competitor data.
+
 ## Workflow
 
 1. **Crawl and inventory the page.** Fetch the target URL and parse the full HTML document. Extract the title tag, meta description, canonical URL, Open Graph tags, all heading elements (H1–H6), images with alt attributes, and every internal and external link. Record the HTTP status code, response time, and redirect chain if applicable.
 
 2. **Analyze on-page SEO elements.** Evaluate the title tag for length (50–60 characters), keyword placement, and uniqueness. Check the meta description for length (150–160 characters) and compelling call-to-action language. Verify there is exactly one H1 tag that contains the primary keyword, and that H2–H4 tags form a logical content hierarchy. Flag missing alt text on images and broken internal links.
 
-3. **Evaluate technical SEO factors.** Assess Core Web Vitals — Largest Contentful Paint (LCP < 2.5s), First Input Delay (FID < 100ms), and Cumulative Layout Shift (CLS < 0.1). Check mobile-friendliness by analyzing the viewport meta tag and responsive layout. Verify the existence and correctness of `robots.txt`, XML sitemap, canonical tags, and hreflang tags for international sites. Identify render-blocking resources and unused CSS/JS.
+3. **Evaluate technical SEO factors.** Assess Core Web Vitals — Largest Contentful Paint (LCP < 2.5s), Interaction to Next Paint (INP < 200ms), and Cumulative Layout Shift (CLS < 0.1). Check mobile-friendliness by analyzing the viewport meta tag and responsive layout. Verify the existence and correctness of `robots.txt`, XML sitemap, canonical tags, and hreflang tags for international sites. Identify render-blocking resources and unused CSS/JS.
 
 4. **Implement structured data markup.** Generate JSON-LD schema markup appropriate to the page type — Article, Product, FAQ, BreadcrumbList, Organization, or LocalBusiness. Validate the markup against Google's Rich Results requirements. Ensure the schema references match the visible page content to avoid structured data penalties.
 
@@ -32,6 +36,8 @@ Provide the agent with the URL of the webpage to optimize and, optionally, the t
 **Prompt:** `Optimize the following page for the keyword "project management tools": https://example.com/blog/best-pm-tools`
 
 ## Examples
+
+The names, numbers, dates and counts in these two examples are made-up placeholders to show the layout. They are not real data. Never copy them into a real page.
 
 ### Example 1: Blog Post On-Page Optimization
 
@@ -49,10 +55,10 @@ Provide the agent with the URL of the webpage to optimize and, optionally, the t
 ```html
 <head>
   <title>15 Remote Work Tips That Boost Productivity in 2025 | Acme Co</title>
-  <meta name="description" content="Discover 15 proven remote work tips to stay productive, manage your time, and avoid burnout. Backed by research from 500+ distributed teams.">
+  <meta name="description" content="Discover 15 remote work tips to stay productive, manage your time, and avoid burnout. [Add a claim here only if you can source it.]">
   <link rel="canonical" href="https://acme.com/blog/remote-work-tips">
   <meta property="og:title" content="15 Remote Work Tips That Boost Productivity">
-  <meta property="og:description" content="Proven strategies from 500+ distributed teams.">
+  <meta property="og:description" content="Practical remote work tips for staying productive.">
   <meta property="og:type" content="article">
   <script type="application/ld+json">
   {
@@ -61,7 +67,7 @@ Provide the agent with the URL of the webpage to optimize and, optionally, the t
     "headline": "15 Remote Work Tips That Boost Productivity in 2025",
     "author": { "@type": "Person", "name": "Jane Smith" },
     "datePublished": "2025-03-10",
-    "description": "Proven remote work tips backed by research from 500+ distributed teams."
+    "description": "Practical remote work tips for staying productive and avoiding burnout."
   }
   </script>
 </head>
@@ -75,17 +81,17 @@ Provide the agent with the URL of the webpage to optimize and, optionally, the t
 
 | Priority | Issue | Details | Fix |
 |----------|-------|---------|-----|
-| Critical | Missing XML sitemap | No sitemap found at `/sitemap.xml`; 40% of pages not indexed | Generate and submit sitemap to Search Console |
+| Critical | Missing XML sitemap | No sitemap found at `/sitemap.xml`; [share of pages not indexed, from Search Console] | Generate and submit sitemap to Search Console |
 | Critical | LCP = 4.8s on mobile | Hero image is 2.4 MB uncompressed PNG | Convert to WebP, add `width`/`height`, use `loading="lazy"` |
 | High | Duplicate title tags | 12 pages share the title "Acme Co — Home" | Write unique, keyword-rich titles for each page |
 | High | Missing canonical tags | 8 pages lack `<link rel="canonical">`, causing index bloat | Add self-referencing canonicals to every page |
 | Medium | No `robots.txt` | Entire site crawlable including `/admin` and `/staging` | Create `robots.txt` disallowing private paths |
-| Low | Images missing alt text | 34 of 120 images have empty `alt` attributes | Add descriptive alt text with relevant keywords |
+| Low | Images missing alt text | [count] of [total] images have empty `alt` attributes | Add descriptive alt text with relevant keywords |
 
 ## Best Practices
 
 - **Write for humans first, search engines second.** Keyword stuffing degrades user experience and triggers ranking penalties. Aim for natural keyword integration at 1–2% density.
-- **Prioritize Core Web Vitals.** Google uses LCP, FID, and CLS as direct ranking signals. Compress images, defer non-critical JS, and set explicit dimensions on media elements.
+- **Prioritize Core Web Vitals.** Google uses LCP, INP, and CLS as direct ranking signals. Compress images, defer non-critical JS, and set explicit dimensions on media elements.
 - **Use self-referencing canonical tags on every page.** This prevents duplicate content issues caused by URL parameters, trailing slashes, or session IDs.
 - **Build topical authority through internal linking.** Link related content in clusters around pillar pages. Use descriptive anchor text instead of generic "click here" links.
 - **Validate structured data with Google's Rich Results Test.** Incorrect schema can result in manual actions. Always match schema fields to visible on-page content.

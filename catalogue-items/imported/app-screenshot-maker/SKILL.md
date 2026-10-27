@@ -45,6 +45,8 @@ Common default URLs to suggest:
 
 ## Step 2: Gather Requirements
 
+If your tool has no `AskUserQuestion` function, ask the same questions in plain chat.
+
 Use `AskUserQuestion` with the following questions:
 
 **Question 1: Screenshot count**
@@ -171,6 +173,8 @@ Create a Node.js script that uses Playwright with proper HiDPI settings. The scr
 
 ### Script Template
 
+Fill in every `[PLACEHOLDER]` (`[APP_URL]`, `[LOGIN_URL]` and the screenshot list) before you run it. Use a test account only. Set `APP_EMAIL` and `APP_PASSWORD` in your shell, so the password is never saved in the file.
+
 Write this script to a temporary file (e.g., `screenshot-script.mjs`) and execute it:
 
 ```javascript
@@ -183,8 +187,9 @@ const SCREENSHOTS_DIR = './screenshots';
 const AUTH = {
   needed: [true|false],
   loginUrl: '[LOGIN_URL]',
-  email: '[EMAIL]',
-  password: '[PASSWORD]',
+  // Read the test login from environment variables. Never write it into this file.
+  email: process.env.APP_EMAIL,
+  password: process.env.APP_PASSWORD,
 };
 
 // Screenshots to capture

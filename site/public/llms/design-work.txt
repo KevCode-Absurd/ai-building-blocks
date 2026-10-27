@@ -1,6 +1,6 @@
 # Design things people love: AI Blocks
 
-> 116 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 114 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
 - [Apple app design checker](https://useaiblocks.com/skills/apple-app-design-checker): Share an Apple app screen or code and target platforms. Get design findings, reasons and concrete fixes to review.
@@ -10,7 +10,6 @@
 - [Brand identity system planner](https://useaiblocks.com/skills/identity-system-planner): Plan your brand identity system in three phases. Give it client facts and every place the brand shows. Get a fixed core and a hand-off guide.
 - [Brand logo planner](https://useaiblocks.com/skills/brand-mark-system-planner): Share a brief and existing brand rules. Get logo concepts, size checks, a sketch plan and a short design direction.
 - [Colour contrast checker](https://useaiblocks.com/skills/colour-contrast-checker): Share your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours.
-- [Colour palette planner](https://useaiblocks.com/prompts/five-colour-feeling-palette-picker): Pick a colour palette from one feeling. Give it what you are colouring and get five colours or fewer, each with a hex code and one job.
 - [Conversion page style guide writer](https://useaiblocks.com/skills/conversion-page-style-guide): Get a conversion page style guide that cuts friction and builds trust, with rules for forms, buttons and proof your team can check.
 - [Creative pairing idea writer](https://useaiblocks.com/skills/unlikely-pairing-idea-generator): Find fresh ideas by crossing two to four styles or fields. Get ten odd pairings, one hard limit and a short list of ideas that hold together.
 - [Creative shoot brief writer](https://useaiblocks.com/skills/creative-shoot-briefer): Turn approved brand guidelines and campaign goals into a production brief with visual direction and specs.
@@ -71,7 +70,6 @@
 - [Page readability and layout checker](https://useaiblocks.com/skills/plain-page-type-checker): Share a page, readers and layout details. Get font, spacing and contrast fixes with reasons and a custom score.
 - [Page typography and layout planner](https://useaiblocks.com/skills/page-grid-and-type-planner): Share your content and page size. Get a grid, a short type list and a plan for space across the pages.
 - [Place design principles writer](https://useaiblocks.com/skills/place-principles-writer): Write a short signed statement for a space, service or app: who it serves, what it must never be and a rule for each part, to guide your team.
-- [Plain error message writer](https://useaiblocks.com/prompts/plain-error-message-writer): Rewrite confusing error messages in plain words. Give it your errors and get what went wrong, the next step and a fix, costliest first.
 - [Playful interface designer](https://useaiblocks.com/agents/agency-design-whimsy-injector): Get three to five playful touches for your product, such as 404 pages, loading lines and button labels, with accessibility and speed checks.
 - [Poster designer](https://useaiblocks.com/skills/poster-designer): Get a finished PNG or PDF poster with its own art style, from a short brief. Your AI plans the look first, then draws it with code.
 - [Power BI report layout planner](https://useaiblocks.com/skills/design-a-power-bi-report-layout): Share report goals and data. Get a page plan with charts, filters and usability checks.

@@ -26,7 +26,7 @@ Trigger this skill when:
 
 1. **Identify Targets**: Select the DOM elements or SVGs to be animated.
 2. **Define Properties & Easing**: Specify values to animate. **Crucially**, utilize advanced easing functions (e.g., custom `cubicBezier`, `spring`, or `elastic`) instead of basic `linear` or `ease-in-out` to make the motion feel expensive and natural.
-3. **Orchestrate Timelines**: Inspect the installed major version first. This example targets Anime.js v3; use `anime.timeline()` to sequence complex choreography. Master the use of timeline offsets (relative `'-=200'` vs absolute) to create seamless overlapping motion.
+3. **Orchestrate Timelines**: Inspect the installed major version first, before you write any code. The snippets below are valid only for v3; for v4, write the v4 equivalent (`createTimeline()`) instead. This example targets Anime.js v3; use `anime.timeline()` to sequence complex choreography. Master the use of timeline offsets (relative `'-=200'` vs absolute) to create seamless overlapping motion.
 4. **Implement**:
    For a bundler with Anime.js v3 installed, `import anime from "animejs";` supplies the `anime` binding. The selectors must exist in the rendered DOM.
 

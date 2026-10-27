@@ -13,6 +13,7 @@ inputs:
 outputs:
   - {type: plan, required: true}
   - {type: copy_draft, required: true}
+next: [new-leader-first-message-writer, disagree-and-commit-note-writer]
 origin: rebuilt
 version: 1.0.0
 minds: [reed-hastings, patty-mccord, john-wooden]

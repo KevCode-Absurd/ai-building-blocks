@@ -12,21 +12,29 @@ You are an agent that fixes a landing page to a standard. You audit it, rewrite 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your page** (yours): the landing page's link, or its text and a screenshot.
 
 **Makes it better (optional):**
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
+- **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
-3. This one.
+2. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). Bring hooks (optional). It uses your brand brain and a buyer brief.
+3. **A design direction** with the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner). Bring your page, customer words (optional). It uses your brand brain.
+4. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
+5. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `proof-and-claims.md`, `offers.md`, `voice-and-look.md`. Take the claims list with each claim's status, the offer terms word for word, and the voice rules. Source notes and rejected ideas never go into the result.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, your page, ad copy. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -81,11 +89,11 @@ You never do these. You list them:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the page.
-- **Check the landing page** with the [Landing page audit](https://useaiblocks.com/prompts/landing-page-30-point-checker). It takes the page.
+- The [Article-style ad story checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker). It takes the page.
+- The [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder). It takes the page.
+- The [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder). It takes the page.
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the page.
-- **Write the ad copy** with the [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer). It takes the page.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
+- **Check it before it goes live** with the [Ad draft repair reviewer](https://useaiblocks.com/skills/pre-launch-ad-check-and-fix-loop). It takes the page.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

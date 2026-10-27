@@ -9,26 +9,27 @@ A small test with three people finds the worst problems, and it fits in one morn
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Brand brain** (its buyers part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Brand brain** (its buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your website** (yours): the link to your site or the page.
+- **Plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Website usability reviewer** with the [Website usability reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer). Bring your question, your website (optional), your page (optional), store capture (optional).
 2. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with audit report, your question, your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for audit report, your question, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Planning tasks and writing the script is text work any strong chat AI does with this skill.
@@ -46,8 +47,8 @@ How to start:
 
 1. **Pick the tasks that matter.** From the goal and the review, choose three to five tasks a visitor really does. Write each as the visitor would say it ("find out what delivery costs"). For each, write why it matters and what done looks like.
 2. **Plan the people.** Recruit three people from your target group loosely, with any who are free. Add one who is not in the target group. Include at least one real beginner who has never used it. Say where to find each.
-3. **Write the read-aloud script.** Cover: thank them; say you are testing the site, not them; ask them to think aloud; promise nothing they say will upset you; give each task on a card. Never give hints about where to click.
-4. **Set the watcher rules.** The team watches live or on a recording. Watchers say nothing and do not help. They write down every pause, every wrong click and every moment someone seems afraid to click. Record each session from the first screen.
+3. **Write the read-aloud script.** Cover: thank them; say you are testing the site, not them; ask them to think aloud; promise nothing they say will upset you; give each task on a card. Say that the session is recorded and get each tester's agreement before the first task; if they say no, take notes instead. Never give hints about where to click.
+4. **Set the watcher rules.** The team watches live or on a recording. Watchers say nothing and do not help. They write down every pause, every wrong click and every moment someone seems afraid to click. Record each session from the first screen, only with the tester's agreement.
 5. **Add a note sheet.** One row per task per person: where they stalled, what they said, and whether they hesitated to click.
 6. **Build the fix list.** After the sessions, list the worst problems seen, not every problem. Mark how many of the four people hit each one. Fix only what was seen.
 7. **Cut what is not the task.** For each task, ask what the person came to do. Mark any step on the path that is not that, as a candidate to cut.
@@ -61,7 +62,7 @@ The goal. The tasks. Who to recruit. The script. The watcher rules. The note she
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Tell it as a story** with the [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
+- **Check the landing page** with the [Landing page conversion reviewer](https://useaiblocks.com/skills/landing-page-auditor).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

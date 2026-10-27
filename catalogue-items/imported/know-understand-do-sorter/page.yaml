@@ -35,7 +35,7 @@ how_to_use:
   - Paste your unit description and the learner stage. Add your learning targets or competency list if you have them.
   - Read the chart. Check that each item sits in the right column and that each test type fits.
   - Fix any item that looks misplaced, then ask your AI to redo that part.
-  - "Use the Do items next: build a rubric for skills, and design a dispositional assessment for dispositions."
+  - "Next, write a marking rubric for the Do: Skills items with the Marking rubric writer. For the Do: Dispositions items, plan how you will watch for the habit over several weeks."
 output_sample:
   input:
     - Your unit description, project brief or competency

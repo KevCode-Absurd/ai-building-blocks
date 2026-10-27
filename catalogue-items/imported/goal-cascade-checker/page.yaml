@@ -34,7 +34,7 @@ how_to_use:
   - Paste your company goals, one goal per line, with the owner and how it is measured.
   - "Paste your team goals the same way: one per line, with the team, owner and measure."
   - Add the five answers on top priority and your org chart, if you have them (optional).
-  - Ask your AI to run the check. The script step needs an AI that can run code. If yours cannot, it reads the goals and does the check itself.
+  - Ask your AI to run the check. The script step needs an AI that can run code. If yours cannot, it reads the goals and does the check itself. The script reads goals in a JSON file, so ask your AI to turn your lines into that format first.
   - Read the orphan goals and conflicts first. Fix those before the rest.
 output_sample:
   input:
@@ -61,3 +61,4 @@ output_sample:
       contains: A score out of 50 across strategy clarity, cascade, conflicts, coverage and communication.
     - name: Fix steps
       contains: Next steps to repair the cascade, such as a workshop, shared goals and a quarterly check.
+next: [okr-writer, goal-sharpener]

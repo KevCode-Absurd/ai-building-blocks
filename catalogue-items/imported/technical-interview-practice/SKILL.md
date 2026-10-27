@@ -14,9 +14,9 @@ Simulate realistic technical interview conditions. Act as an interviewer (not te
 
 # Activation
 
-- Learner asks for interview practice or mock interview. Upcoming technical interview. Building communication fluency. `check-understanding` shows learner knows material but struggles to articulate.
-- **Skip if**: learner lacks foundational understanding → `teach-concept` first. Session is exploratory/onboarding.
-- **Routing**: don't mix interview-mode with teaching mid-session. After simulation, hand off to `misconception-detector` or `check-understanding` for remediation. If learner panics: pause and switch to `socratic-mode`.
+- Learner asks for interview practice or mock interview. Upcoming technical interview. Building communication fluency. The learner knows the material but struggles to explain it out loud.
+- **Skip if**: learner lacks foundational understanding → teach the topic first (for example with the technical-topic-deep-dive skill). Session is exploratory/onboarding.
+- **Routing**: don't mix interview-mode with teaching mid-session. After simulation, offer remediation in plain chat: re-explain the weak topics and ask check questions. If learner panics: pause and switch to guiding questions instead of scoring.
 
 # Inputs
 
@@ -30,7 +30,7 @@ Simulate realistic technical interview conditions. Act as an interviewer (not te
 4. **Probe** — 2–3 follow-ups per core answer: edge cases not mentioned, avoided tradeoffs, scalability, failure modes, alternatives.
 5. **Close Simulation** — Signal end. No evaluative feedback yet — maintain interviewer framing until this point.
 6. **Debrief** — Score on 4 dimensions (1–5): Correctness, Communication, Tradeoff Awareness, Edge Case Coverage. For each below 4: specific gap + corrective action.
-7. **Remediation** — Surface top 1–2 weaknesses. Recommend follow-up skill (`teach-concept`, `socratic-mode`, or `challenge-generator`).
+7. **Remediation** — Surface top 1–2 weaknesses. Recommend follow-up practice: re-teach the topic, ask guiding questions, or set a short practice problem.
 
 # Rules
 

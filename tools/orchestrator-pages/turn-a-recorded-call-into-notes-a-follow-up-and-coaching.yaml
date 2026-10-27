@@ -30,7 +30,7 @@ you_get:
   - A follow-up email draft and a team summary, with updates for you to approve
   - Coaching on speaking time, habits that hurt and what to change, with quotes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 3 skill files in the order they run: Audio meeting notes writer, Call follow-up drafter and Meeting coaching analyst."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Point it at the recording and say which speaker is you.
   - Stop after step 2. Check the draft, fix any wrong detail and send it yourself.
@@ -42,7 +42,7 @@ output_sample:
     - What the call was for
     - One past follow-up email you liked (optional)
   prerequisites:
-    - An AI that can read audio or video files, or a transcript you already have
+    - An AI that can read audio or video files, or a transcript you already have. Reading audio or video needs an AI or transcription tool that supports it, and that can cost money. A ready-made transcript works without one.
     - A yes from everyone on the call to being recorded
   output:
     - name: Step 1 notes

@@ -25,6 +25,10 @@ Two jobs live here and they share the same evidence. The public one is reviews a
 
 ## Step 1 — Set the window and gather everything
 
+Gather first: pasted or exported reviews are the best input (a CSV or copied text with dates and ratings). Optional extras are complaints, tickets, the owner's writing samples and order history from a CRM, payments tool or storefront.
+
+When fetching review pages from the web, respect each site's terms of service and robots rules. Use pasted text or an export first, and fetch only what the site allows.
+
 Default to the last 90 days. Reviews move slowly, and a 30-day window on a business with six reviews a quarter produces a report with nothing in it.
 
 Read `reference/sources.md` for the query detail and the fallbacks. Pull in one pass:
@@ -96,7 +100,7 @@ Structure it in this order:
 
 A worked example is in `reference/examples/example-report.md`.
 
-Alongside the chat summary, deliver the report per the owner's stored output preference — never default to a markdown file. Check the `## Business context` block's `Output preference` (shared style guide rule, `../../shared/artifact-style.md`):
+Alongside the chat summary, deliver the report per the owner's stored output preference — never default to a markdown file. If there is no `## Business context` block or no `Output preference`, use the visual artifact and say that you did. Otherwise check the `## Business context` block's `Output preference` (shared style guide rule, `../../shared/artifact-style.md`):
 
 - **Visual artifact (the default):** render the report as an HTML page in the house style: a theme table with signal counts, verbatim-quote panels tagged to their sources, sentiment status pills, and the drafted-reply list with each reply beside the review it answers. The artifact is additive — the short answer and the approval flow stay in chat.
 - **docx / md / notion / canva preference:** deliver the same content in that form — a DOCX or markdown file, a Notion page created via the connector (named destination, never overwriting), or a Canva Doc created via the Canva connector (a new design each run, named with the date; tables become lists); fall back to the visual artifact if Notion or Canva is not connected — and say that is why. Approvals still happen in chat.

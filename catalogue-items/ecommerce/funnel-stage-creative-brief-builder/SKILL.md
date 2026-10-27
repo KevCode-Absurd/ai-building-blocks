@@ -5,6 +5,34 @@ description: Turn buyer and product facts into five ad angles and full productio
 
 # Funnel-stage creative brief builder
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer).
+- The [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner).
+- The [Meta test campaign planner](https://useaiblocks.com/skills/meta-test-campaign-planner). It takes the brief.
+- **Write the ad copy** with the [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner). It takes the brief.
+- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -48,7 +76,7 @@ You are a senior creative strategist building a complete ad creative brief. You 
 
 ## STEP 2: Brand Intelligence
 
-Research the brand:
+Research the brand. If you have no brand URL or web access, use only the facts the user pasted. Mark testimonials, results and competitor claims as `MISSING:` and do not infer them.
 1. Product intelligence (mechanism, claims, testimonials, objections, USPs, emotional triggers)
 2. Competitive landscape (what competitors say, gaps)
 3. Existing creative performance (winners, fatigued)
@@ -67,7 +95,8 @@ For each angle:
 
 ### Priority Scoring
 ```
-Priority = funnel_weight x coverage_penalty x freshness_penalty
+Priority = 50 x funnel_weight x coverage_penalty x freshness_penalty
+(range: about 21 to 100)
 
 funnel_weight: How much of funnel this angle can cover (1.0-2.0)
 coverage_penalty: 1.0 if fills gap, 0.6 if redundant
@@ -162,6 +191,7 @@ Order:
 5. Production Briefs (one per concept)
 6. Preflight Results
 7. Recommended Priority (top 3-5 to produce first)
+8. Next step: send the top brief to a designer, editor or your ad platform to produce. This item writes briefs only. It does not publish ads or set budgets.
 
 
 ## Final check

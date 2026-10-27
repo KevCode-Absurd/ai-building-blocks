@@ -7,11 +7,46 @@ description: "Check a deal ticking fee. Get the extra price that builds up from 
 
 Checks a ticking fee, the extra amount a buyer pays for each eligible day a deal closes late. It multiplies the eligible days by the fixed daily amount, adds the fee to the base price, and checks the fee was not already included or paid in advance. It does not decide whether a delay triggers the fee, whether a breach happened or whether a payment is owed. For the cash needed at closing, use the Deal funding gap checker. For a payment that depends on a metric instead of days, use the Earnout payout checker.
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Customer invoice borrowing limit calculator](https://useaiblocks.com/skills/receivables-borrowing-base-builder). It takes the document and spreadsheet.
+- The [Project payment priority planner](https://useaiblocks.com/skills/project-payment-waterfall-builder). It takes the spreadsheet and document.
+- The [Inventory borrowing limit calculator](https://useaiblocks.com/skills/inventory-borrowing-base-builder). It takes the spreadsheet and document.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Before you start
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
 If the figures are not in the chat, ask once for the missing items in "What you need". If the person says to go ahead with what they have, finish what you can and mark each gap `MISSING:`. If nothing at all was given, ask for the four figures in one line and stop.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Spreadsheet** with the [Locked-box seller transfer checker](https://useaiblocks.com/skills/locked-box-leakage-checker). Bring document, spreadsheet (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** Any of them can do these sums in a chat and show each step.
+- **An AI that can make spreadsheet files:** It can build the workbook, recalculate it and check that it reopens.
+- **Node.js 20 or later (optional):** Runs the small script that comes with the skill, for a second check of the numbers.
+<!-- /needs -->
 
 ## What you need
 

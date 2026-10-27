@@ -7,6 +7,33 @@ description: "Turn a table of sales, ad or customer numbers into an analytics re
 
 Turn the user's table of numbers into a short report: what changed, the rows that prove it, how sure you are, and what to do next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Data analyst](https://useaiblocks.com/skills/data-analyst). It takes the audit report.
+- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini:** A pasted table or CSV is enough. An AI that can run code checks the sums more closely. The agent cannot reach your live accounts.
+<!-- /needs -->
+
 ## Ask for these first
 
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent a number, a column or a benchmark.

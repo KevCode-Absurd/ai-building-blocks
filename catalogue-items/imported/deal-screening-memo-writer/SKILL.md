@@ -38,6 +38,8 @@ Apply the fund's investment criteria (ask user if not known):
 | Customer concentration | | | |
 | Management continuity | | | |
 
+Pass/Fail takes three values: Pass, Fail, or Unknown (the document does not state it). Never mark a figure Pass or Fail when the teaser leaves it out. Write "Unknown / not stated" and add the figure to the questions for the seller.
+
 ### Step 3: Quick Assessment
 
 Provide a 3-part assessment:

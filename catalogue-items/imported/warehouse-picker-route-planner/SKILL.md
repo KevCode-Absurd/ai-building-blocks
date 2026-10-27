@@ -20,6 +20,8 @@ This skill works in a plain chat. Python is optional: the code blocks show the m
 
 The random-number code in this file is demo data. Never show its output as a result. The percentages beside each method are rough rules of thumb with no source. Do not quote them to the person as facts.
 
+The code blocks are sketches of the method, not tested tools. Two known gaps: in the largest-gap code, `dist1` and `dist2` come out the same and are never used. And the cross-aisle step uses the first aisle's width for every aisle. Before you run any of it, use each aisle's own width and position from the person's layout. Check a route by hand on a small example first, and treat every distance as an estimate until it is measured on the floor.
+
 Out of scope: grouping orders into batches (use the Picking batch planner), and moving products to better slots (use the Warehouse slot assigner).
 
 ---

@@ -34,7 +34,7 @@ Examples:
 - `/marketing-plan acme-saas`
 - `/marketing-plan` (will prompt for client name)
 
-On invocation, the skill reads `~/marketing-plans/{client-slug}/progress.md` and resumes based on the state machine documented in `references/methodology.md` Step 1.1.2 (fresh → INIT → REVIEW → FINALIZE → finalized). Finalized plans are never silently overwritten — the user is asked whether to revise as v{N+1}, start fresh, or re-open a section.
+On invocation, the skill reads `~/marketing-plans/{client-slug}/progress.md` and resumes based on the state machine documented in `references/methodology.md` Step 1.1.2 (fresh → INIT → REVIEW → FINALIZE → finalized). In a plain chat with no file access, skip the progress.md step and keep the approved sections in the chat. Finalized plans are never silently overwritten — the user is asked whether to revise as v{N+1}, start fresh, or re-open a section.
 
 **Path safety.** Build `{client-slug}` only by slugifying the client name to lowercase `[a-z0-9-]` (strip everything else); reject `..`, `/`, and absolute paths, and never read or write outside `~/marketing-plans/`. On a shared machine this keeps one client's plan — and their data — from leaking into another client's context.
 
@@ -162,7 +162,7 @@ Standard tiers in `references/funding-stage-unlocks.md`:
 - **Series A** — $50–$150K/mo paid; performance + content + designer; international consideration
 - **Series B+** — $150K+/mo paid; brand campaigns; PR firm; full-stack marketing org
 
-Use these as anchors. Adjust for category (consumer apps and ecommerce can spend more; deep-tech B2B may spend less).
+Use these as anchors. They are rules of thumb, not sourced benchmarks, so check them against the client's own CAC and ARR. Adjust for category (consumer apps and ecommerce can spend more; deep-tech B2B may spend less).
 
 ## Setting the budget scientifically
 
@@ -173,7 +173,7 @@ The funding-stage anchors above tell you *what's in the ballpark*. To set the ac
 
 Always add **10–20% experimental budget** on top — CAC is the main dependency, and the experimental layer is what funds the next-channel investment before the current one plateaus.
 
-For VC-backed Series A+ clients, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–7 from $1M ARR).
+For VC-backed Series A+ clients, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–7 from $1M ARR). Treat it as a rule of thumb, not a sourced benchmark.
 
 ## Growth patterns — the real shape of SaaS growth
 

@@ -4,12 +4,12 @@ headline: Toll revenue ramp model builder
 summary: Build a three-year toll revenue model from your traffic forecasts, toll rate and collection share. You get receipts, operating cash and checks.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Traffic forecasts and measured counts come from different sources, so they must be kept apart and each one dated."
 subhead: A three-year toll receipts and operating cash schedule. Share three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
 explain: |-
   A three-year toll receipts and operating cash schedule.
 
-  Infrastructure traffic revenue. Illustrative three-year chargeable passages before collection loss of1000,1200,1500 at toll2 and collection90% realize1800,2160,2700. Less operating costs1000,1100,1200 leaves cash800,1060,1500. Counts already representing cash-paid passages must not be multiplied by collection loss a second time. Annual cash excludes debt service and capital spending handled downstream.
+  Infrastructure traffic revenue. Illustrative figures only. Chargeable passages before collection loss are 1,000, 1,200 and 1,500 over three years. The toll is 2 and the collection share is 90%. Cash receipts are 1,800, 2,160 and 2,700. Less operating costs of 1,000, 1,100 and 1,200, operating cash is 800, 1,060 and 1,500. Counts already representing cash-paid passages must not be multiplied by collection loss a second time. Annual cash excludes debt service and capital spending handled downstream.
 when:
   - You need a three-year toll receipts and operating cash schedule.
   - You work on infrastructure traffic revenue and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You need a traffic forecast or a concession valuation: ask a traffic study firm or a valuation adviser, because this model only does the arithmetic."
   - "You need debt service or capital spending in the cash result: add those in your own project finance model after this step."
   - "Your passage counts are already cash-paid: reconcile that basis first, because this model would cut them for collection loss a second time."
+  - "You need an energy operating cash schedule from delivered MWh and one contract price: use the Contracted energy cash model instead."
 you_give:
   - Three annual chargeable-passage forecasts before collection losses, applicable toll per billable passage, cash collection share and operating cash costs, with independent traffic study sources.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The forecast year, plus the currency and scale used for the toll revenue model."
+  - "Your spreadsheet tool, if you want the toll revenue model as a workbook."
 you_get:
   - A three-year toll receipts and operating cash schedule.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the toll revenue model, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of chargeable passages, receipts and operating cash, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the traffic forecasts, the toll rate and the collection share."
+  - "Tell it what you need: three years of toll receipts and operating cash."
+  - "Ask it to stop and mark MISSING if a year of traffic or the toll rate is not in your sources."
+  - "Check that each input is sourced with currency, scale, sign and period, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Three yearly counts of chargeable passages before collection loss
@@ -69,10 +70,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Forecast year"
+    how: "Take the forecast year from the traffic forecasts, the toll rate and the collection share. Use one currency and scale on every line."
+  - what: "Collection share"
+    how: "Change the collection share and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Each material input is sourced with currency, scale, sign and period.
 judge:
@@ -86,8 +87,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one toll revenue model you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define chargeable passage into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

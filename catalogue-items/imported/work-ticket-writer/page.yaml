@@ -16,8 +16,8 @@ when:
   - Developers keep asking what a ticket means.
   - Your backlog has vague items nobody can start.
 not_for:
-  - "You need the spec or PRD itself written first: use a spec writing step before this, then bring the spec here."
-  - "You want to decide what ships this quarter: use a roadmap planning step, not tickets."
+  - "You need the spec or PRD itself written first: use feature-spec-writer first, then bring the spec here."
+  - "You want to decide what ships this quarter: use quarterly-roadmap-builder, not tickets."
   - "You want to hand a whole plan to a coding agent to run alone: use a task brief for that agent instead."
 you_give:
   - Spec, bug or request
@@ -33,7 +33,7 @@ you_get:
   - Backlog readiness audit
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a new chat. No code running or paid tool is needed.
-  - Paste the full text of the skill's SKILL.md file into the chat as your first message.
+  - Paste the full text of the skill's SKILL.md file into the chat as your first message. Also paste the definition-of-ready checklist and the template for each ticket type you need (bug, story, task, spike or epic), because the skill relies on them.
   - Paste your spec, bug report or request in a second message. Add your tracker name and any required fields.
   - Say which ticket type you want, or let the AI pick one. If something is vague, answer its questions.
   - Check each ticket against its done test. Fix any field marked none that should have an answer.
@@ -58,3 +58,4 @@ output_sample:
       contains: One question, a timebox in days, exit criteria and a decision memo as the required result.
     - name: Bug
       contains: Title, numbered repro steps, environment, observed versus expected, severity, priority and how the fix is verified.
+next: [feature-spec-writer, sprint-coach]

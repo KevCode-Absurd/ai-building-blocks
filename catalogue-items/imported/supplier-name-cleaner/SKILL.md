@@ -11,7 +11,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Walks every product in the catalog, normalizes the `vendor` field, and clusters near-duplicates such as `Acme`, `ACME`, `Acme Inc`, and `Acme  ` (trailing whitespace). Surfaces a recommended canonical form per cluster and the count of products that would migrate. Vendor sprawl breaks vendor-based reports, navigation, and supplier reconciliation. Read-only — no mutations; output is the worklist for a follow-up consolidation. 
+Walks every product in the catalog, normalizes the `vendor` field, and clusters near-duplicates such as `Acme`, `ACME`, `Acme Inc`, and `Acme  ` (trailing whitespace). Surfaces a recommended canonical form per cluster and the count of products that would migrate. Vendor sprawl breaks vendor-based reports, navigation, and supplier reconciliation. Read-only — no mutations; output is the worklist for a follow-up consolidation. The `shopify-admin-execution` label in the toolkit line is not used by this skill: it makes no writes at all.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products`

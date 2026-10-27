@@ -7,7 +7,7 @@ role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
+  - {type: audit_report, required: false}
   - {type: question, required: true}
   - {type: product_data, required: false}
 outputs:
@@ -21,3 +21,4 @@ credits:
   - {title: "Simplicity is the key to excellence, says Dieter Rams", by: "Kinfolk", used: "Keeping only what serves the main job"}
   - {title: "Steve Wozniak interview, Founders at Work", by: "Jessica Livingston", used: "Asking of every part whether another part already does its job"}
   - {title: "Steve Wozniak: Designing a Life, Hindsights", by: "1993 interview", used: "Stating the goal and who would want to own the result before listing parts"}
+needs_mode: manual

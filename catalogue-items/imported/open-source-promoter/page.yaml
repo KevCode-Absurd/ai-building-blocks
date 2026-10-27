@@ -30,7 +30,7 @@ you_get:
   - Contributor-friendly issue ideas
   - A launch and follow-up schedule
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running, files or paid tools.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running, files or paid tools. Octolens, the monitoring tool it names, is optional and may cost money.
   - "Describe your project in a few lines: what it does, who uses it and where it is hosted."
   - Say how much time you have each week (optional).
   - Ask for the full plan, then read the readme and launch parts first.

@@ -26,6 +26,8 @@ Strategic framework for creating uncontested market space that makes the competi
 
 Report the current score, which diagnostic rows fail, and the specific ERRC/Six-Paths moves needed to reach 10/10.
 
+Base every rival's level on real competitor data the user gives (prices, product pages, reviews). If a level is a guess, label it "estimate". Never present guesses as fact.
+
 ## Framework
 
 ### 1. Red Ocean vs. Blue Ocean

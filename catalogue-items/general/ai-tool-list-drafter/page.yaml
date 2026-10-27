@@ -63,7 +63,7 @@ how_it_works:
   - title: "Name and describe each"
     text: "Give a short verb-first name, a one-sentence description saying when to use it and when not to, the inputs it needs, and what it hands back."
   - title: "Add guardrails"
-    text: "For every change tool, say what needs a person's approval. Add the limits I named, and list what the AI is never given a tool for."
+    text: "For every change tool, say what needs a person's approval. Add the limits you named, and list what the AI is never given a tool for."
   - title: "Check for confusion"
     text: "Point out any two tools an AI might mix up and fix the names or descriptions."
 

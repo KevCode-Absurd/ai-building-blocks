@@ -7,6 +7,8 @@ metadata:
 
 # Meeting Intelligence
 
+Before you start: this skill uses Codex CLI and a Notion login (see step 0). Either may need a paid account or plan, so check yours first.
+
 Prep meetings by pulling Notion context, tailoring agendas/pre-reads, and enriching with Codex research.
 
 ## Quick start
@@ -42,13 +44,14 @@ After successful login, the user will have to restart codex. You should finish y
 - Use `reference/template-selection-guide.md` to confirm.
 
 ### 3) Build the agenda/pre-read
-- Start from the chosen template in `reference/` and adapt sections (context, goals, agenda, owner/time per item, decisions, risks, prep asks).
+- Start from the chosen template in `reference/` and adapt sections. Put them in this order: context and goals, agenda (each item with an owner and a time box), decisions needed, risks and open questions, research with sources, next steps.
 - Include links to pulled Notion pages and any required pre-reading.
 - Assign owners for each agenda item; call out timeboxes and expected outputs.
 
 ### 4) Enrich with research
 - Add concise Codex research where helpful: market/industry facts, benchmarks, risks, best practices.
 - Keep claims cited with source links; separate fact from opinion.
+- Cite only a URL you actually opened in this session. Drop any figure you cannot link to a source you checked. Never write a number or quote from memory.
 
 ### 5) Finalize and share
 - Add next steps and owners for follow-ups.

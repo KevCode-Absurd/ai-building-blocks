@@ -36,7 +36,7 @@ how_to_use:
   - Add your citation style and who the summary is for, if you have them.
   - For a comparison, give at least two sources.
   - Check that each finding points to a place in the source. Fix anything marked not stated.
-  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft.
+  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft. Before you rely on it, check every number and quote against the source.
 output_sample:
   input:
     - Your paper, article or report, pasted as text or attached

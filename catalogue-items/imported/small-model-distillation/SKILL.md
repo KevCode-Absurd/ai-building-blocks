@@ -26,8 +26,8 @@ If the models, the task data or the GPU are missing, ask once. If still missing,
 2. Choose the method: response distillation if you only have teacher text (hosted teacher), soft-target or logit distillation if you can read the teacher's probabilities, reverse KL (MiniLLM) for free-text generation. Say why in one sentence.
 3. Set temperature and the loss weight (alpha). Start from the values in this file and say they are starting points to tune.
 4. Write the training script from the matching section below. Fix any helper that is not defined in this file before you hand it over.
-5. Write the comparison step: run teacher and student on the held-out prompts, and score both with the task's own check (an accuracy test, a rubric, or a human read of 20 or more answers).
-6. Tell the user how to read the result: the student is worth keeping only if it meets the bar on the task they care about.
+5. Before the comparison, ask the user to set a pass bar for their task (for example, the student scores within a stated gap of the teacher on the held-out prompts). Then write the comparison step: run teacher and student on the held-out prompts, and score both with the task's own check (an accuracy test, a rubric, or a human read of 20 or more answers).
+6. Tell the user how to read the result: the student is worth keeping only if it meets the bar they set in step 5. If it misses, suggest a closer teacher-student pair, a two-stage distillation, or a hosted API. If it passes, keep the model and the held-out prompts so you can re-test after any change.
 
 ## Output
 
@@ -99,6 +99,15 @@ student = AutoModelForCausalLM.from_pretrained(
 )
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-70b-hf")
+
+# Setup the loop below needs (add your own task data)
+from torch.utils.data import DataLoader
+from torch.optim import AdamW
+
+# dataset: your tokenised prompts, each with input_ids, attention_mask and labels
+dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
+optimizer = AdamW(student.parameters(), lr=1e-5)
+# Move each batch to the same device as the models before the forward pass.
 
 # 2. Define distillation loss
 def distillation_loss(student_logits, teacher_logits, labels, temperature=2.0, alpha=0.5):

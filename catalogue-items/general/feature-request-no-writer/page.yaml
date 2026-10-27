@@ -11,7 +11,7 @@ subhead: "Paste the customer's feature request, your decision and the real reaso
 explain: |
   Most feature request replies are a slow no dressed as a maybe. "Great idea, I've passed it to the team" costs nothing to write and leaves the customer waiting for something that will never come. When they work it out, they trust you less than if you had said no on day one.
 
-  This prompt follows the way Jason Fried talks about saying no in public. It names the need under the request, because the feature is the customer's guess at a fix. It opens the reply with the no, gives the real reason you supplied in plain words, offers a way to get close today only if one exists, and thanks them for the detail they gave. It will not write "maybe later" unless you said it is true, and if your reason looks weak it tells you before writing.
+  This prompt writes a plain, honest no. It names the need under the request, because the feature is the customer's guess at a fix. It opens the reply with the no, gives the real reason you supplied in plain words, offers a way to get close today only if one exists, and thanks them for the detail they gave. It will not write "maybe later" unless you said it is true, and if your reason looks weak it tells you before writing.
 
 when:
   - "A customer asks for a feature that would make the product worse for everyone else."
@@ -128,3 +128,4 @@ works_best_with:
   inputs:
     - "The three things your product will never do, written down"
     - "The last five requests you said no to and how customers reacted"
+next: [complaint-reply-promise-checker]

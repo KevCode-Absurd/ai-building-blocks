@@ -10,8 +10,8 @@ date_added: "2026-07-06"
 author: sergebulaev
 tags: [linkedin, copywriting, hooks, social-media, personal-brand, content-marketing]
 tools: [claude, codex, cursor, gemini]
-license: "MIT"
-license_source: "https://github.com/sergebulaev/linkedin-skills/blob/main/LICENSE"
+license: "CC-BY-4.0"
+license_source: "LICENSE-CONTENT"
 ---
 
 # LinkedIn Post Writer
@@ -81,16 +81,16 @@ Read the chosen formula's skeleton from the bundled [references/hook-formulas.md
 - Double line-breaks between ideas, never walls of text
 - 0-2 hashtags, placed at the end
 - No external links in the body (put links in the first comment)
-- Prefer "How I" over "How to": first-person experience hooks outperform generic instruction 2-3x
+- Prefer "How I" over "How to": first-person experience hooks tend to outperform generic instruction (the original author's own observation, about 2-3x on their corpus; not a verified result)
 - Put one specific number in the first sentence ($873.47 beats $900; 40,000 beats "a lot")
 
 ### Step 4: Scrub AI tells
 
-Before showing the draft: strip em dashes, AI vocabulary ("game-changer", "deep dive", "delve"), rule-of-three lists without receipts, and generic openers like "In today's fast-paced world". Add human fingerprints: at least one specific number, one named entity, and one first-person concrete detail per 100 words. Vary sentence length aggressively (mix 3-word and 25-word sentences).
+Before showing the draft: strip em dashes, AI vocabulary ("game-changer", "deep dive", "delve"), rule-of-three lists without receipts, and generic openers like "In today's fast-paced world". Add human fingerprints: ask the user for real specifics (a number, a named person or place, a first-person detail) and use only what they give you. If they give none, leave a marked placeholder such as [add your real number] and never invent one. Vary sentence length aggressively (mix 3-word and 25-word sentences).
 
 ### Step 5: Present the result
 
-Show the user: formula used, full draft, character count, and a suggested posting window (Tuesday to Thursday, 7:30-9:00 AM local time performs best for B2B audiences).
+Show the user: formula used, full draft, character count, and a suggested posting window (the original author's guess: Tuesday to Thursday, 7:30-9:00 AM local time for B2B audiences; check it against the user's own post data).
 
 ## Examples
 
@@ -139,7 +139,7 @@ Agent: Comment-earners are F4 Confession, F10 Contrarian, F12 Permission Slip.
 ## Common Pitfalls
 
 - **Problem:** The draft sounds like every other AI-written LinkedIn post.
-  **Solution:** Run Step 4 ruthlessly. Cut em dashes, cut "game-changer" vocabulary, and force one concrete first-person detail per 100 words.
+  **Solution:** Run Step 4 ruthlessly. Cut em dashes, cut "game-changer" vocabulary, and ask the user for one concrete first-person detail to use.
 - **Problem:** The hook is buried in paragraph two.
   **Solution:** The first 210 characters must carry the hook; everything before the fold decides the expand rate.
 - **Problem:** Comparing F11's raw reach to F8's 19.64x multiplier and picking F11 "because the number is bigger".

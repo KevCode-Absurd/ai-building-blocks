@@ -35,7 +35,7 @@ you_get:
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your site address and attach your traffic by page. If your AI can reach Search Console or Ahrefs, say so. If not, it works from what you attach and marks what it could not check.
+  - Paste your site address and attach your traffic by page. If your AI can reach Search Console or Ahrefs, say so. Ahrefs is a paid subscription, and the run works without it from your exports. If not, it works from what you attach and marks what it could not check.
   - Read the calls. Change any you disagree with. Refresh the keepers as planned, then publish the refreshes, merges and new titles.
   - Give it the dates you changed each page. Check the tracking after six to eight weeks.
 how_it_works:

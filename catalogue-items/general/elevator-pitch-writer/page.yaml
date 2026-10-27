@@ -1,0 +1,131 @@
+new_slug: elevator-pitch-writer
+name: Elevator pitch writer
+summary: Say what you do, for whom and the result. Get 10, 30 and 60 second pitches and an opening question.
+job: speak-and-persuade
+thinking: medium
+thinking_why: It must write natural speech and keep each line to the facts you gave.
+headline: Elevator pitch writer
+subhead: Tell it what you do, who you do it for and the result they get. It writes three versions you can say aloud in about 10, 30 and 60 seconds, an opening question that starts a conversation, and a short line for when someone asks what you do at an event.
+explain: |
+  "What do you do?" is the question you hear most, and most people answer it badly. They say their job title, or list everything, or ramble. The listener nods and forgets.
+
+  This skill gives you a short answer in your own words. It starts from who you help and the result they get, not from your title. It writes a 10-second line for casual moments, a 30-second pitch for introductions and a 60-second one for when someone wants more. Each ends with an easy way for the other person to reply. It also writes an opening question that gets them talking first. It uses only the facts you give, and never invents results, clients or numbers.
+when:
+  - You're going to a networking event or meeting people for the first time.
+  - People often respond to "what do you do?" with a blank look.
+  - You need a short pitch for a profile, an intro call or an investor.
+not_for:
+  - "You want a pitch deck: use the Pitch deck presentation reviewer."
+  - "You want to message a stranger online: use the First outreach message writer."
+  - "You want to pitch a big idea inside your company: use the Internal proposal pitch planner."
+you_give:
+  - What you do, in plain words
+  - Who you do it for
+  - The result they get, and a true example if you have one
+  - "Where you'll use it: event, call, profile, investor (optional)"
+you_get:
+  - A 10-second, a 30-second and a 60-second pitch
+  - An opening question to get the other person talking
+  - A line for each version that makes it easy to reply
+  - A note on which to use when
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you do, who for, and the result. Add one true example if you have it.
+  - Read each version aloud with a timer. Cut any line you stumble on.
+  - Practise the opening question too. It often works better than the pitch.
+  - Try one version at your next event and note what people say back.
+output_sample:
+  input:
+    - What you do, who you do it for and the result they get
+    - A true example, if you have one
+    - Where you will use it (optional)
+  output:
+    - name: One-line version of you
+      contains: Who you help and the result, in one sentence.
+    - name: 10-second pitch
+      contains: One sentence for a casual moment.
+    - name: 30-second pitch
+      contains: Who you help, the problem, the result and an easy way to reply.
+    - name: 60-second pitch
+      contains: The 30-second pitch plus a true example and what working together looks like.
+    - name: Opening question
+      contains: A question that gets the other person talking.
+    - name: When to use each
+      contains: One line on which version fits which moment.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Finds the one result
+    text: Boils your work down to who you help and the result they get.
+  - title: Writes the 10-second line
+    text: One sentence for casual moments.
+  - title: Writes the 30-second pitch
+    text: Who you help, the problem, the result, and an easy reply.
+  - title: Writes the 60-second pitch
+    text: Adds a true example and what working together looks like.
+  - title: Writes the opening question
+    text: A question that gets the other person talking about their own work.
+  - title: Says when to use each
+    text: A line on when each version fits.
+output_shape: |
+  THE ONE-LINE VERSION OF YOU
+  I help <who> <get result>.
+
+  10-SECOND PITCH
+  <one sentence>
+
+  30-SECOND PITCH
+  <who you help, the problem, the result, easy reply>
+
+  60-SECOND PITCH
+  <adds a true example and what working together is like>
+
+  OPENING QUESTION
+  <a question that gets them talking>
+
+  WHEN TO USE EACH
+  <line each>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Who you help
+    how: Be specific. "Small shop owners" works better than "businesses".
+  - what: The result
+    how: Say what changes for them, not what you do. Results stay in the listener's mind.
+  - what: A true example
+    how: Give one real case you may talk about. Without it, the 60-second pitch uses a question instead.
+  - what: Where you'll use it
+    how: Say event, call or profile. It changes the tone.
+judge:
+  - The 10-second line can be said in about ten seconds.
+  - The pitch starts from who you help, not your job title.
+  - No client, result or number appears that you did not give.
+  - Each version ends with an easy way for the other person to reply.
+  - It sounds like something you would say out loud.
+test:
+  - Say each version aloud with a timer. The times should be close to 10, 30 and 60 seconds.
+  - Try the pitch on a friend who doesn't know your work. Ask them to repeat what you do.
+  - Use the opening question at an event, and note how many people answer.
+improve:
+  - Add words you actually use to the skill file, so it sounds like you.
+  - Keep the true examples you may share in your about-me note.
+  - Update your pitch when your work changes, and rerun the skill.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing short spoken lines works well in any strong chat AI.
+    - name: A timer or voice memo app
+      why: Time yourself and listen back. It shows which lines are too long.
+  inputs:
+    - A true story of a client result you may share
+    - The words your customers use to describe what you do
+    - The kind of event or call where you'll use it
+terms:
+  - term: Elevator pitch
+    meaning: A short talk about what you do, short enough to give in a lift ride.
+  - term: Easy reply
+    meaning: A line that makes it simple for the other person to respond, such as a question.

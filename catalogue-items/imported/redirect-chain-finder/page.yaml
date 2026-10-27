@@ -19,6 +19,7 @@ not_for:
   - You have not changed any URLs lately. The check will likely find nothing, so skip it.
   - You want to find broken links on live pages. Use a live site crawler instead.
   - You want the redirects fixed for you. This only reads and reports, so edit them yourself in Shopify Admin under Navigation, URL Redirects.
+  - You want every shared target removed. Some are on purpose, such as several old product URLs merged into one page. Review each group before you change anything.
 you_give:
   - Store domain
   - Shopify CLI sign-in with content read access

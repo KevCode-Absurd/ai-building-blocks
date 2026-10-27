@@ -21,7 +21,7 @@ Run `composio execute GORGIAS_LIST_TICKET_TAGS -d '{}'` in Bash to get the full 
 
 ### Step 3: Fetch tickets
 - If a specific ticket ID was given: run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash
-- If "batch" or no argument: run `composio execute GORGIAS_LIST_TICKETS -d '{...filter for untagged...}'` in Bash
+- If "batch" or no argument: run `composio execute GORGIAS_LIST_TICKETS -d '<JSON>'` in Bash, filtering for untagged tickets with the argument names from the schema (run `composio execute GORGIAS_LIST_TICKETS --get-schema` first if you do not have them)
 
 ### Step 4: Classify each ticket
 For each ticket, read the subject + message body and determine:

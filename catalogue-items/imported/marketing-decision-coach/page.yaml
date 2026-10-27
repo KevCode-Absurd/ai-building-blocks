@@ -36,6 +36,7 @@ how_to_use:
   - Add any test results, such as sends, replies, visitors or ad spend (optional).
   - "Ask your question, for example: should I stop this channel? Check the verdict and the test volume it names."
   - Run the next step it gives you. Come back with the new numbers once you hit the volume.
+  - To plan the test, use the Experiment designer. When the results are in, the Experiment result analyst reads them.
 output_sample:
   input:
     - Your product and what you offer

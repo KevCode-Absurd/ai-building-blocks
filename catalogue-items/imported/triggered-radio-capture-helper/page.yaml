@@ -30,12 +30,12 @@ you_get:
   - A check that the capture is a real signal
   - Tuning steps if detection fails
 how_to_use:
-  - "Set up first: an NI USRP radio, MATLAB and Wireless Testbench. Note your radio model, centre frequency and bandwidth."
-  - Open a chat with an AI that can read the skill folder. Paste the skill instructions if it cannot read files.
+  - "Set up first: an NI USRP radio, MATLAB and Wireless Testbench. These are paid products, and the licence allows this skill only with MathWorks products (BSD 2-Clause plus MathWorks terms, see LICENSE.md). Note your radio model, centre frequency and bandwidth."
+  - Open a chat with an AI that can read the skill folder, including its references folder. The skill needs those files, so paste them in too if your AI cannot read files.
   - Tell it which signal to catch. Add a known preamble if you have one.
   - Answer any questions it asks. It will not guess missing values.
   - Run the MATLAB code on your radio. This needs the radio and MATLAB, so a plain chat cannot run it.
-  - Check the status and ratio it reports. If nothing fires or it fires on noise, ask for the threshold tuning steps.
+  - Check the status and ratio it reports. If nothing fires or it fires on noise, ask for the threshold tuning steps. Then pass the saved samples to your MATLAB signal tools, or pair it with the Radio transmit and capture helper.
 output_sample:
   input:
     - The signal to catch, such as its centre frequency and bandwidth
@@ -52,8 +52,9 @@ output_sample:
     - name: Checked settings
       contains: Your parameters tested against the API limits before any code is written.
     - name: Capture code
-      contains: MATLAB code built from one of seven ready capture patterns, set for your radio and signal.
+      contains: One MATLAB script with a Verify section, built from one of seven ready capture patterns and set for your radio and signal. It prints the ratio r.
     - name: Capture results (data, status, r)
       contains: The captured samples, a status showing whether a trigger fired, and a ratio that shows if it was a real signal.
     - name: Threshold tuning steps
       contains: A plot, diagnose and adjust routine, given when nothing fires or it fires on noise.
+next: [radio-transmit-capture]

@@ -1,6 +1,6 @@
 new_slug: turn-your-lessons-into-funny-stories-and-a-short-talk
 name: Turn your lessons into funny stories and a short talk
-summary: Turn your lessons into funny stories and a short talk. Give it two or three lessons and get a checked one-minute story for each, then a talk script.
+summary: "Give it two or three lessons. Get a checked one-minute funny story for each, then a short talk script built on those stories."
 job: speak-and-persuade
 thinking: medium
 thinking_why: Three text skills, with a repeat of the first two. A mid-size model works.
@@ -28,10 +28,10 @@ you_get:
   - A check of each story against its one point, with cuts and fixes
   - A talk script with each lesson on a true story, one outside voice, a question for the room and an opening joke at your own cost
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Run the first two steps once for each lesson. Fix the competing lines yourself at the pause.
-  - Give the talk step your true stories. Any lesson without one is marked as missing, not made up.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus three skill files, in the order they run: Teaching story writer, Single-effect draft checker, Lesson talk writer."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Run the first two steps once for each lesson. Fix the competing lines yourself at the pause."
+  - "Give the talk step your true stories. Any lesson without one is marked as missing, not made up."
 output_sample:
   input:
     - Two or three lessons you trust, each in one sentence

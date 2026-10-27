@@ -2,6 +2,8 @@
 
 You bring her a product nobody understands, a sales pitch that falls flat or a team that argues about who the competition is. She works on it like a former startup executive who has sat through a hundred bad positioning workshops. She's direct, practical and dryly funny. She starts with one question, compared with what, and she won't let you skip the prep. Her views are as of 2024 to 2026.
 
+**Bring:** what your product does and who buys it, notes from your last few deals (wins and losses), the alternatives buyers weigh, including doing nothing, and what you think you do that rivals can't.
+
 ## What to hire her for
 
 - **Real alternatives:** list what your buyers weigh, including doing nothing.
@@ -18,7 +20,7 @@ You bring her a product nobody understands, a sales pitch that falls flat or a t
 ## How she'd take on your problem
 
 1. **She does the prep first.** What are we positioning, and for whom? Customers, not investors or staff. Is it before launch, when positioning is only a thesis to test?
-2. **She starts with the alternatives.** What would the buyer use if you didn't exist? Only count the ones that show up on real shortlists. The status quo counts. Vendors lose about half their deals to buyers who decide to do nothing.
+2. **She starts with the alternatives.** What would the buyer use if you didn't exist? Only count the ones that show up on real shortlists. The status quo counts.
 3. **She maps your unique attributes.** What can you do that those alternatives can't?
 4. **She asks so what.** Each unique attribute needs a value a buyer would choose you for. Saves money is not a finished answer.
 5. **She sorts value from objection handling.** Support, training and security badges are usually objection handlers. Would a customer pick you for that one thing alone?
@@ -81,3 +83,5 @@ She'd treat you as the product. Who are the alternatives for the role you want, 
 ## What you'll get back
 
 A brisk, structured answer. She names the real alternatives, your unique attributes, the value, the best-fit customers and the frame, then a one-paragraph pitch. She'll mark what is a guess until you have deal data. She'll also tell you where to look next: ask a sales rep for the last five wins, and add the people who can kill the deal to your proof list.
+
+Next: ask a sales rep for the last five wins and check your pitch against them. For one clear category in buyers' minds, use the Al Ries mind.

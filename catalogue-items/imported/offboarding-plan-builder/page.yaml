@@ -30,11 +30,12 @@ you_get:
   - Exit interview questions
   - A script for telling the team
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
   - Tell your AI the role, the level and the last day. Say if the exit is voluntary or involuntary.
-  - Add your country if you want local rules in mind (optional).
-  - Ask for the checklist first. Then ask for the handover template, exit interview questions and team message.
-  - Check the result against your local employment rules before you act on it.
+  - Add your country, so the plan can flag where to check local rules (optional). Paste your own exit policy or past checklist too, if you have one (optional).
+  - Ask for the checklist first, as a table with task, owner, due date and status. Then ask for a one-page handover template, exit interview questions and a short team message.
+  - For any involuntary exit, separation agreement or country-specific step, have an employment lawyer or HR adviser check the result before you act.
+  - After the last week, keep the handover template where the next owner can find it. Schedule the exit interview about two weeks after the last day.
 output_sample:
   input:
     - The role and level of the person leaving

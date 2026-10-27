@@ -29,7 +29,7 @@ you_get:
   - A mission statement in three lengths, with a one-line version you can say from memory
   - A clarity score out of 100 for the statement, line fixes and a review date
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses. You need an AI that can read files, such as Claude Code or a Claude Project, which may need a paid Claude plan. On a free plan, paste each step's SKILL.md into a chat one at a time.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Say your stage in life and answer for the four speakers. Give moments, not titles.
   - Check each result before the next step. Strike out any goal you took from someone else's wish.

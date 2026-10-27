@@ -7,9 +7,9 @@ job: secure-code
 headline: MATLAB secret keeper
 subhead: Passwords, tokens and keys taken out of your MATLAB code and kept in the MATLAB Vault, so a shared file never leaks them. You give it a script with credentials in plain text and get the safe version back.
 explain: |
-  Passwords, tokens and keys taken out of your MATLAB code and kept in the MATLAB Vault, so a shared file never leaks them. You give it a script with credentials in plain text and get the safe version back.
+  A password typed into a MATLAB script leaks the moment you share or push the file. This skill moves each secret into the MATLAB Vault and gives you the safe version back.
 
-  It starts with a guide to choosing where each secret should live. Then it stores the secret once with the setSecret call, retrieves it at the point of use with getSecret,. It has ready patterns for common cases: a bearer token for a web service, a passphrase for an SFTP key, a database login and keys for cloud storage on S3, Azure or Google.
+  It starts with a guide to choosing where each secret should live. Then it stores the secret once with the setSecret call, retrieves it at the point of use with getSecret. It has ready patterns for common cases: a bearer token for a web service, a passphrase for an SFTP key, a database login and keys for cloud storage on S3, Azure or Google.
 when:
   - You are about to share a script that has an API key in it.
   - A database login is typed straight into your connection code.
@@ -19,6 +19,7 @@ not_for:
   - "You use HashiCorp Vault, AWS Secrets Manager or Azure Key Vault: use that tool's own guide, as this skill only covers the MATLAB Vault."
   - "You need help with the connection or query logic and no password is involved: ask your AI to write it as a plain MATLAB task."
   - "You only want to clean or analyze data you already loaded: ask your AI for a data analysis step instead."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Code that contains credentials
   - What the credential connects to
@@ -34,15 +35,17 @@ how_to_use:
   - Read the edited script. Check that no password, token or key is left in it.
   - Run the store steps it gives you at the MATLAB prompt. MATLAB asks you for each value.
   - Run the script to test it. If your AI cannot run MATLAB, run it yourself.
-  - Pair it with the MATLAB data skills once your connection works.
+  - Once your connection works, pair it with the MATLAB database helper or the Market data connector.
 output_sample:
   input:
     - Your MATLAB script that has a password, token or key in it
     - What the credential connects to, such as a web service, database, SFTP server or cloud storage
     - Your MATLAB release (optional)
   prerequisites:
-    - MATLAB R2024a or newer for the Vault functions
+    - MATLAB R2024a or newer for the Vault functions. MATLAB is paid software, so you need a licence
+    - MATLAB R2026a, only if you want importSecrets to load many secrets at once
     - An AI that can run MATLAB, if you want it to test the result (optional)
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Decision guide pick
       contains: "Which way to supply each secret: the Vault, a secrets file, a secret ID, or a process environment variable."

@@ -21,10 +21,10 @@ Write performance tests for MATLAB code using the `matlab.perftest.TestCase` fra
 
 ## When NOT to Use
 
-- User wants a quick one-off timing (use `timeit` instead — see `matlab-optimize-performance`)
-- User wants to optimize existing code (use `matlab-optimize-performance`)
-- User wants to measure memory usage (use `matlab-optimize-memory`)
-- User wants to profile code to find bottlenecks (use `matlab-optimize-performance`, Step 2)
+- User wants a quick one-off timing (use `timeit` instead — see the MATLAB speed tuner on AI Blocks)
+- User wants to optimize existing code (use the MATLAB speed tuner on AI Blocks)
+- User wants to measure memory usage (use the MATLAB memory saver on AI Blocks)
+- User wants to profile code to find bottlenecks (use the MATLAB speed tuner on AI Blocks)
 
 ## Framework: `matlab.perftest.TestCase`
 

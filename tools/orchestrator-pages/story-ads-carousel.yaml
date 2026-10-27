@@ -33,7 +33,7 @@ you_get:
   - A story image ad with a picture plan, two other openings and two tests
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and five skill files, in the order they run: Buyer brief writer, Selling points writer, Problem story copy writer, Story carousel ad writer and Story image ad writer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. Paste real reviews, including the ones that tell a story, and your product facts.
   - It works step by step and saves each result. Read the buyer brief first, then the story. If the story doesn't sound like your buyers, change the brief and run again.

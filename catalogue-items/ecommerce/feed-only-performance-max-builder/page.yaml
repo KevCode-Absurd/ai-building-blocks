@@ -77,7 +77,7 @@ how_it_works:
   - title: Sets the bid
     text: Maximize Conversion Value with no target at the start.
   - title: Blanks the assets
-    text: Switch off auto-created assets and enhancements, include all products, clear every asset and leave signals blank.
+    text: Switch off auto-created assets and enhancements, include all products, clear every asset and leave signals blank. If Google will not accept a blank group, add only what it requires and check where the ads show.
   - title: Sets priority
     text: The new-customer Shopping campaign at High, so it serves first-time searches and Performance Max serves the rest.
   - title: Excludes brand

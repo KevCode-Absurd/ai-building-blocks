@@ -59,3 +59,4 @@ output_sample:
       contains: The habits and attitudes learners need for this topic, and how to build them.
     - name: Developmental Action Plan
       contains: Next steps to build your own knowledge, including questions to check understanding mid-lesson.
+next: [retrieval-quiz-writer, group-work-task-planner]

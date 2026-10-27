@@ -30,11 +30,11 @@ you_get:
   - A re-run with one change if you ask for it
 how_to_use:
   - Open an AI that can run Python code. Paste in this skill.
-  - Set your OpenAI API key on your computer. Never paste the key into the chat.
+  - Set your OpenAI API key on your computer. Never paste the key into the chat. The OpenAI API is paid per use, so check current prices before a big batch.
   - Paste your exact text. Add the voice, style and file format you want.
   - Let your AI make the audio files. For many lines, it runs them as one batch.
   - Listen to each clip before you use it. Check pacing and how names and acronyms sound.
-  - Ask for one change at a time, such as a slower pace. Then drop the clip into your video or phone system. Tell listeners the voice is AI-made.
+  - Ask for one change at a time, such as a slower pace. Then drop the clip into your video or phone system. Tell listeners the voice is AI-made. To choose between voices or paces, make two clips from the same text and compare them. Keep the run record with the final audio.
 output_sample:
   input:
     - The exact text to speak, line by line if you want many clips

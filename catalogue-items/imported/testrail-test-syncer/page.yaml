@@ -31,11 +31,11 @@ you_get:
   - A count of imported cases and written tests
 how_to_use:
   - Check you have a TestRail account and an API key. Set your TestRail address, user email and API key as settings your AI can read.
-  - Install the TestRail connector and add it to your AI tool by hand. Setting the keys alone is not enough.
+  - Set up the TestRail connector once. A developer can do this. Take the integrations/testrail-mcp folder from the source repo, run npm install inside it, and add it to your AI tool's connector (MCP) settings. Then ask your AI to list its tools and check the testrail ones appear. Setting the keys alone is not enough.
   - Open your AI in your Playwright project. It must be able to run code and read your files.
   - Ask it to import your project and suite ID. Check the new tests and their case IDs.
   - To send results, give it a run ID. It runs your tests and pushes each result to that run.
-  - Ask for a status report to see which TestRail cases still have no automated test.
+  - Ask for a status report to see which TestRail cases still have no automated test. Write those as new Playwright tests next. You can also ask it to update a TestRail case from the steps in a Playwright test.
 output_sample:
   input:
     - Your TestRail address, user email and API key

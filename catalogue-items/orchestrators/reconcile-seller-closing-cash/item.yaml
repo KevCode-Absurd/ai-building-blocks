@@ -8,7 +8,7 @@ job: ops
 level: advanced
 inputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: document
     required: true
 outputs:

@@ -108,6 +108,15 @@ const ONE_WAY: [RegExp, string][] = [
   [/\b(?:outages?|downtime|uptime)\b/, "uptime outage downtime monitoring alert"],
   [/\b(?:hacked|hackers?|breach(?:ed)?)\b/, "security breach incident"],
   [/\bbackups?\b/, "backup recovery restore"],
+  // Everyday jobs people type in their own words (added with the 27 Oct 2026 missing-items pass)
+  [/\b(?:terms and conditions|terms conditions|t ?& ?cs)\b/, "terms of service"],
+  [/\b(?:objection handling|handle objections?|overcome objections?)\b/, "objection responder answer"],
+  [/\b(?:ask for a raise|get a raise|pay rises?|payrise|raise my (?:pay|salary))\b/, "pay rise raise salary negotiation"],
+  [/\b(?:quit(?:ting)? my job|hand(?:ing)? in (?:my )?notice|notice letter)\b/, "resignation letter"],
+  [/\bside (?:hustles?|gigs?|income|jobs?)\b/, "side hustle business idea"],
+  [/\b(?:workouts?|gym|fitness|exercise routine)\b/, "workout fitness exercise plan"],
+  [/\bplan my week\b/, "weekly week plan planner"],
+  [/\bwhich (?:ai|chat ?bot|llm)(?: tools?| apps?| assistants?)? (?:should i|do i|to|can i) use\b/, "picker choose"],
   [/\b(?:scrap(?:e|ing)|web scraping)\b/, "extract scrape data"],
 ];
 

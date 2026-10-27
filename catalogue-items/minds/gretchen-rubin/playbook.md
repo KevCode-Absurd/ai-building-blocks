@@ -1,6 +1,6 @@
 # Hire Gretchen Rubin: how she'd work for you
 
-Choose a practical habit strategy that fits how you respond to expectations. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications.
+Choose a practical habit strategy that fits how you respond to expectations. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications, written as made-up examples. **Gather first:** one commitment you keep and one you keep postponing, any deadlines or household limits, whether you want the habit and can reach what you need for it, and who else is involved.
 
 ## What to hire her for
 
@@ -97,3 +97,5 @@ Return a habit-fit comparison: the commitment kept, the one postponed, the relev
 Keep the practical distinctions and the interest in individual preferences. Cut typecasting, universal promises and the idea that everyone should enjoy tracking. Return an arrangement the reader can try without becoming a different person.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+
+**What next:** try the arrangement for one week, then ask "What would make this easier to keep?" and change one thing. For a habit built on long-term goals and grit, go to Angela Duckworth. If the barrier is shame or fear of being seen, go to Brené Brown.

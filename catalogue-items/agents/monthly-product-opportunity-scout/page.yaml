@@ -11,7 +11,7 @@ explain: |
 
   This product candidate planner keeps a running list in a file called scout/pipeline.md. Each month it re-checks every product on watch for new rivals and drops the ones that got crowded. It scores new finds on price, cost and fit. Only the few that pass get the deeper checks on rivals, untapped buyer groups and trend risk.
 
-  At the end you get at most one pick, with a spending cap and a stop rule. If nothing earns a pick, it says so. It reads only the captures you give it, and it never browses, orders stock or contacts a supplier.
+  At the end you get at most one pick, with a spending cap and a stop rule. If nothing earns a pick, it says so. Three checks give a verdict, each in its own words: the scorer says GO, TEST SMALL or DROP, the rival check says GO, TEST FAST or SKIP, and the launch check says GO, TEST FIRST or NO-GO. The report names which check each label came from. It reads only the captures you give it, and it never browses, scrapes, pays for a tool, orders stock or contacts a supplier.
 when:
   - You want a steady way to find your next product to sell, not a one-off hunch.
   - You have a list of product ideas and want to know which are worth a small test.
@@ -24,7 +24,7 @@ not_for:
   - You sell on Amazon. Use the Amazon product viability scorer for that marketplace.
 you_give:
   - Your market and who buys, in a short paragraph
-  - Screenshots from the Meta Ad Library, sales rankings or product graphs for your market (the first month, then fresh ones each month)
+  - Screenshots from the Meta Ad Library, sales rankings or product graphs for your market (the first month, then fresh ones each month). The Meta Ad Library is free to search. Sales-ranking and product-graph tools may need a paid account, or you can save screenshots by hand. The agent pays for and scrapes nothing
   - Your expected landed cost per unit (product plus shipping to the customer), your target price and the most you can lose on a test
   - Last month's scout/pipeline.md, if you ran it before (a pasted copy works in a chat)
   - Customer reviews of the category (optional)

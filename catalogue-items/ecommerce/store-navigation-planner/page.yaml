@@ -11,7 +11,7 @@ subhead: Give it your collections with their search volume, revenue and product 
 explain: |
   If shoppers need four clicks to reach a product, many will not get there. Search engines also crawl deep pages less often. Meanwhile your homepage, which usually has the most links, may feature collections that nobody searches for.
 
-  This skill plans the paths through your store. It picks a menu style for your range size, puts your best collections near the top of the homepage so link value flows to them, shows sub-collections on their parent pages, and decides whether you need filters. Shopify filter pages do not rank, so it lists which filter values deserve a real collection. It counts clicks to your top 10 collections before and after, so you can see the change.
+  This skill plans the paths through your store. It picks a menu style for your range size, puts your best collections near the top of the homepage so link value flows to them, shows sub-collections on their parent pages, and decides whether you need filters. The source says Shopify filter pages are usually not indexed, so it lists which filter values deserve a real collection. It counts clicks to your top 10 collections before and after, so you can see the change.
 
 when:
   - Your menu has grown messy and top products take three or more clicks to reach.
@@ -70,7 +70,7 @@ how_it_works:
   - title: Plans the homepage
     text: Puts high-volume, high-revenue collections near the top, since the homepage usually holds the most links.
   - title: Decides on filters
-    text: Filters only with hundreds of products. Filter pages do not rank on Shopify, so wanted filter values get a real collection.
+    text: Filters only with hundreds of products. The source says filter pages are usually not indexed on Shopify, so wanted filter values get a real collection. Check in Search Console.
   - title: Links down the tree
     text: Shows sub-collections on parent pages, with images where possible.
   - title: Sets grid and product links
@@ -142,7 +142,7 @@ works_best_with:
     - {name: "Shopify Search & Discovery", why: "Free Shopify app for filters and a product grid that loads without JavaScript."}
     - {name: "Google Search Console", why: "Free. Shows impressions for featured collections before and after the change."}
   inputs:
-    - "Search volume per collection from a keyword tool"
+    - "Search volume per collection from a keyword tool (many are paid) or from the free Search Console data for collections you already have"
     - "Revenue per collection from your store report"
     - "Screenshots of your homepage on a phone"
     - "Competitor menus you like"

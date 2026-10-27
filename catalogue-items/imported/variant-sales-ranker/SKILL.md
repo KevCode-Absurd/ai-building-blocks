@@ -38,8 +38,8 @@ Goes beyond product-level revenue by ranking every individual variant (size, col
    **Expected output:** All orders in range; paginate until `hasNextPage: false`; aggregate in-memory per `variant.id`: units sold, gross revenue, refunded units, refunded amount, refund rate
 
 2. **OPERATION:** `productVariants` — query
-   **Inputs:** List of variant IDs collected in step 1, `first: 250`, pagination cursor; select `id`, `sku`, `title`, `selectedOptions`, `inventoryQuantity`, `product { id, title }`, `price`
-   **Expected output:** Current inventory levels and metadata for each sold variant; joined with step-1 aggregates; variants present in inventory but with zero sales are flagged as dead stock candidates
+   **Inputs:** Page through all variants in the store with `first: 250` and the pagination cursor (the `query` string cannot filter by variant ID), and keep the ones you need. To fetch only the sold variants instead, use the `nodes(ids: [<variant GIDs>])` query in batches of 250 with `... on ProductVariant { id sku title price selectedOptions { name value } inventoryQuantity product { id title } }`. Select `id`, `sku`, `title`, `selectedOptions`, `inventoryQuantity`, `product { id, title }`, `price`
+   **Expected output:** Current inventory levels and metadata for each variant; joined with step-1 aggregates. Variants with stock but no sales in the period get `units_sold: 0` and `revenue 0`. List them as a separate group called zero-sales dead stock
 
 3. **In-memory computation:** Sort merged dataset by `sort_by` metric; compute revenue-per-inventory-unit ratio (net revenue ÷ inventory quantity) to highlight variants earning little relative to shelf space; split output into top-N performers and bottom-N by the same metric
 
@@ -202,7 +202,7 @@ CSV file `variant_performance_<YYYY-MM-DD>.csv` with one row per variant:
 
 For `format: human`, two ranked tables are printed inline:
 1. **Top performers** — top `top_n` variants by `sort_by` metric
-2. **Dead weight** — bottom `top_n` variants by `revenue_per_inventory_unit` (≥ `min_units` sold, inventory > 0)
+2. **Dead weight** — bottom `top_n` variants by `revenue_per_inventory_unit` (≥ `min_units` sold, inventory > 0). Variants with stock and zero sales are listed after this table as zero-sales dead stock
 
 ## Error Handling
 | Error | Cause | Recovery |
@@ -217,4 +217,4 @@ For `format: human`, two ranked tables are printed inline:
 2. The `revenue_per_inventory_unit` column is the sharpest signal for dead weight — a high inventory count with near-zero revenue is a clear markdown candidate.
 3. High `refund_rate_pct` on a specific size or color often points to a fit or quality issue — investigate before reordering that option.
 4. Use `min_units: 5` to filter out statistical noise from variants with very few sales before making merchandising decisions.
-5. Pair with `dead-stock-identifier` for a broader view of inventory health beyond the sales period captured here.
+5. Pair with `dead-stock-identifier` (on AI Blocks, the Dead stock finder) for a broader view of inventory health beyond the sales period captured here.

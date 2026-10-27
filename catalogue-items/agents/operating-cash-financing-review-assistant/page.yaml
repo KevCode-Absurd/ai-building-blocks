@@ -116,7 +116,7 @@ tweaks:
 judge:
   - Reported and analytical views reconcile, matched cash ledgers support timing changes, liabilities are conserved and no financing effect is adjusted twice or converted into an accounting ruling.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - Reconcile opening balances, additions, deductions and closing balances.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

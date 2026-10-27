@@ -5,9 +5,9 @@ name: Content channel planner
 summary: Plan where to share your content so people see it. Give it your content and audience. You get a content channel plan with a posting rhythm.
 job: grow-social
 headline: Content channel planner
-subhead: A plan for where your content goes after it is published, matched to your audience, with channels to drop. Most teams put nine tenths of their effort into making content and almost none into getting it seen.
+subhead: A plan for where your content goes after it is published, matched to your audience, with channels to drop. Many teams put far more effort into making content than into getting it seen.
 explain: |
-  A plan for where your content goes after it is published, matched to your audience, with channels to drop. Most teams put nine tenths of their effort into making content and almost none into getting it seen.
+  A plan for where your content goes after it is published, matched to your audience, with channels to drop. Many teams put far more effort into making content than into getting it seen.
 
   Claude sorts channels into owned, earned and paid. It matches each type of content to the channel where that audience reads, sets a posting rhythm and says what to skip. It can also audit why a program publishes steadily but gets little reach. This is about getting content to people. It is different from turning one piece into many formats, which is a separate job.
 when:
@@ -31,11 +31,12 @@ you_get:
   - Notes on owned, earned and paid mix
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
-  - Tell your AI your content types, your audience and the channels you use now.
+  - Gather your current channel list and the last three months of reach and engagement for each. Tell your AI your content types, your audience and the channels you use now.
   - Add your budget and team size if you know them (optional).
   - Ask for a channel plan with a posting rhythm and channels to drop.
   - Check each channel against what your audience really uses. Treat any rule of thumb in the plan as a guide, not a fact.
   - Cut the channels it says to drop. Test the plan for a month, then ask your AI to review it.
+  - To turn one piece into many formats first, use the content repurposer. For paid reach, use the paid media budget planner.
 output_sample:
   input:
     - Your content types, such as blog posts, video or a newsletter

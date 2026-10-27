@@ -20,8 +20,8 @@ not_for:
   - "You need a full test run in a live setup: use your own test environment, because this skill only checks the change you describe."
   - "You have no access to the code or the diff: ask a developer who knows the project to look first."
 you_give:
-  - The change or planned change
-  - Access to the code
+  - The change or planned change, as a diff or commit range
+  - Access to the code, including the repo paths to search and the lockfile
   - The claim the change depends on (optional)
 you_get:
   - A list of things that could break
@@ -33,7 +33,7 @@ how_to_use:
   - Paste the skill text, or upload the skill folder.
   - Describe the change, or paste the diff. Add the claim it depends on, if you have one.
   - Let your AI list the risks and rate each key fact. Check that every risk names a real file and line.
-  - Run the proof script in a local or test setup, never on live data. Then fix what it found and run the proof again on the final change.
+  - Run the proof script in a local or test setup, never on live data. Then fix what it found and run the proof again on the final change. Note the result in your pull request.
 output_sample:
   input:
     - A short description of the change, or the diff itself

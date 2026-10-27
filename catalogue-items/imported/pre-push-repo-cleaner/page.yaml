@@ -9,7 +9,7 @@ subhead: A cleaner project before it goes on GitHub. The skill reads your code f
 explain: |
   A cleaner project before it goes on GitHub. The skill reads your code file by file, fixes what it can and flags what needs your decision.
 
-  It deletes junk such as .DS_Store, logs, temp files, build output and installed dependencies. Then it looks for dead code, unused files, hard-coded secrets and keys, security holes and slow patterns. Fixes are made straight away rather than only listed. Use it before a first push, before making a repo public or before a production release. Review its changes before you commit.
+  It deletes junk such as .DS_Store, logs, temp files, build output and installed dependencies. Then it looks for dead code, unused files, hard-coded secrets and keys, security holes and slow patterns. Small safe fixes are made straight away. Deleting files and removing secrets wait for your yes. Use it before a first push, before making a repo public or before a production release. Review its changes before you commit.
 when:
   - You are about to push a project to GitHub for the first time.
   - You want to make a private repo public safely.
@@ -29,6 +29,7 @@ you_get:
   - List of leaked secrets found
   - Security and speed fixes applied
 how_to_use:
+  - Commit or back up your project first, so you can undo any change.
   - Open an AI that can read and edit your project files, and add your project folder.
   - Paste in the skill instructions, or say "Follow this skill".
   - Add notes on files to keep, and where you plan to publish (optional).

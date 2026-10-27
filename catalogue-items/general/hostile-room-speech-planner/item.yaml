@@ -8,13 +8,13 @@ job: strategy
 level: expert
 inputs:
   - {type: question, required: true}
-  - {type: persona, required: false}
-  - {type: brief, required: false}
+  - {type: copy_draft, required: false}
 outputs:
-  - {type: script}
+  - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
 minds: [william-shakespeare]
 credits:
   - {title: "Julius Caesar (funeral speech scene)", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1522", used: "Asking for a hearing, agreeing first, repeating a trusted phrase until it turns, holding back the strongest fact and ending on a next step"}
   - {title: "Hamlet", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1524", used: "Writing for the speaker's mouth, ending a speech on a decision, and the advice to speak lightly and not overact"}
+needs_mode: manual

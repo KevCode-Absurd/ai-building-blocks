@@ -20,7 +20,7 @@ when:
 not_for:
   - You have fewer than a few hundred subscribers, so the day-by-day chart would be too thin to read. Do a plain review of your cancel reasons by hand instead.
   - You sell one-off products with no repeat billing. A churn audit has nothing to measure, so look at repeat purchase rates in your store reports.
-  - You want lifetime value or cost to win a customer. Use the Subscription unit economics skill for that.
+  - You want lifetime value or cost to win a customer. Use the Subscription payback checker for that.
 
 you_give:
   - Cancels with date, order number and reason
@@ -131,7 +131,7 @@ improve:
   - Change the thresholds in the skill file to match your own history once you have a year of data.
   - Add your product's real delivery time, so the first-delivery window moves to the right days.
   - Add a part for failed payments if they are a big share of your cancels.
-  - Pair it with Subscription unit economics for lifetime value and cost to win, and with Customer churn risk scorer for per-customer risk.
+  - Pair it with the Subscription payback checker for lifetime value and cost to win, and with the Subscriber retention calendar to plan what subscribers receive.
 
 works_best_with:
   tools:
@@ -151,3 +151,4 @@ terms:
     meaning: A repeat charge on a subscription after the first order.
   - term: Cohort
     meaning: A group of customers who started in the same period.
+next: [subscription-cancel-flow-builder, billing-reminder-and-confirmation-writer, subscriber-retention-calendar, subscription-payback-checker]

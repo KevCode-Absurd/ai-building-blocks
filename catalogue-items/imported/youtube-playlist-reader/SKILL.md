@@ -7,7 +7,7 @@ compatibility: Requires internet access to reach transcriptapi.com. No additiona
 required_environment_variables:
   - name: TRANSCRIPT_API_KEY
     prompt: Your TranscriptAPI key (starts with sk_)
-    help: Free account at https://transcriptapi.com — 100 credits, no card required. Or let the agent create one for you.
+    help: Free account at https://transcriptapi.com — 100 credits, no card required. Make the account yourself and paste the key. The agent must ask you before it signs up for anything.
     required_for: all API requests
 metadata: {"openclaw":{"emoji":"📋","requires":{"env":["TRANSCRIPT_API_KEY"]},"primaryEnv":"TRANSCRIPT_API_KEY","homepage":"https://transcriptapi.com"},"hermes":{"tags":["youtube","playlists","video","transcripts","series"],"category":"media"}}
 ---
@@ -18,7 +18,7 @@ Browse playlists and fetch transcripts via [TranscriptAPI.com](https://transcrip
 
 ## Setup
 
-If `$TRANSCRIPT_API_KEY` is not set, read [references/auth-setup.md](references/auth-setup.md) and follow the instructions there to get and store the key.
+If `$TRANSCRIPT_API_KEY` is not set, read [references/auth-setup.md](references/auth-setup.md) and follow the instructions there to get and store the key. Ask the user to create their own TranscriptAPI account and paste the key. Only sign up for them if they clearly say yes first.
 
 ## Required Headers
 

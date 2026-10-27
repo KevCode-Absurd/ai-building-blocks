@@ -1,6 +1,6 @@
 slug: stock-age-report-builder
 name: Stock age report builder
-summary: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over."
+summary: "Get your stock sorted by how long it has sat unsold: 0 to 30, 31 to 60, 61 to 90, 91 to 180 and 181 or more days."
 category: general
 boards: []
 type: skill

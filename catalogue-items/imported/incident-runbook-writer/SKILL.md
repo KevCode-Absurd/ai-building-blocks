@@ -56,7 +56,7 @@ Adaptable templates for incident response runbooks covering detection, triage, m
 
 ## Runbook prerequisites
 
-Bind service, namespace, cluster context, database, owners, approved incident authority, evidence sources and rollback revision before adapting these templates. Thresholds, financial amounts, impact percentages and resolution messages are illustrative, never observed incident facts. Read-only triage comes first; mutations require an approved service-specific response. Verify actual smoke/rollback scripts in the target project before using them. No script is bundled or implied by this template.
+Bind service, namespace, cluster context, database, owners, approved incident authority, evidence sources and rollback revision before adapting these templates. Thresholds, financial amounts, impact percentages and resolution messages are illustrative, never observed incident facts. The endpoints, environment variables and script paths in these templates (the feature-flag API, `STRIPE_CIRCUIT_BREAKER_ENABLED`, `RATE_LIMIT_ENABLED`, `scripts/smoke-test-payments.sh`, `scripts/db-rollback.sh`) are placeholders. They do not exist in your stack by default and the scripts are not included. Replace each with your own tested equivalent, or remove the step. Read-only triage comes first; mutations require an approved service-specific response. Verify actual smoke/rollback scripts in the target project before using them. No script is bundled or implied by this template.
 
 ## Runbook Templates
 
@@ -197,24 +197,10 @@ kubectl set env deployment/payment-service \
   RATE_LIMIT_ENABLED=true \
   RATE_LIMIT_RPS=1000 -n payments
 
-# Step 4: If attack, block suspicious IPs
-kubectl apply -f - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: block-suspicious
-  namespace: payments
-spec:
-  podSelector:
-    matchLabels:
-      app: payment-service
-  ingress:
-  - from:
-    - ipBlock:
-        cidr: 0.0.0.0/0
-        except:
-        - 192.168.1.0/24  # Suspicious range
-EOF
+# Step 4: If attack, block suspicious IPs at your approved edge or WAF
+# Do not apply a broad NetworkPolicy to the whole payments namespace during an incident:
+# it can cut real traffic. Block the suspicious ranges where your team normally does,
+# with the incident commander's approval.
 ```
 
 ## Verification Steps
@@ -251,7 +237,7 @@ curl -X POST https://api.company.com/internal/feature-flags \
 |-----------|-------------|---------|
 | > 15 min unresolved SEV1 | Engineering Manager | @manager (Slack) |
 | Data breach suspected | Security Team | #security-incidents |
-| Financial impact > $10k | Finance + Legal | @finance-oncall |
+| Financial impact > [your threshold] | Finance + Legal | @finance-oncall |
 | Customer communication needed | Support Lead | @support-lead |
 
 ## Communication Templates
@@ -262,7 +248,7 @@ curl -X POST https://api.company.com/internal/feature-flags \
 
 Severity: SEV2
 Status: Investigating
-Impact: ~20% of payment requests failing
+Impact: [X%] of payment requests failing
 Start Time: [TIME]
 Incident Commander: [NAME]
 
@@ -298,7 +284,7 @@ ETA to Resolution: ~15 minutes
 ✅ RESOLVED: Payment Service Incident
 
 Duration: 45 minutes
-Impact: ~5,000 affected transactions
+Impact: [N] affected transactions
 Root Cause: Memory leak in v2.3.4
 
 Resolution:

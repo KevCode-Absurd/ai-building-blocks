@@ -12,6 +12,8 @@ date_added: "2026-02-23"
 
 Integrate privacy protections into software architecture from the beginning, not as an afterthought. This skill applies Privacy by Design principles (GDPR Article 25, Cavoukian's framework) when designing databases, APIs, and user flows. Protects real users' data and builds trust.
 
+**Not legal advice.** This is design guidance. Have a privacy lawyer or data protection officer check the final design before launch.
+
 ## When to Use This Skill
 
 - Use when building apps that collect personal data (names, emails, locations, preferences)
@@ -70,7 +72,7 @@ Ensure these are implementable from day one:
 
 **Data minimization** — Less data = less breach impact, lower storage cost, simpler compliance. Each field is a liability.
 
-**Purpose limitation** — Reusing data without consent is illegal under GDPR. Document purpose in schema or metadata.
+**Purpose limitation** — Under GDPR, using data for a new purpose generally needs a lawful basis, such as consent. Document purpose in schema or metadata.
 
 **Retention** — Indefinite storage increases risk and violates GDPR. Define `retention_days` per data type; automate cleanup.
 

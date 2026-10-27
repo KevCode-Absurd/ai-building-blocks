@@ -49,7 +49,7 @@ how_it_works:
   - title: Weighs by profit
     text: Chance of winning, times the lift, times the extra orders it brings, times gross profit per order, minus the build cost.
   - title: Uses honest win rates
-    text: A range, from about 10 to 20 percent for well-run tests up to the higher rates of teams that research first.
+    text: A wide range, about 10 to 20 percent when research is thin. It is an assumption. Use your own test record when you have one.
   - title: Orders the top
     text: Survey blockers first, then what recordings show is broken, then the busiest page.
   - title: Picks and parks

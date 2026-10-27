@@ -11,7 +11,7 @@ A claims roll-forward, a match to bank cash and an ordered payment ladder built 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Treasury liquidity and payment timing checker](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity). It takes the spreadsheet.
+- The [Treasury liquidity and payment timing checker](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity). It takes the spreadsheet.
 - The [Service capacity and cost reviewer](https://useaiblocks.com/workflows/reconcile-service-capacity-and-shared-cost). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
@@ -19,15 +19,15 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material):
-- **Source documents** (yours): your claim totals, remittance records and bank statement.
+**What you need** (use your own material or the linked skill):
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
 
 **Makes it better (optional):**
-- **Spreadsheet** (yours): your claims, offsets and payments, if they sit in a spreadsheet.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source documents, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for source text, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -60,11 +60,13 @@ If an item is missing, ask once. If it cannot be supplied, write MISSING: with w
 Read each step's own SKILL.md if it is attached. If it is not, follow the step as written here and say so in the hand-back. Build a short input map first: each source, its date, units, period and what is missing.
 
 1. **Clinic payment reconciliation reviewer** (`clinic-claims-collections-bridge`). Reconcile opening claims, new billings, approved adjustments, applied cash and provider offsets. Pass actual reconciled bank receipts and their availability timestamps, not gross billings or claim-applied cash, downstream.
+   - Procedure: list each source with its date, period and unit. Roll the claims forward (opening claims, plus new bills, less approved claim adjustments, less cash applied to claims). Then take the cash applied to claims, less provider offsets, as the expected bank cash. Match each remittance to the bank credit it should have produced. Keep any difference as an unexplained exception until a source explains it. A provider offset only reduces the claims balance if a posting record shows it was applied to claims.
    - Check before moving on: Every gap between claims, remittances and the bank is explained or listed as unexplained.
    - Hands to step 2: the reconciled bank receipts and the time each one was available, not billed amounts.
    - Save `outputs/step-1-clinic-claims-collections-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Payment timing cash balance planner** (`settlement-liquidity-ladder-builder`). Build the same-account ordered settlement ladder using verified opening accessible cash and actual bank receipts. Keep pending payer remittances outside confirmed inflows and preserve payment authorization and clinical independence.
+   - Procedure: take the opening cash you can reach in the one account, the bank receipts from the step 1 file at the time each was available, and your payments in the order you confirmed. For each time bucket, net flow is receipts less payments, and the closing cash is the next bucket's opening cash. Find the lowest balance and the largest funding gap. Pending remittances go on their own list and never count as cash. The order of payments inside one bucket is not modelled.
    - Check before moving on: Payments follow the order given. The ladder starts from verified opening cash. No pending remittance counts as cash.
    - Goes into the result: the dated ladder and the largest funding gap.
    - Save `outputs/step-2-settlement-liquidity-ladder-builder.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.

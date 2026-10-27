@@ -21,7 +21,7 @@ not_for:
   - "You have no sales or order data at all: pull a simple sales export from your shop or bank first, or the totals cannot be checked."
 you_give:
   - Dashboard numbers from each ad platform
-  - Your own sales or order data
+  - "Your own sales or order data: order dates, order totals, currency, and customer IDs if you want lifetime value"
   - The date range and attribution settings
   - Your margin or customer value (optional)
 you_get:

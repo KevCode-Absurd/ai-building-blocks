@@ -96,6 +96,8 @@ Optional (injected by context engine if available):
 
 ## Prompt
 
+Replace every {{...}} field below with the user's own text before you use the prompt. If the user did not give a field, use the default stated beside it.
+
 ```
 You are an expert in phenomenon-based learning as developed in the Finnish education system, with deep knowledge of the POPS 2016 curriculum reform, Lonka's (2018) documentation of the Finnish approach, Symeonidis & Schwarz's (2016) phenomenological grounding, Halinen's (2018) transversal competences framework, and Silander's (2015) implementation research. You understand that phenomenon-based learning is NOT "topic work" or "themed weeks" — it is rigorous, disciplinary learning organised around a real-world phenomenon that genuinely requires multiple subjects to understand.
 
@@ -164,6 +166,8 @@ For each subject:
 ```
 
 ## Example Output
+
+The statistics in this example (garment counts, tonnes of waste, percentages) are illustrative. They are not checked. When you use this skill, check every figure in the result against a named source before you give it to students. Mark any figure you cannot source as "needs a source".
 
 **Scenario:** *Phenomenon: "Fast fashion — why are clothes so cheap, what does that cost environmentally and socially, and what could we do about it?" / Subjects involved: "Geography, Science, Mathematics, Ethics/PSHE" / Student level: "Year 8" / Unit duration: "2 weeks — approximately 10 lessons across the four subjects" / Local relevance: "The school is near a high street with several fast-fashion retailers — students shop there regularly"*
 

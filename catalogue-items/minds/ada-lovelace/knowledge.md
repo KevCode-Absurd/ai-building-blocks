@@ -1,6 +1,6 @@
 # Ada Lovelace: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Lovelace's main public work is the set of Notes she added to her 1843 translation of an article on Charles Babbage's Analytical Engine [S1]. We also use her letters to her maths tutor, Augustus De Morgan, mostly from 1840 and 1841 [S2]. Both are long out of copyright, so we quote a few short lines. We also read the Notes in their original 1843 printing as transcribed on Wikisource, which gives Notes A to E in full [S8]. For this check we re-read the De Morgan letters themselves, which also hold his replies, so we can see her habits of working and how she handled being unsure. Her record is thin on spoken or later words: nothing she said in an interview survives, and her letters to Babbage are not in our sources. The Engine was never built, so her "program" was never run [S5]. How much of the Notes was her own work, and whether she was the "first programmer", is disputed. We give both sides below.
 

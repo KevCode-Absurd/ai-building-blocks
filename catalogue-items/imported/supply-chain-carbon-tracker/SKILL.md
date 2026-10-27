@@ -117,7 +117,9 @@ class CarbonFootprintCalculator:
 
     def _load_emission_factors(self):
         """Load standard emission factors database"""
-        # Based on EPA, DEFRA, and other sources
+        # Example values only, loosely based on public EPA and DEFRA factor tables.
+        # No year, version or unit check is recorded here. Replace any factor you cannot cite
+        # with one from a published source, and write down its source, year and unit.
         return {
             # Energy (kgCO2e per kWh)
             'electricity_us_grid': 0.417,

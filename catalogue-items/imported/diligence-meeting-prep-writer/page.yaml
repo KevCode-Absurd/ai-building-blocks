@@ -19,6 +19,7 @@ not_for:
   - "You need a final investment decision: ask a senior advisor or write a full diligence memo."
   - "You have no documents or data room access: first ask the company for its basic files, then come back."
   - "You want a script to read word for word: use your own judgment, since this gives a guide, not a script."
+  - "You plan to ask an expert or customer for confidential or inside information: don't. Follow your firm's and the expert network's rules."
 you_give:
   - The meeting type and attendees
   - The company and its sector
@@ -36,7 +37,7 @@ how_to_use:
   - Add who attends, your focus area, what you know from the data room, and your main worries.
   - Check the benchmarks. Ask your AI for the source of each one, and mark any number without a source as to verify.
   - Pick your must-ask questions and print the one-page prep sheet.
-  - "End the meeting by asking: what haven't we asked that we should?"
+  - "End the meeting by asking: what haven't we asked that we should? Afterwards, write up your notes and send the follow-up request to the company."
 output_sample:
   input:
     - The meeting type, such as management presentation, expert call or customer reference

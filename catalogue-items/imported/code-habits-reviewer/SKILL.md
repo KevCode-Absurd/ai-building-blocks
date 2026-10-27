@@ -17,10 +17,11 @@ A systems-level approach to software craftsmanship from Hunt & Thomas' "The Prag
 
 ## Scoring
 
-**Goal: 10/10.** Score against the seven Quick Diagnostic rows: award ~1.4 points per row answered "yes" (7 yes = 10). Then band the result:
+**Goal: 10/10.** Score against the seven Quick Diagnostic rows: award 10/7 points (about 1.43) per row answered "yes", so 7 yes = 10 and 0 yes = 0. Round to one decimal. Then band the result:
 - **9-10**: every principle holds -- DRY knowledge, orthogonal layers, a working tracer slice, contracts at boundaries, no broken windows, reversible vendor/DB choices, ranged estimates.
-- **5-6**: 1-2 violations that cost real change-effort (e.g. business logic coupled to the DB, single-point estimates).
-- **<=3**: pervasive duplication, global state, or accumulated broken windows -- entropy is winning.
+- **7-8.9**: 1-2 violations that cost real change-effort (e.g. business logic coupled to the DB, single-point estimates).
+- **4-6.9**: 3-4 violations; changes are getting harder and riskier.
+- **<4**: pervasive duplication, global state, or accumulated broken windows -- entropy is winning.
 
 Always state the score, name the failing diagnostic rows, and give the specific fix from the Action column to reach 10/10.
 
@@ -216,7 +217,7 @@ See: [references/estimation-portfolio.md](references/estimation-portfolio.md) wh
 
 ## Further Reading
 
-- [The Pragmatic Programmer: Your Journey to Mastery, 20th Anniversary Edition](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052?tag=wondelai00-20) by Andrew Hunt and David Thomas
+- [The Pragmatic Programmer: Your Journey to Mastery, 20th Anniversary Edition](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052) by Andrew Hunt and David Thomas
 
 ## About the Authors
 

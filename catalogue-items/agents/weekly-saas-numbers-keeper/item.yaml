@@ -21,7 +21,7 @@ steps:
   - { uses: ltgp-to-cac-checker, note: "Every month: lifetime gross profit against the cost to win a customer, its band and a score." }
   - { uses: bookings-forecast-builder, note: "Only when you sell with a pipeline: commit, best case and pipe-only forecast with the maths shown." }
   - { uses: weekly-growth-target-setter, note: "Every week, last: one growth target for the week, what it means in sign-ups or revenue, and what to skip." }
-schedule: "Every Monday morning, from last week's billing export"
+schedule: "Run it by hand every Monday morning, from last week's billing export. It does not start a schedule itself"
 asks_before: [ changing a price or a plan, changing ad or sales spend, sending the numbers to investors, the board or the team, contacting any customer, changing what counts as churn or revenue ]
 minds: [ paul-graham ]
 origin: own

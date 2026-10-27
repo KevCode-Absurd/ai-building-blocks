@@ -32,7 +32,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Paste your goal, target cost per result, monthly budget, offer and landing page link.
-  - Add past ad results if you have them. Export them as text or a table and paste them in.
+  - Add past ad results if you have them. Your AI cannot see your ad accounts, so export results as text or a table and paste them in.
+  - The skill points to playbook files for deeper steps. In a plain chat the plan uses the core skill text only. In Claude Code, or if you can upload files, add the skill's reference folder too.
   - Answer any questions it asks. If you do not know something, say so and it will mark it MISSING.
   - Read the plan. Check that the budget split and the scale or stop numbers match your real limits.
   - Launch the first test only. Come back with results before you scale.
@@ -61,3 +62,4 @@ output_sample:
       contains: The numbers that tell you to raise spend, hold, or turn an ad off.
     - name: Facts, hypotheses and missing data
       contains: What is known, what is a guess, and any input marked MISSING.
+next: [meta-ads-compliance-checker]

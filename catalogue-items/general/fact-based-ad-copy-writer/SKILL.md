@@ -5,7 +5,7 @@ description: Use when you're writing an ad, headline or page and want the main s
 
 # Fact-based ad copy writer
 
-Readers discount general praise and believe specific facts, because a specific fact sounds like something the seller has checked. So you pick the one true product fact that answers this buyer's biggest want or doubt, build the ad on it, make the picture say the same thing, and show which fact backs each line.
+Readers discount general praise and believe specific facts, because a specific fact sounds like something the seller has checked. So you pick the one true product fact that answers this buyer's biggest want or doubt, build the ad on it, make the picture say the same thing, and show which fact backs each line. It writes one ad, not a sales page: for a long page use the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It also needs real product facts: with none, the ad is mostly MISSING lines.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -14,6 +14,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Makes it better (optional):**
+- **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -24,7 +27,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your brand brain, a buyer brief, hooks. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -44,7 +47,7 @@ How to start:
 1. **Start with the buyer.** Write one line on their situation and what the product changes for them. Follow the brand's voice and the format's limits from here on.
 2. **Find the fact.** Look for the one detail that answers this buyer's want or doubt, the kind of thing that words like "premium" usually hide: a dose, a material, a step in how it's made, a test. Choose it because it matters to this buyer, not because the number is big. Note its source and any conditions attached to it.
 3. **Say what it means for them.** Put the fact in plain words: what does it change for this buyer? An ingredient or process doesn't prove a result on its own, so link it only to a benefit the facts support. Never call something unique, patented or better than others without proof.
-4. **Write the words.** The first line opens on something this buyer feels or has done (the doubt they hold, the thing they quit), never on the product name or a list of specs. The fact comes next, as the answer. The first line carries the main reason to care. If you open with a question or curiosity, the answer is that same reason, not a twist. Give numbers exactly as the source states them, with their conditions. Mention a trial, guarantee or discount only with its real terms; never invent a gift, a deadline or scarcity. End with a next step that matches the page the ad leads to. Don't invent a button destination or web address; name the page only if you were given it, else write `MISSING: landing page`. Count characters exactly, letter by letter and space by space, and give the count only if you counted it.
+4. **Write the words.** The first line opens on something this buyer feels or has done (the doubt they hold, the thing they quit), never on the product name or a list of specs. The fact comes next, as the answer. The first line carries the main reason to care. If you open with a question or curiosity, the answer is that same reason, not a twist. Give numbers exactly as the source states them, with their conditions. Mention a trial, guarantee or discount only with its real terms; never invent a gift, a deadline or scarcity. End with a next step that matches the page the ad leads to. Don't invent a button destination or web address; name the page only if you were given it, else write `MISSING: landing page`. If the product makes health, supplement or nutrition claims, use only the wording your facts allow, and tell the person to check it against the advertising rules for their market and platform before it runs. Count characters exactly, letter by letter and space by space, and give the count only if you counted it.
 5. **Make the picture agree.** The image shows the product used the way it's really used, and only results the facts support. Spell out the handling detail the facts or brand file give (how it opens, how it's held, how it's eaten or poured), in their words. If none is given, write `MISSING: how it's opened and used`. A generated scene is an illustration, never proof: no invented measurements, reactions or results. Say in the notes if you have no proof footage.
 6. **Edit for the decision.** For each line, ask whether it helps an interested buyer decide, and whether any brand in the category could run it unchanged. If a rival could, tie it to the fact, the format or a detail only this product has. Swap any boast for a fact, cut any claim you can't back, and keep lines that already work.
 7. **Write the notes:** the reason chosen, the fact behind it and its source, conditions kept, strong facts left out and why, and anything missing.
@@ -79,11 +82,11 @@ CHECKS MISSED    <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the ad copy.
-- **Write the ad copy** with the [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
-- **Make image ads** with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker). It takes the ad copy.
-- **Write the landing page** with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). It takes the ad copy.
-- **Plan what to test** with the [A/B test design planner](https://useaiblocks.com/skills/split-run-test-planner). It takes the ad copy.
+- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the ad copy.
+- **Check it before it goes live** with the [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor). It takes the ad copy.
+- **Check it before it goes live** with the [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker). It takes the ad copy.
+- The [Ad opening writer and reviewer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer). It takes the ad copy.
+- The [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the ad copy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

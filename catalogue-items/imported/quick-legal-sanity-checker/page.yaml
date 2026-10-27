@@ -24,14 +24,14 @@ you_give:
   - "Your risk table: what is usually fine, what usually needs work, and what usually blocks, with a timeline for each"
   - Where the answer will be shared (optional)
 you_get:
-  - "A call: fine, needs a look, or hold"
+  - "A first call: looks fine on a first read, needs a look, or hold"
   - One sentence on why
   - One catch question when the request may hide a trap
   - A named next step and timeline when it is not fine
   - A warning if your answer is going to a wide channel
 how_to_use:
   - "Write your risk table first. Three or four rows is enough, like: customer logo on website, needs a look, check the contract for publicity terms."
-  - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions, then paste your risk table under them.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions, then paste your risk table under them. The skill file mentions a plugin config file and commands such as /product-legal. A plain chat does not have these, so it uses your pasted table and sends those questions to your lawyer.
   - Paste your question and say where the answer will go, for example a private message to a product manager.
   - Read the call and the reason. If it asks a catch question, answer it and run it again.
   - If the call is needs a look or hold, send the question to your lawyer or privacy lead. This tool does not replace them.
@@ -45,7 +45,7 @@ output_sample:
     - Your legal team's risk table, set up before you start. Without one, the skill can only say it needs a human look.
   output:
     - name: The call
-      contains: "One of three answers: fine, needs a look, or hold."
+      contains: "One of three answers: looks fine on a first read, needs a look, or hold. Not a sign-off."
     - name: The reason
       contains: One sentence on why, matched to a pattern in your risk table.
     - name: Trap question

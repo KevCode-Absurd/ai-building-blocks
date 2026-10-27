@@ -11,7 +11,7 @@ subhead: "Paste ten years of figures for each company: sales, assets, debts, pro
 explain: |
   A plain investor wants companies that are large, financially strong and steady. They do not need to be exciting. Most companies fail at least one of these tests, and that is the point: the screen cuts a long list down before you read a single story about the business.
 
-  This skill runs five quality tests, in the form Benjamin Graham set them in the 1972 edition of The Intelligent Investor. Size is set above a floor that you choose in today's money. Strength is current assets of at least twice current liabilities and long-term debt no more than working capital, with a different test for utilities. Profit must show in each of ten years. Dividends must be unbroken for twenty years. Profit per share must have grown by at least a third over ten years, using three-year averages at each end. Each result is pass, fail or unknown, with the figure beside it. It names no company to buy.
+  This skill runs five quality tests, in the form Benjamin Graham set them in the 1970s text of The Intelligent Investor (reprinted in the 2003 revised edition). Size is set above a floor that you choose in today's money. Strength is current assets of at least twice current liabilities and long-term debt no more than working capital, with a different test for utilities. Profit must show in each of ten years. Dividends must be unbroken for twenty years. Profit per share must have grown by at least a third over ten years, using three-year averages at each end. Each result is pass, fail or unknown, with the figure beside it. It names no company to buy.
 
 when:
   - You have a list of large companies and want to cut it before you study any of them.
@@ -134,3 +134,6 @@ terms:
     meaning: Current assets less current liabilities.
   - term: Three-year average
     meaning: The mean of three years of profit, used so a single odd year cannot swing a result.
+next:
+  - earnings-padding-detector
+  - defensive-price-ceiling-tester

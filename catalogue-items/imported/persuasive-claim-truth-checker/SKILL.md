@@ -23,6 +23,12 @@ Use this skill to determine whether a persuasive message earns its conclusion. T
 - Treat repetition, reposts, and a network of affiliated outlets as one evidence stream until independent origins are established.
 - Match verification effort to stakes. Slow down before health, financial, legal, security, reputational, or irreversible decisions.
 
+## Working in a single chat
+
+- If `references/` and `assets/` files are not available, use the eight sections in step 6 as the template and say so.
+- The authoritative-source check needs a chat AI that can browse or open links. If you cannot open a source, write "could not open" for it and do not give a verdict on that claim stronger than Unknown.
+- Step 5a only applies if you really handed work to subagents or specialists. In a single chat, skip it and do the checks yourself.
+
 ## Workflow
 
 ### 1. Define the decision and claim boundary

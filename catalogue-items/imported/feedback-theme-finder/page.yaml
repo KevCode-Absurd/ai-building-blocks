@@ -35,11 +35,12 @@ you_get:
   - Actions tied to specific themes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text, or add it to your AI.
-  - Upload your survey export. It helps to have the columns score, comment, date and segment.
+  - Upload your survey export. It helps to have the columns score, comment, date and segment. No paid tool or API key is needed. If the file has no comment column, the skill reports the scores only and says so.
   - Say what you want to know, such as "why did detractors score us low this quarter".
   - Check the scorecard first. Count the responses yourself in your file and compare.
   - Check two quotes against your file. They must match word for word.
   - Read the actions as ideas to test. The skill does not predict how much a fix will move your score.
+  - Pick the top theme and plan one fix. To read tickets and calls together with surveys, use the feedback pile sorter.
 how_it_works:
   - title: Collect and tag
     text: It reads all responses and tags each with date, segment and source where you gave them.
@@ -103,3 +104,4 @@ terms:
     meaning: Customer satisfaction score. The average rating customers give after a support chat or purchase.
   - term: Detractor
     meaning: A customer who scored you 0 to 6.
+next: [feedback-pile-sorter, review-insight-finder]

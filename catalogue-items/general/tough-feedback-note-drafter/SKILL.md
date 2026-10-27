@@ -45,9 +45,9 @@ THE BEHAVIOUR (one line). THE CHANGE (one line). THE NOTE (under 150 words). The
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Lead the team** with the [Polite request editor](https://useaiblocks.com/skills/order-to-request-rewriter). It takes the draft.
-- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft.
-- **Sell it** with the [Lost deal evidence and pitch revision review](https://useaiblocks.com/skills/monthly-lost-deal-reviewer). It takes the draft.
+- The [Hard feedback message writer](https://useaiblocks.com/skills/hard-feedback-message-writer).
+- The [Feedback notes writer](https://useaiblocks.com/skills/behaviour-and-fix-notes-writer).
+- The [Feedback conversation planner](https://useaiblocks.com/skills/feedback-conversation-planner). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

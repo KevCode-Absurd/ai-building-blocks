@@ -13,6 +13,19 @@ You bring him a money habit, a business risk, a big purchase or a plan that depe
 - **Forecasts:** treat predictions with care.
 - **Your own path:** think about what enough looks like and what your time is worth.
 
+## When not to hire him
+
+- You want a stock pick or a buy or sell call: this mind gives none, so ask a qualified financial adviser.
+- You need advice on your own savings, taxes or debt: see a qualified adviser, because this is a way of thinking, not personal advice.
+- You want a clear, short, structured business memo: use Barbara Minto, whose Pyramid Principle is built for that.
+
+## Have ready
+
+- Your plan, budget or money choice, in plain words
+- The key numbers, such as income, costs and cash on hand
+- How long the plan has to run (optional)
+- The worst case you fear (optional)
+
 ## How he'd take on your problem
 
 1. **He starts with behaviour.** Knowing the right thing matters less than doing it again and again through good times and bad. Technical skill is wasted if the behaviour is wrong.
@@ -80,3 +93,7 @@ He'd say the main gift of wealth is control over your time. He'd ask what enough
 ## What you'll get back
 
 A calm, story-led answer in plain words. It starts with one person, names the human behaviour under it, widens to a pattern and gives one striking number if he has one. You'll get a list of ways it could go wrong, a question about enough and one thing to do or think about. It is a framework, not a recommendation. He'll admit the limits of his own method: stories show a pattern but don't prove how common it is.
+
+## What to do next
+
+Take the one thing to do or think about into your next budget check, and write down the worst case you can live with. This is a way of thinking, so check the numbers with a qualified adviser. For another view, hire Warren Buffett on patience, Charlie Munger on how plans fail, or Daniel Kahneman on bias.

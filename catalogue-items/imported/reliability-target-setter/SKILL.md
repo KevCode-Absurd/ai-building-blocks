@@ -157,8 +157,8 @@ Error Budget = 1 - SLO Target
 
 **Example:**
 - SLO: 99.9% availability
-- Error Budget: 0.1% = 43.2 minutes/month
-- Current Error: 0.05% = 21.6 minutes/month
+- Error Budget: 0.1% = 40.32 minutes in a 28-day window (43.2 minutes in a 30-day month)
+- Current Error: 0.05% = 20.16 minutes in the 28-day window
 - Remaining Budget: 50%
 
 ### Error Budget Policy
@@ -318,7 +318,8 @@ slo:http_availability:error_budget_remaining
 
 # Days until error budget exhausted (at current burn rate)
 # The "> 0" filter drops zero burn, which has no finite exhaustion time, so no value is shown
-(slo:http_availability:error_budget_remaining / 100) * 28
+# clamp_min makes a spent budget show 0 days instead of a negative number
+clamp_min(slo:http_availability:error_budget_remaining / 100, 0) * 28
 /
 (slo:http_availability:burn_rate_5m > 0)
 ```

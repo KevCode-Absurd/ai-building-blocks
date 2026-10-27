@@ -128,3 +128,6 @@ terms:
     meaning: "How you reached the decision: what you checked, who you asked, how long you took."
   - term: Repeat offender
     meaning: A cause of error that shows up in two or more of your cases.
+next:
+  - decision-checklist-builder
+  - mistake-to-principle-writer

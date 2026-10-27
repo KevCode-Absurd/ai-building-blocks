@@ -29,14 +29,14 @@ you_give:
   - The stock exchange the company trades on, NSE or BSE (optional)
   - Who the file is going to, such as a client or a committee (optional)
 you_get:
-  - A verdict: pass, pass with fixes, or fail
+  - A verdict of pass, pass with fixes, or fail
   - A table of faults with sheet, cell and fix
   - Unit and number format errors with the right formula
   - A list of items it could not check
   - A list of data with no Indian equivalent
 how_to_use:
   - Open the skill in your AI and paste the model sheets as text, or upload the file if your AI can read it.
-  - Say which company and which periods the file covers. Add the stock exchange if you know it.
+  - Say which company and which periods the file covers. Add the stock exchange if you know it. The checks run on the pasted sheets alone. The extra data and author files named in the skill are optional.
   - Read the verdict, then fix the unit rows first, because they can be wrong by 10 times.
   - For each fix in the table, check the cell yourself. Do not accept a change you cannot trace.
   - Re-run the check after your fixes to confirm the faults are gone.

@@ -37,7 +37,8 @@ how_to_use:
   - Type the problem type, for example the kind of equation students solve, and add two or three sticking points.
   - Add your student level and say how many levels you want, 3 or 4 works well. Say what should happen after the last hint.
   - Read the hints in order. Check that none gives the answer too early, and ask your AI to soften any that do.
-  - Paste the final sequence into your worksheet, quiz or tutoring script.
+  - Paste the final sequence into your worksheet, quiz or tutoring script. The reply has five parts, in this order: Hint Architecture, Hint Sequence, Bottom-Out Strategy, Trigger Conditions Summary, then Adaptation Notes.
+  - The text comes from Gareth Manning's skill and is licensed CC BY-SA 4.0. If you reuse or share it, keep his credit and share your version under the same licence.
 output_sample:
   input:
     - The problem type students are solving

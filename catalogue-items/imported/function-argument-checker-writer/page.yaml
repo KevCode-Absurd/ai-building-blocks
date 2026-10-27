@@ -9,7 +9,7 @@ subhead: Paste a MATLAB function and say what each input should be. Your AI rewr
 explain: |
   A MATLAB function whose inputs are checked with a clean arguments block, replacing older checks like inputParser. Bad inputs are rejected with clear errors instead of silently reshaped.
 
-  It writes the block with the right size, class and validator for each input. It handles repeating arguments, name-value options, and copying properties into class constructors. It also warns about quiet conversions where MATLAB changes the size or class of what you pass in, and tightens rules so a scalar means a scalar. It leaves ordinary guard checks inside the function body alone.
+  It writes the block with the right size, class and validator for each input. It handles repeating arguments, name-value options, and copying properties into class constructors. It also warns about quiet conversions where MATLAB changes the size or class of what you pass in, and tightens rules so a scalar means a scalar. It leaves ordinary guard checks inside the function body alone. You need MATLAB, a paid MathWorks product, to run the result. The skill is under the BSD 2-Clause licence, which lets you use it only with MathWorks products (see LICENSE.md).
 when:
   - You want to replace inputParser or validateattributes with an arguments block.
   - Your function accepts wrong types and only fails far down the code.

@@ -144,6 +144,8 @@ Write-Output "Value: $value"
 
 ## 10. Script Template
 
+Note: `Continue` does not send non-terminating errors to `catch`. The template sets `Stop` inside the `try` block so that `catch` runs.
+
 ```powershell
 # Strict mode
 Set-StrictMode -Version Latest
@@ -154,6 +156,7 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # Main
 try {
+    $ErrorActionPreference = "Stop"   # makes errors reach catch
     # Logic here
     Write-Output "[OK] Done"
     exit 0

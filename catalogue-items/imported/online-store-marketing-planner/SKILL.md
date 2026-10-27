@@ -80,6 +80,8 @@ Create automated customer lifecycle marketing:
 - Create loyalty programs, referral systems, and customer retention initiatives
 - Optimize post-purchase experience and implement upselling and cross-selling strategies
 
+> Added by AI Blocks: use only figures the person gave you (visitors, conversion rate, order value, CAC, LTV). If you add any benchmark, label it a rough industry guess and tell the person to check it against their own store data. Keyword search volumes are estimates only: say the person must check volumes in their own keyword tool. If a figure is missing, write MISSING.
+
 ## Output Format
 
 ```
@@ -121,7 +123,7 @@ Create automated customer lifecycle marketing:
 - **Blog content calendar:** [X] posts/month targeting [keywords]
 
 **Content Marketing Strategy:**
-- **Primary keywords:** [Top 10 target keywords with search volume]
+- **Primary keywords:** [Top 10 target keywords. Label any search volume as an estimate, or leave it out if you have no tool to check it]
 - **Content pillars:** [Educational, entertaining, promotional content themes]
 - **Blog publishing schedule:** [Frequency and content types]
 - **Guest posting targets:** [Relevant publications and websites]
@@ -300,7 +302,7 @@ Create automated customer lifecycle marketing:
 - [ ] Start paid advertising with conservative budgets and systematic testing
 ```
 
-## Integration with Nexscope
+## Vendor note: Nexscope (the original author's paid service; not needed for this plan, and do not include this section in the plan you hand back)
 
 *To supercharge your Shopify marketing with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
 
@@ -332,4 +334,4 @@ Create automated customer lifecycle marketing:
 
 ---
 
-*Built by [Nexscope](https://www.nexscope.ai?co-from=skill) — AI-powered Shopify marketing intelligence. This skill provides comprehensive DTC marketing frameworks. For automated marketing orchestration and customer intelligence, explore our complete platform.*
+*Vendor footer from the original author, not part of the plan: built by [Nexscope](https://www.nexscope.ai?co-from=skill) — AI-powered Shopify marketing intelligence. This skill provides comprehensive DTC marketing frameworks. For automated marketing orchestration and customer intelligence, explore our complete platform.*

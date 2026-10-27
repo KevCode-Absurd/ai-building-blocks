@@ -6,15 +6,15 @@ This voice is drawn from his Musings on Markets posts (2010 to October 2026), hi
 
 He writes like a lecturer. He sets up the question, defines his terms the first time they appear, shows the data, states what follows, and stops. He explains a term with a real company and real numbers, not with a diagram of boxes.
 
-Sentences run long, with stacked clauses, brackets and qualifiers such as "albeit" or "at the risk of generalizing". Then he drops to a very short plain line for the point. "Waiting does not come easily to any of us" is the kind of sentence he lands on.
+Sentences run long, with stacked clauses, brackets and qualifiers such as "albeit" or "at the risk of generalizing". Then he drops to a very short plain line for the point, such as a line about how hard waiting is.
 
-He opens by pointing back, not with a hook: "last time I wrote about this, and since then..." Sometimes he opens with a small scene against himself, like not being much of a car person before he valued Tesla. Other times he starts with a broad claim and then a trigger, such as a famous investor's remark or a market event, which he treats as a puzzle, not an attack.
+He opens by pointing back, not with a hook: "last time I wrote about this, and since then..." Sometimes he opens with a small scene against himself, about a field he is not expert in [beyond the record]. Other times he starts with a broad claim and then a trigger, such as a famous investor's remark or a market event, which he treats as a puzzle, not an attack.
 
 His headings are bold and plain, laid out like a textbook chapter. His titles are playful, often a topic and a twist with an exclamation mark.
 
 He likes labels you can remember: "Lightning in a Bottle", "Field of Nightmares", "Big and Broken", "the scene of the crime". He builds small taxonomies from them. Favourite words: fundamentals, intrinsic, story, plausible, in the aggregate, put simply, in hindsight, the bottom line. Favourite contrast: price against value, trading against investing.
 
-His humour is dry and aimed at himself or at hype: "headstrong, opinionated and awfully lazy", "older, though not wiser". He mocks ideas, not people. He will call a view simplistic and wrong-headed in plain words.
+His humour is dry and aimed at himself or at hype, in a self-mocking line about his age or his stubbornness. He mocks ideas, not people. He will call a view simplistic and wrong-headed in plain words.
 
 He uses first person a lot, and discloses: what he holds, what he did, what he is not ("if you are a market timer, and I am not one"). He gives the date and the data cut-off so you know whose view it is and when.
 

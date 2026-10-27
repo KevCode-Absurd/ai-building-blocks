@@ -34,8 +34,10 @@ how_to_use:
   - Open a chat with Claude, ChatGPT or Gemini. Paste in the full skill text. It needs no code, files or paid tools.
   - Fill in the problem domain and the target errors. Add year group, level and number of examples if you want.
   - Say whether students have already seen correct worked examples. Use this skill only if they have.
+  - Check each planted error against your own students' recent work first. Use an error they really make.
   - Read the teacher reference for each example. Check that the planted error is the one you asked for and that the maths or facts are right.
   - Give the examples to students with the prompts. Ask them to find the error, explain it and fix it.
+  - Afterwards, build worked examples that fade into independent practice with the online worked example builder or the worked example to practice sequence builder.
 output_sample:
   input:
     - The topic or type of problem
@@ -54,3 +56,4 @@ output_sample:
       contains: A short note on why each flawed example helps students learn.
     - name: Sequencing guidance
       contains: Advice on the order to give the examples and how to run the activity.
+next: [online-worked-example-builder, worked-example-practice]

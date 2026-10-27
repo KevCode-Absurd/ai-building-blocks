@@ -17,8 +17,10 @@ npx skills add nexscope-ai/eCommerce-Skills --skill brand-protection-amazon -g
 
 ## Features
 
-- **Hijacker Detection** — Find unauthorized sellers on your listings
-- **Price Monitoring** — MAP violation alerts
+This skill has no live data feed and does not watch Amazon. You supply the seller, price and review details for each listing, and it checks what you give it. The detector script runs on built-in sample data until your own details are put in.
+
+- **Hijacker Detection** — Spot unauthorized sellers in the seller list you supply
+- **Price Check** — Flag prices below MAP in the prices you supply
 - **Counterfeit Signals** — Review-based fake detection
 - **Trademark Abuse** — Title/keyword infringement detection
 - **Complaint Templates** — Brand Registry, C&D letters
@@ -77,6 +79,8 @@ python3 scripts/templates.py testbuy
 
 ## Output Example
 
+This is made-up sample output. The ASIN, prices and counts are placeholders, not real findings.
+
 ```
 🛡️ Brand Protection Report
 
@@ -114,7 +118,7 @@ Recommendation: Order test buy
 ## Action Workflow
 
 ```
-Monitor Listings
+Check the listings (using the data you supply)
       ↓
 Detect Violation
       ↓

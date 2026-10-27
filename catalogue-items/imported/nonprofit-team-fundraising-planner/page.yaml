@@ -6,11 +6,13 @@ headline: Plan a team fundraising campaign
 subhead: Bring the goal, dates and past results. Build captain tools and message drafts, then model active fundraisers and the amount each raises.
 explain: Bring the goal, dates and past results. Build captain tools and message drafts, then model active fundraisers and the amount each raises.
 when:
-  - You want to plan a team fundraising campaign.
+  - You are planning a walk, run, ride or online team fundraiser and want to turn sign-ups into people who ask.
+  - Many people register but few raise money, and you want captain tools and message drafts.
+  - You need to model how many fundraisers you need to hit a goal.
 not_for:
-  - "You want to sell sponsorships for the event: use the Corporate sponsorships skill, or ask a sponsor lead to make the calls."
-  - "You need venue and event day logistics: use an event checklist or ask your event lead."
-  - "You want one letter sent from your charity to all donors: write a standard appeal letter, not a team campaign."
+  - "You want to sell sponsorships for the event: use the Nonprofit sponsor package planner."
+  - "You need venue and event day logistics: use the Nonprofit fundraising event planner."
+  - "You want one letter sent from your charity to all donors: use the Nonprofit annual appeal planner."
 you_give:
   - Campaign goal, dates, historical participants and fundraising totals
   - Approved impact statements, captain capacity and incentive budget
@@ -18,9 +20,11 @@ you_get:
   - Campaign calendar and captain toolkit
   - Participant message templates and activation performance model
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - "Gather first: the goal, the dates, last year's sign-ups, the share who fundraised, the average raised per active fundraiser, captain capacity, the incentive budget and approved impact statements. Add them."
+  - Ask for the model first, then the captain toolkit and message drafts.
+  - Treat the conversion and final-week patterns as common patterns, not facts. Check them against your own past results.
+  - Review the result and any missing facts before using it. Get consent before you name people in public recognition.
 output_sample:
   input:
     - Your campaign goal and key dates
@@ -50,3 +54,4 @@ how_it_works:
     text: Track registration-to-fundraising conversion and per-active-fundraiser results; obtain consent for public recognition.
 thinking: medium
 thinking_why: It weighs your evidence and follows a specific method.
+next: [nonprofit-sponsor-package-planner, nonprofit-donor-thank-you-and-renewal-planner]

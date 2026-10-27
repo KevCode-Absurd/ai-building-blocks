@@ -42,7 +42,7 @@ how_to_use:
   - Open an AI that can run commands and load the downloaded skill folder.
   - Ask for the weekly support digest by name.
   - If Gorgias is not connected, your AI will ask you to run composio link gorgias. Do that, then ask again.
-  - Read the report. Check the numbers against Gorgias for anything that looks off.
+  - Read the report. Check the numbers against Gorgias for anything that looks off. The averages come from a sample of up to 25 tickets, so read them as a rough guide.
   - Say yes to post it. Your AI finds the Slack channel and sends it.
 output_sample:
   input:
@@ -67,3 +67,4 @@ output_sample:
       contains: Process changes, product fixes to cut ticket volume, and help articles to write or update.
     - name: Slack post
       contains: The same report sent to your chosen channel after you approve it, with a link to the message.
+next: [gorgias-support-metrics-report, gorgias-ticket-priority-planner]

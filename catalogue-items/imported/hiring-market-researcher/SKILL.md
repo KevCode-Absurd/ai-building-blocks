@@ -97,7 +97,7 @@ Clearly specify:
 
 Collect data from available sources:
 - Web search for recent salary surveys and reports
-- LinkedIn for pool sizing and demand signals
+- LinkedIn for pool sizing and demand signals, only from pages the user can see with their own permitted access or numbers the user pastes. Do not ask for the user's login, do not scrape, and respect each site's terms. If a source is not available, write "not available" and use posted job ranges instead.
 - Job boards for posted salary ranges and posting volume
 - Industry reports for trends and benchmarks
 - Community discussions for qualitative signals
@@ -112,7 +112,7 @@ Collect data from available sources:
 ### Step 4: Frame Recommendations
 
 - Position findings relative to the hiring company's context
-- Highlight trade-offs (e.g., "increasing budget by 15% expands pool 3x")
+- Highlight trade-offs, but only ones the data shows (the form is "a higher budget widens the pool"); never give a made-up multiplier
 - Provide actionable recommendations for sourcing strategy
 - Flag risks and market challenges
 
@@ -151,7 +151,7 @@ Collect data from available sources:
 
 ## Data Presentation
 
-When presenting compensation data, use clear ranges:
+When presenting compensation data, use clear ranges. The figures below show the layout only. They are not real data, so never reuse them. Fill every figure from a source you can name, or write "not found":
 
 ```
 Senior Data Engineer - San Francisco Bay Area

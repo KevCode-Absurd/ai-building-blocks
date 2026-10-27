@@ -35,17 +35,19 @@ Reconciles Shopify Payments payouts to the order transactions that contributed t
 ## Workflow Steps
 
 1. **OPERATION:** `shopifyPaymentsAccount` — query
-   **Inputs:** select `payouts(first: 100, query: "issued_at:>='<NOW - days_back days>'")` with `id`, `issuedAt`, `status`, `net`, `gross`, `summary { chargesGross, chargesFee, refundsGross, refundsFee, adjustmentsGross, adjustmentsFee, retriedPayoutsGross, retriedPayoutsFee }`
+   **Inputs:** select `payouts(first: 100, query: "issued_at:>='<NOW - days_back days>'")` with `id`, `issuedAt`, `status`, `net`, `gross`, `summary { chargesGross, chargesFee, refundsFeeGross, refundsFee, adjustmentsGross, adjustmentsFee, retriedPayoutsGross, retriedPayoutsFee }`
    **Expected output:** All payouts in the window. If account is null, exit — store does not use Shopify Payments.
 
 2. For each payout, compute reconciliation expectation:
    ```
    expected_net = chargesGross - chargesFee
-                - refundsGross + refundsFee   (refundsFee is normally negative / reversed)
+                - refundsFeeGross + refundsFee   (refundsFeeGross is the refunded amount; refundsFee is normally negative / reversed)
                 + adjustmentsGross - adjustmentsFee
                 + retriedPayoutsGross - retriedPayoutsFee
    ```
    `delta = reported_net - expected_net`
+
+   **Sign check.** The query returns `refundsFeeGross` (the refunded amount) and `refundsFee`. The formula assumes refunds reduce the payout, so use the refunded amount as a positive number with a minus sign. Check the signs on the first payout against the Shopify admin payout detail. If almost every payout shows a large delta, suspect a sign error and say so. Do not report every payout as a discrepancy.
 
 3. **OPERATION:** `orders` — query (only for flagged payouts to drill down)
    **Inputs:** `query: "transactions:'gateway:shopify_payments processed_at:>=<payout.issuedAt - 7d> processed_at:<=<payout.issuedAt + 1d>'"`, `first: 250`
@@ -172,7 +174,7 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `payout_reconciliation_<YYYY-MM-DD>.csv` with columns:
-`payout_id`, `issued_at`, `status`, `reported_net`, `expected_net`, `delta`, `currency`, `charges_gross`, `charges_fee`, `refunds_gross`, `refunds_fee`, `adjustments_gross`, `verdict`
+`payout_id`, `issued_at`, `status`, `reported_net`, `expected_net`, `delta`, `currency`, `charges_gross`, `charges_fee`, `refunds_gross` (from `refundsFeeGross`), `refunds_fee`, `adjustments_gross`, `verdict`. The retried payout amounts and `adjustments_fee` are used in `expected_net` but are not written to the CSV.
 
 ## Error Handling
 | Error | Cause | Recovery |

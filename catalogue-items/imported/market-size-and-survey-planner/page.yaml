@@ -33,9 +33,14 @@ you_get:
 how_to_use:
   - Open an AI that can run code, such as Claude or ChatGPT with code tools on.
   - Paste the skill and say you want market size, survey sample size and segment scores.
+  - Save your inputs as market.json, survey.json and segments.json. Ask your AI to run market_sizer.py, sample_size_planner.py and segmentation_scorer.py on them, one at a time.
   - "Gather your inputs first: market and product details, customer counts, prices, share assumptions, confidence level, margin of error and candidate segments."
   - Check the divergence flag before you quote any market size. If it fails, fix your assumptions and run it again.
   - Fund the minimum sample for each segment you plan to report, not just the total.
+  - The extra loop that reconciles your market model needs a separate autoresearch skill, and the question-by-question walk-through needs the author's /cs:grill-research-ops command. Neither is in this folder, so skip both.
+next:
+  - pricing-strategist
+  - go-to-market-positioning-planner
 output_sample:
   input:
     - Your market and product details

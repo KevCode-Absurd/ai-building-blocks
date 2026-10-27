@@ -63,7 +63,7 @@ Before writing the file, give the user a bullet list grouped by section — let 
 - Start with a one-line header explaining the file's purpose.
 - **Subdir file marker:** if this is a subdirectory file (parent folder already has its own CLAUDE.md), open with `Apply root CLAUDE.md first, then this file.`
 - Use `##` section headers matching the sections the user approved.
-- Bullets over prose. Short bullets.
+- Bullets over prose. Short bullets. Aim for under about 60 lines in total, so the file stays easy to check.
 - **Cross-folder references:** use `@relative/path/file.md` import syntax, not prose mentions.
 - **Heavy reference docs:** annotate with `**Read when:**` triggers (e.g. "Read when: writing offer copy"). Prevents loading every session.
 

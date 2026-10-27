@@ -34,6 +34,7 @@ how_to_use:
   - Describe the schema change in plain words. Add your migration tool, database type and table size if you know it.
   - Read the migration and the rollback it gives you. Check any rename, since some tools treat a rename as drop and add.
   - Back up your database. Run the migration on a staging copy and run your tests.
+  - Old columns are removed only in a later, separate migration, after the new code is live. Plan that contract phase as a second release.
   - Roll out to production in the phases the plan lists. Run nothing on production until you have confirmed the backup and staging test.
   - Running the migration needs an AI that can run code and read your project files. In a plain chat, you copy the files and run the commands yourself.
 output_sample:

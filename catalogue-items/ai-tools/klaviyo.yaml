@@ -57,6 +57,7 @@ first_result:
   - "Open Composer and describe one flow, such as a 3-email reminder for people who left items in their cart."
   - "Read each email, the delays between them and which customers it goes to. Change what you do not like."
   - "Send a test to yourself, then launch. Watch the first week of results before you add more flows."
+  - "You end with a draft flow that sends email or text to the right customers, and results to read each week. Next: build the core flows with the Welcome flow builder and the Cart recovery flow builder."
 needs:
   - "A Klaviyo account. The free plan is enough to try it."
   - "A connected store with customer and order data, or an imported customer list."

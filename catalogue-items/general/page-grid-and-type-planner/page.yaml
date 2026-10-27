@@ -134,6 +134,8 @@ improve:
   - "Save the grid as a template in your design tool."
   - "Pair it with \"Visual system rules writer\" for colour and sign rules."
 
+before: []
+next: [brand-style-guide-writer, colour-contrast-checker]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Setting a grid and type list from rules is text and number work any strong chat AI does."}

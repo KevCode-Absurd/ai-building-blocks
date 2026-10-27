@@ -75,11 +75,11 @@ Always use `imageshow` instead of `imshow` (R2024b+). `imageshow` handles sub-bi
 
 ### Code Execution
 
-**Execute code blocks via `evaluate_matlab_code` before presenting them to the user.** If it errors, fix and re-run. This catches type mismatches, wrong argument orders, and nonexistent functions before the user sees them. If execution requires user data or toolboxes not available in the current session, present the code with a note that it should be run with the user's own data — do not loop trying to synthesize stand-in data.
+**Execute code blocks via `evaluate_matlab_code` before presenting them to the user. If you do not have that tool, say so and tell the person to run the code in MATLAB and check it on an image they know.** If it errors, fix and re-run. This catches type mismatches, wrong argument orders, and nonexistent functions before the user sees them. If execution requires user data or toolboxes not available in the current session, present the code with a note that it should be run with the user's own data — do not loop trying to synthesize stand-in data.
 
 ### Error Recovery
 
-If code throws an error after execution, load the `matlab-read-documentation` skill and look up the function's doc page to verify syntax, required arguments, and supported input types before retrying.
+If code throws an error after execution, look up the function's doc page (load the `matlab-read-documentation` skill if you have it, or use MATLAB's own documentation) to verify syntax, required arguments, and supported input types before retrying.
 
 ### When to Ask the User
 

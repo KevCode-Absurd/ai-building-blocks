@@ -159,7 +159,7 @@ Use this framework to explain whether the premium/discount is meaningful:
 | +/- 1.0% to 3.0% | Significant — common for less liquid, international, or specialty ETFs |
 | Beyond +/- 3.0% | Large — may indicate stress, illiquidity, or structural issues |
 
-**Context matters by category:**
+**Context matters by category.** The bands here and in the size table above are rules of thumb from the skill's author. They are not sourced limits. Say so when you use them.
 - **US large-cap equity** (SPY, QQQ, IVV): premiums > 0.10% are unusual
 - **Bond ETFs** (AGG, HYG, LQD, TLT): discounts of 0.5-2% happen during volatility
 - **International/EM** (EEM, VWO, KWEB): time-zone mismatch causes regular 0.3-1% deviations
@@ -238,7 +238,7 @@ Use the category-organized universe in `references/etf_premium_reference.md`, or
 ### C2: Present the results
 
 Show a ranked table sorted by premium (most discounted first). Group by category if the list is long. Call out:
-- **Top 5 deepest discounts** — potential buying opportunities (or signs of stress)
+- **Top 5 deepest discounts** — worth a closer look; a deep discount can be a sign of stress. This is research, not a trading signal
 - **Top 5 highest premiums** — overpaying risk
 - **Category patterns** — are all bond ETFs at a discount? Are all crypto ETFs at a premium?
 
@@ -319,7 +319,7 @@ Return call GEX, put GEX, SqueezeMetrics-style net GEX, gross hedge pressure, ca
 
 Interpret the output:
 
-- **`net_gex_squeezemetrics_$` highly negative** → dealers are short gamma; rallies will be amplified by their hedging buys. Classic gamma-squeeze fuel.
+- **`net_gex_squeezemetrics_$` highly negative** → dealers are short gamma; rallies will be amplified by their hedging buys. A setup that can feed a gamma squeeze. This describes positioning, not a prediction or a trade idea.
 - **Concentration on a single near-dated strike** (e.g., heavy open interest in one strike of next month's calls) → squeeze is fragile and concentrated. When that strike expires or the spot moves past it, the gamma decays sharply.
 - **ATM IV well above the recent average** (e.g., 78% against a typical 30–40%) → market is pricing in continued large moves; option premium decay alone will provide some convergence pressure over days.
 - **Call/Put OI ratio > 2.5** → call-heavy positioning, consistent with a bullish gamma squeeze setup.

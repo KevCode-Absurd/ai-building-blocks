@@ -1,6 +1,6 @@
 # Plan your strategy: AI Blocks
 
-> 207 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 209 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [90-day action plan builder](https://useaiblocks.com/skills/90-day-plan-builder): Share an approved decision, owners and start date. Get a 12-week action plan with milestones, check-ins, dependencies and risks.
 - [90-day marketing strategy planner](https://useaiblocks.com/workflows/check-your-strategy-then-turn-it-into-a-90-day-plan): Review the strategy, resolve weak choices and build a marketing plan with weekly actions, owners and check-ins for 90 days.
@@ -33,6 +33,7 @@
 - [Business positioning roadmap planner](https://useaiblocks.com/workflows/set-your-position-and-turn-it-into-a-checked-roadmap): Share your offer, audience and planning limits. Get a position, trade-offs, measurable roadmap and a review of timing and failure risks.
 - [Business snapshot writer](https://useaiblocks.com/skills/business-snapshot-writer): Share current business figures or connect your tools. Get a one-page cash, sales and priority brief, with sources and gaps.
 - [Business strategist agent](https://useaiblocks.com/agents/agency-business-strategist): Make one big business choice. Get a strategy brief with the problem, three options, risks, a clear pick and what you will not do.
+- [Business structure chooser](https://useaiblocks.com/skills/business-structure-chooser): Share your country, plans and owners. Get business structures compared on risk, tax and paperwork, plus questions for an accountant.
 - [Business target calculator](https://useaiblocks.com/skills/target-size-back-solver): Back-solve a business size target into the buyers, purchases, market share and profit per sale that must be true, with each figure marked.
 - [Business turnaround planner](https://useaiblocks.com/skills/business-turnaround-guide): Share your stalled business, team and evidence. Work through eight review stages to plan strategy, weekly routines, metrics and pricing tests.
 - [Campaign brief and calendar builder](https://useaiblocks.com/skills/campaign-brief-calendar): Plan a campaign brief in minutes. Give your goal, audience, dates and budget. You get messages, channels and a week-by-week content calendar.
@@ -180,6 +181,7 @@
 - [Seven powers scorecard builder](https://useaiblocks.com/skills/seven-powers-scorecard-builder): Check your business against all seven powers. Paste your facts and get each scored on benefit and barrier, then sorted into held, buildable or out of reach.
 - [Shipment exception claims planner](https://useaiblocks.com/skills/shipment-problem-handler): Describe a late, lost or damaged shipment. Get response steps, claim records and a carrier message draft.
 - [Shop operations and expansion planner](https://useaiblocks.com/workflows/shop-system-playbook): Share how your best location works and its results. Get standards, role guides and an expansion review after a real newcomer trial.
+- [Side hustle idea finder](https://useaiblocks.com/skills/side-hustle-idea-finder): Share your skills, spare hours and budget. Get three to five side hustle ideas, each with a first customer and a cheap test.
 - [Small-unit profit tracker](https://useaiblocks.com/skills/small-unit-profit-tracker): List your teams and their income and costs. Get small units, a profit-per-hour figure for each and a weekly sheet.
 - [Software launch evidence reviewer](https://useaiblocks.com/agents/saas-launch-review-agent): Review buyer evidence and launch results. Choose the next positioning, first-customer or growth check without inventing outcomes.
 - [Software marketing idea picker](https://useaiblocks.com/skills/marketing-idea-picker): Describe your software, audience and budget. Get three to five marketing ideas, why they fit and first steps.

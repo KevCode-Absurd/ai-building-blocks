@@ -29,7 +29,7 @@ you_get:
   - Risk level per finding
   - Fix steps, including rotating keys
 how_to_use:
-  - Open an AI that can run commands and has curl. Paste in this skill.
+  - Open an AI that can run commands and has curl. A plain chat cannot do this. Paste in this skill.
   - Give it the web address of a site you own, or have written permission to test.
   - Tell it to run the checks. It only reads pages that any visitor can open.
   - Read the report. Fix the Critical items first.

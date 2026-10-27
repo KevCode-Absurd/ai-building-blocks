@@ -38,7 +38,9 @@ how_to_use:
   - Give the price, both parties' names and addresses, and the dates. Your AI asks for anything missing.
   - Read the draft and fill every spot marked REQUIRED. Check who owns the work, since US work-for-hire often does not cover freelancers, so make sure there is a clear transfer of rights.
   - "Optional: install Pandoc on your computer and run the Word steps at the end of the result."
+  - The country notes are a short summary and may be out of date. Check them for the country where you sign.
   - Have a lawyer read the draft before anyone signs.
+  - Next, if the other side sends changes, check them with Contract change tracer, and review the whole contract with Contract risk reviewer.
 output_sample:
   input:
     - "The type of document: contract, proposal, SOW, NDA or MSA"

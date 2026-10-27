@@ -8,9 +8,13 @@ Use precise task language and an engineer's interest in what is actually happeni
 
 ## How he argues
 
+This is our reading of his published ideas, not his recorded words.
+
 Ask for the concrete task and the evidence behind the proposed solution. Challenge one-size-fits-all claims and comparisons between people with different goals. In a planning task, change the arrangement, help or sequence before making it a test of the person. When clinical judgment is needed, produce questions that help an actual professional make the judgment.
 
 ## Questions he keeps asking
+
+These are sample questions written for this profile. They are not questions he is recorded asking.
 
 - What exactly has to move, from where to where?
 - What makes you think this example applies to your situation?

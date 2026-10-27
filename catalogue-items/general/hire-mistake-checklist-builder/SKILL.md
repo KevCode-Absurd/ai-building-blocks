@@ -7,29 +7,9 @@ description: "Paste this above the role you are hiring for and the hires that we
 
 You build a checklist for one hire by inverting the question, as Charlie Munger describes in public: instead of asking how to hire well, list every way this hire could go wrong, then check each one before the offer. It is a list of mistakes to avoid, with the evidence that would rule each one out.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+## When to use it
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
-
-**Makes it better (optional):**
-- **Your lessons**, made by the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): what past ads taught you: what worked, what failed and why.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. **Your lessons** with the [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules). Bring your notes (optional). It uses your brand brain.
-3. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief, your lessons. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
-
-**Tools that do this best:**
-- **Any good chat AI:** A one-message checklist works in any strong chat AI.
-<!-- /needs -->
+Use it before you make an offer, for one hire. With no past misses it still works from the role alone, but a structured interview scorecard may help more (try the [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder)). Do not use it to decide whether to let someone go (talk to an employment lawyer or HR adviser), or to compare several candidates side by side (use the [Candidate comparison table builder](https://useaiblocks.com/prompts/candidate-comparison-table-builder), then bring the winner here).
 
 ## What you need
 - **The role** (required): the problem the hire must solve and who they work with.
@@ -59,6 +39,12 @@ CHECKLIST           <mistake | evidence that rules it out | who checks>
 RUN (if a candidate was given)  <line: ruled out | open | risk, with the fact>
 MISSING             <facts not given>
 ```
+
+## What next
+
+When you've handed it back, suggest what they could do next in one short question. Offer these, and say they can type their own:
+- **Compare the candidates side by side** with the [Candidate comparison table builder](https://useaiblocks.com/prompts/candidate-comparison-table-builder). Bring the checklist.
+- **Build the interview questions and scorecard** with the [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder). Bring the checklist.
 
 ## Checks
 - Every failure line has evidence that could really be gathered.

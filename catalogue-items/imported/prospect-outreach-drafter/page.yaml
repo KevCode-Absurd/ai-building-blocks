@@ -33,6 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill, or upload the skill folder.
   - Tell your AI who the prospect is and what you want, such as a first email, a re-engage note or a 3-touch sequence.
   - Connect your CRM and email if your AI can. If not, paste in what you know about the person and any past emails.
+  - Give your AI your value in one line, your signature and your tone. If you skip this, it writes a plain neutral draft and leaves out any proof point it was not given.
   - Read the draft. Check that every fact about the prospect is true and that the ask is one clear step.
   - Edit the draft in your email tool and send it yourself. Ask your AI to add the contact to a sequence only if you want that.
 output_sample:
@@ -57,3 +58,4 @@ output_sample:
       contains: A link to the saved email draft so you can open it, edit it and send it.
     - name: Suggested CRM note
       contains: A line you can log in your CRM to record the outbound email.
+next: [cold-email-pre-send-checker, follow-up-email-sequence-writer]

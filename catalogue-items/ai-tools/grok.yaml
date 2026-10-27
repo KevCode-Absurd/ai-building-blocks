@@ -43,6 +43,7 @@ first_result:
     - "Pick a mode from the chat box. The page showed one called Fast, and we could not see the others."
     - "Ask about a recent topic you already know well, such as an event you followed this week."
     - "Check the answer against two sources you trust before you use it. Posts on X can be one-sided."
+    - "You end with a written answer. Ask it for its sources and open them. Next: for a topic scan use the Recent topic pulse researcher, or compare Perplexity for answers with numbered sources."
   api:
     - "Open docs.x.ai and follow its steps to get an API key. We did not check the sign-up steps."
     - "Send one short test prompt through the Responses API with the model you chose. Add the web_search tool if you want current results."

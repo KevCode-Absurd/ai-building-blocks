@@ -9,9 +9,9 @@ headline: "Review what you own by how the businesses are doing, and hold fewer, 
 subhead: Give it your holdings and what you know of each business. It judges every one on earnings and returns with the price hidden, ranks them against your best, writes the rules for sitting still, and then writes your rules for price drops before the next one. It is a method of analysis, not personal financial advice.
 
 explain: |
-  Most people review their investments by the price. It is up, so it feels right. It is down, so it feels wrong. But the price is a mood, and the thing you own is a business with results you can read.
+  It is easy to review investments by the price. It is up, so it feels right. It is down, so it feels wrong. But the price is a mood, and the thing you own is a business with results you can read.
 
-  This workflow reviews your holdings the way a focused owner would. Step one hides the price and sorts each holding as keeper, watch, weak or not understood, by earnings, returns and debt. Step two ranks what is left, using your best holding as the bar every other idea must beat, and keeps the list short with sizes that match how well you understand each. Step three writes the rules for sitting still: the facts that must stay true, the cost of trading and tax, and the only reasons to act. Step four writes your rules for price drops and jumps, before you are in one. The method follows Robert Hagstrom's account of Warren Buffett's focus investing, with Charlie Munger's twenty-punch ranking. It gives no buy or sell calls.
+  This workflow reviews your holdings the way a focused owner would. Step one hides the price and sorts each holding as keeper, watch, weak or not understood, by earnings, returns and debt. Step two ranks what is left, using your best holding as the bar every other idea must beat, and keeps the list short with sizes that match how well you understand each. Step three writes the rules for sitting still: the facts that must stay true, the cost of trading and tax, and the only reasons to act. Step four writes your rules for price drops and jumps, before you are in one. The approach is inspired by Robert Hagstrom's account of Warren Buffett's focus investing. It gives no buy or sell calls, and it is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision.
 
 when:
   - You own a handful of investments and want to judge them by business results.
@@ -30,9 +30,9 @@ you_get:
   - A rule card for price drops and jumps, with look dates and your mind traps
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - List your holdings with the reason you bought each, and attach any yearly figures you have.
+  - List your holdings with the reason you bought each, and attach any yearly earnings, returns and debt figures you have.
   - Answer the half-value question honestly in the last step.
   - Print the rule card, name your witness and redo the review once a year.
 
@@ -62,6 +62,7 @@ output_shape: |
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+    Not personal financial advice. The ranked sizes are not an instruction to buy or sell.
 
 tweaks:
   - what: The reason you bought
@@ -106,3 +107,5 @@ terms:
     meaning: Labels for a holding judged on business results. Keeper means the reason you bought it still holds.
   - term: Half-value test
     meaning: Asking whether you could watch your holdings lose half their value and not sell in a panic.
+next: []
+before: []

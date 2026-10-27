@@ -56,11 +56,9 @@ CHECKS MISSED   <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Write the ad copy** with the [Product flaw copy writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
-- **Study competitor ads** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
-- **Understand your buyers** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
-- **Fill the gaps in your brand brain** with the [Store name tester](https://useaiblocks.com/skills/store-name-tester). It takes the shortlist.
-- **Make an offer people want** with the [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder). It takes the shortlist.
+- The [Search blog post writer](https://useaiblocks.com/skills/search-blog-post-writer).
+- The [Search topic and link planner](https://useaiblocks.com/skills/topic-cluster-mapper).
+- The [Store keyword map builder](https://useaiblocks.com/skills/store-keyword-map-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

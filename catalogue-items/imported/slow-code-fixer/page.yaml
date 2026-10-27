@@ -35,6 +35,7 @@ how_to_use:
   - If your AI can run code, let it time the operation. If not, time it yourself and paste the numbers back.
   - Check the bottleneck it names. Then apply one change at a time.
   - Time it again after each change. Keep only the changes that made it faster.
+  - Last, re-run the timing on data like your live data and write down the change you made.
 output_sample:
   input:
     - What feels slow, in your own words
@@ -42,6 +43,7 @@ output_sample:
     - How slow it is now, if you know (optional)
   prerequisites:
     - An AI that can run code and read your project files, if you want it to measure for you. In a plain chat, you time the code and paste the numbers.
+    - "Optional: monitoring tools such as New Relic, Datadog and Sentry Performance, which are paid services"
   output:
     - name: Bottleneck
       contains: The slowest part, found by timing the real operation or by a profiler or query plan.

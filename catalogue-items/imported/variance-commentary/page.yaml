@@ -33,7 +33,8 @@ how_to_use:
   - "Paste three columns with line names: this period, last period and budget. A spreadsheet pasted as text works."
   - Add your materiality limit. If you skip it, the AI uses 5 percent or a fixed floor, whichever is larger.
   - Add any detail behind the lines, like vendor lists, headcount changes or volumes. No system access is needed, but without detail many drivers will be marked unclear.
-  - Read the table. Send every driver unclear line to your controller before the board package goes out.
+  - Check your company's data policy before you paste real actuals into a public AI chat tool.
+  - Read the table. Send every driver unclear line to your controller, then attach the commentary table to the board package.
 output_sample:
   input:
     - This period's actuals by line

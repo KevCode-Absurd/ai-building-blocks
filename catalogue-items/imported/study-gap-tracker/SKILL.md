@@ -24,7 +24,7 @@ Maintain a prioritized, evidence-based log of topics where the learner consisten
 
 # Severity Scoring
 
-Score each weak area 1–5: `score = recurrence × type_weight + staleness_bonus`
+Score each weak area 1–5: `score = min(5, recurrence × type_weight + staleness_bonus)` (cap the score at 5, so a Deep error that repeats 3 times still scores 5)
 - Type weights: Surface=1, Structural=2, Deep=3
 - Staleness: +1 if not addressed in 3+ sessions
 

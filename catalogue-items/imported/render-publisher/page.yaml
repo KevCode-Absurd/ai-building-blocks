@@ -31,10 +31,11 @@ you_get:
   - List of settings still to fill in
 how_to_use:
   - Push your project to GitHub, GitLab or Bitbucket. Make sure you have a Render account.
+  - 'Words you will see. A Blueprint is Render''s name for a setup file, render.yaml, that describes your whole app. MCP is the link that lets your AI act in your Render account. sync: false marks a secret setting that you type into the Render dashboard yourself.'
   - Open your AI tool and paste in this skill. Use an AI that can run commands if you can.
   - Tell it your repo and whether Render should create a database and other extras.
   - Answer its questions. It reads your code and writes render.yaml.
-  - Push the file to a branch and review it before you merge to main.
+  - Push the file to a new branch (git push origin add-render-config), review it, then merge it to main. Your AI will not push straight to main.
   - Open the Blueprint link, add your secret settings in Render, and check that the deploy runs.
 output_sample:
   input:

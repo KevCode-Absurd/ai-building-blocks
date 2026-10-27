@@ -37,6 +37,7 @@ how_to_use:
   - Read the ranked causes first. Ask your AI to explain any fix you do not follow.
   - Make the changes one at a time, starting with the biggest cause.
   - Test again and compare with the target numbers. Treat the example numbers in the skill as illustrations, not promises.
+  - If a target is still missed, run the audit again on that page only, or ask your host to check how fast your server answers.
 output_sample:
   input:
     - Your site address or your site code
@@ -59,3 +60,4 @@ output_sample:
       contains: How to convert, resize and lazy load images, and which image to load first.
     - name: Results After Optimization
       contains: Target numbers for each fix, so you can re-test and see if it worked. The examples in the skill are illustrative, not measured.
+next: [web-page-speed-tuner, page-speed-fixer]

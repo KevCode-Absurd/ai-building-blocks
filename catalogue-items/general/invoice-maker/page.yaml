@@ -1,0 +1,135 @@
+new_slug: invoice-maker
+name: Invoice maker
+summary: Give it your details, your client and your work. Get an invoice with the totals added up and checked.
+job: work-with-files
+thinking: low
+thinking_why: It lays out details you gave and adds up the lines, with few judgement calls.
+headline: Invoice maker
+subhead: Give it your business details, your client, the work you did and what you charge. It lays out a clear invoice with line totals, tax if you give a rate, the amount due and payment terms. It checks the sums before it hands the invoice back.
+explain: |
+  A late or unclear invoice gets paid late. The client can't tell what they owe, or the total is wrong, or your payment details are missing. Each question costs you days.
+
+  This skill makes the invoice for you from the facts you give. It lists each line with its amount, adds the totals, applies a tax rate only if you give one, and states the amount due, the due date and how to pay. It then re-adds every line to check the total. Because the details an invoice needs differ by country, the skill asks what your tax office requires and marks anything you haven't supplied. It makes text and a table you paste into a document or spreadsheet.
+when:
+  - You finished some work and need to create an invoice for it today.
+  - You send a few invoices a month and don't use accounting software.
+  - You want a second pair of eyes on the totals before an invoice goes out.
+not_for:
+  - "You want to check an invoice you received: use the Invoice checker."
+  - "The invoice is already late and you want to chase it: use the Unpaid invoice chaser."
+  - "You send many invoices every week: accounting software saves and numbers them for you."
+you_give:
+  - Your business name, address and payment details
+  - Your client's name and address
+  - The work you did and what you charge for each line, with quantities
+  - A tax or VAT rate, if you charge one (optional)
+  - Your payment terms, and your last invoice number (optional)
+you_get:
+  - A clear invoice laid out as text and as a table
+  - Line totals, tax if you gave a rate, and the amount due, all added up
+  - The due date and how to pay, worked out from your terms
+  - A list of anything your country requires on an invoice that you left out
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your details, your client's details and each line of work with its price.
+  - Give a tax rate only if you charge tax, and say your payment terms, such as pay within a number of days.
+  - Check the totals against your own sums and the items the skill marked MISSING.
+  - Paste the invoice into your document or sheet, add your logo and save it as a PDF.
+output_sample:
+  input:
+    - Your business details and payment details
+    - Your client's name and address
+    - Each line of work, with quantity and price
+    - A tax rate, your payment terms and your last invoice number (optional)
+  output:
+    - name: Invoice header
+      contains: Invoice number, date and due date, worked out from your terms.
+    - name: From and to
+      contains: Your details and your client's details, as you gave them.
+    - name: Lines
+      contains: Each line with quantity, price and line total.
+    - name: Totals
+      contains: Subtotal, tax at the rate you gave if any, and the total due.
+    - name: How to pay
+      contains: Your payment details and terms.
+    - name: Missing
+      contains: Details your country may require on an invoice that you did not give.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Collects the details
+    text: Pulls your details, the client's and each line of work into one place.
+  - title: Numbers the invoice
+    text: Sets an invoice number and date from your last number, or asks.
+  - title: Adds up the lines
+    text: Works out each line total from quantity and price.
+  - title: Applies tax
+    text: Adds tax only at the rate you give, and shows the working.
+  - title: Sets the due date
+    text: Works out the due date from your terms and states how to pay.
+  - title: Re-adds the sums
+    text: Adds every line again and checks the total matches.
+  - title: Lists what is missing
+    text: Names details your country may require that you did not give.
+output_shape: |
+  INVOICE <number> | Date <date> | Due <date>
+
+  FROM
+  <your business details>
+
+  TO
+  <client details>
+
+  LINES
+  <description> | Qty <n> | Price <amount> | Line total <amount>
+
+  Subtotal <amount>
+  Tax at <your rate> <amount>
+  TOTAL DUE <amount>
+
+  HOW TO PAY
+  <your payment details> | Terms <your terms>
+
+  MISSING
+  <details your country may require that you did not give>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Tax rate
+    how: Give the rate your tax office tells you, or say you charge none. The skill never guesses a rate.
+  - what: Payment terms
+    how: Say them in days or as a date. A clear due date gets paid sooner than "on receipt".
+  - what: Invoice number
+    how: Give your last number. A gap or repeat in numbers is a problem at tax time.
+  - what: Country
+    how: Name it. It decides which details must be on an invoice.
+judge:
+  - Every line total equals quantity times price.
+  - The subtotal, tax and total can be rebuilt from the lines.
+  - No tax rate appears unless you gave it.
+  - Your payment details and the due date are on the invoice.
+  - Anything your country may require that you left out is listed.
+test:
+  - Add the lines up by hand. Your total should match the one on the invoice.
+  - Change one price and run it again. The line, subtotal and total should all change.
+  - Leave out your payment details. The invoice should say MISSING, not make them up.
+improve:
+  - Save your business and payment details in your about-me note, so each invoice needs only the client and lines.
+  - Add your usual payment terms and late-payment wording to the skill file.
+  - Keep a list of invoice numbers sent, and paste the last one in each time.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Laying out details and adding up lines works well in any strong chat AI.
+    - name: A spreadsheet or word processor
+      why: Paste the invoice in, add your logo and save it as a PDF.
+  inputs:
+    - Your last invoice, as a model for layout
+    - Your tax office's list of what an invoice must show
+    - A signed quote or order for the work
+terms:
+  - term: Line total
+    meaning: Quantity times price for one line of work.
+  - term: Subtotal
+    meaning: The sum of the line totals before tax.

@@ -1,6 +1,6 @@
 # Hire Madam C.J. Walker: how she'd work for you
 
-You bring her a business idea, a team to build or a life that feels stuck. She works on it the way she built her company: from what you already have, with real numbers, and with other people in mind. She started with $1.50, so she won't accept "I need more money first." She is proud, direct and warm, and she is firm when she's shut out. Her record ends in 1919.
+You bring her a business idea, a team to build or a life that feels stuck. She works on it the way she built her company: from what you already have, with real numbers, and with other people in mind. She started with $1.50, so she won't accept "I need more money first." She is proud, direct and warm, and she is firm when she's shut out. Her record ends in 1919. The "she'd" lines are our reading of her recorded method, not her own words; where we apply it to a trade she never worked in, we say so. Bring first: the problem you know first-hand and who else has it, what you already have to start with, your product or service and who you could sell to, and any helpers you want to train or pay.
 
 ## What to hire her for
 
@@ -56,7 +56,7 @@ At the 1912 convention the chairman wouldn't call on her. She stood up and spoke
 
 ### Outside her field: a nurse, a trainer or a software maker
 
-Give her a different trade and she asks the same things. Who has this problem? Can they see it work? Who could you teach? A nurse starting a home-care service gets: begin with the families you already know, train others to your standard and keep your name clean. A software maker gets: sell a hands-on demo to a few real users, then train a few who'll show others. She'd say a business grows as fast as it trains. She'd leave the technical craft to you and won't give medical advice, though she'll speak about care and hygiene.
+Our application of her method to other trades, beyond the record. Give her a different trade and she asks the same things. Who has this problem? Can they see it work? Who could you teach? A nurse starting a home-care service gets: begin with the families you already know, train others to your standard and keep your name clean. A software maker gets: sell a hands-on demo to a few real users, then train a few who'll show others. The lesson we draw: a business grows as fast as it trains. She'd leave the technical craft to you and won't give medical advice, though she'll speak about care and hygiene.
 
 ### Your life and career
 
@@ -76,3 +76,5 @@ She was orphaned at seven, married at fourteen, widowed at twenty and worked as 
 ## What you'll get back
 
 A plain, strong note. It opens with the facts and figures of your case, names what you already have, then gives you a path in steps: sell, show, train, own, give back. She'll ask for numbers on a short deadline and a promise to act. She'll say one thing you should stop waiting for. Where her record is silent, she'll say so in a line and tell you what her 1913 speech would suggest.
+
+Next step: bring her the numbers by the deadline she sets, then take the plan to Estée Lauder or Mary Kay Ash to compare how each trained and rewarded sellers. To value a business or read financial statements, use Aswath Damodaran. For health or personal money advice, speak to a licensed professional.

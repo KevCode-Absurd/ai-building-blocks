@@ -17,8 +17,8 @@ when:
   - Your AI keeps missing facts that sit in the middle of a long prompt.
 not_for:
   - "Your whole pile already fits your size limit and has no repeats: paste it as it is, no cleaning needed."
-  - "You only need to score or rank chunks by how well they match a question: use a ranking step such as context-ranking, or ask your AI to score each chunk."
-  - "You need to shrink the text you already picked: use a compression step such as context-compression, or ask your AI for a shorter summary of each chunk."
+  - "You only need to score or rank chunks by how well they match a question: ask your AI to score each chunk against your question."
+  - "You need to shrink the text you already picked: use Context shrinker."
 you_give:
   - Your pile of text chunks or files
   - Your question or task
@@ -34,10 +34,12 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md as your first message. No code, files or paid tools are needed.
   - Paste your chunks next. Label each one with its source name, and add its search score if you have one.
-  - Add your question and your size limit in tokens. If you do not know the limit, ask your AI to suggest one.
-  - Ask your AI to run the skill and return the ordered block, the coverage check and the log of removed chunks.
+  - Add your question and your size limit in tokens. If you do not know the limit, ask your AI to suggest one. A chat cannot count tokens exactly, so your AI will estimate them.
+  - Ask your AI to run the skill and return six things in this order: the starting count, the chunks kept and removed, the scores, the ordered block, the coverage check and the log of removed chunks.
+  - If you gave no search scores, the relevance and density scores are your AI's own judgement, not a measurement. Treat the ranking as a good guess.
   - Check the log. If a needed chunk was removed, ask your AI to add it back.
   - Paste the ordered block into your prompt. Run the skill again when your question changes.
+  - Next, if the block is still over your limit, shrink it with Context shrinker.
 output_sample:
   input:
     - Your pile of text chunks or files

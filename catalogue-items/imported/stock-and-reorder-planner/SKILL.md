@@ -195,7 +195,7 @@ Reorder Point = (10 × 14) + 112 = 252 units
 
 ### Step 5: Analyze Costs
 
-**Fulfillment Cost Benchmarks:**
+**Fulfillment Cost Benchmarks** (rough planning ranges with no source or date. Treat them as illustrative and check them against your own quotes and the carrier or marketplace's current fee page):
 
 | Cost Component | Self-Fulfill | 3PL | FBA |
 |----------------|--------------|-----|-----|
@@ -313,7 +313,7 @@ Target = (10 × 45) + (10 × 10) = 550 units
 | **Peak surcharges** | Q4 rate increases |
 | **Minimum commitments** | Monthly minimums, long-term contracts |
 
-### 3PL Benchmark Costs (2025)
+### 3PL Benchmark Costs (illustrative 2025 ranges, not sourced: check against your own quotes)
 
 | Service | Low | Average | High |
 |---------|-----|---------|------|

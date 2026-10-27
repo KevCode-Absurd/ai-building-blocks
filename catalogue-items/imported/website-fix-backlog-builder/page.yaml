@@ -30,12 +30,14 @@ you_get:
   - Notes saved in a docs folder
   - A phase-by-phase action plan
 how_to_use:
-  - Check you have the eight companion skills from wondelai/skills. If not, install them first or paste their steps into the chat.
+  - Check you have the eight companion skills from wondelai/skills (cro-methodology, ux-heuristics, refactoring-ui, web-typography, storybrand-messaging, high-perf-browser, made-to-stick, design-everyday-things). Install each with npx skills add wondelai/skills/<name> --global, or let the skill run that phase from its short brief instead.
+  - This is a long run of eight phases over several sessions. For a short path, run Phase 1 (the diagnosis) and then one fix phase.
   - Open your AI in a tool that can save files, such as Claude with file access. Add this skill.
   - Tell your AI your live site address and the one action you want visitors to take.
   - Answer the questions at each phase. Phase 1 is a gate, so check the diagnosis before you go on.
   - Read the ranked list in IMPROVE-WEBSITE-PLAN.md. Hand the top fixes to your developer or designer.
   - To stop and return later, ask your AI to read the docs folder and resume.
+  - Next, hand the ranked list to your developer or designer. After they ship fixes, run Phase 1 again to check if conversions moved.
 output_sample:
   input:
     - Your live site address
@@ -56,3 +58,4 @@ output_sample:
       contains: Each big fix written as a test you can run, with the reason behind it.
     - name: IMPROVE-WEBSITE-PLAN.md
       contains: The ranked fix backlog, with evidence for each fix and your decisions at each phase.
+next: [website-speed-tuner, wcag-accessibility-fixer]

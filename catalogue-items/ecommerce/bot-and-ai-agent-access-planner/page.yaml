@@ -144,9 +144,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Your platform's own bot protection", why: "On a hosted store this is usually the first and main layer. Turn it on before adding anything else."}
-    - {name: "Cloudflare", why: "A common edge service with bot and rate-limit settings. It suits stores with a technical person."}
-    - {name: "Any good chat AI", why: "Any current chat AI can write the policy and wording from your description."}
+    - {name: "Your platform's own bot protection", why: "On a hosted store this is usually the first and main layer. Turn it on before adding anything else. Check your plan to see what it includes at no extra cost."}
+    - {name: "Cloudflare", why: "A common edge service with bot and rate-limit settings. It suits stores with a technical person. Some bot and rate-limit settings need a paid plan. Check the price before you commit."}
+    - {name: "Any good chat AI", why: "Any current chat AI can write the policy and wording from your description. A free plan is enough for a first draft."}
   inputs:
     - "A week of failed-login counts per hour and the top source addresses"
     - "A list of your public interfaces from your developer"

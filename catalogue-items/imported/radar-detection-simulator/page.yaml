@@ -20,7 +20,7 @@ not_for:
   - "You need CFAR detector design, beamforming or waveform design: use a signal-level radar tool instead of this one."
   - "You need jamming, interference, or bistatic radar: this skill does not cover them, so ask a radar engineer or a signal-level tool."
 you_give:
-  - Radar datasheet or performance needs
+  - "Radar datasheet fields: transmit power, antenna gain, noise figure, bandwidth and scan mode"
   - Target paths or scenario
   - MATLAB with the needed toolboxes
   - Existing radar code (optional)
@@ -30,11 +30,13 @@ you_get:
   - Fixes for missed detections
   - Check against expected range
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from the skill folder. Use an AI that can run MATLAB code if you can.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the skill folder. Use an AI that can run MATLAB code if you can. The skill's licence lets you use it only with MathWorks products, so it needs your own paid MATLAB licence.
   - Paste your radar datasheet, or describe the range and coverage you need. Include power, gain, noise figure, bandwidth and scan mode.
   - "Describe your targets: their paths and radar cross section. Paste your old code too if it misses detections."
   - Answer the questions your AI asks about scan mode, targets and run time. Then read the requirements sheet it writes.
   - Run the MATLAB script. You need MATLAB with Radar Toolbox. Check the detections against the hand calculation before you trust them.
+  - Next, hand the detections to a tracker or sensor fusion test. Rerun the hand-calculation check each time you change the radar setup.
+next: [radar-waveform-designer, inertial-sensor-fusion-builder]
 output_sample:
   input:
     - Your radar datasheet or performance needs (power, antenna gain, noise figure, bandwidth, scan mode)
@@ -42,7 +44,7 @@ output_sample:
     - Existing radarDataGenerator code that misses detections (optional)
     - Terrain or blocking objects (optional)
   prerequisites:
-    - MATLAB with Radar Toolbox, and an AI that can run MATLAB code
+    - MATLAB with Radar Toolbox, and an AI that can run MATLAB code (MATLAB is paid MathWorks software that needs a licence)
   output:
     - name: Requirements sheet
       contains: A standalone document listing the radar settings, where each value came from, and the target set.

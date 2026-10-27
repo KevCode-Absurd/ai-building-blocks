@@ -74,7 +74,9 @@ The checkout pins the exact commit this catalog copy froze at, which is what a r
 can verify independently. (The canonical repo also blocks retargeting of `v*` tags with
 an active tag ruleset, but a SHA does not ask you to trust that.) `install.sh` symlinks
 the two skills into `~/.claude/skills` (read by Claude Code and OpenCode) and
-`~/.agents/skills` (read by Codex CLI and Copilot CLI).
+`~/.agents/skills` (read by Codex CLI and Copilot CLI). To undo the install, delete those two skill links from each folder. Your decks are not touched.
+
+The commit above belongs to the slideops repository. It is not the same commit as the one in this library's source record, which points at the collection the copy came from.
 
 ### Step 2: Build a deck
 

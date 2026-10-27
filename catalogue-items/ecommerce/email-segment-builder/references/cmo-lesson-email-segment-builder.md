@@ -2,7 +2,7 @@
 
 Build this map as an explicit proposal, with current send eligibility and all suppression rules above. It is not permission to send or suppress anyone. Opens alone may be unreliable; show actual available activity and privacy limitations.
 
-Four engagement bands can be defined as recent activity within thirty days, activity in days31-90 but none in the first band, activity in days91-180 but none in the earlier bands, and no reliable activity in180days. These are adjustable windows, not universal optimal cutoffs. State event definitions and exact AND/OR logic; do not let inclusive ninety-day windows silently overlap shorter bands.
+Four engagement bands can be defined as recent activity within 30 days, activity 31 to 90 days ago but none in the first band, activity 91 to 180 days ago but none in the earlier bands, and no reliable activity in 180 days. Put each person in the most recent band they qualify for, so the bands never overlap. These are adjustable windows, not universal cutoffs. State event definitions and exact AND/OR logic.
 
 Four purchase views are no lifetime order, exactly one, two or more, and a declared VIP rule such as top-ten-percent spend with the period/denominator supplied. VIP may overlap repeat buyer by design; it needs send precedence or exclusions. Unknown lifetime order history is not zero orders.
 

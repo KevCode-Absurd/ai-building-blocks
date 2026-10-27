@@ -35,6 +35,7 @@ how_to_use:
   - Before you accept the files, read them. The container gets extra network rights (NET_ADMIN), it installs plugins from other people, and one setup step deletes your existing .venv folder.
   - Check that the base template files exist. If they are missing, ask your AI to say which ones it needs before it writes anything.
   - Open the project in VS Code and choose Reopen in Container. Or run devcontainer up --workspace-folder . in your terminal.
+  - Once it opens, run your tests and build to confirm it works. Then commit the .devcontainer folder so teammates get the same setup.
 output_sample:
   input:
     - Your project folder, with files like package.json, pyproject.toml, Cargo.toml or go.mod

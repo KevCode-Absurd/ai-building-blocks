@@ -16,11 +16,11 @@ not_for:
   - "You want the finished image made: this writes prompts only, so paste them into Nano Banana in Gemini or your image tool."
   - "You want to edit a photo you have no rights to use: get permission from the owner first, or use an image you own."
 you_give:
-  - brief
-  - "Optional: approved image"
-  - "Optional: reference set"
+  - "Your brief in one sentence, plus where the image will be used"
+  - "Optional: an approved image to edit, and its file type"
+  - "Optional: reference images, how many, and which one wins if they clash"
 you_get:
-  - image prompt
+  - "A plain-language prompt and a matching JSON prompt, with a role for each reference image"
   - Missing inputs and steps that still need to run
 how_to_use:
   - Download the complete pack and give its instructions to your AI.

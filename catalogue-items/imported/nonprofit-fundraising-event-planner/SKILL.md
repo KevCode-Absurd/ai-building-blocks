@@ -11,6 +11,8 @@ metadata:
 
 # Fundraising Events: Galas, Auctions & Benefits
 
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-corporate-sponsorships is the Nonprofit sponsor package planner. nonprofit-peer-to-peer-fundraising is the Plan a team fundraising campaign. nonprofit-donor-retention is the Nonprofit donor thank-you and renewal planner.
+
 ## When to Use This Skill
 
 Use this skill for the budgeting, revenue-mix planning, auction mechanics, and logistics of a
@@ -94,6 +96,7 @@ fund-a-need moment isn't relied upon to make the difference between profit and l
 
 ## Concrete Steps
 
+0. Before any ticket is sold or any bid is taken, confirm with your state or local regulator and your counsel whether raffles, auctions or fund-a-need pledges need a permit or licence. These rules vary by place. Do not guess them.
 1. Set the event's net-revenue goal first, then reverse-engineer the required mix across ticket
    sales, sponsorship, and auction/fund-a-need.
 2. Build the full expense budget with a contingency line before selling a single ticket or

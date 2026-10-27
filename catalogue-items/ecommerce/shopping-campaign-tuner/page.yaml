@@ -149,3 +149,4 @@ terms:
     meaning: Clicks you got as a share of the clicks you could have got.
   - term: Target ROAS
     meaning: A bid goal for revenue per dollar spent.
+next: [search-term-sorter, google-bid-strategy-chooser]

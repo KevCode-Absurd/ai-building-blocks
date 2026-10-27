@@ -111,3 +111,4 @@ works_best_with:
 terms:
   - term: "Swallowed error"
     meaning: "An error the code catches and ignores, so nobody learns something failed."
+next: [ai-written-code-reviewer]

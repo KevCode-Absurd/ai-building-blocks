@@ -34,7 +34,8 @@ how_to_use:
   - Open your AI and paste in the skill instructions.
   - Paste your notes or document. Say who the audience is, how many slides you want and which format.
   - Use an AI that can run code and save files if you want a PPTX file. Marp and reveal.js decks are plain text, so a chat is enough.
-  - Check every number, name and claim. Fill in any bracketed placeholder such as [X%] with a real figure.
+  - Check every number, name and claim. Every figure must come from your own source. Fill in any bracketed placeholder such as [X%] with a real figure.
+  - Run the claims list through the Claim fact checker before you present.
   - Rehearse with the speaker notes, then open the file in your chosen app to check it displays well before you share it.
 output_sample:
   input:
@@ -57,3 +58,4 @@ output_sample:
       contains: The full talking points for each slide, written for the presenter to say aloud.
     - name: Review pass
       contains: A check that no slide is overloaded, plus slides to merge or move to an appendix.
+next: [claim-fact-checker]

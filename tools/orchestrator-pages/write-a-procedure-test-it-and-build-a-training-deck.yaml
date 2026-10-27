@@ -9,7 +9,7 @@ subhead: Describe how a job gets done. It writes the procedure, checks it for th
 explain: |
   Many jobs live in one person's head. When that person is away, work stalls. A written procedure fixes that only if a stranger can follow it. Most procedures skip owners, skip what to do when something goes wrong and use three names for the same thing.
 
-  The workflow writes the procedure with owners, steps, edge cases and measures. It checks it for missing owners, vague steps and no rollback. Then comes a pause: fix the gaps and ask someone who has never done the job to follow it while you watch. Bring the updated version back. It proofreads for slips and mixed-up terms, then builds a training deck from it. If the job changes weekly, a deck will go stale. Stop after the pause.
+  The workflow writes the procedure with owners, steps, edge cases and measures. It checks it for missing owners, vague steps and no rollback. Then comes a pause: fix the gaps and ask someone who has never done the job to follow it while you watch. Bring the updated version back. It proofreads for slips and mixed-up terms, then builds a training deck from it. If the job changes every week, stop after the pause, because a deck would go stale.
 when:
   - Only one person knows how a job is done and you need a back-up.
   - You are about to hire or hand work to someone new.
@@ -28,11 +28,11 @@ you_get:
   - A proofread list of slips and mixed-up terms
   - A training deck with speaker notes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Process and SOP writer, SOP and runbook checker, Technical doc proofreader and Presentation builder.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the job step by step, or paste notes. Answer the questions it asks about owners and edge cases.
-  - After the gap check, ask someone new to follow the procedure while you watch. Write down where they stall.
-  - Bring the updated procedure back for the proofread and the deck.
+  - After the gap check, ask someone who has never done the job to follow the procedure while you watch. Do not coach them. Count their questions and write down where they stall.
+  - Add each stall to the procedure as a note on that step. Bring the updated procedure back for the proofread and the deck.
 output_sample:
   input:
     - Your description of the job, in your own words or rough notes
@@ -58,7 +58,7 @@ how_it_works:
   - title: Check it for gaps
     text: Reads the procedure and flags missing owners, steps with no way to tell if they worked, no rollback and cases the happy path skips. Fixes come in order of importance.
   - title: Test it on someone new
-    text: Fix the gaps, then ask someone who has never done the job to follow the procedure while you watch. Note every place they stall and update the text.
+    text: Fix the gaps, then ask someone who has never done the job to follow the procedure while you watch. Count their questions, note every place they stall, and add each one to the procedure as a note on that step.
   - title: Proofread the fixed procedure
     text: Checks typos, grammar and punctuation, and lists terms used for the same thing so you can pick one. It flags facts that look wrong and does not rewrite.
   - title: Build the training deck

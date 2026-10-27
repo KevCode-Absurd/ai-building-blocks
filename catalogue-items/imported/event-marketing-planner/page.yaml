@@ -36,7 +36,7 @@ how_to_use:
   - Add your main goal, the buyers you want to meet, your budget and your team size.
   - Answer any questions your AI asks. It needs no code, files or paid tools.
   - Check the target list and follow-up tiers, then fix anything that does not fit your buyers.
-  - Book meetings before you go, and send your follow-up within 48 hours.
+  - Book meetings before you go, and send your follow-up within 48 hours. For the outreach, use Cold email writer. For the follow-up emails, use Email sequence writer.
 output_sample:
   input:
     - "Your role: host, sponsor, speaker or attendee"
@@ -50,7 +50,7 @@ output_sample:
     - name: Event selection
       contains: Advice on which events are worth your budget, based on pipeline value and event type.
     - name: Before the event
-      contains: A target list, meeting outreach ideas and a plan to announce your presence.
+      contains: A one-page plan with a table for before, during and after the event. This part has a target list, meeting outreach ideas and a plan to announce your presence.
     - name: During the event
       contains: How to have qualified conversations, record what was said and make content on site.
     - name: After the event

@@ -32,9 +32,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
   - Paste your offer, the facts you can prove, who it is for, and what you want them to do.
-  - Add what you know about how much your audience trusts you, and any proof of what waiting costs.
+  - Add what you know about how much your audience trusts you. Write down the real cost of waiting (time, money or lost progress), with its source, before you paste it in.
   - Read the loss lines next to the gain lines. Pick the pair that fits your audience.
   - Check the list of claims that need proof. Remove or confirm each one before you publish.
+  - Next, run an A/B test of a loss line against a gain line. Pass the winner to your email sequence or pricing page.
 output_sample:
   input:
     - Your offer and its real facts

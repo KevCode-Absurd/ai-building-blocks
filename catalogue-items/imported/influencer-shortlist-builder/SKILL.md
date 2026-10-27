@@ -19,6 +19,7 @@ Discover and analyze influencers across multiple platforms using Apify Actors.
 
 - This skill collects public data from social platforms by running third-party Apify Actors. Apify is a paid service with an account and a token. Tell the user to check Apify's current pricing and free allowance, and never state a price yourself.
 - Scraping must follow each platform's terms of service and the user's local privacy law. The data names real people. Collect only public profile metrics, keep the list for outreach planning, and do not collect private data or contact details beyond what each creator publishes.
+- Keep the collected creator data only for this campaign and delete it afterwards. Take contact details only from the creator's own published profile.
 - Never ask the user to paste their Apify token into the chat. It belongs in a local `.env` file.
 - If the user cannot run code or has no Apify account, use the no-tools route: ask them to paste the public numbers for each creator (followers, average likes and comments on recent posts, niche, link). Then do Step 5 on those numbers. Say clearly that the data is theirs, not collected by you.
 - Ask once for the niche, the target platforms and what a good fit looks like. Mark any answer you do not get as MISSING. Do not guess.
@@ -73,6 +74,8 @@ Fetch the Actor's input schema and details dynamically using mcpc:
 export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
 ```
 
+The command above puts the token in the command line, which can end up in shell history. If your `mcpc` can read the token from an environment variable or a config file, do that instead. Otherwise run it in a private terminal and clear the history after. Run the scripts from the skill folder so `reference/scripts/run_actor.js` resolves.
+
 Replace `ACTOR_ID` with the selected Actor (e.g., `apify/instagram-profile-scraper`).
 
 This returns:
@@ -93,14 +96,14 @@ Before running, ask:
 
 **Quick answer (display in chat, no file):**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT'
 ```
 
 **CSV:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.csv \
@@ -109,7 +112,7 @@ node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
 
 **JSON:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.json \

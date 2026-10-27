@@ -79,6 +79,8 @@ Before any command that changes the machine, remind the person to back up anythi
 
 ## Quick Start
 
+The install command below is for Linux only. The Docker Compose file further down assumes an NVIDIA graphics card. Say which of your steps are for Linux, Mac, Windows or NVIDIA before you give any commands.
+
 Windows and Mac: download the installer from ollama.com and skip the first command. Check the install script before you run it, since it runs with your account's rights.
 
 ```bash
@@ -396,7 +398,7 @@ sudo systemctl status ollama
 - Bind to `127.0.0.1` (the default). Ollama has no login of its own, so never expose port 11434 to a network. Use a reverse proxy with a login for remote access.
 - Keep real secrets in a `.env` file, out of the Compose file, and out of any place you share.
 - Set `WEBUI_AUTH=true` on Open WebUI
-- Use nginx with TLS for remote access:
+- Use nginx with TLS and a login for remote access. The example has a login and an IP allow-list. Do not put it on a network without a login:
 
 ```nginx
 server {
@@ -410,6 +412,8 @@ server {
         proxy_set_header Host $host;
         proxy_buffering off;              # Required for streaming
         proxy_read_timeout 600s;          # Long model responses
+        auth_basic "Restricted";          # login prompt
+        auth_basic_user_file /etc/nginx/.htpasswd;  # create it first, for example with the htpasswd tool
         allow 10.0.0.0/8;
         deny all;
     }

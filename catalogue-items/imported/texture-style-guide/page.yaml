@@ -16,11 +16,12 @@ when:
   - You need design rules written down before developers start building.
   - You are updating an older screen and want clear before-and-after guidance.
 not_for:
-  - "You want a flat or minimal look: ask a designer for a flat design style guide, or write a short token list by hand."
+  - "You want a flat or minimal look with no fake materials: use the Minimal style guide writer."
   - "You need finished screens or mockups: use a design tool such as Figma, since this only writes rules."
-  - "You want a retro look instead: use the Retro style guide writer if it fits, or ask your AI for a retro rulebook."
+  - "You want a retro look instead: use the Retro style guide."
+  - "You want a raw, blunt look with no polish (hard edges, flat color): use the Raw brutalist style guide writer."
 you_give:
-  - A description of your product
+  - A description of your product (what it is, who uses it, and whether it is an app or a site)
   - The mood you want, such as playful or calm
   - Brand colors and fonts (optional)
   - Screens or parts you must cover (optional)
@@ -31,8 +32,8 @@ you_get:
   - A review checklist
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text from this page into the chat.
-  - Describe your product and the mood you want. Add brand colors, fonts and the parts you must cover if you have them.
+  - Add this skill to your AI, or copy its instructions from this page and paste them into the chat.
+  - Describe your product and the mood you want. Add brand colors, fonts and the parts you must cover if you have them. If you add none, the guide uses placeholder colors and fonts built into the skill (an orange primary, Roboto). Swap in your own before you share it.
   - Read the first section. Check that the design intent matches what you meant.
   - Check the accessibility rules and the QA checklist. Ask your AI to fix any rule that sounds vague.
   - Share the guide with your designers and developers.
@@ -57,3 +58,4 @@ output_sample:
       contains: What not to build, plus notes on moving older screens to the new rules.
     - name: QA checklist
       contains: A list your team can run through during code review.
+next: [design-system-auditor]

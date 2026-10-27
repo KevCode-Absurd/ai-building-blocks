@@ -18,6 +18,7 @@ when:
 not_for:
   - "You only need to check ad or marketing copy: use the marketing-claims-review skill from the same legal set, not this one."
   - "You need one risk studied in depth: ask for a feature risk assessment, which this review can hand off to."
+  - "Your launch is in a sector with its own rules, such as children's products, health or finance, or is outside the US: the base eight areas are not enough. The skill adds a sector overlay for these, so name the sector. Have a local lawyer check the result."
   - "You need a final legal opinion or sign-off: ask a qualified lawyer. This memo is a first check."
 you_give:
   - The product plan or PRD
@@ -31,20 +32,21 @@ you_get:
   - A summary for the ticket
 how_to_use:
   - Open your AI tool and add the skill. Use one that can read files.
-  - Fill in your team's legal setup file first. List your legal areas and what counts as a blocker. The skill stops if placeholders remain.
+  - "Fill in your team's legal setup file first. It needs three things: the legal areas to check, what counts as a blocker and what is only a note, and the format you want the memo in. The folder includes a setup interview that asks for these. The skill stops if placeholders remain."
   - Paste your PRD, Drive link or ticket ID. Add related documents if you have them.
   - Ask your AI to run the launch review. It checks each legal area in turn and rates each finding.
-  - Read the bottom line and any flagged new questions. Send those to a lawyer.
+  - Read the bottom line and any flagged new questions. Send those to a lawyer. If you are not a lawyer, do not treat a Clear to ship call as sign-off until a lawyer has reviewed the memo.
   - Keep the full memo private. Post only the safe tracker note to your ticket, then pass marketing copy or deep risks to the related skills.
 output_sample:
   input:
     - Your product plan, PRD, Drive link or ticket ID
-    - Your team's legal setup file (CLAUDE.md) with your framework and risk settings
+    - Your team's legal setup file (CLAUDE.md) with your framework and risk settings, filled in before you start
     - Related documents for the launch (optional)
     - Your ticket tracker connection (optional)
   prerequisites:
     - An AI that can read your files, including the setup file filled in with no placeholders left
     - Your team's legal framework and risk settings written into that setup file
+    - "Optional: a legal research tool such as Westlaw (paid) or CourtListener (free)"
   output:
     - name: Launch review memo
       contains: The full private memo in your house format, for people inside the legal circle only.

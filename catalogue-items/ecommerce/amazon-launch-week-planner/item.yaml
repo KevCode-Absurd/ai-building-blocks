@@ -10,6 +10,8 @@ inputs:
   - {type: product_data, required: true}
   - {type: brand_brain, required: false}
   - {type: performance_sheet, required: false}
+  - {type: plan, required: false}
+  - {type: pdp_copy, required: false}
 outputs:
   - {type: plan}
 uses: []

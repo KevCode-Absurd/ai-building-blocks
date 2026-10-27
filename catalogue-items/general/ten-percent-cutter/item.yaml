@@ -12,6 +12,7 @@ inputs:
 outputs:
   - {type: copy_draft}
   - {type: audit_report}
+next: [overstuffed-draft-cutter, hidden-theme-finder]
 origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, william-zinsser]

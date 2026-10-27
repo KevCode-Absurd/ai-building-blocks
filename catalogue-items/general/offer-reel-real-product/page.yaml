@@ -35,7 +35,7 @@ you_get:
   - The film's code, a review log and final videos in each shape, with loudness and scores
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a coding agent that can run code on your computer, such as Claude Code with Remotion.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a coding agent that can run code on your computer, such as Claude Code with Remotion. Remotion has its own licence terms and may need a paid licence for a company, so read them before you build.
   - Give it your photos, approved words, colours, font files and logo, and answer the one round of questions.
   - Approve the product card, then the product sheet and style guide.
   - Read the storyboard carefully, then reply APPROVED or ask for changes.

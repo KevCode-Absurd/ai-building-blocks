@@ -16,8 +16,8 @@ when:
   - Your workspace is messy and people lose time looking for things.
   - You want an improvement plan without a big project.
 not_for:
-  - "You need the root cause of defects: use quality-management, a different skill, not this one."
-  - "A machine keeps breaking down: use maintenance-planning, or call your repair person."
+  - "You need the one step that holds everything up: use process-bottleneck-finder, not this one."
+  - "A machine keeps breaking down: call your repair person, as this plan does not cover maintenance."
   - "You have a one-off project, not a process you repeat: a simple task list will do."
 you_give:
   - A description of the process and its steps
@@ -32,9 +32,10 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code needs to run.
   - Describe your process step by step. Add the problems you see and your goal.
-  - Add the time each step takes, if you know it. Say so if you do not.
+  - Add the time each step takes, if you know it. Say so if you do not. Use only your own figures. Any gap is marked as an assumption, and the skill's example numbers are not yours.
   - Read the waste map first. Check that each step and delay matches what really happens.
   - Start with the quick fixes at the top of the ranked list. Then set up the 5S plan in one work area.
+  - Next, run the top quick fix as a one-week trial, record the new step times, and run the waste map again to see if it worked.
 output_sample:
   input:
     - A description of your process and its steps
@@ -54,3 +55,4 @@ output_sample:
       contains: A phased plan that starts with the foundation and moves on to flow, pull and ongoing improvement.
     - name: Expected Benefits
       contains: The gains you can aim for, such as shorter lead time and less inventory.
+next: [process-bottleneck-finder, process-and-sop-writer]

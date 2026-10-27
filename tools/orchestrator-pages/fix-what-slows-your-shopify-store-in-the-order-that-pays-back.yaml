@@ -30,7 +30,7 @@ you_get:
   - A keep, remove or delay verdict for each app, with the app stack scored before and after
   - The leftover app code to delete, the first-screen image fix and the layout shift fix, ready to test
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your PageSpeed results and your monthly visits, conversion rate and order value. Say how many hours you or your developer have.
   - When it pauses, remove the apps it marked for removal and copy your theme. Then give it the theme files.
@@ -96,7 +96,7 @@ output_shape: |-
     Files: <each step's file> | MISSING: <every line, in one list>
 tweaks:
   - what: Visits, conversion rate and order value
-    how: The order gains are worked out from these. Give real numbers and the ranking is honest. Without them it can only rank by effort.
+    how: The order gains are worked out from these. Give real numbers and the ranking is honest. Without them it ranks by effort only and does not estimate orders.
   - what: Who does the work and the hours
     how: A developer with 10 hours ranks the list differently from you alone with 2. Say which.
   - what: What each app earns you

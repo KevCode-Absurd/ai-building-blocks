@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It flags orders against set time limits.
 new_slug: where-is-my-order-risk-finder
 name: Where-is-my-order risk finder
-summary: "Find orders likely to trigger a where-is-my-order email: shipped orders with stale tracking and late unshipped ones, so you can write to customers first."
+summary: "Find orders likely to trigger a where-is-my-order email: shipped orders that have not changed for days and late unshipped ones, so you can write to customers first."
 job: run-your-store
 headline: Where-is-my-order risk finder
 subhead: A list of the orders most likely to trigger a "where is my order?" email, found before the email arrives. You can message those customers first.
 explain: |
   A list of the orders most likely to trigger a "where is my order?" email, found before the email arrives. You can message those customers first.
 
-  It connects to your Shopify store and reads open orders. It flags two groups: orders that shipped but whose tracking has not updated for several days, and orders still unfulfilled after your own cut-off. You set both limits, with defaults of five days and three days. The run is read-only, so nothing in your store changes, and it prints a readable report or JSON. You need Shopify admin access with the read_orders scope.
+  It connects to your Shopify store and reads open orders. It flags two groups: orders that shipped but have not changed in your store for several days (a stand-in for stale tracking, since it does not read carrier scans), and orders still unfulfilled after your own cut-off. You set both limits, with defaults of five days and three days. The run is read-only, so nothing in your store changes, and it prints a readable report or JSON. You need Shopify admin access with the read_orders scope.
 when:
   - Support is flooded with tracking questions every Monday.
   - You suspect a carrier has stopped scanning parcels.
@@ -25,7 +25,7 @@ you_give:
   - Days before unfulfilled counts as late (optional)
   - Days before tracking counts as stale (optional)
 you_get:
-  - Shipped orders with stale tracking
+  - Shipped orders not updated for days (the check uses the order's last change, not carrier scans)
   - Unfulfilled orders past your limit
   - Order details for outreach
   - Report in readable or JSON form
@@ -57,3 +57,4 @@ output_sample:
       contains: Counts of late orders, stale orders and all at-risk orders, plus any errors.
     - name: wismo-report CSV file
       contains: One row per order with customer email, order date, days waiting, tracking number, carrier and shipping city and country.
+next: [daily-fulfillment-digest-writer, order-hold-manager]

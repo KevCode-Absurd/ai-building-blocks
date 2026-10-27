@@ -107,9 +107,9 @@ Use this quick product map when needed: CLI is terminal-first local repo work; I
 
 If MCP tools fail or no OpenAI docs resources are available:
 
-1. Run the install command yourself: `codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp`
-2. If it fails due to permissions/sandboxing, immediately retry the same command with escalated permissions and include a 1-sentence justification for approval.
-3. Ask the user to run the install command only if the escalated attempt fails.
+1. Tell the user what the install command does and ask for a yes. Then run it: `codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp`
+2. If it fails due to permissions/sandboxing, ask the user to approve a retry with escalated permissions, with a 1-sentence justification. Never escalate without a yes.
+3. Ask the user to run the install command themselves if the escalated attempt fails or is refused.
 4. Ask the user to restart Codex.
 5. Re-run the doc search/fetch after restart.
 

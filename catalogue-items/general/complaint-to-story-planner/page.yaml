@@ -9,7 +9,7 @@ headline: "Complaint to story planner"
 subhead: "Paste a customer complaint, the fix you are already making and what you can spend. The prompt finds one personal detail, lists five gestures with their cost and the line a friend would hear, picks the best story per dollar, writes the note and sets a team rule."
 
 explain: |
-  A refund closes a ticket. It does not make anyone tell a friend. Tony Hsieh built a company on the public idea that service is marketing when it surprises people, and that the surprise works best when it is small, personal and comes after the problem is fixed.
+  A refund closes a ticket. It does not make anyone tell a friend. Tony Hsieh spoke in public about service as marketing. This planner takes that idea and adds its own rule: the surprise works best when it is small, personal and comes after the problem is fixed.
 
   This prompt starts by checking that the fix is real, because a gift before the fix reads as a bribe. It then finds one detail from the customer's own words, lists five gestures from a handwritten note to a fix for everyone, with what each costs in money and minutes and the sentence a friend would hear. It picks one that fits your limits, writes the note or call script in under 60 words, and turns it into a rule your team can follow next time without asking you.
 

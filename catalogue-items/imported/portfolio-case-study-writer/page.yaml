@@ -7,7 +7,7 @@ job: find-a-job
 headline: Portfolio case study writer
 subhead: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
 not_for:
-  - "You only want to polish a resume line: ask your AI to rewrite the bullet, or edit it yourself."
+  - "You only want to polish a resume line: use the resume-job-application-builder skill, or ask your AI to rewrite the bullet."
   - "You have no notes or results yet: write down what you did, when, and what changed, then come back."
   - "You need a full portfolio website built: use a site builder, then paste this draft into it."
 explain: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
@@ -31,6 +31,7 @@ how_to_use:
   - Say which role the case study is for, such as designer, product manager, engineer or marketer.
   - Check the draft. Fill any gap marked as missing with a real fact, and cut anything you cannot back up.
   - Add your screenshots using the visual asset list. No code or paid tool is needed.
+  - Next, tailor the case study to the role you want and practise a 2-minute walkthrough for interviews.
 output_sample:
   input:
     - Your project notes, with your role, dates and team size
@@ -54,3 +55,4 @@ output_sample:
       contains: What worked, what you would change and what you learned.
     - name: Visual Asset List
       contains: The images and screenshots you should add to the page.
+next: [resume-job-application-builder, technical-interview-practice]

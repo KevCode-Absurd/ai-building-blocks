@@ -32,11 +32,12 @@ you_get:
   - Notes on quality checks
 how_to_use:
   - Use an AI that can run Python code on a computer with a GPU. A chat window alone cannot run this.
-  - "Install the tools with: pip install sae-lens. You need Python 3.10 or newer."
+  - "Install the tools with pip install sae-lens transformer-lens torch. You need Python 3.10 or newer."
   - Tell your AI the model name, the layer to study and the text dataset to use.
   - Start with a ready-made feature set if one exists for your model. Train your own only if none fits.
   - "Check the quality numbers first: dead features, average active features and loss kept."
   - Read the top text for each feature, then test the ones you care about by turning them up or down.
+  - Next, look up the features you care about on Neuronpedia, write down what each one seems to mean, and pass the best one to a steering or removal test.
 output_sample:
   input:
     - The name of your language model

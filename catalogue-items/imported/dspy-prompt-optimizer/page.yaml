@@ -33,9 +33,9 @@ how_to_use:
   - Open a chat with an AI that can run Python code. You also need Python and a model API key.
   - Paste this skill and describe your task in plain words.
   - Add 20 or more examples with the right answers, and say what a good answer looks like.
-  - Ask your AI to write the metric, then run a baseline score before any tuning.
+  - Ask your AI to write the metric, then run a baseline score before any tuning. A metric can be as simple as returning 1 when the predicted label matches the expected label, and 0 when it does not.
   - Ask it to run the optimiser on your examples, then compare the new score with the baseline.
-  - Check the tuned program on a few new inputs before you use it.
+  - Check the tuned program on a few new inputs before you use it. Then load the saved program in your app, and run the same metric again after each new batch of examples.
 output_sample:
   input:
     - A plain description of your AI task

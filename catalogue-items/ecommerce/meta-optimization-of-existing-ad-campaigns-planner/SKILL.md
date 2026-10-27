@@ -9,6 +9,34 @@ Give it a running Meta campaign's results, your break-even numbers and the chang
 
 It plans. It does not change the account.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta creative test campaign planner](https://useaiblocks.com/skills/meta-setup-of-new-ad-campaigns-with-new-creatives-planner).
+- The [Daily Meta ad review planner](https://useaiblocks.com/skills/meta-manage-ads-on-a-daily-basis-planner).
+- The [Meta bid cap launch planner](https://useaiblocks.com/skills/meta-set-up-a-bid-cap-campaign-planner).
+- **Read your ad results** with the [Meta delivery troubleshooter](https://useaiblocks.com/skills/meta-delivery-troubleshooter). It takes the plan.
+- **Read your ad results** with the [Google Ads report auditor](https://useaiblocks.com/skills/google-ads-report-auditor). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Meta Ads Manager:** It is the source of your export. Use the same date range and attribution window for both periods.
+- **Any good chat AI:** It reads a pasted or attached CSV. It needs no connection to your ad account.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:`. No account access is needed. The user pastes or attaches the data.

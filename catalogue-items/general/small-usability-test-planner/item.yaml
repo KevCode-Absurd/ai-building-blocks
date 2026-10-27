@@ -15,6 +15,8 @@ inputs:
 outputs:
   - {type: plan, required: true}
 minds: [steve-krug, jakob-nielsen, melanie-perkins, don-norman]
+next: [landing-page-auditor]
+before: [usability-heuristic-reviewer]
 origin: rebuilt
 version: 1.0.0
 credits:

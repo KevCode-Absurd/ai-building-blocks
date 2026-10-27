@@ -10,6 +10,8 @@ argument-hint: "[file | Drive link | paste text]"
 
 # /dpa-review
 
+**Plain-chat use (AI Blocks note).** The steps below read a saved playbook from a plugin folder. If you pasted this skill into a chat and have no such folder, do not stop. Ask the person to paste their DPA playbook (the positions they will accept) and their privacy policy, or run the setup-interview skill in this folder first and keep its result as a note to paste each time. A legal research tool is optional. Without one, tag every citation `[verify]` and do not state a statute or section as settled.
+
 1. Load `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → DPA playbook. If placeholders, stop and prompt setup.
 2. Get the DPA. Determine direction: are we processor (customer's DPA) or controller (vendor's)? Ask if ambiguous.
 3. Run the workflow below — term-by-term against the appropriate playbook row.

@@ -5,7 +5,7 @@ name: Apify output schema writer
 summary: Write Apify output schema files for your Actor, so run results show as a clear table in Apify Console. Reads your code first. Needs a paid Apify account.
 job: build-software
 headline: Apify output schema writer
-subhead: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account. Bring the Actor project folder. Use the result to plan your next step.
+subhead: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account. Bring the Actor project folder. Then run the Actor once on Apify and check the table in Console before you publish.
 explain: |
   Schema files that make an Actor's results show up as a clear table in Apify Console, so anyone can read a run without opening raw data. It suits Actors already built on Apify, which needs a paid account.
 
@@ -29,6 +29,7 @@ you_get:
   - A key-value store schema (when needed)
   - Updated Actor settings
 how_to_use:
+  - Gather your Actor's .actor folder and its source code, and check that your paid Apify account is active.
   - Open Claude, ChatGPT or Gemini, in a tool that can read your project folder. A plain chat only works if you paste your files in.
   - Paste the skill text, or upload the skill folder if your AI accepts files.
   - Add your Actor project folder. Add your field notes and other Actors to match, if you have them.
@@ -54,3 +55,4 @@ output_sample:
       contains: Your existing Actor settings file, updated to point to the new schema files.
     - name: Summary
       contains: A short list of what was created or changed, and anything you should check.
+next: [apify-actor-builder, apify-actor-converter]

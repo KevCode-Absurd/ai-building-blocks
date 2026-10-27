@@ -5,7 +5,7 @@ description: Use when pricing or promoting a digital product sold online — an 
 
 # Digital product pricing
 
-Digital products have no cost signal from materials or shipping, so the price digits carry more of the quality judgment than for a physical good. This skill is the delta versus `pricing`, `promotions`, and `discounts`. Memberships and recurring plans → `subscription-pricing`.
+Digital products have no cost signal from materials or shipping, so the price digits carry more of the quality judgment than for a physical good. This skill covers only what changes for digital products. The general pricing, promotion and discount skills it was built beside are not in this library, so every rule you need is written here. Memberships and recurring plans are not covered yet.
 
 ## When to use
 
@@ -15,9 +15,9 @@ Digital products have no cost signal from materials or shipping, so the price di
 
 ## When not to use
 
-- Recurring plans and memberships → `subscription-pricing`
-- Working out *how much* people will pay → `price-research`
-- Shared digit, gift, "$0", deadline, and depth rules in isolation → `pricing`, `promotions`, `discounts`
+- Recurring plans and memberships: not covered here. Use a simple tier table of your own.
+- Working out *how much* people will pay: ask 5 to 10 likely buyers first. This skill sets digits and wording, not demand.
+- Physical products: shipping and materials change the price signals.
 
 ## Inputs
 
@@ -27,15 +27,15 @@ Collect, or state your assumption: product and candidate price; individual vs kn
 
 ## Procedure
 
-Only the rules that change for digital products. Shared catalogs live in the Depth skills.
+Only the rules that change for digital products. These are rules of thumb from published pricing research (sources in reference.md), not guarantees. Test any price change on your own audience.
 
-1. **Unknown or individual seller → rounded.** No materials or shipping to signal quality, so a rounded price ($100, not $97) is one of the few quality cues available. Just-below reads as price-led. Depth: `pricing`.
-2. **Buyer already knows the quality → just-below.** After a free sample or a freemium upgrade prompt, quality is already experienced and a low-price ending is fine — and the left digit must actually drop. Depth: `pricing`.
-3. **Distant pre-orders: gift, not discount.** Launch 3+ weeks out → bonus module or extra pack at no cost, not a percentage off. Within about a week, either works. Results-driven courses tolerate only short pre-launch windows. Depth: `promotions`.
-4. **Lead magnets: "for $0", never "FREE".** Depth: `promotions`.
-5. **Pick-your-price, never pay-what-you-want.** 3–4 fixed options; most pick the lowest, so set it deliberately. PWYW is for donations. Depth: `promotions`.
+1. **Unknown or individual seller → rounded.** No materials or shipping to signal quality, so a rounded price ($100, not $97) is one of the few quality cues available. Just-below reads as price-led.
+2. **Buyer already knows the quality → just-below.** After a free sample or a freemium upgrade prompt, quality is already experienced and a low-price ending is fine — and the left digit must actually drop.
+3. **Distant pre-orders: gift, not discount.** Launch 3+ weeks out → bonus module or extra pack at no cost, not a percentage off. Within about a week, either works. Results-driven courses tolerate only short pre-launch windows.
+4. **Lead magnets: "for $0", never "FREE".**
+5. **Pick-your-price, never pay-what-you-want.** 3–4 fixed options; most pick the lowest, so set it deliberately. Pay-what-you-want is for donations.
 
-Shared, unchanged: sale-price just-below, same-left-digit upgrade tiers, deadline not a seat cap, discount ≤ 40% (quality is hard to judge before buying a file). Depth: `pricing`, `discounts`.
+Shared, unchanged: sale-price just-below, same-left-digit upgrade tiers, deadline not a seat cap, discount ≤ 40% (quality is hard to judge before buying a file).
 
 ## Worked example
 
@@ -67,13 +67,13 @@ Individual creator, LinkedIn-growth course, plan: $97, "FREE download" checklist
 
 ## Quick reference
 
-| Situation | Do | Depth |
-|---|---|---|
-| Individual / unknown seller | Rounded | `pricing` |
-| Freemium / sample already used | Just-below | `pricing` |
-| Pre-order, 3+ weeks out | Gift, not discount | `promotions` |
-| Lead magnet | "For $0" | `promotions` |
-| Let buyers choose | 3–4 fixed options | `promotions` |
-| Discount / urgency | ≤ 40%; dated deadline | `discounts` |
+| Situation | Do |
+|---|---|
+| Individual / unknown seller | Rounded |
+| Freemium / sample already used | Just-below |
+| Pre-order, 3+ weeks out | Gift, not discount |
+| Lead magnet | "For $0" |
+| Let buyers choose | 3–4 fixed options |
+| Discount / urgency | ≤ 40%; dated deadline |
 
-Evidence and effect sizes: see [reference.md](reference.md).
+Evidence and effect sizes: see [reference.md](reference.md). After you set the price, run it for a fixed period, record sales at each price, and keep the one that sold more.

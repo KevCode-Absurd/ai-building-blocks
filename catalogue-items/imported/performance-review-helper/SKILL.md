@@ -146,6 +146,8 @@ Not for disciplinary action, dismissal or hiring decisions. Those go through you
 
 ## If Connectors Available
 
+`~~HRIS` and `~~project tracker` stand for tools the user may have connected, such as an HR system or a ticket tracker. If none is connected, ask the user to paste prior reviews, goals and a list of completed work instead.
+
 If **~~HRIS** is connected:
 - Pull prior review history and goal tracking data
 - Pre-populate employee details and current role information

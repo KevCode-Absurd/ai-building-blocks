@@ -42,6 +42,8 @@ Check which connectors are live. Pull from every one that is, in one batch:
 5. Shopify — orders (`list-orders`) as the inflow, plus payout timing. Shopify on its own is enough to run: for a commerce business it is often the largest inflow. The payout read may fail because the connector's scopes exclude Shopify Payments — then ask the owner for their payout schedule and model from that; never infer a lag (`reference/v2_sources.md`)
 6. CSV upload — when no connector is connected
 
+Some connectors need a paid plan or an account with that tool. Say so before you ask the user to connect one. The CSV route needs no connector.
+
 If no connector is live and no file is attached, ask the user to either connect
 a source or upload a CSV (income/expense tabular data, any reasonable format).
 Note which sources were used in the output — this affects confidence band width.
@@ -105,9 +107,11 @@ For each window, compute:
 Confidence band formula:
 ```
 band_pct = weighted_avg_stddev_days / avg_payment_lag_days
-low  = net_cash × (1 − band_pct)
-high = net_cash × (1 + band_pct)
+low  = net_cash − (abs(net_cash) × band_pct)
+high = net_cash + (abs(net_cash) × band_pct)
 ```
+
+Use the absolute value so that low is always the lower figure, also when net cash is negative.
 
 Round band_pct to one decimal place. Cap at ±50% — higher variance means the
 data is too thin to model; flag it instead (see Step 5).
@@ -137,16 +141,16 @@ as raw monospace text. Shape:
 
 - Title line: Cash Flow Snapshot — <date range>
 - Source(s): <connectors used>
-- Opening balance: AUD X,XXX as of <date> (or: none on file — net change only)
+- Opening balance: <currency code> X,XXX as of <date> (or: none on file — net change only)
 
 Then the forecast as a markdown table, amounts carrying the business's currency
 code (`../../shared/currency-and-locale.md`), never a bare symbol:
 
 | Window | Expected | Low | High |
 |---|---|---|---|
-| 30-day net | AUD X,XXX | AUD X,XXX | AUD X,XXX |
-| 60-day net | AUD X,XXX | AUD X,XXX | AUD X,XXX |
-| 90-day net | AUD X,XXX | AUD X,XXX | AUD X,XXX |
+| 30-day net | <currency code> X,XXX | <currency code> X,XXX | <currency code> X,XXX |
+| 60-day net | <currency code> X,XXX | <currency code> X,XXX | <currency code> X,XXX |
+| 90-day net | <currency code> X,XXX | <currency code> X,XXX | <currency code> X,XXX |
 
 Then risks as a short bulleted list under "⚠ Risks flagged: <count>".
 

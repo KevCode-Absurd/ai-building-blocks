@@ -47,6 +47,8 @@ Applies bulk tag changes (add, remove, or both) to customers selected by a query
    - If `mode: replace`: `target = add_tags` (remove_tags ignored)
    Skip the customer if `target == existing` (no-op).
 
+   **Approval gate:** Show the preview (match count and a sample of before and after tag sets). Then stop and wait for the user to say yes in chat. Do not run any `customerUpdate` until they do, and do not treat `dry_run: false` in the request as that yes without showing the preview first.
+
 3. **OPERATION:** `customerUpdate` — mutation
    **Inputs:** For each customer with a non-empty diff: `input: { id: <customer_id>, tags: <target_tag_array> }`
    **Expected output:** `customer.id`, `customer.tags`, `userErrors`; collect failures

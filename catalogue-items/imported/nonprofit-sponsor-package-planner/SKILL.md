@@ -11,6 +11,8 @@ metadata:
 
 # Corporate Sponsorships & Cause Marketing
 
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-grant-research is the Nonprofit grant funder researcher. nonprofit-fundraising-events is the Nonprofit fundraising event planner.
+
 ## When to Use This Skill
 
 Use this skill for sponsorship and cause-marketing revenue from businesses — a fundamentally
@@ -85,6 +87,7 @@ review, especially for high-value in-kind benefit packages; do not give definiti
 3. Prioritize prospects by category fit and existing relationship (a warm board/staff connection
    converts far better than a cold approach) — coordinate sourcing with existing donor/business
    relationships in the pipeline system if applicable.
+   Before you send any pitch, check every fact you state about the prospect (locations, programs, audience, past giving) against its public site or the person's own records. Never invent a claim about a real company. Mark anything unchecked as [unverified].
 4. Customize the pitch deck to each top-tier prospect's brand and community footprint; make a
    specific, named tier ask rather than "let us know what works for you."
 5. Negotiate and document terms in a signed sponsorship agreement before the event/program begins.

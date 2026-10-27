@@ -37,7 +37,9 @@ how_it_works:
     text: Draft the fund owner update with source totals, unresolved eligibility questions and requested decisions, without submitting a funder return.
 output_shape: |-
   Scope and source coverage
-  A reconciled grant spending table, variance brief and evidence gaps.
+  Reconciled grant spending table: date | description | amount | receipt reference | budget category | restricted fund ledger line | status (matched, unmatched or eligibility question)
+  Variance brief: budget category | approved phased budget | actual | variance | cause (timing difference, unapproved reallocation or other) | source
+  Evidence gaps and the fund owner update: source totals | unresolved eligibility questions | decisions you ask for
   Step files and evidence references
   Unresolved facts and checks missed
   Proposed next action and approval status
@@ -73,3 +75,8 @@ works_best_with:
 terms:
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+
+not_for:
+  - "You want to hand over a recurring process, not report on grant spending: use Make a recurring process easier to hand over."
+  - "You need an audit opinion or the funder's sign-off on the spending: ask your auditor or grant officer, because this prepares the table and marks the gaps."
+  - "You have no transaction records for the reporting period: pull them from your accounts first, because the table cannot be reconciled without them."

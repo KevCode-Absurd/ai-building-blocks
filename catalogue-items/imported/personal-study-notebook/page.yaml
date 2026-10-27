@@ -31,7 +31,7 @@ how_to_use:
   - Name the folder where your notes should go. Add any books or articles you want it to teach from (optional).
   - Answer its short questions about how you like things explained. It builds your learner profile and study plan from your answers.
   - Read each lesson note, then take the quiz. Read the feedback and fix weak spots before moving on.
-  - Come back on your review dates. Open the dashboard to see what to study next.
+  - Come back on your review dates. Open the dashboard to see what to study next. Review the notes that are due, then move to the next topic. The progress picture in the dashboard is made by the skill in your own folder as you go, so it is not in the download.
 output_sample:
   input:
     - Your subject and what you want to learn it for

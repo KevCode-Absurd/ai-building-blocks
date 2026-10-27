@@ -2,14 +2,14 @@ thinking: medium
 thinking_why: It studies the site, then fills a set file format.
 new_slug: llms-txt-writer
 name: llms.txt writer
-summary: Write an llms.txt file for your website. It tells AI tools which pages and facts matter most, so they cite the right page.
+summary: Write an llms.txt file for your website. It lists the pages and facts that matter most, for AI tools that read it. No tool is promised to use it.
 job: get-found-in-search
 headline: llms.txt writer
 subhead: An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
 explain: |
   An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
 
-  It studies the site, then writes the file to the published format: a title, a short summary, then sections of links. Each link is a full address with a 10 to 30 word note on what the page covers, ordered by importance. An optional section holds lower priority pages. Key facts such as pricing, features and locations are stated outright, so AI tools can cite the right page. It can also check an existing file against the rules.
+  It studies the site, then writes the file to the published format: a title, a short summary, then sections of links. Each link is a full address with a 10 to 30 word note on what the page covers, ordered by importance. An optional section holds lower priority pages. Key facts such as pricing, features and locations are stated outright, so a tool that reads the file has less to guess. It can also check an existing file against the rules.
 when:
   - AI tools get your pricing or services wrong.
   - You want AI answers to cite your best page.
@@ -31,7 +31,7 @@ you_get:
   - Placement steps for your site
   - A check of an existing file
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can open web pages, so it can read your site.
+  - Open Claude, ChatGPT or Gemini. Pick one that can open web pages, so it can read your site. If yours cannot, paste in the text of your key pages or your sitemap.
   - Paste the skill text into the chat.
   - Add your website address. Add your key pages and facts if you have them.
   - If you already have an llms.txt, paste it in and ask for a check first.

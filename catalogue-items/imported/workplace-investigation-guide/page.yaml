@@ -31,12 +31,12 @@ you_get:
   - Answers from the log
   - Draft memo and audience summaries
 how_to_use:
-  - This skill is built for a plugin that can save files. Use an AI that can create and keep files, and put the skill folder in it.
+  - This skill is built for the employment-legal plugin from Claude for Legal, which saves files under your AI's plugin folder. Use an AI that can create and keep files, and put the skill folder in it. If /employment-legal:cold-start-interview is missing, use the setup-interview folder inside the skill.
   - Confirm first that a lawyer directs the investigation. Marking a file does not create privilege.
   - "Open the matter: describe the complaint, who is involved and the dates. Your AI sets up the log and a sources checklist."
   - Add each document or interview note one at a time. Check each log entry and the list of gaps before you add the next.
   - Ask questions of the log, then ask for the draft memo. Have your lawyer review it before anyone else sees it.
-  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it.
+  - Before any file is made, copy the work-product header from your own CLAUDE.md (the Outputs section) into the matter. Share the memo only with counsel and the named investigators. Give HR or leadership the audience summary, not the full memo.
 output_sample:
   input:
     - A plain description of the complaint

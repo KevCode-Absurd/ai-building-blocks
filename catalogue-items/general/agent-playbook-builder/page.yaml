@@ -9,7 +9,7 @@ explain: |
 
   This multi-agent playbook planner describes a playbook as a pattern. It names which agents must flag which kinds of finding, at what severity, inside what time window, and how many different signals must match. A cooldown stops it firing again for the same client. When it matches, the plan asks the agents involved for their view, joins them into one diagnosis and posts it. It can also open a parent task or a draft proposal, but both wait for a person to approve.
 
-  The playbook only reports and proposes. Before it can fire for real, you test it against your past findings in a dry run. The pack's checklist asks for under 10% false alarms across 30 days of past findings. The pack's example playbooks have gaps of their own, such as a file that holds a different playbook than its name says, and one rule that counts two signals from the same agent. The plan flags gaps like these and does not copy them.
+  The playbook only reports and proposes. Before it can fire for real, you test it against your past findings in a dry run. The pack's checklist asks for under 10% false alarms across 30 days of past findings. The pack's example playbooks had gaps of their own. Some are now fixed, and one rule still counts two signals from the same agent. The plan flags gaps like these and does not copy them.
 
 when:
   - "Several of your AI agents flag problems, and you want one combined response."
@@ -45,6 +45,7 @@ how_to_use:
   - "If you do not know the window or cooldown, say so. It will propose numbers and mark them as proposals."
   - "Read the dry run first. Check each time it fires or stays quiet against what you remember happening."
   - "Run the test cases yourself in a test copy. Keep the playbook in report-only mode until your owner has approved it."
+  - "Next: after approval, switch to live mode and review the next 30 days of firings against the dry run. The starter code posts to a channel only if you wire a post function, and it records the firing only after the post succeeds."
 
 how_it_works:
   - title: "Collects findings in a window"

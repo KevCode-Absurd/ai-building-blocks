@@ -53,7 +53,7 @@ Inspect a provider’s uncalibrated AI-style signal for a document’s prose, wi
    | Question | Tool |
    |---|---|
    | Was this *written* by AI? (style) | this skill |
-   | Is this document *genuine/tampered*? (forensics) | `verify-document` skill |
+   | Is this document *genuine/tampered*? (forensics) | a document forensics check (not part of this skill) |
 
    A human can write generically; an AI can write plainly. One triage signal, never a verdict.
 

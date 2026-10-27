@@ -31,10 +31,12 @@ you_get:
   - A gap table with fixes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Before you ask for anything, list your system boundary (what is in and out), the data types it holds and the security policies you already have.
   - Describe your system in plain words. Say what data it stores and who uses it.
   - Ask for the impact rating and baseline first. Check that the rating matches how you see the risk.
   - Ask for tailoring choices, then draft narratives for the controls you care about.
   - Replace general wording with your real tools, policies and roles. Share the draft with your assessor.
+  - If you sell cloud to federal agencies, plan the FedRAMP route with the federal cloud approval planner.
 output_sample:
   input:
     - A description of your system
@@ -54,3 +56,4 @@ output_sample:
       contains: Control ID, requirement, status, finding and fix for each control you checked.
     - name: RMF step guidance
       contains: The tasks, outputs and roles for the risk management framework step you ask about.
+next: [federal-cloud-approval-planner]

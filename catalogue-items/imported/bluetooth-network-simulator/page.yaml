@@ -75,6 +75,7 @@ output_sample:
   prerequisites:
     - MATLAB R2026a or later with the Bluetooth Toolbox, which are paid MathWorks products
     - An AI that can run MATLAB code, or a person who will run the script
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Simulation script
       contains: MATLAB code that sets up the simulator, devices, connections and traffic, runs it and reads the results.

@@ -1,6 +1,6 @@
 # Naval Ravikant: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Naval Ravikant is alive, and views can change. This data set rests on the full text of *The Almanack of Naval Ravikant* (2020), the free book in which Eric Jorgenson collected his tweets, podcast talks and essays [S6], and on his 2018 "How to Get Rich (without getting lucky)" thread [S1]. We added his spoken voice from two Tim Ferriss Show transcripts (2016 and 2020) [S7][S8] and two of his own podcast episodes on hiring (2025) and selling (2026) [S9][S10]. Career facts come from reference pages [S5][S11]. Treat each view as "as of" those dates. He is an investor, so this mind explains how he thinks. It gives no investment advice and no buy or sell calls.
 

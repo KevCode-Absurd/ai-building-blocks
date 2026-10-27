@@ -32,10 +32,11 @@ you_get:
   - A plain-words verdict on what you can claim
 how_to_use:
   - Save your fitted model results in ArviZ form. Keep the data you fitted it to.
-  - Open an AI that can run Python code and read files, such as Claude or ChatGPT with code tools turned on.
+  - Open an AI that can run Python code and read files, such as Claude or ChatGPT with code tools turned on. These tools may need a paid plan.
   - Paste the skill text from this page, then upload your saved results and data.
   - Say what you want to claim from the model, for example which effect or which model is better.
   - Read the verdict first, then the sampling health section. Fix sampling problems before you trust any comparison.
+  - Once sampling is fixed, run the comparison again. Report your claim with its limits, as the verdict states them.
 output_sample:
   input:
     - Your fitted model results saved in ArviZ form

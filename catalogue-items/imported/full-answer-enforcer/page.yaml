@@ -29,12 +29,13 @@ you_get:
   - Clean continuation chunks for long answers
   - Final check against what you asked for
 how_to_use:
-  - Open a new chat in Claude, ChatGPT or Gemini. No code running, web access or paid tool is needed.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code running, web access or paid tool is needed. In a coding tool such as Claude Code, Cursor or Codex, add the skill to your skills folder so it loads every time.
   - Paste the full text of the skill into the chat, then send it.
   - In your next message, ask for the full file or list. Paste your source files or notes. Say how many items you expect, if you know.
   - If the answer is long, your AI will split it at a clean break. Reply "continue" to get the next part.
   - Count the items in the result and compare them to your request. Look for any "rest of code" or TODO lines before you use it.
   - If something is missing, say which item and ask your AI to write it in full.
+  - A good reply ends with a count check, for example "You asked for 12 items. This has 12."
 output_sample:
   input:
     - Your request for a full file, list or set of items

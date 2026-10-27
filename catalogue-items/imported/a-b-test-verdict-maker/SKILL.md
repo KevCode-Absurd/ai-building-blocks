@@ -3,6 +3,14 @@ name: ab-test-analysis
 description: Rigorous A/B test statistical analysis. Use when analyzing experiment results, calculating statistical significance, checking for sample ratio mismatch, or validating test design before launch.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `references/statistical_tests_reference.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # A/B Test Analysis
 
 # When to use
@@ -16,7 +24,7 @@ description: Rigorous A/B test statistical analysis. Use when analyzing experime
 1. **Confirm test design** — verify the hypothesis, the control and treatment definitions, the randomisation unit (user/session/device), the primary metric, any guardrail metrics, and the target split ratio.
 2. **Check for sample ratio mismatch (SRM)** — run a chi-square test on the actual vs. expected split. If SRM is detected, stop and investigate the randomisation pipeline before interpreting results. Use `scripts/ab_test_analyzer.py --check-srm`.
 3. **Calculate per-variant metrics** — compute the rate (or mean) and 95% confidence interval for the primary metric in each variant. Document absolute and relative difference.
-4. **Run the significance test** — execute a two-proportion z-test (for rates) or Welch's t-test (for means). Record z-score, p-value, and 95% CI for the effect. Use `references/statistical_tests_reference.md` if unsure which test applies.
+4. **Run the significance test** — execute a two-proportion z-test (for rates) or Welch's t-test (for means). Record z-score, p-value, and 95% CI for the effect. Pick the test by data type, as written above. The test guide is not in this copy.
 5. **Check guardrail metrics** — run the same significance test for each guardrail metric. A significant degradation on any guardrail is a blocker regardless of primary metric results.
 6. **Produce the recommendation** — synthesise SRM result, power, significance, and guardrail checks into a clear ship / no-ship / extend decision. Quantify the expected business impact if shipped. Record in `assets/ab_test_report_template.md`.
 

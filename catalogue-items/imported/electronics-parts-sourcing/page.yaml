@@ -36,11 +36,11 @@ you_get:
   - An action list with owners, and a list of missing data
 how_to_use:
   - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works. A tool that can run code and read a spreadsheet gives faster results on long lists."
-  - "Prepare your parts list. These columns help: part_number, quantity_per_unit, manufacturer, allocation_status, lead_time_weeks, available_inventory. Blank cells are fine, and it marks them MISSING."
+  - "Prepare your parts list. These columns help: part_number, quantity_per_unit, manufacturer, allocation_status, lead_time_weeks, available_inventory, allocated_qty (stock already allocated to you). If you run the optional code, it also reads quantity_per_board. Blank cells are fine, and it marks them MISSING."
   - "Paste the list or attach the file, then your production plan and how you build."
   - "Check the risk table first. Read why each part scored high. Change the weights if they do not fit your business."
   - "Confirm lead times and stock for the top parts with your maker or distributor before you act. The skill does not know today's market."
-  - "Fill in the MISSING list, run it again, and take the action list to your buyers."
+  - "Fill in the MISSING list, run it again, and take the action list to your buyers. Re-run once lead times and stock are confirmed, before you place orders."
 how_it_works:
   - title: Learn how you build
     text: Asks about your build model, product type, volume and supplier setup.

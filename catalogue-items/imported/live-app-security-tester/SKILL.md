@@ -40,7 +40,7 @@ Provide the agent with the target URL, authentication credentials if needed, and
 **Prompt example:**
 
 ```
-Run a DAST scan against our staging application at https://staging.example.com. Use OWASP ZAP with the login form at /login (username: testuser, password: Test@1234). Scan all API endpoints under /api/v2 and generate an HTML report.
+Run a DAST scan against our staging application at https://staging.example.com. Use OWASP ZAP with the login form at /login (use a throwaway test account on staging, with the username and password from your own secret store, never a real one). Scan all API endpoints under /api/v2 and generate an HTML report.
 ```
 
 ## Examples
@@ -50,19 +50,20 @@ Run a DAST scan against our staging application at https://staging.example.com. 
 **ZAP Docker command with authentication:**
 
 ```bash
-docker run --rm -v $(pwd)/report:/zap/wrk owasp/zap2docker-stable zap-full-scan.py \
+# The old owasp/zap2docker-stable image is retired. Check ZAP's docs for the current image name.
+docker run --rm -v $(pwd)/report:/zap/wrk ghcr.io/zaproxy/zaproxy:stable zap-full-scan.py \
   -t https://staging.example.com \
   -r zap-report.html \
   -J zap-report.json \
-  -c zap-config.conf \
-  --hook=zap-auth-hook.py \
   -z "-config formhandler.fields.field(0).fieldId=username \
-      -config formhandler.fields.field(0).value=testuser \
+      -config formhandler.fields.field(0).value=<TEST_USERNAME> \
       -config formhandler.fields.field(1).fieldId=password \
-      -config formhandler.fields.field(1).value=Test@1234"
+      -config formhandler.fields.field(1).value=<TEST_PASSWORD>"
 ```
 
 **Findings Report (excerpt):**
+
+The excerpt below is an invented illustration, not real scan output. Your report must contain only what your own scan found.
 
 | # | Risk | Alert | URL | CWE | OWASP | Confidence |
 |---|------|-------|-----|-----|-------|------------|

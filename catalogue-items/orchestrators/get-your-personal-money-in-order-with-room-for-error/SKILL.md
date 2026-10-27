@@ -13,17 +13,16 @@ This workflow chains 5 skills into one job. You run them one after another, and 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material):
-- **Your question** (yours): your income after tax, your debts and your goals, in your own words. Say if you want the smallest debt gone first or the dearest first.
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your bank's export** (yours): two or three months of statements, so the spending is real and not remembered.
-- **Your last bad month** (yours): described, so the room-for-error test uses something real.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for income, spending, the debt list and the goals. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+2. **Check what's missing.** Look for your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Every step is a plan or a piece of writing.
@@ -64,9 +63,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Choose your investing style and your stock and bond split](https://useaiblocks.com/workflows/investing-style-split). Use it once the buffer is built. It gives a one-page policy and does not pick investments.
-- The [Plan a purchase around your real budget](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget). Use it for one big spend. Bring the budget.
-Otherwise suggest re-running this each quarter with the new numbers, and keeping each budget in one folder to see the trend.
+- **Check the money** with the [Investment policy and style reviewer](https://useaiblocks.com/workflows/investing-style-split).
+- The [Purchase total-cost comparison analyst](https://useaiblocks.com/workflows/plan-a-purchase-around-your-real-budget). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

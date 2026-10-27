@@ -31,11 +31,12 @@ you_get:
   - The best solution found
   - Notes on which limits bind
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Choose a mode that can run Python code.
-  - Paste the skill text into the chat. Or upload the skill folder if your AI accepts files.
+  - Use an AI that can run Python code.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Describe your decision, your goal and your limits in plain words. Say which limits are firm.
   - Paste or upload your data tables. Say which numbers you trust.
   - Read the answer. Check each limit against your real rules, then rerun with changed numbers to test it.
+  - When you pick a plan, give it to whoever will carry it out. Rerun the model when your limits change.
 output_sample:
   input:
     - The decision you need to make

@@ -30,11 +30,13 @@ you_get:
   - Cost and revenue consistency check
   - A list of gaps to fix
 how_to_use:
+  - Gather your customer types, your prices, and your main cost figures before you start.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
   - Describe your business, who buys from you and how you earn money. Add your main costs if you know them.
-  - Answer any questions your AI asks. It works in steps, so expect a few rounds.
+  - Answer any questions your AI asks. It works in three rounds: your offer and customers, the rest of the canvas, then a cost and revenue check. It is done when the canvas has all nine blocks and the check finds no clash.
   - "Check the first two blocks: does your offer really match your customers? Fix this before you go on."
   - Read the consistency check and the gaps list. Fix each gap, then ask your AI to check again.
+  - Next, test the riskiest block in five customer conversations, or hand the cost block to a spreadsheet.
 output_sample:
   input:
     - A description of your business

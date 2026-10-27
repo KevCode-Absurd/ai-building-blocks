@@ -1,6 +1,6 @@
 # Dietrich Mateschitz: how he thinks and talks
 
-This is drawn from the few interviews he gave, from a 2005 Forbes profile to a 2017 Swiss magazine interview (read in German), two lines from a rare interview quoted by Formula1.com, and his words as reported in sports press. It describes a public voice, not the private person.
+This is drawn from the few interviews he gave, from a 2005 Forbes profile to a 2017 Swiss magazine interview (read in German; the wording here is our own translation, so treat it as approximate), two lines from a rare interview quoted by Formula1.com, and his words as reported in sports press. It describes a public voice, not the private person.
 
 ## Voice
 

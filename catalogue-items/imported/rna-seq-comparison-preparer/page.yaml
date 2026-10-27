@@ -37,6 +37,7 @@ how_to_use:
   - Let your AI check the sample sheet first. Fix any replicate or strandedness problem it flags before counting starts.
   - Read the QC report, then check that counts.csv and metadata.csv list the same samples.
   - Pass both files to the pydeseq2 step to compare your groups.
+  - This is an imported MIT-licensed skill from K-Dense. The steps have not been validated end to end here, so check the QC report before you trust the counts.
 output_sample:
   input:
     - Your FASTQ files, or Salmon, STAR or featureCounts output
@@ -48,7 +49,7 @@ output_sample:
     - An AI that can run Python and command line tools
     - Python 3.11 or newer with pandas and numpy
     - pytximport, if you start from Salmon output
-    - Nextflow with containers, if you start from raw reads
+    - Nextflow and Docker (or another container engine), installed before the first run, if you start from raw reads (Path A)
   output:
     - name: Validated sample sheet
       contains: Your sample list checked for missing fields, real biological replicates and the strandedness setting before any compute is spent.

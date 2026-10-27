@@ -9,9 +9,9 @@ explain: |-
 
   Share product facts, target buyer, offer, past ads and production limits. Get a ranked concept list with top-eight production picks.
 when:
-  - You need a ranked concept list with top-eight production picks.
-  - You need seven-bucket ad concept brainstormer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Your ad ideas have run dry and you need 20 or more fresh angles in one go.
+  - You want to choose which eight to shoot first, with the reason for each.
+  - You are briefing an agency or freelancer and want ranked ideas, not a vague request.
 not_for:
   - "You need one finished ad, not a list of ideas: ask your AI to write a single ad from your product facts."
   - "You have no product facts or proof yet: gather those first, because ideas without proof get killed."
@@ -25,9 +25,10 @@ you_get:
   - A ranked concept list with top-eight production picks
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your product in one sentence, your main buyer, the stages to cover and your do-not-do list.
+  - Read the top eight. Check the proof each one needs against what you really have.
+  - Brief the top two or three first, then test them against each other.
 output_sample:
   input:
     - Your product in one sentence
@@ -45,20 +46,17 @@ output_sample:
       contains: Weak concepts with no proof or a brand risk, each with the reason.
 how_it_works:
   - title: Check the inputs
-    text: Confirm product facts, target buyer, offer, past ads and production limits. Mark facts that are missing.
-  - title: Collect Context
-    text: Follow the collect context section in the full method and keep its required fields and decision rules.
-  - title: Generate Concepts in Batches
-    text: Follow the generate concepts in batches section in the full method and keep its required fields and decision rules.
-  - title: For Each Concept, Produce
-    text: Follow the for each concept, produce section in the full method and keep its required fields and decision rules.
-  - title: Rank
-    text: Follow the rank section in the full method and keep its required fields and decision rules.
-  - title: Deliver
-    text: Follow the deliver section in the full method and keep its required fields and decision rules.
-  - title: "Brainstorm: [product]"
-    text: "Follow the brainstorm: [product] section in the full method and keep its required fields and decision rules."
-  - title: Review the result
-    text: Return a ranked concept list with top-eight production picks. Check facts, math and the decisions before any action.
+    text: Confirm your product in one sentence, your main buyer, the awareness stages to cover and your brand voice. Mark anything missing.
+  - title: Generate concepts in seven groups
+    text: Problem-first, identity-first, myth-bust, founder story, customer story, comparison and demonstration. At least 20 concepts in all.
+  - title: Fill in each concept
+    text: Hook, angle, buyer, stage, theme, format, proof needed and one risk. Each hook has to differ.
+  - title: Score and rank
+    text: Score each concept 1 to 10 for novelty, proof, production ease and buyer match. Add the four scores and rank by total.
+  - title: Sort into top 8, defer and kill
+    text: The eight highest go to production. Middle ones wait. Concepts with no proof or a brand risk are killed, with the reason.
+  - title: Pick what to brief first
+    text: Take the top two or three to your shooter or designer, and test them one change at a time.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+next: [creative-brief-writer, small-budget-ad-test-planner]

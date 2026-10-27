@@ -7,7 +7,7 @@ compatibility: Requires internet access to reach transcriptapi.com. No additiona
 required_environment_variables:
   - name: TRANSCRIPT_API_KEY
     prompt: Your TranscriptAPI key (starts with sk_)
-    help: Free account at https://transcriptapi.com — 100 credits, no card required. Or let the agent create one for you.
+    help: Free account at https://transcriptapi.com — 100 credits, no card required. Make the account yourself; do not let the agent sign up for you.
     required_for: all API requests
 metadata: {"openclaw":{"emoji":"🔍","requires":{"env":["TRANSCRIPT_API_KEY"]},"primaryEnv":"TRANSCRIPT_API_KEY","homepage":"https://transcriptapi.com"},"hermes":{"tags":["youtube","search","video","channels","discovery","research"],"category":"media"}}
 ---

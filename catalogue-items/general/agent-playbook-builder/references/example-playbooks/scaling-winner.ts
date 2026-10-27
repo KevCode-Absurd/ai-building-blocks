@@ -54,6 +54,10 @@ export const emailFlowOutperformingPlaybook: PlaybookDefinition = {
   },
 }
 
+// The registry in index.ts imports this playbook as scalingWinnerPlaybook.
+// This alias keeps that import working.
+export const scalingWinnerPlaybook = emailFlowOutperformingPlaybook
+
 // ----------------------------------------------------------------------------
 // EXIT CONDITIONS (documentation, enforced at runtime by the engine)
 // ----------------------------------------------------------------------------

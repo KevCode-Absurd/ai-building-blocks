@@ -30,12 +30,16 @@ you_get:
   - Block or allow decisions
   - Batch screening script
 how_to_use:
+  - This is set up by a developer. If you are not one, hand this page to your developer, or use a manual review step until they do.
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code, or plan to run the code yourself.
   - Paste the skill text. Say whether you are screening user messages, third-party content such as web pages, or both.
   - Add a few sample texts and your score cutoff if you have one (optional).
   - Accept Meta's terms for the Prompt Guard model on Hugging Face. Install transformers and torch.
   - Run the code on your sample texts. Check that blocked and allowed results look right, then adjust the cutoff.
   - "Know the limits: the code is MIT, but the model uses the Llama 3.1 Community License. Scores shown in the skill are examples, so test on your own text."
+  - Log every flagged input for review. Do not raise the cutoff for trusted users unless you add another check, because a stolen account would then pass.
+  - Use it alongside LlamaGuard (harmful content) or NeMo Guardrails (what your app may do), not instead of them.
+next: [ai-app-guardrails-builder, prompt-injection-defender]
 output_sample:
   input:
     - The text you want to screen, such as user messages, web pages or search documents

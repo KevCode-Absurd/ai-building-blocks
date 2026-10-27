@@ -89,7 +89,7 @@ For each persona:
 
 **[First Name], [Age] — [Job Title or Life Stage], [Location]**
 
-*"[First-person quote — what they would say about their situation, in their own words]"*
+*"[First-person quote — an illustrative example of what they might say. Label it as a hypothesis to test unless it comes from pasted customer words]"*
 
 **Their World:**
 [2–3 sentences describing a day in their life, how this brand's category fits into it]
@@ -123,7 +123,7 @@ For each persona:
 What words and phrases does this audience use to describe:
 
 **Their problem:**
-[3–5 direct quotes or paraphrases from real customer language — reviews, forums, interviews]
+[3–5 direct quotes or paraphrases taken only from the reviews, surveys or notes the person pasted. If none were pasted, write "No customer words supplied" and give a few phrases labelled as guesses to test]
 
 **Their desired outcome:**
 [3–5 phrases describing what success looks like to them]

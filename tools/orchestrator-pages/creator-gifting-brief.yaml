@@ -8,21 +8,23 @@ headline: Send creators a gift and a brief they can film from
 subhead: Give it your brand file. It picks creators by fit, writes the card that goes with the gift, scripts a short phone video, turns the script into a filming brief, and plans the edit of what they send back.
 explain: |-
   Gifting fails when the creator gets a box and no direction, or a brief so long that nobody reads it. Then the footage that comes back needs rework.
-
   This workflow scores creators on fit, not size, and writes a short card with the disclosure wording. It scripts a phone video the creator can film in a few takes, then turns that into a brief with the shoot in order and the must-haves split from the maybes. When footage comes back, it plans the cut.
+  The disclosure wording is a starting point. Check it against the posting platform's paid-partnership rules and, if you sell in the US, the FTC's rules on endorsements, or ask a lawyer.
 when:
   - You want creators to post about your product but have no process.
   - Past creator posts missed the point of your product.
   - You want footage you can also use in paid ads, with the right permissions.
 not_for:
   - "You have not checked creators against their real posts: look at their last posts yourself first, then come back to score them."
-  - "You only want paid ads and no gifting: use the Competitor-inspired video script writer or write the ad script on its own."
+  - "You only want paid ads and no gifting: use the Selfie-style video ad script writer on its own."
   - "You already have footage and only need captions: use the Video caption maker in your brand font."
 you_give:
   - Your brand file
-  - Who you want to reach (optional)
   - Customer reviews, copied as written
   - Your product facts
+  - What one box costs and what you will spend this round
+  - Creators you are considering, with links to a few recent posts and their view counts (optional)
+  - Who you want to reach (optional)
   - The creator's footage once it comes back
 you_get:
   - A shortlist scored on fit, with a one-page card per creator
@@ -31,9 +33,11 @@ you_get:
   - A filming brief the creator can follow without questions
   - An edit plan for the footage you get back
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md and the four skill files this workflow uses. Unzip it and keep them together in one folder.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+  - After step 3, send the gift and the brief, then collect the footage and paste it in.
+  - If the footage breaks the approved script, the edit plan skips that moment and names the shot to reshoot. Ask the creator to film it again.
 output_sample:
   input:
     - Your brand file, or your brand facts, products, offer and voice

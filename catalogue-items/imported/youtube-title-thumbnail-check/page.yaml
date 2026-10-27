@@ -30,10 +30,11 @@ you_get:
   - "A closing question: ship it or change it"
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code if you can.
-  - Paste the skill text into the chat.
+  - Paste the skill text into the chat. Without Python, your AI counts characters by estimate, so check titles near 40 or 60 characters in a character counter.
   - Add your video idea or a short summary. Add draft titles or voice notes if you have them.
   - Read the top three titles and the issue on each. Check the thumbnail brief does not repeat the title.
   - "Answer the closing question: ship it, or change it. Then make the video yourself."
+  - After you publish, compare impressions and click-through in YouTube Studio before changing the title again. Give the thumbnail brief to whoever designs your thumbnails.
 output_sample:
   input:
     - Your video idea or a short summary of the finished video
@@ -51,3 +52,4 @@ output_sample:
       contains: The expression, the framing, up to three words, and what the background must do to stay clear.
     - name: Ship it or change it
       contains: A closing question asking if you will publish this pairing or change it.
+next: [youtube-title-and-tags-writer, youtube-retention-reader]

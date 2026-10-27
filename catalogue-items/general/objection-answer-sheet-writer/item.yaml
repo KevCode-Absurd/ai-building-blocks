@@ -11,6 +11,7 @@ inputs:
   - {type: objection_map, required: false}
   - {type: voc_reviews, required: false}
   - {type: product_data, required: false}
+  - {type: lessons_register, required: false}
 outputs:
   - {type: objection_map}
 origin: rebuilt

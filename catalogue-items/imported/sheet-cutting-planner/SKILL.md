@@ -358,7 +358,11 @@ class TwoStageGuillotineCutting:
 
         while any(qty > 0 for qty in remaining_items.values()):
             # Create new sheet
+            before = sum(remaining_items.values())
             sheet = self._fill_sheet_greedy(remaining_items)
+            if sum(remaining_items.values()) == before:
+                # No panel fitted: a panel is bigger than the sheet. Stop, do not loop.
+                raise ValueError("A panel is wider or taller than the sheet. Check sizes and rotation.")
             sheets.append(sheet)
 
         total_used_area = sum(
@@ -1236,6 +1240,10 @@ if __name__ == "__main__":
 5. Can items rotate?
 6. Saw kerf width?
 7. Optimization goal?
+
+Before you solve, check that every panel fits on the sheet (turned 90 degrees if rotation is allowed). If one does not, stop and tell the user which panel. Never run the solver on it.
+
+The sheet counts and waste figures are estimates. The simple method is quick for a rough count. Column generation can waste less but uses an approximate sheet count. Check any layout against the real sheet before you cut.
 
 ---
 

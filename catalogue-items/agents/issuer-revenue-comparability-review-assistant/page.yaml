@@ -9,7 +9,7 @@ subhead: Give it a company's new sales release and your last accepted sales mode
 explain: |-
   Reported sales growth can mislead. A company may buy a business, sell one or report in a new currency mix. It may add an extra week to the year, or change how it shows rebates and returns. Each change moves the growth rate without changing how the core business did. If a growth label such as "organic" or "constant currency" comes with no definition, you cannot compare it with last year or with another company.
 
-  This revenue comparison reviewer keeps a short record of the last accepted review. It holds the fiscal year boundaries, original and restated revenue, the list of businesses counted, the currency rule, calendar adjustments, the policy for gross versus net sales and the source versions. When a new release or a restated comparison arrives, it compares the periods, businesses and currencies with that record. Then it runs the Comparable annual revenue modeler. That builds trailing revenue, then removes currency effects, acquisitions and extra weeks in a set order, so each adjustment appears once.
+  This revenue comparison reviewer keeps a short record of the last accepted review. It holds the fiscal year boundaries, original and restated revenue, the list of businesses counted, the currency rule, calendar adjustments, the policy for gross versus net sales and the source versions. When a new release or a restated comparison arrives, it compares the periods, businesses and currencies with that record. Then it runs the Build a comparable trailing revenue model. That builds trailing revenue, then removes currency effects, acquisitions and extra weeks in a set order, so each adjustment appears once.
 
   If the way sales are shown changed, such as gross to net, it rebuilds the bridge from gross billings to reported revenue before it works out growth. An unexplained difference stays as a residual. It is never called an acquisition or a currency effect. It does not forecast sales or value the company. It uses only the filings you give it, and a person who knows them checks the result.
 when:
@@ -18,10 +18,10 @@ when:
   - A company says growth is "organic" or "in constant currency", and you want to see the sums behind the label.
   - A company changed how it shows sales, such as net of rebates and returns instead of gross, and the growth rate looks different.
 not_for:
-  - You only want a trailing twelve month revenue figure. Use the Trailing year financial calculator.
-  - You only want growth without currency moves. Use the Revenue growth currency checker.
-  - You only want growth without acquisitions and sales of businesses. Use the Like-for-like sales growth checker.
-  - You only want to remove an extra week from a 53-week year. Use the Extra week sales growth checker.
+  - You only want a trailing twelve month revenue figure. Use the Trailing-period financial bridge.
+  - You only want growth without currency moves. Use the Constant-currency revenue bridge.
+  - You only want growth without acquisitions and sales of businesses. Use the Organic revenue perimeter bridge.
+  - You only want to remove an extra week from a 53-week year. Use the Extra-week revenue comparability schedule.
   - You want a sales forecast, a valuation or a view on the share price. It checks reported figures and gives no view.
 you_give:
   - The new dated revenue release or restated comparison note (from the company's results page)
@@ -122,7 +122,7 @@ tweaks:
 judge:
   - All comparable revenue bridges reconstruct reported values, adjustments appear once and source-backed definitions accompany every organic or constant-currency label.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - No period mixes a quarter with a year to date, or two calendars. Any unexplained difference stays a residual, not an acquisition or a currency effect.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.
@@ -132,7 +132,7 @@ improve:
   - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
   - Keep one sheet with revenue by business and currency for each period, with the filing page for each row, and paste it in every time.
   - Paste the company's own definitions of organic and constant-currency growth once, and reuse them, so every label rests on a quoted source.
-  - Pair it with the Gross to net revenue checker when only the way sales are shown changed.
+  - Pair it with the Gross-to-net revenue bridge when only the way sales are shown changed.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

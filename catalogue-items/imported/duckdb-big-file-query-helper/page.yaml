@@ -11,7 +11,7 @@ explain: |
 
   The skill uses DuckDB through the Database Toolbox. On load it audits your code for the slow habit of reading a file into MATLAB, writing it to a database, then querying it. It sends you straight to reading the file with SQL instead. It covers in-memory and file databases, filtering, grouping, deduplicating, cleaning and sampling at the source, and saving to a .duckdb file for repeat use. It also says when not to use it: small files, or number-heavy work better done in MATLAB afterwards.
 when:
-  - Your file is too big for readtable.
+  - Your file is too big to load with MATLAB's readtable, which reads a whole file into memory.
   - Your code loads a CSV only to write it into a database.
   - You need to filter and group a large Parquet file before analysis.
   - You want to look at a big dataset before you decide what to load.
@@ -21,6 +21,7 @@ not_for:
   - "You need number-heavy maths on the data: reduce it here first, then do the maths in MATLAB."
 you_give:
   - The path to your CSV, Parquet or JSON file
+  - The file size and how much memory (RAM) your computer has
   - The question or summary you need
   - Your existing MATLAB code to review (optional)
 you_get:
@@ -30,11 +31,11 @@ you_get:
   - A saved .duckdb file for repeat use (optional)
 how_to_use:
   - Check that you have MATLAB R2026a or later with Database Toolbox. This skill needs MATLAB code to run.
-  - Compare your file size to your computer's memory. If the file fits easily, use readtable instead.
+  - Compare your file size to your computer's memory. If the file fits easily, use readtable instead. The first check in the skill depends on this ratio.
   - Paste the skill into your AI. Add the file path and the question you want answered.
   - Ask for the profile query first. Run it to see the columns and row count.
   - Run the full query next. Check the result table has the columns you expect.
-  - Say so if you want the data saved to a .duckdb file for later queries.
+  - Say so if you want the data saved to a .duckdb file (a saved database on your disk) for later queries. Then feed the result table into your MATLAB analysis, or export it for a report.
 output_sample:
   input:
     - Paths to your CSV, Parquet or JSON files

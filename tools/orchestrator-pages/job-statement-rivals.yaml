@@ -1,6 +1,6 @@
 new_slug: job-statement-rivals
 name: "Write your customers' job and name its real rivals"
-summary: "Find the job your customers hire you for and your real rivals. Give it what you sell and who buys. You get leads, one job and a rival list."
+summary: "Give it what you sell and who buys. Get places to look, the job as a situation and your real rivals."
 job: understand-customers
 thinking: high
 thinking_why: "It runs four skills and has to tell a real job from a need or a feature. Give it your strongest model."
@@ -11,7 +11,7 @@ subhead: Give it what you sell and who buys. It searches five places for jobs pe
 explain: |
   A customer profile says who bought. It rarely says what they were trying to get done or what else they could have chosen. Two buyers who look alike can want different things. Two who look different can want the same thing. What explains the choice is a moment: where they were, what had just gone wrong, what they tried and what they could not stand.
 
-  This workflow runs in two halves. The first half looks in five places for unmet jobs: your own life, people who buy nothing, workarounds, tasks people avoid and unusual uses. It scores each lead by the proof behind it and plans a visit. Then you go and watch, and write down what you see in people's own words. The second half writes one job for one circumstance, with its practical, social and emotional sides, and stops if there is no real struggle. It lists every rival for that job, including doing nothing and homemade fixes, and rates them all against what the job cares about. It follows the method taught in Competing Against Luck by Clayton Christensen and his co-authors.
+  This workflow runs in two halves. The first half looks in five places for unmet jobs: your own life, people who buy nothing, workarounds, tasks people avoid and unusual uses. It scores each lead by the proof behind it and plans a visit. Then you go and watch, and write down what you see in people's own words. The second half writes one job for one circumstance, with its practical, social and emotional sides, and stops if there is no real struggle. It lists every rival for that job, including doing nothing and homemade fixes, and rates them all against what the job cares about. The idea is inspired by Competing Against Luck by Clayton Christensen and his co-authors.
 
 when:
   - You can describe your buyers well but cannot say what progress they are trying to make.
@@ -35,7 +35,7 @@ you_get:
   - A grid showing where nobody does the job well
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe what you sell and who buys it. It runs the first step and stops.
   - Go and watch the top leads. Write what you see in people's own words, with where and when.

@@ -35,6 +35,7 @@ how_to_use:
   - Let it run the read-only checks first. Read its diagnosis and the verdict before you agree to any change.
   - If the verdict is safe to regenerate, confirm the exact files and the branch side it names, then let it make the fix.
   - Run your own tests on a test database, not production. Then add the CI rules it suggests.
+  - "Next step by verdict. Safe to regenerate means repair, then run the checks. Needs your confirmation means answer its questions first. Blocked by ambiguity means tell it which branch is the parent, then run it again. No conflict found means look at your schema code instead."
 output_sample:
   input:
     - Your migration folder, including the journal and snapshot files

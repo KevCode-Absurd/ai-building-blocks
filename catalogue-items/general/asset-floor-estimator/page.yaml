@@ -39,7 +39,7 @@ how_to_use:
   - Paste the balance sheet with the notes on debts and preferred shares.
   - Add the share count, the price and the earnings range.
   - Read the comparison with the price and the burn before the figures.
-  - Take the result to "Price versus value gap judge".
+  - Take the result to the Price versus value gap judge.
 output_sample:
   input:
     - The latest balance sheet, and the one before it (optional)

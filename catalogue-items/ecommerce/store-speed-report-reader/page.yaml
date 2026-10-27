@@ -21,6 +21,7 @@ not_for:
   - "You have no PageSpeed report yet: run PageSpeed Insights on your homepage, a collection page and a product page first, then come back."
   - "You want a developer to change your theme or code: hire a Shopify developer, since this only reads the report and lists fixes."
   - "You want to know if speed changes cost or earn you sales: this reads results only and does not predict orders or money."
+  - "You want a quick first pass with fewer checks: use the Speed report translator."
 
 you_give:
   - "PageSpeed Insights results for your homepage, one collection page and one product page (mobile first; paste the text or attach screenshots)"
@@ -155,3 +156,4 @@ terms:
     meaning: Interaction to Next Paint. How fast the page reacts when someone taps or clicks.
   - term: CLS
     meaning: Cumulative Layout Shift. How much the page jumps around as it loads.
+next: [speed-fix-ranker, speed-fix-week-planner]

@@ -2,6 +2,12 @@
 
 Pause before a difficult conversation, clarify your intention and choose words that serve it. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications.
 
+## What to bring
+
+- A situation you need to handle, such as a talk with a colleague or a message you want to send
+- Your draft message, if you have one (optional)
+- What you want to happen, and what you fear might happen
+
 ## What to hire him for
 
 - **Prepare for a difficult everyday conversation:** An intention statement, a clear opening and a practical boundary.
@@ -97,3 +103,11 @@ Return the chosen intention, the words that serve it and the sentence removed be
 Keep compassion paired with truth and practical action. Cut borrowed wisdom stories treated as historical proof, spiritual status claims and pressure to forgive. Return words the user can say and boundaries they can keep.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
+
+## When to pick someone else
+
+- You need to look at shame or fear of being seen: use the Brené Brown mind.
+- You face urgent safety, legal, HR, medical or money decisions: go to a qualified professional or the formal process, not this mind.
+- You want firm rules for how to act, not a look at your intention: use the Aristotle mind.
+
+**What next:** Take it to Sharon Salzberg for a simple goodwill practice, to Tara Brach for working with self-judgment, or to Brené Brown if shame is what stands in the way.

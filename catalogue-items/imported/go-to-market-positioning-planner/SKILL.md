@@ -142,7 +142,7 @@ Build competitive knowledge base:
 
 ```
 COMPETITOR: [Name]
-OVERVIEW: Founded [year], Funding [stage], Size [employees]
+OVERVIEW: Founded [year], Funding [stage], Size [employees]   (only from sources you can name; write "unknown" if you cannot confirm it)
 
 POSITIONING:
 - They say: "[Their claim]"
@@ -283,6 +283,8 @@ Enter new markets systematically:
 8. **Validation:** 3+ paying customers from market in first 90 days
 
 ### Market Priority (Series A)
+
+The figures below are an example split only. Use the user's own budget and targets, never these numbers.
 
 | Market | Timeline | Budget % | Target ARR |
 |--------|----------|----------|------------|

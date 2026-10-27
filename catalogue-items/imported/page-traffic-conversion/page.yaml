@@ -7,12 +7,12 @@ job: audit-landing-page
 headline: Page traffic and conversion reader
 subhead: Give it your Shopify store address. It reads your product and collection pages, ranks them by visits or sales rate, and flags pages with plenty of visits but few sales.
 explain: |
-  A ranked list of your store's product and collection pages by visits, sales rate and bounce rate, so you see which pages earn their traffic and which waste it.
+  A ranked list of your store's product and collection pages by visits and sales rate, so you see which pages earn their traffic and which waste it.
 
   It connects to your Shopify store, reads the built-in analytics, and pulls visit data for each landing page over the last 30 days or a range you choose. It keeps only product and collection pages, then sorts by whichever measure you pick and shows the top 25. It only reads data and changes nothing. You need a Shopify store, a logged-in command-line session and permission to read reports.
 when:
   - You want to know which product pages get visits but never sell.
-  - A collection page has a high bounce rate and you want proof.
+  - A collection page gets plenty of visits but few orders and you want proof.
   - You are choosing which pages to improve first.
   - You need a monthly page performance snapshot.
 not_for:
@@ -47,7 +47,7 @@ output_sample:
   prerequisites:
     - An AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI
     - A Shopify login with permission to read reports
-    - A Shopify plan that includes the analytics reports
+    - A Shopify plan that includes the analytics reports. Session data is not on every plan, so if the report is refused, check your plan
   output:
     - name: Start banner
       contains: Your store address and the time the report began.
@@ -61,3 +61,4 @@ output_sample:
       contains: The days covered, pages checked, top visited page, top converting page and error count.
     - name: traffic_by_page CSV
       contains: One row per page with type, path, sessions, conversion rate percent and a flag for weak pages.
+next: [landing-page-auditor, conversion-landing-page-designer]

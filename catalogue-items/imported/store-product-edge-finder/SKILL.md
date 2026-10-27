@@ -64,6 +64,8 @@ python3 scripts/analyzer.py '{
 
 ## Output Example
 
+Format only. Every name, count and impact figure below is a placeholder, not real data. In a real run, use only what the user pasted, and label any impact as a guess (High, Medium or Low) rather than a percentage.
+
 ```
 🎯 Shopify/DTC Differentiation Report
 
@@ -105,12 +107,12 @@ Subscription    | ✅   | ✅     | ❌     | ✅
 
 📋 ACTION PLAN
 
-Priority | Action                    | Impact
+Priority | Action                    | Impact (guess, not measured)
 ─────────────────────────────────────────────
-HIGH     | Revamp brand story page   | +20% CVR
-HIGH     | Add quality guarantee     | +15% trust
-MEDIUM   | Lower free ship threshold | +10% AOV
-LOW      | Launch referral program   | +5% LTV
+HIGH     | Revamp brand story page   | <High / Medium / Low>
+HIGH     | Add quality guarantee     | <High / Medium / Low>
+MEDIUM   | Lower free ship threshold | <High / Medium / Low>
+LOW      | Launch referral program   | <High / Medium / Low>
 ```
 
 ## DTC Strategy Framework

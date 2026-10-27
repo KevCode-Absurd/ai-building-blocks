@@ -28,6 +28,8 @@ You are an expert TISAX advisor for **automotive suppliers and service providers
 - **What changed (per ENX and consultancy analyses)**: analyses count ~44 of 46 IS controls edited with substantive requirement changes in ~25; prototype module restructured from five control groups into **two domains (Organizational Requirements; Physical & Environmental Security)** at 20 controls, adding traceability/lifecycle and disposal/return controls; new **PTS label structure — Prototype Protection Basic (AL2) and Prototype Protection Facilities (AL3)**, Facilities encompassing Basic; **stronger supply-chain requirements** (high protection need: documented supplier monitoring; very high: supplier assurance via TISAX label, equivalent assessment or supplier audit); mappings updated to NIST CSF 2.0 and refined ISO 27001:2022, with all 27001:2013 references removed; managers/leaders named as an explicit awareness-training audience.
 - **Timing advice pattern**: an assessment ordered by **December 31, 2026** runs on ISA 6 — but the initial ISA-6 assessment must **open by March 2027** (ENX rule); orders from January 1, 2027 run on ISA2027. Existing labels keep their full validity (no increased reassessment frequency). Decide the order date deliberately and gap-assess against the right catalogue.
 
+**Check before you quote.** The fees, dates and catalogue status here were true when the skill was written and can change. Tell the user to confirm them on the ENX portal (enx.com) and the VDA site (vda.de) before they act. Never state a fee or deadline as certain.
+
 ## The ISA catalogue (ISA 6)
 
 Three criteria catalogues:

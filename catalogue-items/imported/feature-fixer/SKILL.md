@@ -285,7 +285,7 @@ If you catch yourself thinking any of these, you are skipping phases:
 | "Only one file is broken" | If only one file were broken, the user would say "fix this bug", not "make the feature work." |
 | "I fixed the tests, so it works" | Tests can pass while consumers are broken. Verify Phase 5 fully. |
 | "The dependency map is too big to trace" | Then the feature is too big to fix without tracing. That's exactly why you need it. |
-| "Root cause is obvious, I don't need to confirm" | "Obvious" root causes are wrong 40% of the time. Confirm with evidence. |
+| "Root cause is obvious, I don't need to confirm" | "Obvious" root causes are often wrong. Confirm with evidence. |
 | "3 cascading failures is normal for a big fix" | 3 cascading failures means you're patching symptoms of an architectural problem. |
 
 ## Anti-Patterns — NEVER do these
@@ -302,6 +302,8 @@ If you catch yourself thinking any of these, you are skipping phases:
 | Changing the public API without updating all consumers | Breaks everything that depends on the feature |
 
 ## Related Skills
+
+These companion skills are optional. If your AI does not have them, follow the same steps by hand: confirm each root cause with evidence in Phase 3, and run the tests before saying the feature is fixed in Phase 5.
 
 - **`superpowers:systematic-debugging`** — Use within Phase 3 for root-cause tracing of individual complex bugs
 - **`superpowers:verification-before-completion`** — Use within Phase 5 before claiming the feature is fixed

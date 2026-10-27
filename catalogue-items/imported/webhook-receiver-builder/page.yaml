@@ -37,6 +37,7 @@ how_to_use:
   - Read the code your AI writes. Check that an event is marked done only after its handler works.
   - Copy the code into your project. This needs a place to run code and a public HTTPS address.
   - Register the URL and signing secret with your provider, then send a test event.
+  - Next, connect the failed-event queue to an alert or a replay step, and after the first live event check the delivery log in the provider dashboard.
 output_sample:
   input:
     - The provider, such as Stripe or GitHub

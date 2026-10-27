@@ -19,7 +19,7 @@ steps:
   - {uses: winners-and-losers-ad-comparer, note: "What your own winners share, so the fix copies a pattern and not a hunch."}
   - {uses: reply-getting-fix-writer, note: "A fixed version that changes only what the causes called for."}
   - {uses: sales-copy-readiness-checker, note: "A last pass before the fixed ad goes out. Apply its fixes to the step 3 draft before step 5."}
-  - {uses: split-run-test-planner, note: "Proves the fix beats the old ad instead of assuming it does. Uses the fixed ad from step 3 as the new version and your old ad as the control, not step 4's report."}
+  - {uses: split-run-test-planner, note: "Proves the fix beats the old ad instead of assuming it does. Uses the step 3 draft with step 4's fixes applied as the new version and your old ad as the control, not step 4's report."}
 origin: rebuilt
 version: 1.0.0
 minds: [john-caples]

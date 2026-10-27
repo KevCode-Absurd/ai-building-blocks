@@ -5,9 +5,9 @@ name: Worked example to practice sequence builder
 summary: Turn any multi-step procedure into worked examples that fade into independent practice. Get a worked example sequence your students can follow.
 job: teach-and-train
 headline: Worked example to practice sequence builder
-subhead: A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It follows how beginners really learn a procedure.
+subhead: A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It is built on research by Sweller and Renkl.
 explain: |
-  A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It follows how beginners really learn a procedure.
+  A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It is built on research by Sweller and Renkl.
 
   You name the skill and the learners' level. The skill writes a series of examples. The first shows every step with the reasoning. In the next, one step is left blank, then two, then more, until the learner does all of it. Each step comes with prompts that make them explain what they did. It also warns when to slow the fading, because as learners gain skill, too much help can start to hurt. It draws on research by Sweller, Renkl and others.
 when:
@@ -36,6 +36,7 @@ how_to_use:
   - Fill in the skill you teach, your students' level and the number of steps. Add common mistakes if you know them.
   - Read the result. Check that the blanks start at the end of the procedure and move backward, so students finish each problem themselves.
   - Fix any example that does not match your students, then print or share the three stages in order.
+  - Next, use practice-problem-set-writer for more practice problems, or lesson-understanding-check to see what students understood.
 output_sample:
   input:
     - The procedure or skill you want to teach
@@ -54,3 +55,4 @@ output_sample:
       contains: What help is removed at each stage and why that step comes out when it does.
     - name: Expertise Reversal Note
       contains: A warning on when to slow the fading or drop worked examples, because too much help can hurt stronger learners.
+next: [practice-problem-set-writer, lesson-understanding-check]

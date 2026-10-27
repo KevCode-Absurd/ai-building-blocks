@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the full skill text into the chat as your first message.
-  - "Type /i-have-adhd, then your request. For example: Summarize the plan as numbered next actions with time estimates."
+  - "Type \"turn on /i-have-adhd mode\" (the slash form only works in tools that support custom commands), then your request. For example: Summarize the plan as numbered next actions with time estimates."
   - Do the first numbered step. Then reply with the result or say done, and your AI gives the next step.
   - To turn it off, type "stop adhd mode" or "normal mode". Your AI confirms in one line.
   - If your AI forgets the style in a long chat, paste the skill text again.

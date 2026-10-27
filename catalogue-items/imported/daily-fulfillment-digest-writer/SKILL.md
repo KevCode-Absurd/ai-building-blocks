@@ -37,7 +37,7 @@ Produces a daily ops triage digest of all unfulfilled and partially-fulfilled or
 
 2. **OPERATION:** `fulfillmentOrders` — query (via nested `order.fulfillmentOrders`)
    **Inputs:** For each order from Step 1: `fulfillmentOrders(first: 5)` to check `status` and `requestStatus`; flag any with `status: ON_HOLD`
-   **Expected output:** Hold status per order, `holdUntil` if set; contribute to the Holds section of the digest
+   **Expected output:** Hold status per order. The query returns no hold start date, so show the order's age (days since `createdAt`) in the Holds section instead, and never invent a hold date
 
 ## GraphQL Operations
 
@@ -57,8 +57,6 @@ query FulfillmentStatusDigest($first: Int!, $after: String, $query: String) {
         }
         customer {
           id
-          firstName
-          lastName
         }
         fulfillmentOrders(first: 5) {
           edges {
@@ -157,7 +155,7 @@ For `format: json`, emit:
 | 7+ days  | n | #XXXX (⚠️ review) |
 
 **Orders On Hold** (if `include_holds: true` and holds exist):
-| Order | Hold Since | Fulfillment Status |
+| Order | Order Age | Fulfillment Status |
 |-------|-----------|-------------------|
 | #XXXX | 3 days | ON_HOLD |
 
@@ -172,5 +170,5 @@ For `format: json`, emit:
 1. Run this digest first thing each morning before processing any orders — it gives you the exception queue in one view.
 2. Orders in the 7d+ bucket are your highest priority; investigate and either fulfill or place an explicit hold with a reason.
 3. Use `format: json` to pipe the digest into a Slack notification or dashboard script.
-4. Combine with `order-hold-and-release` to act on exceptions identified in this digest without leaving the CLI.
+4. Combine with `order-hold-manager` to act on exceptions identified in this digest without leaving the CLI. Next step for each held order: decide whether to release it, fix the cause, or contact the customer.
 5. For stores with 500+ open orders, set `limit: 100` and expect pagination — the digest will still aggregate correctly across all pages.

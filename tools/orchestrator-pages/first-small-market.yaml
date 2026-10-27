@@ -1,6 +1,6 @@
 new_slug: first-small-market
 name: "Pick your first small market and the ones after"
-summary: "Pick your first small market and plan the markets after it. Give it your product. Get one market to win first, the order to grow and a pitch."
+summary: "Give it your product. Get one small first market, the order to grow and a pitch with no rival."
 job: plan-strategy
 thinking: medium
 thinking_why: "It runs four skills that each need some judgement but follow fixed tests. A strong model keeps the steps consistent."
@@ -33,7 +33,7 @@ you_get:
   - Your pitch rewritten around what only you do
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your product and where you can reach people. Count the numbers it asks for before you act on the pick.
   - Use the pitch with one real buyer in the first market and see if they repeat it.

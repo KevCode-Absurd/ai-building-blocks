@@ -87,6 +87,7 @@ const ratelimit = new Ratelimit({
 });
 
 export async function middleware(request: NextRequest) {
+  // Use this header only if your own proxy or host sets it. Clients can fake it otherwise.
   const ip = request.headers.get("x-forwarded-for") ?? "anonymous";
   const { success, limit, remaining, reset } = await ratelimit.limit(ip);
 

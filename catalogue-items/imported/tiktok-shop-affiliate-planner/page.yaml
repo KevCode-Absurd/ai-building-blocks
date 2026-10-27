@@ -35,7 +35,8 @@ how_to_use:
   - Paste the skill text, then list each product with its price and margin.
   - Add your sample budget and the creator types you want. Add current results if you have them.
   - Ask for your TikTok Shop affiliate program plan.
-  - Check each commission rate against your margin. Replace the sales and ROI goals with your own numbers.
+  - Check each commission rate against your margin. The most a product can pay is its price minus cost, fees, and sample and shipping cost per sale. Replace the dashboard figures and the sales and ROI goals with your own numbers.
+  - Vet creators from their public profiles and posts only, and confirm local privacy rules before any further checks.
   - Use the Next Actions list to set up terms and tracking, then start with a small group of creators.
 output_sample:
   input:
@@ -60,3 +61,4 @@ output_sample:
       contains: A month-by-month plan to grow the creator group, plus 6-month targets to replace with your own.
     - name: Next Actions
       contains: A checklist to finish terms, set up tracking and launch with your first creators.
+next: [tiktok-creator-outreach-planner, tiktok-shop-results-reader]

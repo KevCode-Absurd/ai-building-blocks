@@ -36,6 +36,9 @@ how_to_use:
   - Change the 7 and 14 day window, or the consent setting, if you need to.
   - Check the counts, then open the CSV.
   - Load the CSV into your email or SMS tool. This skill does not send anything.
+  - The skill does not remember who was surveyed before. If you want to skip people from a recent survey, remove them from the CSV yourself.
+  - Next, read the answers with the customer feedback report from survey tools, or set up the survey with the Delighted and SatisMeter survey assistant.
+next: [customer-feedback-report-from-survey-tools, delighted-and-satismeter-survey-assistant]
 output_sample:
   input:
     - Your Shopify store domain

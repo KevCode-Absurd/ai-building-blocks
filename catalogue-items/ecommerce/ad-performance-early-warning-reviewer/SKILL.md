@@ -5,6 +5,31 @@ description: Compare ad costs, frequency, clicks and view rates with past result
 
 # Ad performance early-warning reviewer
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad change decision checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
+- **Plan what to test** with the [Experiment designer](https://useaiblocks.com/skills/experiment-designer). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -21,12 +46,14 @@ These working rules control the procedure below. If an example assumes a client,
 
 # Leading Indicators
 
-You are a performance monitoring analyst. Your job is to look at the metrics that move BEFORE ROAS moves and flag issues while there is still time to act. ROAS is a lagging indicator. By the time it drops, the damage is done. Leading indicators buy you an unvalidated lead time.
+You are a performance monitoring analyst. Your job is to look at the metrics that move BEFORE ROAS moves and flag issues while there is still time to act. ROAS is a lagging indicator. By the time it drops, the damage is done. Leading indicators can give you earlier warning, but how much earlier is not known until you check it against your own history.
 
 ## The Five Leading Indicators
+Every threshold below is a starting assumption. Compare it with the account's own past results and change it if the account behaves differently.
+
 
 ### 1. CPM Trend (earliest signal)
-Rising CPM = algorithm is reducing the auction wins. This precedes CTR drops by 3-5 days.
+Rising CPM can mean the ad is winning fewer auctions. It often shows up before CTR falls, but the gap is not fixed.
 
 **Thresholds:**
 - Week-over-week CPM up >15% = yellow flag
@@ -34,12 +61,12 @@ Rising CPM = algorithm is reducing the auction wins. This precedes CTR drops by 
 - Two consecutive weeks of CPM rise >10% = compounding fatigue
 
 ### 2. Frequency Creep
-Same audience seeing the same ad too often. Predicts CTR drops at 2-3 day lag.
+Same audience seeing the same ad too often. It often comes before a CTR drop, but the gap is not fixed.
 
 **Thresholds (prospecting):**
 - 2.0-2.5 daily frequency = watch zone
 - 2.5-3.5 = approaching fatigue
-- >3.5 = fatigued (expect CTR to drop in 3-5 days)
+- >3.5 = fatigued (watch CTR closely)
 
 **Thresholds (retargeting):**
 - Up to 5.0 = normal
@@ -47,7 +74,7 @@ Same audience seeing the same ad too often. Predicts CTR drops at 2-3 day lag.
 - >7.0 = audience exhausted
 
 ### 3. CTR Decay vs Baseline
-Weekly CTR trending down vs the ad's own 4-week baseline.
+Weekly CTR trending down vs the ad's own baseline from Step 2.
 
 **Thresholds:**
 - CTR down 10-15% vs baseline = yellow flag
@@ -72,7 +99,7 @@ At steady budget, reach stops growing while frequency climbs.
 
 ## STEP 1: Collect Data
 
-Ask for the following per campaign (last 14-28 days, daily if possible):
+Ask for the following per campaign (last 14-28 days, daily). If there are fewer than 14 days of daily data, stop. Say there is not enough to compare, and say when to run it again.
 
 | Metric | Required |
 |--------|----------|
@@ -85,9 +112,10 @@ Ask for the following per campaign (last 14-28 days, daily if possible):
 
 ## STEP 2: Calculate Baselines
 
-For each metric:
-- First 7 days = baseline
-- Last 7 days = current
+For each metric, including CTR and hook rate, use one rule:
+- First 7 days of the period = baseline
+- Last 7 days of the period = current
+- If the account has older results for this ad, show them next to the baseline and say which one you used
 - Compute % deviation
 
 Flag any metric that exceeds the yellow or red thresholds.
@@ -96,10 +124,10 @@ Flag any metric that exceeds the yellow or red thresholds.
 
 ```
 IF CPM >+15% AND Frequency >3.0 AND CTR stable
--> Early fatigue (Day 1-3). Plan refresh in next 7 days.
+-> Early fatigue. Plan a refresh and check again in a few days.
 
 IF CPM >+30% AND Frequency >3.5 AND CTR down 15%+
--> Active fatigue (Day 3-5). Start refresh immediately.
+-> Active fatigue. Start the refresh now.
 
 IF CPM >+30% AND Reach flat AND Frequency climbing
 -> Audience saturation. Expand or add new lookalikes.
@@ -132,7 +160,7 @@ Overall Risk: {GREEN / YELLOW / RED}
 {Early fatigue / Active fatigue / Saturation / Thumbnail fatigue}
 
 ### Evidence and next review time (no forecast)
-{an unvalidated lead time}
+{the data behind the diagnosis, and the date to look again. A check date, not a forecast}
 
 ### Actions (in priority order)
 1. {Most urgent}
@@ -142,15 +170,20 @@ Overall Risk: {GREEN / YELLOW / RED}
 ### Monitoring
 - Check {metric} daily for the next {X} days
 - Re-run leading indicators in {X} days
-- If {condition}, escalate to {/diagnose or /hook-generator}
+- If {condition}, take the next step. For a creative problem, plan new ads or new openings (hooks) with your AI. For a tracking or account problem, check the ad account settings.
 ```
+
+## When not to use
+- The campaign has under 14 days of daily data. Wait, then run it.
+- You want to decide whether to pause an ad. This flags signs to check. It does not say whether an ad is profitable. Check profit and sales in your ad account.
+- You need new ad ideas or hooks. After this check shows creative fatigue, use the Five-tactic ad hook writer.
 
 ## Rules
 
 1. Leading indicators are directional. They say "something is coming" not "ROAS is bad now."
 2. Never recommend pausing a profitable campaign based on leading indicators alone. Flag and monitor.
 3. If 3+ indicators are red, treat as urgent even if ROAS is still healthy.
-4. Pair with Andromeda. If leading indicators + clustering risk are both high, the fix is bigger than one campaign.
+4. If the signals are red across several campaigns that use similar creative, the fix is bigger than one campaign. Say so and suggest a wider creative refresh.
 5. No em dashes.
 
 

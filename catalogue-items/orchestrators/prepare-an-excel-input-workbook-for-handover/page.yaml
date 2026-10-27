@@ -26,16 +26,16 @@ explain: >-
   check that needs an app your AI cannot use stays marked as not run. Review
   those limits before you share the result.
 when:
-  - You need the connected deliverables described above.
-  - You want the sources and checks carried through the handover.
-  - You need to see which steps still need your input.
+  - Someone else will keep entering data in a workbook you built, and they need a form that rejects bad entries.
+  - You want the next owner to have a written guide with the sheet map, the allowed entries and the update steps.
+  - You want the checks that passed, and the ones that could not run, listed before you hand it over.
 you_give:
   - Field definitions, required and allowed values, record key, intended Excel
     version and the handover owner or process already known.
   - The app and file tools your AI can use for the requested work
 you_get:
-  - The native files and reports produced by the component methods, plus a run
-    register and unresolved-input list.
+  - input-form.xlsx, field-rules.md and workbook-handover.md, plus a run register
+    and unresolved-input list.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
@@ -44,16 +44,12 @@ how_to_use:
   - Supply your actual files and describe the result. The AI checks existing
     context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+  - Send the workbook and guide to the named owner only after every CHECKS row is passed or clearly marked not run.
 how_it_works:
-  - title: Step 1
-    text: 1. Read `skills/excel-input-form-builder/SKILL.md` completely and run its
-      full method. Build and validate the empty native input table from
-      confirmed field rules; keep valid, missing and duplicate test records in a
-      separate illustrative copy.
-  - title: Step 2
-    text: 2. Read `skills/excel-handover-guide-writer/SKILL.md` completely and run
-      its full method. Document the actual delivered form, allowed entries,
-      calculated fields, validation limits and update steps.
+  - title: Build the input form
+    text: You confirm the field rules. It builds the empty input table with dropdowns and checks, and tests it on a separate copy with made-up valid, missing and duplicate records.
+  - title: Write the handover guide
+    text: "It documents the form as delivered: the allowed entries, calculated fields, what the checks cannot catch, and how to update it. Then you review the check results."
 output_shape: >-
   FILES
 

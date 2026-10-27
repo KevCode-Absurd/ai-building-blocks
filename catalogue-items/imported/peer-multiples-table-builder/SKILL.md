@@ -48,6 +48,8 @@ never substitute a proxy and present it as the real thing.
 
 ## ⚠️ CRITICAL: Data Source Priority (READ FIRST)
 
+**For Indian companies, the default source is each company's own results filing on NSE or BSE.** The hierarchy below applies only where those paid sources are connected. SEC EDGAR covers US filers, not Indian ones.
+
 **ALWAYS follow this data source hierarchy:**
 
 1. **FIRST: Check for MCP data sources** - If S&P Kensho MCP, FactSet MCP, or Daloopa MCP are available, use them exclusively for financial and trading information

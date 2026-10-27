@@ -45,7 +45,7 @@ If the user provides all of these upfront, proceed directly to Step 2.
 
 ### Step 2 — Surface Contributions
 
-Use WorkIQ to gather evidence of real contributions for the review period:
+Use WorkIQ to gather evidence of real contributions for the review period. WorkIQ needs a Microsoft 365 account and may need a paid licence. It reads emails, chats and meetings, so first check the user is allowed to use it this way. For a peer or upward review, make sure the person whose messages are pulled would expect it, and leave out anything that is not about work:
 
 **For self-assessments:**
 - Pull emails and messages where the user delivered results, led initiatives, or solved problems
@@ -72,7 +72,7 @@ Apply the right structure for the review type (see schemas below). Follow these 
 - **Situation** — what was the context or challenge?
 - **Task** — what were you/they responsible for?
 - **Action** — what specifically was done?
-- **Result** — what was the measurable or observable outcome?
+- **Result** — what was the measurable or observable outcome? Use only results you saw in a record or the user told you. If there is no number, say so in words. Never invent a figure.
 
 **Tone rules:**
 - Be specific — name projects, outcomes, and people, not vague adjectives
@@ -211,6 +211,6 @@ A single, clear, actionable ask.
 
 ## Requirements
 
-- **WorkIQ MCP tool** is recommended for surfacing contributions and communications (Microsoft 365 / Outlook / Teams)
+- **WorkIQ MCP tool** (needs a Microsoft 365 account and may need a paid licence) is recommended for surfacing contributions and communications (Microsoft 365 / Outlook / Teams)
 - Without WorkIQ, the skill still works — ask the user for 3–5 bullet points of key contributions as a starting point
 - Output is saved as markdown files in the workspace for the user to copy into their company's review system

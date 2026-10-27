@@ -18,8 +18,8 @@ not_for:
   - You have no stock numbers at all. Get stock by size from your store first, or use the Store friction checker for the page itself.
   - You need to read scroll maps or session recordings. Use the heatmap and recording reader, then bring the scroll map back here.
 you_give:
-  - A screenshot of your collection page, with its top 6 to 12 products
-  - Stock by size and colour for those products
+  - A screenshot of your collection page, with its top 6 to 12 products (required)
+  - Stock by size and colour for those products (required for the stock checks)
   - Each product's grade (A, B or C) or its sales rank
   - Conversion rate by day (optional)
   - A scroll map and your filter or menu list (optional)
@@ -60,7 +60,7 @@ output_sample:
       contains: A score out of 100 with the sum shown and any checks not run.
 how_it_works:
   - title: Grades the top six
-    text: Grade A and B products go in the top six. Grade C stays out, because landing performance depends on the first products shown.
+    text: Grade A and B products go in the top six. Grade C stays out. This is a rule of thumb from store audits, that shoppers spend most of their attention on the first products shown.
   - title: Checks size curves
     text: The winning colour and the medium and large sizes may carry about 30% of clicks. When they sell out, conversion drops, so the product is swapped out or moved down.
   - title: Checks space above the fold
@@ -111,7 +111,7 @@ improve:
   - Pair it with the store friction checker for menus and with the heatmap and recording reader for scroll data.
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Collections, inventory by variant and the theme editor are all in one admin."}
+    - {name: "Shopify", why: "Collections, inventory by variant and the theme editor are all in one admin. You need a paid Shopify plan."}
     - {name: "Microsoft Clarity", why: "Scroll maps show where shoppers stop, to place trust lines."}
     - {name: "Any good chat AI", why: "Needs to read a screenshot of your page."}
   inputs:

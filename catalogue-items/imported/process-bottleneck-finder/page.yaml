@@ -31,11 +31,12 @@ you_get:
   - A root-cause guess for each bottleneck
   - The share of time spent on real work
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code.
-  - Paste the skill text into the chat.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run Python code and read files, such as Claude Code or a chat with file tools on.
+  - Give it the whole skill folder, not only SKILL.md. The math is done by three scripts in the scripts folder (process_documenter.py, cycle_time_analyzer.py and bottleneck_detector.py). Pasting the text alone will not run them.
   - Describe one process, stage by stage. Add the owner, typical time and slow-case time for each stage.
   - Mark each stage as real work, waiting or rework. Answer any question your AI asks about handoffs and batch sizes.
-  - Read the map and the ranked list. Take the top bottleneck into one fix plan, then run it again after the change.
+  - Read the map and the ranked list. The list is a table with one row per stage: its severity, the likely cause and the action to take.
+  - Take the single top bottleneck into one fix plan. Run the analysis again after the change to see if the constraint has moved.
 output_sample:
   input:
     - Your process, with one line per stage and who owns it

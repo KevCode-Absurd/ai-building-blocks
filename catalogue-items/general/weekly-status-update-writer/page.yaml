@@ -6,7 +6,7 @@ thinking: low
 thinking_why: It fills a fixed one-page layout from your updates.
 headline: Weekly status update writer
 subhead: Paste your updates for the period. You get a one-page status report that opens with an overall call, then what got done, risks, the decisions you need and next steps.
-explain: Status reports fail when they bury the point. This prompt puts the call first, as one word and one reason. Then it lists results, owners, risks and the decisions you need, each with a date and your recommendation. It stays under 250 words and uses only the numbers you give it. Leaders can read it in a minute and know where they are needed.
+explain: This is the short, weekly version. It is one page, under 250 words, for a regular internal update. For a longer report with every check, use the Status report writer. Status reports fail when they bury the point. This prompt puts the call first, as one word and one reason. Then it lists results, owners, risks and the decisions you need, each with a date and your recommendation. It stays under 250 words and uses only the numbers you give it. Leaders can read it in a minute and know where they are needed.
 when:
   - A weekly update is due and you are short on time.
   - Your last update was too long to read.

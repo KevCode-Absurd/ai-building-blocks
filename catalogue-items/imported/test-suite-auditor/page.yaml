@@ -9,7 +9,7 @@ subhead: A verdict on whether your Python tests would actually catch broken code
 explain: |
   A verdict on whether your Python tests would actually catch broken code, with the weak, flaky, slow and useless tests listed. A passing suite stops being a comfort and becomes a number you can trust.
 
-  A pinned runner measures the suite. The key check is mutation testing: it makes small deliberate breaks in your code and sees whether any test fails. Tests that never catch a break are weak. It also reruns tests to find flaky ones, times each test to find slow ones, and spots tests that duplicate others without adding detection. Quick mode is a fast sample and deep mode is thorough. The skill reports only and changes none of your tests. It needs Python and pytest.
+  A pinned runner measures the suite. The key check is mutation testing: it makes small deliberate breaks in your code and sees whether any test fails. Tests that never catch a break are weak. It also reruns tests to find flaky ones, times each test to find slow ones, and spots tests that duplicate others without adding detection. Quick mode runs one baseline with timings and coverage and no mutants. Deep mode adds the mutation checks. The skill reports only and changes none of your tests. It needs Python and pytest.
 when:
   - Your tests pass but bugs still reach production.
   - The test run takes so long that people skip it.

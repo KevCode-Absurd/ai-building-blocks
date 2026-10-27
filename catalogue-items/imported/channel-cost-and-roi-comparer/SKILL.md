@@ -123,6 +123,8 @@ cd commercial/skills/channel-economics && python3 scripts/cost_to_serve_calculat
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
+The percentages and ratios in this list (and in the Anti-patterns above) are the author's rules of thumb, not checked figures. Give them as rough guides only, never as facts about the user's business.
+
 Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer + canon citation per question. Never bundled.
 
 1. **"What's your fully-loaded cost-to-serve per channel — including channel-manager headcount, MDF, partner enablement time, and overhead allocation?"**

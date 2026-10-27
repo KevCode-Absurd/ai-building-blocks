@@ -37,7 +37,7 @@ how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Attach the page or paste the menu and button labels."
   - "Say what the first-time visitor is trying to do."
-  - "Add the review if you have it."
+  - "Add the review, or a short list of known trouble spots. With neither, the skill still rates every choice and marks the review as missing."
   - "Swap in the rewrites and test them on someone who has not seen the page."
   - "Run it again on the new labels to see the score change."
 output_sample:

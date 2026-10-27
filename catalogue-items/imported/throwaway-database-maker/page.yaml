@@ -34,7 +34,7 @@ how_to_use:
   - Tell your AI which .env file to use. Say if you want a seed SQL file loaded.
   - Let your AI check that .env is listed in .gitignore. If it is not, it will warn you. Do not commit the connection string.
   - Check the report for where the address was saved. Ask your AI to run a quick test query.
-  - Open the claim link within 72 hours if you want to keep the database.
+  - Open the claim link within 72 hours if you want to keep the database. For anything longer lived, move to a standard Neon project.
 output_sample:
   input:
     - A project that needs a database

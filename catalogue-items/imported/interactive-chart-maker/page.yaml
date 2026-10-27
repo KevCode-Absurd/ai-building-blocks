@@ -34,8 +34,9 @@ how_to_use:
   - Paste the skill text into the chat, or upload the skill folder.
   - Add your data as a CSV with a header row. Say which columns go on each axis.
   - Ask for the chart type you want, or let your AI pick one and say why.
-  - Open chart.html in your browser. Hover, zoom and pan to check it.
+  - Open chart.html in your browser. Hover, zoom and pan to check it. If the chart is blank, check that the CSV header names match the columns you asked to plot.
   - Ask for changes to titles, colours or labels, then save the final file.
+  - Next, embed chart.html in a web page. For live data, move to a dashboard tool such as Dash. For print figures, use a static chart tool such as the Chart maker instead.
 output_sample:
   input:
     - Your data as a CSV file or a table pasted into the chat

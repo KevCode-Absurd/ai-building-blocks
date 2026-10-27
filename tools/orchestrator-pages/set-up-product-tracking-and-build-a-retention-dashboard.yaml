@@ -14,6 +14,8 @@ when:
   - You are about to add analytics to a new product or feature.
   - Your current tracking is a mess and you want to start again with a clean plan.
   - You want to know how many people come back and which sign-up group holds best.
+not_for:
+  - "You have only a handful of sign-ups so far: plan the tracking with step 1, then come back when you have a few hundred."
 you_give:
   - A plain description of your product and what a person does in it
   - Which tool you use for tracking, if you have one (optional)
@@ -25,7 +27,7 @@ you_get:
   - A colour-coded retention grid with a plain reading of where people drop
   - A page with cards, charts and filters you can open and share
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 3 skill files in the order they run: Event tracking planner, Retention heatmap maker and Offline dashboard builder."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your product and what counts as a person using it. Step 1 gives the event plan and stops.
   - Pause. Ship the events, let real people use the product for two to four weeks, then export sign-up dates and activity dates per person.

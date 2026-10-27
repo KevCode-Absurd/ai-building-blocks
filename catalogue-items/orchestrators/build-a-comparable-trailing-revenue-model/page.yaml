@@ -97,7 +97,6 @@ tweaks:
 judge:
   - Every period/business/currency bucket appears once, adjustments have a stated ordering, no quarter/YTD or calendar mix occurs and final comparable revenue bridges exactly to reported trailing revenue.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

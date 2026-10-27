@@ -34,7 +34,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Lea Verou: how they'd work for you
 
-The cases below are original applications of the public methods. They focus on usability for the person configuring or maintaining an interface.
+You get a usable contract for your component, form or CSS feature: the interface you chose, examples, the cases still open and the checks to repeat. The cases below are our own applications of her public methods, not things she said. They focus on usability for the person configuring or maintaining an interface. Bring first: the component, form or CSS feature, who uses it and what they want to do, the behaviour that surprises people, and where it must work, such as which browsers.
 
 ### What to hire her for
 
@@ -116,6 +116,8 @@ Use specialist accessibility assessment for broader conformance questions and cu
 ### What you'll get back
 
 Expect a caller-focused task list, a behaviour matrix, a comparison of alternatives and a compact contract with examples. The result should reduce hidden knowledge and make the remaining assumptions easy to inspect.
+
+Next step: run the assumption tests on your own cases and date the results, then hand the contract to someone who has never seen the component and watch where they stall. Take the stall points to Don Norman. For runtime cost or page speed, use Addy Osmani or Brendan Gregg. For how CSS selectors are organised across a large codebase, use Harry Roberts. For a full accessibility conformance check, ask a specialist accessibility reviewer, then bring their findings back for a usability pass.
 
 ## How Lea Verou thinks and talks
 

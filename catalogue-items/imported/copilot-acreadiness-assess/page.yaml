@@ -11,9 +11,10 @@ not_for:
   - "You want a quick, plain report with no custom look: run the built-in agentrc readiness command with its visual option instead."
   - "You want to write the agent instruction files themselves: use the acreadiness-generate-instructions skill after this check."
 how_to_use:
+  - Before you start, check your company's rules with IT. The scan reads your repo files, and a cloud AI tool may send them off your machine.
   - Use an AI that can run code and edit files in your repo, such as Claude Code or GitHub Copilot. A plain chat window will not work.
-  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm.
-  - Install the skill and the ai-readiness-reporter agent from the same folder, using your AI tool's steps for adding skills and agents.
+  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm. The scan downloads AgentRC from GitHub with npx, so it needs web access.
+  - Install the skill using your AI tool's steps for adding skills. The ai-readiness-reporter agent is optional. If you do not have it, your AI builds the page from report-template.html itself.
   - Ask your AI to run the acreadiness-assess skill. Add your policy file if you have one.
   - Open reports/index.html in your browser and read the fix-first list.
   - Next, run the acreadiness-generate-instructions skill to fix the top gaps.

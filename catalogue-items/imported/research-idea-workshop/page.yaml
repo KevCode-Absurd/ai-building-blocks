@@ -16,8 +16,8 @@ when:
   - You need a written record of why you chose one idea.
   - You are working alone and want the group effect.
 not_for:
-  - "You already have a testable idea and need a hypothesis: use hypothesis-generation."
-  - "You need a study plan or sample size: use experimental-design or statistical-power."
+  - "You already have a testable idea and need a hypothesis: use the Research hypothesis builder."
+  - "You need a study plan or sample size: use the Study design and randomizer or the Sample size planner."
   - "You need ethics approval or clinical advice: ask your ethics board or a qualified clinician."
 you_give:
   - Research area or question
@@ -31,8 +31,12 @@ you_get:
   - Ranked shortlist
   - Decision log
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste the full text of SKILL.md into a new chat. The small helper tools are optional and need an AI that can run Python.
+  - Say your research area or question, the criteria that matter to you, and any evidence you already have.
+  - Write your own ideas first, before you read any from the AI. Add the views of others if you work in a group.
+  - Let it cluster the ideas, attack the weak points and list the hidden assumptions behind each.
+  - Check the scoring. Change a weight if it does not match what matters to you, then ask it to rerun the ranking.
+  - Read the shortlist and the decision log. Keep the log with your project notes.
 output_sample:
   input:
     - Your research area or question
@@ -51,6 +55,7 @@ output_sample:
     - name: Adversarial review
       contains: Notes that attack the weak points of each idea.
     - name: Scored shortlist
-      contains: Ideas ranked against your criteria, with the scoring shown.
+      contains: Ideas ranked against your criteria. The working is shown, with the raw ratings, uncertainty ranges, weights and a check of how the ranking changes when weights change.
     - name: Decision log
       contains: What you chose, why you chose it, and what would make you revisit it.
+next: [research-hypothesis-builder, study-design-and-randomizer]

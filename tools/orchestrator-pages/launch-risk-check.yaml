@@ -9,7 +9,7 @@ subhead: Describe your launch, migration or release. It lists every part and eve
 explain: |
   Most launches fail where two parts meet, not inside one part. Two teams each did their job, but the data, the timing or the order did not match at the join. Then an alarm goes off that nobody can read, and people scramble.
 
-  This workflow checks the joins first. It lists the parts, marks what passes between them, gives every job a priority and plans what the system keeps and drops under load. Then it takes those findings and designs the alarms, the go or no-go decision and a safe point to restart from. The order comes from Margaret Hamilton's paper "What the Errors Tell Us", which draws on her work on software for the Apollo missions.
+  This workflow checks the joins first. It lists the parts, marks what passes between them, gives every job a priority and plans what the system keeps and drops under load. Then it takes those findings and designs the alarms, the go or no-go decision and a safe point to restart from. The order is inspired by Margaret Hamilton's paper "What the Errors Tell Us", which draws on her work on software for the Apollo missions.
 when:
   - A release or migration is coming and you want to know where it could fail before it does.
   - Your last launch went wrong at a handoff between teams or tools, and you want to stop that happening again.
@@ -30,7 +30,7 @@ you_get:
   - A run-through plan for the whole launch
   - Alarm text for each mistake, the go or no-go decision it asks for and a safe restart point
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack first. It's a zip with HANDOFF.md and the two skill files this workflow uses, the launch readiness seam checker and the error warning and recovery designer.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the launch and list the parts you know about. It works step by step and saves each result.
   - Do the run-through with a person in the loop before the real launch, and fix what it finds.

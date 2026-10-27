@@ -13,7 +13,7 @@ explain: |
 
   This skill takes your word map and writes candidates of four kinds: a benefit, a service, an audience and a preference. It cuts any word that is taken or empty, then scores the rest on simple, wanted, true and opposed. It prefers a word opposite to the leader's. It checks what buyers would assume once they believe the word, and picks one word and two backups.
 
-  It ends with what you must stop saying, because one word needs the others to go quiet. No word map yet? Make one first with the Owned word mapper, or use the Open word finder for a quicker look. The method draws on Al Ries and Jack Trout's laws of marketing.
+  It ends with what you must stop saying, because one word needs the others to go quiet. No word map yet? Make one first with the Owned word mapper. The method draws on Al Ries and Jack Trout's laws of marketing.
 
 when:
   - Your message lists four strengths and buyers remember none.
@@ -21,13 +21,13 @@ when:
   - You must choose between two good words and cannot decide.
   - You are about to write a homepage, a name or a slogan.
 not_for:
-  - "You have no map of the words rivals own: run the Owned word mapper first, or the Open word finder for a quicker look."
+  - "You have no map of the words rivals own: run the Owned word mapper first."
   - "You already have your word and need the sentence that states your position: use the Positioning statement writer."
   - "You want a name for a new kind of product: use the Category name writer."
   - "You have your word and want a full list of what to cut against it: use the Give-up list planner. This skill only gives a short stop list."
 
 you_give:
-  - "Your word map: which rival owns which word, and which words are open (from the Owned word mapper or the Open word finder)"
+  - "Your word map: which rival owns which word, and which words are open (from the Owned word mapper)"
   - What you sell, and any proof you hold, such as tests, numbers, awards or customer results (optional)
   - Words you cannot use because of law or brand rules (optional)
   - Reviews or survey lines that show what buyers care about (optional)
@@ -87,7 +87,7 @@ output_shape: |
   <one line per check still missed, or none>
 output_sample:
   input:
-    - Your word map from the Owned word mapper or Open word finder
+    - Your word map from the Owned word mapper
     - What you sell, and any proof you hold (optional)
     - Words you cannot use (optional)
     - Reviews or survey lines on what buyers care about (optional)

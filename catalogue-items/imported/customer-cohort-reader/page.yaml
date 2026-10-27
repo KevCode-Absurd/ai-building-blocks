@@ -34,6 +34,8 @@ how_to_use:
   - Paste the skill, then add your store domain. Add the number of cohort months and follow months if you want to change the defaults of 6 and 3.
   - Check the cohort table first. Look for months where the repeat rate is clearly higher or lower than the rest.
   - Open the CSV file to sort or chart the results in Google Sheets or Excel.
+  - Compare your cohorts with each other, not with a number from elsewhere.
+next: [customer-spend-tier-tagger, retention-cohort-analyst]
 output_sample:
   input:
     - Your Shopify store domain

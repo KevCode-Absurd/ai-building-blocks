@@ -32,10 +32,15 @@ you_get:
   - MOIC sensitivity table
   - Notes on which assumptions drive the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Paste the skill instructions into a chat with an AI that can build a
+    spreadsheet. The India helper files it mentions are not included, so the
+    rules in the skill are what it uses.
+  - Give it the deal terms listed on this page. Say which fiscal year the exit
+    falls in.
+  - Check the base case first. Then read the IRR and MOIC tables and the notes
+    on which assumptions drive the result.
+  - Confirm tax treatment with a tax adviser before you rely on after-tax
+    returns.
 not_for:
   - Your deal is outside India or your company uses calendar years. This skill assumes April to March years and lakh and crore.
   - You only need to know whether a requested EBITDA addback fits your deal cap. Use the Deal EBITDA addback checker.

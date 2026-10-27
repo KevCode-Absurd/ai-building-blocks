@@ -30,4 +30,4 @@ credits:
   - title: pymoo skill
     by: K-Dense
     url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pymoo
-    used: Adapted under the MIT licence. We gave it a plain name and added input checks, a not-for list and a fixed list of what you get. The method is unchanged.
+    used: Adapted under the MIT licence (LICENSE.md). The skill file itself says Apache-2.0. We gave it a plain name and added input checks, a not-for list and a fixed list of what you get. The method is unchanged.

@@ -13,12 +13,12 @@ outputs:
   - {type: audit_report}
 uses: [reversible-decision-sorter, long-shot-bet-planner, program-keep-or-cut-reviewer]
 steps:
-  - {uses: reversible-decision-sorter, note: "It sorted as a one-way or two-way door, with the review it needs"}
+  - {uses: reversible-decision-sorter, note: "Sorts the choice as a one-way or two-way door, with the review it needs"}
   - {uses: long-shot-bet-planner, note: "A small test, a loss cap and a rule for dropping it. Reads the plan from the step before"}
   - {uses: program-keep-or-cut-reviewer, note: "Each one marked keep, cut or double down, judged on cash and customer value"}
 origin: rebuilt
 version: 1.0.0
 minds: [jeff-bezos]
 credits:
-  - {title: "Letters to shareholders", by: "Jeff Bezos", used: "The order of the steps: reversible decision sorter, long-shot bet planner, program keep-or-cut reviewer"}
+  - {title: "Letters to shareholders", by: "Jeff Bezos", used: "The one-way and two-way door idea behind step 1. The long-shot planner and the keep-or-cut review are this workflow's own method."}
 generated_from: intake/bezos-shareholder-letters/skeleton.yaml

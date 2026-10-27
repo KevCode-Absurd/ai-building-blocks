@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
   - Type the role, seniority and place. Add your budget and company stage if you have them.
-  - Say which sources you can reach, such as a LinkedIn login or paid pay surveys. Public pages are used if you have none.
+  - Tell it which sources you can use, such as paid pay surveys, or paste in numbers you already have. It reads public pages only. Never give it a login.
   - Read the summary first. Check the date and source of each pay range.
   - Treat pool sizes and pay ranges as estimates. Check them with a recruiter before you set an offer.
 output_sample:
@@ -55,3 +55,4 @@ output_sample:
       contains: Companies hiring for similar roles, how their pay and employer brand compare, and where you can stand out.
     - name: Recommendations
       contains: Advice on where to source, how to position pay, how long to expect, and what risks to plan for.
+next: [job-post-writer, hiring-search-brief-writer, job-offer-planner]

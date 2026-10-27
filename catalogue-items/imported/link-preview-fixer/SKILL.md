@@ -43,6 +43,8 @@ Fix social sharing so every important URL unfurls as a rich card across all plat
 
 Every shareable page needs ALL of these in static HTML:
 
+AI Blocks note: the code helper below assumes a Next.js App Router site. For any other site, write the same tags by hand in the page's HTML head. Platform limits below (image sizes, file sizes) are the original author's and may have changed, so check each platform's current docs before you rely on them.
+
 ```js
 // Next.js App Router — lib/socialMetadata.js
 export function buildSocialMetadata({
@@ -131,7 +133,7 @@ export async function generateMetadata({ params }) {
 ### Homepage (app/layout.js or app/page.js)
 ```js
 export const metadata = {
-  metadataBase: new URL('https://www.yourdomain.com'), // REQUIRED for absolute URLs
+  metadataBase: new URL('https://www.yourdomain.com'), // needed when any metadata URL is relative
   ...buildSocialMetadata({
     title: 'My Site — Tagline Here',
     description: 'Site-wide description.',
@@ -172,7 +174,7 @@ curl -sI https://www.yourdomain.com/images/og/home.jpg | grep -i "content-type\|
 ### X / Twitter
 - Use `twitter:card = summary_large_image` for full-width images
 - `twitter:image` must be an absolute URL
-- Use the [Card Validator](https://cards-dev.twitter.com/validator) to test
+- Use the [Card Validator](https://cards-dev.twitter.com/validator) to test, if it still works (see the tools table below)
 
 ### LinkedIn
 - Caches hard — use [Post Inspector](https://www.linkedin.com/post-inspector/) to refresh
@@ -203,7 +205,7 @@ If tags don't appear → they're being added by JavaScript (not crawlable). Fix:
 |----------|------|
 | Facebook | https://developers.facebook.com/tools/debug/ |
 | LinkedIn | https://www.linkedin.com/post-inspector/ |
-| Twitter/X | https://cards-dev.twitter.com/validator |
+| Twitter/X | https://cards-dev.twitter.com/validator (this older tool may be retired; if it fails, post the link in a draft on X to see the card) |
 | General | https://metatags.io |
 
 ### 3. Force cache refresh

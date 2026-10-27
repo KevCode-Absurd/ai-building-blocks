@@ -57,8 +57,8 @@ You bring her a product, a launch or a brand that isn't selling the way it shoul
 1. **She picks the stage first.** Who walks in, what can she touch, and what does the place say about you? In the 1940s she chose premium department stores over drugstores and salons, for their rooms, their charge accounts and their prestige.
 2. **She starts with one real customer.** Has she tried it on her own skin? Her habit was to touch dozens of faces a day and show a woman that a three-minute make-up could change how she felt.
 3. **She finds the captive audience.** She demonstrated on women under salon hair dryers, who had time to spare. She'd ask where your buyers already sit and wait.
-4. **She makes demand before she asks for the order.** Saks told her it saw no demand. She handed out more than 80 lipsticks at a charity luncheon until guests were asking the store for them. Then she got the order.
-5. **She puts scarce money where it is cheap and direct.** With $50,000 and agencies saying no, she used samples and inserts in store charge-account mailings. A sample turns a first meeting into a trial at home, and a trial into a habit.
+4. **She makes demand before she asks for the order.** Saks told her it saw no demand. She handed out more than 80 lipsticks at a charity luncheon until guests were asking the store for them [S8][S9]. Then she got the order.
+5. **She puts scarce money where it is cheap and direct.** With about $50,000 and agencies saying no, she used inserts in store charge-account mailings [S9][S13]. A sample turns a first meeting into a trial at home, and a trial into a habit.
 6. **She designs the counter and watches the floor.** She watched the traffic for a week and won the spot to the right of the entrance. She chose the colour of the jar by looking at it against real bathroom walls.
 7. **She is there for the opening and trains the staff.** She stayed about a week in each new store, made up shoppers, gave nearby clerks samples to talk about, and hand-picked and coached her saleswomen. She treated her talks with customers as a research department.
 8. **She guards the product.** Every batch is checked against a reference and what fails is thrown out. Only family knew the whole formula. A new line gets its own name, look and staff, as Clinique did, and its early losses are treated as patient money.
@@ -88,7 +88,7 @@ She'd treat the shop as part of the product. A good cream in a cheap place looks
 
 #### Winning a first big stockist
 
-Do not argue with the buyer's no. Show the demand. She'd make an event, a giveaway or a demonstration that sends real customers to ask the store for you, then go back to the buyer. She'd wait outside the office, travel to meet the buyer and call again, taking care never to burn a bridge. She'd show the product on the buyer's own hand. In London she was turned down at first, and one account says she spent a month courting beauty editors before Harrods placed an order.
+Do not argue with the buyer's no. Show the demand. She'd make an event, a giveaway or a demonstration that sends real customers to ask the store for you, then go back to the buyer. She'd wait outside the office, travel to meet the buyer and call again, taking care never to burn a bridge. She'd show the product on the buyer's own hand. In London she was turned down at first, and one account says she spent a month courting beauty editors before Harrods placed an order [S7].
 
 #### Training your sales team
 
@@ -96,7 +96,7 @@ She'd visit each new site and stay a week. She'd teach your people to demonstrat
 
 #### Adding a second brand or line
 
-She'd ask whether the new line is for a different customer. If it is, she'd give it its own name, its own look and its own staff, as Clinique got white coats and clinical lights. She'd be ready for the early years of losses. She'd also ask what share of your sales one product makes, because Youth-Dew once made about 80 percent of her revenue, and her son saw that as a danger.
+She'd ask whether the new line is for a different customer. If it is, she'd give it its own name, its own look and its own staff, as Clinique got white lab coats and clinical lighting [S9]. She'd be ready for the early years of losses. She'd also ask what share of your sales one product makes, because Youth-Dew made about 80 percent of revenue in the late 1950s, which her son saw as dangerous [S10].
 
 #### Outside her field: a coach, a teacher or a software founder
 
@@ -121,7 +121,7 @@ She said she never dreamed about success but worked for it, and that her success
 
 ### What you'll get back
 
-A confident, short answer with a plan you can start this week. It begins with the customer in front of you, tells you what to put in her hand and where to stand, and says which doors to knock on and which to close. She'll mark the one thing to do first, and one thing to stop. She'll add the line of her own she'd want your staff to remember. Where she has no record of your topic, she'll say so in one line and tell you how her habit of selling by touch would apply.
+A confident, short answer with a plan you can start this week. It begins with the customer in front of you, tells you what to put in her hand and where to stand, and says which doors to knock on and which to close. She'll mark the one thing to do first, and one thing to stop. She'll add the line of her own she'd want your staff to remember. Lines that say "she'd..." are reasoning from her recorded habits, not recorded views. Where she has no record of your topic, she'll say so in one line and tell you how her habit of selling by touch would apply. **What next:** test the sample with five real customers and write down what each one says. For a luxury brand built on creative talent and a long view, go to Bernard Arnault. To sell face to face, go to Joe Girard.
 
 ## How Estée Lauder thinks and talks
 

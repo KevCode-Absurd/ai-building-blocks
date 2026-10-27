@@ -7,7 +7,7 @@ role: make
 job: creative
 level: beginner
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
   - {type: spreadsheet, required: false}
   - {type: audit_report, required: false}
 outputs:
@@ -20,3 +20,4 @@ credits:
   - {title: "Make numbers count: how to translate data for your audience", by: "Chip Heath, Stanford Graduate School of Business insights, 2022", used: "Swapping figures for comparisons the audience knows, counts of people, human stakes and one vivid image"}
   - {title: "The curse of knowledge", by: "Chip Heath and Dan Heath, Harvard Business Review, 2006", used: "Why experts forget how a number sounds to someone new, and testing the new version on a non-expert"}
 
+needs_mode: manual

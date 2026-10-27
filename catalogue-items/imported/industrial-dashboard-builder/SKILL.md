@@ -20,7 +20,23 @@ metadata:
   version: "1.1"
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `references/app-designer/agent-guide-shared.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Industrial HMI Builder
+
+## Start here (added by AI Blocks)
+
+- **You get:** a MATLAB App Designer operator dashboard with grey-field styling, a ranked alarm banner, fixed-range trends and confirmed setpoint writes.
+- **You need:** the data script or source (OPC UA, Modbus, MQTT or PI), the tags with alarm limits, and which values operators may change.
+- **First three steps:** gather those inputs, choose widgets by data type, then add alarms, trends and write safeguards (the numbered steps further down).
+- **Required gate:** never connect a write to a live plant until it has been tested on a simulated node and signed off by a controls engineer. Never enable a write path without this sign-off.
+- The shared agent guide named above is not in this copy. Without `matlab-build-app`, build the plain programmatic `.m` app described below and tell the user.
 
 Build operator-facing SCADA/HMI dashboards in MATLAB App Designer that follow industrial-HMI conventions: gray-field color philosophy, alarms shown at the data source, write safeguards on every setpoint, fixed-range trends with threshold lines, and a drill-down layout (plant overview → area → detail).
 
@@ -68,6 +84,7 @@ Build operator-facing SCADA/HMI dashboards in MATLAB App Designer that follow in
 
 ### Writes
 
+- **Gate before any live write.** Test on a simulated node first and get a controls engineer to sign off. Do not ship a write path to a live plant without that.
 - **Every `writeValue()` confirms.** `uiconfirm` showing node + old + new + units; default option is **Cancel**, not Apply.
 - **Visual feedback after write.** Background flash green on success, red on failure (revert UI on failure). Operator must never be uncertain whether the write took effect.
 - **Range label adjacent to every writable field.** `Limits` on the spinner enforces the bound; the `uilabel` makes it visible.

@@ -30,6 +30,7 @@ you_get:
   - Compliance checklist
   - Disclosure steps if relevant
 how_to_use:
+  - Gather first: the item's USML category if you know it, the commodity classification, the buyer's country and end-user statement, and any foreign persons who will have access.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, web access or paid tool is needed.
   - Describe your item or technical data. Say which country it goes to and who the end user is.
   - Add your registration status and any foreign persons who will see the data, if you know them.

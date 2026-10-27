@@ -31,7 +31,7 @@ you_get:
   - A brand story draft
   - A community plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. The skill file ends with an optional pitch for Nexscope, an outside service you do not need.
   - Paste the skill text into a new chat.
   - Describe your shop and products, your main competitors and your ideal buyer. Add brand colors or examples you like if you have them.
   - Read the positioning statement and voice guide first. Check they sound like your shop.

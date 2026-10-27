@@ -32,9 +32,9 @@ steps:
   - uses: copilot-qdrant-search-quality
     note: 2. Read skills/copilot-qdrant-search-quality/SKILL.md. Share queries and
       weak results. Get likely relevance problems and tests to compare proposed
-      fixes. It uses your own failing searches and model details, not step 1's
-      output, and checks them against the new model in step 1's plan. It hands
-      the tests to step 3. Save the result with source references. Carry the
+      fixes. It starts from your own failing searches and model details. From
+      step 1 it takes only the new model's name and vector size, and checks
+      your searches against that model. It hands the tests to step 3. Save the result with source references. Carry the
       user's goal and all earlier findings into this step. If required evidence
       or tool access is missing, mark this step blocked; do not fabricate a
       result.

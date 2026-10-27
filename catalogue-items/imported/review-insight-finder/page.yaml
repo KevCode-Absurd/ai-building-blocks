@@ -38,7 +38,7 @@ how_to_use:
   - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Paste the reviews and the product name. Add competitor reviews if you want a comparison.
   - Check the first line of the report. It says how many reviews were used and how many were set aside.
   - Spot-check two themes. Search your reviews for the theme and see that the count looks right.
-  - Pick the top complaint and fix it first. Use the quotes in your page copy.
+  - Pick the top complaint and fix it first. Use the customer wording in your page copy as ideas. Before you put a reviewer's own words in a paid ad, check the ad platform's testimonial rules and ask the reviewer for permission.
 output_sample:
   input:
     - Your product reviews, pasted or as a file

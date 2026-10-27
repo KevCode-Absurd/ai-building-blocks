@@ -19,6 +19,7 @@ not_for:
   - "You want clean studio shots of the product alone. Use the Product photo shoot planner."
   - "You want to copy the look of one photo you like. Use the Reference-style product photo maker."
   - "Your product is for children and you want a child in the frame. This skill never shows a child or any part of one."
+  - "You want to present the frames as real customers, a real event or a testimonial. They are made with AI, so label them and check the ad platform's AI-disclosure rules first."
 you_give:
   - Real photos of the product, including one of it in a hand or in use
   - Who buys it, and where, when and with whom they use it

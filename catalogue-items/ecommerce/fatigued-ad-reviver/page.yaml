@@ -21,6 +21,7 @@ not_for:
   - Your ad never worked well. A new hook will not save a weak ad, so write a fresh ad with the Ad first line writer and scorer.
   - You only have a very small budget and want to test 10 hooks. It will plan 3 hooks, or test fewer openers by hand.
   - You want to check ad copy against Meta rules. Use the Meta ads compliance checker before the ad goes live.
+  - "You want a quick first pass with fewer checks: use the Tired ad hook refresher."
 
 you_give:
   - Spend and ROAS by week for the ad, plus frequency and audience size if you have them

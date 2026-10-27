@@ -19,6 +19,7 @@ not_for:
   - Your project has no manifest or lock file. Add one first, or ask a developer to list the packages by hand.
   - Your company already pays for a scanner under contract. Use your vendor's scanner so the results match what your auditors see.
   - You want to test a live site or server for attacks. Hire a security tester, since this only reads package lists.
+  - You need a legal ruling on a licence. The licence flags are a starting point, so have a lawyer review any copyleft or conflicting licence before you ship.
 you_give:
   - Project folder with manifest and lock files
   - Licence policy (optional)
@@ -30,7 +31,7 @@ you_get:
   - Minimum upgrades to fix problems
 how_to_use:
   - Open your AI in a tool that can run code and read files. Give it internet access.
-  - Paste this skill into the chat, or load the skill folder.
+  - Paste this skill into the chat, or load the skill folder. Install the audit tool for your language first, such as npm audit for Node or pip-audit for Python.
   - Point it at your project folder, or at one manifest file.
   - Add your licence policy and build system if you have them.
   - Read the report from the top. Fix Critical and High items first.

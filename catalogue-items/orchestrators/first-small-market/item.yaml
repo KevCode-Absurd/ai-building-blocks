@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [peter-thiel, reid-hoffman]
 credits:
-  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The order of the steps: pick the first market, check the market is real, not drawn to flatter you, order the markets after it, write the pitch without a rival in it"}
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Inspiration for starting with a small market you can own, then moving to the ones next to it, and for a pitch that does not lean on a rival. The four-step order is this workflow's own design."}
 generated_from: intake/zero-to-one-first-market/skeleton.yaml

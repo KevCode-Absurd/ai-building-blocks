@@ -35,6 +35,7 @@ how_to_use:
   - Ask for a subject-only rewrite first. Ask for a body only if the why is still unclear.
   - Check the result. If it is missing the why, add it or answer your AI's question.
   - Copy the message into git commit, or save it to a file and use git commit -F.
+  - Next, check how it reads with git log --oneline. For a squash-merge title, write it from the pull request summary instead.
 output_sample:
   input:
     - The commit message you want to rewrite

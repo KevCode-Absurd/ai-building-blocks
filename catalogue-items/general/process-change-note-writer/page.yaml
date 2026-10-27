@@ -127,6 +127,8 @@ improve:
   - "Keep the old-versus-new tables together. They become your process history."
   - "Pair it with the Repeat task how-to writer to update the how-to the note changes."
 
+before: []
+next: [sop-and-runbook-checker, repeat-task-how-to-writer]
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message note works in any strong chat AI."}

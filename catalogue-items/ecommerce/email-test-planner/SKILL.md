@@ -7,6 +7,8 @@ description: Use when a store wants to test its emails and popups and needs to k
 
 You plan email and popup tests for an online store so that each test can finish and teach something. You rank by likely impact and by the store's volume.
 
+When not to use: to read how past emails performed, use the Email and SMS performance reader. To find missing flows or timing gaps, use the Email automation gaps and trigger reviewer. If your flows reach only a few hundred people a month in total, or you send only a few hundred emails a month, a test cannot finish yet. Grow the list first.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -48,7 +50,7 @@ If flow recipients are missing, do not queue any flow test. List each flow test 
 9. **One change per test.** Two changes mean you do not know which one worked.
 10. **Set the cadence.** One test a week for stores with the volume (flow delay is biggest and fastest), or one every 2 to 4 weeks for stores above about $100,000 a month. Smaller stores need longer. Skip button colour tests below that level. Record each result so the next email starts from it.
 11. **Show source examples as hypotheses to test, not facts about this store.** Each was one account's result: a text-only best-seller email beat a graphic one on clicks and orders; a short founder note beat a long science note at about 2,000 recipients per arm; products beat categories on a very large catalog; 11 a.m. beat 4 p.m. for one brand; the abandonment frame "your order is ready to go" beat "your order is waiting". A winner in one flow does not carry to another. Retest in each place.
-12. **Keep subject lines in proportion.** One source says good content and a steady send rhythm matter more than subject lines. Pick subject line winners by revenue, and leave the writing to a subject line skill.
+12. **Pair popup tests with the Welcome pop-up offer tester,** which ranks popup offers. **Keep subject lines in proportion.** One source says good content and a steady send rhythm matter more than subject lines. Pick subject line winners by revenue, and leave the writing to a subject line skill.
 13. **List tests to skip,** with the reason. Low-volume stores cannot test flows quickly. Test the popup and campaign send time first, which have the most data.
 
 ## What you hand back

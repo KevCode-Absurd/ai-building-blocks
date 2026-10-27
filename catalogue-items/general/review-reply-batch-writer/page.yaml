@@ -21,6 +21,7 @@ not_for:
   - "You already wrote a reply and want it checked for risky promises: use the Customer reply promise checker."
   - "You need to answer a private support ticket or email: write it yourself or use your help desk, since this writes public replies only."
   - "Your platform does not allow public replies to reviews: skip this and contact the customer another way."
+  - "You sell on Shopify and want risky reviews flagged with no refunds promised: use the Public review reply drafter."
 
 you_give:
   - "The reviews with name, stars and text"

@@ -34,7 +34,7 @@ how_to_use:
   - Give your AI the skill folder. Tell it your platform, your pixel ID or ad account ID, and your token.
   - Ask it to audit your pixel first. Read the scorecard and the fix list.
   - Ask for the setup steps for your platform, and make the fixes.
-  - Run the test with a test event code. Without one, the test sends real events to your live data. Then check the Test Events tab in Events Manager.
+  - Copy the test event code from the Test Events tab in Events Manager and pass it to the test script. The script sends fake customer data tagged as a test. Only that code makes the events show up in the tab. Then check the tab.
   - Check your real match quality in Events Manager. The audit score is only an estimate.
 output_sample:
   input:

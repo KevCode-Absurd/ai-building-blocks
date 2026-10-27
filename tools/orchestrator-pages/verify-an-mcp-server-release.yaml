@@ -9,23 +9,25 @@ subhead: Share your MCP server and settings. Get code risks, access risks and a 
 explain: |-
   Share your MCP server and settings. Get code risks, access risks and a real protocol test report.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Step 1 reads each tool handler in your server code and traces the risks, with the file and line. Step 2 reads your settings file for risks in permissions, trust and how the server is reached. Step 3 starts the server in a fresh session and tests its tools, errors and advertised features, trying the risks from steps 1 and 2. Step 3 runs your server, so use a test environment with test data. It works with the sources you provide and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You are about to release an MCP server and want it checked first.
+  - You changed a server's tools or settings and want to know if it is still safe.
+  - You want a real test session, not only a code read.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your MCP server code
+  - Your settings file, such as .mcp.json
+  - How the server is reached, on your machine only or over a network
+  - A way to start the server for a test session
 you_get:
   - Code and settings findings
   - Protocol test report
   - Release blockers and limits
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Add the complete skill pack to an AI that can run commands and start your server.
+  - Share the server code, the settings file and how to start the server. Use test data and a test environment.
+  - Ask it to follow the steps and mark any missing facts. If it cannot start the server, step 3 is marked not run.
+  - Review the findings and fix the blockers before you release.
 how_it_works:
   - title: MCP handler security reviewer
     text: Share your MCP code. Get risks traced through tool handlers, with evidence and fixes.

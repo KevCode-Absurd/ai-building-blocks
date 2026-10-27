@@ -1,0 +1,21 @@
+slug: podcast-show-notes-writer
+name: Podcast show notes writer
+summary: "Paste your transcript or notes. Get show notes: title, summary, key points, links mentioned and a call to action."
+category: general
+boards: []
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: copy_draft
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - social-post-planner
+  - blog-post-publish-check-loop
+  - short-video-hook-writer

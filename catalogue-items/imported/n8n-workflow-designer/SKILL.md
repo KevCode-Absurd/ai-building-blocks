@@ -10,6 +10,8 @@ date_added: "2026-09-04"
 
 Proven architectural patterns for building n8n workflows.
 
+**Working in a chat (added by AI Blocks).** Steps that name n8n MCP tools (such as `search_nodes` or `n8n_create_workflow`) and the related skills (n8n MCP Tools Expert, n8n Expression Syntax, n8n Node Configuration, n8n Validation Expert) need those tools and skills, which are not in this folder. Without them, plan the workflow here and build it by hand in n8n. The `risk: critical` tag in the header is the source repo's label. A workflow can send messages and change data, so show each effect and get approval before you switch one on.
+
 ## When to Use
 - You need to choose an architectural pattern for an n8n workflow before building it.
 - The task involves webhook processing, API integration, scheduled jobs, database sync, or AI-agent workflow design.
@@ -254,32 +256,9 @@ These skills work together with Workflow Patterns:
 
 ---
 
-## Pattern Statistics
+## Pattern Usage
 
-Common workflow patterns:
-
-**Most Common Triggers**:
-1. Webhook - 35%
-2. Schedule (periodic tasks) - 28%
-3. Manual (testing/admin) - 22%
-4. Service triggers (Slack, email, etc.) - 15%
-
-**Most Common Transformations**:
-1. Set (field mapping) - 68%
-2. Code (custom logic) - 42%
-3. IF (conditional routing) - 38%
-4. Switch (multi-condition) - 18%
-
-**Most Common Outputs**:
-1. HTTP Request (APIs) - 45%
-2. Slack - 32%
-3. Database writes - 28%
-4. Email - 24%
-
-**Average Workflow Complexity**:
-- Simple (3-5 nodes): 42%
-- Medium (6-10 nodes): 38%
-- Complex (11+ nodes): 20%
+The five patterns below are the most common starting points. This file gives no counts for how often each is used, so do not quote any.
 
 ---
 
@@ -385,7 +364,7 @@ Use `search_templates` and `get_template` from n8n-mcp tools to find examples!
 
 ### ❌ Don't
 
-- Build workflows in one shot (iterate! avg 56s between edits)
+- Build workflows in one shot (build and test in small steps)
 - Skip validation before activation
 - Ignore error scenarios
 - Use complex patterns when simple ones suffice
@@ -399,8 +378,8 @@ Use `search_templates` and `get_template` from n8n-mcp tools to find examples!
 ## Summary
 
 **Key Points**:
-1. **5 core patterns** cover 90%+ of workflow use cases
-2. **Webhook processing** is the most common pattern
+1. **5 core patterns** cover most workflow use cases
+2. **Webhook processing** is a very common pattern
 3. Use the **workflow creation checklist** for every workflow
 4. **Plan pattern** → **Select nodes** → **Build** → **Validate** → **Deploy**
 5. Integrate with other skills for complete workflow development

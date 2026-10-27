@@ -77,6 +77,8 @@ python scripts/winrate_predictor.py --input deal_context.json --profile enterpri
 
 Take parsed RFP + proof-point matrix + GAP audit + winrate estimate into the go / no-go review. Skill does not commit pursuit budget — leadership does.
 
+**Next steps:** If bid, take the win themes and the fit matrix into your proposal writing tool. If no-bid, log the reasons and the gap list for the next review.
+
 ## Scripts
 
 - `scripts/rfp_parser.py` — section + requirement extractor (regex + cue-word heuristics, stdlib only)
@@ -98,17 +100,17 @@ All scripts: stdlib only (argparse, json, sys, pathlib, re, collections, statist
 - **Win-themes are buyer-side, not seller-side.** "We're the leader in X" is a marketing claim; "Your operations team reduces incident MTTR by 60% with the same headcount" is a win-theme. Shipley canon, not optional.
 - **Winrate estimates are directional.** The model is a discipline tool to force honest pursuit-qualification — not an oracle. Confidence band always wider than the point estimate suggests.
 - **Industry profiles tune base rates** — government RFPs reward compliance discipline; enterprise SaaS rewards reference accounts; healthcare rewards regulatory + security depth.
-- **Late entry is a structural disadvantage.** Entering after the RFP issued, with no relationship history, drops base rate ~15%. The skill names this, doesn't hide it.
+- **Late entry is a structural disadvantage.** Entering after the RFP issued, with no relationship history, lowers the base rate. The size of the drop is an editable default in the script, not a measured fact; replace it with your own deal history. The skill names this, doesn't hide it.
 
 ## Anti-patterns
 
 - **Inventing a proof point to fill a GAP.** Hard rule violation. GAPs surface for leadership decision, not for prose-laundering. See `references/rfp_anti_patterns.md`.
-- **Responding to every RFP.** Without a qualified bid / no-bid gate, the team burns capacity on <20% winrate pursuits and loses the 50%+ pursuits to lack of focus. Bain commercial-discipline research.
+- **Responding to every RFP.** Without a qualified bid / no-bid gate, the team burns capacity on low-winrate pursuits and loses the strong ones to lack of focus.
 - **Generic response with no win-theme.** A proposal that could be sent verbatim by any competitor is decorative. Shipley failure mode #1.
 - **Missing a mandatory disqualifier late.** FedRAMP / HIPAA / ISO 27001 / SOC 2 / on-shore data residency caught on Day 12 of a 14-day response = wasted pursuit. Parser surfaces these on Day 1.
 - **Answering the question YOU wanted asked.** RFP responder discipline: answer what they asked, in their words, in their order. Re-framing belongs in cover letters, not in the compliance matrix.
 - **No compliance matrix.** Every requirement should map to a response section + page number. Evaluators score on a matrix; respondents who don't provide one self-disqualify on traceability.
-- **Late-entry without acknowledging the relationship deficit.** Entering cold against an incumbent with a 3-year relationship and no champion = sub-20% winrate. Pretending otherwise wastes Sales Engineering capacity.
+- **Late-entry without acknowledging the relationship deficit.** Entering cold against an incumbent with a 3-year relationship and no champion = a very low winrate. Pretending otherwise wastes Sales Engineering capacity.
 - **Treating WEIGHTED requirements like MANDATORY.** Score-weighted requirements reward depth on the high-weight items, not uniform mediocrity across all. Shipley capture method.
 
 ## Distinct from
@@ -121,19 +123,20 @@ All scripts: stdlib only (argparse, json, sys, pathlib, re, collections, statist
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time before any script runs. Recommended answer + canon citation per question. Never bundled.
+Walked one at a time before any script runs. Recommended answer per question. Never bundled. Every percentage below is an illustrative default, not a measured fact. Replace it with your own deal history. The "Canon" lines name the general sources the original author drew on; they are not checked quotes or figures.
+
 
 1. **"What's your STRONG / PARTIAL / GAP split on the MANDATORY requirements?"**
    Recommended: STRONG ≥ 70% on MANDATORY before bidding. PARTIAL/GAP on any MANDATORY = either close the gap pre-submission or no-bid.
    Canon: Shipley *Proposal Guide v6* — capture-management discipline, "Pgw (probability of win) is bounded by your weakest MANDATORY."
 
 2. **"Is there an incumbent, and how strong is their position?"**
-   Recommended: strong incumbent (3+ years, no displacement event) drops base winrate ~30%. Don't bid without a named displacement trigger.
-   Canon: Forrester B2B-RFP research — incumbents win 70-80% of renewal RFPs absent a named failure event.
+   Recommended: a strong incumbent (3+ years, no displacement event) lowers your base winrate a lot. Don't bid without a named displacement trigger.
+   Canon: B2B RFP research on incumbent advantage (no figure checked).
 
 3. **"Did you enter the conversation before or after the RFP issued?"**
-   Recommended: late-entry (after RFP issued, no prior engagement) drops winrate ~15% and signals the RFP was scoped to someone else's strengths.
-   Canon: Tom Searcy + Henry DeVries *How to Win Big Business* — "If you didn't help write the RFP, you're column fodder."
+   Recommended: late-entry (after RFP issued, no prior engagement) lowers your winrate and signals the RFP was scoped to someone else's strengths.
+   Canon: Tom Searcy and Henry DeVries, *How to Win Big Business* (general idea only).
 
 4. **"What are your 3-5 win-themes, and does each thread through ≥2 requirements?"**
    Recommended: themes that appear in only one requirement are decorative. Themes must ladder up across MANDATORY + WEIGHTED sections.
@@ -141,11 +144,11 @@ Walked one at a time before any script runs. Recommended answer + canon citation
 
 5. **"For every claim in the response, can you name the verifiable source?"**
    Recommended: every claim → case study / certification / customer reference / technical attestation / benchmark. Unsourced claims = GAPs.
-   Canon: APMP BoK — "Substantiation: every assertion in a proposal must be backed by evidence the evaluator can independently verify."
+   Canon: APMP Body of Knowledge, on backing each claim with evidence (general idea only).
 
 6. **"What's the bid / no-bid threshold you committed to BEFORE seeing this RFP?"**
    Recommended: pre-committed threshold (e.g., winrate ≥ 25%, STRONG ≥ 70% on MANDATORY, named champion). Post-hoc rationalization is how teams end up bidding 5% pursuits.
-   Canon: Bain RFP-win-rate studies — disciplined bid/no-bid gates lift win-rate from ~15% to ~35%.
+   Canon: the general case for a bid / no-bid gate set before you see the RFP.
 
 7. **"What does the buyer's evaluation team actually score on?"**
    Recommended: if the RFP discloses scoring criteria, weight your response effort proportionally. If undisclosed, ask. If you can't ask, that itself is a relationship-deficit signal.

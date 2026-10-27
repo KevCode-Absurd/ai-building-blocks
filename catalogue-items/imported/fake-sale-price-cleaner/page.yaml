@@ -33,9 +33,10 @@ how_to_use:
   - Open an AI that can run code and use the Shopify CLI. Sign in to your store with product read and write access.
   - Paste this skill and give your store domain. Add a collection or tag to limit the run (optional).
   - Start with a dry run. This is the default, and nothing changes in your store.
-  - Open the CSV and check the rows. Old values are not kept in Shopify, so keep this file as your backup.
-  - If you are in a sale, turn off the age rule. Shopify updates the date on any product edit, so some old-price matches may be wrong.
+  - Open the CSV and check every row. Old values are not kept in Shopify, so this file is your only way back. Do not run live until you have read it.
+  - If you are in a sale, turn off the age rule. The age rule uses the date the variant was last updated, not the date the old price was set. Any edit to the product resets that date, so a live sale price can be cleared by mistake.
   - Run it live only when the CSV looks right. Then check 5 to 10 products on your store.
+  - Keep the CSV. To bring a price back, enter the old value from the CSV by hand in Shopify.
 output_sample:
   input:
     - Your store domain
@@ -53,3 +54,4 @@ output_sample:
       contains: Compare-at prices cleared to empty on matching variants, only after you turn off dry run.
     - name: Final summary
       contains: Counts of variants checked, cleared by each rule, total cleared and errors, plus the CSV file name.
+next: [discount-sanity-checker]

@@ -64,7 +64,7 @@ how_it_works:
   - title: "Rank by the ladder"
     text: "Images first, then apps and third-party scripts, then hosting. Weight by traffic: a small gain on a busy page beats a big gain on a quiet one."
   - title: "Show gains as a range"
-    text: "Extra orders = sessions x conversion rate x lift. Use a low and a high lift you state, label both as guesses, and never give one number."
+    text: "Extra orders = sessions x conversion rate x lift. Use a low and a high lift you give it, label both as guesses, and never get one number. With no lift of your own, it leaves the lift blank."
   - title: "Tag each fix"
     text: "No-code, theme code or server. Give hours, risk (low, mid, high) and who does it. For theme code, duplicate the theme first."
   - title: "Split the list"
@@ -110,3 +110,4 @@ works_best_with:
 terms:
   - term: "Core Web Vitals"
     meaning: "Google's three speed checks: how fast the page appears, reacts and stays still."
+next: [speed-fix-ranker]

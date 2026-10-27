@@ -24,6 +24,8 @@ DEMETER2 is a different perturbation modality, not an older CRISPR scoring metho
 
 ## 1. Discover a release, then obtain its files
 
+Gather first: the DepMap release to use, the files to download (`CRISPRGeneEffect.csv`, `Model.csv` and, for drug links, the PRISM files), and Python with numpy, pandas and scipy. Each analysis returns a table with group size, effect size, p-value and q-value columns.
+
 Use [DepMap Downloads](https://depmap.org/portal/data_page/) and the selected
 release's README and release notes. On review, the live catalogue's latest
 `DepMap Public` release was **26Q1**, dated 2026-04-01. Rediscover before new work;

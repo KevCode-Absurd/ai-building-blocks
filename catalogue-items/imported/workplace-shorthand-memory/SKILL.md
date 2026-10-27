@@ -8,6 +8,8 @@ user-invocable: false
 
 Memory makes Claude your workplace collaborator - someone who speaks your internal language.
 
+All names, deals and figures in the examples below (Todd Martinez, Oracle Systems, $2.3M and so on) are made up. Keep only work facts about real people: role, team and how they like to be reached. Leave out personal interests and private details.
+
 ## The Goal
 
 Transform shorthand into understanding:
@@ -170,7 +172,7 @@ Workplace shorthand, acronyms, and internal language.
 - Works closely with Sales on forecasting
 
 ## Notes
-- Cubs fan, likes talking baseball
+- Preferred meeting time: mornings
 ```
 
 **memory/projects/{name}.md:**

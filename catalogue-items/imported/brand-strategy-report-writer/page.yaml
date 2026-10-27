@@ -35,7 +35,8 @@ how_to_use:
   - Say "I have a new branding client" to get the questionnaire. Or paste a filled brief to skip to the report.
   - Fill in the questionnaire, or send it to your client. Paste the answers back into the chat.
   - Read the report. Check anything the AI guessed, since thin answers lead to guesses.
-  - Edit the personas and taglines, then share the report with your team or client.
+  - Mark anything the AI assumed, and check what it says about competitors, before you share. Personas are illustrative, not real customers.
+  - Edit the personas and taglines, then share the report. Next, use it as the brief for the Brand messaging builder and the Brand style guide writer.
 output_sample:
   input:
     - Your brand name and what it sells

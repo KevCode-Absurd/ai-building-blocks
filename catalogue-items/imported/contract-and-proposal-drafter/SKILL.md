@@ -37,7 +37,7 @@ Generate professional, jurisdiction-aware business documents: freelance contract
 |--------|---------|
 | Payment terms | Net-30, milestone-based, monthly retainer |
 | IP ownership | Work-for-hire (US), assignment (EU/UK), license-back |
-| Liability cap | 1x contract value (standard), 3x (high-risk) |
+| Liability cap | 1x contract value, meaning the fees paid or payable (standard), 3x (high-risk) |
 | Termination | For cause (14-day cure), convenience (30/60/90-day notice) |
 | Confidentiality | 2-5 year term, perpetual for trade secrets |
 | Warranty | "As-is" disclaimer, limited 30/90-day fix warranty |
@@ -112,6 +112,8 @@ pandoc contract.md -o contract.docx \
 
 ## Jurisdiction Notes
 
+These notes are a short general summary. They may be out of date or incomplete. Check them against current law for the country where the contract will be signed, and have a lawyer confirm before anyone signs.
+
 ### US (Delaware)
 - Governing law: State of Delaware
 - Work-for-hire doctrine applies (Copyright Act 101)
@@ -137,6 +139,7 @@ pandoc contract.md -o contract.docx \
 - Jurisdiction: German courts (Landgericht) or DIS arbitration
 - DSGVO (GDPR implementation) mandatory for personal data processing
 - Kuendigungsfristen: statutory notice periods apply
+- Terms: Nutzungsrechte = rights to use a work; Kuendigungsfristen = notice periods; para 126 BGB = the written-form rule
 
 ---
 
@@ -179,7 +182,10 @@ Client has [10] business days to accept or reject deliverables in writing.
 ## 3. INTELLECTUAL PROPERTY
 
 Upon receipt of full payment, Developer assigns all right, title, and interest in the
-Work Product to Client as a work made for hire (US) / by assignment of future copyright (EU/UK).
+Work Product to Client. Keep only the version that fits the governing law and delete the others:
+- US: "...to Client by written assignment. To the extent any part qualifies as a work made for hire, it is one." (A freelancer's work is often not a work made for hire, so the written assignment matters.)
+- EU/UK: "...to Client by assignment of copyright, including future copyright."
+- Germany, Austria, Switzerland: "...and grants Client the exclusive Nutzungsrechte (rights to use the work) it needs." Moral rights stay with the author.
 
 Developer retains the right to display Work Product in portfolio unless Client
 requests confidentiality in writing within [30] days of delivery.
@@ -201,7 +207,7 @@ this period. EXCEPT AS STATED, WORK PRODUCT IS PROVIDED "AS IS."
 
 ## 6. LIABILITY
 
-Developer's total liability shall not exceed total fees paid under this Agreement.
+Developer's total liability shall not exceed the total fees paid or payable under this Agreement (1x contract value).
 Neither party liable for indirect, incidental, or consequential damages.
 
 ## 7. TERMINATION

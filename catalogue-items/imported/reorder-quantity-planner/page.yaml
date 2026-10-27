@@ -36,6 +36,7 @@ how_to_use:
   - Paste the skill into your AI. Tell it your store domain, your supplier lead time and how many days of sales to read.
   - Add a supplier name if you only want that supplier's products. Ask for only low stock items if you want a short list.
   - Check the urgent list first. Place those orders before the order-by date, then open the CSV file for the full plan.
+  - The estimated cost comes from the unit cost set in Shopify. Products with no unit cost are left blank.
 output_sample:
   input:
     - Your store domain

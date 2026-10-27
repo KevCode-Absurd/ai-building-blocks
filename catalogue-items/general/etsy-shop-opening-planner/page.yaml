@@ -1,0 +1,138 @@
+new_slug: etsy-shop-opening-planner
+name: Etsy shop opening planner
+summary: "Say what you make and who buys it. Get a plan for your Etsy shop: listings, photos, price check and launch steps."
+job: set-up-store
+thinking: medium
+thinking_why: It has to turn a few facts about your product into a full plan and keep price sums straight.
+headline: Etsy shop opening planner
+subhead: "Tell it what you make or sell and who it is for. It plans your Etsy shop from start to launch: the name, a first set of listings, the photos you need, search words for titles, a price check, shipping and policies, and a checklist for the first month."
+explain: |
+  Most new Etsy shops open with a few listings, photos taken in a hurry and prices copied from other sellers. Then nothing sells, and it is hard to tell why. Often the shop was never planned around what buyers type into the search box or what each sale really costs.
+
+  This skill plans the shop before you build it. It works from what you make, who buys it and what it costs you. It suggests names, lists the first listings and the photos each needs, builds titles from the words buyers would search, and checks each price against your costs and Etsy's fees. You give it the fees from Etsy's own help pages, since they change. You also get shipping choices, shop policies and a checklist for the first month.
+when:
+  - You want to open an Etsy shop, or start selling on Etsy, and need a plan.
+  - You have a shop with few sales and want to start the listings again.
+  - You are not sure your prices cover your costs and Etsy's fees.
+not_for:
+  - "You want your own online store, not a marketplace: use the Shopify store setup reviewer."
+  - "You only need a product description: use the Product description writer."
+  - "You want to run ads for the shop: that needs a shop with some sales first."
+you_give:
+  - What you make or sell, and who buys it
+  - What each item costs you to make and send
+  - Your country and where you will ship
+  - The fees listed on Etsy's help pages today (optional but needed for the price check)
+  - Photos or notes on what you already have (optional)
+you_get:
+  - Shop name ideas and a first set of listings
+  - The photos each listing needs
+  - Title and search words for each listing, from what buyers would type
+  - A price check against your costs, and a launch checklist
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you make, who buys it, and what each item costs you.
+  - Open Etsy's fees page and paste the current fees in. Don't rely on memory, since they change.
+  - Read the first listings it suggests and swap any that you can't make well.
+  - Work through the launch checklist, and check every step against Etsy's help pages.
+output_sample:
+  input:
+    - What you make or sell, and who buys it
+    - What each item costs you to make and send
+    - Your country and where you will ship
+    - The fees from Etsy's help pages today (optional)
+  output:
+    - name: Your shop
+      contains: What you sell, who buys it and where you ship, as you told it.
+    - name: Name ideas
+      contains: Shop names that say what you sell, each with a short note.
+    - name: First listings
+      contains: A starter set of listings, with the photos each needs, a title and search words.
+    - name: Price check
+      contains: "For each listing: your cost, the fees you gave, and what you keep."
+    - name: Shipping and policies
+      contains: The choices to make and the policies to write.
+    - name: Launch checklist
+      contains: Steps before opening and for the first month.
+    - name: Missing
+      contains: Anything you did not tell it that changes the plan.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads your product
+    text: Takes what you make, who it is for and what it costs you.
+  - title: Suggests names
+    text: Gives shop name ideas that say what you sell and are easy to spell.
+  - title: Plans first listings
+    text: Picks a first set of listings and names the photos each one needs.
+  - title: Builds titles
+    text: Writes titles and search words from the words a buyer would type.
+  - title: Checks prices
+    text: Adds your costs and the fees you paste in, and shows what you keep from each sale.
+  - title: Plans shipping and policies
+    text: Lists the shipping choices and the shop policies to write.
+  - title: Writes the launch checklist
+    text: Orders the work before opening and the first month after it.
+output_shape: |
+  YOUR SHOP
+  <what you sell, who buys, where you ship>
+
+  NAME IDEAS
+  <names, with a line on each>
+
+  FIRST LISTINGS
+  <listing> | Photos needed: <list> | Title: <title> | Search words: <words>
+
+  PRICE CHECK
+  <listing> | Cost: <yours> | Fees: <the ones you gave> | You keep: <amount>
+
+  SHIPPING AND POLICIES
+  <choices to make, policies to write>
+
+  LAUNCH CHECKLIST
+  Before opening: <steps>
+  First month: <steps>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Your costs
+    how: Give the real cost of materials, time and postage. Prices built on a guess can lose money.
+  - what: The fees
+    how: Paste them from Etsy's page the day you run it. The skill never assumes a fee.
+  - what: Who buys
+    how: Be specific. "Gift buyers for new babies" gives better search words than "everyone".
+  - what: How many listings
+    how: Say how many you can make well. A small set done well beats many rushed ones.
+judge:
+  - Every title uses words a real buyer would type.
+  - Each price check uses only the costs and fees you gave.
+  - No sales figure, ranking claim or fee appears that you did not give.
+  - Every listing names the photos it needs.
+  - Steps match what you can do in Etsy today, or say to check Etsy's help pages.
+test:
+  - Search Etsy for each title's main words. Check the listings you see are the kind you plan to sell.
+  - Change one cost and run the price check again. The amount you keep should move by the same amount.
+  - Ask a friend who buys gifts which name and title they would click on.
+improve:
+  - Save your product costs in a sheet and paste it in each time you add listings.
+  - Add your photo style to the skill file, so the photo list matches the way you shoot.
+  - After the first month, paste in your shop stats and ask what to change in titles and prices.
+works_best_with:
+  tools:
+    - name: Etsy's seller help pages
+      why: They hold the current fees, rules and set-up steps. Check every fee and step there.
+    - name: Any good chat AI
+      why: Planning listings and sums from your product facts works well in any strong chat AI.
+  inputs:
+    - Photos of the items, taken in daylight
+    - Search results from Etsy for your main words
+    - Your last quote for materials and postage
+terms:
+  - term: Listing
+    meaning: One item for sale in your shop, with its photos, title, price and details.
+  - term: Search words
+    meaning: The words a buyer types into the search box, which your title and tags should include.

@@ -40,7 +40,7 @@ empty templates only - it never holds or processes real employee or customer dat
 
 ## How It Works
 
-Follow the shared execution contract. The module-specific rules below define only domain fields, decisions, calculations, and safety constraints.
+Follow the rules below. They define the domain fields, decisions, calculations, and safety constraints.
 
 ### Step 1 - Identify intent
 
@@ -104,14 +104,7 @@ Once the user asks for it, derive the fields from the confirmed context and emit
 requested artifacts. For machine-readable text, keep prose outside the data; for files,
 provide a usable link. Report material validation failures or limitations separately.
 
-**A selected Notion output is rendered by `notion-manual-import`, so route the
-Notion step there.** When the user selects Notion, hand that step to
-@notion-manual-import: it holds the CSV, the property
-mapping, the import steps and the verification checklist, and it renders the Field
-Reference below instead of defining a table of its own. Do not restate the mapping
-here and do not improvise the import steps. Manual CSV and mapping outputs need no
-connection. For requested workspace changes, follow the shared contract: verify actual
-tool access and the target before writing. A user saying "connected" is not tool evidence.
+**When the user selects Notion,** give the CSV and the property mapping table below (CSV column, Notion property, set after import). The steps are: create a database in Notion, import the CSV, then set each property type from the table. Manual CSV and mapping outputs need no connection. If asked to change a real workspace, first verify that you have actual tool access and know the target before writing. A user saying "connected" is not tool evidence.
 Never ask for a Notion password or token.
 
 For an Excel-compatible CSV, use UTF-8 with a byte order mark so Excel opens the
@@ -122,7 +115,7 @@ that need a number, date or currency format applied.
 
 ```csv
 SOP Title,Category,Department,Description,Last Reviewed,Next Review,Owner,Priority,SOP ID,Status,Tags,Version
-Client Onboarding Runbook,Process,Delivery,"The written procedure for one recurring task, with the steps in the order they are done.",2026-01-15,2026-01-15,Sneha Iyer,Low,,Published,"process, finance",v1.0
+Client Onboarding Runbook,Process,Delivery,"The written procedure for one recurring task, with the steps in the order they are done.",[YYYY-MM-DD],[YYYY-MM-DD],[Owner name],Low,,Published,"process, finance",v1.0
 ```
 
 ```sql
@@ -206,7 +199,7 @@ and anything pointing at another table stays `relation`.
 | 4 | Description | `long_text` | `TEXT` | `string` | Text | `The written procedure for one recurring task, with the steps in the order they are done.` |
 | 5 | Last Reviewed | `date` | `DATE` | `string, format: date` | Date | `2026-01-15` |
 | 6 | Next Review | `date` | `DATE` | `string, format: date` | Date | `2026-01-15` |
-| 7 | Owner | `text` | `VARCHAR(255)` | `string` | Text | `Sneha Iyer` |
+| 7 | Owner | `text` | `VARCHAR(255)` | `string` | Text | `[Owner name]` |
 | 8 | Priority | `select` | `VARCHAR(100)` | `string` | Select (add options after import) | `Low` |
 | 9 | SOP ID | `id` | `SERIAL PRIMARY KEY` | `integer` | Text (preserve source ID) | `(blank)` |
 | 10 | Status | `select` | `VARCHAR(100)` | `string` | Select (add options after import) | `Published` |
@@ -309,9 +302,8 @@ New joiners keep asking how to do client onboarding and nobody answers the same 
 
 ## Related Skills
 
-- ](https://github.com/sickn33/agentic-awesome-skills/blob/main/CATALOG.md) - find the relevant module, then read its skill.
-- @people-directory - the employee master record most modules link to.
-- @notification-reminder-hub - turns due dates in this module into reminders.
+- A people directory (not included in this copy) - the employee master record most modules link to.
+- A reminder tool (not included in this copy) - turns due dates in this module into reminders.
 
 ## Reusable Prompt
 
@@ -319,6 +311,6 @@ New joiners keep asking how to do client onboarding and nobody answers the same 
 I want to set up process documentation for my company.
 Ask me one short question at a time, and only about what I have not already told you.
 Then recommend the smallest setup that fits, and wait for me to ask before you build it.
-When I ask, output CSV, SQL DDL, JSON Schema, a Notion property mapping or an Excel workbook. Data only.
+When I ask, output CSV, SQL DDL, JSON Schema, or a Notion property mapping. For Excel, give an Excel-friendly CSV, not a workbook. Data only.
 ```
 

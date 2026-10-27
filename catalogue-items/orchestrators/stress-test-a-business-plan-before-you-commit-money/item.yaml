@@ -7,8 +7,8 @@ role: orchestrate
 job: analysis
 level: intermediate
 inputs:
-  - {type: brief, required: true}
-  - {type: plan, required: false}
+  - {type: document, required: true}
+  - {type: question, required: false}
 outputs:
   - {type: document}
   - {type: audit_report}

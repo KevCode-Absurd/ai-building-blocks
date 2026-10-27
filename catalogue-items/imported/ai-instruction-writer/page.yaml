@@ -7,7 +7,7 @@ job: make-skills
 headline: AI instruction writer
 subhead: Paste the skill or instruction file your AI keeps ignoring or follows differently each time. Your AI finds the weak lines, rewrites the trigger line, and sorts what to keep loaded from what to link. You get a tighter file and a list of triggers.
 explain: |
-  If your AI skips a skill or an instruction file you wrote, the cause is often one line: the one it always sees that says what a document is and when to open it. This skill, adapted from Matt Pocock's guide to writing for agents, teaches your AI to fix that line first.
+  If your AI skips a skill or an instruction file you wrote, the cause is often one line: the one it always sees that says what a document is and when to open it. This skill, built on Matt Pocock's guide to writing for agents, teaches your AI to fix that line first.
 
   It puts the key word first, gives each different case one trigger, and drops synonyms and words the file already says. It also weighs two costs. Text that is always loaded uses your AI's attention on every turn. Too many files leave you as the person who must remember which one to use.
 
@@ -39,6 +39,7 @@ how_to_use:
   - Ask your AI to start with the trigger line. Read the new line and check that each case has one trigger.
   - Ask for the keep-loaded and link-instead list, then the tighter file. Check that no rule you rely on was cut.
   - Put the new file in place and run it on two real tasks. If your AI still misses the file, ask for a stronger trigger word.
+  - Next, run the fixed file through the skill trigger auditor or the skill file validator.
 how_it_works:
   - title: Read the file
     text: It sorts your document into steps and reference, and spots lines that repeat or never matter.
@@ -79,7 +80,12 @@ works_best_with:
 terms:
   - term: context pointer
     meaning: The line your AI always sees that says what a document is and when to open it.
+  - term: branch
+    meaning: One case your document handles. Different runs can take different branches.
+  - term: leading word
+    meaning: The first word of the pointer line. Your AI weighs it most, so it should name the job.
   - term: trigger
     meaning: A word or case that makes your AI open a skill or file.
   - term: AGENTS.md
     meaning: A file of standing instructions that an AI coding tool reads in a project. CLAUDE.md does the same job for Claude.
+next: [skill-trigger-auditor, skill-file-validator, skill-writer]

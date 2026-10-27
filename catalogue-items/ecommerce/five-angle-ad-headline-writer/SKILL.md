@@ -5,6 +5,34 @@ description: Write five short headlines for one ad, each with a new angle. Get w
 
 # Five-angle ad headline writer
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer). It takes the ad copy.
+- **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
+- **Check it before it goes live** with the [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker). It takes the ad copy.
+- The [Headline option writer](https://useaiblocks.com/skills/headline-option-writer).
+- **Check it before it goes live** with the [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -26,17 +54,24 @@ You write 5 headlines for one ad concept, each using a different rhetorical angl
 
 - Product + one-sentence description
 - Core benefit / USP
+- Proof for each claim you will make (a result, a test, a review the user supplied)
 - Audience (specific, not demographic)
 - Awareness stage
 - Any existing winning headlines (to avoid duplicating)
 
+If a claim has no proof, mark it `MISSING: proof` and do not write a headline that depends on it.
+
+When not to use: for many products in one campaign, write a full creative brief first, then run this once per ad. For organic posts or long captions, ask your AI for a caption draft. With no product facts or proof yet, gather them first.
+
 ## STEP 2: The 5 Angles
+
+The examples below show the shape of each angle. Words in [square brackets] are placeholders. Any number you use must come from the user's own facts. Never copy an example number into a real ad.
 
 ### Angle 1: Benefit-First
 State the outcome. No setup.
-- "Absorb 5x faster."
-- "Sleep deeper. Wake earlier."
-- "97% absorption. Measured."
+- "[Verified result] in [timeframe]."
+- "[Outcome one]. [Outcome two]."
+- "[Measured number]. [How it was measured]."
 
 ### Angle 2: Curiosity
 Open a loop. Make them want the next line.
@@ -46,23 +81,31 @@ Open a loop. Make them want the next line.
 
 ### Angle 3: Question
 Name the viewer's situation.
-- "Tired of 3pm crashes?"
-- "Why does your skin do that?"
+- "Tired of [the buyer's problem]?"
+- "Why does [the thing they notice] do that?"
 - "Still using [old way]?"
 
 ### Angle 4: Direct Callout
 Address by identity or behavior.
-- "For women done with fake health."
-- "If you skip breakfast, read this."
-- "New moms. We see you."
+- "For [identity] done with [frustration]."
+- "If you [behaviour], read this."
+- "[Identity]. We see you."
 
 ### Angle 5: Contrarian
 Challenge a category assumption.
-- "Your greens aren't green."
-- "Stop stretching. Start strengthening."
-- "Dishwashers wreck your knives."
+- "Your [category item] isn't [what they assume]."
+- "Stop [common habit]. Start [better habit]."
+- "[Common method] wrecks your [thing]. (Only if true and you can show it.)"
 
-## STEP 3: Output
+## STEP 3: Draft and count
+
+1. List the claims the user has proof for.
+2. Pick one proven claim for each angle. Do not reuse a claim across angles unless the facts are few; say so.
+3. Draft one headline per angle.
+4. Count the characters and words of each. Keep each to 4 to 6 words and under 40 characters, and redraft any that run over.
+5. Check that no two headlines overlap.
+
+## STEP 3b: Output
 
 For each angle:
 
@@ -81,7 +124,7 @@ Which 2 angles should be tested first, what variable is being isolated, and what
 ## Rules
 - 4-6 words per headline. <40 chars.
 - Every angle must be distinct. No overlapping.
-- Specific > generic. Numbers where possible.
+- Specific > generic. Use a number only if the user gave it.
 - No em dashes.
 
 

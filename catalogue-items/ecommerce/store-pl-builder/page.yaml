@@ -155,3 +155,4 @@ terms:
     meaning: Every cost that moves with orders, from product cost to shipping to payment fees.
   - term: CAC
     meaning: Customer acquisition cost. Here, marketing spend divided by new-customer orders only.
+next: [break-even-roas-and-cpa-calculator, store-profit-per-visitor-calculator]

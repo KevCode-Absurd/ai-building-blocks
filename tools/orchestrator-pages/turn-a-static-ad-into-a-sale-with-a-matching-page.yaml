@@ -9,14 +9,14 @@ subhead: Give it your image ad, its copy and your offer. It scores the ad and re
 explain: |
   Your image ad earns clicks, but the page behind it says something else, so visitors leave. Often the ad itself is part of the problem. It may speak to the wrong buyer, or lead with a claim nobody believes.
 
-  The steps fix the ad first, because the page copies its promise. The critic scores the ad, finds what to fix and writes two stronger headlines. The awareness checker reads the fixed ad and says how much the buyer already knows. The writer builds a page whose first screen picks up where the ad stops, and answers each doubt in its own section. The last step checks the final ad and page together. Nothing in this run waits on you, but you should read the fixed ad before the page is written.
+  The steps fix the ad first, because the page copies its promise. The critic scores the ad, finds what to fix and writes two stronger headlines. The awareness checker reads the fixed ad and says how much the buyer already knows. The writer builds a page whose first screen picks up where the ad stops, and answers each doubt in its own section. The last step checks the final ad and page together. After the first step it shows you the fixed ad and asks if you want to keep the fixes, because the page is written from it. If you are not there, it carries on.
 when:
   - Your image ad gets clicks, but few of those visitors buy from the page.
   - You are about to launch a new static ad and want its page written to match from the start.
   - You wrote the ad and the page at different times, and the promise has drifted.
 not_for:
   - "You have a video ad: use the Pre-launch ad checker, or the Video hook scorer if you only need the first seconds."
-  - "You only want to check ad rules before launch: use the Meta ad policy checker."
+  - "You only want to check ad rules before launch: use the Meta ads compliance checker."
   - "You have no landing page plan yet and only want a new ad picture: use the Single image ad planner."
 you_give:
   - Your image ad, attached as a file
@@ -29,7 +29,7 @@ you_get:
   - Landing page copy whose first screen repeats the ad's promise, and a list of facts still missing
   - A rules check on the ad and page together, and the ad rewritten so it passes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It holds HANDOFF.md and the 4 skill files in the order they run: Static ad critic, Ad awareness stage checker, Ad-matched landing page writer and Meta ads compliance checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach your ad image and paste its headline and text. Add your offer, price and guarantee.
   - Read the fixed ad after step 1. The page is written from it, so change it now if a fix is wrong.

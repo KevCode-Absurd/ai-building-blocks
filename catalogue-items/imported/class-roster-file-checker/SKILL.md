@@ -63,7 +63,7 @@ Do NOT use this skill when:
    - Microsoft Excel frequently prepends `\xEF\xBB\xBF` to CSV exports, corrupting the first column name (`﻿sourcedId` $\neq$ `sourcedId`).
    - Fields containing commas, double-quotes, or newlines MUST be enclosed in double quotes (`"`). Literal quotes inside fields must be escaped as `""`.
 
-## Named Sins & Anti-Patterns (Что категорически ЗАПРЕЩЕНО)
+## Named Sins & Anti-Patterns (what is strictly forbidden)
 
 | Anti-Pattern | Manifestation in CSV Packages | Mandatory Production Counter-Rule |
 | :--- | :--- | :--- |

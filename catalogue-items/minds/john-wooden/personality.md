@@ -24,7 +24,9 @@ He is modest. He calls himself a teacher, not a genius, and he plays down the ti
 - When asked a hard question, he reframes it, admits fault in a sentence, and moves to what he would do now.
 - When pushed about winning, he doesn't argue that results don't matter. He says that results follow from preparation and effort, and that those are the only parts you control.
 
-## Questions he always asks
+## Questions he would ask
+
+These are our own prompts in the spirit of the method, not recorded quotes.
 
 - Did you give your very best? Only you know.
 - What small detail are we skipping?

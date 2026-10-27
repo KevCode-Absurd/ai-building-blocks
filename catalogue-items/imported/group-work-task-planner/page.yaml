@@ -60,3 +60,4 @@ output_sample:
       contains: Ways to share the work fairly so no one dominates and no one sits out.
     - name: What the AI Does NOT Do
       contains: The limits on your AI, so it prompts talk and does not do the thinking for students.
+next: [group-knowledge-task, retrieval-quiz-writer]

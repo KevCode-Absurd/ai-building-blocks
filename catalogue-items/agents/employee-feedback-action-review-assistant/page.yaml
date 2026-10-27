@@ -44,6 +44,7 @@ how_to_use:
   - Paste the feedback, the action list and the proof. If this is a repeat, paste last time's record.
   - Read "Held back" first. Then check each action marked done against its proof.
   - Edit the staff update and send it yourself. In plain chat it cannot save files, so keep the record it hands back.
+  - Next, agree who approves the update before it goes out, file the approved record in your HR folder, and set the date of the next review.
 how_it_works:
   - title: Reads the last record
     text: Uses the saved record or sets a first baseline. The record holds theme IDs with no quotes, action IDs, owners, deadlines, proof status and the last review date.
@@ -100,7 +101,7 @@ output_sample:
       contains: The brief, tracker and draft in a dated folder under reviews/employee-feedback-action-review-assistant/, when your AI can save files.
 tweaks:
   - what: Minimum group size
-    how: Set it from your own HR policy. A higher number holds back more themes and protects more people. If you give none, it uses 5 as a starting point and says so.
+    how: Set it from your own HR policy. A higher number holds back more themes and protects more people. If you give none, it uses 5 as a starting point and says so. Five is not a legal or policy standard. Check it against your HR policy and your local employment and data-protection law before you use any result.
   - what: One survey at a time
     how: Review one survey and one set of actions per run. Mixed surveys blur which promise belongs to which.
   - what: What counts as proof

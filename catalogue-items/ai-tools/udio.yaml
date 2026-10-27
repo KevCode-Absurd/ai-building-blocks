@@ -38,6 +38,7 @@ first_result:
   - "Write a style description in a sentence or two, such as the genre, mood and tempo. Leave the lyrics blank to have Udio write them, or paste your own."
   - "Generate, then listen to every version. Pick the one closest to your idea."
   - "Extend that version if you want a longer track. Treat the result as a draft, not a finished song."
+  - "You end with several song versions to pick from. Next: compare Suno, or plan a jingle with the Jingle video ad script writer."
 needs:
   - "A free Udio account. We could not confirm sign-in options."
   - "A one or two line description of the style and mood."

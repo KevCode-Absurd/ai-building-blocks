@@ -41,8 +41,7 @@ Complete and populate integrated financial model templates with proper linkages 
 **Environment — one path: officecli.**
 - Build every workbook with the `officecli` CLI. Load **`xlsx-author`** for the build loop and **`officecli-xlsx`** for the element vocabulary.
 - Write formulas as `--prop formula="D14*(1+Assumptions!$B$5)"` (no leading `=`). **No `recalc.py` step** — officecli evaluates formulas on read.
-- **Section headers:** set value, merge, and fill in one call on the top-left cell; the merge ref is the `merge` prop's value. `
-  `{"command":"set","path":"A1","props":{"value":"INCOME STATEMENT","merge":"A1:G1","fill":"1F4E79"}}`
+- **Section headers:** set value, merge and fill in one call on the top-left cell. The merge ref is the `merge` prop's value. Example: `{"command":"set","path":"A1","props":{"value":"INCOME STATEMENT","merge":"A1:G1","fill":"1F4E79"}}`
 - All principles below apply identically in either environment.
 
 **Formulas over hardcodes (non-negotiable):**

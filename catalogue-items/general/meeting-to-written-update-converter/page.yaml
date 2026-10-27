@@ -9,7 +9,7 @@ headline: "Meeting to written update converter"
 subhead: "Paste a recurring meeting's purpose, agenda, attendees and a recent set of notes. It sorts each item into report, decide, solve or social and counts the hours the meeting costs. You get a written update to replace the report parts, a template, the shorter meeting that stays and a two-week trial."
 
 explain: |
-  The weekly status meeting is six people listening to one person read. Everyone agrees it is too long. Nobody cancels it, because somewhere in it a decision gets made. Jason Fried has made the public case for years that the report parts belong in writing and the room should be kept for the few things that need one.
+  The weekly status meeting is six people listening to one person read. Everyone agrees it is too long. Nobody cancels it, because somewhere in it a decision gets made. Many teams now keep the report parts in writing and save the room for the few things that need one.
 
   This prompt sorts your agenda into four kinds of item: report, decide, solve or social. It checks each label against what was said last time, so the sort rests on the notes and not on the agenda. It counts the cost in hours per month and shows every sum, so you can check them. Then it designs the written update, with who writes it, when, where, a word limit and how questions get asked.
 

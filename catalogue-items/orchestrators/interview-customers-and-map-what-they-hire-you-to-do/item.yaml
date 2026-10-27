@@ -14,7 +14,7 @@ outputs:
 uses: [customer-interview-coach, customer-research-analyst, customer-job-mapper, customer-path-blueprint-maker]
 steps:
   - {uses: customer-interview-coach, note: "Turns your idea into questions that draw honest answers and a plan for finding the people to ask. You take these into your talks and write down what was said."}
-  - {uses: customer-research-analyst, note: "Uses your own interview notes from the talks, not step 1's questions. Makes the buyer profile and the quote file that steps 3 and 4 both use."}
+  - {uses: customer-research-analyst, note: "Uses your own customer interview notes from the talks, not step 1's questions. Finds the jobs customers hire you for, their pains and their exact words, and makes the buyer profile and the quote file that steps 3 and 4 both use."}
   - {uses: customer-job-mapper, note: "Takes step 2's buyer profile and writes the jobs they hire you for, with the trigger and rivals. This is one of two final documents; step 4 does not need it."}
   - {uses: customer-path-blueprint-maker, note: "Uses step 2's buyer profile and quote file, not step 3's jobs document, to map each step they take and where it hurts. This is the second final document."}
 origin: rebuilt

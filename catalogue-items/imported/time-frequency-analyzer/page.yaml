@@ -32,7 +32,7 @@ you_get:
   - Frequency over time estimates
   - Working MATLAB code
 how_to_use:
-  - Open an AI that can run MATLAB, or run the code it gives you in your own MATLAB. You need the Signal Processing and Wavelet Toolboxes.
+  - Open an AI that can run MATLAB, or run the code it gives you in your own MATLAB. You need a paid MATLAB licence with the Signal Processing and Wavelet Toolboxes. The AI step alone does not give a checked result, so run the code and look at the plots yourself. The licence allows use of this skill only with MathWorks products (see LICENSE.md).
   - Paste the skill text into the chat, or attach the skill folder if your AI accepts files.
   - Give your signal, your sample rate and what you want to find. Add a second signal if you want to compare two.
   - Read the method choice first. If it does not fit your goal, say so and ask for another method.

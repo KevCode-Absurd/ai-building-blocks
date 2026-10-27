@@ -79,6 +79,9 @@ Before optimizing vehicle loading, understand:
 ### Key Loading Principles
 
 **1. Axle Weight Distribution**
+- These are general planning figures for large trucks, not legal limits for a van. Use the axle and GVWR limits on the user's vehicle plate or in its handbook. If the user does not give them, write `MISSING: axle limits` and say the axle check is not valid.
+- The code below places the rear axle at a fixed 60% of cargo length. That is an estimate. Say so in the result, and tell the user to confirm with a weighbridge.
+- Hazardous goods have legal rules that vary by country. Flag them for separate handling and tell the user to follow their local dangerous goods rules. Do not plan their stowage from this skill.
 - Front axle: 12,000-13,000 lbs max (varies by state)
 - Rear axle(s): 34,000 lbs max
 - Gross Vehicle Weight Rating (GVWR): varies

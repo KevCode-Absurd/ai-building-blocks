@@ -2,12 +2,12 @@ thinking: low
 thinking_why: It runs searches and pulls out text with little judgement.
 new_slug: scientific-web-searcher
 name: Scientific web searcher
-summary: Find papers and pages on a research topic by meaning, with the text pulled out. Use this scientific web searcher with an Exa key and Python.
+summary: Find papers and pages on a research topic by meaning, with the text pulled out. Needs an Exa key and Python.
 job: research-topics
 headline: Scientific web searcher
-subhead: Name a research topic. Get papers and pages found by meaning, with text pulled out of the links. Uses Exa. Bring a research topic or question. Use the result to plan your next step.
+subhead: Papers and web pages on your research topic, found by meaning, with the text pulled out of each link. It runs on Exa, a paid search service.
 explain: |
-  A set of papers and web pages on your topic, found by meaning instead of exact keywords, with the page text already pulled out so Claude can read it. It runs on Exa, a search service, so you need an Exa API key and Python.
+  A set of papers and web pages on your topic, found by meaning instead of exact keywords, with the page text already pulled out so your AI can read it. It runs on Exa, a search service, so you need an Exa API key and Python.
 
   For science and technical questions it runs two passes. The first uses a scholarly bias to favour journals, preprints and trusted institutions. The second looks at a short list of academic sites. It prefers peer-reviewed work, then preprints, then government and university pages, over blogs. When you already have links, it can fetch the full text of many pages, including PDFs, in one batch.
 when:
@@ -32,9 +32,10 @@ you_get:
 how_to_use:
   - Get an Exa API key at dashboard.exa.ai. Exa is a paid service, so check its pricing first.
   - Use an AI that can run code, with Python 3.11 or newer. Add the skill folder and set your key as EXA_API_KEY.
-  - Tell your AI your research topic or question. Ask it to follow this skill and search with the publication category.
+  - "Read SKILL.md first, then references/web-search.md. Then tell your AI: \"Search Exa for [your topic], using the publication category and the two-pass academic search, and give me the ranked list with the text.\""
   - If you have links, ask it to fetch the text from all of them in one batch.
   - Check each source's type and date before you rely on it. Peer-reviewed work is stronger than preprints or blogs.
+  - Next, keep the sources you trust and ask your AI to pull the full text for those. Read them before you cite anything.
 output_sample:
   input:
     - Your research topic or question

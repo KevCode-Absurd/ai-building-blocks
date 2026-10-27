@@ -9,7 +9,7 @@ subhead: A re-org or tool switch gets a rollout plan, message templates and a pl
 explain: |
   A re-org or tool switch gets a rollout plan, message templates and a plan for pushback, so people actually adopt it. Most changes fail in the rollout, not the design, and this plan is built around the stages people go through.
 
-  It uses a fast-moving version of the ADKAR model. First, awareness: explain why, honestly, before what. Then desire: answer what is in it for each group, since understanding does not create buy-in. Next come knowledge, ability and reinforcement. It suggests short founder videos over formal documents, names common mistakes at each stage, and gives you wording for each group. It also covers resistance and change fatigue.
+  It uses a fast-moving version of the ADKAR model. First, awareness: explain why, honestly, before what. Then desire: answer what is in it for each group, since understanding does not create buy-in. Next come knowledge, ability and reinforcement. It suggests short founder videos over formal documents, names common mistakes at each stage, and gives you wording for each group. It also covers resistance and change fatigue. This is Alireza Rezvani's change-management skill, shared under the MIT licence and adapted from Prosci's ADKAR model.
 when:
   - You are moving the team to a new CRM and expect complaints.
   - A strategy pivot is coming and people may not trust it.
@@ -30,8 +30,10 @@ you_get:
   - Answers to likely pushback
   - Ways to keep the change in place
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Start a chat in Claude, ChatGPT or Gemini. Add the skill, or paste the text of SKILL.md into the chat.
+  - Paste your answers to the four questions under "What you give it": what is changing and why, who is affected and how they feel, your timeline, and past changes that went badly (optional).
+  - Ask for the rollout plan. Read the stage plan and the communication sequence first.
+  - Next, write the actual announcement with the Change announcement skill. Then run the week 2 and week 4 check-ins from the communication sequence.
 output_sample:
   input:
     - What is changing and why

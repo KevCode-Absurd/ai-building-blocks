@@ -22,14 +22,14 @@ you_give:
   - Your product idea and what you already know about it
   - Customer words, reviews or messages (optional)
   - Your brand facts (optional)
-  - After the test, a note of what each person did and said
+  - After the test, a note of what each person did and said (step 3 waits for it)
 you_get:
   - Four risks scored out of 100, with the weakest named
   - One small test, who to run it on and what to cut from it
   - A fail line written before you run it
   - A keep going or change course call, with the new guess and a review date
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It has HANDOFF.md and three skill files, in the order they run: Product idea risk checker, Smallest test picker and Pivot or persevere decider."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your idea and anything real you have, such as sales, messages or customer words. Say what you have not proved yet.
   - Run the test with five to twenty people. Write down what they did, including who said no.

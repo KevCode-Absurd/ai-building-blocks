@@ -32,8 +32,10 @@ how_to_use:
   - Make a free account at transcriptapi.com. It gives you 100 credits and needs no card. Copy your key.
   - Save the key as TRANSCRIPT_API_KEY in your AI tool. Use an AI that can run code and reach the internet.
   - "Paste this skill into your AI, then say: Search YouTube for your topic, sort by views, past month, top 10."
-  - Check the list. Each search page costs 1 credit.
+  - Check the list. Each search page costs 1 credit, and pulling a transcript costs credits too, so check your credit count before you pull many.
+  - This searches YouTube through a third-party service. Check YouTube's terms and your own policy before you use the results commercially.
   - Tell your AI which videos you want, and ask for their transcripts.
+  - Next, summarise the transcripts with youtube-video-summariser, or use them to plan videos with video-content-planner.
 output_sample:
   input:
     - A topic or search phrase
@@ -54,3 +56,4 @@ output_sample:
       contains: The spoken text of the videos you pick, with timestamps.
     - name: Credits used
       contains: A count of the credits the searches and transcripts cost.
+next: [youtube-video-summariser, video-content-planner]

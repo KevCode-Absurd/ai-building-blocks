@@ -16,8 +16,8 @@ uses: [tech-debt-tracker, tech-debt-prioritiser, code-ownership-analyst, codebas
 steps:
   - {uses: tech-debt-tracker, note: "Every month: scan the code, score each item and save a dated snapshot to compare with last month's. Uses your code. Hands the scored list to step 2 to rank."}
   - {uses: tech-debt-prioritiser, note: "Every month, after the scan: rank the open items by what they cost you in slowed work, bugs and risk. Uses your code and step 1's snapshot. Hands a short list of the 3 to 5 top items to the next steps."}
-  - {uses: code-ownership-analyst, note: "Only when a top item sits in code that one person alone knows: who owns it and how to spread that. Uses your code, for that area only. Hands the ownership risk to the hand-back."}
-  - {uses: codebase-architecture-reviewer, note: "Only when three or more top items sit in the same area: a design cause behind the repeats. Uses your code, for that area only. Hands the design fix to the splitter as a change to cut up."}
+  - {uses: code-ownership-analyst, note: "Only when a top item sits in code that one person alone knows: who owns it and how to spread that. Uses your code, for that area only. Hands the ownership risk to the hand-back. Step 2's list only decides whether it runs; it reads your code."}
+  - {uses: codebase-architecture-reviewer, note: "Only when three or more top items sit in the same area: a design cause behind the repeats. Uses your code, for that area only. Hands the design fix to the splitter as a change to cut up. It does not use step 3's result; the two run side by side."}
   - {uses: structure-behaviour-split, note: "Once per chosen fix: cut it into tidy-up steps, each small enough to review alone. Takes one fix from step 2's short list, or step 4's design fix, as the change. Hands tidy-up steps for you to approve."}
 schedule: "First working day of each month"
 asks_before: [changing code, deleting code, opening tickets or pull requests, changing the sprint plan, merging anything]

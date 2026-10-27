@@ -142,8 +142,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify reports", why: "Show which products your existing buyers bought together, for the cross-sell check."}
-    - {name: "Klaviyo or another email tool", why: "Runs the first test, an email send to your list."}
+    - {name: "Shopify reports", why: "Show which products your existing buyers bought together, for the cross-sell check. You need a paid Shopify plan."}
+    - {name: "Klaviyo or another email tool", why: "Runs the first test, an email send to your list. Most email tools are paid."}
     - {name: "Any good chat AI", why: "Any current chat AI can run the checks from the facts you paste."}
   inputs:
     - "Orders that show which products buyers bought together"

@@ -70,7 +70,7 @@ For skills with `requirements.txt`, `package.json`, or inline `pip install`:
 
 | Check | What It Does | Severity |
 |-------|-------------|----------|
-| **Known vulnerabilities** | Cross-reference with PyPI/npm advisory databases | 🔴 CRITICAL |
+| **Known vulnerabilities** | Match against a local list of known-risky patterns (no live advisory lookup) | 🔴 CRITICAL |
 | **Typosquatting** | Flag packages similar to popular ones (e.g., `reqeusts`) | 🟡 HIGH |
 | **Unpinned versions** | Flag `requests>=2.0` vs `requests==2.31.0` | ⚪ INFO |
 | **Install commands in code** | `pip install` or `npm install` inside scripts | 🟡 HIGH |

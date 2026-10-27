@@ -7,6 +7,8 @@ description: Use when a video ad should look like one person talking to their ph
 
 You write a 15 to 60 second script for one person talking to their phone. It should pass as a post from a person until the last line, and every claim in it must hold up. People tell stories in three moves: this was going on, but something got in the way, so I did this. Weak scripts skip the middle and list features. This one opens on the snag and spends most of its time on the product in someone's hands.
 
+Not for a product whose benefit can't be seen in a hand, like software or a service: use a plain narrated video with diagrams or a short screen recording. To make the AI presenter clips from this script, use the Selfie-style video prompts skill. For a brief for a real creator to film, use the Creator filming brief writer.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,7 +32,7 @@ How to start:
 
 **Tools that do this best:**
 - **Claude:** Keeps the speaker rules and the one-detail limit in view across a long brief.
-- **Veo:** Turns a start frame of your AI presenter into short talking clips with the lips matched to the line.
+- **Veo:** Turns a start frame of your AI presenter into short talking clips with the lips matched to the line. Veo is a paid Google service that needs an account; this script does not need it.
 <!-- /needs -->
 
 ## What you need
@@ -74,10 +76,9 @@ How to start:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the video ad script.
-- **Make video ads** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor). It takes the video ad script.
-- **Make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). It takes the video ad script.
-- **Write the ad copy** with the [Video scripts for buyer groups](https://useaiblocks.com/skills/persona-script-multiplier). It takes the video ad script.
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the script.
+- The [Creator filming brief writer](https://useaiblocks.com/skills/creator-filming-brief-writer). It takes the script.
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts). It takes the script.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -102,10 +103,10 @@ Write `MISSING: <what>` and ask once, in one short message, then carry on. No bu
 
 ## Desire, audience voice and casting note
 
-Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-ugc-script.md.
+Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Extra detail is in references/cmo-method-ugc-script.md; you can skip it, because this section holds the rules you need.
 
 State one primary desire or practical job from buyer evidence: convenience, competence, belonging, security, relief or the actual motive present. Do not combine every desire or infer a diagnosis or protected trait.
 
 Set voice by audience situation: vocabulary in customer words, sentence length, knowledge, intensity and what the speaker cannot credibly say. Do not invent slang from an age label. Keep approved claims and uncertainty.
 
-Add a creator-match note: authentic experience or demonstration needed, product familiarity, action, setting and disclosure. A real customer story needs a real authorized customer; a fictional presenter can deliver a brand demonstration without pretending personal results. Replace private external framework dependencies with this self-contained record. Return script, hooks, desire/evidence map, casting note and proof gaps.
+Add a creator-match note: authentic experience or demonstration needed, product familiarity, action, setting and disclosure. A real customer story needs a real authorized customer; a fictional presenter can deliver a brand demonstration without pretending personal results. Return script, hooks, desire/evidence map, casting note and proof gaps.

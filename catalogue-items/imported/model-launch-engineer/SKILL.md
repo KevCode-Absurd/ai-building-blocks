@@ -47,7 +47,7 @@ Provide the agent with a trained model artifact, its dependencies, and the targe
 import joblib
 import numpy as np
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, field_validator
 from contextlib import asynccontextmanager
 from typing import List
 
@@ -64,7 +64,8 @@ app = FastAPI(title="ML Model API", version="1.0.0", lifespan=lifespan)
 class PredictionRequest(BaseModel):
     features: List[float]
 
-    @validator("features")
+    @field_validator("features")
+    @classmethod
     def validate_features(cls, v):
         if len(v) != 4:
             raise ValueError("Expected exactly 4 features")
@@ -90,6 +91,8 @@ def predict(request: PredictionRequest):
 ```
 
 ### Example 2: Docker + Kubernetes Deployment
+
+> Sample code, not tested here. The `LoadBalancer` service below is open to the internet. Before you expose a model API, add an API key check or keep it on a private network.
 
 **Dockerfile:**
 

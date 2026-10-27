@@ -36,7 +36,8 @@ how_it_works:
 output_shape: |-
   Evaluation criteria and cases
   Feedback loop design
-  Quality findings and next experiment
+  Quality findings: five scores out of 5, the three worst problems ranked, a fix for each
+  Next experiment: the one change to try next, in a short paragraph
 tweaks:
   - what: Scope
     how: Name the date window, project or business to keep the work focused.

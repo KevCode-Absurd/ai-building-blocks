@@ -24,6 +24,7 @@ you_give:
   - Your brand file or your colours and voice (optional)
   - Product facts such as size and label text (optional)
   - The size you need the final images (optional)
+  - The image tool and the upscaler you will use (step 4 asks which, and an image tool may bill each picture)
 you_get:
   - A plan for the set that says what repeats, what changes and how many pieces
   - A ready-to-paste image prompt for each piece, with exact words and a fix for each fault

@@ -30,9 +30,10 @@ you_get:
   - Tests for your modules
   - A diagnosis for failed runs
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Use one that can run code and read files, because this skill runs Nextflow.
+  - Use an AI that can run terminal commands on your own computer, such as Claude Code. A plain chat window cannot install or run Nextflow.
+  - "Gather first: your input files, the reference genome and annotation if you work with DNA data, a samplesheet (a table listing your samples and their files), and the Java and container versions on your machine."
   - Make sure Java, Nextflow and a container tool such as Docker are installed on your machine.
-  - Paste the skill into the chat. Then describe your data steps, your tools and your input files.
+  - Add the skill to your AI, or paste it in. Then describe your data steps, your tools and your input files.
   - "Say where it will run: laptop, cluster or cloud. Paste the error log too if a run failed."
   - Read the pipeline and the config before you run it on real data. Try the small test run first.
   - Ask your AI to add nf-test tests once the pipeline runs well.

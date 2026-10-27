@@ -90,7 +90,7 @@ Implement the highest-leverage loop first:
 - Compound results over time
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Use $ARGUMENTS to pass the items below. If you pasted this skill into a chat, write them in your message instead:
 - Product description and primary user action
 - Target user demographics and behavior
 - Existing sharing/collaboration features
@@ -104,7 +104,7 @@ A growth loops analysis including:
 - Secondary loops to layer over time
 - Key metrics and measurement framework
 - 30-60-90 day implementation roadmap
-- Potential loop coefficient and growth projections
+- Potential loop coefficient and growth projections (use only figures the user gave; label every coefficient as an estimate and show how you worked it out)
 
 ## Framework
 Based on growth loops research by Ognjen Bošković. Focuses on compounding user acquisition through built-in, product-native sharing and collaboration mechanisms.

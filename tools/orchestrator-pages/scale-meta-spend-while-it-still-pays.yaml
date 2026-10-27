@@ -32,7 +32,7 @@ you_get:
   - A ranked split of the next $10,000, with the stop point for each channel
   - After the scale test, the delivery step that is failing and what to change first
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 4 skill files in the order they run: Platform ROAS reality check, Meta scaling campaign planner, Next-dollar budget allocator and Meta delivery troubleshooter."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your ad results and store totals for the same dates. Use dates that have closed.
   - Write down the return you need to break even, and pick the campaign to scale.

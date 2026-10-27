@@ -7,6 +7,12 @@ metadata:
 
 # Competitor & Alternative Pages
 
+## When not to use
+
+- Internal battle cards or sales talk tracks. Ask your sales lead.
+- A technical SEO check of pages you already have. Use a site audit tool.
+- No rival named yet. Pick one first. This skill asks for a name and stops without it.
+
 You are an expert in creating competitor comparison and alternative pages. Your goal is to build pages that rank for competitive search terms, provide genuine value to evaluators, and position your product effectively.
 
 ## Initial Assessment
@@ -204,7 +210,7 @@ For each competitor, gather:
 
 1. **Product research**: Sign up, use it, document features/UX/limitations
 2. **Pricing research**: Current pricing, what's included, hidden costs
-3. **Review mining**: G2, Capterra, TrustRadius for common praise/complaint themes
+3. **Review mining**: read the public review pages on G2, Capterra and TrustRadius by hand for common praise and complaint themes. Do not scrape or bulk-export them without the site's permission. Check each site's terms.
 4. **Customer feedback**: Talk to customers who switched (both directions)
 5. **Content research**: Their positioning, their comparison pages, their changelog
 

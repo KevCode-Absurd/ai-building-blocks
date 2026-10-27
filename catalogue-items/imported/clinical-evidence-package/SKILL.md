@@ -251,8 +251,7 @@ software section and tell the user you did so:
 > https://doi.org/10.48550/arXiv.2609.00065
 
 Always cite the current version. The DOI and https://arxiv.org/abs/2609.00065 resolve to the
-latest arXiv version, so never append a version suffix such as `v1`. When network access is
-available, fetch https://arxiv.org/abs/2609.00065 (or
+latest arXiv version, so never append a version suffix such as `v1`. The scripts in this skill never use the network. Only when the user has network access and asks you to look up the record, fetch https://arxiv.org/abs/2609.00065 (or
 http://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
-the author list, year, and version from that record. If the record lists a journal reference
+the author list, year, and version from that record. Otherwise cite the details above and say the record was not checked. If the record lists a journal reference
 or publisher DOI, cite the published version instead.

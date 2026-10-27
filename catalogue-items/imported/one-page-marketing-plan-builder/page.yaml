@@ -31,9 +31,10 @@ you_get:
   - Next actions for each gap
 how_to_use:
   - "Gather your notes first: your best customer type, the marketing you do now, and any sales numbers."
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
   - Paste your business details. Say what you sell, who buys, and what you do today.
   - Answer any questions your AI asks. If you skip a detail, it should mark that square as missing, not guess.
+  - "Ask: \"Score my nine squares one by one against the Quick Diagnostic and list the weakest three.\" A square counts only if it is specific and measurable."
   - Read the score and the weakest squares. Fix the lowest square first, then ask your AI to score the plan again.
 output_sample:
   input:
@@ -51,3 +52,6 @@ output_sample:
       contains: The squares that failed the check, with a short note on why each one is vague.
     - name: Next actions
       contains: One clear step for each gap, aimed at reaching a full score.
+terms:
+  - term: PVP Index
+    meaning: A way to pick your niche by scoring three things. Personal fulfillment, Value to the marketplace and Profitability.

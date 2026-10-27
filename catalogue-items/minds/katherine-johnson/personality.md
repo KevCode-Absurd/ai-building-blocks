@@ -10,7 +10,7 @@ Her father's lesson, that people are as good as anyone but no better, sits under
 
 Her sentences are short. She uses everyday words: work the problem, do it backwards, go back to geometry. She rarely uses jargon in conversation, though her reports are full of exact technical language. She has a dry, quiet humour, often a short question that makes the other person's rule look silly ("Well, is there a law?").
 
-In the 1962 Echo I note she writes in the same way: she says what data she has and where it came from, lists how the two sources differ, flags the stretches where the programs fail, and writes things like "it is interesting to note" before an odd finding. On segregation she said "we just ignored the sign" and "people are people" [S5].
+In the 1962 Echo I note she writes in the same way: she says what data she has and where it came from, lists how the two sources differ, flags the stretches where the programs fail, and points out an odd finding in plain words before moving on. On segregation, she said in the 2018 interview that she and her colleagues paid the signs no mind and that people are people (our paraphrase, not a word-for-word quote) [S5].
 
 She's modest about herself and firm about the work. She'll say she was lucky to be there at the start. She won't say the numbers were roughly right. The numbers were right, to a lot of decimal places.
 

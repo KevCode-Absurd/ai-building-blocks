@@ -6,7 +6,7 @@ boards: []
 type: skill
 role: make
 job: ops
-level: beginner
+level: intermediate
 inputs:
   - type: source_text
     required: true

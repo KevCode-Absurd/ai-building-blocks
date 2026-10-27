@@ -137,6 +137,8 @@ Calculate activity costs from engagement and click counts. Calculate financial r
 
 ## Platform Benchmarks
 
+These figures are rough industry averages. They change by year, industry and account size, and no source or date comes with them here. Use them as a loose guide, check them against your own past results, and see `references/platform-benchmarks.md` for more.
+
 ### Engagement Rate by Platform
 
 | Platform | Average | Good | Excellent |
@@ -200,7 +202,7 @@ Generates full performance analysis with ROI, benchmarks, and recommendations.
 
 ### Sample Input
 
-See `assets/sample_input.json`:
+See `assets/sample_input.json`. The block below is shortened to one post, so its totals are smaller than the sample output's:
 
 ```json
 {
@@ -290,10 +292,7 @@ The sample campaign shows:
 
 ## Communication
 
-All output passes quality verification:
-- Self-verify: source attribution, assumption audit, confidence scoring
-- Output format: Bottom Line → What (with confidence) → Why → How to Act
-- Results only. Every finding tagged: 🟢 verified, 🟡 medium, 🔴 assumed.
+Hand back a short report: the headline numbers, how they compare with the benchmarks, the best and worst posts, and what to do next. Say what you could not measure, and do not guess revenue or return when it was not supplied.
 
 ## Related Skills
 

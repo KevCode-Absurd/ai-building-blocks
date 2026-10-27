@@ -14,7 +14,7 @@ You are a support reporting analyst. Generate a comprehensive weekly support dig
 Run `composio search "list support tickets from Gorgias filtered by date range" "get ticket details from Gorgias" "send a formatted message to Slack channel"` in Bash.
 
 ### Step 2: Fetch the week's data
-Run `composio execute GORGIAS_LIST_TICKETS -d '{...past 7 days...}'` in Bash to pull all tickets from the past 7 days. Paginate to get the complete set. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
+Run `composio execute GORGIAS_LIST_TICKETS -d '<JSON>'` in Bash, with the date range set to the past 7 days (or the week the user named), using the argument names from the schema to pull all tickets from the past 7 days. Paginate to get the complete set. If the CLI reports the toolkit is not connected, ask the user to run `composio link gorgias` and retry.
 
 ### Step 3: Enrich key tickets
 For a representative sample (up to 25 tickets), run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>"}'` in Bash as parallel calls to get response time data and message details.
@@ -29,8 +29,9 @@ For a representative sample (up to 25 tickets), run `composio execute GORGIAS_GE
 - New tickets: X (+/-Y% vs last week)
 - Resolved: X
 - Still open: X
-- Avg first response: Xh
-- Avg resolution time: Xh
+- Avg first response: Xh (from a sample of up to 25 tickets)
+- Avg resolution time: Xh (from a sample of up to 25 tickets)
+- Sample note: ticket counts cover the whole week; the averages come from the sample only. Say how many tickets the sample held.
 - CSAT: X% (if available)
 
 ### Top Issues This Week
@@ -56,7 +57,7 @@ For a representative sample (up to 25 tickets), run `composio execute GORGIAS_GE
 
 ### Step 5: Confirm and post to Slack
 Show the digest to the user for review. After confirmation:
-1. Run `composio execute SLACK_FIND_CHANNELS -d '{...}'` in Bash to find the target Slack channel, parse the JSON output for the channel ID
+1. Run `composio execute SLACK_FIND_CHANNELS -d '<JSON>'` in Bash (ask the user which channel, and use the argument names from the schema) to find the target Slack channel, parse the JSON output for the channel ID
 2. Format the digest as a Slack message (use markdown_text for formatting)
 3. Run `composio execute SLACK_SEND_MESSAGE -d '{"channel":"<channel id>","text":"<digest>"}'` in Bash
 4. Parse the JSON output and confirm with the posted message link

@@ -33,8 +33,8 @@ Use this skill when:
 ### Storefront API
 
 - Public storefront access
-- Uses public access token
-- Safe for frontend/client-side
+- Public access token: safe for frontend/client-side code
+- Private access token: for server-side code only, never in the browser
 
 ## Getting Started
 
@@ -54,6 +54,8 @@ const shopify = shopifyApi({
 ```
 
 ### Making Requests
+
+The example below is for a Remix app (the Shopify app template). Outside Remix, use the client from the setup above. Shopify retires old API versions, so check that 2025-01 is still supported before you use it.
 
 ```javascript
 // In a Remix app route
@@ -579,13 +581,19 @@ async function queryWithRetry(admin, query, variables, maxRetries = 3) {
 
 ### Authentication
 
+Install the client with `npm install @shopify/storefront-api-client`. Use a public token in browser code. This server-side example uses a private token from an environment variable:
+
 ```javascript
-const storefrontClient = new StorefrontApiClient({
+import { createStorefrontApiClient } from "@shopify/storefront-api-client";
+
+const storefrontClient = createStorefrontApiClient({
   privateAccessToken: process.env.STOREFRONT_ACCESS_TOKEN,
   storeDomain: "your-store.myshopify.com",
   apiVersion: "2025-01",
 });
 ```
+
+For browser code, pass `publicAccessToken` instead of `privateAccessToken`.
 
 ### Product Query (Storefront)
 

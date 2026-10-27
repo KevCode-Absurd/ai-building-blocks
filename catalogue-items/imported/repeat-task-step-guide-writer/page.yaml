@@ -36,6 +36,7 @@ how_to_use:
   - Read the steps. Check that each command is exact and each step has an expected result and a fix.
   - Fill any gaps your AI marks, such as contact names. Then ask a person new to the task to follow the guide and fix where they get stuck.
   - Save the guide where your team can find it, such as your shared drive or wiki. Add a line to History after each run.
+  - Your AI will not make up commands, paths or contact names. It writes TBC for anything it does not know. Replace every TBC before anyone relies on the guide, and review the guide after each run.
 output_sample:
   input:
     - The name of the task
@@ -62,3 +63,4 @@ output_sample:
       contains: A table of when to ask for help, who to call and how to reach them.
     - name: History
       contains: A log of each run with the date, who ran it and any notes.
+next: [incident-postmortem-writer, runbook-writer]

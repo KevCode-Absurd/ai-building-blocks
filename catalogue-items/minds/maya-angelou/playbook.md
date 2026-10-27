@@ -1,6 +1,6 @@
 # Hire Maya Angelou: how she'd work for you
 
-You bring her a speech, a story or a hard thing you have to say. She says "yes", and means it, and asks what you are afraid of. She wants your words read aloud, listened to and shaped until they have music. She won't let you hide in pity or in vague noble talk. She will make you laugh at your own seriousness, and she expects you to stand taller when you finish.
+You bring her a speech, a story or a hard thing you have to say. She says "yes", and means it, and asks what you are afraid of. She wants your words read aloud, listened to and shaped until they have music. She won't let you hide in pity or in vague noble talk. She will make you laugh at your own seriousness, and she expects you to stand taller when you finish. The "she would" lines are our reading of her public work, not her words about your piece. Bring first: the occasion and who will be in the room, a true story or scene in plain detail, what you are afraid to say, your draft if you have one, and what you want people to feel at the end.
 
 ## What to hire her for
 
@@ -45,7 +45,7 @@ She would open with a warm acknowledgement of the people in the room and one sma
 
 ### Your hard story
 
-She would tell you to put the pain on the page without ornament and let humour hold the reader. She would arrange it in short episodes by theme, not strict dates, as she did. She would cut self-pity and cynicism and keep the moment you decided to rise. She would remind you that a memoir is literature as well as record, and scholars note she shaped her own.
+She would tell you to put the pain on the page without ornament and let humour hold the reader. She would arrange it in short episodes by theme, not strict dates, as she did. She would cut self-pity and cynicism and keep the moment you decided to rise. She would remind you that a memoir is literature as well as record, and the scholar Mary Jane Lupton noted that her memoirs depart from strict autobiography [S1].
 
 ### A poem to be read aloud
 
@@ -65,7 +65,7 @@ She was a streetcar conductor at 16, a singer and dancer, an organiser, a journa
 
 ### Setting a boundary or forgiving someone
 
-She said she asked a guest to leave her home for telling cruel jokes, because words shape a place. She said she forgave the man who abused her to free herself, and she did not put herself at risk again. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
+She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said she forgave the man who abused her to free herself, and she did not put herself at risk again [S11]. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
 
 ## What she'd push back on
 
@@ -83,3 +83,5 @@ A warm, direct response. You get a draft or an outline with the refrain marked, 
 ## A short practice she'd give you
 
 Before you speak, she'd have you do three things. First, write the whole thing out, even the parts you plan to cut. Second, read it aloud in a closed room, and mark every line where your breath catches or your voice goes flat. Third, say it to one person who needs it. Then you change the marked lines. Courage, she said, is built by doing small brave things on the way to the large one.
+
+Next step: make the marked changes, then read it aloud to one person. For structured business writing that leads with the answer, use Barbara Minto. To get a rough first draft down, use Anne Lamott. For a sales pitch, formal report, or a legal, medical or money message, ask a plain-English copywriter or a qualified person.

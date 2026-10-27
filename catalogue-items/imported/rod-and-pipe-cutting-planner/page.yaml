@@ -32,7 +32,8 @@ you_get:
   - A plan you can hand to the saw operator
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
-  - Add your stock lengths, the cost of each piece, and your cut list with quantities.
+  - "Next, paste a filled input: stock length, cost per stock piece, your cut list (length and quantity of each piece), saw cut width and the smallest offcut worth keeping."
+  - Ask for the pattern table first, then the cutting list.
   - "Add the optional details if you have them: saw cut width, smallest useful offcut and leftover pieces."
   - For a big order, use an AI that can run code. Small jobs can run in a plain chat.
   - Check the pattern table. Each pattern's pieces plus its waste should equal the stock length.

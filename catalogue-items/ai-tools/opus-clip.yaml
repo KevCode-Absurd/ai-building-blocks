@@ -34,5 +34,21 @@ blocks:
   - marketing-video-producer
 alternatives: [descript, capcut, veed]
 last_checked: 2026-10-21
+first_result:
+  - "Go to opus.pro and sign up for the free plan. It lets you post one clip a day with no card."
+  - "Add your long video. It needs clear speech."
+  - "Wait for the suggested moments. Read each one against the video."
+  - "Pick two to four. Fix any wrong words in the captions."
+  - "Check that the framing keeps the speaker in view. Then download or post."
+  - "You end with short captioned clips sized for TikTok, Reels and Shorts."
+  - "Next: plan what to post with the Social post planner. For hand editing, use Descript."
+needs:
+  - "A long video with clear speech."
+  - "The right to reuse it. Get consent from guests before you clip them."
+  - "A free account."
+not_verified:
+  - "How it picks and ranks moments."
+  - "Credits per plan. The page does not list them."
+  - "Which video sites it accepts links from."
 sources:
   - https://www.opus.pro/pricing

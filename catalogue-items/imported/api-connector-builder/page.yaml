@@ -36,7 +36,7 @@ how_to_use:
   - Say which sign-in the service uses. Keep real keys out of the chat and use placeholders.
   - Read the code. For any POST that moves money, check it sends an idempotency key, or turn retries off for that call.
   - Run it with your own key in an environment variable. This needs a place to run code and a connection to the internet.
-  - Test the connector, then wire its output into your workflow.
+  - Test the connector against saved responses first. Then run it on a schedule or call it from your app, and watch the logs for the first few days.
 output_sample:
   input:
     - The name of the service, or a link to its API docs
@@ -59,3 +59,4 @@ output_sample:
       contains: Request and error logs to help you debug, with sensitive fields hidden.
     - name: Usage examples and tests
       contains: Short examples of how to call the connector, plus tests that use saved responses instead of the live service.
+next: [webhook-receiver-builder, api-retry-handler, api-test-suite-builder]

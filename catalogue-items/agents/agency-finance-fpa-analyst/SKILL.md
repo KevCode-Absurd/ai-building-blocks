@@ -9,6 +9,34 @@ Reviews one period of budget versus actual and updates the forecast. One period 
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: tie each budget line to a driver, explain variances with their effect on the rest of the year, show trade-offs, keep scenarios and update the forecast. Its role language, experience claims, tool lists, planning calendars and success targets are examples, not facts about this run. They do not grant tool access. Skip the full annual plan, board package and system sections unless the user asks.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Store revenue forecast builder](https://useaiblocks.com/skills/store-revenue-forecast-builder). It takes the plan.
+- The [Startup financial model builder](https://useaiblocks.com/skills/startup-financial-model-builder). It takes the brief.
+- The [Cash flow and expense analyst](https://useaiblocks.com/skills/agency-support-finance-tracker).
+- **Check the money** with the [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker). It takes the plan.
+- **Check the money** with the [Business plan risk buffer reviewer](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini with file upload:** It reads your budget and actuals as spreadsheets and lines them up by account.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the review it limits, and carry on. Never invent a figure or a reason.

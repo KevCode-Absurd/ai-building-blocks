@@ -55,3 +55,4 @@ output_sample:
       contains: Typical mistakes students make when reading closely, and how to spot them.
     - name: Assessment Indicators
       contains: Signs you can mark against to see which level a student has reached.
+next: [history-think-aloud, history-source-simplifier, history-thinking-quiz-designer]

@@ -41,6 +41,7 @@ how_to_use:
   - Paste the skill and give your account link, platform and a small cap, such as 100 results, to start.
   - Ask your AI to name the Actor it picked and what the run will cost before it runs. Try the quick answer first, which shows the top 5 results, to check you have the right data.
   - Run the full export, then read the summary. Treat age, gender and location as guesses unless the data states them.
+  - When you are done, delete or lock the exported file. It holds personal public data about followers.
 how_it_works:
   - title: Choose the Actor
     text: It matches your platform and goal to a ready-made Apify Actor from its table.

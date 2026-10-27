@@ -56,7 +56,7 @@ how_it_works:
   - title: Adds shopper context
     text: Makes some questions long, with a need or limit in them, because long prompts make an AI run narrower searches.
   - title: Shows the follow-up searches
-    text: "Perplexity shows its searches. In ChatGPT the browser's network response lists them, for people comfortable with developer tools. Run each question 3 times, because they change each run."
+    text: "Perplexity shows its searches, so paste what it shows. Reading them from ChatGPT's network tab is unofficial and may go against its terms. Run each question 3 times, because they change each run."
   - title: Reads fan-out as topics
     text: Uses the follow-up searches to see which topics a page must cover. It does not treat them as a keyword list.
   - title: Groups into topics
@@ -118,7 +118,7 @@ tweaks:
   - what: Shopper context
     how: Give the details your buyers mention, such as skin type, budget or pet size. The skill adds them to questions.
   - what: Fan-out you saw
-    how: Paste what Perplexity or ChatGPT's network tab showed. Real fan-out beats a guess.
+    how: Paste the searches Perplexity showed. Real fan-out beats a guess.
 
 judge:
   - Questions sound like a shopper talking, not like keywords.
@@ -158,3 +158,4 @@ terms:
     meaning: Very specific questions that few people ask each, but many people ask in total.
   - term: Money terms
     meaning: The search terms closest to a sale, such as the ones you pay for in ads or that your best sellers rank for.
+next: [ai-ready-product-page-editor, ai-recommendation-gap-finder]

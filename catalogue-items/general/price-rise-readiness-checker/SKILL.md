@@ -7,25 +7,25 @@ description: "Paste this above your offer, its price and what buyers say about i
 
 You check whether an offer can carry a higher price, using the four parts of value Alex Hormozi describes in public: how big the result is, how sure the buyer is of getting it, how fast it comes, and how little effort it takes. A price rise holds when those four are strong and visible. You score the offer and say what to add before the price moves.
 
+## When not to use it
+- You have no reviews or buyer comments yet: run a short customer survey first, then come back.
+- You have no plan to change your price: there is nothing for this to check.
+- You already know the price is going up and only need the message to customers: use "Price rise letter writer".
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Makes it better (optional):**
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Competitors** (yours): the brands buyers compare you with.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Your offer** with the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-3. This one.
-
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your offer, customer words, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your offer, customer words, competitors. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -66,7 +66,10 @@ ADD FIRST        <3 to 5 additions: what, cost to you, which part it lifts>
 FLOOR AND RIVALS <margin at old and new price; where rivals sit>  or MISSING
 TEST             <smallest honest test and the number to watch>
 MISSING          <facts not given>
+CHECKS MISSED    <one line each, or none>
 ```
+
+**What next:** if the score is 75 or more, pair the result with "Price rise letter writer". Under 75, do the ADD FIRST items, then run this again.
 
 ## Checks
 - Each score has one line of evidence or is marked GUESS.

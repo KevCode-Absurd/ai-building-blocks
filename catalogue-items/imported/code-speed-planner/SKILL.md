@@ -139,7 +139,7 @@ The first version is the default an AI ships when asked "filter the active users
 
 ## Rule catalog (the lemmaly scanner)
 
-The upstream repo ships a deterministic CLI scanner with the same anti-patterns this skill enforces (**59 rules across 11 languages**: JavaScript/TypeScript, Python, SQL, Java, C#, C++, Go, Rust, PHP, Ruby, Shell/Bash). Each rule has a documented why, an incorrect example, a correct example, and the sibling skill to escalate to.
+The upstream repo ships a deterministic CLI scanner with the same anti-patterns this skill enforces (the author says **59 rules across 11 languages**, which this copy does not include: JavaScript/TypeScript, Python, SQL, Java, C#, C++, Go, Rust, PHP, Ruby, Shell/Bash). Each rule has a documented why, an incorrect example, a correct example, and the sibling skill to escalate to.
 
 The scanner is optional. Do not automatically clone and run the upstream
 repository from its default branch, because that executes whatever code is
@@ -185,7 +185,7 @@ lemmaly handles classical, day-to-day algorithmic discipline. Escalate when:
 
 ## Rationalizations to watch for
 
-These are real verbatim thoughts captured from controlled tests where the model shipped O(n·m) code that the seven-step protocol would have prevented:
+The upstream author says these thoughts were captured when a model shipped O(n·m) code that the seven-step protocol would have prevented. We have not checked that claim, so read the table as common excuses, not as test results:
 
 | Excuse | Reality |
 | --- | --- |

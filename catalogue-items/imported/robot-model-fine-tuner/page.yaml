@@ -5,7 +5,7 @@ name: Robot model fine-tuner
 summary: Fine-tune a pi0 robot model on your own robot data and serve it so your robot code can call it. Covers JAX and PyTorch training.
 job: build-software
 headline: Robot model fine-tuner
-subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it. Bring your robot dataset. Use the result to plan your next step.
+subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server your robot code can call over a network connection to get actions.
 explain: |
   A robot policy model trained on your own task data, plus a server that other code can call to get actions back. This covers the pi0 family from Physical Intelligence, using the open OpenPI project.
 
@@ -30,9 +30,12 @@ you_get:
   - A running policy inference server
   - Fixes for stats and memory errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
+  - Gather first: your dataset's repo_id (for example your-org/your-dataset, in LeRobot format), the config name to start from, your GPU type and memory, and your robot setup. Renting a cloud GPU costs money, so check the price first.
+  - Clone the public openpi repo first (Workflow 0 in the skill). The training and serving scripts the steps call live in that clone, not in this skill folder.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code on a computer with a strong GPU.
+  - When the server runs, connect your robot code to it over a WebSocket and test with the simple client before you use a real robot.
 output_sample:
   input:
     - Your robot dataset, in LeRobot format

@@ -31,10 +31,11 @@ you_get:
   - KPI targets with owners
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - "Paste your numbers: revenue, EBITDA, margins, diligence findings and the holding period. Add team notes if you have them."
+  - "Paste your numbers as text, or upload a spreadsheet if your AI takes files. Include: last full year revenue, EBITDA and margins, headcount by function, the findings and quick wins from your diligence report, and the holding period in years. Add team notes if you have them."
   - Ask for the plan. Your AI works through the baseline, the levers, the EBITDA bridge, the 100-day plan and the KPIs.
   - Check the timing and the dollar effects. Most gains take 12 to 24 months to show, so push back on anything faster.
   - Ask your AI to make the Excel model. This needs an AI that can create files.
+  - Take the plan and the Excel model to your operating partner for review. The runbook file in the skill folder sets the order of skills to load for the full walkthrough.
 output_sample:
   input:
     - Current revenue, EBITDA and margins

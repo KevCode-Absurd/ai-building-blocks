@@ -30,9 +30,10 @@ you_get:
   - Ad channel and budget suggestions
   - Conversion and retention actions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. You do not need to install anything or run code.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. You do not need to install anything or run code. Without web search, keyword search volumes are rough guesses, so check them in your own keyword tool.
   - "Describe your store: what you sell, who buys, monthly visitors, conversion rate, budget and channels you use."
   - If you do not know a number, say so. Ask your AI to mark it as an estimate, not guess it.
+  - Any benchmark the AI gives you (order value, cost to win a customer, lifetime value, conversion, search volume) is a rough industry guess. Check it against your own store data before you use it.
   - Read the plan and check the targets against your real figures.
   - Get opt-in consent from customers before you start any email or text flows.
   - Start with the Next Actions section and do those first.

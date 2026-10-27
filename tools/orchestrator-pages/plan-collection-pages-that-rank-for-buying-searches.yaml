@@ -20,7 +20,7 @@ not_for:
   - "You want a sales page for an ad or a long article: use the Ad-matched landing page writer or the Article-style landing page writer."
 you_give:
   - Your product list, with categories and what each product is
-  - A keyword export from a search tool, with volume and difficulty if you have them
+  - A keyword export from one search tool, with volume and difficulty if you have them. The free Google Keyword Planner works; paid tools add difficulty scores
   - A list of your main competitors (optional)
   - Your search or sales results by collection (optional)
   - Customer review lines for the first collection you build (optional)

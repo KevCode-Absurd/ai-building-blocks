@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It makes many options, drops weak ones and judges which are still safe, but the steps are fixed."
 
 headline: "Unlikely pairing idea generator"
-subhead: Give it who the work is for and two to four fields, styles or tones you admire. It writes at least ten odd pairings, sets one hard limit, lets one accident in, and returns a short list that has passed a not-safe check, with what each pairing borrows.
+subhead: Give it who the work is for and two to four fields, styles or tones you admire. It writes at least ten odd pairings, sets one hard limit, lets one accident in, and returns a short list that has passed a comfort check, with what each pairing borrows.
 
 explain: |
   Safe ideas come from asking what everyone else does. Fresh ones often come from crossing two things that do not usually meet, such as a legal firm and a comic strip, or a bakery and a field recording. Most pairings fail, so you need many.
@@ -30,7 +30,7 @@ you_get:
   - Ten or more pairings, failures included
   - One limiting rule and how it applies
   - A shortlist where each pairing says what it borrows from each field
-  - A not-safe verdict on each
+  - A comfort verdict on each
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -72,7 +72,7 @@ how_it_works:
     text: Fixes one hard limit, such as one colour family or one voice.
   - title: Lets an accident in
     text: Moves one strong idea to a new order or format and sees what changes.
-  - title: Runs the not-safe check
+  - title: Runs the comfort check
     text: Asks of each survivor whether it feels safe, and pushes it further if it does.
   - title: Shortlists
     text: Picks the few that hold together and says what each borrows from each field.
@@ -95,7 +95,7 @@ output_shape: |
   <the idea moved to a new order or format, and the result>
 
   SHORTLIST
-  <n>. <pairing> | Borrows from A: <x> | Borrows from B: <y> | Not-safe check: <result>
+  <n>. <pairing> | Borrows from A: <x> | Borrows from B: <y> | Comfort check: <result>
 
   MISSING
   <what would sharpen the list>
@@ -144,5 +144,5 @@ works_best_with:
 terms:
   - term: Pairing
     meaning: A combination of two fields, styles or tones that do not normally meet.
-  - term: Not-safe check
+  - term: Comfort check (the checks list calls it the not-safe check)
     meaning: A test that asks whether an idea feels comfortable, and pushes it further out if it does.

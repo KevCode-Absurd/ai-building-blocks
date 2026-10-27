@@ -3302,6 +3302,7 @@
    "good": [
     "interview-summary-writer",
     "customer-interview-request",
+    "customer-interview-notes",
     "smallest-test-picker",
     "job-based-avatar-builder",
     "must-have-survey-planner"

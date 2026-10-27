@@ -72,6 +72,9 @@ output_shape: |
 
   ## Open questions
   <missing inputs>
+next:
+  - multi-gpu-training-setup-helper
+  - llm-fine-tuning-guide
 output_sample:
   input:
     - Your GPUs, such as how many and which type

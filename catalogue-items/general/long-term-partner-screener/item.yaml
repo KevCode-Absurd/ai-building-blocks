@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: plan, required: true}
   - {type: question, required: true}
+  - {type: spreadsheet, required: false}
 outputs:
   - {type: audit_report}
 origin: rebuilt

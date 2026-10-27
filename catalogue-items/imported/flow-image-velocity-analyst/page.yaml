@@ -28,7 +28,7 @@ you_get:
   - Velocity field
   - Flagged and replaced bad vectors
   - Vorticity and strain rate
-  - Turbulence statistics
+  - Turbulence statistics: mean and spread of the speeds (u_mean, v_mean, rms_u, rms_v, tke). Here tke is spatial variance of one frame, not full turbulent kinetic energy
   - Plots and a parameter log
 how_to_use:
   - Install the openpiv package in Python with uv pip install openpiv. Your AI must be able to run code and save files.
@@ -36,7 +36,7 @@ how_to_use:
   - Add your image pairs, the time gap between frames and the pixel to millimetre scale.
   - Ask your AI to run the analysis and show vector_field.png. Check that the arrows look right before you trust the numbers.
   - If you see stray arrows, ask your AI to change the window size or overlap and run it again.
-  - Next, plot or compare vectors.txt and params.npz in your own tools, or against your CFD results.
+  - Next, plot or compare vectors.txt and params.npz in your own tools, or against your CFD results. If the vector field is sparse, run it again with a different window size or overlap. To plan a simulation to compare with, use the fluid flow simulation planner.
 output_sample:
   input:
     - Your pairs of flow images (frame A and frame B)
@@ -57,3 +57,4 @@ output_sample:
       contains: Spin and stretch values worked out from the cleaned velocity field.
     - name: Turbulence statistics
       contains: Averages and fluctuation measures worked out from the measured velocities.
+next: [fluid-flow-simulation-planner]

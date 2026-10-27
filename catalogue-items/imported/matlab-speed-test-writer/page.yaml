@@ -33,9 +33,12 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
   - Paste the MATLAB code you want to time. Say which input sizes to try and which MATLAB release you use.
   - Ask for a performance test class. Read it to check setup sits outside the timed part.
+  - You can run the class yourself. Save it in MATLAB and run it with runperf. Your AI does not need to run MATLAB. Paste any errors back to it.
   - Save the class as a .m file in MATLAB and run it with runperf. This needs a paid MATLAB licence.
   - Save the first results as a baseline. After you change your code, run again and compare against the baseline.
   - If the results look noisy, ask your AI to fix the setup or raise the input size, then run again.
+next:
+  - matlab-speed-tuner
 output_sample:
   input:
     - The MATLAB function or code you want to time

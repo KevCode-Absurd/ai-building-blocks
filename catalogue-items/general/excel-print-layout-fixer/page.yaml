@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel print layout fixer
 subhead: Share a workbook and paper size. Get printable sheets with readable columns, repeated headers and checked page breaks. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share a workbook and paper size. Get printable sheets with readable columns, repeated headers and checked page breaks.
+  A sheet that looks fine on screen often prints with cut-off columns, a header only on page one and a stray page. This sets the print area, paper size and page breaks so every page is readable, without touching your data or formulas.
 
 
   It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -15,9 +15,9 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share a workbook and paper size. Get printable sheets with readable columns, repeated headers and checked page breaks.
-  - Workbook, sheets to print, paper size, orientation, required columns and any existing print requirements.
-  - You need a checked copy while keeping your original files intact.
+  - A wide sheet prints with columns cut off or split across pages.
+  - Your header row shows only on the first printed page.
+  - You need the same workbook to print cleanly on a set paper size, such as A4 or Letter.
 not_for:
   - "You need macros, pivots or data connections kept intact and your AI has no Excel engine: ask your AI for a plain-text print checklist, then set the print options in Excel yourself."
   - "You only want to change the numbers or formulas in the workbook: edit them in Excel, since this skill leaves data and formulas unchanged."
@@ -113,3 +113,4 @@ tests:
     expected: Fit the width and retain multiple pages vertically; verify header repetition.
   - input: Two nonadjacent print areas were set accidentally
     expected: Flag separate-page output and confirm the intended continuous area.
+next: [excel-workbook-change-reviewer]

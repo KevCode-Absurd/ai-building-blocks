@@ -34,6 +34,7 @@ how_to_use:
   - Paste this skill into the chat and tell your AI which model you use.
   - Say yes when it asks to download the since-cutoff tool. It reads your files and does not run your code.
   - Read the summary. Check each changed library and the files that use it.
+  - The skill can also run an optional test, since-cutoff run, to see which changes your model gets wrong. That test sends prompts to the model company you pick and uses your credits or plan allowance. It never sends your source code. Say no unless you want it.
   - Ask for the notes preview if you want them. Read the diff, then say yes to write it into AGENTS.md or CLAUDE.md.
 output_sample:
   input:
@@ -44,6 +45,7 @@ output_sample:
   prerequisites:
     - An AI that can run commands and read your project files
     - Internet access, so the tool can fetch library releases and model dates
+    - "For the optional since-cutoff run test only: an account with a model provider, and credits or plan allowance to spend"
     - The uv tool, which runs since-cutoff for you
   output:
     - name: Model and cutoff

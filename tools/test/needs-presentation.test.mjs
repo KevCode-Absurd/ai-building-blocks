@@ -54,3 +54,35 @@ test('meeting minutes lead to meeting actions and board minutes rather than an u
   assert.deepEqual(next.map(x => x.slug), [weekly.slug, board.slug]);
   assert(next.every(x => x.takes.length));
 });
+
+const makers = {
+  'website-brand-brain-builder': { slug: 'website-brand-brain-builder', name: 'Website brand brain builder', task: 'brand-file', inputs: [], outputs: [{ type: 'brand_brain' }] },
+  'ai-image-fix-rules': { slug: 'ai-image-fix-rules', name: 'AI visual feedback editor', task: 'check-ads', inputs: [], outputs: [{ type: 'lessons_register' }] },
+  'buyer-brief-writer': { slug: 'buyer-brief-writer', name: 'Buyer brief writer', task: 'understand-customers', inputs: [], outputs: [{ type: 'brief' }] },
+};
+
+test('stock and decision work get plain inputs, not the brand brain, ad lessons or a buyer brief', () => {
+  const stock = { slug: 'stock-watch', task: 'plan-supply-chain', inputs: [{ type: 'spreadsheet', required: true }, { type: 'product_data', required: true }], outputs: [] };
+  const decide = { slug: 'decision-log', task: 'think-and-decide', inputs: [{ type: 'question', required: true }, { type: 'lessons_register', required: false }, { type: 'brief', required: false }], outputs: [] };
+  for (const b of [stock, decide]) {
+    const { needed, helps } = needsOf(b, makers);
+    assert.deepEqual([...needed, ...helps].filter(i => i.maker), []);
+    assert.doesNotMatch(JSON.stringify([...needed, ...helps]), /past ads|buyer brief|Brand brain/i);
+  }
+  assert.deepEqual(needsOf(stock, makers).needed.map(i => i.key), ['spreadsheet', 'product_data']);
+});
+
+test('ad work still reads product data from the brand brain and lessons from past ads', () => {
+  const ad = { slug: 'image-ad', task: 'make-image-ads', inputs: [{ type: 'product_data', required: true }, { type: 'lessons_register', required: false }], outputs: [] };
+  const { needed, helps } = needsOf(ad, makers);
+  assert.deepEqual(needed.map(i => i.key), ['website-brand-brain-builder']);
+  assert.deepEqual(helps.map(i => i.key), ['ai-image-fix-rules']);
+});
+
+test('a workflow lists its own inputs and specific step inputs, not the generic hand-offs between steps', () => {
+  const bySlug = { ...makers, read: { slug: 'read', task: 'track-numbers', inputs: [{ type: 'spreadsheet', required: true }], outputs: [{ type: 'audit_report' }] }, act: { slug: 'act', task: 'track-numbers', inputs: [{ type: 'plan', required: true }, { type: 'performance_sheet', required: false }], outputs: [{ type: 'plan' }] } };
+  const flow = { slug: 'flow', task: 'track-numbers', inputs: [{ type: 'spreadsheet', required: true }], outputs: [{ type: 'plan' }], steps: [{ uses: 'read' }, { uses: 'act' }] };
+  const { needed, helps } = needsOf(flow, bySlug);
+  assert.deepEqual(needed.map(i => i.key), ['spreadsheet']);
+  assert.deepEqual(helps.map(i => i.key), ['performance_sheet']);
+});

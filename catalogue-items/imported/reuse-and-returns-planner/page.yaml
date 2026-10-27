@@ -39,7 +39,9 @@ how_to_use:
   - Add your return rate and any resale prices or refurbish quotes you have. Leave out what you do not know.
   - Answer its questions. It marks missing numbers instead of guessing them.
   - Check the ranked options against your own sense of what is easy. Ask it to explain any ranking that surprises you.
+  - Before you read any money figure, check it uses your own resale prices, refurbish quotes and return grades. The sample rates in the code are placeholders. With no figures of your own, the option stays ranked by effort and the money shows as MISSING.
   - Get a local advisor to check any take-back rule it names before you rely on it.
+  - Next, get quotes for the top-ranked option, then set resale prices and the shop layout with the resale store pricing and layout planner.
 how_it_works:
   - title: Map your products
     text: It lists what you sell, the materials in each product, and where each one ends up today.
@@ -97,3 +99,4 @@ terms:
     meaning: Take a product apart and rebuild it to like-new standard.
   - term: Take-back
     meaning: A program where customers return used products to you.
+next: [resale-store-pricing-and-layout-planner]

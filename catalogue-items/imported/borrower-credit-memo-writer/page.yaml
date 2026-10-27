@@ -32,11 +32,12 @@ you_get:
   - A written credit recommendation with ranked risks and protections
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Pick one that can run code, so the ratios are worked out by a script.
-  - Paste the skill text, then add the borrower's financial statements and the loan details.
+  - Paste the skill text. Also upload scripts/calculate.py and references/covenant-guide.md from the skill folder, since the ratios are worked out by that script. Then add the borrower's financial statements and the loan details.
   - Add the existing debt list and covenants. Add projections if you have them.
   - Ask for the credit memo. If something is missing, your AI should ask for it and not guess.
   - "Check the ratio table against the accounts. DSCR is debt service coverage: cash left after costs, divided by interest plus principal due."
   - Compare the rules of thumb (such as debt under 3.0 times EBITDA) with your own lender's credit policy before you use the memo.
+  - Send the memo to a credit officer for sign-off. It is a draft, not a lending decision.
 output_sample:
   input:
     - Three or more years of the borrower's financial statements

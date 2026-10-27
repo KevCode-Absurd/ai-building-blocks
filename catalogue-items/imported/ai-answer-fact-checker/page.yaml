@@ -31,12 +31,12 @@ you_get:
   - Links to the public pages that back each finding
   - A comparison of where several AIs agree or clash
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with web search turned on. The check needs a web-enabled AI.
+  - Open Claude, ChatGPT or Gemini with web search turned on. The check needs a web-enabled AI. Web search can need a paid plan or a setting you turn on, so check before you start.
   - Paste the skill text into the chat.
   - Paste your question, then the AI answer. Label each answer with the AI that wrote it.
   - Add the date or country that matters, if there is one.
   - Read the claim matrix first. Open the links for any claim that matters to you.
-  - For contradicted claims, fix them before you use the answer. For insufficient claims, find better proof or ask an expert.
+  - For contradicted claims, fix them before you use the answer. For insufficient claims, find better proof or ask an expert. Drop or fix every claim that fails before you send the answer on, and re-run the check on the new text.
 output_sample:
   input:
     - The question you asked the AI

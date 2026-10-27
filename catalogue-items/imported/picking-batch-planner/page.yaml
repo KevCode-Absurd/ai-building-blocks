@@ -18,7 +18,7 @@ when:
 not_for:
   - Your orders are high-value or complex, so pick them one at a time. Batching adds sorting and more mispick risk.
   - You have no space or staff to sort orders after picking. Use cluster picking with a multi-order cart, or pick one order at a time.
-  - You need to time when groups of orders are released to the floor. Use wave-planning-optimization for that.
+  - You need to time when groups of orders are released to the floor. This planner does not cover release timing, so plan it with your warehouse system.
 you_give:
   - A list of the day's orders with items
   - Warehouse layout and pick locations
@@ -30,9 +30,11 @@ you_get:
   - Sort steps after picking
   - Risks such as mispicks flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can run code (Python).
+  - Export the day's orders to a spreadsheet, with one row per order line and columns for order number, item and pick location.
+  - Open your AI, paste in the skill text, then paste or upload the file. Add your cart size and any urgent cut-off times.
+  - Ask for the batch table, the walking distance saved and the sort steps. It works best when your AI can run code (Python), but a chat can do small lists.
+  - Check two or three batches by hand against your floor layout. Then try one batch on a real shift before you change how you pick for the whole day.
+  - The distance saved is an estimate. Measure it on your own orders.
 output_sample:
   input:
     - Your day's orders, with the items on each line
@@ -55,3 +57,4 @@ output_sample:
       contains: Picker hours with and without batching, and the labour hours saved.
     - name: Recommendations
       contains: Next steps such as extra sort stations, express batches for priority orders and cart size changes.
+next: [warehouse-picker-route-planner, warehouse-slot-assigner]

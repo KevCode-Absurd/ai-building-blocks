@@ -21,9 +21,15 @@ Analyze options chain data with real vs lottery call separation — the key insi
 - Use when you need to separate institutional hedging from speculative lottery-ticket activity.
 - Use when tracking options anomalies against a recent baseline.
 
+## When Not to Use
+
+- The user wants to know what to buy or sell, or when to time a trade. This skill reads options activity only and gives no advice.
+- There is no Polygon.io key and no options data to paste in. Do not make up numbers.
+- The user wants a view of one stock's price and news. Use a price and news check first.
+
 ## What it does
 
-Standard P/C ratio analysis is misleading. A P/C of 0.35 looks "extremely bullish" but may be 84% lottery calls ($0.01-$0.09 OTM options).
+Standard P/C ratio analysis can be misleading. A low P/C can look "extremely bullish" when most of the volume is lottery calls ($0.01-$0.09 OTM options).
 
 This skill separates:
 - **Real calls**: Strike price within 5% of stock price, meaningful premium
@@ -41,6 +47,8 @@ For each ticker:
 - Sentiment classification: Bullish/Bearish/Neutral with confidence
 
 ## Example Output
+
+_Illustration only. Every ticker, price and ratio below is made up to show the layout. Never present them as live or verified data. Use only data you pulled from Polygon.io or that the user pasted in._
 
 ```
 Options Flow Summary — 2026-05-13
@@ -71,7 +79,7 @@ Flag anomalies vs 30-day baseline.
 
 ## Requirements
 
-- Polygon.io API key (free tier covers basic data; paid tier for full chain)
+- Polygon.io API key (free tier covers basic data; paid tier for full chain). Keep the key out of shared or logged chats: set it as an environment variable or in your tool's secrets settings.
 - WebSearch for cross-verification
 
 ## Limitations
@@ -81,16 +89,8 @@ Flag anomalies vs 30-day baseline.
 - Sentiment classifications are analytical signals, not financial advice or trade recommendations.
 - Always cross-check unusual flow against price action, news catalysts, liquidity, and risk controls.
 
-## Key Discovery
+## Why the split matters
 
-This real/lottery separation was discovered during live portfolio management when RXRX showed P/C 0.35 (looks extremely bullish) but was actually 84% lottery calls at $0.01-$0.09. The "bullish signal" was noise. This skill prevents that mistake.
+A raw put-call ratio counts cheap far out-of-the-money contracts the same as real positions. Splitting them out shows where meaningful money went. The author describes finding this while managing a portfolio. Their results are not tested here, so check any signal against price, news and volume.
 
-## Pricing
-
-Free: Basic P/C ratio for 3 tickers
-**Full bundle — $29 one-time**: Real/lottery separation + anomaly detection + per-expiry + unlimited tickers
-→ https://jaehyunpark.gumroad.com/l/tcyahy
-
-## Author
-
-Built from a real trading mistake that cost money. The real/lottery discovery is documented and battle-tested across 17 tickers over 2+ months.
+Author: tellmefrankie (see the credit on the item page).

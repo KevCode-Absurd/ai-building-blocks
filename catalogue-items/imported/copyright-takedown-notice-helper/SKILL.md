@@ -21,6 +21,8 @@ Three modes. Pick one:
 
 1. **Read the practice profile.** Load `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it contains `[PLACEHOLDER]` markers or does not exist, stop and say: "This plugin needs setup before it can give you useful output. Run `/ip-legal:cold-start-interview` — the takedown skill depends on your approval matrix and practice profile."
 
+   If the user is in a plain chat with no plugin, do not just stop. Ask for the same facts in plain words: who must approve a notice, and the facts of the case (the work, who owns it, any registration, the exact URLs, and your fair-use read). Use those answers in place of the profile, say so at the top of the draft, and keep every other rule below. The file names below (notice-v1.md, submission.md and so on) apply only when the AI can save files; in a chat, give the text in the reply.
+
 2. **Check matter workspaces.** Per `## Matter workspaces`: if `Enabled` is `✗`, skip. If enabled and there is no active matter, ask: "Which matter is this for? Run `/ip-legal:matter-workspace switch <slug>` or say `practice-level`."
 
 3. **Dispatch on `$ARGUMENTS`:**

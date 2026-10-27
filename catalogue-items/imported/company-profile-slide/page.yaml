@@ -40,6 +40,7 @@ how_to_use:
   - Check the slide image it shows you for overlap, cut-off text and chart edges. Tell it what to fix.
   - Look at every n/a. Fill those cells yourself from the latest filing or your data terminal.
   - Only then drop the slide into your pack. Put the sources and dates in the footer.
+  - Next, use the company tear sheet maker for a written one-page version, or the editable slide deck builder for the full pack.
 output_sample:
   input:
     - The company name or ticker

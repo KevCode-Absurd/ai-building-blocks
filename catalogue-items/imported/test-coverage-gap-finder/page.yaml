@@ -35,7 +35,7 @@ how_to_use:
   - "Say: find my test coverage gaps. Name your most important flows, such as login and checkout, if you have them."
   - Read the coverage matrix first. Check that the pages marked missing really have no tests.
   - Use the ranked plan to pick what to test first.
-  - When asked, say yes, no or pick specific to have tests written for the top gaps. This needs the templates folder and /pw:generate.
+  - When asked, say yes, no or pick specific to have tests written for the top gaps. This works only if you already have a templates folder and a /pw:generate command from your own setup. If you do not, skip it and write the tests from the ranked plan, or use the browser test writer.
 output_sample:
   input:
     - Your app code, so your AI can list pages, forms and endpoints
@@ -60,3 +60,4 @@ output_sample:
       contains: A rough share of your app surface that has tests.
     - name: Generate offer
       contains: A question asking if you want tests written for the top gaps.
+next: [browser-test-writer, browser-test-reviewer]

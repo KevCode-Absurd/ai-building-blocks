@@ -30,12 +30,12 @@ you_get:
   - SUMO files for the scenario
   - Setup fixes for common start-up errors
 how_to_use:
-  - Install MATLAB, Simulink, SUMO and the SUMO support package. Set SUMO_HOME to your SUMO folder.
-  - Open an AI that can run MATLAB code and add this skill.
+  - Install MATLAB, Simulink, SUMO and the SUMO support package. MATLAB and Simulink are paid MathWorks products, and the licence allows this skill only with MathWorks products (see LICENSE.md). SUMO is free. Set SUMO_HOME to your SUMO folder.
+  - Open an AI that can run MATLAB code, for example one with a MATLAB connection (MCP) set up, and add this skill. If yours cannot run MATLAB, ask it for the code and run it yourself.
   - Describe your traffic test. Add your .sumocfg file if you have one (optional).
   - Tell it which vehicle is the ego vehicle and how it should be controlled.
   - Check that the model, .sumocfg and route files were saved, then open the .slx file in Simulink and press Run.
-  - Log the speed and position signals to read the results. Pair it with your own controller model.
+  - Log the speed and position signals to read the results. Check the ego vehicle's speed and gap to other cars first, then pair the model with your own controller.
 output_sample:
   input:
     - A description of the traffic test

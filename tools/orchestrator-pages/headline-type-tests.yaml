@@ -1,6 +1,6 @@
 new_slug: headline-type-tests
 name: "Get headlines sorted by type and the three worth testing"
-summary: "Write 20 or more headlines sorted by type, rank them with a cover test, and get a keyed plan to test the best three before you spend on ads."
+summary: "Give it your product and buyer. Get headlines sorted by type, ranked with a cover test, and a keyed test plan."
 job: write-ad-copy
 thinking: high
 thinking_why: "It picks a buying reason, writes a long list, judges it and plans a test. Give it your strongest model."
@@ -9,9 +9,9 @@ headline: "Twenty headlines, sorted by type and cut to the three worth testing"
 subhead: "Give it your product, your buyer and your offer. It picks the buying reason to lead with, writes twenty or more headlines labelled self-interest, news or curiosity, and reads each one alone as a stranger would. You get the best three and a keyed plan to test them."
 
 explain: |
-  Most headlines are written one at a time, and the first decent one gets used. The choice is made by whoever likes it most. Yet the reason you give a buyer, and the headline that carries it, usually matter more than anything else in an ad.
+  Headlines are often written one at a time, and the first decent one gets used. The choice is made by whoever likes it most. A long list, sorted and tested, gives you a better way to choose.
 
-  This workflow starts with the reason to buy, chosen from a list and checked for fit and belief. It then writes at least twenty headlines in three types: those that offer the reader something, those that announce real news, and those that make the reader curious with a promise inside. Each headline is read alone, with the copy hidden, and scored on five rules. Dead, too-clever and meaningless lines are cut. The three that remain differ from each other, and a keyed plan sets how to test them with a winner rule. The method follows John Caples's Tested Advertising Methods.
+  This workflow starts with the reason to buy, chosen from a list and checked for fit and belief. It then writes at least twenty headlines in three types: those that offer the reader something, those that announce real news, and those that make the reader curious with a promise inside. Each headline is read alone, with the copy hidden, and scored on five rules. Dead, too-clever and meaningless lines are cut. The three that remain differ from each other, and a keyed plan sets how to test them with a winner rule. The types and the keyed test are inspired by John Caples's Tested Advertising Methods. Unlike the headline workflow that fits buyer awareness, this one gives you a long typed list, a cover test and a keyed winner rule.
 
 when:
   - You need a headline for an ad, email or page and want a long list sorted and narrowed before you spend on a test.
@@ -21,11 +21,12 @@ not_for:
   - "You have no buyer evidence or no offer yet: use the Buyer brief writer first, then come back."
   - "You only need one headline and no test: use the Ad headline writer."
   - "You want the opening line of an ad, not the headline: use the Ad hook writer."
+  - "You want headlines that fit where your buyers stand on awareness and claim fatigue: use Write a headline that fits what your buyers already know."
 
 you_give:
   - Your product facts, including amounts, times and dates
   - Who your buyer is, and customer words if you have them (optional)
-  - Your offer and price (optional)
+  - Your offer and price
 you_get:
   - Your top three buying reasons, each with the proof it needs
   - Twenty or more headlines, each labelled by type and reason
@@ -33,7 +34,8 @@ you_get:
   - The best three and a keyed test plan with a winner rule
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Gather your product facts with amounts and dates, and your live offer with price and terms.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your product facts, your buyer and your offer.
   - It works step by step and saves each result. Read the ranked list before the test plan.

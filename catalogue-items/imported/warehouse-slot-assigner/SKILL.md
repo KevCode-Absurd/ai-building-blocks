@@ -984,6 +984,8 @@ Cluster 2 (Electronics): 32 SKUs
 
 **Expected Benefits:**
 
+*The figures below are a made-up layout only. In a real run, estimate each one from the user's own pick records, label it an estimate, and never quote it as a result.*
+
 | Metric | Current | Optimized | Improvement |
 |--------|---------|-----------|-------------|
 | Avg Pick Travel (ft) | 2,850 | 2,100 | -26% |

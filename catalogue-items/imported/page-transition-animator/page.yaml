@@ -5,7 +5,7 @@ name: Page transition animator
 summary: Add smooth page transitions to your React or Next.js app. Describe the motion and get working code that respects reduced-motion settings.
 job: build-websites
 headline: Page transition animator
-subhead: Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings. Bring your React or Next.js code. Use the result to plan your next step.
+subhead: Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings. Written for a developer. If you run a business and not code, hand this page to the person who builds your site.
 explain: |
   Smooth movement between screens in your React or Next.js app, such as a card that grows into a detail page, using the browser's built-in transition tool instead of a heavy library.
 
@@ -35,6 +35,7 @@ how_to_use:
   - Ask your AI to audit first, then add the transitions and the styles.
   - Run your app and try each move. Then turn on reduced motion in your system settings and check that the animations stop.
   - Back and forward buttons in the browser do not animate. Use links that navigate to a set address if you need the motion.
+  - Share the audit and the list of still moments with the person who owns the front end. Test on a real phone and a desktop before release.
 output_sample:
   input:
     - Your React or Next.js code, such as the list and detail pages
@@ -55,3 +56,4 @@ output_sample:
       contains: The settings and link options needed to turn transitions on, if your app uses Next.js.
     - name: Moments left still
       contains: A short list of moments with no animation, such as background refreshes, and the reason for each.
+next: [animated-landing-page-builder, react-landing-page-builder]

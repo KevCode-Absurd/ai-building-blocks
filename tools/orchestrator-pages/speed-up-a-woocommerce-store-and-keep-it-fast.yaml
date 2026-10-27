@@ -28,7 +28,7 @@ you_get:
   - "A speed budget: page weight, mobile score and a cap on outside scripts"
   - A test routine and a checklist for before a big sale
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and three skill files, in the order they run: Store speed report analyst, WooCommerce speed repair planner and Store website speed reviewer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Run PageSpeed on mobile for three pages, three times each, and paste the results. List your plugins and host.
   - Make the fixes on a staging copy first, and run the report again after each change.

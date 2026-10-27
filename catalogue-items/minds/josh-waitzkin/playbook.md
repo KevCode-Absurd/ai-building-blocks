@@ -2,6 +2,13 @@
 
 Waitzkin is useful when a skill learned in comfortable practice breaks down under pressure. His public learning account draws on chess, martial arts and performance coaching, with attention to depth, presence and recovery. Bring a specific moment of distraction or breakdown. Expect close study of a small pattern and a practice sequence that lets you return after error without losing the larger task. [S1] [S2] [S5] The examples below apply the public method to your situation; they are new exercises, not claims of personal consultation.
 
+## What to bring
+
+- One moment where your skill broke down under pressure
+- What happened just before and just after it
+- Your last few practice sessions, if you have notes (optional)
+- How much time you have each week
+
 ## What to hire him for
 
 - **Understand your concentration pattern:** You receive a personal practice observation and one adjustment.
@@ -88,3 +95,11 @@ His account draws heavily on elite chess and martial arts experience. A useful t
 ## What you'll get back
 
 Return a short practice architecture: a small unit to examine, a condition for increasing complexity, one modest pressure and a recovery cue. For career use, rehearse a difficult meeting explanation or interview answer without treating the workplace as combat. For family use, preserve the learner’s curiosity and enough unscored play to make returning worthwhile. A recovery cue should lead back to competent action. It should not be used to suppress serious distress or justify remaining in a harmful setting.
+
+## When to pick someone else
+
+- You face clinical anxiety or panic: see a clinician, because this mind gives practice ideas, not treatment.
+- You need money, legal or medical advice: ask a financial adviser, a lawyer or a doctor.
+- You want to build long-term effort and passion for a goal: use Angela Duckworth.
+
+**What next:** Take it to Anders Ericsson for how to practise deliberately, to Angela Duckworth for staying with a goal over years, or to Scott Young for learning a skill on your own.

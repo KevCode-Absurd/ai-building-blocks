@@ -99,3 +99,4 @@ terms:
     meaning: Labels you add to a repo so people can find it in GitHub search.
   - term: Awesome list
     meaning: A curated list of good projects on one subject, kept on GitHub.
+next: [open-source-promoter, readme-first-run-tester]

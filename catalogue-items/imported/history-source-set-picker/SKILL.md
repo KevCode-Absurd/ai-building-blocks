@@ -212,7 +212,7 @@ Return your output in this exact format:
 **Perspectives absent:** [Who doesn't, and why]
 **Suggestions:** [How to address gaps, or acknowledgement that the gap is itself historically significant]
 
-**Self-check before returning output:** Verify that (a) every document earns its place — remove any source that doesn't contribute something unique, (b) at least one clear analytical tension exists in the set, (c) the skill affordances are specific to the documents, not generic, (d) the sequencing has a rationale beyond chronological order, and (e) the representation audit is honest about whose voices are missing.
+**Self-check before returning output:** Verify that (a) every document earns its place — remove any source that doesn't contribute something unique, (b) at least one clear analytical tension exists in the set, (c) the skill affordances are specific to the documents, not generic, (d) the sequencing has a rationale beyond chronological order, and (e) the representation audit is honest about whose voices are missing, and (f) every source named is a real, findable document: give its author, date and where it can be found, and mark any you are unsure of as "check this exists". Never invent a source or a quote.
 ```
 
 ## Example Output

@@ -5,7 +5,7 @@ name: Org change announcement writer
 summary: Write an org change announcement fast. Give it your change and audience. You get a leader message, manager talking points, a town hall script and FAQ.
 job: hire-people
 headline: Org change announcement writer
-subhead: Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers. Bring what is changing and why. Use the result to plan your next step.
+subhead: Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers. Have HR and legal read the texts before anything goes out.
 explain: |
   All the words you need when a change hits your company: the leader announcement, manager talking points, a town hall script and answers to the hard questions. People hear the same clear story from everyone.
 
@@ -17,6 +17,7 @@ when:
   - A leader is leaving and people will have questions.
 not_for:
   - You only need a routine update. Send a short standard notice instead.
+  - "You want one quick package for a re-org, tool change or layoff with a send calendar: use the Internal change announcement writer."
   - You are planning layoffs. Get legal and HR review first, then use this for wording only. A lawyer should approve the final text.
   - You need to run a full change program over many months. Ask your HR lead or a change consultant for a full plan.
 you_give:
@@ -32,12 +33,13 @@ you_get:
   - FAQ and hard-question answers
   - Timing and channel plan
 how_to_use:
-  - "Write a short brief: what is changing, why, who is affected, company size, tone and timeline."
+  - "Write a short brief with: what is changing and why, who is affected and how many people, the date it was decided, who will send it, what is not changing, company size, tone and timeline."
   - Add any rumours or worries you already know about (optional).
   - Open Claude, ChatGPT or Gemini. Paste the skill, then paste your brief.
   - Ask for the pieces you need, such as the leader announcement, manager talking points or town hall script.
   - Read each piece for tone. Check that it answers what this means for each person.
   - Have HR or legal review it before you send anything.
+  - Send the texts in the order in your communication plan. A week later, use the rumour and follow-up check to see what people understood.
 output_sample:
   input:
     - What is changing and why
@@ -58,3 +60,4 @@ output_sample:
       contains: Common questions and tough ones, each with a model answer.
     - name: Rumour and follow-up check
       contains: Ways to listen for rumours and check that people understood the change.
+next: [change-rollout-planner, change-announcement]

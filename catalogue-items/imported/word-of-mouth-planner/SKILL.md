@@ -13,7 +13,7 @@ A framework for engineering word-of-mouth and making products, ideas, and conten
 
 ## Core Principle
 
-**Virality is not born — it is engineered.** Products spread because they were designed — consciously or not — to be shared. Only 7% of word-of-mouth happens online; the other 93% happens in offline conversations, so virality is about the psychology of sharing, not social media mechanics. Those psychological patterns are predictable and can be engineered into anything using the STEPPS framework.
+**Virality is not born — it is engineered.** Products spread because they were designed — consciously or not — to be shared. Berger's research suggests most word-of-mouth happens offline (the author gives about 7% online and 93% offline; we have not checked the source), so virality is about the psychology of sharing, not social media mechanics. Those psychological patterns are predictable and can be engineered into anything using the STEPPS framework.
 
 See: [references/word-of-mouth.md](references/word-of-mouth.md) when the brief over-indexes on social media — it makes the offline-vs-online case, lists conversation triggers, and gives a WOM measurement/audit method.
 
@@ -251,7 +251,7 @@ See: [references/viral-content-patterns.md](references/viral-content-patterns.md
 
 | Mistake | Why It Fails | Fix |
 |---------|-------------|-----|
-| Focusing only on online sharing | 93% of WOM is offline | Design conversation triggers, not just share buttons |
+| Focusing only on online sharing | Most WOM is offline (per Berger's research) | Design conversation triggers, not just share buttons |
 | Shareable but not brand-linked | People share the joke, forget who made it | Apply the Trojan Horse test |
 | Using low-arousal emotions | Sadness and contentment don't activate sharing | Reframe for awe, excitement, amusement, or anger |
 | Invisible product usage | No one imitates what they can't see | Add behavioral residue and observable signals |
@@ -270,6 +270,8 @@ See: [references/viral-content-patterns.md](references/viral-content-patterns.md
 | Is the brand embedded in a retellable story? | No narrative vehicle | Create a Trojan Horse story that needs your brand |
 
 ## Further Reading
+
+*The book links below carry the original skill author's affiliate tag, so the author may earn a commission if you buy.*
 
 - [Contagious: Why Things Catch On](https://www.amazon.com/Contagious-Things-Catch-Jonah-Berger/dp/1451686579?tag=wondelai00-20) by Jonah Berger
 - [The Catalyst: How to Change Anyone's Mind](https://www.amazon.com/Catalyst-How-Change-Anyones-Mind/dp/1982108606?tag=wondelai00-20) by Jonah Berger

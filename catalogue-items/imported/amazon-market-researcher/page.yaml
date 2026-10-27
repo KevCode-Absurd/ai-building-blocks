@@ -33,8 +33,8 @@ you_get:
 how_to_use:
   - Sign up with Pangolinfo and get an API key. Plan credits may be used.
   - Connect the Pangolinfo MCP bridge in your AI tool. Check the setup guide on the official Pangolinfo site first. Keep the key in your tool's secret settings, never in chat.
-  - Open a chat and paste this skill. Say your product or keyword, marketplace and goal.
-  - Start small, such as three products or one page of results. Widen only after you check the first result.
+  - Open a chat and paste this skill. Ask your AI to list the bridge's tools first, and compare them with the tools named in the skill. If they do not match, stop and check the setup guide. Say your product or keyword, marketplace and goal.
+  - Start small, with no more than three products or one page of results on the first run, so credit use stays low and predictable. Widen only after you check the first result.
   - Check that each row matches the product and marketplace you meant. Treat empty fields as gaps.
   - Use the table to plan your next step, such as a pricing check or keyword research.
 output_sample:

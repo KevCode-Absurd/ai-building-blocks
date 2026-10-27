@@ -39,6 +39,8 @@ Scans all customer records and reports the breakdown of email and SMS marketing 
 
 3. Calculate: addressable audience (subscribed), at-risk (pending), unreachable (unsubscribed/not asked)
 
+4. Write the CSV file `consent_audit_<YYYY-MM-DD>.csv` (columns under Output Format) to the working folder and tell the user where it is saved. The SMS summary has no pending count, so an SMS customer in any other state is not shown in those counts.
+
 ## GraphQL Operations
 
 ```graphql

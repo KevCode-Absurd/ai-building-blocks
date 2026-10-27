@@ -50,6 +50,7 @@ first_result:
   - "Type one small job, such as a description for one product. Add its name, material, size and price. Slash commands like /product-description are listed on Shopify's page."
   - "Read the draft against your real product. Fix any claim that is not true before you save it."
   - "Do the same for a photo: upload a phone photo and ask for a studio-style version. Compare it to the real product."
+  - "You end with a draft description or an edited photo in your admin, ready to review. Next: plan your store with the Shopify store setup planner, or clean up product titles with the Product title cleaner."
 needs:
   - "A Shopify store on any plan. Sidekick is included, but limits vary by plan."
   - "Product facts for each item: name, materials, size, price and what it is for."

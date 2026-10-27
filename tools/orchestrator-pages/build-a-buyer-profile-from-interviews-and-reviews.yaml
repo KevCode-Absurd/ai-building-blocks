@@ -9,20 +9,21 @@ subhead: Give it your order records and any reviews. It builds interview sheets 
 explain: |
   Most buyer profiles are an age, a gender and a guess. Ads written from them sound like everyone else's and speak to no one. If you sell to a mix of people, you can't tell which of them matters or what pushed them to buy.
 
-  The steps replace guesses with quotes. First it uses your order records to write a short call sheet for each recent buyer. You then call five to eight of them and write notes. It mines those notes, your reviews and public forum posts for the words they use. It groups the stories by the job each buyer hired you for, writes the brief, and checks your current ad or page against the profile. Two pauses ask you to call buyers and to gather reviews and posts.
+  This workflow replaces guesses with quotes. Step 1 uses your order records to write a call sheet for each recent buyer. The run then pauses while you call five to eight of them, write notes and gather reviews and forum posts. Step 2 mines your notes, reviews and posts for the words buyers use. Step 3 groups the stories by the job each buyer hired you for and writes a profile for each group. Step 4 boils it to a half-page brief for writers. Step 5 checks your current ad or page against the profile.
 when:
   - You sell to a mix of people and want to know which one buys most, and why, before you write ads or pages.
   - Your ads get views but not sales, and you suspect they speak to the wrong person.
   - You have reviews or support emails sitting unused and want them turned into something your writers can use.
 not_for:
-  - "You have no buyers or order records yet: use the Website brand brain builder first, then come back."
-  - "You only want to find where your buyers hang out online: use the Customer community finder."
-  - "You only need a script for one buyer call: use the Customer purchase interview script writer."
+  - "You have no buyers yet: use the Forum and review avatar digger on its own, with public posts and reviews."
+  - "You only want to find where your buyers spend time online: use the Audience hangout finder."
+  - "You only need a script for one buyer call: use the Buying story interview guide."
 you_give:
   - Your order list with dates, times, devices, items bought together and order value
   - Buyers who agreed to a call (use codes, not names)
-  - Your product, price and what it replaced for buyers
+  - Your product, its price, the problem it solves and what it replaced for buyers
   - Reviews, survey answers or support emails (optional)
+  - Forum posts you read and paste by hand (optional)
   - Your brand file (optional)
   - Your current ad copy or landing page, to check against the profile (optional)
 you_get:
@@ -30,13 +31,13 @@ you_get:
   - A one-page sketch of who buys, with quotes and the exact phrases they use
   - Buyer profiles built on the job they hire you for, each with a trigger, proof and a not-for line
   - A half-page brief for ad and page writers
-  - A fit score out of 100 for your ad or page, with rewrites in the buyer's words
+  - A fit score out of 100 for your ad or page, with rewrites in the buyer's words (if you give an ad or page)
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Ask each buyer before you list them for a call. It only builds sheets for people who agreed.
   - When it pauses, call five to eight recent buyers, write notes right after each call, and collect reviews and forum posts from the same group.
-  - Bring the notes back and let the later steps run. Remove names and contact details first.
+  - Bring the notes back and let the later steps run. Remove names and contact details first. Paste only reviews and posts you can already see, and take out usernames.
 output_sample:
   input:
     - Your order list with dates, devices, items bought together and order value
@@ -65,9 +66,9 @@ how_it_works:
   - title: Write the interview sheets
     text: Picks recent buyers from your orders. Writes a call that builds a timeline of the day they bought, with questions only where the order leaves a gap.
   - title: Dig for their words
-    text: Gives you search phrases and a timed hour for forums and reviews. Marks up the quotes you paste and writes a one-page sketch of the buyer.
+    text: Gives you search phrases and a timed hour for forums and reviews. You read and paste by hand. It marks up your call notes and the quotes you paste, and writes a one-page sketch of the buyer.
   - title: Build the buyer profiles
-    text: Groups stories by the struggle behind the purchase, not by age. Writes the job, the trigger, quoted proof and who it is not for.
+    text: Groups stories by the struggle behind the purchase, not by age. Writes the job, the trigger, three or more quotes and who it is not for. Steps 4 and 5 use these profiles.
   - title: Write the buyer brief
     text: Settles how much the buyer knows and which force to work on. Boils it to a half page of quotes and a job line.
   - title: Check your copy against it
@@ -95,8 +96,8 @@ tweaks:
     how: Buyers from the last few weeks remember the day. Older orders give vaguer stories.
   - what: How many stories you bring
     how: Fewer than five gives guesses, and every profile says so. Five to eight gives leads, not proof.
-  - what: Your own buyers or rivals' reviews
-    how: A new store with no buyers can use rivals' reviews, but every profile is marked low confidence.
+  - what: Where the reviews and posts come from
+    how: Paste only reviews and posts you can already see, such as your own reviews, survey answers and public threads. Read forum posts by hand and paste the words, without usernames. Do not use a scraper.
   - what: A reward for the call
     how: A small gift card helps people say yes. Tell step 1 what you offer.
 judge:
@@ -113,3 +114,9 @@ improve:
   - Add your own interview questions to the sheet skill, for what your product replaced.
   - Save the profiles and brief in your brand file so every ad and page skill starts from them.
   - Repeat the forum hour for each new buyer group, and call more buyers each quarter.
+
+terms:
+  - term: Job
+    meaning: The progress a buyer wants in a certain moment. Profiles are built on the job, not on age or gender.
+  - term: Not-for line
+    meaning: A line on each profile that says who the product will disappoint.

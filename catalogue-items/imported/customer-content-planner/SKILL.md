@@ -18,10 +18,10 @@ Check if `.agents/brand-context.md` exists. Read it. UGC must align with brand v
 ## Why UGC Works
 
 UGC outperforms brand-created content because:
-- **Trust**: 92% of consumers trust peer recommendations over brand ads
+- **Trust**: people tend to trust peers more than brand ads (no figure given here; do not quote a percentage unless the user supplies a source)
 - **Authenticity**: Real customers in real settings feel genuine
 - **Cost**: UGC is free or cheap content vs. expensive professional production
-- **Performance**: UGC-style ads consistently outperform polished brand ads on Meta and TikTok
+- **Performance**: UGC-style ads often do well on Meta and TikTok, but test them against your own brand ads before you assume they win
 - **SEO**: Reviews and UGC create keyword-rich content the brand didn't have to write
 
 ---
@@ -105,7 +105,7 @@ Reviews are the most persuasive form of UGC. Build a systematic approach:
 - App: App Store + Google Play
 
 **Incentivizing reviews (carefully):**
-- Loyalty points for leaving a review (allowed on most platforms)
+- Rewards for leaving a review: many review sites ban or limit them. Check each site's current incentive rules before you offer anything, and disclose any reward where the rules require it.
 - Do NOT offer discounts or gifts for positive reviews (FTC violation)
 - Do NOT ask only happy customers (biased — and against platform rules)
 
@@ -140,16 +140,13 @@ Paying creators to make authentic-style content (not for their audience — for 
 **Deliverables:** [# of videos, # of hooks, raw + edited versions]
 **Usage rights:** [Brand has rights to use in paid ads for X months]
 
-**Pricing benchmarks:**
-- Micro UGC creator: $50–150/video
-- Mid-tier UGC creator: $150–500/video
-- Specialist (doctor, chef, expert): $300–1,000/video
+**Pricing:** Creator prices vary widely. Get quotes from two or three creators and set your budget from those. Do not quote price ranges unless the user supplies them.
 
 ---
 
 ### 05 — UGC FOR PAID ADS
 
-UGC-style creative is consistently the highest-performing ad format on Meta and TikTok.
+UGC-style creative is a format worth testing on Meta and TikTok. Do not promise it will beat your other ads.
 
 **Why UGC ads work:**
 - Blend into the feed (don't look like ads)
@@ -164,7 +161,7 @@ UGC-style creative is consistently the highest-performing ad format on Meta and 
 5. **Problem/solution** — creator shares the problem, then shows the brand as the solution
 6. **Duet/reaction** — react to another piece of content featuring the product
 
-**Hook formulas for UGC ads:**
+**Hook formulas for UGC ads** (a creator may only say these about their own real experience with the product; never script a claim they did not live, and never present paid creator content as a real customer's review):
 - "I never thought I'd be the person who [outcome]..."
 - "Okay so I've been using [product] for 30 days and..."
 - "This [product] genuinely changed how I [routine]"
@@ -193,7 +190,7 @@ UGC-style creative is consistently the highest-performing ad format on Meta and 
 - Whitelisting rights: right to run ads from the creator's handle (more expensive)
 
 **FTC compliance:**
-- Paid creators must disclose (#ad, #sponsored, or explicit mention)
+- Paid creators must disclose (#ad, #sponsored, or explicit mention), and paid ads that reuse their content must carry the disclosure the platform requires
 - Incentivized reviews must not be presented as independent
 - Health/supplement claims in UGC must be verified and compliant
 

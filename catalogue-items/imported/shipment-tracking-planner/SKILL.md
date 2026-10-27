@@ -93,6 +93,8 @@ Before implementing track-and-trace, understand:
 
 ## Shipment Tracking System
 
+The Python classes in this section are illustrative examples with stubbed carrier data. You do not need to run any code to use this skill: the plan, the event table and the alert rules can all be written in chat. Use the code only as a model for a developer.
+
 ### Real-Time Shipment Visibility
 
 ```python

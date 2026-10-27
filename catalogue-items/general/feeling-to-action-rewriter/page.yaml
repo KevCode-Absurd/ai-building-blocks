@@ -102,3 +102,4 @@ works_best_with:
   inputs:
     - "A paragraph of yours you like"
     - "A list of words you overuse"
+next: [show-dont-tell-scene-rewriter]

@@ -1,0 +1,142 @@
+new_slug: pay-raise-case-builder
+name: Pay raise case builder
+summary: Share your results and the pay raise you want. Get your case, a script and replies to likely answers.
+job: sell-and-negotiate
+thinking: medium
+thinking_why: It has to turn your facts into a clear case and plan for replies you can't predict.
+headline: Pay raise case builder
+subhead: 'Tell it your role, your results since your last review and what you want. It builds a case you can say out loud in five minutes: your evidence, the market proof to look up, the ask, and a script. You also get replies to "no" and "not now", and ideas for what to ask for instead.'
+explain: |
+  Asking for a raise is easier when you have a case ready. Most people go in with a feeling that they are underpaid. A manager can't act on a feeling. They can act on results, the market and a clear number.
+
+  This skill builds the case from your own facts. You give it your role, what you have done since your last review, and what you want. It sorts your results into the ones that matter to your manager, lists the pay evidence you should look up yourself, and sets out the ask as a range with one number you would be happy with. It writes a short script, replies to "not now" and "we can't", and a list of other things to ask for if pay is fixed. It does not invent results, salary data or what your employer will say.
+when:
+  - Your review is coming and you want to ask for a raise, also called a pay rise.
+  - You took on more work or a bigger role and your pay hasn't changed.
+  - You are in a salary negotiation with your employer, or got an offer elsewhere and want to talk to your manager.
+not_for:
+  - "You are negotiating a job offer from scratch: use the Job offer planner."
+  - "You want to prepare for a tough talk on another topic: use the Negotiation prep coach."
+  - "You want to know what to pay your own staff: use the Salary band and benefits planner."
+you_give:
+  - Your role, how long you've been in it and when you were last paid more
+  - "What you have done since: results, new duties, things you saved or earned"
+  - The amount or range you have in mind
+  - Pay evidence you found, such as job ads or surveys (optional)
+  - How your manager and company usually decide pay (optional)
+you_get:
+  - Your results, sorted by what matters to your manager
+  - A list of pay evidence to look up before you go in
+  - Your ask as a range, with one number you would take
+  - A short script, replies to likely answers, and other things to ask for
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List what you have done since your last raise. Give numbers only if they're true and you can show them.
+  - Look up pay for your role in places you trust, and paste in what you find.
+  - Say the range you want. Be ready to say the number you'd be glad to get.
+  - Rehearse the script out loud, then ask your manager for a time to talk.
+output_sample:
+  input:
+    - Your role, how long you've been in it and when your pay last rose
+    - "What you have done since: results, new duties, things saved or earned"
+    - The range you have in mind
+    - Pay evidence you found (optional)
+  output:
+    - name: Your case
+      contains: Your results in order of what your manager cares about, each with the reason it matters.
+    - name: Pay evidence to look up
+      contains: What to find yourself, and where to look.
+    - name: The ask
+      contains: Your range, and the one number you would be glad to get.
+    - name: Script
+      contains: A short opening, your case in three points, and the ask.
+    - name: If they say
+      contains: Replies to "not now", "we can't" and "let me think".
+    - name: If pay is fixed, ask for
+      contains: Other things to ask for, such as a review date.
+    - name: Follow-up note
+      contains: A short note to send after the talk.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Sorts your results
+    text: Picks the results your manager would care about most and puts them in order.
+  - title: Finds the evidence to look up
+    text: Lists the pay evidence you should find yourself, such as pay for similar roles.
+  - title: Sets the ask
+    text: Turns your range into one ask, with the number you would be glad to get.
+  - title: Writes the script
+    text: A short opening, the case in three points, and the ask.
+  - title: Plans for replies
+    text: Writes replies to "not now", "we can't" and "let me think".
+  - title: Lists other asks
+    text: Names other things to ask for if pay is fixed, such as a review date or extra time off.
+  - title: Writes the follow-up
+    text: A short note to send after the talk.
+output_shape: |
+  YOUR CASE
+  1. <result> | Why it matters to your manager: <reason>
+
+  PAY EVIDENCE TO LOOK UP
+  - <what to find, and where>
+
+  THE ASK
+  Range <yours> | The number you'd be glad to get <yours>
+
+  SCRIPT
+  Open: <line>
+  The case: <three points>
+  The ask: <line>
+
+  IF THEY SAY
+  "<reply>" -> <what to say>
+
+  IF PAY IS FIXED, ASK FOR
+  - <option>
+
+  FOLLOW-UP NOTE
+  <short note>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Your results
+    how: Give what you did and what changed because of it. A result with a number you can show carries more weight.
+  - what: Pay evidence
+    how: Paste in real job ads or survey data. The skill never makes up what others are paid.
+  - what: Your range
+    how: Say the real range. If the low end is too low, you may get it.
+  - what: Your manager
+    how: Say how they like to be asked, by email first or in person. It changes the script.
+judge:
+  - Every result in the case is one you gave.
+  - No salary figure for others appears unless you gave it.
+  - The ask is a range with one clear number.
+  - The script can be said in about five minutes.
+  - There are replies for "no" and "not now".
+test:
+  - Say the script out loud with a friend playing your manager. Note where you stumble.
+  - Remove one result you can't prove. The case should still hold.
+  - Ask a trusted colleague if each point would matter to your manager.
+improve:
+  - Keep a running list of results in your about-me note, so you always have a case ready.
+  - Add how your company decides pay, such as review dates, to the skill file.
+  - After the talk, paste in what was said and ask for a plan for the next step.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Turning your facts into a case and a script works well in any strong chat AI.
+    - name: Public pay data and job ads
+      why: They show what similar roles pay. Find and check them yourself.
+  inputs:
+    - Your last review and its feedback
+    - Your job description now, and as it was when you started
+    - Three job ads for similar roles
+terms:
+  - term: Pay evidence
+    meaning: Facts about what similar roles pay, such as job ads, surveys or offers.
+  - term: The ask
+    meaning: The specific amount or range you request.

@@ -11,10 +11,11 @@ not_for:
   - "You want a new build set up from scratch: ask a developer, or start with GitHub's own starter workflows."
   - "You need to change org-wide or account billing settings: ask your GitHub org owner, since this only reviews repo files."
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text and the four files in its references folder (actions.md, patterns.md, reporting.md and review-rubric.md). Without them the audit rules and report format are missing.
   - Paste your workflow files. Add your recent run list if you have it.
   - If your AI can run code and the gh tool, let it run the checks. If not, it reviews your pasted files only and says so.
-  - Read the top 3 fixes and check each one still keeps your required tests.
+  - If your AI runs a live test push, it must use a throwaway branch, never main. The test creates real workflow runs.
+  - Read the top 3 fixes and check each one still keeps your required tests. If fewer than 3 are listed, that is fine. Only safe fixes are kept.
   - Take the top fix into a pull request. Run gh run list a week later to compare real savings.
 output_sample:
   input:

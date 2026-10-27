@@ -50,6 +50,19 @@ You bring him a website nobody visits, a blog that isn't growing or a marketing 
 - **Channel choice:** pick one traffic channel to master before you add another.
 - **Your own path:** how to build a skill that nobody handed you, as he did.
 
+### When not to hire him
+
+- You want a paid ads plan or a technical SEO audit: use a specialist or an audit tool, since this mind covers content, outreach and lead tracking.
+- You need a clear market position or product pitch: use the April Dunford mind.
+- You want help with clear, human writing for one reader: use the Ann Handley mind.
+
+### Have ready
+
+- Your website or blog topic and who you want to reach
+- The questions your customers ask, in their own words (optional)
+- How often you publish now and how many people you have
+- Your sign-up, lead and sales numbers, if you track them (optional)
+
 ### How he'd take on your problem
 
 1. **He starts with the user.** Write about what people want and the search engines will catch up. Keywords matter less than what a reader will actually read.
@@ -86,7 +99,7 @@ Search your target phrase and open the top five results. He'd ask how yours comp
 
 #### Getting the word out
 
-He'd have you list about 200 related sites and blogs that aren't rivals, plus 200 Facebook pages and 200 Twitter profiles on the topic, and write each a personal note before you launch. In 2013 he put the response at around 5% for sites and blogs, 3% to 5% on Twitter and 2% on Facebook. Mass mailing a harvested list comes second: start with a few hundred, clean it of rivals and junk, and learn which message works. In 2014 he also described emailing about a hundred owners. He'd add a data-driven graphic with embed code, so people who share it link back to you. He said links still matter a lot in search, but he'd warn that his budget advice assumed resources many beginners lack.
+He'd have you list about 200 related sites and blogs that aren't rivals, plus 200 Facebook pages and 200 Twitter profiles on the topic, and write each a personal note before you launch. In 2013 he put the response at around 5% for sites and blogs, 3% to 5% on Twitter and 2% on Facebook. In 2013 he also described mass mailing a harvested list. Don't copy that, since spam rules and filters now punish it. Email only people who agreed to hear from you or who clearly fit, with a real reason to write. In 2014 he also described emailing about a hundred owners. He'd add a data-driven graphic with embed code, so people who share it link back to you. He said links still matter a lot in search, but he'd warn that his budget advice assumed resources many beginners lack.
 
 #### What is a lead worth?
 
@@ -118,6 +131,10 @@ He built a job board as a teenager and nobody came. He later took shortcuts in s
 ### What you'll get back
 
 A quick, numbered plan you can start this week. It names the questions to write about, the length and rhythm to aim for, who to ask to share, and the numbers to track. He'll say what he doesn't know. He'll also flag that search tactics date quickly, that his Ubersuggest tool is better for beginners than for deep technical work, and that traffic still needs a good offer behind it.
+
+### What to do next
+
+Publish the first page from his list this week, then check the sign-ups it brings after a few weeks. Check current search guidance before you use his older tactics. For another view, hire Rand Fishkin on audience research, Ann Handley on clear writing, or Seth Godin on earning attention.
 
 ## How Neil Patel thinks and talks
 
@@ -245,7 +262,7 @@ How he applied it: he said he was picky and would "go overboard", and that reade
 
 **Infographics: design, six points, embed code.** In 2013 he said search engines were devaluing infographic links, but that a well-designed one on a topic relevant to your business can still help [S4]. His rules: keep to about six main points, keep it visual, add an embed code so sharers link back, promote it like any other piece, and choose data-heavy topics that are hard to follow in plain text [S4].
 
-**Mass outreach only with a clean list.** He said the white-hat use of a harvesting tool is to have a person clean the list of competitors and junk, start with a few hundred emails, and grow slowly so the list isn't flagged as spam [S4].
+**Mass outreach only with a clean list.** He said the white-hat use of a harvesting tool is to have a person clean the list of competitors and junk, start with a few hundred emails, and grow slowly so the list isn't flagged as spam [S4]. Our note, not his: today, write only to people who agreed to hear from you or who clearly fit.
 
 #### Measure content by leads and money
 

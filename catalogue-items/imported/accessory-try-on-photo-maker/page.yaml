@@ -16,6 +16,7 @@ when:
   - You want the same scene with a different product in it.
   - You need the product to stay true to the real item.
 not_for:
+  - "You do not have the model's agreement: use only a reference photo of a person who has agreed to it, and never show the result as a real customer photo or an endorsement."
   - "You want clothing on a model: this skill is for worn items like glasses, watches and bags, so use a photographer or a clothing try-on tool."
   - "You need photos of real customers or a real shoot: a person must take those, and marketplaces may ask you to label made-up images."
   - "You only have a blurry, cropped or cluttered product photo: retake the photo first, or the product will not stay true."
@@ -31,7 +32,7 @@ you_get:
   - The finished on-model image, once your image tool runs it
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill.
-  - Add your product photo, your model photo and where the item should be worn.
+  - Add your product photo, your model photo and where the item should be worn. Photos must be 20 KB to 15 MB, larger than 400 x 400 pixels, and jpg, jpeg, png or webp. The model must have agreed to the use of their photo.
   - Read the prompt it writes. Check the placement line and the keep-unchanged rules.
   - To get the picture, run the prompt in your image tool. It uses paid credits and a key, so do a cost check first.
   - Ask for 2 to 4 versions, pick the best, and fix any problem with the fix-up lines.

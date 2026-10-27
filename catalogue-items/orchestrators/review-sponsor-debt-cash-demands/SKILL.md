@@ -47,7 +47,7 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 - Ending PIK is added once, cash interest is paid once and ECF is never added again to cash already generated.
 - Actual and proposed cases are shown apart, and a covenant is never marked met by an unexecuted prepayment.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+- Reconcile opening balances, additions, deductions and closing balances.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
 - Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.

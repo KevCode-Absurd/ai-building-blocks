@@ -7,7 +7,7 @@ job: build-software
 headline: Apify Actor builder
 subhead: Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account. Bring the task to automate. Use the result to plan your next step.
 explain: |
-  A ready Apify Actor project for a task you want to automate, such as scraping a site or processing data, with its inputs, outputs and deploy steps in place. You need an Apify account, which is paid.
+  This is a copy of a public Apify skill (CC BY-4.0), given a plain name; the credit is at the bottom of this page. A ready Apify Actor project for a task you want to automate, such as scraping a site or processing data, with its inputs, outputs and deploy steps in place. You need an Apify account, which is paid.
 
   The skill checks that the Apify command line tool is installed and signed in, and asks you to supply a token safely. It then picks a template, defines the JSON input the Actor accepts, writes the logic, and saves results to a dataset or store. It fills in the Actor settings file, including a note on which AI tool wrote it, and shows how to run it locally and push it to Apify. Actors are small cloud programs that do one job.
 when:
@@ -62,3 +62,4 @@ output_sample:
       contains: Plain documentation for the Actor page on the Apify marketplace.
     - name: Local test and deploy steps
       contains: How to test with apify run, check the local storage folder, then publish with apify push.
+next: [apify-output-schema-writer, apify-actor-converter]

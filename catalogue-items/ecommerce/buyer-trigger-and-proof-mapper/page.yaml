@@ -5,9 +5,9 @@ job: understand-customers
 headline: Buyer trigger and proof mapper
 subhead: Paste your customer words, product facts and any current ads. Your AI maps what starts the search, the feeling, the proof and the result the buyer wants. It also shows which step each ad is missing.
 explain: |-
-  Map what starts a buyer's search, how they feel, what proof they need and what outcome they want.
+  Many ads get clicks and no sales because they skip a step in how the buyer decides. Some show proof but give no reason to care. Some promise a result but never name the moment the buyer felt the problem.
 
-  Share customer words, product facts and existing ads. Get a buyer trigger, emotion, evidence and payoff map.
+  This skill maps four steps from your customer words: the trigger that starts the search, the feeling behind it, the proof the buyer needs, and the result they expect. It then checks each of your ads for the steps it has and lacks, and ranks your ad ideas by how many steps they cover. It uses only what you give it.
 when:
   - You are about to brief a new ad and need to know who you are talking to.
   - Your ads get clicks but few sales, and you want to see which step is missing.
@@ -29,7 +29,7 @@ you_get:
   - Advice on what to lead with for new buyers and for return visitors
   - A list of missing inputs and assumptions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code, files or paid tools are needed.
   - Paste your customer words, product facts and the buyer group you want to map.
   - Add your current ads if you have them. Say so if you have none.
   - Ask for the buyer map and the ranked ad ideas.
@@ -56,20 +56,16 @@ output_sample:
       contains: Which step to lead with for new buyers and for people who already visited, and which step never to skip.
 how_it_works:
   - title: Check the inputs
-    text: Confirm customer words, product facts and existing ads. Mark facts that are missing.
-  - title: The TEEP Framework
-    text: Follow the the teep framework section in the full method and keep its required fields and decision rules.
-  - title: Map the Buyer's TEEP
-    text: Follow the map the buyer's teep section in the full method and keep its required fields and decision rules.
-  - title: Audit Current Ads
-    text: Follow the audit current ads section in the full method and keep its required fields and decision rules.
-  - title: Prescribe TEEP-Balanced Creative
-    text: Follow the prescribe teep-balanced creative section in the full method and keep its required fields and decision rules.
-  - title: Deliver Psychology Map
-    text: Follow the deliver psychology map section in the full method and keep its required fields and decision rules.
-  - title: "Buyer Psychology Map: [Audience]"
-    text: "Follow the buyer psychology map: [audience] section in the full method and keep its required fields and decision rules."
+    text: It confirms you gave customer words and product facts. Anything it cannot fill from them is marked missing, not invented.
+  - title: Map the four steps
+    text: Trigger, emotion, evidence and payoff, each with examples taken from your customer words.
+  - title: Audit your ads
+    text: Each ad is checked for which steps it has, which are missing and which is pushed too hard.
+  - title: Balance the ad ideas
+    text: Each idea gets a main step and supporting steps, so none skips a step.
+  - title: Hand back the map
+    text: The map, the ad ideas ranked by coverage, and what to lead with for new buyers and return visitors.
   - title: Review the result
-    text: Return a buyer trigger, emotion, evidence and payoff map. Check facts, math and the decisions before any action.
+    text: Check each point against your own facts and customer words. Remove anything not backed up.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

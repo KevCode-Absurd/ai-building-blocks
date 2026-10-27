@@ -48,6 +48,13 @@ The workflow preserves the original file and generates separate presentation, na
 - Use when creating presentation-style videos.
 - Use when the user asks for Markdown-to-video, narrated slides, or audio-video generation.
 
+## When Not to Use This Skill
+
+- The document is confidential. Edge-TTS sends the text to an online speech service, so stop after Step 4 (slides and script only).
+- The user wants a product demo from screenshots. Use the product demo video maker.
+- The user only wants text read aloud as audio. Use the multilingual narrator.
+- The user needs a PowerPoint deck for a talk. Use the storyboard to PowerPoint deck builder.
+
 ## How It Works
 
 ### Step 1: Check Environment
@@ -58,15 +65,15 @@ Verify required local dependencies before running the workflow. Do not install, 
 
 Keep the original file unchanged.
 
-Create a new Markdown file with improved sectioning, formatting, and natural transitions while preserving the original meaning.
+Create a new Markdown file (name it `<original>-prepared.md`) with improved sectioning, formatting, and natural transitions while preserving the original meaning. Put one main idea under each heading, and add a one-sentence transition between sections that need one. Do not add facts that are not in the original.
 
 ### Step 3: Generate Presentation Markdown
 
 Convert the prepared document into Marp-compatible slides.
 
 - Separate slides with `---`.
-- Prevent content overflow.
-- Split oversized tables, code blocks, or sections when necessary.
+- Prevent content overflow: keep each slide to about 8 lines of text or 6 table rows.
+- Split oversized tables, code blocks, or sections into numbered slides (for example "Title (1 of 2)") when necessary.
 - Ask the user to choose a Marp style when required.
 
 ### Step 4: Generate Narration
@@ -100,6 +107,10 @@ Then:
 ```
 python md2video.py
 ```
+
+## Next steps
+
+Check that the presentation and narration files have the same number of slides. Watch the MP4 once from start to end before sharing it. For a product demo use the product demo video maker, and for audio only use the multilingual narrator.
 
 ## Examples
 

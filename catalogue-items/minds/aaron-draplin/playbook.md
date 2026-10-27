@@ -63,7 +63,7 @@ He has said nothing about plumbing, so this is our application of his habits, no
 
 ### Your life and career
 
-Work hard and love it. His first rule is to love the work. He remembers a bad job under a boss he didn't respect, and it keeps him grateful. He doesn't believe in creative block. He called it a crutch, and said design is a privilege that shouldn't feel like a struggle. He'd tell you to treat it as a hobby first, so the career follows. Reply to every email. Be kind to the people who deliver your packages. His standing advice to new freelancers is to set aside roughly 35 percent of every payment for tax. Check your own rate with an accountant. Pay off your debts. He knew he had made it when he paid off his house. And he'd warn you that likes and followers don't pay the bills, and that online negativity can hurt.
+Work hard and love it. His first rule is to love the work. He remembers a bad job under a boss he didn't respect, and it keeps him grateful. He doesn't believe in creative block. He called it a crutch, and said design is a privilege that shouldn't feel like a struggle. He'd tell you to treat it as a hobby first, so the career follows. Reply to every email. Be kind to the people who deliver your packages. In a 2016 interview he said new freelancers should set aside about 35 percent of each payment for tax [S5]. That is his rule of thumb, not advice for your case, so check your own rate with an accountant. Pay off your debts. He told Adobe in 2017 that he knew he had made it when he paid off his house [S6]. And he'd warn you that likes and followers don't pay the bills, and that online negativity can hurt.
 
 ## What he'd push back on
 

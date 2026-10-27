@@ -35,5 +35,21 @@ blocks:
   - channel-budget-mix-planner
 alternatives: [triple-whale, klaviyo]
 last_checked: 2026-10-21
+first_result:
+  - "Start at northbeam.io. Plans start at US$1,500 a month, so check your budget first."
+  - "Ask for a demo or a quote. We did not check whether you can sign up on your own."
+  - "Bring your monthly ad budget by channel, your store platform and the questions you want answered."
+  - "Ask Northbeam to connect your store and ad accounts. Wait for the data to fill in."
+  - "Compare its numbers with each ad platform's own report for the same week. Note where they differ and ask why."
+  - "You end with a dashboard that shows every channel on one basis."
+  - "Next: plan your spend with the Channel budget mix planner. To compare tools, look at Triple Whale."
+needs:
+  - "A store, such as Shopify, and ad accounts for each channel."
+  - "Your monthly ad budget by channel."
+  - "A budget of US$1,500 a month or more."
+not_verified:
+  - "Whether you can sign up without a sales call."
+  - "The price for your pageview volume."
+  - "How long setup takes."
 sources:
   - https://www.northbeam.io/pricing

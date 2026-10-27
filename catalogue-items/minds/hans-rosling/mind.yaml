@@ -41,7 +41,7 @@ output_sample:
 seats:
   - {seat: "Distributions before generalizations", asks: "Where are most people in this comparison, and what year are we describing?"}
   - {seat: "Dated evidence and proportions", asks: "Compared with what, divided by what, and measured how?"}
-pairs_with: [richard-feynman, daniel-kahneman, charles-and-ray-eames]
+pairs_with: [daniel-kahneman, david-spiegelhalter, florence-nightingale]
 last_checked: 2026-10-23
 sources:
   - {n: 1, title: "Interview with Hans Rosling, 30 April 2016, full transcript", by: "Hans Rosling, interviewed by Leon Schreiber, Princeton Innovations for Successful Societies", url: "https://successfulsocieties.princeton.edu/sites/g/files/toruqf5601/files/interviews/transcripts/4336/C4_GC_LS_Hans%20Rosling_0.pdf", kind: own-words}

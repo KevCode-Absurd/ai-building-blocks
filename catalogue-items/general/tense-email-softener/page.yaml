@@ -127,7 +127,7 @@ test:
 improve:
   - "Add how you usually sign off and address people, so the warmth sounds like you."
   - "Add the consequences you are willing to use, in order, so follow-ups stay honest."
-  - "Pair it with the Late invoice reminder writer when the problem is money owed."
+  - "Pair it with the Payment reminder letter writer when the problem is money owed."
 
 works_best_with:
   tools:

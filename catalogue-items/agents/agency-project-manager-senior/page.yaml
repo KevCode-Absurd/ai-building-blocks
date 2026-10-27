@@ -1,37 +1,45 @@
 name: Senior Project Manager agent
-summary: Turn your brief into a senior project manager plan with tasks and acceptance checks, plus the gaps and assumptions to check first.
+summary: Give it a website or app spec. You get small tasks, each with an acceptance check, plus the gaps to settle first.
 headline: Senior Project Manager agent
-subhead: Use this agent for senior project manager tasks. Get a scoped project plan with tasks and acceptance checks. Bring your brief. Share the goal, relevant files and limits. It uses the source profile to propose work and checks. You review the result before using it.
+subhead: Give it your spec or brief, your tech stack and your deadline. It quotes what the spec asks for, flags the gaps, and splits the work into small tasks a developer can finish in under an hour. Each task has an acceptance check.
 job: organise-work
 thinking: high
 thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
-explain: >-
-  Get a scoped project plan with tasks and acceptance checks. Bring your brief.
+explain: |-
+  Projects slip when the brief is vague and the tasks are big. This agent turns a spec into a list of small, specific tasks, each sized for 30 to 60 minutes of developer work. Each task has an acceptance check that says when it is done. It quotes the spec word for word, so it does not add features nobody asked for. Where the spec is unclear, it lists the gap and asks, instead of guessing.
 
+  The original profile is written for web builds. It names a Laravel, Livewire and FluxUI stack and a Playwright screenshot script. Those are examples. Give your own stack and the agent swaps them in. It cannot read your project tool or update a tracker. You copy the tasks across yourself.
 
-  A scoped project plan with tasks and acceptance checks.
-
-
-  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
 when:
-  - You need the senior project manager role for a defined task.
-  - You have relevant facts or files and want a proposal you can check.
+  - You have a written spec or brief for a website or app and need a task list a developer can start on.
+  - Your tasks are too big or too vague to estimate, and you want them split with a check for each.
+  - You suspect the spec has gaps and want them listed before work starts.
 not_for:
   - You need live project data or a tracker updated. Your AI cannot reach your tools here, so use your project tool and paste in what it shows.
   - You want someone to approve spending, send messages or change live systems. Ask a person on your team to do that.
   - You only need a short to-do list for one day. Write it by hand or ask your AI for a quick list instead.
+  - You have no written brief yet. Write down the goal and the must-haves first, then run this.
 you_give:
-  - The task you want a senior project manager to handle, and what a useful result looks like.
-  - Relevant files, evidence and constraints, including tools the AI can actually use.
+  - The project goal and the spec or brief, pasted or attached
+  - The deadline, budget and limits
+  - The team and who owns what
+  - Your tech stack, such as the framework and tools in use
+  - An existing plan or a tracker export, if you have one
+  - Anything the spec leaves out that you already know, such as a client request
 you_get:
-  - A scoped project plan with tasks and acceptance checks.
-  - Assumptions, missing evidence and checks to run before accepting the work.
+  - A short summary that quotes the key requirements from your spec
+  - A numbered task list, each task sized for under an hour, with an acceptance check
+  - The gaps and unclear points in the spec, as questions to settle
+  - Assumptions the plan takes as true
+  - A quality checklist and the evidence still missing before you accept the plan
 how_to_use:
-  - Download the complete pack and open SETUP.md.
-  - Add the pack as a skill in an AI that supports skills, or paste SKILL.md followed by references/source-agent.md into a chat.
-  - For a Claude Code agent, copy references/source-agent.md into .claude/agents/ and supply the scope and review rules from SKILL.md.
-  - Ask it to handle your senior project manager task. Share the goal, relevant material and limits.
-  - Review the proposal and the checks. Authorize any external action separately.
+  - Download the pack and open SETUP.md. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a chat.
+  - Paste your spec, goal, deadline, budget, team and tech stack. Attach an existing plan if you have one.
+  - Ask for the task list. Say "Quote my spec and mark every gap. Do not add features."
+  - Check each task against the spec. Answer the gap questions, then ask it to update the list.
+  - Look for tasks with no acceptance check or no clear owner, and have them fixed.
+  - Copy the accepted tasks into your project tool. The agent cannot update it for you.
 output_sample:
   input:
     - Your project brief and the goal you want met
@@ -51,12 +59,14 @@ output_sample:
     - name: Checks still needed
       contains: Missing evidence and steps to run before you accept the plan.
 how_it_works:
-  - title: Set the task
-    text: Confirm the intended result, available evidence and allowed actions.
-  - title: Use the role profile
-    text: Read the supplied Senior Project Manager profile and apply the methods that fit the task.
+  - title: Read the spec
+    text: It quotes the exact requirements and the stack, and lists any gaps or unclear points.
+  - title: Split the work
+    text: It breaks the spec into specific tasks, each small enough for under an hour, with no added extras.
+  - title: Add acceptance checks
+    text: It gives each task a clear, testable check, so you know when it is done.
   - title: Review the result
-    text: Separate facts from assumptions, show evidence and list checks still needed.
+    text: It separates facts from assumptions and lists the evidence still missing.
 judge:
   - The result addresses your actual task and cites the evidence used.
   - Examples, role-play experience and targets are kept separate from verified results.
@@ -65,11 +75,14 @@ test:
   - Try a small task whose result you can check yourself.
   - Omit one important fact and check whether the agent names the gap.
 tweaks:
-  - what: Task scope
-    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Task size
+    how: Ask for bigger tasks, such as half a day, if the team prefers fewer lines.
+  - what: Stack
+    how: Name your own framework and tools so the quality checklist fits your project.
 improve:
-  - Keep useful corrections with your task notes and apply them on the next run.
+  - Keep your corrections in your own notes. The agent keeps no memory, so paste them into the next chat.
 terms: []
 works_best_with:
   inputs:
-    - A clear brief and the source files needed to check the result.
+    - A written spec with the must-haves marked.
+    - Your deadline, budget and the people who will do the work.

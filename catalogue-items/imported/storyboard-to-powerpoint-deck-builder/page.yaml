@@ -16,12 +16,15 @@ not_for:
   - "You can't run Node on your computer: ask a colleague or designer to build the deck, or make slides by hand in PowerPoint."
   - "You want a style other than corporate-bright with no review: plan to check source notes and layout on every slide yourself."
 how_to_use:
+  - Before you start, gather your source files. Fill in templates/brief.template.md with your audience, your goal and the one message you want them to leave with.
   - Use an AI that can run code on your computer, and install Node and the npm packages first.
   - Download the skill folder and open it in your AI tool.
   - Give your AI your source text, your audience, your goal and the filled-in brief.
-  - Ask it to check the storyboard, build the deck, then run the source-note finalizer.
+  - Ask it to work in this order: validate the storyboard, build the deck, run the source-note finalizer, then render every slide.
   - Render every slide and look at titles, chart units, source notes and wrapped text.
   - Confirm the deck has the same number of slides as the storyboard before you present.
+  - Next, write your speaker notes and export a PDF handout. For a talk with a different look, use the conference talk slide maker.
+next: [conference-talk-slide-maker]
 output_sample:
   input:
     - Your source text, notes or documents

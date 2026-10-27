@@ -5,7 +5,7 @@ name: Data extraction pipeline builder
 summary: Build a data extraction script that pulls data from a website, file or API into a clean CSV or JSON file, with a check for empty or broken results.
 job: build-software
 headline: Data extraction pipeline builder
-subhead: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites. Bring the site, file or API address. Use the result to plan your next step.
+subhead: Give it a site, file or API address and the data you want. You get a checked script and a clean CSV or JSON file. Load the file into a spreadsheet or pass it to the Data cleaner.
 explain: |
   Get a script that pulls data from a website, document or API into a clean CSV or JSON file, with a check that the result is not empty or broken. It avoids fragile one off scripts.
 
@@ -34,8 +34,10 @@ how_to_use:
   - Paste this skill's instructions into the chat.
   - Tell your AI the site, file or API address, and the fields you want. Add your preferred format if you have one.
   - If the job needs Firecrawl, store your key as an environment variable named FIRECRAWL_API_KEY. Never paste it into the script.
-  - Check the route and cost estimate your AI gives you before it runs a large job.
+  - Run the script once with --sample first to check the output shape before any live or paid Firecrawl job.
+  - Check the route and cost estimate your AI gives you before it runs a large job. Firecrawl is a separate service that uses your own key and may charge for large jobs.
   - Read the validation result. If it shows a warning or error, ask your AI to fix the script and run it again.
+next: [data-cleaner, spreadsheet-checker]
 output_sample:
   input:
     - The website, file or API address you want data from

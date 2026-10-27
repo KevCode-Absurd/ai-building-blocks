@@ -4,12 +4,12 @@ headline: Implied terminal reinvestment schedule
 summary: Find the reinvestment and return on capital hidden in your terminal value. Give it value, NOPAT, growth and WACC. You get an implied reinvestment schedule.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The terminal value is taken as given and worked backwards, so the method only holds if it covers operating assets at the terminal date."
 subhead: An implied FCFF, reinvestment-rate and ROC workpaper. Share terminal operating value, first stable-year NOPAT, stable growth and matching WACC.
 explain: |-
   An implied FCFF, reinvestment-rate and ROC workpaper.
 
-  Public equity valuation. Illustrative figures.1,000×(10%-3%)=70 FCFF;100-70=30 reinvestment, or30%.3%/30%=10% ROC. Value800 implies56 FCFF,44% reinvestment and6.818182% ROC.
+  Public equity valuation. Illustrative figures. A terminal value of 1,000 at a 10% WACC and 3% growth implies FCFF of 70. With NOPAT of 100, reinvestment is 30, or 30% of NOPAT. Growth of 3% divided by a 30% reinvestment rate gives a ROC of 10%. A value of 800 implies FCFF of 56, reinvestment of 44 (44%) and a ROC of 6.818182%.
 when:
   - You need an implied FCFF, reinvestment-rate and ROC workpaper.
   - You work on public equity valuation and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You need a full company valuation or an investment call: use a person who does valuation work, such as an analyst or adviser."
   - "You are valuing a bank, insurer or other financial firm: this method does not fit, so use a model built for financial firms."
   - "Your reinvestment comes out zero, negative or above 100%: the steady-state view fails, so rework your growth, WACC or terminal value first."
+  - "You start from growth and return on capital and want the reinvestment a terminal value needs: use the Terminal growth reinvestment check instead."
 you_give:
   - Terminal operating value, first stable-year NOPAT, stable growth and matching WACC.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The terminal date, plus the currency and scale used for the implied terminal reinvestment."
+  - "Your spreadsheet tool, if you want the implied terminal reinvestment as a workbook."
 you_get:
   - An implied FCFF, reinvestment-rate and ROC workpaper.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the implied terminal reinvestment, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of the backsolved cash flow and the terminal value, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the terminal value, first stable-year NOPAT, growth and WACC."
+  - "Tell it what you need: the cash flow, reinvestment rate and return on capital hidden in the terminal value."
+  - "Ask it to stop and mark MISSING if the terminal value or the WACC is not in your sources."
+  - "Check that the backsolved cash flow rebuilds the terminal value exactly, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Your terminal operating value, at the terminal date, for operating assets only
@@ -64,12 +65,13 @@ output_shape: |-
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING lines
+  CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Terminal date"
+    how: "Take the terminal date from the terminal value, first stable-year NOPAT, growth and WACC. Use one currency and scale on every line."
+  - what: "Stable growth"
+    how: "Change the stable growth and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Backsolved FCFF reconstructs supplied terminal value exactly.
 judge:
@@ -82,8 +84,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one implied terminal reinvestment you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define terminal value into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

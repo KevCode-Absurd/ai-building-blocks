@@ -12,7 +12,7 @@ A senior creative strategist's playbook for producing ad creative that performs.
 
 Performance creative is a different discipline from brand creative. Brand work optimizes for memorability, emotional resonance, and distinctive identity. Performance creative optimizes for stopping the scroll, communicating value in three seconds, and producing a click. Both matter. Mixing them up costs money. Brand creative running as performance ads bleeds budget; performance creative running as brand ads erodes equity.
 
-This skill is the discipline that produces performance creative without diluting brand. It assumes you know your audience and offer (see `paid-media-strategy`). It assumes you have brand-voice guidance (see `brand-voice`). The hard part is the systematic production of variations that test cleanly and ship without manual approval bottlenecks, and that is what is here.
+This skill is the discipline that produces performance creative without diluting brand. It assumes you know your audience and offer (use your own media plan and audience notes). It assumes you have brand-voice guidance (your own voice notes, or the Brand voice editor in this library). The hard part is the systematic production of variations that test cleanly and ship without manual approval bottlenecks, and that is what is here.
 
 When to use this skill: producing ad creative for paid campaigns, planning a creative testing cycle, diagnosing creative fatigue, or auditing why creative is not converting.
 
@@ -20,7 +20,7 @@ When to use this skill: producing ad creative for paid campaigns, planning a cre
 
 ## What this skill is for
 
-This skill spans creative production, hook patterns, testing methodology, and fatigue diagnosis. It does not cover paid media strategy (use `paid-media-strategy`), result interpretation (use `ads-performance-analytics` once it ships), or brand voice authoring (use `brand-voice`). Pair this skill with the relevant integrations microsite for platform-specific MCP details and example prompts.
+This skill spans creative production, hook patterns, testing methodology, and fatigue diagnosis. It does not cover paid media strategy (use your own media plan), result interpretation (use your ad platform's reports or an analyst), or brand voice authoring (write a short voice note yourself). Those names come from the original author's toolkit and are not in this library.
 
 The audience is an ad creative producer, a growth marketer responsible for creative testing, or an agency producing creative at scale. The voice is tactical. There is no "consider every option." Performance creative has shape, and a senior practitioner can map a brief to a production-ready variation matrix in an afternoon.
 
@@ -39,6 +39,8 @@ A worked example. A premium coffee brand running a 60-second YouTube awareness a
 ---
 
 ## Hook patterns: the first 3 seconds
+
+> **AI Blocks note:** every number, result and proof point in the hook examples below (such as "cut CAC 40% in 30 days" or "10,000+ teams") is a placeholder. Replace it with a verified result of your own before any ad runs, or leave it out. The fatigue limits and performance gaps later in this file are the author's rules of thumb, not sourced figures. Check them against your own account.
 
 The biggest lever in performance creative. If the hook fails, no amount of body copy or CTA can recover the impression. A user who scrolled past the first second has already decided. The hook is the whole game until the body justifies why the user kept watching.
 
@@ -221,6 +223,10 @@ The output of the framework is a production plan. A list of variations to ship i
 - [`references/brand-voice-performance-balance.md`](references/brand-voice-performance-balance.md) - Voice attributes that survive 15-second compression vs those that do not, with a four-format worked example.
 
 ---
+
+## Next steps
+
+Log each ad's hook, body, call to action and format in one sheet, with the naming scheme above, so results can be read against it. Bring the results to your ad platform's reports or an analyst, and refresh the set when the fatigue signals show.
 
 ## Closing: the hook is the whole game
 

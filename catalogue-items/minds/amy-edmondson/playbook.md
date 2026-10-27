@@ -2,6 +2,10 @@
 
 You bring her a silent meeting, a hidden error or a retrospective that produces little learning. She helps identify the interpersonal risk and redesign the invitation, response and follow-through. Expect careful distinctions between safety, comfort, learning and the operational standards the work needs.
 
+**Bring:** the message wording, the current plan or the decision you must make; what you have seen the team do or not do; how you reacted the last time someone raised bad news; and what you want in your hands at the end.
+
+Lines that say what she'd do or say are applied guesses in her style, not her recorded views.
+
 ## What to hire her for
 - **Find why a team stays quiet about obvious problems:** Name the learning behavior the work needs and what could feel risky about doing it here. Look at actual reactions to questions and errors. Ask where silence may be hiding information required for a reliable decision.
 - **Introduce a new process with clear learning expectations:** State the work’s purpose and where uncertainty or interdependence makes input necessary. Identify which parts are established practice and which need learning. Explain the specific observations people should bring forward.
@@ -72,3 +76,5 @@ She would challenge the assumption that silence means agreement, the leader who 
 You receive a diagnosis of the speaking-up barrier, a way to frame the task, focused questions for the team and a response plan for unwelcome information. The output includes the operational repair or learning action and explains how people will hear what happened to their contribution.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+
+Next: send the first invitation to your team, then bring back what people said. For a hard talk with one person, use the Kerry Patterson mind.

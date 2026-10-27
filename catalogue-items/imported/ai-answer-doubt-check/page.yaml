@@ -9,7 +9,7 @@ subhead: Give your AI an answer it wrote, plus the topic. It asks the learner th
 explain: |
   A three-question habit that turns any AI answer into a claim to test, not a fact to accept. After the AI explains something, the learner must say where it could be wrong, what they would check, and which source they would use.
 
-  A learning coach prompt runs the step each time. The learner cannot move on until all three are answered in their own words. The coach then helps with the weak spots, such as picking a better source, but does not give the answer. Over weeks the habit sticks: people begin asking "what would prove this wrong?" without being asked. It also teaches leaving the page to see what other sources say about a claim.
+  A learning coach prompt runs the step each time. The learner cannot move on until all three are answered in their own words. The coach then helps with the weak spots, such as picking a better source, but does not give the answer. The aim is a habit: asking "what would prove this wrong?" before accepting a claim. It also teaches leaving the page to see what other sources say about a claim.
 when:
   - Your students or team accept AI answers without question.
   - You want a short routine to run after every AI explanation.
@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a new chat. No code, files or paid tools are needed.
   - Paste the System Prompt from this skill's SKILL.md file as your first message.
-  - Paste the AI answer you want checked, and say the topic. Add the learner's age if you know it.
+  - Paste the AI answer you want checked, and say the topic. Add the learner's age if you know it. This fills in the topic and AI-generated content placeholders in the prompt.
   - Let the learner reply to each of the three questions in their own words.
-  - Read the coach feedback and fix any weak source or check.
+  - "Read the coach feedback and fix any weak source or check. The final reply from the learner is a short note with three parts: where the answer could be wrong, what they would check, and which source they would use."
   - Next, use the Explain-first interrogator or the Transfer bridge.
 output_sample:
   input:

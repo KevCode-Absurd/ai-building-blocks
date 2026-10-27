@@ -170,8 +170,13 @@ CSV file `refund_rate_<YYYY-MM-DD>.csv` with columns:
 | No refunds in window | Clean period | Exit with 0% rate, expected |
 | Deleted product on refund line | Product removed after refund | Log as "deleted product" in group |
 
+## Limits
+
+- Each order's line items and refunds are read up to 50 per order, so very large orders may be undercounted.
+- The `period_days` and `currency` values in the JSON example are examples. Use the days back the user asked for and the store's real currency.
+
 ## Best Practices
-- A refund rate above 5–10% on specific products typically signals a listing, quality, or expectation mismatch issue.
+- A refund rate that is high compared with your other products may point to a listing, quality, or expectation mismatch issue. What counts as high varies by category, so compare against your own products and past months.
 - Use `group_by: vendor` to identify if quality problems are concentrated with a specific supplier.
-- Cross-reference high-refund products with `return-reason-analysis` to understand whether the issue is product quality, wrong size, or customer expectation.
+- Cross-reference high-refund products with the return reason finder from this library (`return-reason-analysis` in the original) to understand whether the issue is product quality, wrong size, or customer expectation.
 - Run before quarterly supplier reviews to support data-driven conversations about product quality and chargebacks.

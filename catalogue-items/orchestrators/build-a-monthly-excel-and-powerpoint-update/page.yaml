@@ -48,7 +48,7 @@ how_it_works:
   - title: PowerPoint template populator
     text: Fills your supplied template with the checked monthly results. Keeps charts and tables editable. Hands the deck and a source map to the number checker.
   - title: Excel to PowerPoint number checker
-    text: Matches every number on the slides to the workbook. Fails stale periods, swapped categories and mixed units. Hands a clean deck to the notes step.
+    text: Matches every number on the slides to the workbook. Fails stale periods, swapped categories and mixed units. Hands its list of matched and failed numbers to the notes step; you fix any failed number in the deck first.
   - title: PowerPoint speaker notes builder
     text: Adds speaker notes linked to their sources, with a time budget. It does not change a checked figure.
 output_shape: |-

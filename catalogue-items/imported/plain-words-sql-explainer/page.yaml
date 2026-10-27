@@ -32,6 +32,7 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
   - Paste your SQL query. Say what business question it answers.
   - Add notes on key tables, columns and status values if you have them.
+  - The skill folder also holds a script and a document template. They are optional extras. In a chat, the steps in the skill give you the same document.
   - Read the join and filter sections first. Check they match the question you were asked.
   - Send the validation questions to the person who wrote the query.
   - Save the finished document in your data catalog or dbt docs, so the next person can find it.
@@ -54,3 +55,4 @@ output_sample:
       contains: The business meaning of each column, with edge cases like nulls, rounding or currency.
     - name: Issues and validation questions
       contains: Possible problems such as repeated rows or fixed dates, plus 3 to 5 questions for the query author.
+next: [sql-query-launch-reviewer, plain-words-sql-writer]

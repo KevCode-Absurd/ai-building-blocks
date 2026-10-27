@@ -51,11 +51,9 @@ WASTE SCORE: 100 minus wasted spend as a share of total spend = <n>/100 (sum sho
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner). It takes the audit report.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign performance reviewer](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- **Understand your buyers** with the [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- The [AI search recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
+- The [Google Ads brand traffic splitter](https://useaiblocks.com/skills/brand-and-non-brand-splitter). It takes the audit report.
+- The [Search term sorter](https://useaiblocks.com/skills/search-term-sorter). It takes the audit report.
+- The [Google Ads audience builder](https://useaiblocks.com/skills/google-ads-audience-builder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

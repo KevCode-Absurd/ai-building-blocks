@@ -30,12 +30,13 @@ you_get:
   - A scoring guide
   - A mid-quarter check routine
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, web access or paid tool is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The full skill is long and written for product leaders. If it is too much, paste only its objective, key result, scoring and mid-quarter sections. No code or paid tool is needed.
   - Paste your goals for the quarter, your team or role, and what you can measure today.
   - Add last quarter's goals and scores if you have them (optional).
   - Read the objectives. Each one should describe an outcome, not a task.
   - Check each key result has a number you can measure. Fix any that are vague.
   - Save the scoring guide and mid-quarter check. Use them at the halfway point and at quarter end.
+  - At quarter end, score honestly and use what you learn to write next quarter's objectives. Use the North star metric picker if you still need the one number to aim at.
 output_sample:
   input:
     - The goals or priorities for your quarter
@@ -55,3 +56,4 @@ output_sample:
       contains: Questions to ask halfway through to spot goals that are off track and decide what to change.
     - name: Last quarter review
       contains: A read of last quarter's scores, if you gave them, to show goals that were too easy or too hard.
+next: [north-star-metric-picker]

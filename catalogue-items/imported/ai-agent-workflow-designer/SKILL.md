@@ -36,6 +36,8 @@ Design production-grade multi-agent workflows with clear pattern choice, handoff
 
 ## Quick Start
 
+> **AI Blocks note:** two routes. **In a plain chat** (no scripts): describe the job, steps, volumes, and the time and cost limits, then ask for the design in the pattern that fits. Skip the commands below. **With the full folder** (an AI that can run code and read files): the commands below run `scripts/workflow_scaffolder.py` and the AI can read `references/workflow-patterns.md`. Both are included in this item's folder.
+
 ```bash
 # Generate a sequential workflow skeleton
 python3 scripts/workflow_scaffolder.py sequential --name content-pipeline

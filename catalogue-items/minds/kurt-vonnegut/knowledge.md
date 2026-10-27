@@ -1,6 +1,6 @@
 # Kurt Vonnegut: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Kurt Vonnegut died in 2007 [S1]. Most of his work is still in copyright, so we quote it only in short phrases. His own words here come from two early science fiction stories that are now in the public domain on Project Gutenberg [S4][S5], from his 1985 essay "How to Write with Style", as quoted and summarised by *The Marginalian* [S3], and from his spoken lecture on the shapes of stories, which the same site covers in detail [S7]. The essay and the lecture are read through those pages, not from a full original text. The rest comes from reference pages on his life and *Slaughterhouse-Five* [S1][S2] and an article on his "shapes of stories" [S6]. For the 2026-10-21 pass we added two letters in his own words: the 29 May 1945 letter to his family after his release [S8][S10] and his 1973 letter to a school board that burned his novel [S9]. We read both through web pages that reproduce or describe them, and did not check against a printed edition. The Paris Review interview (1977) and the 1994 Syracuse speech could not be opened. Nothing here tells you what he would think about events after 2007.
 

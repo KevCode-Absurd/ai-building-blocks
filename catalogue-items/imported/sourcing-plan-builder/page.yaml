@@ -31,11 +31,12 @@ you_get:
   - Quote request and scoring rules
   - Negotiation tactics
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. You do not need code running or any files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. You do not need code running or any files. The Python blocks in the skill are optional reference code.
   - Tell your AI the spend category, yearly spend and volume, current suppliers and contract terms.
   - Add your goals, such as cost, risk or quality (optional).
   - Read the Kraljic position first. It sets how hard to push, so check it fits what you know.
-  - Replace any sample numbers or rates in the plan with your own figures before you share it.
+  - Replace any sample numbers or rates in the plan with your own figures before you share it. The percentages and prices in the skill's code are placeholders, not benchmarks.
+  - Next, send the quote request to your suppliers. Then compare their offers with supplier-scorer.
 output_sample:
   input:
     - The spend category, such as packaging or software

@@ -24,5 +24,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [alex-hormozi]
 credits:
-  - {title: "The New Secret Chapter: How to Make Money (Section A: Attract, free and discount promotions)", by: "Alex Hormozi", used: "The order of the steps: choose premium, free or discount, set the cost and the friction, plan the small paid first step, plan what buyers buy next, test it small"}
+  - {title: "The New Secret Chapter: How to Make Money (Section A: Attract, free and discount promotions)", by: "Alex Hormozi", used: "Inspired by its chapter on free and discount promotions: choose premium, free or discount, set the cost and the friction, plan the small paid first step, plan what buyers buy next, test it small"}
 generated_from: intake/hormozi-offers-first-offer/skeleton.yaml

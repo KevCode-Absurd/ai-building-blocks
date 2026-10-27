@@ -9,7 +9,7 @@ subhead: Give it the documents, decks or call notes where you already sound like
 explain: |
   When several people write for you, or you write on different days, the voice slips. One page is warm, the next is stiff. Telling a writer "be on brand" does not help, because no one has written down what that means.
 
-  The steps write it down from what you already have. First it reads your documents and call notes, sorts what they say about voice, tone and words, and rates how sure it is of each rule. It lists the questions your team has not settled. You answer those, because only you can. Then it writes a real email, post or pitch in the settled voice, with a note on each choice. Last it checks a draft against the guide and ranks each gap, with a before and after for the fix.
+  The steps write it down from what you already have. First it reads your documents and call notes, sorts what they say about voice, tone and words, and rates how sure it is of each rule. It lists the questions your team has not settled. You answer those, because only you can. Then it writes a real email, post or pitch in the settled voice, with a note on each choice. Last it checks a draft against the guide and ranks each gap, with a before and after for the fix. The guide alone gives you rules. The new piece shows them at work, and the check works on any later draft.
 when:
   - Your pages, emails and posts sound like different people wrote them.
   - You hire writers or use AI to write and want a guide they can follow.
@@ -29,10 +29,10 @@ you_get:
   - A new email, post or pitch written in that voice, with notes on each choice
   - A ranked list of where the draft drifts, each with a before and after fix
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md and the three skill files, in the order they run: Brand voice guide builder, Brand voice rewriter and Draft brand voice checker.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach or paste your best documents and call notes. Step 1 stops with the guide and its open questions.
-  - Answer the open questions with whoever owns the brand, then paste the updated guide back.
+  - Answer the open questions with whoever owns the brand, one line each, then paste the updated guide back. If nobody can answer yet, say so, and the unsettled rules stay marked.
   - Give the brief for the new piece. Then paste a draft to check, or use the one it just wrote.
 output_sample:
   input:

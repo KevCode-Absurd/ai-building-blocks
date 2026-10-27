@@ -9,7 +9,7 @@ subhead: Give it screenshots of designs you like and your page content. It write
 explain: |
   Most people can point at a design they like and cannot say why. Copying it by eye gets the surface and misses the rules, and the colours you guess often fail on a real screen.
 
-  The first step reads your references and writes the look as a profile: measured colours, type, spacing, mood and effects, with a note where the references disagree. The second step takes that profile and your content. It sets margins, a grid, one or two typefaces, sizes and white space, page by page. The third checks every text and background colour in the result for reading. It finds the closest passing colour for any that fail.
+  The first step reads your references and writes the look as a profile: estimated colours (exact only if you give hex codes), type, spacing, mood and effects, with a note where the references disagree. The second step takes that profile and your content. It sets margins, a grid, one or two typefaces, sizes and white space, page by page. The third checks every text and background colour in the result for reading. It finds the closest passing colour for any that fail.
 when:
   - You have screenshots you love and no words for what they share.
   - You want your own page to feel like them without copying them.

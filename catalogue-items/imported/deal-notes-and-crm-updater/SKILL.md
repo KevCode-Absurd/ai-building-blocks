@@ -22,6 +22,8 @@ Stop doing data entry.
 
 CRM and pipeline is a common growth ask from owners, and the specific request underneath it is almost always automatic logging: update the CRM from my meetings, log my calls, turn every sales call into a structured deal note. Owners do not want a better CRM interface. They want to stop opening one.
 
+**Plain-chat note.** The steps below use connector words (`discover`, `describe`, `dispatch_readonly`, `tool_guidance`, `search_crm_objects`). They apply only if your AI has a CRM connected. If it does not, skip them: work from what the person pastes, then write the log note, the field changes you propose and the follow-up drafts as plain text, or build the spreadsheet CRM described at the end. Never say you wrote to a CRM you cannot reach.
+
 ## Step 1 — Work out which mode this is
 
 Four paths. Pick from the message and context.

@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel to PowerPoint number checker
 subhead: Share a workbook and its slides. Get a source map showing which slide numbers, charts and labels agree with Excel. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share a workbook and its slides. Get a source map showing which slide numbers, charts and labels agree with Excel.
+  Numbers on slides drift from the workbook they came from: a changed period, a swapped label, a unit mismatch. This compares each slide number with its source cell and shows every difference, with the slide and cell for each.
 
 
   It works with the actual Excel and PowerPoint files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -15,12 +15,12 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share a workbook and its slides. Get a source map showing which slide numbers, charts and labels agree with Excel.
-  - The actual workbook, PPTX deck, approved cell-to-slide mapping or enough source context to establish it, period and rounding rules.
-  - You need a checked copy while keeping your original files intact.
+  - You are about to present or send a deck built from an Excel workbook.
+  - The workbook changed after the slides were made.
+  - You inherited a deck and need to know which numbers still match their source.
 not_for:
   - "You need a screenshot chart checked as real data: ask the person who made it for the source data, or check it by hand."
-  - "Your AI cannot open or read Excel and PowerPoint files: check the slides by hand against the workbook."
+  - "Your AI cannot open or read Excel and PowerPoint files: print the slide numbers and tick each one off by hand against its workbook cell, noting the sheet, cell and slide."
   - "You want the deck designed or rewritten: ask your AI for slide copy in a normal chat instead."
 you_give:
   - The actual workbook, PPTX deck, approved cell-to-slide mapping or enough source context to establish it, period and rounding rules.
@@ -111,3 +111,4 @@ tests:
     expected: "Report a mismatch: expected 50% for the same population."
   - input: Workbook values are in thousands but the slide label says units
     expected: Flag a unit mismatch even when digits are identical.
+next: [excel-workbook-change-reviewer]

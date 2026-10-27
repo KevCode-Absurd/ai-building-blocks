@@ -1,6 +1,6 @@
 # Richard Feynman: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Feynman's books are still in copyright, so this is our summary of his ideas, with only a few short sourced phrases. The record now includes his own words in six places: the 1974 Caltech address [S4], the Challenger appendix [S5], the 1959 talk [S6], his 1965 Nobel lecture about how he really got to his results [S7], his 1975 Los Alamos talk [S8] and an excerpt of his 1955 address on doubt [S9], plus the official Rogers Commission report [S10]. His popular memoirs were compiled with Ralph Leighton from stories he told, so we use them only as his own telling, not as checked history [S1]. The excerpt of the 1955 address [S9] is partial.
 

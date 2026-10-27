@@ -33,10 +33,10 @@ Queries all B2B company accounts and their associated locations, price lists, an
 ## Workflow Steps
 
 1. **OPERATION:** `companies` — query
-   **Inputs:** `first: 250`, select `name`, `locations`, `contacts`, `createdAt`, pagination cursor
-   **Expected output:** All B2B company accounts; paginate until `hasNextPage: false`
+   **Inputs:** `first: 250`, select `name`, `locationsCount`, `contactsCount`, `createdAt`, the latest order, pagination cursor
+   **Expected output:** All B2B company accounts (with counts of locations and contacts); paginate until `hasNextPage: false`. This query gives counts only, so Step 2 fills in the detail.
 
-2. **OPERATION:** `companyLocations` — query
+2. **OPERATION:** `companyLocations` — query, run once for each company ID from Step 1
    **Inputs:** `first: 250` per company, select `name`, `buyerExperienceConfiguration { paymentTermsTemplate, checkoutToDraft }`, `catalogsCount`
    **Expected output:** Company locations with payment and catalog configuration
 
@@ -174,6 +174,7 @@ CSV file `b2b_companies_<YYYY-MM-DD>.csv` with columns:
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | Empty companies list | B2B not configured or no accounts | Exit with 0 companies, note B2B Plus requirement |
 | `companies` query not available | Store not on Shopify Plus | Return clear error: B2B requires Shopify Plus |
+| Access denied or partial data | The `read_customers` scope may not cover B2B company data on your store | Check the access scopes in the current Shopify Admin API docs for the `companies` query, add any scope it names, then re-authenticate and run again |
 
 ## Best Practices
 - Run monthly as a wholesale account health check — companies with no orders in 90+ days may need outreach.

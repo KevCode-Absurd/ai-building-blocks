@@ -8,7 +8,7 @@ job: strategy
 level: intermediate
 inputs:
   - type: shortlist
-    required: true
+    required: false
   - type: offer
     required: true
 outputs:

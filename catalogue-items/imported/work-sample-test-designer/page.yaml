@@ -18,7 +18,7 @@ when:
   - You want a take-home task that is fair and takes a sensible amount of time.
   - You already use a test and want it checked for bias.
 not_for:
-  - "You only need good interview questions: use the hiring interview designer or the interview scorecard builder."
+  - "You only need good interview questions: use hiring-interview-designer or interview-scorecard-builder."
   - "You want to check a test for fairness only: use the assessment fairness check."
   - "The job needs a licence or a portfolio you can simply look at: check those first, and skip a test."
 you_give:
@@ -41,6 +41,7 @@ how_to_use:
   - Ask for the task brief, then the scoring guide. Check that every task step is something the person would really do on the job.
   - Ask for the fairness checks and the marker plan. Fix any step that blocks people for reasons unrelated to the work.
   - Try the test on a colleague first. Then use it with live candidates.
+  - Send the approved task brief to candidates only after the colleague trial and the fairness fixes are done.
 how_it_works:
   - title: Pick the method
     text: It picks a skills test, work sample, simulation or assessment centre based on the role and level.
@@ -90,3 +91,4 @@ terms:
     meaning: A day or half day of several exercises, used mostly for senior roles.
   - term: adverse impact
     meaning: When a test lowers the pass rate for one group, such as by age or gender, more than for others.
+next: [interview-scorecard-builder, hiring-interview-designer]

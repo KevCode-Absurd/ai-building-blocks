@@ -9,7 +9,7 @@ subhead: A draft figure of your network, pathway or flowchart, saved as a PNG yo
 explain: |
   A draft figure of your network, pathway or flowchart, saved as a PNG you can check label by label. You describe the parts and how they connect in plain words, and an image model draws the first version.
 
-  A second model then reviews the draft and gives it a score. The pass mark depends on where the figure is going: 8.5 out of 10 for a journal, 6.5 for slides. If the score falls short, the draft is redrawn once or twice, and a review log is saved with each attempt. The result is a raster image with no vector or print resolution control, so check it before it goes into a paper. It needs Python and an OpenRouter key.
+  A second model then reviews the draft and gives it a score. The pass mark depends on where the figure is going: 8.5 out of 10 for a journal, 6.5 for slides. If the score falls short, the draft is redrawn once, so you get at most two drafts, and a review log is saved with each attempt. The result is a raster image with no vector or print resolution control, so check it before it goes into a paper. It needs Python and an OpenRouter key.
 when:
   - You need a first-draft pathway or workflow figure for a paper and have no time to draw it.
   - You are building a poster and want a clean flowchart of your method.
@@ -37,6 +37,7 @@ how_to_use:
   - 'Run one command with your description and document type, for example: python scripts/generate_schematic.py "your diagram description" -o figures/name.png --doc-type journal'
   - Open the PNG and the review log. Check every label and arrow yourself.
   - Remember the pass marks are local rules of this tool, not journal rules. Redraw the final figure in a vector tool if the journal needs it.
+  - Next, redraw the PNG in a vector tool if your journal wants vector art, then place it in your paper, for example with the LaTeX includegraphics command.
 output_sample:
   input:
     - A plain-language description of the diagram and how its parts connect

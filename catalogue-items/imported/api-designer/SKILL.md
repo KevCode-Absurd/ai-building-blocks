@@ -155,6 +155,8 @@ interface CreateTaskInput {
 
 ### 6. Honouring an Idempotency Key
 
+*Scope: this applies to payments and other state changes that clients may retry. A read-only endpoint does not need it.*
+
 Accepting an `Idempotency-Key` is the contract. Honouring it is the implementation, and it is where the money is lost — a key the server accepts but handles carelessly is worse than no key at all, because the client now believes retrying is safe.
 
 **Derive the key from the intent, not the attempt.** The key must be stable across retries of one intent and different across distinct intents:

@@ -104,13 +104,13 @@ Check for these problems and fix them:
 ### Content
 
 - **Generic names like "John Doe" or "Jane Smith".** Use diverse, realistic-sounding names.
-- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.
-- **Placeholder company names like "Acme Corp", "Nexus", "SmartFlow".** Invent contextual, believable brand names.
+- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use the person's real figures. If you must use placeholders, make them clearly marked placeholders (such as "[price]"). Never invent figures, testimonials or customer names that could be taken as real.
+- **Placeholder company names like "Acme Corp", "Nexus", "SmartFlow".** Use the person's real brand and customer names. Where none exist, use a clearly marked placeholder.
 - **AI copywriting cliches.** Never use "Elevate", "Seamless", "Unleash", "Next-Gen", "Game-changer", "Delve", "Tapestry", or "In the world of...". Write plain, specific language.
 - **Exclamation marks in success messages.** Remove them. Be confident, not loud.
 - **"Oops!" error messages.** Be direct: "Connection failed. Please try again."
 - **Passive voice.** Use active voice: "We couldn't save your changes" instead of "Mistakes were made."
-- **All blog post dates identical.** Randomize dates to appear real.
+- **All blog post dates identical.** Use each post's real date. If a date is unknown, mark it as a placeholder.
 - **Same avatar image for multiple users.** Use unique assets for every distinct person.
 - **Lorem Ipsum.** Never use placeholder latin text. Write real draft copy.
 - **Title Case On Every Header.** Use sentence case instead.

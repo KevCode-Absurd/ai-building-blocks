@@ -68,7 +68,7 @@ how_it_works:
   - title: Keep the real product in the picture
     text: Gives each photo a job, fixes the details models get wrong and rewrites the prompt with the exact words in quotes.
   - title: Check the ad before you make it
-    text: Reads the words and picture together as your buyer would and checks every claim and number against your proof.
+    text: Reads the words and picture together as your buyer would and checks every claim and number against your proof. A claim that fails sends you back to step 2. A product that does not match your photos sends you back to step 3.
   - title: Pause to make and approve the image
     text: You make the image, compare the product with your photos and approve the one you want to run.
   - title: Get the pick to full size

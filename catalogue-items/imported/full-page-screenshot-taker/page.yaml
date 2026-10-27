@@ -29,13 +29,15 @@ you_get:
   - Content from inner scroll areas
   - Late-loading images included
   - Environment check result
+next: [screenshot-privacy-masker, web-page-speed-tuner]
 how_to_use:
-  - Open Chrome and turn on remote debugging. Go to chrome://inspect/#remote-debugging and allow it for this browser.
+  - Open Chrome and turn on remote debugging. Go to chrome://inspect/#remote-debugging and allow it for this browser. Turn it off when you finish, because it lets other programs on your computer use your signed-in sessions.
   - Use an AI that can run code on your computer, and make sure Node.js 22 or newer is installed.
   - Paste this skill into your AI. Ask it to run the environment check first.
   - For a page behind a login, open it in Chrome and ask your AI to list your tabs. Pick the right one.
   - "For a public page, give your AI the page address. Add a width: 1200 for articles, 1440 or more for dashboards."
-  - Ask your AI to check the saved image size. Open the PNG and look at the bottom of the page to confirm nothing is cut off.
+  - Ask your AI to check the saved image size. Open the PNG and look at the bottom of the page to confirm nothing is cut off. The file is saved where you told your AI to save it.
+  - Next, send the PNG for review, or run it through the Screenshot privacy masker if it shows private data.
 output_sample:
   input:
     - A page address, or the ID of a tab already open in Chrome

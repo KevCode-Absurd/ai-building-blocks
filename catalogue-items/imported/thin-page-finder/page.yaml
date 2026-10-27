@@ -5,9 +5,9 @@ name: Thin page finder
 summary: "Find thin pages and blog posts in your Shopify store: empty, too short, or missing a search title or description. Get a CSV list to fix."
 job: audit-landing-page
 headline: Thin page finder
-subhead: Search engines downgrade pages with almost no words or no search titles, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
+subhead: Pages with almost no words or no search titles can rank poorly, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
 explain: |
-  Search engines downgrade pages with almost no words or no search titles, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
+  Pages with almost no words or no search titles can rank poorly, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
 
   It reads your content through the Shopify Admin connection, using a read-only login, so nothing in your store is changed. It checks each page for an empty body, a body under a length you set (100 characters by default), a missing SEO title and a missing SEO description. You can include unpublished items too. The result is a plain list or JSON you can hand to a writer.
 when:
@@ -16,7 +16,7 @@ when:
   - You inherited a store with many half-finished pages.
   - You want a quick content check before an SEO review.
 not_for:
-  - "You want to check product or collection search fields: use the SEO metadata audit, or check them by hand in Shopify."
+  - "You want to check product or collection search fields: use the Store SEO gap finder, or check them by hand in Shopify."
   - "You have no Shopify admin access: ask the store owner to add you, or to run it and send you the list."
   - "You want a full review of one landing page: read it yourself, or ask a writer to check it."
 you_give:
@@ -33,8 +33,9 @@ how_to_use:
   - Use an AI that can run commands and connect to Shopify, such as Claude Code. A plain chat window cannot read your store.
   - Sign in to your store with read access to content. The skill only reads, so nothing in your store changes.
   - Tell your AI to run the Thin page finder on your store address. Add a minimum body length or ask for unpublished items if you want.
-  - Open the CSV file it makes. Start with your About, FAQ and Contact pages.
-  - Give the list to a writer, or fix the empty pages and missing search fields yourself.
+  - Open the CSV file it makes. Sort it by the issue column. Start with your About, FAQ and Contact pages.
+  - Spot-check a few flagged pages in Shopify. The search title and description are read from Shopify's default fields, so a store that keeps them elsewhere can show false "missing" flags.
+  - Give the list to a writer, or fix the empty pages and missing search fields yourself. Then run the Store SEO gap finder to check your products and collections.
 output_sample:
   input:
     - Your store address
@@ -55,3 +56,4 @@ output_sample:
       contains: "One row per page or post: type, id, title, handle, publish date, body length, SEO flags and the issue."
     - name: JSON summary (optional)
       contains: Counts of pages scanned, posts scanned, issues found and the CSV file name.
+next: [store-seo-gap-finder]

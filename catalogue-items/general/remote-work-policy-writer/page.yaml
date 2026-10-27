@@ -1,0 +1,131 @@
+new_slug: remote-work-policy-writer
+name: Remote work policy writer
+summary: Say how your team works from home. Get a plain remote work policy and a list of choices left to make.
+job: hire-people
+thinking: medium
+thinking_why: It has to turn a few choices into clear rules and spot the ones you have not made yet.
+headline: Remote work policy writer
+subhead: "Tell it who can work remotely, how often, and what you expect. It writes a remote work policy in plain words: who it covers, where and when people work, equipment and costs, security, how to stay in touch, and how exceptions work. It lists the choices only you can make."
+explain: |
+  Teams that work from home without a written policy end up with unwritten ones. One manager allows it, another doesn't. Nobody knows who pays for the chair, or what happens when someone works from another country for a month.
+
+  This skill turns your decisions into a policy people can read in five minutes. You say who can work remotely and how often. It writes the sections a remote policy needs: who is covered, work hours and availability, where people may work, equipment and costs, keeping data safe, staying in touch, and how to ask for an exception. Where you haven't decided, it says so and asks. It marks the parts that depend on employment law where you are, so a lawyer or adviser can check them.
+when:
+  - People on your team already work from home and you have nothing written down.
+  - You are moving to hybrid or fully remote work and need rules to share.
+  - A request has come up, such as working from another country, and you need a policy to answer it.
+not_for:
+  - "You want a policy on a different topic, such as leave or conduct: use the HR policy drafter."
+  - "You already have a policy and need to explain it to staff: use the Company policy explainer."
+  - "You need legal advice about staff in other countries: ask an employment lawyer."
+you_give:
+  - Who can work remotely, and how many days a week
+  - Core hours and how fast people need to reply
+  - What you will pay for or provide, such as equipment and internet
+  - Where people may work from, including other countries
+  - Anything you already have in writing (optional)
+you_get:
+  - A remote work policy in plain words, in the sections a policy needs
+  - A list of choices you still need to make
+  - Parts marked for a lawyer or adviser to check
+  - A short summary you can send to staff
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Answer its questions about who, how often, hours, costs and where. Say "not decided" where you haven't.
+  - Read the list of open choices and settle each one.
+  - Send the parts marked CHECK to an employment lawyer or adviser.
+  - Share the staff summary, then the full policy. Set a date to review it.
+output_sample:
+  input:
+    - Who can work remotely, and how many days a week
+    - Core hours and reply times
+    - What you will pay for or provide
+    - Where people may work, including other countries
+  output:
+    - name: Policy
+      contains: "Numbered sections: who it covers, where, hours, equipment and costs, data safety, staying in touch, exceptions and review."
+    - name: Choices still to make
+      contains: Each decision you have not made yet, one line each.
+    - name: Check with a lawyer or adviser
+      contains: Parts that depend on employment law where you are.
+    - name: Short note for staff
+      contains: A five-line summary you can send to the team.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Gathers your choices
+    text: Asks who, how often, hours, costs and places, and records what you have not decided.
+  - title: Writes the scope
+    text: States who the policy covers and who it does not.
+  - title: Writes hours and contact
+    text: Sets core hours, reply times and how people stay in touch.
+  - title: Writes equipment and costs
+    text: States what you provide and pay for, and what you do not.
+  - title: Writes security rules
+    text: Sets simple rules for keeping company data safe at home.
+  - title: Writes the exceptions
+    text: Explains how to ask for a different arrangement and who decides.
+  - title: Marks the checks
+    text: Flags the parts that depend on local employment law.
+  - title: Writes the staff summary
+    text: Boils the policy down to a short note for the team.
+output_shape: |
+  REMOTE WORK POLICY
+  1. Who this covers: <scope>
+  2. Where people can work: <places, and what needs approval>
+  3. Hours and availability: <core hours, reply times>
+  4. Equipment and costs: <what you provide, what you do not>
+  5. Keeping data safe: <rules>
+  6. Staying in touch: <meetings, tools, check-ins>
+  7. Asking for an exception: <how, who decides>
+  8. Review: <date>
+
+  CHOICES STILL TO MAKE
+  - <choice>
+
+  CHECK WITH A LAWYER OR ADVISER
+  - <part that depends on local law>
+
+  SHORT NOTE FOR STAFF
+  <five lines>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Days in the office
+    how: Give a number or say "by team". A vague answer gives a vague rule.
+  - what: Working from abroad
+    how: Say yes, no or by approval. It changes tax and legal duties, so it needs a decision.
+  - what: Costs
+    how: Say exactly what you cover. "A desk and chair" is clearer than "home office needs".
+  - what: Your size
+    how: Say how many people you have. A team of five needs a shorter policy than a team of fifty.
+judge:
+  - A new hire could say what the policy allows after reading it once.
+  - Each choice you did not make is listed, not filled in for you.
+  - No legal claim or law is named as fact.
+  - Each rule is one you can actually check or enforce.
+  - There is a way to ask for an exception.
+test:
+  - Ask someone on your team to read the staff note and say what they can and can't do.
+  - Find a real request, such as working from abroad. See if the policy gives a clear answer.
+  - Leave one choice undecided and run it again. It should be listed as a choice, not guessed.
+improve:
+  - Add your company's words for roles and teams, so the policy uses names people know.
+  - Save the policy in your handbook and set a review date in your calendar.
+  - After three months, ask your team what was unclear and add those answers to the skill file.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Turning choices into clear rules is text work any strong chat AI does well.
+    - name: An employment lawyer or HR adviser
+      why: They check the parts that depend on law where you are.
+  inputs:
+    - Your current handbook or any emails that set rules for remote work
+    - A list of where each person works today
+    - Your security rules for company data
+terms:
+  - term: Core hours
+    meaning: The hours when everyone is expected to be reachable, wherever they work.
+  - term: Exception
+    meaning: An arrangement that differs from the policy, agreed for one person or case.

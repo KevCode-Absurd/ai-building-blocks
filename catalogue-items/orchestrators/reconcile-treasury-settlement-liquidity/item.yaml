@@ -11,7 +11,8 @@ inputs:
     required: true
   - type: document
     required: true
-outputs: []
+outputs:
+  - type: spreadsheet
 needs_mode: manual
 uses:
   - restricted-cash-availability-checker

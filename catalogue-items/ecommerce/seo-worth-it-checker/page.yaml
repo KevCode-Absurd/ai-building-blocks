@@ -59,7 +59,7 @@ how_it_works:
   - title: Reads the results page
     text: Stores with collection and product pages on page one mean you can win. Only blogs or giant brands mean it is harder.
   - title: Tests the terms
-    text: It looks for variants with a low difficulty score and buying intent. Its starting rule is under about 35 to 40, and narrow variants above 50.
+    text: It looks for variants with a low difficulty score and buying intent. Its starting rule is under about 35 to 40, and narrow variants above 50. Difficulty scores come from a keyword tool, and many are paid. With only the free Keyword Planner, this check is marked not run and the call leans on who ranks on page one.
   - title: Checks runway and hours
     text: It wants cash for at least 6 months, no need for orders this quarter and about a working day a month.
   - title: Defends the brand

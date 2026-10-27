@@ -35,8 +35,8 @@ how_to_use:
   - Paste the skill text into the chat.
   - Add your event type, ticket price, dates, seats per date and which dates are full.
   - Add how far away the first date is, and a bonus you could give (optional).
-  - Read the table of choices and reasons. The 30 percent and 3 week limits are rules of thumb, so check them against your own sales.
-  - Put the deadline on your ticket page. After one sales week, check how many dates are full.
+  - Read the table of choices and reasons. The 30 percent, 3 week and 40 percent limits are rules of thumb with no strong source, so check them against your own sales.
+  - Put the deadline on your ticket page in your booking or checkout tool. After one sales week, check how many dates are full and recheck the rules.
 output_sample:
   input:
     - Your event type and planned ticket price

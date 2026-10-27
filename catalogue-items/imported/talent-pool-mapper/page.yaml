@@ -34,8 +34,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Turn on web search if your AI offers it.
   - Paste the skill text from this page into the chat.
   - Describe the role, your industry, your company size and the places you can hire. Add your known competitors if you have them.
-  - Read the company list. Check that every pool size is marked as an estimate, and check the sources it names.
-  - Pick the top companies and channels. Then start your outreach, or ask your AI to draft the first messages.
+  - Read the company list. Every pool size and pay figure should be marked as an estimate, with its method and source. Blank is better than a guess. Open the sources it names.
+  - Take the top 5 companies into a first outreach list and set a date to refresh the map. Talent maps go stale within about a quarter.
 output_sample:
   input:
     - The role or skill set you need to hire
@@ -44,7 +44,7 @@ output_sample:
     - Your known competitors (optional)
   prerequisites:
     - An AI that can search the web, or pages you paste in yourself
-    - Check each site's terms before you collect data from it. Some sources need a login or a paid plan, such as LinkedIn, PitchBook and BuiltWith.
+    - Check each site's terms before you collect data from it. Some sources need a login or a paid plan, such as LinkedIn, PitchBook and BuiltWith. Read those by hand from your own account. Do not scrape them.
   output:
     - name: Executive summary
       contains: The total estimated talent pool, the top 5 target companies with reasons, and the main advice.
@@ -56,3 +56,4 @@ output_sample:
       contains: Who else is hiring for this profile, pay ranges by company group and how each employer presents itself.
     - name: Recommended sourcing channels
       contains: A ranked list of channels, events, communities and referral ideas for reaching each pool.
+next: [candidate-sourcing-planner, candidate-outreach-drafter]

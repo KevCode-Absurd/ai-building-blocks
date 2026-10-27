@@ -320,17 +320,23 @@ import { parentPort } from "node:worker_threads";
 
 let isShuttingDown = false;
 let currentJob: { id: string; checkpoint: () => Promise<void> } | null = null;
+let loopDone: Promise<void> = Promise.resolve(); // set when the poll loop starts
 
 process.on("SIGTERM", async () => {
-  isShuttingDown = true;
+  isShuttingDown = true; // the poll loop stops taking new jobs
   console.log("Worker shutting down — finishing current job");
 
-  if (currentJob) {
+  // Wait for the loop to finish the job it is running, up to a deadline
+  // that is shorter than the host's kill timeout.
+  const deadline = new Promise<"timeout">((resolve) => setTimeout(() => resolve("timeout"), 25_000).unref());
+  const result = await Promise.race([loopDone.then(() => "done" as const), deadline]);
+
+  if (result === "timeout" && currentJob) {
     await currentJob.checkpoint();
     console.log(`Job ${currentJob.id} checkpointed`);
   }
 
-  process.exit(0);
+  process.exit(result === "done" ? 0 : 1);
 });
 
 async function processJobs(queue: JobQueue): Promise<void> {
@@ -344,6 +350,9 @@ async function processJobs(queue: JobQueue): Promise<void> {
     currentJob = null;
   }
 }
+
+// Start the loop and keep its promise so the handler can wait for it:
+// loopDone = processJobs(queue);
 ```
 
 ## Best Practices

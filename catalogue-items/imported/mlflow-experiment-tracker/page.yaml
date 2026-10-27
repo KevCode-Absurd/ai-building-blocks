@@ -31,7 +31,7 @@ you_get:
   - A promotion path from test to production
   - Steps to repeat your best run
 how_to_use:
-  - Pick a small training script you already have. Check that Python and MLflow are installed (pip install mlflow).
+  - Before you start, check you have a recent Python, run pip install mlflow, and install the machine learning library your script uses. Pick a small training script you already have.
   - Paste the skill into your AI, then paste your script. Say which scores you care about and which library you use.
   - Ask your AI to add MLflow logging. It should name the experiment and give each run a clear name.
   - Run the script a few times with different settings. This needs an AI that can run Python, or you run it yourself.

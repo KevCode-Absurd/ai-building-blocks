@@ -13,6 +13,8 @@ This skill enables the agent to guide the complete logo design process — from 
 
 ## Workflow
 
+AI Blocks note: you cannot draw or render files. In steps 4 and 5, write the file specification and the size tests as a written spec, and say plainly that a designer or an image tool must draw the SVG, PNG and ICO files and check them at each size. Do not say you tested or produced a file.
+
 1. **Gather Brand Context**: Collect the brand name, industry, target audience, competitors, and personality attributes (e.g., "modern and approachable" vs. "luxurious and exclusive"). Ask about existing brand colors, fonts, or visual assets that must be incorporated. Determine where the logo will primarily appear — website, mobile app, packaging, signage — since this shapes format and scalability requirements.
 
 2. **Define the Design Brief**: Synthesize the gathered information into a structured design brief that includes brand values, visual direction keywords, color preferences, and mandatory constraints. Specify the logo types needed: icon/symbol mark, wordmark (logotype), combination mark, and favicon/app icon. List required file formats and sizes upfront so deliverables are clear.

@@ -26,7 +26,7 @@ not_for:
   - "Businesses that are not selling products online."
 pricing:
   model: subscription
-  from: US$10 per month
+  from: "Check the maker's site (US$10 a month on one of two price lists)"
   note: "Checked 26 Oct 2026, from the data on gorgias.com/pricing. The visible text shows no prices, and a second block of data on the same page lists higher ones, so confirm at checkout. Per month, Starter is US$10 (monthly billing only, 50 tickets). Basic is US$60, or US$50 billed yearly (300 tickets). Pro is US$360, or US$300 yearly (2,000 tickets). Advanced is US$900, or US$750 yearly (5,000 tickets). Extra tickets cost US$0.36 to US$0.40 each. Enterprise is a custom quote. AI Agent is extra: US$1.00 per automated interaction on a monthly contract, US$0.90 on an annual one, and US$1.50 each above the interactions your plan includes. Each automated interaction also counts as a ticket."
 works_with:
   - Shopify
@@ -48,6 +48,7 @@ first_result:
   - "Set a tone of voice and handover rules. Start with few handover topics."
   - "Open AI Agent, then Playground, choose a channel and send your five most common real order questions. Test chats are not billed and send no real messages."
   - "Go to AI Agent, then Deploy, and turn on one channel. Read the first live conversations before you add more channels."
+  - "You end with AI Agent answering one channel, and a set of conversations to review. Next: size your team with the Support capacity planner, and set up order updates with the Delivery update flow builder."
 needs:
   - "A Shopify store connected to Gorgias."
   - "A Gorgias plan and an AI Agent subscription."

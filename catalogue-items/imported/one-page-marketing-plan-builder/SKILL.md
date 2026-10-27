@@ -123,7 +123,7 @@ See [references/advertising-media.md](references/advertising-media.md) when choo
 
 **Core concept:** The goal of marketing is not the immediate sale -- it is building a database of interested prospects by exchanging genuine value (lead magnets) for contact information. Your database is the most valuable asset in your business.
 
-**Why it works:** Only about 3% of any market is ready to buy right now. Capturing leads keeps you in contact with the other 97% so you can sell when they are ready.
+**Why it works:** Only a small share of any market is ready to buy right now (a commonly quoted rule of thumb is about 3%, with no firm source). Capturing leads keeps you in contact with the rest so you can sell when they are ready.
 
 **Key insights:**
 - The best lead magnets solve a specific, immediate problem for your target market
@@ -245,7 +245,7 @@ See [references/customer-experience.md](references/customer-experience.md) when 
 
 **Core concept:** The most expensive sale is the first one. Increasing lifetime value through upsells, cross-sells, an ascension model, and retention is the highest-leverage activity in your business.
 
-**Why it works:** Acquiring a new customer costs 5-25x more than retaining one, and a 5% retention gain can raise profits 25-95%. Existing customers already know, like, and trust you.
+**Why it works:** Acquiring a new customer usually costs more than keeping one (often quoted as 5-25x, and a 5% retention gain as raising profits 25-95%, from widely repeated figures that vary by business; check against your own numbers). Existing customers already know, like, and trust you.
 
 **Key insights:**
 - Design an ascension model: low-ticket entry offer, mid-ticket core offer, high-ticket premium, ultra-premium tier

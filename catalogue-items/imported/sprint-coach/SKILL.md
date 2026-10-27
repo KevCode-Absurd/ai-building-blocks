@@ -163,7 +163,7 @@ python retrospective_analyzer.py team_data.json > retro_insights.txt
 ```
 
 - Map retrospective analyzer maturity output to the appropriate development stage.
-- Supplement with an anonymous psychological safety pulse survey (Edmondson 7-point scale) and individual 1:1 observations.
+- Supplement with an anonymous psychological safety pulse survey (Edmondson's 7-item survey; report it on a 1 to 5 scale so it matches the 4.0/5.0 target below) and individual 1:1 observations.
 - If maturity output is `forming` or `storming`, prioritise safety and conflict-facilitation interventions before process optimisation.
 
 ### Intervention

@@ -1,0 +1,131 @@
+new_slug: resignation-letter-writer
+name: Resignation letter writer
+summary: Share your role, last day and tone. Get a short resignation letter, what to say first and a handover list.
+job: write-emails
+thinking: low
+thinking_why: It writes a short letter from a few facts, with little judgement needed.
+headline: Resignation letter writer
+subhead: Give it your role, who you report to, your notice period and the tone you want. It writes a short, polite resignation letter that states your last day, a few lines to say to your manager first, and a handover list. It leaves out reasons you don't want to give.
+explain: |
+  A resignation letter has one job: to say clearly that you are leaving and when. It is not the place for complaints, thanks that sound forced, or a long story. A short, polite letter keeps the door open and leaves little to argue about.
+
+  This skill writes that letter from a few facts. You give it your role, who you report to, your last day and the tone you want, from plain to warm. It writes the letter, then a few lines to say to your manager before they read it, because they should hear it from you first. It adds a short handover list. It does not state your notice period for you, since that is in your contract, and it leaves out reasons unless you ask for one.
+when:
+  - You have decided to leave and need to write the letter.
+  - You want to know what to say to your manager before you hand it in.
+  - You want a handover list so you leave on good terms.
+not_for:
+  - "You haven't decided to leave yet: decide first, then come back to write the letter."
+  - "You want to know your rights, such as notice or pay owed: check your contract and ask an employment adviser."
+  - "You are letting someone go: use the Staff exit and announcement planner."
+you_give:
+  - Your role, your employer and who you report to
+  - Your last day, and your notice period from your contract
+  - "The tone you want: plain, warm or formal"
+  - Whether you want to give a reason, and what it is (optional)
+  - What you are working on, for the handover list (optional)
+you_get:
+  - A short resignation letter with your last day
+  - A few lines to say to your manager first
+  - A handover list from what you are working on
+  - A note on what to check in your contract
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Check your contract for your notice period and who must receive the letter, then give those facts.
+  - Say the tone you want, and whether you want to give a reason.
+  - Tell your manager in person or by call first, using the lines it wrote, and then hand in the letter.
+  - Use the handover list to plan your last weeks.
+output_sample:
+  input:
+    - Your role, employer and who you report to
+    - Your last day and your notice period from your contract
+    - The tone you want, and whether you want to give a reason
+    - What you are working on, for the handover (optional)
+  output:
+    - name: Say this first
+      contains: A few lines to tell your manager in person before they read the letter.
+    - name: Letter
+      contains: A short, polite letter that states you are resigning, your last day and a line of thanks.
+    - name: Handover list
+      contains: What you are working on, its status, and who takes it, or marked as to be agreed.
+    - name: Check in your contract
+      contains: Points to confirm, such as notice, holiday owed and returning equipment.
+    - name: Missing
+      contains: Anything you did not tell it, such as a notice period.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Takes your facts
+    text: Uses your role, employer, manager, last day and notice period.
+  - title: Writes the letter
+    text: States that you are resigning, your last day and a short thanks, in your tone.
+  - title: Handles reasons
+    text: Leaves a reason out unless you want one, and keeps it short and neutral if you do.
+  - title: Writes what to say first
+    text: A few lines to tell your manager before they read the letter.
+  - title: Lists the handover
+    text: Turns what you are working on into a handover list.
+  - title: Checks the contract points
+    text: Reminds you of notice, holiday owed and returning equipment, for you to check.
+output_shape: |
+  SAY THIS FIRST
+  <three lines for your manager>
+
+  LETTER
+  <date>
+  Dear <name>,
+  <I am resigning from my role as ... My last day will be ...>
+  <one line of thanks>
+  <offer to help with the handover>
+  Yours sincerely,
+  <name>
+
+  HANDOVER LIST
+  - <task> | Status <...> | Who takes it <MISSING>
+
+  CHECK IN YOUR CONTRACT
+  - <point>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Your last day
+    how: Count it from your contract's notice period. Give the date, not "two weeks".
+  - what: Tone
+    how: Say plain, warm or formal. Plain is shortest and works for most.
+  - what: A reason
+    how: You don't have to give one. If you do, keep it neutral and short.
+  - what: Who receives it
+    how: Check your contract. Some require the letter to go to a named person.
+judge:
+  - The letter says you are resigning and gives your last day in the first lines.
+  - It is short enough to read in under a minute.
+  - It contains no complaints, blame or threats.
+  - No notice period or legal right is stated unless you gave it.
+  - The handover list uses only what you told it.
+test:
+  - Read the letter aloud. It should take well under a minute.
+  - Ask a friend if the tone fits. Change the tone and see how the letter changes.
+  - Leave out your notice period. It should ask for it and not guess.
+improve:
+  - Save your role, employer and manager in your about-me note for the next time.
+  - Add your own sign-off to the skill file, so the letter sounds like you.
+  - Keep a running list of your work and who knows it, so a handover list is quick to write.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short letter from a few facts is a quick job for any strong chat AI.
+    - name: Your employment contract
+      why: It states your notice and who must receive the letter. Check it before you give the date.
+  inputs:
+    - Your employment contract
+    - A list of projects, files and logins others will need
+    - The name and title of the person who should receive the letter
+terms:
+  - term: Notice period
+    meaning: The time you must give your employer before your last day, set in your contract or by law.
+  - term: Handover
+    meaning: Passing on your work, files and knowledge so others can carry on.

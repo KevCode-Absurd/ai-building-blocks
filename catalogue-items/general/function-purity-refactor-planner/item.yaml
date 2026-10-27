@@ -8,11 +8,12 @@ job: ops
 level: advanced
 inputs:
   - {type: question, required: true}
-  - {type: copy_draft, required: false}
+  - {type: codebase, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt
 version: 1.0.0
 minds: [john-carmack]
 credits:
-  - {title: "In-depth: Functional programming in C++", by: "John Carmack", used: "Listing every outside state a function reads or changes, moving the work into a function that depends only on its inputs, and weighing the copying cost"}
+  - {title: "In-depth: Functional programming in C++", by: "John Carmack, Gamasutra (2012)", url: "https://www.gamedeveloper.com/programming/in-depth-functional-programming-in-c-", used: "Listing every outside state a function reads or changes, moving the work into a function that depends only on its inputs, and weighing the copying cost"}
+needs_mode: manual

@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Check you have Python, git and an NVIDIA GPU with enough memory. A 7B model needs about 14 GB, or less with 4-bit loading. Your AI cannot run the model in a chat window. You run it on your own machine.
   - Open Claude, ChatGPT or Gemini and paste this skill. Tell it your GPU and the model size you want.
-  - Run the install commands it gives you, then run the first command with one image and one question.
+  - Run the install commands it gives you, then run the first command with one image and one question. The install clones the LLaVA project from GitHub. Ask your AI to name the exact release or commit it used, so you can repeat the install later. The multi-turn and web chat code are sketches, so your AI needs to write a small helper to finish them.
   - Read the answer and compare it with the image. If it invents details, make your question more specific.
   - Move on to your full set of images, or start the web chat page to ask follow-ups.
   - Save the captions to a file or spreadsheet, and check a sample by eye.

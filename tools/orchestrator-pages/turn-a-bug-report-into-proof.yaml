@@ -9,22 +9,25 @@ subhead: Share a bug report and repo. Get a repeatable case, missing tests and a
 explain: |-
   Share a bug report and repo. Get a repeatable case, missing tests and a record of what is verified.
 
-  Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
+  Step 1 turns an unclear report into steps that repeat the bug, and the smallest case that fails. Step 2 finds the tests that are missing, weak or out of date, ranked by the behavior at risk. Step 3 records what is verified, partly verified or blocked, with the date. It works with the sources you provide and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - A bug report is vague and you cannot make the bug happen on your machine.
+  - You have a fix and need proof that it works, not a claim.
+  - You want to know which tests would have caught the bug.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The bug report, as you received it
+  - Your repo, or the part of the code the bug touches
+  - Error messages or logs, with secrets removed (optional)
+  - The fix and the checks you ran on it, for the last step (optional)
 you_get:
   - Reproduction brief
   - Coverage gaps
   - Verified, partial or blocked bug receipt
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
+  - Add the complete skill pack to an AI that can read your repo and run commands, such as Claude Code.
+  - Share the bug report and the repo. Take secrets out of any logs first.
   - Ask it to follow the steps and mark any missing facts.
+  - Read the repeatable case before step 2. If the AI cannot repeat the bug, the receipt will say blocked.
   - Review the result before approving external actions.
 how_it_works:
   - title: Bug reproduction evidence writer

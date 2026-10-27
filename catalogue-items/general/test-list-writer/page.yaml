@@ -21,6 +21,7 @@ not_for:
   - "You need to split a messy change into safe steps: use the Structure and behaviour change splitter."
   - "You are fixing one known bug or making a one-off data edit: a plain checklist or a note to yourself is enough."
   - "You want finished code or a design: ask your AI to build it after you have the list, or hire a developer."
+  - "You want a quick first pass with fewer checks: use the Edge case list maker."
 
 you_give:
   - The change you want to make, in your own words

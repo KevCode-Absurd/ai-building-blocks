@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
   - "Gather first: your site address, and how many pages to check. If you have them, add Search Console reports and a crawl export."
   - Tell your AI your site type, your business goal, your priority topics and any recent changes.
-  - Use an AI that can browse the web. It needs this to read your pages.
+  - Use an AI that can browse the web. It needs this to read your pages. The skill mentions web_fetch, a browser tool and a .agents/product-marketing.md file. These are Claude features. In ChatGPT or Gemini, paste your page text and the notes from that file instead, and ask for the audit from what you pasted. Schema markup cannot be seen from plain page text, so test it in Google's Rich Results Test.
   - Read the Executive Summary first. Then work through the Prioritized Action Plan from the top.
 output_sample:
   input:

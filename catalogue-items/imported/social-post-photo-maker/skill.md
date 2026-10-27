@@ -5,6 +5,20 @@ description: 同款穿搭换模特换场景做种草图。穿搭图 → 社交�
 
 # clothing-grass-planting — 相同穿搭改模特场景姿势
 
+## English summary (added by AI Blocks)
+
+The rest of this file is in Chinese. In short: it turns one outfit photo into social post photos with a new model, scene, pose and light. The outfit stays the same.
+
+- **Paid service.** It uses the dLazy image tool (`dlazy gpt-image-2`) and needs a dLazy account and API key. Each image costs money. Add `--dry-run` to see the cost without running.
+- **Claude cannot draw.** Claude writes the picture prompt. The image tool draws the pictures.
+- **Input.** One outfit photo, 20 KB to 15 MB, over 400 by 400 pixels, jpg, png or webp. Full or near full body, one person, every item clear, no filters or text. Optional: a scene and pose reference photo.
+- **Steps.** List each item the person wears. Write the prompt: lock every garment, then set the new model, place, pose, light and camera. Run it for three or four images per scene. Check for swapped items, odd hands and a busy background, then add a fix line and run again.
+- **Output.** Tall images (1024 by 1536, jpeg), one set per scene such as street, cafe, home, travel and commute.
+- **Not for.** Never present generated people as real customers, or as endorsing or using your product. Never copy a real person's face without consent. Use honest photos or real reviews instead.
+- **Missing files.** The example commands point to `docs/` images that are not included here. Use your own photos.
+
+---
+
 **穿搭不动，人 / 场景 / 姿势全换**，换成社交平台的种草风格。
 
 和 [one-shot](../one-shot/skill.md) 的区别：one-shot 面向电商主图（保持棚拍规范、构图不动），本技能面向**内容种草**——要的是生活感、抓拍感、氛围光，构图和景别都可以变。

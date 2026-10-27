@@ -23,6 +23,7 @@ you_give:
   - The memory tool or folder your AI can use
   - Your project name
   - Standing decisions you want kept (optional)
+  - Any notes or rules files your AI tool already uses (optional), so setup starts from what you have
 you_get:
   - Rules for when your AI recalls
   - Rules for when it saves
@@ -35,6 +36,7 @@ how_to_use:
   - Add any standing decisions you want kept (optional). Ask your AI to save each one as a note.
   - Work as usual. Check that your AI names the notes it used, with dates, before it starts.
   - Correct it when it forgets. It should save the correction as a new note.
+  - Once a month, review the notes and close any that are out of date. For the files your AI reads at the start, pair this with the Agent context setter.
 output_sample:
   input:
     - The memory tool or notes folder your AI can use

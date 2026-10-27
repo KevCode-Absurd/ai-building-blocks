@@ -11,7 +11,7 @@ explain: |
 
   The workbook has two sheets. The DCF sheet holds the forecast, a case switch for bear, base and bull, the step from company value to price per share, and three sensitivity tables. The WACC sheet works out the discount rate from an Indian government bond yield, a beta against the NIFTY 50 and an equity risk premium. Every projection is a live formula, and every typed input has a cell comment with its source.
 
-  It follows Indian rules that US tools get wrong. Years run April to March. Amounts are in lakh and crore, and the skill divides by 10,000,000 in a formula, because Excel's usual crore format is wrong by 100 times. The result is a research model. It is not advice, and the equity risk premium and growth are judgement calls.
+  It follows Indian rules that US tools get wrong. Years run April to March. Amounts are in lakh and crore, and the skill divides by 10,000,000 in a formula, because Excel's usual crore format shows figures 10 times too large. The result is a research model. It is not advice, and the equity risk premium and growth are judgement calls.
 when:
   - You want to value a company listed on the NSE or BSE.
   - You are checking whether a stock looks cheap or expensive.
@@ -36,10 +36,11 @@ you_get:
 how_to_use:
   - Use an AI that can run commands and save files, such as Claude Code. The skill builds the Excel file with a command line tool called officecli. A plain chat cannot do this and would give you a table of formulas.
   - Open the skill and name the company. Add the annual reports if you have them.
-  - Check each stage when it pauses: raw inputs, revenue forecast, cash flow, discount rate, then the value bridge. Reply to continue or to change an assumption.
+  - "Check each stage when it pauses: raw inputs, revenue forecast, cash flow, discount rate, then the value bridge. Reply to continue or to change an assumption."
   - If it asks for the 10-year government bond yield because the web page failed, paste the current yield and its date.
   - Open the file. Read the sensitivity tables to see which assumptions move the answer most. Do this before you compare the implied price with the market price.
   - Check the figures in the cell comments against the company's filings. Treat the result as research, not advice.
+  - Next, compare the implied price with the market price. If you change formulas or units by hand, run the India modeling rules checker on the file.
 output_sample:
   input:
     - The company name or NSE or BSE ticker

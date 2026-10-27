@@ -54,12 +54,13 @@ DB_USER="backup_user"
 BACKUP_DIR="/var/backups/postgresql"
 RETENTION_DAYS=30
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${TIMESTAMP}.sql.gz"
+BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${TIMESTAMP}.dump"
 
 mkdir -p "$BACKUP_DIR"
 
 echo "[$(date)] Starting backup of database '${DB_NAME}'..."
-pg_dump -U "$DB_USER" -h localhost -Fc "$DB_NAME" | gzip > "$BACKUP_FILE"
+# -Fc is the custom format, which is already compressed, so no gzip step
+pg_dump -U "$DB_USER" -h localhost -Fc "$DB_NAME" > "$BACKUP_FILE"
 
 # Verify the backup file is non-empty
 if [ ! -s "$BACKUP_FILE" ]; then
@@ -67,11 +68,14 @@ if [ ! -s "$BACKUP_FILE" ]; then
     exit 1
 fi
 
+# Write a checksum next to the backup so you can verify it later with: sha256sum -c <file>.sha256
+sha256sum "$BACKUP_FILE" > "${BACKUP_FILE}.sha256"
+
 FILE_SIZE=$(du -h "$BACKUP_FILE" | cut -f1)
 echo "[$(date)] Backup complete: ${BACKUP_FILE} (${FILE_SIZE})"
 
 # Clean up backups older than retention period
-find "$BACKUP_DIR" -name "${DB_NAME}_*.sql.gz" -mtime +${RETENTION_DAYS} -delete
+find "$BACKUP_DIR" -name "${DB_NAME}_*.dump*" -mtime +${RETENTION_DAYS} -delete
 echo "[$(date)] Expired backups removed (older than ${RETENTION_DAYS} days)."
 ```
 
@@ -154,7 +158,7 @@ mongosh --eval "db.adminCommand({listDatabases: 1})"
 ## Edge Cases
 
 - **Large databases exceeding disk space:** For databases larger than available local storage, stream backups directly to object storage (e.g., `pg_dump | gzip | aws s3 cp - s3://bucket/backup.gz`) to avoid local disk exhaustion.
-- **Active write traffic during backup:** Use `pg_dump` with `--snapshot` or MongoDB's `--oplog` to get a consistent point-in-time backup even while writes continue. For MySQL, use Percona XtraBackup for hot backups of InnoDB without locking.
+- **Active write traffic during backup:** `pg_dump` already takes a consistent snapshot of the database in a single transaction, so writes during the dump do not make it inconsistent (the `--snapshot` flag is only for sharing a snapshot between several dumps). For MongoDB use `--oplog` to get a consistent point-in-time backup while writes continue. For MySQL, use Percona XtraBackup for hot backups of InnoDB without locking.
 - **Backup of encrypted databases:** If Transparent Data Encryption (TDE) is enabled, ensure the encryption keys are backed up separately and that the backup process captures encrypted data in a restorable format.
 - **Cross-region replication lag:** When backing up from a replica, verify replication lag is zero or near-zero before starting the backup to avoid capturing stale data.
 - **Backup credential rotation:** Store credentials in a secrets manager (Vault, AWS Secrets Manager) rather than hardcoding them in scripts, and ensure backup scripts can handle credential rotation without manual updates.

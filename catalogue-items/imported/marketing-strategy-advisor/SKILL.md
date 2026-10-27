@@ -16,6 +16,8 @@ metadata:
 
 Strategic marketing leadership — brand positioning, growth model design, budget allocation, and org design. Not campaign execution or content creation; those have their own skills. This is the engine.
 
+**Working in a chat (added by AI Blocks).** Ignore any mention of `../agent-protocol`, `[INVOKE:role|question]` calls, `company-context.md` and the 🟢🟡🔴 tags. They come from the author's multi-agent setup. Ask the user for what you need. If you cannot run the Python scripts, do the sums in chat.
+
 ## Keywords
 CMO, chief marketing officer, brand strategy, brand positioning, growth model, product-led growth, PLG, sales-led growth, community-led growth, marketing budget, CAC, customer acquisition cost, LTV, lifetime value, channel mix, marketing ROI, pipeline contribution, marketing org, category design, competitive positioning, growth loops, payback period, MQL, pipeline coverage
 
@@ -92,6 +94,8 @@ Ask these before making any strategic recommendation:
 | **Growth** | Brand search volume trend | ↑ QoQ |
 | **Growth** | Win rate vs. primary competitor | > 50% |
 | **Retention** | NPS (marketing-sourced cohort) | > 40 |
+
+These targets are common rules of thumb, not benchmarks for the user's market. Check them against the user's own data.
 
 ---
 

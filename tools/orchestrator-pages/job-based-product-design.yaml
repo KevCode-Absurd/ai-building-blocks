@@ -11,7 +11,7 @@ explain: |-
 
   This workflow turns one job spec into four pieces of design. It maps the moments of buying and use, rates today's experience from your evidence and designs the change that clears each worry, with one owner per moment. It uses the job as a filter on your feature list, so you keep what serves it and cut or merge the rest.
 
-  It then names the product so a stranger can guess what to hire it for, and writes a line that tells the wrong buyer to look elsewhere. Last, it checks the numbers you track against three data traps and writes three to five measures of customer progress, with one for repeat use. It follows the method in Competing Against Luck by Clayton Christensen and his co-authors.
+  It then checks the numbers you track against three data traps and writes three to five measures of customer progress, with one for repeat use. Last, it names the product so a stranger can guess what to hire it for, and writes a line that tells the wrong buyer to look elsewhere. It follows the method in Competing Against Luck by Clayton Christensen and his co-authors.
 when:
   - You know the job, but your product, features or reports still follow your org chart.
   - Customers stall at set-up, return the product or do not use it twice.
@@ -31,8 +31,8 @@ you_get:
   - A map of the moments, the worry at each and a rating of today's experience
   - A designed fix for each weak moment, with one owner
   - A keep, cut and merge list for your features
-  - Ten names tested three ways, with three ranked picks and a not-for line for each
   - Three to five measures of customer progress, with a guard against gaming each
+  - Ten names tested three ways, with three ranked picks and a not-for line for each
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude, ChatGPT or Gemini, in an AI that can read files, and say Follow HANDOFF.md.
@@ -55,10 +55,10 @@ output_sample:
       contains: The job line, six to ten moments with worry, today's rating and evidence, the fix and one owner each.
     - name: Feature cuts
       contains: Each feature marked keep, cut or merge, with a reason tied to the job, and any that cannot be cut.
-    - name: Name
-      contains: The job in eight words or fewer, ten names with test scores, and the top three with hire-it-when and not-for lines.
     - name: Measures
       contains: Your tracked numbers tagged, and three to five progress measures with source, owner and a guard against gaming.
+    - name: Name
+      contains: The job in eight words or fewer, ten names with test scores, and the top three with hire-it-when and not-for lines.
     - name: Hand-back summary
       contains: Each step's file, every MISSING line in one list and the checks that could not run.
 how_it_works:
@@ -66,10 +66,10 @@ how_it_works:
     text: "From first look to later use, including when things go wrong. For each: the worry, today's rating with evidence, the designed fix and one owner."
   - title: Cut features by the job
     text: Tests each feature against the job. Keeps what serves it, cuts or merges the rest and uses the moments map to weigh what fixes a weak moment.
-  - title: Name the product after the job
-    text: Drafts names in four routes and tests each on a stranger, on stretch, on lookalikes and without the company name.
   - title: Pick the measures
     text: Tags what you track, checks it against three data traps and writes a few measures of progress with a source, an owner and a guard against gaming.
+  - title: Name the product after the job
+    text: Drafts names in four routes and tests each on a stranger, on stretch, on lookalikes and without the company name. Drops any name that promises progress the measures do not track.
 output_shape: |
   STEP 1: MOMENTS AND EXPERIENCE
     <moment> | worry | today: <good, patchy, bad or unknown> | designed experience | inside change | owner
@@ -78,11 +78,11 @@ output_shape: |
   STEP 2: FEATURE CUTS
     Keep: <features that serve the job> | Cut: <...> | Merge: <...>
 
-  STEP 3: NAME
-    Job in eight words or fewer | ten names | scores | top three with a hire-it-when line and a not-for line
-
-  STEP 4: MEASURES
+  STEP 3: MEASURES
     What you track, tagged | three to five measures: formula or question | source | owner | guard against gaming | repeat-use measure
+
+  STEP 4: NAME
+    Job in eight words or fewer | ten names | scores | top three with a hire-it-when line and a not-for line
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
@@ -101,7 +101,7 @@ judge:
   - Each measure traces to a promise in the job and has a guard against gaming.
 test:
   - Give it a spec where reviews complain about set-up. The set-up moment should rate bad with a quote.
-  - Give it a name that is only your company name. It should fail the maker test.
+  - Give step 4 a name that is only your company name. It should fail the maker test.
   - Give it a dashboard with ten sales figures. It should say that few or none show customer progress.
 improve:
   - Rerun the map when new complaints arrive, and review the unowned moments each quarter.

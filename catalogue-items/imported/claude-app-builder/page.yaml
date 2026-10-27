@@ -36,6 +36,9 @@ how_to_use:
   - Read the approach it picks before you run anything. Check that it fits your goal.
   - Add your API key as a setting in your project, not in the code. Then run the code. Each run is billed by Anthropic.
   - If your AI cannot reach the web, it works from the skill's own notes. Test the code and fix any errors.
+  - If you already have Claude code, ask for migrate first to move it to a newer model, or prompt-audit to find prompts written for older models.
+  - Check the model name and thinking settings it picks against what your account offers. They are defaults written into the skill and can go out of date.
+  - Next, run the code once on one small test input. When it works, ask for cost-optimize to cut the bill or build-eval to test the answers.
 output_sample:
   input:
     - What you want to build with Claude

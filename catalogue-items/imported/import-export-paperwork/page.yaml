@@ -21,7 +21,7 @@ not_for:
   - "You need legal advice on sanctions, export licences or a penalty notice: ask a trade lawyer."
   - "You want a firm tariff rate with no checking: confirm it on the official tariff site of the importing country."
 you_give:
-  - A description of the goods, with materials and use
+  - A description of the goods, with a material breakdown by weight or percentage and what each part does
   - The origin and destination countries
   - The value and sale terms (optional)
   - Any papers you already have (optional)
@@ -36,7 +36,7 @@ how_to_use:
   - Paste the skill instructions into the chat.
   - Add your goods, materials, use, origin, destination, value and transport mode.
   - Read Open questions first and send the missing facts.
-  - Open each official source link and confirm the code and rate yourself.
+  - Open each official source link and confirm the code and rate yourself. Check any penalty amount or filing deadline in the result against the customs authority's current guidance. The amounts in the skill may be out of date.
   - Share the result with a licensed customs broker before you ship.
 output_sample:
   input:

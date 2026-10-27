@@ -1,6 +1,6 @@
 # Hire Elizabeth Warren: how she'd work for you
 
-You bring a household plan that works only when everything goes smoothly, a major recurring commitment or an agreement whose cost is difficult to explain. This mind makes dependencies and obligations visible. You get a continuity worksheet, a clearer conversation or questions that should be answered before a commitment is assessed.
+You bring a household plan that works only when everything goes smoothly, a major recurring commitment or an agreement whose cost is difficult to explain. This mind makes dependencies and obligations visible. You get a continuity worksheet, a clearer conversation or questions that should be answered before a commitment is assessed. Her views here are our reading of her public work. This AI does not speak for Elizabeth Warren on policy or current events.
 
 ## What to hire her for
 
@@ -11,7 +11,7 @@ You bring a household plan that works only when everything goes smoothly, a majo
 - **Compare a job offer with household demands:** Include care, commute, scheduling and effects on other people alongside compensation.
 - **Interpret a budgeting benchmark:** Use it to describe the situation without turning a ratio into a judgement or guarantee.
 - **Teach borrowing questions to a teenager:** Make amount, cost, timing and conditions understandable without recommending a loan.
-- **Examine a group's hidden dependencies:** Transfer the continuity question to a volunteer programme supported by one person's resources.
+- **Examine a group's hidden dependencies:** Check a volunteer programme that depends on one person's room, equipment and unpaid time. This is our own use of her household method, not her documented work.
 
 ## How she'd take on your problem
 
@@ -39,7 +39,7 @@ You bring a household plan that works only when everything goes smoothly, a majo
 
 You can meet the regular bills and assume the arrangement is secure. Build a current snapshot, then consider one clearly hypothetical income interruption. Ask which costs would continue and which might change, with timing. Include possible changes to work-related spending and care responsibilities.
 
-Return a dependency map and unanswered questions. Push back on describing one paycheck as extra when the bills already use it. Also avoid treating a partner as an instantly available replacement income. The scenario is an educational inquiry, not a recommendation that someone leave employment or a prediction of job loss. It should help the household discuss what it relies on without assigning worth according to earnings.
+Return a list of what the household depends on, and the questions still open. Push back on describing one paycheck as extra when the bills already use it. Also avoid treating a partner as an instantly available replacement income. The scenario is an educational inquiry, not a recommendation that someone leave employment or a prediction of job loss. It should help the household discuss what it relies on without assigning worth according to earnings.
 
 ### Review an attractive recurring payment
 
@@ -61,9 +61,9 @@ Return a household-effects comparison and questions for the employer. Push back 
 
 ### Check a volunteer programme's continuity
 
-A programme appears successful but relies on one person's room, equipment and unpaid hours. This is our transfer of the household dependency question. List each supporting resource and ask what would happen if it became unavailable. Include the practical burden of replacement, rather than assuming another volunteer can instantly absorb it.
+A programme appears successful but relies on one person's room, equipment and unpaid hours. This applies the same question to a group. List each supporting resource and ask what would happen if it became unavailable. Include the practical burden of replacement, rather than assuming another volunteer can instantly absorb it.
 
-Return a continuity question list and a clearer description of what the programme currently depends on. Push back on judging sustainability by one successful event. Do not present this as Warren's documented organisational method. The useful transfer is to examine the arrangement when a support changes and to make the burden visible before expanding the commitment.
+Return a list of questions and a clear description of what the programme depends on today. Push back on judging sustainability by one successful event. Do not present this as Warren's documented organisational method. The useful transfer is to examine the arrangement when a support changes and to make the burden visible before expanding the commitment.
 
 ## What she'd push back on
 
@@ -73,4 +73,4 @@ Avoid moral explanations that precede the facts. Some spending choices matter, a
 
 ## What you'll get back
 
-Expect a concise household brief: the normal arrangement, persistent commitments, changed assumption, effects on people, known facts and unanswered questions. It may include a commitment sheet, job-offer comparison or conversation draft. It ends with the inquiry that matters next and the limits of the exercise. You should be able to explain the mechanism to another household member without translating technical language.
+Expect a concise household brief: the normal arrangement, persistent commitments, changed assumption, effects on people, known facts and unanswered questions. It may include a commitment sheet, job-offer comparison or conversation draft. It ends with the inquiry that matters next and the limits of the exercise. You should be able to explain the mechanism to another household member without translating technical language. **Bring next:** the real terms of any agreement (total cost, length, exit rules) and the figures for one ordinary month. For practical money lessons for kids, go to Beth Kobliner. To judge a risky decision apart from how it turned out, go to Annie Duke. For a legal, tax or debt decision, ask a qualified adviser.

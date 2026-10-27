@@ -106,7 +106,7 @@ Check if the `Agent` tool is available:
 
 ### Web Search
 
-This skill requires WebSearch for real data. If WebSearch is unavailable or denied, fall back to **Knowledge-Based Mode**: use training data, mark all findings with **[Knowledge-Based — verify independently]**, and reduce confidence ratings by one level.
+This skill requires WebSearch for real data. If WebSearch is unavailable or denied, fall back to **Knowledge-Based Mode**. Tell the user the output is then not live market data, and do not give review quotes or figures in this mode. Use training data, mark all findings with **[Knowledge-Based — verify independently]**, and reduce confidence ratings by one level.
 
 > **Reference:** Read `references/research-principles.md` before starting any wave. It defines source quality tiers, cross-referencing rules, and how to handle data gaps.
 
@@ -126,7 +126,7 @@ Two agents (or two sequential blocks):
 
 Two agents (or two sequential blocks):
 
-**B1: Review Mining** — Mine G2, Capterra, TrustRadius, Product Hunt, and App Store reviews for each competitor. Extract patterns: what do people praise? What do they complain about? What features do they request? Organize by competitor and by pain theme. Include verbatim quotes.
+**B1: Review Mining** — Mine G2, Capterra, TrustRadius, Product Hunt, and App Store reviews for each competitor. Extract patterns: what do people praise? What do they complain about? What features do they request? Organize by competitor and by pain theme. Include verbatim quotes only from pages you actually opened, with the link, and check each quote against the live page. Read pages through web search one at a time. Do not bulk-collect reviews, because many review sites forbid it in their terms.
 
 **B2: Forum & Community Mining** — Mine Reddit, Indie Hackers, Hacker News, Quora, and niche communities. Find: complaints about existing tools, "what do you use for X?" threads, migration stories, workaround discussions. Build a **language map** — the exact words customers use to describe their problems and desires. Identify **churn signals** — why people leave each competitor.
 

@@ -10,6 +10,8 @@ date_added: "2026-02-27"
 
 Memory provides the persistence layer that allows agents to maintain continuity across sessions and reason over accumulated knowledge. Simple agents rely entirely on context for memory, losing all state when sessions end. Sophisticated agents implement layered memory architectures that balance immediate context needs with long-term knowledge retention. The evolution from vector stores to knowledge graphs to temporal knowledge graphs represents increasing investment in structured memory for improved retrieval and reasoning.
 
+**Quick path (AI Blocks note):** 1) Write down what the agent must remember and five questions it must answer from memory. 2) Pick the simplest store that can answer them (file, vector, graph or time-aware graph). 3) Test the pick against the five questions, and change it if any question cannot be answered.
+
 ## When to Use
 
 Activate this skill when:

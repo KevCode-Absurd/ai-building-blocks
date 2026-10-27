@@ -34,7 +34,9 @@ how_to_use:
   - "Describe your system, where it is hosted and the data level, such as OFFICIAL: Sensitive. If you skip the level, the AI assumes OFFICIAL: Sensitive."
   - Say your role, such as agency or supplier. Add your current controls and documents if you have them.
   - "Say what you want: a gap table, an authorisation plan, an IRAP checklist or a security document."
-  - Check the ISM release the answer names. Confirm every control number and date on cyber.gova.au before it goes into any document. This is guidance, not an IRAP result or legal advice.
+  - The control numbers, release contents and the "last verified" date come from the skill's source. They are not checked by us.
+  - Check the ISM release the answer names. Confirm every control number and date on cyber.gov.au before it goes into any document. This is guidance, not an IRAP result or legal advice.
+  - Next, ask your AI to turn the gap table into a security plan outline or a fix plan, and book an IRAP assessor when the gaps are closed.
 output_sample:
   input:
     - A short description of your system and where it is hosted
@@ -54,3 +56,4 @@ output_sample:
       contains: A structured security document that cites ISM control IDs.
     - name: Cloud answer checklist
       contains: Extra checks added to any answer about a cloud-hosted system or cloud provider.
+next: [it-controls-audit-planner, iso-27001-audit-prep-coach]

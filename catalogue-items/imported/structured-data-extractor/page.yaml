@@ -18,6 +18,7 @@ when:
 not_for:
   - "You need to pull data from one or two texts by hand: use a plain prompt in your chat AI and copy the result."
   - "You don't work in Python: use a no-code tool that reads documents into a spreadsheet."
+  - "You want a full pipeline that reads files in bulk: use the data extraction pipeline builder."
   - "You want free-form text such as a summary or an email: ask your AI directly, no data shape needed."
 you_give:
   - The fields you want to extract
@@ -36,7 +37,9 @@ how_to_use:
   - Paste a sample of the text you want to read. Say which AI provider you use.
   - Add rules for valid values if you have any, such as an age range or a fixed list of choices.
   - Copy the code it writes. You need Python and an API key to run it. Run the pip install line first.
-  - Test it on 10 to 20 sample documents, then load the checked results into your database or spreadsheet.
+  - Test it on 10 to 20 sample documents, then load the checked results into your database or spreadsheet. Send documents that fail all retries to a person to check by hand.
+  - The code uses Pydantic v2 and example model names that change often. Update the model name to one your provider offers today before you run it.
+next: [data-extraction-pipeline-builder, spreadsheet-checker]
 output_sample:
   input:
     - The fields you want, such as name, date and amount

@@ -38,6 +38,8 @@ how_to_use:
   - Read the filter choice and its reason. Ask why if it is not what you expected.
   - Run the MATLAB code on your recorded data. Your AI needs to run MATLAB, or you can paste the code into MATLAB yourself.
   - Check the estimate against ground truth. Then run tune on your recorded data to improve the noise values.
+  - Next, re-run the filter with the tuned noise values on a recording it has not seen before, to check the tuning holds.
+  - Licence: BSD 2-Clause, for use with MathWorks products only (see LICENSE.md). The skill file also links the MathWorks reuse licence.
 output_sample:
   input:
     - The list of sensors you have

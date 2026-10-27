@@ -23,5 +23,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [bill-bernbach, joseph-sugarman]
 credits:
-  - {title: "Facts Are Not Enough", by: "Bill Bernbach", used: "The order of the steps: buyer instinct brief writer, flaw-first ad writer, fresh line rewriter"}
+  - {title: "Facts Are Not Enough", by: "Bill Bernbach", used: "Inspired by its idea that facts alone do not move people: find the drive behind the sale, write the ad from a flaw, then freshen the wording"}
 generated_from: intake/facts-are-not-enough/skeleton.yaml

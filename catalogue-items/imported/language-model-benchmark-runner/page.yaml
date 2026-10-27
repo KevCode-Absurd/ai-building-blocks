@@ -36,6 +36,7 @@ how_to_use:
   - "Run the command. Your AI must run code, or you run it yourself and paste the results back. Plan for time: MMLU takes about 2 hours for a 7B model on one A100 GPU."
   - For HumanEval, turn on code execution, or the test will not run.
   - Ask your AI to build the results table and flag any score that looks far from published numbers.
+  - Next, compare your scores with the published leaderboard numbers. After each training change, run the same command again and compare with your last run.
 output_sample:
   input:
     - Your model name or the path to your model files

@@ -19,6 +19,7 @@ not_for:
   - "You need the product's shape, color or material changed: ask a photographer or designer to reshoot or edit it."
   - "Your item is glass or mirror and you have no reference photos: keep a plain background, since the reflections will look fake."
   - "Your photo is already in a busy scene: cut out the product onto white first, or use a simple photo editor."
+  - "You need a real photo of the product in a real place: book a photographer, or use a stock-photo service for the backdrop."
 you_give:
   - A white-background product photo
   - The scene you want, such as a wooden desk by a window
@@ -33,7 +34,7 @@ how_to_use:
   - Check your photo first. It should be a jpg, png or webp file, at least 400 by 400 pixels, between 20KB and 15MB.
   - Pick your scene. Choose one that fits the product, such as a floor for shoes or a counter for beauty items.
   - Paste the skill into Claude, ChatGPT or Gemini. Add your photo, the scene and the product details.
-  - Copy the image prompt it writes. Run it in an image model that accepts a photo, such as ChatGPT or Gemini. Some paid tools or API keys cost money per image.
+  - Copy the image prompt it writes. Run it in an image model that accepts a photo, such as ChatGPT or Gemini. The skill's own commands use the paid dLazy tool and need an account and a way to run commands. You can skip that and run the prompt in ChatGPT or Gemini instead. Some paid tools or API keys cost money per image.
   - Check the result for a shadow under the product, matching light, clean edges and an unchanged product.
   - If it looks fake, add one of the fix lines to the prompt and run it again.
 output_sample:

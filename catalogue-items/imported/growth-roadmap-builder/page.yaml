@@ -65,3 +65,4 @@ output_sample:
       contains: Work in order across days 1 to 30, 31 to 60 and 61 to 90.
     - name: KPIs & Tracking
       contains: The numbers to watch to see if the plan works.
+next: [growth-health-checker, launch-channel-picker]

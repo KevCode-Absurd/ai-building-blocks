@@ -22,6 +22,7 @@ not_for:
 you_give:
   - Research question or plan
   - Compute or tools it may use
+  - A spend cap, a time limit and a maximum number of cycles
   - Success measure for experiments
   - Existing work or code (optional)
 you_get:
@@ -32,7 +33,8 @@ you_get:
 how_to_use:
   - Open an AI that can run code, search the web and work on its own, such as Claude Code.
   - Paste the skill into the chat, or point your AI to the skill folder.
-  - Tell it your research question, what tools or compute it may use, and how to measure success. Add existing work if you have it (optional).
+  - Tell it your research question, what tools or compute it may use, and how to measure success. Set a spend cap, a time limit and a maximum number of cycles, and ask it to check with you before any paid call that could pass the cap. Add existing work if you have it (optional).
+  - Set up the extras first if you want them. Messages to Telegram, WhatsApp or Slack, and the scheduled check-ins, each need their own account and setup. Without them, reports are saved in a folder. The companion skills it names (ml-paper-writing and research-ideation) are installed separately.
   - Let it set up its continuity loop first. This keeps the project going between cycles.
   - Check research-log.md and findings.md now and then. Redirect it if it drifts.
   - Read the progress presentation and the draft paper when it finishes, and check every claim before you share it.
@@ -45,7 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can run code and keep working on its own
     - Web access, so it can search for papers
-    - Time and compute you are happy for it to spend
+    - Time and compute you are happy for it to spend, with a cap you set before it starts
   output:
     - name: research-state.yaml
       contains: The central record of where the project stands, so work can restart after a break.

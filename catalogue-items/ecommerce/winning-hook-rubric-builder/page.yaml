@@ -11,7 +11,7 @@ subhead: Paste the opening lines and results of your top ads or videos, and the 
 explain: |
   Most hook advice is a guess. Your own best ads, and a rival's, show what actually worked for an audience. The problem is seeing the pattern across dozens of ads by eye.
 
-  This skill sorts each source's ads by results and marks the break point, where the numbers drop sharply. Above it are winners, below are losers. It then compares winners with losers: the psychology, the trigger words and framing, the grammar, and what is not obvious. Patterns that show up in two or more sources are marked universal. Each winning hook becomes a template with blanks. Your new hooks are graded against the rubric, line by line, and rewritten. It works best with 50 or more items. With four to ten per source, treat the rules as guesses to test.
+  This skill sorts each source's ads by results and marks the break point, where the numbers drop sharply. Above it are winners, below are losers. It then compares winners with losers: the psychology, the trigger words and framing, the grammar, and what is not obvious. Patterns that show up in two or more sources are marked universal. Each winning hook becomes a template with blanks. Your new hooks are graded against the rubric, line by line, and rewritten. It works best with 50 or more items. With under about 10 per source, treat the rules as guesses to test.
 
 when:
   - You have a pile of old ads or videos and want to know what your winners have in common.
@@ -73,7 +73,7 @@ how_it_works:
   - title: Grades your drafts
     text: Checks each draft against each rubric rule and says why it lost marks, such as no specific number, a soft opening or no proof.
   - title: Rewrites, not copies
-    text: Gives three rewrites that keep the format but use your product and your facts. Hooks graded C or below are not shown.
+    text: Gives three rewrites that keep the format but use your product and your facts. Drafts graded C or below are never offered as final. You get the failed rules and three rewrites to use instead.
   - title: Saves the rubric
     text: Hands back the rubric as a file to reuse, so the analysis isn't run again each time.
 
@@ -106,7 +106,7 @@ output_shape: |
 
 tweaks:
   - what: Number of items
-    how: More is better. Four to ten per source is thin. Fifty or more gives sharper rules. Add more if you can.
+    how: Start with about 10 per source. Under 10 is thin. 50 or more gives sharper rules. Add more if you can.
   - what: The result metric
     how: Name the metric you trust. Views suit organic video. For paid ads use a result that fits, such as cost per purchase or hold rate.
   - what: Rivals kept separate
@@ -142,7 +142,7 @@ works_best_with:
     - "Transcripts of each ad, not only the title"
     - "A result for each ad, such as views, hold rate, cost per purchase"
     - "Notes on which ads were boosted or ran to a narrow audience"
-    - "At least 30 items per source if you have them"
+    - "As many items per source as you have: 10 to start, 50 or more for sharper rules"
 
 terms:
   - term: Hook

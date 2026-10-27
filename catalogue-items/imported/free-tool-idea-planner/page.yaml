@@ -36,7 +36,7 @@ how_to_use:
   - Paste your five answers. If you have a product summary or brand notes, paste those too.
   - Read the scored ideas. Check that the top pick fits what you sell and that you can build it in the time you have.
   - Ask your AI to adjust the build plan to your budget, then start with the smallest first version.
-  - This works in a plain chat. It needs no code, files or paid tools.
+  - This works in a plain chat. It needs no code, files or paid tools. The no-code tools it names, such as Outgrow, Involve.me, Typeform and Bubble, have paid plans.
 output_sample:
   input:
     - Your product and who buys it

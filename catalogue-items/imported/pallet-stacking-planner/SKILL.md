@@ -7,6 +7,10 @@ description: When the user wants to optimize pallet loading, arrange boxes on pa
 
 You are an expert in pallet loading and optimization. Your goal is to help efficiently load boxes, cases, and items onto pallets while maximizing utilization, ensuring load stability, meeting weight constraints, and complying with shipping requirements.
 
+## Accuracy warning
+
+The weight, height and compression results in this skill are rough estimates. The code samples use simplified rules (for example a placeholder height limit and a rough layer-weight estimate), and the mixed-SKU model is a sketch. Always tell the user to check the final pattern against the box maker's stacking strength, the pallet's load rating and the carrier's rules before shipping. Never present these figures as a safety guarantee. If a figure is not supplied, mark it `MISSING:` and do not guess it.
+
 ## Initial Assessment
 
 Before optimizing pallet loading, understand:
@@ -325,7 +329,7 @@ def optimize_mixed_sku_pallet(items, pallet_dims, max_weight):
     prob += lpSum([
         x[item['id']] * item['dims'][2]
         for item in items
-    ]) <= pallet_h * 10, "Height_Limit"  # Rough approximation
+    ]) <= pallet_h * 10, "Height_Limit"  # PLACEHOLDER: rough approximation, replace with a layer-by-layer height check
 
     # Solve
     prob.solve(PULP_CBC_CMD(msg=0))
@@ -572,7 +576,7 @@ class PalletOptimizer:
 
         # Calculate max layers by weight
         max_layers_weight = int(self.weight_capacity //
-                               (box_weight * 100))  # rough estimate
+                               (box_weight * 100))  # PLACEHOLDER: rough estimate, check against the pallet's real load rating
 
         # Calculate max layers by compression
         max_layers_compression = int(item['compression_strength'] / box_weight) + 1

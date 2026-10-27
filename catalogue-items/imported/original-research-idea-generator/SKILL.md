@@ -262,7 +262,7 @@ Stuart Kauffman's concept, popularized by Steven Johnson: innovation happens at 
 3. **Combine enablers**: The most powerful adjacent possibles arise from the intersection of multiple new enablers
 4. **Check for competition**: If many people can see the same adjacent possible, speed or a unique angle matters
 
-**Current Adjacent Possibles (2025-2026)**:
+**Current Adjacent Possibles (2025-2026)**: This table is the original author's example, written for 2025-2026. Its figures are rough. Check each row against current sources before you rely on it, and say "needs checking" for any row you cannot confirm.
 
 | Enabler | Newly Possible |
 |---------|---------------|
@@ -289,7 +289,7 @@ Albert Rothenberg's studies of eminent creators found that **holding two contrad
 | Security AND Usability | Zero-knowledge proofs: prove knowledge without revealing it | Enabled private computation |
 | Expressiveness AND Tractability | Probabilistic programming: express complex models, automate inference | New programming paradigm |
 | Memorization AND Generalization | Grokking: models memorize first, then generalize with more training | New understanding of learning dynamics |
-| Compression AND Quality | Neural codecs that compress beyond information-theoretic limits via learned priors | Redefined compression research |
+| Compression AND Quality | Neural codecs that compress far better than hand-built codecs by using learned priors | Redefined compression research |
 
 **Dialectical Thinking Workflow**:
 

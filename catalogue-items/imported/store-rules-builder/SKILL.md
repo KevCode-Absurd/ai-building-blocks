@@ -70,8 +70,8 @@ shopify app generate extension
 extensions/
 └── my-discount/
     ├── src/
-    │   └── run.rs (or run.js)
-    ├── input.graphql
+    │   ├── run.rs (or run.js)
+    │   └── run.graphql
     ├── shopify.extension.toml
     └── Cargo.toml (for Rust)
 ```
@@ -98,7 +98,7 @@ command = "cargo wasi build --release"
 path = "target/wasm32-wasi/release/volume-discount.wasm"
 ```
 
-### Input Query (input.graphql)
+### Input Query (src/run.graphql)
 
 ```graphql
 query RunInput {
@@ -183,7 +183,9 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
     })
 }
 
+// The metafield JSON uses camelCase keys: minimumQuantity and discountPercentage.
 #[derive(Default, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
 struct Config {
     minimum_quantity: i64,
     discount_percentage: String,
@@ -204,7 +206,7 @@ import { DiscountApplicationStrategy } from "../generated/api";
 export function run(input) {
   const config = JSON.parse(
     input.discountNode.metafield?.value ??
-      '{"minimumQuantity": 5, "percentage": "10"}',
+      '{"minimumQuantity": 5, "discountPercentage": "10"}',
   );
 
   const discounts = [];
@@ -229,10 +231,10 @@ export function run(input) {
           ],
           value: {
             percentage: {
-              value: config.percentage,
+              value: config.discountPercentage,
             },
           },
-          message: `${config.percentage}% volume discount`,
+          message: `${config.discountPercentage}% volume discount`,
         });
       }
     }
@@ -258,6 +260,7 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
 
     for method in input.cart.delivery_groups[0].delivery_options.iter() {
         // Hide express shipping for heavy orders
+        // cart_weight_exceeds_limit is a helper you write: sum the line weights and compare with your limit
         if method.title.contains("Express") && cart_weight_exceeds_limit(&input) {
             operations.push(output::Operation::Hide(output::HideOperation {
                 delivery_option_handle: method.handle.clone(),
@@ -453,6 +456,7 @@ Create an admin UI to configure function settings:
 
 ```jsx
 // app/routes/app.discount.jsx
+import { redirect } from "@remix-run/node";
 import { authenticate } from "../shopify.server";
 import { Form, TextField, Button, Card } from "@shopify/polaris";
 
@@ -479,6 +483,7 @@ export async function action({ request }) {
       variables: {
         discount: {
           title: formData.get("title"),
+          // Replace with your Function ID: shown after `shopify app deploy`, or in your app in the Partner dashboard
           functionId: "YOUR_FUNCTION_ID",
           startsAt: new Date().toISOString(),
           metafields: [
@@ -486,8 +491,8 @@ export async function action({ request }) {
               namespace: "volume-discount",
               key: "config",
               value: JSON.stringify({
-                minimumQuantity: parseInt(formData.get("minQty")),
-                discountPercentage: formData.get("percentage"),
+                minimumQuantity: parseInt(formData.get("minimumQuantity")),
+                discountPercentage: formData.get("discountPercentage"),
               }),
               type: "json",
             },

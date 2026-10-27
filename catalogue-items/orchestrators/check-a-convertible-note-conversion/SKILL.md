@@ -7,6 +7,8 @@ description: "Use when a priced round closes and you need the shares a simple-in
 
 Check how many shares a convertible note converts into. Two steps run in order: work out the accrued simple interest and the converting balance, then compare shares at the cap, the discount and the round price.
 
+**When not to use it:** The investment is a SAFE (use Check a SAFE into priced financing). The note has no cap, compound interest, interest paid in cash or other terms (this is built for simple interest and a lower-of cap and discount clause). You want the whole cap table after the round (this works out one note's shares only). You want a legal view (ask the issuer's counsel).
+
 ## Before you start
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
@@ -36,18 +38,18 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 2. **Cap and discount conversion checker** (`cap-and-discount-conversion-checker`). Pass the verified converting balance as amount, converting scale explicitly if necessary. Use the approved cap price and actual round discount, confirm lower-of language and compare resulting shares against round-price shares. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-cap-and-discount-conversion-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the amount passed in is the verified converting balance with its scale, the lower-of wording is quoted from the note, and shares at the cap, at the discount and at the round price sit side by side.
 
-## Workbook checks
+## Workbook
 
-For a requested workbook, use the available spreadsheet tool and the supplied template. Make the primary output easy to find. Keep focused schedules compact; separate operating schedules when their periods, drivers or sources differ. Inputs feed calculations and outputs, while audit checks remain terminal readers. Use one authoritative scenario selector when cases are requested, preserve historical actuals and expose the actual driver assumptions. Use native What-If Data Tables for requested valuation sensitivities when supported; otherwise explain the limitation before agreeing on a different method. Avoid unintended circularity and verify any deliberately iterative model in its target engine. In working areas, editable numeric inputs are blue, same-sheet formulas black and cross-sheet links green. Show monetary units, parentheses for negatives and meaningful precision. Recalculate, inspect formulas and errors, test a changed input, restore the intended case, render every sheet and reopen the exported file. Report any native-engine or rendering check that could not run. A saved template or mathematically correct illustration does not validate source truth, legal interpretation or an investment conclusion.
+If you asked for a workbook and your AI can make files: keep the inputs apart from the formulas, recalculate, change one input to test it, and reopen the saved file. If it cannot make files, return the same tables as text and say no workbook was made.
 
 ## Acceptance
 
-- Interest accrues only on funded principal for the contract's dates; the converting balance passes between steps with its scale; the lower-of price is confirmed from the note's own wording; share rounding is left to the agreement.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
-- Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
-- Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
-- Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.
+- Interest accrues only on funded principal, for each funding date and the note's year fraction. Principal and interest are shown apart.
+- The converting balance passes from step 1 to step 2 with its currency and scale.
+- The lower-of wording is quoted from the note. If it is not in what you were given, it is `MISSING:` and not assumed.
+- Shares at the cap price, at the discounted round price and at the round price sit side by side, with the extra shares versus the round price.
+- Share rounding is left to the agreement.
+- Each input traces to its source, date, currency and scale. Unresolved `MISSING:` lines stay. End with `CHECKS MISSED: none` or the exact checks that did not run.
 
 ## Hand back
 

@@ -51,8 +51,8 @@ git status --short
 git diff --cached --stat
 
 # 2. Suppose the change: added CAPTCHA verification to the login endpoint
-# Generated commit:
-git commit -m "feat: add CAPTCHA verification to login endpoint" -m "Blocks automated credential stuffing; CAPTCHA valid 5 minutes, account locks 10 minutes after 3 failures."
+# Generated commit (the details in the body are placeholders; use only facts from your own diff):
+git commit -m "feat: add CAPTCHA verification to login endpoint" -m "Blocks automated credential stuffing; <timeout and lockout values from your diff>."
 ```
 
 Another example (bug fixes must state trigger conditions):

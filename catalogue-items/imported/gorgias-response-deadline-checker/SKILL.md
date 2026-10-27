@@ -6,6 +6,8 @@ disable-model-invocation: true
 
 # SLA Monitor
 
+**Before you start:** this needs the Composio CLI and a Gorgias account linked through it. Composio may charge for use, so the user should check its pricing before the first run.
+
 You are an SLA compliance monitor. Check all open [Gorgias](https://composio.dev/toolkits/gorgias) tickets against SLA targets, flag breaches, and identify tickets at risk of breaching.
 
 ## Workflow
@@ -29,11 +31,15 @@ For each ticket, run `composio execute GORGIAS_GET_TICKET -d '{"ticket_id":"<ID>
 - Determine if first response was sent and when
 - Check if resolution time is approaching limit
 
+Use the Next Reply Time target too: if the customer's last message has gone unanswered longer than the target, count the ticket as BREACHED, and as AT RISK once 75% of that target has passed.
+
 Classify each ticket:
 - **BREACHED** - SLA target exceeded
 - **AT RISK** - Over 75% of SLA target elapsed
 - **ON TRACK** - Within SLA limits
-- **MET** - Responded/resolved within SLA
+- **MET** - First response, and resolution if the ticket is closed, both happened within the target
+
+Compute the health score as the average of the First Response and Resolution percentages met. Show how you got it.
 
 ### Step 5: Present SLA dashboard
 
@@ -60,5 +66,5 @@ Classify each ticket:
 
 ### Recommendations
 - [Specific actions for breached tickets]
-- [Agents who should be pinged]
+- [Agents who should be pinged: the assigned agent first; the team lead if the ticket is unassigned. Start with breached P0 and P1 tickets.]
 ```

@@ -9,7 +9,7 @@ subhead: Give it a finished RF board design in MATLAB. It adds your connectors a
 explain: |
   Gerber files for a finished RF board, with the right connectors attached and formatted for the company that will make it. It runs in MATLAB.
 
-  It takes a pcbComponent or pcbStack design and writes the manufacturing set with gerberWrite. You choose RF connectors such as SMA, SMB or MMCX, including edge-launch types, and attach them so shielded analysis matches the real part. It formats output for makers such as OSH Park, Seeed or Advanced Circuits. Design and validation should be done first. You need MATLAB with RF PCB Toolbox.
+  It takes a pcbComponent or pcbStack design and writes the manufacturing set with gerberWrite. You choose RF connectors such as SMA, SMB or MMCX, including edge-launch types, and attach them so shielded analysis matches the real part. It formats output for makers such as OSH Park, Seeed or Advanced Circuits. Design and validation should be done first. You need MATLAB with RF PCB Toolbox. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
 when:
   - Your board design is done and checked, and a board maker needs Gerber files.
   - You need SMA, SMB or MMCX connectors, or edge-launch connectors, on the board.
@@ -36,9 +36,9 @@ how_to_use:
   - Check that you have MATLAB with RF PCB Toolbox. Both are paid, and this page does not cover a free way to run them.
   - Gather your design variable name, connector type, board thickness and board maker before you start.
   - Open MATLAB and load your design, so the pcbComponent variable is in your workspace.
-  - Paste the skill into your AI, with the variable name, connector and board maker. Ask for the gerberWrite code.
+  - Paste the skill into your AI in one message with the variable name, connector type and board maker. Ask for the gerberWrite code, then say which code block to run.
   - Run the code in MATLAB. Pass several connectors as a cell array, like {C1, C2}.
-  - Open the output folder. Check for the copper, solder mask, silkscreen and drill files, then upload them to your board maker.
+  - Open the output folder. Check for the copper, solder mask, silkscreen and drill files. Preview the folder in a free Gerber viewer such as GerbLook, and open the copper layer first. Then upload the files to your board maker.
 output_sample:
   input:
     - Your finished board design in MATLAB, saved as a pcbComponent or pcbStack variable

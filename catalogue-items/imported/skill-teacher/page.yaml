@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Make an empty folder on your computer for this topic, like "learn-spanish".
   - Open your AI in that folder. Use an AI that can save files, such as Claude Code or another AI coding tool. A plain chat window cannot keep the folder.
-  - Add the skill to your AI, then run it with the topic you want to learn.
+  - Add the skill to your AI, for example by copying the skill folder into your AI tool's skills folder. Claude Code needs a paid plan or account. Then run it with the topic you want to learn.
   - Answer its questions about why you want to learn it. It writes this into MISSION.md.
   - Open the first lesson and do the quiz. Ask your AI about anything unclear.
   - Come back to the same folder next time. Your AI reads your notes and picks up where you stopped.
+  - After each lesson, open RESOURCES.md for the next reading. Reuse the cheat sheets at work. Check that each resource link opens before you rely on it.
 output_sample:
   input:
     - The topic you want to learn

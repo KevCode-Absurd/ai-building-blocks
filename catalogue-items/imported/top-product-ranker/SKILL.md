@@ -23,7 +23,7 @@ Ranks products by revenue, units sold, and refund rate for a given date range by
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | false | Not used. This skill is read-only, so there is nothing to preview or undo. |
 | date_range_start | string | yes | — | Start date in ISO 8601 (e.g., `2025-01-01`) |
 | date_range_end | string | yes | — | End date in ISO 8601 (e.g., `2025-01-31`) |
 | top_n | integer | no | 20 | Number of top products to show in the ranked output |
@@ -33,7 +33,9 @@ Ranks products by revenue, units sold, and refund rate for a given date range by
 
 1. **OPERATION:** `orders` — query
    **Inputs:** `first: 250`, `query: "created_at:>='<date_range_start>' created_at:<='<date_range_end>'"`, pagination cursor
-   **Expected output:** All orders in range with line items (`title`, `quantity`, `originalTotalSet`, `refundableQuantity`) and refund line items; paginate until `hasNextPage: false`; aggregate in-memory per product: sum `originalTotalSet` for gross revenue, sum refund amounts for net revenue, sum quantities for units sold, compute refund rate
+   **Expected output:** All orders in range with line items (`title`, `quantity`, `originalTotalSet`, `refundableQuantity`) and refund line items; paginate until `hasNextPage: false`; aggregate in-memory per product: sum `originalTotalSet` for gross revenue, sum refund amounts for net revenue, sum quantities for units sold, compute refund rate (refund rate % = refunded amount ÷ gross revenue × 100, per product)
+
+   **Limit:** `lineItems(first: 50)` and `refundLineItems(first: 50)` return at most 50 lines per order. If an order has more than 50 lines, page that order's lines with their own cursor. If you cannot, say which orders were cut off and that their counts are understated.
 
 ## GraphQL Operations
 
@@ -173,4 +175,4 @@ For `format: json`, `results` is an array of objects with keys: `rank`, `product
 2. `sort_by: refund_rate` highlights products with quality or expectation issues — a refund rate above 10% is worth investigating.
 3. Revenue figures are gross (before refunds) and net (after refunds) — use net revenue for accurate profitability ranking.
 4. Products that have been deleted will still appear if they were purchased in the date range — they show with `product_id: null` and their title from the order line item.
-5. Combine with `discount-ab-analysis` to see which discount codes drove the most revenue for your top products.
+5. Combine with `discount-ab-analysis` (on AI Blocks, the Discount code comparer) to see which discount codes drove the most revenue for your top products.

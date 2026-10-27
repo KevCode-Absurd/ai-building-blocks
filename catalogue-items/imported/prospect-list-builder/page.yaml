@@ -23,6 +23,7 @@ you_give:
   - Description of your ideal customer
   - What you sell and who it helps
   - Region or industry
+  - How many leads you want (optional, default 25)
   - Data tools you have access to (optional)
 you_get:
   - Qualified account list
@@ -31,8 +32,9 @@ you_get:
   - Tier or score for each lead
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
-  - Describe your ideal customer, what you sell, and your region or industry.
+  - Describe your ideal customer in a few lines, what you sell, your region or industry, and how many leads you want (default 25, or 15 for local shops).
   - Say which data tools you have, such as Apollo, ZoomInfo or Clay. These need a paid account or API key. With none, your AI can still research in the browser, but only if it has web access.
+  - For early customer discovery, your AI reads only public pages such as forums, review sites, job posts and open issue threads. It cites each one and does not bulk-scrape platforms. Tools like Firecrawl or Browserbase read one company's own site and need a paid account.
   - Read the lead table. Check the fit reason and confidence on each row.
   - "Verify every email before it goes into a sequence. Sources: licensed data and public pages are fine, and LinkedIn scraping is never used."
 output_sample:
@@ -53,3 +55,4 @@ output_sample:
       contains: The same lead sheet as a file, when the list has more than 25 rows or you ask for one.
     - name: Evidence report
       contains: "For early customer discovery only: public complaints and pain signals instead of a lead table."
+next: [cold-email-writer, prospect-outreach-drafter]

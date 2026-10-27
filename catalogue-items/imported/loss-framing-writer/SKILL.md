@@ -31,7 +31,7 @@ If the reference point is unclear, ask before proceeding.
 ## PSYCHOLOGICAL FRAMEWORK: REFERENCE-POINT FRAMING
 
 ### Mechanism
-People evaluate outcomes relative to a reference point, not in absolute terms. Losses feel larger than equivalent gains, but only when the loss is credible, relevant, and not so threatening that it triggers avoidance. Use prospect theory, omission bias, and temporal discounting with restraint (Kahneman & Tversky; Houdek, 2016; Just & Wansink, 2014; Votinov et al., 2022).
+People evaluate outcomes relative to a reference point, not in absolute terms. Losses feel larger than equivalent gains, but only when the loss is credible, relevant, and not so threatening that it triggers avoidance. Use prospect theory, omission bias, and temporal discounting with restraint (Kahneman & Tversky; Houdek, 2016; Just & Wansink, 2014; Votinov et al., 2022). These author-year citations are the original author's and are unverified. Check each publication before you cite it anywhere outside your own planning.
 
 ### Execution Steps
 

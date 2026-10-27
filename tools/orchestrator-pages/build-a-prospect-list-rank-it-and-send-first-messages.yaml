@@ -5,14 +5,14 @@ job: sell-and-negotiate
 thinking: high
 thinking_why: It judges who to approach and writes messages real strangers will read. Give it your strongest model.
 headline: Build a prospect list, rank it and send first messages
-subhead: Give it who your ideal customer is and what you offer. It builds a qualified prospect list, ranks it by fit and activity, writes a first message a stranger can answer in Aaron Ross's manner, checks every claim, and plans a daily prospecting block the way Jeb Blount teaches.
+subhead: Give it who your ideal customer is and what you offer. It builds a qualified prospect list, ranks it by fit and activity, writes a first message a stranger can answer in Aaron Ross's manner, checks its claims, and plans a daily prospecting block the way Jeb Blount teaches.
 explain: |
   Outbound sales fails in two quiet ways. The list is wrong, so good messages go to people who will never buy. Or the list is fine but nobody works it, because prospecting is the task everyone puts off until the quarter is lost.
 
-  This workflow fixes both. It builds a prospect list from your ideal customer, with a reason each account fits, then ranks it by fit and activity so the first hour goes to the best twenty. It writes a first message a stranger can answer in one line, following Aaron Ross's rule that the first email asks for a referral or a short answer, never a meeting. It checks every claim in the message before you send. Then it plans a protected daily prospecting block, with the two-minute research batch and one real reason to reach out, the way Jeb Blount teaches. You send, and you keep sending.
+  This workflow fixes both. Step 1 builds a prospect list from your ideal customer, with a reason each account fits, the person to contact and a public source for each. Step 2 ranks it by fit and activity so the first hour goes to the best accounts. Step 3 writes a first message a stranger can answer in one line, following Aaron Ross's rule that the first email asks for a referral or a short answer, never a meeting. Step 4 tests each claim about the prospect against page text you paste in, and checks the basics of commercial email. Step 5 plans a protected daily prospecting block, with a two-minute research batch and one real reason to reach out, the way Jeb Blount teaches. You send the messages yourself.
 when:
   - You have a product people like and no pipeline.
-  - You bought or built a list of 800 names and have called none of them.
+  - You have a long list of names and have contacted none of them.
   - Your first emails get no reply and you do not know whether it is the list or the message.
 not_for:
   - "You want to sell more to people who already bought: use your own customer list and a short note from you, not this workflow."
@@ -23,17 +23,20 @@ you_give:
   - What you offer and the price
   - Your current list, if you have one (optional)
   - Your week and how much time you can give to prospecting
+  - The text of each prospect's own page, so step 4 can check claims about them
+  - Your brand file, for voice and approved claims (optional)
 you_get:
-  - A qualified prospect list with the reason each fits
+  - A qualified prospect list with the reason each fits, the person to contact and a public source for each
   - The list ranked into tiers by fit and activity
-  - A first message and a follow-up a stranger can answer, with every claim checked
+  - A first message under 60 words, a 30-word email and a 15-second call opening, with each claim about the prospect checked
   - A daily prospecting block with a research batch and a reason to reach out
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste your ideal customer and your offer. It builds and ranks the list.
-  - Read the first message and the checker's notes. Fix any claim it flagged.
-  - Send to the top tier yourself, in your daily block. Log replies and bring them back after two weeks.
+  - Paste your ideal customer, your offer and your week. It builds and ranks the list.
+  - Paste the text of the prospect pages the message refers to. Step 4 checks each claim against it.
+  - Read the first message and the checker's notes. Fix any claim it flagged. Add your postal address and an opt-out line if it says they are missing.
+  - Send to the top tier yourself, in your daily block. Keep a log of replies so you can use it later.
 output_sample:
   input:
     - "Your ideal customer: company type, size, role and the problem they have"
@@ -45,48 +48,48 @@ output_sample:
     - Your offer from the New offer opportunity finder (optional, but it helps)
   output:
     - name: Prospect list
-      contains: Accounts that match your ideal customer, with the reason each fits and the right person to contact.
+      contains: Accounts that match your ideal customer, with the reason each fits, the right person to contact and a public source.
     - name: Ranked list
       contains: Each account scored on fit and activity and sorted into tiers, so the first hour goes to the best.
-    - name: First message and follow-up
-      contains: A short message and one follow-up a stranger can answer in a line, asking for a referral or short answer.
-    - name: Checked messages
-      contains: Each claim checked against your facts, spam triggers removed, and a repaired version ready to send.
+    - name: First message and short versions
+      contains: A message under 60 words, a 30-word email and a 15-second call opening, asking a stranger for a referral or a short answer.
+    - name: Checked message
+      contains: Each claim about the prospect checked against the page text you supplied, the basics of commercial email listed, and a tightened version.
     - name: Daily prospecting block
       contains: A protected daily time slot, a two-minute research batch per prospect and one real reason to reach out.
     - name: HAND-BACK SUMMARY
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the list
-    text: Builds a list of accounts that match your ideal customer, with the reason each fits and who to contact.
+    text: Builds a list of accounts that match your ideal customer, with the reason each fits, who to contact and a public source. A contact with no source is marked MISSING.
   - title: Rank it
-    text: Scores each account on fit and activity and sorts the list into tiers.
+    text: Reads the list from step 1. Scores each account out of 100 on fit and activity, and sorts the list into tiers.
   - title: Write the first message
-    text: Writes a short first message and a follow-up that ask a stranger for a referral or a short answer, in Aaron Ross's manner.
+    text: Reads the top tier from step 2 and your offer. Writes a first message under 60 words, a 30-word email and a 15-second call opening that ask a stranger for a referral or a short answer, in Aaron Ross's manner.
   - title: Check it before sending
-    text: Checks every claim and line, removes what trips spam filters, and hands back a repaired message.
+    text: Tests each claim about the prospect against the page text you paste in, marks claims about you that need proof, checks the subject line, length and the single ask, and lists the commercial email basics. Hands back a tightened version.
   - title: Send in daily batches
     text: A pause. Send the checked message to the top tier yourself, from your own address, in small daily batches.
   - title: Plan the daily block
-    text: Books a protected daily prospecting block with a research batch and one real reason per prospect, in Jeb Blount's method.
+    text: Uses the ranked list from step 2 and your week, not the step 4 messages. Plans a protected daily prospecting block with a research batch and one real reason per prospect, in Jeb Blount's method.
 output_shape: |-
   STEP 1: PROSPECT LIST
-    <account> | Fits because: <...> | Contact: <role, name if public>
+    <account> | Fits because: <...> | Contact: <role, name if public> | Source: <URL, date> or MISSING
 
   STEP 2: RANKED
     Tier A (<n>): <accounts> | Tier B: <...> | Tier C: <...> | Scored on: <fit, activity>
 
   STEP 3: FIRST MESSAGE
-    Subject: <...> | Body: <under 90 words, about them, one ask> | Follow-up (day <n>): <...>
+    Subject: <...> | Body: <under 60 words, about them, one easy ask> | Short versions: <30-word email, 15-second call opening>
 
   STEP 4: CHECKED
-    Claims: <each, backed or cut> | Spam triggers: <removed> | Final: <...>
+    Claims about them: <each, backed or unsupported> | Claims about you: <backed or needs proof> | Tightened version: <...> | Before you send: <postal address, opt-out line>
 
   PAUSE: send to tier A yourself, in daily batches
 
   STEP 5: DAILY BLOCK
     When: <time, length> | Research batch: <2 minutes each, what to look for> | Reason to reach out: <...>
-    Weekly count: <sent, replied, booked>
+    End-of-day count: <calls made, conversations held, opportunities added>
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
@@ -105,7 +108,7 @@ tweaks:
   - what: The ideal customer
     how: Give the size, place and the sign they already buy something like yours. The list is only as good as this.
   - what: Your offer
-    how: Give the real price and terms. The first message mentions neither, but the checker needs them.
+    how: Give the real price and terms. Step 3 writes from your offer, and step 4 flags any claim about you that needs proof.
   - what: The ask
     how: Say if you want a referral, a yes or no, or a sample request. The message asks for one thing.
   - what: Your time
@@ -113,7 +116,7 @@ tweaks:
 judge:
   - Every account on the list has a reason it fits that you agree with.
   - Tier A is small enough to work in a week.
-  - The first message is under 90 words, is about them, and asks for one thing that is not a meeting.
+  - The first message is under 60 words, is about them, and asks for one thing that is not a meeting.
   - The checker flagged every claim without a source and the final message has none.
   - The daily block fits your calendar and names what to look up in two minutes.
 test:
@@ -122,7 +125,7 @@ test:
   - Add a made-up statistic to the message. Step 4 should cut it.
   - Run step 2 twice. The tier A accounts should be the same both times.
 improve:
-  - After two weeks, paste replies and no-replies. Step 2 learns which signals predicted a reply.
+  - Once you have enough replies and no-replies, paste them and ask step 2 to reweigh its scoring. The ranking skill suggests waiting for about 90 days of results first.
   - Save your offer and your ideal customer in one file and paste it every run.
   - Keep every first message you sent and its reply rate in one sheet. Step 3 can start from the best.
   - Pair it with "Find your niche, write the first message, split sales jobs" if you are not sure who the ideal customer is yet.
@@ -135,6 +138,7 @@ works_best_with:
     - name: Your own email account
       why: Send from it, in small batches, so replies reach you.
   inputs:
+    - The text of each prospect's own page, so claims about them can be checked
     - A list of your best current customers and what they share
     - Replies to past outreach, good and bad
     - Public signals that an account is buying (job posts, new locations)

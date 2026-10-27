@@ -11,6 +11,8 @@ metadata:
 
 # Pulse — Multi-Source Recency Research
 
+> **Before you start:** Reddit's terms may limit automated access. Use only light, polite reads of public pages and never get round a block. X needs a supplied export file, or a paid X API key. Grok and browser automation are extras that may need their own paid accounts. If the chat cannot run the scripts or save files, skip the file save, do the time-window maths by hand, and give the briefing in the chat.
+
 > **Portability:** Works in Claude Code CLI and Claude.ai. Phase 4 accepts a local X/Twitter search export before trying a live interface.
 
 A recency-oriented research skill that synthesizes what people are saying about a topic across Reddit, Hacker News, the open web, and (optionally) X/Twitter — within a configurable time window. Output is a single coherent briefing with citations, engagement signals, and cross-platform pattern analysis. The skill captures the **current conversation**, not the canonical reference.

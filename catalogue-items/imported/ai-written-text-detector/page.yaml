@@ -5,7 +5,7 @@ name: AI-written text detector
 summary: Check if AI wrote a document. Paste text or add a file and get an honest lean, the wording clues behind it, and a clear note when it cannot tell.
 job: write-and-tell-stories
 headline: AI-written text detector
-subhead: Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it. Bring a document as a file, link or pasted text. Use the result to plan your next step.
+subhead: Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it. Bring a document as a file, link or pasted text.
 explain: |
   An honest estimate of whether AI wrote a document, with the wording clues behind it and a clear "cannot tell" when the document is not suited to testing. It reads style only. It cannot prove who wrote something.
 
@@ -21,7 +21,7 @@ not_for:
   - "Your document is a form, table, payslip or scan: the service refuses these, so read it by hand."
 you_give:
   - A document as a file, link or pasted text
-  - An API key for the detection service
+  - An API key for the Stipple detection service. We cannot say if it is free or paid, or what the allowance is, so check Stipple's current terms first
   - Who will read the result (optional)
 you_get:
   - A lean of AI, human or unsure
@@ -34,6 +34,7 @@ how_to_use:
   - Add your Stipple API key, then give it your file, link or pasted text.
   - Read the lean, the flagged phrases and the limits note. If it says the document is not prose, stop there.
   - Treat the result as one signal. Talk to the writer before you act on it.
+  - If the result is unsure or cannot tell, do not treat it as a no. Talk to the writer, or use a document check that looks at the file itself.
 output_sample:
   input:
     - Your document as a file, link or pasted text

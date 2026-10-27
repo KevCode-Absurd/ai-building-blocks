@@ -4,9 +4,14 @@ summary: Check translation parity across RU, EN and PT-BR chapters. Find changed
 job: write-and-tell-stories
 headline: Check translation parity across three languages
 subhead: Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
-explain: Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
+explain: |
+  Share the three texts, term list and house rules. Compare matching lines. Get a report of drift with cited text; the files stay unchanged.
+
+  It checks quote and dash style, term use, fixed quotations, names and exact numbers across Russian, English and Brazilian Portuguese. It never translates and never edits. When a ruling is not in your term list, it flags the gap and leaves the call to you.
 when:
   - You want to check translation parity across three languages.
+  - You changed the Russian text and need to see whether the English and Portuguese caught up.
+  - You are about to commit translated chapters and want a drift check first.
 not_for:
   - "You edit text in one language only: use a plain proofreader instead."
   - "You want a machine translation or a new translation: use a human translator, since this only checks existing text."
@@ -19,6 +24,8 @@ how_to_use:
   - "Gather your files first: the three matching passages, your term registry, your fixed quotations and your typography rules."
   - Open your AI tool and paste the skill, or add the skill folder. Use an AI that can read files if you have whole chapters.
   - Paste or attach the three texts and your rule files. Say which chapter or file to check.
+  - The typography rules in the skill (dash spacing, English-style quote marks in Portuguese) are one book's house rules. Replace them with your own if your style differs.
+  - The staged and range modes need a git repository. Without git, paste the text and use the file or chapter mode.
   - Read the report. Fix every blocking finding before you publish or commit.
   - If the report flags a term that is not in your registry, decide the right translation yourself and add it to terminology.md. Then run the check again.
 output_sample:

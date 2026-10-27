@@ -33,7 +33,7 @@ you_get:
   - A list of facts still missing
   - A plan split into quick wins, short term and long term
 how_to_use:
-  - Gather what you can. Use the Model view to list your tables and links. Add storage modes, row counts, refresh schedule and access rules. Screenshots or a pasted list both work.
+  - Gather what you can. Use the Model view to list your tables and links. Add storage modes, row counts, refresh schedule and access rules. Screenshots or a pasted list both work. If you only have Power BI Service and cannot open the Model view, paste the table and relationship names from the model's lineage view or from the person who built it, and mark what you do not know.
   - Paste the skill, then your notes. Add one line on who uses the model and what they need to answer.
   - Ask your AI to list what it still needs before it reviews. Fill the gaps, or tell it to mark them as missing.
   - Read the top findings first. Check each against your model, because your AI can only judge what you showed it.

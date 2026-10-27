@@ -16,7 +16,7 @@ Track and analyze content performance using Apify Actors to extract engagement m
 - You need exported analytics results and a concise interpretation of what content is performing best.
 
 ## Prerequisites
-(No need to check it upfront)
+Check these before you start. Run the commands from this skill's folder so the script path resolves.
 
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
@@ -87,14 +87,14 @@ Before running, ask:
 
 **Quick answer (display in chat, no file):**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT'
 ```
 
 **CSV:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.csv \
@@ -103,7 +103,7 @@ node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
 
 **JSON:**
 ```bash
-node --env-file=.env ${CLAUDE_PLUGIN_ROOT}/reference/scripts/run_actor.js \
+node --env-file=.env reference/scripts/run_actor.js \
   --actor "ACTOR_ID" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_OUTPUT_FILE.json \

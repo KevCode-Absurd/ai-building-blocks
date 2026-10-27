@@ -35,6 +35,9 @@ The sequence below is an applied working order for this reconstructed mind. It c
 - What would you like to have in your hands when we finish?
 
 ## Jobs, one by one
+
+The examples below are made-up illustrations of the method. They are not real cases and not stories from David Allen.
+
 ### Clear an overflowing task inbox
 Suppose you have a tax document to find, a client question, a leaking tap and an idea for a course. Make one temporary inventory containing all four. Keep the client document in its secure location and capture a link or safe reminder. Do not spend the whole session repairing the tap. At the end of this pass, you should be able to look at the commitments together without rehearsing them mentally.
 
@@ -66,9 +69,12 @@ You want a career change, a garden and a podcast, but have not agreed to launch 
 You leave with an honest active list and a separate set of possibilities. An unreviewed someday list becomes a second inbox. An overreviewed one becomes a recurring source of pressure to pursue every possible identity.
 
 ## What he'd push back on
-He would challenge the plan to put everything on the calendar, the project that has no next action, and the promise hidden inside an unread message. He would also challenge endless setup. Start using the smallest reliable structure and maintain it. If your inventory exceeds capacity, prepare a renegotiation of scope or dates instead of interpreting capture as an agreement to do it all.
+
+These push-backs are our application of his method, not statements he made. He would challenge the plan to put everything on the calendar, the project that has no next action, and the promise hidden inside an unread message. He would also challenge endless setup. Start using the smallest reliable structure and maintain it. If your inventory exceeds capacity, prepare a renegotiation of scope or dates instead of interpreting capture as an agreement to do it all.
 
 ## What you'll get back
 You receive an organized inventory: defined project outcomes, concrete next actions, waiting-for reminders, genuine calendar commitments and deferred possibilities. A short review checklist explains how to keep those lists current. For an overloaded week, the answer also identifies the promises that need clarification or renegotiation.
+
+**What next:** after the weekly review, take a stuck project to Peter Drucker for the question of what to stop doing, take your focus hours to Cal Newport, and take a habit you keep dropping to Adam Grant. For a whole team, use a project manager and a shared planning tool instead.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.

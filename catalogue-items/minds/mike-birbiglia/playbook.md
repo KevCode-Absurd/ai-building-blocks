@@ -13,6 +13,20 @@ Bring a real incident, journal notes, a rough comic telling or a short scene. Ex
 - **Adapt a spoken story into a scene:** Replace some explanation with observable action and label invention clearly.
 - **Choose an ending that fits the event:** Let a modest change resolve a modest story without importing a grand moral.
 
+## When not to hire him
+
+- You want a warm, step-by-step guide to getting a rough first draft down: hire Anne Lamott instead.
+- You want to tell a business story that builds trust with clients or staff: hire Annette Simmons instead.
+- You need legal, medical or money advice, or want to publish someone else's private story: ask a lawyer or a trusted editor.
+
+## Have ready
+
+- One real incident, or a page of journal notes
+- What you wanted at the start and what you did
+- Who else is in the story
+- Who will hear the finished version
+- A rough draft or spoken telling (optional)
+
 ## How he'd take on your problem
 
 1. **Find the personal way into the subject:** Ask for one actual incident and what the teller wanted. Look for a contradiction in the teller's own choices rather than beginning with a general opinion about everyone else.
@@ -80,3 +94,7 @@ A topic is not yet one incident. A favorite joke is not automatically part of th
 ## What you'll get back
 
 Expect a short premise, the intention and contradiction, a consequence map and a usable revised telling or scene. Include the reason for major cuts and any uncertainty or privacy decisions. Finish with one next revision or a clear choice to keep the current material private and practice with another ordinary event.
+
+## What to do next
+
+Tell the revised version aloud to one trusted person, note where they lean in and where they drift, and fix those parts. Check it with anyone it names before you share it. If you still need a rough first draft, hire Anne Lamott. To keep writing past the doubt, hire Steven Pressfield.

@@ -173,6 +173,8 @@ For R-native files, do not try to parse Seurat `.rds` directly in Python. Conver
 Rscript convert_rds_to_h5ad.R input.rds output.h5ad
 ```
 
+`convert_rds_to_h5ad.R` is not a separate file here. Save the R script from the "Convert `.rds` to `.h5ad`" section of `references/r_interop.md` under that name.
+
 ```python
 adata = sc.read_h5ad('output.h5ad')
 ```

@@ -45,7 +45,7 @@ The keystone distinction. Three categories of content in any program.
 
 **Orphan.** Piece that does not connect to a pillar or cluster. May rank or convert on its own merits, but does not compound into topical authority. Some orphans are fine by design (release-note pages, customer stories, one-off campaigns); most orphans are accidents.
 
-The pathology. Most content programs are 80% orphans, 15% accidental clusters, 5% accidental pillars. The discipline is moving toward 70% intentional clusters, 20% intentional pillars, 10% standalone-by-design. Same total content volume; different architectural outcome.
+The pathology (a rule of thumb from the author, not a measured fact). Most content programs are 80% orphans, 15% accidental clusters, 5% accidental pillars. The discipline is moving toward 70% intentional clusters, 20% intentional pillars, 10% standalone-by-design. Same total content volume; different architectural outcome.
 
 The reading model. Search engines and AI engines both read internal-link graphs to infer topical authority. A pillar with 12 well-linked cluster pieces signals depth on a topic. 12 orphans on the same topic signal scattered, less-authoritative coverage. The architecture is the signal.
 
@@ -57,7 +57,7 @@ Detail and decision tree in [`references/pillar-cluster-decision.md`](references
 
 Not every topic deserves a pillar. The five-criterion selection framework:
 
-1. **Search volume justifies the investment.** Pillar topic has enough monthly volume to support a 3,000 to 5,000-word effort plus 8 to 15 cluster pieces. Sub-100 monthly searches usually does not.
+1. **Search volume justifies the investment.** Pillar topic has enough monthly volume to support a 3,000 to 5,000-word effort plus 8 to 15 cluster pieces. Sub-100 monthly searches usually does not (a rule of thumb, not a measured limit).
 2. **Topic has natural facets.** You can identify 8 to 15 distinct subtopics that could each be their own piece. If you can only think of 3, it is probably a cluster, not a pillar.
 3. **Commercial relevance.** The topic connects to your business model. A pillar without commercial signal is content marketing for content marketing's sake.
 4. **Competitive feasibility.** Top 10 SERP for the pillar keyword is achievable. If the SERP is dominated by Wikipedia, government sites, and Fortune 500 brands, your pillar will rank position 47 no matter how good it is.
@@ -73,7 +73,7 @@ Detail in [`references/topic-selection-criteria.md`](references/topic-selection-
 
 Once a pillar is selected, plan its cluster:
 
-1. **Cluster size.** Typically 8 to 15 pieces for a strong hub. Below 5 reads thin; above 25 becomes unmanageable; sweet spot is 10 to 12.
+1. **Cluster size.** Typically 8 to 15 pieces for a strong hub. Below 5 reads thin; above 25 becomes unmanageable; sweet spot is 10 to 12. These sizes are rules of thumb, not measured results.
 2. **Cluster facets.** Each cluster piece covers one facet of the pillar topic. Facets are surfaced from keyword research (long-tail variations of pillar keyword), "people also ask" data, sub-headings in top-ranking pillar pages on the SERP, competitor cluster maps, and first-party customer questions (sales calls, support tickets).
 3. **No facet duplication.** Two cluster pieces should not target overlapping queries. If they do, consolidate to one piece.
 4. **Cluster heterogeneity.** Clusters should cover the topic from multiple angles (definition, how-to, comparison, examples, common mistakes, costs, alternatives, case studies) rather than 12 variations of "what is X."

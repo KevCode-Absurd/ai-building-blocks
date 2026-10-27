@@ -13,7 +13,7 @@ use_cases:
   - "Clarify an uncertain answer without interrogating: If the child does not know, allow time and ask whether every assignment is equally difficult."
   - "State an adult concern without sneaking in a solution: Explain that late starts leave too little time for sleep."
   - Work through homework starts that keep failing while adults repeat consequences
-  - Prepare a respectful relationship conversation with identify one problem and invite a solution
+  - Prepare a calm talk with your child that names one problem and invites their ideas
 not_for:
   - "Your child is in immediate danger or you have a clinical concern: contact a doctor, a psychologist or your local child safeguarding service instead."
   - "You want to repair things after you lost your temper with your child: use Becky Kennedy."
@@ -39,9 +39,9 @@ output_sample:
       contains: Open questions, and signs that this method is the wrong fit for the moment.
 seats:
   - seat: Proactive solutions with children
-    asks: How would name an unsolved problem change the next practical action?
+    asks: How would naming the unsolved problem change your next step?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using start with the child's concern?
+    asks: What can you say next to start with the child's concern?
 pairs_with:
   - brene-brown
   - adam-grant

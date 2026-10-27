@@ -292,6 +292,7 @@ stream.on('data', chunk => process(chunk));
 Always measure before and after:
 
 ```javascript
+// Illustrative timings only, not measured results
 // Before optimization
 console.time('query');
 const users = await db.users.find();
@@ -304,7 +305,7 @@ const users = await db.users.find();
 console.timeEnd('query');
 // query: 23ms
 
-// Improvement: 100x faster!
+// Your own numbers will differ. Always measure your own code.
 ```
 
 ## Performance Budgets
@@ -336,7 +337,7 @@ Time to Interactive: < 3 seconds
 - Slow query log
 - Database profiler
 
-**Monitoring:**
+**Monitoring (paid services; this skill works without them):**
 - New Relic
 - Datadog
 - Sentry Performance

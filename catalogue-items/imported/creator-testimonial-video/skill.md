@@ -5,6 +5,8 @@ description: UGC 口播种草视频。商品 + 人设 → 口播脚本与成片�
 
 # ugc-testimonial — UGC 口播种草
 
+> AI Blocks note (English): Before you use this skill, check that every product claim in the script is true for your product. The sample lines below (for example "washed three times, no deformation", "five below zero") are placeholders; replace them with facts you have checked. Only use a face image of a person who gave written consent, never a customer or a public figure. The paths assets/model/face-a.jpg and the brand-kit link are examples; point them at your own files, or leave the face out. Next: join the clips, add captions and a voiceover, and label the video as AI-made where the platform asks.
+
 投流素材里转化最好的一类往往不是精致广告，而是**看起来像真人随手拍的推荐**。
 
 这个技能生成那种质感：手持、家里的光、说人话。

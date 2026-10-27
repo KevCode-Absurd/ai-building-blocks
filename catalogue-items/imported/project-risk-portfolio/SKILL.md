@@ -71,7 +71,9 @@ def calculate_emv(risks):
     category_weights = {"Technical": 1.2, "Resource": 1.1, "Financial": 1.4, "Schedule": 1.0}
     total_emv = 0
     for risk in risks:
+        # Score ranks risks and uses the category weight. EMV below does not.
         score = risk["probability"] * risk["impact"] * category_weights[risk["category"]]
+        # EMV = probability x financial impact (money terms only)
         emv = risk["probability"] * risk["financial_impact"]
         total_emv += emv
         risk["score"] = score
@@ -305,7 +307,7 @@ Reference: `assets/expected_output.json`
 ### Atlassian Integration
 - **Jira**: Portfolio dashboards, cross-project metrics, risk tracking
 - **Confluence**: Strategic documentation, executive reports, knowledge management
-- Use MCP integrations to automate data collection and report generation
+- Use MCP integrations to automate data collection and report generation. These need access to your Jira or Confluence, some setup, and sometimes a paid plan. If you do not have that, ask the user to paste the data in.
 
 ### Financial Systems Integration
 - **Budget Tracking**: Real-time spend data for variance analysis
@@ -363,6 +365,9 @@ Reference: `assets/expected_output.json`
 Reference: `references/portfolio-kpis.md` for full definitions and measurement guidance.
 
 ### Portfolio Performance
+
+The targets in this section are example starting values, not standards. Replace them with the user's own numbers. The health-score weights can be changed too.
+
 - On-time Delivery Rate: >80% within 10% of planned timeline
 - Budget Variance: <5% average across portfolio
 - Quality Score: >85 composite rating

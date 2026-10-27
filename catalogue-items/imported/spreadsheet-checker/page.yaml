@@ -7,7 +7,7 @@ job: work-with-files
 headline: Spreadsheet checker
 subhead: A spreadsheet that has been inspected, cleaned or analysed without breaking your original. The skill works on a copy and records the file's fingerprint, so the source stays safe.
 explain: |
-  A spreadsheet that has been inspected, cleaned or analysed without breaking your original. The skill works on a copy and records the file's fingerprint, so the source stays safe. It lists every sheet, then separates stored values from formulas.
+  Spreadsheets hide problems: broken formulas, hidden sheets, wrong totals, odd blanks. This skill checks your file for them and answers your question about it. It works on a copy and records the file's fingerprint, so your original stays safe. It lists every sheet, then separates stored values from formulas.
 
   It asks what each column means before guessing at blanks, zeros, dates or IDs, and writes down its assumptions. It checks formulas and data quality, reconciles to totals you trust, and compares versions. Each finding comes with the method, filters, units and where the evidence sits. Edits go to a new file, and calculated values are labelled apart from cached ones.
 when:
@@ -32,11 +32,12 @@ you_get:
   - Reconciliation results
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files. If your data is private, use a setup that stays on your computer.
-  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
+  - Paste the skill text into the chat, or upload the skill folder if your AI accepts files. The bundled profile_table.py script only runs where the skill folder can be executed. Pasting SKILL.md gives the AI the instructions but not the script.
   - Attach a copy of your spreadsheet or CSV. Add your question and any totals you trust.
   - 'Paste this first prompt: "Follow this skill. Check my attached file and answer my question. Work on a copy. Ask me what unclear columns mean."'
   - Read the findings and the data quality notes first. Then check the new file before you use it.
   - If your AI cannot run code, it can still read the file and describe it. It will mark values as not recalculated.
+  - Before you act on a finding, check the new file's totals against a figure you trust. Or give the findings to the file's owner before anyone changes the original.
 output_sample:
   input:
     - Your spreadsheet or CSV file
@@ -59,3 +60,10 @@ output_sample:
       contains: How totals matched your trusted figures, what was recalculated and reopened, and what could not be verified.
     - name: Assumptions and limits
       contains: What your AI assumed about unclear columns, and values labelled as calculated, estimated, cached or missing.
+terms:
+  - term: fingerprint
+    meaning: A short code made from the file. If the file changes, the code changes, so you can prove your original was not touched.
+  - term: cached value
+    meaning: The result a spreadsheet last saved for a formula. It may be out of date until the file is recalculated.
+  - term: very hidden sheet
+    meaning: A sheet hidden so well that it does not show in the normal unhide list.

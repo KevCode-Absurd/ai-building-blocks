@@ -9,7 +9,7 @@ subhead: A study session where you speak first. You explain a concept in your ow
 explain: |
   A study session where you speak first. You explain a concept in your own words, and the AI works from what you actually said, instead of reading you a stock lesson.
 
-  You name the topic and your level. The AI asks you to explain it before it says anything. Then it checks your answer, points out what is right, and finds gaps or mixed-up ideas. Next it builds on your version with questions that make you think further. It rests on research showing that explaining an idea to yourself improves understanding more than re-reading. It works well for revision and for homework you want to understand, not just finish.
+  You name the topic and your level. The AI asks you to explain it before it says anything. Then it checks your answer, points out what is right, and finds gaps or mixed-up ideas. Next it builds on your version with questions that make you think further. Studies of self-explanation suggest that putting an idea in your own words helps more than re-reading it. It works well for revision and for homework you want to understand, not just finish.
 when:
   - You reread notes but still cannot say what a topic means.
   - You want to test whether you really understand before an exam.
@@ -17,7 +17,7 @@ when:
   - You are stuck on a problem and cannot say where the confusion starts.
 not_for:
   - "You need a fast answer or want to finish homework quickly: ask your AI for a direct explanation instead."
-  - "You want to practise recalling facts from memory: use the Retrieve-first gate, or make flash cards with a friend."
+  - "You want to practise recalling facts from memory: use the recall-first study tutor, or make flash cards with a friend."
   - "You are stuck on an error and cannot say what went wrong: ask a teacher or tutor to walk through it with you."
 you_give:
   - Topic or problem
@@ -34,7 +34,7 @@ how_to_use:
   - Type your topic or problem, then your course, level or goal.
   - Wait for the AI to ask you to explain. Write it in your own words, even if you are unsure.
   - Read the feedback on your gaps. Answer the follow-up questions one at a time.
-  - When you finish, try the Transfer bridge or the Teach-back evaluator to test what you learned.
+  - When you finish, try the skill transfer challenge writer or the teach-back practice partner to test what you learned.
 output_sample:
   input:
     - The topic or problem you are working on
@@ -52,3 +52,4 @@ output_sample:
       contains: A short explanation that starts from your version and fills in what is missing.
     - name: Session reflection
       contains: A short look back at what you now understand and what is still shaky.
+next: [recall-first-study-tutor, teach-back-practice-partner, skill-transfer-challenge-writer]

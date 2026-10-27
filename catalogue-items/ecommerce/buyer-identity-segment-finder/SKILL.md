@@ -9,23 +9,23 @@ You help a store owner find the buyer groups already hiding in their reviews and
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with customer words, your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for customer words, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Reads and counts the self-descriptions in the reviews you paste.
 - **Google Forms:** A free way to send the three-question survey and collect open answers.
-- **Shopify post-purchase survey apps:** Ask the questions right after an order so answers keep coming.
+- **Shopify post-purchase survey apps:** Ask the questions right after an order so answers keep coming. Many of these apps charge a monthly fee, so check the price. A Google Form is the free way.
 <!-- /needs -->
 
 ## What you need
@@ -38,16 +38,16 @@ Does not fit: no reviews and no buyers yet. Use the Forum and review avatar digg
 Privacy: count identities, not people. Keep the identity phrase and the product-related words. Never keep reviewer names, profile links, photos or any detail that could point to one person.
 
 ## Steps
-1. **Gather the reviews.** Use your own first. With few reviews, add reviews of similar products from larger brands and from generic marketplaces. Include a rival's reviews too.
+1. **Gather the reviews.** Use your own first. With few reviews, add reviews of similar products from larger brands and from generic marketplaces. Include a rival's reviews too. Copy or export only reviews you can already see and may use. Do not scrape sites.
 2. **Search for self-descriptions.** Look for "I am a", "I'm a", "as a" and other ways people say who they are: nurse on her feet all day, teacher, dietician, new mother, night-shift worker. Pull the sentence around each one. Keep what the product does for them in their words.
 3. **Ask your buyers.** Send existing buyers a short, free-form survey (a free form tool is enough):
    - How would you describe yourself, such as your role or what you do?
    - What is going on in your life or work that made you look for this?
    - How does the product help you in that situation?
-   Make the answers open text, not tick boxes. A post-purchase survey, and a follow-up email, keeps answers coming; apps for this exist for Shopify. Ideas for rewards and a non-buyer version are in the Buyer research plan with survey.
+   Make the answers open text, not tick boxes. A post-purchase survey, and a follow-up email, keeps answers coming. The free way is a Google Form linked in the order confirmation or a follow-up email. Shopify post-purchase survey apps also exist, but many charge a monthly fee, so tell the owner to check the price. Ideas for rewards and a non-buyer version are in the Buyer research plan with survey.
 4. **Count the repeats.** Group the self-descriptions into identities and count how often each appears. An avatar here means a group that keeps growing in your reviews and survey. If dates are given, note which identities are rising and which are old.
 5. **Map the market like nesting dolls.** Start broad and go narrower one step at a time. The source's example: athletic wear, then gym-goers, then gym subcultures such as female-only, alternative and entrepreneur lifters. Place each identity on the map.
-6. **Size check.** A niche inside a market of 100 million people can be tiny and still work. A niche inside a market of only 20,000 people may be too small to promote. Those figures are one speaker's illustration. Give each group a rough size note (large, medium, small) and say what the note rests on, such as forum activity, search interest or your own count. If you have nothing, write `[unsized]`.
+6. **Size check.** A niche inside a market of 100 million people can be tiny and still work. A niche inside a market of only 20,000 people may be too small to promote. Those figures are one speaker's illustration, not data. Give each group a rough size note (large, medium, small) and say what the note rests on, such as the number of members in a forum or group the owner names, a search-volume tool the owner uses (some are paid), or your own count of repeats. If you have nothing, write `[unsized]`.
 7. **Watch for new hobbies and trends.** Note any rising hobby or subculture in your reviews or the wider content in your niche (the source's example is cornhole). Decide whether to be the first brand to serve it. Being first is a bet, so say what evidence would back it.
 8. **Rank the groups and pick one.** Rank by repeat count, growth, fit with what the product really does, and size. Pick one.
 9. **List what changes for it.** The ad, the primary text, the page and the product photos. Everything should speak to that one group.
@@ -86,11 +86,9 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Job spec writer](https://useaiblocks.com/skills/job-spec-writer). It takes the shortlist.
-- **Write the ad copy** with the [Candid line writer](https://useaiblocks.com/skills/candid-line-writer). It takes the shortlist.
-- **Study competitor ads** with the [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). It takes the shortlist.
-- The [Brand facts accuracy fixer](https://useaiblocks.com/skills/brand-facts-accuracy-fixer). It takes the document.
-- The [Email setup health checker](https://useaiblocks.com/skills/email-setup-health-checker). It takes the document.
+- The [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner).
+- The [Customer feedback and brand reviewer](https://useaiblocks.com/skills/monthly-customer-voice-keeper).
+- The [Trust barrier and proof checker](https://useaiblocks.com/skills/trust-barrier-fixer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

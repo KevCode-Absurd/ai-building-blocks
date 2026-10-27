@@ -135,6 +135,8 @@ improve:
   - Note the years the company announced cost-cutting and see if margins held afterward.
   - Pair it with "Owner earnings calculator" for the cash side.
 
+before: []
+next: [business-tenet-scorecard-writer, owner-earnings-calculator]
 works_best_with:
   tools:
     - {name: "A spreadsheet", why: "Keeps the cleaned years and rival figures together and lets you recheck each sum."}

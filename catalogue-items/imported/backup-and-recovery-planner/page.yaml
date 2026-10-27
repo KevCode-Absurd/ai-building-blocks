@@ -32,7 +32,7 @@ you_get:
   - A restore guide for each system
   - A drill plan and a schedule for the next drill
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text (SKILL.md). Also paste references/restore-runbook-template.md, so the restore guide follows the full template. No code or paid tools are needed.
   - "Make a table of your systems with these columns: System, Data type, Tier, Current backup, Tested? Fill in what you know and leave the rest blank."
   - Paste the table and add how much data loss and downtime you can take, your hosting and your team size.
   - Answer any questions your AI asks. If a target has no spend behind it, expect it to push back.
@@ -61,3 +61,4 @@ output_sample:
       contains: A place to record what was tested, what broke and the real recovery time.
     - name: Communication templates
       contains: Draft messages for customers and your team during a real recovery.
+next: [runbook-writer, site-go-live-runbook-writer, outage-incident-leader]

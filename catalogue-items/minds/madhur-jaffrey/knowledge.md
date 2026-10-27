@@ -4,7 +4,7 @@ Built from public sources, last checked 2026-10-23. Source tags identify the pub
 
 ## In one paragraph
 
-Jaffrey is an actor and cookbook author whose work includes An Invitation to Indian Cooking and Vegetarian India. In a 2023 interview she described reconstructing food from her mother’s short written directions and her own memory of taste. [S5] Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The useful distinction is between a documented principle and a new situation in which you choose to test it. This profile keeps those two layers visible.
+Jaffrey is an actor and cookbook author whose work includes An Invitation to Indian Cooking and Vegetarian India. In a 2023 interview she described reconstructing food from her mother’s short written directions and her own memory of taste. [S3] Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The useful distinction is between a documented principle and a new situation in which you choose to test it. This profile keeps those two layers visible.
 
 ## Core ideas
 

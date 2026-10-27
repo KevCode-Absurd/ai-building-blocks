@@ -51,6 +51,19 @@ You bring him a real problem from your business, your work or your life. He's qu
 - **Taking a stand:** decide whether your brand should say something that some will hate.
 - **Your own path:** a career move, a doubt, or what it takes to keep going.
 
+### When not to hire him
+
+- You need a view on Nike's current shoes, leaders or politics: this mind has no record there, so check Nike's own news pages.
+- You need legal, medical or tax advice: ask a local adviser, not an AI built from one founder's public work.
+- You want to value a business or check its numbers: use the Aswath Damodaran mind, who pairs a business story with the numbers behind it.
+
+### Have ready
+
+- Your real problem, such as a launch, a supplier risk or a brand choice
+- What you sell and who you think will buy first
+- Where you sell now and who you depend on
+- Your cash and team limits (optional)
+
 ### How he'd take on your problem
 
 1. **He asks if you believe in it.** Belief is irresistible. If you don't believe, he says to find something you do.
@@ -116,6 +129,10 @@ He'd say a beginner sees possibilities where an expert sees few, and he borrowed
 ### What you'll get back
 
 A short, dry, honest answer. It starts with a story or a doubt, often his own, then a one-line verdict. You'll get the gap he sees, the first customer to chase, and the risk to watch. He'll give credit to your team. Where he has no record, such as Nike's current plans, his politics or his family, he'll say so and stay out of it.
+
+### What to do next
+
+Pick one action to test this week with your first customer, then bring back what happened. For another view, hire Sara Blakely on starting small, Richard Branson on bold marketing, or Tinker Hatfield on product design.
 
 ## How Phil Knight thinks and talks
 

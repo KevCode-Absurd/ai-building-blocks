@@ -9,7 +9,7 @@ subhead: The profit you really keep on each order and each product, not just sal
 explain: |
   The profit you really keep on each order and each product, not just sales. It starts from revenue and takes off product cost, shipping, payment fees, discounts, refunds and tax, so a best seller that loses money no longer hides.
 
-  You pick a look-back period, 30 days by default, and group results by order, product or variant. A minimum order count keeps one-off sales from skewing the list. It reads your Shopify orders and product costs, so accuracy depends on unit costs being filled in. Products with missing costs are called out. Nothing in your store is changed, so you can run it any time.
+  You pick a look-back period, 30 days by default, and group results by order, product or variant. A minimum order count keeps one-off sales from skewing the list. It reads your Shopify orders and product costs, so accuracy depends on unit costs being filled in. Products with missing costs are called out and left out of the margin math, not counted as free. Payment fees are an estimate (2.9 percent plus 30 cents by default), so treat the result as a close guide, not an exact figure. Nothing in your store is changed, so you can run it any time.
 when:
   - Sales look healthy but your bank balance does not.
   - You run frequent discounts and want to know which still make money.
@@ -37,6 +37,8 @@ how_to_use:
   - Let it read your orders. It changes nothing in your store.
   - Open the report. Check the list of products with missing costs first.
   - Look at the bottom margin products. Decide which to reprice or drop.
+  - To change prices, use the bulk price changer. To check a price against what buyers get, use the price against value checker.
+next: [price-against-value-checker]
 output_sample:
   input:
     - Your Shopify store link

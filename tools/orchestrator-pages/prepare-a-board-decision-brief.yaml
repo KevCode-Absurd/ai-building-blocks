@@ -5,9 +5,9 @@ job: lead-people
 headline: Prepare a board decision brief
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share company facts and decisions due. Get an evidence map, a board update and a review rhythm. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Give it the decisions your board must make and your numbers against plan. For each decision you get the evidence for and against it. You also get a one-page board update and a rhythm for reviewing the decisions and the numbers. Your AI marks every gap and returns work you can review before acting.
 explain: |-
-  Share company facts and decisions due. Get an evidence map, a board update and a review rhythm.
+  A board decision goes better when the case, the case against it and the unknowns are on one page before the meeting.
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
@@ -18,9 +18,10 @@ not_for:
   - "You need minutes or a written consent after the meeting: use the Board minutes drafter or the Board written consent drafter."
   - "You want a short update to investors with no decision to make: use the Board and investor update planner on its own."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - The decisions the board must make, one sentence each
+  - Your key metrics against plan, and any bad news the board has not heard
+  - Your team size, your goals and the meetings you hold now (optional)
+  - Documents and numbers that bear on each decision, with where they came from
 you_get:
   - Decision evidence map
   - Board update
@@ -58,8 +59,13 @@ how_it_works:
     text: Share your team and goals. Get meeting rhythms, metric reviews and decision rules that fit your stage.
 output_shape: |-
   Decision evidence map
-  Board update
-  Decision and metric review rhythm
+    Per decision: question | provisional answer | evidence for and against, with source | unknowns
+
+  Board update (one page)
+    Headline | three bullets: what is working, what is not, what you are doing about it | metric table against target | questions the board may ask
+
+  Decision and metric review rhythm (a table)
+    Meeting | how often | who attends | numbers reviewed | who decides what
 tweaks:
   - what: Scope
     how: Name the date window, project or business to keep the work focused.

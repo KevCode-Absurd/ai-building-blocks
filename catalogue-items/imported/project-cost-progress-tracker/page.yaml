@@ -36,6 +36,8 @@ how_to_use:
   - Measure percent complete by finished work, such as half the foundation poured, not by hours spent.
   - Read the cost and schedule scores first. A score below 1.0 means over budget or behind.
   - Check the forecast and the corrective actions, then share the dashboard with your sponsor.
+  - Next, log actual cost and percent complete each month and run the table again, so you can see the trend.
+  - If your AI cannot run code, it does the sums by hand. Ask it to show each step so you can check them.
 output_sample:
   input:
     - Your total budget for the project

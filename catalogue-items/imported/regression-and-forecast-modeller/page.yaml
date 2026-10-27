@@ -41,6 +41,7 @@ how_to_use:
   - Paste the skill, attach the CSV and give your question. Ask for the plan first, with the model, the rows used and any rows dropped. Check it makes sense.
   - Read the checks before the effects table. If a check fails, ask your AI to fix it or try another model before you trust the numbers.
   - For a forecast, look at the test on held-back months and use the range, not one number.
+  - Next, pick one factor from the effects table and test it with a planned experiment. Or hand the forecast table to the Trend and forecast analyst.
 how_it_works:
   - title: Check the data
     text: It looks for missing values, column types and units, and records every row it drops.
@@ -65,6 +66,7 @@ output_shape: |
   HELD-BACK    <how far off the forecast was on months it did not see>
   SO WHAT      <plain reading, and what the model cannot show>
   MISSING      <inputs not given, or none>
+next: [trend-and-forecast-analyst, forecast-narrative-writer]
 output_sample:
   input:
     - Your data as a CSV with column names in the first row

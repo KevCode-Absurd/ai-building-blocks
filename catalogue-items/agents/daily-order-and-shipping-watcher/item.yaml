@@ -23,9 +23,9 @@ steps:
   - uses: order-hold-manager
     note: "Only after you have reviewed held orders and said which to release or keep held. Uses your store connection and your release choices on step 3's holds. Hands the released and still-held orders to your action list."
   - uses: carrier-performance-comparer
-    note: "Only when most of the stale tracking sits with one carrier: whether that carrier is slower than the others. Uses your store connection; step 2's stale-tracking count decides when it runs. Hands a keep or review call on the carrier to your action list."
+    note: "Only when most of the stale tracking sits with one carrier: whether that carrier is slower than the others. Uses your store connection; step 2's stale-tracking count decides when it runs. Hands a keep or review call on the carrier to your action list. It does not use step 4's result; the two run side by side."
   - uses: tracking-number-fixer
-    note: "Only when you supply corrected tracking numbers and say yes: updates them on orders already shipped. Uses your corrected numbers and your store connection. Hands the updated orders to the day's log."
+    note: "Only when you supply corrected tracking numbers and say yes: updates them on orders already shipped. Uses your corrected numbers and your store connection. Hands the updated orders to the day's log. It does not use step 5's result; the two run side by side."
 schedule: "Every weekday morning, before support opens"
 asks_before: [tagging or holding any order, releasing a held order, cancelling or changing an order, changing tracking numbers, emailing any customer]
 origin: own

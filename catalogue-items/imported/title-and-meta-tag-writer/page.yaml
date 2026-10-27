@@ -37,6 +37,7 @@ how_to_use:
   - Read the three title and three description options. Pick the one marked as recommended or test two.
   - Check that any number or claim in the text is true for your page. Remove anything you cannot back up.
   - Paste the final tags into your page settings or site editor, and add your real image links to the social tags.
+  - After you publish, check the tags in a search preview tool and in the Facebook and X share debuggers. Search engines may rewrite your snippet, so a good tag does not guarantee a ranking or a click.
 output_sample:
   input:
     - Your page title and page type, such as blog post or product page
@@ -59,3 +60,4 @@ output_sample:
       contains: A check of each title, description and social tag against length, keyword and wording rules.
     - name: Variant Comparison Table
       contains: A side-by-side table of all six variants with length, keyword placement, power words and the recommended pick.
+next: [on-page-seo-tuner, seo-auditor]

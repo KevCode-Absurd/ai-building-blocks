@@ -30,7 +30,8 @@ you_get:
   - A prompt to re-scan after changes
 how_to_use:
   - Open Claude, ChatGPT or Gemini with a tool that can read your project folder and run code.
-  - Paste the skill instructions, or upload the skill folder.
+  - Paste the skill instructions, or upload the skill folder. The AI must be able to read your project and run commands. Save or commit your changes first, so the scan sees your latest code.
+  - The dependency check needs npm audit (JavaScript) or pip-audit (Python) installed. The scanner script needs Python and runs on your computer. If a tool is missing, that check shows as manual.
   - Say "Run the ship gate" and share your project folder. Add your stack or what counts as critical if you want.
   - Read the stack your AI detected and fix it if it is wrong.
   - Answer the manual checks, then read the verdict and the critical items first.

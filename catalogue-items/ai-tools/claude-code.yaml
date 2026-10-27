@@ -49,6 +49,23 @@ blocks:
   - generated-code-reviewer
 alternatives: [cursor, codex, github-copilot, windsurf]
 last_checked: 2026-10-21
+first_result:
+  - "Check you have a paid Claude plan (Pro or above) or a Console account with API credit. The free Claude plan does not include Claude Code."
+  - "Install it from claude.com/product/claude-code. It runs in the terminal, in your editor, on the web, in the desktop app and in Slack. We did not check the install steps."
+  - "Open it in a project folder that is saved with git, so you can undo any change."
+  - "Start with a read-only job. Ask it to explain how the project is laid out."
+  - "Then give it one small fix. Read its plan, approve each edit and run the tests."
+  - "You end with changed files in your project, and a pull request if you ask for one. Read every change before you merge."
+  - "Next: write your project rules with the AI coding agent rules writer, and check the work with the Generated code reviewer."
+needs:
+  - "A paid Claude plan, or a Console account with API credit."
+  - "A project folder, saved with git."
+  - "One small task, written as what should change and how you will know it worked."
+  - "Your approval for each edit and command it wants to run."
+not_verified:
+  - "Install steps for each place it runs."
+  - "How much use each plan allows before limits."
+  - "How well it handles your language or framework. We did not test it."
 sources:
   - https://claude.com/pricing
   - https://claude.com/product/claude-code

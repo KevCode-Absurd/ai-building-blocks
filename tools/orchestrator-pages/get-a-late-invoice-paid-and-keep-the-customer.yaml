@@ -28,8 +28,9 @@ you_get:
   - A range the customer can realistically pay and proposed terms
   - A firm follow-up that states the consequence and keeps the door open
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Tell it your limits first: the last date you can wait and the plan or part payment you would accept. The proposed terms never go past them.
   - Paste the invoice facts and your history with the customer. It writes the warm reminder.
   - Send it. If nothing arrives in the agreed days, paste what you know of their means.
   - Send the proposed terms. If still nothing, send the firm follow-up.

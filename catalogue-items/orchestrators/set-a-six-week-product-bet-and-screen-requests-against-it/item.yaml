@@ -7,17 +7,19 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: plan, required: true}
   - {type: question, required: true}
+  - {type: document, required: true}
   - {type: voc_reviews, required: false}
 outputs:
+  - {type: plan}
   - {type: shortlist}
   - {type: copy_draft}
 uses: [project-kickoff-brief-writer, lean-product-shaping-coach, feature-request-screener]
 steps:
   - {uses: project-kickoff-brief-writer, note: "Puts the plan on one page with a goal, an audience and limits."}
-  - {uses: lean-product-shaping-coach, note: "Shrinks the brief to a six-week bet and a no list. Reads the brief from the step before."}
-  - {uses: feature-request-screener, note: "Screens your request list against the bet. Reads the plan from the step before."}
+  - {uses: lean-product-shaping-coach, note: "Shrinks the brief to a six-week bet and a no list, using the build-less rules of the 37signals books. Reads the brief from the step before."}
+  - {uses: feature-request-screener, note: "Screens your request list against the bet. Reads the six-week bet from step 2."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/set-a-six-week-product-bet-and-screen-requests-against-it/skeleton.yaml

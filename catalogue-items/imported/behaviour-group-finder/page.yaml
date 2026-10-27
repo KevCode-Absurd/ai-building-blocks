@@ -9,7 +9,7 @@ subhead: Natural customer groups found in your data and described in a way you c
 explain: |
   Natural customer groups found in your data and described in a way you can act on. Say what decision the groups should inform, such as a campaign, a roadmap or a retention plan, and the AI picks three to seven behaviours to compare.
 
-  It runs k-means clustering with a helper script, then profiles each group by how far above or below average it sits on each trait. It checks the groups are truly different using a silhouette score above 0.3, and that they make business sense. Each group gets a strategy: retain and expand, monetise, activate, win back or sunset. You need user-level data and a way to run Python.
+  Your AI runs k-means clustering (a way to sort users into groups) in code. A helper script then profiles each group by how far above or below average it sits on each trait. It checks the groups are truly different using a silhouette score above 0.3, and that they make business sense. Each group gets a strategy: retain and expand, monetise, activate, win back or sunset. You need user-level data and a way to run Python.
 when:
   - Marketing wants different messages for different customers and has no groups.
   - You suspect your best customers share a pattern.
@@ -30,10 +30,12 @@ you_get:
   - A recommended strategy per group
 how_to_use:
   - Open Claude, ChatGPT or Gemini with a mode that can run code and upload files.
+  - Remove names, emails and other personal details from your data first. Use user IDs instead, and check your AI provider's data terms before you upload.
   - Paste this skill, then upload your user data file.
   - Say what the groups will be used for, such as a campaign, a roadmap or a retention plan.
   - Add the traits you think matter (optional). Your AI picks three to seven if you do not.
   - Check the group profiles. Ask whether you would treat each group differently, and rerun with other traits if not.
+  - Next, test one group with a small campaign or a retention email. Compare its results with the group profile.
 output_sample:
   input:
     - Your user-level data, with details like plan type and behaviour such as sessions, spend and last visit
@@ -43,7 +45,7 @@ output_sample:
     - An AI that can run Python code and read your data file
   output:
     - name: segmentation_runner.py
-      contains: The script that runs k-means, draws the elbow and silhouette charts, and gives each user a group label.
+      contains: The script that profiles each group against the overall average. The AI's own code does the k-means run and the charts.
     - name: segmentation_approaches.md
       contains: A guide to when k-means, RFM or rule-based groups fit best, and how to read the results.
     - name: segment_profile_template.md

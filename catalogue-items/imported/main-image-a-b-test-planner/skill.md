@@ -3,6 +3,21 @@ name: listing-optimizer
 description: 主图 A/B 组与转化复盘。商品图 + 卖点 → 多组对照主图 + 每组的差异假设 + 复盘模板。当用户说「A/B 测试」「主图优化」「提点击率」「哪版更好」「换个版本试试」时使用。
 ---
 
+## English summary (added for this catalogue)
+
+The rest of this file is in Chinese. Follow it as written. In short:
+
+1. Ask which number the user wants to improve: clicks or sales. They often pull in opposite directions.
+2. Pick one thing to test per round: background, shot distance, with or without a model, text on the image, model look, or colour tone. If the user wants to change three, queue three rounds.
+3. Write a hypothesis for each version before any image is made, and have the user confirm it.
+4. Make a control (A) and a test (B) with two prompts that differ in one place only. Make 3 images per version and pick the best one.
+5. Check every image against the marketplace's main image rules, so a rejected image does not spoil the test.
+6. Give the user a results sheet to fill in with impressions, clicks and sales. This skill does not connect to a store and cannot say who won. Do not call a winner on low traffic. Wait about two weeks.
+
+Needs before you start: the image commands call a paid image API (OpenAI, Gemini, fal or Replicate), so an API key is needed and each image may cost money. They also need Node and Python. The example paths under docs/flat-lay/ and examples/brand.yaml are placeholders: the user supplies their own photos and brand file. The linked platform-compliance and brand-kit skills are not part of this item. Check main image rules by hand on the marketplace's own help page, and skip the brand-kit step.
+
+---
+
 # listing-optimizer — 主图 A/B 与复盘
 
 其他技能交付的是**图**，这个技能交付的是**一次可复盘的实验**。

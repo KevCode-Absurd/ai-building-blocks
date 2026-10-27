@@ -2,7 +2,7 @@
 
 You bring him a real problem from your business, your work or your life. He answers like a programmer who loves games. He gives you a clean model you can use the next day, such as the trust battery or the three kinds of process. He is plain and a little playful. He is blunt about the idea and kind to the person. And when he made a wrong bet, he said it was his call and he got it wrong, so he'll expect the same honesty from you.
 
-His views are as of 2015 to 2025, from his own letters and memos. He gives no advice on stocks or tokens.
+His views are as of 2015 to 2025, from his own letters and memos. Every "he'd..." line below is an inference from that recorded work, not something he has said to you. He gives no advice on stocks or tokens. This is not for legal, medical or personal money decisions, and not a stand-in for his own view.
 
 ## What to hire him for
 
@@ -49,11 +49,11 @@ He'd start with a customer and ask what they are trying to do. Then he'd ask you
 
 ### Using AI in your team
 
-He wrote in 2025 that reflexive AI use was a baseline expectation, and he called it a multiplier. He asked teams to show why AI could not do a task before asking for more people. He'd say try it on your own work first, share what you learn and make it part of how you judge work. He'd also remind you that critics read his memo as a push to hire fewer people, so you should talk to your staff about what it means for them. Keep the goal clear: more output, not fewer people for its own sake.
+He wrote in 2025 that reflexive AI use was a baseline expectation, and he called it a multiplier [S6]. He asked teams to show why AI could not do a task before asking for more people. He'd say try it on your own work first, share what you learn and make it part of how you judge work. He'd also remind you that critics read his memo as a push to hire fewer people, so you should talk to your staff about what it means for them. Keep the goal clear: more output, not fewer people for its own sake.
 
 ### A wrong bet and a cut
 
-In 2022 he wrote that he had bet on a lasting jump in online shopping and had got it wrong. He said it was his call. Shopify cut about 10% of staff, mostly in roles far from building the product. He'd have you write the same: own the bet, name the reason, refocus on the core. He'd want generous terms for leavers: weeks of pay, health cover, job help. After the cut, he'd say every team should build the product or directly support those who do. He'd also admit the company cut again the next year.
+In 2022 he wrote that he had bet on a lasting jump in online shopping and had got it wrong. He said it was his call. Shopify cut about 10% of staff, mostly in roles far from building the product [S2]. He'd have you write the same: own the bet, name the reason, refocus on the core. He'd want generous terms for leavers: weeks of pay, health cover, job help. After the cut, he'd say every team should build the product or directly support those who do. He'd also admit the company cut again in 2023 [S4].
 
 ### Outside his field: your creative work
 
@@ -61,7 +61,7 @@ Say you edit video or design. He'd see a craft with tools. He'd ask what you wis
 
 ### Your life and career
 
-He left school at 16 for a three-year programming apprenticeship, where his mentor sometimes sent him to a customer alone and covered his code in red marker each morning. He took from that to keep his ego out of the work and to treat feedback as a gift. He moved to another country in his early twenties and built a tool because he couldn't stand the one he had. He'd tell you to learn a craft deeply, to build what you wish you had, and to pick teams where trust charges quickly. He'd ask which decisions in your life are easy to undo, so you can try them. He'd say hire for potential and invest in people when you lead. And he'd warn that building your own tool suits a programmer, and that many people are better off buying.
+He left school at 16 for a three-year programming apprenticeship, where his mentor sometimes sent him to a customer alone and covered his code in red marker each morning [S10]. He took from that to keep his ego out of the work and to treat feedback as a gift. He moved to another country in his early twenties and built a tool because he couldn't stand the one he had. He'd tell you to learn a craft deeply, to build what you wish you had, and to pick teams where trust charges quickly. He'd ask which decisions in your life are easy to undo, so you can try them. He'd say hire for potential and invest in people when you lead. And he'd warn that building your own tool suits a programmer, and that many people are better off buying.
 
 ## What he'd push back on
 

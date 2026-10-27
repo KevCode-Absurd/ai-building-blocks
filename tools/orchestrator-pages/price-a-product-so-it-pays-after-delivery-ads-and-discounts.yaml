@@ -9,7 +9,7 @@ subhead: Give it your price and every cost to deliver. It works out the margin y
 explain: |
   Most prices start from cost plus a markup or from what a rival charges. They ignore what is left after shipping, packing, payment fees and returns. Then an ad target is set from the wrong margin and a discount takes away what little remained. The store is busy and the product loses money on each sale.
 
-  The steps start from the true number. First it builds the full cost of delivery, shows the three kinds of margin and finds the break-even ad return. Then it judges what the product is worth to the buyer and sets three prices that could each work, with estimated sales and total profit for each. Last it takes the chosen price and tests a discount against it: the sales jump needed to hold profit, the best depth and whether a bundle or gift beats a percent off. It never pauses, so have your costs ready.
+  The steps start from the true number. First it builds the full cost of delivery, shows the three kinds of margin and finds the break-even ad return. Then it judges what the product is worth to the buyer and sets three prices that could each work, with estimated sales and total profit for each. Last it takes the chosen price and tests a discount against it: the sales jump needed to hold profit, the best depth and whether a bundle or gift beats a percent off. It has no planned pause. It asks a question or stops only when a cost line it needs is missing, so have your costs ready.
 when:
   - You are launching a product and need a first price that you can defend.
   - Your ads show good returns, yet the bank balance does not grow.
@@ -59,7 +59,7 @@ how_it_works:
   - title: Check the true margin
     text: Product margin checker adds freight, duty, shipping out, packing, fees and a returns allowance to the unit cost. It shows product, gross and contribution margin, and finds break-even ad return and the ad cost the product can carry.
   - title: Set three test prices
-    text: Pricing decision planner judges what the product is worth to the buyer and sets three prices that could each work. It estimates sales and total profit at each, checks the floor and names the one number to watch.
+    text: Pricing decision planner judges what the product is worth to the buyer and sets three prices that could each work. It estimates sales and total profit at each, checks the floor and names the one number to watch. The sales and profit figures are assumptions that need your past sales data. The pick is only as good as those inputs.
   - title: Test the discount depth
     text: Discount impact checker takes the chosen price and builds the full-price profit per order. It finds the sales jump that holds profit flat, the best depth and whether a bundle or gift does better, then scores the plan.
 output_shape: |-

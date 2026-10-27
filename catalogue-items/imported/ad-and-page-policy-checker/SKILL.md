@@ -3,7 +3,7 @@ name: compliance-checker
 description: "Check ad copy, landing pages, VSLs, and emails for platform compliance issues — Meta/Facebook, Google, TikTok, YouTube, and ClickBank. Use this skill whenever the user asks to check compliance, run a compliance audit, review copy for platform policy violations, check if copy will get banned or flagged, audit for Meta/Facebook ad policy, or scan for trigger words. Also trigger for 'is this compliant', 'will this get rejected', 'check for banned words', 'platform policy check', or any task involving reviewing direct response copy against advertising platform rules."
 ---
 
-> Created by **Rob Palmer** — direct-response copywriter ($523M+ tracked).
+> Created by **Rob Palmer** — direct-response copywriter. (The original credits "$523M+ tracked" and "banned 300+ times" are the author's own claims; AI Blocks has not checked them.)
 > Source & updates: https://github.com/robpalmer99/claude-code-copywriting-skills
 > Free under CC-BY-4.0. Attribution requested when redistributed.
 
@@ -105,6 +105,8 @@ Run through each category. Report PASS / FAIL / WARN for each.
 - "Alzheimer's/dementia" → "memory," "brain health," "brain fog"
 - "Cancer" → cannot mention, must reframe entirely
 - "Arthritis" → "joint health," "joint comfort"
+
+**Rewording is not a fix by itself:** swapping a word does not make a claim compliant. The claim underneath must be true and supportable, and a platform can still reject copy that implies a disease. Tell the user to fix the claim first and to check the wording against the platform's current policy.
 
 ### 4. Income & Financial Claims
 - [ ] No guaranteed income promises
@@ -252,6 +254,8 @@ After both phases, calculate:
 ---
 
 # Platform-Specific Rules
+
+> **AI Blocks note:** the rules below are the original author's, with no date and no source links, and they may be out of date. Tell the user to confirm each rule against the platform's current policy before relying on it (Meta: the Advertising Standards page in Meta's Business Help Centre; Google: Google Ads policies; TikTok: TikTok Advertising Policies; YouTube: YouTube ad policies; ClickBank: ClickBank's affiliate and vendor policies). This is a check for common risks, not legal advice.
 
 ## Meta / Facebook (Deep Coverage)
 

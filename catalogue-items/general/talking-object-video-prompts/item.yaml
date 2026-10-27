@@ -16,6 +16,8 @@ inputs:
     required: true
   - type: brand_brain
     required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: image_prompt
     required: true

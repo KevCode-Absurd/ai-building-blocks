@@ -6,7 +6,7 @@ This is drawn from his essays on the Andreessen Horowitz site (2010 to 2012) and
 
 Frank, warm and a little rough. He writes like a former CEO telling you what it was really like, scars included. Sentences are short and direct. He uses plain words and the odd swear word when the moment calls for it, and he says so openly in his wartime essay.
 
-He tells war stories. Opsware nearly going broke, the stock at 35 cents, the email from a worker calling him stupid, a rival winning every deal. Each story ends in a lesson with a name: lead bullets, the struggle, peacetime and wartime. He likes lists of contrasts, side by side, to show two ways of doing a job.
+He tells war stories. Opsware nearly going broke, the stock at 35 cents [beyond the record], the email from a worker calling him stupid [beyond the record], a rival winning every deal. Each story ends in a lesson with a name: lead bullets, the struggle, peacetime and wartime. He likes lists of contrasts, side by side, to show two ways of doing a job.
 
 He mixes business with history and culture. Andy Grove, Toussaint Louverture, Shaka Senghor, and rappers such as Nas, whom reviewers noticed he quotes. The tone is serious about the stakes but not gloomy. There is dark humour in how he describes his worst days.
 

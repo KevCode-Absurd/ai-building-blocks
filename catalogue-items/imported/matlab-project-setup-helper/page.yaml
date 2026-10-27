@@ -7,9 +7,9 @@ job: build-software
 headline: MATLAB project setup helper
 subhead: "A matlab.toml file that sets up your project: its folders, search paths, dependencies and scripts that run on open or close. You describe how the project is laid out and get a file that fits."
 explain: |
-  A matlab.toml file that sets up your project: its folders, search paths, dependencies and scripts that run on open or close. You describe how the project is laid out and get a file that fits.
+  A MATLAB project with the wrong paths breaks on a teammate's computer, and MATLAB does not warn you when the project file has a typo. This skill writes the file for you.
 
-  The skill asks only for the project name, then scans your folder for what already exists. It writes a minimal draft first and shows it to you,. When you edit an existing file it changes only the parts you name, and leaves the rest as it was. It checks every key against the format rules by hand, because MATLAB's openProject does not report mistakes in the file; unknown keys are silently ignored.
+  The skill asks only for the project name, then scans your folder for what already exists. It writes a minimal draft first and shows it to you. When you edit an existing file it changes only the parts you name, and leaves the rest as it was. It checks every key against the format rules by hand, because MATLAB's openProject does not report mistakes in the file; unknown keys are silently ignored.
 when:
   - You are starting a MATLAB project and want its folders on the path automatically.
   - A teammate cannot run your code because the paths are wrong.
@@ -19,6 +19,7 @@ not_for:
   - "You want to edit an old .prj project file: this skill only writes matlab.toml, so edit the .prj in MATLAB or convert it first."
   - "You want to build the project in code with matlab.project.createProject: write those calls yourself, because this skill writes the file directly."
   - "You need to build or install a MATLAB package: use MATLAB's own package tools, not this skill."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The project name
   - Your folder layout
@@ -35,6 +36,7 @@ how_to_use:
   - Let it scan your folders. Read the short draft it shows you and say what to change.
   - Answer its questions about packages, shortcuts or deployment, only if you need them.
   - Ask it to check every key against the format rules, then save the file in your project root.
+  - In MATLAB, run openProject and currentProject to confirm the paths are right. If the project ships as a toolbox file, use the Toolbox packager next.
   - MATLAB is a paid product. Install and license it to open the project and confirm the file loads. Converting a .prj file needs a recent MATLAB release. The skill alone cannot run MATLAB.
 output_sample:
   input:
@@ -45,6 +47,7 @@ output_sample:
   prerequisites:
     - An AI that can read your project folder and write files
     - MATLAB installed and licensed, only if you want to open the project and check it loads
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: matlab.toml
       contains: The project file with the name, folders, startup and shutdown scripts, and any sections you asked for.

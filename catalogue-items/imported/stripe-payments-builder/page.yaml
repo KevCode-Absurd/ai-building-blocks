@@ -9,7 +9,7 @@ subhead: Tell it how you charge and what your app is built with. It writes the S
 explain: |
   This skill adds Stripe payments to a web app. It covers one-off checkout, monthly plans, free trials, upgrades with proration, usage-based billing and the customer portal. The sample code is Next.js, and your AI adapts it to your stack.
 
-  Most billing bugs are in the webhooks, the messages Stripe sends when a payment or plan changes. The webhook code here checks Stripe's signature, skips events it has already handled, and sets values from Stripe instead of adding to them. A retry then cannot charge twice or lose an update.
+  Most billing bugs are in the webhooks, the messages Stripe sends when a payment or plan changes. The webhook code here checks Stripe's signature, skips events it has already handled, and sets values from Stripe instead of adding to them. A retry is then much less likely to charge twice or lose an update.
 
   It works in test mode only. You get a seven-step test run to follow before you go live. It asks for your plans and prices instead of guessing them. It also warns that some calls differ by Stripe API version, so check them against Stripe's docs.
 when:
@@ -39,6 +39,7 @@ how_to_use:
   - Read the list of files it made. Check that it changed only what you expected.
   - Follow the seven-step test run, in order. Stop at the first step that fails and ask your AI to fix it.
   - Have a developer who knows payments review the code before you take real money.
+next: [card-payment-security-checker]
 output_sample:
   input:
     - How you charge, such as monthly plans with a free trial

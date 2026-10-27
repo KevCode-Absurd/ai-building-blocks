@@ -31,6 +31,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
   - "Describe the problem: what is slow, since when, and what changed."
+  - Some checks need root access, perf or sysstat. Tracing adds load, so on a live server start with short, read-only checks and ask your ops team first.
   - Run the commands the AI lists on your server and paste the output back. If your AI can run commands itself, let it, but only for read-only checks.
   - Check the causes it ruled out and the evidence for each one.
   - Approve any fix yourself before it is applied, then ask it to re-measure.

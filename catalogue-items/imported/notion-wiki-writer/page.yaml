@@ -2,7 +2,7 @@ thinking: low
 thinking_why: It sorts notes into a set page format.
 new_slug: notion-wiki-writer
 name: Notion wiki writer
-summary: Turn a chat thread or meeting notes into a linked Notion wiki page for a decision, how-to or FAQ. Your AI fills in owner, tags and status.
+summary: Turn a chat or meeting notes into a Notion wiki page. Owner, tags and status are filled in only if your notes state them.
 job: organise-work
 headline: Notion wiki writer
 subhead: Turn a messy chat or set of meeting notes into a clean Notion page that people can find later. It might be a decision record, a how-to, an FAQ or a short write-up of what you learned.
@@ -30,11 +30,12 @@ you_get:
   - Tags, owner and status filled in
   - Links from related hub pages
 how_to_use:
-  - Use an AI tool that can connect to Notion. The skill steps are written for Codex.
+  - Use an AI tool that can connect to Notion. The skill steps are written for the Codex command line, so this is not a beginner setup. Other AI tools need their own Notion connection.
   - Connect Notion first. Run codex mcp add notion --url https://mcp.notion.com/mcp, turn on the remote MCP client, then run codex mcp login notion to sign in.
   - Restart Codex after you sign in, then start the skill again.
   - Paste your chat or notes. Say what you are saving, who it is for, and whether the page is new or an update.
-  - Answer any question about which Notion database to use.
+  - Answer any question about which Notion database to use. Before it writes, your AI shows the target database and page. Confirm them.
+  - If your notes do not name an owner, status or date, it leaves that field blank or marks it to confirm.
   - Open the new page and check the tags, owner, status and links before you share it.
 output_sample:
   input:

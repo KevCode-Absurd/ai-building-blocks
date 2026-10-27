@@ -12,7 +12,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **What you need:**
 - **Cash flow statement** (yours): reported cash from operations for the period, from the annual report.
-- **Factoring records** (yours): advances received from the factor and the customer receipts paid to it, for the same period and pool, from the notes or the factor's statements.
+- **Factoring records** (yours): advances received from the factor and the customer receipts paid to it, for the same period and the same set of invoices sold to the factor, from the notes or the factor's statements.
 - **Supplier-finance disclosure** (yours): balances, payment terms and how they are classified, from the notes.
 - **Operating balances** (yours): opening and closing receivables, inventory and payables, plus acquisition, currency and other noncash movements, from the notes.
 - **Debt and cash** (yours): financing debt and eligible cash at the same date.
@@ -20,7 +20,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 **Makes it better (optional):** your own cash flow workbook, so the AI can keep your layout.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. Some plans charge for file and spreadsheet features. In a free chat or plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
@@ -42,14 +42,14 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Workbook checks
 
-For a requested workbook, use the available spreadsheet tool and the supplied template. Make the primary output easy to find. Keep focused schedules compact; separate operating schedules when their periods, drivers or sources differ. Inputs feed calculations and outputs, while audit checks remain terminal readers. Use one authoritative scenario selector when cases are requested, preserve historical actuals and expose the actual driver assumptions. Use native What-If Data Tables for requested valuation sensitivities when supported; otherwise explain the limitation before agreeing on a different method. Avoid unintended circularity and verify any deliberately iterative model in its target engine. In working areas, editable numeric inputs are blue, same-sheet formulas black and cross-sheet links green. Show monetary units, parentheses for negatives and meaningful precision. Recalculate, inspect formulas and errors, test a changed input, restore the intended case, render every sheet and reopen the exported file. Report any native-engine or rendering check that could not run. A saved template or mathematically correct illustration does not validate source truth, legal interpretation or an investment conclusion.
+For a requested workbook, use the available spreadsheet tool and the supplied template. Make the primary output easy to find. Keep focused schedules compact; separate operating schedules when their periods, drivers or sources differ. Inputs feed calculations and outputs, while audit checks remain terminal readers. Use one authoritative scenario selector when cases are requested, preserve historical actuals and expose the actual driver assumptions. Avoid unintended circularity and verify any deliberately iterative model in its target engine. In working areas, editable numeric inputs are blue, same-sheet formulas black and cross-sheet links green. Show monetary units, parentheses for negatives and meaningful precision. Recalculate, inspect formulas and errors, test a changed input, restore the intended case, render every sheet and reopen the exported file. Report any native-engine or rendering check that could not run. A saved template or mathematically correct illustration does not validate source truth, legal interpretation or an investment conclusion.
 
 ## Acceptance
 
 - Reported figures stay visible beside every analytical figure, and each financing effect is adjusted once.
 - Cash movements and balance movements are never mixed, and analytical reclassifications keep total liabilities unchanged.
 - Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+- Reconcile opening balances, additions, deductions and closing balances for each step.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
 - Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.

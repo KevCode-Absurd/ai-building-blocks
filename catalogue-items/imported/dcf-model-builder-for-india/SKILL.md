@@ -24,7 +24,7 @@ Ask once for anything missing. Never invent a financial figure. Mark an unsource
 **Two Indian rules.**
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year. Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: each trailing comma divides by 1,000, so it shows lakh under a crore label (a 100× error). Divide by `10000000` in a live formula and label the column `Total Revenue (₹ Cr)`.
+- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: each trailing comma divides by 1,000, so two commas divide by 1,000,000, but a crore is 10,000,000 (the figure shows 10× too large). Divide by `10000000` in a live formula and label the column `Total Revenue (₹ Cr)`.
 
 The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`, `references/sec-filings.md`, and the helper skills `xlsx-author` and `officecli-xlsx`) are not in this folder. If something has no Indian equivalent or you cannot source it, say so. Never put in a stand-in and present it as the real thing.
 
@@ -397,7 +397,7 @@ Implied Upside/(Downside),+XX%
 
 Build **three sensitivity tables** at the bottom of the DCF sheet showing how valuation changes with different assumptions:
 
-1. **WACC vs Terminal Growth** - Shows enterprise value sensitivity to discount rate and perpetuity growth
+1. **WACC vs Terminal Growth** - Shows implied price per share across discount rate and perpetuity growth (the centre cell must equal the model's implied price per share)
 2. **Revenue Growth vs EBIT Margin** - Shows impact of top-line growth and operating leverage
 3. **Beta vs Risk-Free Rate** - Shows sensitivity to cost of equity components
 

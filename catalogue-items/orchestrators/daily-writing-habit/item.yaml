@@ -24,5 +24,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [stephen-king, jerry-seinfeld]
 credits:
-  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "The order of the steps: plan the start and the restart, set the daily word quota, build a reading plan, review the log"}
+  - {title: "On Writing: A Memoir of the Craft", by: "Stephen King", used: "Inspiration for writing every day to a set count and treating reading as part of the job. The four-step order is this workflow's own design."}
 generated_from: intake/on-writing-daily-habit/skeleton.yaml

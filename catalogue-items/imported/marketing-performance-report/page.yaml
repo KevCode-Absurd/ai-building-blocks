@@ -9,7 +9,7 @@ subhead: Give it your campaign or channel numbers, the period and last period's 
 explain: |
   A clear marketing report you can send to a boss or client, built from your raw campaign numbers. It tells them what moved, what worked, what fell short and what to do next, without making them read a spreadsheet.
 
-  You say which kind of report you need (campaign, email, social, paid, search or overall), the time period and. The skill then writes it in a fixed order: a short summary, a table of the key numbers for that channel, trends against the last period, wins, problems, insights and next steps. It checks your figures against common benchmarks for each channel, so a 2% click rate is judged fairly.
+  You say which kind of report you need (campaign, email, social, paid, search or overall), the time period and your numbers. The skill then writes it in a fixed order: a short summary, a table of the key numbers for that channel, trends against the last period, wins, problems, insights and next steps. It checks your figures against common benchmarks for each channel, so a 2% click rate is judged fairly.
 when:
   - Your monthly marketing report is due and the numbers are still in exports.
   - A boss wants a one-page summary of how a campaign did.
@@ -37,6 +37,11 @@ how_to_use:
   - Tell it who will read the report, if you want the tone matched to them.
   - Check each figure in the key numbers table against your source before you send it.
   - Treat any benchmark it quotes as a rough rule of thumb, not a fixed standard.
+  - Targets come from you. If you give none, the Target and Status columns should read 'no target given'. Do not accept a target you did not set.
+  - Next, send the report with a short note on the one thing you will change. Run it again on the next period's numbers to see if it worked.
+next:
+  - marketing-results-reporter
+  - marketing-plan-writer
 output_sample:
   input:
     - Your campaign or channel numbers, pasted or from a spreadsheet

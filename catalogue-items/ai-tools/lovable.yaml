@@ -21,7 +21,7 @@ best_for:
   - Designers and marketers who need a landing page or a small app.
   - Teams that want a fast prototype to show before a build.
 not_for:
-  - Large, long-lived products without a developer to clean up the code.
+  - Large, long-lived products without a developer to clean up the code. Real customer payments or private data should wait until a developer has reviewed it.
   - Anyone who wants a fixed monthly bill, since credits, hosting and extras add up.
 pricing:
   model: freemium
@@ -37,6 +37,24 @@ blocks:
   - vibe-coded-app-cleaner
 alternatives: [bolt, v0, replit, cursor]
 last_checked: 2026-10-21
+first_result:
+  - "Go to lovable.dev and sign up. The free plan gives about 30 credits a month."
+  - "Describe your app in a few sentences: who uses it, the three things it must do and the look you want."
+  - "Look at the preview. Ask for one change at a time in plain words."
+  - "Test it as a user would. Click every button and try bad input."
+  - "Before you add sign-in or payments, check how it stores data and who can see it."
+  - "Publish to the live link when it works. A custom domain needs a paid plan."
+  - "You end with a working web app on a link."
+  - "Next: tidy the result with the Lovable project cleaner or the Vibe-coded app cleaner."
+needs:
+  - "A Lovable account."
+  - "A short written brief with the users, the main jobs and the look."
+  - "Credits. The free plan has about 30 a month."
+  - "A Supabase, GitHub or Stripe account, if the app needs them."
+not_verified:
+  - "Current plan prices. The note above comes from a June 2026 article."
+  - "How many credits one change uses."
+  - "How easy the code is for a developer to take over."
 sources:
   - https://lovable.dev/pricing
   - https://eesel.ai/blog/lovable-pricing

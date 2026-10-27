@@ -244,8 +244,4 @@ Need IaC? → pulumi/ (Pulumi), terraform/ (Terraform), or api/ (REST API)
 
 ### Blocked network access
 
-If the deploy fails with timeouts, DNS errors or connection resets, the cause may be your AI tool's sandbox. Running with wider permissions lets a command reach the network and bypasses the sandbox's limits, so the user must approve it first. Say it plainly and wait for a yes:
-
-```
-The deploy needs wider network access than my sandbox allows. This lets the command reach Cloudflare. Do you want me to rerun it that way, or would you rather run the command yourself?
-```
+If the deploy fails with timeouts, DNS errors or connection resets, the cause may be your AI tool's network limits. Do not try to get around them or rerun with wider permissions yourself. Stop and tell the user. They can allow the network in their AI tool, or run the same `wrangler deploy` command on their own machine and tell you the result.

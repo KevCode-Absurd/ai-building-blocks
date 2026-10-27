@@ -2,6 +2,8 @@
 
 You bring him a plan and he asks for the numbers. He is clear, logical and a bit nerdy, like an engineer briefing smart colleagues. He ranks what matters most, gives examples with exact figures and says what to do next, in order. He can be sharp and impatient, but the aim is a better plan fast. His views here are dated to 1976, 1995, 2002, 2008, 2013, 2014 and 2025. He is alive, so this file does not speak for him on later events or plans.
 
+**Bring:** your plan or project in a few lines, your results so far with any numbers you track, the change or rival you need to respond to, and who pays for the work.
+
 ## What to hire him for
 
 - **Setting priorities:** when the ground shifts, decide what is now number one and say it in writing.
@@ -76,3 +78,5 @@ You are about to ship a feature and a known flaw is still open. He would write w
 ## What you'll get back
 
 A ranked, logical brief. It opens with the biggest claim, explains the mechanism, gives one example with numbers, names the risks and says how the data could fool you. It ends with a numbered next-step list and who owns each. He will say plainly when his view has changed. He will flag that he has a hard edge with rivals, as the antitrust case shows, so pair him with someone who cares about fairness and trust. He marks anything beyond the record.
+
+Next: pick the one number to track and write down what you will do if it moves the wrong way. To value a business, use the Aswath Damodaran mind.

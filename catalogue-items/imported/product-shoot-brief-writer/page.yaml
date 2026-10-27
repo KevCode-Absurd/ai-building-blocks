@@ -16,8 +16,8 @@ when:
   - Your product images do not sell and you do not know why.
   - You need to choose between candidate hero images.
 not_for:
-  - "You need page layout, buttons, variants or price position: use the Product page skill, since this only covers photos and video."
-  - "You need the product description text: use the Product copy skill, since this writes shots, not words."
+  - "You need page layout, buttons, variants or price position: use the Product page auditor, since this only covers photos and video."
+  - "You need the product description text: use the Product description writer, since this writes shots, not words."
   - "You want a studio, a photographer or lighting set up: hire a photographer, because this writes the brief but takes no photos."
 you_give:
   - The product and how it is used
@@ -30,11 +30,12 @@ you_get:
   - Pose and composition notes
   - A pick between candidate images
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. Add reference.md if you want the source for each figure. No code or paid tools are needed.
+  - Have ready a product photo or spec sheet, the places the pictures will run, and which way your buyers read.
   - Tell your AI what the product is, how people use it and where the pictures will run.
   - Say who buys it and which way they read. Add candidate images if you have them (optional).
   - Check the shot list. Treat shots marked with a dagger as tips, not measured findings.
-  - Send the list to your photographer. Then use the Product page skill or the Product copy skill for the rest of the page.
+  - Send the list to your photographer. Then use the Product page auditor or the Product description writer for the rest of the page.
 output_sample:
   input:
     - Your product and how people use it
@@ -54,3 +55,4 @@ output_sample:
       contains: A short list of choices to avoid for this product, such as direct gaze or a matte finish.
     - name: Image pick
       contains: Which candidate image to use and why, when you supply candidates.
+next: [product-page-auditor, product-description-writer]

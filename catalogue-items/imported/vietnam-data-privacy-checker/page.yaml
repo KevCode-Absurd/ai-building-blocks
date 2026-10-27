@@ -31,11 +31,11 @@ you_get:
   - A step-by-step fix plan
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
-  - Describe the personal data you collect, where it is kept and who gets it.
+  - Have ready a list of the data you collect, your vendors and the countries data goes to, the date you first sent data abroad, and your headcount. Describe where it is kept and who gets it.
   - Add your business type and sector, such as finance, AI or cloud.
   - Paste your current privacy notice or consent wording, if you have one (optional).
   - Read the gap list and check each point against the official law text.
-  - Take the plan to your data protection officer or Vietnamese counsel before you act. Check the penalty table against the official decree, as the skill was last verified on 5 September 2026.
+  - Take the plan to your data protection officer or Vietnamese counsel before you act. The skill does not link the official law text, so check every fine in the penalty table against the official Decree 330/2026 before you quote it. It was last verified on 5 September 2026.
 output_sample:
   input:
     - A description of the personal data you collect
@@ -57,3 +57,4 @@ output_sample:
       contains: What your notice and consent wording must include, and what yours is missing.
     - name: Breach response steps
       contains: The 72-hour sequence from containing a breach to review, and what a report must say.
+next: [agency-data-privacy-officer]

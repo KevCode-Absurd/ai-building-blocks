@@ -34,8 +34,8 @@ how_to_use:
   - Paste the skill into the chat, or save it in your project. Then say "Set up my workplace memory."
   - Give it your nicknames, acronyms, project codes and key people. Share only work roles, not private details.
   - Check that CLAUDE.md is saved in your project folder and the memory/ folder sits next to it.
-  - "Optional: if you have the Claude Code productivity plugin, run /productivity:start. It scans your chat, calendar, email and documents, so check which accounts you connect first."
-  - Try a short request like "ask todd to do the PSR". Fix any wrong entry, and the AI will remember it.
+  - "Optional: if you have the Claude Code productivity plugin, run /productivity:start. It needs Claude Code and a paid Claude plan, and it reads your chat, calendar, email and documents, so check which accounts you connect first."
+  - Try a short request like "ask todd to do the PSR". Check each person and project entry against the real person or project, and fix any wrong one. Then reuse the memory for drafting and reporting requests.
 output_sample:
   input:
     - Your nicknames, names and acronyms

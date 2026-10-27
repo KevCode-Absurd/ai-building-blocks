@@ -748,6 +748,19 @@
 /workflows/sort-decisions-by-how-reversible-they-are-and-fund-long-shots /workflows/reversible-decisions 301
 /workflows/test-a-story-idea-check-every-scene-turns-and-strip-the-voice-over /workflows/story-idea-test 301
 /workflows/work-back-from-a-low-price-to-a-cheaper-way-of-making-it /workflows/target-cost-production 301
+/skills/test-idea-shortlist-maker /skills/test-idea-ranker 301
+/skills/process-waste-walk-planner /skills/process-waste-finder 301
+/skills/plain-error-message-writer /skills/error-message-rewriter 301
+/skills/ad-test-budget-setter /skills/ad-test-budget-calculator 301
+/skills/late-invoice-reminder-writer /skills/payment-reminder-letter-writer 301
+/skills/five-colour-feeling-palette-picker /skills/mood-colour-palette-planner 301
+/skills/negotiation-call-opening-planner /skills/negotiation-call-prep-planner 301
+/skills/shipping-zone-and-rate-drafter /skills/shipping-rate-planner 301
+/skills/two-version-ad-test-planner /skills/split-run-test-planner 301
+/skills/open-word-finder /skills/owned-word-mapper 301
+/skills/product-niche-problem-picker /skills/pain-point-niche-finder 301
+/skills/setback-update-drafter /skills/bad-news-update-writer 301
+/skills/open-buyer-group-finder /skills/untapped-buyer-finder 301
 
 # App pages with no page file of their own.
 /traction /tools/growth-channel-planner 301

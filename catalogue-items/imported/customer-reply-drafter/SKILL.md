@@ -6,7 +6,7 @@ argument-hint: "<situation description>"
 
 # /draft-response
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> If you have no email, chat, CRM or help desk connected, ask the person to paste the relevant thread or account notes. Do not guess at account details.
 
 Draft a professional, customer-facing response tailored to the situation, customer relationship, and communication context.
 
@@ -39,27 +39,27 @@ Parse the user's input to determine:
 
 Gather relevant background from available sources:
 
-**~~email:**
+**Email (if connected, or pasted):**
 - Previous correspondence with this customer on this topic
 - Any commitments or timelines previously shared
 - Tone and style of the existing thread
 
-**~~chat:**
+**Team chat (if connected, or pasted):**
 - Internal discussions about this customer or topic
 - Any guidance from product, engineering, or leadership
 - Similar situations and how they were handled
 
-**~~CRM (if connected):**
+**CRM (if connected, or pasted):**
 - Account details and plan level
 - Contact information and key stakeholders
 - Previous escalations or sensitive issues
 
-**~~support platform (if connected):**
+**Help desk (if connected, or pasted):**
 - Related tickets and their resolution
 - Known issues or workarounds
 - SLA status and response time commitments
 
-**~~knowledge base:**
+**Knowledge base (if connected, or pasted):**
 - Official documentation or help articles to reference
 - Product roadmap information (if shareable)
 - Policy or process documentation

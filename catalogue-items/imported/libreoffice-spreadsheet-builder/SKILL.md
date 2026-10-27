@@ -62,6 +62,15 @@ soffice --calc template.ods
 ```
 
 #### Method 2: Python with UNO
+
+Setup first: start LibreOffice with its socket listener, or the code below cannot connect.
+
+```bash
+soffice --headless --accept="socket,host=localhost,port=8100;urp;"
+```
+
+AI Blocks note: this file shows no steps for building a chart. If the person asks for one, build it through UNO and check the result, or say you could not and tell them to add the chart in LibreOffice by hand.
+
 ```python
 import uno
 

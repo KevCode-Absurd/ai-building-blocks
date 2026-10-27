@@ -83,7 +83,7 @@ Extensions and settings from all detected languages should be merged into the co
 
 ## Phase 2: Generate Configuration
 
-Start with base templates from `resources/` directory. Substitute:
+Start with base templates from `resources/` directory. This catalogue copy does not include that folder. If it is missing, say so and ask the user for the base files before you write anything. Do not invent them. Substitute:
 
 - `{{PROJECT_NAME}}` → Human-readable name (e.g., "My Project")
 - `{{PROJECT_SLUG}}` → Slug for volumes (e.g., "my-project")
@@ -139,6 +139,7 @@ Add to `customizations.vscode.settings`:
 ```
 
 **postCreateCommand:**
+Warning: `rm -rf .venv` deletes an existing Python virtual environment. Tell the user and get a clear yes before you include it. If they say no, leave it out.
 If `pyproject.toml` exists, chain commands:
 ```
 rm -rf .venv && uv sync && uv run /opt/post_install.py
@@ -286,7 +287,13 @@ Generate these files in the project's `.devcontainer/` directory:
 
 ## Validation Checklist
 
-Before presenting files to the user, verify:
+Before presenting files to the user, list these and ask the user to approve each one:
+
+- The container gets the NET_ADMIN capability (network rules).
+- It installs third-party plugin marketplaces (anthropics/skills, trailofbits/skills, trailofbits/skills-curated).
+- Every command that runs when the container is created (`postCreateCommand`), including any `rm -rf`.
+
+Then verify:
 
 1. All `{{PROJECT_NAME}}` placeholders are replaced with the human-readable name
 2. All `{{PROJECT_SLUG}}` placeholders are replaced with the slugified name
@@ -303,6 +310,7 @@ After generating, inform the user:
 1. How to start: "Open in VS Code and select 'Reopen in Container'"
 2. Alternative: `devcontainer up --workspace-folder .`
 3. CLI helper: Run `.devcontainer/install.sh self-install` to add the `devc` command to PATH
+4. Next: once the container opens, run the project's tests and build to confirm it works, then commit the `.devcontainer` folder so teammates get the same setup.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

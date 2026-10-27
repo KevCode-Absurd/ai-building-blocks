@@ -35,8 +35,9 @@ how_to_use:
   - Paste your app's code, or describe how it works. Say where it reads outside text and which tools it can use.
   - Ask your AI to list the entry points where untrusted text can get in. Check the list against what you know.
   - Ask it to pick the defence layers that fit, then add the screening and output check code.
-  - Run the red-team tests on a test copy. This needs Python, so use an AI that can run code or run the files yourself.
+  - Run the red-team tests on a test copy. The skill gives the test cases as a list with the expected result for each, but no runner. Ask your AI to write a small Python script that sends each test input to your test copy and marks pass or fail against the expected result. Or go through them by hand.
   - Fix any test that fails and run the tests again before you launch.
+  - Treat any failing test as a hole to close. For a wider review, pair this with the Code security reviewer.
 output_sample:
   input:
     - Your app's code or a plain description of how it works

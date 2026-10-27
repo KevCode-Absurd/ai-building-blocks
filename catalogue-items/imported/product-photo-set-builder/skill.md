@@ -3,6 +3,8 @@ name: fission-pattern
 description: 一张商品图裂变成整套素材。商品图 + 卖点 → 多角度多场景成套图，够铺满一屏。当用户说「裂变套图」「一张变一屏」「凑够详情页」「出一套图」时使用。
 ---
 
+> **Read this first (added by AI Blocks).** This file is written in Chinese. Follow the same steps and answer the user in English. The `dlazy` commands, `scripts/gen.mjs` and the `docs/` paths are not included here. They need a paid dLazy account and a way to run commands, so treat them as optional. The free route: write the prompt, then give it and the user's photo to the image tools in ChatGPT or Gemini. Do not claim a picture was made unless an image tool made it. The set is five shots: front hero, 45-degree angle, in-use scene, detail close-up, and size or inside view. Two paragraphs (the product description and the mood) are reused word for word in every prompt. Steps that call the scripts can be skipped: write the five prompts and run them by hand. The linked skills and `docs/fission-pattern/` examples are not in this library.
+
 # fission-pattern — 一张图裂变完整套图
 
 一张商品图 → **一整套**不同角度 / 场景 / 构图的商拍图。

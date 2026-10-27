@@ -33,8 +33,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini with a tool that can run Python code and read files. Upload the skill folder.
   - Paste your current prompt and your test cases. If you have no test cases, ask your AI to help you write 10 to 20 first.
   - Ask your AI to follow the skill. It will score your current prompt before it changes anything.
+  - Ask your AI to run each revised prompt on every test case and record pass or fail for each in eval_results.json. Accept only results from those real runs, not guesses.
   - Add your provider's price per million tokens if you want cost figures in dollars.
   - Read the comparison. Ship a new version only if it keeps every case that passed before.
+  - Save the version you ship as your new baseline.json, so the next change is tested against it.
 output_sample:
   input:
     - Your current prompt
@@ -58,3 +60,4 @@ output_sample:
       contains: Scores for how relevant, complete and faithful your retrieved answers are, compared with an earlier run.
     - name: Agent config check (optional)
       contains: Errors and warnings in your agent setup, such as missing tool settings and loop risk.
+next: [prompt-change-tester, prompt-change-manager]

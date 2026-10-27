@@ -21,7 +21,7 @@ best_for:
   - Analysts who want AI help inside their notebook.
   - Reports that people need to explore and refresh.
 not_for:
-  - A one-off look at a single spreadsheet.
+  - A one-off look at a single spreadsheet. Julius AI is simpler for that.
   - People who want no contact with data work at all.
 pricing:
   model: freemium
@@ -36,5 +36,21 @@ blocks:
   - warehouse-a-b-test-runner
 alternatives: [julius, claude, chatgpt, gemini]
 last_checked: 2026-10-21
+first_result:
+  - "Go to hex.tech and sign up for the free Community plan, which includes a trial of the agent."
+  - "Connect one data source your team already uses, such as BigQuery or Snowflake. You may need the person who owns that data to do this."
+  - "Start a new project. Ask one plain question you can check by hand, such as how many orders you had last month."
+  - "Open the SQL or Python the agent wrote. Check that it uses the right tables and dates."
+  - "Publish the result as an app, or schedule it to run each week and send alerts."
+  - "You end with a chart or table, the query behind it, and an app or scheduled report your team can open."
+  - "Next: to test a change on store data, use the Warehouse A/B test runner."
+needs:
+  - "A Hex account."
+  - "A data source you can log in to, or a person who can connect it."
+  - "A first question you can check by hand."
+not_verified:
+  - "Which data sources the free plan allows."
+  - "How long the agent trial lasts."
+  - "How the agent handles very large tables. We did not test it."
 sources:
   - https://hex.tech/pricing/

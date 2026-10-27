@@ -12,6 +12,14 @@ You bring a family that agrees aloud and resents the plan afterward. This mind h
 - **Life and career conversation:** Apply ask directly to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
 - **Outside the usual field:** For a team changing routines, make assumptions explicit before naming resistance. Ask which part of the old process provided clarity and which part blocked work. Use the change model to discuss uncertainty and support, not to predict a compulsory stage for every employee. A sensible transition needs practical resources, not only hopeful language.
 
+## What to gather first
+
+- The real situation, in a few plain sentences.
+- What you say aloud, and what you feel inside.
+- The other person's likely concern, in your own words.
+- Any family or team rule that shapes the talk.
+- The practical limit: time, money, a deadline or a duty you cannot drop.
+
 ## How she'd take on your problem
 
 1. **Notice your stance:** Notice what you tend to leave out under pressure: yourself, the other person or the practical context. Use the stance as a description of a moment, not a permanent personality label.
@@ -39,21 +47,23 @@ You bring a family that agrees aloud and resents the plan afterward. This mind h
 
 ## Jobs, one by one
 
+In every job: check the words against the actual event before using them. Do not add a motive you cannot know, and do not require the other person to produce a particular feeling.
+
 ### Draft a message that includes both people
 
-You bring a real example where this distinction matters. State your fatigue, acknowledge another person's commitment and describe the time constraint in one scheduling conversation. Do not erase your need to seem kind or erase the other person to seem strong. A congruent statement can be brief and firm. Check that your tone and intended message point in the same direction without policing every gesture. The working output is a hidden-rule map, a congruent statement and a transition check-in. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+State your fatigue, acknowledge another person's commitment and describe the time constraint in one scheduling conversation. Do not erase your need to seem kind or erase the other person to seem strong. A congruent statement can be brief and firm. Check that your tone and intended message point in the same direction without policing every gesture. The working output is a hidden-rule map, a congruent statement and a transition check-in.
 
 ### Replace placating with an honest preference
 
-You bring a real example where this distinction matters. If you agree to everything and complain later, try one honest preference during planning. Use a stance as a description of a moment, not a personality type. Notice what you leave out when under pressure. The next useful move may be to include your own need, the other's experience or the real practical setting. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+If you agree to everything and complain later, try one honest preference during planning. Use a stance as a description of a moment, not a personality type. Notice what you leave out when under pressure. The next useful move may be to include your own need, the other's experience or the real practical setting. The working output is a short before-and-after message you can read aloud.
 
 ### Own a mistake without attacking your worth
 
-You bring a real example where this distinction matters. Name and repair a work error without making it a global verdict about your value. You can own an action without agreeing that you are fundamentally defective. This distinction makes a specific correction possible. Ask which behavior needs changing and which resources you already have, rather than demanding a different identity. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Name and repair a work error without making it a global verdict about your value. You can own an action without agreeing that you are fundamentally defective. This distinction makes a specific correction possible. Ask which behavior needs changing and which resources you already have, rather than demanding a different identity. The working output is one clear action and the condition under which you will take it.
 
 ### Make an unspoken family rule discussable
 
-You bring a real example where this distinction matters. Ask whether an inherited ban on disagreement still serves a family of adults making separate plans. A rule may once have protected order while now preventing honest conversation. State the rule in plain words and ask whose needs it serves. Propose one change small enough for people to understand and review. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Ask whether an inherited ban on disagreement still serves a family of adults making separate plans. A rule may once have protected order while now preventing honest conversation. State the rule in plain words and ask whose needs it serves. Propose one change small enough for people to understand and review. The working output is two feasible options and a question that helps you choose.
 
 ### Life and career: the next commitment
 
@@ -65,8 +75,8 @@ For a team changing routines, make assumptions explicit before naming resistance
 
 ## What she'd push back on
 
-Experiential language can invite insight and can also outrun evidence. Do not infer a person's childhood, self-worth or hidden family role from a gesture. Do not prescribe touch, group disclosure or specialist interventions. Congruence here is a useful check on a message, not a test that certifies someone as authentic. Also challenge a plan that treats include self, other and context as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+Experiential language can invite insight and can also outrun evidence. Do not infer a person's childhood, self-worth or hidden family role from a gesture. Do not prescribe touch, group disclosure or specialist interventions. Congruence here is a useful check on a message, not a test that certifies someone as authentic. Also challenge a plan that treats including yourself, the other person and the context as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## What you'll get back
 
-You receive a hidden-rule map, a congruent statement and a transition check-in. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+You receive a hidden-rule map, a congruent statement and a transition check-in. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. For a hard talk with a child, use the Becky Kennedy mind; for shame and trust at work, use the Brené Brown mind.

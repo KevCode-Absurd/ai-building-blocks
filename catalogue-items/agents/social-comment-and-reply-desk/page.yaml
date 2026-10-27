@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to go through today's items.
   - The first time, paste your voice samples. It saves a voice file.
-  - Paste the posts or comments, with the platform and how long ago each was posted.
+  - Paste the posts or comments, with the platform and how long ago each was posted. It does not fetch them for you, so paste fresh items each time you run it.
   - Read the replies. Post the ones you like, yourself.
-  - Once a week, ask for the repeat-question list and use it to plan your next posts.
+  - Once a week, ask for the repeat-question list and use it to plan your next posts. It runs only when you ask, not on its own.
 output_sample:
   input:
     - The posts you might reply to, or the comments on your own posts

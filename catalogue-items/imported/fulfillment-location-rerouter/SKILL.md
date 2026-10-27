@@ -36,6 +36,8 @@ Queries open fulfillment orders assigned to a source location and moves them to 
 
 ## Workflow Steps
 
+**Confirm before moving.** Never set `dry_run` to false on your own. After the preview in step 1, show the user the list of orders and the destination, and wait for the user to type an explicit yes. Only then run step 2.
+
 1. **OPERATION:** `fulfillmentOrders` — query
    **Inputs:** `assignedLocationId: <source_location_id>`, `status: OPEN`, `first: 250`, pagination cursor
    **Expected output:** List of open fulfillment orders; paginate until `hasNextPage: false`
@@ -169,10 +171,10 @@ CSV file `routing_log_<YYYY-MM-DD>.csv` with columns:
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | `userErrors` on fulfillmentOrderMove | Order already fulfilled or location inactive | Log error, skip order, continue |
-| Destination location not stocked | Insufficient inventory at destination | Log warning per SKU, continue move |
+| Destination location not stocked | Insufficient inventory at destination | Pause and ask the user whether to skip these orders or stop. Do not move orders to a location that cannot fulfil them |
 | No open orders at source | Source has no pending work | Exit with summary: 0 orders found |
 
 ## Best Practices
-- Always run with `dry_run: true` first — moving a fulfillment order does not move inventory; verify destination stock levels separately using the `multi-location-inventory-audit` skill.
+- Always run with `dry_run: true` first — moving a fulfillment order does not move inventory; verify destination stock levels separately in Shopify Admin.
 - Use `order_filter` to move specific high-priority orders first rather than the entire queue.
 - For location closures, run this skill before the location is deactivated in Shopify Admin.

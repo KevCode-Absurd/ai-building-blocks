@@ -37,6 +37,9 @@ how_to_use:
   - "Say what you want: a tech debt review, a build or buy call, a hiring plan or a health check."
   - Check each result with your lead engineer. Costs and dates are estimates, and your AI does not know your code.
   - The two Python scripts are optional. They only run in an AI that can run code. Skip them in a plain chat.
+  - Your AI marks each figure as "from your input" or "estimate, check with your lead". It asks for numbers you have not given instead of quoting benchmarks it cannot source.
+  - Next, take the hiring plan to your budget review, log the health measures in a monthly check, and run the debt review again after the first sprint. Write each big decision down with the decision record writer.
+next: [tech-debt-prioritiser, decision-record-writer]
 output_sample:
   input:
     - A description of your team and tech stack

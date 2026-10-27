@@ -8,7 +8,7 @@ metadata:
 
 # Candidate assessment
 
-Design and run structured assessments — skills tests, work samples, simulations, and assessment centers — that predict on-the-job performance more reliably than unstructured interviews alone.
+Design and run structured assessments — skills tests, work samples, simulations, and assessment centers — that give you a more consistent, comparable view of candidates than unstructured interviews alone. Do not claim any test predicts job performance.
 
 ## What to ask for first
 

@@ -34,7 +34,7 @@ how_to_use:
   - "Say what you want: a scan, a deep read, an impact check or a reading list. Add the topic, title or arXiv link."
   - Let your AI install the three Python add-ons if it asks. This happens once per session.
   - Check the paper IDs and titles it lists before you ask for a PDF download.
-  - Save the result to your notes. If Semantic Scholar says it is busy, wait ten seconds and ask again.
+  - Save the result to your notes. If Semantic Scholar says it is busy, wait ten seconds and ask again. Some script messages are in Chinese, and your AI can translate them. To keep the reading list, add the paper IDs to a reference manager such as Zotero.
 output_sample:
   input:
     - A topic, paper title, DOI or arXiv link

@@ -32,12 +32,14 @@ Aggregates abandoned checkout data broken down by cart value bucket and hour of 
 
 1. **OPERATION:** `abandonedCheckouts` — query
    **Inputs:** `first: 250`, `query: "created_at:>='<date_range_start>' created_at:<='<date_range_end>'"`, pagination cursor
-   **Expected output:** All abandoned checkouts in range with `totalPrice` and `createdAt`; paginate until `hasNextPage: false`; then aggregate in-memory: (1) count by cart value bucket, (2) count by hour of day (UTC, 0–23)
+   **Expected output:** All abandoned checkouts in range with `totalPriceSet` and `createdAt`; paginate until `hasNextPage: false`; then aggregate in-memory: (1) count by cart value bucket, (2) count by hour of day (UTC, 0–23)
+
+   In order: (a) sign in with `shopify auth login --store <store>`; (b) run the query with `first: 250` and the date filter; (c) while `hasNextPage` is true, run it again with `after` set to `endCursor`; (d) count each checkout once by its `totalPriceSet.shopMoney.amount` band and once by the UTC hour of `createdAt`; (e) report the two tables and the total. The query asks only for the fields the report needs. It does not pull customer emails or line items.
 
 ## GraphQL Operations
 
 ```graphql
-# abandonedCheckouts:query — validated against api_version 2025-04
+# abandonedCheckouts:query — the original author validated this against api_version 2025-04; the header says 2025-01. Use one version for the run: 2025-01, or 2025-04 if the store rejects it.
 query AbandonedCheckoutsReport($first: Int!, $after: String, $query: String) {
   abandonedCheckouts(first: $first, after: $after, query: $query) {
     edges {
@@ -48,22 +50,6 @@ query AbandonedCheckoutsReport($first: Int!, $after: String, $query: String) {
           shopMoney {
             amount
             currencyCode
-          }
-        }
-        customer {
-          defaultEmailAddress {
-            emailAddress
-          }
-        }
-        lineItems {
-          edges {
-            node {
-              title
-              quantity
-              variant {
-                price
-              }
-            }
           }
         }
       }

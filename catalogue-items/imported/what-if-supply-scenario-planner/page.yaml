@@ -36,7 +36,7 @@ how_to_use:
   - Describe your worry in one or two lines, such as a late shipment or a demand spike.
   - Add the decision it affects, how far ahead you plan, and any weak points like a single supplier.
   - Paste your cost and lead time figures if you have them. If not, your AI will ask or mark them as missing.
-  - Check the numbers in the result. Any example figures are placeholders, so swap in your own.
+  - Check the numbers in the result. The skill's example demand, cost and penalty figures are invented placeholders, so swap in your own before you share the report.
   - Share the report with your team or finance, and set a date to review the early warning signs.
 output_sample:
   input:
@@ -46,7 +46,7 @@ output_sample:
     - Your cost and lead time data (optional)
     - Known weak points, such as one supplier (optional)
   prerequisites:
-    - An AI chat tool such as Claude, ChatGPT or Gemini. No code is needed for a written report.
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code is needed for a written report. The Python code in the skill is optional.
   output:
     - name: Executive summary
       contains: The purpose, the scenarios tested, the main findings and what they mean for your decision.
@@ -60,3 +60,4 @@ output_sample:
       contains: "Actions grouped by time: now to 3 months, 3 to 12 months, and 1 to 3 years."
     - name: Monitoring and review
       contains: What to track, how often to review, and the trigger points that start each plan.
+next: [supply-chain-backup-plan-builder, demand-forecast-planner]

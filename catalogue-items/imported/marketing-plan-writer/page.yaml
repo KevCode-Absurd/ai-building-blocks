@@ -33,11 +33,14 @@ you_get:
   - A measurement plan with the open decisions listed
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. Or upload the skill folder if your AI takes files.
+  - The skill uses 14 reference files, such as budget-planning and funding-stage-unlocks. Upload them with the skill if your AI takes files, or the plan runs without them. In a plain chat, paste the ones you need.
   - Tell your AI about your business, audience, offer, budget and team size. Add what you have tried.
   - Answer its questions. It may search the web, so use an AI that can browse if you want market research.
   - Read each of the 13 sections as it appears. Fix anything that is wrong before you move on.
   - Ask for the joined plan at the end. Save it as final_plan.md if your AI can make files, or copy it into Notion.
   - Connected tools like Ahrefs, GA4 and Stripe are optional. Some need a paid account or an API key. Without them, your AI works from what you tell it.
+  - In a plain chat there is no saved folder to resume from. Copy each section you approve into a note, and paste them back if the chat is lost.
+  - The budget tiers, the extra 10 to 20 percent for experiments and the 3-3-2-2-2 growth rule are rules of thumb, not sourced data. Check them against your own cost per customer and revenue.
 output_sample:
   input:
     - A description of your business

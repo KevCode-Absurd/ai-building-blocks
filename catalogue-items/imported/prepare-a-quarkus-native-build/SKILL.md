@@ -5,6 +5,13 @@ description: 'Build Quarkus native executables (Mandrel/GraalVM), fix native fai
 
 # Quarkus Native and Container
 
+**Start here:**
+1. Pick the build command that fits the project's Quarkus version and target (see "Native build").
+2. Run the native build, and use "Common native failures" if it fails.
+3. Test the native binary, then build the container image and Kubernetes files.
+
+The version numbers and timings in this file ("verified", "about 70 s") are the author's own results on their machines. Treat them as a guide, and confirm them on yours.
+
 Check the project's Quarkus version first. For generic (non-Quarkus) GraalVM work, use the optional `java-add-graalvm-native-image-support` skill if installed (otherwise see the GraalVM docs, <https://www.graalvm.org/latest/reference-manual/native-image/>).
 
 ## Native build

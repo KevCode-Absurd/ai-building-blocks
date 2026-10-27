@@ -17,13 +17,13 @@ when:
   - You are comparing the value of 1P and 2P cases.
 not_for:
   - You need a reserve report for an SEC filing or a lender. Ask a qualified reserves engineer to sign it off.
-  - You want the cost of closing wells and platforms. Use aro-computation, the decommissioning cost skill.
-  - You want to value a whole oil company. Use investment-analysis, or ask an analyst.
+  - You want the cost of closing wells and platforms. Use the Cleanup cost liability calculator.
+  - You want to value a whole oil company. Ask an analyst, or use the Company financial health reviewer for the books.
 you_give:
-  - Reserve volumes by category
-  - Production or decline data
-  - Lifting, development and tax costs
-  - Price assumption
+  - Reserve volumes for 1P, 2P and 3P, in MMbbl (oil) or Bcf (gas)
+  - Annual production, or the decline rate
+  - Lifting and finding-and-development cost, in dollars per BOE, plus tax and royalties
+  - "Your price deck: the oil and gas prices and the basis you use"
 you_get:
   - A cash flow table by year
   - The PV-10 figure
@@ -31,11 +31,12 @@ you_get:
   - Notes on the pre-tax versus post-tax difference
 how_to_use:
   - Gather your reserve volumes, production or decline data, costs and price choice.
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your numbers. Say which price basis you want, such as a 12-month average or a forward curve.
-  - Ask for the valuation memo. If you want the script run, use an AI that can run code.
+  - Ask for the valuation memo. If your AI cannot run code, it works the formulas by hand, year by year. The script is not in the pasted text.
   - Check each yearly line in the cash flow table against your own figures.
   - Ask your AI to show the price sensitivity table before you use the result.
+  - Treat the PV-10 as a screening estimate. Check it with a qualified reserves engineer before a lender, a filing or a purchase.
 output_sample:
   input:
     - "Your reserve volumes by category: proved, probable or possible"

@@ -271,7 +271,7 @@ Late: Can't function, decisions have stopped, team notices before you do.
 ### Structural prevention
 
 - **Protect recovery time.** Not weekends — protected time during the week where you're not available.
-- **Therapy or coaching.** Not optional for founders. The job is isolating and the stakes are high.
+- **Therapy or coaching.** Consider a therapist or coach if burnout signs persist. The job can be isolating. This skill does not replace professional care.
 - **Peer group.** Other founders at similar stages. They're the only people who actually understand the job.
 - **Clear off-ramps.** Know what "enough for today" looks like. Don't let the work be infinite.
 

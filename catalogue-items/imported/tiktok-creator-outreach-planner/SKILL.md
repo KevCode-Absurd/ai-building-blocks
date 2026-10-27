@@ -82,6 +82,8 @@ Optimize for maximum impact:
 
 ## Output Format
 
+**Every number in this template is a placeholder, not a fact.** That covers follower counts, engagement, audience match, ROI, rates, commission and the contract terms (12-month usage rights, 30-day exclusivity, 48-hour approval). Replace each with the user's own data. If the user has none, write "unknown" or leave it blank. These contract terms are starting points only: tell the user to have a lawyer review usage rights, exclusivity and the paid-ad and branded-content disclosure rules before anything is sent. Pay and commission rates are unverified, so tell the user to check current market rates.
+
 ```
 ## TikTok Creator Marketplace Strategy
 **Campaign:** [Campaign Name] | **Budget:** $[Amount] | **Timeline:** [Duration]

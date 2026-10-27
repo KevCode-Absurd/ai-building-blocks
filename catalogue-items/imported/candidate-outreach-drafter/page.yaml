@@ -36,6 +36,7 @@ how_to_use:
   - Tell your AI the tone you want, such as professional, casual or technical. If you say nothing, it uses a friendly, professional tone.
   - Read the first message. Check that the personal detail about the person is true, then send it.
   - Send the follow-ups on the days listed in the sequence. Stop after the fourth touch.
+  - When someone replies with interest, send the role brief and book a call within 48 hours. The response playbook in the result has a reply for each other answer. The skill also reads its five reference files, so paste them in too or attach the folder.
 output_sample:
   input:
     - The role and what makes it appealing

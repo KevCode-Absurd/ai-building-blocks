@@ -36,6 +36,7 @@ how_to_use:
   - Add the rate limits from the API docs if you have them (optional).
   - Read the result. Check that actions which change data are not retried without a repeat-safe key.
   - Run and test the code in your own project. Your AI can only run it if it has code tools.
+  - Wire the retry function into one real API call, log each retry, and add a circuit breaker (a switch that stops calls for a while) for long outages.
 output_sample:
   input:
     - The API you call
@@ -44,6 +45,7 @@ output_sample:
     - Rate limits from the API docs (optional)
   prerequisites:
     - An AI that can run code and read your project files helps, but you can also paste the code into your project yourself
+    - The TypeScript code uses the built-in fetch (Node 18 or newer, or a browser). The Python code needs the httpx package
   output:
     - name: Response sorting
       contains: A rule for which errors to stop on and which to retry, such as rate limits, timeouts and server faults.

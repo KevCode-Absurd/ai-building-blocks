@@ -31,10 +31,11 @@ you_get:
   - Notes on what changed and why
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Paste your Dockerfile, or describe your project, language and framework.
+  - Paste your Dockerfile, or describe your project, language and framework. A project without a Dockerfile needs its main files too (package.json or requirements.txt, and how it starts).
   - "Say which job you want: optimize, compose or security. Say if it is for development or production."
   - Add any services your app needs, such as a database (optional).
   - Read the result and check the notes on what changed. Then build the image to test it.
+  - Next, run the compose file and confirm the healthchecks pass. Fix any audit finding it listed, then run the audit again.
   - The analyzer and validator scripts only run if your AI can run code. Without that, you still get the files and the audit.
 output_sample:
   input:

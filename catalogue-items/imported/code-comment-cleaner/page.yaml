@@ -51,7 +51,7 @@ output_sample:
     - name: Added comments
       contains: Docstrings and notes added to complex logic or public functions that had none.
     - name: Removed comments
-      contains: Redundant comments and dead code taken out, listed one by one.
+      contains: Redundant comments taken out, listed one by one. Commented-out code is flagged for your yes or no before it goes.
     - name: Flagged as stale
       contains: Comments that no longer matched the code, with what they used to say and what they say now.
     - name: Left alone

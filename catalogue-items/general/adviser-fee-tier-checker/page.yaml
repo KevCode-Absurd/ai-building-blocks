@@ -4,7 +4,7 @@ headline: Adviser fee tier checker
 summary: Work out a two-tier success fee, take off the retainer you already paid and see what is left to invoice. Each number ties back to your signed letter.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Each rate must apply to its own slice and the credit may only use paid retainers, so every step needs checking against the letter."
 subhead: Give it your signed engagement letter and the deal value. It splits the value at the breakpoint, applies each rate to its own slice, checks the minimum fee and credits the retainer. You get the gross fee, the credit and the amount left to invoice.
 explain: |-
   Many fee letters charge one rate on the first slice of a deal and a lower rate only on the slice above it. A common slip is to apply one rate to the whole value. This adviser fee checker applies each rate to its own slice only.
@@ -36,12 +36,14 @@ how_to_use:
   - Read MISSING and CHECKS MISSED before you pay or send an invoice.
   - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
-  - title: 1. Resolve transaction-value inclusions such as assumed debt, contingent consideration and rollover before applying rates
-    text: Resolve transaction-value inclusions such as assumed debt, contingent consideration and rollover before applying rates.
-  - title: 2. Apply first marginal rate up to the breakpoint and second rate only above it; compare with contractual minimum
-    text: Apply first marginal rate up to the breakpoint and second rate only above it; compare with contractual minimum.
-  - title: 3. Subtract only the allowed paid retainer credit, floor invoice at zero and flag credits exceeding success fee
-    text: Subtract only the allowed paid retainer credit, floor invoice at zero and flag credits exceeding success fee.
+  - title: Settles the deal value
+    text: Decides what counts as deal value under your letter, such as debt taken on, later payments and rolled-over shares, before any rate is used.
+  - title: Splits at the breakpoint
+    text: Applies the first rate up to the breakpoint and the second rate only to the slice above it. Then it compares the result with the minimum fee.
+  - title: Credits the retainer
+    text: Takes off only the retainer the letter lets you credit, once. The invoice never goes below zero, and a credit larger than the fee is flagged.
+  - title: Shows the sums
+    text: Every number is traced to a clause in the letter, so a reviewer can check it by hand.
 output_shape: |-
   Gross success fee, retainer credit and remaining fee invoice.
   Scope and dated sources
@@ -50,10 +52,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Deal value date"
+    how: "Take the deal value date from the signed engagement letter and the deal value. Use one currency and scale on every line."
+  - what: "Deal value"
+    how: "Change the deal value and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Marginal tiers are not an all-value cliff rate.
 judge:
@@ -66,8 +68,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one adviser success fee you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define deal value into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -86,6 +88,7 @@ not_for:
   - "You want to check an adviser's fee as part of seller closing proceeds: use Check adviser fees in seller proceeds."
   - "You need a private fund's management fee or fee credits worked out: use Fund fee and credit reviewer."
   - "Your letter has a tail period, expense refunds or tax on the fee. This checker leaves those out."
+  - "You are checking a private fund's management fee offsets, not an adviser's success fee: use the Transaction fee offset checker instead."
 output_sample:
   input:
     - Your signed engagement letter

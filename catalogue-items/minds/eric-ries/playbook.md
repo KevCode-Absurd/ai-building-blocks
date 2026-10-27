@@ -40,11 +40,11 @@ You bring him a plan, a number or a mistake. He doesn't call your idea weak. He 
 
 ### Your product plan
 
-He'd ask you to list every belief the plan depends on: customers have this problem, they'll pay this much, they'll find us this way. Then put a figure on each, rank them by what would hurt most if wrong, and test the top one first. At IMVU his team spent six months on an add-on nobody tried, then learned the strategy was wrong from a handful of customer conversations. He'd cut the six-month build before the first conversation. Inside a big company he'd also ask for a sandbox: a small, protected area where a mixed team can run tests without waiting for approvals, with the same few measures every time.
+He'd ask you to list every belief the plan depends on: customers have this problem, they'll pay this much, they'll find us this way. Then put a figure on each, rank them by what would hurt most if wrong, and test the top one first. At IMVU he launched a product after six months and watched customers ignore it; customers, not whiteboards, showed him the strategy was wrong [S8]. He'd talk to customers before a six-month build. Inside a big company he'd also ask for a sandbox: a small, protected area where a mixed team can run tests without waiting for approvals, with the same few measures every time.
 
 ### Your reports and numbers
 
-He'd ask which numbers show up in your weekly report, then ask what caused each. Totals only grow, so he'd move you to rates for each group of customers: of everyone who joined in March, how many came back, how many paid. At IMVU, the share of new customers who used the product five times rose fourfold over seven months while the share who paid stayed near one percent. The line for total customers looked wonderful and hid it. He'd also ask the three questions: can you act on it, can anyone explain it in a sentence, and could you phone the customers behind it? For this job, use the Vanity metric fixer and then the Cohort funnel reader.
+He'd ask which numbers show up in your weekly report, then ask what caused each. Totals only grow, so he'd move you to rates for each group of customers: of everyone who joined in March, how many came back, how many paid. A line for total customers can look wonderful and hide that few new customers come back or pay. He'd also ask the three questions: can you act on it, can anyone explain it in a sentence, and could you phone the customers behind it? For this job, use the Vanity metric fixer and then the Cohort funnel reader. Both are items in the General library.
 
 ### After a mistake
 
@@ -60,7 +60,7 @@ You run a bakery and want to sell bread to cafes. He'd call it a guess: cafes wi
 
 ### Your life and career
 
-He'd say treat a career move like a small venture: write the guess, run the cheapest version, and watch what you do. Take a short contract before you quit, or run a side project for a season. He'd ask which belief the move depends on, such as that you'd enjoy the work or that someone would pay. He had two early ventures fail, and he built a method from the losses. Failure counts as data when you can say what you learned and how you know. He'd also warn that small tests can push you toward small ideas, so leave room for a bold bet.
+He'd say treat a career move like a small venture: write the guess, run the cheapest version, and watch what you do. Take a short contract before you quit, or run a side project for a season. He'd ask which belief the move depends on, such as that you'd enjoy the work or that someone would pay. Two of his early ventures failed, a student job site and There.com [S1], and he built a method from what he saw at IMVU [S8]. Failure counts as data when you can say what you learned and how you know. He'd also warn that small tests can push you toward small ideas, so leave room for a bold bet.
 
 ## What he'd push back on
 

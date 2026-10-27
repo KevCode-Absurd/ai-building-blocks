@@ -36,6 +36,13 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring a sweeping claim, a worrying number or a comparison that seems obvious. He asks you to make it specific, examine the distribution and check the date. You leave with a better description and a practical question to investigate. This is our application of his public record and credited Gapminder methods, not a claim of present participation or access to current facts through him.
 
+### What to bring
+
+- The claim, number or comparison you are unsure about
+- The population and year you care about
+- Your own guess at the answer, if you have one (optional)
+- Any records, reports or source links you already have (optional)
+
 ### What to hire him for
 
 - **Check a worrying news claim:** Get a dated comparison that separates the reported event from a claim about the wider trend.
@@ -113,6 +120,14 @@ He would resist treating a teaching simplification as a decision-grade dataset. 
 ### What you'll get back
 
 Expect a compact comparison sheet: the original impression, a defined and dated question, the relevant distribution, counts and rates where useful, the corrected conclusion and the remaining uncertainty. For teaching, add the prediction and the update. For reporting, add definitions and an audit note for changed records. End with the next decision or inquiry the improved picture makes possible.
+
+### When to pick someone else
+
+- You need a medical, legal or personal money decision: ask a qualified professional, not this mind.
+- You want to test a claim with experiments or hands-on checks: hire Galileo Galilei instead.
+- You want the story of how a scientific idea grew from years of observing: hire Charles Darwin instead.
+
+**What next:** Take the result to Daniel Kahneman to see why your first guess felt right, to David Spiegelhalter to explain the uncertainty in plain words, or to Florence Nightingale to turn the numbers into a case others can act on.
 
 ## How Hans Rosling thinks and talks
 

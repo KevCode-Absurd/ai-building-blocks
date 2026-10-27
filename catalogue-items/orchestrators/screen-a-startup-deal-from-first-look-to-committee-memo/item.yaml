@@ -8,8 +8,9 @@ job: analysis
 level: advanced
 inputs:
   - {type: source_text, required: true}
-  - {type: brief, required: true}
-  - {type: question, required: false}
+  - {type: meeting_notes, required: true}
+  - {type: question, required: true}
+  - {type: document, required: false}
 outputs:
   - {type: document}
   - {type: audit_report}

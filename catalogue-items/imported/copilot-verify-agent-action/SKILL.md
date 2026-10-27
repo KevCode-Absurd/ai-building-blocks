@@ -72,6 +72,8 @@ Use a project-specified canonicalization and digest algorithm when provided.
 Otherwise, report that cryptographic identity cannot be independently verified;
 still compare every field structurally.
 
+A chat AI cannot compute or check a digest or signature itself. Unless the user supplies a value computed by their own tool, report the digest as NOT_VERIFIED and do not mark the action as verified on that point.
+
 Never normalize away a security-relevant distinction such as:
 
 - branch, commit, repository, environment, recipient, amount, currency, or host

@@ -40,7 +40,8 @@ how_to_use:
   - Paste this skill, then your results, study type and target journal.
   - Ask for the outline first. Fix the section order and the main claim before it writes the full text.
   - Read the draft against your data. Check each number and every flagged reference.
-  - Tell it what to change, then export it to Word or PDF. The long guide mentions extra research and image tools. They are not included, so use what you have.
+  - Get the official checklist for your study type (CONSORT, STROBE or PRISMA) from the EQUATOR Network website, and tick off each item against the draft. The AI lists the gaps it found, but the official list is the one to follow.
+  - Tell it what to change, then export it to Word or PDF. The long guide mentions extra research and image tools that are not included. To check references, use your AI's web search or upload the PDFs of the papers you cite. For figures, ask your AI to draw charts in Python, or make them in your spreadsheet.
 output_sample:
   input:
     - Your findings, as a results summary or tables
@@ -66,3 +67,4 @@ terms:
   - IMRAD: The standard order of a paper, Introduction, Methods, Results and Discussion.
   - Reporting checklist: A list of items a journal expects you to report for your study type.
   - CONSORT, STROBE, PRISMA: Checklists for trials, observational studies and systematic reviews.
+next: [scientific-manuscript-drafter, manuscript-peer-review-drafter]

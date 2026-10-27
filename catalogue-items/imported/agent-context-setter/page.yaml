@@ -20,6 +20,7 @@ not_for:
   - "You have one quick question about code: ask it in a normal chat, no setup needed."
   - "You have no project files or code yet: write down your goals in a short note first, then come back."
 you_give:
+  - Your project folder or codebase, or a short description if you have no code yet
   - A short description of your project
   - The tools and commands you use
   - Rules the AI keeps breaking (optional)

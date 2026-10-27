@@ -20,12 +20,12 @@ when:
 not_for:
   - "You have no ad yet: write one first with the Fact-based ad copy writer, then come back to fix it."
   - "You want to know why sales dropped overall, not why one ad gets no replies: use the Ad sales drop analyst."
-  - "You only want a quick read on one ad's response problem, with no rewrite or test: use the Ad response troubleshooter."
+  - "You only want the likely causes, with no rewrite or test: run the Ad pull diagnoser on its own."
 
 you_give:
   - The ad as the reader sees it, including the reply path
-  - Results for the ad, and for your other ads if you have them
-  - Your offer and what a reply means (optional)
+  - Results for the ad over a set start and end date, and for your other ads if you have them
+  - Your offer and what counts as a reply (optional)
 you_get:
   - A finding on each of seven checks, with the evidence, and causes ranked by likelihood and cost
   - What your winners share, found from your own results

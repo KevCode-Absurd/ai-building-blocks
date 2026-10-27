@@ -30,11 +30,12 @@ you_get:
   - A list of gaps and missing documents
   - A version history when you update it
 how_to_use:
-  - Open your AI tool. Use one that can read files, such as Claude. Add the skill, or paste its instructions into a chat.
+  - Open your AI tool. Use one that can read files, such as Claude. Add the skill, or paste its instructions into a chat. If you have no saved case folder, that is fine. It works from the files you upload and your one-line description of the issue.
   - Tell your AI if any papers came from legal disclosure. It will ask, and it will warn you if their use may be limited.
   - Upload your emails and documents. Say in one or two lines what the main issue is.
   - Ask it to build the timeline. If you have case notes, add them too. Say if you want a working, statement-of-facts or witness version.
   - Read the red entries and fix anything it got wrong. It will ask you to do this before it finishes.
+  - The dates and events come only from the files you uploaded. Anything from the web or the AI's own memory is tagged "verify". Check those first. Any deadline, time limit or rule about disclosed papers is the AI's general knowledge, so confirm it with a lawyer before you rely on it.
   - Use the checked red entries as the facts section of a letter or brief, or hand the timeline to your lawyer.
 output_sample:
   input:

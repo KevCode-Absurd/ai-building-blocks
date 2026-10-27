@@ -14,7 +14,7 @@ when:
   - Someone has asked to see or delete their personal data.
   - A business team wants an NDA and keeps asking the same questions.
   - A vendor sent a legal question your team answers often.
-  - A subpoena arrived and you need a prompt, correct first reply.
+  - A subpoena arrived and you need a first framework only. A lawyer must review it before any reply goes out.
 not_for:
   - "You need legal advice or a final answer on a risky case: ask a qualified lawyer, because this only writes a first draft."
   - "You want to review or mark up a contract: read it with a lawyer, since this tool replies to requests and does not check contract terms."
@@ -33,6 +33,7 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text from this page.
   - Say which type of request it is, such as data access request, NDA request, subpoena or vendor question.
   - Paste the request and your reply template for that type (optional). Add the facts of this case.
+  - Do not paste privileged, personal or confidential case details into a public AI chat unless your organisation has approved that tool.
   - Read the escalation check first. If it flags a risk, send the draft to a lawyer before anything else.
   - Check the draft reply and fill any gaps it marks. Have a qualified person approve it, then send it.
 output_sample:

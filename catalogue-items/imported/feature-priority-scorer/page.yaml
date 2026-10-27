@@ -21,7 +21,7 @@ not_for:
   - "You need a full product roadmap with dates: use a roadmap session with your team and engineers."
 you_give:
   - A feature list with reach, impact, confidence and effort
-  - Team capacity for the period
+  - Team capacity for the period, in person-months (the default is 10)
   - Interview transcripts (optional)
   - The problem you are solving
 you_get:
@@ -30,12 +30,13 @@ you_get:
   - Pain points and quotes from interviews
   - A requirements template
 how_to_use:
-  - Open an AI that can run Python code and upload the skill folder, or paste in the skill text.
+  - Open an AI that can run Python 3 code, such as Claude Code, and upload the skill folder. The scripts need only Python 3. If your AI cannot run code, paste in the skill text and it will score the features by hand with the same formula.
   - Ask it to make the sample CSV file, so you can see the format.
   - Replace the sample rows with your own features. Add reach, impact, confidence and effort for each.
-  - Ask it to run the scoring with your team capacity, and read the ranked list.
+  - Ask it to run the scoring with your team capacity in person-months, and read the ranked list.
   - Check the top picks against your goals and ask your team if they agree.
-  - To analyze a customer call, upload the transcript and ask for the pain points, requests and quotes.
+  - Save the ranking as a CSV or JSON file, add it to your roadmap or spreadsheet, and check the top picks with the people who asked for them. Then write the spec for the winner.
+  - To analyze a customer call, upload the transcript and ask for the pain points, requests and quotes. For many calls at once, use the customer interview synthesizer.
 output_sample:
   input:
     - Your feature list as a CSV file, with reach, impact, confidence and effort for each feature
@@ -57,3 +58,4 @@ output_sample:
       contains: Pain points, feature requests, themes, sentiment and notable quotes from one transcript.
     - name: PRD templates
       contains: Requirements document templates for complex features, simple features, early ideas and agile epics.
+next: [feature-spec-writer, customer-interview-synthesizer]

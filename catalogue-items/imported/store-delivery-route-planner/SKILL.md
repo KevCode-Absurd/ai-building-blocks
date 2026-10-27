@@ -178,7 +178,7 @@ class DSDRouteOptimizer:
 
     def _compute_distance_matrix(self):
         """Compute distance matrix between all locations"""
-        from scipy.spatial.distance import cdist
+        import numpy as np
 
         # Add depot as first location
         all_locations = pd.concat([
@@ -186,9 +186,15 @@ class DSDRouteOptimizer:
             self.stores[['lat', 'lon']]
         ], ignore_index=True)
 
-        # Calculate distances (haversine approximation)
-        coords = all_locations.values
-        distances = cdist(coords, coords, metric='euclidean') * 69  # miles
+        # Straight-line (haversine) distance in miles. Real roads are longer,
+        # so check the plan against real drive times before using it.
+        coords = np.radians(all_locations.values.astype(float))
+        lat = coords[:, 0][:, None]
+        lon = coords[:, 1][:, None]
+        dlat = lat - lat.T
+        dlon = lon - lon.T
+        a = np.sin(dlat / 2) ** 2 + np.cos(lat) * np.cos(lat.T) * np.sin(dlon / 2) ** 2
+        distances = 3959 * 2 * np.arcsin(np.sqrt(a))  # miles
 
         return distances.astype(int)
 

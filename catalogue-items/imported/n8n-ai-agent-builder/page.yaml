@@ -32,9 +32,13 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill's instructions, or upload the skill folder if your AI accepts files.
   - Describe the job your agent should do and the apps it needs to reach.
-  - Say which n8n version you run. If your AI can use the n8n MCP tools, connect them so it can check each node.
+  - Say which n8n version you run. Checking each node against your live setup needs the n8n MCP tools. Without them, ask whoever runs your n8n to review the plan.
   - Read the node choice first. If a simple chain or classifier fits, build that instead.
   - Check the approval steps before you turn the workflow on. Add your keys only in n8n credentials, never in prompts.
+  - Next, test the agent on a copy that is not live. Then add error handling with the n8n failure handler, and split repeated steps with the n8n sub-workflow builder.
+next:
+  - n8n-failure-handler
+  - n8n-sub-workflow-builder
 output_sample:
   input:
     - What your agent should do, in plain words

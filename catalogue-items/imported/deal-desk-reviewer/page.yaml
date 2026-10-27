@@ -20,15 +20,23 @@ not_for:
   - "You need a full legal review of contract text: send it to your lawyer. This item only scans a short list of risky terms."
   - "You want to set your discount rules or list prices: decide those first with your finance lead. This item applies rules you already have."
 you_give:
-  - Deal size, discount and tier
+  - Deal size, term, discount and tier
   - Cost or margin details
-  - Contract terms or redline
+  - "Contract terms or redline, as short lines such as indemnity: uncapped or payment: net 60"
   - Your discount policy (optional)
 you_get:
   - Deal score and verdict
   - Approver chain and timing
   - Risky terms with counters
   - Margin after discount
+output_shape: |
+  VERDICT: <approve | review | escalate | decline>, score <n> out of 100
+  SCORE BY AREA: margin <n>, risk <n>, strategic value <n>, commercial fit <n>, term shape <n>
+  MARGIN AFTER DISCOUNT: <margin before> to <margin after>
+  APPROVER CHAIN: <role> to <role> to <role>, about <n> days
+  RISKY TERMS
+  - <clause>: <severity>, counter <standard counter>, signs off <role>
+  NEXT STEP: send this packet to the named approvers. A person approves the deal.
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a chat that can run code, since the scoring uses Python scripts.
   - Upload the skill folder, or paste the skill text into the chat.

@@ -115,7 +115,7 @@ tweaks:
 judge:
   - Per-good-unit costs and product mix quantities use identical physical units; planned volume is not increased automatically from contribution rankings. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
+  - For every batch, input equals good output plus scrap, in one physical unit. Scrap value counts only with a dated sale record; unproven scrap counts at zero and is listed.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

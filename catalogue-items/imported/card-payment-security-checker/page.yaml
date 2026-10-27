@@ -36,6 +36,7 @@ how_to_use:
   - Describe how you take cards, which provider you use, and which systems touch card data. Add your yearly card volume if you know it.
   - Say which PCI DSS version you use. If you skip this, the skill assumes version 4.0.1, the current one.
   - Read the result and check each gap against your real setup. Then ask your bank or a QSA to confirm before you act on it.
+  - Take the form choice and the gap table to your bank or QSA first. They decide which form you file.
 output_sample:
   input:
     - "How you take card payments: online checkout, in person or by phone"

@@ -26,6 +26,13 @@ You bring a pursue-withdraw argument after someone feels ignored. This mind help
 
 6. **Practice connection:** Agree a feasible check-in or a way to announce a pause. Review whether the ritual supports connection rather than monitoring, while recognizing that this practice is not professional EFT.
 
+## What to bring
+
+- One recent argument where someone felt ignored or shut out
+- What happened, in order: the trigger, what each person did and how you read it
+- What you hoped the other person would understand
+- The decision or request that is due now (optional)
+
 ## First questions she'd ask you
 
 - Where does the familiar cycle begin?
@@ -67,6 +74,14 @@ For a friendship interrupted by travel, discuss how each person interprets long 
 
 A cycle description is not permission to flatten unequal responsibility. A person may withdraw because conversation is unsafe, not because they need a better emotional script. Do not ask someone to become vulnerable on command. These general reflection prompts teach noticing and communicating, and do not diagnose an attachment pattern or deliver EFT. Also challenge a plan that treats name the cycle together as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
+## When not to use
+
+- Your situation involves threats, abuse or fear for your safety: contact a professional or a local support service, not an AI advisor.
+- You want help with shame, courage or trust at work: hire Brené Brown instead.
+- You want to talk to your child about a hard moment or repair after losing your temper: hire Becky Kennedy instead.
+
 ## What you'll get back
 
 You receive a cycle map and an optional connection conversation. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+
+**What next:** Send the connection message when you are both calm, and use the check-in plan if it stalls. For shame or trust at work, go to the Brené Brown mind. For the words to open a hard talk, go to the Chris Voss mind.

@@ -1,6 +1,6 @@
 # Test changes to your store: AI Blocks
 
-> 12 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 11 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Bold store experiment planner](https://useaiblocks.com/skills/big-swing-test-picker): Share store traffic, orders and page findings. Get ranked ideas for bigger tests, with metrics, risks and sample-size checks to complete.
 - [Heatmap and session recording analyst](https://useaiblocks.com/skills/heatmap-and-recording-reader): Share heatmaps, page data and recording notes. Get possible shopping problems, evidence gaps, repair ideas and a plan for what to watch next.
@@ -10,7 +10,6 @@
 - [Store experiment results reviewer](https://useaiblocks.com/agents/store-test-program-runner): Track store tests, review actual results and plan one supported next test. Keep running tests and weak conclusions in check.
 - [Store profit test planner](https://useaiblocks.com/workflows/find-the-store-change-most-worth-testing): Calculate profit per visitor. Review real shopper behaviour and rank the page changes most worth testing.
 - [Store test evidence reviewer](https://useaiblocks.com/skills/store-test-verdict-maker): Check if your store test result can be trusted. Get a ship call, the lift as a range in money, and a trust score out of 100.
-- [Store test idea priority planner](https://useaiblocks.com/prompts/test-idea-shortlist-maker): Share store test ideas, evidence and order volume. Get repairs separated from experiments, a scored shortlist and ideas to park.
 - [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker): Check if your store can run an A/B test. Give your orders, visits and the change. Get a verdict, weeks needed and a readiness score.
 - [Store test results and rollout reviewer](https://useaiblocks.com/workflows/read-a-finished-store-test-and-pick-the-next-one): Share completed test results, dates and original rules. Get a result review, rollout recommendation and ranked ideas for the next test.
 - [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker): Paste your research findings. Get each test written as a hypothesis and ranked by evidence and profit.

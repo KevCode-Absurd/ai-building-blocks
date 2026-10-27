@@ -40,6 +40,19 @@ blocks:
   - voice-swap-editor
 alternatives: [otter, fireflies, elevenlabs, descript]
 last_checked: 2026-10-21
+first_result:
+  - "Choose how to run it. For private audio, run the open source model on your own computer. For no setup, use OpenAI's API."
+  - "To run it yourself, follow the install steps on the GitHub page. It needs Python and a tool called ffmpeg. A computer with a graphics card runs the larger models faster."
+  - "Point it at one audio or video file. Tell it the language, or let it detect the language."
+  - "Read the text against the audio. Check names, numbers and product words, since these are the usual errors."
+  - "Paste the text into Claude or ChatGPT to get a summary, action items or an article."
+needs:
+  - "An audio or video file with clear speech."
+  - "For the open source model, a computer where you can install Python and ffmpeg. For the API, an OpenAI account and a payment method."
+  - "The language spoken, if you know it (optional)."
+  - "A list of names and product words to check against the transcript (optional)."
+example:
+  reply: "The words from your recording as text, with no summary, speaker names or formatting. The open source tool can also write subtitle files. Check the GitHub page for the formats."
 sources:
   - https://github.com/openai/whisper
   - https://developers.openai.com/api/docs/models/whisper-1

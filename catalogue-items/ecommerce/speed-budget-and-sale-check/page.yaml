@@ -151,3 +151,4 @@ terms:
     meaning: A pause on new apps and theme changes before an event, so nothing new can break the store.
   - term: Virtual waiting room
     meaning: A queue that holds visitors briefly when too many arrive at once, so the site stays up.
+next: [speed-fix-ranker, app-script-auditor]

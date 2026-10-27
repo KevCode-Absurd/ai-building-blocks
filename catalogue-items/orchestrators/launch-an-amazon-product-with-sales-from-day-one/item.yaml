@@ -19,7 +19,7 @@ steps:
   - {uses: amazon-keyword-picker, note: "Starts the flow. Chooses the true, searched phrases every later step uses."}
   - {uses: amazon-listing-writer, note: "Writes the title, bullets and backend terms from the keyword tiers."}
   - {uses: amazon-ppc-launch-builder, note: "Turns the same keyword list into launch campaigns with bids and negatives."}
-  - {uses: amazon-inbound-stock-planner, note: "Plans how much to send, when and how, using the quantities and lead times you now have."}
+  - {uses: amazon-inbound-stock-planner, note: "Sizes your first order from your maker's lead time and monthly capacity. Then plans how much to send, when and how. You place the sized order after this step."}
   - {uses: amazon-launch-week-planner, note: "Plans launch day around the live listing, the ads and the stock that has arrived."}
 origin: rebuilt
 version: 1.0.0

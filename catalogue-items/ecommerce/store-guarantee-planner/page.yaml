@@ -24,7 +24,7 @@ not_for:
 
 you_give:
   - Your current sales and refund rate
-  - The sales lift you expect from a stronger guarantee
+  - The sales lift you expect from a stronger guarantee (optional; it shows a few cases if you have none)
   - Product type, margin, and the cost to take back a return
   - Your current policy and return window
   - Your payment setup, if you want a try-before-you-pay option (optional)
@@ -132,7 +132,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "It runs the net-sales sums and writes the guarantee wording."}
-    - {name: "Shopify", why: "Return and refund reports show your real refund rate and refund cost."}
+    - {name: "Shopify", why: "Return and refund reports show your real refund rate and refund cost. It is a paid service, and you need a paid plan."}
   inputs:
     - "Refund rate and reasons by product for the last 12 months"
     - "Return shipping cost and the share of returns you can resell"

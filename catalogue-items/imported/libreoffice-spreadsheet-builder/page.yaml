@@ -17,7 +17,7 @@ when:
   - The same formulas must be added to many workbooks.
 not_for:
   - "You need Excel macros or a live link to a database report: use Excel itself, or ask a person who builds database reports."
-  - "You want Excel-native work, such as an XLSX file built for Excel only: use xlsx-official."
+  - "You want Excel-native work, such as an XLSX file built for Excel only: build it in Excel itself."
   - "You have no way to run code or install LibreOffice: ask your AI to describe the formulas, then type them into a sheet yourself."
 you_give:
   - What the sheet should track
@@ -35,8 +35,9 @@ how_to_use:
   - "Write a short brief: what the sheet tracks, the totals you need, and the file format you want back."
   - Add a CSV or sample data if you have it (optional).
   - Paste the brief into an AI that can run code and save files, and ask it to use this skill.
-  - Open the ODS file and check the formulas and charts.
+  - Open the ODS file and check the formulas and charts. Charts are the least tested part. If your AI cannot make one, add it in LibreOffice by hand.
   - Open the converted copies, such as XLSX or CSV, and check they look right before you send them.
+  - Next, send the file, or import the CSV into your reporting tool. Rerun the batch command on next month's files.
 output_sample:
   input:
     - What the sheet should track, in plain words

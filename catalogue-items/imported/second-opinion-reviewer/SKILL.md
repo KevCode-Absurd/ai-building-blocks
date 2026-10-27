@@ -3,6 +3,14 @@ name: doubt-driven-development
 description: Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when you want every assumption cross-examined before proceeding, when stress-testing a plan for hidden failure modes, when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production auth, security-sensitive logic, a high-stakes migration, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../../references/orchestration-patterns.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Doubt-Driven Development
 
 ## Overview
@@ -43,7 +51,7 @@ If you doubt every keystroke, you ship nothing. The skill applies only to non-tr
 
 This skill is designed for the **main-session orchestrator**, where Step 3 (DOUBT, detailed below) can spawn a fresh-context reviewer.
 
-- **Do NOT add this skill to a persona's `skills:` frontmatter.** A persona that follows Step 3 would spawn another persona — the orchestration anti-pattern explicitly forbidden by `../../references/orchestration-patterns.md` ("personas do not invoke other personas").
+- **Do NOT add this skill to a persona's `skills:` frontmatter.** A persona that follows Step 3 would spawn another persona — the orchestration anti-pattern (the rule: a persona must never start another persona).
 - **If you find yourself applying this skill from inside a subagent context** (where Claude Code prevents nested subagent spawn): the preferred path is to surface to the user that doubt-driven cannot run nested and let the main session handle it. As a last resort only, a degraded self-questioning fallback exists — rewrite ARTIFACT + CONTRACT as a fresh self-prompt with a hard mental separator from your prior reasoning, and walk Steps 1–5. This is **not fresh-context review** (you carry your own context with you), so flag the result as degraded and prefer escalation whenever the user is reachable.
 
 ## The Process
@@ -120,6 +128,8 @@ A single-model reviewer shares blind spots with the original author — a colder
 After the single-model review in Step 3 above, but before RECONCILE, pause and ask:
 
 > *"Single-model review complete. Want a cross-model second opinion? Options: Gemini CLI, Codex CLI, manual external review (you paste it elsewhere), or skip."*
+
+Before the user picks a CLI, say that the artifact is sent to that tool's service, that it may need a paid account or API key, and that they should only send material they are allowed to share.
 
 This question is mandatory in every interactive doubt cycle — even on artifacts that feel low-stakes. The user — not the agent — decides whether the cost is worth it. The agent's job is to surface the choice.
 
@@ -226,7 +236,7 @@ If 3 cycles is "obviously insufficient" because the artifact is large: the artif
 - **`source-driven-development`**: SDD verifies *facts about frameworks* against official docs. Doubt-driven verifies *your reasoning about the artifact*. SDD checks the API exists; doubt-driven checks you used it correctly under the contract.
 - **`test-driven-development`**: TDD's RED step is doubt made concrete — a failing test is a disproof attempt. When TDD applies, that failing test *is* the doubt step for behavioral claims.
 - **`debugging-and-error-recovery`**: when the reviewer surfaces a real failure mode, drop into the debugging skill to localize and fix.
-- **Repo orchestration rules** (`../../references/orchestration-patterns.md`): this skill orchestrates from the main session. A persona calling another persona is anti-pattern B — see Loading Constraints above.
+- **Orchestration rule:** this skill orchestrates from the main session. A persona calling another persona is anti-pattern B — see Loading Constraints above.
 
 ## Verification
 

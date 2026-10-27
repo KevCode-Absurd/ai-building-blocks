@@ -10,17 +10,16 @@ inputs:
   - {type: question, required: true}
   - {type: product_data, required: true}
   - {type: persona, required: true}
-  - {type: performance_sheet, required: true}
-  - {type: plan, required: false}
+  - {type: performance_sheet, required: false}
 outputs:
   - {type: test_report}
   - {type: plan}
 uses: [brand-social-account-checker, short-video-format-picker, video-hook-scorer, organic-format-tester]
 steps:
   - {uses: brand-social-account-checker, note: "Starts with the account setup, because a wrong setup caps reach."}
-  - {uses: short-video-format-picker, note: "Chooses formats and hooks for the focus you set after the account check. Uses your product and who will be on camera, not step 1's report, and hands step 3 the hooks and script outlines."}
+  - {uses: short-video-format-picker, note: "Chooses formats and hooks for the focus you set after the account check. Uses your product, who will be on camera and the focus from step 1's report, and hands step 3 the hooks and script outlines."}
   - {uses: video-hook-scorer, note: "Scores the hooks from the format picker before you film."}
-  - {uses: organic-format-tester, note: "Reads which of the formats you picked earned views and sets the next round. Uses the export of the posts you filmed from steps 2 and 3 and published over three weeks, not step 3's scores."}
+  - {uses: organic-format-tester, note: "Reads which of the formats you picked earned views and sets the next round. Uses the export of the posts you filmed from steps 2 and 3 and published over three weeks, with the hooks you posted, not step 3's scores."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/start-your-stores-organic-social-from-zero/skeleton.yaml

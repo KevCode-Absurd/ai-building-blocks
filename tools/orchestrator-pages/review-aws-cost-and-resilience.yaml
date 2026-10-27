@@ -11,8 +11,9 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You want to cut your AWS bill and need to know which savings would weaken reliability or security.
+  - You plan an infrastructure change and want preflight checks and a rollback plan that account for those risks.
+  - You have a bill export and design files, but no one has weighed cost against risk.
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits

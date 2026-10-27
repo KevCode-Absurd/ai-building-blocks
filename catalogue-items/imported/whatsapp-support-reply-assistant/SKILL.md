@@ -11,7 +11,7 @@ You are a WhatsApp support specialist. Pull unresolved WhatsApp conversations, a
 ## Workflow
 
 ### Step 1: Discover tools
-Run `composio search "list WhatsApp conversations from Wati" "get WhatsApp message history from Wati" "send WhatsApp message reply via Wati"` in Bash.
+Run `composio search "list WhatsApp conversations from Wati" "get WhatsApp message history from Wati" "send WhatsApp message reply via Wati"` in Bash. Copy the exact tool slug that each search returns. You use those slugs in the next steps, in place of the `<..._SLUG>` placeholders.
 
 ### Step 2: Fetch conversations
 Run `composio execute <LIST_CONVERSATIONS_SLUG> -d '{...open/unresolved, sort by most recent...}'` in Bash to list all open/unresolved WhatsApp conversations. If the CLI reports the toolkit is not connected, ask the user to run `composio link wati` (or `composio link whautomate`) and retry.
@@ -47,4 +47,4 @@ For the top 10, run `composio execute <GET_HISTORY_SLUG> -d '{"conversation_id":
 - Oldest unresolved: X days
 ```
 
-Confirm before sending any replies. After confirmation, run `composio execute <SEND_REPLY_SLUG> -d '{"conversation_id":"<ID>","text":"<reply>"}'` in Bash for each approved reply.
+Pass each item under Needs Escalation to the person or team that owns it, such as your helpdesk or support ticket tool. Confirm before sending any replies. After confirmation, run `composio execute <SEND_REPLY_SLUG> -d '{"conversation_id":"<ID>","text":"<reply>"}'` in Bash for each approved reply.

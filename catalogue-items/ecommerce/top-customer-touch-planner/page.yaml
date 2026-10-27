@@ -135,7 +135,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can rank a list and write notes. Attach your customer list."}
-    - {name: "Handwrytten", why: "A service that writes real notes with a pen machine, for when you pass the number you can write yourself."}
+    - {name: "Handwrytten", why: "A service that writes real notes with a pen machine, for when you pass the number you can write yourself. It is a paid service."}
     - {name: "Loom", why: "Records a 60-second personal video you can send by link, at the cost of your time."}
   inputs:
     - "Your customer list with lifetime spend and order count"

@@ -73,16 +73,16 @@ how_it_works:
   - title: Checks access and security
     text: Smallest role per person, two-step sign-in and a company email domain limit.
   - title: Checks the pixel
-    text: The official Shopify app, the right accounts picked, a data sharing choice and each event tested.
+    text: The official Shopify app, the right accounts picked, the least data sharing you need, matched to your privacy policy, and each event tested.
   - title: Checks defaults
     text: Location, minimum age, brand safety and account health.
   - title: Checks each ad habit
     text: Ad library box off, music sharing off and music rights held.
   - title: Scores readiness
-    text: Weighted points by area, with half points for items you are not sure of. A missing purchase event means do not launch.
+    text: Weighted points by area, with half points for items you are not sure of. A missing purchase event or no payment method means do not launch.
 
 output_shape: |
-  SETUP READINESS  <n>/100   LAUNCH: <ready | not yet: <Stop items>>
+  SETUP READINESS  <n>/100   LAUNCH: <ready | not yet: <Stop items: no purchase event, no payment method>>
 
   ACCOUNTS AND LINKS  <points>/25
     <item> | Done / Missing / Not sure | fix: <one step>

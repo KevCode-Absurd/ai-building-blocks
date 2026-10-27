@@ -37,6 +37,7 @@ how_to_use:
   - Add storage limits if you have them (optional).
   - Check each rule against what you know about your suppliers. Ask your AI to change any rule that does not fit.
   - Test the rules on your best sellers first, then roll out to the rest.
+  - Put the approved rules where you order from, such as your reorder sheet, your stock system or a supplier order calendar. Run the designer again when your sales or lead times change.
 output_sample:
   input:
     - Your sales history by product or product group
@@ -55,3 +56,4 @@ output_sample:
       contains: Why each rule fits, plus notes on storage space, minimum orders and full-truck savings.
     - name: Replenishment strategy document
       contains: One write-up that pulls the rules, reasons and next steps together.
+next: [reorder-quantity-planner, stock-and-reorder-planner]

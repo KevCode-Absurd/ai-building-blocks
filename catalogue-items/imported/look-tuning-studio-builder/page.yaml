@@ -35,6 +35,7 @@ how_to_use:
   - Share the files or page involved. Say which settings matter, if you know.
   - Your AI builds a local page. Open it and adjust the controls by eye, or edit and comment on the text.
   - Save your choices. Your AI gets the settings or edits back and applies them to your files.
+  - "Check the result: reload the real page and compare it with the look you chose in the studio, or with your reference look. If no code-running AI is available, ask a chat AI for a short list of 3 or 4 looks to compare by eye, then give your pick back in words."
 output_sample:
   input:
     - What you want to tune or review, such as a landing page's colors and spacing

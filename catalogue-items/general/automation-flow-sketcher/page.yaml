@@ -38,6 +38,7 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+  - "Next: build it with three test rows first, then run your test checks before you go live. Zapier and Make are paid tools with free tiers, so check each feature against your plan."
 output_sample:
   input:
     - The task, step by step as you do it now

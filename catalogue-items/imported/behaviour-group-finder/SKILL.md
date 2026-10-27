@@ -15,7 +15,7 @@ description: Customer/user segmentation with actionable insights. Use when ident
 # Process
 1. **Define the segmentation goal** — clarify what decisions the segments will inform (product roadmap, marketing campaigns, retention programs). The goal determines which variables matter and how many segments are useful (typically 3–7). See `references/segmentation_approaches.md`.
 2. **Select and prepare variables** — choose 3–7 attributes or behaviours that vary across users and relate to the business outcome. Handle missing values and scale continuous variables. Remove outliers only if they would distort cluster centroids.
-3. **Run the segmentation** — for data-driven segmentation, use k-means clustering via `scripts/segmentation_runner.py`. For rule-based segmentation, apply the business logic rules and validate that segments are distinct and non-overlapping.
+3. **Run the segmentation** — for data-driven segmentation, run k-means clustering yourself in code (for example with scikit-learn: scale the variables, try k from 2 to 8, keep the k with the best silhouette score) and add a segment label to each user. For rule-based segmentation, apply the business logic rules and validate that segments are distinct and non-overlapping. Then run `scripts/segmentation_runner.py --csv <file> --segment-col <label column> --metric-col <number column>` to profile each segment against the overall average. The script does not cluster. It expects a column that already holds each user's segment label.
 4. **Profile each segment** — compute the mean and median for each variable by segment, expressed as % above/below the overall average. Identify the 2–3 defining characteristics of each segment and assign a descriptive name.
 5. **Validate and interpret** — confirm segments are meaningfully different (silhouette score > 0.3 for clustering) and make business sense. Sanity-check by asking whether you would actually treat each segment differently.
 6. **Map to strategy and report** — assign each segment to a recommended strategy (Retain & Expand, Monetise, Activate, Win-Back, Sunset). Produce `assets/segment_profile_template.md` with the profiles and strategic priorities.
@@ -27,6 +27,6 @@ description: Customer/user segmentation with actionable insights. Use when ident
 - Minimum of ~100 users per expected segment for clustering to be meaningful
 
 # Output
-- `scripts/segmentation_runner.py` — runs k-means clustering, produces elbow and silhouette plots, assigns segment labels
+- `scripts/segmentation_runner.py` — profiles pre-labelled segments against the overall average and ranks them by how far they sit above or below it (it does not cluster). The k-means run, elbow and silhouette charts come from the AI's own code
 - `references/segmentation_approaches.md` — when to use k-means vs. RFM vs. rule-based; interpretation guide
 - `assets/segment_profile_template.md` — filled segment profiles with size, key characteristics, recommended strategy, and tracking plan

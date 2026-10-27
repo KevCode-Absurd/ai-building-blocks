@@ -32,10 +32,15 @@ you_get:
   - A list of limits
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - The checking scripts in this folder need Python 3.11 or later. In a plain chat your AI follows the method but cannot run them.
   - Tell your AI the market, the region, the time period and the decision the report will support.
   - Paste any reports or data you already have. Turn on web search if your AI offers it.
   - Check the claims table first. Open a few sources and confirm they back the claim.
   - Review the market size ranges and assumptions before you share the report, and ask for changes where they look weak.
+  - Only cite web pages you can open and are allowed to use. Ask your AI to flag any figure it cannot trace to a source, and drop it from the board version.
+next:
+  - market-size-estimator
+  - market-size-and-survey-planner
 output_sample:
   input:
     - The market you want to study and the question to answer

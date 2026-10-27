@@ -7,7 +7,9 @@ job: organise-work
 headline: Gorgias and HubSpot contact check
 subhead: Connect Gorgias and HubSpot and ask for a contact check. It matches customer email addresses from recent support tickets to your contact records. You get missing contacts, conflicting names or fields, and suggested fixes to review.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Your support team talks to customers who may not be in your CRM.
+  - You are about to clean up HubSpot and want to know which contacts are missing or out of date.
+  - Names or emails on support tickets do not match what sales sees.
 not_for:
   - "You want records created or synced for you: this only reports gaps, so use a sync tool or fix them by hand in HubSpot."
   - "You have no way to connect Gorgias and HubSpot to your AI: do a manual review of a ticket export against your HubSpot contact list."
@@ -53,3 +55,4 @@ output_sample:
       contains: The share of contacts in sync, the number missing from the CRM, the mismatch count, and an overall rating.
     - name: Recommendations
       contains: Specific actions to fix the gaps you found.
+next: [gorgias-and-hubspot-customer-brief, crm-hygiene-auditor]

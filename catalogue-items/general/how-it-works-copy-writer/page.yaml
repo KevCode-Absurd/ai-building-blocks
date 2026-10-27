@@ -119,7 +119,7 @@ test:
 improve:
   - Save the plain name you give your mechanism and use it everywhere.
   - Add test results and standards to your facts as you gather them. More links become possible.
-  - Pair it with "Claim and proof matcher" so the chain's facts sit beside the claims.
+  - Pair it with "Claim evidence checker" so the chain's facts sit beside the claims.
   - Add words your field overuses to the "Avoid" list in the skill file.
 
 works_best_with:

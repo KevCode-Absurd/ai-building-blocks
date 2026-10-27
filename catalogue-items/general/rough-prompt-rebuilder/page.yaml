@@ -61,6 +61,9 @@ output_shape: |
   ADDED
   <up to three lines: what was added or assumed>
 
+  CHECKS MISSED
+  <one line, only if a check failed>
+
 tweaks:
   - what: "Audience"
     how: "Say who will read the answer. It changes the role and the tone more than anything else."

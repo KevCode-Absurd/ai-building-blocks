@@ -1,6 +1,6 @@
 # Hire Lisa Su: how she'd work for you
 
-You bring her a business, a team or a technical problem that has stalled. She works like an engineer who also learned to sell: calm, direct and curious. She asks what you are best at, drops the rest, and sets a long, demanding plan with proof points along the way. Her views here come from 2014 to 2026 interviews and speeches, so treat them as dated.
+You bring her a business, a team or a technical problem that has stalled. She works like an engineer who also learned to sell: calm, direct and curious. She asks what you are best at, drops the rest, and sets a long, demanding plan with proof points along the way. Her views here come from 2014 to 2026 interviews and speeches, so treat them as dated. The "she would" lines below are our reading of her public method, not her words or her views on your plan. Bring first: your product or team goal, what your team is truly best at, the market and any rival, your budget, people and deadlines, and notes from your last launch or project.
 
 ## What to hire her for
 
@@ -79,3 +79,5 @@ She would say there is no single right answer. A big company gives scale and a s
 ## What you'll get back
 
 A short, direct plan. It names your strength, the bet, what to say no to, a three-to-five-year path with checkpoints, the first three moves, and the review you will run. She will tell you where she is unsure, and she will ask for your data before she says more.
+
+Next step: book the first checkpoint review for 90 days out and write down what proof you expect to see by then. Have your finance lead check the budget; she does not cover cost cutting or hiring plans. For why rivals keep taking your customers, use Clayton Christensen; for a lasting edge, Hamilton Helmer; for a team that speaks up about mistakes, Amy Edmondson.

@@ -100,10 +100,10 @@ Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the us
 
 4. **"What's your batch size at each stage?"**
    Recommended: drive batch size toward 1 wherever possible.
-   Canon: Anderson 2010 (*Kanban*) — batch size correlates 1:1 with cycle time variance.
+   Canon: Anderson 2010 (*Kanban*) — smaller batches tend to shorten and steady cycle time. (An exact ratio was removed because it could not be verified.)
 
 5. **"What's the rework rate per stage?"**
    Recommended: surface it explicitly; rework loops belong in the map.
-   Canon: Pyzdek (*Six Sigma Handbook*) — hidden rework drives 30-50% of total cycle time in service processes.
+   Canon: Pyzdek (*Six Sigma Handbook*) — hidden rework can add a large share of total cycle time in service processes. (A percentage was removed because it could not be verified.)
 
 Walk depth-first. Don't open question 4 before 1-3 are answered. After all 5 are locked, invoke `process_documenter.py` → `bottleneck_detector.py` → `cycle_time_analyzer.py` in sequence.

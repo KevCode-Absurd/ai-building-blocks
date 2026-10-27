@@ -1,6 +1,6 @@
 slug: enough-info-check
 name: "Check you know enough before you act"
-summary: "Describe what you are about to do. Get what you know tested with hard questions, and a learn, borrow or pass plan."
+summary: "Describe what you are about to do. Get your knowledge tested, then a learn, borrow, start small or pass plan."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger, warren-buffett]
 credits:
-  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The order of the steps: map your circle, test whether you really know it, check any adviser you would lean on, choose to learn, borrow, start small or pass"}
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The circle of competence idea: know where your knowledge ends before you act. The four-step order is this workflow's own design."}
 generated_from: intake/munger-models-circle-of-competence/skeleton.yaml

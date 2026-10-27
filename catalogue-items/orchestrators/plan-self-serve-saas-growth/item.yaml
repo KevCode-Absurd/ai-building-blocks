@@ -22,9 +22,9 @@ uses:
   - copilot-gtm-operating-cadence
 steps:
   - uses: copilot-gtm-product-led-growth
-    note: "1. Read skills/copilot-gtm-product-led-growth/SKILL.md. Share your product funnel. Get activation and expansion changes, with tests to see whether self serve growth fits. Save the result with source references. Hands step 2 the tests and the metric each one moves, so the review rhythm can track them. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
+    note: "1. Read skills/copilot-gtm-product-led-growth/SKILL.md. Share your product funnel. Get activation and expansion changes, with tests to see whether self serve growth fits. Score each funnel stage (sign-up, first use, first value, paying, expanding). Write each test with the metric it moves, its baseline, the decision rule and the date to read it. Save the result with source references. Hands step 2 the tests and the metric each one moves, so the review rhythm can track them. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-gtm-operating-cadence
-    note: "2. Read skills/copilot-gtm-operating-cadence/SKILL.md. Uses your own team and goals brief, not step 1's plan, as its starting point. Then it takes the tests and metrics from step 1 and builds the meeting rhythm, metric reviews and decision rules around them. Save the result with source references. This is the final step; it hands back the review cadence. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
+    note: "2. Read skills/copilot-gtm-operating-cadence/SKILL.md. Starts from your own team and goals brief and takes the tests and the metric each one moves from step 1. It builds the meeting rhythm, metric reviews and decision rules around them. Save the result with source references. This is the final step; it hands back the review cadence. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
 origin: rebuilt
 version: 1.0.0
 credits:

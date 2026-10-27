@@ -36,7 +36,7 @@ How he applied it: he admitted he rarely wrote ads himself in later years. He sa
 
 ### Reach high, and keep restless
 
-The agency's logo is a hand reaching for the stars [S5]. A line credited to him in Reader's Digest says that if you reach for the stars, you may not get one, but you won't come back with mud [S8]. In the 1967 speech he asked his staff to keep the restless feeling that nothing they made was quite good enough [S2].
+The agency's logo is a hand reaching for the stars [S5]. A line credited to him in Reader's Digest, as listed on Wikiquote (we did not open the original), says that if you reach for the stars, you may not get one, but you won't come back with mud [S8]. In the 1967 speech he asked his staff to keep the restless feeling that nothing they made was quite good enough [S2].
 
 How he applied it: he said he would want his name removed if the agency lost its urge to do a job well for its own sake, whatever the client, the money or the effort [S2][S3].
 
@@ -145,7 +145,7 @@ In a set of his rules gathered by a branding blog, he argues that dishonest adve
 ## Short phrases on the record
 
 - "Fun without sell gets nowhere, but sell without fun tends to become obnoxious." (1961) [S8]
-- "you won't get a handful of mud either" (on reaching for the stars, Reader's Digest, 1985) [S8]
+- "you won't get a handful of mud either" (on reaching for the stars, credited to Reader's Digest 1985, as listed on Wikiquote) [S8]
 - "work like hell, and love, honor and obey your hunches" (as quoted) [S7]
 - "Make it simple. Make it memorable. Make it inviting to look at." (undated, as gathered by Branding Strategy Insider) [S13]
 - "You'll have to find another name." (1967 speech) [S3]

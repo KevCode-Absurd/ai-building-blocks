@@ -58,6 +58,7 @@ output_schema:
     - field: "monitoring_guide"
       type: "string"
       description: "What to look for as students work and when to intervene"
+# Names below are skills from the author's wider set. They are not all in this library.
 chains_well_with:
   - "explicit-instruction-sequence-builder"
   - "worked-example-fading-designer"

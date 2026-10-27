@@ -422,7 +422,7 @@ end
 | Few discrete element options | `pcbElement` with PortValue (re-solves each time) |
 | Final validation of optimal value | `pcbElement` with the chosen value for full-wave confirmation |
 
-This technique is orders of magnitude faster than re-solving EM per iteration — Task 8 swept 1000 impedance values in seconds vs. hours of EM solves.
+This technique is much faster than re-solving EM for each value. The original author reports sweeping 1000 impedance values in seconds against hours of EM solves for one of their own test tasks. That figure is theirs, not measured here, so check it on your own design.
 
 ## Pitfalls
 

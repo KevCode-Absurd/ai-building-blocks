@@ -32,11 +32,12 @@ you_get:
   - Feedback wording that keeps motivation up
 how_to_use:
   - Pick one trait and one age band. Write a one sentence definition that starts with "The ability to".
-  - Gather the band descriptors for that trait first. These are the "I can" statements for the age band.
+  - Gather the band descriptors for that trait first. Use the "I can" statements for the age band, or the things a teacher notices at that band. The plan turns either into things an adult can see. The bands run A to F by age: A is 5 to 7, B is 8 to 10, C is 10 to 12, D is 12 to 14, E is 13 to 15 and F is 15 to 17.
   - Open your AI in Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
   - Paste your trait, definition, age band, band descriptors and when assessment happens. Add your school's feedback setup if you have one (optional).
   - Read the plan. Check that each thing to look for is something an adult can really see, then change any that are vague.
   - Use the plan over several weeks and in more than one setting. Then use the Synthesis Guide to bring the evidence together.
+  - The plan comes back as headed sections: observation protocol, student self-reflection tool, parent input guide, synthesis guide and developmental conversation guide.
 output_sample:
   input:
     - The trait you want to assess, such as agency or curiosity

@@ -45,6 +45,7 @@ output_sample:
   prerequisites:
     - An AI that can read your calendar, such as Google Calendar or Outlook
     - Permission to create events on that calendar
+    - Access set up for each calendar service you use, such as Google Calendar, Microsoft Outlook or Calendly. Some need API access or login details from you, and Calendly availability may need a paid Calendly plan
   output:
     - name: Availability matrix
       contains: Each option shown in every person's local time, with time zone labels and a flag on awkward hours.

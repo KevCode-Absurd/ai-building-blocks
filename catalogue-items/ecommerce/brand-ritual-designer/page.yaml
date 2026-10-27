@@ -139,7 +139,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can run this. Paste your product notes and reviews into the chat."}
-    - {name: "Klaviyo", why: "Put the ritual line in your first post-purchase email, then compare repeat orders for buyers who got the new email."}
+    - {name: "Klaviyo", why: "Put the ritual line in your first post-purchase email, then compare repeat orders for buyers who got the new email. It is a paid service."}
   inputs:
     - "Reviews and photos that show how your best customers use the product"
     - "A photo of what arrives in the box, laid out as the buyer sees it"

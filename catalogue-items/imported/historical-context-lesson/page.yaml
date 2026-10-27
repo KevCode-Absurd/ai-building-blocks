@@ -55,3 +55,4 @@ output_sample:
       contains: Mistakes students often make with context, and what to do when you see them.
     - name: Assessment Indicators
       contains: Signs that show whether learners are improving, and whether the gap is knowledge or skill.
+next: [history-close-reading, history-think-aloud, history-source-set-picker]

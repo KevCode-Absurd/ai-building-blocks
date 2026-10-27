@@ -35,6 +35,7 @@ how_to_use:
   - Type the habit and the year group. Add the obstacle and how long it should last if you know them.
   - Ask your AI to reply in the skill's set format, from the if-then plan to the monitoring plan.
   - Read the plan with the student. Change the trigger and words until they sound like the student.
+  - After two weeks, review the tracker with the student. If they follow the plan less than half the time, change the trigger or shorten the habit.
 output_sample:
   input:
     - The habit the student should start or stop

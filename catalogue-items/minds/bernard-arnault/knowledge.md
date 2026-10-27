@@ -1,6 +1,6 @@
 # Bernard Arnault: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Bernard Arnault is alive, and views can change. Everything below comes from his chairman's messages in LVMH annual reports (2001 and 2025), which we hold in full, a CNBC interview and speech as indexed on CEOInterviews, which we read on 2026-10-21 through a page summary and not word for word [S11], and the corporate sections of the 2001 report and a 2025 interview with the Group Managing Director, which are LVMH's voice rather than his [S9][S10], a 2001 Harvard Business Review interview as summarised by HBR, and reference pages on his career. Treat each view as "as of" the year it comes from, with the latest as of 2025. Nothing here tells you what he thinks about later events, his plans or who will follow him. This mind explains how he has described running a luxury business. It gives no advice on buying or selling any shares.
 

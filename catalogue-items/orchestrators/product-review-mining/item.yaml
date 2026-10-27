@@ -16,7 +16,7 @@ outputs:
 uses: [product-vocabulary-sheet-builder, shared-want-hook-mapper]
 steps:
   - {uses: product-vocabulary-sheet-builder, note: "A sorted sheet of its own phrases, ready for headlines, proof and demos"}
-  - {uses: shared-want-hook-mapper, note: "The one want they share, its smaller parts and a hook for each. Reads the angle library from the step before"}
+  - {uses: shared-want-hook-mapper, note: "The one want they share, its smaller parts and a hook for each. Reads the phrase sheet from step 1"}
 origin: rebuilt
 version: 1.0.0
 minds: [eugene-schwartz]

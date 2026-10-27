@@ -31,7 +31,7 @@ you_get:
   - Checkpoints and a list of risks
 how_to_use:
   - Open your AI in a tool that can read and save files. Chat-only works too, but you copy the plan out yourself.
-  - Paste the skill text, then paste your spec. Add the codebase and any deadlines if you have them.
+  - Paste the skill text, then paste your spec. Say what format the spec is in, give access to the codebase if there is one, and name your task tracker and any deadlines.
   - Ask your AI to plan the work and write no code.
   - Read the plan. Check that each task is small and has clear done checks, then answer any open questions.
   - Review the plan with a person before you start. Then run the tasks one at a time, in tasks/todo.md or your tracker.

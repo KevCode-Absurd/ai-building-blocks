@@ -30,9 +30,9 @@ you_get:
   - Duplicates and odd value list
   - Columns worth analysing
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick a chat that can run code and accept file uploads.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can run code and accept file uploads. Uploads and code running are often on paid plans. Check yours. If you only have a free chat, paste 20 to 50 rows as text and treat the result as a rough look.
   - Paste the text of SKILL.md into the chat.
-  - Attach your CSV, Excel, Parquet or JSON file. Or type the name of a table if your AI has a data tool connected to your warehouse.
+  - Attach your CSV, Excel, Parquet or JSON file. Or type the name of a table if your AI has a data tool connected to your warehouse. No file? Paste sample rows instead.
   - Say what you plan to do with the data, if you know. This is optional.
   - Read the Data Quality Issues first. Each flag is a hint, so check the ones that matter to you.
   - Pick one of the suggested explorations and ask your AI to run it.

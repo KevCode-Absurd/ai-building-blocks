@@ -83,6 +83,7 @@ output_shape: |
   FLOOR AND RIVALS <margins; rival position> or MISSING
   TEST             <group, change, number>
   MISSING          <...>
+  CHECKS MISSED    <one line each, or none>
 
 example:
   business: sprout
@@ -131,6 +132,8 @@ improve:
   - "Paste your proof-and-claims file so certainty is scored on what you can really claim."
   - "Pair it with the Price rise letter writer once the score says go."
 
+before: []
+next: []
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a scored review in one message."}

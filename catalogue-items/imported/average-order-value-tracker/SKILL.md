@@ -39,10 +39,10 @@ Calculates Average Order Value (AOV) over configurable time buckets (daily, week
 
 2. Classify each order: if `customer.numberOfOrders == 1` → new customer order; else → returning
 
-3. **OPERATION:** `customers` — query (optional enrichment for cohort context)
-   **Inputs:** Recent customers for new vs. repeat segmentation validation
+3. **OPERATION:** `customers` — query (optional; skip it if you only need the order-based split)
+   **Inputs:** Recent customers, used only to cross-check the new vs. repeat split from step 2
 
-4. Group orders by time bucket; calculate AOV per bucket and per customer segment
+4. Group orders by time bucket; calculate AOV per bucket and per customer segment. AOV is the mean of `totalPriceSet`, which includes tax and shipping.
 
 ## GraphQL Operations
 
@@ -159,6 +159,6 @@ CSV file `aov_trends_<YYYY-MM-DD>.csv` with columns:
 
 ## Best Practices
 - A free shipping threshold increase or bundle introduction should show up as an AOV lift in the week/month it launched — use this report to measure the impact.
-- Returning customer AOV is typically higher than new — a shrinking gap may indicate loyalty erosion.
+- Compare the new and returning split with your own store's earlier periods. A shrinking gap against your own history is worth a look.
 - `bucket: week` is best for campaign measurement; `bucket: month` for long-term trend tracking.
 - Guest checkout orders cannot be segmented as new vs. returning — for stores with high guest checkout rates, the segmentation will under-count new customers.

@@ -32,12 +32,17 @@ you_get:
   - Plots that show the response
   - The filter applied to your data
 how_to_use:
-  - Open an AI that can run MATLAB code. The skill needs MATLAB with Signal Processing Toolbox and DSP System Toolbox.
-  - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - Open an AI that can run MATLAB code through a tool connection (an MCP server for MATLAB). The skill needs MATLAB with Signal Processing Toolbox and DSP System Toolbox.
+  - Upload the whole skill folder, including the references folder. Pasting the skill text alone does not work, because the skill reads those reference files before each design.
   - Give your sample rate in Hz, the filter type, and the frequencies to keep and to remove. Add your signal data if you have it.
   - Answer its questions about streaming or offline use and phase. It will not guess these.
   - Check the verification numbers and plots against your targets before you use the filter.
-  - To use the filter on live data, ask your AI to move the chosen design into a streaming pipeline.
+  - To use the filter on live data, ask your AI to move the chosen design into a streaming pipeline, or export the .m files into your project.
+terms:
+  - term: MCP
+    meaning: A connection that lets your AI run programs on your computer, here MATLAB, and read the results.
+  - term: Preflight
+    meaning: The step where the AI reads the right reference notes before it writes any filter code.
 output_sample:
   input:
     - Your signal data, or its sample rate in Hz

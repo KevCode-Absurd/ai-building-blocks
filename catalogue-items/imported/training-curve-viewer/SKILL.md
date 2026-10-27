@@ -22,7 +22,7 @@ Use TensorBoard when you need to:
 - **Profile performance** and identify bottlenecks
 - **Visualize images and text** during training
 
-**Users**: 20M+ downloads/year | **GitHub Stars**: 27k+ | **License**: Apache 2.0
+**Users and stars**: the author's rough figures, not checked here | **TensorBoard's own licence**: Apache 2.0 (this skill file is MIT)
 
 ## Installation
 
@@ -617,7 +617,7 @@ with profiler.profile(
 
 - **Documentation**: https://www.tensorflow.org/tensorboard
 - **PyTorch Integration**: https://pytorch.org/docs/stable/tensorboard.html
-- **GitHub**: https://github.com/tensorflow/tensorboard (27k+ stars)
+- **GitHub**: https://github.com/tensorflow/tensorboard 
 - **TensorBoard.dev**: https://tensorboard.dev (share experiments publicly)
 
 ## See Also

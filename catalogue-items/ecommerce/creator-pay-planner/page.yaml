@@ -80,8 +80,8 @@ output_shape: |
   Posts: <n>  Usage and ad rights: <terms>
   Disclosure: posts carry #ad or the platform's paid-partnership label
 
-  RECRUITING LADDER (optional, check the rules first)
-  <micro-creator> -> <commission only when earnings pass the move-up line> -> <recruiter>
+  RECRUITING LADDER  skipped, rules not checked
+  (Fill in only after the store confirms the local pay-to-recruit rules and the platform's terms.)
 
   VOLUME AND REPOSTING
   <posts per week>  Review owner: <name>  Repost to: <platforms>, commission <rule>
@@ -105,7 +105,7 @@ output_sample:
     - name: OFFER
       contains: A flat fee, or a floor or commission for shop sales, with post count, usage rights and the paid-post label rule.
     - name: RECRUITING LADDER
-      contains: An optional path from small creator to commission only to recruiter, with a note to check the rules first.
+      contains: Skipped by default. It is filled in only after you confirm the pay-to-recruit rules and the platform's terms.
     - name: VOLUME AND REPOSTING
       contains: Posts per week, who reviews them, and where to repost with the creator's name.
     - name: CHECK AFTER POSTING

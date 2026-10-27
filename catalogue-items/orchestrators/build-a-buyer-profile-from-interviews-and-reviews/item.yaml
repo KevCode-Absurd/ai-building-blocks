@@ -19,7 +19,7 @@ outputs:
 uses: [order-record-buyer-interview-guide, forum-and-review-avatar-digger, job-based-avatar-builder, buyer-brief-writer, avatar-fit-checker]
 steps:
   - {uses: order-record-buyer-interview-guide, note: "Picks recent buyers from your order records and writes the questions to ask each one. Hands you the interview sheets to take into your calls."}
-  - {uses: forum-and-review-avatar-digger, note: "Mines your interview notes, reviews and forum posts for the words this group uses. Uses the notes you write after each interview, not the sheet itself, plus reviews and posts you paste. Hands the quoted words to the next step."}
+  - {uses: forum-and-review-avatar-digger, note: "Mines your interview notes, reviews and forum posts for the words this group uses. Uses your own notes from each interview, not step 1's sheet, plus reviews and posts you paste. Hands the quoted words to the next step."}
   - {uses: job-based-avatar-builder, note: "Turns the quoted words into a buyer profile with a trigger, a job and proof. Reads the words from the step before."}
   - {uses: buyer-brief-writer, note: "Boils the findings to a half-page brief for ad and page writers. Reads the quoted words from step 2 and the buyer profile from step 3. Hands the brief to the fit check."}
   - {uses: avatar-fit-checker, note: "Checks whether your current ad or page sounds like this buyer. Reads the brief from step 4 and the profile from step 3, plus your own ad or page."}

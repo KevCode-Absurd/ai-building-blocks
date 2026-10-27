@@ -8,11 +8,11 @@ role: write
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: slide_deck
     required: true
-  - type: audit_report
+  - type: document
+    required: false
+  - type: question
     required: false
 outputs:
   - type: slide_deck

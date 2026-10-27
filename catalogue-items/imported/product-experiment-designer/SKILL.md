@@ -50,7 +50,9 @@ ICE Score = (Impact * Confidence * Ease) / 10
 - Avoid repeated peeking without proper method
 - Monitor guardrails continuously
 
-6. Interpret results
+6. Interpret results and decide what next
+- Compare the interval with the smallest gain that matters: ship if the whole interval is above it, drop if it is below, re-test if it straddles it
+- Rank the next idea from the ICE list
 - Statistical significance is not business significance
 - Compare point estimate + confidence interval to decision threshold
 - Investigate novelty effects and segment heterogeneity

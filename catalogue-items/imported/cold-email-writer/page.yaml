@@ -7,7 +7,7 @@ job: write-emails
 headline: Cold email writer
 subhead: Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
 explain: |
-  Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
+  Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings. This is Corey Haines' public cold-email skill, shared under the MIT licence.
 
   It asks who you are writing to, what outcome you want, what value you offer, your proof, and any signal such as funding, hiring or a recent post. If you have little, it still writes and tells you what would make it better. It then covers the follow-up sequence, how to work with other channels, and how to handle replies. It checks your product marketing notes first, so you do not repeat yourself.
 when:
@@ -36,6 +36,7 @@ how_to_use:
   - Read the emails aloud. Cut any line that sounds like marketing copy.
   - Before you send, set up a separate sending domain and check your list. This needs a paid sending tool such as Instantly, lemlist or Outreach.
   - Turn off open tracking and watch replies. When someone replies, stop every other message to them.
+  - LinkedIn automation tools such as HeyReach or lemlist carry terms-of-service risk with LinkedIn. Weigh that before you connect an account.
 output_sample:
   input:
     - Who you are writing to, with their role and company

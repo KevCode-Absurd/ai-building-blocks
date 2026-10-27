@@ -374,7 +374,7 @@ class WarehouseEfficiencyOptimizer:
 
         distance_saved = (current_avg_pick_distance - optimized_avg_pick_distance) * picks_per_day
         time_saved_minutes = distance_saved / 200  # 200 ft/min walk speed
-        labor_cost_saved = time_saved_minutes / 60 * 18  # $18/hour
+        labor_cost_saved = time_saved_minutes / 60 * 18  # $18/hour (illustration only, use the user's wage)
 
         return {
             'sku_assignments': self.velocity[['sku', 'velocity_class', 'recommended_zone']],
@@ -461,8 +461,8 @@ class WarehouseEfficiencyOptimizer:
         if order_volume_per_day > 500:
             recommendations.append({
                 'technology': 'Put wall / Light-directed picking',
-                'investment': '$50K - $150K',
-                'expected_benefit': '40% picking efficiency gain',
+                'investment': '$50K - $150K',  # illustration only
+                'expected_benefit': '40% picking efficiency gain',  # illustration only
                 'payback_months': 12,
                 'priority': 'High' if order_volume_per_day > 2000 else 'Medium'
             })
@@ -491,7 +491,7 @@ class WarehouseEfficiencyOptimizer:
         if order_volume_per_day > 2000:
             recommendations.append({
                 'technology': 'Automated packing stations',
-                'investment': '$150K - $400K',
+                'investment': '$150K - $400K',  # illustration only
                 'expected_benefit': '50% packing labor reduction',
                 'payback_months': 15,
                 'priority': 'High' if order_volume_per_day > 5000 else 'Medium'
@@ -818,7 +818,7 @@ class ReturnsOptimizer:
         recovery_pct = recovery_rate.get(product_category, 0.60)
 
         # Calculate impact
-        gross_profit_per_unit = avg_selling_price * 0.40  # Assume 40% margin
+        gross_profit_per_unit = avg_selling_price * 0.40  # Assume 40% margin (illustration only, use the user's margin)
 
         # Return cost per unit sold
         return_cost_per_unit = return_rate * total_return_cost

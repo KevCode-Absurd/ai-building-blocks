@@ -203,8 +203,8 @@ Carrying a US-derived "index" reference into an Indian model is a silent methodo
 is retired — 404. Take the list from the provider factsheet or derive it, and **never** substitute a
 "top 50 by market cap" proxy and label it the NIFTY 50.
 
-**Join on ISIN, not scrip code.** Reliance is NSE `2885` and BSE `500325` — one company, one ISIN,
-two scrip codes.
+**Join on ISIN, not scrip code.** Reliance is NSE symbol `RELIANCE` and BSE `500325` — one company, one ISIN,
+two exchange identifiers.
 
 ### Market-cap bands
 
@@ -225,7 +225,7 @@ whole sets of companies between periods.
 
   **A ±10% daily-move filter written for US markets will false-positive constantly here** — a normal
   Indian day can be well past it. Use a circuit-aware bound, or none at all.
-- **Short selling is largely prohibited** (intraday in F&O scrips only). Bearish-pressure logic
+- **Short selling is largely prohibited** (intraday in F&O scrips only; this is the rule as the original author stated it, so check the current SEBI and exchange rules before you rely on it). Bearish-pressure logic
   carried from a US playbook does not transfer.
 - **Settlement.** The standard is T+1, with an optional T+0 intraday segment. Any
   working-capital, receivable-days or cash-conversion figure built on a single settlement lag is

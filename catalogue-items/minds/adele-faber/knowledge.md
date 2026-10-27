@@ -69,7 +69,7 @@ Before trying the example, define what a useful result would look like for the p
 
 ## Where she stood
 
-The recurring question in this profile is how to approach school mornings filled with nagging and delay without losing the useful distinction in hear the feeling first. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
+The recurring question in this profile is how to approach school mornings filled with nagging and delay without losing the useful distinction in naming the feeling first. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
 
 In the original application, ask whether the proposed response preserves describe what needs doing and whether it leaves room for allow a different role. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
 

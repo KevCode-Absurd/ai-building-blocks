@@ -9,7 +9,7 @@ subhead: In the UAE, where your company sits decides which law covers you. This 
 explain: |
   In the UAE, where your company sits decides which law covers you. This skill tells you which data and cyber rules apply to your setup and what to do for each.
 
-  It starts with a short intake: mainland, DIFC, ADGM or another free zone, what type of organisation, which emirate, what personal or health data you hold, where data is stored, and what certifications you have. It then gives a table of the laws, who regulates them and when they apply, such as the federal data law, DIFC and ADGM rules, central bank rules, health data localisation and government standards. After that it gives gaps, steps and mapping to ISO 27001, NIST or SOC 2. It is not legal advice.
+  It starts with a short intake: mainland, DIFC, ADGM or another free zone, what type of organisation, which emirate, what personal or health data you hold, where data is stored, and what certifications you have. It then gives a table of the laws, who regulates them and when they apply, such as the federal data law, DIFC and ADGM rules, central bank rules, health data localisation and government standards. After that it gives gaps, steps and mapping to ISO 27001, NIST or SOC 2. It is not legal advice. Its author last checked the rules on 15 August 2026. Fine amounts, deadlines and the status of rules still to be issued can change, so confirm each one in the official text first.
 when:
   - You are expanding to the UAE and need the rules for your location.
   - You handle health or banking data and need to know about residency rules.

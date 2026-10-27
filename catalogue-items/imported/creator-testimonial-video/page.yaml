@@ -19,6 +19,7 @@ not_for:
   - "You want real customer reviews: use a real video from a buyer, with their permission. This tool makes acted scenes, not real buyer reviews."
   - "You need the speaker's lips to match the words: add a voiceover in a video editor, or use shots that do not show the face."
   - "You have no video model account or key: write the script here, then ask a freelance creator to film it."
+  - "You want to say a real person used the product, or show a real person's face without their written consent: use a real buyer and get their permission first."
 you_give:
   - Your product and its key points
   - The persona of the speaker (who they are and why they are credible)
@@ -35,9 +36,11 @@ you_get:
 how_to_use:
   - Paste the skill into Claude, ChatGPT or Gemini. The skill text is in Chinese, so ask your AI to reply in English.
   - Give it your product, key points, platform and the persona you want.
-  - Read the compliance note and the script. Edit the script until it sounds like a real person talking.
+  - Read the compliance note and the script. Check every claim about the product (washing, warmth, fit, results) is true for your product. The example lines in the skill are placeholders, so replace them with facts you have checked.
+  - Edit the script until it sounds like a real person talking.
   - To make video, you need an AI that can run code, plus your own paid fal or Replicate key. Each clip costs money, so run the dry run first.
-  - Add your own face image so every clip shows the same person. Join the clips with ffmpeg.
+  - Add a face image so every clip shows the same person. Use a model who has given written consent, never a customer or a public figure. If you have none, leave the face out and use hand and product shots. The skill's file paths (such as assets/model/face-a.jpg) are examples, so point them at your own files.
+  - Join the clips with ffmpeg.
   - Add captions and a voiceover, since lip sync is weak. Label the video as AI-made if the platform asks.
 output_sample:
   input:

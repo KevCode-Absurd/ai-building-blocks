@@ -17,7 +17,7 @@ not_for:
   - "You have not decided yet, or you can still change your answer: take time to decide first, then come back."
 you_give:
   - The request, who made it and when
-  - Your real reasons
+  - "Your real reasons. For a private one, write it like this: I can't share the reason, but it is not about you."
   - What you can offer instead (optional)
 you_get:
   - The no, word for word, under 150 words
@@ -62,6 +62,9 @@ output_shape: |-
 
   MISSING
   <e.g. alternative>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
 tweaks:
   - what: Spoken or written
     how: Say which, and the layout changes to short lines or a short email.

@@ -5,6 +5,29 @@ description: Get a coding brief for a Slack bot that receives scoped events, che
 
 # Build First Slack Bot prompt
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Meta Ads reporting app planner](https://useaiblocks.com/prompts/meta-ads-report-code-builder-prompt).
+- The [API endpoint development brief writer](https://useaiblocks.com/prompts/build-first-api-endpoint-builder-prompt).
+- The [Slack bot builder](https://useaiblocks.com/skills/slack-bot-builder).
+- The [Code change reviewer](https://useaiblocks.com/skills/code-change-reviewer). It takes the code change.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -15,7 +38,7 @@ description: Get a coding brief for a Slack bot that receives scoped events, che
 - Keep output portable across AI tools; state what can be drafted without the named integrations. Do not claim a render, query, delivery or runtime test happened unless it did.
 - Project paths in the source are examples. Inspect the user-selected repository; never assume another desktop repository or an absent private skill exists.
 - List missing schemas, modules, API permissions and setup prerequisites before implementation. If a reference dependency is unavailable, produce a self-contained specification or identify the exact gap.
-- Do not install dependencies, provision services, start schedules, deploy or mutate accounts merely because an example build prompt says to. Use the current user-authorized scope.
+- Do not install dependencies, provision services, start schedules, deploy or mutate accounts merely because an example build prompt says to. Use the current user-authorized scope. The packages the build prompt names are the exception: install them only after the user says yes.
 
 These working rules control the procedure below. If an example assumes a client, person, provider, price or threshold, replace it with the user's verified setting.
 
@@ -23,7 +46,7 @@ These working rules control the procedure below. If an example assumes a client,
 
 
 
-Copy this into Claude Code to create a Slack bot that responds to messages.
+Copy this into Claude Code to create a Slack bot that replies when a message contains the word "ping". It answers any message with that word in a channel the bot has been invited to, not only @mentions.
 
 ---
 
@@ -41,14 +64,14 @@ Do these things:
      - token: process.env.SLACK_BOT_TOKEN
      - appToken: process.env.SLACK_APP_TOKEN
      - socketMode: true
-   - Add a message listener that triggers when someone mentions "ping"
+   - Add a message listener that triggers when any message in a channel the bot is in contains the word "ping"
    - The bot should reply in the same thread: "Pong! I'm alive. Channel: [channel name], User: [who sent it]"
    - Export the app instance
 
 3. Create scripts/test-slack-bot.ts:
    - Import the app from lib/slack/app
    - Start the app
-   - Print "Slack bot is running. Mention 'ping' in any channel the bot is in."
+   - Print "Slack bot is running. Type 'ping' in any channel the bot is in."
    - Handle SIGINT for graceful shutdown
 
 4. After creating both files, explain:
@@ -88,6 +111,15 @@ This is the same pattern your agent system uses. The only difference: instead of
 
 The Slack connection is the interface. Everything else plugs into it.
 
+
+## What you get
+- `lib/slack/app.ts`: the bot. It starts in Socket Mode and replies in the thread to any message containing "ping".
+- `scripts/test-slack-bot.ts`: the script that starts it, with a clean shutdown.
+- The install step for `@slack/bolt`, run only after you say yes.
+- A short plain explanation of Socket Mode, the two tokens and how to invite the bot.
+- The exact reply: `Pong! I'm alive. Channel: <channel name>, User: <who sent it>`.
+
+**Next step:** replace the "Pong" reply with a router that sends each message to the right agent or handler, then post the result back in the thread.
 
 ## Final check
 

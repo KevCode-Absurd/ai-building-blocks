@@ -30,11 +30,13 @@ you_get:
   - Safer code for new work
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use a tool that can read your project files, or paste the code you want checked.
-  - Paste the skill text from this page into the chat.
+  - Gather the list of frameworks you use, how you deploy (on your machine, hosted, or behind a TLS proxy), and any project security notes or rules to override.
+  - Attach the whole skill folder, or paste the skill text and each reference file for your framework. The framework rules live in the references folder, so without them the review is general.
   - Say that you want a security review. Add your project folder or code, and name your frameworks if you know them.
   - Say where the report file should be saved, or let your AI pick a place.
   - Read the report. The most serious findings come first.
   - Ask your AI to fix one finding at a time. Run your tests after each fix.
+  - This is OpenAI's security best practices skill under the Apache 2.0 licence. The text is theirs, not written for this library.
 output_sample:
   input:
     - Your code or project folder

@@ -19,21 +19,22 @@ not_for:
   - "You only want to find what rivals leave empty, without briefs or a campaign: use the Competitor ad opportunity finder."
   - "You want to save rival ads to browse for ideas, not count them: use the Competitor ad swipe file builder."
 you_give:
-  - Ads or an Ad Library export from one or more rivals
-  - Your brand file (products, voice, claims you can make)
-  - Your own ad results (optional)
+  - "Ads or an Ad Library export from one or more rivals, with inactive ads included"
+  - "Your brand file (products, voice, claims you can make), optional but recommended"
+  - "Your daily test budget and target cost per sale, for the campaign layout"
+  - "Your own ad results (optional)"
 you_get:
   - Counts by format, ad age, landing page, awareness stage and offer
   - The ad types and buyer questions your rivals leave empty
   - Three ideas with nine designer-ready versions and questions to settle first
   - A test campaign layout with pack names, budget split and scale rules
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
-  - Export your rival's ads from the Ad Library with inactive ads included. Pick rivals a step or two above your size.
-  - Add your brand file. The briefs only use claims you can make.
-  - Check the Step 1 counts first. If they look wrong, fix the export before you use the briefs.
-  - Send the Step 3 briefs to your designer once you have answered its questions.
+  - "Download the handoff pack. It's a zip with HANDOFF.md plus four skill files, in the order they run: Ad library teardown counter, Competitor ad gap finder, Ad test brief writer, Meta test campaign planner."
+  - "Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say \"Follow HANDOFF.md\"."
+  - "Export your rival's ads from the Ad Library with inactive ads included. Pick rivals a step or two above your size."
+  - "Add your brand file. The briefs only use claims you can make."
+  - "Check the Step 1 counts first. If they look wrong, fix the export before you use the briefs."
+  - "Send the Step 3 briefs to your designer once you have answered its questions."
 output_sample:
   input:
     - Ads or an Ad Library export from one or more rivals

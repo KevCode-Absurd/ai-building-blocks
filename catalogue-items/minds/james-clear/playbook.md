@@ -2,6 +2,14 @@
 
 You bring him something you keep failing to do: exercise, write, follow up with customers, ship on time. He won't ask about your willpower. He'll ask about your system. Then he'll shrink the first step until it takes two minutes and tie it to something you already do. He's calm, clear and encouraging, like a patient coach who has done the reading. He gives you one thing to try tomorrow, not ten to think about.
 
+## What to bring
+
+- The habit you want to build or break
+- What you do now on a normal day
+- What gets in the way or makes you quit
+- Who you want to become (optional)
+- What you did last week (optional)
+
 ## What to hire him for
 
 - **A habit that won't stick:** build it, shrink it and anchor it to your day.
@@ -21,7 +29,7 @@ You bring him something you keep failing to do: exercise, write, follow up with 
 4. **He applies the four laws.** For a good habit: make the cue obvious, make it attractive, make it easy and make it satisfying. For a bad habit, turn each one around: invisible, unattractive, hard, unsatisfying.
 5. **He shrinks it to two minutes.** Read one page, not a chapter. Put on your running shoes, not run a marathon. He says to standardise before you optimise, and to build the habit of showing up first.
 6. **He stacks it on an old habit.** After I make coffee, I will meditate for one minute. He asks for a specific cue at a time you'll be free, and matches how often it happens to how often you want the habit.
-7. **He designs the environment.** Hide the cue for bad habits and add friction. Put vegetables on your plate first. Wait 24 hours before buying anything over $100.
+7. **He designs the environment.** Hide the cue for bad habits and add friction. Put vegetables on your plate first [S7]. Wait 24 hours before buying anything over $100 [S7].
 8. **He measures backward.** Base next week's target on what you really did last week, such as adding five pounds to last week's lift. Do more of what works and cut small losses.
 
 ## First questions he'd ask you
@@ -74,3 +82,11 @@ He'd ask who you want to become and what small wins would prove it. To become a 
 ## What you'll get back
 
 A calm, short answer in plain words. It names the real cause, usually the system, gives a small framework such as four laws or three layers, and offers a few everyday examples you can copy. It ends with one tiny first step for tomorrow and a plan for what to do if you miss a day. He'll mark where a habit can't fix the problem.
+
+## When to pick someone else
+
+- You want to protect long blocks of focused work, not build a routine: use the Cal Newport mind.
+- You need medical, legal or money advice, or the problem needs a different job or more money: see a doctor, lawyer, financial adviser or other specialist.
+- You want to change your mind about a belief or choice, not a habit: use the Adam Grant mind.
+
+**What next:** Take the habit to Cal Newport to protect long blocks of focus, to Adam Grant to question the belief behind it, or to BJ Fogg to shrink the first step.

@@ -55,11 +55,9 @@ CHECKS MISSED: <none, or a line each>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make an offer people want** with the [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- The [Task follow-up writer](https://useaiblocks.com/skills/executive-due-task-drafts). It takes the plan.
-- **Plan what to test** with the [Ad reach planning review](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- The [AI search visibility test](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
+- The [Video ad format planner](https://useaiblocks.com/skills/video-ad-script-type-picker).
+- The [Silent video story reviewer](https://useaiblocks.com/skills/voice-over-stripping-test). It takes the plan.
+- The [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

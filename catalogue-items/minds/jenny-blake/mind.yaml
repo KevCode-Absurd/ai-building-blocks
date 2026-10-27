@@ -40,7 +40,7 @@ output_sample:
 seats:
   - {seat: "Career pivots and practical pilots", asks: "What already works, and what real activity could you test next?"}
   - {seat: "Strengths and related opportunities", asks: "What should this pilot teach you before you commit further?"}
-pairs_with: [peter-drucker, adam-grant, seth-godin]
+pairs_with: [herminia-ibarra, bill-burnett, kim-scott]
 last_checked: 2026-10-23
 sources:
   - {n: 1, title: "Plant, Scan, Pilot: Wharton Work/Life interview, 2014", by: "Jenny Blake interviewed by Stew Friedman", url: "https://worklife.wharton.upenn.edu/2014/12/plant-scan-pilot-jenny-blakes-pivot-method/", kind: own-words}

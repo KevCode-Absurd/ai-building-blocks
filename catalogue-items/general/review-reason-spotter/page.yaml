@@ -67,6 +67,9 @@ output_shape: |
 
         NOTES
         <entries used and dropped, what the pile cannot tell you>
+
+        CHECKS MISSED
+        <one line per check missed, or none>
 tweaks:
   - what: Pile size
     how: More entries make the ranking steadier. Under 20, the prompt flags the result as thin.

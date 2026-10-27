@@ -35,5 +35,21 @@ blocks:
   - marketing-image-maker
 alternatives: [nano-banana, flux, ideogram, leonardo]
 last_checked: 2026-10-21
+first_result:
+  - "Go to midjourney.com and pick a plan. There is no free plan. Basic starts at US$10 a month."
+  - "Write the subject, mood and style in one sentence. Look at the four options it makes."
+  - "Pick one. Vary it, zoom out, or redraw it."
+  - "To match a look, upload a reference image or save a personal style."
+  - "Check any words in the image. Expect them to be wrong."
+  - "You end with image files in your gallery."
+  - "Next: for ad images use the Marketing image maker. When words must be exact, use Ideogram."
+needs:
+  - "A paid Midjourney plan."
+  - "One sentence on subject, mood and style."
+  - "Reference images for a look (optional)."
+not_verified:
+  - "How you sign in and where prompts go."
+  - "How many images one hour of fast time makes."
+  - "The licence for commercial use on Basic."
 sources:
   - https://eesel.ai/blog/midjourney-pricing

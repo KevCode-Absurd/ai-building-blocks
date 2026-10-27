@@ -70,7 +70,7 @@ how_it_works:
   - title: "Distrust big surprises"
     text: "A huge lift is more likely a tracking bug than a discovery. Say re-test."
   - title: "Read a range, in money"
-    text: "Give the difference with a 95% range and show the working. Monthly gain = monthly visitors x the difference in gross profit per visitor, at the low, middle and high end."
+    text: "Give the difference with a 95% range (the standard two-proportion method) and show the working. Monthly gain = monthly visitors x the difference in gross profit per visitor, at the low, middle and high end."
   - title: "Check guardrails and call it"
     text: "A win that cuts order value or margin is not a win. Call SHIP, DO NOT SHIP, RE-TEST or INCONCLUSIVE."
 
@@ -82,6 +82,7 @@ output_shape: |
   GUARDRAILS: <each ok or hurt>
   WHY: <two sentences>
   MISSING: <what you did not give>
+  CHECKS MISSED: <checks that failed or could not run, or none>
 
 tweaks:
   - what: "Run length"
@@ -103,7 +104,7 @@ test:
 improve:
   - "Add your usual smallest lift under the prompt."
   - "Keep a log entry for every call."
-  - "Pair it with a test idea shortlist maker."
+  - "Pair it with a test idea ranker."
 
 works_best_with:
   tools:

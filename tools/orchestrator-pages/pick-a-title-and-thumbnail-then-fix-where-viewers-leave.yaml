@@ -35,6 +35,7 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the video and your channel. Choose one of the three pairs and publish it.
   - After a week or more, open YouTube Studio, download the audience retention report for that video and give it back with the video link.
+  - Paste the video's captions from YouTube Studio too. This is free. The workflow can fetch them with a paid service (TranscriptAPI, your own key) only if you say yes.
 output_sample:
   input:
     - Your video idea and what the viewer gets
@@ -66,7 +67,7 @@ how_it_works:
   - title: Publish and export (you)
     text: You publish the top pair. After a week or more you download the audience retention report for the video from YouTube Studio.
   - title: Get the words of the video
-    text: Gets the transcript of the live video. If you'd rather not use a transcript service, paste the captions from YouTube Studio.
+    text: Paste the video's captions from YouTube Studio. This is free and the default. The transcript reader can fetch them for you instead, but it uses a paid service (TranscriptAPI) that needs your own key and has a small free allowance.
   - title: Read where viewers leave
     text: Finds the loss in the first 30 seconds, the steep drops and the slow slide, matches each to what you said, and names the one biggest leak.
 output_shape: |-

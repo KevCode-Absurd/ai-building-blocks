@@ -31,10 +31,10 @@ you_get:
 how_to_use:
   - Check you have MATLAB with the Image Acquisition Toolbox and Image Processing Toolbox. MATLAB is a paid product.
   - Connect your camera to the computer.
-  - Open an AI that can run MATLAB code and paste in this skill.
+  - Open an AI that can run MATLAB code and paste in this skill. It needs MATLAB tool access to run its checks (detect_matlab_toolboxes and check_matlab_code). Without that, type ver in MATLAB to list your toolboxes, and ask your AI to read the code before you run it.
   - Say what looks wrong, and name your camera if you know it.
   - Read the diagnosis, then try the camera settings it suggests before any processing.
-  - Keep the .m function it writes for later captures.
+  - Keep the .m function it writes for later captures. If the before and after numbers do not improve, change one camera setting at a time and measure again.
 output_sample:
   input:
     - What looks wrong, such as too dark, blurry, noisy or washed out

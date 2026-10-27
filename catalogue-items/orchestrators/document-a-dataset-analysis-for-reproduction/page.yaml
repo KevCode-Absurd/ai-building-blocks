@@ -35,7 +35,7 @@ you_get:
   - "A list of gaps: what it could not see or run"
   - A hand-back summary and one next step
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from the button on this page. It is a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
   - Attach the data, the dictionary, your commands or workbook and your draft note. List your software versions.
   - Read the inventory first. Correct any column the AI read wrongly.
@@ -62,7 +62,7 @@ output_shape: |-
     What could not be seen or run
 
   HAND-BACK SUMMARY
-    Files | MISSING lines | Checks not done | One next step
+    Files | MISSING lines | Checks missed | One next step
 output_sample:
   input:
     - Your dataset and its data dictionary

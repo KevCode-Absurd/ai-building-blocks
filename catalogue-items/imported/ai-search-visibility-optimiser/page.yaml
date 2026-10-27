@@ -16,7 +16,7 @@ when:
   - You want existing blog posts rewritten so an answer can be lifted from them.
   - You need a way to track AI mentions over time.
 not_for:
-  - "You need a technical or on-page SEO audit for Google search: use seo-audit instead, as it is not a sibling item on this site."
+  - "You need a technical or on-page SEO audit for Google search: use the technical SEO auditor instead."
   - "You only need schema markup added to a page: use a schema tool or a developer, since this skill only suggests markup."
   - "The page does not affect sales or leads: skip it, because the edits take time and will not pay back."
 you_give:
@@ -31,11 +31,12 @@ you_get:
   - A tracking list of prompts to monitor
 how_to_use:
   - Open your AI. Use one that can browse the web, such as ChatGPT, Claude or Gemini.
-  - Paste the skill text from this page into the chat.
+  - Upload the skill file, or paste its text. The full skill is long, so if your AI limits pasting, paste only the parts for the step you are on.
   - Add your page address or topic, and your key customer questions.
   - Add your competitors and brand background if you have them.
   - Read the audit first. Then apply the page edits one at a time.
   - Re-check the same questions in a few weeks to see what changed.
+  - Then make the page edits on the pages that sell first, and add schema markup to those pages.
 output_sample:
   input:
     - A page address or a topic
@@ -59,3 +60,4 @@ output_sample:
       contains: Suggested structured data to add to your page.
     - name: Monitoring list
       contains: The questions to re-check over time to see if AI mentions you more.
+next: [schema-markup-writer, llms-txt-writer, technical-seo-auditor]

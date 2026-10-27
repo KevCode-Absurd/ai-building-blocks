@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Check you have an AI that can run commands, like Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
   - Sign in to your store with Shopify CLI and give it read access to orders.
-  - Open the skill in your AI and give it your store domain. Add how many days to look back if you want something other than 30.
+  - Add the skill to your AI and give it your store domain. Add how many days to look back if you want something other than 30.
   - Add a grouping, a minimum order value or one reason if you want a narrower view. All three are optional.
   - Read the summary first, then check the flagged weeks. Compare the rates with your own past numbers, not a general figure.
   - Remember that reasons are only as good as the reason staff picked when they cancelled the order. The skill only reads data and changes nothing.

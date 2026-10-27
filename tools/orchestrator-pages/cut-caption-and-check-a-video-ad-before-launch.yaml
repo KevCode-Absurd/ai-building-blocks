@@ -25,18 +25,18 @@ you_give:
   - The list of your raw clip files
   - The script the clips follow
   - Your offer (optional)
-  - Your brand font file (optional)
+  - Your brand font file (needed for the captions)
   - The exported video, after you edit it at the pause
 you_get:
   - A cut list with in and out times for each shot
   - A caption plan in your font, an exported file and a subtitle file
   - A launch check with a verdict, a fix for each mistake and a score out of 100
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md and the three skill files this workflow uses. Unzip it and keep them together in one folder.
   - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - List your clips and paste your script. Step 1 needs only these.
   - When it stops after the cut list, edit the video in your own editor and export it.
-  - Attach the exported video and your font. Step 2 adds captions and step 3 checks the result.
+  - Attach the exported video and your font file. Step 2 adds captions and step 3 checks the result.
   - Fix every stop-ship mistake, then run the check again before you launch.
 output_sample:
   input:
@@ -58,7 +58,7 @@ output_sample:
     - name: Fault list
       contains: Caption problems found, such as text sitting under app buttons, each with a fix.
     - name: Launch check
-      contains: Stop-ship mistakes first, each with a fix, then a ship or fix verdict and a score out of 100.
+      contains: Stop-ship mistakes first, each with a fix, then a verdict (fix, remake, ready within what was reviewed, or incomplete) and a score out of 100.
     - name: HAND-BACK SUMMARY
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:

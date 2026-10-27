@@ -31,10 +31,12 @@ you_get:
   - A quarterly schedule you can repeat
 how_to_use:
   - Export your post list from your analytics tool, with traffic for at least two periods.
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
-  - Paste your post list, then add your goals and how many posts your team can handle each month.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
+  - Paste your post list, then add your goals and how many posts your team can handle each month. Compare traffic over at least 90 days. The skill treats a slow fall of 5 to 10 percent a year as drift and a fall of 40 percent or more in a month as a sharp drop, after you allow for seasons.
   - Add search or ranking data if you have it. If a post has no data, ask your AI to mark it as missing.
+  - Ask for one table, one row per post, with the signals, the decision (refresh, merge or delete), the depth and the priority. High-value posts that are falling come first. Stable posts are left alone.
   - Check the decisions on your top posts first. Change any call you disagree with.
+  - For each merge or delete, get the content owner to approve the redirect target before you remove anything.
   - Put the next audit in your calendar for next quarter and run it again with fresh data.
 output_sample:
   input:

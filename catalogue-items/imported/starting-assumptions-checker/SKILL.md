@@ -6,6 +6,14 @@ description: >-
   sensitivity, including power scaling, regularized horseshoe and R2D2 assumptions.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `../pymc-modeling/references/extras-model-tools.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Prior elicitation
 
 A prior is a scientific assumption, not a scale-free default. Work from the
@@ -51,8 +59,8 @@ quantity's meaning to a distribution, then check its observable implications.
 - [Shrinkage and regularization](references/shrinkage.md) — regularized horseshoe
   scales, R2D2 variance allocation, geometry and interpretation.
 - For optional pymc-extras prior factories, serialization, censoring and
-  posterior-as-prior transfer, see [extras model tools](../pymc-modeling/references/extras-model-tools.md)
-  when `pymc-modeling` is installed.
+  posterior-as-prior transfer, see the extras model tools file from the separate `pymc-modeling` skill.
+  That file is not included in this copy.
 
 Use the installed package's version-matched API documentation when adapting the
 examples. PreliZ widgets need an interactive notebook; pymc-extras is optional

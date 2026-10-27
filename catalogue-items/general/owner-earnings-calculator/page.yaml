@@ -126,6 +126,8 @@ improve:
   - Add the notes from the annual report that explain big spending.
   - Run it on a rival and compare the share of profit that survives.
   - Pair it with "Return on equity and margin checker" for the full set of money tests.
+before: []
+next: [business-value-range-calculator, roe-margin-check]
 works_best_with:
   tools:
     - name: A spreadsheet

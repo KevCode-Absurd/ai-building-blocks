@@ -141,7 +141,7 @@ Show, for the request:
 
 ## STEP: Results and summary
 
-Report the finding in the user's terms — what the analysis said about their model, tied back to the intent that was asked. Surface any caveat or assumption on its own line.
+Report the finding in the user's terms — what the analysis said about their model, tied back to the intent that was asked. Surface any caveat or assumption on its own line. Close with one line on what to do next: check the findings with a data scientist before acting on them, or retrain the model outside this skill if the model is weak.
 
 ## Core Idioms
 

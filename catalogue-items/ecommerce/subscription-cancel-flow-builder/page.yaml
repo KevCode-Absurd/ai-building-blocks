@@ -21,6 +21,7 @@ not_for:
   - You sell one-off items like a rug or a shirt. A cancel flow needs a natural repeat order, so start with a simple after-purchase email instead.
   - Your portal cannot branch by reason or show a splash screen. Ask your portal's support what it can do first, or build the flow by hand.
   - You want a full audit of why subscribers leave over time. Ask a person who knows your numbers to review your cancel data first.
+  - "You want a quick first pass with fewer checks: use the Cancel reason save planner."
 
 you_give:
   - The reasons customers give today, or a survey
@@ -143,9 +144,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Skio", why: "It supports a splash screen, branching by reason and flows by payment type failure."}
-    - {name: "Recharge", why: "It has a customer portal with cancel flows and skip and delay settings."}
-    - {name: "Klaviyo", why: "It sends the post-cancel, win-back and failed-payment emails and texts."}
+    - {name: "Skio", why: "It supports a splash screen, branching by reason and flows by payment type failure. It is a paid app."}
+    - {name: "Recharge", why: "It has a customer portal with cancel flows and skip and delay settings. It is a paid app."}
+    - {name: "Klaviyo", why: "It sends the post-cancel, win-back and failed-payment emails and texts. It is a paid service."}
   inputs:
     - "Cancel reasons by count, from your portal"
     - "A one-minute founder video"

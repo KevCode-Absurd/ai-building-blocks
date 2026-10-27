@@ -152,3 +152,4 @@ terms:
     meaning: The searcher is comparing options before buying.
   - term: Transactional intent
     meaning: The searcher is ready to buy now.
+next: [store-keyword-map-builder]

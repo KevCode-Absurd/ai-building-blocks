@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a monthly update or a one-project report: write a short status note yourself instead."
   - "You only want to check whether profit is backed by cash: use the Cash versus earnings checker."
-  - "You want to explain ad results to a client: use the Ad results report writer."
+  - "You already have your principles and only need the letter: use the Annual letter writer."
 
 you_give:
   - Your business, who the letter is for and the hard trade-offs you face

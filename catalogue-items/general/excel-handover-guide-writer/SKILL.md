@@ -9,6 +9,28 @@ This skill writes a handover guide for an Excel workbook, so the next owner can 
 
 Not for: fixing or cleaning the workbook (use "Spreadsheet formula auditor" or "Messy spreadsheet cleaner"); comparing two versions (use "Excel workbook change reviewer"); checking whether a PivotTable is safe to share (use "Excel PivotTable refresh planner").
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **Spreadsheet** with the [Excel input form builder](https://useaiblocks.com/skills/excel-input-form-builder). Bring your question, spreadsheet (optional).
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a brief, spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **An AI that can read Excel files:** Lets it inspect the real sheets, formulas and connections, so the guide is checked, not guessed.
+- **Microsoft Excel:** Needed to refresh connections and test the update steps. Without it, steps stay marked as not run.
+<!-- /needs -->
+
 ## What you need
 
 - **The workbook** (required): an uploaded file. If you cannot open files, ask for pasted lists: the sheet names, the formulas behind the main outputs, the named ranges and the data connections.
@@ -72,6 +94,15 @@ CHECKS
 OPEN ITEMS
 MISSING: <fact or unsupported check> | <who or what settles it>
 ```
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Excel workbook change reviewer](https://useaiblocks.com/skills/excel-workbook-change-reviewer).
+- The [Spreadsheet formula auditor](https://useaiblocks.com/skills/spreadsheet-formula-auditor).
+- The [Excel PivotTable refresh planner](https://useaiblocks.com/skills/excel-pivot-refresh-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before handing back
 

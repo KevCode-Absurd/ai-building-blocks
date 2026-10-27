@@ -36,7 +36,8 @@ how_to_use:
   - Add your current controls, policies and any test exceptions if you have them.
   - Ask for the system inventory first. Check it matches your real systems before you go on.
   - Then ask for the risk and control matrix, test scripts and a rating for any gaps.
-  - Check the rules and dates against official sources before you rely on them. The skill was last checked on 14 Sep 2026.
+  - Check the rules, dates and statistics against SEC and PCAOB sources before you rely on them. The skill was last checked on 14 Sep 2026.
+  - Take the remediation plan and re-test window to your audit committee or external auditor. Run the matrix again after each control fix.
 output_sample:
   input:
     - Your list of finance systems and who runs them

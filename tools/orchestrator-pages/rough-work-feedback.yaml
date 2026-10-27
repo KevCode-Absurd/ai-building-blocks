@@ -20,7 +20,8 @@ not_for:
   - "You have no reviewers and no comments yet: ask two or three peers to look at the work first, then come back."
 you_give:
   - The work, or a description of it, and what is stuck
-  - The people who could review it, with their roles
+  - The people who could review it, with their roles and whether they have power over you
+  - How long the session is and where it is held
   - After the session, every comment as it was said
 you_get:
   - A session plan with who sits in the room, who stays quiet first and the rule for notes
@@ -28,7 +29,7 @@ you_get:
   - Each problem traced to its likely cause, with notes that may name the wrong spot
   - Three to five headlines, what to blow up and keep, a choice sheet for you and the date of the next look
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and four skill files, in the order they run: Peer feedback session planner, Good note sharpener, Problem root cause tracer, then Revision headline planner."
   - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - "Step 1: paste your work and the people who could review it. Then hold the review session and write down every comment."
   - "Step 2: paste all the comments, with who said each one. Steps 3 and 4 then run from the notes."

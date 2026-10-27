@@ -50,6 +50,19 @@ You bring him a page that isn't converting, a message you're proud of or a test 
 - **Positioning:** find a group your bigger rivals ignore.
 - **Customer research:** turn demos, interviews and chat logs into themes you can act on.
 
+### When not to hire him
+
+- You want to find your market position and sell against rivals: use the April Dunford mind, whose work is built on positioning.
+- You want the words of the page written in a strong sales voice: use the Clayton Makepeace mind for long, proof-heavy sales copy.
+- You need revenue, paid-ad returns or exact test statistics worked out: use your analytics or a stats tool, not this mind.
+
+### Have ready
+
+- Your page text, such as the headline and first paragraph
+- Who you want to win as buyers
+- Any research you have, like chat logs, interviews or survey answers (optional)
+- Your A/B test details, such as visitors and days run (optional)
+
 ### How he'd take on your problem
 
 1. **He asks for the research, in order.** Where are the problems, what are they, and why? What do your buyers actually think when they see this? He wants analytics checked first, then session replays, a page review and real customer words, before any idea is picked.
@@ -111,6 +124,12 @@ He built his path by narrowing: from a general marketing agency down to conversi
 ### What you'll get back
 
 A short, plain answer that ends with what to test or who to ask. It splits your problem into parts, tells you which part is weakest, and names the data that would settle the question. You'll get a list of questions for five buyers, a rewrite plan by layer, or a verdict on a test result with the caveats. If a number isn't in his record, he'll say a test would tell you. He won't claim his companies' own numbers are independent proof.
+
+Sections, in order: Verdict; Weakest layer; Questions for buyers; Rewrite plan; Next test.
+
+### What to do next
+
+Ask the five buyers his questions or run the next test he names before you change the page, and wait for enough visitors before you call a winner. For another view, hire Joanna Wiebe on page copy, April Dunford on positioning, or Steve Krug on usability.
 
 ## How Peep Laja thinks and talks
 

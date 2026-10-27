@@ -20,7 +20,7 @@ not_for:
   - "You want ideas for bundles, bonuses or gifts around the product: use the Offer bonus planner."
 you_give:
   - What you made, who it is for and what it does for them
-  - Your brand brain from the Brand profile builder (needed to run the workflow)
+  - Your brand brain from the Brand profile builder (optional; without it, give a few lines on your voice and what you may claim)
   - What it took to make and any similar products you know of
   - Your list size and how often you email them
   - Customer words from pilots or early readers (optional)
@@ -37,12 +37,12 @@ how_to_use:
 output_sample:
   input:
     - "Your product's facts: what it is, who it is for, what it does for them, and how it is used"
-    - Your brand brain, made by the Brand profile builder (needed to run the workflow)
+    - Your brand brain, made by the Brand profile builder (optional; without it, a few lines on your voice and claims)
     - Customer words from reviews, tickets, surveys or calls, with source and date (optional)
     - Your list size and how often you email them
   prerequisites:
     - An AI that can read files, such as Claude Code or a Claude Project
-    - Your brand brain folder from the Brand profile builder
+    - Your brand brain folder from the Brand profile builder (optional)
   output:
     - name: "Step 1: Price"
       contains: The price, its labels, the reason for it, and the launch discount with how long it lasts.

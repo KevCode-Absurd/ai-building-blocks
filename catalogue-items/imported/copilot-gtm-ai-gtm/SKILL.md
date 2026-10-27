@@ -9,6 +9,8 @@ metadata:
 
 # AI Product GTM
 
+Note: the figures and rules of thumb in this skill (such as three deals closing in 8 weeks, ceiling-moment outreach converting 3-5x, and pricing at 20-30% of the customer's alternative cost) are one author's own experience. They are not proven results. Present them as that author's view, and check them against the user's own buyers.
+
 Go-to-market strategy for AI products. These aren't generic AI principles — they're patterns from selling autonomous AI agents into enterprises where "autonomous" scared buyers and "teammate" converted them.
 
 ## When to Use
@@ -142,7 +144,7 @@ Why? **Word choice shapes buyer psychology.**
 **After:** "AI teammate that pairs with your engineers on complex tasks"
 - Developers: "This helps me"
 - Managers: "This makes my team more productive"
-- Deal progression: Three enterprise deals that had stalled 4+ months closed within 8 weeks of the shift
+- Deal progression: the author reports that three enterprise deals that had stalled 4+ months closed within 8 weeks of the shift (one author's account, not a measured result)
 
 **Specific Language Choices That Mattered:**
 
@@ -227,7 +229,7 @@ If it's $0.10 per API call but saves them $2 in labor, you're underpriced. If it
 
 **Pricing Rule:**
 
-Your variable cost should be **20-30% of customer's alternative cost**. High enough to capture value, low enough that they'll use it liberally.
+Your variable cost should be **20-30% of customer's alternative cost** (the author's rule of thumb). High enough to capture value, low enough that they'll use it liberally.
 
 **Common Mistake:**
 
@@ -448,7 +450,7 @@ The prospect has:
 
 **Why This Converts Better:**
 
-Ceiling-moment conversations convert 3-5x vs cold outreach because:
+The author reports that ceiling-moment conversations convert 3-5x better than cold outreach (their experience, not a measured result), because:
 - Prospect already understands the problem
 - They've already invested in the category
 - They have internal budget allocated

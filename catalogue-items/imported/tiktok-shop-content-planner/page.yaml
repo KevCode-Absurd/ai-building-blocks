@@ -9,7 +9,7 @@ subhead: Share your products and brand. Get a TikTok Shop content plan with vide
 explain: |
   A month of TikTok Shop videos planned before you open the camera: formats, opening lines, hashtags and a calendar that mixes product demos, trends and proof from customers.
 
-  You tell the skill about your products and brand. It picks content pillars and matches them to formats that tend to sell, such as demos, before and after, and unboxing. It writes hook ideas for the first seconds, shows how to work in customer clips, and reuses one video across other platforms. If your videos get views but no sales, it checks the call to action, product tagging and where viewers drop off, and suggests simple tests to run.
+  You tell the skill about your products and brand. It picks content pillars and matches them to formats that tend to sell, such as demos, before and after, and unboxing. It writes hook ideas for the first seconds, shows how to work in customer clips, and reuses one video across other platforms. If your videos get views but no sales, it reads the results you paste, such as views, clicks and sales, and suggests simple tests on the call to action and the hook. It cannot see your TikTok account, so check product tagging and where viewers drop off in your own TikTok analytics and tell your AI what you find.
 when:
   - You post but have no plan for what comes next.
   - Your videos get views and nobody buys.
@@ -35,7 +35,8 @@ how_to_use:
   - List your products with prices. Add your brand tone and how many videos you can post each week.
   - Add your last 30 days of video results if you have them (optional). Say if you get views but no sales.
   - Ask for a 30 day content calendar with hooks and hashtags.
-  - Check the targets in the result against your own TikTok analytics. Treat them as starting guesses.
+  - Check the targets in the result against your own TikTok analytics. Treat them as starting guesses, not benchmarks.
+  - Only make claims you can prove in your videos, such as price comparisons or results, and follow TikTok Shop's ad rules.
   - Film your first week of videos, then test one hook change at a time.
 output_sample:
   input:
@@ -62,3 +63,4 @@ output_sample:
       contains: A six week plan to test hooks, formats and calls to action.
     - name: Next Actions
       contains: A checklist of what to do first to start posting.
+next: [tiktok-shop-results-reader, tiktok-shop-listing-writer]

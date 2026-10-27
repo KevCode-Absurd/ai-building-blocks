@@ -8,6 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: question, required: true}
+  - {type: document, required: true}
 outputs:
   - {type: copy_draft}
 uses: [demand-letter-fact-gatherer, dispute-timeline-builder, demand-letter-drafter]

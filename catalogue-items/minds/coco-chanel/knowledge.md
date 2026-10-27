@@ -1,6 +1,6 @@
 # Coco Chanel: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Chanel left no essays or books of her own. Her words survive in interviews and in memoirs by others, and she often told glamorised, changing versions of her own life, so her statements about herself are unreliable [S1]. The one long stretch of her speaking that we now hold is a late-life French TV interview with Micheline Sandrel, recorded after 20 July 1969 and kept by France's INA archive [S9]. We have it only as a blogger's English translation, posted in 2012, so the wording is the translator's and some French terms are glossed. In it she is about 85 or 86, speaking off the cuff, and some of her views are those of a very old woman, not of the designer of the 1920s. Beyond that, her voice comes from a Wikiquote page whose lines are each tied to a named book or interview, such as Marcel Haedrich's 1971 book and a 1957 *LIFE* piece [S2], a review that quotes Paul Morand's notes of her talk in 1946 [S7], and a trace of her 1965 *McCall's* interview [S8]. Those lines were chosen and translated by others. A search in October 2026 for more of her own spoken or written words, such as press interviews or a Morand text we could read, found nothing further that is free to read, so her record in her own voice stays thin: the 1969 translation, the Wikiquote lines and one traced interview. Many sayings credited to her online have no good source. Most of what we say about what she did rests on Wikipedia and the Victoria and Albert Museum [S1][S3][S4][S5][S6]. Her wartime record is serious and partly disputed. We set out what the sources say and mark what is contested.
 
@@ -154,5 +154,5 @@ Each is reported by others, with the source shown. The last two are from a trans
 - "Fashion is made to become unfashionable." (*LIFE*, 1957, via Wikiquote) [S2]
 - "Fashion is architecture. It is a matter of proportions." (Haedrich, 1971, via Wikiquote) [S2]
 - "In order to be irreplaceable one must always be different." (Haedrich, 1971, via Wikiquote) [S2]
-- "Nothing is more aging than trying to look younger" (1969 TV interview, translated) [S9]
-- "You need trousers, I'll make trousers." (1969 TV interview, translated) [S9]
+- "Nothing is more aging than trying to look younger" (1969 TV interview, secondhand translation, wording approximate) [S9]
+- "You need trousers, I'll make trousers." (1969 TV interview, secondhand translation, wording approximate) [S9]

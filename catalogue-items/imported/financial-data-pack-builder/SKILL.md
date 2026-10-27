@@ -44,6 +44,8 @@ Triggers: Revenue, Sales, Income, EBITDA, Profit, Loss, Cost, Expense, Cash, Deb
 Format: $#,##0.0 for millions, $#,##0 for thousands
 Negatives: $(123.0) NOT -$123
 
+**Currency note (added by AI Blocks):** The `$` formats in Rules 1 to 5 are for a USD pack. For an Indian pack, use the same layout with `₹` and the lakh and crore rule in the India section above, and label every money column with its unit, for example `Total Revenue (₹ Cr)`. Never label rupee figures with `$`.
+
 **RULE 2: Operational data (counting things) → Number format, NO $**
 Triggers: Units, Stores, Locations, Employees, Customers, Square Feet, Properties, Headcount
 Format: #,##0 with commas
@@ -432,6 +434,8 @@ Present company's projections as provided in source materials:
 - Note key drivers and sensitivities
 - Flag any "hockey stick" inflections that require skepticism
 - Present as "Management Case" with clear labeling
+
+**Scenario cases are assumptions.** Management Case figures come from the source. Base and Downside figures are assumptions made by you, the AI. Label each one "Assumption", give the reason, and tell the user to review and change them before the pack goes to a deal meeting.
 
 **Base Case (Risk-Adjusted):**
 Apply conservative adjustments to management projections based on company-specific risk factors:

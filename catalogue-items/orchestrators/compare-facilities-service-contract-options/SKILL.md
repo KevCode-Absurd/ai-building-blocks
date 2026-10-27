@@ -7,6 +7,25 @@ description: "Use when you need to compare contractor proposals for a facilities
 
 Compare facilities contractor proposals side by side. Share the quotes and contracts; get a cost and risk table, plain-words terms and questions.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A capable chat AI with file support:** Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+<!-- /needs -->
+
 ## What you need
 
 - **Each contractor's proposal** (required): priced for the same sites and the same contract period. If a proposal covers different sites, a different service level or a different period, flag it. Do not treat it as comparable.
@@ -37,6 +56,14 @@ Before step 2, write a short brief: the contractors, the sites, the period and t
 ## What you hand back
 
 A comparison table and a call for each contractor, a plain-words summary of each contract, the questions to ask and the facts that could not be verified. Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, all MISSING: lines and CHECKS MISSED. Name one next step.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Contract renewal and negotiation planner](https://useaiblocks.com/workflows/prepare-a-contract-renewal-negotiation). It takes the document.
+- The [Vendor transition continuity planner](https://useaiblocks.com/workflows/plan-a-vendor-change-without-losing-work).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

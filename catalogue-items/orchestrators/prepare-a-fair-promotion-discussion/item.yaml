@@ -23,7 +23,7 @@ steps:
   - uses: role-skills-framework-builder
     note: "Translate the supplied promotion criteria into observable work and evidence requirements. Hands step 2 the criteria as work you can see."
   - uses: career-ladder-plan
-    note: "Map the actual evidence to the target role and identify practical development work. Uses the person's dated evidence with step 1's criteria. Hands step 3 the evidence map and the gaps."
+    note: "Map the actual evidence to the target role and identify practical development work. Uses the person's dated evidence, which you bring, with step 1's criteria. Hands step 3 the evidence map and the gaps."
   - uses: feedback-conversation-planner
     note: "Prepare a discussion that states the evidence, unresolved questions and next review point. Uses your question about the person with step 2's evidence map and gaps."
 origin: rebuilt

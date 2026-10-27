@@ -35,6 +35,7 @@ how_to_use:
   - Ask your question in plain words, like top pages last week. Add your property ID.
   - Check the login result first. If it fails, fix what it lists and ask again.
   - Read the table and the query it shows. Check the date range is the one you wanted.
+  - If a number looks wrong or a drop needs explaining, ask for the next report, or hand the question to the traffic drop investigator.
 output_sample:
   input:
     - Your GA4 property ID
@@ -56,3 +57,4 @@ output_sample:
       contains: A short read-back of what the numbers show, in everyday language.
     - name: Fix notes
       contains: If sign-in or access fails, a list of what to change, since the AI cannot do setup for you.
+next: [traffic-drop-investigator, ga4-raw-data-analyst]

@@ -34,12 +34,12 @@ you_get:
   - Error replies for webhook callers, with the right status code and no private detail
   - The one setting you must switch on yourself in the n8n screen
 how_to_use:
-  - Open an AI that can use n8n tools, such as Claude Code with the n8n MCP set up. Without it, the AI can write the changes for you to make in n8n by hand.
+  - Open an AI that can use n8n tools, such as Claude Code with the n8n MCP set up. You need an n8n instance (n8n Cloud is paid, or you can host it yourself) with API access turned on. Without that, the AI can write the changes for you to make in n8n by hand.
   - Paste the skill and your workflow JSON. Say where alerts should go, and which steps send emails or take payments.
   - Read the list of risky steps it found. Check the retry plan, and confirm nothing that sends or charges will run twice.
   - Let it make the changes, or follow its edit list in n8n. Then ask it to read the workflow back and confirm each error path is both switched on and wired.
   - Open the workflow settings in n8n and choose the new error workflow. The AI cannot do this step for you.
-  - Run a test that fails on purpose, and check the alert and the reply you get.
+  - Run a test that fails on purpose, and check the alert and the reply you get. If no alert arrives, check that the new error workflow is chosen in the workflow settings and that each error path is wired to the handler.
 how_it_works:
   - title: Find the risky steps
     text: It lists each step that calls the network, writes data or sends something.

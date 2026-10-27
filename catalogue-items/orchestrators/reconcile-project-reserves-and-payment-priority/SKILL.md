@@ -16,7 +16,9 @@ Use what is attached or pasted first. If something is missing, say what you can 
 - **Reserve account** (yours): opening balance and approved draws.
 - **Payment order** (yours): the contract order from the loan agreement.
 
-**Makes it better (optional):** a sourced cash-after-senior-service limit for preliminary reserve funding.
+**Also needed for step 1:**
+- **Coverage months** (yours): how many months of debt service the reserve must cover, from the loan agreement.
+- **Cash after senior service** (yours): a sourced limit on the cash left after senior debt service that can go into the reserve. Step 1 uses it to size the preliminary deposit. Without it, step 1 still works out the requirement and the top-up need, and marks the deposit `MISSING:`.
 
 **Tools that do this best:**
 - **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
@@ -35,24 +37,26 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 1. **Debt reserve rollforward builder** (`debt-reserve-rollforward-builder`). Calculate reserve requirement, approved draws and top-up need from the same debt schedule. Use a sourced cash-after-senior-service limit for preliminary funding and pass requirement, need and opening reserve separately to the waterfall. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-debt-reserve-rollforward-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** requirement, approved draws and top-up need come from the same debt schedule, and the top-up appears once. The opening reserve stays separate. If not, stop and say which line is off.
 
-2. **Project payment waterfall builder** (`project-payment-waterfall-builder`). Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, correct the input map and record the reconciliation instead of forcing a plug. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-project-payment-waterfall-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the reserve deposit in the waterfall equals the rollforward deposit, or the difference is recorded with its reason. Every unpaid senior, reserve and junior amount is shown.
+2. **Project payment waterfall builder** (`project-payment-waterfall-builder`). Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, list the mismatched line, the two amounts and which source to re-pull (the debt schedule or the reserve statement). Re-pull that source, rerun the tie, and record the reconciliation and its reason instead of forcing a plug. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-project-payment-waterfall-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** the reserve deposit in the waterfall equals the rollforward deposit, or the difference is recorded with its reason. Every unpaid senior, reserve and junior amount is shown.
 
 ## Workbook checks
 
-For a requested workbook, use the available spreadsheet tool and the supplied template. Make the primary output easy to find. Keep focused schedules compact; separate operating schedules when their periods, drivers or sources differ. Inputs feed calculations and outputs, while audit checks remain terminal readers. Use one authoritative scenario selector when cases are requested, preserve historical actuals and expose the actual driver assumptions. Use native What-If Data Tables for requested valuation sensitivities when supported; otherwise explain the limitation before agreeing on a different method. Avoid unintended circularity and verify any deliberately iterative model in its target engine. In working areas, editable numeric inputs are blue, same-sheet formulas black and cross-sheet links green. Show monetary units, parentheses for negatives and meaningful precision. Recalculate, inspect formulas and errors, test a changed input, restore the intended case, render every sheet and reopen the exported file. Report any native-engine or rendering check that could not run. A saved template or mathematically correct illustration does not validate source truth, legal interpretation or an investment conclusion.
+Only when a workbook is requested: use the available spreadsheet tool and the supplied template, and keep inputs, calculations and checks apart. Editable inputs are blue, same-sheet formulas black and cross-sheet links green. Show currency and scale, with parentheses for negatives. Recalculate, change one input to test it, restore it, and reopen the saved file. Report any check that could not run. In plain chat, return the same tables as text and say no workbook was made.
 
 ## Acceptance
 
-- Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
-- Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
-- Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
-- Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.
+- The reserve top-up appears once. The opening reserve stays separate from the top-up.
+- The reserve rolls: opening reserve, plus the deposit, less approved draws and any release, equals the closing reserve.
+- Requirement, approved draws and top-up need all come from the same debt schedule.
+- The preliminary funding is reconciled to the reserve deposit in the waterfall. Any difference is recorded with its reason, never plugged.
+- Cash paid out across senior debt, the reserve and junior debt, plus cash left, equals the cash available. Every unpaid senior, reserve and junior amount stays visible.
+- Each input traces to its source, date, currency, scale and sign. Unresolved `MISSING:` lines stay.
+- A real zero, unavailable evidence and a tier that does not apply are three different things.
+- End with CHECKS MISSED: none, or the exact checks still outstanding.
 
 ## Hand back
 
-Lead with the reserve rollforward, the payment waterfall and the tie between them, then every unpaid amount. State plainly that nothing was paid or sent, and that a person who knows the loan terms must check the definitions before anyone acts. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the reserve rollforward, the payment waterfall and the tie between them, then every unpaid amount. State plainly that nothing was paid or sent, and that a person who knows the loan terms must check the definitions before anyone acts. Then return a HAND-BACK SUMMARY with the saved files, source coverage, the checks run, assumptions, unresolved MISSING: lines and CHECKS MISSED. Separate illustrative examples from supplied actuals.
 
 ## After this
 Suggest one next step in a short question, and say they can type their own:

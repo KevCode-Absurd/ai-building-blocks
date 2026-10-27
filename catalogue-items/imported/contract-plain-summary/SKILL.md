@@ -10,6 +10,12 @@ description: >
 
 # Stakeholder Summary
 
+**Running this in a plain chat (no plugin).** This file was written for a Claude plugin. Where it mentions slash commands, matter workspaces, CLAUDE.md or `~/.claude/plugins` paths, `renewal-tracker` or `escalation-flagger`, ignore those and work from what the user pastes: the review and the contract text. In a chat:
+- Start the summary with "Confidential. First-pass summary, not legal advice."
+- If no house style is given, write for a busy manager: two short paragraphs, no legal terms.
+- Never say a renewal is "tracked" or "added to the tracker". Write "Add the renewal date to your calendar. Not done yet."
+- If the review names people to escalate to, list each one under "Escalation status" as "not routed", because nothing here sends it. If the review names none, leave the block out.
+
 ## Matter context
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/commercial-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/commercial-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.

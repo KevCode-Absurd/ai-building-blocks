@@ -31,11 +31,13 @@ you_get:
   - Dock assignment rules
   - Handling time and cost targets
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. The plan works as prose. The skill text also holds Python examples that need pandas, numpy, pulp and matplotlib. You can skip the code and ask for the plan in words.
   - Describe your products, case or pallet size, and inbound and outbound volumes.
   - Add your dock doors, staging space, time window and any temperature or inspection needs.
   - Answer any questions your AI asks. Say so if you do not know a figure.
-  - Check the numbers in the plan against your own figures before you act on it.
+  - Check the numbers in the plan against your own figures before you act on it. Sample figures in the skill are placeholders.
+  - Take the dock assignment rules to your yard or warehouse system team to set up.
+next: [warehouse-layout-planner, warehouse-slot-assigner]
 output_sample:
   input:
     - What you move and the case or pallet size

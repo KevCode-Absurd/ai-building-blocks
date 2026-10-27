@@ -10,22 +10,20 @@ inputs:
   - type: document
     required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
     required: true
+outputs:
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses:
   - weighted-average-antidilution-checker
   - option-pool-top-up-checker
 steps:
   - uses: weighted-average-antidilution-checker
-    note: Use the actual charter A/B/C definitions to calculate the qualifying reset. Preserve new conversion ratio, rounding, exemptions and the document version used.
+    note: Use the actual charter A/B/C definitions to calculate the qualifying reset. In the usual weighted-average form, B is the cash received divided by the old price, and the new price is the old price times (A + B) / (A + C). Follow the charter where its wording differs. Preserve new conversion ratio, rounding, exemptions and the document version used.
   - uses: option-pool-top-up-checker
-    note: Require a freshly approved fully diluted denominator reflecting the actual protected conversion ratios where the term sheet requires them. Calculate only the separate pre-cash reserve top-up and flag missing interacting classes.
+    note: Takes the new conversion ratios from step 1. Require a freshly approved fully diluted denominator reflecting the actual protected conversion ratios where the term sheet requires them. Calculate only the separate pre-cash reserve top-up and flag missing interacting classes.
 execution: coordinator
 origin: own
 version: 1.0.0

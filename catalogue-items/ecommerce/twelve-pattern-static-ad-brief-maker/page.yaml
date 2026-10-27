@@ -5,9 +5,9 @@ job: make-image-ads
 headline: Twelve-pattern static ad brief maker
 subhead: Tell your AI about your product, your buyer and the proof you have. It picks one of twelve static ad patterns and writes the brief. You get the copy, the layout and the image notes.
 explain: |-
-  Choose from twelve static ad patterns by buyer stage and proof. Get the copy, layout and image brief.
+  Twelve static ad patterns cover most still ads, from a single pain moment to a last-chance review. Each one needs certain proof. A testimonial ad needs a real review. A comparison ad needs checked facts.
 
-  Share product, buyer stage, offer, proof and production limits. Get a selected ad pattern with copy, visual, layout and proof checks.
+  This skill matches your buyer stage and the proof you really have to one pattern. It writes the copy, the layout and the image notes. It uses only your facts, so a count, quote or deadline is never made up.
 when:
   - You need a still ad for Meta or another feed and want a proven pattern to start from.
   - A designer asks for a brief and you only have a product and some reviews.
@@ -63,19 +63,17 @@ output_sample:
 how_it_works:
   - title: Check the inputs
     text: Confirm product, buyer stage, offer, proof and production limits. Mark facts that are missing.
-  - title: Collect Context
-    text: Follow the collect context section in the full method and keep its required fields and decision rules.
-  - title: The 12 Archetypes
-    text: Follow the the 12 archetypes section in the full method and keep its required fields and decision rules.
-  - title: Archetype Selection Flow
-    text: Follow the archetype selection flow section in the full method and keep its required fields and decision rules.
-  - title: Produce the Archetype
-    text: Follow the produce the archetype section in the full method and keep its required fields and decision rules.
-  - title: "Static Ad Brief: [Archetype name]"
-    text: "Follow the static ad brief: [archetype name] section in the full method and keep its required fields and decision rules."
-  - title: Variation (optional)
-    text: Follow the variation (optional) section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a selected ad pattern with copy, visual, layout and proof checks. Check facts, math and the decisions before any action.
+  - title: Narrow by buyer stage
+    text: Cold, warm and ready-to-buy buyers each get four of the twelve patterns.
+  - title: Narrow by proof
+    text: A pattern is ruled out if you lack the proof it needs, such as a real review or a real deadline.
+  - title: Pick one pattern
+    text: Your strongest single claim picks the one pattern. Patterns are never mixed.
+  - title: Write the brief
+    text: Visual, headline, sub line, proof line, a call to action of three words at most, and a layout diagram.
+  - title: List the proof you need
+    text: The proof you must hold before the ad runs.
+  - title: Add the opposite version
+    text: Optional. A matching opposite ad to test in the same spot.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

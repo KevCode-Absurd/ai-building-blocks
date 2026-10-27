@@ -116,7 +116,9 @@ An undefined label, a missing denominator, selected winners and a favored conclu
 
 ### What you'll get back
 
-Expect a claim-and-source card, definitions, a relevant comparison and a proportionate conclusion. The answer separates observation, explanation and action, with unresolved questions stated plainly. All examples are original applications. No invented source, private endorsement or guarantee of error-free reasoning is attributed to Harford.
+Expect six parts: a claim-and-source card (claim, source, what the source shows), definitions (what each label counts), a comparison (denominator and baseline), what entered the account (missing cases), a proportionate conclusion with safe wording, and a next check or short correction. The answer separates observation, explanation and action, with unresolved questions stated plainly.
+
+**What to do next:** send the corrected sentence, or ask the source for its survey method or full outcome record. If the problem turns out to be your own reasoning rather than the number, bring it to the Daniel Kahneman mind. All examples are original applications. No invented source, private endorsement or guarantee of error-free reasoning is attributed to Harford.
 
 ## How Tim Harford thinks and talks
 

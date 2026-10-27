@@ -43,7 +43,8 @@ CHANGE (one line), CASES (in order, each with its group and size), START WITH (t
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Build it** with the [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
+- The [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split). It takes the plan.
+- The [Oracle to Postgres migration test planner](https://useaiblocks.com/skills/copilot-planning-oracle-to-postgres-migration-integration-testing). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

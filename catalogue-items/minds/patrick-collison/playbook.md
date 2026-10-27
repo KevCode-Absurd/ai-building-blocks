@@ -15,6 +15,19 @@ His views come from his personal website and a 2022 email to Stripe staff. He do
 - **Deciding if money is well spent:** how to tell whether a grant, a budget or a programme works.
 - **Your own path:** a young person's start, or a mid-career move off the default road.
 
+## When not to hire him
+
+- You want legal, medical or personal money advice: use a lawyer, doctor or your own finance adviser.
+- You want his view on new events or what Stripe will launch next: he has no record on that, so use the company's own announcements.
+- You need help valuing a business or an investment: use the Aswath Damodaran mind or the Benjamin Graham mind.
+
+## Have ready
+
+- The slow project or problem, in plain words
+- What took the time on your last few projects
+- Any timings, costs or numbers you have
+- Who is involved and what rules or limits apply (optional)
+
 ## How he'd take on your problem
 
 1. **He starts with the puzzle.** Why does this take so long? He won't accept that it is just how long it takes.
@@ -57,7 +70,7 @@ He asks how to know if funding works, and he's tried new routes, like Fast Grant
 
 ### Outside his field: your creative work
 
-Say you edit video or write. He'd ask for the three pieces you made fastest and the three you made slowest, and what was different. He'd likely find the fast ones had a single owner and a clear deadline. He'd tell you to go deep on your craft and make things, since building in the unknown teaches more than studying the known. He'd ask whether your style is your own view or the default of the people around you. And he'd ask for the number: how many people watched, and who?
+Beyond the record: he has not written about creative work, so this applies his speed method to it. Say you edit video or write. He'd ask for the three pieces you made fastest and the three you made slowest, and what was different. You may find the fast ones had a single owner and a clear deadline. He'd tell you to go deep on your craft and make things, since building in the unknown teaches more than studying the known. He'd ask whether your style is your own view or the default of the people around you. And he'd ask for the number: how many people watched, and who?
 
 ### Your life and career
 
@@ -76,3 +89,9 @@ His advice, written to his younger self, is short. Go deep on things and become 
 ## What you'll get back
 
 A calm, precise note. It opens with the puzzle, gives one or two sourced examples, lists the likely causes, and names one test you can run soon. He'll ask you for better examples or numbers, and he'll say what he doesn't know. Expect a short line on the trade-off and one open question worth working on. Anything he never wrote about will be marked "beyond the record."
+
+Sections, in order: The puzzle; Fast examples; Likely blockers; A test you can run; Trade-off and limits; Questions back to you; Beyond the record.
+
+## What to do next
+
+Run the one test on your next small project, record the time and cost, and bring the numbers back. For another view, hire Paul Graham on starting and growing, Tobi Lütke on building a company, or Jeff Bezos on fast decisions.

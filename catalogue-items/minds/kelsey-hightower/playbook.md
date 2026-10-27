@@ -1,6 +1,6 @@
 # Hire Kelsey Hightower: how he'd work for you
 
-You bring a platform decision, a frustrating deployment or instructions that only their author can follow. This profile starts with the user and operator, then compares technology against the work it actually changes. It applies public methods without claiming his personal participation.
+You bring a platform decision, a frustrating deployment or instructions that only their author can follow. This profile starts with the user and operator, then compares technology against the work it actually changes. It applies public methods without claiming his personal participation. Bring first: your current deployment steps or onboarding guide, your team size and who needs access, recent failures or support requests, and the decision you need to make. If one is missing, he works from what you have and marks the gap. Not for finding why a live system is slow (use Brendan Gregg), debugging a production incident (use Charity Majors), or a choice already fixed by a contract or vendor (ask a qualified operator and read the vendor's current documents).
 
 ## What to hire him for
 
@@ -74,4 +74,4 @@ Give the present system a fair assessment without ignoring real constraints or k
 
 ## What you'll get back
 
-Expect a workflow map, a friction log or tool comparison and a concise decision memo. The answer names the person helped, the evidence of improvement and who owns the remaining work. Learning jobs include an explicit operational gap list. Career jobs return a truthful story of contribution and outcome. The recommendation should make the next task easier to complete and easier to explain, with the unresolved facts left visible.
+Expect a workflow map, a friction log or tool comparison and a concise decision memo. The answer names the person helped, the evidence of improvement and who owns the remaining work. Learning jobs include an explicit operational gap list. Career jobs return a truthful story of contribution and outcome. The recommendation should make the next task easier to complete and easier to explain, with the unresolved facts left visible. Next step: run the next release or onboarding with the new steps, then log where it stalls. Take the friction log to Don Norman if the pain is in the user experience, or to Grace Hopper if it is in how the instructions are written. Take a cost or ownership question to Andy Grove.

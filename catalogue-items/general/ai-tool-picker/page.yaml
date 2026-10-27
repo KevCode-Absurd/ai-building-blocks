@@ -1,0 +1,134 @@
+new_slug: ai-tool-picker
+name: AI tool picker
+summary: Describe the job you want done. Get the kind of AI tool that fits, tools to try first and a backup.
+job: set-up-ai
+thinking: medium
+thinking_why: It has to match a job to a kind of tool and be honest about what changes quickly.
+headline: AI tool picker
+subhead: Tell it the job, what you will give the AI, and any limits on cost or privacy. It tells you which kind of AI tool fits, such as a chat assistant, a search tool, an image maker or a transcriber. You get one or two tools to try first, what to check on their site, and a backup.
+explain: |
+  There are too many AI tools, and the names change. Most people try the one they heard of, find it does not suit the job, and decide AI is not for them. The better question is what kind of tool the job needs.
+
+  This skill starts from the job. You say what you want done, what you will give the AI, who will see the result and any limit on cost or privacy. It picks the kind of tool that fits, such as a chat assistant, a search tool that shows sources, an image maker, a video maker, a transcriber or an automation tool. It then names one or two tools to try first and a backup. Features and prices change often, so it tells you what to check on each tool's own site and never states a price.
+when:
+  - You ask "which AI tool should I use?" for a job and want the best AI tool for that one task.
+  - You tried one tool, it didn't fit, and you want to know what to try instead.
+  - Your team asks which AI tools to use and you want a short, reasoned answer.
+not_for:
+  - "You want to know if AI can solve a problem at all: use the AI suitability reviewer."
+  - "You want a rule for how your team may use AI: use the HR AI use policy writer."
+  - "You want a tool for a daily hassle you can't name yet: use the Daily AI tool finder."
+you_give:
+  - The job you want done, in a sentence or two
+  - What you will give the AI, such as text, a file, images, audio or a link
+  - Who will see the result, and whether the content is private
+  - Any limit on cost or the apps you already use (optional)
+you_get:
+  - The kind of tool that fits the job, and why
+  - One or two tools to try first, and a backup
+  - What to check on each tool's own site before you commit
+  - A first small task to try, so you learn quickly if it fits
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the job and what you will give the AI. Say if the content is private.
+  - Read the kind of tool it picks and try the first tool on a small task.
+  - Check price, limits and privacy terms on the tool's own site, since they change.
+  - If the first tool doesn't fit, try the backup, and tell the skill what went wrong.
+output_sample:
+  input:
+    - The job you want done
+    - What you will give the AI, and who will see the result
+    - Any limit on cost, privacy or the apps you use (optional)
+  output:
+    - name: The job
+      contains: What goes in and what you want out, in one line.
+    - name: Kind of tool
+      contains: The type of AI tool that fits, and why.
+    - name: Try first
+      contains: One or two tools, each with a reason and what to check on its own site.
+    - name: Backup
+      contains: A second option and when to switch to it.
+    - name: First test
+      contains: One small task that shows fast if the tool fits.
+    - name: Not a fit because
+      contains: Tools or kinds ruled out for your job, with the reason.
+    - name: Missing
+      contains: Anything you did not tell it that changes the pick.
+    - name: Checks missed
+      contains: One line for each of its own checks that still fails, or none.
+how_it_works:
+  - title: Reads the job
+    text: Boils the job down to what goes in and what you want out.
+  - title: Picks the kind of tool
+    text: "Matches the job to a kind: chat, search with sources, image, video, audio, data or automation."
+  - title: Names tools to try
+    text: Names one or two well-known tools of that kind and a backup, using plain names without version numbers.
+  - title: Checks the limits
+    text: Weighs cost, privacy and the apps you already use against each pick.
+  - title: Says what to check
+    text: Lists what to confirm on each tool's own site, such as price, limits and how it treats your data.
+  - title: Sets a first task
+    text: Gives one small test that shows fast if the tool fits.
+output_shape: |
+  THE JOB
+  <what goes in> -> <what you want out>
+
+  KIND OF TOOL
+  <kind, and why it fits>
+
+  TRY FIRST
+  1. <tool> | Why: <reason> | Check on its site: <price, limits, data use>
+  2. <tool> | Why: <reason>
+
+  BACKUP
+  <tool and when to switch>
+
+  FIRST TEST
+  <one small task, and what a good result looks like>
+
+  NOT A FIT BECAUSE
+  <tools or kinds you ruled out, and why>
+
+  MISSING
+  <what you did not tell it>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+tweaks:
+  - what: Privacy
+    how: Say if the content is private, such as customer data. It changes which tools are safe to try.
+  - what: What you give it
+    how: Name the file type or format. A tool for a spreadsheet differs from one for audio.
+  - what: Your apps
+    how: Say what you already use. A tool built into your app may beat a separate one.
+  - what: Cost
+    how: Say if you need free or low cost. It changes the order of the picks.
+judge:
+  - The job is stated as an input and an output.
+  - The kind of tool fits that job, not just the best-known tool.
+  - No price, plan limit or feature is stated as fact.
+  - Each pick says what to check on the tool's own site.
+  - The first test is small enough to run in one sitting.
+test:
+  - Run the first test on the tool it picks. Note whether the result is good enough to use.
+  - Name a private job and run it again. The pick should change or carry a privacy note.
+  - Ask for the backup and try it on the same test. Compare the two.
+improve:
+  - Add the tools you already pay for to the skill file, so the picks start from them.
+  - Save the jobs you do often and the tool that worked for each, as a short list.
+  - Re-run the same job every few months. Tools change fast, and the best pick may too.
+works_best_with:
+  tools:
+    - name: The AI tools directory on this site
+      why: It lists tools by job, with how to start. Use it to confirm a pick.
+    - name: Each tool's own site
+      why: It holds the current price, limits and data terms.
+  inputs:
+    - A sample of the file or text you will give the AI
+    - Your company's rules on AI and private data
+    - A list of the apps you already use
+terms:
+  - term: Kind of tool
+    meaning: A group of AI tools that do the same sort of job, such as chat assistants or image makers.
+  - term: Search tool with sources
+    meaning: An AI tool that looks things up and shows where the answer came from.

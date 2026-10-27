@@ -147,3 +147,4 @@ terms:
     meaning: How often the subscription ships.
   - term: Prepaid plan
     meaning: A plan where the customer pays for several months in one payment.
+next: [subscription-payback-checker, subscription-cancel-flow-builder]

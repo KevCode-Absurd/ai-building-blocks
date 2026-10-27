@@ -1,11 +1,11 @@
 slug: prototype-to-production-guide
 name: Prototype to production guide
-summary: Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users.
+summary: Give it a working prototype. Get tests, a tech debt list and a plan for real users.
 category: general
 boards: []
 type: skill
 role: orchestrate
-job: ops
+job: test-and-fix-code
 level: advanced
 inputs:
   - type: codebase

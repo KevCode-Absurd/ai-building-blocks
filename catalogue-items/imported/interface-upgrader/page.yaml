@@ -34,7 +34,8 @@ how_to_use:
   - Add the skill instructions from this page to the chat.
   - Tell your AI which pages to improve, and what must not change.
   - Let it scan and list the generic patterns it found. Read the list before it changes anything.
-  - Check the result in your real app on a phone, a laptop and more than one browser.
+  - Check the result in your real app on a phone, a laptop and more than one browser. Make sure no placeholder name, number or date is left on a live page.
+  - Next, have the owner check every changed screen before launch. Pair the result with a copy review.
 output_sample:
   input:
     - Your site or app code

@@ -38,6 +38,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Attach your product page as a PDF without images, and say who buys and what it replaces.
   - Let the AI write its own research prompt, then run it with deep research on. Answer its questions and wait 8 to 20 minutes.
+  - Do not scrape sites with scripts or tools. Your AI's own deep research mode is fine, and so is copying comments by hand.
   - Check every study, name and number it found before you use any of it.
   - Save the four documents as PDFs and upload them every time you write a page, ad or script.
 output_sample:

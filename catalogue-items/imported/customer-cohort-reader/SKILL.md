@@ -38,10 +38,10 @@ Groups customers by the month of their first purchase and tracks how each cohort
    **Expected output:** Customers acquired in the cohort window
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - cohort_months + follow_months months>'"`, `first: 250`, select `customer { id }`, `createdAt`, `totalPriceSet`, pagination cursor
+   **Inputs:** `query: "created_at:>='<START>'"` where START is the first day of the month that is cohort_months months before today (the same start date as the customers query, so every order after a cohort's first order is included), `first: 250`, select `customer { id }`, `createdAt`, `totalPriceSet`, pagination cursor
    **Expected output:** All orders to build per-customer purchase timeline
 
-3. Group customers by first-order month (cohort); for each cohort, calculate repeat purchase rate and total revenue in months 1, 2, 3+
+3. Assign each customer to the cohort of the calendar month of their first order (customers with no customer record, such as guest checkouts, are skipped). A repeat buyer is a customer with at least one more order after the first. For each cohort, count repeat buyers and add up order revenue at month offsets 1, 2 and 3+ after the first-order month. Use one calendar-month boundary for every cohort. Do not count months that have not finished yet.
 
 ## GraphQL Operations
 
@@ -157,7 +157,7 @@ CSV file `cohort_analysis_<YYYY-MM-DD>.csv` with columns:
 | Guest checkout orders | No customer record | Exclude from cohort tracking |
 
 ## Best Practices
-- A healthy ecommerce business typically sees 20–40% of first-month customers repeat within 90 days — use this as a benchmark.
+- Compare cohorts with each other first. Any outside repeat-rate figure (some people quote 20–40% within 90 days) is an unsourced rule of thumb, so do not judge your store against it.
 - Declining repeat rates in recent cohorts may signal product quality issues, CX friction, or increased competition.
 - Use `follow_months: 6` for subscription-oriented businesses where the repeat window is longer.
 - Pair with `customer-spend-tier-tagger` — customers from high-repeat cohorts are your best candidates for the Gold/Platinum tier.

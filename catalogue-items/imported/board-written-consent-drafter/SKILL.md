@@ -72,6 +72,8 @@ Do not proceed to Step 1 or any drafting under this gate without an explicit res
 
 ## Load context
 
+In a plain chat with no plugin config file or consents repository: ask the user to type or paste the board members, the state of incorporation and one or two past consents (or sample wording). Use those in place of the config file. If the user pastes no past consent, use the No-precedent stop below.
+
 - `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → `## Board & Secretary`:
   - Consents repository location
   - House resolution language
@@ -234,6 +236,8 @@ Date: _______________
 ---
 
 ## Step 4: Confirm the consent rules for the state of incorporation
+
+In a plain chat, with no web search and no config file: ask the user for the state of incorporation and treat the list below as questions for counsel to confirm. Do not state the state's rules as fact. Put each one in the State-law notice as "to confirm with counsel".
 
 Check the state of incorporation in `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md`. Research the written-consent requirements for that state before drafting:
 

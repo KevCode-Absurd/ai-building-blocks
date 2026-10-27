@@ -28,8 +28,8 @@ you_get:
   - A one-page agreement for the first job you hand off
   - A one-on-one plan with agenda rules, timing and follow-up
 how_to_use:
-  - "Open Claude Code, or a Claude Project where you can add files. Add the three skill files this workflow uses: founder-leadership-coach, results-agreement-writer and one-on-one-meeting-planner."
-  - "Paste the workflow text and say: run the steps in order."
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe a real week. Add the hours if you can, and name who could take work on.
   - Read the delegation plan. Say which job to hand off first and who gets it.
   - Read the agreement with that person, then use the one-on-one plan for your first meeting.

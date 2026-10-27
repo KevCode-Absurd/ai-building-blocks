@@ -19,6 +19,7 @@ not_for:
   - "You work in Simulink models: use Simulink Coder or Embedded Coder in Simulink, since this skill covers MATLAB code only."
   - "You need a language other than C, C++ or CUDA: ask a developer to port it by hand."
   - "You have a hand-written MEX C file: edit it yourself, because this skill only works with code that MATLAB Coder makes."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The MATLAB function or class
   - Input types and sizes
@@ -31,11 +32,12 @@ you_get:
   - Notes on limits
 how_to_use:
   - Check that you have MATLAB with MATLAB Coder. For CUDA you also need GPU Coder.
-  - Open your AI tool and paste the contents of the skill's SKILL.md file. Use an AI that can run MATLAB, or be ready to paste results back.
+  - Open your AI tool and give it the whole skill folder, not only SKILL.md. SKILL.md sends the AI to the files in references/ (generate-code.md, verify-code.md and others), which hold the details. In a plain chat, paste the ones it asks for. Use an AI that can run MATLAB, or be ready to paste results back.
   - Paste your MATLAB function. Say the type and size of each input, and whether you want C, C++ or CUDA.
   - Let your AI run the screener first. Read what it cannot convert before you go on.
   - Check the match result against your MATLAB function. Do this before you use the generated code.
   - Ask for speed tuning last. Review the settings it suggests before you apply them.
+  - After any edit to the MATLAB function or the settings, run the match check again before you ship the C code.
 output_sample:
   input:
     - Your MATLAB function or class
@@ -46,6 +48,7 @@ output_sample:
     - MATLAB with a MATLAB Coder licence
     - An AI that can run MATLAB commands, or that you can paste results back to
     - GPU Coder or Embedded Coder only if you want CUDA or embedded targets
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Screener result
       contains: A list of calls and messages showing what in your code MATLAB Coder cannot convert.

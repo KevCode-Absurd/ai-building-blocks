@@ -17,8 +17,8 @@ when:
   - You need deadlines pulled out of a long thread.
 not_for:
   - "You need one short reply that takes a minute: write it yourself, or paste only that email into your AI."
-  - "You want to pay vendor bills: this tool passes bills to ap-processor, so use that to extract and code them."
-  - "You want to follow up on a new sales lead: use speed-to-lead, which qualifies it and drafts the reply."
+  - "You want to pay vendor bills: this tool only lists the bills it finds. Use the Invoice checker to check and code them."
+  - "You want to follow up on a new sales lead: use the Lead prioritizer to rank it, then write the reply yourself."
 you_give:
   - Access to your inbox, or pasted emails
   - A sample of your writing voice (optional)
@@ -30,9 +30,9 @@ you_get:
   - Extracted asks, dates and amounts
   - Counts of mail handled and filed
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If your AI can connect to Gmail or Microsoft 365, connect your mailbox first.
-  - If it can't read your mail, paste or forward a batch of emails instead. This works just as well.
-  - Add a few emails you wrote, and say what you promised in the last two weeks. This helps the replies sound like you.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If your AI can connect to Gmail or Microsoft 365, connect your mailbox first. Slack and Zapier connections are optional extras. Each needs your own account and some plans cost money.
+  - If it can't read your mail, paste or forward a batch of emails instead. This needs no connection and no paid plan.
+  - Add a few emails you wrote, and say what you promised in the last two weeks. This helps the replies sound like you. Skip it and the drafts will be plain and neutral, not in your voice.
   - Read the Needs you list first. Check each ask, date and amount against the thread.
   - Edit the drafted replies, then say yes to send them. Nothing is sent until you approve.
   - Your AI archives finished mail only if it is connected to your mailbox. It never deletes.

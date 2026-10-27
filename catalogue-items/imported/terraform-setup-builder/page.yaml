@@ -34,9 +34,9 @@ how_to_use:
   - Open your AI tool and paste in this skill. Use Claude, ChatGPT or Gemini.
   - Paste your .tf files, or describe your cloud setup and name your provider.
   - "Pick a job: ask for a review, a module design or a security audit."
-  - Read the results and the new code. Run a plan and check it before anything is applied.
+  - Read the results and the new code. Run terraform plan in a copy of the project first and check it. Never apply code you have not read.
   - The two analysis scripts need python3 and an AI that can run code. Skip them in a plain chat.
-  - Set your CI to need a manual approval before apply.
+  - Set your CI to need a manual approval before apply. Then work through the security findings list, highest risk first.
 output_sample:
   input:
     - Your .tf files, or a plain description of your cloud setup

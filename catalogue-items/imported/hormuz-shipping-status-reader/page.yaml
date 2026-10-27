@@ -29,12 +29,13 @@ you_get:
   - Oil price and insurance impact
   - A short risk assessment
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web or run commands.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web or run commands, because the skill fetches the dashboard at hormuzstraitmonitor.com. No paid service or key is needed.
   - Paste the skill text into the chat.
   - "Ask your question, such as: is Hormuz open today? Name a topic like ships or insurance if you only want that part."
   - Check the time stamp in the answer to see how fresh the data is.
   - If the dashboard is down, the AI will say so. Visit hormuzstraitmonitor.com yourself.
   - Treat the result as a read of a third-party dashboard, not financial advice.
+  - Then check the status of your own cargo with your shipper or freight agent. If the strait is restricted, run the Shipping rate gap finder or the Supply chain backup plan builder.
 output_sample:
   input:
     - "A question about the strait, such as: is Hormuz open today?"

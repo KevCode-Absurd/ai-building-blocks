@@ -35,7 +35,8 @@ how_to_use:
   - Pick your team when your AI asks. It only asks if you have more than one.
   - Say yes when it asks to push. It will name the branch and say preview or production first.
   - Say production only if you want the live site. Otherwise you get a preview.
-  - Open the link your AI gives you and check the site yourself. If you have no Vercel account, the no-account route makes a public preview link. Your project files are uploaded to Vercel, and the link stays public until you claim it.
+  - Your AI lists the files it will commit before it pushes. Check that list has no .env files or keys.
+  - Open the link your AI gives you and check the site yourself. Then ask your AI to set up deploys on every push, if you have not already. If you have no Vercel account, the no-account route makes a public preview link. Your project files are uploaded to Vercel, and the link stays public until you claim it.
 output_sample:
   input:
     - Your project folder
@@ -56,3 +57,4 @@ output_sample:
       contains: Whether the build is still running, finished or failed, and whether it is a preview or production.
     - name: Claim link
       contains: "Only on the no-account route: a link to move the deployment to your own Vercel account."
+next: [vercel-publisher]

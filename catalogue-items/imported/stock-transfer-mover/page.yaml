@@ -26,15 +26,17 @@ you_give:
 you_get:
   - A preview of the stock changes
   - Source and destination levels after the move
-  - A warning if a source would go negative
+  - A warning, and a skipped line, if a source would go negative
   - A record of what was moved
 how_to_use:
   - Use an AI that can run code and connect to your Shopify store. A plain chat window cannot change stock.
   - Give your AI the skill and your store link. Sign in to Shopify when it asks.
   - List the source location, the destination location, and each product code with its quantity.
-  - Run the preview first. Check each line and any low stock warning.
+  - Run the preview first. Check each line and any low stock warning. On a real run, any product where the source has less stock than you asked to move is skipped and listed, so the source never goes below zero.
   - If the numbers look right, ask your AI to run it for real. This changes live stock.
-  - Keep the CSV file it makes. It is your record of the move.
+  - Keep the CSV file it makes. It is your record of the move. Shopify logs each change as a direct stock adjustment, not a transfer order, so keep the CSV with your own records.
+  - Not sure how much to move? Check slow stock first with the stock age report builder or the dead stock finder.
+next: [stock-count-updater, inventory-value-report-builder]
 output_sample:
   input:
     - Your Shopify store link and access

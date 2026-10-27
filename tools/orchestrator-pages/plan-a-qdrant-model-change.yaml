@@ -11,8 +11,9 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You are switching the embedding model behind your Qdrant search and need a plan that can be rolled back.
+  - Some searches already return weak results and you want to know whether the new model helps.
+  - You want alerts and rollback gates ready before you send live traffic to the new model.
 not_for:
   - "Your Qdrant search is slow, not wrong or changing models: use Diagnose slow Qdrant search or the Qdrant search speed tuner."
   - "You only need to pick where to host Qdrant: use the Qdrant hosting option adviser."
@@ -51,7 +52,7 @@ how_it_works:
   - title: Qdrant embedding migration planner
     text: Share your current and new models. Get a search migration plan with validation and rollback steps. It hands the plan and the new model to the next two steps.
   - title: Qdrant search relevance investigator
-    text: Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes. It starts from your own failing searches and checks them against the new model in the plan.
+    text: Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes. It starts from your own failing searches and model details. From step 1 it takes only the new model's name and vector size.
   - title: Qdrant health monitoring planner
     text: Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search. It starts from your own setup and builds the alerts and rollback gates around the plan and the tests.
 output_shape: |-

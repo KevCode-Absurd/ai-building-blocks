@@ -174,7 +174,7 @@ Now write the configuration file. Follow these steps exactly:
    - **Audiences** -- one subsection per audience with their profile
    - **Information Sources** -- tools available, specific repos/channels/lists to monitor, known gaps
    - **Preferences** -- always include, never include, hard constraints
-   - **Your Examples** -- paste their original examples verbatim, wrapped in code fences
+   - **Your Examples** -- paste their original examples verbatim, wrapped in code fences. First, check each example for names, client details and private figures, and ask the user to confirm or remove them. The config file keeps whatever you save, in plain text
 
 4. Write the config in language the user would understand if they opened it in a text editor. No internal shorthand, no codes, no technical metadata. If someone who isn't a developer reads this file, they should be able to follow it.
 

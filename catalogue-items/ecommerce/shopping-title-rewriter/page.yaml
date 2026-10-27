@@ -109,3 +109,4 @@ terms:
     meaning: "The product list you send to Google Merchant Center."
   - term: "Title order"
     meaning: "The fixed order of parts in every title, such as search term, type, colour, feature, brand."
+next: [shopping-feed-title-writer, merchant-center-feed-health-checker]

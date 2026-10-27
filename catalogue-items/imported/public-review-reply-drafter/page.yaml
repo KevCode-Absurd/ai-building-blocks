@@ -19,6 +19,7 @@ not_for:
   - "You want to answer a private customer email or chat: use your support inbox, since this skill writes public replies only."
   - "You need to reply to reviews of a service or a non-store business: write those by hand, as this skill is built for store product reviews."
   - "A review mentions injury, an allergic reaction or a legal threat: talk to a person first. The skill flags these but does not settle them."
+  - "You want a list of gaps to fill along with your replies: use the Review reply batch writer."
 you_give:
   - Pasted reviews
   - Support email (optional)

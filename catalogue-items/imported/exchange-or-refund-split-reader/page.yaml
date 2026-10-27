@@ -5,18 +5,19 @@ name: Exchange or refund split reader
 summary: Find what share of your Shopify returns end as exchanges, store credit or refunds, and how many you keep as sales, over any period you pick.
 job: run-your-store
 headline: Exchange or refund split reader
-subhead: "A percentage split of how your returns end: exchange, store credit or refund. It also shows how much revenue each route keeps, so you see what returns really cost you."
+subhead: "Get a percentage split of how your returns end: exchange, store credit or refund. It also gives a recovery rate, the share of returns that stay as sales."
 explain: |
-  A percentage split of how your returns end: exchange, store credit or refund. It also shows how much revenue each route keeps, so you see what returns really cost you.
+  Your returns end in three ways. Exchanges keep the sale. Store credit keeps it for later. Refunds lose it. This skill counts each.
 
-  The skill reads your Shopify returns for a chosen period, such as 30 days, and puts each return into one bucket. Exchanges keep the revenue. Store credit defers it. Refunds lose it. It then reports a revenue recovery rate, and can compare against an earlier period to show if you are improving. It is read-only and changes nothing in your store. You need a Shopify store with the command line tool signed in and permission to read orders and returns.
+  The skill reads your Shopify returns for a chosen period, such as 30 days, and puts each return into one bucket. It then reports a recovery rate: exchanges plus store credit as a share of all returns. It counts returns, not money, so one big refund weighs the same as one small one. It can compare against an earlier period to show if you are improving. It is read-only and changes nothing in your store. You need a Shopify store with the command line tool signed in and permission to read orders and returns.
 when:
   - You want to know how many returns you convert into exchanges.
   - You changed your returns policy and want to see if it worked.
   - You are deciding whether to push store credit over refunds.
   - You need numbers for a monthly returns report.
 not_for:
-  - "You want the reasons customers send items back: use a return reason analysis step, or read the return notes in Shopify yourself."
+  - "You want the reasons customers send items back: use the return reason finder."
+  - "You want the money lost to returns: use the return cost calculator."
   - "You have only a handful of returns a month: count them by hand in Shopify, as a percentage split will swing too much."
   - "You can't give your AI read access to your Shopify store: it cannot pull your returns, so a person on your team should export them first."
 you_give:
@@ -26,7 +27,7 @@ you_give:
   - Earlier period to compare (optional)
 you_get:
   - Share of exchanges, credit and refunds
-  - Revenue recovery rate
+  - Recovery rate (exchanges plus store credit, counted by return)
   - Comparison with an earlier period
   - Readable or data-file output
 how_to_use:
@@ -34,8 +35,8 @@ how_to_use:
   - Sign in to your store with the Shopify command line tool and allow read access to orders and returns.
   - Give your AI the skill and your store address, for example mystore.myshopify.com.
   - Say how many days to look back. Add an earlier period if you want a comparison.
-  - Check the split and the CSV file. Returns still in progress are left out of the split.
-  - The skill only reads data. It changes nothing in your store.
+  - Check the split and the CSV file. Returns still in progress are left out of the split. If the skill cannot tell store credit from a refund, it counts the return as a refund and tells you.
+  - The skill only reads data. It changes nothing in your store. Then run the return reason finder to see why items come back.
 output_sample:
   input:
     - Your Shopify store address
@@ -53,8 +54,9 @@ output_sample:
     - name: Resolution breakdown
       contains: Count and percentage of returns that ended as exchange, store credit or refund.
     - name: Revenue recovery rate
-      contains: Exchanges plus store credit as a share of all returns in the period.
+      contains: Exchanges plus store credit as a share of all returns in the period, counted by return, not by money.
     - name: Period comparison
       contains: The same split for an earlier period, when you ask for one.
     - name: exchange_refund_ratio CSV file
       contains: One row per return with order name, how it ended, exchange item, refund amount, currency and date.
+next: [return-reason-finder, return-cost-calculator, refund-rate-analyzer]

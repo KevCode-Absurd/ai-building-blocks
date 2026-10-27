@@ -106,7 +106,7 @@ tweaks:
   - what: The rival pages
     how: Name the top two or three. The depth check needs them.
   - what: How personal the notes are
-    how: Add a fact about each person's site. Notes with a real detail get more replies than templates.
+    how: Add a fact about each person's site. A note with a real detail reads less like a template. Test it by comparing reply rates with and without the detail.
   - what: The send size
     how: A few hundred is the start. Raise it only after the first replies.
   - what: The list types

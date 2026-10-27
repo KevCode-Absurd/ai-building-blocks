@@ -15,15 +15,20 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share your PowerPoint template and approved content. Get an editable deck that follows its layouts and placeholder rules.
-  - Actual PPTX template, approved text and data, slide outline, required layouts, dimensions and licensed assets.
+  - You have a company template and approved content, and need a finished deck that keeps the template's look.
+  - A teammate's content must go into the brand layouts without breaking them.
+  - You want to fill a template with data and keep charts and tables editable.
   - You need a checked copy while keeping your original files intact.
 not_for:
   - "You only need to edit one chart: change it by hand in PowerPoint, or fix the chart data in your own file."
   - "Your file is not a PPTX, such as a PDF, Google Slides link or Keynote file: save or export it as PPTX first."
   - "You have no template yet: build the slides by hand in PowerPoint, or ask your AI for an outline only."
 you_give:
-  - Actual PPTX template, approved text and data, slide outline, required layouts, dimensions and licensed assets.
+  - The PPTX template.
+  - The approved text and data.
+  - The slide outline and any slide limit.
+  - The layouts you must use and the slide size.
+  - Licensed images or logos you may use.
   - The app and file tools your AI can use for the requested work
 you_get:
   - populated-template.pptx, a source map and rendered slide previews.
@@ -33,6 +38,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+  - Have the content owner sign off the wording. Then add notes with the PowerPoint speaker notes builder or check access with the PowerPoint accessibility reviewer.
 output_sample:
   input:
     - Your PowerPoint template (PPTX file)
@@ -83,7 +89,7 @@ tweaks:
   - what: The result you need
     how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
+    how: Say which PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - A real template is inspected before reuse.
   - No unresolved placeholders remain.
@@ -104,3 +110,5 @@ tests:
     expected: Map the outline to those layouts and retain dimensions.
   - input: Approved text overflows a placeholder
     expected: Revise within scope or ask about the slide limit; do not silently cut text.
+before: []
+next: [powerpoint-speaker-note-builder, powerpoint-accessibility-reviewer]

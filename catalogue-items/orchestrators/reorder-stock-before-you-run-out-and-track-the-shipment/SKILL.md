@@ -9,6 +9,20 @@ Connect your store. Get days of stock left, restock rules, draft purchase orders
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Tool connection** (yours): an AI connected to an outside tool or service, such as an MCP server.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for tool connection, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## What you need
 - **An AI connected to an outside tool or service, such as an MCP server** (required)
 - **The problem, decision or piece of work you want help with, and what a good outcome looks like** (required)
@@ -37,11 +51,9 @@ Pause here: Check the drafts with your supplier, place the orders and note the p
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Stock and reorder planner](https://useaiblocks.com/skills/stock-and-reorder-planner). It takes the spreadsheet.
 - The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Amazon reimbursement claim finder](https://useaiblocks.com/skills/amazon-reimbursement-claim-finder). It takes the spreadsheet and document.
+- The [Late order and shipment tracker](https://useaiblocks.com/skills/daily-order-and-shipping-watcher). It takes the spreadsheet.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

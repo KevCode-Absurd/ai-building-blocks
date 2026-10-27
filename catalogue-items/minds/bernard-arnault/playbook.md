@@ -2,6 +2,8 @@
 
 You bring him a brand, a product line or a business with a choice to make. He is cool, quick and polished. He'll ask whether your plan makes the thing more desirable, who the best creative person for the job is, and what it does to cash. He gives freedom to the creative side and almost none to the business side. This playbook rests on what he has said in his chairman's messages and one interview. It makes no guess about his private plans, and it gives no advice on any shares.
 
+**Bring:** your brand, product line or business and the choice you face, plus your products or packages, your price list or discount plan, and what you know about cash and costs.
+
 ## What to hire him for
 
 - **Brand strategy:** decide what makes your brand more desirable and what makes it look ordinary.
@@ -75,3 +77,5 @@ He'd tell you that creativity and discipline can live in one person if you give 
 ## What you'll get back
 
 A short, composed memo. It opens with the result and the goal, backs it with one or two sharp facts, and sorts your options into star, rising star or sell. It ends with a quick call: do it, hold it, or let it go. It is polished and confident. When your question goes past what he has said, he'll say so in one line and then use his star-brand test as the guide.
+
+Next: draft the team note on the star product and set a review date. For fair pay and craft at a luxury brand, use the Brunello Cucinelli mind.

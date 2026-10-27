@@ -7,6 +7,27 @@ description: "Use when a compliance review is coming and you need an evidence in
 
 Prepare evidence for a compliance review. Three steps run in order: turn the scope into control questions, build an evidence register and check it, then turn the gaps into owned actions with dates.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for document, spreadsheet, a brief. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **A spreadsheet-capable AI:** It can build and reopen a real evidence register. In plain chat you get the same register as text.
+<!-- /needs -->
+
 ## What you need
 
 - The review scope: systems, teams and the period under review. Ask once if absent.
@@ -42,6 +63,16 @@ Before each step, write a short brief for it: the result wanted, the source refe
 - outputs/hand-back.md: readiness statement, source coverage, MISSING lines and CHECKS MISSED
 
 Lead with the number of controls covered, partly covered and not covered, then the gaps that put the review most at risk, then the plan. Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, every MISSING: line and CHECKS MISSED. If a tool made a native file, include it with its real verification result. An outline is not a finished document, and a plan is not a completed action.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Compliance evidence and request tracker](https://useaiblocks.com/skills/compliance-evidence-request-assistant). It takes the spreadsheet.
+- The [AI law gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker). It takes the audit report.
+- The [Trade compliance checklist builder](https://useaiblocks.com/skills/trade-compliance-checklist).
+- The [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker). It takes the spreadsheet and audit report and plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
 
 ## Check before you hand it back
 

@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and add the skill instructions. In a chat AI, paste them in.
   - Describe the job you want the skill to do. Add a draft or good and bad examples if you have them (optional).
   - Answer the questions it asks, then read the draft skill and the test prompts it writes.
-  - If your AI can run code and files, it runs the tests and opens a results viewer. This needs Python. If it cannot, review the results in the chat by hand.
+  - "If your AI can run code and files (such as Claude Code), it runs the tests with helper agents and opens a results viewer. This needs Python. If it cannot, skip the viewer and the benchmark scripts, ask for the draft, the test prompts and the trigger description, and review the results in the chat by hand."
   - Tell it what is wrong. It rewrites the skill and tests again.
   - When you are happy, ask it to improve the trigger description, then save the final skill.
 output_sample:

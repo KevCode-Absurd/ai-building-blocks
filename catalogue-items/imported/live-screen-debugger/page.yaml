@@ -34,13 +34,15 @@ you_get:
   - Screenshots in the chat, with notes on the desktop and phone checks
   - A short list of what was tested and what was left out
 how_to_use:
+  - "Warning: this skill needs your AI started with its safety sandbox turned off, so it can reach your browser. That lets it do more on your computer. Use it only in an isolated or disposable setup, never on a machine that holds sensitive data, and only on a local app you trust, never on a live site."
   - Use an AI tool that can run code on your computer and open a browser. The skill was written for OpenAI Codex and its js_repl tool. A plain chat window will not work.
-  - Know the risk first. The skill asks you to start Codex with its sandbox turned off, so your AI can reach your browser. That lets it do more on your computer. Use it only on a local app you trust, never on a live site.
+  - Have Node.js installed. In your project folder, run npm install playwright and then npx playwright install chromium. The first run fails without them.
   - Start your app in its own terminal so it keeps running.
   - Give your AI the skill, the app address, the bug and the steps to repeat it. Add the screen sizes you care about.
   - Let it run the loop. Read its test list first, and add anything it missed.
   - When it says it is done, look at the screenshots it shows in the chat. Ask it to repeat any check you doubt.
   - Run your own tests, then look at the changes in your code review before you save them.
+  - Next, turn the bug you reproduced into a lasting test with the Browser test writer, so it stays fixed.
 how_it_works:
   - title: Write the test list
     text: It lists what you asked for, what it changed and what it will claim, and plans a check for each. It adds at least two off-path tests.

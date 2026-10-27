@@ -16,7 +16,7 @@ when:
   - You must show scenario coverage from real data for a safety standard.
   - You want a road surface file from lidar for vehicle testing.
 not_for:
-  - "Your data still needs importing, syncing or timestamp fixes: run the matlab-import-driving-data skill first, then come back."
+  - "Your data still needs importing, syncing or timestamp fixes: run Driving data importer first, then come back."
   - "You have no recorded drive and want to make up a path: use MATLAB's waypointTrajectory to draw one by hand."
   - "You do not have MATLAB with the Scenario Builder support package: ask an engineer who does, or pick a simpler tool."
 you_give:
@@ -30,12 +30,21 @@ you_get:
   - Extracted critical events from the drive
   - Road surface or map additions (optional)
 how_to_use:
-  - Check you have MATLAB with the Scenario Builder support package. It is a paid MathWorks product. Add RoadRunner if you want that export.
+  - This is for engineers. If you are not a MATLAB user, ask one to run it. Check you have MATLAB with the Scenario Builder support package. It is a paid MathWorks product. Add RoadRunner if you want that export.
   - Open an AI that can write and run MATLAB code, and paste in the skill.
   - Give it your sensor files and say which format you want, such as RoadRunner or OpenSCENARIO.
   - Check the data format table it shows first. Fix any timestamp or axis problem it flags.
   - Tell it the paths to RoadRunner when it asks, and check the plots at each step.
-  - Open the exported files in your simulator and replay the drive.
+  - Open the exported files in your simulator and replay the drive. Then run test scenarios from them, or feed the events into a safety coverage report. Driving scenario simulator can replay them.
+terms:
+  - term: RoadRunner
+    meaning: MathWorks software that builds and edits 3D roads and driving scenes for simulators.
+  - term: OpenSCENARIO
+    meaning: An open file format that describes how cars and other actors move in a test.
+  - term: OpenCRG
+    meaning: An open file format for the bumps and texture of a road surface.
+  - term: Scenario Builder
+    meaning: A paid MathWorks add-on that turns recorded drive data into driving scenarios.
 output_sample:
   input:
     - Your recorded GPS data, with timestamps
@@ -46,7 +55,7 @@ output_sample:
     - MATLAB with the Scenario Builder support package for Automated Driving Toolbox (paid, from MathWorks)
     - RoadRunner installed, if you export to RoadRunner
     - An AI that can write and run MATLAB scripts
-    - Data already imported and synced, using the matlab-import-driving-data skill if not
+    - Data already imported and synced, using Driving data importer if not
   output:
     - name: Format table
       contains: A check of your data against what Scenario Builder expects, with timestamp scale and any flips or fixes needed.

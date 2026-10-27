@@ -2,7 +2,7 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-go-mcp-server-generator
 name: Go MCP server starter builder
-summary: Build a Go MCP server project from a plain description of your tools, with a working layout, config, README and tests, ready to connect to your AI.
+summary: Build a Go MCP server project from a plain description of your tools, with a starting layout, config, README and tests to run before you connect it.
 job: connect-tools
 headline: Go MCP server starter builder
 subhead: "Describe the tools you want your AI to call, and the data behind them. You get a Go MCP server project with a clear folder layout, typed tools, a README and a first test. You need Go installed and an AI that can write files."
@@ -41,6 +41,7 @@ how_to_use:
   - Run go mod tidy and then go test ./... in the new folder. Ask your AI to fix any error it shows.
   - Add the server to your AI app's MCP settings, and try each tool with a real question.
   - Replace the sample logic in each tool with your own, and keep the tests passing.
+  - The code pins go-sdk v1.0.0. Check that your Go and SDK versions match, and fix any call the newer SDK renamed.
 how_it_works:
   - title: Gather the facts
     text: It asks for the name, the tools, the data source and the module path, and does not guess them.

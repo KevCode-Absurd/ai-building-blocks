@@ -14,7 +14,7 @@ Map all testable surfaces in the application and identify what's tested vs. what
 
 ### 1. Map Application Surface
 
-Use the `Explore` subagent to catalog:
+Use the `Explore` subagent to catalog the items below. If you have no subagent, read the route, component and endpoint files yourself:
 
 **Routes/Pages:**
 - Scan route definitions (Next.js `app/`, React Router config, Vue Router, etc.)
@@ -69,7 +69,7 @@ Rank uncovered areas by business impact:
 
 For each gap, recommend:
 - Number of tests needed
-- Which template from `templates/` to use
+- Which template from `templates/` to use (only if a `templates/` folder exists; if not, say "write by hand")
 - Estimated effort (quick/medium/complex)
 
 ```
@@ -85,6 +85,8 @@ For each gap, recommend:
 ```
 
 ### 6. Auto-Generate (Optional)
+
+Only if a `templates/` folder and the `/pw:generate` command exist in this project. If they do not, skip this step and say so.
 
 Ask user: "Generate tests for the top N gaps? [Yes/No/Pick specific]"
 

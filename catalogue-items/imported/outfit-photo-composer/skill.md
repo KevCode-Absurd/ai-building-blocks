@@ -7,6 +7,8 @@ description: 多单品融合成一整套 Look。最多 8 张单品图 → 同一
 
 一次给**最多 8 张单品图**，融合成同一个模特身上的**一整套 Look**。
 
+> **English summary.** Give up to 8 photos, one item per photo, in wearing order (top, bottoms, coat, shoes, bag, extras). Each file must be 20KB to 15MB, no larger than 8192 x 8192, in jpg, jpeg, png, heic or webp. The skill names each item and where it is worn, writes one prompt that keeps every item's colour, weave, pattern and material unchanged, and adds basics for missing items. It then calls an image model (dLazy seedream-5.0, about 5 credits per image, so a paid account is needed). Run with `--dry-run` first to see the cost. Check item count, colours, layer order and patterns before you publish, and label the photo as AI-made. Never use it to fake a real person's endorsement.
+
 和 [flat-lay](../flat-lay/skill.md) 的「多件上身」（只支持上装+下装两张）不同，本技能是**任意品类的自由组合**：毛衣 + 阔腿裤 + 帽子 + 项链 + 包 + 鞋，一次出一张完整搭配图。
 
 ---
@@ -52,13 +54,7 @@ dlazy seedream-5.0 \
 
 ## 2、输入素材规则
 
-生成前先自检这几条硬性约束：
-
-- 大小：**20KB ~ 15MB**
-- 分辨率：**大于 400×400**
-- 格式：**jpg / jpeg / png / webp**
-
-本技能的素材约束比其他技能宽：
+生成前先自检这几条硬性约束（只有这一组，以此为准）：
 
 - 数量：**最多 8 张**
 - 大小：**20KB ~ 15MB**

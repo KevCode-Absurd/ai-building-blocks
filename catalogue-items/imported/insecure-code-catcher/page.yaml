@@ -31,9 +31,9 @@ you_get:
 how_to_use:
   - Open Claude Code. This hook does not work in a chat window, and it needs no API key or paid service.
   - "Add the plugin with these two commands: /plugin marketplace add alirezarezvani/claude-skills, then /plugin install security-guidance@claude-code-skills."
-  - Ask your AI to edit code as you normally do. The hook runs on its own before every edit or write.
+  - Ask your AI to edit code as you normally do. The hook runs on its own before every edit or write made with Claude Code's Edit, Write and MultiEdit tools. Code changed by shell commands or other tools is not checked.
   - When a warning blocks a write, read the risk note. Ask your AI for the safer option, such as setting text instead of using innerHTML.
-  - If a risky call is truly needed, add a SAFETY comment in the file that says why. The same warning will not repeat in that session.
+  - If a risky call is truly needed, add a SAFETY comment in the file that says why. The comment only documents the reason and does not switch the check off. The warning shows once per file and rule in a session, so later edits in that session go through.
   - Next, pair the hook with a code scanner like semgrep or CodeQL in your build checks, because the hook only matches text patterns.
 output_sample:
   input:

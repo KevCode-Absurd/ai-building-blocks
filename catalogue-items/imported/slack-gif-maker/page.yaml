@@ -29,11 +29,13 @@ you_get:
   - A check of the file against Slack's limits
   - A smaller version, only if you ask for one
 how_to_use:
-  - Open your AI tool. Use one that can run Python code and save files.
+  - Open your AI tool. Use one that can run Python code and save files. This is not a plain-chat job: if you cannot run Python, ask someone who can.
   - Paste the skill text, or upload the skill folder.
   - Describe the animation, like a star spinning. Say if it is for emoji or a message.
   - Add an image or colour notes if you have them.
+  - Your AI follows these steps. It makes a GIF builder, draws each frame, saves the file, then runs the Slack check on it.
   - Check the GIF and the Slack check result. Ask for a smaller file if it is too big.
+  - To use it, upload the GIF as a custom emoji in Slack's emoji settings, or post it in a message.
 output_sample:
   input:
     - A description of the animation, such as a star spinning

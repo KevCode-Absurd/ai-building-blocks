@@ -26,7 +26,7 @@ you_get:
   - Cash levels at which to cut or raise, set in advance
   - A finance plan for your board
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give your plan in plain words and your honest numbers. Say which are guesses.
   - Add your real monthly bank history before step 2 if you have it.
@@ -72,9 +72,9 @@ test:
 improve:
   - Replace guesses with real numbers every month and rerun step 2.
   - Rerun after every hire or big contract.
-  - Not worth running before you have a rough plan for revenue. Spend a week on that first.
 
 not_for:
+  - "You have no rough plan for revenue yet: spend a week on that first."
   - "You run an online store and want its cash and stock planned: use the Store financial model builder or the Inventory cash planner."
   - "You only need a short cash forecast for the next few weeks: use the Cash forecast builder."
   - "You only want practice for tough board questions: use the Hard-questions board prep coach."
@@ -95,3 +95,5 @@ output_sample:
       contains: Cash levels, set in advance, at which you cut costs or start raising.
     - name: Board pack
       contains: Answers to hard questions, raise steps with dilution, and a finance plan for your board.
+next: [hard-questions-board-prep-coach, cash-forecast-builder]
+before: []

@@ -4,12 +4,14 @@ headline: Deal EBITDA addback checker
 summary: Check how much of a requested EBITDA addback your deal cap allows. Give it your EBITDA and addbacks. You get adjusted EBITDA and the excess.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "The cap depends on how the agreement defines its base, and a wrong base changes the allowed amount."
 subhead: Give it your EBITDA, your addback requests and the cap in your agreement. It applies the cap to EBITDA before addbacks. You get adjusted EBITDA, the allowed addback and the excess that is rejected.
 explain: |-
-  Adjusted EBITDA, allowed capped addback and disallowed excess.
+  Lenders and buyers let you add some costs back to EBITDA, often only up to a cap. Here the cap is a share of EBITDA before the addbacks. This checker applies that cap. You get adjusted EBITDA, the addback it allows and the excess it rejects.
 
-  Private credit definitions. Illustrative figures only. Cap20% of100 permits20 of requested40; adding10 uncapped gives130. Cap10% gives120 and rejects30.
+  Costs the contract allows without a cap are added in full. Costs it caps are limited to the cap amount. It does not say whether an addback is allowed by the contract. Your lawyer decides that.
+
+  Illustrative figures only. With EBITDA of 100, a 20% cap permits 20 of the 40 requested. Adding 10 uncapped gives adjusted EBITDA of 130. A 10% cap permits only 10, which gives 120 and rejects 30.
 when:
   - A lender or buyer asks you to justify an addback against a cap.
   - You need a traceable EBITDA addback calculation for a credit agreement.
@@ -19,6 +21,7 @@ not_for:
   - "Your cap is measured on EBITDA after the addbacks: ask an adviser or your lawyer to work out the algebra, because this tool only handles caps on EBITDA before addbacks."
   - "You need to know if the addback is legally allowed under your contract: ask your lawyer, because this tool only does the arithmetic."
   - "You want audited earnings or free cash flow: use your accountant's reported figures, because adjusted EBITDA here is a contract scenario."
+  - "You need to fix an EV to EBITDA multiple that leaves out minority interests: use the Minority-interest multiple reconciliation instead."
 you_give:
   - Your actual EBITDA before addbacks.
   - Adjustments that have no cap, with their support (optional).
@@ -75,10 +78,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Test date"
+    how: "Take the test date from the credit or deal agreement and your EBITDA. Use one currency and scale on every line."
+  - what: "Requested addback"
+    how: "Change the requested addback and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Do not use this formula when the cap denominator includes the addbacks themselves.
 judge:
@@ -91,8 +94,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one EBITDA addback cap you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define addback cap into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -107,3 +110,6 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+next:
+  - net-leverage-covenant-checker
+  - minority-interest-multiple-reconciliation

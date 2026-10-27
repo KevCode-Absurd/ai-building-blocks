@@ -7,7 +7,7 @@ thinking_why: It runs five skills in a row, and four of them do profit sums that
 headline: An offer that lifts profit, not just sales
 subhead: Give it your product, your buyer's biggest doubt and your costs. It builds an offer, adds a gift or spend tier and a guarantee with the costs counted, tests it against a plain discount, and compares profit per visitor with your current offer.
 explain: |
-  Percent-off sales lift revenue, but each one gives away margin, and buyers learn to wait for the next one. A sale that doubles orders can still lose money once ad spend, shipping and fees are counted. Most stores never run the sum before they launch.
+  Percent-off sales lift revenue, but each one gives away margin, and buyers learn to wait for the next one. A sale that doubles orders can still lose money once ad spend, shipping and fees are counted. This workflow runs that sum before you launch.
 
   The steps build an offer that answers one buyer doubt instead of cutting the price. A gift or spend tier follows, with the margin checked at every tier. Then a guarantee is added, with the cost of refunds and returns counted. The offer is then tested against a plain discount to show the ad return it must hit to keep your profit. Last, it compares profit per visitor with your current offer, before you launch it. No step pauses, so bring your costs and numbers first.
 when:
@@ -32,7 +32,7 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it all your costs per order. Product cost alone makes every discount look safe, so add shipping, fulfilment and fees.
   - Name your buyer's biggest doubt in their own words, from reviews or calls.
-  - Run the final comparison on real traffic numbers if you have them. Then launch the winner and keep the stop rule.
+  - Give step 5 your real sessions and orders for each version. Then launch the winner and keep the stop rule.
 how_it_works:
   - title: Build the offer
     text: Puts the buyer's main doubt on one lever of value, such as result, certainty, time, effort or price. Builds the offer, checks profit and runs five checks.

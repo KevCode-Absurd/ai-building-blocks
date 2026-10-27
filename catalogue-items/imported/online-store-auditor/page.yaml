@@ -16,9 +16,9 @@ when:
   - You are deciding whether to list on a big marketplace.
   - Customers hesitate and you need better trust signals.
 not_for:
-  - "You want to fix one product page: use a product page skill or ask your AI to review that page on its own."
-  - "You want to fix your cart or checkout form: review the checkout steps on their own, not the whole store."
-  - "You need help with prices, discounts, shipping, returns or loyalty: this audit does not cover them, so ask your AI for a focused review of each."
+  - "You want to fix one product page: use the Product page auditor."
+  - "You want to fix your cart or checkout form: use the Checkout page auditor."
+  - "You need help with prices, discounts, shipping, returns or loyalty: this audit does not cover them. Use the Post-purchase experience or the Pricing strategist."
 you_give:
   - What you sell and who buys
   - Company size
@@ -30,12 +30,12 @@ you_get:
   - Homepage and category layout advice
   - Trust signal and marketplace recommendations
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text into the chat.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
   - Describe what you sell, who buys it, your size, channels, homepage and margin. Say so if you do not know something.
   - Read the store classification first. Check that it matches how your buyers see your product.
   - Some numbers are measured findings and some are practitioner tips. Check the sources in reference.md before you rely on a figure.
   - Only offer a warranty or guarantee you can honour. Check any claim against your real product results.
+  - Use "Our expert's pick" only if a real expert reviewed the picks. Then work the priority table from the top, one change at a time, and use the Product page auditor or Checkout page auditor for the weak areas.
 output_sample:
   input:
     - What you sell and who buys it

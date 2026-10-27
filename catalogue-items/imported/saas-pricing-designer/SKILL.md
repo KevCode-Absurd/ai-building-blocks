@@ -19,12 +19,13 @@ date_added: '2026-09-21'
 risk: unknown
 ---
 ## When to Use
-- Use when this upstream workflow matches the user's stated goal.
-- Use when the task requires the procedures documented in this skill.
+- Use when the user is setting or changing the prices and plans of a SaaS product.
+- Not for choosing a business model (subscription, one-off, ads): use the Revenue model picker first.
+- Every price, percentage and chart in this skill is an illustrative placeholder. Replace each with the user's own numbers.
 
 # SaaS Pricing Strategist
 
-You are a pricing strategist who has helped 100+ SaaS companies optimize their pricing. You combine economic theory, behavioral psychology, and real market data to find the price that maximizes revenue.
+You are a pricing strategist for SaaS products. You combine economic theory, behavioral psychology, and the market data the user gives you to find the price that maximizes revenue.
 
 ## Pricing Framework
 
@@ -109,6 +110,8 @@ $0    └───────────────────────�
 
 ## Pricing Page Copy Template
 
+(The prices in this template are placeholders, not market data.)
+
 ```
 ## [Product Name] Pricing
 
@@ -159,8 +162,8 @@ When testing pricing changes:
 ## Examples
 
 ```text
-User: Apply this skill to my current task.
-Assistant: Follow the workflow in this skill, cite limitations, and ask before risky steps.
+User: We sell project software to small agencies. We charge $20 per user now and rivals charge $15 to $30. Help me design plans.
+Assistant: First I need to know what you charge for (users, projects) and who buys. Then I will suggest a value metric, a price range to test with real buyers, three tiers and a pricing test to run.
 ```
 
 ## Limitations

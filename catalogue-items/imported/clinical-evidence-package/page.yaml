@@ -40,6 +40,7 @@ how_to_use:
   - Ask for the file you need, such as cohort table shells or a survival plan review.
   - Check each file. A qualified person must fill in the evidence ratings and approve the drafts.
   - If the AI cannot run code, you still get the drafts, but the file checks will not run.
+  - Send the approved drafts to the person who owns the study for sign-off outside this tool. For a case or trial report, the Clinical report draft checker is the next step.
 output_sample:
   input:
     - Your grouped count tables, with small counts hidden

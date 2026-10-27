@@ -30,11 +30,12 @@ you_get:
   - A debugging and contribution checklist
 how_to_use:
   - Open an AI that can run code and read files. Python must be installed on your computer.
-  - Give it this skill and the path to your repository.
+  - Give it this skill and the path to your repository. The AI reads your code, so check your company policy first if the code is confidential. The template files and the scan script come with the skill folder. If you paste only the text, also paste references/onboarding-template.md.
   - "Say who the guide is for: a junior, a senior, a tech lead or a contractor."
   - Let it scan the project, then read the guide it writes from the template.
   - Ask a new hire to run the setup steps on a clean machine and fix anything that fails.
   - Send the guide to your tech lead for review before you share it.
+  - "The template has these parts: what the project is, quick start, architecture, key files, common developer tasks and a debugging guide."
 output_sample:
   input:
     - The path to your repository

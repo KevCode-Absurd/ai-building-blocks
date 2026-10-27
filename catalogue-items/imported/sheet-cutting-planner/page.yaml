@@ -9,7 +9,7 @@ subhead: Cutting layouts that use the least material when you cut panels from la
 explain: |
   Cutting layouts that use the least material when you cut panels from large sheets of steel, glass, wood, fabric or paper. You list sheet size and every panel you need, with sizes and quantities.
 
-  Claude first asks what limits you: whether pieces can rotate, whether grain matters, blade kerf, minimum trim, and whether cuts must run edge to edge, as on a guillotine saw, in two or three stages. Then it picks the right method and produces cutting patterns, with waste percentage and a sheet count. You can aim to minimise sheets, cost or complexity. It can handle several sheet sizes. The output is a pattern set you can send to the saw.
+  Claude first asks what limits you: whether pieces can rotate, whether grain matters, blade kerf, minimum trim, and whether cuts must run edge to edge, as on a guillotine saw, in two or three stages. Then it picks the right method (a quick method for a rough count, a slower one that can waste less) and produces cutting patterns, with waste percentage and a sheet count. You can aim to minimise sheets, cost or complexity. It can handle several sheet sizes. The output is a pattern set you can send to the saw.
 when:
   - You need 60 panels cut from standard 2440 by 1220 mm sheets.
   - Your offcuts are piling up and you want less waste.
@@ -37,7 +37,8 @@ how_to_use:
   - Tell it your sheet size and every panel, with width, height and quantity.
   - "State your saw limits first: blade width, minimum trim, grain, turning panels, and whether cuts must run edge to edge."
   - Check the sheet count and the waste figure. Treat the waste as an estimate, not a guaranteed minimum.
-  - Send the cutting layouts to your saw operator, or ask for a table you can copy into a spreadsheet.
+  - If a panel is bigger than the sheet, your AI should stop and tell you which one. Fix that size first.
+  - Check one layout against a real sheet or offcut before you cut. Then send the layouts to your saw operator, or ask for a table you can copy into a spreadsheet.
 output_sample:
   input:
     - Your sheet size, and cost per sheet if you know it
@@ -46,6 +47,7 @@ output_sample:
     - "Your saw limits: blade width, minimum trim and cut type (optional)"
   prerequisites:
     - An AI that can run code gives the best results, but a chat works for small jobs
+    - "Python packages numpy and pulp, if you run the code yourself"
   output:
     - name: Solution summary
       contains: The number of sheets used, the share of material used, and the method chosen.

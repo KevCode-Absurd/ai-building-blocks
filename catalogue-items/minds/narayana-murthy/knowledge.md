@@ -1,6 +1,6 @@
 # N. R. Narayana Murthy: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 N. R. Narayana Murthy is alive, and views can change. The core of this data set is his own words: the 2007 NYU Stern lecture [S2], a 2006 interview with YaleGlobal [S7] and a 2019 speech in Dhaka [S8]. Short sourced quotes from his 2003 book and other talks come through Wikiquote [S4]. Press reports of his Stanford talk [S9], his 2001 Wharton commencement talk [S10] and a 2024 interview [S11] add stories and quoted lines, but they are second-hand summaries, so we treat them with more care. Facts come from reference pages [S1][S3][S5]. Treat each view as "as of" the date it comes from. Nothing here tells you what he thinks about events since, or about his plans, and nothing here covers his private life.
 

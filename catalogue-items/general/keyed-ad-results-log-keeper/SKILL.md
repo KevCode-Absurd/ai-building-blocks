@@ -24,10 +24,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
+- **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad results report writer** with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). Bring your results.
+1. **Ad results report writer** with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). Bring your results, audit report (optional).
 2. This one.
 
 How to start:
@@ -87,7 +87,7 @@ CHECKS MISSED
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan what to test** with the [Creative brief writer](https://useaiblocks.com/skills/creative-brief-writer). It takes the lessons.
-- **Write the ad copy** with the [Reply-getting fix writer](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the lessons.
+- **Write the ad copy** with the [Ad response copy editor](https://useaiblocks.com/skills/reply-getting-fix-writer). It takes the lessons.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

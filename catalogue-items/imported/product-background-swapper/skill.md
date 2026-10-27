@@ -3,6 +3,8 @@ name: item-change-background
 description: 商品换背景。白底商品图 → 逼真场景图，光影与投影匹配新环境。当用户说「换背景」「加场景」「白底转场景」「放到桌面上」时使用。
 ---
 
+> **Read this first (added by AI Blocks).** This file is written in Chinese. Follow the same steps and answer the user in English. The `dlazy` commands, `scripts/gen.mjs` and the `docs/` paths are not included here. They need a paid dLazy account and a way to run commands, so treat them as optional. The free route: write the prompt, then give it and the user's photo to the image tools in ChatGPT or Gemini. Do not claim a picture was made unless an image tool made it. English prompt template for the scene step: "Place this product into a photorealistic lifestyle scene. Keep the [product, with its finish, pattern, shape, proportions and camera angle] 100% faithful. Replace the plain background with [scene]. Light comes from [direction], with a natural contact shadow under the product and soft reflections from nearby surfaces. The product must sit believably on the surface with correct perspective. Photorealistic commercial product photography, no text, no watermark." Name each file for the scene and variant, such as shoes-desk-1.jpg, shoes-desk-2.jpg.
+
 # item-change-background — 商品图生成逼真场景图
 
 白底商品图 → **有质感的实拍场景图**。商品不动，环境换掉。

@@ -33,9 +33,11 @@ how_to_use:
   - Use an AI that can search the web, such as Claude, ChatGPT or Gemini with search on. Without search, findings are marked as unverified estimates.
   - Paste the skill into a new chat, or upload its folder if your AI takes files.
   - Say "Follow this skill to position my product". Then answer its questions about your product, buyers and rivals.
-  - Let it run its two research rounds. It may take 10 to 30 minutes.
+  - Let it run its two research rounds. It may take 10 to 30 minutes. It reads public reviews and forums. If you gather them yourself, copy them by hand or use an export the site allows. Do not scrape a site against its terms.
   - Check anything marked unverified, then read the red flags and yellow flags at the end of each file.
   - Use the positioning statement and messaging notes to rewrite your site and pitch.
+  - Test the statement on five real buyers before you publish it. Share the positioning document with your sales or marketing lead.
+next: [brand-messaging-builder, competitor-messaging-comparer, customer-interview-coach]
 output_sample:
   input:
     - Your product and what it does

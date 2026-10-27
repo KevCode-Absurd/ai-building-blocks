@@ -15,8 +15,8 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Evaluates the true return on investment for each discount code and automatic discount by measuring revenue generated, number of orders, average order value with vs. without discount, customer acquisition attributed to discounts, and whether discounted orders cannibalized full-price sales. Goes beyond `discount-hygiene-cleanup` (which finds broken/unused codes) to answer "was this discount worth it?" Read-only — no mutations.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_discounts`
-- API scopes: `read_orders`, `read_discounts`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_discounts,read_customers`
+- API scopes: `read_orders`, `read_discounts`, `read_customers` (needed to read `customer.numberOfOrders` for the new-customer share)
 
 ## Parameters
 
@@ -34,13 +34,13 @@ Evaluates the true return on investment for each discount code and automatic dis
 ## Workflow Steps
 
 1. **OPERATION:** `discountNodes` — query
-   **Inputs:** `first: 250`, select discount details (title, code, type, value, usageCount, startsAt, endsAt), pagination cursor
+   **Inputs:** `first: 250`, select discount details (title, code, type, value, asyncUsageCount, startsAt, endsAt), pagination cursor
    **Expected output:** All discount codes and automatic discounts
 
-2. Filter to discounts with `usageCount >= min_uses` and active within lookback window
+2. Filter to discounts with `asyncUsageCount >= min_uses` and active within lookback window
 
 3. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>' discount_code:<code>"`, `first: 250` for each active discount code, select `totalPriceSet`, `totalDiscountsSet`, `subtotalPriceSet`, `customer { id, numberOfOrders }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>' discount_code:<code>"`, `first: 250` for each active discount code. This finds code discounts only. For automatic discounts, query all orders in the window and match on each order's discount data (the `discountApplications` title) instead, select `totalPriceSet`, `totalDiscountsSet`, `subtotalPriceSet`, `customer { id, numberOfOrders }`, pagination cursor
    **Expected output:** All orders using each discount
 
 4. Also query orders WITHOUT any discount in same period for baseline AOV comparison
@@ -52,7 +52,7 @@ Evaluates the true return on investment for each discount code and automatic dis
    - **Baseline AOV** = AOV of non-discounted orders in same period
    - **AOV Lift/Drop** = discounted AOV - baseline AOV
    - **New Customer %** = orders where customer.numberOfOrders == 1 / total
-   - **Gross ROI** = (revenue - discount_cost) / discount_cost × 100
+   - **Revenue against discount cost** (called ROI below) = (revenue - discount_cost) / discount_cost × 100. This is not profit, because product cost is not included
    - **Cannibalization Risk** = high if discount AOV < baseline AOV and new customer % < 20%
 
 ## GraphQL Operations
@@ -185,8 +185,8 @@ CSV file `discount_roi_<YYYY-MM-DD>.csv` with columns:
 | Stacked discounts | Multiple codes per order | Attribute proportionally or flag as "multi-discount" |
 
 ## Best Practices
-- Discounts with ROI < 100% cost more than they generate — consider retiring them.
+- Discounts with ROI < 100% cost more than they generate in revenue. Check your product costs before you retire one, because this figure ignores them.
 - High new-customer % with positive ROI = great acquisition tool — keep running.
 - Low new-customer % with negative AOV lift = cannibalization — customers would have bought anyway.
-- Cross-reference with `discount-ab-analysis` for split-test insights.
-- Use with `discount-hygiene-cleanup` to find and remove underperforming codes.
+- To compare two codes side by side, use Discount code comparer.
+- To find broken or unused codes, use a discount cleanup check.

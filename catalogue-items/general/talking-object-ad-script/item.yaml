@@ -17,6 +17,7 @@ outputs:
   - {type: script}
 uses: []
 example: talking-object
+next: [meta-ads-compliance-checker, talking-object-video-prompts]
 origin: own
 source_ids: [CES-123]
 old_name: script-format-talking-object

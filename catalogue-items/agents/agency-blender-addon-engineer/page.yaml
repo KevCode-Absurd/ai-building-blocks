@@ -23,7 +23,9 @@ explain: >-
   This is a role profile from Agency Agents, shared under MIT. It writes
   starter code, but a chat AI cannot run Blender. You must install and test the
   add-on yourself, on a copy of your file. Time-saved targets in the original
-  are goals, not results from AI Blocks.
+  are goals, not results from AI Blocks. Blender's code library changes between
+  versions and this agent cannot check yours. It marks any call you should look
+  up in the docs for the version you name.
 when:
   - Your artists fix the same naming, scale or material mistakes before every export.
   - An asset reached Unity, Unreal or glTF with a wrong scale or a missing material.
@@ -55,6 +57,7 @@ how_to_use:
   - Read the plan before the code. Check the rules are the ones your team really uses, and that nothing is changed without a dry run or your yes.
   - Make a copy of a messy scene. Install the add-on from a file in Blender's preferences, run the checker and read the report.
   - Paste any error from Blender's system console back into the chat and ask for a fix. Only give it to your team once it works on real scenes.
+  - Next, take the checker's report to a team review. Add each new mistake you find to the rule list and run it again on the copy.
 how_it_works:
   - title: Map the manual work
     text: It lists each step of the chore and the mistakes that keep happening, such as bad names, unapplied scale or no material.

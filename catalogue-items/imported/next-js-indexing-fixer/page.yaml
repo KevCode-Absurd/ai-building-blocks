@@ -16,7 +16,7 @@ when:
   - You are checking sitemap and robots files before a release.
   - Old URLs return 404 and you need the right redirects.
 not_for:
-  - "Your site is not built with Next.js: ask for a general SEO audit from an SEO person or tool instead."
+  - "Your site is not built with Next.js: use the Technical SEO auditor instead."
   - "You want Google to index a page for sure: no tool can promise that, so check the page content and links yourself."
   - "You want to change URLs or redirects on a live site without a review: ask a developer to check the plan first."
 you_give:
@@ -30,12 +30,13 @@ you_get:
   - Sitemap and robots code
   - A redirect and internal linking plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Say which Next.js version you use. The examples differ slightly for version 14 and earlier.
   - Paste the exact Search Console message and a few affected URLs.
   - Share your project files, such as app/layout.js, sitemap and next.config.js. If your AI cannot read files, paste them in.
   - Read the cause it finds before you change anything. Check why Google picked a different canonical before you change yours.
   - Run the commands it gives you in your own terminal. Your AI cannot run them in a normal chat.
   - Ask a developer to review any change to redirects or canonical rules before you publish.
+  - After you deploy, check the affected URLs again in Search Console and ask Google to crawl them. Then run the Technical SEO auditor if pages are still not indexed.
 output_sample:
   input:
     - The Search Console error or status, such as Crawled, not indexed
@@ -64,3 +65,4 @@ output_sample:
       contains: Rules that block important pages, and robots.js code to replace them.
     - name: Indexing checklist
       contains: A tick list of the checks above to finish before release.
+next: [technical-seo-auditor]

@@ -36,6 +36,8 @@ how_to_use:
   - Run the prompt in your image model. The skill uses gpt-image-2 through the dLazy tool, which needs a dLazy account and costs credits. It needs an AI that can run commands.
   - Compare the result with your original. Check that folds, hardware and colour match, and that no flaws were erased.
   - If something is off, add the matching fix-up line and run it again.
+  - When it looks right, upload it to your shop listing. Next, check it against your marketplace's photo rules.
+next: [marketplace-photo-rule-checker, product-photo-set-builder]
 output_sample:
   input:
     - Your phone photo of the product (1 to 4 photos of the same item is best)

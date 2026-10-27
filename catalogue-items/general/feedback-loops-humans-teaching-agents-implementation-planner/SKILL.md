@@ -7,6 +7,33 @@ description: Plan how your team's Slack reactions teach your AI agents. Get a fo
 
 Plan the loop where people react to an agent's finding in Slack and the agent learns from it. A person adds an emoji and maybe a reply. The plan turns that into a saved feedback record of one of four kinds, counts repeats, and drafts a lesson for a named person to review. It never rewrites a live rule on its own. This skill reads a starter handler and a method note, lists what they get wrong, and drafts the log, the lesson rules and the tests. It does not run code, read your Slack or touch your database.
 
+Do not use it to score an agent's own past predictions (use the [Agent prediction review builder](https://useaiblocks.com/skills/self-reflection-grading-past-predictions-implementation-planner)), to change one rule once (edit the rules file by hand), to collect feedback from customers (use a survey tool), or to let an agent rewrite its own live rules (it only drafts lessons).
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Agent prediction log builder](https://useaiblocks.com/skills/self-reflection-grading-past-predictions-implementation-planner).
+- The [Agent approval workflow builder](https://useaiblocks.com/skills/the-proposal-engine-agents-ask-permission-implementation-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude Code:** Reads your Slack handler and the starter together and proposes exact edits.
+- **Slack:** A test channel lets you try each emoji before the plan goes near real work.
+<!-- /needs -->
+
 ## What you need
 
 Ask once for anything missing. If it is still missing, write `MISSING:` for it in BASIS and use a labelled placeholder. Never invent a reviewer, a rule or a count.
@@ -98,4 +125,4 @@ TEST CASES cover at least: one reaction of each kind, a reply with no reaction, 
 
 ## Final check
 
-Before you send the result, confirm: the four kinds are named once and used the same way everywhere; no lesson goes live without a named reviewer; no number from the notes is stated as a fact; nothing says a test passed or a message was posted; NEXT STEP is one step the owner can do today.
+Before you send the result, confirm: the four kinds are named once and used the same way everywhere; no lesson goes live without a named reviewer; no number from the notes is stated as a fact; nothing says a test passed or a message was posted; NEXT STEP is one step the owner can do today, and it names who must approve lessons (the reviewer, or MISSING if none was given).

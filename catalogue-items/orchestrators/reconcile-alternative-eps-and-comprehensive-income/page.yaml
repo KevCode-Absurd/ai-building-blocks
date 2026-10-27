@@ -87,7 +87,6 @@ tweaks:
 judge:
   - Reported profit is the common anchor, tax effects are traceable, OCI recycling has equal/opposite entries and total comprehensive income reconciles; alternative EPS is labeled as an analytical measure.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
-  - Reconcile opening balances, additions, deductions and closing balances. Match enterprise or equity cash flows to the corresponding discount rate.
   - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 test:
   - Try a small sourced case and inspect every component handoff.

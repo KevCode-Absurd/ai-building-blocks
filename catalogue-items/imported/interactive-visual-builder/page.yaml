@@ -30,11 +30,13 @@ you_get:
   - Controls like sliders and toggles
   - A page you can open in a browser
 how_to_use:
-  - In Claude, paste the skill into a chat, or add it as a skill if your plan allows. Then describe the visual you want.
-  - In ChatGPT or Gemini, paste the skill text first. Then describe your visual and add your numbers. Ask for a full HTML page you can save.
+  - Gather first the numbers or facts to show, who will see the visual, and which AI tool you use. The steps differ by tool.
+  - In Claude, paste the skill into a chat, or add it as a skill if your plan allows. Then describe the visual you want. The rules are written for Claude's built-in widget tool.
+  - In ChatGPT or Gemini, paste the skill text first. Then describe your visual and add your numbers. Ask for a full HTML page you can save. Expect a standalone file, and check that any chart library loads when you open it.
   - In Codex or any tool that can save files, ask for a complete HTML file. Then open the file in your browser.
   - "Check the result: move each slider and toggle, and make sure the numbers look right."
   - Chat follow-up buttons only work where your AI has a chat link. Without one, they are removed. Sliders and toggles still work.
+  - Next, save the HTML file and embed it in a page or slide deck. Check the numbers against a spreadsheet first.
 output_sample:
   input:
     - What you want to show, in a sentence

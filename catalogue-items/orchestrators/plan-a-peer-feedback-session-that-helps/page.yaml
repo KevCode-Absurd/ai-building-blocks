@@ -45,7 +45,7 @@ how_to_use:
   - Print the note form and the plan. After the session, come back with the comments to sort them.
 how_it_works:
   - title: Peer feedback session planner
-    text: Picks reviewers, sets the time for each part, writes the rules and builds the note form. It hands the plan and the form to the model step.
+    text: Picks reviewers, sets the time for each part, writes the rules and builds the note form. It hands the criteria and the form to the model step.
   - title: Honest draft feedback giver
     text: Takes the one permitted draft you give it, not the plan, and uses the criteria from step 1. It writes feedback on that draft, naming what works, what to leave alone and which lines to question. It hands that example to the record.
   - title: Reader feedback sorter

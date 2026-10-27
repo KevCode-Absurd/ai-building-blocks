@@ -123,7 +123,7 @@ Welcome to DevTool! Complete these steps to get up and running.
 - **Signup +0h:** Welcome email with install instructions and link to interactive tutorial
 - **Signup +24h:** "Did you run your first scan?" — re-engagement if install step incomplete
 - **Signup +72h:** "Here's what teams like yours find most valuable" — use case inspiration
-- **Signup +7d:** "Invite your team" — social proof of team adoption stats
+- **Signup +7d:** "Invite your team" — social proof using your own team adoption numbers (use a real figure from your product data or leave the stat out)
 - **Signup +14d:** "Ready for CI?" — guide to pipeline integration with ROI calculator
 
 ## Best Practices
@@ -131,7 +131,7 @@ Welcome to DevTool! Complete these steps to get up and running.
 - Optimize for time-to-first-value above all else — every task that doesn't directly contribute to the customer's first success moment should be deferred to post-onboarding.
 - Build separate playbook variants per segment (SMB self-serve, mid-market guided, enterprise high-touch) rather than one generic playbook with conditional branches.
 - Instrument every milestone as a product event so you can measure onboarding completion rates, identify drop-off points, and trigger automated interventions.
-- Include "what good looks like" benchmarks for each phase — e.g., "80% of customers connect a data source by Day 7" — so CSMs know when an account is falling behind.
+- Include "what good looks like" benchmarks for each phase — e.g., "[your target]% of customers connect a data source by Day [n]", set from your own product data, not a generic benchmark — so CSMs know when an account is falling behind.
 - Review and update the playbook quarterly based on completion rate data, customer feedback, and product changes.
 - Assign a playbook owner (usually a CS Ops lead) who is accountable for maintaining the playbook, training new CSMs, and iterating on it.
 

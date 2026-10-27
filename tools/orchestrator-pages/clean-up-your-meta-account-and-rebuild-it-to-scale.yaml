@@ -7,17 +7,17 @@ thinking_why: Three skills run in a row, with simple break-even sums. A mid-size
 headline: Cut your Meta campaigns down to the ones that earn their place
 subhead: Give it your campaign list and results. It marks each campaign keep, merge or cut, plans a simpler layout with ads per ad set, then builds a spend ladder from what the new layout proves.
 explain: |
-  Meta accounts grow by habit. A campaign for every idea, split audiences with a handful of sales each, and old setups nobody dares to touch. Each campaign learns on its own, so splitting a small number of sales across many leaves all of them short. Then raising spend on top of that mess is a guess.
+  Meta accounts grow by habit. You add a campaign for each idea, split audiences until each has a handful of sales, and leave old setups alone because nobody dares to touch them. Each campaign learns on its own, so splitting a small number of sales across many leaves all of them short. Raising spend on top of that mess is a guess.
 
-  The steps clear the ground first. The first step gives each campaign a one-line purpose, checks frequency, attribution and testing, and marks it keep, merge or cut. It pauses while you pause or merge what it flagged and pull 30 days of spend, products and margins. The second step plans a layout from your spend tier and a few questions. It pauses again while you run the new layout for four weeks. The last step works out break-even and builds a spend ladder from the winning ad sets.
+  The steps clear the ground first. The first step gives each campaign a one-line purpose, checks frequency, attribution and testing, and marks it keep, merge or cut. It pauses while you pause or merge what it flagged and pull 30 days of spend, products and margins. The second step plans a layout from your spend tier and five questions about your range, margins, buyers, countries and how many new ads you can make. It pauses again while you run the new layout for four weeks. The last step works out break-even, finds each ad set's ceiling and builds a spend ladder with a stop rule for every row.
 when:
   - Your account has many campaigns and you cannot say what each one is for.
   - Campaigns have few sales each and results swing from week to week.
   - You want to raise spend but do not trust the structure under it.
 not_for:
   - "Your account is new and has little spend: start with one testing campaign and add more once sales come in."
-  - "You want to check ads against Meta's rules before you publish: use the Meta ad policy checker."
-  - "You only want to set a test budget for new ads: use the Ad test budget setter."
+  - "You want to check ads against Meta's rules before you publish: use the Meta ads compliance checker."
+  - "You only want to set a test budget for new ads: use the Ad test budget calculator."
 you_give:
   - Your campaign list with spend, results and attribution settings
   - Screenshots of your settings (optional)
@@ -29,7 +29,7 @@ you_get:
   - Your break-even return, each ad set's ceiling and a spend ladder
   - A call on whether a separate scaling campaign pays yet
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md and the three skill files this workflow uses. Unzip it and keep them together in one folder.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Share your full campaign list, even the ones you think are dead.
   - When it pauses, pause or merge the flagged campaigns, then pull 30 days of data for what is left.
@@ -54,11 +54,11 @@ output_sample:
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check what each campaign is for
-    text: Writes a one-sentence purpose for every campaign, checks frequency, attribution and testing, scans for common setup errors and marks each one keep, merge or cut.
+    text: Writes a one-sentence purpose for every campaign, checks frequency, attribution and testing, scans for common setup errors and marks each one keep, merge or cut. You get a score out of 100.
   - title: Plan the simpler layout
-    text: Pauses while you pause or merge what was flagged and pull 30 days of data. Then it sets your spend tier, answers five questions about categories, margins and buyers, and plans fewer campaigns with ads per ad set and KPIs.
+    text: Pauses while you pause or merge what was flagged and pull 30 days of data. Then it sets your spend tier, answers five questions about your range, margins, buyers, countries and ad output, and plans fewer campaigns with ads per ad set, KPIs and a spend cap per concept.
   - title: Build the spend ladder
-    text: Pauses while you run the new layout for four weeks. Then it works out break-even, finds each ad set's ceiling and plans steps up, and says whether a scaling campaign pays yet.
+    text: Pauses while you run the new layout for four weeks. Then it works out break-even from your costs, finds each ad set's ceiling, writes a stop rule for every step up and says whether a scaling campaign pays yet.
 output_shape: |-
   STEP 1: CAMPAIGN CHECK
     Purpose of each campaign | keep, merge or cut | setup errors | score
@@ -76,8 +76,8 @@ output_shape: |-
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
 tweaks:
-  - what: Your spend tier
-    how: Say your monthly spend. Under about $50,000 the layout stays very simple, with one testing campaign.
+  - what: Your monthly spend
+    how: Say it. Under about $50,000 a month the layout stays very simple, with one testing campaign.
   - what: Product range and margins
     how: A wide spread of margins is a good reason to split. Tell it so step 2 can use it.
   - what: Cash and stock
@@ -97,5 +97,4 @@ test:
 improve:
   - Re-run step 1 every quarter to stop the account growing messy again.
   - Move creative effort to the concept that takes most of the spend.
-  - Review the numbers yourself for a few hours a month.
-  - Not worth it for a brand-new account with little spend. Start with one testing campaign.
+  - Open the numbers yourself for a few hours each month, instead of relying only on an agency report.

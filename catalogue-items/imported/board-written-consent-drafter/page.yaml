@@ -30,8 +30,8 @@ you_get:
   - Conflict and notice flags
   - Prompts for what to review
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code running or paid tool is needed.
-  - "Add your setup details: board members, state of incorporation and house wording. If you have no setup file, type these in the chat."
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code running or paid tool is needed. A chat cannot read a settings file or a consents folder, so you type or paste what the skill asks for.
+  - "Add three things: the action to approve, the board members and the state of incorporation. Add your house wording too if you have it. The skill checks no legal database."
   - Paste one or two past consents from your files. If you have none, paste any sample consent wording you like.
   - Describe the action to approve in a sentence or two. Name any director who may have a conflict.
   - If the skill warns this is a major action, stop and talk to outside counsel before going on.

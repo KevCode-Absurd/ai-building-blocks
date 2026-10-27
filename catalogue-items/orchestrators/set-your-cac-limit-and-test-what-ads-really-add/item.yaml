@@ -8,16 +8,18 @@ job: analysis
 level: advanced
 inputs:
   - {type: performance_sheet, required: true}
-  - {type: spreadsheet, required: false}
+  - {type: spreadsheet, required: true}
 outputs:
   - {type: plan}
+  - {type: audit_report}
+  - {type: spreadsheet}
 uses: [new-customer-profit-dashboard-builder, cac-payback-checker, platform-roas-reality-check, incrementality-test-planner, next-dollar-budget-allocator]
 steps:
   - {uses: new-customer-profit-dashboard-builder, note: "Starts with a daily sheet of new-customer CAC, MER and profit from your store and ad exports."}
-  - {uses: cac-payback-checker, note: "Uses the new-customer sheet to set the CAC limit you and your media buyer both hold to."}
-  - {uses: platform-roas-reality-check, note: "Compares what each platform reports with the new-customer sheet, to see which numbers hold up."}
-  - {uses: incrementality-test-planner, note: "Designs a lift test for the channel the first checks left in doubt."}
-  - {uses: next-dollar-budget-allocator, note: "Reads the test plan and its result to decide where the next $10,000 goes."}
+  - {uses: cac-payback-checker, note: "Takes the new-customer sheet from step 1 and sets the CAC limit you and your media buyer both hold to."}
+  - {uses: platform-roas-reality-check, note: "Compares what each platform reports with the new-customer sheet from step 1, to see which numbers hold up."}
+  - {uses: incrementality-test-planner, note: "Follows a pause, when you pick the channel you doubt most and pull its spend by week and region. Designs a lift test for the channel the first checks left in doubt."}
+  - {uses: next-dollar-budget-allocator, note: "Follows a pause, when you run the test and pull the results. Reads the test plan and its result to decide where the next $10,000 goes."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/set-your-cac-limit-and-test-what-ads-really-add/skeleton.yaml

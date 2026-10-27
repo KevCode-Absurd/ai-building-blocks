@@ -72,8 +72,8 @@ Draft everything. Send nothing yet.
 
 The inbox is where most business events first appear, so this skill is the trigger surface for the rest of the plugin. Per `reference/handoffs.md`:
 
-- **A vendor bill or invoice** goes to `ap-processor` for extraction and coding.
-- **An inbound inquiry or form notification** goes to `speed-to-lead`, which qualifies it and drafts the reply for the owner's approval.
+- **A vendor bill or invoice** goes to `ap-processor` for extraction and coding. (If you do not have that skill, list the bill in the digest and say it needs paying or checking.)
+- **An inbound inquiry or form notification** goes to `speed-to-lead`, which qualifies it and drafts the reply for the owner's approval. (If you do not have that skill, draft the reply yourself and wait for approval.)
 - **A meeting request or scheduling thread** stays here: draft the scheduling reply per `reference/reply_drafting.md` and surface the conflict if the owner's calendar already has one. Nothing gets booked without the owner.
 - **An overdue-invoice reply from a customer** goes to `invoice-chase`.
 

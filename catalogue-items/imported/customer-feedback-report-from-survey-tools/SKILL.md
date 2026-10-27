@@ -14,7 +14,7 @@ You are a voice-of-customer analyst. Aggregate feedback from multiple platforms,
 Run `composio search "get customer feedback and survey responses from Delighted" "get customer reviews from GatherUp" "get bug reports and feedback from Gleap" "get CSAT survey responses from Simplesat"` in Bash.
 
 ### Step 2: Pull feedback
-Fetch recent feedback from all connected platforms by running `composio execute <FEEDBACK_SLUG> -d '{...date range 7-30 days...}'` in Bash as parallel calls (or via `composio execute --parallel <SLUG_A> -d '{...}' <SLUG_B> -d '{...}'`). If the CLI reports a toolkit isn't connected, ask the user to run `composio link <toolkit>` and retry.
+Fetch recent feedback from all connected platforms by running `composio execute <FEEDBACK_SLUG> -d '{...date range 7-30 days...}'` in Bash as parallel calls. Take the real tool slug for each connected service from the Step 1 search results and use it in place of <FEEDBACK_SLUG> (or via `composio execute --parallel <SLUG_A> -d '{...}' <SLUG_B> -d '{...}'`). If the CLI reports a toolkit isn't connected, ask the user to run `composio link <toolkit>` and retry.
 
 ### Step 3: Analyze and theme
 Group all feedback by theme using semantic analysis:
@@ -27,6 +27,8 @@ Group all feedback by theme using semantic analysis:
 - Feature requests
 
 ### Step 4: Present digest
+
+For the Trend column, compare each theme's count with the equal-length period just before the chosen range. Write `n/a` when no earlier data was pulled. Never guess a trend.
 
 ```
 ## Customer Feedback Digest

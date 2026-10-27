@@ -1,17 +1,17 @@
 new_slug: rival-go-no-go
 name: "Size up a rival and decide whether to go"
-summary: "Size up a rival before you move. Give it your plan and what you know about them. You get a five-factor matchup and a go or no-go call."
+summary: "Size up a rival before you move. Give it your plan and what you know about them. You get a five-factor matchup and a go, wait or no call."
 job: study-competitors
 thinking: high
 thinking_why: "It has to weigh both sides honestly and then test your plan against that. Give it your strongest model."
 
 headline: "Know whether to take on a rival, and where to meet them"
-subhead: "Describe your plan and the rival you are facing. It sets you side by side on five factors, ranks your options and shows where the rival is thin. Then it tests your plan for common mistakes and gives a go or no-go answer."
+subhead: "Describe your plan and the rival you are facing. It sets you side by side on five factors, ranks your options and shows where the rival is thin. Then it tests your plan for common mistakes and gives a go, wait or no verdict."
 
 explain: |
   Most people pick a fight with a rival because the rival looks beatable on one measure, such as price or size. They move before they have looked at the people, the timing, the ground and the cost of a long contest. Or they never move, because every rival looks too big.
 
-  This workflow compares you and the rival on the same five factors, so the comparison is fair. It ranks your options, from breaking their plan to avoiding them, and finds where they are thin or unready. Then it checks your plan against six common faults and three checks that you are ready, the rival is open and the ground allows it. It ends in go or no-go. The method comes from Sun Tzu's The Art of War, an old book on competing that still applies to business.
+  This workflow compares you and the rival on the same five factors, so the comparison is fair. It ranks your options, from breaking their plan to avoiding them, and finds where they are thin or unready. Then it checks your plan against six common faults and three checks that you are ready, the rival is open and the ground allows it. It ends with a go, wait or no verdict. The method comes from Sun Tzu's The Art of War, an old book on competing that still applies to business.
 
 when:
   - You are about to launch a product or offer into a market where a stronger rival already sells.
@@ -31,14 +31,15 @@ you_give:
 you_get:
   - A side-by-side of you and the rival on five factors, with the reason for each
   - A ranked list of your options, with where to fight and where to stay away
-  - A go or no-go answer, with the faults and checks it rests on
+  - A go, wait or no verdict, with the one reason that decided it
+  - The six faults and three checks it rests on, and a fix for each fault
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the pack. It holds HANDOFF.md and two skill files, in the order they run: Rival matchup scorer, then Go or no-go launch checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your plan, your side and the rival. Be honest about your weak spots.
   - It works step by step and saves each result. Read the matchup before the go or no-go.
-  - If the answer is no-go, use the "opening to wait for" in step 1 to decide when to look again.
+  - If the answer is wait or no, use the "opening to wait for" in step 1 to decide when to look again.
 output_sample:
   input:
     - Your plan or move, in a few sentences
@@ -51,7 +52,7 @@ output_sample:
     - name: Rival matchup (step 1 file)
       contains: You and the rival scored on five factors, ranked options, where they are thin and the cost of a long fight.
     - name: Go or no-go check (step 2 file)
-      contains: Six faults and three readiness checks run on your plan, ending in a go or no-go call with reasons.
+      contains: Six faults and three readiness checks run on your plan, ending in a go, wait or no verdict with its reason.
     - name: HAND-BACK SUMMARY
       contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
@@ -59,7 +60,7 @@ how_it_works:
   - title: Score the matchup
     text: "Scores you and the rival on five factors, ranks your options and finds where the rival is thin. Prices the cost and length of a long fight."
   - title: Check the plan
-    text: "Takes the matchup and your plan and checks it for six common faults. Then checks that your team is ready, the rival is open and the ground allows it. Ends with go or no-go."
+    text: "Takes the matchup and your plan and checks it for six common faults. Then checks that your team is ready, the rival is open and the ground allows it. Ends with a go, wait or no verdict."
 
 output_shape: |-
   STEP 1: RIVAL MATCHUP
@@ -72,7 +73,8 @@ output_shape: |-
   STEP 2: GO OR NO-GO
     Six faults: <fault | clear or at risk | why>
     Three checks: <team ready | rival open | ground allows>
-    CALL: <go / no-go>, because <reasons>
+    CALL: <go / wait / no>, because <the one reason that decided it>
+    Fixes: <one per fault found>
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>

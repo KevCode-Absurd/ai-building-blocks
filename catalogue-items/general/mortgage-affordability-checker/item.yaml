@@ -1,0 +1,24 @@
+slug: mortgage-affordability-checker
+name: Mortgage affordability checker
+summary: Share your pay, costs, deposit and quoted rates. Get monthly payments, a higher-rate stress test and questions for your lender.
+category: general
+boards: []
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: question
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - spending-story-reviewer
+  - retirement-savings-projector

@@ -32,7 +32,7 @@ how_to_use:
   - Open an AI that can run code and use the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store.
   - Sign in to your store with read-only product access. Cost data may also need permission to read inventory.
   - Paste the skill into your AI. Give it your store address.
-  - Add the status to check and any required metafields, if you want them (optional).
+  - Add the status to check and any required metafields, if you want them (optional). By default only active products are scored. Ask for draft or all products if you want those too.
   - Open the report and the CSV. Fix the lowest scores first, starting with missing descriptions and images.
   - Run it again after a clean-up to see if your average score went up.
 output_sample:

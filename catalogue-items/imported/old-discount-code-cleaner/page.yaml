@@ -36,7 +36,8 @@ how_to_use:
   - Give your AI the skill and your store domain. Pick what to flag.
   - Keep it on preview first. Read the CSV list.
   - Check that no flagged code is in an email campaign that has not gone out yet.
-  - Only then ask it to delete. Deleted codes cannot be brought back.
+  - Only then ask it to delete. It stops and shows the flagged list, and deletes only the codes you approve in the chat. Deleted codes cannot be brought back.
+  - Afterwards, check your scheduled email campaigns, and run this again each quarter. If you want a softer step, turn codes off by hand in your Shopify admin first.
 output_sample:
   input:
     - Your store domain

@@ -57,11 +57,9 @@ CHECKS MISSED      <one line each, or none>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- The [Email draft readiness checker](https://useaiblocks.com/prompts/email-send-readiness-scorer). It takes the draft.
-- **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
-- **Read your ad results** with the [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). It takes the draft.
-- **Understand your buyers** with the [Product launch FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer). It takes the draft.
+- The [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker). It takes the draft.
+- The [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker). It takes the draft.
+- The [Email draft reviewer](https://useaiblocks.com/skills/email-draft-reviewer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

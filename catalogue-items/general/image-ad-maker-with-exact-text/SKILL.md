@@ -21,7 +21,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
+2. **Image plan** with the [Repeated image campaign planner](https://useaiblocks.com/skills/repeated-image-campaign-planner). Bring product photos. It uses your brand brain.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
@@ -126,8 +127,11 @@ CHECKS MISSED: {one line each, or none}
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Product image ad prompt writer](https://useaiblocks.com/prompts/accurate-product-image-ad-maker).
 - **Check it before it goes live** with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker). It takes the image prompt.
-- The [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker). It takes the image prompt.
+- The [Ignored reminders image ad maker](https://useaiblocks.com/skills/ignored-reminders-image-ad-maker).
+- The [Image ad batch brief writer](https://useaiblocks.com/skills/weekly-image-ad-batch-maker).
+- **Check it before it goes live** with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). It takes the image prompt.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

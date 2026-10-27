@@ -106,7 +106,7 @@ class PriceElasticityAnalyzer:
 
         sku_data = self.data[self.data['sku'] == sku].copy()
 
-        if len(sku_data) < 10:
+        if len(sku_data) < 10:  # needs at least 10 weeks of sales; with less, set the cuts by hand
             return {'error': 'Insufficient data', 'elasticity': None}
 
         # Calculate discount percentage
@@ -186,7 +186,7 @@ class PriceElasticityAnalyzer:
             return {'error': 'Cannot optimize without elasticity data'}
 
         # Test different price points
-        price_range = np.linspace(cost * 1.1, current_price, 20)  # Don't go below cost
+        price_range = np.linspace(cost * 1.1, current_price, 20)  # Floor is cost plus 10%. Replace 1.1 with your own margin limit.
         results = []
 
         for test_price in price_range:

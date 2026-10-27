@@ -12,8 +12,8 @@ use_cases:
   - "Listen before solving a teenager's dilemma: Reflect a teenager's dilemma about an invitation before recommending your favorite option."
   - "Switch from stating your concern to listening: After raising cleanup, hear a child's concern about homework before continuing."
   - "Build a no-lose household agreement: List quiet and social needs for a shared room, brainstorm hours and try an accepted arrangement."
-  - Work through music during a parent's work call
-  - Prepare a respectful relationship conversation with identify ownership and invent shared options
+  - Handle music that interrupts a parent's work call without a fight
+  - Prepare a respectful talk that names who owns the problem and invents shared options
 not_for:
   - "You need to give hard feedback at work: use the Kim Scott mind, who covers care with clear feedback."
   - "You face a high-stakes talk where trust has broken down: use the Joseph Grenny mind, who covers crucial conversations."
@@ -35,9 +35,9 @@ output_sample:
       contains: What remains unknown and what would make the exercise a poor fit for your situation.
 seats:
   - seat: Problem ownership and no-lose agreements
-    asks: How would ask who owns the problem change the next practical action?
+    asks: How would asking who owns the problem change your next step?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using listen when another needs help?
+    asks: What can you say next to listen when someone needs help?
 pairs_with:
   - brene-brown
   - adam-grant

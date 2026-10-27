@@ -9,7 +9,7 @@ subhead: A pre-earnings briefing for one stock, built from live data. Give a tic
 explain: |
   A pre-earnings briefing for one stock, built from live data. Give a ticker and you get the report date, what analysts expect, how the company has beaten or missed before, and what to watch.
 
-  The skill uses the yfinance Python package, and installs it if missing. A single script pulls the calendar, estimate tables for earnings and revenue, past surprise history, recent price action and key company facts. It turns these into a short readable brief. The data comes from Yahoo Finance, so it is for research only and is not financial advice. You need Python, an internet connection and the ability to install a package.
+  The skill uses the yfinance Python package, and installs it if missing. A single script pulls the calendar, estimate tables for earnings and revenue, past surprise history, recent price action and key company facts. It turns these into a short readable brief. The data comes from Yahoo Finance through yfinance, an unofficial package that is not made by Yahoo. It reads Yahoo's web pages, so it can break or be limited without notice and may not suit Yahoo's terms. It is for research only and is not financial advice. You need Python, an internet connection and the ability to install a package.
 when:
   - A company reports next week and you want a quick prep sheet.
   - You want to see how often it has beaten estimates.
@@ -20,9 +20,9 @@ not_for:
   - The company is private or listed outside the US. Yahoo Finance data may be missing, so check the company's own investor page.
   - You want advice on whether to buy or sell. This brief shows what the street expects. Talk to a licensed adviser.
 you_give:
-  - A stock ticker or company name
+  - A stock ticker, or a company name you confirm with the exact ticker
   - Python with internet access
-  - Specific metrics to watch (optional)
+  - Specific metrics to watch (optional, say them before you run the skill)
 you_get:
   - The expected report date
   - Analyst estimates for earnings and revenue

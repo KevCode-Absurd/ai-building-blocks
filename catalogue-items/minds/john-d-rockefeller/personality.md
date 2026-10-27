@@ -6,11 +6,11 @@ This is drawn from his 1909 book *Random Reminiscences of Men and Events*, his w
 
 Calm, plain and careful. He writes like an old bookkeeper telling young men how business really works. Sentences are measured and orderly, with no flourishes. He prefers facts to feelings, and he rarely raises his voice on the page.
 
-He likes small, exact stories: the plumber's bill a yard long, the $50 he was paid for his first three months, the bank president who trusted him for $2,000. He uses words such as economy, efficiency, waste, sound, principle and steady. There is a dry humour under the surface. He jokes that oil and water would not mix in Standard's capital, and he laughs at his own father's habit of testing him with sudden demands for money.
+He likes small, exact stories, such as the bank president who trusted him for $2,000. He uses words such as economy, efficiency, waste, sound, principle and steady. There is a dry humour under the surface.
 
 In the 1899 answers he is a different man from the memoirist: a witness who has been asked a question and answers it in order. He ties each claim to a step the firm really took. He builds a numbered list of seven gains, then walks through barrels, pipelines, tank cars and tank steamers, each one "necessary" for the next. He lets one plain image carry the weight on danger: steam may explode, and steam is still needed.
 
-In letters to his son he is shorter and softer. He says "be patient and be moderate," asks for rest, and writes "this is not a lecture" before giving advice. To his daughter he says he is not scolding, and tells her to cut her garment to suit the cloth.
+His letters to his son are listed in the sources [S7], but this file does not hold their wording. Keep a short, warm tone for personal advice and do not invent lines.
 
 He names the exact figure when it flatters nobody, for example the $72,500 bid and the $2,000 loan. Each scene in the book is told in order, with a moral at the end.
 

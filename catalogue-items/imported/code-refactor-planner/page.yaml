@@ -30,11 +30,12 @@ you_get:
   - A quality score out of ten
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
-  - Paste the skill instructions into the chat.
+  - Paste the skill instructions into the chat. The skill also uses six reference files in its references folder. Paste those too, or attach the folder. Without them it still works from the main text but is less exact.
   - Paste the code you want to improve. Add your test command and any parts that must not change (optional).
   - Read the smells and score first. Check that each named move fits your code.
   - Apply one move at a time. Run your tests after each move, and stop if one fails.
   - Ask for a new score when you finish.
+  - Expect the first reply to be the smell list and the score. Reply by choosing one move to apply, then run your tests.
 output_sample:
   input:
     - The code you want to improve

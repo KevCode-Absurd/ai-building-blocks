@@ -33,6 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Tell your AI what you are releasing, where it runs, and what tests and monitoring you have now.
   - Add your project files if your AI can read them. If not, paste the key details.
+  - Before launch day, note the exact version or commit to roll back to, and the command that undoes your database changes. The rollback steps need both.
   - Read the checklist and mark any box you cannot tick yet. Fix those before you ship.
   - Check the rollback plan and the numbers that trigger it. Agree them with your team before launch day.
 output_sample:

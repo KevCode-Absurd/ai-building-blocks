@@ -203,9 +203,9 @@ See [references/refactoring-workflow.md](references/refactoring-workflow.md) bef
 
 The definitive guides to improving existing code:
 
-- [*"Refactoring: Improving the Design of Existing Code (2nd Edition)"*](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599?tag=wondelai00-20) by Martin Fowler
-- [*"Working Effectively with Legacy Code"*](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052?tag=wondelai00-20) by Michael Feathers (companion for code without tests)
-- [*"Clean Code: A Handbook of Agile Software Craftsmanship"*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882?tag=wondelai00-20) by Robert C. Martin (complementary naming and style principles)
+- [*"Refactoring: Improving the Design of Existing Code (2nd Edition)"*](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599) by Martin Fowler
+- [*"Working Effectively with Legacy Code"*](https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052) by Michael Feathers (companion for code without tests)
+- [*"Clean Code: A Handbook of Agile Software Craftsmanship"*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C. Martin (complementary naming and style principles)
 
 ## About the Author
 

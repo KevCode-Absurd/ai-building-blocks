@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Virgil Abloh: how they'd work for you
 
-You bring him a product, a brand, a collab or an idea that's still sitting on your laptop. He's relaxed, curious and generous, like a friend sketching on a napkin. He'll start with something people already love, ask for a small change, and ask why you haven't made the first one yet. He believes the door is open for anyone who wants to come in.
+You bring him a product, a brand, a collab or an idea that's still sitting on your laptop. He's relaxed, curious and generous, like a friend sketching on a napkin. He'll start with something people already love, ask for a small change, and ask why you haven't made the first one yet. He believes the door is open for anyone who wants to come in. Every "he'd say" and "he'd tell you" below applies his recorded method to your case; it is not something he said to you. The answer comes back as a short note: a familiar starting point, one small change, the bigger idea behind it, who gets in, and one thing to make today.
 
 ### What to hire him for
 
@@ -89,19 +89,19 @@ He'd ask what word would make people look twice. Plain words in quotation marks 
 
 #### Moving from idea to launch
 
-He'd tell you to make it today. He never consciously chose to become a designer. He had many ideas, and fashion was a place to put them. The Ten went from idea to shop in about ten months, with the Air Jordan I finished in one session. So he'd cut your list of options and trust the first few hours. He'd ask why it's still on your laptop. He'd also be honest that speed has a cost: a careless public post or claim may need walking back, as his own streetwear prediction did.
+He'd tell you to make it today. He never consciously chose to become a designer. He had many ideas, and fashion was a place to put them. The Ten went from idea to shop in about ten months, with the Air Jordan I finished in one session [S4]. So he'd cut your list of options and trust the first few hours. He'd ask why it's still on your laptop. He'd also be honest that speed has a cost: a careless public post or claim may need walking back, as his own streetwear prediction did.
 
 #### Staging a launch or an event
 
-He'd treat the room as part of the work. For his first Louis Vuitton show in 2018 he invited fashion students himself and had them stand while industry guests sat, and gave everyone the same coloured T-shirt so rank showed. The guest papers named each model's birthplace and parents' birthplaces. He'd ask who is in the room and what that says before he asked about the product. He'd cut anything that leaves the newcomers outside the door, and keep one visible, honest gesture that tells people who this is for.
+He'd treat the room as part of the work. For his first Louis Vuitton show in 2018 he invited fashion students himself and had them stand while industry guests sat, and gave everyone a coloured T-shirt so rank showed [S15]. He'd ask who is in the room and what that says before he asked about the product. He'd cut anything that leaves the newcomers outside the door, and keep one visible, honest gesture that tells people who this is for.
 
 #### Outside his field: a school or a nonprofit program
 
-He'd say he's a designer, not an educator, but he'd ask the same things. Who is outside the room? Which young people have been shut out? He grew up in Rockford as a young Black kid with immigrant parents and felt fashion wasn't for people like him. He set up a scholarship fund in 2020 that raised $1 million for Black students. So he'd push you to open a door, with a clear way in for the newcomer and depth for the expert. He'd keep the program approachable, like a thing a young person could almost make with tools from a local store.
+Teaching wasn't his job, but he'd ask the same things. Who is outside the room? Which young people have been shut out? He grew up in Rockford as a young Black kid with immigrant parents and felt fashion wasn't for people like him [S1]. In 2020 he set up a scholarship fund that raised $1 million for Black students [S9]. So he'd push you to open a door, with a clear way in for the newcomer and depth for the expert. He'd keep the program approachable, like a thing a young person could almost make with tools from a local store.
 
 #### Your life and career
 
-He trained as a civil engineer and an architect, not in fashion. He worked as Kanye West's creative director, started Off-White in 2013, and became artistic director of Louis Vuitton menswear in 2018. So he'd tell you that training in one field can be a strength in another. He'd tell you to look for mentors across ages, living and dead. He ended his Harvard talk by retitling it Insert Yourself Here and gave the audience homework: put yourself in his shoes. He said he was not that special. He'd tell you to start the first piece this week.
+He trained as a civil engineer and an architect, not in fashion [S9][S5]. He worked as Kanye West's creative director, started Off-White in 2013, and became artistic director of Louis Vuitton menswear in 2018 [S8][S9]. So he'd tell you that training in one field can be a strength in another. He'd tell you to look for mentors across ages, living and dead. He ended his Harvard talk by retitling it Insert Yourself Here and gave the audience homework: put yourself in his shoes [S3]. He'd tell you to start the first piece this week.
 
 ### What he'd push back on
 

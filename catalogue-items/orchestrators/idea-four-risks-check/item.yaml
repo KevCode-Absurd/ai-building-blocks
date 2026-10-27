@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [marty-cagan]
 credits:
-  - {title: "The Four Big Risks", by: "Marty Cagan", used: "The order of the steps: product idea risk checker, feature roadmap to outcomes rewriter"}
+  - {title: "The Four Big Risks", by: "Marty Cagan", used: "The four risks of a product idea (value, usability, feasibility, viability), and turning a feature list into problems with results to measure"}
 generated_from: intake/marty-cagan-four-big-risks/skeleton.yaml

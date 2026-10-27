@@ -65,8 +65,8 @@ export default {
   ],
   compare: { input: "lift", label: "At other lifts", values: [10, 20, 50], outputs: ["perVersion", "cost", "days"] },
   next: [
-    { slug: "two-version-ad-test-planner", why: "Set one clear difference between the versions and a winner rule before launch." },
-    { slug: "ad-test-budget-setter", why: "Turn the cost into a daily budget, a spend limit per ad and a rule for reading it." },
+    { slug: "split-run-test-planner", why: "Set one clear difference between the versions and a winner rule before launch." },
+    { slug: "ad-test-budget-calculator", why: "Turn the cost into a daily budget, a spend limit per ad and a rule for reading it." },
     { if: "days > 30", slug: "small-budget-ad-test-planner", why: "Too long at your budget? Plan a staged test that starts smaller." },
   ],
   sources: [

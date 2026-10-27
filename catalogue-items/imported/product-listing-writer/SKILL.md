@@ -112,6 +112,8 @@ Which mode?
 
 ### Step 2: Gather Keywords
 
+> **No web tools?** `web_fetch` below means "open the page and read it", and `web_search` means "search the web". If your AI cannot do either (some ChatGPT or Gemini chats), ask the user to open each competitor page and paste its title, bullets and description into the chat. Work from that text.
+
 **If competitor URLs provided:**
 
 1. Fetch each competitor page:
@@ -276,7 +278,8 @@ E — Evidence:  Spec, number, or proof that backs the claim
 Example:
 ```
 ❌ "Made with BPA-free Tritan plastic"
-✅ "SAFE FOR YOUR FAMILY — BPA-free Tritan plastic means no harmful chemicals leaching into your smoothies, even after 1000+ uses"
+✅ "SAFE FOR YOUR FAMILY — BPA-free Tritan plastic means [what the buyer gets from it] [confirm: test report or spec that proves it]"
+(The wording is a pattern. Only use a claim such as "BPA-free" or a usage figure if the user's facts or documents back it up.)
 ```
 
 ### Platform-Specific Writing Rules
@@ -377,6 +380,12 @@ Coverage: X/Y keywords (Z%)
 ## ⚠️ Excluded Competitor Brands
 [brands found in competitor copy — excluded from all output]
 ```
+
+---
+
+## What to do next
+
+Check every claim against the real product. Paste the copy into the platform's listing editor. After a few weeks of sales data, run this skill again in Optimize mode.
 
 ---
 

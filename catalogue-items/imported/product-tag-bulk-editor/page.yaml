@@ -33,11 +33,11 @@ you_get:
   - A count of changes made and a list of any failures
   - A CSV with each product's old tags, so you can undo
 how_to_use:
-  - Connect your AI to your Shopify store with permission to read and change products. The skill needs this to make the change. Without it, you get a preview only.
-  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Say whether you want to add or remove, the exact tag names, and how to pick the products.
+  - Use an AI tool that can run the Shopify command line tool, such as Claude Code, Cursor, Codex or Gemini CLI. Sign in with the Shopify CLI to your store, with the read_products and write_products permissions. The skill needs this to make the change. Without it, you get a preview only.
+  - Open the skill in your AI tool, or paste it in. Say whether you want to add or remove, the exact tag names, and how to pick the products.
   - Read the preview. Check the count and the sample titles. If a removal could affect a collection rule, check the rule first.
   - Say yes only when the preview is right. Your AI then runs the change.
-  - Open two products in Shopify and check their tags. Keep the CSV in case you need to restore them.
+  - Open two products in Shopify and check their tags. Keep the CSV in case you need to restore them. To put tags back after a removal, ask your AI to add the tags listed in the previous_tags column, after a new preview.
 output_sample:
   input:
     - Your Shopify store address

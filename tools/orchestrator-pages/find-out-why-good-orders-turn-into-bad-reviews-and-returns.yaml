@@ -9,19 +9,19 @@ subhead: Give it your order data and your low reviews. It compares your best and
 explain: |
   Sales look healthy, yet the reviews are mixed and returns pile up. The usual guess is that the product is the problem. Often some of the buyers came for a different job than the one the product does, drawn in by an ad angle, a photo or a claim that promised something else. Fixing the product will not help them.
 
-  The first step compares your top and bottom customers by profit and traces them to the ads and offers that brought them in. The second tags each low review as a product failure, a wrong-job buyer, a promise you set or a delivery fault, and scores how much of the pain comes from the promise. The third ranks the worries and old habits that hold buyers back and picks one change to test. The fourth picks three to five measures that show buyers making progress. The review step needs about 30 low reviews to be worth running. If most of your lows are real product failures, fix the product first.
+  The first step compares your top and bottom customers by profit and traces them to the ads and offers that brought them in. The second tags each low review as a product failure, a wrong-job buyer, a promise you set or a delivery fault, and scores how much of the pain comes from the promise. The third ranks the worries and old habits that hold buyers back and picks one change to test. The fourth picks three to five measures that show buyers making progress. The review step works best with about 30 low reviews. With fewer, it reads each one and gives rough counts but no score. If most of your lows are real product failures, fix the product first.
 when:
   - Orders are healthy but reviews, returns or repeat orders are weak, and you want to know who is unhappy and why.
   - A new ad angle brought a rush of sales and then a rush of refunds.
   - You keep adding features and still lose the same kind of buyer.
 not_for:
-  - "You have fewer than about 30 low reviews: wait for more, or read each review yourself first, as the review step needs that many to find patterns."
+  - "You have fewer than about 30 low reviews and want a score: wait for more. It still runs on fewer, but gives rough counts and no promise match score."
   - "Most of your low reviews are real product faults: fix the product first, then run this."
   - "You only want to rewrite an ad or page: use the Story image ad writer, then come back here to check who it attracts."
 you_give:
   - Order data with customers, products, discount codes and refunds
   - Your reviews, return notes and support messages
-  - The product page copy or ad text that draws buyers in
+  - The product page copy or ad text that draws buyers in. The second step needs it to trace a bad review to a claim
   - A question to focus on, such as one product or one ad angle (optional)
   - A brief or notes on who you meant to sell to (optional)
 you_get:
@@ -30,7 +30,7 @@ you_get:
   - The worries and habits holding buyers back, ranked, with two fixes each and one change to test
   - Three to five measures of customer progress, each with a formula, a source and an owner
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your order export and your reviews, with the discount code on each order if you have it.
   - Add the page copy or ad text that draws buyers in, so the second step can trace a bad review to a claim.
@@ -82,7 +82,7 @@ output_shape: |-
     Files: <each step's file> | MISSING: <every line, in one list>
 tweaks:
   - what: How many low reviews you give it
-    how: The second step wants 30 or more. With fewer it says so and marks its groups as early reads.
+    how: The second step wants 30 or more. With fewer it reads each review, marks its groups as early reads and gives no score.
   - what: Discount codes on orders
     how: Without them, step 1 cannot split full-price buyers from deal buyers, which is often where the worst customers sit.
   - what: The page copy and ads you give step 2

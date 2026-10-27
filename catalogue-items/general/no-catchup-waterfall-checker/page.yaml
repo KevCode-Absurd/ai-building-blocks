@@ -4,12 +4,12 @@ headline: No-catchup waterfall checker
 summary: Check how one fund payout splits across capital, preference and carry with no GP catch-up. You get LP cash, GP carry and any unpaid shortfall.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Each tier is paid in order and only from cash left after the tier above, so the order and the amounts must come from the agreement."
 subhead: Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall. Share available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
 explain: |-
   Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
 
-  Private fund distributions. Illustrative figures only. 150 pays100 capital then20 preference. Remaining30 splits GP6 and LP24, LP total144. Cash110 leaves10 preference unpaid and zero carry.
+  Private fund distributions. Illustrative figures only. A distribution of 150 first returns 100 of capital, then pays 20 of preference. The remaining 30 splits 6 to the GP and 24 to the LP (a 20% carry), so LP cash totals 144. A distribution of 110 returns 100 of capital, pays 10 of preference, leaves 10 of preference unpaid and pays zero carry.
 when:
   - You need capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
   - You work on private fund distributions and need traceable calculations.
@@ -18,19 +18,20 @@ not_for:
   - "You need a GP catch-up, deal-by-deal carry or a tax-distribution waterfall: ask your fund lawyer or fund administrator, because this tool does not model them."
   - "You want to know what your LPA clause means: ask a fund lawyer, because this tool only does the arithmetic."
   - "You want to check an investor statement against its records: use the Investor statement NAV checker."
+  - "You need to work out the accrued preferred return itself: use the Preferred return accrual checker instead."
 you_give:
   - Available distributable cash, eligible unreturned LP capital, separately verified accrued preference and residual GP carry fraction under a no-catchup LPA.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The distribution date, plus the currency and scale used for the fund distribution waterfall."
+  - "Your spreadsheet tool, if you want the fund distribution waterfall as a workbook."
 you_get:
   - Capital returned, preference paid, GP carry, LP cash and remaining first-tier shortfall.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "An editable workbook of the fund distribution waterfall, with its inputs, formulas and test cases to rerun."
+  - "A tie-out of investor cash plus manager cash and the amount distributed, the inputs still missing and the checks that ran."
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Download the pack and give your AI its SKILL.md. Then add the fund agreement, the cash available and the capital and preference owed."
+  - "Tell it what you need: capital returned, preference paid, carry, investor cash and any shortfall."
+  - "Ask it to stop and mark MISSING if the unreturned capital or the accrued preference is not in your sources."
+  - "Check that carry stays at zero until all capital and preference are paid, then read CHECKS MISSED before you rely on the result."
 output_sample:
   input:
     - Cash available to distribute
@@ -67,12 +68,13 @@ output_shape: |-
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING lines
+  CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Distribution date"
+    how: "Take the distribution date from the fund agreement, the cash available and the capital and preference owed. Use one currency and scale on every line."
+  - what: "Cash available to distribute"
+    how: "Change the cash available to distribute and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Carry remains zero until the entire supplied capital and preference obligations are met.
 judge:
@@ -85,8 +87,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one fund distribution waterfall you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define preferred return into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

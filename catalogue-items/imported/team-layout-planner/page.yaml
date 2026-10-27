@@ -20,11 +20,13 @@ not_for:
   - "You have one small team or a one-off process question: talk it through with your team lead, no structure plan needed."
   - "You need to split software into parts, not teams: use a domain-driven design guide for that question."
   - "You want to fix how code depends on other code: use a clean architecture guide, not a team plan."
+  - "You want to see who is overloaded this month, not how teams are shaped: use the team capacity planner."
 you_give:
-  - Your current teams and what each owns
+  - Your current teams and what each owns (the minimum to start)
   - The product or system they work on
   - Pain points such as delays or handoffs
   - Team sizes (optional)
+  - Any data on how loaded each team feels (optional). If you have none, your AI will ask you a few questions instead.
 you_get:
   - Each team labelled by type
   - Interaction modes between teams
@@ -36,7 +38,10 @@ how_to_use:
   - Describe the product and your main pain points, such as slow sign offs or work bouncing between teams.
   - Ask your AI to review your teams with this skill and score the design.
   - Read the overload flags first. Check they match what your teams feel.
+  - The score out of ten is your AI's judgement against the Team Topologies ideas, not a tested benchmark. Check team sizes and pain points yourself.
   - Use the ordered changes as a draft plan, and talk it through with your team leads before you act.
+  - Run the review again after one quarter. Next, map who decides what with the org structure map, and tell people with the org change announcement writer.
+next: [org-structure-map, org-change-announcement-writer]
 output_sample:
   input:
     - A list of your current teams and what each one owns

@@ -49,6 +49,7 @@ When triggered, ask the user:
   - By profit margin?
   - By sales velocity (how fast they're selling)?
   - Combination of the above?
+  - If the user does not answer, default to total revenue and say so in the brief.
 
 - **"Do you have seasonality patterns in mind?"**
   - If yes: "Tell me about them" (capture user's known seasonality)
@@ -75,7 +76,7 @@ Fetch data from the authenticated connector (QuickBooks, PayPal, or Square, user
 
 Any one of those carries product name, date, revenue, and usually quantity, which is everything Step 3 needs. A pasted list of what sold and roughly when also works — say plainly that the read is rougher, and run it.
 
-**Fallback:** If <3 months of data, use industry seasonality benchmarks for the SMB's category (e.g., retail, services, e-commerce)
+**Fallback:** If <3 months of data, you may use general seasonality for the SMB's category (e.g., retail, services, e-commerce). Label it "general estimate, not from your sales", name where it comes from, or say plainly that no source was used. Never give a seasonal figure as fact.
 
 Identify:
 - **Top 3–5 performers** (by user's chosen metric)
@@ -86,7 +87,7 @@ Identify:
 ### Step 4: Layer in seasonality
 
 - **User-provided:** If they shared seasonal patterns, weight recommendations against them
-- **Industry benchmarks:** For categories without strong user data (e.g., "Q1 is strong for tax services")
+- **Industry benchmarks:** For categories without strong user data (e.g., "Q1 is strong for tax services"). In the brief, label each one as a general estimate and name its source, or say that none was used.
 - **Timing:** Flag products that should ramp up/down in the next 30 days based on seasonal patterns
 
 ### Step 5: Build the 30-day brief

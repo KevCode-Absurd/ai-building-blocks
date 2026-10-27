@@ -38,6 +38,7 @@ how_to_use:
   - Do the first check it gives and send back what you saw.
   - Make only one change per run and write down the result.
   - Move to tuning only when all the checks pass.
+  - Once tuning starts, record the final settings in the change log. Then run the chosen model once on a held-out test set that tuning never touched.
 output_sample:
   input:
     - Your model, the task and what goes wrong

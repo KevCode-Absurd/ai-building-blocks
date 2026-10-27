@@ -33,7 +33,7 @@ how_to_use:
   - Talk through the feature with your AI first, in the same chat. Say what it should do and why.
   - Paste in this skill, or add it to your AI tool as a skill. Make sure your AI can read your code and reach your issue tracker.
   - Tell your AI the name of your tracker and that your ready-for-agent label exists.
-  - Ask your AI to write the spec. It will pick where to test the feature and ask you to confirm.
+  - Ask your AI to write the spec. It will pick the test points (the places in the code that your tests call into, ideally one) and ask you to confirm them once. That one check is the only question.
   - Check the spec your AI posts. Fix anything wrong in the tracker before an agent picks it up.
   - If your AI cannot reach your tracker, ask it to print the spec and paste it in yourself.
 output_sample:

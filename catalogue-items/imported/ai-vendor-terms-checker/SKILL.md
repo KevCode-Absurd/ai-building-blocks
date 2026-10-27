@@ -11,7 +11,7 @@ argument-hint: "[vendor name, or attach the contract]"
 
 # /vendor-ai-review
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm vendor governance positions are populated — if not, stop and direct to setup.
+1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm vendor governance positions are populated. If that file does not exist (for example in a plain chat), ask the user to paste their AI policy and vendor positions, or to say "provisional", and carry on.
 2. Use the framework below.
 3. Confirm document type (AI addendum / main agreement AI provisions / ToS). If only an AUP was provided, ask for the full terms.
 4. Term-by-term review: training on data, confidentiality of inputs, model changes, output IP, liability, incident notification, human review rights, use restrictions, audit rights.
@@ -70,6 +70,8 @@ If `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` con
 > - Say **"provisional"** and I'll review against generic defaults — US jurisdiction, middle risk appetite, lawyer role, no playbook — and tag every output `[PROVISIONAL — configure your profile for tailored output]` so you can see what I do before committing.
 
 ### Provisional mode
+
+In a plain chat with no configured files, the cold-start interview command is not available. Use provisional mode, or ask the user to paste their AI policy.
 
 If the user says "provisional," run the vendor AI review normally using these generic defaults: middle risk appetite, lawyer role, US jurisdiction, no playbook (flag all common vendor-AI risks from first principles rather than matching to configured positions). Tag the reviewer note and every finding block with `[PROVISIONAL]`. At the end of the output, append:
 

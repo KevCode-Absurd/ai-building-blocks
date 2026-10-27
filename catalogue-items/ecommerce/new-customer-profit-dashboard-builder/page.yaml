@@ -19,8 +19,8 @@ when:
   - Your product costs are not all tagged in Shopify and margin is a guess.
 not_for:
   - Your orders have no new or returning flag. Fix that in Shopify first, or the new-customer lines cannot be trusted.
-  - You spend heavily on influencers, TV or retail. One platform's spend misleads, so run a lift test instead.
-  - You want to judge how fast a customer pays back their cost. Use the CAC payback checker, which is not in this list yet.
+  - You spend heavily on influencers, TV or retail. One platform's spend misleads, so run a lift test instead (use the incrementality test planner).
+  - You want to judge how fast a customer pays back their cost. Use the CAC payback checker.
 
 you_give:
   - Shopify orders with a new or returning flag
@@ -135,7 +135,7 @@ improve:
   - Add your own good range for new-customer MER once you have three months of data. It depends on your margin and repeat rate.
   - Save the definitions to your brand file so every report uses them.
   - Add a weekly view once the daily view is stable.
-  - Add the 180-day band when cohort data is ready, using the CAC payback checker.
+  - Add the 180-day band when cohort data is ready, and run the CAC payback checker for the full read.
   - Pair it with the daily contribution margin tracker for the owner view. Money figures are planning numbers, so check them with your accountant.
 
 works_best_with:

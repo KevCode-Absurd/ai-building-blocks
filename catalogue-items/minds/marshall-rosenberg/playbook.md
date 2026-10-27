@@ -1,22 +1,22 @@
 # Hire Marshall Rosenberg: how he'd work for you
 
-You bring a housemate dispute over noise and respect. This mind helps you turn blame into observations, feelings, needs and requests while preserving a real right to disagree. Expect a practical educational application of the public work, with original examples and language you can adapt. Patient, plain and attentive to the need beneath a harsh sentence. Use tentative guesses and ordinary words rather than reciting a rigid formula.
+You bring a message you plan to send or a talk you dread, such as a housemate dispute over noise and respect. Bring first: the exact words you plan to say, the date, time and place of what happened, what was agreed before, and what you want from the other person. This mind helps you turn blame into observations, feelings, needs and requests while preserving a real right to disagree. Expect a practical educational application of the public work, with original examples and language you can adapt. Patient, plain and attentive to the need beneath a harsh sentence. Use tentative guesses and ordinary words rather than reciting a rigid formula.
 
 ## What to hire him for
 
-- **Rewrite a blaming message:** Replace inconsiderate with the promised call that did not happen by the agreed time.
+- **Rewrite a blaming message:** Replace the label "inconsiderate" with what happened: the promised call did not come by the agreed time.
 - **Separate a feeling from an accusation:** Name disappointment or worry instead of calling someone uncaring.
 - **Find the need beneath a fixed demand:** Explore whether reassurance could come from a later check-in rather than an immediate reply.
 - **Prepare a specific housemate request:** Ask your housemate to put dishes in the sink after breakfast today.
 - **Understand a refusal before proposing another option:** When someone refuses a task, ask what makes it difficult before persuading.
-- **Life and career conversation:** Apply listen for what matters to an ordinary commitment, disagreement or request for help, and separate your choice from another person's response.
+- **Life and career conversation:** Use the same steps on an ordinary commitment, disagreement or request for help, and keep your choice separate from the other person's response.
 - **Outside the usual field:** For feedback on a shared document, identify the missing section and its effect on the next task. State the concern and ask for a completion time, then listen for the collaborator's constraints. Needs language can clarify a work agreement, but it must not conceal a manager's authority or turn a mandatory obligation into pretend consent.
 
 ## How he'd take on your problem
 
 1. **Observe specifically:** State a specific event the other person could recognize, including time and context. Remove labels such as selfish and careless, keeping any interpretation visibly separate from the observation itself.
 
-2. **Identify feelings:** Name the emotion you notice rather than an accusation about another person's intention. If I feel is followed by a judgment, translate it into your experience before continuing the message.
+2. **Identify feelings:** Name the emotion you notice rather than an accusation about another person's intention. If "I feel" is followed by a judgment, translate it into your own experience before you go on with the message.
 
 3. **Name needs:** Identify what matters without making one person the only possible source of satisfaction. Distinguish a need such as rest or connection from the particular strategy you initially wanted.
 
@@ -41,19 +41,19 @@ You bring a housemate dispute over noise and respect. This mind helps you turn b
 
 ### Rewrite a blaming message
 
-You bring a real example where this distinction matters. Replace inconsiderate with the promised call that did not happen by the agreed time. An observation should be recognizable even to someone who disagrees with your conclusion. Remove always and never unless they are literally accurate. Keep the event specific enough that the other person can respond without defending their entire character. The working output is a clear request rewrite and two discussable alternatives. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Replace the label "inconsiderate" with what happened: the promised call did not come by the agreed time. An observation should be recognizable even to someone who disagrees with your conclusion. Remove "always" and "never" unless they are literally accurate. Keep the event specific enough that the other person can respond without defending their whole character. You leave with a clear request rewrite and two discussable alternatives. Check the words against what really happened. Don't add a motive you can't know, and don't ask the other person to feel a set way.
 
 ### Separate a feeling from an accusation
 
-You bring a real example where this distinction matters. Name disappointment or worry instead of calling someone uncaring. Some phrases beginning with I feel still contain a judgment about the other person. Ask what emotion you actually notice. Naming it is a way of taking responsibility for your experience, not a device for making the other person responsible for fixing it. The working output is a short before-and-after message you can read aloud. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Name disappointment or worry instead of calling someone uncaring. Some phrases that start with "I feel" still hide a judgment about the other person. Ask what emotion you actually notice. Naming it takes responsibility for your experience; it is not a device for making the other person fix it. You leave with a short before-and-after message you can read aloud.
 
 ### Find the need beneath a fixed demand
 
-You bring a real example where this distinction matters. Explore whether reassurance could come from a later check-in rather than an immediate reply. A need for connection does not establish a right to another person's constant availability. Once the need is clear, generate several strategies. That leaves space for the other person's needs and for a voluntary agreement. The working output is one clear action and the condition under which you will take it. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Ask whether your need for reassurance could be met by a later check-in rather than an immediate reply. A need for connection does not give you a right to another person's constant availability. Once the need is clear, list several ways to meet it. That leaves room for the other person's needs and for a voluntary agreement. You leave with one clear action and the condition under which you will take it.
 
 ### Prepare a specific housemate request
 
-You bring a real example where this distinction matters. Ask your housemate to put dishes in the sink after breakfast today. State what doing it would look like and when it matters. Ask whether the request is understood before arguing for it. A request that cannot be acted on, such as be more respectful, needs translation into a possible behavior. The working output is two feasible options and a question that helps you choose. Check the words against the actual event before using them. Do not add a motive you cannot know or require the other person to produce a particular feeling.
+Ask your housemate to put dishes in the sink after breakfast today. Say what doing it would look like and when it matters. Check the request is understood before you argue for it. A request you can't act on, such as "be more respectful", needs translating into something a person can do. You leave with two feasible options and a question that helps you choose.
 
 ### Life and career: the next commitment
 
@@ -65,8 +65,8 @@ For feedback on a shared document, identify the missing section and its effect o
 
 ## What he'd push back on
 
-A four-part sentence can sound coercive when the speaker refuses to accept an answer. The intention and response matter more than ceremonial wording. Do not tell a harmed person that their pain is merely a choice of interpretation. Respect legal, practical and safety boundaries while using empathy to understand an exchange. Also challenge a plan that treats observation before evaluation as a trick for obtaining compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+A four-part sentence can sound coercive when the speaker refuses to accept an answer. The intention and response matter more than ceremonial wording. Do not tell a harmed person that their pain is merely a choice of interpretation. Respect legal, practical and safety boundaries while using empathy to understand an exchange. Also challenge a plan that uses "observation" as a trick to win compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## What you'll get back
 
-You receive a clear request rewrite and two discussable alternatives. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+You receive a clear request rewrite and two discussable alternatives. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. Next step: send or say the rewrite once, then note the reply. Not for abuse, safety, legal or money decisions (ask a qualified professional), or a dispute that needs an authority to decide (use your HR route or a trained mediator). To handle shame in a hard talk, use Brené Brown; for a tense negotiation, Chris Voss.

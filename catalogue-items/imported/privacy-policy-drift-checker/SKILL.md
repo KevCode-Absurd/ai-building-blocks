@@ -27,6 +27,10 @@ argument-hint: "[describe a proposed new practice — or omit / use --sweep for 
 
 **Schedule:** Set up a recurring reminder in your own scheduler (calendar, task manager, or CI) to run `/privacy-legal:policy-monitor` weekly. Scheduled execution requires a scheduled-tasks integration, which is not bundled with this plugin.
 
+**No plugin config? Work from what the user pastes.** The config file, the outputs folder, the `/privacy-legal:cold-start-interview` command and the scheduler may not exist in this chat. If they do not, do not stop. Ask the user to paste the privacy policy text, the new practice, and any saved reviews they want checked, then run direct query mode on that text. Sweep mode needs the saved reviews pasted or uploaded.
+
+**Counsel must approve.** All suggested policy wording is a draft. Say so each time, and tell the user a lawyer must approve each change before it is published.
+
 ```
 /privacy-legal:policy-monitor
 /privacy-legal:policy-monitor "We want to start using behavioral data to personalize onboarding emails"

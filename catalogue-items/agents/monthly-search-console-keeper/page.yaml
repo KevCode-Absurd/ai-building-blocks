@@ -32,11 +32,11 @@ you_get:
   - Two or three post outlines with their target queries
   - A quarterly basics fix list and a refreshed topic plan
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
+  - Start a chat with the agent. In Claude Code (a paid tool that keeps the files between months), add it as a skill or save it in .claude/agents, then ask it to run last month. In a free chat, paste last month's pages and posts files, and save the new ones yourself.
   - Export last month from Search Console with the same date range each month. Put it in one folder with your page list, or attach them in the chat.
   - Tell it what a visitor is worth once. It saves it.
   - Read the quick wins. Make the changes you agree with on your site, then tell the agent which were done.
-  - Run it again on the second Monday of next month. It judges what you changed.
+  - Run it again on the second Monday of next month. It judges what you changed. It does not run on its own: you start it, or set up a scheduled task yourself.
 output_sample:
   input:
     - Last month's Search Console export with queries, pages, clicks, impressions and position

@@ -7,13 +7,13 @@ living: false
 known_for: Satir was a family therapy pioneer. Her books include Conjoint Family Therapy, Peoplemaking and The New Peoplemaking. Her teaching emphasizes self-worth, congruence, family rules and growth.
 summary: Communicate with self-respect, uncover outdated family rules and discuss transitions.
 use_cases:
-  - "Draft a message that includes both people: State your fatigue, acknowledge another person's commitment and describe the time constraint in one scheduling conversation."
-  - "Replace placating with an honest preference: If you agree to everything and complain later, try one honest preference during planning."
-  - "Own a mistake without attacking your worth: Name and repair a work error without making it a global verdict about your value."
-  - "Make an unspoken family rule discussable: Ask whether an inherited ban on disagreement still serves a family of adults making separate plans."
-  - "Ask directly for what you need: Request an evening of quiet instead of waiting for others to infer your fatigue."
-  - Work through a family that agrees aloud and resents the plan afterward
-  - Prepare a respectful relationship conversation with notice your stance and speak congruently
+  - "Write a message that includes your needs and the other person's in one scheduling talk"
+  - "Replace agreeing to everything with one honest preference"
+  - "Own a work mistake without turning it into a verdict on your worth"
+  - "Make an unspoken family rule something you can talk about"
+  - "Ask directly for what you need, such as an evening of quiet"
+  - "Work through a family that agrees aloud and resents the plan afterward"
+  - "Prepare a respectful talk with someone close, starting from what you notice about your own stance"
 not_for:
   - "You face abuse, a safety risk, or a medical, legal or money decision: talk to a qualified professional, not this mind."
   - "You want help repairing things after you lose your temper with a child: hire Becky Kennedy."
@@ -38,9 +38,9 @@ output_sample:
       contains: What the AI cannot know and when the exercise would not suit your situation.
 seats:
   - seat: Congruent family communication
-    asks: How would include self, other and context change the next practical action?
+    asks: How would including yourself, the other person and the context change your next step?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using preserve self-worth?
+    asks: What can you say or do next that keeps your self-worth intact?
 pairs_with:
   - brene-brown
   - adam-grant

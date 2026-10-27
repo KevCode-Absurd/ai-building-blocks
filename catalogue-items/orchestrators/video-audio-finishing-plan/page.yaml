@@ -9,21 +9,24 @@ explain: |-
 
   Set the output use and duration before choosing a loudness/export target. Do not silently hard-code a platform target or assume all supplied media has reuse rights.
 when:
-  - You need a clear voice, music and effects finishing handoff.
-  - You want a clear draft and checks from the material you already have.
+  - You have a video with a script or voice takes and need a plan to finish the sound.
+  - You want voice, music and effects planned in time order before you edit.
+  - You need to hand an editor a clear mix plan.
 you_give:
-  - brief
-  - "Optional: script"
-  - "Optional: audio"
-  - "Optional: footage"
+  - Your brief, with where the video will play and how long it runs
+  - Your script, with the approved wording (optional)
+  - Voice takes, music and sound effect files, with their usage rights (optional)
+  - Your footage or a timed edit (optional)
 you_get:
-  - edit plan
-  - plan
-  - Missing inputs and steps that still need to run
+  - A list of every audio file, with its role, approval and length
+  - A timed mix plan for voice, room tone, music, effects and fades
+  - The loudness and file target for where the video plays, and the listening checks to do
+  - A list of what did not run, and what is still missing
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+  - Hand the timed mix plan to your editor. If the recordings are noisy, repair them first with the Noisy audio cleaner.
 how_it_works:
   - title: Read the brief
     text: Inventory the script, dialogue/voice takes, footage, music and SFX with durations and approvals. Separate created assets from assets only planned.

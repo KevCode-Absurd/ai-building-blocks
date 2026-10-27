@@ -33,7 +33,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Madhur Jaffrey: how they'd work for you
 
-You bring a practical problem with a real setting, some limits and an outcome you care about. Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
+You bring a dish you want to cook or remember. Bring first: the dish and where your version came from, the pots, tools and ingredients you have or can buy where you live, your time and cooking skill on the night, and what went wrong last time if a recipe tasted flat. Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The examples are our own applications of her public work, not advice she gave you.
 
 ### What to hire them for
 
@@ -71,33 +71,35 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 #### A first dal-and-vegetable supper
 
-Choose a manageable pair of recipes and a rice or bread accompaniment, avoiding several unfamiliar techniques in one evening. A first Indian supper need not contain five unfamiliar dishes. Choose one pulse preparation and one vegetable recipe with compatible methods, then add a grain or bread you can manage. Read both recipes before beginning and notice where spices require immediate attention. The plan should create a coherent meal without asking a novice to monitor several new techniques simultaneously.
+A first Indian supper need not contain five unfamiliar dishes. Choose one pulse preparation and one vegetable recipe with compatible methods, then add a grain or bread you can manage. Read both recipes before beginning and notice where spices require immediate attention. The plan should create a coherent meal without asking a novice to monitor several new techniques simultaneously.
 
 #### Using a small spice cupboard
 
-Pick recipes that share a short set of spices and learn their distinct uses before buying a large collection. For a small spice cupboard, choose a short cluster of recipes before shopping. Make a list of the spices they share and learn where each enters the cooking sequence. Keep the reference recipe intact on the first attempt. A compact repertoire teaches more than a large collection of jars whose different uses remain unfamiliar to their owner.
+For a small spice cupboard, choose a short cluster of recipes before shopping. Make a list of the spices they share and learn where each enters the cooking sequence. Keep the reference recipe intact on the first attempt. A compact repertoire teaches more than a large collection of jars whose different uses remain unfamiliar to their owner.
 
 #### Vegetarian weekday variety
 
-Rotate pulses, greens and vegetable textures while keeping the cooking sequence clear enough to repeat. For vegetarian variety, keep the meal structure manageable while changing its vegetables, pulses and texture. Do not make every component soft or every component intensely spiced. Compare the role each dish plays at the table. A thoughtful combination gives a weeknight meal interest without making it depend on an ever-expanding pantry or an exhausting sequence of separate preparations.
+For vegetarian variety, keep the meal structure manageable while changing its vegetables, pulses and texture. Do not make every component soft or every component intensely spiced. Compare the role each dish plays at the table. A thoughtful combination gives a weeknight meal interest without making it depend on an ever-expanding pantry or an exhausting sequence of separate preparations.
 
 #### Documenting a family process
 
-Ask the person to describe sensory cues and quantities while they work, then test the written version independently. A family recipe can be recorded while the cook works. Note the size of the pan, approximate quantities and the colour, smell or texture that signals the next step. Then let another person try the written version and return with questions. This honours the original knowledge while making its otherwise invisible decisions available to a learner living elsewhere.
+A family recipe can be recorded while the cook works. Note the size of the pan, approximate quantities and the colour, smell or texture that signals the next step. Then let another person try the written version and return with questions. This honours the original knowledge while making its otherwise invisible decisions available to a learner living elsewhere.
 
 #### Learning a skill after moving
 
-Use a familiar outcome as your target, translate missing local resources and practise with the tools now available. For a person learning after moving, begin with a recognisable taste rather than an idealised kitchen. List what can be bought locally, choose one achievable dish and keep notes on the gap between memory and result. That gap is a practical learning question. It need not become a judgment about whether the person has retained or lost their connection to home.
+For a person learning after moving, begin with a recognisable taste rather than an idealised kitchen. List what can be bought locally, choose one achievable dish and keep notes on the gap between memory and result. That gap is a practical learning question. It need not become a judgment about whether the person has retained or lost their connection to home.
 
 ### What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is a clear recipe bridges distance: Explain a new term at the point where the learner needs it. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her challenge: a clear recipe bridges distance, so explain each new term at the point where the learner needs it. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 One author cannot stand in for every Indian household or region. Identify the recipe’s context and mark substitutions honestly instead of calling every adapted vegetable dish an authentic curry. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ### What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Choose a method that fits tonight’s time and tools. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. The closing check: choose a method that fits tonight's time and tools. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+
+Next step: cook the dish once, write down the colour, smell and texture cues that told you each step was done, then let the original cook correct your notes. For Mexican regional food, use Diana Kennedy; for Southern American home cooking, Edna Lewis; for seasonal, garden-led menus, Alice Waters.
 
 ## How Madhur Jaffrey thinks and talks
 
@@ -154,7 +156,7 @@ Built from public sources, last checked 2026-10-23. Source tags identify the pub
 
 ### In one paragraph
 
-Jaffrey is an actor and cookbook author whose work includes An Invitation to Indian Cooking and Vegetarian India. In a 2023 interview she described reconstructing food from her mother’s short written directions and her own memory of taste. [S5] Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The useful distinction is between a documented principle and a new situation in which you choose to test it. This profile keeps those two layers visible.
+Jaffrey is an actor and cookbook author whose work includes An Invitation to Indian Cooking and Vegetarian India. In a 2023 interview she described reconstructing food from her mother’s short written directions and her own memory of taste. [S3] Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The useful distinction is between a documented principle and a new situation in which you choose to test it. This profile keeps those two layers visible.
 
 ### Core ideas
 

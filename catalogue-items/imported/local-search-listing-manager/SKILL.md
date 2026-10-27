@@ -120,6 +120,8 @@ See [references/review-response-templates.md](references/review-response-templat
 
 ## Mode 2: Service Area Pages
 
+AI Blocks note: every landmark, cross-street, zip code and neighborhood problem on these pages must come from the user or be marked [VERIFY] until the user checks it. Never invent a local fact.
+
 Service area pages rank for "[service] in [neighborhood]" searches — the highest-intent local queries.
 
 ### What Makes a Good Service Area Page
@@ -202,7 +204,7 @@ The script checks known directory listings and outputs a consistency report with
 |---|---|---|
 | 1 | Google Business Profile | Highest weight local signal |
 | 1 | Apple Maps | iOS users — major traffic source |
-| 1 | Bing Places | 25% of desktop search |
+| 1 | Bing Places | Another major search engine's map listings (the original's "25% of desktop search" figure is unsourced) |
 | 2 | Yelp | High DA, frequent appearing in Map Pack vicinity |
 | 2 | BBB | Trust signal for home services |
 | 2 | Angi (formerly Angie's List) | High-intent home service searches |

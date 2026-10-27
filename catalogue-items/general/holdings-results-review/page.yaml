@@ -143,6 +143,7 @@ terms:
   - term: Holding
     meaning: A share or stake in a business that you own.
   - term: Return on equity
-    meaning: Operating profit after tax divided by the money owners have in the business.
+    meaning: Profit after tax divided by the money owners have in the business (owners' equity).
   - term: Broad fund
     meaning: A fund that owns many companies, such as an index fund, so there is no single business to judge.
+next: [lifetime-punch-card-bet-ranker, sit-still-rule-writer]

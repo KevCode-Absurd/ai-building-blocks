@@ -9,7 +9,7 @@ headline: "Sign-in policy drafter"
 subhead: "Paste how staff and customers sign in to your store and tools. It finds the gaps, ranks them, scores your setup out of 100, and drafts a one-page password and second-step policy."
 
 explain: |
-  Most store takeovers start with a stolen login on one account, often email or the domain registrar, not the store itself. A password rule from ten years ago will not stop that.
+  Many store takeovers start with a stolen login on one account, such as email or the domain registrar, not the store itself. A password rule from ten years ago will not stop that.
 
   This prompt checks your setup against current basics: a second step on the accounts that matter, no forced password changes, safe recovery, and a re-ask before risky changes. It ranks the gaps so you fix the worst first.
 
@@ -109,3 +109,4 @@ terms:
     meaning: "A second proof you are you, such as a code or a key, on top of a password."
   - term: "Passkey"
     meaning: "A sign-in that uses your device instead of a password."
+next: [store-sign-in-security-checker, staff-phishing-rules-briefer]

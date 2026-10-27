@@ -9,7 +9,7 @@ subhead: An MCP server that lets your AI use a real API, built from the API's ow
 explain: |
   An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
 
-  The skill turns each path and operation into a tool definition, then writes a starter server. It checks names, descriptions and data shapes, and runs a validator that catches duplicate names, bad shapes and missing fields before you wire anything up. It also helps with sign-in choices and keeps the tool contract separate from how the server runs. When the API changes, it applies version and compatibility checks so your tools do not break quietly.
+  The skill turns each path and operation into a tool definition, then writes a starter server. It checks names, descriptions and data shapes, and runs a validator that catches duplicate names, bad shapes and missing fields before you wire anything up. It also helps with sign-in choices and keeps the tool contract separate from how the server runs. It also gives notes on changing tools later without breaking the ones people already use.
 when:
   - You want Claude or another AI to use your company's API.
   - Browser automation is too fragile and you want proper tools.
@@ -33,9 +33,10 @@ how_to_use:
   - Get your API's OpenAPI spec as a JSON file and save it in your project folder.
   - Open your AI in a tool that can run code and read files. Paste in this skill.
   - Tell it your spec file name, a server name, and Python or TypeScript.
-  - Let it make the tool list and server starter files. It needs to run code to do this.
+  - Let it make the tool list and server starter files. It needs to run code to do this. The files go in the output folder you name, such as ./out. Ask your AI how to start the server locally for your language.
   - Ask it to run the validator on tool_manifest.json. Fix any errors it lists.
   - Add the real call logic for each tool, then connect the server to your AI app.
+  - When the report is clean, run your own tests against the server, and read the production hardening notes before you publish it.
 output_sample:
   input:
     - Your API's OpenAPI spec file (JSON)
@@ -54,3 +55,4 @@ output_sample:
       contains: Errors and warnings such as duplicate names, bad data shapes, missing descriptions and empty required fields.
     - name: Production hardening notes
       contains: Advice on keeping secrets safe, limiting which hosts the server can call, and changing tools without breaking them.
+next: [mcp-server-hardener, mcp-server-test-runner, mcp-server-sign-in-builder]

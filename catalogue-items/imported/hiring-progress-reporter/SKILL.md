@@ -3,6 +3,14 @@ name: stakeholder-reporting
 description: This skill should be used when the user asks to "create a sourcing report", "build a dashboard", "generate a pipeline update", "update for hiring manager", "stakeholder report", "sourcing metrics", "pipeline report", "weekly sourcing update", "market insights report", "talent map presentation", or needs to compile sourcing data into structured reports or visual dashboards for stakeholders.
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `.claude/skills/stakeholder-reporting/references/brandguidelines.pdf`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Stakeholder Reporting for Recruiting Sourcing
 
 ## Purpose
@@ -35,7 +43,7 @@ Research-driven report on the talent market for a role or function.
 **Format:** Markdown report + HTML dashboard with charts
 
 **Contents:**
-- Compensation landscape
+- Compensation landscape (use only pay and market figures the user supplies; for any outside figure, name the source and date, and label estimates as estimates; never make up a figure)
 - Talent supply & demand analysis
 - Competitive landscape
 - Hiring difficulty assessment
@@ -186,7 +194,7 @@ roles/
 
 ## Brand Guidelines
 
-All branded reports and PDF-exportable deliverables MUST follow the QuoIntelligence brand guidelines. See `.claude/skills/stakeholder-reporting/references/brandguidelines.pdf` for the complete specification including:
+**Optional.** Branding and PDF export only apply if the user has a brand guide to follow. The QuoIntelligence guide below is the original author's own and is not in this copy. If the user has no brand guide, skip this section and the PDF steps (they need Puppeteer, Chrome and build scripts that are not included) and give a plain markdown report. When a brand guide is available, branded reports and PDF-exportable deliverables follow it. See `.claude/skills/stakeholder-reporting/references/brandguidelines.pdf` for the complete specification including:
 
 - **60-30-10 color rule** — White (60%), QUO Sec Blue (30%), QUO Main Orange (10%)
 - **Typography** — Inter font family at specified weights and sizes

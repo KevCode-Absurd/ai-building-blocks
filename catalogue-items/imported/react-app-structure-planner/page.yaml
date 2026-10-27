@@ -21,8 +21,8 @@ not_for:
   - "You want a visual design or a component library: use a design system tool or a UI kit instead."
 you_give:
   - Your app folder or a description of it
-  - Framework in use
-  - Current pain points (optional)
+  - Framework and state library in use
+  - Your top two pain points (optional)
 you_get:
   - Folder layout by feature
   - Import rules between layers
@@ -34,6 +34,7 @@ how_to_use:
   - Say which framework you use, and add your pain points if you have any.
   - Read the folder layout and import rules first. Check them against your real app.
   - Ask for the migration steps. Move one feature at a time, not the whole app.
+  - Try the import rules as a review checklist on one feature first. Once they hold, roll them out to the rest. Pair the layout with a design system file for how the screens should look.
 output_sample:
   input:
     - Your app folder or a short description of it
@@ -58,3 +59,4 @@ output_sample:
       contains: A list of checks to run in code review so the structure holds.
     - name: Migration steps
       contains: Steps to move an existing app toward this layout.
+next: [code-refactor-planner]

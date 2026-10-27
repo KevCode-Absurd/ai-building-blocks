@@ -94,6 +94,8 @@ python3 scripts/analyzer.py --demo
 
 ## Output Example
 
+This is made-up sample output. The impact figures (such as +15% CVR) are illustrations, not predictions. Do not promise them.
+
 ```
 🎯 Product Differentiation Report
 

@@ -9,7 +9,7 @@ subhead: Paste a price you are weighing and what you sell under this prompt. It 
 explain: |
   The last digits of a price send a signal. A round price such as $200 says think about quality. A price such as $199 says think about cost. Which one helps you depends on what you sell and who buys it.
 
-        This prompt does not choose how much to charge. It picks the digits and layout once you have a price in mind. These are rules of thumb from studies, not a promise of more sales, so it also gives you two prices to test on your own shop.
+        This prompt does not choose how much to charge. It picks the digits and layout once you have a price in mind. These are rules of thumb, not a promise of more sales, so it also gives you two prices to test on your own shop.
 when:
   - You are stuck between $199, $200 and $197.50.
   - You are pricing add-ons or an upgrade tier.

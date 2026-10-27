@@ -40,7 +40,8 @@ how_to_use:
   - Read the plan first. If the teacher is a hosted model, check its terms of use before you generate training data.
   - Copy the training script to a computer with a GPU and run it. A chat AI cannot train a model for you, but Claude Code or Codex can if they run on that computer.
   - Paste the loss values and any error back to your AI. Ask it to fix the script or adjust the settings.
-  - Run the comparison script on your test prompts. Keep the small model only if it meets the bar on your task.
+  - Set your pass bar before you run the comparison, for example "within a stated gap of the teacher on my test prompts". Run the comparison script on your test prompts. Keep the small model only if it meets that bar.
+  - If it misses, try a closer teacher and student pair, a two-stage run, or a hosted API.
 how_it_works:
   - title: Check the setup
     text: It confirms the teacher, the student, the task data and the GPU, and checks the size gap between the models.

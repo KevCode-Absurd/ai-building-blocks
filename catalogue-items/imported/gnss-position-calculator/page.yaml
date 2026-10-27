@@ -5,7 +5,7 @@ name: GNSS position calculator
 summary: Turn RINEX satellite files into GNSS receiver positions. Pick satellite groups, check DOP and scatter, and compare one group against several.
 job: build-software
 headline: GNSS position calculator
-subhead: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups. Bring rINEX 3 observation file. Use the result to plan your next step.
+subhead: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups. Bring a RINEX 3 observation file and its navigation file. Compare one satellite group against several.
 explain: |
   Where a receiver was, worked out from satellite data you already have. Give it RINEX observation and navigation files and it calculates positions using pseudoranges from GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC and SBAS.
 
@@ -59,3 +59,4 @@ output_sample:
       contains: Labelled figures that compare one satellite group against several.
     - name: Ground truth comparison
       contains: The error against a known true position, only if you supply one.
+next: [gnss-signal-generator]

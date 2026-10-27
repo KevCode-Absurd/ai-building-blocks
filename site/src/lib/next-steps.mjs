@@ -41,6 +41,8 @@ const stepSlug = (s) => (typeof s === "string" ? s : Array.isArray(s) ? s[0] : s
 const CONTEXT = new WeakMap();
 const bump = (map, a, b, by = 1) => { let m = map.get(a); if (!m) map.set(a, (m = new Map())); m.set(b, (m.get(b) ?? 0) + by); };
 const isFlow = (b) => b.category === "orchestrator" || b.type === "workflow" || b.type === "routine";
+/** The catch-all job: items in it are linked only by a workflow, a build-on or a specific hand-off. */
+const CATCH_ALL = "set-up-ai";
 /** A port type read in more than this many jobs counts as a loose hand-off, like the generic ones. */
 const BROAD_JOBS = 20;
 /**
@@ -152,7 +154,9 @@ export function nextSteps(b, all, { max = 5, perTask = 3, floor = FLOOR, exclude
     if (!follows && !builtOn && !after && !takes.length && x.task !== b.task) continue;
     const specific = takes.filter((p) => !loose(p)).reduce((s, p) => s + (required(p) ? 3 : 1), 0);
     const generic = takes.filter(loose).reduce((s, p) => s + (GENERIC_PORTS.has(typeOf(p)) ? 1 : 1.5), 0);
-    const sameTask = x.task === b.task, family = sameFamily(b.task, x.task), flow = jobFlow(b.task, x.task, all);
+    // "Set up AI" holds unrelated set-ups (a study plan, a server plan), so sharing it is no evidence on its own.
+    const catchAll = b.task === CATCH_ALL && x.task === CATCH_ALL;
+    const sameTask = x.task === b.task && !catchAll, family = !catchAll && sameFamily(b.task, x.task), flow = jobFlow(b.task, x.task, all);
     const sim = subjectSimilarity(b, x, all);
     const linked = follows > 0 || builtOn > 0 || (after > 0 && family)
       || (specific > 0 && (sameTask || (flow >= MOVES && sim >= 0.02) || sim >= 0.12))

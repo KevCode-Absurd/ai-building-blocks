@@ -31,10 +31,10 @@ you_get:
   - Output format request
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed to write the brief.
-  - Describe what you want to learn and why. Add names, dates and known facts. Say what to include or avoid.
+  - Gather first: your project name, the decision this research feeds, your deadline, who the answer is for, and any sources you already know. Then describe what you want to learn and why. Say what to include or avoid.
   - Read the brief your AI writes. Check that it has one question, three to six numbered sub-questions and your limits.
   - Fix anything wrong or missing, then ask your AI to rewrite it as one paragraph.
-  - Paste the brief into a deep research tool. Some of these need a paid plan or an account, so check yours first.
+  - Paste the brief into a deep research tool. Some of these need a paid plan or an account, so check yours first. The skill's optional DeepAPI route needs an API key and a paid service. Pasting by hand needs neither.
 output_sample:
   input:
     - What you want to learn, even if it is vague

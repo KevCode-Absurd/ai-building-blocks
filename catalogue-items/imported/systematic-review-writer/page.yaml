@@ -5,11 +5,11 @@ name: Systematic review writer
 summary: Turn your research question into a logged literature search, screened papers, a PRISMA flow diagram and a themed review with DOI-checked citations.
 job: research-topics
 headline: Systematic review writer
-subhead: Give it a research question and your inclusion rules. It builds search strings, runs them across sources such as PubMed and arXiv, logs every query and screens the papers. You get a repeatable search, a screened paper list, a PRISMA flow diagram and a themed review with checked citations.
+subhead: Give it a research question and your inclusion rules. It writes search strings for sources such as PubMed and arXiv, processes the records you bring back, logs every query and helps screen the papers. You or a second person run the database searches and check each source. You get a repeatable search log, a screened paper list, a PRISMA flow diagram and a themed review whose citations are DOI-checked.
 explain: |
   A literature review you can defend: a recorded search, papers screened with clear rules, a PRISMA flow diagram, and a written synthesis whose citations have been checked. Reviewers can repeat your steps and get the same papers.
 
-  The skill turns your question into search strings and runs them across sources such as PubMed, arXiv, bioRxiv and Semantic Scholar. It logs every query and count. Papers are screened against inclusion rules you set, and the reconciled counts feed the PRISMA diagram. Findings are grouped by theme, gaps are named, and every citation is verified against its DOI. It works with Python, and PDF export needs Pandoc and XeLaTeX.
+  The skill turns your question into search strings for sources such as PubMed, arXiv, bioRxiv and Semantic Scholar. It helps you log every query and count, and it processes the records the searches return. Papers are screened against inclusion rules you set, and the reconciled counts feed the PRISMA diagram. Findings are grouped by theme, gaps are named, and a script checks that each citation's DOI is registered and fetches its details. You still open each source to confirm it supports the claim. It works with Python, and PDF export needs Pandoc and XeLaTeX.
 when:
   - You need a systematic or scoping review for a thesis or paper.
   - You must show reviewers exactly how you searched.
@@ -31,12 +31,16 @@ you_get:
   - A PRISMA flow diagram
   - A themed review with verified citations
 how_to_use:
+  - Start here. Have these ready: your research question, your inclusion and exclusion rules, the databases you will use, your date range and any papers you already have.
   - Open an AI that can run code and reach the internet. Install the skill folder, or paste in its instructions.
   - Paste your research question and your inclusion and exclusion rules. Add your databases and date range if you have them.
   - Check the search strings it writes before it runs them. Save the search log it keeps.
   - Ask a second person to screen the full texts and settle any disagreements. Then check the PRISMA counts add up.
   - Read the citation check as a DOI and metadata check only. Open each source yourself to confirm it supports the claim.
   - Ask for a PDF only if Pandoc and XeLaTeX are installed. Schematics need a paid OpenRouter key.
+  - The optional parallel-cli web search needs a Parallel account and sign-in (parallel-cli auth or a PARALLEL_API_KEY). You do not need it for the core database search.
+  - The steps follow the seven phases in the skill: plan, search, screen, extract, synthesise, verify citations, write up. Next, pull out more papers with the literature review finder, or compare two sources with the research literature comparison.
+next: [literature-review-finder, research-literature-comparison]
 output_sample:
   input:
     - Your research question

@@ -6,14 +6,14 @@ source: https://github.com/AlmogBaku/debug-skill/tree/master/skills/debugging-co
 source_repo: AlmogBaku/debug-skill
 source_type: community
 date_added: 2026-07-01
-license: MIT
-license_source: https://github.com/AlmogBaku/debug-skill/blob/master/LICENSE
+license: CC-BY-4.0
+license_source: LICENSE-CONTENT
 ---
 
 # Interactive Debugger
 ## When to Use
 
-Use this skill when you need interactively debug source code — set breakpoints, step through execution line by line, inspect live variable state, evaluate expressions against the running program, and navigate the call stack to trace root causes. Use when a program crashes, raises unexpected exceptions, produces...
+Use this skill when you need to debug source code interactively: set breakpoints, step through execution line by line, inspect live variable state, evaluate expressions against the running program, and navigate the call stack to trace root causes. Use it when a program crashes, raises unexpected exceptions, or produces wrong output.
 
 
 Use when a program crashes, produces wrong output, or you need to understand exactly
@@ -26,11 +26,9 @@ evaluate arbitrary expressions against the live process — all without restarti
 
 ## Setup
 
-This skill uses `dap`, a CLI tool that background daemon to interact with the debugger via the DAP Protocol, maintain
-the debugger state, so you can simply interact with it with multiple calls.
+This skill uses `dap`, a command-line tool that runs a background process. It talks to the debugger through the DAP protocol and keeps the debugger's state, so you can use it across many calls.
 
-If `dap` isn't installed (check: `command -v dap`), install it NOW.
-Ask/notify the user before proceeding to install it.
+If `dap` isn't installed (check: `command -v dap`), ask the user first. Install it only after they say yes.
 
 From Homebrew (macOS)
 

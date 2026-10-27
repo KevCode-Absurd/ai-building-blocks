@@ -6,7 +6,9 @@ argument-hint: "<process or task name>"
 
 # /runbook
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Placeholders that start with `~~` (such as ~~knowledge base and ~~ITSM) stand for optional tools. In a plain chat none are connected, so ignore them.
+
+**Do not invent anything.** Never guess a command, file path, server name or contact name. If you do not know one, write `TBC` in its place for the user to fill in.
 
 Create a step-by-step operational runbook for a recurring task or procedure.
 
@@ -71,6 +73,8 @@ Create a step-by-step operational runbook for a recurring task or procedure.
 ```
 
 ## If Connectors Available
+
+Skip this section in a plain chat. It applies only if the user has connected a knowledge base or ticketing tool.
 
 If **~~knowledge base** is connected:
 - Search for existing runbooks to update rather than create from scratch

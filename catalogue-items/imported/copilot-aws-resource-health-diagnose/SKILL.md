@@ -124,11 +124,13 @@ Identify: recurring error patterns, correlation with deployments (CloudTrail), p
 
 ### Step 6: Generate Remediation Plan
 
+Approval gate: write these commands into the plan only. Do not run any put-, reboot- or modify- command until the user has confirmed that exact command. A database reboot causes downtime. Check current account and function limits first, and use the value that fits them.
+
 **Immediate Actions** (Critical):
 ```bash
 # Lambda throttling — increase reserved concurrency
 aws lambda put-reserved-concurrency \
-  --function-name <name> --reserved-concurrent-executions 100
+  --function-name <name> --reserved-concurrent-executions <value within your account limit>
 
 # RDS connection exhaustion — reboot to reset connections
 aws rds reboot-db-instance --db-instance-identifier <name>
@@ -162,6 +164,8 @@ Present findings:
 ```
 
 Then generate a full markdown report covering: health metrics, issues with root cause analysis, phased remediation steps with AWS CLI commands, CloudWatch alarm recommendations, and validation checklist.
+
+Next steps: set the suggested CloudWatch alarms, then run this check again after each fix to confirm it worked. The `date -d` commands in this skill need GNU date (Linux). On macOS, use `date -u -v-24H` or read the same figures in the console.
 
 ## Error Handling
 - **Resource Not Found**: Ask user to clarify name/region

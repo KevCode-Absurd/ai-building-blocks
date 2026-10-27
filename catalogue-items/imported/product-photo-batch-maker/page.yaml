@@ -9,11 +9,11 @@ subhead: One matching product photo for every row in your product spreadsheet, s
 explain: |
   One matching product photo for every row in your product spreadsheet, so a whole catalog looks like a single shoot. The hard part is keeping a big set consistent, so the style rules never change and only the product details do.
 
-  Claude splits each prompt into a fixed style block and a variable block for each item. It sets up a loop with parallel runs, retries and resume after a stop, and a cost limit that halts the run when spending hits your cap. A contact sheet helps you pick the best images. Claude cannot draw. An image model API key and its cost are needed.
+  Claude splits each prompt into a fixed style block and a variable block for each item. It sets up a loop with parallel runs, retries and resume after a stop, and a price check before the run. The script does not stop on its own when spending reaches a cap, so you set a total you accept and watch it yourself. A contact sheet helps you pick the best images. Claude cannot draw. An image model API key and its cost are needed.
 when:
   - You have hundreds of products and need images in one style.
   - A run failed halfway and you want to resume it.
-  - You want to cap image spend before starting.
+  - You want to see the image spend before starting.
   - You need a contact sheet to choose from.
 not_for:
   - "You want mixed visual styles in one batch: run each style as its own batch, or make single photos one at a time."
@@ -23,12 +23,12 @@ you_give:
   - A CSV of products with descriptions
   - Source product photos
   - A visual style for the whole set
-  - A spending limit and image model access
+  - A total you are willing to spend, and image model access
 you_get:
   - A batch script with fixed style and variable parts
   - One image per product
   - Retry and resume handling
-  - A cost limit
+  - A price check before you run
   - A contact sheet to pick from
 how_to_use:
   - Open your AI tool and paste in this skill. Use one that can run commands and read your files.
@@ -37,6 +37,7 @@ how_to_use:
   - Run one product first. Then run five more that cover dark, light and shiny items. Fix the style now, because changing it later means rerunning the whole batch.
   - Do a dry run to see the price, then run the full batch. Check report.csv and rerun the failed products.
   - Check a sample of the images before you publish them. The prompt templates in the skill are in Chinese.
+  - Next, use report.csv to rerun the failed products, and the contact sheet to pick the best image for each product. The skill's last step points to a separate check skill (detect-task) that is not in this folder, so look at a 10% sample by eye instead.
 output_sample:
   input:
     - Your product list as a CSV with a code, a photo path and a short description for each product

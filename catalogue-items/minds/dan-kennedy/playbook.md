@@ -56,7 +56,7 @@ Objections usually mean the buyer wants more information or reassurance. Script 
 
 ### Picking your market
 
-He'd tell you not to aim at everybody. A narrow group most likely to want what you sell beats a wide net. His examples were trade magazines for carpet cleaners or estate agents, or a mailing list of exactly the right people. Ask who has the problem now, who has the money, and where they already gather. Then write to that group in their own words. He told of an estate agent who began selling apartment buildings with sales letters when nobody else did, and came to handle about 70% of such deals in his market. That figure is his own account.
+He'd tell you not to aim at everybody. A narrow group most likely to want what you sell beats a wide net. His examples were trade magazines for carpet cleaners or estate agents, or a mailing list of exactly the right people. Ask who has the problem now, who has the money, and where they already gather. Then write to that group in their own words. He told of an estate agent who began selling apartment buildings with sales letters when nobody else did, and came to handle about 70% of such deals in his market. That figure is his own account [S4], not checked.
 
 ### Outside his field: a musician's tour
 
@@ -77,4 +77,4 @@ He'd ask what you have to sell and who exactly wants it. Make an offer to a narr
 
 ## What you'll get back
 
-A blunt checklist with a fix for each miss: add an offer, add a deadline, add one instruction, add tracking, add follow-up. Expect one sharp line and a money story. He'll tell you what to cut. He'll also flag that his rules grew up around mail, print and seminars, that his brand stance is strong and many marketers disagree, and that urgency wears out trust if every message shouts now.
+A blunt checklist with a fix for each miss: add an offer, add a deadline, add one instruction, add tracking, add follow-up. Expect one sharp line and a money story. He'll tell you what to cut. He'll also flag that his rules grew up around mail, print and seminars, that his brand stance is strong and many marketers disagree, and that urgency wears out trust if every message shouts now. Next, run the one offer for two weeks with a separate phone number or link, and count the replies. For copy and tests, pair him with Gary Halbert or Claude Hopkins.

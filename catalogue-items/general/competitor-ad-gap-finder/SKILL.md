@@ -10,12 +10,17 @@ You read a fair sample of competitor ads, place each on the shared ad type map, 
 ## Where the ads come from
 Only the public **Meta Ad Library** at facebook.com/ads/library, browsed by hand and never logged in to. No scrapers, no Ad Library API (it needs a developer login), no paid spy tools, no bulk downloads. For ordinary ads the library shows the advertiser, the start date, the platforms and whether there are several versions. It shows no spend, results or targeting (Meta Help Center, "Ad Library"). So nothing here can say an ad worked, only that someone kept paying for it.
 
+## When not to use
+- You only want to save and sort a few competitor ads. Use the Competitor ad swipe file builder.
+- You cannot collect ads by hand from the Meta Ad Library, for example ads on other sites. Ask a person on your team to collect them first.
+- You want proof that a competitor ad made sales. The Ad Library shows no spend or results, so ask your own buyers or check your own ad results.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain**, made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+**What you need** (use your own material or the linked skill):
+- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 
 **Makes it better (optional):**
@@ -23,16 +28,16 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
 2. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, reference ads, competitors. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, reference ads, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Ad Library:** The public source for competitor ads, with library IDs and start dates, browsed by hand.
@@ -122,11 +127,11 @@ SCORE     <passed> of <all> checks = <score> out of 100
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Study competitor ads** with the [Video script writer from a competitor ad idea](https://useaiblocks.com/skills/competitor-idea-video-script). It takes the ad breakdowns and buyer brief.
-- **Write the ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It takes the buyer brief.
-- **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the buyer brief.
-- **Make video ads** with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker). It takes the buyer brief.
-- **Write the landing page** with the [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer). It takes the buyer brief.
+- The [Competitor-inspired video script writer](https://useaiblocks.com/skills/competitor-idea-video-script). It takes the ad breakdowns and brief.
+- The [Competitor brand association mapper](https://useaiblocks.com/skills/owned-word-mapper). It takes the ad breakdowns.
+- The [Competitor ad change reviewer](https://useaiblocks.com/skills/monthly-competitor-watcher).
+- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the brief.
+- **Write the ad copy** with the [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer). It takes the brief.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -9,6 +9,8 @@ subhead: A blunt review of your idea from five angles before you spend time or m
 explain: |
   A blunt review of your idea from five angles before you spend time or money on it. Claude tends to agree with you, so this one is built to push back, then a judge makes one call.
 
+  The five reviewers are AI role-plays, not real buyers. The 48-hour test is where real market data comes from.
+
   You answer three or four questions: what it is, who pays and how, your edge and your limits. Five reviewers then go to work: the Critic, the Champion, the Analyst, the Investigator and the Customer. None may hedge or be polite. A judge weighs them and gives a single verdict with what to fix first. Small Python helper scripts build the brief and compute the verdict. They use no outside services. It works in Claude Code and on Claude.ai.
 when:
   - You are about to build a product and want to hear what is wrong with it first.

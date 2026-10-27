@@ -21,8 +21,8 @@ best_for:
   - Quick research and summaries of long documents.
   - Anyone who wants one assistant for many small jobs.
 not_for:
-  - "Decisions based on facts you cannot check against reliable sources."
-  - "Image text that must be exact without manual checking."
+  - "Decisions based on facts you cannot check against reliable sources. Perplexity shows numbered sources you can open."
+  - "Image text that must be exact without manual checking. Ideogram is built for words in images."
 pricing:
   model: freemium
   from: Check the maker's site
@@ -41,6 +41,21 @@ blocks:
   - ai-citation-scorer
 alternatives: [claude, gemini, perplexity, microsoft-copilot]
 last_checked: 2026-10-21
+first_result:
+  - "Go to chatgpt.com and create a free account, or sign in."
+  - "Pick one real task, such as a short reply to a customer. Type it in the message box with who it is for, the tone and the length."
+  - "If the answer must come from your own material, upload a PDF or a spreadsheet and say so."
+  - "Check the answer against your source. Ask it to fix anything wrong or missing."
+  - "You end with text you can copy, or an image or file if you asked for one. Save your brand details in a project so the next chat starts informed."
+  - "Next: to build a small app inside ChatGPT, use the ChatGPT app builder. To see how AI search describes your brand, use the AI search platform checker."
+needs:
+  - "A free ChatGPT account."
+  - "One task, written in a sentence or two."
+  - "The files or brand details the answer should use (optional)."
+not_verified:
+  - "What the free plan allows each day."
+  - "Where each setting sits in the app. Menus change often."
+  - "Plan prices. The note above comes from third-party reports, not the maker's page."
 sources:
   - https://krater.ai/blog/chatgpt-pricing
   - https://www.cometapi.com/chatgpt-pricing-2026-free-vs-go-vs-plus-vs-pro/

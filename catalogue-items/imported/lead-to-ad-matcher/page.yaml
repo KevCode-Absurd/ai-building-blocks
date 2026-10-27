@@ -35,6 +35,7 @@ how_to_use:
   - Upload the export. Add your channel naming rules, and your ad data if you have it (optional).
   - Ask your AI to match each lead to a channel and ad, and to keep every lead, even unmatched ones.
   - Check the unmatched and unclear rows first. Fix missing tags in your CRM, then run it again.
+  - Next, join the matched table to your GA4 or ad spend data, or feed it into a funnel report. Any report that uses it must say its date mode and lookback, and whether it counts only the attribution-primary leads.
   - To repeat this on your own data, ask for the BigQuery SQL. You need a BigQuery account to run it.
 output_sample:
   input:

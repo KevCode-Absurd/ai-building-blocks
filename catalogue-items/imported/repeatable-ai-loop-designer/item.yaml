@@ -5,8 +5,8 @@ category: general
 boards: []
 type: skill
 role: make
-job: ops
-level: advanced
+job: set-up-ai
+level: intermediate
 inputs:
   - type: brief
     required: true

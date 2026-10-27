@@ -19,6 +19,7 @@ not_for:
   - "You have a long B2B sales cycle with few, high-value buyers: talk to each lead yourself, or use a short contact form."
   - "You have no offer to send people to after the quiz: write the offer first, then come back."
   - "You only want to fix a page that gets visits but no sign-ups: edit the page copy directly, since a quiz adds a whole new asset to build."
+  - "You sell from a store and want routes by answer and a drop-off check: use the Store quiz funnel builder."
 you_give:
   - Your audience and the goal they want
   - Your offers or services
@@ -29,7 +30,7 @@ you_get:
   - Result tiers with next steps
   - Six-point funnel score
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. The plan works in any chat AI. Building the quiz needs a quiz tool or form builder, but no code or API key.
   - Tell your AI who your audience is and the goal they want.
   - List your offers or services. Paste your current landing page if you have one.
   - Read the plan. Check that each result tier leads to an offer that fits.
@@ -54,3 +55,4 @@ output_sample:
       contains: A different next step and follow-up for each result tier, matched to your offers.
     - name: Funnel score
       contains: A score out of 10 from six checks, with the rows to fix first.
+next: [conversion-problem-finder, one-page-marketing-plan-builder]

@@ -31,11 +31,13 @@ you_get:
   - UGC or video ad scripts
   - A note on the ad strategy used
 how_to_use:
+  - Gather your real results, reviews and proof points first. The skill must not invent them, so give it only facts you can back up.
   - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tools are needed.
   - Describe your offer and your buyer. Say what they already know and where the ad sends people.
   - "Add past ads that worked (optional) and say which format you want: static ad, short UGC, long video or story."
   - Read the variations. Replace every placeholder, such as [X customers], with your own real numbers, names and results.
   - Check any health, weight-loss or before and after claims against Meta's ad policies before you launch.
+  - Next, log each version in a test sheet. Run the best hooks against the same body text, and write the landing page in a separate chat.
 output_sample:
   input:
     - Your offer and product

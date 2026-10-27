@@ -9,7 +9,7 @@ subhead: "A LinkedIn post that opens with a line chosen for what you want it to 
 explain: |
   A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows.
 
-  The skill holds 16 tested opening formulas, each matched to an engagement goal. You give it a topic, an angle and who you are talking to. It selects a formula, drafts the post with current formatting rules, such as keeping the hook above the fold. Then it scrubs wording that sounds machine-written and hands you the result. It warns against picking a hook just because its raw reach number is bigger.
+  The skill holds 16 opening formulas, each matched to an engagement goal. The engagement figures and the best posting time come from the original author's own posts, not from a controlled test. You give it a topic, an angle and who you are talking to. It selects a formula, drafts the post with current formatting rules, such as keeping the hook above the fold. Then it scrubs wording that sounds machine-written and hands you the result. It warns against picking a hook just because its raw reach number is bigger.
 when:
   - You have a story but your first line is weak.
   - You want more comments, not just views.
@@ -36,6 +36,7 @@ how_to_use:
   - Add your own real numbers, names and short stories. Your AI should ask for them, not invent them.
   - Read the formula it picked and the draft. Ask for another formula if the hook does not fit.
   - Replace any detail that is not true for you, then post it. Put links in the first comment.
+  - Treat the engagement figures and the suggested posting time as the author's guesses. Check them against your own post data.
 output_sample:
   input:
     - Your topic

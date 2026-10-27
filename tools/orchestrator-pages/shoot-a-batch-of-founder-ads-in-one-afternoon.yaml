@@ -22,7 +22,7 @@ you_give:
   - Your product facts (what it is, price, who uses it and what it solves)
   - Your customer reviews, survey answers or support emails (at least 20 real lines is best)
   - Your brand file, with the founder's origin story, how the product works, and proof such as test results, certificates and reviews
-  - Who the ad is for and what they already know
+  - Who the ad is for (the buyer persona) and what they already know
   - Where you can film, and how many hours you have (optional)
 you_get:
   - A grid of buyer problems and angles, ranked in test order, with a first line for each
@@ -31,7 +31,7 @@ you_get:
   - A script check with a score out of 100 and rewrites for weak spots from hook to offer
   - A shoot list by location and outfit, a hook by body matrix that shows how many ads you get, and edit notes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and five skill files, in the order they run: Ad concept matrix builder, Founder ad script builder, Video hook scorer, Video script bridge checker and Founder ad shoot planner."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your reviews and product facts. With fewer than about 20 real lines, it marks personas that rest on a guess.
   - Give it the founder's real story and your proof. It will not invent a result, a customer or an expert.
@@ -45,7 +45,7 @@ output_sample:
     - Where you can film and how many hours you have (optional)
   prerequisites:
     - An AI that can read files, such as Claude with a Project or Claude Code
-    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your brand facts, founder story and proof, pasted in or as a brand brain from the Website brand brain builder
   output:
     - name: Ad concept matrix
       contains: Buyer problems with an angle, an offer, the proof needed, a first line and a test order.

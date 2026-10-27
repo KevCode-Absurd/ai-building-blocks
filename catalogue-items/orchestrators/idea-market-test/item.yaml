@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [peter-thiel, hamilton-helmer]
 credits:
-  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The order of the steps: find the belief your idea rests on, size your market without flattering yourself, test for a ten-times edge, check it still holds in ten years, score the seven questions and make the call"}
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Inspired by its ideas on a belief few share, owning a market, a ten-times edge, lasting ten years and seven make-or-break questions"}
 generated_from: intake/zero-to-one-monopoly-test/skeleton.yaml

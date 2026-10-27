@@ -30,6 +30,7 @@ you_get:
   - Exact file names and paths worked in
   - Up to three assumptions for you to check
 how_to_use:
+  - Have your rough request ready, plus the file paths or links the agent should read.
   - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill instructions from the SKILL.md file.
   - Send your rough request. Add any files, links or notes the agent should know. Say so if it should skip the questions.
   - Answer the questions. Say yes to accept a suggested answer.

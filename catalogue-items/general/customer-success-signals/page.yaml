@@ -147,3 +147,6 @@ terms:
     meaning: A group of customers who started in the same week or month.
   - term: Lifetime value
     meaning: What a customer pays you over the whole time they stay.
+next:
+  - cohort-funnel-reader
+  - customer-job-interview-planner

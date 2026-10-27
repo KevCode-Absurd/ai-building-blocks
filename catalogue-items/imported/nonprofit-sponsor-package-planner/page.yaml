@@ -13,8 +13,8 @@ when:
   - A sponsor asks for an extra perk and you need to know if it fits their tier.
   - You want to plan renewal asks for next year.
 not_for:
-  - "You want grant money from a foundation or the government: use nonprofit-grant-research."
-  - "You need the event budget or event logistics: use nonprofit-fundraising-events."
+  - "You want grant money from a foundation or the government: use the Nonprofit grant funder researcher."
+  - "You need the event budget or event logistics: use the Nonprofit fundraising event planner."
   - "You need final tax advice on sponsor deductions or UBIT: ask your finance lead or a tax adviser."
 you_give:
   - Your event or program facts, such as name, date and place.
@@ -22,6 +22,7 @@ you_give:
   - The benefits you can offer, such as logo spots, tickets and stage mentions.
   - Promises you already made to current sponsors (optional).
   - Your funding goal.
+  - Last year's sponsor delivery records and what similar local events charge (optional).
 you_get:
   - A sponsor tier grid with prices and benefits for each tier.
   - A pitch for each prospect with one clear tier ask.
@@ -42,12 +43,12 @@ works_best_with:
   inputs:
     - Benefit tiers touch the sponsorship-vs-advertising line and UBIT.
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
-  - Paste the skill text, then add your event facts, audience facts, benefits and goal.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
+  - Add your event facts, audience facts, benefits and goal. Add last year's sponsor delivery records and what similar local events charge, if you have them, so the prices rest on evidence.
   - Ask for the tier grid first. Check that each lower tier is a clearly smaller bundle.
-  - Name a prospect and ask for a pitch with one specific tier ask.
+  - Name a prospect and ask for a pitch with one specific tier ask. Check every fact about that company against its public site or your own records before you send it.
   - Ask for the fulfillment checklist and keep it up to date during the event.
-  - Show the tier benefits to your finance lead before you send anything. Some benefits can bring tax questions, such as UBIT, a tax on income unrelated to your mission.
+  - Show the tier grid and the pitch to your finance lead before any sponsor sees them. Some benefits can bring tax questions, such as UBIT, a tax on income unrelated to your mission.
 output_sample:
   input:
     - Your event or program facts, such as name, date and place
@@ -70,3 +71,4 @@ output_sample:
       contains: Proof of what you delivered last cycle, plus next year's ask, timed ahead of the decision.
     - name: Finance review flags
       contains: Notes on where benefits may raise tax questions, including UBIT, for your finance lead to check.
+next: [nonprofit-fundraising-event-planner]

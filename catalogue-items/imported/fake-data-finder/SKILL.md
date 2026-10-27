@@ -59,6 +59,7 @@ Because this workflow drives a real browser against live pages, treat it as an i
 2. For every button: click only user-approved, allowlisted controls that are clearly non-destructive by role, accessible name, nearby text, icon, URL/action target, and expected network side effect; skip destructive or ambiguous controls rather than relying on a label regex alone
 3. For every form: identify required fields and prefer empty-submit validation; submit throwaway data only when the user explicitly approved the exact form, target environment, and test account
 4. Record per-element behavior
+5. Stop rule: if a click or form could change real data (save, send, pay, delete, invite, publish), stop and ask the user first. Do not run Phase 3 at all on a page the user does not own or has not named a test account for.
 
 ### Phase 4: Trace Provenance
 

@@ -21,7 +21,7 @@ not_for:
   - "You want to load test a service you do not own: do not. Get written permission first, or test your own copy."
 you_give:
   - An API spec or a description of the service
-  - Database type and connection details (optional)
+  - Database schema as a .sql file (optional)
   - Language or framework, such as Express
   - Load targets (optional)
 you_get:
@@ -33,8 +33,9 @@ how_to_use:
   - Open a chat with an AI that can run code and read your files, and add the skill folder.
   - Paste your API plan or describe what your service must do. Say which framework you use.
   - Ask for routes first. Read the files it writes before you use them.
-  - Add your database link if you want a speed check. Ask for migration files, then try them on a copy first.
-  - Only run a load test on a system you own or have written permission to test. Never test a live login page without approval.
+  - Add your database schema as a .sql file if you want a speed check. The tool reads the file, not a live database. Ask for migration files, then try them on a copy first.
+  - Only run a load test on a system you own or have written permission to test. Use a staging copy, and never test a live login page without approval.
+  - Next, read the files it wrote, run your tests, and review the security steps with someone who knows backends before you ship.
 output_sample:
   input:
     - Your API plan as an OpenAPI file, or a plain description of the service
@@ -55,3 +56,4 @@ output_sample:
       contains: Requests per second, response time spread, error counts and advice on scaling.
     - name: Security hardening steps
       contains: Fixes for login, rate limiting and input checks, with tests to confirm they work.
+next: [api-test-suite-builder, api-security-checker, code-change-reviewer]

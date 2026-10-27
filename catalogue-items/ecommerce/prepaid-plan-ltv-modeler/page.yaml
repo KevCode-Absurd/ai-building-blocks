@@ -23,7 +23,7 @@ you_give:
   - The discount you plan for each plan, such as 25 percent for 3 orders
   - A dated twelve-month cohort with customer and completed-order counts, and the basis of any repeat-order shares
   - What share of buyers you could move to each plan
-  - Your re-enrol rate for plans, if you have run any (optional)
+  - Your re-enrol and cancel rates for plans, from your subscription app or payment provider, if you have run any (optional)
   - The delivery schedule, refund and cancellation assumptions, cash timing and prepaid obligations
 you_get:
   - Contribution per order and expected per customer within twelve months
@@ -31,7 +31,7 @@ you_get:
   - A valid customer-mix scenario and a separate cash-versus-obligations view
   - Custom planning parts with evidence gaps and a proposed test
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Its repeat-order figures come from one subscription platform's merchants, so replace them with your own data before you decide anything.
   - Paste your price, costs and planned discounts. Attach your cohort table, or say that you have none.
   - Say how many buyers you think you could move to each plan.
   - Check contribution, data gaps and the delivery schedule before interpreting the custom points. A failed financial gate is not overridden by a high score. Agree on an appropriate test before committing.

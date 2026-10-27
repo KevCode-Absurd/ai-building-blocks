@@ -86,6 +86,7 @@ Where customers prefer them: <list>. Where customers prefer you: <list>.
 
 **Customer words for your page or ads**
 - "<word for word>"
+- Before a reviewer's words go in a paid ad, check the ad platform's testimonial rules and get the reviewer's permission.
 
 **What this cannot tell you:** <list>
 

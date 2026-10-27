@@ -29,11 +29,13 @@ you_get:
   - Validation or field logic
   - Steps to test and deploy
 how_to_use:
+  - "Before you start, you need a Shopify Partner account, the Shopify CLI and a store on Shopify Plus or with checkout extensibility. This is a job for someone comfortable with a terminal. If that is not you, give the code to a developer before you deploy."
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Describe the change you want and the page it should appear on.
   - Ask your AI to list any imports or app web addresses you must add before the code runs.
   - Run the setup and preview commands yourself, or use an AI that can run code. You need the Shopify CLI for this.
   - Preview the extension in your checkout editor and test it on a phone before you deploy.
+  - The sample offers (such as 20% off and the upsell product) are placeholders. Swap in your own offer and product. When the test passes, deploy with the Shopify CLI and check the result in your Shopify admin.
 output_sample:
   input:
     - The change you want at checkout, such as a gift note field

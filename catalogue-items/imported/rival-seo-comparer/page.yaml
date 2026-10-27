@@ -36,7 +36,8 @@ how_to_use:
   - Paste any exports from your SEO tools. If you have none, say so. Your AI will use manual search checks and mark what it could not verify.
   - Pick all five angles for a full report, or two or three for a focused look.
   - Read the executive summary first. Check any number that matters before you act on it.
-  - Start with the top items in the roadmap.
+  - Start with the top items in the roadmap. Fix one page with the On-page SEO tuner, and re-run this comparison in a few months.
+next: [on-page-seo-tuner, store-seo-gap-finder, seo-auditor]
 output_sample:
   input:
     - Your site address

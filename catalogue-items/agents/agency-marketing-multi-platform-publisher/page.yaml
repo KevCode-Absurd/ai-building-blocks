@@ -10,7 +10,7 @@ explain: |-
 
   It first asks where the piece fits and drops the poor matches. A deep technical tutorial suits Zhihu and CSDN, not Xiaohongshu. Then it rewrites the article for each platform you keep, with the right voice, title length, cover and call to action. It lists each platform's limits so you can check them. It ends with a plan to post every draft as a draft, never as a live post.
 
-  In a chat, the agent writes and plans only, and you paste each draft into the platform yourself. The original profile also describes tools that sync drafts for you, such as Wechatsync. Those need installs and your own logged-in accounts, and they are third-party tools. The agent never asks for your passwords or cookies, and it never publishes. The profile's targets, such as a 95 percent sync rate, are the author's goals, not results from AI Blocks.
+  In a chat, the agent writes and plans only, and you paste each draft into the platform yourself. The original profile also describes tools that sync drafts for you, such as Wechatsync. Those need installs and your own logged-in accounts, and they are third-party tools. Unofficial automation tools such as xiaohongshu-mcp and biliup may break a platform's terms and can get an account limited or banned. Chat only mode is the safer default. The agent never asks for your passwords or cookies, and it never publishes. The profile's targets, such as a 95 percent sync rate, are the author's goals, not results from AI Blocks.
 when:
   - You wrote one article and want it on three or four Chinese platforms.
   - You are not sure which platforms suit a technical post, a review or an opinion piece.

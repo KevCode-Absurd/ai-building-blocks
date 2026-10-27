@@ -12,7 +12,7 @@ not_for:
   - You have no notes on past mistakes. Write down a few errors first, because the list must come from real evidence.
 explain: Give it your error notes, past checks and learning goal. It groups repeated mistakes, ranks the gaps and chooses what to revisit. You get a short active list, the next practice task and clear rules for closing each gap.
 you_give:
-  - Your error notes, with topic, error type, date and how often it repeated
+  - "Your error notes, with topic, error type, date and how often it repeated. Error type is Surface (a slip, such as a wrong sign), Structural (a wrong step in the method) or Deep (a wrong idea about the topic)"
   - Your learning goal
   - Your earlier gap list (optional)
   - How sure you feel about each topic (optional)
@@ -35,6 +35,9 @@ how_to_use:
   - Do the practice it suggests for the top one or two gaps.
   - Come back after practice, paste how it went, and let it update the list.
   - Two clean checks in a row mean a gap is improving. Three mean it is closed.
+  - The score runs from 1 to 5: repeats times error weight (Surface 1, Structural 2, Deep 3), plus 1 if you have not worked on it for three sessions, capped at 5. Score 1 or 2 means more practice questions, 3 or 4 means re-learn the topic, 5 means ask yourself or your AI to question you on why.
+  - The skill's extra skills (check-understanding, challenge-generator and so on) are not needed. Ask your AI in plain words for practice questions or a re-explanation.
+next: [study-understanding-check, study-revision-coach]
 output_sample:
   input:
     - Your error notes, with topic, error type, date and how often it repeated

@@ -7,6 +7,11 @@ description: Paste this above a rival's public facts and your proven strengths t
 
 Finds where your proven strength meets a rival's weak spot, and writes the message without naming or attacking them.
 
+## When not to use it
+- Your market has no weak spot a buyer can check: build the message on your own proof, or ask a customer why they chose you.
+- You want an ad that names the rival: get a legal or ad-policy review first, because this prompt does not name them.
+- You want the full set of checks: use "Rival weakness message finder".
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -58,18 +63,10 @@ MESSAGE 2 ... MESSAGE 3 ...
 
 CLAIM ONLY (not used): <strengths with no proof>
 MISSING: <anything you could not source>
+CHECKS MISSED: <one line per check missed, or none>
 ```
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad). It takes the buying reasons.
-- **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). It takes the buying reasons.
-- **Understand your buyers** with the [Buyer emotion and copy theme finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
-- **Write the ad copy** with the [Ad headline ideas](https://useaiblocks.com/skills/typed-headline-batch-writer). It takes the buying reasons.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+**What next:** test each message against its likely reply with a few real buyers before it runs. Get an ad-policy or legal review before any message names a rival.
 
 ## Checks
 - Every rival weak spot has a public source.

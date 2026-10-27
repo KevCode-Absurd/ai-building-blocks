@@ -1,6 +1,6 @@
 ---
 name: scorecard-marketing
-description: 'Build quiz and assessment funnels that generate qualified leads at 30-50% conversion. Use when the user mentions "quiz funnel", "scorecard", "lead magnet", "score-based segmentation", or "lead qualification". Also trigger when designing self-assessment tools, building calculators or graders for marketing, or creating personalized result pages that drive conversions. Covers concept hooks, question design, dynamic results by tier, and automated follow-up sequences. For landing page conversion, see cro-methodology. For full marketing plans, see one-page-marketing.'
+description: 'Build quiz and assessment funnels that generate qualified leads. Use when the user mentions "quiz funnel", "scorecard", "lead magnet", "score-based segmentation", or "lead qualification". Also trigger when designing self-assessment tools, building calculators or graders for marketing, or creating personalized result pages that drive conversions. Covers concept hooks, question design, dynamic results by tier, and automated follow-up sequences. For landing page conversion, see cro-methodology. For full marketing plans, see one-page-marketing.'
 license: MIT
 metadata:
   author: wondelai
@@ -152,6 +152,8 @@ See [references/analytics-optimization.md](references/analytics-optimization.md)
 - "The [Adjective] [Topic] Quiz" — "The Complete Wellness Quiz"
 
 ## Conversion Benchmarks
+
+*These figures are the original author's rough estimates. They have no source here. Treat them as a hope, not a promise, and never quote them to others as fact.*
 
 - Traditional PDF lead magnets: 3-10% conversion
 - Scorecard/quiz funnels: 30-50% conversion

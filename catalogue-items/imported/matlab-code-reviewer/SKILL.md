@@ -78,7 +78,7 @@ Read the `matlab_coding_guidelines` MCP resource to get the authoritative MathWo
 |-------|----------|----------|
 | Input count | Max 6 positional inputs | Warning |
 | Output count | Max 4 outputs | Warning |
-| Validation | `arguments` block present | Warning |
+| Validation | `arguments` block present | Warning (Error for public-facing functions, see High-Severity Flags) |
 | Name-value args | `options.Name` pattern (not `varargin`) | Suggestion |
 | Length | Flag if >50 lines | Suggestion |
 | Nesting | Flag if >3 levels deep | Warning |

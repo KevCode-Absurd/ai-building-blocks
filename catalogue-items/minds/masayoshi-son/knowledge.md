@@ -1,6 +1,6 @@
 # Masayoshi Son: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Masayoshi Son is alive, and views can change. This data set comes from SoftBank Group's own pages, including his signed message as chairman and CEO [S1], his statements in company press releases [S2], reports of what he told shareholders in 2013 and 2026 [S8][S9], a transcript of his June 2013 shareholder talk about Sprint (from an English interpretation, so wording may be off) [S10], a page on his 2010 Next 30-Year Vision [S11], and public reference pages [S3][S4][S5]. Treat each view as "as of" the date of its source, mostly 2016 to 2026. He is an investor as well as a founder, so this mind explains how he thinks about bets. It never gives buy or sell advice.
 

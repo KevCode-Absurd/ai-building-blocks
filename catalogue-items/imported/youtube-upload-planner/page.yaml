@@ -33,9 +33,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Tell your AI how many hours you can give this week and what videos are already half made.
   - Add your best upload day from your channel analytics, if you know it.
-  - If your AI has no record of your voice, paste the text of three of your own videos so it can match how you talk.
+  - If your AI has no record of your voice, paste the text of three of your own videos so it can match how you talk. A saved voice file is only read by tools that can open your files, so paste the samples each time in a plain chat.
   - Read the week table and check the hours fit your real week.
   - "Answer the last question: ship it, or change it. Then post the videos yourself, as the AI does not publish."
+  - Next, book the anchor video's recording day first. After the week, bring your analytics back and run the plan again.
 output_sample:
   input:
     - How many hours you can give this week
@@ -60,3 +61,4 @@ output_sample:
       contains: The upload to cut if the week goes wrong.
     - name: Ship it or change it
       contains: A closing question asking whether you want to go ahead or edit the plan.
+next: [youtube-title-thumbnail-check, youtube-script-writer]

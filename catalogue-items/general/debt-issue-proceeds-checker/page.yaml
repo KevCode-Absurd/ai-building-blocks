@@ -4,12 +4,14 @@ headline: Debt issue proceeds checker
 summary: "Check debt issue proceeds: tie face value to the cash you actually received after issue discount and upfront fees, with checks and gaps listed."
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Face value, discount and fees are easy to mix up, so each must be traced to the contract."
 subhead: Give it the debt face amount, the issue price, the upfront fees and your funding statement. It works out the discount, the cash and the net proceeds. It then ties them to what you actually received.
 explain: |-
-  Original issue discount, gross cash and usable net proceeds.
+  When debt is issued below its face value, you get less cash than you owe. The gap is the original issue discount (OID). Fees taken at closing cut the cash further. This checker works out the gross cash, the discount and the net proceeds. It then ties them to your funding statement.
 
-  Acquisition financing. Illustrative figures only. 100 face at98% provides98, less1 fee gives97. At95% it gives94 while principal remains100.
+  The principal you owe stays at face value. Each fee comes off once only.
+
+  Illustrative figures only. A face of 100 at 98% gives 98 of gross cash, and a fee of 1 leaves 97. At 95% the net is 94, while the principal owed stays 100.
 when:
   - You have a loan or bond issued below par and need to know the real cash received.
   - You are checking acquisition financing and a lender's funding figure looks low.
@@ -19,6 +21,7 @@ not_for:
   - "You need tax OID amortization or effective-interest schedules: ask your tax adviser or accountant, because this only checks one issue."
   - "You need to know if a loan is legally available or funded: read the signed credit agreement and the lender's funding notice."
   - "You want to build a full debt payoff schedule: use a spreadsheet loan schedule, and keep principal at face there."
+  - "You are paying off old debt and need to tie the payoff, premium and fees to usable new funding: use the Refinancing closing cost checker instead."
 you_give:
   - Debt face amount, from the signed contract.
   - Issue price as a share of par, from the contract.
@@ -79,10 +82,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Funding date"
+    how: "Take the funding date from the signed debt terms and the list of upfront fees. Use one currency and scale on every line."
+  - what: "Upfront fees"
+    how: "Change the upfront fees and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Debt principal is not reduced by OID in a principal-payoff schedule.
 judge:
@@ -95,8 +98,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one debt issue proceeds you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define issue discount into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -111,3 +114,6 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+next:
+  - refinancing-closing-cost-checker
+  - deal-funding-gap-checker

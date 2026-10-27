@@ -21,5 +21,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham, warren-buffett]
 credits:
-  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The order of the steps: test each company for size, strength, record and growth, check the per-share earnings for traps, test the price against a ceiling, build the list and keep it spread, write the rules for sitting still"}
+  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The seven tests for a defensive investor: size, strength, profit record, dividends, growth and two price ceilings. The step order, the earnings check and the holding rules are this workflow's own design."}
 generated_from: intake/intelligent-investor-defensive-screen/skeleton.yaml

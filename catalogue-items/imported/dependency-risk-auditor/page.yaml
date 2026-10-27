@@ -5,11 +5,11 @@ name: Dependency risk auditor
 summary: Run a dependency risk audit on your project. Find risky packages and licence clashes, and get a safe order to upgrade.
 job: secure-code
 headline: Dependency risk auditor
-subhead: A check of every package your project uses, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files.
+subhead: A quick offline check of your packages against a small built-in list, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files.
 explain: |
-  A check of every package your project uses, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files. They work offline and give the same result every time.
+  A quick offline check of your packages against a small built-in list, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files. They work offline and give the same result every time.
 
-  The scanner flags known weak versions from a built-in pattern set. The licence checker compares each licence to your policy and calls out conflicts. The upgrade planner takes the scan and orders changes by risk across a timeline you pick. It reads files from JavaScript, Python, Go, Rust, Ruby and more. After you upgrade, you rerun the scan to confirm no high-severity findings remain. It needs Python.
+  The scanner flags known weak versions from a built-in pattern set. The licence checker compares each licence to your policy and calls out conflicts. The upgrade planner takes the scan and orders changes by risk across a timeline you pick. It reads files from JavaScript, Python, Go, Rust, Ruby and more. After you upgrade, you rerun the scan to see whether any high-severity findings from that list remain. A clean scan is a first screen, not proof. It needs Python.
 when:
   - You want a fast offline first screen of your packages before a release.
   - You inherit an old project and fear what is in it.
@@ -35,7 +35,7 @@ how_to_use:
   - Tell it your licence policy, strict or permissive. Add a timeline in days and a risk level if you want.
   - Ask it to run the scan, the licence check and the upgrade plan, then read the three results.
   - Apply the upgrades in the order given, then run the scan again. Aim for no high-severity findings.
-  - Run npm audit, pip-audit or cargo audit too, for current known problems.
+  - Treat a clean scan as a first screen only. Before you sign off, run npm audit, pip-audit or cargo audit for current known problems.
 output_sample:
   input:
     - The path to your project folder
@@ -53,4 +53,4 @@ output_sample:
     - name: plan.json
       contains: Upgrades in order of risk, with a testing checklist, rollback notes and a timeline.
     - name: Re-scan result
-      contains: A second scan after you upgrade, to confirm no high-severity findings remain.
+      contains: A second scan after you upgrade, to see whether any high-severity findings from the built-in list remain.

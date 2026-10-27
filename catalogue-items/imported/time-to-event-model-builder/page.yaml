@@ -31,9 +31,13 @@ you_get:
   - Risk and survival curves
   - A reproducible script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can run code.
+  - Download the skill folder and add it to your AI that can run code, such as Claude Code. A plain chat can explain the steps but cannot fit the models.
+  - Use only data with names and IDs removed, and only data you are allowed to use. Do not paste patient records.
+  - Ask your AI to set up a Python 3.11 or later environment with uv, and to install scikit-survival there.
+  - Ask it to check your table first with validate_survival_csv.py. Fix any error before moving on.
+  - Tell it your time column, event column and features, and the question you want answered. It then trains the models with train_survival_model.py and scores them with evaluate_survival_metrics.py.
+  - Ask for model_report.py to write the summary. Take that summary to a statistician or an expert in your field before you act on any score.
+  - The scikit-survival library is licensed GPL-3.0-or-later, even though this skill is MIT. Check the library's licence before you redistribute anything built on it.
 output_sample:
   input:
     - A table with a time column, an event flag (1 if the event happened, 0 if cut off) and your feature columns

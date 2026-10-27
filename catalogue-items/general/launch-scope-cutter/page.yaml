@@ -21,6 +21,7 @@ not_for:
   - "Your date or budget can still move: build a full project plan instead, or ask a project manager."
   - "You want to judge new feature requests from customers: use the Feature request screener."
   - "You have not decided what the product is: talk to your customers first, then come back with a plan."
+  - "You want a quick first pass with fewer checks: use the Launch scope halver."
 
 you_give:
   - Your launch plan or list of features and tasks

@@ -16,11 +16,19 @@ most Indian errors:
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
   `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  **million under a crore label: a 10× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
 What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
 never substitute a proxy and present it as the real thing.
+
+**Missing files.** `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this folder. Without them, follow the two rules above, take figures only from the company's exchange filing (BSE or NSE) and the documents the user gives you, and name any gap.
+
+**US examples below.** The 10-Q, SEC, EDGAR and dollar examples in the sections below come from the original US skill. For an Indian company, use the exchange results filing (BSE or NSE), the results press release, the investor presentation and the concall transcript instead, and show amounts in ₹ crore. Do not cite a US form for an Indian issuer.
+
+**Links.** Only link a document you actually opened. Never guess or complete a URL. If you did not open the page, write the document name and date with no link.
+
+**Rating and price target.** A rating and a price target make this a research report. In India that is regulated, so it needs the disclosures and the compliance review that your firm and SEBI's research analyst rules require. Ask the user for their disclosure text and add it as given. Do not write disclosures yourself, and do not publish before a compliance reviewer has read it.
 
 Create professional **EARNINGS UPDATE REPORTS** analyzing quarterly results for companies already under coverage, following institutional standards (JPMorgan, Goldman Sachs, Morgan Stanley format).
 

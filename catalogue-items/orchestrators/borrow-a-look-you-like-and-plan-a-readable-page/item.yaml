@@ -15,9 +15,9 @@ outputs:
   - {type: audit_report}
 uses: [design-style-analyst, page-grid-and-type-planner, colour-contrast-checker]
 steps:
-  - {uses: design-style-analyst, note: "Turns your references into one style profile you can reuse."}
-  - {uses: page-grid-and-type-planner, note: "Lays out your content in the borrowed look. Reads the style profile from the step before."}
-  - {uses: colour-contrast-checker, note: "Checks the final colours are readable. Reads the design direction the planner updated."}
+  - {uses: design-style-analyst, note: "Reads your reference images. Returns one style profile you can reuse, with measured colours."}
+  - {uses: page-grid-and-type-planner, note: "Reads the style profile from step 1. Returns a layout for your content in the borrowed look, with a grid and a type plan."}
+  - {uses: colour-contrast-checker, note: "Reads the updated design direction from step 2. Returns a pass or fail for each text and background pair, with a passing fix."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/borrow-a-look-you-like-and-plan-a-readable-page/skeleton.yaml

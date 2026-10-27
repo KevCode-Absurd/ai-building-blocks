@@ -5,13 +5,13 @@ job: launch-and-scale-ads
 headline: Campaign budget scenario planner
 subhead: Share campaign spend, budget, results, targets and allowed total spend. Get three budget plans with balanced totals and change limits.
 explain: |-
-  Group campaigns by budget action and compare three plans. Check totals, learning risk and spend concentration before changing anything.
+  Moving ad budget by instinct is how a good campaign gets starved and a weak one gets fed. Big jumps can also reset a platform's learning, so results get worse before they get better.
 
-  Share campaign spend, budget, results, targets and allowed total spend. Get three budget plans with balanced totals and change limits.
+  Paste 30 days of spend and results for each campaign, your target return and your total daily budget. The skill puts each campaign in one group (scale, maintain, reduce or pause), then builds three plans: careful, middle and bold. Each plan adds up to your total, keeps every move under 50% and checks that no campaign takes more than 60% of the budget. It proposes changes only. You make them.
 when:
-  - You need three budget plans with balanced totals and change limits.
-  - You need campaign budget scenario planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have several campaigns and need to decide where the next dollar goes.
+  - One campaign is far ahead on return and you want to scale it without breaking it.
+  - You want the budget moves written down in safe steps before you touch the ad account.
 not_for:
   - "You have no campaign-level spend and results data: pull a report from your ad platform first, then come back."
   - "You run ads outside Meta and have not checked that platform's learning rules: use that platform's own budget tool."
@@ -25,7 +25,7 @@ you_get:
   - Three budget plans with balanced totals and change limits
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Open your AI tool and paste in the skill from the pack. No code or paid tool is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
   - Paste your campaign numbers from the last 30 days. A table or a spreadsheet export works.
   - Add your target return, total daily budget and how much risk you accept.
   - Read the classification table first. Check that each campaign sits in the right group.
@@ -52,21 +52,17 @@ output_sample:
     - name: Monitoring checklist
       contains: What to watch after each change, including when to revert and the no-edit window.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm campaign spend, budget, results, targets and allowed total spend. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Campaign Data
-    text: Follow the collect campaign data section in the full method and keep its required fields and decision rules.
-  - title: Campaign Classification
-    text: Follow the campaign classification section in the full method and keep its required fields and decision rules.
-  - title: 3-Scenario Projections
-    text: Follow the 3-scenario projections section in the full method and keep its required fields and decision rules.
-  - title: Safety Rails
-    text: Follow the safety rails section in the full method and keep its required fields and decision rules.
-  - title: Reallocation Math
-    text: Follow the reallocation math section in the full method and keep its required fields and decision rules.
+  - title: Collect the numbers
+    text: It asks for 30 days of spend, revenue, purchases and budget for each campaign, plus your target return and total daily budget.
+  - title: Sort each campaign
+    text: "Each campaign lands in one group: scale, maintain, reduce or pause. It uses your target, and a placeholder if you gave none, and says so."
+  - title: Build three plans
+    text: For campaigns to scale it models a careful, a middle and a bold increase. It takes some return off the bold case, because return usually falls as spend rises.
+  - title: Apply the safety rules
+    text: No move over 50%, a gap of 72 hours between changes, a revert rule and a check that no campaign holds over 60% of the budget.
+  - title: Check the totals
+    text: Money freed from cuts and pauses goes to the campaigns that scale. Every plan adds up to your total.
   - title: Review the result
-    text: Return three budget plans with balanced totals and change limits. Check facts, math and the decisions before any action.
+    text: Check the sums and the groups before you change anything in your ad account.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

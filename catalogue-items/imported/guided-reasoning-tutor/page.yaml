@@ -25,6 +25,7 @@ how_it_works:
     text: Probe with concrete questions and offer hints when you get stuck.
   - title: Step 3
     text: Correct gaps, ask for a restatement and set one practice task.
+next: [study-understanding-check]
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
   - Tell it the concept or problem and your goal. Say your level too.

@@ -7,7 +7,7 @@ thinking_why: Native file features, source meaning and check evidence must survi
 headline: Excel workbook change reviewer
 subhead: Share the old and revised workbook. Get a review of changed values, formulas, names and workbook features. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share the old and revised workbook. Get a review of changed values, formulas, names and workbook features.
+  Two versions of a workbook can look the same and still differ: a formula pasted over with its value, a moved row, a changed range. This compares the old and revised files and lists each change with its sheet and cell.
 
 
   It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
@@ -15,9 +15,9 @@ explain: >-
 
   You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share the old and revised workbook. Get a review of changed values, formulas, names and workbook features.
-  - Baseline and revised workbook, intended changes, sheet/key mapping and materiality or tolerance rules.
-  - You need a checked copy while keeping your original files intact.
+  - A colleague sends back a revised budget or model and you need to see what changed before you rely on it.
+  - You want proof that only the changes you asked for were made.
+  - A number changed and nobody can say which edit caused it.
 not_for:
   - "You want to fix errors in a workbook: ask the file owner or an Excel user to repair it. This item only reviews and makes no repairs unless you ask."
   - "You are comparing two unrelated files: this tool needs an old and a new version of the same workbook. Use the owner's change log instead."
@@ -111,3 +111,4 @@ tests:
     expected: Record a reorder, not a fabricated business change.
   - input: A formula cell is replaced with its current numeric result
     expected: Flag a formula-to-constant change even if the displayed number is unchanged.
+next: [excel-powerpoint-number-checker]

@@ -59,6 +59,8 @@ This triage assumes the jurisdictional scope specified in your configuration. Pr
 
 ## Read the config first
 
+> Added by AI Blocks: if you are in a chat that cannot read local files, ask the person to paste their privacy practice setup (regulatory footprint, PIA house style, privacy policy commitments) before you triage. Other commands named in this skill, such as pia-generation, ai-governance-legal and product-legal, are not included. Skip any handoff to them and tell the person they can start the full assessment in a separate chat.
+
 Before triaging, always read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md`. The PIA trigger criteria, regulatory
 footprint, and privacy policy commitments there are authoritative. Generic privacy
 law reasoning is not a substitute for what this company has actually committed to.
@@ -123,7 +125,7 @@ activities need a PIA regardless of internal policy.
 >
 > If yes to any: the federal overlay usually supplies the controlling substantive restriction, not just an exemption from a state consumer privacy law. Research and cite the specific provision before continuing. An activity that is "exempt" from CCPA under § 1798.145(e) because it is GLBA-covered is still subject to the GLBA restrictions (e.g., § 6802(a)-(c) on NPI sharing) — the CCPA exemption does not make the activity lawful; it just moves the governing framework to GLBA.
 
-For each regime in `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → `## Regulatory footprint`, **research the currently operative mandatory privacy/data-protection assessment triggers**. Cite controlling statute, regulation, or regulator guidance with pinpoint references. Note effective dates — national and state regulators publish and update trigger lists regularly; do not rely on a static checklist. Flag uncertainty for attorney verification rather than guess.
+For each regime in `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → `## Regulatory footprint`, **research the currently operative mandatory privacy/data-protection assessment triggers**. Cite controlling statute, regulation, or regulator guidance with pinpoint references. Note effective dates — national and state regulators publish and update trigger lists regularly; do not rely on a static checklist. Flag uncertainty for attorney verification rather than guess. Cite only sources you can name, such as the GDPR text (Art. 35) and the regulator's published DPIA list. If you cannot open a source, mark the citation [verify] and never invent a statute number, article or date.
 
 If **any** applicable regime's mandatory trigger is met → **DPIA MANDATORY** (or the equivalent regime-specific mandate), regardless of house trigger.
 

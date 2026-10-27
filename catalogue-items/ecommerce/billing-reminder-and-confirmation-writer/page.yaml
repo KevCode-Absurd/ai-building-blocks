@@ -9,7 +9,7 @@ headline: "Billing reminder and confirmation writer"
 subhead: Give it your subscription products, your gift schedule and your email platform. It writes a billing reminder for each rebill number and an order confirmation for first orders, rebills and one-time orders. You also get a link setup list and an A/B test plan.
 
 explain: |
-  Two emails sit right next to a cancel. The billing reminder says a charge is coming. The order confirmation says it just happened. Most stores leave both as plain, transactional emails from the subscription app or Shopify, with a big manage button at the top. In one audit, the biggest cancel day was the day of the first rebill, when the plain receipt went out. It was about double the cancels on the reminder.
+  Two emails sit right next to a cancel. The billing reminder says a charge is coming. The order confirmation says it just happened. Most stores leave both as plain, transactional emails from the subscription app or Shopify, with a big manage button at the top. One brand's audit, as told in the playbook this is built from, found the biggest cancel day was the day of the first rebill, when the plain receipt went out. That was about double the cancels on the reminder. It is one brand's result, not a rule, so check your own cancels by day.
 
   This skill rebuilds both emails in your email platform. It opens warm, shows the product and any free gift in the next box, and puts a one-click delay link first, because too much product is the most common reason to cancel. The manage link sits at the bottom. Cancel stays easy to find. The charge amount and date stay clear.
 
@@ -110,7 +110,7 @@ tweaks:
   - what: Your current cancel rate
     how: Give cancels per 100 reminders sent. It becomes the baseline for the test.
   - what: Shopify plan
-    how: Your plan decides whether you can switch off Shopify's own confirmation email and replace it with the custom one.
+    how: Your plan may decide whether you can switch off Shopify's own confirmation email and replace it with the custom one. This item does not know which plans allow it, so check with Shopify support.
 
 judge:
   - The charge amount and date are easy to find in every email.
@@ -123,7 +123,7 @@ test:
   - Send yourself the reminder and the confirmation for rebill 1. Click every link. Delay and skip should act in one click, and cancel should work.
   - Check each gift line against your real schedule. A gift that does not arrive causes cancels and complaints.
   - Run the A/B test for at least one full billing cycle. Compare cancels per 100 reminders sent, split by rebill number.
-  - Treat the source's drop from 8.6 to 5.8 cancels per 100 as one store's result. Aim to beat your own baseline.
+  - The source reports a drop from 8.6 to 5.8 cancels per 100 for one brand. We could not verify it, so do not use it as a target. Beat your own baseline.
 
 improve:
   - Save your gift schedule and your best true testimonials to your brand file, so every draft starts from them.
@@ -133,9 +133,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "It can pull next order date, items and order number into the email and build a different version for each rebill number."}
-    - {name: "Skio or Recharge", why: "Your subscription app supplies the one-click delay, skip, swap and manage links."}
-    - {name: "Shopify", why: "Your plan decides whether you can turn off the built-in order confirmation."}
+    - {name: "Klaviyo", why: "It can pull next order date, items and order number into the email and build a different version for each rebill number. It is a paid service."}
+    - {name: "Skio or Recharge", why: "Your subscription app supplies the one-click delay, skip, swap and manage links. Both are paid apps."}
+    - {name: "Shopify", why: "Your plan decides whether you can turn off the built-in order confirmation. You need a paid Shopify plan."}
   inputs:
     - "Your cancel reasons, to see whether too much product is the top one"
     - "Your current reminder and confirmation emails, as screenshots"

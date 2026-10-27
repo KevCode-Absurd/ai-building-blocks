@@ -42,6 +42,8 @@ python skills/skills/security-ownership-map/scripts/run_ownership_map.py \
 
 ## Quick start
 
+The commands below start with `skills/skills/security-ownership-map/`. Replace that with the folder on your machine that holds this skill's `scripts/` folder, or run the commands from inside that folder.
+
 Run from the repo root:
 
 ```bash

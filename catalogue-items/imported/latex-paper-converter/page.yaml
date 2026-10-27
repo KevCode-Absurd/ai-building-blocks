@@ -35,7 +35,7 @@ how_to_use:
   - Add your .tex file, your figures, your bibliography and the new template folder. Name the target journal if you can.
   - Ask your AI to convert the paper. If the two layouts differ a lot, it may ask how to map sections such as abstract and keywords.
   - Open the compiled PDF and check it against the journal's author guidelines.
-  - Send the list of fixes to a co-author to review.
+  - Send the list of fixes to a co-author to review before you submit.
 output_sample:
   input:
     - Your source .tex file

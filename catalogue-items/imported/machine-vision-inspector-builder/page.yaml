@@ -23,6 +23,7 @@ not_for:
   - You still need to connect the camera or read frames from it. That is the Image Acquisition Toolbox, not this skill.
   - You want to send results to a PLC over OPC UA or MQTT. Use the Industrial Communication Toolbox for that part.
   - Your images are medical scans or photo effects. This skill is for factory-style inspection only.
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - What you need to check, in a few lines (defects, count or measure)
   - 5 to 20 sample photos of your parts, good ones and any bad ones
@@ -37,11 +38,12 @@ you_get:
   - A note on what can still go wrong
 how_to_use:
   - Make sure MATLAB and the Visual Inspection Toolbox are installed. Your AI can only write code in a chat. You must run it in MATLAB.
-  - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read files, give it the skill folder so it can load the reference files.
+  - Open an AI tool and give it this skill. The code patterns live in the skill's reference files, so use one that can read the skill folder, such as Claude Code. In a plain chat, paste the reference files in too, and have it load them before it writes any code.
   - Describe the job in plain words. Add your sample photos, the units you need and the device it must run on.
   - Read the plan first. Check that the method fits your parts before you accept any code.
   - Copy the code into MATLAB and run it on your own photos. Tell your AI what failed, and it will change the code.
   - Collect the extra photos it asks for and run again, then follow the deploy steps for your device.
+  - Before you trust it, test it on photos you held back from training. Keep a log of the parts it gets wrong and add those photos next time. Pair it with the Image Acquisition and Industrial Communication toolboxes for camera and PLC links.
 how_it_works:
   - title: Read the job
     text: It reads what you need to check and what you have, such as good photos only, labelled defects or none.
@@ -82,6 +84,7 @@ output_sample:
   prerequisites:
     - MATLAB with the Visual Inspection Toolbox, both paid
     - An AI that can read the skill's reference files, or paste them in
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Approach
       contains: Rules, AI or a mix for your job, and the plain reason it fits.

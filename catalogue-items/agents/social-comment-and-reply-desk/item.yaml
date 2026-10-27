@@ -18,7 +18,7 @@ steps:
   - {uses: x-reply-writer, note: "Only for X posts: a reply that would stand alone as a post, or a clear call to skip. Says when the post is too old for reach. Uses your pasted X posts; hands its replies to the desk's final list"}
   - {uses: linkedin-comment-writer, note: "Only for LinkedIn posts: a comment that adds what the post left out, or a call to skip. Uses your pasted LinkedIn posts and voice file, not step 1's replies"}
   - {uses: youtube-comment-reply-writer, note: "Only for comments on your own YouTube videos: sorts them into questions, corrections, praise and bait, drafts short replies and picks one comment to pin. Uses your pasted YouTube comments, not step 2's output"}
-schedule: "Once a day on days you post, and once a week for the repeat-question list"
+schedule: "Run it by hand: once a day on days you post, and once a week for the repeat-question list. Paste that day's items each time"
 asks_before: [posting any reply or comment, replying as your brand to an angry or hostile comment, replying to anything about a dispute, health, money or the law, liking, following or messaging anyone, promising a video, a feature or a refund in a reply]
 origin: own
 version: 1.0.0

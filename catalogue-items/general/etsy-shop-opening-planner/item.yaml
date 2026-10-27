@@ -1,0 +1,23 @@
+slug: etsy-shop-opening-planner
+name: Etsy shop opening planner
+summary: "Say what you make and who buys it. Get a plan for your Etsy shop: listings, photos, price check and launch steps."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: plan
+    required: true
+origin: own
+version: 1.0.0
+next:
+  - price-position-planner
+  - thirty-day-launch-planner
+  - go-or-no-go-launch-checker

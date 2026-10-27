@@ -19,6 +19,7 @@ not_for:
   - "You need to change table structure or write to production tables: ask a database admin, or run the change through your team's review steps."
   - "Your data lives in a spreadsheet and not in a database: use the spreadsheet's own filters and pivot tables."
   - "You want charts and dashboards, not a query: use a BI tool, then bring the query here if it needs one."
+  - "You only need a quick check of a small table: use a spreadsheet or your database's own query browser."
 you_give:
   - A description of the data you need
   - Your database type
@@ -34,7 +35,8 @@ how_to_use:
   - Paste your description of the data you need. Add table and column names if you know them.
   - Read the explanation and performance notes, then copy the query into your database tool.
   - If your AI is connected to your warehouse, ask it to run the query and check the results. Without that link, it cannot run the query for you.
-  - The file mentions a sql-queries skill and a CONNECTORS.md file. You do not need either. The dialect rules still work without them.
+  - The file mentions a sql-queries skill and a CONNECTORS.md file. Neither is included. Your AI writes the dialect syntax from its own knowledge, so test the query on a small sample first.
+  - For a large table, first run the query on a small date range or add a LIMIT. Check the cost and the result before a full run.
 output_sample:
   input:
     - A plain description of the data you need
@@ -52,3 +54,4 @@ output_sample:
       contains: Tips on date filters, partitions and joins that could make the query slow or costly.
     - name: Modification suggestions
       contains: Ways to change the query for another time range, level of detail or extra filter.
+next: [plain-words-sql-explainer, sql-query-launch-reviewer]

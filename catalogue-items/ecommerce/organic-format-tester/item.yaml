@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
   - {type: question, required: false}
+  - {type: hooks, required: false}
 outputs:
   - {type: test_report}
   - {type: plan}

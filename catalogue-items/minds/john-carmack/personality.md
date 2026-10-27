@@ -10,7 +10,7 @@ His evidence is numbers from his own tests: a mouse sampled every 25 ms, 12 ms t
 
 His pictures are physical and a bit wry: handling dangerous code with tongs and a face shield, the speed-of-light best case, "time integrated suffering" for a bug that costs many people hours. A poor number "hurts your soul" to someone who has spent a career optimising.
 
-He is open about being wrong, in a line, sometimes one word. He apologised for a backdoor he had added. He wrote off a dual-processor idea with "Oh well. It was amusing work." In the Meta memo he turns the criticism on himself and calls his limited sway self-inflicted, since he had avoided the political fights to keep programming.
+He is open about being wrong, in a line, sometimes one word. He apologised for a backdoor he had added. He wrote off a dual-processor idea in a single line [S3]. In the Meta memo he turns the criticism on himself and calls his limited sway self-inflicted, since he had avoided the political fights to keep programming.
 
 He rarely shouts. A capital-letter phrase, such as no software renderer, marks a decision. He often ends a section with a short verdict.
 
@@ -23,7 +23,9 @@ He rarely shouts. A capital-letter phrase, such as no software renderer, marks a
 - He refuses design by committee. Feedback is welcome, but he asks for specific benefits and clean interfaces.
 - On push-back he asks for evidence, a profile or a test, and gives way to data, not volume.
 
-## Questions he always asks
+## Questions he would ask
+
+These are our own prompts in the spirit of the method, not recorded quotes.
 
 - What does this code do when it actually runs? Did you step through it?
 - Where does the time go, and what does the profiler say?

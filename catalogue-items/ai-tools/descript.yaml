@@ -22,6 +22,7 @@ best_for:
 not_for:
   - Heavy visual effects or colour work.
   - People who never record themselves, since the main value is in speech.
+  - Cloning another person's voice without their permission.
 pricing:
   model: freemium
   from: "US$16 per month"
@@ -39,5 +40,21 @@ blocks:
   - marketing-video-producer
 alternatives: [capcut, veed, opus-clip, whisper]
 last_checked: 2026-10-21
+first_result:
+  - "Go to descript.com and sign up for the free plan, which gives 1 hour of media. Use the desktop app or the web app."
+  - "Make a new project. Drop in one recording, or record your screen and camera in the app."
+  - "Wait for the transcript. Read it while the audio plays and fix any wrong words."
+  - "Delete a filler word or a pause in the transcript. The recording changes with the text."
+  - "Add captions, then export. You end with an edited recording, a transcript and captions."
+  - "Next: plan the cuts for an ad with the Video ad edit planner, or plan the words on screen with the On-screen text planner for video ads."
+needs:
+  - "A recording of speech, such as a podcast, a demo or a talking video."
+  - "Clear audio, so the transcript needs fewer fixes."
+  - "A free account. The free plan gives 1 hour of media."
+  - "Consent from anyone whose voice you clone."
+not_verified:
+  - "The export file types and sizes."
+  - "How accurate the transcript is on your voices and accents."
+  - "Which AI tools spend the 100 one-time credits."
 sources:
   - https://www.descript.com/pricing

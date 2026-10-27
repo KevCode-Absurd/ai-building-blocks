@@ -37,10 +37,11 @@ you_get:
 how_to_use:
   - Check that you may link these visits to contacts. You need consent or another lawful basis. If you are unsure, ask your legal adviser first.
   - Export your visits, your contacts and the form fills or logins that link a visitor to a person. Keep real emails and phones out of any ID column.
-  - Use an AI that can run Node.js code, such as Claude Code, or give the skill folder to a developer. A plain chat cannot run the scripts.
+  - This needs a developer or an AI that can run Node.js code, such as Claude Code. Give the skill folder to your developer if you do not have one. A plain chat cannot run the scripts.
   - Paste the skill and ask your AI to list its rules first. These cover the 30-minute repeat window, what counts as evidence and which sources link to which contacts. Confirm them.
   - Ask it to run the built-in tests, then your data. Read the count of matched, unclear and unlinked visits before anything else.
   - Give no credit to unclear visits. Look at the shared-device flags and fix your data or rules where they are wrong.
+  - Next, review the unclear visits that have the most value first, fix the form or login events that are missing, then run it again and compare the counts.
 how_it_works:
   - title: Clean and hash identities
     text: It trims and lowercases emails, needs a country code on phones, and hashes both.
@@ -91,3 +92,4 @@ terms:
     meaning: One browser or phone used by more than one person, so a visit cannot be tied to one.
   - term: Webhook
     meaning: A message your form tool sends to another system the moment someone submits.
+next: [agency-identity-graph-operator]

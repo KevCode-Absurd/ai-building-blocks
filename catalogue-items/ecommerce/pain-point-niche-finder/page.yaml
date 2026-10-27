@@ -24,8 +24,8 @@ when:
 not_for:
   - "You already have a product and want it scored on margin and shipping. Use the Product idea viability scorer."
   - "You want a short list of products already running ads. Use the Advertised product finder."
-  - "You want a quick list to paste into any chat, with no brand table. Use the Product niche problem finder prompt."
   - "Your market has no clear before and after, or your claims need proof you cannot give. Pick another market first."
+  - "You sell services or to other businesses: talk to five likely buyers and ask what they struggle with."
 
 you_give:
   - A market, such as pets, hair growth, skincare or supplements

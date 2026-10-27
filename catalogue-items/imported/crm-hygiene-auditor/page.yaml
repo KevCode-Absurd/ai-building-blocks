@@ -7,7 +7,7 @@ job: sell-and-negotiate
 headline: CRM hygiene auditor
 subhead: A pipeline full of stale dates and empty fields makes forecasts unreliable. Give this your open deals and you get a ranked fix list, with each problem tied to the exact record.
 explain: |
-  A pipeline full of stale dates and empty fields makes forecasts unreliable. Give this your open deals and you get a ranked fix list, with each problem tied to the exact record. It changes nothing in your CRM.
+  A pipeline full of stale dates and empty fields makes forecasts unreliable. Give this your open deals and you get a ranked fix list, with each problem tied to the exact record. The audit itself changes nothing in your CRM.
 
   It looks for missing amounts, close dates in the past, deals with no next step, no recent activity, and stages that do not match what the deal's data shows. It uses your CRM's real field and stage names and says "blank" when a field is empty and "not checked" when it could not read it. You decide which fixes to make, then hand them to an update step.
 when:
@@ -34,6 +34,7 @@ how_to_use:
   - Add your own stage names and required fields if you have them (optional).
   - Read the summary first, then the fix list. Check each suggested value against the record.
   - Tell your AI which fixes to apply. It only writes after you approve, and only if your CRM allows writes. Otherwise, make the changes by hand.
+next: [crm-deal-updater]
 output_sample:
   input:
     - Your open deals, from a live CRM connection or an uploaded export

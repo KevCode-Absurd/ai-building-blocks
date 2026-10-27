@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [jeff-bezos]
 credits:
-  - {title: "Letters to shareholders, 1997 to 2020", by: "Jeff Bezos", used: "The order of the steps: sort the decision by reversibility, decide whether math or judgment settles it, set the evidence bar, write the disagree-and-commit note"}
+  - {title: "Letters to shareholders, 1997 to 2020", by: "Jeff Bezos", used: "Inspiration for the ideas of one-way and two-way doors, deciding with part of the facts, and disagree and commit. The four-step order is this workflow's own design."}
 generated_from: intake/bezos-letters-fast-decisions/skeleton.yaml

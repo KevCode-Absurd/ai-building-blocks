@@ -109,7 +109,7 @@ Once you have the filled questionnaire (either from Step 2 or uploaded by the us
 - Every section should feel considered — not generic filler.
 - Use the client's own language and context to make it feel bespoke.
 - Avoid marketing jargon. Write clean, purposeful prose.
-- Where the client hasn't provided enough info, make intelligent strategic inferences based on their category, audience, and positioning — don't leave sections blank.
+- Where the client hasn't provided enough info, make intelligent strategic inferences based on their category, audience, and positioning. Mark every inferred value (persona details, income, quotes, market figures) as an assumption, and label personas "illustrative" in the output. Never present an invented persona quote as a real customer's.
 - Always suggest a tagline (even if they already have one — offer alternatives too).
 
 ---
@@ -180,7 +180,7 @@ Then 2–3 **Audience Personas**. For each persona:
 
 **[Name], [Age], [Job Title], [City], [Income/mo]**
 - *One-line description of their lifestyle*
-- *Persona quote (first person, authentic)*
+- *Persona quote (first person, written as an illustrative voice, marked as not from a real customer)*
 - **Goals:** What they want from personal care / this category
 - **Challenges:** What frustrates them
 - **Needs:** What they actually need
@@ -218,7 +218,7 @@ For each competitor (cover all mentioned, max 8), create a row:
 - **Weaknesses:** 1–2 gaps or limitations
 - **How [Brand] is different:** 1–2 sentences on the contrast
 
-Cover Indian and international competitors separately if both exist.
+Cover Indian and international competitors separately if both exist. Competitor details come from what the client said or from public knowledge, so tell the user to check them before sharing the report. The India focus is optional: for other markets, swap the examples and city tiers for your own.
 
 ---
 

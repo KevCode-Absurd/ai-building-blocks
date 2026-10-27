@@ -9,7 +9,7 @@ subhead: A plan for which product goes in which storage spot, so fast sellers si
 explain: |
   A plan for which product goes in which storage spot, so fast sellers sit close and slow ones sit far away. That cuts the distance pickers walk each day.
 
-  You give the product list with picks per week, size and weight, plus the storage locations and any rules like cold zones or heavy items low. The skill ranks products by how often they are picked and by cube movement, which mixes volume and speed. It puts the top movers in the easiest spots near the dock and balances the load between aisles. It respects product rules and shows when to refresh the plan as demand shifts.
+  You give the product list with picks per month, size and weight, plus the storage locations and any rules like cold zones or heavy items low. The skill ranks products by how often they are picked and by cube movement, which mixes volume and speed. It puts the top movers in the easiest spots near the dock and balances the load between aisles. It respects product rules and shows when to refresh the plan as demand shifts.
 when:
   - Your best sellers are stored at the back of the building.
   - You are setting up a new site and need a first slot plan.
@@ -20,7 +20,7 @@ not_for:
   - "You are designing a new building or its aisles: use a warehouse design plan, as this plan only fills slots you already have."
   - "You have no pick counts for your products: count picks for a few weeks first, or the ranking will be a guess."
 you_give:
-  - Product list with picks per week
+  - Product list with picks per month (the skill uses a monthly count)
   - Product size and weight
   - Storage locations and levels
   - Rules such as cold, hazmat or first-in-first-out (optional)
@@ -35,10 +35,11 @@ how_to_use:
   - Add your storage locations with their level and capacity. Add your rules, such as cold zones or heavy items low.
   - Ask your AI to rank your products and assign each one to a slot.
   - Check the top 25 moves first. Make sure each one fits its slot and your rules.
+  - Compare the travel and picks-per-hour gains with your real pick records before you quote them. Then pair the plan with warehouse-picker-route-planner, and run the ranking again when pick counts change.
   - For a long list, use an AI that can run code (Python) and upload your spreadsheet as a file.
 output_sample:
   input:
-    - Your product list with picks per week or month
+    - Your product list with picks per month
     - Product size and weight
     - Your storage locations, levels and how much each holds
     - Your rules, such as cold, hazmat or first-in-first-out (optional)
@@ -61,3 +62,4 @@ output_sample:
       contains: A table comparing current and planned pick travel, picks per hour and labor hours.
     - name: Maintenance Plan
       contains: How often to check pick rates and redo the plan as demand shifts.
+next: [warehouse-picker-route-planner]

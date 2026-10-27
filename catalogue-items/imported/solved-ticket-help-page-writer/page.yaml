@@ -32,9 +32,9 @@ you_get:
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini.
   - Paste the full text of this skill into the chat.
-  - Below it, paste your solved ticket and the steps that fixed it. Add who is affected if you know.
+  - Below it, paste your solved ticket and the steps that fixed it. Add who is affected if you know. Linking your help desk or help center is optional and may need a paid plan. Without it, just paste the ticket text.
   - Send it. You get a full article draft with a title, tags, steps and publishing notes.
-  - Check the steps against the ticket and fix any menu names. Ask your AI to adjust the depth for a different reader if needed.
+  - Check every step, menu name and on-screen message against your live product. Your AI cannot see it and may get them wrong. Ask your AI to adjust the depth for a different reader if needed.
   - Publish it, or ask your AI for a companion article. No code or paid tool is needed.
 output_sample:
   input:

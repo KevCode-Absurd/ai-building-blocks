@@ -131,7 +131,7 @@ test:
 improve:
   - "Add your real smallest and largest sizes to \"What you need\"."
   - "Add your competitors' marks so \"distinct\" is judged against them."
-  - "Change the weights in step 8 if one test matters more to you."
+  - "Tell it which test matters most to you. The scores stay as they are, and it explains how that changes each call."
   - "Pair it with \"Brand mark system planner\" to plan the mark as a system."
 
 works_best_with:

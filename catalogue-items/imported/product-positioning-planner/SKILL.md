@@ -125,7 +125,7 @@ Two agents (or two sequential blocks):
 
 **A1: Alternative Mapping (JTBD Lens)** — Map ALL competitive alternatives, not just direct competitors. Include: direct competitors, adjacent tools competing for the same budget, manual processes, spreadsheets, hiring someone, doing nothing / status quo. For each: what job does the customer hire it for, where does it fall short, what triggers switching? The goal is the full set of things your product replaces.
 
-**A2: Customer Intelligence** — Mine voice-of-customer data: reviews, forums, communities. Extract: pain points with current alternatives, exact language customers use, what "better" means to them, best-fit customer profile (who gets the most value fastest), switching triggers (what makes someone finally change). Build a **language map** — the words customers use to describe their problem and desired outcome.
+**A2: Customer Intelligence** — Mine voice-of-customer data: reviews, forums, communities. Extract: pain points with current alternatives, exact language customers use, what "better" means to them, best-fit customer profile (who gets the most value fastest), switching triggers (what makes someone finally change). Build a **language map** — the words customers use to describe their problem and desired outcome. Read public reviews and forums by hand, or use exports and APIs the site allows. Do not scrape a site unless its terms allow it, and quote customers only as written in sources you can name.
 
 ### Wave 2: Market Frame & Trends
 

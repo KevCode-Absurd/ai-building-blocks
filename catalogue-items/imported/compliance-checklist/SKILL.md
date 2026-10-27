@@ -34,6 +34,8 @@ Generate a SOC2 Type II readiness checklist for our Series A startup. We're a B2
 
 ## Examples
 
+The counts, percentages and day estimates below are made up to show the layout. Never reuse them. Use only what the user tells you.
+
 ### Example 1: SOC2 Type II Readiness for a Startup
 
 **Input:** 20-person B2B SaaS startup on AWS. Uses GitHub, Datadog, Google Workspace, Slack. No formal security program yet. SOC2 audit in 6 months.

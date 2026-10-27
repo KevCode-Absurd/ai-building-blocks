@@ -152,7 +152,7 @@ Two and only two lawful bases exist:
 | Basis | Provision | Key Requirement |
 |-------|-----------|----------------|
 | **Consent** | Section 6 | Free, specific, informed, unconditional, unambiguous; clear affirmative action |
-| **Legitimate uses** | Section 7 | One of the 9 enumerated categories (exhaustive list) |
+| **Legitimate uses** | Section 7 | One of the 8 enumerated categories (exhaustive list) |
 
 No other basis exists. Processing outside these two is unlawful.
 
@@ -265,7 +265,7 @@ Processing without parental consent is permitted only when strictly necessary fo
 - Potential impact on India's sovereignty, integrity, security, or electoral democracy
 - Risk to public order
 
-> **Note:** As of October 2026, the Data Protection Board is constituted (Chairperson and Members appointed June 6, 2026) but no enforcement actions have issued, and no specific organisations have been publicly designated as
+> **Note:** The status of the Data Protection Board and of any SDF designation changes over time. Check the Board's current official notices before you rely on SDF status. At the time this skill was written, no specific organisations had been publicly designated as
 > SDFs. Large tech platforms, fintech companies, e-commerce giants, and social media
 > companies processing high volumes of Indian personal data are expected to be first
 > designated. Organisations matching the criteria should self-assess and prepare.
@@ -322,7 +322,7 @@ Violation of these duties may result in personal penalties up to **₹10,000**.
 
 - Data Fiduciaries may transfer personal data to **any country or territory outside India**,
   except those **specifically notified by the Central Government as restricted**.
-- **Current status (October 2026):** No countries have been notified as restricted. All
+- **Status when this skill was written:** no countries had been notified as restricted. Check the current MeitY notifications. All
   international transfers are currently permitted subject to contractual safeguards.
 - Future notifications may restrict transfers. Monitor the MeitY Official Gazette.
 - Recommended practice: Even pending notification, apply reasonable contractual protections

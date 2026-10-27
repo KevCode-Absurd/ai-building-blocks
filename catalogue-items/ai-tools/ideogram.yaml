@@ -36,5 +36,22 @@ blocks:
   - marketing-image-maker
 alternatives: [midjourney, recraft, nano-banana, flux]
 last_checked: 2026-10-21
+first_result:
+  - "Go to ideogram.ai and sign up for the free plan. Free images are public, so do not use private material."
+  - "Write the exact words that must appear, in quotes. Then describe the style and layout around them."
+  - "Make a set and keep the closest. Use the edit tool to change one area and leave the rest."
+  - "Check every letter of the text. If a word is wrong, edit that area or try again."
+  - "Make the final pick bigger if you need it larger."
+  - "You end with image files with readable words in them, such as a poster or an ad image."
+  - "Next: plan the wording first with the Image ad maker with exact text. For product photos, try Nano Banana."
+needs:
+  - "An Ideogram account."
+  - "The exact words for the image."
+  - "A style note or a reference image (optional)."
+  - "A paid plan if your images must be private."
+not_verified:
+  - "Where each tool sits in the app."
+  - "Plan prices. Third-party pages list them differently."
+  - "How many credits one image uses."
 sources:
   - https://eesel.ai/blog/ideogram-pricing

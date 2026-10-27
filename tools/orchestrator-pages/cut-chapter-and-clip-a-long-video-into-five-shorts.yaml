@@ -20,18 +20,19 @@ not_for:
   - "You want ad shots, not shorts from a talking video: use the Video ad shot list maker."
 you_give:
   - The transcript of your raw recording, with times
-  - The link to the video after you cut and upload it
+  - The link to the video after you cut and upload it, or its captions pasted from YouTube Studio
+  - A TranscriptAPI key if you use the link (100 free credits, no card, 1 credit per transcript)
   - Your channel topic, so first lines fit (optional)
 you_get:
   - A timed list of pauses, filler lines and retakes to cut
   - A chapter list for the description that YouTube will show
-  - Five short clips with start and end times and a new first line each
+  - Five short clips (fewer if fewer stand alone) with start and end times and a new first line each
   - On-screen text for the first two seconds of each clip
 how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the transcript of your raw recording. Apply the cut list in your editor, then upload the new version.
-  - Give it the link to the uploaded video, or paste its captions. It picks up from there.
+  - Give it the link to the uploaded video and your TranscriptAPI key, or paste its captions from YouTube Studio. It picks up from there.
 output_sample:
   input:
     - The transcript of your raw recording, with times
@@ -59,11 +60,11 @@ how_it_works:
   - title: Edit and upload (you)
     text: You make the cuts in your editor, export the video and upload it. The times change after cutting, so the next steps use the new version.
   - title: Read the final transcript
-    text: Gets the transcript of the video you uploaded. If you'd rather not use a transcript service, paste the captions from YouTube Studio.
+    text: Reads the captions of the video you uploaded through TranscriptAPI, which needs a key. The free credits cover a first transcript. Or paste the captions from YouTube Studio and skip the key.
   - title: Write the chapters
-    text: Finds where the topic shifts and writes a chapter list that starts at 00:00, has at least three chapters and none under ten seconds.
+    text: Reads the final transcript, finds where the topic shifts and writes a chapter list that starts at 00:00, has at least three chapters and none under ten seconds.
   - title: Pick five shorts
-    text: Finds moments of 20 to 55 seconds that open on a full thought and end on a strong line, then writes a new first line for each.
+    text: Reads the same final transcript, not the chapters. Finds moments of 20 to 55 seconds that open on a full thought and end on a strong line, then writes a new first line, on-screen text and a loop point for each.
 output_shape: |-
   STEP 1: CUT LIST
     Time | what to cut | why (dead air, filler or retake) | time saved

@@ -21,6 +21,7 @@ not_for:
   - Your task is done by one person with no hand-offs. Just list the steps yourself and cut what you don't need.
   - One step keeps failing and you want to know why. Use a root cause analysis, such as asking why five times, on that step.
   - You need a go or no-go call on a launch. Use the Go or no-go launch checker.
+  - "You want each waste item priced, with a buyer or reuse for it: use the Waste and by-product finder."
 
 you_give:
   - "Your process, step by step, with who does each"
@@ -29,7 +30,7 @@ you_give:
 you_get:
   - "A table of steps with times"
   - "Each step marked value or waste with a named kind"
-  - "The worst waste, backed by the time line"
+  - "The worst waste, backed by the time line, with where its mistakes travel"
   - "One change to try, and a review date"
 
 how_to_use:
@@ -70,7 +71,7 @@ how_it_works:
   - title: "Names the waste"
     text: "From the standard list of eight."
   - title: "Finds the worst"
-    text: "Backed by the time line."
+    text: "Backed by the time line, plus where its mistakes travel and five whys."
   - title: "Asks who asked"
     text: "A name for every step and requirement."
   - title: "Deletes then changes"

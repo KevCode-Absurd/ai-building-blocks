@@ -7,7 +7,7 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
+  - {type: question, required: true}
 outputs:
   - {type: plan}
 uses: [backwards-unit-planner, mixed-practice-unit-planner, revision-schedule-planner]

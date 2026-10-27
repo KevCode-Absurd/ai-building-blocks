@@ -17,7 +17,7 @@ when:
   - You want stakeholders to agree on the plan at a kickoff.
 not_for:
   - "You only need a quick one-off number pulled: just run the query or build the sheet yourself."
-  - "Your brief is not agreed yet: gather the requirements from your stakeholders first, using the stakeholder requirements gathering skill."
+  - "Your brief is not agreed yet: gather the requirements from your stakeholders first, using the requirements question asker."
   - "You already have a plan and want to start the work: begin with your first step and check it against the deadline."
 you_give:
   - The analysis brief or requirements
@@ -30,8 +30,8 @@ you_get:
   - A kickoff document (optional)
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. It works as pasted text and needs no code, web access or paid tool.
-  - Paste the skill instructions into the chat.
-  - Paste your brief, then list your data sources and your deadline.
+  - Paste the skill instructions into the chat. Add the three reference files (scoping framework, effort estimation, risks and dependencies) and the analysis plan template. Add the kickoff template if you want a kickoff document. If your tool takes files, upload the whole folder.
+  - Paste your brief, then list your data sources and your deadline. If you have no written brief yet, run the requirements question asker first.
   - Say if you want a kickoff document for stakeholders.
   - Read the plan. Check the time total against your deadline and look at any data marked unknown.
   - Fix the gaps, then share the plan with the people who asked for the work.
@@ -58,3 +58,4 @@ output_sample:
       contains: All of the above filled into one plan document, ready to share.
     - name: Kickoff document (optional)
       contains: A short document for a stakeholder kickoff meeting, so everyone agrees on the plan.
+next: [requirements-question-asker, project-kickoff-brief-writer, stakeholder-update-writer]

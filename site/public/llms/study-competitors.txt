@@ -1,11 +1,10 @@
 # Study competitor ads: AI Blocks
 
-> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Run an ad library teardown on any rival. Give a brand name, get their live ads sorted into hooks, offers, calls to action and tests to run.
 - [Amazon market researcher](https://useaiblocks.com/skills/amazon-market-researcher): Name an Amazon product, market and research question. Get a sourced report through Pangolinfo, with missing data clearly marked.
 - [Brand playbook fit checker](https://useaiblocks.com/skills/brand-playbook-fit-checker): Share a larger brand’s tactic, public evidence and your store’s limits. Get a fit review, dependencies, claim risks and a small test.
-- [Brand positioning word finder](https://useaiblocks.com/prompts/open-word-finder): Share rival messages and buyer comments. Get a map of repeated brand words and possible gaps, with evidence and uncertainty shown.
 - [Competitive disruption risk reviewer](https://useaiblocks.com/skills/disruption-risk-checker): Compare a cheaper rival with a disruption pattern. Get evidence-backed scores, missing facts and a response to consider.
 - [Competitive sales message writer](https://useaiblocks.com/prompts/rival-gap-message-writer): Share sourced rival facts and your proven strengths. Get defensible sales messages, supporting evidence and possible rival responses.
 - [Competitor ad change reviewer](https://useaiblocks.com/agents/monthly-competitor-watcher): Compare collected rival ads with last month. Find meaningful changes and up to two responses your evidence can support.

@@ -22,6 +22,7 @@ best_for:
 not_for:
   - Long videos with one continuous take.
   - Exact on-screen text, which still comes out wrong often.
+  - Face swaps or likenesses of real people without their permission.
 pricing:
   model: freemium
   from: Check the maker's site
@@ -47,6 +48,24 @@ blocks:
   - marketing-image-prompt-writer
 alternatives: [kling, krea, freepik, runway]
 last_checked: 2026-10-21
+first_result:
+  - "Go to higgsfield.ai and sign up. The free plan gives daily credits and basic models only."
+  - "Check the credits each model uses before you start. Paid plans are sold as monthly credits."
+  - "Start with an image of your product or character. Make one or upload your own."
+  - "Turn it into a short clip. Describe the shot in one sentence: who or what, the move and the setting."
+  - "Make two or three versions with different models and keep the best."
+  - "Check product details, hands and any words in the clip."
+  - "You end with short video clips and images to download."
+  - "Next: plan the shots first with the Video ad shot list maker or the Video avatar and storyboard planner."
+needs:
+  - "A Higgsfield account."
+  - "A product photo or character image, if you want to guide the clip."
+  - "A one-sentence description of each shot."
+  - "Credits for the models you try."
+not_verified:
+  - "Plan prices. Third-party pages quote them differently."
+  - "How many credits each model uses per clip."
+  - "The licence for commercial use on each plan."
 sources:
   - https://higgsfield.ai/
   - https://higgsfield.ai/pricing

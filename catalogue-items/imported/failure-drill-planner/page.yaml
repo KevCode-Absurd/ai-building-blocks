@@ -31,8 +31,9 @@ you_get:
   - Abort criteria and a rollback step
   - A tool suggestion
   - A short results write-up
+next: [incident-postmortem-writer, feature-flag-planner]
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and read your project files.
 output_sample:
@@ -45,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run Python code, to use the three scripts (optional, you can also run the steps in chat)
     - A named approver and an on-call person before any test in production
+    - "Optional: Gremlin and AWS FIS are paid, and AWS FIS needs an AWS account"
   output:
     - name: Experiment plan
       contains: Hypothesis, steady state, fault, size, duration, blast radius, abort limits, rollback steps, dashboards to watch and one question to learn.

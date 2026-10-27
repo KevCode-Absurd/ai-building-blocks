@@ -4,12 +4,12 @@ headline: Share compensation cash-offset cost
 summary: Estimate the cash needed to offset the shares you actually issued to staff, and compare it with reported share compensation expense.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Issued shares and reported expense measure different things, so each line needs its own source before the two are compared."
 subhead: Give it the shares your company issued to employees, a repurchase price to test, and what employees paid. It works out the cash needed to offset those shares. It then compares that cost with reported share compensation expense.
 explain: |-
   A share-issuance cash-offset scenario and comparison with reported compensation expense.
 
-  Issuer accounting and earnings. Illustrative figures.Three million issued shares×$20 cost60 to offset; employee proceeds10 reduce net cash to50,10 above reported expense40. Price15 makes gross45, net35 and a negative5 comparison.
+  Illustrative figures, in millions. Three million issued shares x $20 = 60 to offset. Employee proceeds of 10 reduce net cash to 50, which is 10 above reported expense of 40. At a price of $15, gross is 45, net is 35, and the comparison is -5 (35 - 40).
 when:
   - You want to know what it would cost in cash to buy back the shares you issued to staff.
   - You need to explain why that cash cost differs from reported share compensation expense.
@@ -19,6 +19,7 @@ not_for:
   - "You need the fair value of grants: ask an accountant or valuation adviser, because this does not value awards."
   - "You need diluted earnings per share: use your accounting team's EPS workings, because this uses actual issued shares only."
   - "You want to decide on or run a share buyback: talk to your finance lead and legal adviser, because this only models cost."
+  - "You need incremental shares from options for diluted EPS: use the Treasury-stock option dilution instead."
 you_give:
   - Net employee shares issued, from your share ledger
   - The repurchase price you want to test
@@ -75,10 +76,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Issue period"
+    how: "Take the issue period from the share ledger, the repurchase price and the exercise payments. Use one currency and scale on every line."
+  - what: "Repurchase price"
+    how: "Change the repurchase price and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Employee proceeds and net settlement are not deducted twice.
 judge:
@@ -91,8 +92,10 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one share offset cost you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define net share issuance into SKILL.md, so every run uses your wording."
+before: []
+next: [reconcile-share-compensation-dilution-and-cash, treasury-stock-option-dilution]
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI

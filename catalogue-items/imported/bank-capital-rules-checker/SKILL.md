@@ -83,7 +83,7 @@ Then give a next step: share the table with your compliance or risk team, and re
 
 ### 1. Risk-Weighting
 - Assign 0% weight to cash/sovereigns.
-- Assign 35-100% to mortgages.
+- Assign 35-100% to mortgages. These are general Basel III ranges for illustration. Use the weights in the bank's own regulator's table.
 - Assign 100%+ to corporate loans.
 
 ### 2. Capital Buffers
@@ -105,7 +105,7 @@ Then give a next step: share the table with your compliance or risk team, and re
 - **NSFR**: (Net Stable Funding Ratio).
 
 **Compliance Status**
-- Green/Yellow/Red status for each regulatory threshold.
+- Pass or Shortfall status for each regulatory threshold, as in the table above (or MISSING when a figure was not given).
 
 ---
 

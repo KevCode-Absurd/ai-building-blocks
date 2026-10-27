@@ -36,6 +36,8 @@ Analyze the licenses in my Node.js project. Here's my package.json dependencies.
 
 ### Example 1: Node.js Dependency Tree Analysis
 
+_Illustration only. Every package count and result below is made up to show the layout. It is not a real scan. Never copy these numbers into a real report._
+
 **Input:** A Node.js REST API distributed as an open-source MIT-licensed npm package. Key dependencies from package.json:
 
 ```json

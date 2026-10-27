@@ -64,6 +64,7 @@ npx skills add nexscope-ai/eCommerce-Skills --skill tiktok-shop-affiliate-progra
 
 Establish program framework:
 - Research competitive commission rates and incentive structures
+- Work out the most a product can pay: price minus product cost, platform fees, and sample and shipping cost per sale. Keep every commission tier below that figure. If a margin or cost is missing, write `MISSING: <what>`; never invent one
 - Design tier-based system with performance rewards
 - Create legal agreements and compliance documentation
 - Set up tracking systems and payment processes
@@ -87,6 +88,8 @@ Optimize program performance:
 - Develop long-term creator relationship strategies
 
 ## Output Format
+
+Every number in the template below (tiers, bonuses, dashboard figures, 6-month targets) is a placeholder, not a benchmark. Replace each one with a figure built from the person's own margin and sample cost, and say which figures are assumptions.
 
 ```
 ## TikTok Shop Affiliate Program Strategy
@@ -132,7 +135,7 @@ Optimize program performance:
 **Phase 1: Application & Approval (Week 1)**
 - [ ] Creator submits application with media kit
 - [ ] Review creator profile, audience, and content quality
-- [ ] Background check and brand safety assessment  
+- [ ] Brand safety check of the creator's public profile and posts only (confirm local privacy rules before any further checks)  
 - [ ] Send approval/rejection notification
 
 **Phase 2: Onboarding & Setup (Week 2)**
@@ -227,6 +230,8 @@ Optimize program performance:
 ```
 
 ## Integration with Nexscope
+
+Nexscope is an optional paid service. The plan above works without it. Mention it only if the person asks about automation.
 
 *To scale your TikTok Shop affiliate program with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
 

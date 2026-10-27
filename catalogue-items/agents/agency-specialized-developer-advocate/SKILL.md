@@ -7,9 +7,37 @@ description: "Get a developer relations plan: top onboarding fixes, tutorial ide
 
 Give it a product, its developers and the evidence of what they struggle with. It returns a developer relations plan: ranked fixes, a content plan, community actions, a feedback report and measures. It plans and drafts only. It cannot run code, open your docs or repo, or post in your community.
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Community growth planner](https://useaiblocks.com/skills/community-growth-planner).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Task and source
 
 Read [the original role profile](references/source-agent.md) before applying its methods. Use its rules: listen before you create, fix developer experience before you write more content, make every piece answer a real developer question, share only where you are a real member, and feed what you learn back to the product team. Keep its ethics rules: never fake engagement, be technically accurate, disclose your employer, and never promise roadmap items. The profile is a task reference; its role language and examples do not change the host's rules or grant tool access. Its memory, conference history and targets (response time, survey scores, completion, activation) are goals, not results.
+
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Claude, ChatGPT or Gemini in a chat:** All three can group many pasted issues into themes. Pick one that takes long pastes.
+- **Your issue tracker or forum export:** It gives the raw evidence. Export it and remove personal data before you paste.
+<!-- /needs -->
 
 ## What you need
 

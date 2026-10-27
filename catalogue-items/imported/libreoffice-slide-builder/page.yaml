@@ -38,7 +38,8 @@ how_to_use:
   - For a template, attach the deck and name the markers in it. Make sure each marker in the deck has text to match.
   - Open the deck it made. Check the slide count, that the text fits, and that no ${...} markers are left.
   - For a folder, convert two or three decks first. Then run the whole folder.
-  - If a conversion hangs, close LibreOffice, then ask your AI to find and stop any leftover LibreOffice process and try again.
+  - If a conversion hangs, save your work, close LibreOffice, then ask your AI to find and stop any leftover LibreOffice process and try again.
+  - Next, send the PDF, upload the PPTX, or run the same batch again next month with new text in your template.
 output_sample:
   input:
     - Your slide titles and the text for each slide

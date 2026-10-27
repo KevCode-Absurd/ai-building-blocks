@@ -28,9 +28,9 @@ steps:
   - uses: design-system-auditor
     note: Identify existing patterns and gaps so the component reuses the current system. Hands step 2 the reuse list and the gaps as context.
   - uses: screen-states-designer
-    note: Define each needed state and transition, including interruption and recovery. Uses your component code and design, with step 1's reuse list as context, and hands step 3 the states and the styles each one needs.
+    note: Define each needed state and transition, including interruption and recovery. Uses your own component code and design, with step 1's reuse list as context, and hands step 3 the states and the styles each one needs.
   - uses: design-token-builder
-    note: Use component mapping and developer handoff modes with the existing approved values. Preserve those values instead of generating a replacement palette. Uses your brief and brand guide for the approved values, plus step 2's states to know which styles are needed.
+    note: Use component mapping and developer handoff modes with the existing approved values. Preserve those values instead of generating a replacement palette. Uses your own brief and brand guide for the approved values, plus step 2's states to know which styles are needed.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

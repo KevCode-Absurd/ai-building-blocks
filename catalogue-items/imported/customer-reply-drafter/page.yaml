@@ -30,7 +30,8 @@ you_get:
   - Points to avoid promising
   - An alternative shorter version
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add the skill to Claude, ChatGPT or Gemini, or copy the full skill file and paste it into a new chat.
+  - Take out card or account numbers and full names before you paste anything, and check your company's rules on sharing customer data with an AI tool.
   - Describe the situation in a few lines. Say who the customer is, what happened and how urgent it is.
   - Add the channel and any facts you can share. Add past messages if you have them.
   - Read the draft and the internal notes. Check each fact before you send.

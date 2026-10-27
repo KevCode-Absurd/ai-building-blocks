@@ -11,6 +11,8 @@ metadata:
 
 # Nonprofit Outcomes Measurement
 
+> Added by AI Blocks: skills named below by their old names are in this library under new names. nonprofit-program-design is the Nonprofit program outcome planner. nonprofit-grant-writing is the Nonprofit grant proposal writer. nonprofit-annual-report is the Nonprofit annual report planner. nonprofit-needs-assessment is not in this library yet. Client data: ask the person to remove names and other identifiers from case notes and records before they share them, and to check their consent terms.
+
 ## When to Use This Skill
 
 Use this skill for the measurement and evaluation side of program work — turning a program's

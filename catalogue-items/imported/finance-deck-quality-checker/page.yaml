@@ -23,6 +23,7 @@ you_give:
   - The slide deck as a PowerPoint file, or open in the add-in
   - The audience (optional)
   - Key figures that must match (optional)
+  - Your fiscal year end (April to March in India), and the currency and unit, such as rupees in lakh or crore. Confirm these before the check starts
 you_get:
   - A list of number mismatches by slide
   - Wording and claim issues
@@ -30,10 +31,11 @@ you_get:
   - A priority order for fixes
 how_to_use:
   - Paste the skill into your AI. Use Claude or another AI that can read files and run code.
-  - Upload your deck as a PowerPoint file. Or open it in the PowerPoint add-in.
+  - Upload your deck as a PowerPoint file in chat, or open it in the PowerPoint add-in. In chat, the AI reads the file and writes each slide's text, with slide numbers, to a working file. It needs to run Python for the number check.
   - Say who the deck is for and list any key figures that must match (optional).
   - Read the critical findings first. Fix those slides in your own file.
   - Run the check again after your edits to confirm the mismatches are gone.
+  - For a wording and structure review of a pitch deck, use the pitch deck 10/20/30 checker.
 output_sample:
   input:
     - Your client deck as a PowerPoint file, or open in the PowerPoint add-in
@@ -51,3 +53,4 @@ output_sample:
       contains: Font sizes, spacing, number format drift and date format drift to polish.
     - name: Fix order
       contains: A short list that puts criticals first, so you know what to fix before the client sees the deck.
+next: [pitch-deck-checker-10-20-30]

@@ -19,6 +19,7 @@ not_for:
   - "You have a runtime error to fix: use the matlab-debug-code skill, which is not yet in this library."
   - "You want tests written for your code: use the matlab-write-tests skill, which is not yet in this library."
   - "You want your code made faster by measuring it: use the MATLAB profiler, or a teammate who knows it well."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - The MATLAB files to review
   - Any style rules your team has (optional)
@@ -29,9 +30,9 @@ you_get:
   - Suggested fixes
   - A short summary of overall quality
 how_to_use:
-  - Open an AI that can run MATLAB and has the MathWorks tools connected. Paste in the skill text.
+  - Open an AI that can run MATLAB and has the MathWorks tools connected. Paste in the skill text. Connect the MATLAB tools in your AI app first, so the check_matlab_code tool and the coding guidelines are available.
   - Add the MATLAB files or the folder you want reviewed.
-  - Add your team's style rules and your MATLAB release if you have them.
+  - Give it the folder path and your MATLAB release before the run starts. Add your team's style rules if you have them.
   - Ask for a code review. Your AI runs the code analyser first, then checks the rest by reading the code.
   - Read the errors first, then the warnings. Apply the fixes you agree with. The review does not change your code.
 output_sample:
@@ -42,6 +43,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB with the MathWorks tools connected
     - The check_matlab_code tool and the matlab_coding_guidelines resource
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Static analysis
       contains: The count of errors and warnings the built-in MATLAB code analyser found in each file.

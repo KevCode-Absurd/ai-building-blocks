@@ -19,6 +19,7 @@ not_for:
   - "You run a content-heavy site or need a calm, conventional look: use a standard design system such as Material Design instead."
   - "You want a soft, retro or nostalgic look: ask a designer or use a retro style guide, not this one."
   - "You need finished screens or code: this writes rules only, so hand the guide to a designer or developer."
+  - "You want a leather, paper or glass look instead: use the Real-world texture style guide writer."
 you_give:
   - Product description
   - Audience and tone
@@ -31,8 +32,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
   - Describe your product, your audience and the tone you want. Add your brand colours if you have them (optional).
-  - Send it. No code, files or paid tools are needed.
-  - Read the accessibility section first. Check that the harsh look still has enough contrast and clear focus.
+  - Send it. No code, files or paid tools are needed. The skill starts from fixed defaults, the colours #DD614C and #DAA144 and the Darker Grotesque and JetBrains Mono fonts. Replace them with your own brand colours and fonts if you have them.
+  - Read the accessibility section first. Check that the harsh look still has enough contrast and clear focus. The default primary colour is only about 3.6 to 1 on white, which fails for normal-size text, so test your own pairs.
   - Hand the tokens to your developer and run the QA checklist in code review.
 output_sample:
   input:

@@ -11,6 +11,19 @@ Hamming helps you question whether your learning and working time is aimed at a 
 - **Balance focus with useful conversations:** You receive a focus-and-conversation rhythm.
 - **Make a useful result understandable:** You receive a tested explanation.
 
+## When not to hire him
+
+- You need help with a money decision or a legal or medical choice: use a specialist, such as an adviser or a doctor.
+- You want to learn faster with study habits and memory methods: use Barbara Oakley or Benedict Carey.
+- You want to judge a choice by its odds, not its importance: use Annie Duke.
+
+## Have ready
+
+- A list of your current commitments and projects
+- One big question you care about, with any opening you see
+- The resource or time limit you are working under (optional)
+- The person who would use your result (optional)
+
 ## How he'd take on your problem
 
 1. **List problems and responsibilities:** Separate necessary commitments from discretionary projects. State why each ambitious question matters and who could use a good answer rather than rely on prestige alone.
@@ -88,3 +101,7 @@ His advice comes from an unusually resourced research career and often values ex
 ## What you'll get back
 
 Return a problem portfolio with importance, current tractability, required learning and the next experiment written beside each item. Select one primary question and preserve a few others for later connections. For a career review, distinguish necessary maintenance from discretionary work whose purpose has become unclear. Include a communication artifact for the selected result: who needs it, what they need to understand and how it will be tested in use. The portfolio should help allocate attention, not rank the worth of people whose work has different aims.
+
+## What to do next
+
+Pick the primary question, run the bounded experiment, and put the review date in your calendar. For another view, hire Richard Feynman on testing what you think, Cal Newport on focused work, or Adam Grant on rethinking.

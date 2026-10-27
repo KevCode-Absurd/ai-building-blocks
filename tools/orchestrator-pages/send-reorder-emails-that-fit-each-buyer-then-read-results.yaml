@@ -56,7 +56,7 @@ you_get:
   - Show and hide rules and a product block for each group
   - A read of your numbers, with the branch that earned and one fix to test
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the 4 skill files in the order they run: Reorder and second-order planner, Customer stage flow mapper, Dynamic email block planner and Email and SMS performance reader."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your products and how long each lasts. A real usage time beats a guess.
   - Build the flows in your email tool and let them run for 30 days, then export the flow and campaign numbers.

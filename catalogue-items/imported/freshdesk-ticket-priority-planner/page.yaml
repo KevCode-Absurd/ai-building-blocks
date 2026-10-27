@@ -35,12 +35,14 @@ works_best_with:
     - name: Freshdesk
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
+  - Read this first. Your ticket text goes through Composio, a third-party service, so check that suits your privacy rules. Composio needs its own account, and its plan may cost money, so check its pricing before you start.
   - Check you have a Freshdesk account with API access and a Composio account with its command line tool.
   - Open an AI that can run commands and read skill files, such as Claude Code, and add the downloaded folder.
   - Ask it to run the Freshdesk ticket priority planner.
   - If it says Freshdesk is not connected, run composio link freshdesk and ask again.
   - Read the queue and check the urgent tickets first.
-  - Approve any changes before your AI makes them.
+  - The skill only reads tickets. It does not change anything in Freshdesk. The deadline counts (past due, due soon, on track) come from the due-by dates Freshdesk records on each ticket, so they are only as good as those dates.
+  - Then draft replies to the urgent tickets, for example with the customer inbox triage and reply drafter, and escalate any outage.
 output_sample:
   input:
     - Your Freshdesk account, connected through Composio
@@ -62,3 +64,4 @@ output_sample:
       contains: A count of tickets that have missed their response deadline, are due soon, or are on track.
     - name: Recommended Actions
       contains: Specific next steps for the tickets that need attention first.
+next: [customer-inbox-triage-and-reply-drafter, support-capacity-planner]

@@ -33,7 +33,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from the skill folder.
   - Add your learning objective and a few lines on your class. Add the optional details if you have them.
   - Read the task design. Check that every learner holds a piece the group needs.
-  - If students will interview elders or care-home residents, get school approval first. Get consent from each person they interview.
+  - If students will interview elders or care-home residents, get school approval first. Get consent from each person they interview, and from families.
+  - Follow your school's safeguarding and data protection rules. Never leave a student alone with an interviewee, and agree where recordings are stored and when they are deleted.
   - Adjust the roles and timing to fit your class, then run the task.
   - Afterward, use what the group built as a shared class record, and read the evidence note to see how strong the research is.
 output_sample:
@@ -58,3 +59,4 @@ output_sample:
       contains: What you do before, during and after the task.
     - name: Known Limitations
       contains: A note on how strong the research behind the approach is.
+next: [group-work-task-planner, retrieval-quiz-writer]

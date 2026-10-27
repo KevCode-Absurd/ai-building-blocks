@@ -5,11 +5,11 @@ name: Telegram ad vetter
 summary: Check a Telegram channel before you buy an ad post. Get a reach check, fake follower signs, cost per thousand views and a buy or skip verdict.
 job: check-ads
 headline: Telegram ad vetter
-subhead: Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand. Bring the channel name or link. Use the result to plan your next step.
+subhead: Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand views.
 explain: |
   A verdict on whether a Telegram channel is worth the price you were quoted, based on real audience reach, signs of fake followers and a fair cost per thousand views. You avoid paying for a post that nobody sees.
 
-  The skill reads the public preview of the channel and records subscriber count and views of 10 to 20 older posts. It works out reach as median views divided by subscribers and compares that with benchmarks for channels of the same size. It looks for odd growth and flat views. It then calculates cost per thousand views, explains what slots like 1/24 or a permanent post are worth,.
+  The skill reads the public preview of the channel and records subscriber count and views of 10 to 20 older posts. It works out reach as median views divided by subscribers and compares that with benchmarks for channels of the same size. It looks for odd growth and flat views. It then calculates cost per thousand views, explains what slots like 1/24 or a permanent post are worth. The benchmarks come from studies by TGScope, whose maker wrote this skill, so weigh them as one source.
 when:
   - An admin offers you a post slot and you are unsure about the price.
   - You want to compare five channels for one campaign.
@@ -31,7 +31,7 @@ you_get:
   - Cost per thousand views
   - A buy, negotiate or skip verdict
 how_to_use:
-  - Open your AI chat and paste the skill text. Use an AI that can open web links if you can.
+  - Open your AI chat and paste the skill text. Use an AI that can open web links if you can. It reads the channel's public t.me page, which is a form of scraping. Check Telegram's terms first, or paste the numbers in yourself.
   - Give it the channel name or link, the price and the post format offered.
   - Add other channels you want to compare (optional).
   - If the AI cannot open the channel preview, paste in the subscriber count and the views of 10 to 20 posts that are over a week old.

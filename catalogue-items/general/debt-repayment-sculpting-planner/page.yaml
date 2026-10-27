@@ -89,8 +89,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Save one schedule you have already checked, so your AI copies its layout.
+  - Write how your loan agreement defines cash flow for debt service into the skill, so every run uses your wording.
 works_best_with:
   tools:
     - name: Claude, ChatGPT or Gemini

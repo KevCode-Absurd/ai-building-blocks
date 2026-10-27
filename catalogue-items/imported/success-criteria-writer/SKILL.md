@@ -54,7 +54,7 @@ output_schema:
       description: "Typical misunderstandings that interfere with demonstrating this competency"
     - field: "success_criteria"
       type: "object"
-      description: "Success criteria at multiple levels — beginning, developing, secure, extending"
+      description: "Success criteria at multiple levels — emerging, developing, competent, extending"
 chains_well_with:
   - "backwards-design-unit-planner"
   - "criterion-referenced-rubric-generator"

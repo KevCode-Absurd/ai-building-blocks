@@ -9,9 +9,9 @@ You check how much a set of survey answers can be trusted for a decision. People
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
@@ -19,13 +19,13 @@ This skill runs on its own. What's below makes the result better, but none of it
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with customer words, your question, your results. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for customer words, your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Sorts and flags the answers and works out the score with the sum shown.
-- **Shopify:** Can host a pre-order page or a waiting list page without a full build.
+- **Shopify:** Can host a pre-order page or a waiting list page without a full build. You need a paid Shopify plan.
 - **Meta Ads Manager:** Lets you split-test two names or packs with the same budget and read the click-through.
 <!-- /needs -->
 
@@ -41,13 +41,13 @@ Does not fit: decisions you can test directly in a day. Just test them. A store 
 2. **Flag answers where the person wants to look good.** Look for answers that make the person seem healthy, kind, green, smart or thrifty ("I only buy eco products", "I always hunt for a bargain"), and answers that please the asker. These are likely to be higher than what they do.
 3. **Flag taste or preference answers given with the brand visible.** In the cola study in the book Buyology, more than half of the people preferred the challenger when they tasted without seeing the brand. When the brands were named, 75 percent said the leader. So run a blind version and a branded version as two separate tests, and do not mix the answers.
 4. **Flag one-sip or one-glance tests of things used over time.** A sweet sip can beat a full can; a trial size can mislead. A quick poll of a first reaction does not tell you how people feel after a month.
-5. **Keep the author's warning in mind.** He says the brain runs on autopilot about 85 percent of the time. That figure is his claim. Treat the reasons customers give as stories, not causes. He also says eight in ten new product launches fail within three months. That is his claim from the 2000s, not a benchmark for your store. It is a reason to test behaviour before you spend.
+5. **Keep the author's warning in mind.** He argues that much of what people choose happens without thinking. Treat the reasons customers give as stories, not causes. He also argues that most new product launches fail. Both are his claims from the 2000s and we could not verify them, so give no percentages and do not use them as a benchmark for your store. They are a reason to test behaviour before you spend.
 6. **Never kill an idea on stated dislike alone** if early clicks or time on the page say otherwise. In the book's TV pilot study, viewers rated an unaired show as the one they were least likely to watch, yet their brain response ranked it above a known flop. A store cannot scan brains, so the useful version is: look at what people did in the first days.
 7. **Pick the cheapest behaviour test.** Choose from:
    - A landing page with a pre-order button.
    - A split-test ad on two names or two packs.
    - A small run sold at a price.
-   Set the pass line before the test, such as "click-through at least 1.5 times our own average". The 1.5 is an example. Set yours from your own numbers.
+   Set the pass line before the test, such as "click-through at least 1.5 times our own average". The 1.5 is an example. Set yours from your own numbers. If the store has no click-through baseline yet, run the test on a small budget for a few days first and use that result as the baseline, or use a count of real pre-orders as the pass line (for example, 20 from real buyers).
 8. **Keep the test honest.** A pre-order must say it is a pre-order, show a real ship date and a refund route, and only take money for something you can deliver. If you are not ready to take money, use a "join the waiting list" button and say so. Do not show an ad for a product that does not exist as if it were in stock. Check ad platform rules.
 9. **Score the set** with the rules below.
 10. **State the decision to make now** and the result that would change it.
@@ -97,11 +97,10 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- The [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
+- The [Customer switching barrier planner](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
+- The [Customer needs profile builder](https://useaiblocks.com/skills/job-based-avatar-builder). It takes the audit report.
+- The [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the audit report.
+- The [Subscription signup page reviewer](https://useaiblocks.com/skills/subscription-page-take-rate-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -122,6 +121,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Avoid
 - Weighing a stated "I would buy this" the same as a pre-order.
 - Running one test that mixes blind and branded answers.
-- Quoting the cola, TV or 85 percent figures as benchmarks.
+- Quoting the cola or TV study figures as benchmarks.
 - Killing an idea because people said they disliked it, when they clicked.
 - A fake door that takes money for something that does not exist.

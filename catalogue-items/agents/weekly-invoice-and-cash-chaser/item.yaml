@@ -14,14 +14,13 @@ outputs:
   - {type: audit_report}
   - {type: copy_draft}
   - {type: spreadsheet}
-uses: [invoice-totals-checker, cash-tied-up-finder, late-invoice-reminder-writer, payment-reminder-letter-writer, can-they-pay-deal-checker, cash-forecast-builder]
+uses: [invoice-totals-checker, cash-tied-up-finder, payment-reminder-letter-writer, can-they-pay-deal-checker, cash-forecast-builder]
 steps:
   - {uses: invoice-totals-checker, note: "Only for invoices sent this week, before they count as owed: totals, dates and missing fields checked. Hands on: the fixes to make before an invoice goes out again."}
   - {uses: cash-tied-up-finder, note: "Every week: days outstanding per customer, the cash cycle and where cash is stuck, compared with last week. Uses your open invoices, bills and stock, not step 1's check. Hands on: which customers hold the cash, so you know which late invoices to chase."}
-  - {uses: late-invoice-reminder-writer, note: "For each invoice 1 to 30 days late with a customer who usually pays: a warm reminder and a firmer follow-up. Uses the invoice facts from your list and the customers file, with step 2 showing which are late. Hands on: the drafted reminder (never sent for you)."}
-  - {uses: payment-reminder-letter-writer, note: "Only for an invoice over 30 days late, a repeat late payer or a customer you want to keep: a reminder that starts where they are. Uses the invoice facts and history you give, and takes the place of step 3 for that invoice."}
+  - {uses: payment-reminder-letter-writer, note: "For each late invoice: a warm reminder and a firmer follow-up when it is 1 to 30 days late and the customer usually pays, or a reminder that starts where they are when it is over 30 days late, a repeat late payer or a customer you want to keep. Uses the invoice facts from your list, the customers file and the history you give, with step 2 showing which are late. Hands on: the drafted reminder (never sent for you)."}
   - {uses: can-they-pay-deal-checker, note: "Only when a customer has gone quiet past 45 days or asked for more time: what they can pay and a plan to offer. Uses your terms and what you know of their means. Hands on: the plan to offer, and which owed amounts the forecast should treat as doubtful."}
-  - {uses: cash-forecast-builder, note: "Every week, last: the 30, 60 and 90 day cash view from what is owed, what you owe and fixed costs. Uses your invoices, bills and fixed costs, with the doubtful amounts from step 5 marked so they are not counted as sure."}
+  - {uses: cash-forecast-builder, note: "Every week, last: the 30, 60 and 90 day cash view from what is owed, what you owe and fixed costs. Uses your invoices, bills and fixed costs, with the doubtful amounts from step 4 marked so they are not counted as sure."}
 schedule: "Every Monday morning, before the week's work starts"
 asks_before: [sending any reminder or letter, offering a payment plan or discount, pausing work for a client, passing a debt to a collector or lawyer, writing off an invoice]
 minds: [robert-collier]

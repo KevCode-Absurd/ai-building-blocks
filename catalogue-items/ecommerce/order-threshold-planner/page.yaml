@@ -93,6 +93,7 @@ output_shape: |
   OFFER WORDING  <dollar off | percent off | free item> for <price range>
   CART BAR  <step 1 reward> then <step 2 reward>
   CHECKS  <low-ticket free shipping | stacking | history used>
+  CHECKS MISSED: <none or the list>
   MISSING: <orders | margins | shipping costs>
 
 tweaks:

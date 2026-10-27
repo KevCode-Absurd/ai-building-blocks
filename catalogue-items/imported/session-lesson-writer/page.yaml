@@ -30,6 +30,7 @@ you_get:
   - A note on when not to use it
   - A cleaned version with private details removed
 how_to_use:
+  - "Works with any chat for the drafting steps. In ChatGPT or Gemini, paste your session summary as text: there is no transcript file or helper there. The session-length helper and transcript counting need Claude Code or a terminal with Bash and Python 3."
   - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md. If your AI takes files or project folders, add SKILL.md there instead.
   - Paste your session summary and the command or check that proved the fix. Say if the lesson is for this project, one tool version, or general.
   - Ask your AI to write a draft lesson. It will not save anything until you say so.

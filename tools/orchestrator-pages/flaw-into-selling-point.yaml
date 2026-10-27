@@ -6,12 +6,12 @@ thinking: high
 thinking_why: "It tests reframes against the facts and must reject any that would mislead. Give it your strongest model."
 
 headline: "Turn the trait that puts buyers off into a reason to buy"
-subhead: "Give it your product, the thing buyers dislike and what rivals claim. It reads your buyers and market, tests four ways to give the product a new, true meaning, explains how it works so the new frame is believed, and checks the claim is yours and not a rival's."
+subhead: "Give it your product, the thing buyers dislike and what rivals claim. It reads your buyers and market, tests four ways to give the product a new, true meaning, explains how it works so the new frame is believed, and checks the claim is yours and not a rival's. You must give the product facts, with the price and the trait buyers dislike. Rival claims and real reviews make it sharper."
 
 explain: |
   Some products come with a built-in turn-off: a high price, a strong smell, a hard-looking setup, an audience that seems too small. Other products are fine, but every rival says the same thing, so buyers stop listening. A better pitch does not help in either case. The buyer has already made up their mind before reading it.
 
-  This workflow, built on a summary of Eugene Schwartz's Breakthrough Advertising, first reads how aware your buyers are and how many claims they have heard. Then it names the handicap in the buyer's own words and tests fixes: turn the trait into proof, cut the product down to one thing the buyer does, tie it to a bigger concern, or reset the price comparison with a sum. Only a fix that is true is kept. A short cause-and-effect passage then explains how it works, and a claim check tests that only you can say it. The source is a third-party summary, so treat its detail as second-hand.
+  This workflow, inspired by a summary of Eugene Schwartz's Breakthrough Advertising, first reads how aware your buyers are and how many claims they have heard. Then it names the handicap in the buyer's own words and tests fixes: turn the trait into proof, cut the product down to one thing the buyer does, tie it to a bigger concern, or reset the price comparison with a sum. Only a fix that is true is kept. A short cause-and-effect passage then explains how it works, and a claim check tests that only you can say it. The source is a third-party summary, so treat its detail as second-hand.
 
 when:
   - Buyers back away from something about your product before they read the benefits.
@@ -30,7 +30,7 @@ you_get:
   - A claim check on whether the offer is stated, only you can say it and it is strong enough to pull
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your product facts and, if you have them, rival claims and what buyers say about the trait.
   - It works step by step and saves each result. Read the fix results before the passage.

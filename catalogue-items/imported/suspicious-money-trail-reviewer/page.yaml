@@ -37,6 +37,8 @@ how_to_use:
   - Read the red flags first. Treat every name as provisional until a qualified examiner confirms it.
   - Ask your AI to run the digit test with code if it can. If not, it explains the test and you check the numbers yourself.
   - Take the report outline and next steps to your accountant, examiner or lawyer. Do not confront anyone based on this alone.
+  - Next, list the control gaps it found and fix them with your accountant. For rules to flag risky payments as they happen, use the fraud review queue builder.
+next: [fraud-review-queue-builder]
 output_sample:
   input:
     - Your financial records as files, such as a CSV export or PDF statements

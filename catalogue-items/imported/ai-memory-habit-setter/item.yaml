@@ -30,7 +30,7 @@ credits:
   - title: agent-memory-discipline skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agent-memory-discipline
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Copied as it is, under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says CC0-1.0. We gave it a plain name.
   - title: Original author
     by: mnemoverse
     url: https://github.com/mnemoverse/agent-memory-discipline

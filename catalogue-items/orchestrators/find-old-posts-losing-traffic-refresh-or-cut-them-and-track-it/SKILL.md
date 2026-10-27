@@ -13,18 +13,17 @@ This workflow chains 5 skills into one job. You run them one after another, and 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**What you need** (use your own material):
-- **Your website** (yours): the link to your site, and the list of post addresses if you have it.
-- **Your traffic by page** (yours): twelve months or more, exported from your analytics or Search Console.
+**What you need** (use your own material or the linked skill):
+- **Your website** (yours): the link to your site or the page.
+- **Spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
-- **Competitors** (yours): the brands or sites you lose searches to.
-- **Search Console searches by page** (yours): shows which searches each page is losing.
-- **Publish and last-updated dates** (yours): from your CMS, for each post.
+- **Competitors** (yours): the brands buyers compare you with.
+- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check the setup.** The decay and rival steps use Ahrefs or Search Console data, and the tracking step uses Search Console and a live page fetch. If a tool is unavailable, say what you can do from the exports provided. Do not claim you used it.
+2. **Check what's missing.** Look for your website, spreadsheet, competitors. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,6 +35,7 @@ How to start:
 ## What you need
 - **Your site address** (required): and the list of post addresses, if you have it.
 - **Traffic by page for at least twelve months** (required): sessions or clicks per page per month, from your analytics or Search Console, with the dates. If there are fewer than twelve months, say decay cannot be judged and stop at step 1.
+- **Ahrefs or a similar rank tool** (optional): Ahrefs is a paid subscription. The run works from your traffic export and Search Console without it, and marks rival gaps `MISSING:`.
 - **Competitors** (optional): without them, step 1 reports your own decay and marks the rival gaps MISSING.
 - **Search Console searches by page, and publish or last-updated dates** (optional): without them the decay is by page only, not by search.
 - **How many refreshes a month you can do** (required for the calls): if missing, ask once, then plan without a cap and say so.
@@ -61,13 +61,19 @@ Pause here: Make the refreshes and the merges. Publish the new titles and snippe
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-5 step files and the summary. The second file holds the calls, the third the refresh plans, the fourth the titles and snippets, and the last the tracking.
+5 step files and the summary:
+- **Step 1, decay:** each page with traffic then and now, the searches it lost and the rival now above you.
+- **Step 2, calls:** each page marked keep, refresh, merge or cut, with the reason, the numbers and the redirect or surviving address.
+- **Step 3, refresh plans:** for each page, the facts to update, the structure to change and the questions to add.
+- **Step 4, titles and snippets:** three options per page with character counts, and a pick.
+- **Step 5, tracking:** per page, the change date, the searches to watch, the read date and what counts as worked.
+- **Summary:** each file, any step not run and why, and every `MISSING:` line in one list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Plan a topic cluster from keywords to briefs and links](https://useaiblocks.com/workflows/plan-a-topic-cluster-from-keywords-to-post-briefs-and-links). Bring the pages you kept. It places them in a cluster and plans the new posts.
-- The [Audit your site's SEO and fix what matters first](https://useaiblocks.com/workflows/audit-your-sites-seo-and-fix-titles-tags-and-markup-first). Use it for titles, tags and markup across the rest of the site.
+- The [Search topic and content brief planner](https://useaiblocks.com/workflows/plan-a-topic-cluster-from-keywords-to-post-briefs-and-links).
+- The [Website SEO editor](https://useaiblocks.com/workflows/audit-your-sites-seo-and-fix-titles-tags-and-markup-first).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

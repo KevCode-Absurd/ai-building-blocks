@@ -1,0 +1,24 @@
+slug: self-assessment-tax-return-checklist
+name: Self-assessment tax return checklist
+summary: Say how you earned money. Get records to gather, totals to work out, an order of work and questions for your accountant.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+    required: true
+  - type: question
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - tax-set-aside-planner
+  - expense-report-builder

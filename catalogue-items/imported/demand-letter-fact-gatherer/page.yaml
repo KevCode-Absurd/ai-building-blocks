@@ -32,19 +32,24 @@ you_get:
   - Evidence and gaps list
   - File ready for the drafting step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
+  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
   - It works best when your AI can read your saved legal setup notes and save
-    files.
+    files. If it cannot, paste the eight core questions into the chat and save
+    the answers as intake.md by hand.
+  - The drafting step is a separate skill, the Demand letter drafter. Give it
+    the saved fact sheet. Have a lawyer check any settlement-communication
+    wording before you send.
   - Where the skill points to /litigation-legal:cold-start-interview, use the
     setup-interview folder inside it. We copied it in so the skill works on its
     own.
 not_for:
   - You already have your facts and want the letter written. Use the Demand letter drafter.
   - Someone is copying your work and you want them to stop. Use the Cease-and-desist letter helper.
-  - You only need to chase a late invoice. Use the Late invoice reminder writer.
+  - You only need to chase a late invoice. Use the Payment reminder letter writer.
+next: [demand-letter-drafter]
 output_sample:
   input:
     - What happened and when, in a few sentences

@@ -117,7 +117,7 @@ test:
 improve:
   - "Add two no-oriented questions that already worked for you, so the options match your field."
   - "Add your rule for when to stop following up, so the IF THEY SAY NO line respects it."
-  - "Pair it with the Negotiation call opening planner when the no turns into a meeting."
+  - "Pair it with the Negotiation call prep planner when the no turns into a meeting."
 
 works_best_with:
   tools:

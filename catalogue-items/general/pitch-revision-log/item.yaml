@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: copy_draft, required: true}
   - {type: feedback_notes, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: copy_draft}
   - {type: lessons_register}

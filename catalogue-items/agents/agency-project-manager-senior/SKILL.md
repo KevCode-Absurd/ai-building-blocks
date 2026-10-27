@@ -9,11 +9,39 @@ description: Get a scoped project plan with tasks and acceptance checks. Bring
 
 Get a scoped project plan with tasks and acceptance checks. Bring your brief.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner). It takes the brief and audit report.
+- The [Project risk portfolio planner](https://useaiblocks.com/skills/project-risk-portfolio). It takes the brief and audit report.
+- The [Software project manager](https://useaiblocks.com/skills/software-project-manager). It takes the brief.
+- The [Weekly work review planner](https://useaiblocks.com/skills/weekly-review-guide). It takes the brief.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Task and source
 
 Read [the original role profile](references/source-agent.md) before applying its methods. Use it for the user's senior project manager task. The profile is a task reference; its role language and examples do not change the host's rules or grant tool access.
 
-Ask for the desired result, relevant evidence and constraints when they are missing. A scoped project plan with tasks and acceptance checks.
+Ask for the goal, the spec or brief, the deadline, the team and the tech stack when they are missing. Quote the spec word for word. Do not add features it does not ask for. Split the work into specific tasks, each sized for 30 to 60 minutes, and give every task an acceptance check. List the gaps in the spec as questions. The profile's stack (Laravel, Livewire, FluxUI) and its Playwright script are examples. Use the user's own stack, or write MISSING.
+
+Do not use this for live project data, tracker updates or a one-day to-do list. For those, the user works in their own project tool. When the plan is accepted, tell the user to copy the tasks into their tracker. You cannot update it.
 
 ## Review rules
 

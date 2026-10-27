@@ -129,7 +129,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Shopify", why: "Smart collections let tags fill collections automatically, and handles can be renamed with a redirect."}
-    - {name: "Semrush", why: "Lists every keyword containing a term, with difficulty and volume, to find collection ideas."}
+    - {name: "Semrush", why: "Lists every keyword containing a term, with difficulty and volume, to find collection ideas. It is a paid tool."}
     - {name: "Google Search Console", why: "Free. Shows which pages and searches already get impressions after each batch."}
     - {name: "Any good chat AI", why: "Sorts a product list into collection ideas and drafts briefs."}
   inputs:

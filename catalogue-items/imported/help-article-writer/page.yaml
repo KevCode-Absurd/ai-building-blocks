@@ -57,3 +57,4 @@ output_sample:
       contains: Links to nearby help topics the reader may need next.
     - name: FAQ entries
       contains: Short question and answer versions of the same idea, for topics that don't need a full guide.
+next: [solved-ticket-help-page-writer, release-notes-writer]

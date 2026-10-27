@@ -18,7 +18,7 @@ when:
   - "You are launching a new site and want the address settled first."
   - "You are merging two sites into one."
 not_for:
-  - "You need to set up DNS records or hosting: use the Domain and DNS planner."
+  - "You need to set up DNS records or hosting: ask your host or registrar support, or a developer."
   - "You want to buy or pick a new domain name: ask a registrar or use a name search tool."
   - "You need to fix a site that is already down: call your host or registrar support."
 
@@ -125,3 +125,5 @@ terms:
     meaning: "A rule that sends visitors from one web address to another."
   - term: "Subdomain"
     meaning: "A name in front of your domain, like blog.example.com."
+next:
+  - domain-and-certificate-watch-checker

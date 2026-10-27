@@ -12,7 +12,7 @@ when:
   - You have a budget and need a clear budget narrative that matches it.
   - A grant report is due and must match what you promised in the proposal.
 not_for:
-  - You still need to find or check funders. Use a grant research tool or ask a grant consultant first.
+  - You still need to find or check funders. Use the Nonprofit grant funder researcher or ask a grant consultant first.
   - You have no program plan yet. Build the program design and results plan first, then come back to write the proposal.
   - You want to send the draft as it is. Program staff, finance and your director must review it before it goes out.
 you_give:
@@ -41,12 +41,13 @@ works_best_with:
   inputs:
     - Proposals are binding representations to a funder about what you will deliver.
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tool is needed.
   - Paste the funder's guidelines first. Ask your AI to list the required sections, limits and attachments.
   - Add your program plan, budget and local data. Mark anything you do not have, so your AI does not guess.
   - Ask for the draft in the funder's section order. Then ask it to flag totals that do not reconcile.
   - Have program staff check the facts and finance check the budget and rate. Confirm current federal rules with finance before you use them.
   - Have your director sign off on every promise before you submit.
+  - If you need funders first, use the Nonprofit grant funder researcher. If you need a program plan first, use the Nonprofit program outcome planner.
 output_sample:
   input:
     - Funder guidelines or the RFP (the funder's call for proposals)
@@ -72,3 +73,4 @@ output_sample:
       contains: Each budget line explained in words, with the math shown and totals checked against your budget.
     - name: Review list
       contains: Totals that do not match, missing attachments, open rate questions, and who must review each part.
+next: [nonprofit-program-measurement-planner, nonprofit-grant-funder-researcher]

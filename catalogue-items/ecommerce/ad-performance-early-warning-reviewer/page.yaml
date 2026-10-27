@@ -5,13 +5,13 @@ job: read-ad-results
 headline: Ad performance early-warning reviewer
 subhead: Share matched daily results, account baselines, campaign age and alert rules. Get a five-signal warning report with next checks and review times.
 explain: |-
-  Compare ad costs, frequency, clicks and view rates with past results. Flag signals to check without predicting a sales drop.
+  Sales results tell you an ad has gone stale after the damage is done. Cost per 1,000 views, frequency, clicks, view rate and reach often move first. A check on those five can show you a problem earlier.
 
-  Share matched daily results, account baselines, campaign age and alert rules. Get a five-signal warning report with next checks and review times.
+  Paste daily results for one campaign. The skill compares the last 7 days with the first 7, marks each of the five signals green, yellow or red, and says what to check next and when to look again. The cut-off points are starting assumptions. It flags signs to check. It does not forecast a drop in sales.
 when:
-  - You need a five-signal warning report with next checks and review times.
-  - You need ad performance early-warning reviewer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - Your cost per 1,000 views is climbing and you want to know if the ad is going stale.
+  - You want a weekly check on a campaign before sales results change.
+  - You want to know whether to refresh the creative or widen the audience.
 not_for:
   - Your campaign has under 14 days of data. Wait until you have two weeks of daily results, then run it.
   - You want to decide whether to pause an ad. Check profit and sales in your ad account, or ask a media buyer.
@@ -24,11 +24,11 @@ you_get:
   - A five-signal warning report with next checks and review times
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill instructions.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste 14 to 28 days of daily results for one campaign. Add hook rate if it is a video ad.
   - Add your campaign age and any alert rules you use.
   - Ask your AI to return the five-signal warning report.
-  - Check the numbers against your ad account. Treat lead times and thresholds as starting points, and compare them with your own history.
+  - Check the numbers against your ad account. Treat the cut-offs as starting points, and compare them with your own history.
 output_sample:
   input:
     - Daily results for one campaign for the last 14 to 28 days (cost per 1,000 views, frequency, clicks, reach, spend)
@@ -49,21 +49,17 @@ output_sample:
     - name: Monitoring
       contains: Which numbers to watch daily, when to re-run the check and when to escalate.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm matched daily results, account baselines, campaign age and alert rules. Mark facts that are missing.
-  - title: The Five Leading Indicators
-    text: Follow the the five leading indicators section in the full method and keep its required fields and decision rules.
-  - title: Collect Data
-    text: Follow the collect data section in the full method and keep its required fields and decision rules.
-  - title: Calculate Baselines
-    text: Follow the calculate baselines section in the full method and keep its required fields and decision rules.
-  - title: Pattern Match to Severity
-    text: Follow the pattern match to severity section in the full method and keep its required fields and decision rules.
-  - title: Deliver the Warning Report
-    text: Follow the deliver the warning report section in the full method and keep its required fields and decision rules.
-  - title: "Leading Indicator Report: {Campaign}"
-    text: "Follow the leading indicator report: {campaign} section in the full method and keep its required fields and decision rules."
+  - title: Collect the data
+    text: It asks for 14 to 28 days of daily cost, frequency, clicks, hook rate, reach and spend. With under 14 days it stops and tells you to wait.
+  - title: Set the baseline
+    text: The first 7 days are the baseline and the last 7 days are current. It works out the change for each signal.
+  - title: Mark each signal
+    text: Each of the five signals is green, yellow or red against the starting cut-offs.
+  - title: Match the pattern
+    text: The mix of signals points to early fatigue, active fatigue, audience saturation or thumbnail fatigue.
+  - title: Write the report
+    text: A risk rating, a signal table, the diagnosis, actions in order and when to look again.
   - title: Review the result
-    text: Return a five-signal warning report with next checks and review times. Check facts, math and the decisions before any action.
+    text: Check facts, math and the decisions before any action.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

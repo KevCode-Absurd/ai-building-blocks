@@ -33,9 +33,11 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
   - Tell it your base model, your dataset and what the model should do better.
   - Add your GPU type and memory so it can pick safe settings.
+  - Check that your dataset columns match the method you picked. SFT, DPO and the others each expect different columns.
   - Read the method choice and the reasons for each setting before you run anything.
+  - Remove --push_to_hub from the command, or check the Hub repo is private. That flag uploads your trained model to the Hugging Face Hub, and it may be public.
   - Run the command on your own machine. The AI cannot train for you unless it can run code on a GPU.
-  - Check the result against the checklist. Test on a small slice of data first, because GPU time costs money.
+  - Check the result against the checklist. Do a short test run first, with a small max_steps value on a slice of data, because GPU time costs money.
 output_sample:
   input:
     - The base model you want to train

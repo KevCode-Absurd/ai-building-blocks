@@ -8,7 +8,7 @@ job: strategy
 level: advanced
 inputs:
   - {type: question, required: true}
-  - {type: competitor_set, required: false}
+  - {type: competitor_set, required: true}
 outputs:
   - {type: plan}
 uses: [business-power-tester, seven-powers-scorecard-builder, ten-year-durability-checker, power-stage-build-planner]

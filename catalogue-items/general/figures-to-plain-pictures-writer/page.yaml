@@ -118,3 +118,4 @@ works_best_with:
   inputs:
     - "The decision you want from the room"
     - "Comparisons your audience already uses"
+next: [number-to-picture-translator, read-aloud-speech-shaper]

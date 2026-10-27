@@ -6,7 +6,7 @@ argument-hint: "<description of what data you need>"
 
 # /write-query - Write Optimized SQL
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> This copy has no CONNECTORS.md file. If a warehouse tool is connected, use it. If not, ask the user to name their tables and columns. Never guess a table or column name.
 
 Write a SQL query from a natural language description, optimized for your specific SQL dialect and following best practices.
 
@@ -80,7 +80,7 @@ Follow these best practices:
 - Put each major clause on its own line
 
 **Dialect-specific optimizations:**
-- Apply dialect-specific syntax and functions (see `sql-queries` skill for details)
+- Apply dialect-specific syntax and functions from your own knowledge of that dialect. There is no separate dialect guide in this copy. If you are not sure a function exists in the user's dialect, say so and use the plainest SQL that works
 - Use dialect-appropriate date functions, string functions, and window syntax
 - Note any dialect-specific performance features (e.g., Snowflake clustering, BigQuery partitioning)
 

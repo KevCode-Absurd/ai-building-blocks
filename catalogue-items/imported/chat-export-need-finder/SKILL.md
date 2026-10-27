@@ -57,6 +57,7 @@ Do NOT use this skill when:
 
 5. **Strict Air-Gap & Zero Exfiltration**:
    - The entire analysis executes locally and offline. No network requests, no external telemetry, no remote LLM proxying of raw message contents.
+   - The coverage check ("existing_coverage") uses only what you already know about existing tools, not a lookup. Mark anything you cannot verify `I cannot confirm this`.
 
 ## Named Sins & Anti-Patterns (Что категорически ЗАПРЕЩЕНО)
 
@@ -76,6 +77,8 @@ Do NOT use this skill when:
 ## Concrete Archetypes / Presets
 
 ### Archetype 1: Streaming Regex Need Scanner (Python 3.10+)
+
+This scanner only counts hits and samples text. It cannot read a message's date, chat name or author, and it does not skip service messages. To report dates, chats and quotes, read the export message by message: parse the JSON as a stream, skip any message with `type` equal to `service`, and read each message's `date`, chat name and `text`. Use the scanner to count and find candidates, then take every quote from the parsed messages.
 ```python
 import re
 import os
@@ -120,11 +123,14 @@ def mine_need_signals(filepath: str, regex: re.Pattern, max_samples: int = 5) ->
 ```
 
 ### Archetype 2: Need Cluster & Prioritization Schema
+
+The theme, chats, quotes and numbers below are made up to show the shape. Do not reuse them.
+
 ```json
 {
   "theme_id": "NEED-001",
   "theme_name": "Zero-Downtime SQLite Replication for Edge Daemons",
-  "aggregate_score": 14.14,
+  "aggregate_score": 28.28,
   "distinct_chats": 4,
   "total_hits": 50,
   "chats_observed": ["devops_talk_ru", "sqlite_users", "homelab_ops", "backend_craft"],
@@ -181,6 +187,7 @@ Before emitting any market research summary or opportunity report, verify:
 *Problems: Zero verbatim quotes, zero date citations, zero chat distribution count, ungrounded speculation, generic meaningless advice.*
 
 ### Good (Production ChatExport Need Miner Output):
+(Illustration only: the chats, counts, quotes and tool names below are made up and unchecked.)
 > ### 1. Schema Migration Rollbacks for Flyway in CI/CD — 38 hits across 4 chats ($U=4, H=38, \text{Score}=24.66$)
 > - **Chat Distribution**: `k8s_ru` (14 hits), `devops_community` (12 hits), `backend_pro` (8 hits), `java_chat` (4 hits).
 > - **Evidence 1**: *"бесит когда flyway падает на миграции в CI и приходится вручную чистить schema_version таблицу на стейдже"* (2026-07-19T09:12:44, `devops_community`).

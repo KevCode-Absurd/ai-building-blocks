@@ -57,6 +57,8 @@ Provide your ICP definition, the engagement signals you track, and a list of lea
 | Webinar attended | 7 pts | Halved after 30 days |
 | Blog visit | 1 pt (per visit, max 5) | Expires after 30 days |
 
+The signal maximums above add up to 58, but the engagement score is capped at 50. Add up the signals after decay, then cut the total at 50. Show the raw total and the capped total so the reader can see when the cap applied.
+
 **Tier Thresholds:**
 
 | Tier | Score Range | Action |

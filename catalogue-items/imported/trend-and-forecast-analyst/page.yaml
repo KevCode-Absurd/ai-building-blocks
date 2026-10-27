@@ -33,7 +33,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files.
   - Paste the skill instructions, then upload your data as a CSV with a date column and one number column.
   - Tell your AI how often the data is recorded and how far ahead to forecast. Add your event log if you have one.
+  - Check that your AI wrote the CSV, the charts and the report. If the script fails, ask it to show the error and fix it. If it still fails, fall back to a trend line in a spreadsheet.
   - Check the odd points against what really happened. Then read the forecast range, not just the single number.
+  - Before you trust the next forecast, put last period's forecast next to the real numbers. If the real numbers often fall outside the range, do not rely on it yet.
   - Feed the forecast table into your staffing or stock plan. Run it again each month with the new data.
 output_sample:
   input:

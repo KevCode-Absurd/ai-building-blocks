@@ -44,9 +44,9 @@ For each request: REPEATS (who, how long), COST (if it counts), FIT (with, again
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Category name writer](https://useaiblocks.com/skills/category-name-writer). It takes the shortlist.
-- **Decide what to do** with the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-running-order). It takes the shortlist.
-- **Test the idea with real people** with the [Customer interview question writer](https://useaiblocks.com/skills/customer-interview-questions). It takes the shortlist.
+- The [Feature request screener](https://useaiblocks.com/skills/feature-request-screener).
+- The [Product manager](https://useaiblocks.com/skills/agency-product-manager).
+- The [Feature priority scorer](https://useaiblocks.com/skills/feature-priority-scorer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

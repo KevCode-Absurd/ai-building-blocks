@@ -40,7 +40,7 @@ The skill recommends **three forecast numbers + an explicit assumption block**. 
 
 ### Step 1 — Intake pipeline + cohort + historical conversion data
 
-Fill `assets/forecast_intake_template.md` (≈ 20 min). Captures: opportunity list with stage/amount/close-date/age/last-activity; historical stage-to-stage conversion across last 4Q and last 12Q; per-cohort ARR + per-quarter retention + expansion data; funnel stage names with 12-quarter conversion history.
+Fill `assets/forecast_intake_template.md` (≈ 20 min). If history is thin (fewer than 12 quarters, or few deals per stage), use the shorter window you have and mark the result "low confidence". Captures: opportunity list with stage/amount/close-date/age/last-activity; historical stage-to-stage conversion across last 4Q and last 12Q; per-cohort ARR + per-quarter retention + expansion data; funnel stage names with 12-quarter conversion history.
 
 ### Step 2 — Run 3-tier bookings forecast
 
@@ -90,7 +90,7 @@ All scripts: stdlib only. `--help` and `--sample` work on all three.
 
 ## Assumptions
 
-- **Historical conversion is the prior, not the truth.** Last 4Q is weighted 70%, last 12Q is weighted 30%. The blend captures regime change (recent slowdown) without overfitting to a single bad quarter. Window + weighting are surfaced in every output.
+- **Historical conversion is the prior, not the truth.** Last 4Q is weighted 70%, last 12Q is weighted 30%. These weights and the CoV bands (10/25/50%) are this skill's own starting defaults, not industry benchmarks. The blend captures regime change (recent slowdown) without overfitting to a single bad quarter. Window + weighting are surfaced in every output.
 - **A forecast without a disclosed assumption block is theatre.** This is the skill's hard rule. The CLI refuses to omit the assumption block.
 - **Cohort decomposition reveals leaks 2-3 quarters before the consolidated number does.** Reporting NRR without per-cohort breakdown hides the leak.
 - **CoV (coefficient of variation) is the right discipline for stage confidence.** A stage with mean conversion 40% and stdev 4% (CoV 10%) is HIGH confidence; mean 40% stdev 20% (CoV 50%) is VERY LOW. The same average masks very different reliability.
@@ -118,34 +118,34 @@ All scripts: stdlib only. `--help` and `--sample` work on all three.
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer + canon citation per question. Never bundled.
+Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer plus a short reason per question. The numbers are this skill's own starting defaults and rules of thumb, not sourced benchmarks. Check them against your own history. Never bundled.
 
 1. **"What conversion rate are you using, and is it last-4Q or last-12Q?"**
    Recommended: a 70/30 blend (last-4Q weighted 70%, last-12Q weighted 30%). Last-12Q alone hides recent slowdown; last-4Q alone overfits one bad quarter.
-   Canon: Tomasz Tunguz (Theory Ventures) — forecasting studies show single-window conversion estimates miss regime change at ~3-quarter lag.
+   Why: a single window can miss a change in conversion. The 70/30 blend is this skill's own default, not an industry standard. Check it against your own history.
 
 2. **"What's your pipeline coverage ratio, and is your commit above pipeline ÷ 3?"**
-   Recommended: 3x coverage is the SaaS-industry floor; below 3x means your commit is structurally unsupported.
-   Canon: Pacific Crest / KeyBanc SaaS Survey — top-quartile SaaS companies maintain 3.0-4.5x pipeline coverage against committed bookings.
+   Recommended: 3x coverage is a common floor in SaaS sales (a rule of thumb); below 3x means your commit is structurally unsupported.
+   Why: 3x is a common rule of thumb in SaaS sales, not a sourced benchmark. Compare it with your own coverage and close rates.
 
 3. **"Can you show me NRR by cohort, not just consolidated?"**
    Recommended: never report a consolidated NRR without the per-cohort breakdown. Leaky cohorts hide in averages.
-   Canon: Patrick Campbell (ProfitWell) + David Skok — cohort-driven retention decomposition surfaces leaks 2-3 quarters before consolidated NRR moves.
+   Why: splitting retention by cohort shows a leak sooner than one blended number does. This is a rule of thumb, not a measured lead time.
 
 4. **"What's the variance (CoV) on each stage's conversion rate over the last 12 quarters?"**
    Recommended: CoV < 10% → commit-grade; 10-25% → moderate; 25-50% → soft floor only; > 50% → do not use this stage for forecasting.
-   Canon: MIT Sloan forecasting research / Hyndman & Athanasopoulos (*Forecasting: Principles and Practice*) — CoV on the input series predicts forecast accuracy more reliably than mean.
+   Why: a stage whose conversion swings a lot is a weaker base for a forecast. These bands are this skill's own starting defaults. Check them against your history.
 
 5. **"How long has each late-stage opp been in late-stage?"**
    Recommended: stage-age > 2x the median stage-duration → treat as stalled, exclude from commit, keep in pipe-only.
-   Canon: David Skok (*For Entrepreneurs*) — stalled-opp identification by stage-age is the #1 forecast hygiene practice in top-decile SaaS pipelines.
+   Why: deals that sit far longer than usual in a stage rarely close on time. The 2x cut-off is a starting default, not a sourced figure.
 
 6. **"Is your best-case forecast within 30% of your pipe-only?"**
    Recommended: if best-case is < 50% of pipe-only, your stage-conversion assumptions are pessimistic and you're sandbagging; if best-case > 80% of pipe-only, you're hockey-sticking.
-   Canon: McKinsey research on forecast bias + OpenView SaaS benchmarks — most teams operate in one of two failure modes: sandbagging (commit << earnings) or hockey-sticking (commit >> earnings).
+   Why: forecasts tend to err low (sandbagging) or high (hockey-sticking). The 50% and 80% lines are starting defaults, not sourced benchmarks.
 
 7. **"What assumption block accompanies the number on the board slide?"**
    Recommended: every forecast number on a board slide names (a) the conversion rate, (b) the data window, (c) the weighting choice, (d) the pipeline-coverage ratio. No assumption block = the slide is theatre.
-   Canon: Bain & Company commercial-forecasting practice + Forrester pipeline-coverage research — undisclosed-assumption forecasts have 2.3x higher variance against actuals than disclosed-assumption forecasts.
+   Why: a number is easier to challenge and fix when its assumptions are on the slide. No figure is claimed for how much this helps.
 
 Walk depth-first. Lock 1-3 before opening 4-7. After all 7 are answered, invoke `bookings_forecaster.py` → `cohort_arr_projector.py` → `funnel_confidence_scorer.py` in sequence.

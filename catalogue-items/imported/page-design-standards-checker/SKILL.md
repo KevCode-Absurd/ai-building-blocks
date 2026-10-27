@@ -6,11 +6,19 @@ catalog_summary: "Production-grade page and component design standards"
 display_order: 2
 ---
 
+## Supporting material availability
+
+This catalog copy does not include these files:
+
+- `brand-identity/references/contrast-and-accessibility.md`
+
+Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+
 # Design Standards
 
 Production design standards for any web project. Stack-agnostic. Tool-agnostic. Covers tokens, contrast, hierarchy, spacing, mobile rules, and the pre-ship checklist.
 
-This skill complements `brand-identity` (which defines the visual system) and `brand-style-guide` (which documents it). This skill is for the day-to-day work of applying those standards in real components and pages.
+This skill complements `brand-identity` (which defines the visual system) and `brand-style-guide` (which documents it). The other skills named in this file (`brand-identity`, `brand-style-guide`, `design-system`, `frontend-component-build`, `accessibility-audit`) are separate skills. They are not in this copy, so use the matching items in this library, such as the Design system auditor or the Accessibility standards checker. This skill is for the day-to-day work of applying those standards in real components and pages.
 
 ---
 
@@ -93,7 +101,7 @@ Common failures to avoid:
 - Light borders on form fields that compute under 3:1
 - Bright orange or yellow on white at small sizes
 
-For the math, the contrast checker, and brand-color strategies, see `brand-identity/references/contrast-and-accessibility.md`.
+How to check contrast without the missing reference file: work out the contrast ratio as (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter colour and L2 of the darker (the WCAG formula), or paste both hex codes into a free checker such as the WebAIM Contrast Checker. Compare the result with the ratios in the table. If a brand colour fails as text, use a darker variant for text and keep the brand colour for large shapes.
 
 ### 3. Visual hierarchy
 

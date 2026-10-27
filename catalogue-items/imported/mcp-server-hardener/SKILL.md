@@ -274,7 +274,7 @@ policies:
     allowed_tools:
       - "read_file"
       - "list_directory"
-      - "query_database:SELECT"
+      - "query_database"   # allow the tool, then check for SELECT-only inside the handler
     denied_tools: ["*"]
 
 dangerous_tools:
@@ -291,6 +291,8 @@ dangerous_tools:
 ```
 
 ### 5.2 Per-User Tool Access Enforcement
+
+> Note (added by AI Blocks): the code below checks only `allowed_tools` and `denied_tools`. Nothing in this sample enforces `requires_approval`, `max_executions_per_session` or `allowed_operations`. Treat those as policy notes until you add the checks to your own handler. Sections 6 to 11 and the quick checklist are in `references/details.md`.
 
 ```typescript
 // src/toolAuth.ts

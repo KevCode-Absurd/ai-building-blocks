@@ -24,8 +24,8 @@ Plan for the worst case: the database is gone, the host is down for a week, the 
 
 ## When NOT to use
 
-- Active incident response (use `incident-response`)
-- Routine deploy rollbacks (use `launch-runbook`)
+- Active incident response (follow your incident process, or use the outage incident leader)
+- Routine deploy rollbacks (use your deploy tool, or the site go-live runbook writer)
 - Code or content versioning (covered by Git, CMS revision history)
 - Routine database snapshots (use this skill to set them up; routine review goes in monitoring)
 
@@ -170,6 +170,8 @@ After each drill, document:
 - Action items
 
 If the actual RTO was 6 hours when the target was 1 hour, the target is fiction. Either fix the gap or revise the target.
+
+Log the results in the drill log, and fix the largest gap before the next drill.
 
 ### Step 7: Schedule the next drill
 

@@ -55,7 +55,7 @@ Scan the Node.js project in /app for dependency vulnerabilities. Generate a Cycl
 npm audit --json > audit-report.json
 ```
 
-**Vulnerability Report (excerpt):**
+**Vulnerability Report (excerpt, illustrative output from a sample project, not a real scan; your own run will give different results):**
 
 | # | Severity | Package | Installed | Fixed In | CVE | Dependency Path |
 |---|----------|---------|-----------|----------|-----|-----------------|
@@ -88,7 +88,7 @@ npm audit --json > audit-report.json
 pip-audit -r requirements.txt --format json --output audit.json --fix --dry-run
 ```
 
-**Vulnerability Report (excerpt):**
+**Vulnerability Report (excerpt, illustrative output from a sample project, not a real scan; your own run will give different results):**
 
 | # | Severity | Package | Installed | Fixed In | CVE | Description |
 |---|----------|---------|-----------|----------|-----|-------------|

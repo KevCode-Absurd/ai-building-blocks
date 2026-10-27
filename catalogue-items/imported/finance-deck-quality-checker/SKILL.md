@@ -7,9 +7,7 @@ description: Investment banking presentation quality checker. Reviews a pitch de
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+This skill operates on **Indian markets**. Two rules cause most Indian errors (no other file is needed):
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -19,8 +17,7 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+If something has no Indian equivalent, name the gap. Never substitute a proxy and present it as the real thing.
 
 Perform comprehensive QC on the presentation across four dimensions. Read every slide, then report findings.
 
@@ -37,7 +34,7 @@ This is read-and-report only — no edits — so the workflow is identical in bo
 
 ### Read the deck
 
-Pull text from every slide, keeping track of which slide each line came from. You'll need slide-level attribution for every finding ("$500M appears on slides 3 and 8, but slide 15 shows $485M"). A deck with 30 slides is too much to hold in working memory reliably — write the extracted text to a file so the number-checking script can process it.
+Pull text from every slide (in chat, a library such as python-pptx reads the uploaded file; in the add-in, read the open deck), keeping track of which slide each line came from. You'll need slide-level attribution for every finding ("$500M appears on slides 3 and 8, but slide 15 shows $485M"). A deck with 30 slides is too much to hold in working memory reliably — write the extracted text to a file so the number-checking script can process it.
 
 The script expects markdown-ish input with slide markers. Format as:
 

@@ -16,6 +16,7 @@ when:
   - You want to test a model inside a larger system simulation first.
   - You need C code generated from a PyTorch model.
 not_for:
+  - You want to use the code outside MATLAB or other MathWorks products. The licence (BSD 2-Clause plus MathWorks terms) does not allow it.
   - You have no MATLAB license. Use a free route such as your chip maker's own tools, or ask an embedded engineer.
   - Your model runs fine on a laptop or server. You do not need this, so keep using the model as it is.
   - You only need to import a model into MATLAB with no chip target. Ask your AI for a plain import step instead.
@@ -35,6 +36,7 @@ how_to_use:
   - Tell it your target chip and its memory limits. Add the accuracy drop you can accept (optional).
   - Let it pick a path and ask you before it changes or shrinks anything.
   - Check the accuracy and memory results before you load the generated code on your device.
+  - Next, load the code on the target board and rerun the accuracy and memory checks there before any release.
 output_sample:
   input:
     - Your trained model, from MATLAB, PyTorch, ONNX, TensorFlow or LiteRT
@@ -52,5 +54,7 @@ output_sample:
       contains: A smaller version of the model, made by quantization, pruning or projection, sized for your chip.
     - name: Simulink system test
       contains: The model placed inside a larger system simulation, so you can test it before building code.
+    - name: Report
+      contains: A short report with the model check, the accuracy change against your baseline, the memory use on the chip and the list of generated files.
     - name: Generated code
       contains: C, C++ or CUDA code for your chosen chip, ready to load.

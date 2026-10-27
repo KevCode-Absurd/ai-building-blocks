@@ -54,7 +54,7 @@ export const abandonedCartDeclinePlaybook: PlaybookDefinition = {
   },
 
   analysisAgents: ['email-marketing', 'shopify-analytics', 'conversion-tracking'],
-  cooldownHours: 48,
+  cooldownHours: 72,
 
   issueTemplate: {
     title: 'Cart recovery dropped: {{clientName}}',
@@ -101,7 +101,7 @@ export const abandonedCartDeclinePlaybook: PlaybookDefinition = {
 // to the proposal. Only human approval creates the actual task tree.
 //
 // ----------------------------------------------------------------------------
-// Why a 72-hour window and a 48-hour cooldown
+// Why a 72-hour window and a 72-hour cooldown
 // ----------------------------------------------------------------------------
 //
 // Pick the time window slightly longer than your slowest specialist's sweep
@@ -109,7 +109,7 @@ export const abandonedCartDeclinePlaybook: PlaybookDefinition = {
 // reports worth of evidence.
 //
 // Cooldown is the patience period. Once this playbook fires, do not refire it
-// for the same client until 48 hours pass, even if new findings keep arriving.
+// for the same client until 72 hours pass (the cooldown is never shorter than the window), even if new findings keep arriving.
 // Two reasons:
 //   1. The first proposal is probably still being worked on.
 //   2. Without a cooldown, every new finding will spam the channel.

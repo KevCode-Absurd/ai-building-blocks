@@ -91,9 +91,9 @@ tweaks:
   - what: How much of your buyer's own words you give it
     how: Reviews and call notes make step 1 specific. Without them, the problems are guesses and marked that way.
   - what: Hours and cash you can spend delivering
-    how: Step 3 cuts to fit your limits. Without them it uses a default line of one hour per buyer.
+    how: Step 3 cuts to fit your limits. Without them it uses a default of one hour per buyer, marked as an estimate with a MISSING line.
   - what: The buyer's real numbers
-    how: Step 5 sets the price from what the result is worth to your buyer. Their own hourly rate or what a lost sale costs them makes the price firm.
+    how: Step 5 sets the price from what the result is worth to your buyer. Their own hourly rate or what a lost sale costs them makes the price firm. Without those numbers, the worth figure is an estimate and is marked MISSING.
 judge:
   - Every promise in step 1 traces to a buyer problem, and quotes are separated from guesses.
   - After trimming, every problem still has an answer.

@@ -32,8 +32,8 @@ you_get:
   - Questions for counsel
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can browse the web and run Python code.
-  - Paste the skill text from this page. Say you want an EU AI Act readiness check.
-  - Add your list of AI systems, your role for each, and the countries where they are used.
+  - Upload the whole skill folder, not just the text. The AI needs the checklist, the sources file and the checker script. Say you want an EU AI Act readiness check.
+  - Fill in the blank inventory template in the folder (assets/ai-system-inventory-template.csv) with your AI systems, your role for each, and the countries where they are used.
   - Add your risk, privacy and security documents if you have them (optional).
   - Check the inventory and gap register with each system owner. Fix any wrong facts.
   - Send the questions list to a qualified EU lawyer before you act on any risk class.

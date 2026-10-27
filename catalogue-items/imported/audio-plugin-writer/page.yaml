@@ -31,11 +31,12 @@ you_get:
   - Notes on settings and state
 how_to_use:
   - Open an AI that can run MATLAB with Audio Toolbox. If yours cannot, you will need to run the MATLAB commands yourself.
+  - Before you start, decide your list of settings, your sample rate and your format, VST or AU.
   - Paste in the skill text, then describe the effect or sound you want.
-  - List the settings you want to control and the format you want, such as VST or AU.
+  - Give it the settings list and the format.
   - Let the AI write the plugin class, then run the validation commands it gives you.
   - Send any validation errors back to the AI and ask it to fix them.
-  - When validation passes, run the build command to export the plugin and load it in your music software.
+  - When validation passes, run the build command to export the plugin and load it in your music software. Test it there by ear before you share it.
 output_sample:
   input:
     - A description of the effect or sound you want
@@ -45,6 +46,8 @@ output_sample:
   prerequisites:
     - MATLAB with Audio Toolbox, run by you or by an AI that can run MATLAB
     - A Mac to build AU plugins, since AU is macOS only
+    - MATLAB and Audio Toolbox are paid MathWorks products, so you need a licence
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Plugin class file
       contains: A MATLAB classdef file with your settings, a process step, a reset step and the plugin interface.

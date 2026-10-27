@@ -128,3 +128,4 @@ terms:
   - {term: "View product rate", meaning: "The share of visits where someone looks at a product page."}
   - {term: "Path exploration", meaning: "A GA4 report that shows which pages people go to next."}
   - {term: "Navigation loop", meaning: "Shoppers going from the homepage to a collection and back again without finding a product."}
+next: [store-page-conversion-reader, store-friction-checker, heatmap-and-recording-reader]

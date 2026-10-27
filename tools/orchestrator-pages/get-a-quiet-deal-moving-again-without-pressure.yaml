@@ -29,7 +29,7 @@ you_get:
   - Four to seven short questions, each with an honest yes, ending at your ask
   - Short, true lines for each moment the talk could turn
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the buyer's own words from emails and calls, not your summary of them.
   - Say if a deadline is real. If it is not, the steps leave urgency out.

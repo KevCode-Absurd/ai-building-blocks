@@ -29,12 +29,12 @@ you_get:
   - A preview of the app you can try right away
   - A design that avoids plain defaults like purple gradients and centred-everything layouts
 how_to_use:
-  - Open an AI that can run code and use files, and paste this skill. Check that Node 18 or newer is installed.
+  - Open an AI that can run code and use files, and paste this skill. Check that Node 18 or newer is installed and that you are online, because the setup scripts download packages.
   - Describe your app. Add style notes if you have them.
   - Your AI runs the setup script with your project name. This makes the project folder.
-  - It edits the generated code to build your app.
+  - It edits the generated files (for example src/App.tsx and index.html) to build your app, and checks the project builds before bundling.
   - It runs the bundle script. This makes bundle.html with everything inside.
-  - Open bundle.html to try the app. Then send the file to others, or ask your AI to test it.
+  - Open bundle.html to try the app. Then send the file to others, or ask your AI to test it. If bundle.html is blank or breaks, ask your AI to read the build errors and fix the code, then bundle again. One file cannot hold a server, a login or a database.
 output_sample:
   input:
     - A description of the app you want

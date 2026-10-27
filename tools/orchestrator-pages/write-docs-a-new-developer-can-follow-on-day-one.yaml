@@ -5,7 +5,7 @@ job: document-work
 thinking: high
 thinking_why: It must understand a codebase and explain it accurately to a stranger. Give it your strongest model.
 headline: Write docs a new developer can follow on day one
-subhead: Give it the codebase. It reads the architecture, interviews you for the decisions behind it and writes the README, writes an onboarding guide to the code, writes a quickstart that gets a developer to a running app, then follows the quickstart on a clean machine and reports where it breaks.
+subhead: Give it the codebase. It reads the architecture, interviews you for the decisions behind it and writes the README, writes an onboarding guide to the code, writes a quickstart that gets a developer to a running app, then follows the quickstart as a newcomer would and reports where it breaks.
 explain: |
   Most codebases have a README that was true on day one and a set of decisions that live in one person's head. A new developer spends their first week asking that person, who is also the person with the least time.
 
@@ -23,15 +23,16 @@ you_give:
   - Fifteen minutes to answer questions about the decisions behind it
   - Who the new developer is and what they already know
   - Your current README and docs, if any (optional)
+  - What the app is, its language, and the real install and run commands (optional)
 you_get:
   - "An architecture read: the parts, how they talk and where things live"
   - A README that records the decisions and their reasons
   - An onboarding guide to the code and a quickstart to a running app
   - A first-run test report with every step that broke
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md and the five skill files, in the order they run: Codebase architecture reviewer, README and decision interviewer, Codebase onboarding guide writer, Developer quickstart writer and README first-run tester.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Open the codebase in Claude Code and start. It reads the architecture and asks you about the decisions.
+  - Open the codebase in Claude Code and start. It reads the architecture and asks you about the decisions. If nobody can answer yet, each decision is marked MISSING in the README and nothing is guessed.
   - Read the guide and the quickstart. Fix anything that is wrong about your setup.
   - Read the first-run report and fix every broken step before the new developer starts.
 output_sample:
@@ -68,7 +69,7 @@ how_it_works:
   - title: Write the quickstart
     text: Writes the shortest path from a clean machine to a running app, with every command and expected output.
   - title: Test the first run
-    text: Follows the quickstart on a clean setup and reports every step that breaks or assumes knowledge.
+    text: Follows the quickstart as a newcomer would, checking each step against the code. It runs commands only if you say so, on a clean setup. It reports every step that breaks or assumes knowledge.
 output_shape: |-
   STEP 1: ARCHITECTURE
     Parts: <...> | How they talk: <...> | Where things live: <...> | Unusual: <...>

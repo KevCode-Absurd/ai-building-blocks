@@ -138,6 +138,8 @@ improve:
   - "Keep a file of past gaps and what resolved them."
   - "Pair it with Mistake-to-principle writer to turn what you find into a rule."
 
+next: [mistake-to-principle-writer]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}

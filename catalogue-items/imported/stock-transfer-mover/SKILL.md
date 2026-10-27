@@ -33,7 +33,7 @@ Transfers a specified quantity of inventory from a source location to a destinat
 
 ## Safety
 
-> ⚠️ `inventoryAdjustQuantities` directly modifies inventory levels. Decrementing the source below zero is possible if the quantity exceeds available stock — the skill will warn but Shopify does not block negative adjustments. Run with `dry_run: true` to verify available quantities at the source before committing. This does NOT create a transfer order record in Shopify; it is a direct adjustment.
+> ⚠️ `inventoryAdjustQuantities` directly modifies inventory levels. Shopify does not block negative adjustments, so this skill does: when `available < quantity` at the source, it warns in the preview and, on a live run (`dry_run: false`), skips that SKU and lists it. Run with `dry_run: true` to verify available quantities at the source before committing. This does NOT create a transfer order record in Shopify; it is a direct adjustment.
 
 ## Workflow Steps
 
@@ -45,10 +45,10 @@ Transfers a specified quantity of inventory from a source location to a destinat
    **Inputs:** Batch lookup by SKU to get `inventoryItem.id` for each transfer SKU
    **Expected output:** Inventory items with current quantities at source location
 
-3. Validate: for each SKU, confirm `available >= quantity` at source. Warn if not but proceed if `dry_run: false`
+3. Validate: for each SKU, confirm `available >= quantity` at source. If not, warn; on a live run (`dry_run: false`) skip that SKU and list it in the summary
 
 4. **OPERATION:** `inventoryAdjustQuantities` — mutation
-   **Inputs:** Two changes per SKU: `{ inventoryItemId, locationId: source, delta: -quantity, reason: "correction" }` and `{ inventoryItemId, locationId: destination, delta: +quantity, reason: "correction" }`
+   **Inputs:** Two changes per SKU: `{ inventoryItemId, locationId: source, delta: -quantity, reason: "<reason>" }` and `{ inventoryItemId, locationId: destination, delta: +quantity, reason: "<reason>" }` (reason defaults to `other`, because these are moves between locations, not corrections; the user may set another valid reason)
    **Expected output:** `inventoryAdjustmentGroup { changes { delta, location } }`, `userErrors`
 
 ## GraphQL Operations
@@ -188,10 +188,10 @@ CSV file `inventory_transfer_<YYYY-MM-DD>.csv` with columns:
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | SKU not found | SKU not in catalog | Log warning, skip transfer for that SKU |
 | `userErrors` on adjustment | Location not stocking item | Log error, skip SKU, continue |
-| Quantity would go negative | Transferring more than available | Log warning; abort SKU if `dry_run: false` |
+| Quantity would go negative | Transferring more than available | Log warning; skip the SKU if `dry_run: false` |
 
 ## Best Practices
 - Always run with `dry_run: true` first — the skill verifies available quantities and shows exactly what will change.
 - This creates raw inventory adjustments, not a transfer order. For audit trail purposes, add a note in the reason field and document the transfer separately.
 - For large transfers (50+ SKUs), run during off-peak hours to avoid interfering with live inventory reads by the storefront.
-- Pair with `multi-location-inventory-audit` to identify which locations have excess stock before deciding transfer quantities.
+- Check stock levels in each location first (for example with `stock-age-report-builder` or `dead-stock-finder`) to decide transfer quantities.

@@ -5,6 +5,34 @@ description: Write short ad hooks using five tactics. Rank them by buyer fit and
 
 # Five-tactic ad hook writer
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Check it before it goes live** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). It takes the hooks.
+- **Check it before it goes live** with the [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker). It takes the ad copy.
+- The [Headline and cover test planner](https://useaiblocks.com/skills/headline-cover-test-ranker). It takes the hooks.
+- **Check it before it goes live** with the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser). It takes the ad copy.
+- The [Ad hook writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer). It takes the ad copy.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -33,6 +61,8 @@ You are a senior creative director generating ad hooks. A hook is the first 2 se
 
 ## STEP 2: The 5 Hook Tactics
 
+The examples show the shape of each tactic. Words in [square brackets] are placeholders. Use a number, a result or a personal story only if the user supplied it with proof. Never copy an example number or story into a real ad.
+
 ### 1. Pattern Interrupt
 Say something unexpected, rhythmically jarring, or counter to category defaults.
 
@@ -55,10 +85,10 @@ Examples:
 Specific, provocative, ideally with a number.
 
 Examples:
-- "97% absorption."
-- "We cut the sugar to zero."
-- "3 days. No caffeine."
-- "4,200 people switched last month."
+- "[Verified number] [measured result]."
+- "We cut the [ingredient] to [verified amount]."
+- "[Number of days]. No [thing]." (only if true)
+- "[Verified count] people switched [timeframe]."
 
 ### 4. Direct Callout
 Address the viewer directly by identity or behavior.
@@ -73,10 +103,10 @@ Examples:
 Open a loop. The viewer has to keep watching to close it.
 
 Examples:
-- "I tried 12 greens powders so you don't have to."
-- "Here's what happened when I switched my shampoo."
-- "My mom was drinking 10 cans of Diet Coke a day. So I made this."
-- "Three weeks. No skincare. Let me explain."
+- "I tried [number] [category items] so you don't have to." (only if the person did)
+- "Here's what happened when I switched my [thing]."
+- "[Real person from the founder's story]. So I made this."
+- "[Timeframe]. No [thing]. Let me explain."
 
 ## STEP 3: Generate 10-15 Hooks
 
@@ -114,6 +144,7 @@ For each top hook, recommend:
 3. If it sounds like something a real person would say, it's probably good.
 4. Pair every hook with a tactic label so the user can test tactic-by-tactic.
 5. Never use em dashes.
+6. Next step: pair the top-ranked hook with body copy in a normal chat, then test the top two hooks tactic by tactic.
 
 
 ## Final check

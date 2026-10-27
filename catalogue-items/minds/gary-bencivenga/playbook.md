@@ -42,7 +42,7 @@ You bring him an offer, a page, a headline, a launch plan or a job you are about
 
 ### Your offer page
 
-Picture your best prospect reading at midnight, half hopeful and half sure it is another empty promise. He checks the four parts: problem, promise, proof and an easy proposition. He lists your claims one by one and marks the ones that outrun their proof. He asks for the three reasons why. He would hold a headline back if it shouts. A silver ad of his lost by about 200 percent when he swapped "may" for "will". Fix the weakest part first, cut any superlative you can't back, then test the new page against the old one.
+Picture your best prospect reading at midnight, half hopeful and half sure it is another empty promise. He checks the four parts: problem, promise, proof and an easy proposition. He lists your claims one by one and marks the ones that outrun their proof. He asks for the three reasons why. He would hold a headline back if it shouts. A silver ad's hedged headline ("may rise") beat his stronger "will rise" by about 200 percent [S7]. Fix the weakest part first, cut any superlative you can't back, then test the new page against the old one.
 
 ### Your headline
 
@@ -50,7 +50,7 @@ He'd ask you to write 30 to 50 and then judge them two ways. Would it wake someo
 
 ### Your offer, guarantee and bonus
 
-He'd test the version with the believable reason first: a fire, an anniversary, a founder retiring. He'd add a deluxe option, lengthen the guarantee, and try "buy one, get one". He warned that a limit works only if you keep it. He'd ask what you will do when the limit hits. He once told a newsletter star to cap his list for exactly that reason, and the star refused.
+He'd test the version with the believable reason first: a fire, an anniversary, a founder retiring. He'd add a deluxe option, lengthen the guarantee, and try "buy one, get one". He warned that a limit works only if you keep it. He'd ask what you will do when the limit hits. He once advised a newsletter publisher, by his own account, to cap his list for exactly that reason, and the publisher refused [S6].
 
 ### Your launch and your market
 
@@ -58,7 +58,7 @@ He would not let you bet a business on an untested idea. Find where people are a
 
 ### Working with a writer, and what you count
 
-He'd tell you to let the writer write and judge on results. Ask for two packages, a safe one and a bold one. Prefer pay that rises with your results. Do not hand a winning package to another writer to reword, since that kills the reason to give you the best idea. He once offered clients to beat their best ad by 10 percent or charge nothing, so he'd also ask what the writer will risk. On measuring, he'd ask what you count. Visits and clicks are not sales. He'd want the sales number of your last test and the next test you will run. He does not give personal investment advice, and neither does this playbook.
+He'd tell you to let the writer write and judge on results. Ask for two packages, a safe one and a bold one. Prefer pay that rises with your results. Do not hand a winning package to another writer to reword, since that kills the reason to give you the best idea. His agency once offered clients to beat their best ad by 10 percent or charge nothing [S7], so he'd also ask what the writer will risk. On measuring, he'd ask what you count. Visits and clicks are not sales. He'd want the sales number of your last test and the next test you will run. He does not give personal investment advice, and neither does this playbook.
 
 ### Outside his field: a parent planning a move
 
@@ -66,7 +66,7 @@ You are moving your family to a new town for a job, and every choice feels like 
 
 ### Your life and career
 
-He tells would-be founders to keep the job while they prove the business at night. He worked days as a copywriter and took eight years of night school for his degree, and says the staying power mattered more than the paper. Build a small version on evenings and weekends, get a first paying customer, and find your hungry crowd. Find a mentor and study the winners and the failures in your field. Guard a quiet morning hour for the hardest task. When a test goes against you, ask why instead of hiding it. Credit your teachers, and write one sentence that keeps you on target when you feel anxious.
+Guard a quiet morning block for the hardest task: he keeps about three quiet hours with no email first [S7]. When a test goes against you, ask why instead of hiding it, as his silver ad did [S7]. [beyond the record] Our sources do not cover his advice to would-be founders. As our application of his test-first habit: keep your job while you prove a small version on evenings and weekends, get a first paying customer, and find a mentor.
 
 ## What he'd push back on
 
@@ -77,7 +77,7 @@ He tells would-be founders to keep the job while they prove the business at nigh
 - Betting a business on an untested idea.
 - A limit or a deadline you won't keep.
 - Taking a fight you can't win just to look brave.
-- Copying a winning package with new words ("barely legal plagiarism", in his phrase).
+- Copying a winning package with new words. Handing it to another writer to reword kills the reason to give you the best idea (our reading of his rule).
 - Hype that borrows his method but skips the evidence.
 
 ## What you'll get back

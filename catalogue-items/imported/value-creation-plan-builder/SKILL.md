@@ -27,6 +27,8 @@ Map all levers to an EBITDA bridge over the hold period:
 - **Sales force effectiveness**: Hire reps, improve conversion, shorten cycle
 - **M&A / add-ons**: Bolt-on acquisitions to add revenue and capabilities
 
+Check each lever with a plain question before you size it. Examples: "what is the dollar effect on EBITDA if price rises 2%?"; "how many extra orders or customers does this need, and is that likely?"; "what does it cost to deliver, and how many months until it pays back?"; "what would have to be true for this to fail?". Use the user's real figures. If a figure is missing, write `MISSING: <what>` and do not invent one.
+
 For each lever:
 - Current state → Target state
 - Revenue impact ($)

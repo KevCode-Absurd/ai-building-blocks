@@ -12,9 +12,9 @@ when:
   - Your floor feels cluttered and you want a clearer layout.
   - A season is coming and you want to plan the changeover early.
 not_for:
-  - "You want to list high-value items for online auction: use the online resale skill in your own library, or check recent sold listings by hand."
-  - "You need help grading new donations before they reach pricing: grade them with your intake team first, then come back here."
-  - "You need till setup, cash handling or theft prevention: ask your store operations lead or your point-of-sale provider."
+  - "You want to list high-value items for online auction: use the Donated goods online resale planner, or check recent sold listings by hand."
+  - "You need help grading new donations before they reach pricing: grade them first with the Donated goods intake planner or your intake team, then come back here."
+  - "You need till setup, cash handling or theft prevention: use the Resale store daily procedure planner, or ask your store operations lead or your point-of-sale provider."
 you_give:
   - Your item categories and condition grades
   - Counts of items by grade (optional)
@@ -40,13 +40,14 @@ works_best_with:
     - name: A chat AI that can read your files
       why: The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
   inputs:
-    - Pricing and floor layout for donated goods; adjust and move on.
+    - A floor sketch or photos of your shop with rough measurements
+    - Notes on which items sell fastest in which season
 how_to_use:
   - Gather your category list, grade counts, sales records and a floor sketch.
   - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste or upload your records. No code or paid tool is needed.
   - Ask for the price-band table first. Check each range against what you really charge and what nearby shops charge.
   - Ask for the markdown calendar, floor zones and seasonal plan next.
-  - Review the plan with your store team before you change any price tags.
+  - Treat every price band and markdown percent as a draft. Set them from your own sold records and what nearby shops charge, and review the plan with your store team before you change any price tags.
   - Repeat the sell-through check each month and adjust bands or space.
 output_sample:
   input:
@@ -69,3 +70,4 @@ output_sample:
       contains: When to swap seasonal stock onto the floor and how to stage the change in backstock.
     - name: Sell-through by category report
       contains: The share of stock that sold in each time window, to show which categories need a price or space change.
+next: [resale-store-daily-procedure-planner, donated-goods-online-resale-planner]

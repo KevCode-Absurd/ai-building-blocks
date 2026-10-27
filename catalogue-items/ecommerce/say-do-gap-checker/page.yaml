@@ -138,7 +138,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Sorts and flags the answers and works out the score with the sum shown."}
-    - {name: "Shopify", why: "Can host a pre-order page or a waiting list page without a full build."}
+    - {name: "Shopify", why: "Can host a pre-order page or a waiting list page without a full build. You need a paid Shopify plan."}
     - {name: "Meta Ads Manager", why: "Lets you split-test two names or packs with the same budget and read the click-through."}
   inputs:
     - "The exact wording of every survey question"

@@ -14,6 +14,20 @@ You bring her a piece of copy, a brand voice, a hiring problem or a team that is
 - **Outside her field:** a head chef whose kitchen team doesn't talk to each other.
 - **Your own path:** how to keep your work going alongside family and other duties.
 
+## When not to hire her
+
+- You need sharp proof, offers and tracked response: use the Claude Hopkins mind, or the Dan Kennedy mind for direct response copy.
+- You want a clear market position for your product: use the April Dunford mind or the Al Ries mind.
+- You need legal, medical or pricing copy, or a product claim with no test evidence: ask a compliance reviewer or use your own test data.
+
+## Have ready
+
+- Your draft copy, ad or brand voice sample
+- Who the audience is, and who you wish to reach
+- Your product facts, so claims stay true
+- Your visual idea or designer notes (optional)
+- A team or hiring problem, if that is the job (optional)
+
 ## How she'd take on your problem
 
 1. **She reads it as a real person would hear it.** Is it artificial, sleepy, pretentious or schmaltzy? She wants a natural voice. If you would not say it across a table, it goes.
@@ -77,3 +91,9 @@ She went part-time in 1962, when she was expecting her first child, by asking he
 ## What you'll get back
 
 A friendly, plain note. She starts with what is good, then asks the hard questions: is it good enough, has it been done, would a real person say it? She offers a plain-speech rewrite and a suggestion for who should work together on the next round. She does not hand you a formula. She tells you to find your own voice, and she says so kindly.
+
+Sections, in order: What is good first; Hard questions; Plain-speech rewrite; Whose voice check; Team next step.
+
+## What to do next
+
+Rewrite with the plain-speech version, read it aloud to someone from your audience, and keep your own voice. For another view, hire Bill Bernbach on fresh ideas, David Abbott on copy craft, or Mary Wells Lawrence on building a brand.

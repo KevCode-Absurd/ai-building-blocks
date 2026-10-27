@@ -35,7 +35,8 @@ how_to_use:
   - Tell it which countries and platforms you sell on. Don't say "worldwide".
   - Add your size chart if you have one. It adds centimeters to every size.
   - Let it make the text-free main image first. Then ask for each country's version.
-  - Check all foreign text with a native speaker. Confirm current platform rules and label rules before you upload.
+  - Check all foreign text with a native speaker. Confirm current platform rules and label rules on each platform's own seller help page before you upload. The rules in the skill are the author's notes and may be out of date.
+  - Upload the images that pass and the approved copy for each region. Check again whenever a platform changes its rules. To write the listing text itself first, use the Product listing writer.
   - Image making and checks need an AI that can run code and your own image model key (OpenAI, Gemini, fal or Replicate). Copy and size tables work in any chat.
 output_sample:
   input:
@@ -58,3 +59,4 @@ output_sample:
       contains: A pass or fail check of each image against the platform's picture rules.
     - name: Label reminders
       contains: Labels the region often requires, such as materials, origin and certifications. Hints only, not legal advice.
+next: [product-listing-writer, listing-completeness-scorer]

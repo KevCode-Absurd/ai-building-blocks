@@ -189,6 +189,8 @@ Define targets for each key metric based on their current baseline + realistic i
 
 ## The 5 Growth Levers
 
+Benchmark figures below come from public sources dated 2025 to 2026 and may be out of date or differ for your category. When you quote one, name its source and year, and tell the user to check it against their own numbers before they rely on it.
+
 Every e-commerce business grows through the same 5 levers. The question is which lever gives you the biggest return right now.
 
 ### Lever 1: Traffic / Acquisition

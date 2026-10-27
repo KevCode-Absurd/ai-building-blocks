@@ -10,6 +10,7 @@ not_for:
   - You need to share references now, before anyone asks. Wait for the final round, and send the list only when the employer requests it.
   - Your referee has left, said no or may give a lukewarm review. Pick someone else who saw your work, such as a senior colleague or client.
   - You need a CV or cover letter. Write those first, then come back here to build the list.
+  - The employer has already asked for references. Send the list only after you have each person's agreement.
 explain: Share the role and people who can speak about your work. It helps choose relevant references and formats their details. You get a reference list, permission-request drafts and short briefings about the role for each person to review.
 you_give:
   - The target role and possible professional references.
@@ -31,7 +32,7 @@ how_to_use:
   - Add their titles, contact details and how you worked together. Say who has already agreed.
   - Answer any questions it asks. It will mark missing details instead of guessing.
   - Check the list and drafts. Ask people before you send anything, then send the list only when the employer asks for it.
-  - After the check, send your thank-you notes and tell each referee the result.
+  - After the check, send your thank-you notes and tell each referee the result. Pair the list with your CV and cover letter, and update your job-search tracker.
 output_sample:
   input:
     - The role you are applying for, and the company

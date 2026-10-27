@@ -15,6 +15,19 @@ Scientific, customer-centric approach to conversion rate optimization based on t
 
 **Don't guess -- discover.** Every visitor who doesn't convert has a reason. Discover those reasons through research, then systematically eliminate them with evidence and proof. This evidence-based approach consistently outperforms "best practices", intuition, competitor copying, and expert opinion.
 
+## Inputs to gather first
+
+Ask for: the page URL or screenshots, the current conversion rate, weekly visitors if known, and any survey, chat or support feedback. If traffic data is missing, say so, score from the page alone, and mark any test-size advice as "needs traffic data". Never make up a rate.
+
+## What you hand back
+
+1. Score out of 10 and the diagnostic rows that failed
+2. Problems found, ranked worst first, with what each one costs
+3. Objections and the proof or wording that answers each
+4. Test hypotheses (change, expected result, reason)
+5. Priority order: which test first, which can wait
+6. Test setup guidance (visitors needed, how long to run, mistakes like stopping early)
+
 ## Scoring
 
 **Goal: 10/10.** Score any landing page, funnel, or conversion flow against the seven Quick Diagnostic rows below: award ~1.4 points per row answered "yes" (7 rows = 9.8, capped at 10). Bands: **9-10** = single clear action, research-grounded O/CO table, value prop legible in 5 seconds, proof at every friction point, funnel mapped, path free of UX blockers; **5-6** = guessed objections, generic best-practices copy, proof buried in FAQs; **<=3** = competing CTAs, no funnel map, claims with no proof. Report the current score and the specific diagnostic rows failing.
@@ -220,8 +233,8 @@ Audit any landing page or conversion flow:
 
 For the complete CRE Methodology(TM), detailed case studies, and advanced techniques:
 
-- [*"Making Websites Win: Apply the Customer-Centric Methodology That Has Doubled the Sales of Many Leading Websites"*](https://www.amazon.com/Making-Websites-Win-Customer-Centric-Methodology/dp/1544500513?tag=wondelai00-20) by Dr. Karl Blanks and Ben Jesson
+- [*"Making Websites Win: Apply the Customer-Centric Methodology That Has Doubled the Sales of Many Leading Websites"*](https://www.amazon.com/Making-Websites-Win-Customer-Centric-Methodology/dp/1544500513) by Dr. Karl Blanks and Ben Jesson
 
 ## About the Author
 
-**Dr. Karl Blanks and Ben Jesson** are cofounders of Conversion Rate Experts, the agency whose CRE Methodology has doubled the sales of many leading websites -- clients include Google, Apple, Amazon, Facebook, and Dropbox -- and earned a Queen's Award for Enterprise (Innovation). Blanks holds a PhD and led usability teams at Hewlett-Packard; Jesson's background is direct-response marketing. Their book *Making Websites Win* distills the methodology into a repeatable, evidence-based process.
+**Dr. Karl Blanks and Ben Jesson** are cofounders of Conversion Rate Experts, the agency behind the CRE Methodology. Their claims about clients and awards are their own and are not checked here. Blanks holds a PhD and led usability teams at Hewlett-Packard; Jesson's background is direct-response marketing. Their book *Making Websites Win* distills the methodology into a repeatable, evidence-based process.

@@ -101,7 +101,7 @@ output_shape: |-
     <batch folder, log line> | MISSING: <every line>
 tweaks:
   - what: A fact for every prospect
-    how: The checks cannot pass without it. A list with names and no facts only gets short, honest cold emails.
+    how: The checks cannot pass without it. A prospect with no fact gets a short, plain email with no claim about them. If no prospect has a fact, it stops and asks.
   - what: Samples of your own emails
     how: Three to five emails you sent and liked give it your voice. Without them it writes a plain, direct voice.
   - what: Batch size

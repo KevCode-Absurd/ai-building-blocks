@@ -34,7 +34,7 @@ how_to_use:
   - Only audit systems you own or have written permission to test. Agree the scope first and start with read-only checks.
   - Open an AI that can read your project files, and paste in this skill.
   - Describe your system, the scope and any standard you must meet. Add your config files or code.
-  - Scans need tools installed and access to your systems. Without them, ask for a review of files and config only.
+  - Scans need tools installed and access to your systems. Some of the tools named in the skill are paid, and cloud scans need cloud credentials you grant. Without them, the skill runs as a files-only review of your config and code.
   - Approve any active scan before it runs. Read the findings and check the top ones yourself.
   - Fix the highest-rated issues first, then ask your AI to re-check them.
 output_sample:

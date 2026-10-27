@@ -5,11 +5,11 @@ name: PowerShell pitfall checker
 summary: Check your PowerShell script for operator, quoting and null mistakes. You get a list of problems and a fixed script back.
 job: test-and-fix-code
 headline: PowerShell pitfall checker
-subhead: Paste your Windows PowerShell script. Your AI checks it against a fixed list of known traps, like missing brackets, emoji, null checks and JSON depth. You get a list of what it found and a corrected script.
+subhead: Paste your Windows PowerShell script. Your AI checks it against a fixed list of known traps, like missing parentheses, emoji, null checks and JSON depth. You get a list of what it found and a corrected script.
 explain: |
   Catch the Windows PowerShell mistakes that make scripts fail for no clear reason, and get the corrected script back.
 
-  The skill checks for known traps. Logical operators like -and and -or need each command wrapped in brackets. Emoji and fancy symbols break output, so it swaps them for plain tags like [OK] and [!]. It reviews null checks, quoting, error handling and path handling, and rewrites any line that is wrong. You paste your script and get a list of what was found plus a fixed version. It is built for Windows PowerShell.
+  The skill checks for known traps. Logical operators like -and and -or need each command wrapped in parentheses. Emoji and fancy symbols break output, so it swaps them for plain tags like [OK] and [!]. It reviews null checks, quoting, error handling and path handling, and rewrites any line that is wrong. You paste your script and get a list of what was found plus a fixed version. It is built for Windows PowerShell.
 when:
   - A script runs on your machine but fails on a colleague's.
   - An if line with -or or -and acts strangely or throws a parameter error.
@@ -33,7 +33,8 @@ how_to_use:
   - Add the error text and your PowerShell version if you have them.
   - Ask for the findings list first, and read it.
   - Then ask for the corrected script with a reason for each fix.
-  - Test the new script somewhere safe before you use it. No code running is needed.
+  - Test the new script in a test folder before you use it. No code running is needed.
+  - Next, paste the fixed script back in. The findings list should now be empty. For a second check, run the free PSScriptAnalyzer tool.
 output_sample:
   input:
     - Your PowerShell script
@@ -41,8 +42,8 @@ output_sample:
     - Your Windows or PowerShell version (optional)
   output:
     - name: Findings list
-      contains: Each mistake found, such as missing brackets around commands joined by -or, emoji in output, or a missing null check.
+      contains: Each mistake found, such as missing parentheses around commands joined by -or, emoji in output, or a missing null check.
     - name: Corrected script
-      contains: Your script with each wrong line rewritten, using brackets, plain [OK] and [!] tags, and Join-Path.
+      contains: Your script with each wrong line rewritten, using parentheses, plain [OK] and [!] tags, and Join-Path.
     - name: Fix explanations
       contains: A plain reason for each change, so you can spot the same mistake next time.

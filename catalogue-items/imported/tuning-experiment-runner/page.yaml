@@ -17,6 +17,7 @@ when:
   - You are not sure when to stop trying new settings.
 not_for:
   - Your goal is a matter of taste and has no score. Ask a person to review the options instead.
+  - You have only a few settings to try. A single manual A/B test costs less than a search.
   - You have not agreed to spend compute or paid API money. Get that approval first, then come back.
   - You only need to fix a bug or review code. Ask your AI for a plain code review instead.
 you_give:
@@ -34,7 +35,7 @@ how_to_use:
   - Say the one score to improve, the settings with their ranges, and your current settings.
   - Set a cap on trials, time or money before the first run. Trials can use paid API calls or compute.
   - Let your AI run the baseline, then one trial at a time. Code running helps here. If it cannot run code, run each trial yourself and paste back the score.
-  - Read the trial log and the stop reason. Check the best settings on held-out data or a fresh run before you rely on them.
+  - Read the trial log and the stop reason. Check the best settings on held-out data or a fresh run before you rely on them. Then save the winning settings to your config.
 output_sample:
   input:
     - The one score to improve, and whether higher or lower is better

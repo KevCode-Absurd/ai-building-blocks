@@ -34,9 +34,9 @@ how_to_use:
   - Open your AI tool and paste the skill, or load the skill folder if your tool takes files.
   - Say what your app needs from a server and which services you call.
   - Share your Expo project files. This works best when your AI can read files and run commands.
-  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service.
+  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service. The skill's sign-in example is a stub that accepts any token, so replace it with a real check. The skill gives no rate-limit code, so ask your AI to add one, such as a per-user counter in your database or your host's rate-limit feature.
   - Test locally with npx expo serve and curl.
-  - To go live, log in to EAS, set your secrets, then run eas deploy. Stripe, OpenAI and hosting use can cost money.
+  - To go live, log in to EAS, set your secrets (leave out --value so EAS asks for the key and it stays out of your shell history), then run eas deploy. Stripe, OpenAI and hosting use can cost money.
 output_sample:
   input:
     - What your app needs from a server

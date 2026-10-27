@@ -19,6 +19,7 @@ not_for:
   - "You need Classic Bluetooth (BR/EDR): use bluetoothWaveformGenerator in MATLAB instead."
   - "You need Channel Sounding for ranging or distance: use bleCSWaveform in MATLAB R2024b or later."
   - "You need link-layer or network simulation: use bluetoothLENode in MATLAB. For radio path loss, use bluetoothPathLoss."
+  - You have no radio or MATLAB experience. This is for engineers, so ask one to run it for you. The licence also limits use to MathWorks products.
 you_give:
   - The packet type or PHY mode to generate, such as LE1M, LE2M, LE500K or LE125K
   - Payload size and channel (optional)
@@ -45,6 +46,7 @@ output_sample:
   prerequisites:
     - MATLAB R2022a or later with the Bluetooth Toolbox
     - An AI tool that can write and run MATLAB code, not just a chat
+    - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Waveform generation code
       contains: MATLAB code that builds the packet waveform with bleWaveformGenerator, using the pattern that matches your request.

@@ -29,7 +29,7 @@ you_get:
   - A task ladder from where they can succeed up to the hard problem
   - A study plan with short sessions and a review in each
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the learner's attempts and the task. It diagnoses the sticking point.
   - Use the hints one at a time in your next session. Stop as soon as the learner moves.
@@ -127,3 +127,5 @@ works_best_with:
 terms:
   - term: Task ladder
     meaning: A set of tasks ordered from what a learner can do now up to the hard one, each a small step harder.
+next: [mixed-practice-unit-planner]
+before: []

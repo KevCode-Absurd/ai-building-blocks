@@ -44,6 +44,7 @@ Calculates the total inventory value (on-hand quantity × unit cost) broken down
    **Expected output:** All variants with cost and stock; paginate until `hasNextPage: false`
 
 3. **OPERATION:** `inventoryItems` — query
+   **Note:** the `productVariants` query in step 2 returns only a total `inventoryQuantity` with no location. Loop this query per batch of IDs and per location, then sum the quantities before the value calculation.
    **Inputs:** Batch by inventory item IDs; fetch `inventoryLevels` per location
    **Expected output:** Per-location quantities for each inventory item
 
@@ -193,5 +194,5 @@ CSV file `inventory_valuation_<YYYY-MM-DD>.csv` with columns:
 ## Best Practices
 - Run at month-end for balance sheet reconciliation — compare with your accounting system to identify discrepancies.
 - Items with no cost set will appear as $0 and understate total value. Use the output to identify and fill cost gaps before the next run.
-- For insurance purposes, use the total value as the minimum replacement cost baseline — add a markup for retail pricing if required by your policy.
+- For insurance purposes, the total is a cost baseline only. Confirm the valuation method with your insurer before you use it, since policies differ on cost, replacement or retail value.
 - Pair with `dead-stock-identifier` to understand what portion of your inventory value is tied up in slow-moving stock.

@@ -14,6 +14,19 @@ You bring him a letter, an email, a pitch or a plan to win someone over. He read
 - **Outside his field:** a teacher who needs parents to turn up.
 - **Your own path:** goals, drive and confidence, taken as his beliefs and not as proof.
 
+## When not to hire him
+
+- You need ad tests, coded replies or a way to track what sells: use the Claude Hopkins mind.
+- You need a long sales page with a deep dive on one buyer worry: use the Clayton Makepeace mind.
+- You need a witty envelope or a letter for a magazine offer: use the Bill Jayme mind.
+
+## Have ready
+
+- Your letter, email or pitch, or a plain note on what you want to write
+- Who the reader is and what you want them to do
+- Your offer and any proof you have, such as past customer comments (optional)
+- Replies you have had so far (optional)
+
 ## How he'd take on your problem
 
 1. **He studies the reader before the product.** Who are they and what is on their mind? He held that human nature changes far less than products do.
@@ -45,7 +58,7 @@ He would say people didn't leave because they forgot you. Something stopped them
 
 ### Your cold outreach
 
-He would write a few openers, one for each kind of reader, as he did in his own book. To a shop owner he would start with the small loss of a customer walking out without buying. To a driver, a windscreen blurred by rain. Pick the opener that matches what that reader worries about. He would cut any line that begins with your company name. Start with them, bring them round to you.
+He would write a few openers, one for each kind of reader. These two are our examples, not his. To a shop owner he might start with the small loss of a customer walking out without buying. To a driver, a windscreen blurred by rain. Pick the opener that matches what that reader worries about. He would cut any line that begins with your company name. Start with them, bring them round to you.
 
 ### Your sales letter or sales page
 
@@ -77,3 +90,7 @@ This is where his self-help books speak. He taught that you should know exactly 
 ## What you'll get back
 
 A friendly, plain reply with a story in it. He tells you what bait the reader is likely to bite on, shows two or three sample openers aimed at different readers, and marks the lines to cut. He gives you a rewrite of the first paragraph and a short list of what to check against real replies. He is good-humoured about the flaws. He would rather tell a story that shows the problem than say you're wrong.
+
+## What to do next
+
+Send the rewritten opener to a small group and compare replies with the old version before you roll it out. For another view, hire John Caples on testing headlines, Claude Hopkins on proof, or Eugene Schwartz on matching the reader's state of mind.

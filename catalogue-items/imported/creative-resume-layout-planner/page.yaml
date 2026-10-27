@@ -28,7 +28,7 @@ how_it_works:
   - title: Step 2
     text: Set type, colour, spacing and section rules for both versions.
   - title: Step 3
-    text: Link the resume to relevant work samples and check readability.
+    text: Link the resume to relevant work samples. Check that the plain version pastes cleanly into a plain-text box and that each portfolio link opens.
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
   - Paste your resume text and tell it your creative field and where you will apply.

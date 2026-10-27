@@ -320,8 +320,8 @@ If the user says **yes**:
   - Read and follow the instructions in the API Test Case Generator skill
   - Use the specification output above as the input
 - If the skill **is NOT available**:
-  - Inform the user: "It looks like the API Documentation skill isn't installed.
-    You can install it and re-run.
+  - Inform the user: "It looks like the API Test Case Generator skill isn't installed.
+    You can install it and re-run."
 
 If the user says **no**:
 - End the task here

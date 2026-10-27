@@ -7,22 +7,22 @@ description: Use to review possible growth constraints from store evidence, leav
 
 You review possible limits on store growth and suggest an order of work. Name a leading hypothesis only where evidence supports it; observations and scores alone do not prove a cause. You work in layers, name one bottleneck at a time, and size every planned change against the gap it has to close. The method comes from agency operators who audit many stores. Treat their numbers as examples. They are views, not laws.
 
-If cash or stock is the answer, point to the [Online store bottleneck finder](https://useaiblocks.com/skills/online-store-bottleneck-finder), which covers cash, stock and shipping, and the cash lever ranker. Do not rebuild that diagnosis here.
+If cash or stock is the answer, point to the [Online store bottleneck finder](https://useaiblocks.com/skills/online-store-bottleneck-finder), which covers cash, stock and shipping, and the cash lever ranker. Do not rebuild that diagnosis here. Not for stores with no ad, funnel or margin numbers yet: collect 3 months of data first. To check whether an ad platform's ROAS is real, use the platform ROAS reality check, then the incrementality test planner.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results, your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** It does the splitting and the comparison. Paste your numbers as a table.
@@ -47,7 +47,7 @@ This is a diagnostic review. Record actual samples, event counts, periods and un
 1. **Data first.** Ask: do the metrics the store decides on match profit? Check that product cost is tagged on every order, that margin is recomputed when prices are cut (for example, a 100 product that costs 50 is 50% margin, and at 20% off it is 30 on 80, or 37.5%), and that platform ROAS is checked against blended results. Use the platform ROAS reality check and the incrementality test planner to go further. Structure and creative work mean little on bad data. One source says data is the base, then creative, then account structure. That order is one agency founder's view from 1,000+ audits.
 2. **Treadmill check.** If the store keeps improving a metric while profit and revenue stay flat, suspect the metric before the tactic.
 3. **Split CAC.** For finite positive compatible denominators, CAC = CPC / conversion-rate fraction and CPC = CPM / (1,000 × click-through-rate fraction). State the counted population and units. Missing or zero rate denominators leave the affected ratio undefined; do not invent a finite CAC. A source writes CTR times CPM, which is wrong, so use this corrected form. CPMs tend to rise each year, so to stay level the store has to lift click-through rate or conversion rate by about as much. Aim for steady small gains in both.
-4. **Run the scale gate.** Revenue per 100 visitors = 100 × conversion-rate fraction × average order value. For example, 0.03 × 100 × $100 = $300. If a rate is entered as percentage points (3 rather than0.03), label that different input convention explicitly. The source wants about 300 or more. Examples: 3% times $100, 5% times $60, 1% times $300. At a $3 CPC, 100 clicks cost $300, so $300 revenue only matches ad spend before product and other costs. This is not profit break-even or proof that cold traffic cannot scale. Match clicks and site sessions before comparing their rates. That rule assumes a CPC around $1 to $3. For a very different CPC, work out revenue per 100 visitors against ad cost per 100 visitors (100 times CPC) and compare the ratio with break-even ROAS.
+4. **Run the scale gate.** Revenue per 100 visitors = 100 × conversion-rate fraction × average order value. For example, 0.03 × 100 × $100 = $300. If a rate is entered as percentage points (3 rather than 0.03), label that different input convention explicitly. The source wants about 300 or more. Examples: 3% times $100, 5% times $60, 1% times $300. At a $3 CPC, 100 clicks cost $300, so $300 revenue only matches ad spend before product and other costs. This is not profit break-even or proof that cold traffic cannot scale. Match clicks and site sessions before comparing their rates. That rule assumes a CPC around $1 to $3. For a very different CPC, work out revenue per 100 visitors against ad cost per 100 visitors (100 times CPC) and compare the ratio with break-even ROAS.
 5. **Read the funnel left to right.** First click-through rate (is the angle interesting?). Then site conversion times order value. Then the backend: repeat rate and gross profit per customer. A low conversion rate is a sign, not a cause. Find the step where people drop off. Example from a source: a checkout drop-off that turned out to be a payment processor that was never connected.
 6. **Test product and audience first.** One agency owner says that if a seller has worked hard for about two years and still cannot crack serious sales, the product or the audience is wrong. Re-test audience and angle before small hacks such as a pop-up. A strong pain point for a big enough audience beats a 0.1% conversion tweak. Treat this as one operator's view.
 7. **Break the funnel yourself.** Before any launch, try to break checkout, payment and mobile, not just check them.
@@ -95,11 +95,9 @@ MISSING: <metrics | funnel rates | creative data | margin | cash position>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report and plan.
-- **Decide what to do** with the [Yes, no or too-hard call writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report and plan.
-- **Check the money** with the [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer). It takes the plan and audit report.
-- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report and plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- The [Market category opportunity finder](https://useaiblocks.com/skills/first-in-category-finder). It takes the audit report.
+- The [Growth idea ranker](https://useaiblocks.com/skills/growth-idea-ranker). It takes the audit report.
+- The [Backwards planning checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -114,7 +112,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The score shows its sum.
 
 ## If something is missing
-Write `MISSING: <metrics | funnel rates | creative data | margin | cash position>`. At any sample size, state observations, event counts and uncertainty. Fewer events may limit a rate comparison, but1000sessions is not a universal reliability threshold. Check the chosen metric’s denominator and do not present cost per sale as automatically precise. Never invent a number to fill a gap. A layer you could not check is not scored.
+Write `MISSING: <metrics | funnel rates | creative data | margin | cash position>`. At any sample size, state observations, event counts and uncertainty. Fewer events may limit a rate comparison, but 1,000 sessions is not a universal reliability threshold. Check the chosen metric’s denominator and do not present cost per sale as automatically precise. Never invent a number to fill a gap. A layer you could not check is not scored.
 
 ## Avoid
 - Listing five bottlenecks.

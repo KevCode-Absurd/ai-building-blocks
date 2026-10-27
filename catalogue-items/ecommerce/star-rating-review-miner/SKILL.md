@@ -9,15 +9,15 @@ You read competitor reviews one star level at a time, because each level teaches
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for customer words. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Amazon reviews:** The largest source of star-rated reviews for physical products, sortable by star.
@@ -25,7 +25,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Competitor reviews, by star rating** (required): at least 100 across the products you are studying, so repeats show up. The person pastes them, with the star level kept. Strip reviewer names as you read.
+- **Competitor reviews, by star rating** (required): at least 100 across the products you are studying, so repeats show up. The person pastes them, with the star level kept. Strip reviewer names as you read. Copy the reviews by hand, or use an export the site allows. Do not scrape them: bulk copying can break a site's terms of use (Amazon's, for one).
 - **Your own reviews** (optional): to compare what your buyers say with what rivals' buyers say.
 - **Who you sell to** (strongly advised): one line, so you can tell if a reviewer is in your market.
 
@@ -37,7 +37,7 @@ Privacy: public reviews only. Keep the words, not the people. No usernames, prof
 1. **Set up three working areas** for 1-star, 3-star, and 1-star plus 5-star reviews. Keep the star level with each pasted review.
 2. **Read the 1-star reviews of competitors.** Log each exact failure point and each bit of physical friction. The source's example is a brace the buyer could not take off fast enough. Write what happened, in the buyer's words.
 3. **Log repeated claims buyers no longer believe.** When many 1-star reviews say a promise did not hold, that promise is a broken trust marker. It is a claim to avoid making in the same way, or to answer with proof.
-4. **Read the 3-star reviews only for structural gaps and level problems.** The source's example is a book review that says it suits beginners but is too basic. A 3-star review often says what the product did not cover. If you are going after beginners, study how the product speaks to them. If your buyers are more advanced, you need more advanced material.
+4. **Read the 3-star reviews only for structural gaps and level problems.** The source's example is a book review that says it suits beginners but is too basic. A 3-star review often says what the product did not cover. For each level gap, write one sentence that sets the rival's wording against your own product's. If you are going after beginners, say what they need that the rival leaves out. If your buyers are more advanced, say what advanced material you need.
 5. **Scan the 1-star and 5-star reviews for hot-lead lines.** Look for variants of "I spent thousands of dollars and it did not work". The writer has looked for a fix, spent time and money, and still has the problem. They are hunting for something better. The source says to lean in on a line like this, whether in a review or a call, because it may describe your best customer.
 6. **When two reviews contradict, do not chase both.** For example, one says "too technical" and another says "not scientific enough". Note the split, then choose which group is yours.
 7. **Do not build for every complaint.** Ask whether the reviewer is in your market. Sometimes the market is simply not your market. File the complaint away and move on. Chasing every comment pulls the product in many directions.
@@ -74,11 +74,8 @@ CHECKS MISSED: <none | list>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Understand your buyers** with the [Switch friction remover](https://useaiblocks.com/skills/switch-friction-remover). It takes the audit report.
-- **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
-- **Read your ad results** with the [Campaign keep-or-change checker](https://useaiblocks.com/skills/campaign-keep-or-change-checker). It takes the audit report.
-- The [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder). It takes the audit report.
-- The [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker). It takes the audit report.
+- The [Forum buyer researcher](https://useaiblocks.com/skills/forum-and-review-avatar-digger).
+- **Grow on social** with the [Product angle finder](https://useaiblocks.com/skills/product-angle-finder).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

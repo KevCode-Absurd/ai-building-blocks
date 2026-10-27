@@ -3,7 +3,7 @@ thinking_why: Legal tiers need careful reading of each article.
 new_slug: eu-ai-act-risk-classifier
 name: EU AI Act risk classifier
 summary: Find your AI system's risk tier under the EU AI Act, the paperwork it needs, and the duties for your role. Not legal advice.
-job: secure-code
+job: check-contracts
 headline: EU AI Act risk classifier
 subhead: The risk tier of your AI system under the EU AI Act, with the duties that come with it. You learn whether it is banned, high-risk, needs a transparency notice, or is minimal.
 explain: |
@@ -35,7 +35,7 @@ how_to_use:
   - "Say your role: provider, deployer, importer, distributor or authorized representative."
   - Read the tier and the Article it cites. Check that the reason matches your system.
   - For a high-risk system, ask for the conformity route and the documentation checklist.
-  - Take the memo to your compliance lead or lawyer. Unclear cases need their call. The scripts only run if your AI can run Python.
+  - Take the memo to your compliance lead or lawyer. Unclear cases need their call. The scripts only run if your AI can run Python, and the input format for each is at the top of the script. Without Python, the chat route works without them.
 output_sample:
   input:
     - A description of your AI system and what it is for

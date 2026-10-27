@@ -35,6 +35,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring a practical problem with a real setting, some limits and an outcome you care about. Learn the dish from its place and its cooks before adapting it. Record ingredients and handling carefully, credit the source and resist treating a regional food tradition as a bag of interchangeable flavors. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
+**Bring first:** the dish and the region it comes from; who taught you the dish or where the recipe came from; the ingredients you have or plan to buy; any substitutions; and your kitchen, time and budget limits.
+
 ### What to hire them for
 
 - **Learning a regional Mexican recipe:** Find a clearly attributed source, follow its ingredient handling and label the changes required by local availability.
@@ -91,13 +93,13 @@ Learn from practitioners, name your limits and build a record of careful observa
 
 ### What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. The main challenge from this mind is fieldwork requires questions: Ask how the dish is actually made and when it is eaten. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. She would challenge a recipe learned without asking anyone. Ask how the dish is actually made and when it is eaten. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 A British researcher’s account is one contribution within living Mexican food traditions. Include the people who supplied the knowledge, recognise change and variation, and label practical substitutions openly. A 2010 NPR report found the geographical index difficult for newcomers and noted missing staple preparations that some recipes assume the reader knows. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
 ### What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. For this mind the closing check is: Keep separate versions and describe their differences rather than merging them. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Keep separate versions of a dish and describe their differences rather than merging them. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision. **What next:** cook the dish once, write down what you changed and why, and credit the person you learned it from. For a plated menu built on seasonal, local produce, go to Alice Waters. For Southern American food and its history, go to Edna Lewis.
 
 ## How Diana Kennedy thinks and talks
 

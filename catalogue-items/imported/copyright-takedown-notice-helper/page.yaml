@@ -30,12 +30,12 @@ you_get:
   - Options when responding
   - Short triage memo
 how_to_use:
-  - Run the setup-interview in the folder first. It builds your practice profile. Without it, the skill stops at the first step.
+  - Have these facts ready: the work, who owns it, any registration, the exact web addresses of the copies, and who must approve a notice. If your AI has no saved setup, it will ask you for them. This is for US law only. For the EU, UK or elsewhere, you need a different notice.
   - Open your AI tool. Use one that can read and write files, such as Claude, and load the skill folder.
   - Say whether you want to send a notice, respond to one you received, or write a counter-notice.
   - Add your work description, the web address of the copy and your proof of ownership. Paste the notice you received if you have one.
   - Read the fair use check and the draft. Fix anything that is not true.
-  - Give the draft to a lawyer. A takedown notice is a sworn statement, so do not send it unreviewed.
+  - Give the draft to a lawyer. A takedown notice is a sworn statement, so do not send it unreviewed. Lawyer review is not optional.
 output_sample:
   input:
     - A short description of your original work

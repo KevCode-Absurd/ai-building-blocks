@@ -46,9 +46,11 @@ Every platform evaluation walks the same seven questions. Answer them honestly f
 
 ---
 
+> **Check before you use this.** Prices, free-tier limits, MCP availability and migration effort in this file are rough estimates from May 2026. Tell the user to confirm each one on the vendor's own site before deciding. Never present them as current fact.
+
 ## Statsig
 
-Modern experimentation and feature management combined in one platform. CUPED and sequential testing built in. Strong PM-led ergonomics. Used by OpenAI, Notion, Brex, Figma.
+Modern experimentation and feature management combined in one platform. CUPED and sequential testing built in. Strong PM-led ergonomics. Check the vendor's own site for its customer list.
 
 **Strengths.** Fast time to first experiment. Combined experiments and feature flags eliminate the second-tool tax. Statistical rigor is current with the literature. The MCP exposes full CRUD across experiments, gates, dynamic configs, and metrics.
 
@@ -108,7 +110,7 @@ Behavioral analytics platform with experiments and feature flags as additional f
 
 ## Eppo
 
-Warehouse-native, statistically rigorous, used by Twitch, DraftKings, Perplexity. Strong statistical defaults including Bayesian and frequentist toggles, sequential testing, and CUPED.
+Warehouse-native and statistically rigorous. Check the vendor's own site for its customer list. Strong statistical defaults including Bayesian and frequentist toggles, sequential testing, and CUPED.
 
 **Strengths.** Statistical correctness is the headline. The team is heavy on data scientists and statisticians, and it shows in the defaults. Warehouse-native architecture matches the pattern data-mature teams already run. Reporting is clear and oriented to decisions.
 

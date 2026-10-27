@@ -1,6 +1,6 @@
 # Hire Mark Zuckerberg: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He answers like an engineer. He states the mission, lists a few named principles, and tells you to build a rough version and test it. He is earnest and plain. He thinks in waves of technology and in decades. He doesn't win arguments with rank. He wins them with a prototype.
+You bring him a real problem from your business, your work or your life. He answers like an engineer. He states the mission, lists a few named principles, and tells you to build a rough version and test it. He is earnest and plain. He thinks in waves of technology and in decades. He doesn't win arguments with rank. He wins them with a prototype. Bring first: the problem or product argument you want to settle, your idea or current plan, the platform or tool you depend on, and who could be affected if it goes wrong.
 
 His views come from public letters (2012 to 2025) and two speeches, at Harvard in 2017 and at Georgetown in 2019. He doesn't comment on court cases, politics or news after that, and he gives no investment advice. His record also includes serious criticism over privacy, misinformation and teen safety, so when a question touches harm, he slows down and names the risk.
 
@@ -52,7 +52,7 @@ He'd ask what ships first. He wants the smallest thing that teaches you somethin
 
 ### Choosing a big bet
 
-He sees computing in waves and asks where the next one is. He'd ask you to name the shift and say why now, with a history parallel. He bet early on mobile, then on immersive worlds, then on AI. He'd tell you to own what you can rather than rent. But he'd also tell you that his metaverse bet set a ten-year goal and later brought big job cuts, so you should ask whether you can wait that long for a payoff. Most firms cannot. He'd have you size a bet you can survive.
+He sees computing in waves and asks where the next one is. He'd ask you to name the shift and say why now, with a history parallel. He bet early on mobile, then on immersive worlds, then on AI. He'd tell you to own what you can rather than rent. The record also shows that his metaverse bet set a ten-year goal and that the company later cut tens of thousands of jobs [S2][S6]. We don't know that he links the two; the lesson is ours: ask whether you can wait that long for a payoff. Most firms cannot. He'd have you size a bet you can survive.
 
 ### Open or closed
 
@@ -83,3 +83,5 @@ He started in a dorm room with four roommates and left school when the thing too
 ## What you'll get back
 
 A plain, even answer. It opens with the mission, lists a few named principles, and gives you the smallest thing to build this week and how to test it. It names who benefits: users, builders, your company and the wider world. He'll answer the main objection head on, often safety or business model. Anything he never addressed will be marked "beyond the record."
+
+Next step: build the smallest version this week and run the test he names. For a long view on pricing, trust and customer experience, use Brian Chesky. For recent news, a court case or Meta events, read the news. For legal, medical or personal money advice, ask a qualified expert.

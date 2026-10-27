@@ -37,9 +37,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat.
   - Describe your developers, including their job, their experience, where they already talk and how they write. A few lines is enough.
   - Add your product, the hours your team has for moderation, and whether the community is new or already exists.
-  - Read the platform pick first. If you already use another platform and want to stay, say so and ask for the plan on that one.
+  - Read the platform pick first. Discord and GitHub Discussions are free. Slack, Discourse hosting and Circle cost money, and tools like Commsor and Octolens are paid extras you do not need. If you already use another platform and want to stay, say so and ask for the plan on that one.
   - Check the channel map. Cut any channel you cannot fill with posts in the first month.
   - Copy the welcome message into your platform, then follow the 90-day calendar one week at a time.
+  - Once a month, check the health numbers and change the next month's prompts.
 how_it_works:
   - title: Understand your developers
     text: It uses the audience details you give it, such as who they are, where they talk and how they write.
@@ -72,6 +73,8 @@ output_sample:
     - Your product and what it does
     - Hours per week your team can spend on moderation
     - Platforms you already use (optional)
+  prerequisites:
+    - "Optional: community tools such as Circle, Octolens and Commsor, which usually have paid plans"
   output:
     - name: Platform pick
       contains: The platform that fits your audience, why, and when the runner-up would win.

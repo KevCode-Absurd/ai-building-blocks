@@ -25,7 +25,7 @@ Collect, or state your assumption: tiers, prices, billing period; any per-unit c
 
 ## Procedure
 
-Only the rules that change for recurring plans. Shared catalogs live in the Depth skills.
+Only the rules that change for recurring plans. The `Depth` notes name other skills (`pricing`, `post-purchase`, `promotions`, `discounts`, `price-research`, `digital-product-pricing`) that are not in this folder. Ignore them. The rules here are enough.
 
 1. **Lead with a flat rate that covers what most members want**, priced *above* the pay-per-use equivalent. Keep pay-per-use only as a low-commitment entry. The source study is purchasing professionals buying usage-based services; applying it to consumer memberships is a transfer. Depth: `pricing`.
 2. **Put the upgrade path on the same left digit.** No just-below on the lower tier if you want Basic → Pro ($40 → $48, not $39.99 → $48). Depth: `pricing`.
@@ -39,7 +39,7 @@ Shared, unchanged: quality-led → rounded, price-led or post-trial → just-bel
 
 Membership site, plan: Basic $9.99, Pro $29.99, pay-per-video $2.49, extra seats $4.61 + $6 admin fee, opt-in 3-tier rewards, goal: more Basic→Pro upgrades.
 
-- **$10 → $30** removes the just-below start that discourages the step up. Same-left-digit ($40.50 → $48.50) is the stronger version and needs closer tiers.
+- **$9.99 → $10 and $29.99 → $30** removes the just-below start on Basic. That is the minimum fix. Keeping the same left digit ($40.50 → $48.50) is stronger, so use it where the tiers can sit that close. A $10 to $30 jump is fine only when Pro gives members much more.
 - Pay-per-video stays as entry, priced so ~10 videos equals Pro.
 - Seats: **$5, no admin fee**.
 - Rewards: **auto-enroll, one tier**.
@@ -49,11 +49,13 @@ Membership site, plan: Basic $9.99, Pro $29.99, pay-per-video $2.49, extra seats
 | Item | Value |
 |---|---|
 | Tiers | Basic $10/month · Pro $30/month |
-| Upgrade path | No .99 on Basic |
+| Upgrade path | No .99 on Basic; same left digit where tiers are close |
 | Pay-per-use | Entry only; heavy users cheaper on Pro |
 | Components | $5 per extra seat, no admin fee |
 | Perk / rewards | Minimum order on the perk; auto-enrolled single tier |
 | Why | one line per choice |
+
+**Next:** test one tier change with a small group of members. Track Basic to Pro upgrades for one full billing cycle before you change prices for everyone.
 
 ## Common mistakes
 

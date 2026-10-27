@@ -381,6 +381,8 @@ risk_treatment:
 
 ## OWASP Threat Dragon Setup
 
+Optional. The Threat Dragon, Docker and CI/CD sections need a terminal. Chat-only users can skip them and use the worksheet and the risk scoring above.
+
 ```bash
 # Run Threat Dragon locally with Docker
 docker run -d \
@@ -479,9 +481,8 @@ jobs:
 
 ### Example
 
-```bash
-# Read-only first: inventory before any active step.
-which <tool> && <tool> --help | head -n 20
-```
+For a chat user, the first step is: paste your architecture notes and ask for the STRIDE worksheet, one component at a time. Read-only first: list the parts and data flows before you score anything.
+
+For a terminal user who wants to run Threat Dragon, check it is installed first, for example `which docker && docker --version`.
 
 > Adapted from [BagelHole/DevOps-Security-Agent-Skills](https://github.com/BagelHole/DevOps-Security-Agent-Skills) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: helper scripts and templates not bundled.

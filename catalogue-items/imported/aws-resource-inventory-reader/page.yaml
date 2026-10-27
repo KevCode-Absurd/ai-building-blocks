@@ -25,11 +25,12 @@ you_get:
   - The account and region the answer covers.
   - A note on gaps, such as missing permissions or empty regions.
 how_to_use:
-  - Use an AI that can run commands on your computer, and make sure the AWS CLI is installed and signed in.
+  - Use an AI that can run commands on your computer, and make sure the AWS CLI is installed and signed in. Use a read-only role or profile for the sign-in, so the AI cannot change anything even by mistake.
   - Add the skill folder to your AI tool, or paste the SKILL.md text into the chat.
   - "Ask your question and name the account and region, for example: list running EC2 instances in eu-west-1."
   - Check the account and region at the top of the answer before you trust it.
   - Read the gaps and limits note, then ask for a narrower filter if the list is long.
+  - Pass the resource table to your cloud admin, or use it with a cost or security review.
 output_sample:
   input:
     - Your question, such as which EC2 instances are running
@@ -60,3 +61,4 @@ how_it_works:
     text: Summarize counts and useful fields, retaining permission and regional coverage limits.
 thinking: medium
 thinking_why: It weighs your evidence and follows a specific method.
+next: [cloud-bill-waste-finder, cloud-misconfiguration-finder]

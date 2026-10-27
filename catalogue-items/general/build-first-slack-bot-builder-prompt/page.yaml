@@ -5,9 +5,9 @@ job: build-software
 headline: First Slack Bot coding prompt
 subhead: Use this to prove your Slack connection works. You give it your project and tokens. It builds a small ping bot that replies in the thread, and explains each part in plain words.
 explain: |-
-  Share your project and the required feature. Get a coding brief for first slack bot, with setup and test steps.
+  Slack bots are hard to debug when nothing works. This prompt builds the smallest one: a bot that answers "ping" with "Pong" in the same thread. If it replies, your tokens, Socket Mode and scopes are set up right.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  Paste the prompt into Claude Code in your project. It writes two files, lib/slack/app.ts and scripts/test-slack-bot.ts, and explains Socket Mode and the two tokens in plain words. You need a Slack app and both tokens first. Try it in a sandbox workspace.
 when:
   - You want a first test that your app can talk to Slack.
   - You are new to Slack bots and want each part explained simply.
@@ -55,11 +55,13 @@ output_sample:
     - name: Test steps
       contains: The command to start the bot, then how to invite it to a channel and type ping.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Check what you have
+    text: Your coding AI looks at your project and your .env.local for the two Slack tokens.
+  - title: Install the Slack package
+    text: It asks before it installs @slack/bolt. Say yes to continue.
+  - title: Write the bot and the test script
+    text: It writes the bot file and a script that starts it, then explains Socket Mode and the two tokens.
+  - title: Test it in Slack
+    text: You invite the bot to a channel, type ping, and check that it replies in the thread. The next step is to turn the reply into real work, such as routing the message to an agent.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

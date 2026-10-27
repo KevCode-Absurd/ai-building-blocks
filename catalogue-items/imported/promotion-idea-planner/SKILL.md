@@ -35,7 +35,9 @@ Collect, or state your assumption:
 
 ## Procedure
 
-1. **Pre-orders: gift or discount by launch distance.** Launch 3+ weeks out → give a gift (a complementary product, extra content); it beats a discount by a wide margin. Launch within about a week → gift or discount both work. Keep the pre-order window short for utilitarian products; hedonic products tolerate long windows.
+Every percentage below (39%, 17.1%, 25%, 31%, "up to half") is a result from one study, listed in reference.md. Treat each as a guide, not a promise.
+
+1. **Pre-orders: gift or discount by launch distance.** Launch 3+ weeks out → give a gift (a complementary product, extra content); it beats a discount by a wide margin. Launch within about a week → gift or discount both work. Launch 1 to 3 weeks out → no study covers this middle range. Split-test a gift against a discount on your own list. Keep the pre-order window short for utilitarian products; hedonic products tolerate long windows.
 2. **Bundles: make the wanted product the gift.** Pair the product with a complement and frame the *target* product as the gift: "Buy the scale, get the fitness tracker at no cost" — shown to people searching for the tracker. Only for items of comparable value (not "buy a case, get a phone").
 3. **Frame the bundle as a gift, not a special price.** "Buy X, get Y at no cost" cut returns by up to half compared with "X and Y for a special price". The gift framing is what matters, not the word.
 4. **Wherever the word "free" would appear, write "for $0".** The study tested the numeral: "$0" reminds people of money not spent; "free" reads as a giveaway with no value. "At no cost" is an untested paraphrase — use it only where "$0" can't work grammatically. (The two studies used different wording; combining gift framing with "$0" is the sensible default, but the combination itself wasn't tested.)
@@ -47,6 +49,8 @@ Collect, or state your assumption:
 10. **Rewards: make them uncertain.** "20% or 80% off your next order" outperforms a fixed reward on repeat behavior, even if fewer sign up at first.
 
 ## Output
+
+After the split test, keep the winning offer. Then track pre-order count and returns over the launch window.
 
 | Item | Value |
 |---|---|

@@ -69,7 +69,7 @@ If the person says yes in clear words to one named action, do only that action. 
 - **This batch:** how many new applicants, how many strong fits, how many miss a must-have, and how many are unclear.
 - **Ranking:** the updated top list, each with the quoted evidence for the score and the must-haves met or missed.
 - **Path taken:** why you went on to replies, or why you suggest widening the search.
-- **Drafts waiting for your yes:** each draft with the person it is for and what it says, grouped as invite, reply or hold.
+- **Drafts waiting for your yes:** each draft with the person it is for and what it says, grouped as invite, reply or hold. Say which to review first: strong-fit invites, then holds, then replies to people who missed a must-have.
 - **Questions for you:** anything unclear on a resume that you could not score, and any must-have worth a second look.
 - **Friday update:** the one-page progress note, on Fridays.
 - **Files, and every `MISSING:` line** from all steps in one list.

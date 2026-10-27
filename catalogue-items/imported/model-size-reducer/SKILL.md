@@ -10,6 +10,8 @@ dependencies: [autoawq, transformers>=4.45.0, torch>=2.0.0]
 
 # AWQ (Activation-aware Weight Quantization)
 
+Note: AutoAWQ is deprecated (see the Deprecation notice at the end). Use these steps for an existing AWQ model. For a new project, use vLLM llm-compressor or MLX-LM. The speed and accuracy figures below are the original author's, not measured here, so measure them on your own model and GPU.
+
 4-bit quantization that preserves salient weights based on activation patterns, achieving 3x speedup with minimal accuracy loss.
 
 ## When to use AWQ

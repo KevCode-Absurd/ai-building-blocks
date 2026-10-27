@@ -158,15 +158,18 @@ graph TD
 
 ### Progressive Feature Rollout
 ```python
-# Example feature flag implementation
+# Example feature flag implementation (illustrative; adapt it to your stack)
+import hashlib
+
 class MigrationFeatureFlag:
     def __init__(self, flag_name, rollout_percentage=0):
         self.flag_name = flag_name
         self.rollout_percentage = rollout_percentage
     
     def is_enabled_for_user(self, user_id):
-        hash_value = hash(f"{self.flag_name}:{user_id}")
-        return (hash_value % 100) < self.rollout_percentage
+        # hashlib gives the same bucket every run; Python's built-in hash() does not
+        digest = hashlib.sha256(f"{self.flag_name}:{user_id}".encode()).hexdigest()
+        return (int(digest, 16) % 100) < self.rollout_percentage
     
     def gradual_rollout(self, target_percentage, step_size=10):
         while self.rollout_percentage < target_percentage:
@@ -178,7 +181,7 @@ class MigrationFeatureFlag:
 ```
 
 ### Circuit Breaker Pattern
-Implement automatic fallback to legacy systems when new systems show degraded performance:
+Implement automatic fallback to legacy systems when new systems show degraded performance. The code below is illustrative pseudo-code: it leaves `new_service`, `fallback_to_legacy`, `on_success`, `on_failure` and `should_attempt_reset` for you to supply.
 
 ```python
 class MigrationCircuitBreaker:
@@ -404,11 +407,11 @@ class MigrationCircuitBreaker:
 migration_validation:
   stage: test
   script:
-    - python scripts/compatibility_checker.py --before=old_schema.json --after=new_schema.json
-    - python scripts/migration_planner.py --config=migration_config.json --validate
+    - python3 scripts/migration_planner.py --input migration_spec.json --format json -o migration_plan.json
+    - python3 scripts/compatibility_checker.py --before old_schema.json --after new_schema.json --type database --format json -o compatibility.json
   artifacts:
     reports:
-      - compatibility_report.json
+      - compatibility.json
       - migration_plan.json
 ```
 

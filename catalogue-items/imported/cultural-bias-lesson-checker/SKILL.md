@@ -153,6 +153,8 @@ For each adaptation (2–4):
 
 ## Example Output
 
+Note: the regional groupings in this example (for example "collectivist cultures, broadly East Asian, South Asian, Middle Eastern, African") are broad tendencies from the cited research. They are not facts about any student. The cited studies are the author's references; read the originals before repeating a finding as settled.
+
 **Scenario:** *Task or practice: "Think-pair-share — a discussion strategy where the teacher asks a question, gives students individual thinking time, then pairs discuss, then selected pairs share with the whole class. Widely used as a 'best practice' for increasing student participation." / Intended context: "An international school in the UAE with students from diverse backgrounds — Emirati, South Asian (Indian, Pakistani, Bangladeshi), Filipino, Egyptian, Jordanian, British, American. Significant cultural diversity in the same classroom. Some students are very comfortable with public discussion; others rarely speak in class despite being capable and engaged." / Specific concerns: "I notice that think-pair-share seems to work well for some students but not others. The students who don't participate aren't disengaged — they seem uncomfortable with the format itself. I want to understand whether the strategy has cultural assumptions that might explain this."*
 
 ---

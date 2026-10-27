@@ -60,6 +60,8 @@ Use this skill when the user:
 
 ## Section-by-Section Guide
 
+> **AI Blocks note:** every name, grant, amount, date, advisor and student in the examples below is placeholder text. Never carry any of it into a real CV. Use only the details the person gives you, and write `MISSING:` where a detail was not given. Ask for missing details one at a time before you draft.
+
 ### 1. Contact Information
 
 ```
@@ -406,6 +408,10 @@ When creating an academic CV:
 - [ ] [Missing item]
 - [ ] [Item needing update]
 ```
+
+## Next steps
+
+Once the person has confirmed the checklist, they can paste the draft into the job application. For a cover letter or research statement, ask for it as a separate task. This skill builds only the CV.
 
 ## Academic CV Checklist
 

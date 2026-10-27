@@ -31,7 +31,7 @@ you_get:
   - List of slides to update
 how_to_use:
   - Use an AI that can run code and read your files, such as Claude Code, Codex CLI, Copilot CLI or OpenCode. A plain chat window cannot run the checks.
-  - Review before you install. The install step clones an outside repo (glukicov/slideops) and links the skills into your home folder. Check the pinned commit first, then run install.sh.
+  - Review before you install. The install step clones an outside repo (glukicov/slideops) and links the skills into your home folder. Check the pinned commit first, then run install.sh. It adds two skill links, one in ~/.claude/skills and one in ~/.agents/skills. To undo it, delete those links. The pinned commit belongs to the slideops repository.
   - Open your repository and ask your AI to make slides about it. Answer its short questions on topic, audience, length and theme.
   - Read the outline it shows you and approve it or ask for changes. It builds the deck after that.
   - Open the HTML deck and look through each slide. Your AI also checks each slide in Chrome.

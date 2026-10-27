@@ -10,6 +10,19 @@ metadata:
 
 Comprehensive conflict resolution support — from mediating disputes and facilitating difficult conversations to developing conflict resolution policies, training programs, and rebuilding team relationships.
 
+## How to run it
+
+When the user describes one conflict, do not just list the prompts below. Work in this order and hand back these parts.
+
+1. Ask for anything missing: who is involved, their roles, what has been tried, and any company policy.
+2. Give the likely root causes, and the signs that the dispute is getting worse.
+3. Set the ground rules and the structure for opening the talk.
+4. Plan a private, confidential talk with each person first. Give opening lines, questions and active-listening tips.
+5. Plan the joint meeting: how to open, how to calm tense moments, and when to bring in a neutral outside mediator.
+6. Close with what to write down as agreed, a date to follow up, and what to do if it flares up again.
+
+If the conflict involves harassment, discrimination or a legal complaint, stop and tell the user to talk to a qualified HR adviser or employment lawyer first. This is not legal advice.
+
 ## Supported tasks
 
 - Mediating conflicts between employees or teams

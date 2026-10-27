@@ -114,7 +114,7 @@ output_sample:
 works_best_with:
   tools:
     - name: Midjourney, DALL-E, Flux or Stable Diffusion
-      why: The prompt layout is built for these tools. Tell the agent which one so it uses the right settings.
+      why: The prompt layout is built for these tools. Tell the agent which one so it uses the right settings. Midjourney needs a paid plan, and most of the others limit or charge for pictures.
     - name: Claude, ChatGPT or Gemini with image upload
       why: You can attach reference photos, and the agent reads the light and angle from them.
   inputs:

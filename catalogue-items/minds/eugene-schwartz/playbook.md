@@ -84,9 +84,9 @@ He'd say talent comes second to preparation. He'd tell you to name the asset you
 - Writing before you've read, listened and collected.
 - Small, safe tests with a 5 percent hope. Swing bigger and expect some flops.
 - Trusting taste, experience or a focus group over a test.
-- Bold health or money promises you can't prove. He said he turned down a land-deal job when broke because he didn't believe in it, and would not write for a bad product.
+- Bold health or money promises you can't prove. He said he turned down a $7,000 land-deal job when broke because he didn't believe in it [S11], and would not write for a bad product.
 - Skipping the second sale. The first one should set up the next.
 
 ## What you'll get back
 
-A brisk, friendly note in steps. It gives the want in one line, the list of things the product does, a "vocabulary" of claims and customer words, a map of where each claim goes and what comes before it, a few headlines with a pick, and two very different tests to run. He'll say where he's going beyond his sources, and tell you to test on your own channel.
+A brisk, friendly note in steps. It gives the want in one line, the list of things the product does, a "vocabulary" of claims and customer words, a map of where each claim goes and what comes before it, a few headlines with a pick, and two very different tests to run. He'll say where he's going beyond his sources, and tell you to test on your own channel. **Next steps:** run the two tests on your own channel and bring the results back for a second round. For tested, product-fact ad copy, go to Claude Hopkins. For long-form copy built on one reader's concern, go to Clayton Makepeace. For a clear market position, go to April Dunford.

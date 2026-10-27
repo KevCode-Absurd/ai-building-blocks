@@ -7,11 +7,13 @@ job: organise-work
 headline: Nonprofit fundraising event planner
 subhead: Share your event goal, expected attendance, costs, and planned income sources. It works back from the money left after expenses. You get a full budget, cautious and stretch scenarios, auction tracker, event-day schedule, and staffing plan.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You are planning a gala, auction or benefit dinner and know how much you need to raise.
+  - You need a ticket price and a mix of ticket, sponsor and auction income that covers your costs.
+  - You need a minute-by-minute plan and a staff and volunteer plan for event day.
 not_for:
-  - "You need sponsor tiers or a pitch deck: use the nonprofit-corporate-sponsorships skill, then add the sponsor income to this budget."
-  - "You are planning a walk, run or ride with team fundraising: use the nonprofit-peer-to-peer-fundraising skill."
-  - "You need thank-you letters or tax receipt wording: use the nonprofit-donor-retention skill, and check the final wording with a qualified adviser."
+  - "You need sponsor tiers or a pitch deck: use the Nonprofit sponsor package planner, then add the sponsor income to this budget."
+  - "You are planning a walk, run or ride with team fundraising: use the Plan a team fundraising campaign."
+  - "You need thank-you letters or tax receipt wording: use the Nonprofit donor thank-you and renewal planner, and check the final wording with a qualified adviser."
 you_give:
   - Net fundraising goal, attendance assumptions, cost estimates, income sources, timing, and available staff.
 you_get:
@@ -30,8 +32,11 @@ works_best_with:
   inputs:
     - Auctions and raffles are state-regulated and budgets commit real money.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Before you sell a ticket or take a bid, check with your state or local regulator and your counsel whether raffles, auctions or fund-a-need pledges need a permit. The rules differ by place.
+  - Add your net goal, expected attendance, cost estimates, income sources, date and available staff.
+  - Read the budget and the cautious and stretch income scenarios first. Then use the auction tracker, the run of show and the staffing plan.
+  - After the event, enter your actual numbers and ask for the post-event report.
 output_sample:
   input:
     - Your net fundraising goal for the event
@@ -52,3 +57,4 @@ output_sample:
       contains: Who covers check-in, auction runners, checkout and payments, and donor hosting.
     - name: Post-event report
       contains: Actual against budget, net revenue, cost to raise a dollar, and lessons for next year.
+next: [nonprofit-sponsor-package-planner, nonprofit-donor-thank-you-and-renewal-planner]

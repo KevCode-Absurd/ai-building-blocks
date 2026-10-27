@@ -31,6 +31,12 @@ If that is blank, or still reads like a placeholder, take the idea from the conv
 - Use when the user asks "would investors fund this?" or wants to practice a pitch before a real meeting.
 - Use when the user says "pitch", "shark tank" or "/shark".
 
+## When Not to Use This Skill
+
+- The person needs a real valuation or a funding decision: send them to a mentor, advisor or accountant.
+- The person wants a friendly read on a rough idea: talk it through in plain chat first.
+- The person is in a chat window that cannot run code or spawn sub-agents: this skill needs Claude Code.
+
 ## The tool
 
 Every piece of bookkeeping goes through `scripts/shark.py` in this skill's folder:

@@ -33,6 +33,8 @@ Wait for the user to confirm before proceeding. If they have questions about the
 
 ### 1. Check Settings
 
+Ask for the company name and any places the user already knows hold brand files before you search.
+
 Read `.claude/brand-voice.local.md` if it exists. Extract:
 - Company name
 - Which platforms are enabled (notion, confluence, google-drive, box, microsoft-365, figma, gong, granola, slack)
@@ -64,7 +66,7 @@ Apply these rules:
 
 Before launching discovery, confirm:
 - Which platforms to search (default: all connected)
-- Whether to include conversation transcripts (Gong, Granola) or just documents
+- Whether to include conversation transcripts (Gong, Granola, Slack) or just documents. Leave them out unless the user confirms they hold no customer data, or they are fine to share with this AI. Connecting these tools may need a paid plan or API access on their side.
 - Any known locations to prioritize
 
 Keep this brief — one question, not a questionnaire.
@@ -90,6 +92,8 @@ When the agent returns, present the report to the user with a summary:
 - Key brand elements discovered
 - Any conflicts between sources
 - Open questions requiring team input
+
+The report has these sections: sources found, ranked by usefulness; conflicts between sources; open questions; and next steps.
 
 ### 6. Offer Next Steps
 

@@ -16,7 +16,7 @@ when:
   - You want an existing deck reviewed for layout and access problems.
   - You want a deck planned before any slides are made.
 not_for:
-  - "You want to change, fill in or fix an existing PowerPoint file: use @pptx-official, which edits files that already exist."
+  - "You want to change, fill in or fix an existing PowerPoint file: use a skill that edits existing PowerPoint files, such as the PowerPoint template populator."
   - "You only need a quick outline or talking points: ask your AI for a plain list and skip building a file."
   - "You want a deck made of slide pictures or screenshots: this builds real text, tables and charts, not images."
 you_give:
@@ -30,12 +30,12 @@ you_get:
   - A story outline
   - A quality and accessibility check
 how_to_use:
-  - Use an AI that can run code and save files. It needs Python and the python-pptx library. A chat that cannot run code can only plan the deck.
+  - Use an AI that can run code and save files. It needs Python and the python-pptx library. The skill ships no ready-made builder program, so your AI has to write a short python-pptx script for your deck first. A chat that cannot run code can only plan the deck.
   - Paste this skill into your AI. Then give it your main message, your audience, your source facts and figures, and any brand colours or fonts.
   - Pick a story structure when your AI asks. It will not pick one for you.
   - Check the story plan and slide layouts before the file is built. Fix anything that looks wrong.
   - Image or design services are optional. They need their own account, and your AI should ask before sending anything out.
-  - After the build, open the audit results and fix any failed checks. Then share the file so others can edit it.
+  - After the build, open the audit results. Fix the failed checks that hide or cut off content first (overlaps, text too small, tables that overflow), then the accessibility ones. Ask your AI to re-run the audit after your edits, then share the file so others can edit it.
 output_sample:
   input:
     - Your main message and who the deck is for

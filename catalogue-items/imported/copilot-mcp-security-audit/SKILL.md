@@ -20,6 +20,8 @@ Audit MCP server configurations for security issues — secrets exposure, shell 
 
 MCP servers give agents direct tool access to external systems. A misconfigured `.mcp.json` can expose credentials, allow shell injection, or connect to untrusted servers. This skill catches those issues before they reach production.
 
+In a plain chat, treat the Python blocks below as reference logic to read and reason from, not code to run. The check reads the file as text only. It does not prove that a package is safe. If the file holds a real key, tell the user to replace it with a placeholder and rotate that key.
+
 ```
 .mcp.json → Parse Servers → Check Each Server:
   1. Secrets in args/env?

@@ -7,7 +7,7 @@ license: MIT
 # collab-proof
 
 Surfaces AI collaboration evidence the developer didn't consciously record.
-Vela 3-layer pipeline × ADHD 4-frame reasoning — prompt-native. In plain words: three layers (rate the session, score it four ways, write the record) and four scoring frames (technical, uncertainty, fork, AI contribution).
+The original author calls this method a "Vela 3-layer pipeline" with "ADHD 4-frame reasoning". Those are the author's labels, not clinical terms. In plain words: three layers (rate the session, score it four ways, write the record) and four scoring frames (technical, uncertainty, fork, AI contribution).
 
 ## What you need first
 
@@ -215,18 +215,17 @@ Fields:
 - `tok:[total]` — total tokens this session (input + cache_read + cache_create + output, in K e.g. `45K`)
 - verb phrase — what shipped, grounded in git log
 
-**Collect token usage** (optional). This script reads your local Claude Code session logs in `~/.claude/projects`, which hold your past chats. It prints only counts and the first 80 characters of up to three prompts. It picks the most recently changed log file, which may not be this session if you have several open. Ask the user before you run it. If they say no, write `cache:n/a` and `tok:n/a`. Run in bash and capture the output:
+**Collect token usage** (optional). This script reads your local Claude Code session logs in `~/.claude/projects`, which hold your past chats. It prints only counts and the first 80 characters of up to three prompts. The newest log file may belong to another session or another project. So first list the 5 newest `.jsonl` files in the folder for this project under `~/.claude/projects` (names and times only), and let the user pick the one for this session. Do not read any file's contents before they choose. Pass the chosen path to the script as its first argument. Ask the user before you run it. If they say no, write `cache:n/a` and `tok:n/a`. Run in bash and capture the output:
 ```bash
 python3 -c "
 import json, sys
 from pathlib import Path
 
-projects = Path.home() / '.claude/projects'
-files = sorted(projects.rglob('*.jsonl'), key=lambda f: f.stat().st_mtime, reverse=True)
-if not files:
+# The path the user chose is passed as the first argument
+if len(sys.argv) < 2 or not Path(sys.argv[1]).is_file():
     print('no_data'); sys.exit()
 
-with open(files[0]) as fp:
+with open(sys.argv[1]) as fp:
     lines = [json.loads(l) for l in fp if l.strip()]
 
 ti = to = cr = cc = 0
@@ -253,7 +252,7 @@ print(f'input={ti} output={to} cache_read={cr} cache_create={cc} hit={hit:.0f} t
 turns.sort(reverse=True)
 for idx, (tok, p) in enumerate(turns[:3]):
     print(f'top{idx+1}={tok}|{p}')
-"
+" "<path of the log file the user chose>"
 ```
 
 Parse the output and include token stats in the session narrative. Then:

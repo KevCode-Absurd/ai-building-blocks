@@ -35,7 +35,8 @@ how_to_use:
   - List every company you share customer data with, and what each one does with it.
   - Paste your privacy policy if you have one (optional).
   - Read the yes or no first, then the duties and gaps. Fix the gaps in order.
-  - Show the result to a lawyer before you act on it. The skill notes the date its law facts were last checked.
+  - Show the result to a lawyer before you act on it. The skill's law facts were last checked on 3 October 2026. Rules, deadlines and fines change, so check the CPPA website before you act.
+  - Next, use the gap list to update your policy with the Privacy policy drafter, and set up how you handle consumer requests.
 output_sample:
   input:
     - What personal data you collect and why

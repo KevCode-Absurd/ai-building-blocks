@@ -29,10 +29,10 @@ you_get:
   - A faster PCM option for low delay
 how_to_use:
   - Make an ElevenLabs account and create an API key. Using it may cost credits.
-  - Open Claude, ChatGPT or Gemini with a tool that can run code. Paste this skill and your key. Do not share the key anywhere public.
+  - Open an AI tool that can run code, such as Claude Code, and add this skill. Save your key as the ELEVENLABS_API_KEY setting on your own computer, or in the tool's secrets settings. Never paste the key into a chat.
   - Give your AI the audio file or link and ask it to clean the speech.
   - Ask it to run the example on your file first. It saves the result as clean.mp3.
-  - Play clean.mp3 and check that the voice is clear. Then run it on your other files.
+  - Play clean.mp3 and check that the voice is clear. Then run it on your other files. Send the clean file to a speech-to-text tool if you want a transcript.
   - If you see an error, 401 means a bad key, 422 means the wrong format, and 429 means wait and try again.
 output_sample:
   input:

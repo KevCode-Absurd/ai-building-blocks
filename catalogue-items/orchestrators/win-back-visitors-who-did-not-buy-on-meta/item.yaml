@@ -15,9 +15,9 @@ outputs:
   - {type: plan}
 uses: [retargeting-objection-ad-planner, retargeting-ad-sequence-planner, next-dollar-budget-allocator]
 steps:
-  - {uses: retargeting-objection-ad-planner, note: "Starts with why people left and gives each reason an ad."}
-  - {uses: retargeting-ad-sequence-planner, note: "Orders the objection ads into a short sequence."}
-  - {uses: next-dollar-budget-allocator, note: "Checks the sequence plan does not take budget from ads that find new buyers."}
+  - {uses: retargeting-objection-ad-planner, note: "Starts with why people left, your conversion rate and your proof, and gives each reason an ad."}
+  - {uses: retargeting-ad-sequence-planner, note: "Reads the objection map from step 1 and your product list with margins, and orders the objection ads into a short sequence."}
+  - {uses: next-dollar-budget-allocator, note: "Reads the sequence plan from step 2 and your spend and new-customer revenue by channel, and checks the plan does not take budget from ads that find new buyers."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/win-back-visitors-who-did-not-buy-on-meta/skeleton.yaml

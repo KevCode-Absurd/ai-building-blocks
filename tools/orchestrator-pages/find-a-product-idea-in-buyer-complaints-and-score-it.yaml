@@ -7,7 +7,7 @@ thinking_why: It runs four skills in a row, and most of the work is reading and 
 headline: A product idea built on what buyers complain about, scored before you spend
 subhead: Give it a category. It finds the complaints buyers keep making, picks the best problems and who already sells to them, finds the one gap rivals leave open, then scores the product you choose on your own costs.
 explain: |
-  Most people pick a product by what looks hot, then hunt for a reason it will sell. Complaints are a better start. A low-rated sub-category with strong search tells you buyers want something and nobody is serving them well. The risk is the opposite: a loud forum post is not a market, and a good problem with thin margins is still a bad product.
+  Picking a product because it looks hot, then hunting for a reason it will sell, is a risky start. Complaints are a better one. A low-rated sub-category with strong search tells you buyers want something and nobody is serving them well. The risk is the opposite: a loud forum post is not a market, and a good problem with thin margins is still a bad product.
 
   The steps move from complaints to a costed score. First it lists unmet pain points with proof and keeps only gaps that two kinds of evidence agree on. Next it turns them into 30 buyer problems, picks the best five and lists the brands already selling to each. Then it compares those rivals on price, where they sell, quality and buyer, and finds the one thing to change. You then pick a product for that gap and write down its costs. The last step scores it against eleven rules and gives a go or no-go.
 when:
@@ -21,7 +21,8 @@ not_for:
 you_give:
   - A category or a market you want to sell in
   - Who you are, your budget and your country
-  - Reviews or forum posts from the category (optional)
+  - The top brands in the category, if you know them (optional)
+  - Reviews or forum posts from the category, copied in by hand from public pages (optional)
   - A product cost, shipping cost and planned price, once you have picked a product
 you_get:
   - Ranked buyer complaints with proof, and sub-categories with weak ratings but strong search
@@ -29,9 +30,10 @@ you_get:
   - A ranked list of gaps, a one-line position for the top one and a short test
   - A score out of 100 for your chosen product, a go or no-go and the one thing to fix first
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Turn on web search if your AI has it. Without it, paste reviews in yourself.
+  - Add the competitor set (the top brands in the category) if you already know it. Otherwise step 2 finds them.
   - When it pauses, choose one product for the top gap and write down its costs and price.
 output_sample:
   input:
@@ -87,7 +89,7 @@ tweaks:
   - what: Category size
     how: Name a narrow category. A broad one gives generic gaps.
   - what: Ad spy tool
-    how: Connect one if you have it. Without it, step 2 gives search terms and an empty table, not invented brands.
+    how: Connect one if you have it. Most are paid and need an account or key. Without it, step 2 gives search terms and an empty table, not invented brands.
   - what: Health, safety or legal categories
     how: Say so. The steps flag claims and rules to check with a qualified person.
   - what: Your budget

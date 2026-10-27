@@ -19,9 +19,7 @@ and an honest account of what has been checked and what still needs participants
 
 ## When not to use
 
-Use `travel-guide` for destination research and visitor itineraries, `documents`
-for document rendering or formatting alone, and `product-discovery` for product
-requirements research. This skill owns community program design. It does not
+For destination research and visitor itineraries, use a travel writer or a local tourism office. For document formatting alone, use a word processor. For product requirements research, do the research first, then come back. This skill owns community program design. It does not
 replace specialist technical advice or direct an unfolding emergency.
 
 ## Choose the entry point
@@ -55,6 +53,8 @@ Its source-to-action audit and language/version preflight are required before
 handoff; an unsupported resident imperative must be removed, not merely flagged.
 
 ## Workflow
+
+Short run sheet: (1) write the community brief, (2) set outcomes and what each depends on, (3) write the worksheet and host notes so they agree, (4) walk through it as a new host would and revise, (5) hand it off with an owner and an update plan. Each step is explained below.
 
 ### 1. Establish the community brief
 

@@ -19,6 +19,7 @@ not_for:
   - "You only need a calculation with no window or buttons: ask your AI for plain MATLAB code."
   - "You want to change an app you already have: ask your AI to edit the existing files instead."
   - "You want to convert an app between .mlapp and plain text: open it in App Designer and use File > Save As."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - What the app should do
   - Who will use it
@@ -36,6 +37,7 @@ how_to_use:
   - Answer its questions. Say if you want App Designer files (.mlapp or plain text) or plain code.
   - Check the route it recommends and confirm it. Then check the plan before it builds.
   - Run the built app in MATLAB and test it. If you use version control, save the plain-text files there.
+  - Next, give it a look that matches your brand with the Chart and app styler, or add charts with the MATLAB chart maker.
 output_sample:
   input:
     - What the app should do
@@ -45,7 +47,9 @@ output_sample:
     - Your MATLAB release number (optional)
   prerequisites:
     - An AI that can write files and run MATLAB code
-    - MATLAB installed on your computer
+    - MATLAB installed on your computer. MATLAB is paid software, so you need a licence
+    - MATLAB R2026b or later, only if you want App Designer plain-text files
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Recommendation
       contains: The build route it suggests, the signals behind it, and the main trade-off, so you can confirm or change it.

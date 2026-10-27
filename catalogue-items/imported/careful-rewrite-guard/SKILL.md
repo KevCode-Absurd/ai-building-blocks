@@ -66,10 +66,13 @@ The AI must identify and catalog:
 The AI outputs a complete erasure plan and **waits for user confirmation before deleting or writing anything.**
 
 ```
-HOLLOW PURPLE — ERASURE PLAN
+ERASURE PLAN
 ─────────────────────────────────────────
 TARGET FOR ERASURE:
   [file path or module name]
+
+BACKUP:
+  [commit hash or backup location the user named]
 
 WHY TARGETED FIXES ARE WRONG:
   [specific justification — architectural rot, fundamental mismatch, etc.]
@@ -99,7 +102,7 @@ Confirm to proceed with erasure and rebuild.
 
 ### PHASE 4 — Controlled Erasure
 
-User confirms → the target is deleted. Rules for this phase:
+User confirms → the target is deleted. First, ask the user to name the commit hash or backup location that holds the current file. If they have none, stop and ask them to save one. Do not delete without it. Rules for this phase:
 
 - **Delete cleanly.** Not commented out, not renamed to `_old`, not archived in place — deleted.
 - **Delete only the declared target.** Nothing outside the declared scope is touched during erasure.
@@ -141,7 +144,7 @@ After the rebuild is complete, the AI checks every file in the blast radius:
 Final verification report:
 
 ```
-HOLLOW PURPLE — VERIFICATION
+VERIFICATION REPORT
 ─────────────────────────────────────────
 Preservation List:          ALL ITEMS ✓
 Blast radius files checked:
@@ -152,11 +155,13 @@ New issues introduced:      NONE / [describe if found]
 Status: CLEAN ✓  /  NEEDS FOLLOW-UP ⚠
 ```
 
+Next: run your existing test suite, fix every file marked as a follow-up, then open the change for review.
+
 ---
 
 ## Self-Ask Before Erasure
 
-The AI must answer all four before Phase 4 begins:
+The AI must answer all five before Phase 4 begins:
 
 | # | Question | Required |
 |---|---|---|
@@ -164,6 +169,7 @@ The AI must answer all four before Phase 4 begins:
 | 2 | Have I identified the full blast radius? | Yes — or search more |
 | 3 | Has the user confirmed the erasure plan? | Yes — or wait |
 | 4 | Is the erasure scoped exactly to what was declared? | Yes — or re-declare |
+| 5 | Has the user named a commit or backup that holds the current file? | Yes — or stop and ask |
 
 ---
 
@@ -214,7 +220,7 @@ The AI must answer all four before Phase 4 begins:
 ```text
 User: "The authentication module is beyond saving. Rewrite this from scratch."
 
-AI: [Outputs HOLLOW PURPLE — ERASURE PLAN]
+AI: [Outputs the ERASURE PLAN]
 "Confirm to proceed with erasure and rebuild."
 
 User: "Confirmed."

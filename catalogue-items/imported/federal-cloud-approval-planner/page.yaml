@@ -31,11 +31,12 @@ you_get:
   - A map of the NIST 800-53 controls that apply to you
   - Monthly and yearly monitoring steps after approval
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. FedRAMP is the US federal cloud approval programme.
   - Paste your service description first. Add your cloud setup, your customers and the data types you hold, such as controlled unclassified information.
   - Paste any security documents you already have (optional). Then ask for a gap assessment.
   - Check the gap table and the target class. Ask for the document checklist or control map next.
   - Compare every date and class name with fedramp.gov before you act. Put the text into the official FedRAMP templates.
+  - Then use the federal security controls planner to draft the control write-ups.
 output_sample:
   input:
     - A description of your cloud service
@@ -57,3 +58,13 @@ output_sample:
       contains: Bullet findings on your system boundary and cloud setup, with fixes.
     - name: Continuous monitoring steps
       contains: The monthly and yearly tasks to keep your approval after you get it.
+terms:
+  - term: 3PAO
+    meaning: A third-party assessment organisation. An accredited firm that tests your system for FedRAMP.
+  - term: SSP
+    meaning: System security plan. The main document that describes your system and how it meets each control.
+  - term: POA&M
+    meaning: Plan of action and milestones. A list of known security gaps, with owners and fix dates.
+  - term: Continuous monitoring
+    meaning: The monthly and yearly checks you must keep up after you are approved.
+next: [federal-security-controls, federal-accessibility-checker]

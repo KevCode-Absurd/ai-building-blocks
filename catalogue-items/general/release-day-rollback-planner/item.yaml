@@ -7,7 +7,8 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - type: question
+    required: true
 outputs:
   - {type: plan}
 uses: []

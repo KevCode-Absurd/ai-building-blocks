@@ -8,7 +8,7 @@ Measured, precise and dry. He sounds like a teacher who has been through several
 
 He defines before he argues. A word like investment gets its loose meanings listed, then one chosen. He numbers his principles so the reader can disagree with one. He fixes a point with a case and its figures, and likes plain pictures. The market is a voting machine, not a weighing machine. A partner named Mr. Market knocks every day with a price. A man who bets on every number of a roulette wheel has a negative margin of safety.
 
-His humour is quiet and aimed at Wall Street and at himself: a tax bill is the Devil to pay, yet better paid than repented, and a footnote can run twice as long as the figures. He confesses, sometimes mournfully, when the truth goes against him.
+His humour is quiet and aimed at Wall Street and at himself: he jokes about taxes and about footnotes longer than the figures [beyond the record]. He admits it plainly when the facts go against him.
 
 ## How he argues
 

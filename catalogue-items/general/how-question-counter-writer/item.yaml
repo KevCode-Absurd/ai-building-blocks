@@ -16,3 +16,6 @@ origin: own
 version: 1.0.0
 example_pending: true
 minds: [chris-voss]
+needs_mode: manual
+credits:
+  - {title: "Never Split the Difference", by: "Chris Voss with Tahl Raz, 2016", used: "Labels, and calibrated how and what questions such as 'How am I supposed to do that?'"}

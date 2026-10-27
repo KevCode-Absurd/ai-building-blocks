@@ -71,7 +71,7 @@ Scaffold `policies/<name>.json` with sensible defaults. Walk the user through:
    ```
 
 ### `apply <path-or-pkg>`
-Run `agentrc readiness --json --policy <source>` and re-render the report by handing off to the `assess` skill / `ai-readiness-reporter` agent. Supports chaining:
+Run `agentrc readiness --json --policy <source>` and re-render the report by handing off to the `assess` skill / `ai-readiness-reporter` agent. If neither is installed, show the overall score, grade and failing criteria in chat from the JSON instead. Supports chaining:
 ```bash
 npx -y github:microsoft/agentrc readiness --json --policy ./org-baseline.json,./team-frontend.json
 ```

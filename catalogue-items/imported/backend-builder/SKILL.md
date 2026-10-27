@@ -15,10 +15,10 @@ Backend development patterns, API design, database optimization, and security pr
 # Generate API routes from OpenAPI spec
 python scripts/api_scaffolder.py openapi.yaml --framework express --output src/routes/
 
-# Analyze database schema and generate migrations
-python scripts/database_migration_tool.py --connection postgres://localhost/mydb --analyze
+# Analyze a database schema file and suggest changes (reads a .sql file, not a live database)
+python scripts/database_migration_tool.py schema.sql --analyze
 
-# Load test an API endpoint
+# Load test an API endpoint (only one you own or have written permission to test)
 python scripts/api_load_tester.py https://api.example.com/users --concurrency 50 --duration 30
 ```
 
@@ -38,13 +38,9 @@ Generates API route handlers, middleware, and OpenAPI specifications from schema
 # Generate Express routes from OpenAPI spec
 python scripts/api_scaffolder.py openapi.yaml --framework express --output src/routes/
 # Output: Generated 12 route handlers, validation middleware, and TypeScript types
-
-# Generate from database schema
-python scripts/api_scaffolder.py --from-db postgres://localhost/mydb --output src/routes/
-
-# Generate OpenAPI spec from existing routes
-python scripts/api_scaffolder.py src/routes/ --generate-spec --output openapi.yaml
 ```
+
+The scaffolder reads an OpenAPI spec file. It does not read a live database or existing route files.
 
 **Supported Frameworks:**
 - Express.js (`--framework express`)
@@ -57,23 +53,21 @@ python scripts/api_scaffolder.py src/routes/ --generate-spec --output openapi.ya
 
 Analyzes database schemas, detects changes, and generates migration files with rollback support.
 
-**Input:** Database connection string or schema files
+**Input:** A SQL schema file (the tool does not connect to a live database)
 **Output:** Migration files, schema diff report, optimization suggestions
 
 **Usage:**
 ```bash
-# Analyze current schema and suggest optimizations
-python scripts/database_migration_tool.py --connection postgres://localhost/mydb --analyze
+# Analyze a schema file and suggest optimizations
+python scripts/database_migration_tool.py schema.sql --analyze
 # Output: Missing indexes, N+1 query risks, and suggested migration files
 
 # Generate migration from schema diff
-python scripts/database_migration_tool.py --connection postgres://localhost/mydb \
-  --compare schema/v2.sql --output migrations/
+python scripts/database_migration_tool.py old.sql --compare new.sql --output migrations/
 
-# Dry-run a migration
-python scripts/database_migration_tool.py --connection postgres://localhost/mydb \
-  --migrate migrations/20240115_add_user_indexes.sql --dry-run
 ```
+
+The tool writes migration files. It does not apply them. Always try a migration on a copy of your database first, never on live data.
 
 ---
 
@@ -165,10 +159,8 @@ export const createUser = async (req: Request, res: Response) => {
 # - Path parameter validation
 ```
 
-**Step 5: Generate updated OpenAPI spec**
-```bash
-python scripts/api_scaffolder.py src/routes/ --generate-spec --output openapi.yaml
-```
+**Step 5: Update the OpenAPI spec by hand**
+The scaffolder does not read routes back into a spec. Edit `openapi.yaml` to match your routes, then regenerate.
 
 ---
 
@@ -176,9 +168,11 @@ python scripts/api_scaffolder.py src/routes/ --generate-spec --output openapi.ya
 
 Use when queries are slow or database performance needs improvement.
 
+**Before you start:** work on a staging copy of the database, never on live data. Do not touch a database you do not own without written permission.
+
 **Step 1: Analyze current performance**
 ```bash
-python scripts/database_migration_tool.py --connection $DATABASE_URL --analyze
+python scripts/database_migration_tool.py schema.sql --analyze
 ```
 
 **Step 2: Identify slow queries**
@@ -194,24 +188,16 @@ LIMIT 10;
 
 **Step 3: Generate index migrations**
 ```bash
-python scripts/database_migration_tool.py --connection $DATABASE_URL \
-  --suggest-indexes --output migrations/
+python scripts/database_migration_tool.py schema.sql --suggest-indexes --output migrations/
 ```
 
-**Step 4: Test migration (dry-run)**
-```bash
-python scripts/database_migration_tool.py --connection $DATABASE_URL \
-  --migrate migrations/add_indexes.sql --dry-run
-```
+**Step 4: Review the migration file**
+The tool does not run migrations. Read `migrations/add_indexes.sql` and run it on a staging copy of the database first.
 
 **Step 5: Apply and verify**
+Apply the migration to the staging copy with your own database tool. Then re-run the analysis on the updated schema file:
 ```bash
-# Apply migration
-python scripts/database_migration_tool.py --connection $DATABASE_URL \
-  --migrate migrations/add_indexes.sql
-
-# Verify improvement
-python scripts/database_migration_tool.py --connection $DATABASE_URL --analyze
+python scripts/database_migration_tool.py schema.sql --analyze
 ```
 
 ---
@@ -260,15 +246,15 @@ const data = CreateUserSchema.parse(req.body);
 
 **Step 4: Load test with attack patterns**
 ```bash
-# Test rate limiting
-python scripts/api_load_tester.py https://api.example.com/login \
-  --concurrency 200 --duration 10 --expect-rate-limit
+# Only run these against a system you own or have written permission to test, and prefer a staging copy.
+# Test rate limiting: look for 429 replies in the status counts
+python scripts/api_load_tester.py https://staging.example.com/login \
+  --concurrency 200 --duration 10
 
-# Test input validation
-python scripts/api_load_tester.py https://api.example.com/users \
+# Test input validation: look for 400 replies in the status counts
+python scripts/api_load_tester.py https://staging.example.com/users \
   --method POST \
-  --body '{"email": "not-an-email"}' \
-  --expect-status 400
+  --body '{"email": "not-an-email"}'
 ```
 
 **Step 5: Review security headers**
@@ -293,6 +279,8 @@ app.use(helmet({
 | `references/api_design_patterns.md` | REST vs GraphQL, versioning, error handling, pagination | Designing new APIs |
 | `references/database_optimization_guide.md` | Indexing strategies, query optimization, N+1 solutions | Fixing slow queries |
 | `references/backend_security_practices.md` | OWASP Top 10, auth patterns, input validation | Security hardening |
+
+Included in this item: the `scripts/`, `references/` and `profiles/` folders. Not included: the `agents/` file, the `engineering/` sibling skills and the slash commands named in this file. Ignore any step that needs them.
 
 ---
 
@@ -353,15 +341,14 @@ CREATE INDEX idx_users_email_name ON users(email) INCLUDE (name);
 ```bash
 # API Development
 python scripts/api_scaffolder.py openapi.yaml --framework express
-python scripts/api_scaffolder.py src/routes/ --generate-spec
 
 # Database Operations
-python scripts/database_migration_tool.py --connection $DATABASE_URL --analyze
-python scripts/database_migration_tool.py --connection $DATABASE_URL --migrate file.sql
+python scripts/database_migration_tool.py schema.sql --analyze
+python scripts/database_migration_tool.py old.sql --compare new.sql --output migrations/
 
 # Performance Testing
 python scripts/api_load_tester.py https://api.example.com/endpoint --concurrency 50
-python scripts/api_load_tester.py https://api.example.com/endpoint --compare baseline.json
+python scripts/api_load_tester.py https://api.example.com/v1 https://api.example.com/v2 --compare
 ```
 
 ---
@@ -436,7 +423,7 @@ The `cs-backend-engineer` agent orchestrates these forks via `context: fork`. In
 
 ## Forcing-question library (Matt Pocock grill)
 
-Before locking any backend decision, walk the seven forcing questions in `references/forcing_questions.md`. Discipline:
+Before locking a major backend decision (tenancy, data store, monolith or microservices), walk the seven forcing questions in `references/forcing_questions.md`. For a quick route scaffold or a one-off query check, you can skip them. Discipline:
 
 1. One question per turn. No bundling.
 2. Always recommend the answer with cited canon.

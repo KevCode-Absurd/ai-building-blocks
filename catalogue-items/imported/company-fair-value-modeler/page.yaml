@@ -33,7 +33,8 @@ how_to_use:
   - Type the stock ticker. Add your own growth view or a list of peers if you have them (optional).
   - Let it run. It installs what it needs, pulls public data and builds the three methods.
   - Read the headline verdict and the sensitivity grid first. Then check the peer list and key assumptions against the company's annual report.
-  - Treat the result as research, not advice. It does not work for unlisted companies.
+  - The data comes from an unofficial Yahoo Finance reader, which may be wrong or against that site's terms. Check the figures against the company's filings.
+  - Treat the result as research, not advice, and do not use it alone for a buy or sell decision. It does not work for unlisted companies.
 output_sample:
   input:
     - A stock ticker

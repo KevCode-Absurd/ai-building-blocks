@@ -19,5 +19,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [charlie-munger]
 credits:
-  - {title: "The Psychology of Human Misjudgment", by: "Charlie Munger", used: "The order of the steps: decision bias pile-up checker, incentive checker, failure-first plan check"}
+  - {title: "The Psychology of Human Misjudgment", by: "Charlie Munger", used: "Ideas behind the pressure check, the incentive check and the failure-first check. The step order is this workflow's own."}
 generated_from: intake/psychology-of-human-misjudgment/skeleton.yaml

@@ -31,6 +31,7 @@ you_get:
   - Privacy and permission notes
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code running or paid tool is needed.
+  - The skill has 18 reference files on topics such as accessibility and colour. Pasting the skill text does not include them. Without them, findings come from general knowledge. Paste the files you want checked, or upload the whole folder.
   - Add screenshots of your design, or describe each screen in a few lines.
   - Say which device and system version you are building for, and what the app is for.
   - Add your brand rules or design notes if you have them (optional).
@@ -55,3 +56,4 @@ output_sample:
       contains: Notes on where advice changes between iPhone, iPad and Mac.
     - name: Code patterns
       contains: Short SwiftUI, UIKit or AppKit examples for the fixes, where they help.
+next: [accessibility-checker, app-store-listing-optimiser]

@@ -9,7 +9,7 @@ headline: "Find out if your idea can own its market, or only join a crowded one"
 subhead: Give it your idea. It finds the belief the idea rests on, sizes your market the way a buyer sees it, and tests whether you are ten times better than what buyers use now. It checks the edge will hold in ten years, then scores seven make-or-break questions and gives a go, fix or stop call.
 
 explain: |
-  Most ideas fail the same way. The market is described to look small and alone. The product is a little better, which buyers shrug at. The plan never asks what happens in year five. Each step feels fine and the whole thing is weak.
+  A weak idea often fails in a familiar way. The market is described to look small and alone. The product is a little better, which buyers shrug at. The plan never asks what happens in year five. Each step feels fine and the whole thing is weak.
 
   This workflow runs your idea through five checks in order. The first finds the belief you are betting on and whether it is new or a copy. The second works out your share of the market a buyer really compares you in. The third measures your gap to the closest substitute after the cost of switching. The fourth asks who can copy you and what could end your edge. The fifth scores seven questions, including timing, people and how you reach buyers, and names the weakest one as your first fix.
 
@@ -19,8 +19,8 @@ when:
   - You are about to pitch backers or hire a team and want to know where the plan is weakest.
 not_for:
   - "Your product already has proven sales and you want to improve them: use a pricing review or a sales review instead."
-  - "You want to check how strong your edge is over rivals: use the Competitive advantage tester."
-  - "You want to test the guesses behind your plan: use the Business model assumption tester."
+  - "You want to check how strong your edge is over rivals: use the Ten-times-better checker."
+  - "You want to test the guesses behind your plan: use the workflow Find the riskiest guess in your plan and test it."
 
 you_give:
   - Your idea in a few sentences, and who it is for
@@ -34,9 +34,10 @@ you_get:
   - A score on seven questions, a go, fix or stop call, and the first thing to fix
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Describe your idea and paste any numbers you have. It works step by step and saves each result.
+  - Describe your idea and paste any numbers, lost-deal notes and team facts you have. It works step by step and saves each result.
+  - If step 2 says sliver, the later steps work on the narrower market. If steps 3 and 4 disagree, you see both.
   - Read the weakest question last, then do the first fix it names before you spend more.
 output_sample:
   input:
@@ -132,3 +133,5 @@ terms:
     meaning: Whether your edge is still there in ten years.
   - term: Substitute
     meaning: What a buyer would use or do if your product did not exist.
+next: [riskiest-guess-test]
+before: []

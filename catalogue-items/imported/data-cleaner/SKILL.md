@@ -17,7 +17,7 @@ This skill enables an AI agent to systematically clean and preprocess raw datase
 
 2. **Handle missing values.** Apply strategy per column based on data type and missingness pattern. For numeric columns with less than 5% missing, use median imputation. For categorical columns, use mode or a dedicated "Unknown" category. For columns missing more than 40%, flag them for potential removal and consult the user before dropping.
 
-3. **Remove duplicates and resolve conflicts.** Identify exact duplicates and near-duplicates (e.g., rows differing only in whitespace or casing). For exact duplicates, keep the first occurrence. For near-duplicates, apply fuzzy matching with a configurable similarity threshold and merge conflicting values by recency or completeness.
+3. **Remove duplicates and resolve conflicts.** Identify exact duplicates and near-duplicates (e.g., rows differing only in whitespace or casing). For exact duplicates, keep the first occurrence. For near-duplicates, apply fuzzy matching with a configurable similarity threshold and merge conflicting values by recency or completeness. Show the user the near-duplicate pairs and the threshold before merging: a loose threshold can merge two different people.
 
 4. **Correct data types and standardize formats.** Coerce columns to their intended types — parse date strings into datetime objects, convert numeric strings to floats, and normalize categorical values to a canonical form. Standardize formats such as phone numbers, postal codes, and currency representations.
 
@@ -64,7 +64,8 @@ df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
 
 # 2. Handle missing values
 df["customer_name"] = df["customer_name"].fillna("Unknown")
-df["email"] = df["email"].fillna("missing@placeholder.com")
+# Leave blank emails blank and flag them for the source. Never invent contact details.
+df["email_missing"] = df["email"].isna()
 df["amount"] = df["amount"].fillna(df["amount"].median())
 df["region"] = df["region"].fillna(df["region"].mode()[0])
 df["order_date"] = df["order_date"].fillna(method="ffill")

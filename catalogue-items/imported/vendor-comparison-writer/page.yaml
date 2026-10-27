@@ -33,7 +33,7 @@ how_to_use:
   - "Gather what you have: the vendor's proposal, the contract, what you pay now and the renewal date."
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Say if this is a new vendor, a renewal or a comparison. Paste or upload your files. For two vendors, add both.
-  - Read the Summary and Recommendation first. Then check the cost table against the proposal. Fill any gaps your AI marked.
+  - Read the Summary and Recommendation first. Then check the cost table against the proposal. If a cost is missing, ask the vendor for a full written quote before you fill the gap. Do not let your AI guess it.
   - Send the Negotiation Points to whoever handles buying, or raise them with the vendor yourself.
   - No code, web access or paid tool is needed.
 output_sample:
@@ -58,3 +58,4 @@ output_sample:
       contains: "One call: proceed, negotiate or pass, with the reasons."
     - name: Negotiation Points
       contains: Points to raise with the vendor before you sign.
+next: [vendor-scorecard-builder]

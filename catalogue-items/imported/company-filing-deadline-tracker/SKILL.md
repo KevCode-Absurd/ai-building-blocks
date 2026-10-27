@@ -25,6 +25,8 @@ For each entity, show the confirmed source and as-of date, the filing and date (
 
 # /entity-compliance
 
+In a plain chat there are no slash commands and no `~/.claude` folder. Treat each flag below as a plain request ("build my tracker", "show what is due in 90 days", "update", "audit", "export"). Take the entity list from what the user pastes, and keep the tracker as a file in the user's own folder.
+
 1. Load `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → `## Entity Management` (entity table, jurisdictions, registered agent).
 2. Route to the correct mode below based on flag:
    - No flag or `--init`: Mode 1 — initialize tracker from entity table

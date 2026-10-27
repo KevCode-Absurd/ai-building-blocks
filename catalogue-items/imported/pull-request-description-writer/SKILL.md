@@ -26,21 +26,22 @@ Before creating a PR, ensure all changes are committed. If there are uncommitted
 git status --porcelain
 ```
 
-If the output shows any uncommitted changes (modified, added, or untracked files that should be included), invoke the available `commit` skill before proceeding. If the client requires qualified skill names, use the qualifier for the plugin that supplied this skill.
+If the output shows any uncommitted changes (modified, added, or untracked files that should be included), invoke the available `commit` skill before proceeding. If no commit skill is available, show the user the files and a proposed commit message, and run `git add` and `git commit` only after they say yes. If the client requires qualified skill names, use the qualifier for the plugin that supplied this skill.
 
 ## Process
 
 ### Step 1: Verify Branch State
 
 ```bash
-# Detect the default branch — note the output for use in subsequent commands
-gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name'
+# Detect the default branch and keep it in BASE
+BASE=$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')
+echo "$BASE"
 ```
 
 ```bash
-# Check current branch and status (substitute the detected branch name above for BASE)
+# Check current branch and status (BASE was set in the command above)
 git status
-git log BASE..HEAD --oneline
+git log "$BASE"..HEAD --oneline
 ```
 
 Ensure:
@@ -53,11 +54,11 @@ Ensure:
 Review what will be included in the PR:
 
 ```bash
-# See all commits that will be in the PR (substitute detected branch name for BASE)
-git log BASE..HEAD
+# See all commits that will be in the PR
+git log "$BASE"..HEAD
 
 # See the full diff
-git diff BASE...HEAD
+git diff "$BASE"...HEAD
 ```
 
 Understand the scope and purpose of all changes before writing the description.
@@ -75,6 +76,8 @@ Use this structure for PR descriptions (ignoring any repository PR templates):
 
 <any additional context reviewers need>
 ```
+
+State a reason or an alternative only if the commits or the linked issue give it. If you have to infer a reason from the diff, mark it "(inferred, please confirm)" and ask the author to confirm or correct it before you run `gh pr create`. If there is no alternative on record, leave that paragraph out.
 
 **Do NOT include:**
 - "Test plan" sections

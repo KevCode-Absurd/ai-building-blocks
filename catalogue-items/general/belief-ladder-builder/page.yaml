@@ -18,7 +18,7 @@ when:
   - Your headline promise sounds too good to be true.
   - You sell something that asks the reader to change a belief, such as "I could never do this".
 not_for:
-  - Your big claim has no evidence behind it. Get the proof first, or use the Claim and proof matcher to find what backs it.
+  - Your big claim has no evidence behind it. Get the proof first, or use the Claim evidence checker to find what backs it.
   - Your claim is about health, money or medicine and is regulated. Have a qualified person review it before you publish.
   - You want to fix typos or tone only. Edit the draft by hand or ask your AI for a plain line edit.
 
@@ -111,7 +111,7 @@ test:
 improve:
   - Keep a list of beliefs your buyers hold, with their words, and paste it in each time.
   - Save the ladders that worked, so a new product in the same field starts from them.
-  - Pair it with "Claim and proof matcher" so each rung also has proof beside it.
+  - Pair it with "Claim evidence checker" so each rung also has proof beside it.
   - Add the logic words you do not want, such as "obviously", to the "Avoid" list in the skill file.
 
 works_best_with:

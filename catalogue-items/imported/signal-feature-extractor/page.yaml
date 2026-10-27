@@ -16,6 +16,7 @@ when:
   - You want a feature table to feed into a model.
   - You are unsure which feature extractor suits your signal.
 not_for:
+  - You want to use this code outside MATLAB or other MathWorks products. The licence (BSD 2-Clause plus MathWorks terms) does not allow it.
   - "You want audio features like MFCC or mel-spectrogram: use audioFeatureExtractor in MATLAB's Audio Toolbox."
   - "You need to filter or clean the signal first: do that step on its own, then bring the result here."
   - "You have images or many files to run as a batch: use MATLAB's signalDatastore to build the pipeline, and run this on one file at a time."
@@ -35,7 +36,8 @@ how_to_use:
   - Add your signal, its sample rate and your frame size. Name the features you want, if you know them.
   - Ask your AI to check if the frequency content shifts over time, then pick and set up the extractor.
   - Run the code it gives you in MATLAB and check the feature table.
-  - For the GPU version, you also need the Parallel Computing Toolbox and a supported GPU.
+  - For the GPU version or a parallel datastore run, you also need the Parallel Computing Toolbox. The GPU version needs a supported GPU as well.
+  - Next, feed the per-frame table to a classifier such as fitcecoc. If your model needs one fixed-length row per signal, average the frames per signal first.
 output_sample:
   input:
     - Your 1D signal, such as vibration, biosignal, radar or sensor data

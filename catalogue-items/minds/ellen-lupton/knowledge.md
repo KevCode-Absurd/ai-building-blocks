@@ -1,6 +1,6 @@
 # Ellen Lupton: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Ellen Lupton is alive, and views can change. This data set rests on her own answers in a 2007 interview with the journal InfoDesign, which we read in full [S2], a 2024 interview about supporting design students, read in full [S8], a 2020 Creative Review profile whose excerpt covers her family, her influences and her stance on type [S3] and a 2010 Print Q and A with her partner Abbott Miller, where only a few answers are hers alone [S4]. It also uses the abstract of a 1994 essay she wrote with Miller [S7], a report of a 2019 talk [S5], her publisher's page for the 2024 edition of Thinking with Type [S6] and a reference page [S1]. Treat each view as "as of" the year of its source. Several longer interviews were blocked or behind paywalls, and her podcast and lecture pages have no transcript we could open, so this picture leans on shorter pieces. Nothing here tells you what she thinks about events after 2024.
 

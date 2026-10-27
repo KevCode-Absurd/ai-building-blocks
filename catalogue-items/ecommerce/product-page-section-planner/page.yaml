@@ -21,6 +21,7 @@ not_for:
   - "You want a review of a page that is already live: ask a person for a page audit, or check it by hand against your buyers' questions."
   - "You sell on Amazon or another marketplace with fixed listing layouts: follow that marketplace's own listing rules."
   - "You need the words for the page: write the copy yourself or with your AI after this plan is done."
+  - "You want a quick first pass with fewer checks: use the Product page doubt mapper."
 
 you_give:
   - The product and its price

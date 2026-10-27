@@ -35,7 +35,7 @@ how_to_use:
   - Say which changes you want to compare, and your token or cost limits (optional).
   - Read the rubric and test tasks it gives you. Change any part that does not fit your agent.
   - Run your agent on the test tasks, before and after your change. Paste the results back so your AI can score them.
-  - Check the tricky cases yourself, then compare the scores to the pass marks. The skill only writes the plan. Automating the tests needs code running and an AI judge, which you set up yourself.
+  - Check the tricky cases yourself, then compare the scores to the pass marks. If the score meets the release gate, keep the change. If it falls below, revert it. Log each score with the date so you can see the trend. The skill only writes the plan. Automating the tests needs code running and an AI judge, which you set up yourself.
 output_sample:
   input:
     - A description of what your agent does

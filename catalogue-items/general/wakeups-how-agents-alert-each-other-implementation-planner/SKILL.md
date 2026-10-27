@@ -5,6 +5,19 @@ description: Build an agent wakeup flow with scoped events, duplicate checks, cl
 
 # Wakeups— How Agents Alert Each Other implementation planner
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Codebase** (yours): a project's code, in a folder or repo the AI can open.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for codebase. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -20,15 +33,32 @@ These working rules control the procedure below. If an example assumes a client,
 
 ## Method
 
-1. Persist one event signal with a deduplication key.
-2. Claim eligible events atomically.
-3. Keep client and agent scope attached.
-4. Respect pause and budget limits.
-5. Dispatch a bounded heartbeat.
-6. Mark consumed only after handoff.
-7. Reset stale claims safely and avoid creating extra user-visible threads.
+1. **Save one event signal with a dedup key.** Build the key from the agent, the reason and the source id (for example `agent:reason:source`). Add a unique index on the key that only covers rows still pending or claimed. A second event with the same key is skipped and logged, never an error. A wakeup is a signal, not the work: if work is needed, create the issue first, then wake.
+2. **Claim events in one step.** Write the claim as a single update that moves `pending` rows to `claimed` and sets `claimed_at`, scoped to one agent. Two workers must not be able to claim the same row.
+3. **Keep client and agent scope on every row.** Every wakeup carries the client and the agent it belongs to. A claim query never returns another client's rows.
+4. **Check pause and budget before waking.** Skip the dispatch when the agent is paused or over its budget. Leave the row pending and log why.
+5. **Dispatch a bounded heartbeat.** Wake the agent for a set number of events per run, in priority order. Cap retries. An agent never wakes itself; it creates an issue instead, so there are no loops.
+6. **Mark processed only after the handoff.** Set `processed` after the agent has taken the work. If the worker crashes first, the row stays `claimed`.
+7. **Recover stale claims.** Run a recovery job that puts `claimed` rows older than the lease (the starter uses 30 minutes; set your own) back to `pending`. Do not create a new user-visible thread when you do.
+8. **Write the failure checklist and tests.** Cover lost wakeups, event storms, loops, double claims and crashes. Build synthetic test cases from made-up events: a duplicate, a crash before handoff, a paused agent and a stale claim.
 
 Read the supplied reference modules and method notes before adapting the code. Keep their invariants, schemas and failure paths; the steps above do not replace those implementation details.
+
+## What you hand back
+
+Separate headed sections: **Dispatcher code**, **Dedup rule**, **Claim and lease rule**, **Stale-claim recovery**, **Failure checklist**, **Synthetic test cases**, **Missing inputs**.
+
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Recoverable agent job queue builder](https://useaiblocks.com/skills/the-job-queue-where-agents-actually-run-implementation-planner).
+- The [Structured data extractor](https://useaiblocks.com/skills/structured-data-extractor).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Next steps
+
+Review the dispatcher against your current heartbeat. Run the synthetic tests in a staging project before turning it on. Then check three numbers each week: wakeups per hour, dedup rate and stale pending wakeups (should be near zero).
 
 ## Final check
 

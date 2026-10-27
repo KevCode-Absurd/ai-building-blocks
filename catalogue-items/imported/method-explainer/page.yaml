@@ -35,6 +35,7 @@ how_to_use:
   - Add your assumptions and known limits if you have them (optional).
   - Check the limits paragraph. Make sure it says what the limit means for your conclusion.
   - Paste the write-up into your report. If you will present the method, ask for the slide version too.
+  - If you do not name a reader, your AI should write for a business analyst and say so at the top. Name the reader to change the depth.
 output_sample:
   input:
     - "How you did the analysis: the method, the data and the steps"

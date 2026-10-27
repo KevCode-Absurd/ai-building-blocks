@@ -19,6 +19,7 @@ not_for:
   - "You are writing a new MEX function from scratch: use the typed calls like mxGetDoubles from the start, no conversion is needed."
   - "Your code uses the C++ MEX API (matlab::mex::Function): this skill only covers files that use the C Matrix API in mex.h, so ask a MATLAB developer or the MathWorks docs."
   - "Your file already uses typed calls like mxGetDoubles or mxGetComplexDoubles: it is already in the newer format, so just build it with -R2018a."
+  - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
 you_give:
   - Your MEX source files (.c, .cpp, .cxx, .F or .f90)
   - "Where to save the converted files: a new file or in place"
@@ -29,12 +30,12 @@ you_get:
   - A summary of each change
   - Build and test steps
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open an AI tool and give it the skill text. A chat window can convert the code, but it cannot build or test it. To build and test, use an AI that can run MATLAB with a C or Fortran compiler, or run the build yourself and paste back any errors.
   - Paste in your MEX source files.
   - Answer when it asks where to save the converted code.
   - Check the change summary. Old calls like mxGetPr and mxGetPi should now be typed calls like mxGetComplexDoubles.
   - Build the new file in MATLAB with mex -R2018a. This needs a MATLAB licence and a working C or Fortran compiler.
-  - Run your own tests and compare with the old results before you use the new file.
+  - Run your own tests and compare with the old results before you use the new file. Next, accept the offered benchmark and compare its output with your original test suite.
 output_sample:
   input:
     - Your MEX source files (.c, .cpp, .cxx, .F or .f90)
@@ -43,6 +44,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB with a working C or Fortran compiler, to build and test the result
     - A MATLAB licence
+    - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
   output:
     - name: Pre-upgrade check
       contains: A count of old calls such as mxGetPr and mxGetPi, and whether the file handles complex data.

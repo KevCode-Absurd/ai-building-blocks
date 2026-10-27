@@ -9,7 +9,7 @@ subhead: Routine coding jobs go to free helper models, while Claude plans the wo
 explain: |
   Routine coding jobs go to free helper models, while Claude plans the work, checks it and merges the result. This keeps your paid usage for the thinking.
 
-  It uses the opencode command line tool to run disposable workers. Each worker has a role: a scout to read code, a coder to write it, a tester to check it. You can send one worker out or a group in parallel. Claude reads their output before anything is kept. Set up takes some work: you install Node and opencode, log in, and copy a few command files. Do not send private code or secrets, because the free workers run on opencode's servers.
+  It uses the opencode command line tool to run disposable workers. Each worker has a role: a scout to read code, a coder to write it, a tester to check it. You can send one worker out or a group in parallel. Claude reads their output before anything is kept. Set up takes some work: you install Node and opencode, log in, and copy a few command files. Do not send private code or secrets, because the free workers run on opencode's servers. The free tier belongs to opencode and can change. Only the models it lists as free cost nothing; the opencode-go models need paid workspace billing.
 when:
   - You spend heavily on tokens for grunt work like searching code.
   - You have several small tasks that can run side by side.
@@ -36,6 +36,7 @@ how_to_use:
   - For a group, the AI splits the task into 2 to 5 separate jobs. Each coder gets its own git worktree, which is a separate copy of your project.
   - Read the diff for each worker before you accept it. Your AI merges only the work it has checked, then runs your tests.
   - If a worker fails twice, your AI does that job itself and marks it as orchestrator-sourced.
+  - Next, commit or drop the merged branches, and check the run log with oc-status.mjs. Before a bulk run, check opencode's current pricing, because $0 is not guaranteed.
 output_sample:
   input:
     - The coding task you want done, in plain words

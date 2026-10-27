@@ -97,9 +97,9 @@ Add one closing line: "This is a planning aid, not personal financial advice."
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Client pricing planner](https://useaiblocks.com/skills/client-fee-and-cap-setter). It takes the question and audit report.
-- **Decide what to do** with the [Cash shortage planning adviser](https://useaiblocks.com/skills/lean-year-cash-rules-writer). It takes the audit report.
-- **Decide what to do** with the [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the question.
+- The [Client pricing planner](https://useaiblocks.com/skills/client-fee-and-cap-setter). It takes the question and audit report.
+- The [Cash shortage planning adviser](https://useaiblocks.com/skills/lean-year-cash-rules-writer). It takes the audit report.
+- The [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer). It takes the question.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

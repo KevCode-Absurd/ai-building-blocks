@@ -23,7 +23,11 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 ## When to Use
 
-Use this skill when you need complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.
+Use this skill when you need screens, navigation, native tabs, styling, motion, search or sheets in an Expo Router app (a new app or an existing one).
+
+Do not use it for web-only apps, apps not built with Expo, server routes (use the Expo API route builder), SDK upgrades (use the Expo upgrade helper) or data fetching (use the Mobile data fetching coder).
+
+These notes follow a recent Expo SDK, and some imports here (for example `Color` from `expo-router` and `expo-router/react-navigation`) may differ in yours. Ask the person which SDK version they use, and confirm any API you are not sure of in the current Expo docs before you write code.
 
 
 ## References

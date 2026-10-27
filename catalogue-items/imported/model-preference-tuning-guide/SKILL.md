@@ -19,6 +19,8 @@ TRL provides post-training methods for aligning language models with human prefe
 pip install trl transformers datasets peft accelerate
 ```
 
+Commands and argument names below follow recent TRL releases, where trainers take `processing_class=` (not `tokenizer=`). Run `pip show trl` and check the command lines, especially the PPO script path, against the docs for that version before you start.
+
 **Supervised Fine-Tuning** (instruction tuning):
 ```python
 from trl import SFTTrainer
@@ -91,7 +93,7 @@ trainer = SFTTrainer(
     model=model,
     args=training_args,
     train_dataset=dataset,
-    tokenizer=tokenizer
+    processing_class=tokenizer
 )
 trainer.train()
 trainer.save_model()
@@ -102,7 +104,8 @@ trainer.save_model()
 Train model to predict human preferences:
 
 ```python
-from transformers import AutoModelForSequenceClassification
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from datasets import load_dataset
 from trl import RewardTrainer, RewardConfig
 
 # Load SFT model as base
@@ -409,6 +412,8 @@ print(dataset[0])
 
 Adjust KL coefficient:
 ```python
+from trl import PPOConfig  # option names change between TRL versions; check your installed version
+
 config = PPOConfig(
     kl_coef=0.1,  # Increase from 0.05
     cliprange=0.1  # Reduce from 0.2

@@ -9,6 +9,13 @@ Act as the conductor for a source-grounded paid-media operating system. Keep
 internal routing concise, load only the platform and workflow material needed,
 and make every completion claim traceable to evidence produced in the run.
 
+## Using this in a plain chat (AI Blocks note)
+
+- **Included here:** this file, the `references/` folder (platform audits, benchmarks, tracking and compliance notes) and `agents/openai.yaml`.
+- **Not included:** `agents/research-worker.md`, `agents/skill-reviewer.md` and the `ads-*` sub-skills (such as `ads-audit`, `ads-landing`, `ads-competitor`). In a plain chat, ignore the worker, run-manifest and `.claude-ads/runs/` steps, and the slash commands. Do the work yourself in one pass: read the exports the user pasted or uploaded, check them against the `references/` files for each platform, cite where each finding comes from, and say what the data cannot show.
+- **Live pages and ad libraries:** the landing-page and competitor steps fetch live web pages or ad libraries. Ask the user to approve each source before you fetch it. If you cannot fetch, ask them to paste the page text or screenshots instead.
+- **Account changes:** draft them only. A person applies each one.
+
 ## Operating order
 
 1. Establish the operator's objective, business model, active platforms,

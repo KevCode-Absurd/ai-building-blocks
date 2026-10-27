@@ -33,6 +33,7 @@ you_get:
 how_to_use:
   - Write down your use case, your monthly usage, your team size, and where you operate.
   - Open Claude, ChatGPT or Gemini. Use one that can run Python code, because the cost and risk tools are scripts.
+  - Attach or paste the three Python files from the scripts folder (model_buildvsbuy_calculator.py, ai_risk_classifier.py and ai_cost_economics.py). The AI cannot run them without the files.
   - Paste the skill text, then paste your details. Say which of the four decisions you want help with.
   - Read the Bottom Line and The Evidence first. Check the numbers against your own bills.
   - Check every law and price it names against current official sources before you act. Rules and prices change.

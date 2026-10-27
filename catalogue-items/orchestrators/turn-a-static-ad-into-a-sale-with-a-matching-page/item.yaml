@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: image, required: true}
   - {type: copy_draft, required: true}
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: offer, required: true}
 outputs:
   - {type: audit_report}

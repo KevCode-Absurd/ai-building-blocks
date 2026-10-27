@@ -18,7 +18,8 @@ when:
 not_for:
   - "You want to build a scenario or export to RoadRunner or OpenSCENARIO: use the scenario builder skill in MATLAB, which takes over after this import."
   - "You only want to look at or replay a recording: open the Driving Log Analyzer app in MATLAB yourself. This skill does not open it unless you ask."
-  - "You have no MATLAB with Automated Driving Toolbox: ask a colleague who has it, because this skill needs code run in MATLAB."
+  - "You have no MATLAB with Automated Driving Toolbox: ask a colleague who has it, because this skill needs code run in MATLAB. Both are paid MathWorks software."
+  - "You are not an engineer who works with sensor recordings, or you do not use MathWorks products: this is a tool for automated driving engineers, and its licence (see LICENSE.md) allows use only with MathWorks products."
 you_give:
   - Your raw recording files
   - The dataset type, such as KITTI or ROS bag
@@ -34,6 +35,7 @@ how_to_use:
   - Give your AI this skill and say you want to import driving data.
   - Point it to your recording folder and say which dataset type it is.
   - Add calibration files and sensor mounting details if you have them.
+  - If your annotations or timestamps are laid out in a way the skill cannot read, it should ask you how, not guess. Tell it where the timestamps are kept.
   - Check the data summary it prints before you go on. Fix any missing sensor or wrong frame.
   - Ask it to sync, trim or fix time offsets, then save the result for scenario building.
 output_sample:

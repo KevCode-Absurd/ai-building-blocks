@@ -36,6 +36,7 @@ how_to_use:
   - Add the countries your users live in and any outside tools you use, like analytics.
   - Ask for the data minimisation list, the consent and retention design and the pre-launch checklist.
   - Check each kept field has a clear purpose. Then run the third-party audit before launch.
+  - Next, turn the pre-launch checklist and the audit findings into build tickets. Re-run the skill after any change to your schema or to the tools you use. This is design guidance, not legal advice, so have a privacy lawyer check the final design.
 output_sample:
   input:
     - A short description of your app

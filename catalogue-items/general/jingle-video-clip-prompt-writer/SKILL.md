@@ -11,23 +11,23 @@ You take a bar-by-bar song script through six stages, in order. Stop for approva
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
-- **Brand brain** (its products part), made by the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **A video ad script**, made by the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
+**What you need** (use your own material or the linked skill):
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **A video ad script**, made by the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script): the script, beat by beat, with on-screen text.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A video ad script** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words. It uses your brand brain and your offer and buying reasons.
+1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
+2. **A video ad script** with the [Customer quote video ad writer](https://useaiblocks.com/skills/quote-video-ad-script). Bring customer words, plan (optional). It uses your brand brain and your offer and buying reasons.
 3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `voice-and-look.md`, `offers.md`, `proof-and-claims.md`. Take how the product looks, the colours, fonts and photo style, and the exact words allowed on the picture. Leave out review quotes and research notes. Source notes and rejected ideas never go into the result.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain, a video ad script. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
+2. **Check what's missing.** Look for your brand brain, a video ad script. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Suno:** Has a style box and a lyrics box that reads section tags like [Verse]. Songs you download on a paid plan can run in ads.
@@ -101,7 +101,7 @@ Name each attached image by its job in every prompt. Build every shot from the s
    - **Hold line,** in every clip: "Same lead as image 1. Same product as image 3. Real-time speed. Surfaces stay plain. No music, voice or song made in this clip." Add "mouth stays closed" to every shot not marked singing.
 2. **Takes.** Make 2 or 3 takes of each clip and pick one.
 3. **Voice and lip-sync.** The voice is the chosen take. For a lead on long notes: if your video tool syncs a mouth to audio, give it that bar's slice of the song; if not, start the shot mid-note with the mouth open on the vowel and a slow push in, so it reads as singing without exact sync. For a crowd on the tag: mouths open on the tag's vowel.
-4. **Edit.** Lay the whole song, snap every cut to a bar line, add captions of the lyric if wanted, and put the offer over the tag as text. Keep all words inside the platform's safe zone, clear of its buttons and caption area.
+4. **Edit.** Lay the whole song, snap every cut to a bar line, add captions of the lyric if wanted, and put the offer over the tag as text. Copy any price, renewal or trial term in the offer text from the brand file's offers section, word for word, and show its renewal terms on screen. If the brand file has no offer terms, write `MISSING: offer terms` and leave the price off. Keep all words inside the platform's safe zone, clear of its buttons and caption area.
 5. **Final check** against the script and claims: every brand line sung exactly, no number or result beyond the approved claims, the product on screen within 5 seconds, no artist or tune copied, and music rights checked for the tool you used.
 
 ## Run the checks
@@ -120,7 +120,9 @@ One file per stage:
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Make video ads** with the [Video ad shot list maker](https://useaiblocks.com/skills/video-ad-shot-list-maker). It takes the shot list.
+- The [Motion comic video clip prompt writer](https://useaiblocks.com/skills/motion-comic-video-prompts).
+- The [Selfie-style video clip prompt writer](https://useaiblocks.com/skills/selfie-style-video-prompts).
+- The [Skeleton video clip prompt writer](https://useaiblocks.com/skills/skeleton-video-prompts).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -131,6 +133,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every cut sits on a bar line of the chosen take.
 - The lead and the product match their sheets in every shot; mouths move only in shots marked as singing.
 - The product is on screen within 5 seconds; nothing claims more than the brand supports; no artist named, no cloned voice.
+- Every price, renewal or trial term in the offer text matches the brand file, with its renewal terms shown.
 
 ## If something is missing
 Before you write MISSING for a product fact or claim, look for it in the brand file and the input; write `MISSING: <what>` only when both lack it, and clear sung lines against the brand file's claims. No BPM in the script: use 120 and say so. The brand doesn't use music or animation, or you don't know: ask before any song is made, and keep writing the prompts meanwhile.

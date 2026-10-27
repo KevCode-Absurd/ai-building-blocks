@@ -53,7 +53,7 @@ Before optimizing order batching, understand:
 
 **2. Batch Picking**
 - Pick multiple orders simultaneously
-- **Pros**: Reduced travel (60-80% reduction), higher productivity
+- **Pros**: Less walking and higher productivity. How much depends on your layout, order mix and cart size, so measure it on your own orders.
 - **Cons**: Requires sorting, more complex
 - **Use**: Standard warehouse operations
 
@@ -167,6 +167,8 @@ Higher similarity → Better batch candidates
 ## Batching Algorithms
 
 ### Greedy Seed-Based Batching
+
+The code in this skill is illustrative. It uses mock or random orders and distances to show the method, so its output is not a real result. Install `pandas`, `numpy`, `scipy`, `scikit-learn` and `pulp` before you run it, and replace the mock data with the user's own orders and layout.
 
 ```python
 import pandas as pd
@@ -536,6 +538,8 @@ for batch in result['batches']:
 ### Dynamic Batching with Real-Time Updates
 
 ```python
+from datetime import datetime, timedelta
+
 class DynamicBatcher:
     """
     Dynamic order batching system with real-time updates

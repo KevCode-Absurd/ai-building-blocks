@@ -33,9 +33,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill instructions into a new chat.
   - "Add your brief: your idea, your customer, any market notes, and any cost or revenue ideas."
-  - Ask for the nine-section canvas plus three validation experiments.
+  - Ask for the nine-section canvas plus three validation experiments. Treat every number on it (market size, customer lifetime value, cost to win a customer) as a guess until you check it with real data.
   - Read the assumptions list first. Pick the riskiest guess and test it before you spend money.
   - Update the canvas as you learn, and ask your AI to redo any box that feels vague.
+  - Next, test the top assumption with a landing page or customer interviews (the Customer interview coach can help). Bring the result back and update the canvas. The Assumption test ranker helps you pick what to test first.
 output_sample:
   input:
     - Your idea, described in a few lines

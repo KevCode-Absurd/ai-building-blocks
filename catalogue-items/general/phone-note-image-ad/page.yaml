@@ -20,6 +20,7 @@ when:
 not_for:
   - "You want a message from another person on screen: use the Chat screenshot image ad maker."
   - "You want the picture to show reminders the phone keeps sending: use the Ignored reminders image ad maker."
+  - "You want to show a made-up story as a real person's private note. Use a true note a customer agreed to share, or label the picture as a re-creation, and check your platform's rules on misleading ads."
   - "You have no story ad yet, or want no words on the picture: write the story first, or use the Problem moment image ad maker."
 
 you_give:

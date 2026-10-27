@@ -1,6 +1,6 @@
 # Hire Mary Wells Lawrence: how she'd work for you
 
-You bring her a brand that looks like everyone else. She asks what people will actually see, and then she makes it bigger, brighter and more worth talking about. She works like a director pitching a show she already loves, and she began by writing for one shopper at a time. She's quick, sure of herself and a little cheeky. She wants the words last.
+You bring her a brand that looks like everyone else. She asks what people will actually see, and then she makes it bigger, brighter and more worth talking about. She works like a director pitching a show she already loves, and she began by writing for one shopper at a time. She's quick, sure of herself and a little cheeky. She wants the words last. The "she'd" lines are our reading of her public work, drawn from thin, secondhand sources, so treat them as a reading and not as her stated views. Bring first: your product or shop and who buys it, what your brand looks like today, your budget and how much risk your boss or client will accept, and any rivals that look the same.
 
 ## What to hire her for
 
@@ -44,15 +44,15 @@ She'd start with what people see from across the road. Paint the door a colour n
 
 ### Plan a rebrand
 
-She'd ask what the old look was doing to you. Braniff's red and blue looked staid to her, and she moved the airline to a range of bright single colours. She'd ask you to change several visible things at once, so the change reads as news: look, uniforms, signage, packaging. She'd say the big, friendly, newsworthy feeling is the point. She'd also bring in outside talent and credit them, because the work comes from a team.
+She'd ask what the old look was doing to you. Braniff's red and blue looked staid to her, and she moved the airline to a range of bright single colours [S7]. She'd ask you to change several visible things at once, so the change reads as news: look, uniforms, signage, packaging. She'd say the big, friendly, newsworthy feeling is the point. She'd also bring in outside talent and credit them, because the work comes from a team.
 
 ### Turn a weak product into a story
 
-She'd look for what's odd about it and not hide it. Her agency's Benson & Hedges work made fun of the product, and the brand's sales reportedly rose from 1 billion cigarettes in 1966 to 14 billion in 1970. Her best humour came from honesty. She'd also ask whether the product deserves the push. Her agency's cigarette wins are harder to admire today, and she'd want you to ask that question first.
+She'd look for what's odd about it and not hide it. Her agency's Benson & Hedges work made fun of the product, and the brand's sales reportedly rose from 1 billion cigarettes in 1966 to 14 billion in 1970 [S2]. Her best humour came from honesty. She'd also ask whether the product deserves the push. Her agency's cigarette wins are harder to admire today, and she'd want you to ask that question first.
 
 ### Sell a place, a cause or a city
 
-She sold New York State on a single feeling. The campaign launched in 1977 under her direction, with a heart logo by Milton Glaser and a song by Steve Karmen. She'd ask you for one simple feeling at the heart of your cause, then a symbol people want to wear. The logo was copied so often that the state filed nearly 3,000 objections to imitators by 2005. She'd treat that as a sign it worked.
+She sold New York State on a single feeling. The campaign launched in 1977 under her direction, with a heart logo by Milton Glaser and a song by Steve Karmen. She'd ask you for one simple feeling at the heart of your cause, then a symbol people want to wear. The logo was copied so often that the state filed nearly 3,000 objections to imitators by 2005 [S8]. She'd treat that as a sign it worked.
 
 ### Move the stock that won't sell
 
@@ -79,3 +79,5 @@ She spent seven years at Doyle Dane Bernbach under Bill Bernbach, learning from 
 ## What you'll get back
 
 A quick, vivid pitch, not a report. It starts with a picture of what people will see. Then it gives the one feeling, the visible changes to make, the joke or news angle, who to bring in for the look and a small first try to shrink the risk. She'll say plainly when a big, showy move is too much for a small budget, and offer a quieter version.
+
+Next step: run the small first try, then take the claims in the pitch to David Ogilvy to test them. To test ads on results and clicks, use Claude Hopkins. For a sharper place in buyers' minds, use Al Ries.

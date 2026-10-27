@@ -5,6 +5,30 @@ description: Group campaigns by budget action and compare three plans. Check tot
 
 # Campaign budget scenario planner
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator). It takes the plan.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
+2. This one.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+<!-- /needs -->
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -58,38 +82,39 @@ Also ask:
 ---
 
 ## STEP 2: Campaign Classification
+Put each campaign in exactly one tier. Check the tiers in this order and stop at the first that fits. The cut-offs are starting assumptions. Change them to the user's targets.
 
-### Tier 1: SCALE (Increase Budget)
-Criteria (ALL must be true):
-- ROAS > target ROAS (default 3.0x)
-- Lost Impression Share (Budget) > 20% [if available]
-- OR: ROAS > 2x target with consistent performance (14+ days)
+### Tier 4: KILL (propose a pause)
+- ROAS below 0.5x, or
+- Zero revenue with more than $200 total spend, or
+- CPA above 3x the target CPA for 7 or more days.
 
-Headroom calculation:
+### Tier 1: SCALE (increase budget)
+- ROAS above the target ROAS with 14 or more days of steady results, and
+- Lost Impression Share (Budget) above 20% if the platform shows it (Google Ads does; on Meta use steady ROAS and frequency instead).
+- Or ROAS above 2x the target with 14 or more days of steady results.
+
+Headroom:
 ```
-Incremental daily budget = Current budget x Lost IS (Budget) %
-Projected incremental revenue = Incremental budget x Current ROAS
+Incremental daily budget = Current budget x Lost IS (Budget) %   (Google Ads)
+On Meta, with no lost share figure: use 20% of the current budget as the starting headroom, and say it is an assumption.
 ```
 
-### Tier 2: MAINTAIN (Hold Steady)
-- ROAS between 1x and target ROAS
-- Stable performance, no immediate scaling opportunity or risk
+### Tier 3: REDUCE (decrease budget)
+- ROAS below the target ROAS for 14 or more days, and
+- Spend above $50 a day, and
+- Flat or declining.
 
-### Tier 3: REDUCE (Decrease Budget)
-- ROAS < target ROAS for 14+ days
-- Spend > $50/day
-- Not improving (flat or declining)
-
-Reduction formula:
 ```
 New budget = Current budget x (Current ROAS / Target ROAS)
-Floor: Never reduce below 50% of current budget in one move
+Floor: never reduce below 50% of the current budget in one move
 ```
 
-### Tier 4: KILL (Pause)
-- ROAS < 0.5x
-- OR: Zero revenue with >$200 total spend
-- OR: CPA > 3x target CPA for 7+ days
+### Tier 2: MAINTAIN (hold steady)
+- Everything else: for example ROAS near the target, under 14 days of data, or spend of $50 a day or less.
+- Say why each campaign sits here.
+
+If the target ROAS or CPA is not given, write `MISSING: target ROAS`, use 3.0x as a placeholder only, and say so. Never present it as the user's real target.
 
 ---
 
@@ -100,7 +125,7 @@ For each SCALE campaign, model three scenarios:
 ### Conservative (50% of max headroom)
 ```
 Budget increase: (headroom x 0.50) added
-Projected daily revenue gain: increase x current ROAS
+Projected daily revenue gain: increase x current ROAS (a ceiling, because ROAS usually falls as spend rises)
 Monthly impact: daily gain x 30
 Risk: LOW
 ```
@@ -117,7 +142,7 @@ Budget increase: (headroom x 1.00)
 Risk: HIGH, daily monitoring required
 ```
 
-ROAS decay assumption: at aggressive scaling, expect 10-20% ROAS decline. Factor this in.
+ROAS decay assumption: marginal ROAS does not stay constant as spend rises. As a starting assumption, take 10-20% off the projected ROAS for the aggressive case and show the result with and without it. For the other cases say the projection is a ceiling. These are assumptions to check against the account's own history, not forecasts.
 
 ---
 
@@ -132,7 +157,7 @@ Example: $100/day → $300/day
 - Phase 3: $225 → $300
 
 ### Learning Phase Protection
-- Any change >20% may reset Meta's learning phase
+- Any change above 20% may reset Meta's learning phase. Prefer steps of 20% or less. The 50% cap above is a hard limit, not a target.
 - After increase: no other edits for 72 hours
 - If ROAS drops >30% within 48 hours: revert
 
@@ -175,6 +200,11 @@ Include:
 
 ---
 
+## When not to use
+- You have no campaign-level spend and results data. Pull a report from your ad platform first.
+- You run ads outside Meta or Google and have not checked that platform's learning rules.
+- Your campaigns all miss the target and none qualify to scale. Get a creative review first.
+
 ## Rules
 
 1. Never >50% budget change in one move. Phase it.
@@ -183,7 +213,9 @@ Include:
 4. ROAS decay at scale is real. 10-20% decay in aggressive projections.
 5. Freed budget goes to scale, not new experiments, unless scale is maxed.
 6. If no campaigns qualify for SCALE, the answer is "fix your creative" not "increase budget".
-7. No em dashes.
+7. Budget scenarios must add up to the chosen total. Show the sum for each scenario.
+8. This plan only proposes changes. The user makes them in the ad platform, after reviewing each one.
+9. No em dashes.
 
 
 ## Final check

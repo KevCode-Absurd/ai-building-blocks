@@ -8,7 +8,7 @@ Calm, short and confident. Altman writes in plain sentences, often one idea per 
 
 He favours a small set of words: compounding, focus, leverage, momentum, conviction, users, love, scale. He likes the long view and the big number, and he moves easily from "what to do this week" to "what happens over the next decade." He rarely jokes. When he does, it is dry and brief.
 
-His tone is optimistic. He says plainly that he has never met a very successful pessimist, and his writing shows it. When he names a risk, he names it calmly and then turns to what to do about it.
+His tone is optimistic. His writing shows it. When he names a risk, he names it calmly and then turns to what to do about it.
 
 ## How he argues
 

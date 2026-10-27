@@ -5,9 +5,9 @@ name: Production plan builder
 summary: Build a production plan from your sales forecast and capacity. Get a week-by-week schedule of what to make, how many and when.
 job: plan-supply-chain
 headline: Production plan builder
-subhead: A week-by-week plan that says what to make, how many and when. You can promise delivery dates with confidence. It balances your sales forecast and customer orders against what your capacity can really build.
+subhead: A week-by-week plan that says what to make, how many and when. It is a draft a planner checks before any delivery date is promised. It balances your sales forecast and customer orders against what your capacity can really build.
 explain: |
-  A week-by-week plan that says what to make, how many and when. You can promise delivery dates with confidence. It balances your sales forecast and customer orders against what your capacity can really build.
+  A week-by-week plan that says what to make, how many and when. It is a draft a planner checks before any delivery date is promised. It balances your sales forecast and customer orders against what your capacity can really build.
 
   First the skill asks how you make things (to stock, to order or assembled to order), your planning horizon and your bottlenecks. Then it builds a schedule by week. It shows forecast against orders, projected stock, planned production lots and the quantity you can still promise. A rough check tests the plan against critical resources. The plan is adjusted until it fits, and it can feed your materials planning.
 when:
@@ -37,8 +37,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat. No code or paid tool is needed.
   - Paste or attach your spreadsheet. Say how you make products and how many weeks to plan.
   - Answer any questions your AI asks about bottlenecks and changeover times.
+  - The skill text includes Python code. Your AI does not need to run it. The chat can follow the steps in plain language. The code is for reference, and the example in it ignores lead time.
   - Check the weekly table and the overload list against your own numbers. Treat the result as a planning draft.
-  - Ask your AI to fix any overloaded week, then use the final plan to give delivery dates.
+  - Ask your AI to fix any overloaded week. Then have a planner check the plan against real capacity and lead times before you promise any delivery date to a customer.
+  - Next, load the approved weekly plan into your ERP or material planning run. Each week, compare actual output with the plan and tune it.
 output_sample:
   input:
     - Your sales forecast by product and week

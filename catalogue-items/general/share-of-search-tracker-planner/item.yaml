@@ -12,6 +12,7 @@ inputs:
 outputs:
   - {type: plan}
 uses: []
+next: [brand-and-sales-budget-splitter, campaign-link-tracker]
 origin: own
 version: 1.0.0
 example_pending: true

@@ -35,7 +35,8 @@ how_to_use:
   - Name a clause to trace, such as indemnity. Skip this to get a summary of all changes.
   - Check the order of the documents the AI used. Fix it if it guessed wrong.
   - Check each quote and section number against your files before you rely on it.
-  - Take any watch items to a lawyer.
+  - Copy the watch items into a short note for your lawyer, with the section number of each one.
+  - Next, check the current contract against your own rules with Contract risk reviewer.
 output_sample:
   input:
     - Your base contract

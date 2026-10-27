@@ -217,6 +217,8 @@ For each milestone:
 
 ## Example Output
 
+This example is fictional. The river, the industrial estate and the incident in it (algae, sick dogs) are made up to show the format. Replace them with your own real local context. Never present them as real local facts.
+
 **Scenario:** *Project topic: "Water quality in our local river" / Learning objectives: "Understand the causes and indicators of water pollution, apply scientific testing methods (pH, dissolved oxygen, nitrate levels), evaluate evidence to draw conclusions, communicate scientific findings to a non-specialist audience" / Student level: "Year 8" / Project duration: "8 lessons over 4 weeks" / Subject area: "Science" / Real-world connection: "The local river has had reports of increased algae growth — a real local issue"*
 
 ---

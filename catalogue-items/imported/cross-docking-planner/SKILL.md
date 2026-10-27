@@ -72,6 +72,8 @@ Before designing cross-dock operations, understand:
 
 ## Cross-Dock Design Principles
 
+Note: the figures in the code below (30 pallets per door per day, 25 sq ft per pallet, 20 doors) are placeholders. Replace them with the user's own data, and never present them as planning rules. The door assignment code splits each inbound load across every outbound door at a fixed 10% share. That is a simplification, so treat its result as a first draft to check against real lane volumes.
+
 ### Facility Layout
 
 ```python

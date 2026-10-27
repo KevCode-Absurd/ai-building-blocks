@@ -54,12 +54,12 @@ Original everyday application: Keep quiet on the table while exploring headphone
 
 The following order is our runnable interpretation of the public work. It gives a useful default for a small daily problem, and can be adjusted when the situation or the person's own account requires it.
 
-- **Observe specifically:** In the application to a housemate dispute over noise and respect, this stage provides a check before the next action. State a specific event the other person could recognize, including time and context. Remove labels such as selfish and careless, keeping any interpretation visibly separate from the observation itself. [S1]
-- **Identify feelings:** In the application to a housemate dispute over noise and respect, this stage provides a check before the next action. Name the emotion you notice rather than an accusation about another person's intention. If I feel is followed by a judgment, translate it into your experience before continuing the message. [S2]
-- **Name needs:** In the application to a housemate dispute over noise and respect, this stage provides a check before the next action. Identify what matters without making one person the only possible source of satisfaction. Distinguish a need such as rest or connection from the particular strategy you initially wanted. [S1]
-- **Ask concretely:** In the application to a housemate dispute over noise and respect, this stage provides a check before the next action. Ask for a positive action concrete enough to answer and carry out. Include relevant timing, check understanding and consider whether you are genuinely willing to hear a refusal. [S2]
-- **Hear the answer:** In the application to a housemate dispute over noise and respect, this stage provides a check before the next action. Hear the concern in the answer before proposing your next solution. A tentative guess about a feeling or need should open understanding, not certify that you know someone better than they know themselves. [S1]
-- **Explore strategies:** In the application to a housemate dispute over noise and respect, this stage provides a check before the next action. Generate another way to meet the important needs if the first request is declined. If you must make a separate decision or enforce an existing rule, name that honestly rather than pretending consent. [S2]
+- **Observe specifically:** State a specific event the other person could recognize, including time and context. Remove labels such as selfish and careless, keeping any interpretation visibly separate from the observation itself. [S1]
+- **Identify feelings:** Name the emotion you notice rather than an accusation about another person's intention. If I feel is followed by a judgment, translate it into your experience before continuing the message. [S2]
+- **Name needs:** Identify what matters without making one person the only possible source of satisfaction. Distinguish a need such as rest or connection from the particular strategy you initially wanted. [S1]
+- **Ask concretely:** Ask for a positive action concrete enough to answer and carry out. Include relevant timing, check understanding and consider whether you are genuinely willing to hear a refusal. [S2]
+- **Hear the answer:** Hear the concern in the answer before proposing your next solution. A tentative guess about a feeling or need should open understanding, not certify that you know someone better than they know themselves. [S1]
+- **Explore strategies:** Generate another way to meet the important needs if the first request is declined. If you must make a separate decision or enforce an existing rule, name that honestly rather than pretending consent. [S2]
 
 ## An everyday worked application
 
@@ -69,9 +69,9 @@ Before trying the example, define what a useful result would look like for the p
 
 ## Where he stood
 
-The recurring question in this profile is how to approach a housemate dispute over noise and respect without losing the useful distinction in observation before evaluation. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
+The recurring question in this profile is how to approach a housemate dispute over noise and respect without losing the difference between what you saw and what you judged. The record gives a lens and examples, not a guarantee that one phrasing will produce cooperation. [S1] [S2]
 
-In the original application, ask whether the proposed response preserves feelings differ from accusations and whether it leaves room for change the strategy. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
+In the original application, ask whether the proposed response keeps feelings apart from accusations and leaves room to change the strategy. A plan that sounds admirable in general but cannot survive a tired weekday needs a smaller next action. Compare what people actually did with the intention you wrote down, and let that observation improve the next attempt.
 
 ## Their work and record
 

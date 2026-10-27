@@ -34,6 +34,8 @@ Draft a privacy policy for my SaaS app "TaskFlow" — a project management tool.
 
 ## Examples
 
+The examples below are fictional. Statements about security (such as AES-256 or TLS 1.3), data sales ("we do not sell personal information"), retention periods and consent steps are placeholders. Replace each one with a fact you have confirmed about your own business and systems. Never publish a claim you have not checked.
+
 ### Example 1: SaaS App with Email and Usage Data
 
 **Input:** TaskFlow, a project management SaaS. Collects email, name, profile photo, usage analytics (Mixpanel), payment info (Stripe), Google OAuth login. Users in US and EU.
@@ -94,6 +96,7 @@ Given the sensitive nature of location and health data, we implement layered con
 - Treat the output as informational drafting or issue spotting, not legal advice.
 - Identify the governing jurisdiction and relevant effective date; verify changing requirements against current primary sources.
 - Do not claim that language is compliant, enforceable, or complete. Flag uncertainty and recommend qualified counsel for material decisions.
+- Mark every factual claim about the business's own systems (security, data sale, retention, consent) as "to confirm" until the user has checked it.
 - Do not file, publish, accept, sign, or send legal terms without the user reviewing and explicitly authorizing that action.
 
 ## Edge Cases

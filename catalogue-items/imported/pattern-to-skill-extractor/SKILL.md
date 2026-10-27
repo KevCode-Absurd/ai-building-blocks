@@ -70,7 +70,7 @@ the `claude*`/`anthropic*` prefix with `cc-`) and confirm with the user.
 
 ### Step 4: Create the skill files
 
-**Spawn the `skill-extractor` agent** for the actual file generation.
+**Spawn the `skill-extractor` agent** for the actual file generation. That agent is not in this folder. If it is not installed, do not stop: write the files yourself, following the structure below and the format in Step 5, and tell the user you did.
 
 The agent creates:
 
@@ -154,7 +154,7 @@ Files created:
   {{path}}/reference/examples.md  ({{lines}} lines)
 
 Install: /plugin install (copy to your skills directory)
-Publish: clawhub publish {{path}}
+Publish (optional): clawhub publish {{path}}   # clawhub is a separate sharing service; check whether it needs an account or has a cost before you publish
 
 Source: MEMORY.md entries at lines {{n, m, ...}} (retained — the skill is portable, the memory is project-specific)
 ```

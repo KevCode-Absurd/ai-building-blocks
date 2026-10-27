@@ -30,6 +30,7 @@ you_get:
   - Strengths and threats listed
   - A check of question against sources
   - A rewritten question and teaching notes
+next: [history-source-set-picker, history-source-simplifier, primary-source-lesson]
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page. No code, files or paid tools are needed.
   - Paste your draft question.

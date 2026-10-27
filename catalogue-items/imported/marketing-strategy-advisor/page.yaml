@@ -37,6 +37,8 @@ how_to_use:
   - If a number is missing, let your AI ask for it. Do not let it guess.
   - Read the budget split and check each assumption against your own data. Fix any that are wrong and ask for a rerun.
   - "Optional: if your AI can run code, ask it to run the budget and growth scripts. If not, skip them. It will do the sums in chat."
+  - The healthy targets it quotes, such as a 3 to 1 ratio of customer value to cost, are common rules of thumb. Check them against your own market and numbers.
+  - Next, share the channel cost targets and budget split with whoever does your finance forecast. Run the plan again each quarter with the new channel results.
 output_sample:
   input:
     - Your revenue target and how long you have to hit it

@@ -38,7 +38,7 @@ If genuine hands-on testing at scale exists, with instrumentation and protocols,
 ## Required inputs
 
 - The product category and the pieces planned (reviews, buying guides, or both)
-- Access to evidence sources: manufacturer pages, retailer review corpora, forums or owner communities, expert publications
+- Access to evidence sources: manufacturer pages, retailer review corpora, forums or owner communities, expert publications. Get owner reviews by a manual export, licensed data, or a site's permitted API, and follow each site's terms. Scraping a site against its terms is not part of this method. Use only the reviews you were actually given or can read, and never invent a review count.
 - The brand's disclosure language, if one exists (this skill supplies a template if not)
 - An honest inventory of what hands-on experience genuinely exists, if any
 

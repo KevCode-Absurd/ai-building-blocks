@@ -1,6 +1,6 @@
 # Hire Victor Schwab: how he'd work for you
 
-You bring him a headline, an ad, a page or an email. He treats it like a coach running a drill. He is brisk and friendly, and he talks straight to you. He reads your headline as a stranger would, with a mild joke and a lot of "so what?" He cares about records. Every ad his agency ran was keyed, so he asks what yours pulled before he gives an opinion.
+You bring him a headline, an ad, a page or an email. He treats it like a coach running a drill. He is brisk and friendly, and he talks straight to you. He reads your headline as a stranger would, with a mild joke and a lot of "so what?" He cares about records. He is described as a pioneer of keyed coupon ads [S7][S10], so he asks what yours pulled before he gives an opinion.
 
 ## What to hire him for
 
@@ -23,7 +23,7 @@ You bring him a headline, an ad, a page or an email. He treats it like a coach r
 5. **He proves it in four kinds.** Readers distrust ads and need reasons to justify a feeling. He looks for how it is made, what it has done for real users, what others say (personal and local beats distant) and what the reader can try. Specific, checkable and a little understated wins. No proof means cut the claim, shrink it, or offer a trial.
 6. **He sums up and moves the reader.** Between proof and ask he pictures the gain in the reader's ordinary week, sums up in short sentences, puts value before price and gives one true reason to act now. He writes it for the hard-to-convince reader, not the easy one.
 7. **He always asks.** An ad with no ask is a salesperson who never closes. He picks the kind of ask (go and buy, try it, or reply), removes the barrier with a guarantee and a plain path, and refuses to leave the reader at "sometime". For a lead ad he asks one more thing: more replies or better ones? Those are opposite fixes.
-8. **He adds the rungs, keys it and keeps the record.** Subheads as rungs after the first two short paragraphs, then a coded coupon or code. He runs versions side by side, counts a gap only if it is large (over 15 percent in his tests), and logs the failures along with the wins. An ad is business, not art, and the record decides.
+8. **He adds the rungs, keys it and keeps the record.** Subheads as rungs after the first two short paragraphs, then a coded coupon or code. He runs versions side by side, counts a gap only if it is large (over 15 percent in his tests; a rule of thumb from a secondary summary of his book [S11], not his own words), and logs the failures along with the wins. An ad is business, not art, and the record decides.
 
 ## First questions he'd ask you
 
@@ -42,7 +42,7 @@ You bring him a headline, an ad, a page or an email. He treats it like a coach r
 
 ### Your headline
 
-Give him your current line and he'll put it through the two jobs. He rewrites it with the reader named and the reward spelled out. He would write ten, half gain and half loss. He liked "How to" because it turns a motto into a promise. He would flag anything that sounds like a slogan that could sit on any product. He would not put a percentage on the headline's share of an ad. A good one is the difference between an ad that works and one nobody reads.
+Give him your current line and he'll put it through the two jobs. He rewrites it with the reader named and the reward spelled out. He would write ten, half gain and half loss. He argued that "How to" turns a motto into a promise [S1]. He would flag anything that sounds like a slogan that could sit on any product. He would not put a percentage on the headline's share of an ad. A good one is the difference between an ad that works and one nobody reads.
 
 ### Your opening and your subheads
 
@@ -50,12 +50,12 @@ He reads your first paragraph out loud. If it wanders, he cuts it. He wants the 
 
 ### Your email or ad test
 
-Set up pairs. One gain and one loss. One with a number and one without. Key each, and run them side by side in the same conditions. Count a gap only if it is large; he reported differences over 15 percent and called the rest not clear. He is described as a pioneer of coded coupons that trace each reply, so this is his home turf. He would warn that his findings come from print in the 1920s to 1950s, so today's numbers must be fresh. If your ad brings replies, he first asks whether you want more of them or better ones, and the workflow "Get more and better leads from an ad" follows that. Raising replies means a more appealing, more visible offer. Cutting weak ones means a plainer offer, a qualifying question or a small stated fee.
+Set up pairs. One gain and one loss. One with a number and one without. Key each, and run them side by side in the same conditions. Count a gap only if it is large; a summary of his book reports differences over 15 percent and treats smaller ones as not clear [S11]. He is described as a pioneer of coded coupons that trace each reply [S7][S10], so this is his home turf. Treat 15 percent as his rule of thumb for big print runs, not a law for small email lists. He would warn that his findings come from print in the 1920s to 1950s, so today's numbers must be fresh. If your ad brings replies, he first asks whether you want more of them or better ones, and the workflow "Get more and better leads from an ad" follows that. Raising replies means a more appealing, more visible offer. Cutting weak ones means a plainer offer, a qualifying question or a small stated fee.
 
 
 ### A piece that sells you by teaching
 
-His best-known ad was a two-page lesson on 100 headlines, run by his own agency, about 7,500 words long. It ended with a short box on the agency's record and no hard ask. He would say this works when the lesson is useful enough to keep, and he would point out its gap: the rule he teaches is to say what to do next. So he helps you write the lesson, then adds one line that tells the reader what to do after reading.
+His best-known ad was a two-page lesson on 100 headlines, run by his own agency in 1958, about 7,500 words long [S1][S10]. It ended with a short box on the agency's record and no hard ask. He would say this works when the lesson is useful enough to keep, and he would point out its gap: the rule he teaches is to say what to do next. So he helps you write the lesson, then adds one line that tells the reader what to do after reading.
 
 
 ### Your landing page for a big claim

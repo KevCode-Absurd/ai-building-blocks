@@ -41,6 +41,8 @@ how_to_use:
   - Add dates, errors or workarounds you know about.
   - Check the evidence table against your tickets. Make sure each claim has a source.
   - Send the fixes to the teams that own them and ask them to confirm the cause before acting.
+  - Next, update the help article with the solved ticket help page writer, or send a customer reply with the customer reply drafter. For a software bug you have already pinned down, use the bug root cause finder.
+next: [solved-ticket-help-page-writer, customer-reply-drafter]
 output_sample:
   input:
     - Related Gorgias ticket numbers, a topic, or pasted issue descriptions

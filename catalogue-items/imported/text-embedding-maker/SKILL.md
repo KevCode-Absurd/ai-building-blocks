@@ -22,7 +22,7 @@ Python framework for sentence and text embeddings using transformers.
 - Running embeddings locally (no API)
 - Cost-effective alternative to OpenAI embeddings
 
-**Metrics**:
+**Metrics** (the author's rough figures from when the skill was written, not checked here. Look up current numbers before you quote them):
 - **15,700+ GitHub stars**
 - **5000+ pre-trained models**
 - **100+ languages** supported
@@ -210,7 +210,7 @@ embed_model = HuggingFaceEmbedding(
     model_name="sentence-transformers/all-mpnet-base-v2"
 )
 
-from llama_index.core import Settings
+from llama_index.core import Settings, VectorStoreIndex
 Settings.embed_model = embed_model
 
 # Use in index
@@ -230,7 +230,7 @@ index = VectorStoreIndex.from_documents(documents)
 
 1. **Start with all-MiniLM-L6-v2** - Good baseline
 2. **Normalize embeddings** - Better for cosine similarity
-3. **Use GPU if available** - 10× faster encoding
+3. **Use GPU if available** - Often much faster encoding (depends on your hardware)
 4. **Batch encoding** - More efficient
 5. **Cache embeddings** - Expensive to recompute
 6. **Fine-tune for domain** - Improves quality
@@ -238,6 +238,8 @@ index = VectorStoreIndex.from_documents(documents)
 8. **Monitor memory** - Large models need more RAM
 
 ## Performance
+
+Rough, unsourced figures. Speed and memory depend on your hardware and text length. Measure on your own machine.
 
 | Model | Speed (sentences/sec) | Memory | Dimension |
 |-------|----------------------|---------|-----------|

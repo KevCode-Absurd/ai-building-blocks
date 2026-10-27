@@ -1,0 +1,22 @@
+slug: flashcard-maker
+name: Flashcard maker
+summary: Paste your notes or a chapter. Get flashcards with one question and one short answer each, grouped by topic.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+    required: true
+  - type: copy_draft
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - lesson-understanding-check
+  - study-understanding-check

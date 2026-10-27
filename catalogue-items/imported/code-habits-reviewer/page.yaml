@@ -16,8 +16,8 @@ when:
   - Business logic is copied into several places.
   - You want a quick quality score for a codebase.
 not_for:
-  - "You want line-level tidying of names and functions: use a clean code review, since SKILL.md points to its clean-code skill for that."
-  - "You want to restructure messy code step by step: use a refactoring guide, since SKILL.md points to its refactoring-patterns skill."
+  - "You want line-level tidying of names and functions: use the Code cleanup planner."
+  - "You want to restructure messy code step by step: use the Code refactor planner."
   - "You have a small script or a throwaway prototype: skip this and just run it, since the habits pay off only when code lives long."
 you_give:
   - Code or a design description
@@ -30,7 +30,7 @@ you_get:
   - What to do first
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini. No code running or paid tool is needed.
-  - Paste the full text of the skill file as your first message.
+  - Paste the full text of the skill file (SKILL.md, about 2,400 words) as your first message. The references folder, with one file per principle, is optional. The review works from SKILL.md alone, but it will not see those extra notes.
   - Paste the code you want reviewed. A few files, one module or a design doc gives the most reliable score. A whole large codebase will not fit, so pick the part you worry about.
   - Add the language, the framework and your biggest worry if you have them.
   - Read the score and the failing checks first. Then fix the ones that cost the most effort.

@@ -192,6 +192,7 @@ Making calculator tools that get shared
 4. Make result shareable
 
 ### Result Presentation
+The dollar figures below are made-up examples of wording, not real results. Any number a tool shows must come from the user's own inputs and a stated formula.
 ```
 BAD:  "Result: $45,230"
 GOOD: "You could save $45,230 by age 40"
@@ -199,6 +200,8 @@ BEST: "You're leaving $45,230 on the table 💸"
 ```
 
 ### Comparison Features
+An average, a percentile or a rank is only allowed if it comes from a named, stated source (for example a published survey, with its year). Mark any sample numbers as placeholders. If there is no source, drop the comparison instead of inventing one.
+
 - "Compare with average"
 - "Compare with friends"
 - "See where you rank"
@@ -247,6 +250,10 @@ Message: Results not optimized for mobile sharing.
 Fix action: Design result cards mobile-first, test screenshots on phone
 
 ## Collaboration
+
+The companion skills named below (landing-page-design, viral-hooks, seo, frontend, ai-image-generation, ai-wrapper-product) are separate items. They are optional and are not part of this one; get them separately.
+
+The `risk: critical` label in the front matter comes from the original author's catalogue. This skill is a planning aid: it does not build or run anything by itself. Follow its advice with care when a tool gives money or health results.
 
 ### Delegation Triggers
 

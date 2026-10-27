@@ -198,15 +198,15 @@ Return your output in this exact format:
 > 3. Test your number on both players. Does it correctly show that Player B is more "spread out" than Player A?
 > 4. If you have time: would your number work for ANY two datasets, not just these two?
 
-**Expected student responses:**
+**Expected student responses** (illustrative guesses to help you prepare, not classroom data):
 
 Students will generate several approaches, most of which will be partially correct:
 
-- **Range approach (most common):** Player A range = 2 - 1 = 1. Player B range = 6 - 0 = 6. This works but is fragile — it only uses two data points and ignores everything in between. Approximately 60-70% of pairs will try this first.
+- **Range approach (most common):** Player A range = 2 - 1 = 1. Player B range = 6 - 0 = 6. This works but is fragile — it only uses two data points and ignores everything in between. This is likely the most common first try (a guess, not measured data).
 
-- **"Distance from mean" approach (less common but promising):** Some students will calculate how far each score is from the mean (1.5) and try to combine these distances. They'll likely add the distances, getting different totals for each player. This is close to the conceptual basis of standard deviation. Approximately 20-30% of pairs.
+- **"Distance from mean" approach (less common but promising):** Some students will calculate how far each score is from the mean (1.5) and try to combine these distances. They'll likely add the distances, getting different totals for each player. This is close to the conceptual basis of standard deviation. Expect fewer pairs (a guess).
 
-- **"Count the zeros" or "count the extremes" approach:** Some students will try non-mathematical approaches — counting how many times a player scored 0, or how many "big" games they had. This captures the intuition but isn't generalisable. Approximately 10-20%.
+- **"Count the zeros" or "count the extremes" approach:** Some students will try non-mathematical approaches — counting how many times a player scored 0, or how many "big" games they had. This captures the intuition but isn't generalisable. Expect a few pairs (a guess).
 
 - **Stuck/confused:** Some pairs will struggle to move from the verbal description ("Player B is more inconsistent") to a numerical measure. This is expected. The teacher should NOT help — the struggle is the point.
 

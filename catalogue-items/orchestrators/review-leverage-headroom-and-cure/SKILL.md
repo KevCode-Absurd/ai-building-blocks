@@ -46,7 +46,6 @@ For a requested workbook, use the spreadsheet tool you have and any template sup
 
 - No addback is allowed without evidence. No cure is treated as received, timely or effective without proof. Signed headroom uses the same date for debt, cash and EBITDA.
 - Each material input traces to its source, date, currency, scale, sign and period. Unresolved items stay as MISSING: lines.
-- Opening balances, additions, deductions and closing balances reconcile. Cash flows are matched to the right discount rate where one is used.
 - Real zeros, unavailable evidence and inapplicable ratios are told apart. No statement is forced to tie with an unexplained plug.
 - Original source locations, assumptions, formula conventions, failed checks and actual verification results are saved. End with CHECKS MISSED: none, or the exact outstanding checks.
 

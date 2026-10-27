@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your loose request
   - Answers to each round of questions
-  - Any context you have, such as audience or goal (optional)
+  - Your goal in one sentence, and any known audience or deadline (optional)
 you_get:
   - Short rounds of focused questions
   - Clear record of your choices

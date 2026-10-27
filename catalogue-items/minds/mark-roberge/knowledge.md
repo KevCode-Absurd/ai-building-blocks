@@ -1,6 +1,6 @@
 # Mark Roberge: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Mark Roberge is alive, and views can change. His own words here come from the first chapter of *The Sales Acceleration Formula* (2015, publisher excerpt) [S8], a 2020 Intercom interview [S1], a SaaStr question-and-answer session [S2], a full SaaStr Annual 2019 talk transcript [S9] and a Gainsight podcast transcript [S10]. Two write-ups by others [S11][S12] add detail on his HubSpot decisions and the Stage 2 Capital fund. They lean on his book, so they carry less weight. We could not find his birth year. The rest of that book and *The Science of Scaling* are not online, so we know them only through these talks and summaries. Treat each view as "as of" about 2019 to 2024. He now invests in startups, and here he explains frameworks only, never which companies to back.
 

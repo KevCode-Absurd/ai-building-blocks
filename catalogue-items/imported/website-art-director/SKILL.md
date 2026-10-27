@@ -218,7 +218,7 @@ Write the whole page as a copy deck (plain text) before markup, following `refer
   what it includes, an answer for each real question. Thin sections are the commonest reason a clean
   page loses to a busier one.
 - Sample details are expected where the brief leaves gaps (dish names, room names and rates, project
-  titles) so the design is seen at full density; list them in the report for the client to confirm.
+  titles) so the design is seen at full density; list them in the report for the client to confirm, and label each one on the built page itself as placeholder text (for example a visible "Sample" tag or a code comment) so nobody mistakes it for a real fact.
   Proof is never invented: no customers, quotes, reviews, press, logos or business statistics.
 
 ### 6. Build it, still

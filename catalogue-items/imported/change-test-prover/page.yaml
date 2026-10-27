@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open your AI in a place where it can run code and read your Python project. A chat window with no file access will not work.
   - "Paste the skill text. Say which change to check: your uncommitted work, or a branch to compare with main."
-  - Let it write the check first, then run the mutation check. It fetches a runner from GitHub, so review that runner before first use.
+  - Let it write the check first, then run the mutation check. It fetches a runner from GitHub, so review that runner before first use. Look for network calls and writes outside your project.
   - Read the verdict. If it says gaps, let your AI add tests for each surviving mutant. It stops after three rounds.
   - Check the final report. Look at which new tests fail on the old code, and read any mutants it left for you to judge.
 output_sample:

@@ -33,6 +33,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed to run it.
   - Describe how you sell, your deal size, your sales cycle and the tools you use.
   - Say what is going wrong today, such as slow follow-up or leads sales rejects. Start there.
+  - Have ready your current lead volume, your current MQL definition (marketing qualified lead) and any response-time promises you already make. If you have past won and lost leads, add them, so the scoring can be tested. Without that history, start with fit and engagement points only.
+  - Treat any benchmark it quotes, such as conversion rates or response-time figures, as a rough rule of thumb. Compare against your own past numbers.
   - Read each document it gives you. Check that every stage and handoff has an owner and a time limit.
   - Fix anything that does not match how your team works. Then build it in your CRM.
 output_sample:

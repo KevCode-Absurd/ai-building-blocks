@@ -31,9 +31,10 @@ how_to_use:
   - Use an AI that can run code and the Shopify command line. A plain chat window can't do this.
   - Sign in to your store with the Shopify command line, with permission to read and write orders.
   - Give your AI the skill and your store domain. Add the number of days if you don't want 30.
+  - Tell your AI which tag marks your live B2B quotes, if you use one. It keeps those drafts out of the delete list.
   - Read the dry-run list. It shows what would be deleted and nothing is removed yet. Look for notes, high values and open B2B quotes.
   - Say yes only when the list is right. Deletes are permanent and can't be undone.
-  - Open the CSV file to see what was removed.
+  - Open the CSV file to see what was removed. Keep it as a record. Check it against your Shopify admin, and run the clean-up again each month.
 output_sample:
   input:
     - Your store domain

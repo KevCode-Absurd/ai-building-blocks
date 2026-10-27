@@ -19,5 +19,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [benjamin-graham, warren-buffett]
 credits:
-  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "The order of the steps: read what the market is offering you, check whether the business itself has changed, write your rules for price drops"}
+  - {title: "The Intelligent Investor (revised edition, with commentary by Jason Zweig)", by: "Benjamin Graham", used: "Inspired by its Mr. Market idea: read what the market is offering you, check whether the business itself has changed, write your rules for price drops"}
 generated_from: intake/intelligent-investor-mr-market/skeleton.yaml

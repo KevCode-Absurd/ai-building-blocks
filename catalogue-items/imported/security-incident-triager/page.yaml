@@ -32,9 +32,9 @@ you_get:
   - Next steps
 how_to_use:
   - Open a chat with an AI that can run Python code, and paste in the skill instructions. Without code running, it can still triage by hand.
-  - Paste the alert details. Use JSON if you have it, plain text if not.
+  - Paste the alert details. For the script, use JSON with at least event_type and host. Add user, source_ip, timestamp and raw_payload if you have them. Plain text works for a hand triage.
   - Add the systems and data involved. Add your escalation contacts and your location and sector if you have them.
-  - Read the severity, the false positive flag and the escalation path first.
+  - Read the severity, the false positive flag and the escalation path first. The script returns the severity, an exit code (0, 1 or 2), the escalation path and the false positive flag. A false positive is closed only when the source host or asset also matches, and every closure is logged.
   - If the severity is SEV1 or SEV2, alert your security lead at once. Then start the evidence list.
   - Check any notice deadlines with legal counsel before you act on them.
 output_sample:

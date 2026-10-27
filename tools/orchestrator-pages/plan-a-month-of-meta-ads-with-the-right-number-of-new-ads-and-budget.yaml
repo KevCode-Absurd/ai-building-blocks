@@ -15,7 +15,7 @@ when:
   - Your ads have gone stale and you want fresh ideas that come from what buyers say, not from a guess.
   - You can add budget and want to know which channel should get it.
 not_for:
-  - "You run a brand new store with no spend history: start with a simple test plan, or use the Ad test budget setter."
+  - "You run a brand new store with no spend history: start with a simple test plan, or use the Ad test budget calculator."
   - "You only need one brief for one ad idea: use the Ad test brief writer."
   - "You want to check an ad before it goes live: use the Pre-launch ad checker or the Meta ad policy checker."
 you_give:

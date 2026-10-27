@@ -761,5 +761,18 @@
   "review-a-product-against-ten-principles-then-cut-what-it-does-not-need": "ten-principles-review",
   "sort-decisions-by-how-reversible-they-are-and-fund-long-shots": "reversible-decisions",
   "test-a-story-idea-check-every-scene-turns-and-strip-the-voice-over": "story-idea-test",
-  "work-back-from-a-low-price-to-a-cheaper-way-of-making-it": "target-cost-production"
+  "work-back-from-a-low-price-to-a-cheaper-way-of-making-it": "target-cost-production",
+  "test-idea-shortlist-maker": "test-idea-ranker",
+  "process-waste-walk-planner": "process-waste-finder",
+  "plain-error-message-writer": "error-message-rewriter",
+  "ad-test-budget-setter": "ad-test-budget-calculator",
+  "late-invoice-reminder-writer": "payment-reminder-letter-writer",
+  "five-colour-feeling-palette-picker": "mood-colour-palette-planner",
+  "negotiation-call-opening-planner": "negotiation-call-prep-planner",
+  "shipping-zone-and-rate-drafter": "shipping-rate-planner",
+  "two-version-ad-test-planner": "split-run-test-planner",
+  "open-word-finder": "owned-word-mapper",
+  "product-niche-problem-picker": "pain-point-niche-finder",
+  "setback-update-drafter": "bad-news-update-writer",
+  "open-buyer-group-finder": "untapped-buyer-finder"
 }

@@ -34,7 +34,8 @@ how_to_use:
   - Open an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
   - Paste the skill and give your store address. Add days, a collection or triples if you want them.
   - Check the order count first. If few orders had two or more products, run it again with a longer window.
-  - Use the top pairs to plan bundles by hand. Pairs with high lift are the strongest ideas.
+  - Use the top pairs to plan bundles by hand. Pairs with high lift are the strongest ideas. A store with over 250 orders in the window needs several passes, so the run takes longer.
+  - Next, check the pairs against the Top product ranker, then build the bundle or cross-sell offer from the CSV.
 output_sample:
   input:
     - Your store address

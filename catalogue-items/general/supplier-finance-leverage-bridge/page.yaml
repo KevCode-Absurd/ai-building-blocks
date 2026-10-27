@@ -4,7 +4,7 @@ headline: Supplier finance leverage bridge
 summary: See how treating supplier finance as debt changes your net debt and trade payables, with the reported figures kept beside the adjusted ones.
 job: track-numbers
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: "Moving a balance from payables to debt changes two figures at once, so each move needs evidence from the notes."
 subhead: Give it reported debt, cash, trade payables and the supplier finance balances you can prove. It moves only the proven balance from payables to debt, takes off cash once and shows reported and adjusted figures side by side.
 explain: |-
   Some companies pay suppliers through a finance provider, and the balance can sit in trade payables instead of debt. An analyst may want to see that balance as debt-like. This bridge builds that view without overwriting the reported one.
@@ -51,10 +51,10 @@ output_shape: |-
   Actual file verification
   MISSING: and CHECKS MISSED
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: "Balance sheet date"
+    how: "Take the balance sheet date from the debt note, the payables note and the supplier finance disclosure. Use one currency and scale on every line."
+  - what: "The supplier finance balance"
+    how: "Change the the supplier finance balance and have your AI recalculate. Keep the actual figures you supplied."
   - what: Acceptance
     how: Supplier balances are not already included in financing debt.
 judge:
@@ -67,8 +67,8 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save one supplier finance adjustment you have already checked as an approved example, so your AI copies its layout."
+  - "Write how your documents define supplier finance into SKILL.md, so every run uses your wording."
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
@@ -84,7 +84,7 @@ terms:
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
 not_for:
-  - "You need to recheck a loan net debt limit after earnings or cash change: use Loan net debt covenant reviewer."
+  - "You need to recheck a loan net debt limit after earnings or cash change: use the Net leverage covenant checker."
   - "You want to see how much cash really went into working capital: use Noncash working-capital bridge."
   - "You want a ruling on how the accounts must classify these balances. Ask the auditor; this is a what-if view."
 output_sample:

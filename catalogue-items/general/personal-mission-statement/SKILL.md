@@ -7,6 +7,13 @@ description: Use when you have your roles, goals and values and want them in a s
 
 A mission statement is a standard for choices. It says what you want to be and what you want to do, in a few lines you can bring to mind when a request lands. It is worth little if it sounds like a poster. This skill builds it from your own roles, goals and values, in three lengths, so you can pick the one you will use. For testing it, use "Mission choice tester". For a company mission, use "Business mission writer".
 
+## When not to use it
+
+- You want a company or brand mission: use "Business mission writer".
+- You have not listed your roles and goals yet: start with "Roles and long-term goals mapper", then come back.
+- You already have a statement and want to test it: use "Mission choice tester".
+- You only want a ranked list of values: use "Eulogy values finder".
+
 ## Required input
 
 Your **roles and long-term goals** are required. If they are missing (an empty message, or only "go ahead"), do not return a blank template. Ask for them in one line and stop: "List your roles (for example parent, manager, friend) and one or two long-term goals for each." You can also point them to the [Roles and long-term goals mapper](https://useaiblocks.com/skills/roles-and-goals-mapper). This rule beats any "go ahead" wording in "Before you start" below.
@@ -93,7 +100,7 @@ CHECKS MISSED
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Decide what to do** with the [Mission choice tester](https://useaiblocks.com/skills/mission-choice-tester). It takes the draft.
+- The [Mission choice tester](https://useaiblocks.com/skills/mission-choice-tester). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

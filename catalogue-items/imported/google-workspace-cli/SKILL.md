@@ -33,7 +33,9 @@ This skill acts on real Gmail, Drive, Calendar and admin data. Follow these rule
 python3 scripts/gws_doctor.py
 ```
 
-### Send an Email
+### Send an Email (a change: read first, then confirm)
+
+This sends real email. Under rules 2 and 3 above, start with a read-only command such as the unread summary (`gws gmail +triage`, check `--help` for the exact name), show the exact command below, check `gws gmail +send --help` for a dry-run option, and wait for a clear yes before running it.
 
 ```bash
 gws gmail +send --to "team@company.com" \

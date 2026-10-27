@@ -35,6 +35,7 @@ how_to_use:
   - Let it run the tests first. If you have none, it writes one from a sample input and the current result.
   - Check each change it proposes. If a test fails, it undoes that change and stops.
   - Apply the final diff only after your own tests pass.
+  - For new code, plan the approach first. For math-level changes, such as a Bloom filter or an FFT, ask a developer.
 output_sample:
   input:
     - Your slow code

@@ -23,7 +23,7 @@ uses:
   - traction-experiment-reviewer
 steps:
   - uses: find-your-saas-growth-channel
-    note: Run on the first run, or when the saved plan needs redoing. It hands step 2 the business profile, the channel pilots and the review plan.
+    note: Run on the first run, or when the saved plan needs redoing. Runs the whole growth channel workflow, which profiles the business, shortlists channels and plans a small test for each. It hands step 2 the business profile, the channel pilots and the review plan.
   - uses: traction-experiment-reviewer
     note: Run on later runs, when new results have matured. It reads the saved business profile and channel pilots from step 1 and your new results, and hands back a dated decision and the next test.
 asks_before:

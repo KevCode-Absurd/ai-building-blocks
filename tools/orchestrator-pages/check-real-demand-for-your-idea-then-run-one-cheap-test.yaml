@@ -9,7 +9,7 @@ subhead: Give it your idea. It reads what people post about the problem, tries t
 explain: |
   Most ideas die for a plain reason that was findable in a week. People never complained about the problem, or they already fixed it another way, or they would not pay. You feel sure because you have not looked yet, and building feels easier than asking.
 
-  The steps look first, then judge, then test. It reads public posts about the problem and groups the pain, the workarounds and the buying signals. It turns that into a short buyer brief. It then tries to kill the idea and names the one fact that would end it. If the idea survives, it designs two or three cheap tests, each with a pass mark. The pause asks you to run the cheapest test for a week or two and compare the numbers with the pass mark. The first step may need a ScrapeCreators account to read posts. If you would rather not, paste posts you gathered yourself.
+  The steps look first, then judge, then test. It reads public posts about the problem and groups the pain, the workarounds and the buying signals. It turns that into a short buyer brief. It then tries to kill the idea and names the one fact that would end it. If the idea survives, it designs two or three cheap tests, each with a pass mark. The pause asks you to run the cheapest test for a week or two and compare the numbers with the pass mark. The first step reads posts through a paid ScrapeCreators account. If you would rather not use one, paste posts and comments you gathered yourself, with their links.
 when:
   - You have an idea and have not built anything yet.
   - Friends say it is great, but nobody has paid or signed up.
@@ -21,6 +21,7 @@ not_for:
 you_give:
   - Your idea in a sentence or two, and who you think it is for
   - The words you would search for to find people with the problem
+  - Your budget and days for a test
   - Anything you already know about rivals or workarounds (optional)
   - Your brand file (optional)
 you_get:

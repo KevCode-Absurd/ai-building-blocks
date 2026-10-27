@@ -56,7 +56,7 @@ Before starting any task, mentally check how many of these apply:
 
 ### Step 2: Ask Round 1 Questions
 
-Ask up to 3 questions using `ask_user_input_v0`. Group related questions in a single call. Lead with 1–2 sentences explaining why you're asking. Mark one option per question as **(Recommended)**.
+Ask up to 3 questions using `ask_user_input_v0`. If that tool is not available (for example in a plain chat), ask the same questions as a short lettered list in plain text, mark the recommended option, and wait for the reply. Where this skill says Antigravity, it means you, whichever AI you are. Group related questions in a single call. Lead with 1–2 sentences explaining why you're asking. Mark one option per question as **(Recommended)**.
 
 ### Step 3: Re-run the Checklist
 

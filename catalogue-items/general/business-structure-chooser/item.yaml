@@ -1,0 +1,23 @@
+slug: business-structure-chooser
+name: Business structure chooser
+summary: Share your country, plans and owners. Get business structures compared on risk, tax and paperwork, plus questions for an accountant.
+category: general
+boards: []
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+  - type: question
+    required: false
+origin: own
+version: 1.0.0
+next:
+  - business-insurance-needs-checker
+  - tax-set-aside-planner
+  - startup-business-planner

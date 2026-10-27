@@ -16,7 +16,7 @@ when:
   - You run a small team and need a morning list of what to ship first.
   - You want to catch held orders before customers complain.
 not_for:
-  - "You need to place or release a hold on an order: use the order-hold-and-release skill."
+  - "You need to place or release a hold on an order: use the Order hold manager skill."
   - "You have no way to give your AI access to your Shopify admin: check orders by hand on the Orders page."
   - "You want to track orders that already shipped: use the shipping and carrier tracking in your Shopify admin."
 you_give:
@@ -33,7 +33,8 @@ how_to_use:
   - Sign in to your store with the Shopify CLI first. Your sign-in needs permission to read orders.
   - Give your AI the skill and your store address. Add your own age cut points if you want them (optional).
   - Read the age table first. Start with the oldest group.
-  - Check the held orders list. Then fix those orders in Shopify, or use the order-hold-and-release skill.
+  - Check the held orders list. Then fix those orders in Shopify, or use the Order hold manager skill.
+next: [order-hold-manager]
 output_sample:
   input:
     - Your store address

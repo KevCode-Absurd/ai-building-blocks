@@ -7,18 +7,24 @@ description: Use when costs have grown faster than revenue and you must decide w
 
 When spending grows faster than sales, the gap does not close by itself. A series of small cuts keeps people on edge, and a vague note loses trust. This skill puts the numbers side by side, helps you make one clear decision and drafts the note to staff. The approach comes from two notes Daniel Ek wrote to Spotify staff in 2023.
 
+## When not to use
+
+- You only need a small budget tweak. Do a regular budget review with your finance lead or in a spreadsheet.
+- Costs and revenue have grown at about the same pace. Keep your normal budget review and skip a reset.
+- You need to give legal notice or pay terms. Ask an employment adviser, then use this for the plan and note.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
-**Works best with** (or they can paste their own instead):
+**What you need** (use your own material or the linked skill):
 - **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your results, your question. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your results, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **A spreadsheet:** Your figures and growth rates are easiest to check in a sheet before the AI uses them.
@@ -26,6 +32,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the inputs for this skill. If the section above asks for an ads export, ignore that: use your own cost ledger, payroll totals and revenue reports by period. Revenue figures are the one thing it cannot run without.
 
 - **Costs and revenue** (required): at least two comparable periods, with what each column means.
 - **The big spending decisions** (required): what each was, its cost and who approved it.
@@ -47,14 +55,13 @@ How to start:
 
 ## What you hand back
 
-Cost against revenue. The bets that ran ahead. The decision and why. Who is affected, and the support for each. The goal that stays. The draft note. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+Cost against revenue. The bets that ran ahead. The decision and why. Who is affected, and the support for each. The goal that stays. The draft note, with a line that legal notice and pay rules vary and must be checked with an employment adviser before it is sent. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Lead the team** with the [Disagree-and-commit note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
-- **Say it to the room** with the [Annual letter writer](https://useaiblocks.com/skills/annual-letter-writer). It takes the draft and plan.
-- **Sell it** with the [Disagreement calming line writer](https://useaiblocks.com/skills/disagreement-calming-line-writer). It takes the plan.
+- The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.
+- The [Team decision and dissent note writer](https://useaiblocks.com/skills/disagree-and-commit-note-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -69,7 +76,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <part>`. With no revenue figures, stop and ask. Never invent a number, a legal term or a name. Say that legal and pay rules vary and should be checked with an adviser before sending.
+Write `MISSING: <what> for <part>`. With partial data, carry on and mark each gap. With no revenue figures at all, stop and ask. Never invent a number, a legal term or a name. Say that legal and pay rules vary and should be checked with an adviser before sending.
 
 ## Avoid
 

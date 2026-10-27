@@ -36,7 +36,7 @@ how_to_use:
   - "Type your trade: strategy, ticker, strikes, expiry, premium and quantity. Or add a broker screenshot."
   - Check the strategy summary. Any value you did not give, such as premium, volatility, spot or days left, is a default guess. Replace it with your real number.
   - Drag the sliders to see how price, volatility and time change the lines.
-  - A live price quote needs Python with yfinance and fetches data from a third-party site. Without it, type your spot price. This is for learning, not advice.
+  - A live price quote needs Python with yfinance. It reads an unofficial feed from a third-party site that can change or block requests. Without it, type your spot price. Before you place or close any trade, take the break-even and max loss figures to your broker and check premium and volatility against live quotes. This is for learning, not advice.
 output_sample:
   input:
     - Your strategy type and underlying, typed or from a broker screenshot

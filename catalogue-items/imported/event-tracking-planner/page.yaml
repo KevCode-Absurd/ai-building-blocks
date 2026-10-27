@@ -31,12 +31,13 @@ you_get:
   - User identity plan
   - North Star metric choice
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. Your own analytics tool, such as Mixpanel, Amplitude or PostHog, may cost money.
   - Describe your product in a few lines and list the main steps a user takes.
   - Say which analytics tool you use and what your business goal is. Paste your current event list if you have one.
   - Read the event list first. Cut any event you will not use, and check that names follow the rules.
   - Check the funnels and the North Star metric against your goal. Ask your AI to fix anything that does not fit.
   - Hand the final plan to your developers to build.
+  - If you have not yet decided what to measure and why, do that first with your team. The strategy skills this plan mentions, analytics-strategy and experimentation-analytics, are not in this library yet.
 output_sample:
   input:
     - Your product description and the main steps a user takes
@@ -48,13 +49,13 @@ output_sample:
     - A clear idea of what you want to measure
   output:
     - name: Event list
-      contains: Each event with its name, what triggers it, its properties, an owner and a version.
+      contains: A table with one row per event and the columns name, trigger, properties, owner and version.
     - name: Naming rules
       contains: How to name events and properties, such as object then past-tense action, snake_case and money in cents.
     - name: Schema versioning plan
       contains: How to change events later without breaking old data, including when to add a new version.
     - name: Funnels
-      contains: Step-by-step paths such as signup to paid, with the start event and a time window.
+      contains: Numbered steps for paths such as signup to paid, with the start event and a time window.
     - name: Retention cohorts
       contains: Groups of users defined by when they joined or what they did, so you can track who returns.
     - name: User identity plan

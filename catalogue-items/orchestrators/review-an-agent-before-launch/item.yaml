@@ -11,12 +11,17 @@ job: ops
 level: intermediate
 execution: coordinator
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: codebase
+    required: true
+  - type: audit_report
     required: false
 outputs:
-  - type: document
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
 uses:
   - copilot-agent-governance
   - copilot-agent-owasp-compliance
@@ -24,13 +29,13 @@ uses:
   - copilot-audit-integrity
 steps:
   - uses: copilot-agent-governance
-    note: "1. Read skills/copilot-agent-governance/SKILL.md. Share how your agent uses tools. Get controls for permissions, trust and risky actions. It hands over a plan of controls for the later steps to keep in view. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
+    note: "1. Read skills/copilot-agent-governance/SKILL.md. Share the agent's job and each tool it can call, with a note on whether the tool reads or changes things. Get controls for permissions, trust and risky actions: allow, deny or ask a person for each tool. It hands over a plan of controls for the later steps to keep in view. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-agent-owasp-compliance
-    note: "2. Read skills/copilot-agent-owasp-compliance/SKILL.md. Share your agent code. Get findings against the OWASP agent risks, with evidence and fixes. It uses your agent code, not the control plan from step 1, and hands over the OWASP findings. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
+    note: "2. Read skills/copilot-agent-owasp-compliance/SKILL.md. Share your agent code. Get a pass or fail line for each of the 10 OWASP agent risks, with evidence and fixes. It uses your own agent code and tests it against the control plan from step 1, and hands over the OWASP findings. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-agent-supply-chain
-    note: "3. Read skills/copilot-agent-supply-chain/SKILL.md. Share your agent tools and packages. Get file checks and a record of supply chain risks. It uses your agent code and package files, not the findings from step 2, and hands over the supply chain findings. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
+    note: "3. Read skills/copilot-agent-supply-chain/SKILL.md. Share your agent tools and packages. Get file checks and a record of supply chain risks. It uses your own agent code and package files, not step 2's findings, and hands over the supply chain findings. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-audit-integrity
-    note: "4. Read skills/copilot-audit-integrity/SKILL.md. Share a security audit. Get claims without proof, missing facts and failed checks called out. It reads the findings from steps 2 and 3 as the audit to check, and hands over the evidence review. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
+    note: "4. Read skills/copilot-audit-integrity/SKILL.md. Share a security audit. Get claims without proof, missing facts and failed checks called out. It reads the findings from steps 2 and 3, and any audit you supply, as the audit to check against the files they cite, and hands over the evidence review. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
 origin: rebuilt
 version: 1.0.0
 credits:

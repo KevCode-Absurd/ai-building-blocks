@@ -31,7 +31,7 @@ you_get:
   - Three actions for this week
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill. Use an AI that can read your connected tools if you have one.
-  - Connect your sales and marketing tools, or upload exports such as a CRM deal list, a sales report or an ads CSV.
+  - Connect your sales and marketing tools, or upload exports such as a CRM deal list, a sales report or an ads CSV. For reviews, name the public review pages to read, or paste the reviews in. It does not log in to anything.
   - Say which week or month to review. Add your goals and last period's figures if you have them.
   - Read the one-line story first, then check the status on each of the five views.
   - Pick from the three actions. Each one shows the number behind it, so you can check it before you act.
@@ -61,3 +61,4 @@ output_sample:
       contains: Each action says what to do, why with a number from the page, and what it is worth.
     - name: Appendix
       contains: Sources that were missing or had no data, marked n/a.
+next: [growth-roadmap-builder, kpi-dashboard-designer]

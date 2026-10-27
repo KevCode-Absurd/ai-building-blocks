@@ -9,7 +9,7 @@ subhead: Give it de-identified or made-up facts, each with a source. It builds a
 explain: |
   A structured draft for a clinical case, trial or safety report, plus checks that show what is missing or inconsistent. It works only with de-identified or invented data, and every output is marked as a draft not for clinical use.
 
-  It picks the reporting guide that fits your report type and builds the outline from the facts you supply. It does not guess or fill gaps: missing dates, units or outcomes are listed for a person to resolve. Local scripts check structure and internal consistency, such as numbers that do not add up or sections left blank. It keeps track of where each fact came from. It will not diagnose, advise treatment, sign off or send anything anywhere.
+  It picks the reporting guide that fits your report type and builds the outline from the facts you supply. It does not guess or fill gaps: missing dates, units or outcomes are listed for a person to resolve. Local scripts check structure and internal consistency, such as numbers that do not add up or sections left blank. It keeps track of where each fact came from. The scripts only check what you declare. They do not open your source records, confirm the source links are real, or prove the data is de-identified. A person has to do those. It will not diagnose, advise treatment, sign off or send anything anywhere.
 when:
   - You are drafting a case report and need a proper outline.
   - You want to check your tables for numbers that do not add up.
@@ -36,6 +36,7 @@ how_to_use:
   - Fill in only facts you can verify. Ask your AI to run the checks.
   - Read the gap list and the failed checks. Fix the facts yourself. Never let the AI guess.
   - This needs an AI that can run Python code on files. In a plain chat, you get the outline and a manual checklist.
+  - Last, a named qualified reviewer checks the gap list and signs off outside this tool. Use the CARE checklist for a case report or CONSORT for a trial report as the reference.
 output_sample:
   input:
     - A list of verified facts, each with an ID and a source note, in synthetic or de-identified form

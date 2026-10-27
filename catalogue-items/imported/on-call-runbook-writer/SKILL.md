@@ -116,6 +116,8 @@ If unresolved after [X] minutes:
 | YYYY-MM-DD | [Name] | Initial version |
 ````
 
+> **Warning: sample only.** The commands below scale deployments to zero, promote a replica and change DNS. They can cause downtime or data loss. Hosts, IDs and phone numbers are placeholders. Run any step like this in staging first, and have a second person confirm before a production run.
+
 ## Overview
 
 Failover the primary PostgreSQL instance to the synchronous replica when
@@ -207,7 +209,7 @@ kubectl scale deployment worker --replicas=4 -n production
 
 ## Rollback
 
-If the promoted replica has issues, restore from the most recent backup:
+If the promoted replica has issues, restore from the most recent backup. Note that this builds a new database from a snapshot. It does not undo the failover, and writes made since the snapshot are lost, so decide this with the DBA lead first:
 
 ```bash
 # Restore latest automated snapshot (RDS example)
@@ -324,6 +326,8 @@ exit $EXIT_CODE
 ```
 
 ### Disk Space Cleanup
+
+> **Warning: destructive.** This script deletes logs, temp files and Docker data, including volumes. Read each line, test it on a staging host, and have a second person confirm before you run it on production.
 
 ```bash
 #!/usr/bin/env bash

@@ -31,7 +31,7 @@ how_to_use:
   - Open your AI tool in the project folder, so it can read your files. This works best with Codex or a similar coding assistant.
   - Paste the skill text into the chat, or add the skill folder to your project.
   - "Ask: Audit this project and tell me which skills to add or update."
-  - Add your memory notes and past session summaries if you have them. The skill looks for them in the ~/.codex folder.
+  - Add your memory notes and past session summaries if you have them. The skill looks for them in the ~/.codex folder, which is where Codex keeps them. Other assistants do not use that folder, so paste your summaries instead. Those notes can hold private details, so check them and remove anything sensitive first.
   - If those folders are missing, it still reads your project files and existing skills, but the evidence will be thinner. Paste a few past chat summaries instead.
   - Check each pick has real evidence. Then ask your AI to write the skill you chose.
 output_sample:

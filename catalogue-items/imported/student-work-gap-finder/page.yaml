@@ -33,10 +33,13 @@ you_get:
   - A feedback script to say aloud
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tools are needed.
-  - Paste the student's work. Remove the student's name first.
+  - Check your school's data-protection and AI-use rules before you paste any student work. Remove the student's name and any other details that identify them.
+  - Paste the student's work.
   - Add your criteria and the learning goal. Add year level and subject if you can.
   - Read the strengths and gaps. Check each gap against the work itself.
   - Use the priority gap and the feedback script to talk with the student.
+  - To check your feedback is clear and useful, run it through the written feedback checker. To find why a student keeps making the same mistake, use the student mistake analyser.
+next: [written-feedback-checker, student-mistake-analyser]
 output_sample:
   input:
     - The student's work, pasted or described

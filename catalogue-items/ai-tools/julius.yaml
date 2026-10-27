@@ -21,7 +21,7 @@ best_for:
   - People who know their data but not code.
   - Quick looks at a file before a meeting.
 not_for:
-  - Large live reporting for a whole team.
+  - Large live reporting for a whole team. Use Hex for that.
   - Numbers you cannot check, since you still need to read the steps it ran.
 pricing:
   model: freemium
@@ -36,6 +36,23 @@ runs_in: [web]
 blocks: []
 alternatives: [hex, chatgpt, claude, gemini]
 last_checked: 2026-10-21
+first_result:
+  - "Go to julius.ai and sign up for the free plan, which has 15 messages a month. Write your questions down first so none are wasted."
+  - "Upload one export you know well, such as ad spend by campaign or orders by product."
+  - "Ask one question you can check by hand, such as which product sold the most."
+  - "Open the steps behind the answer. Check the columns and filters it used."
+  - "Ask for a chart or a table, then copy it into your report."
+  - "You end with a chart or table and the steps that made it."
+  - "Next: for weekly reports your team reruns, use Hex. For a quick chat about a small file, Claude or ChatGPT also work."
+needs:
+  - "A spreadsheet or CSV export."
+  - "A free account."
+  - "A question you can check by hand."
+  - "A paid plan for database connections."
+not_verified:
+  - "Which file types and sizes it accepts."
+  - "Where your uploaded files are stored and for how long. Check before you upload customer data."
+  - "Plan prices after April 2026."
 sources:
   - https://coefficient.io/julius-ai-pricing
   - https://www.eesel.ai/blog/julius-ai-pricing

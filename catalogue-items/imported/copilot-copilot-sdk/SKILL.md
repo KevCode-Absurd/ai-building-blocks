@@ -335,6 +335,7 @@ asyncio.run(main())
 
 ### Go
 ```go
+// This snippet needs the imports "fmt" and "math/rand" at the top of the file.
 type WeatherParams struct {
     City string `json:"city" jsonschema:"The city name"`
 }
@@ -559,6 +560,7 @@ async with await client.create_session(
 ```
 
 ### Go
+This is a sketch. The string keys `"type"` and `"url"` below are not valid Go struct fields. Check the `copilot.MCPServerConfig` type in the SDK and set its real fields before you build.
 ```go
 session, _ := client.CreateSession(&copilot.SessionConfig{
 	OnPermissionRequest: copilot.PermissionHandler.ApproveAll,

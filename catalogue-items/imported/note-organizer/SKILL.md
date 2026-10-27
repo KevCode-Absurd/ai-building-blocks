@@ -19,6 +19,8 @@ This skill enables an AI agent to manage a complete note-taking workflow: creati
 
 3. **Write Structured Content:** Format the note content using clear Markdown: headings for sections, bullet points for lists, checkboxes for action items, and bold text for key terms. Include metadata at the top (date, tags, related notes) to enable future retrieval.
 
+   **Record only facts the user supplied.** If you add background that the user did not give you, mark it "(to verify)" and name its source. Never present your own additions as the user's findings.
+
 4. **Organize with Tags and Links:** Add tags to the note's metadata to enable filtering by topic, project, or type. Where relevant, add links to related notes to build a connected knowledge base.
 
 5. **Retrieve and Synthesize:** When the user asks for information, search notes by filename, tags, or content. For broad queries ("What did we discuss about authentication this month?"), synthesize relevant notes into a summary rather than returning raw file contents.
@@ -86,6 +88,8 @@ related: []
 ---
 
 ### Example 2: Research Notes with Source Tracking
+
+> Added by AI Blocks: in this sample, the file includes some points the request did not state (for example, which ORMs break, the memory cost of raising max_connections, and read replica routing). Treat them as examples of added context. In real use, mark such points "(to verify)" with a source, or leave them out.
 
 **User Request:**
 > I'm researching connection pooling strategies for PostgreSQL. Take notes on what I've found so far:

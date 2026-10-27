@@ -5,13 +5,13 @@ job: make-image-ads
 headline: Twelve-pattern opening frame designer
 subhead: Share product photos, buyer, ad angle, brand rules and placement. Get three to five opening frame specs with layout and light notes.
 explain: |-
-  Choose opening frames from twelve visual patterns. Get a clear design brief for each first-frame test.
+  The first frame is your ad's thumbnail. It decides whether someone stops scrolling.
 
-  Share product photos, buyer, ad angle, brand rules and placement. Get three to five opening frame specs with layout and light notes.
+  This skill picks three to five of twelve visual patterns that fit your product, buyer and ad angle. For each one it writes a brief: what is in the frame, the layout, the text, the light and the colors. It also says which pattern to test first and what to change in each A/B variant. It flags health, before and after and comparison frames, which need checking against ad rules.
 when:
-  - You need three to five opening frame specs with layout and light notes.
-  - You need twelve-pattern opening frame designer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have product photos and an ad angle, and need three to five first frames to test.
+  - Your ads get few thumb stops and you want fresh visual ideas.
+  - You need a written brief to hand to a designer or photographer.
 not_for:
   - You need a finished image or a render. This gives written briefs only, so use a designer or an image tool to make the frame.
   - You want the spoken or written first line of the ad. Write that first, then pair it with each frame, because the method says to match the two.
@@ -25,9 +25,11 @@ you_get:
   - Three to five opening frame specs with layout and light notes
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI, or copy it and paste it into a new chat.
+  - Add your product photos or a description of them, your buyer, your ad angle and where the ad will run.
+  - Read the frame specs. Test the pattern it names first.
+  - Check any health, before and after or comparison frame against the ad platform's rules and your own facts.
+  - Give each brief to your designer, or use it with an image tool.
 output_sample:
   input:
     - Your product photos and packaging
@@ -49,19 +51,15 @@ output_sample:
 how_it_works:
   - title: Check the inputs
     text: Confirm product photos, buyer, ad angle, brand rules and placement. Mark facts that are missing.
-  - title: The 12 Visual Hook Patterns
-    text: Follow the the 12 visual hook patterns section in the full method and keep its required fields and decision rules.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Pick 3-5 Visual Hook Patterns
-    text: Follow the pick 3-5 visual hook patterns section in the full method and keep its required fields and decision rules.
-  - title: Design Each Frame
-    text: Follow the design each frame section in the full method and keep its required fields and decision rules.
-  - title: Production Notes
-    text: Follow the production notes section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return three to five opening frame specs with layout and light notes. Check facts, math and the decisions before any action.
+  - title: Pick three to five patterns
+    text: Match the twelve patterns to your theme, product and buyer. Skip any that need photos or claims you do not have.
+  - title: Design each frame
+    text: For each pattern, set the subject, layout, background, text, light and colors.
+  - title: Add production notes
+    text: List the photo type, what you have and lack, the time to make it, and A/B variants.
+  - title: Pair with a first line
+    text: Each frame gets a spoken or written hook to go with it.
+  - title: Check the rules
+    text: The first frame must read in half a second, with five to seven words of text at most.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

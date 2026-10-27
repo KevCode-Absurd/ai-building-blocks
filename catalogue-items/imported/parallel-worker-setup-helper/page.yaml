@@ -9,7 +9,7 @@ subhead: Parallel MATLAB code that stops failing on workers because each worker 
 explain: |
   Parallel MATLAB code that stops failing on workers because each worker has the paths, variables and objects it needs. It fixes errors like undefined function, cannot serialize or slow data transfer.
 
-  Workers share your path but do not inherit loaded libraries, open database connections or heavy objects. The skill shows which tool fits each case. Use parallel.pool.Constant for items that cannot be copied, parfevalOnAll to run setup once on every worker, and pool options for settings set at start. It also replaces the setup-with-spmd habit that wastes time. You need MATLAB with Parallel Computing Toolbox.
+  Workers share your path but do not inherit loaded libraries, open database connections or heavy objects. The skill shows which tool fits each case. Use parallel.pool.Constant for items that cannot be copied, parfevalOnAll to run setup once on every worker, and pool options for settings set at start. It also replaces the setup-with-spmd habit that wastes time. You need MATLAB with Parallel Computing Toolbox. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
 when:
   - A parfor loop works in a normal for loop but errors on workers.
   - Each worker needs its own database connection.
@@ -34,6 +34,7 @@ how_to_use:
   - Say what each worker needs, such as a library, a database connection, a path or a data file.
   - Read the cause note first, then check the setup code fits your case.
   - Run the fixed code in MATLAB yourself. Your AI cannot run it unless it has MATLAB access.
+  - Test it on a small loop first. Then check the worker logs, or run the pool with a few iterations, before you scale up.
 output_sample:
   input:
     - Your MATLAB code that uses parfor or parfeval

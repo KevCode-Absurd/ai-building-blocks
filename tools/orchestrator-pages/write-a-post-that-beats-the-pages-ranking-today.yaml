@@ -23,17 +23,18 @@ you_give:
   - Three to five links to the pages that rank for it, copied from a search
   - What your site is and who the post is for
   - Your facts, examples and any numbers you can share (optional)
+  - The link to your published draft, for the last step (you get it after you edit and publish)
 you_get:
   - A brief with the search intent, a coverage table, gaps to fill and an outline
   - A full post with the answer first, an FAQ and internal link slots
   - A title and meta description draft
   - A ranked list of fixes for the published page, covering title, description, headings, links, images, address and markup
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. It's a zip with HANDOFF.md and the three skill files, in the order they run: Search page brief writer, Search blog post writer and On-page SEO tuner.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give the keyword and the links to the top pages. If it cannot open them, paste each page's title and headings.
   - Edit the post before you publish. Add your own facts and cut anything you cannot stand behind.
-  - Publish it as a draft page, give the link back to step 3, and apply the fixes.
+  - Publish it as a draft page. Give the link and the keyword to step 3, or paste the draft text if your AI cannot open the link. Then apply the fixes.
 output_sample:
   input:
     - The keyword or question the post should rank for

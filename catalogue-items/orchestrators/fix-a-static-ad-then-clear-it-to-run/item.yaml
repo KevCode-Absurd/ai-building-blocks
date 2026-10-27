@@ -20,7 +20,7 @@ steps:
   - {uses: static-ad-critic, note: "Starts the chain: scores the ad and hands step 2 the ad copy with two rewrites."}
   - {uses: ad-awareness-stage-checker, note: "Reads the rewritten copy from the step before and checks it speaks to one stage. It hands step 3 the ad copy with its awareness-stage rewrites."}
   - {uses: five-part-ad-checker, note: "Tests the rewritten copy from step 2 for proof and a clear ask, which the earlier steps do not score. It hands you a ranked fix list to apply before step 4."}
-  - {uses: pre-launch-ad-checker, note: "Uses the ad copy with the fixes from steps 1 to 3 applied by you, not step 3's report itself. Runs the last check and gives the ship call."}
+  - {uses: pre-launch-ad-checker, note: "Uses the static ad, its image and its copy, with the fixes from steps 1 to 3 applied by you, not step 3's report itself. Walks the ad as a viewer meets it on a phone, runs the last check and gives the ship call."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/fix-a-static-ad-then-clear-it-to-run/skeleton.yaml

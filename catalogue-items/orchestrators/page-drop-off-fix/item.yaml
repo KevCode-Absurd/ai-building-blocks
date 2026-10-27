@@ -15,7 +15,7 @@ outputs:
   - {type: audit_report}
 uses: [sales-funnel-drop-off-finder, customer-question-finder, ab-test-traffic-checker]
 steps:
-  - {uses: sales-funnel-drop-off-finder, note: "Shows which step loses the most buyers and which page owns the leak. Step 2 checks that page."}
+  - {uses: sales-funnel-drop-off-finder, note: "Shows which step loses the most buyers and which page owns the leak. Reviews that page on a phone and sizes each fix. Step 2 checks the same page after you fix it."}
   - {uses: customer-question-finder, note: "Uses your customer words and your page (the one step 1 found leaking), not step 1's report. Hands step 3 the unanswered doubts and where each answer goes."}
   - {uses: ab-test-traffic-checker, note: "Uses your own visits and orders, and takes the page change from step 2 as the thing to test. Says whether your traffic can prove it and how many weeks that takes."}
 origin: rebuilt

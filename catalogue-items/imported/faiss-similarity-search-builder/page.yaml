@@ -20,7 +20,7 @@ not_for:
   - "You have a small set, a few thousand items or fewer: a plain exact search in a spreadsheet or short script is enough."
   - "You do not have embeddings yet: make them first with an embedding service, then come back."
 you_give:
-  - Your embedding vectors
+  - Your embedding vectors, and the embedding model or service that made them
   - Vector size and item count
   - Your speed and memory limits
   - A set of test queries (optional)
@@ -34,8 +34,9 @@ how_to_use:
   - "Paste your embedding details: vector size, item count, and your speed and memory limits. Add test queries if you have them (optional)."
   - Ask your AI to pick an index and write the build, search and save code.
   - Run the code in Python with faiss installed. Your AI needs a code tool to run it for you, or you can run it yourself.
-  - Check the speed and recall table. Treat the figures as typical values, not results from your data, until you run the check.
+  - Check the speed and recall table. The figures, and any "10 to 100 times faster" GPU claim, are typical values from the library's guide, not measured on your data. Run the check on your own vectors before you rely on them.
   - Only load saved index files you made yourself. Loading files from others can run harmful code.
+  - To power a find-similar feature, load the saved index in your app, turn the visitor's query into a vector with the same embedding model, and search the index.
 output_sample:
   input:
     - Your embedding vectors, as a numpy array
@@ -59,3 +60,4 @@ output_sample:
       contains: A check of how speed and accuracy change as you tune settings like nprobe, with typical values noted.
     - name: Next steps
       contains: What to do with the saved index, such as wiring it into a find-similar feature or re-checking recall after adding data.
+next: [agency-engineering-rag-pipeline-engineer]

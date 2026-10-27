@@ -41,4 +41,4 @@ if (verbose && split === 'dev') {
 const bench = JSON.parse(fs.readFileSync(path.join(SITE, 'test/fixtures/workflow-bench.json'), 'utf8')).goals.filter(g => split === 'all' || half(g.id) === split);
 const top = q => m.mindsFor(c, [[q, 1]], 3, 0, m.TOPIC_PROMINENCE);
 const rowAt = floor => ({ floor, topicsShown: round(topics.filter(q => (top(q.q)[0]?.score ?? 0) >= floor).length / topics.length), topicsRight: round(topics.filter(q => top(q.q).filter(x => x.score >= floor).some(x => q.expect.includes(x.mind.slug))).length / topics.length), tasksShown: round(bench.filter(g => (top(g.request)[0]?.score ?? 0) >= floor).length / bench.length) });
-console.log(JSON.stringify({ row: [0.2, 0.3, 0.4, 0.5].map(rowAt) }));
+console.log(JSON.stringify({ row: [0.6, 0.8, 1].map(rowAt) }));

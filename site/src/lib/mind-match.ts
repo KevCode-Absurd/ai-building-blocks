@@ -8,6 +8,7 @@ import type { Block, Catalogue } from "./data.ts";
 import { queryTokens, searchTokens } from "./library-search-core.ts";
 
 type Profile = { slug: string; weight: Map<string, number>; works: number };
+const PLACE_CAP = 6;
 const PROFILES = new WeakMap<Catalogue, { profiles: Profile[]; idf: Map<string, number> }>();
 
 function profilesOf(c: Catalogue) {
@@ -18,7 +19,9 @@ function profilesOf(c: Catalogue) {
   const areaName = (id: string) => c.minds?.areas?.[id] ?? id;
   const profiles = c.blocks.filter(b => b.type === "mind").map(m => {
     const weight = new Map<string, number>();
-    const put = (text: string | undefined, w: number) => { if (text) for (const t of searchTokens(text, true)) weight.set(t, Math.max(weight.get(t) ?? 0, w)); };
+    // A word in several places (a seat, the keywords, an area) counts for more than one strong place: the mind is broadly
+    // known for it. Capped, so no single word decides.
+    const put = (text: string | undefined, w: number) => { if (text) for (const t of new Set(searchTokens(text, true))) weight.set(t, Math.min(PLACE_CAP, (weight.get(t) ?? 0) + w)); };
     put(m.name.split(" (")[0], 3);
     for (const s of m.seats ?? []) put(s, 3);
     put(m.identity ?? roster.get(m.slug)?.identity, 2.5);
@@ -84,8 +87,8 @@ export function mindSearchOrder(c: Catalogue, query: string, matched: string[], 
 }
 
 /** How clearly a mind must fit a library search to be named above its results (scripts/evaluate-minds.mjs `row`). */
-export const SEARCH_ROW_FLOOR = 0.4;
+export const SEARCH_ROW_FLOOR = 0.8;
 /** How clearly a mind must fit a step to be named as a fit for it (the AI builder's fitting_minds). */
-export const CLEAR_FIT = 0.25;
+export const CLEAR_FIT = 0.5;
 /** The lift a topic search gives the minds most library work builds on (scripts/evaluate-minds.mjs, dev half). */
 export const TOPIC_PROMINENCE = 0.04;
